@@ -1,0 +1,1 @@
+<%@ include file='/types/WebPage/doWebPageFullDisplay.jsp' %>

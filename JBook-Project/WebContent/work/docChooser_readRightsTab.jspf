@@ -1,0 +1,47 @@
+        
+        <%
+        // JCMS-8422 - Only provide the "default/custom" choice during creation of a Content, nor during update
+        boolean provideDefaultChoice = formHandler.getPublication() == null;
+        
+        EnumerateSettings useDefaultReadRightsSettings = new EnumerateSettings()
+          .disableInline()
+          .enumLabels("ui.work.form.lbl.read-rights.use-default", "ui.work.form.lbl.read-rights.use-custom")
+          .enumValues("true", "false")
+          .dataAttribute("jalios-action", "toggle:hide")
+          .dataAttribute("jalios-target", ".use-read-rights-options");
+        %>
+        <% if (provideDefaultChoice) { %>
+        <jalios:field name="useDefaultReadRights" value="<%= formHandler.getAvailableUseDefaultReadRights() %>" resource="field-vertical">
+          <jalios:control settings='<%= useDefaultReadRightsSettings %>' />
+        </jalios:field>
+        
+       <div class="use-read-rights-options use-default-read-rights <% if (!formHandler.getAvailableUseDefaultReadRights()) { %>hide<% }%>">
+        <jalios:message msg="ui.work.form.lbl.read-rights-default.info" title="" dismissable="false" css="widget-content"/>
+        
+        <%-- Default AuthorizedGroupSet ------------------------------------------------------------ --%> 
+        <jalios:field label="ui.work.form.lbl.grp-read-rights-default" name="defaultAuthorizedGroupIdsDisabled" value="<%= formHandler.getDefaultAuthorizedGroupSet() %>" disabled="true" resource="field-vertical" css="nodnd" mv="0">
+          <jalios:control type="<%= ControlType.GROUP %>" />
+        </jalios:field>
+  
+        <%-- Default AuthorizedMemberSet ------------------------------------------------------------ --%> 
+        <jalios:field label="ui.work.form.lbl.mbr-read-rights-default" name="defaultAuthorizedMemberIdsDisabled" value="<%= formHandler.getDefaultAuthorizedMemberSet() %>" disabled="true" resource="field-vertical" css="nodnd">
+          <jalios:control type="<%= ControlType.MEMBER %>" />
+        </jalios:field>
+       </div>
+       
+       <div class="use-read-rights-options use-custom-read-rights <% if (formHandler.getAvailableUseDefaultReadRights()) { %>hide<% }%>">
+       <% } %>
+        <jalios:message msg="ui.work.form.lbl.read-rights.info" title="" dismissable="false" css="widget-content"/>
+         
+        <%-- AuthorizedGroupSet ------------------------------------------------------------ --%> 
+        <jalios:field name="authorizedGroupIds" label="ui.work.form.lbl.grp-read-rights" value='<%= formHandler.getAvailableAuthorizedGroupSet() %>' keyword='true'>
+          <jalios:control type="<%= ControlType.GROUP %>" />
+        </jalios:field>
+            
+        <%-- AuthorizedMemberSet ------------------------------------------------------------ --%> 
+        <jalios:field name="authorizedMemberIds" label="ui.work.form.lbl.mbr-read-rights" value='<%= formHandler.getAvailableAuthorizedMemberSet() %>' keyword='true'>
+          <jalios:control settings="<%= new MemberSettings().filter(MemberSettings.MemberFilter.ACCOUNT) %>" />
+        </jalios:field>
+        <% if (provideDefaultChoice) { %>
+       </div>
+       <% } %>          

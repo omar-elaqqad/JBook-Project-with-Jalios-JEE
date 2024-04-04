@@ -1,0 +1,187 @@
+@import "../../../core/init-mixins.less";
+
+.topbar-application-menu {
+  .topbar-ctxmenu-body {
+    max-height: 70vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    
+    .ps__rail-y{
+      z-index: 10;
+    }
+
+    .app-draggable-clone {
+      border: 1px solid #E8E8E8;
+      box-shadow: 1px 1px 4px 0 rgba(129, 129, 129, 0.39);
+    }
+  }
+
+  .topbar-application-item-inner-global {
+    .topbar-application-item-wrapper {
+      display: none;
+      border-top: 1px solid #d3d3d3;
+    }
+
+    &.is-expanded {
+      .topbar-application-item-wrapper {
+        display: block;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    max-width: 350px;
+
+    &.is-loading {
+      background-color: transparent;
+
+      .topbar-ctxmenu-body {
+        overflow: hidden;
+      }
+    }
+  }
+
+  .topbar-ctxmenu-body {
+    position: relative;
+    min-height: 150px;
+    width: @topbar-application-menu-width;
+
+    .topbar-application-item-inner,
+    .topbar-application-item-inner-global {
+      position: relative;
+
+      .topbar-application-item-global,
+      .topbar-application-item-mbr {
+        position: relative;
+        z-index: 5;
+      }
+
+      .topbar-application-item-global-clone,
+      .topbar-application-item-mbr-clone {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+
+        .topbar-application-item {
+          float: none;
+          position: absolute;
+        }
+
+        a {
+          border: none;
+          background-color: inherit;
+        }
+      }
+    }
+  }
+
+  .topbar-application-item-wrapper {
+    padding: 24px;
+    margin: 0; //height: @topbar-application-menu-item-wrapper-height;
+    overflow: hidden;
+    .ps__scrollbar-y-rail {
+      z-index: 6;
+    }
+  }
+
+  .topbar-application-menu-other-items {
+    display: none;
+
+    &.is-expanded {
+      display: block;
+      border-top: 1px solid #EAEAEA;
+    }
+  }
+
+  .topbar-application-item-separator {
+    clear: both;
+    background-color: rgba(210, 210, 210, 0.66);
+    height: 1px;
+    width: 100%;
+  }
+
+  .topbar-application-item {
+    background-color: white;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 100px;
+    margin-bottom: 2*@topbar-baseline;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: @topbar-baseline*2;
+    cursor: pointer;
+    border: 1px solid white;
+    height: 83px !important;
+    padding-top: 10px;
+    .transition(border 200ms linear);
+    position: relative;
+
+    &.is-clone {
+      position: absolute !important;
+    }
+    &:hover {
+      border: 1px solid #E8E8E8;
+      text-decoration: none;
+    }
+
+    .icon-wrapper {
+      display: inline-block;
+      position: relative;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 8px;
+
+      > IMG {
+        width: 48px;
+        height: 48px;
+        border-radius: 6px;
+      }
+    }
+
+    .label-wrapper {
+      color: #333;
+      font-size: 12px;
+      display: block;
+    }
+
+    .topbar-item-badge {
+      right: 16px;
+      top: 8px;
+      position: absolute;
+      z-index: 1;
+      &.app-badge-level-info {
+        background-color: @topbar-badge-info-bg;
+      }
+      &.app-badge-level-warning {
+        background-color: @topbar-badge-warning-bg;
+      }
+      &.app-badge-level-danger {
+        background-color: @topbar-badge-danger-bg;
+      }
+    }
+
+  }
+
+  .topbar-ctxmenu-footer-btn {
+    .show-less {
+      display: none;
+    }
+
+    &.is-expanded {
+      .show-more {
+        display: none;
+      }
+
+      .show-less {
+        display: block;
+      }
+    }
+  }
+}
+
+
+//Override default badge position
+.topbar .topbar-application-menu .topbar-item .topbar-item-badge {
+  right: 8px;
+}

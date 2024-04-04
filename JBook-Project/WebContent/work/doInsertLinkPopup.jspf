@@ -1,0 +1,46 @@
+<% if (refreshAndClose && !(showRadioInsert || showCheckInsert)) { %>
+  <jalios:javascript>
+    if (window.opener) {
+      window.opener.location = window.opener.location;
+    }
+    window.close();
+  </jalios:javascript>
+<% } %>
+<% if (showRadioInsert || showCheckInsert) { %>
+
+  <script language="JavaScript">
+  <%-- Cannot use namespace --%>
+  JCMS = window.JCMS || {};
+  JCMS.chooser = JCMS.chooser || {
+    myLabel : null,
+    myId : null, 
+    myDisplayURL : null
+  };
+
+	function insertLink(id, label, displayURL) {
+	  JcmsLogger.info("inserLink", id, label, displayURL);
+		JCMS.chooser.myId = id;
+		JCMS.chooser.myLabel = label;
+		JCMS.chooser.myDisplayURL = displayURL;
+    	<% if (Util.notEmpty(targetInput)) { %>
+    		window.opener.<%= targetInput %> = JCMS.chooser.myId;
+    		window.opener.<%= targetLabel %> = JCMS.chooser.myLabel;
+    	<% } else if (Util.notEmpty(targetUrl)) { %>
+    	  <% String qsStart = targetUrl.indexOf('?') == -1 ? "?" : "&"; %>
+    		window.opener.location = '<%= targetUrl %><%= qsStart %><%= targetParam %>=<%= Util.notEmpty(targetValue) ? (targetValue+"|") : "" %>'+JCMS.chooser.myId;
+    	<% } else { %>
+    	  jQuery.jalios.Browser.callback(id, label, undefined, displayURL);
+    	<% } %>
+    	window.close();
+	}
+  </script>
+  
+  <jalios:javascript>
+  <% if (Util.notEmpty(jsFunc)) { %>
+    Event.observe(window, 'unload', function(){ 
+      opener.<%= jsFunc %>(JCMS.chooser.myId, JCMS.chooser.myLabel, JCMS.chooser.myDisplayURL);
+    }); <%
+	}
+  %>
+  </jalios:javascript>
+<% } // showRadioInsert || showCheckInsert %>

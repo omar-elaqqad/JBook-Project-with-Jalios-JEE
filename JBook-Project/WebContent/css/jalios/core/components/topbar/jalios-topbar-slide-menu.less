@@ -1,0 +1,78 @@
+@import "../../../core/init-mixins.less";
+
+.slide-wrapper {
+  position: relative;
+  overflow: hidden;
+
+  // .js-slidemenu-input-refresh-wrapper {
+  //   position: relative;
+  // }
+
+  .list-group {
+    margin-bottom: 0;
+
+    .list-group-item {
+      padding-right: 25px;
+      cursor: pointer;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      border-left: 0;
+      border-right: 0;
+      margin-top: 0;
+
+      &:first-child {
+        border-radius: 0; // Override bootstrap default behavior
+      }
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      &.active .icon-child-menu {
+        color: white;
+      }
+
+      .icon-child-menu {
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        position: absolute;
+        right: 10px;
+        top: 0;
+      }
+    }
+
+    &.main-menu {
+      transform: translateX(-348px);
+      transition: transform 200ms ease-in;
+      will-change: transform;
+    }
+
+    &.child-menu.is-active,
+    &.is-active {
+      transform: translateX(0);
+    }
+
+    &.is-active.is-parent {
+      transform: translateX(-348px);
+    }
+
+    &.child-menu {
+      position: absolute;
+      top: 0;
+      transform: translateX(348px);
+      border-radius: 0;
+      width: 348px;
+      transition: transform 200ms ease-in;
+      will-change: transform;
+
+      > .list-group-item {
+        border-radius: 0;
+      }
+
+    }
+
+  }
+
+}

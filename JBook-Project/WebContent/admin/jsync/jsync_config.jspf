@@ -1,0 +1,97 @@
+<div class="tab-page">
+  <h2 class="tab"><%= glp("ui.adm.jsync.tab.configuration") %></h2>
+  <table class='table-data auto'>
+    <tr>
+      <th class='formLabel' scope="row"><%= glp("ui.adm.jsync.st.r-url") %></th>
+      <td class='formInfo'><%= channel.getJSyncReplicaUrl() %></td>
+    </tr>
+    <tr>
+      <th class='formLabel' scope="row"><%= glp("ui.adm.jsync.st.r-urid") %></th>
+      <td class='formInfo'><%= channel.getUrid() %> </td>
+    </tr>
+    <% if (Util.notEmpty(formHandler.getLeaderUrl())) { %>
+    <tr>
+      <th class='formLabel' scope="row"><%= glp("ui.adm.jsync.st.l-url") %></th>
+      <td class='formInfo'><%= formHandler.getLeaderUrl() %></td>
+    </tr>
+    <% } %>
+    <tr>
+      <th class='formLabel' scope="row"><%= glp("ui.adm.prop.jsync.sync-files") %></th>
+      <td class='formInfo'>
+        <%= glp(replica.getSyncFiles() ? "ui.com.lbl.yes" : "ui.com.lbl.no") %></a>
+      </td>
+    </tr>
+    <tr>
+      <th class='formLabel' scope="row"><%= glp("ui.adm.prop.jsync.update-mode") %></th>
+      <td class='formInfo'>
+        <%= glp("ui.adm.prop.jsync.update-" + channel.getProperty("jsync.update-mode")) %>
+      </td>
+    </tr>
+    <tr>
+      <th class='formLabel' scope="row"><%= glp("ui.adm.prop.jsync.stab-delay") %></th>
+      <td class='formInfo'>
+        
+        <jalios:duration time="<%= channel.getJSyncStabDelay() %>" />
+        
+      </td>
+    </tr>
+    <tr>
+      <th class='formLabel' scope="row"><%= glp("ui.adm.prop.jsync.max-delay") %></th>
+      <td class='formInfo'>
+        <%= channel.getIntegerProperty("jsync.max-delay", 10) %>
+      </td>
+    </tr>
+    <tr>
+      <th class='formLabel' scope="row"><%= glp("ui.adm.prop.jsync.max-op") %></th>
+      <td class='formInfo'>
+        <%= channel.getIntegerProperty("jsync.max-op", 5000) %>
+      </td>
+    </tr>
+    <tr>
+      <th class='formLabel' scope="row"><%= glp("ui.adm.prop.jsync.ip") %></th>
+      <td class='formInfo'>
+        <%= channel.getProperty("jsync.ip", "") %>
+      </td>
+    </tr>
+    <tr>
+      <th class='formLabel' scope="row"><% /* %>Startup Join<% */ %><%= glp("ui.adm.prop.jsync.startup-join") %></th>
+      <td class='formInfo'>
+        <% long startUpJoin = channel.getIntegerProperty("jsync.startup-join", 0) * 1000; 
+        if (startUpJoin == 0) { %>
+        <%= glp("ui.com.lbl.no") %>
+        <% } else { %>
+        <jalios:duration time="<%= startUpJoin %>" />
+        <% } %>
+      </td>
+    </tr>
+    <tr>
+      <th class='formLabel' scope="row"><% /* %>Can be joined<% */ %><%= glp("ui.adm.prop.jsync.can-be-joined") %></th>
+      <td class='formInfo'>
+        <%= channel.getBooleanProperty("jsync.can-be-joined", false) ? glp("ui.com.lbl.yes") : glp("ui.com.lbl.no") %>
+      </td>
+    </tr>
+    <tr>
+      <th class='formLabel' scope="row"><% /* %>Prevent Cyclic Leadership<% */ %><%= glp("ui.adm.prop.jsync.can-leader-join") %></th>
+      <td class='formInfo'>
+        <%= channel.getBooleanProperty("jsync.can-leader-join", false) ? glp("ui.com.lbl.yes") : glp("ui.com.lbl.no") %>
+      </td>
+    </tr>
+    <tr>
+      <th class='formLabel' scope="row"><% /* %>Explicit replica list<% */ %><%= glp("ui.adm.prop.jsync.explicit-replica-list") %></th>
+      <td class='formInfo'>
+        <%= channel.getProperty("jsync.explicit-replica-list", "") %>
+      </td>
+   </tr>
+    <tr>
+      <th class='formLabel' scope="row"><% /* %>Replica Startup Join<% */ %><%= glp("ui.adm.prop.jsync.replica-startup-join") %></th>
+      <td class='formInfo'>
+        <% long replicaStartUpJoin = channel.getIntegerProperty("jsync.replica-startup-join", 0) * 1000; 
+        if (replicaStartUpJoin == 0) { %>
+        <%= glp("ui.com.lbl.no") %>
+        <% } else { %>
+        <jalios:duration time="<%= replicaStartUpJoin %>" />
+        <% } %>
+      </td>
+    </tr>
+  </table>
+</div>  

@@ -1,0 +1,17 @@
+<%@page import="com.jalios.jcms.TypeFieldEntry"%>
+<%@page import="com.jalios.jcms.Publication"%>
+
+<% if (alert.getData() != null && alert.getData() instanceof Publication && Util.notEmpty(((Publication)alert.getData()).getAbstract())) { %>
+<div class="alert-abstract well well-sm">
+  <%
+  Publication pub = (Publication)alert.getData();
+  TypeFieldEntry tfe = channel.getTypeAbstractFieldEntry(pub.getClass());
+  boolean isWysiwyg = tfe != null && tfe.isWysiwyg();
+  %>
+  <% if (isWysiwyg) { %>
+  <jalios:wysiwyg><%= pub.getAbstract(userLang) %></jalios:wysiwyg>
+  <% } else { %>
+  <jalios:wiki><%= pub.getAbstract(userLang) %></jalios:wiki>
+  <% } %>
+</div>
+<% } %>

@@ -1,0 +1,10 @@
+<%
+/* ACL Manager require TRUE ADMIN ACCESS */ 
+if (!isAdmin || !channel.isValidAdminIP(request)) {
+  sendForbidden(request, response);
+  return;
+}
+boolean aclWorkspaceFilter = false;
+boolean manageAcl = true;
+String refreshUrl = "admin/accessManager/accessManager.jsp";
+%>

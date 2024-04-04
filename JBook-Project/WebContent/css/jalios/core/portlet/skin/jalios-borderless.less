@@ -1,0 +1,60 @@
+@import "../../../../../css/jalios/core/init-mixins";
+
+.borderless-skin.Portlet {
+  margin-bottom: 40px;
+
+  .borderless-header {
+    margin-bottom: 16px;
+    &.portlet-header-primary {
+      color: ~'var(--portlet-primary-color)';
+    }    
+    .portlet-header-secondary {
+      background-color: ~'var(--portlet-secondary-color)';
+    }
+    
+    .title {
+      .title-wrapper {
+        flex-grow: 1;
+        display: flex;
+        gap: 8px;
+      }
+      .skin-header-icon {
+        font-size: 24px;
+      }
+      .portlet-header-actions {
+        flex-shrink: 0;
+      }
+     .btn-portlet-header {
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2px 8px;
+        font-size: 12px;
+        line-height: 1.5;
+      }
+      
+    }
+    .borderless-header-sub {
+      font-size: 14px;
+      color: #666;
+    }
+    
+  }
+      
+  .borderless-title-border {
+    width: 56px;
+    height: 5px;
+    background-color: #999;
+    display: block;
+    margin-top: 4px;
+    margin-bottom: 8px; 
+  }
+  
+  .item-box-footer {
+    background-color: white;
+    border-top: 0 none;
+    display: flex;
+    justify-content: center;
+  }
+}

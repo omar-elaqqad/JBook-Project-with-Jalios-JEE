@@ -1,0 +1,15 @@
+<%@page import="com.jalios.jcms.taglib.ControlType"%>
+<%@page import="com.jalios.jcms.jportal.JPortalUtils"%>
+<%@page import="com.jalios.jcms.jportal.JPortalStructure"%>
+<%@page import="com.jalios.jcms.jportal.JPortalManager"%>
+<%@page import="generated.JPortal"%>
+<% if (isJPortal) { 
+	JPortal jPortal = (JPortal) pub;
+	JPortalStructure structure =  JPortalManager.getInstance().getJPortalStructure(jPortal, false);
+%>
+	<div class="tab-pane" id="jportal">
+	  <jalios:field resource="field-vertical" value="<%= JPortalUtils.getPrettyPrintJPortalStructure(structure) %>" label="jportal.portlet.information.structure" description="jportal.portlet.information.structure.description">
+	    <jalios:control type="<%= ControlType.TEXTAREA %>" />
+	  </jalios:field>
+	</div>
+<% } %>

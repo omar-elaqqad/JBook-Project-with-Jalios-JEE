@@ -1,0 +1,52 @@
+.lg-on:not(.lg-on-wysiwyg) {
+  overflow: hidden;
+}
+
+.lg-toolbar .lg-icon.lg-jplatform-action {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+.wysiwyg-lightbox-wrapper,
+a.lightbox-img {
+  cursor: zoom-in;
+}
+.lg-container {
+  &.wysiwyg-container .lg-counter {
+    display: none;
+  }
+  
+  .lg-sub-html h4  {
+    color: white;
+  }
+  
+  .lg-toolbar {
+    background-color: #000000e0;
+    .lg-icon {
+      color: white;
+      
+      &:hover {
+        color: #999;
+      }
+    }
+  }
+  
+  .lg-backdrop {
+    background-color: #000000b8 !important;
+    z-index: @z-index-lightbox;
+  }
+  
+  /*.lg-outer {
+    cursor: zoom-out;
+  }
+  
+  .lg-medium-zoom .lg-outer.lg-grab img.lg-object {
+    cursor: zoom-out;
+  }
+  
+  .lg-medium-zoom .lg-outer.lg-grabbing img.lg-object {
+    cursor: zoom-out;
+  }*/
+}

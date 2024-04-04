@@ -1,0 +1,112 @@
+BODY:not(.browser-IE11) {
+}
+
+.card-flip-wrapper {
+  /* activate 3D space */
+  perspective: 1000px;
+
+  /* flip the pane when hovered or when .hover class is added */
+  &.hover .card,
+  &:hover.card-flip-hover .card {
+    .rotateY(-180deg);
+  }
+
+  .card {
+    .transition(0.5s);
+    transform-style: preserve-3d;
+    position: relative;
+
+    .card-back,
+    .card-front {
+      background-color: #fff;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+      width: 100%;
+      overflow: hidden;
+      /* prevent the front face from showing through the back */
+      .backface-visibility(hidden);
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      .if(@card-rounded-corners,  border-radius, @card-border-radius);
+    }
+
+    /* front pane, placed above back */
+    .card-front {
+      z-index: 2;
+      transform: rotateY(0deg); // Firefox 31 and above
+    }
+
+    /* back, initially hidden pane */
+    .card-back {
+      /* initially rotate the element in the back so that when the card is flipped, it faces the viewer */
+      transform: rotateY(180deg);
+      //z-index: 3;
+    }
+  }
+}
+
+.browser-IE11 {
+  // Reset transform
+  .card-flip-wrapper .card .card-back,
+  .card-flip-wrapper .card .card-front {
+    transform: none;
+  }
+  .card-flip-wrapper.hover .card,
+  .card-flip-wrapper:hover.card-flip-hover .card {
+    transform: none;
+  }
+
+  .card-flip-wrapper .card .card-front {
+    display: block;
+  }
+  .card-flip-wrapper .card .card-back {
+    display: none;
+  }
+
+  .card-flip-wrapper.hover .card,
+  .card-flip-wrapper:hover.card-flip-hover .card {
+    .card-front {
+      display: none;
+    }
+    .card-back {
+      display: block;
+    }
+  }
+}
+
+// Print
+@media print {
+  BODY:not(.browser-IE11) .card-flip-wrapper {
+    /* in print, hide back pane (display front pane instead) */
+    .card-back {
+      display: none;
+    }
+    /* in print, cancel card flipping */
+    &.hover .card,
+    &:hover.card-flip-hover .card {
+      &,
+      .card-front {
+        .rotateY(0deg);
+      }
+    }
+  }
+}
+
+@media print {
+  .browser-IE11 {
+    .card-flip-wrapper {
+      &.hover .card,
+      &:hover.card-flip-hover .card {
+        // in print in IE11, cancel card flipping
+        .card-front {
+          display: block;
+        }
+        .card-back {
+          display: none;
+        }
+      }
+    }
+  }
+}

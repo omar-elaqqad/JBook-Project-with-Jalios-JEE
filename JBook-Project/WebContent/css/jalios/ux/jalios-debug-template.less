@@ -1,0 +1,29 @@
+@import "../core/init.less";
+
+/* --- Debug templates --------------------------------------------------------------------------------- */
+
+.jalios-debug-template {
+  code {
+    color: #333;
+  }
+  &.skin-template .jalios-debug-template-path {
+    background: #f0f2f9;
+  }
+  &.portlet-template {
+   .jalios-debug-template-path {
+      background: #f2fdf2;
+    }
+  }
+  &.publication-template {
+   .jalios-debug-template-path {
+      background: #f9f9f2;
+    }
+  }
+}
+.cs-portal {
+  .jalios-debug-template {
+    + DIV DIV.app {
+      margin-top: 0px;
+    }
+  }
+}

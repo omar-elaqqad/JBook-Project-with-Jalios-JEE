@@ -1,0 +1,112 @@
+<%@page import="generated.AbstractPortletSkinable"%>
+<%@page import="java.util.Map"%>
+<%@page import="com.jalios.jcms.taglib.settings.impl.TextFieldSettings"%>
+<%@page import="com.jalios.jcms.taglib.card.CardsDisplayMode"%>
+<%@page import="com.jalios.jcms.jportal.JPortalEditorHandler"%>
+<%@page import="com.jalios.jcms.jportal.JPortalManager"%>
+<%@page import="java.util.HashMap"%>
+<%@page import="com.jalios.jcms.portlet.Portlet"%>
+<%@page import="com.jalios.jcms.jportal.component.JPortalComponent"%>
+<%@page import="com.jalios.jcms.uicomponent.DataAttribute"%>
+<%@page import="com.jalios.util.Util"%>
+<%@page import="com.jalios.jcms.taglib.card.LinkOptions"%>
+<div class="sidebar-tab-title"><%= glp("jportal.edition.sidebar.components.title") %><%= formHandler.getPortletClass() != null ? " : " + formHandler.getPortletName() : "" %></div>
+<div class="<%= formHandler.getPortletClass() != null ? "is-portlet-choice" : "" %>">
+	<% if (formHandler.getPortletClass() != null) { %>
+	  <% boolean canCreatePortlet = formHandler.canCreatePortlet(); %>
+	  <% 
+	  
+	  String portletEditTemplatePath = formHandler.getPortletEditTemplatePath(); 
+	  request.setAttribute(JPortalEditorHandler.PORTLET_EDITION_REQUEST_ATTR, true);
+	  request.setAttribute("jcms.edit.footer.display", false);
+	  request.setAttribute(EditPortletSkinableHandler.DISPLAY_PORTLET_SKINABLE_FORM_REQUEST_ATTR, false);
+	  request.setAttribute("field-vertical", true);
+	  if(formHandler.isCreatePortlet()){
+	    request.setAttribute("is-create-portlet", true);
+	  }
+	  %>
+	  <% if (formHandler.isCreatePortlet() && canCreatePortlet) { %>
+	    <form>
+	      <div class="jportal-portlet-creation">
+		      <div class="jportal-sidebar-group">
+			      <jalios:include jsp="<%= portletEditTemplatePath %>" /><%
+			      
+  	          EditPortalElementHandler genericFormHandler = (EditPortalElementHandler) request.getAttribute("formHandler");
+  			      boolean isSkinableType = generated.AbstractPortletSkinable.class.isAssignableFrom(formHandler.getPortletClass());
+  			      boolean isSkinable = isSkinablePortlet || isSkinableType;
+            %>
+			    </div>
+          <% if(isSkinableType){ %>
+			    <div class="jportal-sidebar-group is-accordion jportal-sidebar-group-separated">
+	          <a class="sidebar-subtitle collapsed" data-toggle="collapse" href="#portletTemplate" aria-expanded="false" aria-controls="advanced">
+	           <jalios:icon src="caret" /> <%= glp("jportal.edition.sidebar.display-style") %>
+	          </a>
+	          <div class="collapse sidebar-collapsed-group" id="portletTemplate">
+	            <%@ include file='/jcore/jportal/portletSidebar/doJPortletTemplatesContent.jspf' %>
+	          </div>
+	        </div>
+	        
+				    <div class="jportal-sidebar-group is-accordion jportal-sidebar-group-separated">
+						  <a class="sidebar-subtitle collapsed" data-toggle="collapse" href="#portletSkin" aria-expanded="false" aria-controls="advanced">
+						   <jalios:icon src="caret" /> <%= glp("jportal.edition.sidebar.ui.advanced.title") %>
+						  </a>
+						  <div class="collapse sidebar-collapsed-group" id="portletSkin">
+				         <%@ include file='/jcore/jportal/portletSidebar/doJPortletMiscContent.jspf' %>
+						  </div>
+		        </div>
+            <%@ include file='/jcore/jportal/portletSidebar/doJPortletCacheContent.jspf' %>
+	        <% } %>
+        </div>
+	      
+	      <div class="buttons">
+	        <input type="hidden" name="portletClassName" value="<%= formHandler.getPortletClass().getSimpleName() %>" />
+	        <input type="hidden" name="jPortal" value="<%= jPortal.getId() %>" />
+	        <input type="hidden" name="createPortlet" value="true" />
+	        <a class="btn btn-default" data-jalios-action="ajax-refresh" data-jalios-options='{ "params" : {"jPortal": "<%= jPortal.getId() %>", "portletClassName" : "<%= formHandler.getPortletClass().getSimpleName() %>" }}'><%= glp("jportal.edition.sidebar.components.cancel") %></a>
+	        <button class="btn btn-primary btn-create" name="opCreate" value="true" data-jalios-action="ajax-refresh"><%= glp("jportal.edition.sidebar.components.create") %></button>
+	      </div>
+	    </form>
+	  <% } else { %>
+
+			<% if (canCreatePortlet) { %>
+			  <a class="btn btn-default btn-block br jportal-component-create" 
+			   data-jalios-sidebar-target=".jportal-editor-sidebar" 
+			   data-jalios-sidebar-action="open" 
+			   data-jalios-sidebar-url="jcore/jportal/commonSidebar/doJPortalSidebar.jsp?jPortal=<%=jPortal.getId() %>&portletClassName=<%= formHandler.getPortletClass().getSimpleName() %>&createPortlet=true">
+          <span class="jportal-component-label"><%= glp("jportal.edition.sidebar.components.create-portlet", formHandler.getPortletName()) %></span>
+			  </a>
+			<% } %>
+      <form method="post">
+	      <input type="hidden" name="portletClassName" value="<%= formHandler.getPortletClass().getSimpleName() %>" />			
+        <input type="hidden" name="jPortal" value="<%= jPortal.getId() %>" />
+				<div class="filters js-select2-no-image">
+					<jalios:field name="componentSearchName"  resource="field-vertical" css="br">
+		        <jalios:control settings='<%= formHandler.getComponentsAutoCompleteSettings() %>' />
+		      </jalios:field>
+          <jalios:field name="workspaceFilter" resource="field-vertical" css="br" value="<%= formHandler.getAvailableWorkspaceFilter() != null ? formHandler.getAvailableWorkspaceFilter().getId() : null %>">
+            <jalios:control settings='<%= formHandler.getWorkspaceFilterSettings() %>' />
+          </jalios:field>		      
+	      </div>
+	      <jalios:include jsp="jcore/jportal/portalSidebar/doComponentCards.jsp" />
+      </form>
+              
+	  <% } %>
+	<% } else { %>
+	  <%
+		  Map<String, Object> searchDataAttributes = new HashMap<String, Object>();
+	    searchDataAttributes.put("jalios-target", ".portlet-list");
+		  searchDataAttributes.put("data-jalios-field-autocomplete", "jcore/jportal/portalSidebar/doJPortalSidebarInnerTab_items.jsp");
+	  %>
+	  <jalios:field name='text' value="" resource="field-vertical" css="jportal-component-search-field">
+	    <jalios:control settings='<%= new TextFieldSettings().placeholder("jportal.edition.sidebar.search-components.placeholder").css("no-focus").dataAttributes(searchDataAttributes) %>' />
+	    <span class="input-group-btn">
+	      <button class="btn btn-default" data-jalios-action="widget:clear" title='<%= glp("ui.com.btn.reset") %>'><jalios:icon src="clear"/></button>
+	    </span>
+	  </jalios:field>
+	  
+	  <div class="portlet-list">
+	    <jalios:include jsp="jcore/jportal/portalSidebar/doJPortalSidebarInnerTab_items.jsp" />
+	  </div>
+  
+	<% } %>
+</div>  

@@ -1,0 +1,23 @@
+// Include variables and mixins
+@import "../init-mixins.less";
+
+.local-passwords.ALL .widget {
+  display: revert;
+}
+.local-passwords.EXTERNAL .widget,
+.local-passwords.DISABLED .widget {
+  display: none;
+}
+
+.local-passwords > .help-block { display: none; }
+.local-passwords.ALL > .help-block.ALL { display: revert; }
+.local-passwords.EXTERNAL > .help-block.EXTERNAL { display: revert; }
+.local-passwords.DISABLED > .help-block.DISABLED { display: revert; }
+
+// In Member caddy
+.account[data-jalios-usage="0"] {
+  display: revert;
+}
+.account[data-jalios-usage="1"] {
+  display: none;
+}

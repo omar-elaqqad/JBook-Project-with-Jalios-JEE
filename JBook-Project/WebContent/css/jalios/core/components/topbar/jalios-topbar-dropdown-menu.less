@@ -1,0 +1,238 @@
+.dropdown.open > .topbar-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar-menu.dropdown-menu {
+  padding: 0;
+  max-height: 80vh;
+  margin-top: 0;
+
+  &:before {
+    content: "";
+    top: -13px;
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 12px 12px 12px;
+    border-color: transparent transparent rgba(0, 0, 0, 0.15) transparent;
+  }
+
+  &:after {
+    content: "";
+    top: -12px;
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 12px 12px 12px;
+    border-color: transparent transparent #ffffff transparent;
+  }
+
+  &:not(.dropdown-menu-right):after {
+    left: 14px;
+  }
+
+  &:not(.dropdown-menu-right):before {
+    left: 14px;
+  }
+
+  &.dropdown-menu-right:before {
+    right: 14px;
+  }
+
+  &.dropdown-menu-right:after {
+    right: 14px;
+  }
+
+  &.has-header:after {
+    border-color: transparent transparent #E8e8e8 transparent;
+  }
+
+  &.has-btn-footer {
+    padding-bottom: 38px;
+  }
+
+  .topbar-ctxmenu-header {
+    padding: 8px 8px 8px 16px;
+    background-color: #E8e8e8;
+    border-radius: 4px 4px 0 0;
+    font-size: 18px;
+    H2 {
+      margin: 0;
+      font-size: inherit;
+      line-height: @line-height-base;
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    .topbar-ctxmenu-header-actions {
+      float: right;
+
+      .topbar-ctxmenu-header-item {
+        text-decoration: none;
+        padding: 5px;
+        transition: background-color 200ms ease-in;
+        border-radius: 4px;
+        display: inline;
+       
+        &.dropdown {
+          cursor: pointer;
+
+          > A {
+            text-decoration: none;
+          }
+        }
+
+        &:hover {
+          background-color: rgba(136, 127, 127, 0.33);
+        }
+
+        .jalios-icon {
+          font-size: 18px;
+          text-decoration: none;
+          margin-right: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .js-close-menu .jalios-icon {
+    color: #999;
+    font-size: 14px !important;
+    text-decoration: none;
+  }
+
+  .topbar-ctxmenu-no-result {
+    text-align: center;
+    padding: 32px;
+    min-height: 150px;
+    background-color: white;
+
+    P {
+      font-size: 18px;
+    }
+
+    .jalios-icon {
+      font-size: 48px;
+      color: #CCC;
+      line-height: 64px;
+    }
+
+    IMG.jalios-icon {
+      margin-bottom: 10px;
+      height: 160px;
+    }
+
+    &.is-hidden {
+      display: none;
+    }
+  }
+
+  &.topbar-default-menu {
+    width: 350px;
+    max-width: 350px;
+
+    &.is-loading {
+      background-color: transparent;
+
+      .topbar-ctxmenu-body {
+        height: 150px;
+        overflow: hidden;
+      }
+    }
+
+    .topbar-ctxmenu-body {
+      position: relative;
+      overflow-y: auto;
+    }
+  }
+
+  &.has-header .list-group-item:first-child {
+    border-radius: 0;
+  }
+
+  .list-group {
+    margin-bottom: 0;
+
+    &.list-group-noborder > .list-group-item {
+      border: 0 none;
+    }
+
+    .list-group-item.list-group-item-divider {
+      border: 1px solid #CCC;
+      padding: 0;
+    }
+
+    .list-group-item.list-group-item-extended {
+      padding-right: 0;
+    }
+
+    .list-group-item.list-group-item-header {
+      background-color: rgba(232, 232, 232, 0.65);
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+  }
+
+  .list-group-item.slide-menu-search-input {
+    border: 0 none;
+  }
+
+  .topbar-ctxmenu-footer {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    .topbar-ctxmenu-footer-btn {
+      border-radius: 0;
+      background-color: #EEE;
+      width: 100%;
+      border-left: 0 none;
+      border-right: 0 none;
+      padding: 8px;
+      border-top: 0 none;
+    }
+  }
+}
+
+.dropdown-overlay-backdrop {
+  &.full {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: @z-index-sidebar - 2;
+    background-color: @modal-backdrop-bg;
+  }
+  // Fade for backdrop
+  &.fade {
+    .opacity(0);
+
+    &.in {
+      .opacity(@modal-backdrop-opacity);
+    }
+  }
+}
+@media screen and (min-width: @screen-sm-min) {
+  .topbar-warning-menu A#topbar-warning-menu-opener {
+    // Ensure ctxCaret has enough width to be visible in SM+
+    min-width: 70px;
+  }
+}
+@media screen and (min-width: @topbar-width) {
+  .topbar-warning-menu A#topbar-warning-menu-opener {
+    // Restore native width, when label will be also displayed
+    min-width: none;
+  }
+}

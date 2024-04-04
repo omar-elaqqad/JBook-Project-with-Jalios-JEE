@@ -1,0 +1,63 @@
+<%@ page import="com.jalios.jcms.handler.QueryHandler" %><%
+
+  Collection collection    = new TreeSet();
+  Set        allCidSet     = new TreeSet();
+  int        resultSize    = Util.getSize(box.getFirstPublications());
+  boolean    isResultSizeAccurate = true;     
+  Class      queryHandlerTypesCommonSuperClass = Publication.class;
+  boolean isDynamicPubList = "dynamicPubList".equals(box.getDisplayMode()) || Util.isEmpty(box.getDisplayMode());
+  boolean         seeMore = getBooleanParameter("seeMore", false);
+
+  if (Util.notEmpty(box.getPublications()) && !isDynamicPubList) {
+    collection = Arrays.asList(box.getPublications());
+    List<Publication> rightsCollection = new ArrayList();
+    
+    for (Object itObj : collection) {
+      Publication itPub = (Publication) itObj;
+      if (itPub != null && itPub.canBeReadBy(loggedMember)) {
+        rightsCollection.add(itPub);
+      }
+    }
+    
+    collection = rightsCollection;
+  } else if(isDynamicPubList){
+    {
+      %><%@ include file='/types/PortletQueryForeach/doQueryHandlers.jspf' %><%
+      for (Iterator itHandler = queryHandlerSet.iterator(); itHandler.hasNext(); ){
+        QueryHandler handler = (QueryHandler) itHandler.next();
+        QueryResultSet qrSet = handler.getResultSet();
+        if (queryHandlerSet.size() == 1) {
+          collection = qrSet;
+          resultSize = qrSet.getResultSize();
+        } else {
+          // publication already in the collection may be added by these new query
+          // make sure the total number of items is correctly computed with those duplicated items
+          int previousSize = collection.size();
+          collection.addAll(qrSet);
+          int newSize = collection.size();
+          int duplicateItemsNbr = newSize - (qrSet.size() + previousSize);
+          resultSize += qrSet.getResultSize() + duplicateItemsNbr;
+          // For the current query result, if the the total number of result is more important
+          // than the collection being added to the result, we have no guarantee that 
+          // there won't be any duplicated publication for the next page : 
+          //  --> it means the total is not guaranteed to be accurate, indicate it
+          if (qrSet.getResultSize() > qrSet.size()) {
+            isResultSizeAccurate = false;
+          }
+        }
+        allCidSet.addAll(handler.getAllCidSet());
+        isResultSizeAccurate = isResultSizeAccurate && qrSet.isTotalAccurate();
+      }
+      queryHandlerTypesCommonSuperClass = QueryHandler.getTypesCommonSuperClass((QueryHandler[]) queryHandlerSet.toArray(new QueryHandler[queryHandlerSet.size()]));
+    }
+    
+  }
+  
+
+
+  int maxResults  = box.getMaxResults();
+  int skipResults = box.getSkipFirstResults();
+
+  boolean displayNoResult = isDynamicPubList ? resultSize == 0 : Util.isEmpty(collection);
+  boolean hideWhenNoResult = box.getHideWhenNoResults();
+%>

@@ -1,0 +1,34 @@
+<%--
+  This JSP is the old path of this UI. 
+  It was moved in /admin/accessManager/ directory for JCMS-8867.
+  This JSP, including the new one, is being kept for some time to prevent any backward incompatibility.
+--%><%
+jcmsContext.setAjaxRequestAttribute("acl-list-showEditAcl", showEditAcl);
+jcmsContext.setAjaxRequestAttribute("acl-list-showTitle", showTitle);
+jcmsContext.setAjaxRequestAttribute("acl-list-showRadioInsert", showRadioInsert);
+jcmsContext.setAjaxRequestAttribute("acl-list-showCheckInsert", showCheckInsert);
+jcmsContext.setAjaxRequestAttribute("acl-list-showWorkspaceAclOnly", showWorkspaceAclOnly);
+jcmsContext.setAjaxRequestAttribute("acl-list-showWorkspaceAclState", showWorkspaceAclState);
+jcmsContext.setAjaxRequestAttribute("acl-list-showGroupCount", showGroupCount);
+jcmsContext.setAjaxRequestAttribute("acl-list-showMemberCount", showMemberCount);
+jcmsContext.setAjaxRequestAttribute("acl-list-showDelete", showDelete);
+
+// for backward compatibility (continue providing "Set aclSet" variable)
+// Now, aclSet is provided by doInitAclList.jspf
+Set<AccessControlList> aclSet = new TreeSet<AccessControlList>(AccessControlList.getNameComparator());
+{
+  Set<AccessControlList> tmpSet = channel.getDataSet(AccessControlList.class);
+  if (tmpSet != null) {
+    aclSet.addAll(tmpSet);
+  }
+}
+if (showWorkspaceAclOnly) {
+  JcmsUtil.applyDataSelector(aclSet, AccessControlList.getWorkspaceAclSelector());
+}
+
+String text = getUntrustedStringParameter("text", null);
+if (Util.notEmpty(text)) {
+  JcmsUtil.applyDataSelector(aclSet, new AccessControlList.NameSelector(text));
+}
+%>
+<jalios:include jsp="/admin/accessManager/aclList.jsp" />

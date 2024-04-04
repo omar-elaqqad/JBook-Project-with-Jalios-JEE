@@ -1,0 +1,21 @@
+<%@page import="com.jalios.jcms.portlet.EditPortletSkinableHandler"%>
+<%@page import="com.jalios.jcms.taglib.settings.impl.WikiAreaSettings"%>
+<%@page import="generated.EditAbstractPortletSkinableHandler"%>
+<div class="jportal-sidebar-group">
+  <% EditAbstractPortletSkinableHandler skinableHandler = (EditAbstractPortletSkinableHandler) genericFormHandler; %>
+  
+	<%-- Portlet Image (DataImage) ----------------------------------------------%>
+	<jalios:field name="portletImage" label="ui.editportlet.image" tooltip="ui.editportlet.image.h" ml="<%= channel.isMultilingual() %>" value="<%= skinableHandler.getAllAvailablePortletImageML() %>">
+	  <jalios:control type="<%= ControlType.IMAGEPATH %>" />
+	</jalios:field>
+	
+	<%-- Description ------------------------------------------------------------ --%> 
+	<jalios:field name="description" label="ui.editportlet.description" ml="<%= channel.isMultilingual() %>" value="<%= skinableHandler.getAllAvailableDescriptionML() %>">
+	  <jalios:control settings='<%= new WikiAreaSettings().rows(5) %>' />
+	</jalios:field>
+	
+  <%-- BehaviorCopy ------------------------------------------------------------ --%> 
+  <jalios:field name='<%= "behaviorCopy" %>' label='<%= glp("ui.editportlet.behaviorcopy") %>' required='<%= true %>' value='<%= ""+genericFormHandler.getAvailableBehaviorCopy() %>'>
+    <jalios:control settings='<%= new EnumerateSettings().select().enumValues("true", "false", "ws").enumLabels("ui.editportlet.behaviorcopy.copy", "ui.editportlet.behaviorcopy.ref", "ui.editportlet.behaviorcopy.ws") %>' />
+  </jalios:field>	
+</div>

@@ -1,0 +1,34 @@
+<div class="table-responsive">
+ 
+  <%-- Table --%>
+  <table class="table-data table-app">
+    <thead>
+      <tr>
+        <th class="fit">#</th>
+        <th>Member</th>
+        <th>Title</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <% Set<Publication> resultSet = channel.getPublicationSet(Publication.class, loggedMember); %>
+      <jalios:pager name="appTablePagerHandler" declare="true" pageSize="20" action="init" size="<%= resultSet.size() %>"/>
+      <jalios:foreach skip="<%= appTablePagerHandler.getStart() %>" max="<%= appTablePagerHandler.getPageSize() %>" type="Publication" name="itPub" collection="<%= resultSet %>">
+        <tr>
+          <td><%= itCounter %></td>
+          <td>
+            <jalios:memberphoto member="<%= itPub.getAuthor() %>" size="<%= PhotoSize.TINY %>" />
+            <jalios:link data="<%= itPub.getAuthor() %>" />
+          </td>
+          <td><jalios:link data="<%= itPub %>" /></td>
+          <td><%= itPub.getWFStateLabelHtml(userLang) %></td>
+        </tr>
+      </jalios:foreach>
+    </tbody>
+    
+  </table>
+  
+  <jalios:pager name="appTablePagerHandler"/>
+  
+</div>

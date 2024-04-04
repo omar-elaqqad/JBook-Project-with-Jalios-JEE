@@ -1,0 +1,24 @@
+<%@ taglib uri="jcms.tld" prefix="jalios" %><%
+
+if (portlet == null || jcmsContext == null) {
+  return;
+}
+
+String  lazy          =  portlet instanceof PortletSkinable ? Util.getString(((PortletSkinable)portlet).getSkinClasses(),"") : "";
+boolean isEditPortlet = Util.toBoolean(request.getAttribute("isPortletMode"),false);
+
+if (jcmsContext.isAjaxRequest() || lazy.indexOf("ajax-lazy") < 0 || lazy.indexOf("ajax-lazy-custom") >= 0 || isEditPortlet){
+  String portletPath = portlet.getTemplatePath(jcmsContext);
+  try { %><jalios:include target="INCLUDE_BEFORE_TEMPLATE" targetContext="skin" /><%
+    if (jcmsContext.isDebugTemplate()) {
+      jcmsContext.addCSSHeader("css/jalios/ux/jalios-debug-template.css");
+      %><div class="jalios-debug-template portlet-template" title="<%= com.jalios.jcms.HttpUtil.encodeForHTMLAttribute("Template path") %>"><%
+        %><code class="jalios-debug-template-path"><%= portletPath %></code><%
+      %></div><%
+    }
+    %><jsp:include page='<%= "/"+portletPath %>' flush="true" /><jalios:include target="INCLUDE_AFTER_TEMPLATE" targetContext="skin" /><% }
+  catch (Throwable ex) {
+    PortalManager.printPortletException(out, ex, portlet, org.apache.log4j.Logger.getLogger("jsp.doIncludePortletTemplate_jsp"));
+  }
+}
+%>

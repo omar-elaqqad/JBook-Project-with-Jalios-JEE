@@ -1,0 +1,77 @@
+<jalios:include target="EDIT_MBR_CATEDITHRIGHTTAB_HEADER" />
+
+<%
+Map<String, Object> editCatModeSettingsDataAttributes = new HashMap<String, Object>();
+editCatModeSettingsDataAttributes.put("jalios-action", "sync:value");
+editCatModeSettingsDataAttributes.put("jalios-target",".widget-name-editcat");
+editCatModeSettingsDataAttributes.put("jalios-target-attribute", "class");
+
+Map<Integer, String> editCatModeMap = new HashMap();
+editCatModeMap.put(CategoryRight.GROUP_AND_MEMBER, "grpmbr");
+editCatModeMap.put(CategoryRight.MEMBER_ONLY, "mbr");
+editCatModeMap.put(CategoryRight.GROUP_ONLY, "grp");
+
+List<String> editCatEnumLabelsList = Util.getArrayList(
+  String.valueOf(glp("ui.adm.mbr-edit.cat-r.grpmbr")),
+  String.valueOf(glp("ui.adm.mbr-edit.cat-r.mbr")),
+  String.valueOf(glp("ui.adm.mbr-edit.cat-r.grp"))
+);
+List<Object> editCatEnumValueList = Util.getArrayList(
+    editCatModeMap.get(CategoryRight.GROUP_AND_MEMBER), 
+    editCatModeMap.get(CategoryRight.MEMBER_ONLY), 
+    editCatModeMap.get(CategoryRight.GROUP_ONLY)
+);
+
+SelectorSettings editCatModeSettings = new EnumerateSettings()
+  .enumLabels(editCatEnumLabelsList.toArray(new String[]{}))
+  .enumValues(editCatEnumValueList.toArray(new Object[]{}))
+  .required()
+  .select()
+  .dataAttributes(editCatModeSettingsDataAttributes);
+
+Set editCatSet = formHandler.getCategorySet("cids");
+
+Integer editCatMode = formHandler.getAvailableEditCatMode();
+String editCatModeValue = editCatModeMap.get(editCatMode);
+String cidsFieldCss = "widget-name-editcat " + editCatModeValue;
+%>
+
+<style type="text/css">
+.editCatModeField {
+  width: 100%;
+}
+.input-group.widget-name-editcat {
+  display: none;
+}
+.widget-name-editcat.<%= editCatModeMap.get(CategoryRight.GROUP_AND_MEMBER) %>,
+.widget-name-editcat.<%= editCatModeMap.get(CategoryRight.MEMBER_ONLY) %> {
+  display: block;
+}
+</style>
+
+<jalios:field label=''
+    name="editCatMode"
+    value='<%= editCatModeValue %>'
+    resource='field-light'
+    css='editCatModeField br'>
+  <jalios:control settings='<%= editCatModeSettings %>' />
+</jalios:field>
+
+<div class="widget input-group jalios-input-group widget-name-editcat <%= editCatModeValue %>">
+  <jalios:treecatview prefix="cids" 
+                      input="cids" 
+                      type="checkbox"
+                      
+                      opened="<%= editCatSet %>" 
+                      checked="<%= editCatSet %>" 
+                      highlighted="<%= editCatSet %>" 
+                      level="1"
+                      collection="<%= Util.getHashSet(channel.getRootCategory()) %>"
+                      selectable="false" 
+                      dragdrop="true"
+                      showCtxMenu="true"
+                      css="autocomplete" />
+  <input type='hidden' name='cids' value='' />
+</div>
+
+<jalios:include target="EDIT_MBR_CATEDITHRIGHTTAB_FOOTER" />

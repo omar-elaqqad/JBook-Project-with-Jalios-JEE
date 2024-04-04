@@ -1,0 +1,13 @@
+You can set a color on your app by using either :
+<ul>
+  <li>
+    One of the class defined in jalios-app.css, prefixed by ".app-theme-", which you must set on the main DIV of your app
+  </li>
+  <li>
+    Using the mixin ".app-theme-from-color(Your app name,Your color));" available in following files : 
+    <ul>
+      <li>jalios-app-variables.less</li>
+      <li>jalios-app-mixins.less</li>
+    </ul>
+  </li>
+</ul>

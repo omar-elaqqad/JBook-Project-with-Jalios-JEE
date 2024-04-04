@@ -1,0 +1,208 @@
+@import "core/init-mixins.less";
+
+@member-csv-import-rules-font-size: font-size-small;
+
+#csvMemberImportForm {
+  
+  TABLE.import-options {
+    margin-bottom: 0;
+    
+    & > TBODY > TR > TD:first-child { // Override TABLE.peer core's rule
+      width: 20%;
+    }
+  }
+}
+
+.member-csv-import-modal {
+  
+  #checkingInProgress,
+  #importInProgress {
+    text-align: center;
+  }
+  &.select-import-type {
+    .modal-steps {
+      display: none;
+    }
+  }
+  .jcms-message .jcms-message-title {
+    display: none;
+  }
+  .help-block {
+    margin-bottom: 0;
+    A.label-toggle-rules {
+      font-weight: normal;
+      font-size: @@member-csv-import-rules-font-size;
+      padding: 5px 0;
+      &, .jalios-icon.help-question {
+        color: @text-color;
+      }
+      &:focus, &:hover {
+        text-decoration: none;
+      } 
+    }
+  }
+  
+  .checking-list {
+    .itemlist-item {
+      .itemlist-item-link {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      &.success {
+        background-color: @jalios-success;
+        color: white;
+      }
+      &.error {
+        color: white;
+        background-color: @jalios-danger;
+      }
+      &:hover {
+        background-color: transparent;
+        color: inherit;
+      }
+    }
+  }
+  .import-format-rules {
+    font-size: @@member-csv-import-rules-font-size;
+    margin-top: 10px;
+    &:not(.jalios-icon) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .itemlist-item {
+      .itemlist-item-link {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+  A.toggle-error-detail {
+    font-size: @font-size-small;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+  }
+  .import-type {
+    .import-type-choice {
+      text-align: center;
+      
+      &, A {
+        color: @text-info-color;
+        text-decoration: none;
+      }
+    }
+    .action-label {
+      font-size: @font-size-large;
+      margin-bottom: 5px;
+      margin-top: 10px;
+      color: @text-color;
+    }
+    .member-import-type {
+      font-size: 4em;
+    }
+    .jalios-icon {
+      color: @jalios-color-icon;
+    }
+    .member-import-type-input {
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+    
+  .datas-list {
+    UL.datas-container {
+      .group-name {
+        font-weight: normal;
+        margin-left: 5px;
+      }
+      .group-list,
+      &.group-list {
+        margin-left: 35px;
+        margin-top: 5px;
+        .group-icon {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  .preview-detail {
+    P {
+      margin: 0;
+    }
+    PRE.import-source {
+      margin: 0;
+      padding: 5px;
+      font-size: @font-size-small;
+      border: 0;
+      background: transparent;
+    }
+    .warning.jalios-icon {
+      font-size: @font-size-small;
+    }
+    .import-detail-cell UL {
+      margin-bottom: 0;
+      LI {
+        line-height: 20px; 
+      }
+    }
+  }
+  .success-detail + .error-detail {
+    margin-top: 20px;
+  }
+  .error-detail .panel-body {
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .workspace-group-list {
+    .wrapper {
+      .ws-close,
+      .ws-open {
+        text-decoration: none;
+        color: @gray-dark;
+      }
+      /* ToggleManager */
+      .ws-close {
+        display: block;
+      }
+      .ws-open {
+        display: none;
+      }
+      &.group-show .ws-close { display: none; }
+      &.group-show .ws-open { display: block; }
+    }
+    UL {
+    
+      &.workspaces-container {
+      
+        margin: 10px 0;
+        
+        .workspace {
+          margin-bottom: 5px;
+          
+          IMG.toggle-icon {
+            margin: 0 5px;
+          }
+          .workspace-label {
+            margin-left: 5px;
+          }
+          .group-name {
+            &.default-group {
+              font-style: italic;
+            }
+          }
+          INPUT.group-checker {
+            margin-top: 0;
+            margin-left: 5px;
+          }
+  
+        } // .workspace
+      }
+    }
+  }
+}
+
+.csv-import-modal.modal-result {
+  OL { margin-left: 40px; }
+}

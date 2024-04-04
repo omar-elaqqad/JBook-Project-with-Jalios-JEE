@@ -1,0 +1,3195 @@
+emojis.categories.recent: Utilisé récemment
+emojis.categories.people: Smileys et personnes
+emojis.categories.nature: Animaux & nature
+emojis.categories.food: Nourriture & boisson
+emojis.categories.activity: Activité
+emojis.categories.travel: Voyages & lieux
+emojis.categories.objects: Objets
+emojis.categories.symbols: Symboles
+emojis.categories.flags: Drapeaux
+emojis.1f600.name: Visage rigolard
+emojis.1f600.keywords: visage,grand,sourire,dent,heureux
+emojis.1f62c.name: Visage grimaçant
+emojis.1f62c.keywords: visage,grimace
+emojis.1f601.name: Visage rigolard avec des yeux rieurs
+emojis.1f601.keywords: œil,oeil,visage,sourire,rigole
+emojis.1f602.name: Visage avec des larmes de joie
+emojis.1f602.keywords: visage,joie,rire,larme
+emojis.1f603.name: Visage souriant avec la bouche ouverte
+emojis.1f603.keywords: visage,bouche,ouverte,sourire,heureux
+emojis.1f604.name: Visage souriant avec la bouche ouverte et les yeux rieurs
+emojis.1f604.keywords: œil,oeil,visage,bouche,ouverte,sourire,heureux
+emojis.1f923.name: Mort de rire à s'en rouler par terre
+emojis.1f923.keywords: visage,par terre,rire,lol,mdr,rouler
+emojis.1f605.name: Visage souriant avec la bouche ouverte et une sueur froide
+emojis.1f605.keywords: froide,visage,ouvert,sourire,sueur
+emojis.1f606.name: Visage souriant avec la bouche ouverte et les yeux bien fermés
+emojis.1f606.keywords: visage,rire,bouche,ouverte,satisfait,sourire
+emojis.1f607.name: Visage souriant avec un halo
+emojis.1f607.keywords: ange,visage,conte de fées,conte de fees,fantaisie,fantastique,halo,innocent,sourire
+emojis.1f609.name: Visage faisant un clin d'œil 
+emojis.1f609.keywords: visage,clin d'œil,clin d'oeil
+emojis.1f60a.name: Visage souriant avec des yeux rieurs
+emojis.1f60a.keywords: rougir,œil,oeil,visage,sourire
+emojis.1f642.name: Visage légèrement souriant
+emojis.1f642.keywords: visage,sourire,heureux
+emojis.1f643.name: Visage tête bèche
+emojis.1f643.keywords: visage,tête-bêche,tete-beche
+emojis.263a.name: Visage souriant
+emojis.263a.keywords: visage,souligné,souligne,relaxé,relaxe,sourire
+emojis.1f60b.name: Visage savourant un délicieux repas
+emojis.1f60b.keywords: délicieux,delicieux,visage,savourant,sourire,euh,miam
+emojis.1f60c.name: Visage soulagé
+emojis.1f60c.keywords: visage,soulagé,soulage
+emojis.1f60d.name: Visage souriant avec des yeux en forme de cœur
+emojis.1f60d.keywords: œil,oeil,visage,cœur,coeur,amour,sourire
+emojis.1f618.name: Visage envoyant un baiser
+emojis.1f618.keywords: visage,cœur,coeur,baiser
+emojis.1f617.name: Visage faisant un bisou
+emojis.1f617.keywords: visage,baiser
+emojis.1f619.name: Visage faisant un baiser avec des yeux rieurs
+emojis.1f619.keywords: œil,oeil,visage,bisou,sourire
+emojis.1f61a.name: Visage faisant un bisou avec les yeux fermés
+emojis.1f61a.keywords: fermé,ferme,œil,oeil,visage,bisou
+emojis.1f92a.name: Visage tout fou
+emojis.1f92a.keywords: yeux,souriant,fou,excité,excite,déchaîné,dechaine,enthousiaste,grand sourire
+emojis.1f61c.name: Visage tirant la langue et faisant un clin d'œil
+emojis.1f61c.keywords: œil,oeil,visage,blague,langue,clin d'œil,clin d'oeil
+emojis.1f61d.name: Visage tirant la langue avec les yeux bien fermés
+emojis.1f61d.keywords: œil,oeil,visage,horrible,goût,gout,langue
+emojis.1f61b.name: Visage tirant la langue
+emojis.1f61b.keywords: visage,langue
+emojis.1f911.name: Visage avec billets sur la bouche
+emojis.1f911.keywords: visage,argent,bouche
+emojis.1f60e.name: Visage souriant avec des lunettes de soleil
+emojis.1f60e.keywords: joyeux,cool,œil,oeil,lunettes,visage,lunettes,sourire,soleil,lunettes de soleil,météo,meteo,temps
+emojis.1f913.name: Visage d'intello
+emojis.1f913.keywords: visage,geek,intello
+emojis.1f9d0.name: Visage avec monocle
+emojis.1f9d0.keywords: riche,blindé,blinde
+emojis.1f920.name: Visage avec un chapeau de cowboy
+emojis.1f920.keywords: cowboy,cowgirl,visage,chapeau
+emojis.1f917.name: Visage faisant un câlin
+emojis.1f917.keywords: visage,câlin,calin,câliner,caliner
+emojis.1f921.name: Tête de clown
+emojis.1f921.keywords: clown,visage
+emojis.1f60f.name: Visage avec un sourire narquois
+emojis.1f60f.keywords: visage,narquois
+emojis.1f636.name: Visage sans bouche
+emojis.1f636.keywords: visage,bouche,calme,silencieux
+emojis.1f610.name: Visage neutre
+emojis.1f610.keywords: figé,fige,visage,neutre
+emojis.1f611.name: Visage inexpressif 
+emojis.1f611.keywords: sans expression,visage,inexpressif,inexpressif
+emojis.1f612.name: Visage blasé
+emojis.1f612.keywords: visage,blasé,blase,malheureux
+emojis.1f644.name: Visage avec les yeux levés au ciel
+emojis.1f644.keywords: yeux,visage,levés au ciel,leves au ciel
+emojis.1f928.name: Visage avec haussement de sourcils
+emojis.1f928.keywords: méfiance,mefiance,sceptique,désapprobation,desapprobation,incrédulité,incredulite,légère surprise,legere surprise,scepticisme
+emojis.1f914.name: Visage songeur
+emojis.1f914.keywords: visage,songeur
+emojis.1f92b.name: Visage demandant de garder le silence
+emojis.1f92b.keywords: chut,silence,faire taire
+emojis.1f92d.name: Visage avec main sur la bouche
+emojis.1f92d.keywords: yeux,souriant,couvrant,bouche,main
+emojis.1f925.name: Visage de menteur
+emojis.1f925.keywords: visage,mensonge,pinocchio
+emojis.1f633.name: Visage rougissant
+emojis.1f633.keywords: étourdi,etourdi,visage,rougissant
+emojis.1f61e.name: Visage déçu
+emojis.1f61e.keywords: déçu,decu,visage
+emojis.1f61f.name: Visage inquiet 
+emojis.1f61f.keywords: visage,inquiet
+emojis.1f620.name: Visage énervé
+emojis.1f620.keywords: énervé,enerve,visage,furieux
+emojis.1f621.name: Visage boudant
+emojis.1f621.keywords: faché,fache,visage,énervé,enerve,rage,rouge
+emojis.1f92c.name: Visage avec des symboles sur la bouche
+emojis.1f92c.keywords: en train de jurer,en train de maudire
+emojis.1f614.name: Visage pensif
+emojis.1f614.keywords: abattu,visage,pensif
+emojis.1f615.name: Visage confus
+emojis.1f615.keywords: confus,visage
+emojis.1f641.name: Visage légèrement renfrogné
+emojis.1f641.keywords: visage,renfrogné,renfrogne,triste,malheureux
+emojis.2639.name: Visage renfrogné
+emojis.2639.keywords: visage,renfrogné,renfrogne,triste,malheureux
+emojis.1f623.name: Visage persévérant
+emojis.1f623.keywords: visage,persévérant,perseverant
+emojis.1f616.name: Visage déconcerté
+emojis.1f616.keywords: confus,déconcerté,deconcerte,visage
+emojis.1f62b.name: Visage fatigué
+emojis.1f62b.keywords: visage,fatigué,fatigue
+emojis.1f629.name: Visage lassé
+emojis.1f629.keywords: visage,fatigué,fatigue,lassé,lasse
+emojis.1f624.name: Visage avec regard triomphant
+emojis.1f624.keywords: visage,triomphe,victorieux
+emojis.1f62e.name: Visage avec la bouche ouverte
+emojis.1f62e.keywords: visage,bouche,ouverte,compassion
+emojis.1f631.name: Visage hurlant de peur
+emojis.1f631.keywords: visage,peur,peureux,munch,effrayé,effraye,cri
+emojis.1f628.name: Visage apeuré
+emojis.1f628.keywords: visage,peur,peureux,effrayé,effraye
+emojis.1f630.name: Visage avec la bouche ouverte et des sueurs froides
+emojis.1f630.keywords: bleu,froid,visage,bouche,ouverte,pressé,presse,précipité,precipite,sueur
+emojis.1f62f.name: Visage silencieux
+emojis.1f62f.keywords: visage,silencieux,stupéfait,stupefait,surpris
+emojis.1f626.name: Visage fronçant les sourcils avec la bouche ouverte
+emojis.1f626.keywords: visage,sourcils froncés,fronces,bouche,ouverte
+emojis.1f627.name: Visage angoissé
+emojis.1f627.keywords: angoissé,angoisse,visage
+emojis.1f622.name: Visage pleurant
+emojis.1f622.keywords: pleurs,visage,triste,larme
+emojis.1f625.name: Visage déçu mais soulagé
+emojis.1f625.keywords: déçu,decu,visage,soulagé,soulage,ouf
+emojis.1f62a.name: Visage somnolent
+emojis.1f62a.keywords: visage,endormi
+emojis.1f924.name: Visage bavant
+emojis.1f924.keywords: bavant,visage
+emojis.1f613.name: Visage avec des sueurs froides
+emojis.1f613.keywords: froid,visage,sueur
+emojis.1f62d.name: Visage pleurant à chaudes larmes
+emojis.1f62d.keywords: pleurs,visage,triste,sanglot,larme
+emojis.1f929.name: En admiration
+emojis.1f929.keywords: yeux,visage,souriant,étoile,etoile,étoiles dans les yeux,etoiles dans les yeux,grand sourire
+emojis.1f635.name: Visage étourdi
+emojis.1f635.keywords: étourdi,etourdi,vertige,visage
+emojis.1f632.name: Visage étonné
+emojis.1f632.keywords: étonné,etonne,visage,choqué,choque,totalement
+emojis.1f92f.name: Tête qui explose
+emojis.1f92f.keywords: visage,choqué,choque,explosion,fou,hallucinant
+emojis.1f910.name: Visage avec bouche close par fermeture éclair
+emojis.1f910.keywords: visage,bouche,cousue,fermeture éclair,fermeture eclair
+emojis.1f637.name: Visage avec un masque médical
+emojis.1f637.keywords: froid,docteur,visage,masque,médicament,medicament,malade
+emojis.1f915.name: Visage bandé
+emojis.1f915.keywords: bandage,visage,douleur,blessure
+emojis.1f912.name: Visage avec thermomètre
+emojis.1f912.keywords: visage,malade,thermomètre,thermometre
+emojis.1f92e.name: Visage qui vomit
+emojis.1f92e.keywords: malade,vomi,dégueulis,degueulis
+emojis.1f922.name: Visage nauséeux
+emojis.1f922.keywords: visage,nauséeux,nauseeux,vomi
+emojis.1f927.name: Visage éternuant
+emojis.1f927.keywords: visage,à vos souhaits,,a vos souhaits,éternuement,eternuement
+emojis.1f634.name: Visage endormi
+emojis.1f634.keywords: visage,endormi,zzz
+emojis.1f4a4.name: Zzz
+emojis.1f4a4.keywords: comique,endormi,zzz
+emojis.1f608.name: Visage souriant avec des cornes
+emojis.1f608.keywords: visage,conte de fées,conte de fees,fantaisie,fantastique,cornes,sourire
+emojis.1f47f.name: Diablotin
+emojis.1f47f.keywords: démon,demon,maléfique,malefique,visage,conte de fées,conte de fees,fantaisie,fantastique,diablotin
+emojis.1f479.name: Ogre japonais
+emojis.1f479.keywords: créature,creature,visage,conte de fées,conte de fees,fantaisie,fantastique,japonais,monstre,ogre
+emojis.1f47a.name: Lutin japonais
+emojis.1f47a.keywords: créature,creature,visage,conte de fées,conte de fees,fantaisie,fantastique,lutin,japonais,monstre
+emojis.1f4a9.name: Tas de merde
+emojis.1f4a9.keywords: comique,fumier,visage,monstre,caca,caca
+emojis.1f47b.name: Fantôme
+emojis.1f47b.keywords: créature,creature,visage,conte de fées,conte de fees,fantaisie,fantastique,fantôme,fantome,monstre
+emojis.1f480.name: Crâne
+emojis.1f480.keywords: corps,mort,visage,conte de fées,conte de fees,monstre,crâne,crane
+emojis.2620.name: Crâne et os croisés
+emojis.2620.keywords: corps,os entrecroisés,os entrecroises,mort,visage,monstre,crâne,crane
+emojis.1f47d.name: Extraterrestre
+emojis.1f47d.keywords: extraterrestre,créature,creature,visage,conte de fées,conte de fees,fantaisie,fantastique,monstre,espace,ovni
+emojis.1f916.name: Visage de robot
+emojis.1f916.keywords: visage,monstre,robot
+emojis.1f383.name: Citrouille-lanterne
+emojis.1f383.keywords: activité,activite,fête,fete,divertissement,halloween,jack,lanterne,citrouille
+emojis.1f63a.name: Tête de chat souriant avec la bouche ouverte
+emojis.1f63a.keywords: chat,visage,bouche,ouverte,sourire
+emojis.1f638.name: Tête de chat rigolarde avec des yeux rieurs
+emojis.1f638.keywords: chat,œil,oeil,tête,tete,sourire
+emojis.1f639.name: Tête de chat avec des larmes de joie
+emojis.1f639.keywords: chat,visage,joie,larme
+emojis.1f63b.name: Tête de chat souriant avec des yeux en forme de cœur
+emojis.1f63b.keywords: chat,œil,oeil,visage,cœur,coeur,amour,sourire
+emojis.1f63c.name: Tête de chat avec un sourire ironique
+emojis.1f63c.keywords: chat,tête,tete,ironique,sourire,tordu
+emojis.1f63d.name: Tête d'un chat faisant un baiser avec les yeux fermés
+emojis.1f63d.keywords: chat,œil,oeil,tête,tete,bisou
+emojis.1f640.name: Tête de chat épuisé
+emojis.1f640.keywords: chat,tête,tete,oh,surpris,lassé,lasse
+emojis.1f63f.name: Tête de chat qui pleure
+emojis.1f63f.keywords: chat,pleur,tête,tete,triste,larme
+emojis.1f63e.name: Tête de chat boudant
+emojis.1f63e.keywords: chat,tête,tete,boudant
+emojis.1f450.name: Mains ouvertes
+emojis.1f450.keywords: corps,main,ouverte
+emojis.1f932.name: Deux paumes levées
+emojis.1f932.keywords: prière,priere,mains formant une coupe
+emojis.1f64c.name: Personne levant les mains en l'air en guise de célébration
+emojis.1f64c.keywords: corps,fête,fete,geste,main,hourra,levé,leve
+emojis.1f44f.name: Applaudissements
+emojis.1f44f.keywords: applaudissements,corps,applaudir,main
+emojis.1f64f.name: Personne avec les mains jointes
+emojis.1f64f.keywords: demander,corps,saluer,plié,plie,geste,main,s'il vous plaît,s'il vous plait,svp,prier,merci
+emojis.1f91d.name: Poignée de mains
+emojis.1f91d.keywords: accord,main,poignée de main,poignee de main,réunion,reunion,serrer
+emojis.1f44d.name: Pouce levé
+emojis.1f44d.keywords: corps,haut,pouce,pouce levé,pouce leve,+1
+emojis.1f44e.name: Pouce baissé
+emojis.1f44e.keywords: corps,bas,main,pouce,pouce baissé,pouce baisse,-1
+emojis.1f44a.name: Poing fermé
+emojis.1f44a.keywords: corps,fermé,ferme,poing,main,coup de poing
+emojis.270a.name: Poing levé
+emojis.270a.keywords: corps,fermé,ferme,poing,main,coup de poing
+emojis.1f91b.name: Poing vers la gauche
+emojis.1f91b.keywords: poing,vers la gauche
+emojis.1f91c.name: Poing vers la droite
+emojis.1f91c.keywords: poing,vers la droite
+emojis.1f91e.name: Main avec index et majeur croisés
+emojis.1f91e.keywords: croisé,croise,doigt,main,chance
+emojis.270c.name: V de la victoire
+emojis.270c.keywords: corps,main,v,victoire
+emojis.1f918.name: Signe des cornes avec les mains
+emojis.1f918.keywords: corps,doigt,main,cornes,rock-on
+emojis.1f91f.name: Geste Je t'aime
+emojis.1f91f.keywords: je t'm,je t'aime,main,signe
+emojis.1f44c.name: OK de la main
+emojis.1f44c.keywords: corps,main,ok
+emojis.1f448.name: Revers de main avec index pointant vers la gauche
+emojis.1f448.keywords: revers de la main,corps,doigt,main,index,pointer
+emojis.1f449.name: Index pointant vers la droite
+emojis.1f449.keywords: revers de la main,corps,doigt,main,index,pointer
+emojis.1f446.name: Revers de main avec index pointant vers le haut
+emojis.1f446.keywords: revers de la main,corps,doigt,main,index,pointer,vers le haut
+emojis.1f447.name: Revers de main avec index pointant vers le bas
+emojis.1f447.keywords: revers de la main,corps,vers le bas,doigt,main,index,pointer
+emojis.261d.name: Index pointant vers le haut
+emojis.261d.keywords: corps,doigt,main,index,pointer,vers le haut
+emojis.270b.name: Main levée
+emojis.270b.keywords: corps,main
+emojis.1f91a.name: Main levée de dos
+emojis.1f91a.keywords: revers de la main,levé,leve
+emojis.1f590.name: Main levée avec doigts écartés
+emojis.1f590.keywords: corps,doigt,main,écarté,ecarte
+emojis.1f596.name: Main levée avec espace entre le majeur et l'annulaire
+emojis.1f596.keywords: corps,doigt,main,spock,vulcain
+emojis.1f44b.name: Salut de la main
+emojis.1f44b.keywords: corps,main,salut,saluer
+emojis.1f919.name: Main faisant signe de s'appeler
+emojis.1f919.keywords: appel,main
+emojis.1f4aa.name: Biceps en flexion
+emojis.1f4aa.keywords: biceps,corps,comique,fléchir,flechir,contracter,muscle
+emojis.1f595.name: Main de dos avec majeur tendu
+emojis.1f595.keywords: corps,doigt,main,majeur
+emojis.270d.name: Main qui écrit
+emojis.270d.keywords: corps,main,écrire,ecrire
+emojis.1f933.name: Selfie
+emojis.1f933.keywords: appareil photo,téléphone,telephone,selfie
+emojis.1f485.name: Vernis à ongle
+emojis.1f485.keywords: corps,soin,cosmétiques,cosmetiques,manucure,ongle,vernis
+emojis.1f444.name: Bouche
+emojis.1f444.keywords: corps,lèvres,levres,bouche
+emojis.1f445.name: Langue
+emojis.1f445.keywords: corps,langue
+emojis.1f442.name: Oreille
+emojis.1f442.keywords: corps,nez
+emojis.1f443.name: Nez
+emojis.1f443.keywords: corps,nez
+emojis.1f441.name: Oeil
+emojis.1f441.keywords: corps,œil,oeil
+emojis.1f440.name: Yeux
+emojis.1f440.keywords: corps,œil,oeil,visage
+emojis.1f9e0.name: Cerveau
+emojis.1f9e0.keywords: corps,organe,intelligent
+emojis.1f464.name: Silhouette d'un buste
+emojis.1f464.keywords: buste,silhouette
+emojis.1f465.name: Silhouette de bustes
+emojis.1f465.keywords: buste,silhouette
+emojis.1f5e3.name: Silhouette d'une tête qui parle
+emojis.1f5e3.keywords: visage,tête,tete,silhouette,parole,qui parle
+emojis.1f476.name: Bébé
+emojis.1f476.keywords: bébé,bebe
+emojis.1f9d2.name: Enfant
+emojis.1f9d2.keywords: personne,garçon,garcon,enfant,fille
+emojis.1f466.name: Garçon
+emojis.1f466.keywords: garçon,garcon,enfant
+emojis.1f467.name: Fille
+emojis.1f467.keywords: fille,jeune fille,vierge,zodiaque,enfant
+emojis.1f9d1.name: Adulte
+emojis.1f9d1.keywords: personne,adulte,homme,femme,masculin,feminin,féminin,hommes,femmes
+emojis.1f468.name: Homme
+emojis.1f468.keywords: homme,moustache,masculin,hommes
+emojis.1f9d4.name: Personne barbue
+emojis.1f9d4.keywords: barbe,barbu,homme,masculin,hommes
+emojis.1f471-200d-2642-fe0f.name: Homme blond
+emojis.1f471-200d-2642-fe0f.keywords: blonds,blond,cheveux,homme,hommes
+emojis.1f471.name: Personne avec les cheveux blonds
+emojis.1f471.keywords: blonds,blond,cheveux,homme,hommes
+emojis.1f469.name: Femme
+emojis.1f469.keywords: femme,féminin,feminin,femmes
+emojis.1f471-200d-2640-fe0f.name: Femme blonde
+emojis.1f471-200d-2640-fe0f.keywords: blonds,blonde,cheveux,femme,femmes
+emojis.1f9d3.name: Adulte plus âgé
+emojis.1f9d3.keywords: personne,vieux,vieille,âgé,âgée,age,agee,homme,femme,hommes,femmes
+emojis.1f474.name: Vieil homme
+emojis.1f474.keywords: vieil,vieux,âgé,age,ancien,homme,hommes
+emojis.1f475.name: Vieille femme
+emojis.1f475.keywords: vieille,âgée,agee,ancien,femme,femmes
+emojis.1f472.name: Homme avec une calotte traditionelle chinoise
+emojis.1f472.keywords: calotte traditionnelle chinoise,chapeau,homme,hommes
+emojis.1f473-200d-2640-fe0f.name: Femme avec un turban
+emojis.1f473-200d-2640-fe0f.keywords: turban,femme,femmes
+emojis.1f473-200d-2642-fe0f.name: Homme avec un turban
+emojis.1f473-200d-2642-fe0f.keywords: turban,homme,hommes
+emojis.1f473.name: Homme avec un turban
+emojis.1f473.keywords: turban,homme,hommes
+emojis.1f9d5.name: Femme portant le foulard
+emojis.1f9d5.keywords: foulard,hijab,mantille,foulard juif,bandana,foulard islamique,femme,feminin,féminin,femmes
+emojis.1f46e-200d-2640-fe0f.name: Policière
+emojis.1f46e-200d-2640-fe0f.keywords: policière,policiere,officier,police,femme,femmes
+emojis.1f46e-200d-2642-fe0f.name: Policier
+emojis.1f46e-200d-2642-fe0f.keywords: policier,officier,police,homme,hommes
+emojis.1f46e.name: Officier de police
+emojis.1f46e.keywords: policier,officier,police,homme,hommes
+emojis.1f469-200d-1f692.name: Femme pompier
+emojis.1f469-200d-1f692.keywords: feu,pompier,femme,femmes
+emojis.1f468-200d-1f692.name: Pompier
+emojis.1f468-200d-1f692.keywords: feu,pompier,homme,hommes
+emojis.1f477-200d-2640-fe0f.name: Ouvrière du bâtiment
+emojis.1f477-200d-2640-fe0f.keywords: bâtiment,batiment,ouvrière,ouvriere,femme,femmes
+emojis.1f477-200d-2642-fe0f.name: Ouvrier du bâtiment
+emojis.1f477-200d-2642-fe0f.keywords: bâtiment,batiment,ouvrier
+emojis.1f477.name: Ouvrier du bâtiment 
+emojis.1f477.keywords: bâtiment,batiment,ouvrier
+emojis.1f469-200d-1f3ed.name: Ouvrière
+emojis.1f469-200d-1f3ed.keywords: usine,industriel,soudeuse,femme,femmes
+emojis.1f468-200d-1f3ed.name: Ouvrier
+emojis.1f468-200d-1f3ed.keywords: usine,industriel,soudeur,homme,hommes
+emojis.1f469-200d-1f527.name: Mécanicienne
+emojis.1f469-200d-1f527.keywords: commerçante,commercante,plombière,plombiere,électricienne,electricienne,réparatrice,reparatrice,femme,femmes
+emojis.1f468-200d-1f527.name: Mécanicien
+emojis.1f468-200d-1f527.keywords: commerçant,commercant,plombier,électricien,electricien,réparateur,reparateur,homme,hommes
+emojis.1f469-200d-1f33e.name: Agricultrice
+emojis.1f469-200d-1f33e.keywords: ouvrière agricole,ouvriere agricole,agricultrice,éleveuse,eleveuse,jardinière,jardiniere,agriculture,femme,femmes
+emojis.1f468-200d-1f33e.name: Agriculteur
+emojis.1f468-200d-1f33e.keywords: ouvrier agricole,agriculteur,éleveur,eleveur,jardinier,agriculture,homme,hommes
+emojis.1f469-200d-1f373.name: Cuisinière
+emojis.1f469-200d-1f373.keywords: cuisine,service,cheffe,cuisinière,cuisiniere,cuisiner,femme,femmes
+emojis.1f468-200d-1f373.name: Cuisinier
+emojis.1f468-200d-1f373.keywords: cuisine,service,chef,cuisinier,cuisiner,homme,hommes
+emojis.1f469-200d-1f3a4.name: Chanteuse
+emojis.1f469-200d-1f3a4.keywords: musique,musicienne,rockeuse,star du rock,artiste,femme,femmes
+emojis.1f468-200d-1f3a4.name: Chanteur
+emojis.1f468-200d-1f3a4.keywords: musique,musicien,rocker,star du rock,artiste,homme,hommes
+emojis.1f469-200d-1f3a8.name: Artiste féminine
+emojis.1f469-200d-1f3a8.keywords: art,artiste,peinture,peintre,femme,femmes
+emojis.1f468-200d-1f3a8.name: Artiste masculin
+emojis.1f468-200d-1f3a8.keywords: art,artiste,peinture,peintre,homme,hommes
+emojis.1f469-200d-1f3eb.name: Enseignante
+emojis.1f469-200d-1f3eb.keywords: éducation,education,enseignante,institutrice,éducatrice,educatrice,professeure,instructrice,femme,femmes
+emojis.1f468-200d-1f3eb.name: Enseignant
+emojis.1f468-200d-1f3eb.keywords: éducation,education,enseignant,instituteur,professeur,éducateur,educateur,instructeur,homme,hommes
+emojis.1f469-200d-1f393.name: Étudiante
+emojis.1f469-200d-1f393.keywords: élève,eleve,diplômée,diplomee,éducation,education,école,ecole,femme,femmes
+emojis.1f468-200d-1f393.name: Étudiant
+emojis.1f468-200d-1f393.keywords: élève,eleve,diplômé,diplome,éducation,education,école,ecole,homme,hommes
+emojis.1f469-200d-1f4bc.name: Employée de bureau
+emojis.1f469-200d-1f4bc.keywords: bureau,comptable,banquière,banquiere,manager,manageuse,conseillère,conseillere,secrétaire,secretaire,analyste,femme,femmes
+emojis.1f468-200d-1f4bc.name: Employé de bureau
+emojis.1f468-200d-1f4bc.keywords: bureau,comptable,banquier,manager,manageur,conseiller,secrétaire,secretaire,analyste,homme,hommes
+emojis.1f469-200d-1f4bb.name: Femme technologue
+emojis.1f469-200d-1f4bb.keywords: technologie,logiciel,ingénieure,ingenieure,codeuse,développeuse,developpeuse,ordinateur portable,femme,femmes
+emojis.1f468-200d-1f4bb.name: Homme technologue
+emojis.1f468-200d-1f4bb.keywords: technologie,logiciel,ingénieur,ingenieur,codeur,développeur,developpeur,ordinateur portable,homme,hommes
+emojis.1f469-200d-1f52c.name: Femme scientifique
+emojis.1f469-200d-1f52c.keywords: scientifique,chimiste,ingénieure,ingenieure,mathématicienne,mathematicienne,physicienne,biologiste,technicienne de laboratoire,femme,femmes
+emojis.1f468-200d-1f52c.name: Homme scientifique
+emojis.1f468-200d-1f52c.keywords: scientifique,chimiste,ingénieur,ingenieur,mathématicien,mathematicien,physicien,biologiste,technicien de laboratoire,homme,hommes
+emojis.1f469-200d-1f680.name: Femme astronaute
+emojis.1f469-200d-1f680.keywords: espace,étoiles,etoiles,lune,planètes,planetes,femme,femmes
+emojis.1f468-200d-1f680.name: Homme astronaute
+emojis.1f468-200d-1f680.keywords: espace,étoiles,etoiles,lune,planètes,planetes,homme,hommes
+emojis.1f469-200d-2695-fe0f.name: Femme travaillant dans le secteur de la santé
+emojis.1f469-200d-2695-fe0f.keywords: docteure,doctoresse,médecin,medecin,dre,infirmière,infirmiere,dentiste,professionnelle de santé,professionnelle de sante,thérapeute,therapeute,femme,femmes
+emojis.1f468-200d-2695-fe0f.name: Homme travaillant dans le secteur de la santé
+emojis.1f468-200d-2695-fe0f.keywords: docteur,médecin,medecin,dr,infirmier,dentiste,professionnel de santé,professionnel de sante,thérapeute,therapeute,homme,hommes
+emojis.1f469-200d-2696-fe0f.name: Femme juge
+emojis.1f469-200d-2696-fe0f.keywords: juge,tribunal,loi,femme,femmes
+emojis.1f468-200d-2696-fe0f.name: Homme juge
+emojis.1f468-200d-2696-fe0f.keywords: juge,tribunal,loi,homme,hommes
+emojis.1f469-200d-2708-fe0f.name: Femme pilote
+emojis.1f469-200d-2708-fe0f.keywords: pilote,avion,aviatrice,aviation,femme,femmes
+emojis.1f468-200d-2708-fe0f.name: Homme pilote
+emojis.1f468-200d-2708-fe0f.keywords: pilote,avion,aviateur,aviation,homme,hommes
+emojis.1f482-200d-2640-fe0f.name: Gardienne
+emojis.1f482-200d-2640-fe0f.keywords: gardienne,garde,femme,femmes
+emojis.1f482-200d-2642-fe0f.name: Gardien
+emojis.1f482-200d-2642-fe0f.keywords: gardien,garde,homme,hommes
+emojis.1f482.name: Garde
+emojis.1f482.keywords: gardien,garde,homme,hommes
+emojis.1f575-fe0f-200d-2640-fe0f.name: Détective privée
+emojis.1f575-fe0f-200d-2640-fe0f.keywords: détective,detective,privée,privee,enquêtrice,enquetrice,fin limier,espionne,femme,femmes
+emojis.1f575-fe0f-200d-2642-fe0f.name: Détective privé
+emojis.1f575-fe0f-200d-2642-fe0f.keywords: détective,detective,privé,prive,enquêteur,enqueteur,fin limier,espion,homme,hommes
+emojis.1f575.name: Détective ou espion
+emojis.1f575.keywords: détective,detective,privé,prive,enquêteur,enqueteur,fin limier,espion,homme,hommes
+emojis.1f385.name: Père Noël
+emojis.1f385.keywords: activité,activite,fête,fete,noël,noel,père,pere,père noël,pere noel,homme,hommes
+emojis.1f936.name: Mère Noël
+emojis.1f936.keywords: activité,activite,fête,fete,noël,noel,mère,mere,mère noël,mere noel,père,pere,femme,femmes
+emojis.1f47c.name: Bébé ange
+emojis.1f47c.keywords: ange,bébé,bebe,visage,conte de fées,conte de fees,fantaisie,fantastique
+emojis.1f478.name: Princesse
+emojis.1f478.keywords: conte de fée,conte de fee,fantaisie,fantastique,princesse,femme,femmes
+emojis.1f934.name: Prince
+emojis.1f934.keywords: conte de fée,conte de fee,fantaisie,fantastique,prince,homme,hommes
+emojis.1f470.name: Mariée avec un voile
+emojis.1f470.keywords: mariée,mariee,voile,mariage,femme,femmes
+emojis.1f935.name: Homme en costume
+emojis.1f935.keywords: marié,marie,costume,homme,hommes
+emojis.1f574.name: Homme en costume d'affaires qui lévite
+emojis.1f574.keywords: affaires,costume,homme,hommes
+emojis.1f9d9.name: Mage
+emojis.1f9d9.keywords: fantaisie,sorcier,magicien,homme,masculin,hommes
+emojis.1f9d9-200d-2640-fe0f.name: Femme mage
+emojis.1f9d9-200d-2640-fe0f.keywords: fantaisie,sorcière,sorciere,femme,féminin,feminin,femmes
+emojis.1f9d9-200d-2642-fe0f.name: Homme mage
+emojis.1f9d9-200d-2642-fe0f.keywords: fantaisie,sorcier,magicien,homme,masculin,hommes
+emojis.1f9dd.name: Elfe
+emojis.1f9dd.keywords: fantaisie,elfe,oreilles pointues,homme,masculin,hommes
+emojis.1f9dd-200d-2640-fe0f.name: Lutine
+emojis.1f9dd-200d-2640-fe0f.keywords: fantaisie,elfe,oreilles pointues,femme,féminin,feminin,femmes
+emojis.1f9dd-200d-2642-fe0f.name: Lutin
+emojis.1f9dd-200d-2642-fe0f.keywords: fantaisie,elfe,oreilles pointues,homme,masculin,hommes
+emojis.1f9da.name: Fée
+emojis.1f9da.keywords: fantaisie,titania,ailes,femme,feminin,féminin,femmes
+emojis.1f9da-200d-2640-fe0f.name: Fée
+emojis.1f9da-200d-2640-fe0f.keywords: fantaisie,titania,ailes,femme,feminin,féminin,femmes
+emojis.1f9da-200d-2642-fe0f.name: Homme fée
+emojis.1f9da-200d-2642-fe0f.keywords: fantaisie,oberon,obéron,auberon,aubéron,lutin,homme,masculin,hommes
+emojis.1f9de.name: Génie
+emojis.1f9de.keywords: fantaisie,djinn,homme,masculin,hommes
+emojis.1f9de-200d-2640-fe0f.name: Femme génie
+emojis.1f9de-200d-2640-fe0f.keywords: fantaisie,djinn,femme,féminin,feminin,femmes
+emojis.1f9de-200d-2642-fe0f.name: Homme génie
+emojis.1f9de-200d-2642-fe0f.keywords: fantaisie,djinn,homme,masculin,hommes
+emojis.1f9dc.name: Personne sirène
+emojis.1f9dc.keywords: fantaisie,triton,homme,masculin,hommes
+emojis.1f9dc-200d-2640-fe0f.name: Sirène
+emojis.1f9dc-200d-2640-fe0f.keywords: fantaisie,sirène,sirene,femme,feminin,féminin,femmes
+emojis.1f9dc-200d-2642-fe0f.name: Triton
+emojis.1f9dc-200d-2642-fe0f.keywords: fantaisie,triton,homme,masculin,hommes
+emojis.1f9db.name: Vampire
+emojis.1f9db.keywords: fantaisie,dracula,mort-vivant,mort vivant,homme,masculin,hommes
+emojis.1f9db-200d-2640-fe0f.name: Femme vampire
+emojis.1f9db-200d-2640-fe0f.keywords: fantaisie,mort-vivant,mort vivant,femme,feminin,féminin,femmes,morte vivante,morte-vivante
+emojis.1f9db-200d-2642-fe0f.name: Homme vampire
+emojis.1f9db-200d-2642-fe0f.keywords: fantaisie,dracula,mort-vivant,mort vivant,homme,masculin,hommes
+emojis.1f9df.name: Zombie
+emojis.1f9df.keywords: fantaisie,mort-vivant,mort vivant,homme,masculin,hommes
+emojis.1f9df-200d-2640-fe0f.name: Femme zombie
+emojis.1f9df-200d-2640-fe0f.keywords: fantaisie,mort-vivant,mort vivant,femme,feminin,féminin,femmes,morte vivante,morte-vivante
+emojis.1f9df-200d-2642-fe0f.name: Homme zombie
+emojis.1f9df-200d-2642-fe0f.keywords: fantaisie,mort-vivant,mort vivant,homme,masculin,hommes
+emojis.1f647-200d-2640-fe0f.name: Femme qui s'incline
+emojis.1f647-200d-2640-fe0f.keywords: excuses,incliner,geste,désolée,desolee,femme,femmes
+emojis.1f647-200d-2642-fe0f.name: Homme qui s'incline
+emojis.1f647-200d-2642-fe0f.keywords: excuse,incliner,geste,désolé,desole,homme,hommes
+emojis.1f647.name: Personne s'inclinant profondément
+emojis.1f647.keywords: excuse,incliner,geste,désolé,desole,homme,hommes
+emojis.1f481.name: Guichetier
+emojis.1f481.keywords: main,aide,information,insolente,femme,femmes
+emojis.1f481-200d-2640-fe0f.name: Femme avec la main vers le haut
+emojis.1f481-200d-2640-fe0f.keywords: main,aide,information,insolente,femme,femmes
+emojis.1f481-200d-2642-fe0f.name: Homme avec la main vers le haut
+emojis.1f481-200d-2642-fe0f.keywords: main,aide,information,insolent,homme,hommes
+emojis.1f645.name: Visage avec un geste de refus
+emojis.1f645.keywords: interdit,geste,main,non,femme,femmes
+emojis.1f645-200d-2640-fe0f.name: Femme faisant un geste de désapprobation
+emojis.1f645-200d-2640-fe0f.keywords: interdit,geste,main,non,femme,femmes
+emojis.1f645-200d-2642-fe0f.name: Homme faisant un geste de désapprobation
+emojis.1f645-200d-2642-fe0f.keywords: interdit,geste,main,non,homme,hommes
+emojis.1f646.name: Visage avec un geste d'approbation
+emojis.1f646.keywords: geste,main,ok,d'accord,approbation,impeccable,tout va bien,femme,femmes
+emojis.1f646-200d-2640-fe0f.name: Femme faisant un geste d'approbation
+emojis.1f646-200d-2640-fe0f.keywords: geste,main,ok,d'accord,approbation,impeccable,tout va bien,femme,femmes
+emojis.1f646-200d-2642-fe0f.name: Homme faisant un geste d'approbation
+emojis.1f646-200d-2642-fe0f.keywords: geste,main,ok,d'accord,approbation,impeccable,tout va bien,homme,hommes
+emojis.1f937.name: Haussement d'épaules
+emojis.1f937.keywords: doute,ignorance,indifférence,indifference,haussement d'épaules,haussement d'epaules,femme,femmes
+emojis.1f937-200d-2640-fe0f.name: Femme haussant les épaules
+emojis.1f937-200d-2640-fe0f.keywords: doute,ignorance,indifférence,indifference,haussement d'épaules,haussement d'epaules,femme,femmes
+emojis.1f937-200d-2642-fe0f.name: Homme haussant les épaules
+emojis.1f937-200d-2642-fe0f.keywords: doute,ignorance,indifférence,indifference,haussement d'épaules,haussement d'epaules,homme,hommes
+emojis.1f64b.name: Personne heureuse levant un bras 
+emojis.1f64b.keywords: geste,main,heureuse,contente,levée,levee,femme,femmes
+emojis.1f64b-200d-2640-fe0f.name: Femme levant la main
+emojis.1f64b-200d-2640-fe0f.keywords: geste,main,heureuse,contente,levée,levee,femme,femmes
+emojis.1f64b-200d-2642-fe0f.name: Homme levant la main
+emojis.1f64b-200d-2642-fe0f.keywords: geste,main,heureux,content,levée,levee,homme,hommes
+emojis.1f926.name: Main sur le visage
+emojis.1f926.keywords: incrédulité,incrédulite,exaspération,exasperation,visage,paume,main,femme,femmes
+emojis.1f926-200d-2640-fe0f.name: Femme avec une main sur le front
+emojis.1f926-200d-2640-fe0f.keywords: incrédulité,incrédulite,exaspération,exasperation,visage,paume,main,femme,femmes
+emojis.1f926-200d-2642-fe0f.name: Homme avec une main sur le front
+emojis.1f926-200d-2642-fe0f.keywords: incrédulité,incrédulite,exaspération,exasperation,visage,paume,main,homme,hommes
+emojis.1f64e.name: Personne faisant la moue
+emojis.1f64e.keywords: geste,bouder,femme,femmes
+emojis.1f64e-200d-2640-fe0f.name: Femme qui boude
+emojis.1f64e-200d-2640-fe0f.keywords: geste,bouder,femme,femmes
+emojis.1f64e-200d-2642-fe0f.name: Homme qui boude
+emojis.1f64e-200d-2642-fe0f.keywords: geste,bouder,homme,hommes
+emojis.1f64d.name: Personne fronçant les sourcils
+emojis.1f64d.keywords: froncement de sourcils,geste,femme,femmes
+emojis.1f64d-200d-2640-fe0f.name: Femme fronçant les sourcils
+emojis.1f64d-200d-2640-fe0f.keywords: froncement de sourcils,geste,femme,femmes
+emojis.1f64d-200d-2642-fe0f.name: Homme qui fronce les sourcils
+emojis.1f64d-200d-2642-fe0f.keywords: froncement de sourcils,geste,homme,hommes
+emojis.1f487.name: Coupe de cheveux
+emojis.1f487.keywords: coiffeur,coiffeuse,beauté,beaute,,coupe de cheveux,salon,femme,femmes
+emojis.1f487-200d-2640-fe0f.name: Femme qui se fait couper les cheveux
+emojis.1f487-200d-2640-fe0f.keywords: coiffeur,coiffeuse,beauté,beaute,,coupe de cheveux,salon,femme,femmes
+emojis.1f487-200d-2642-fe0f.name: Homme qui se fait couper les cheveux
+emojis.1f487-200d-2642-fe0f.keywords: coiffeur,coiffeuse,beauté,beaute,coupe de cheveux,salon,homme,hommes
+emojis.1f486.name: Massage du visage
+emojis.1f486.keywords: massage,salon,femme,femmes
+emojis.1f486-200d-2640-fe0f.name: Femme se faisant masser la tête
+emojis.1f486-200d-2640-fe0f.keywords: massage,salon,femme,femmes
+emojis.1f486-200d-2642-fe0f.name: Homme se faisant masser la tête
+emojis.1f486-200d-2642-fe0f.keywords: massage,salon,homme,hommes
+emojis.1f930.name: Femme enceinte
+emojis.1f930.keywords: enceinte,bébé,bebe,femme,feminin,féminin,femmes
+emojis.1f931.name: Allaitement
+emojis.1f931.keywords: sein,bébé,bebe,nourrisson,mere,mère,enfant,allaitante,lait,femme,féminin,feminin,femmes
+emojis.1f6b6-200d-2640-fe0f.name: Femme qui marche
+emojis.1f6b6-200d-2640-fe0f.keywords: randonnée,randonnee,randonneuse,pédestre,pedestre,promenade,marche,femme,femmes
+emojis.1f6b6-200d-2642-fe0f.name: Homme qui marche
+emojis.1f6b6-200d-2642-fe0f.keywords: randonnée,randonnee,randonneur,pédestre,pedestre,promenade,marche,homme,hommes
+emojis.1f6b6.name: Piéton
+emojis.1f6b6.keywords: randonnée,randonnee,randonneur,pédestre,pedestre,promenade,marche,homme,hommes
+emojis.1f3c3-200d-2640-fe0f.name: Femme qui court
+emojis.1f3c3-200d-2640-fe0f.keywords: marathon,coureuse,course,femme,femmes
+emojis.1f3c3-200d-2642-fe0f.name: Homme qui court
+emojis.1f3c3-200d-2642-fe0f.keywords: marathon,coureur,course,homme,hommes
+emojis.1f3c3.name: Coureur
+emojis.1f3c3.keywords: marathon,coureur,course,homme,hommes
+emojis.1f483.name: Danseur
+emojis.1f483.keywords: danse,dansant,danseuse,femme,femmes
+emojis.1f57a.name: Homme qui danse
+emojis.1f57a.keywords: danse,dansant,danseur,homme,hommes
+emojis.1f46f.name: Femmes avec des oreilles de lapin
+emojis.1f46f.keywords: lapin,danseuse,femme,femmes
+emojis.1f46f-200d-2640-fe0f.name: Femmes avec des oreilles de lapin
+emojis.1f46f-200d-2640-fe0f.keywords: lapin,danseuse,femme,femmes
+emojis.1f46f-200d-2642-fe0f.name: Hommes avec des oreilles de lapin
+emojis.1f46f-200d-2642-fe0f.keywords: lapin,danseur,homme,hommes
+emojis.1f46b.name: Homme et femme se tenant par la main
+emojis.1f46b.keywords: couple,main,tenir,homme,femme,hommes,femmes
+emojis.1f46c.name: Deux hommes se tenant par la main
+emojis.1f46c.keywords: couple,main,tenir,homme,hommes
+emojis.1f46d.name: Deux femmes se tenant par la main
+emojis.1f46d.keywords: couple,main,tenir,femme,femmes
+emojis.1f491.name: Couple avec un cœur
+emojis.1f491.keywords: couple,cœur,coeur,amour,romance,homme,femme,hommes,femmes
+emojis.1f469-200d-2764-fe0f-200d-1f469.name: Couple avec cœur (femme, femme)
+emojis.1f469-200d-2764-fe0f-200d-1f469.keywords: couple,cœur,coeur,amour,romance,femme,femmes
+emojis.1f468-200d-2764-fe0f-200d-1f468.name: Couple avec cœur (homme, homme)
+emojis.1f468-200d-2764-fe0f-200d-1f468.keywords: couple,cœur,coeur,amour,romance,homme,hommes
+emojis.1f48f.name: Baiser
+emojis.1f48f.keywords: couple,baiser,cœur,coeur,amour,romance,homme,femme,hommes,femmes
+emojis.1f469-200d-2764-fe0f-200d-1f48b-200d-1f469.name: Baiser (femme, femme)
+emojis.1f469-200d-2764-fe0f-200d-1f48b-200d-1f469.keywords: couple,baiser,cœur,coeur,amour,romance,femme,femmes
+emojis.1f468-200d-2764-fe0f-200d-1f48b-200d-1f468.name: Baiser (homme, homme)
+emojis.1f468-200d-2764-fe0f-200d-1f48b-200d-1f468.keywords: couple,baiser,cœur,coeur,amour,romance,homme,hommes
+emojis.1f46a.name: Famille
+emojis.1f46a.keywords: famille,père,pere,mère,mere,homme,femme,hommes,femmes,garçon,garcon,enfant
+emojis.1f468-200d-1f469-200d-1f467.name: Famille (homme, femme, fille)
+emojis.1f468-200d-1f469-200d-1f467.keywords: famille,père,pere,mère,mere,homme,femme,hommes,femmes,fille,enfant
+emojis.1f468-200d-1f469-200d-1f467-200d-1f466.name: Famille (homme, femme, fille, garçon)
+emojis.1f468-200d-1f469-200d-1f467-200d-1f466.keywords: famille,père,pere,mère,mere,homme,femme,hommes,femmes,garçon,garcon,fille,enfant
+emojis.1f468-200d-1f469-200d-1f466-200d-1f466.name: Famille (homme, femme, garçon, garçon)
+emojis.1f468-200d-1f469-200d-1f466-200d-1f466.keywords: famille,père,pere,mère,mere,homme,femme,hommes,femmes,garçon,garcon,enfant
+emojis.1f468-200d-1f469-200d-1f467-200d-1f467.name: Famille (homme, femme, fille, fille)
+emojis.1f468-200d-1f469-200d-1f467-200d-1f467.keywords: famille,père,pere,mère,mere,homme,femme,hommes,femmes,fille,enfant
+emojis.1f469-200d-1f469-200d-1f466.name: Famille (femme, femme, garçon)
+emojis.1f469-200d-1f469-200d-1f466.keywords: famille,mère,mere,femme,femmes,garçon,garcon,enfant
+emojis.1f469-200d-1f469-200d-1f467.name: Famille (femme, femme, fille)
+emojis.1f469-200d-1f469-200d-1f467.keywords: famille,mère,mere,femme,femmes,fille,enfant
+emojis.1f469-200d-1f469-200d-1f467-200d-1f466.name: Famille (femme, femme, fille, garçon)
+emojis.1f469-200d-1f469-200d-1f467-200d-1f466.keywords: famille,mère,mere,femme,femmes,garçon,garcon,fille,enfant
+emojis.1f469-200d-1f469-200d-1f466-200d-1f466.name: Famille (femme, femme, garçon, garçon)
+emojis.1f469-200d-1f469-200d-1f466-200d-1f466.keywords: famille,mère,mere,femme,femmes,garçon,garcon,enfant
+emojis.1f469-200d-1f469-200d-1f467-200d-1f467.name: Famille (femme, femme, fille, fille)
+emojis.1f469-200d-1f469-200d-1f467-200d-1f467.keywords: famille,mère,mere,femme,femmes,fille,enfant
+emojis.1f468-200d-1f468-200d-1f466.name: Famille (homme, homme, garçon)
+emojis.1f468-200d-1f468-200d-1f466.keywords: famille,père,pere,homme,hommes,garçon,garcon,enfant
+emojis.1f468-200d-1f468-200d-1f467.name: Famille (homme, homme, fille)
+emojis.1f468-200d-1f468-200d-1f467.keywords: famille,père,pere,homme,hommes,fille,enfant
+emojis.1f468-200d-1f468-200d-1f467-200d-1f466.name: Famille (homme, homme, fille, garçon)
+emojis.1f468-200d-1f468-200d-1f467-200d-1f466.keywords: famille,père,pere,homme,hommes,garçon,garcon,fille,enfant
+emojis.1f468-200d-1f468-200d-1f466-200d-1f466.name: Famille (homme, homme, garçon, garçon)
+emojis.1f468-200d-1f468-200d-1f466-200d-1f466.keywords: famille,père,pere,homme,hommes,garçon,garcon,enfant
+emojis.1f468-200d-1f468-200d-1f467-200d-1f467.name: Famille (homme, homme, fille, fille)
+emojis.1f468-200d-1f468-200d-1f467-200d-1f467.keywords: famille,père,pere,homme,hommes,fille,enfant
+emojis.1f469-200d-1f466.name: Famille (femme, garçon)
+emojis.1f469-200d-1f466.keywords: famille,mère,mere,femme,femmes,garçon,garcon,enfant
+emojis.1f469-200d-1f467.name: Famille (femme, fille)
+emojis.1f469-200d-1f467.keywords: famille,mère,mere,femme,femmes,fille,enfant
+emojis.1f469-200d-1f467-200d-1f466.name: Famille (femme, fille, garçon)
+emojis.1f469-200d-1f467-200d-1f466.keywords: famille,mère,mere,femme,homme,fille,garçon,garcon,enfant
+emojis.1f469-200d-1f466-200d-1f466.name: Famille (femme, garçon, garçon)
+emojis.1f469-200d-1f466-200d-1f466.keywords: famille,mère,mere,femme,femmes,garçon,garcon,enfant
+emojis.1f469-200d-1f467-200d-1f467.name: Famille (femme, fille, fille)
+emojis.1f469-200d-1f467-200d-1f467.keywords: famille,mère,mere,femme,femmes,fille,enfant
+emojis.1f468-200d-1f466.name: Famille (homme, garçon)
+emojis.1f468-200d-1f466.keywords: famille,père,pere,homme,hommes,garçon,garcon,enfant
+emojis.1f468-200d-1f467.name: Famille (homme, fille)
+emojis.1f468-200d-1f467.keywords: famille,père,pere,homme,femme,fille,enfant
+emojis.1f468-200d-1f467-200d-1f466.name: Famille (homme, fille, garçon)
+emojis.1f468-200d-1f467-200d-1f466.keywords: famille,père,pere,homme,hommes,garçon,garcon,fille,enfant
+emojis.1f468-200d-1f466-200d-1f466.name: Famille (homme, garçon, garçon)
+emojis.1f468-200d-1f466-200d-1f466.keywords: famille,père,pere,homme,hommes,garçon,garcon,enfant
+emojis.1f468-200d-1f467-200d-1f467.name: Famille (homme, fille, fille)
+emojis.1f468-200d-1f467-200d-1f467.keywords: famille,père,pere,homme,femme,fille,enfant
+emojis.1f45a.name: Vêtements féminins
+emojis.1f45a.keywords: vêtements,vetements,femme
+emojis.1f455.name: T-shirt
+emojis.1f455.keywords: vêtements,vetements,maillot,t-shirt
+emojis.1f9e5.name: Manteau
+emojis.1f9e5.keywords: vêtements,vetements,vetement,vêtement,habit,habits,manteau,veste
+emojis.1f456.name: Jeans
+emojis.1f456.keywords: vêtements,vetements,jeans,pantalon,futal,falzar
+emojis.1f454.name: Cravate
+emojis.1f454.keywords: vêtements,vetements,cravate
+emojis.1f457.name: Robe
+emojis.1f457.keywords: vêtements,vetements,robe
+emojis.1f459.name: Bikini
+emojis.1f459.keywords: bikini,maillot,vêtements,vetements,nager
+emojis.1f458.name: Kimono
+emojis.1f458.keywords: vêtements,vetements,kimono
+emojis.1f484.name: Rouge à lèvres
+emojis.1f484.keywords: cosmétiques,cosmetiques,rouge à lèvres,rouge a levres,maquillage
+emojis.1f48b.name: Marque de baiser
+emojis.1f48b.keywords: cœur,coeur,baiser,bisou,lèvres,levres,marque,amour
+emojis.1f463.name: Empreintes de pas
+emojis.1f463.keywords: corps,vêtements,vetements,empreinte de pas,empreinte,pas
+emojis.1f9e6.name: Chaussettes
+emojis.1f9e6.keywords: vêtements,vetements,vetement,vêtement,habit,habits,chaussettes,paire de
+emojis.1f460.name: Chaussure à talon haut
+emojis.1f460.keywords: vêtements,vetements,talon,chaussure,femme
+emojis.1f461.name: Sandale féminine
+emojis.1f461.keywords: vêtements,vetements,sandale,chaussure,femme
+emojis.1f462.name: Bottes féminines
+emojis.1f462.keywords: botte,vêtements,vetements,chaussure,femme
+emojis.1f45e.name: Chaussure pour homme
+emojis.1f45e.keywords: vêtements,vetements,homme,chaussure
+emojis.1f45f.name: Chaussure de sport
+emojis.1f45f.keywords: sportif,vêtements,vetements,chaussure,tennis
+emojis.1f9e2.name: Casquette
+emojis.1f9e2.keywords: vêtements,vetements,vetement,vêtement,habit,habits,baseball,base ball,base-ball,casquette,chapeau
+emojis.1f452.name: Chapeau de femme
+emojis.1f452.keywords: vêtements,vetements,chapeau,femme
+emojis.1f3a9.name: Chapeau haut-de-forme
+emojis.1f3a9.keywords: activité,activite,vêtements,vetements,divertissement,chapeau,haut,haut-de-forme
+emojis.1f393.name: Toque universitaire
+emojis.1f393.keywords: activité,activite,casquette,toque,coiffe,fête,fete,vêtements,vetements,diplôme,diplome,chapeau
+emojis.1f451.name: Couronne
+emojis.1f451.keywords: vêtements,vetements,couronne,roi,reine
+emojis.26d1.name: Casque avec croix blanche
+emojis.26d1.keywords: secours,aide,croix,visage,chapeau,casque
+emojis.1f392.name: Cartable d'écolier
+emojis.1f392.keywords: activité,activite,sac,cartable,école,ecole
+emojis.1f45d.name: Pochette
+emojis.1f45d.keywords: sac,vêtements,vetements,pochette
+emojis.1f45b.name: Porte-monnaie
+emojis.1f45b.keywords: vêtements,vetements,pièce,piece,porte-monnaie
+emojis.1f45c.name: Sac à main
+emojis.1f45c.keywords: sac,vêtements,vetements,sac à main,sac a main
+emojis.1f4bc.name: Porte-documents 
+emojis.1f4bc.keywords: porte-documents,porte documents,serviette
+emojis.1f453.name: Lunettes
+emojis.1f453.keywords: vêtements,vetements,œil,oeil,lunettes
+emojis.1f576.name: Lunettes de soleil foncées
+emojis.1f576.keywords: foncé,fonce,œil,oeil,lunettes,lunettes de soleil
+emojis.1f9e3.name: Écharpe
+emojis.1f9e3.keywords: vêtements,vetements,vetement,vêtement,habit,habits,foulard,cou,écharpe,echarpe
+emojis.1f9e4.name: Gants
+emojis.1f9e4.keywords: vêtements,vetements,vetement,vêtement,gants,mains,habit,habits
+emojis.1f48d.name: Bague
+emojis.1f48d.keywords: diamant,bague,romantisme
+emojis.1f302.name: Parapluie fermé
+emojis.1f302.keywords: vêtements,vetements,pluie,parapluie,météo,meteo,temps
+emojis.2602.name: Parapluie
+emojis.2602.keywords: vêtements,vetements,pluie,parapluie,météo,meteo,temps
+emojis.1f3fb.name: (teint de peau clair)
+emojis.1f3fb.keywords: éditeur d'emoji,editeur d'emoji,fitzpatrick,phototype,peau,ton
+emojis.1f3fc.name: (teint clair moyen)
+emojis.1f3fc.keywords: éditeur d'emoji,editeur d'emoji,fitzpatrick,phototype,peau,ton
+emojis.1f3fd.name: (teint de peau moyen)
+emojis.1f3fd.keywords: éditeur d'emoji,editeur d'emoji,fitzpatrick,phototype,peau,ton
+emojis.1f3fe.name: (teint de peau foncé moyen)
+emojis.1f3fe.keywords: éditeur d'emoji,editeur d'emoji,fitzpatrick,phototype,peau,ton
+emojis.1f3ff.name: (teint de peau foncé)
+emojis.1f3ff.keywords: éditeur d'emoji,editeur d'emoji,fitzpatrick,phototype,peau,ton
+emojis.1f469-200d-2764-fe0f-200d-1f48b-200d-1f468.name: Baiser (femme, homme)
+emojis.1f469-200d-2764-fe0f-200d-1f48b-200d-1f468.keywords: couple,baiser,cœur,coeur,amour,romance,homme,femme,hommes,femmes
+emojis.1f469-200d-2764-fe0f-200d-1f468.name: Couple avec un cœur (femme, homme)
+emojis.1f469-200d-2764-fe0f-200d-1f468.keywords: couple,cœur,coeur,amour,romance,homme,femme,hommes,femmes
+emojis.1f468-200d-1f469-200d-1f466.name: Famille (homme, femme, garçon)
+emojis.1f468-200d-1f469-200d-1f466.keywords: famille,père,pere,mère,mere,homme,femme,hommes,femmes,garçon,garcon,enfant
+emojis.1f436.name: Tête de chien
+emojis.1f436.keywords: chien,tête,tete,animal de compagnie
+emojis.1f431.name: Tête de chat
+emojis.1f431.keywords: chat,tête,tete,animal de compagnie
+emojis.1f42d.name: Tête de souris
+emojis.1f42d.keywords: tête,tete,souris
+emojis.1f439.name: Tête de hamster
+emojis.1f439.keywords: tête,tete,hamster,animal de compagnie
+emojis.1f430.name: Tête de lapin
+emojis.1f430.keywords: lapin,tête,tete,animal de compagnie
+emojis.1f43b.name: Tête d'ours
+emojis.1f43b.keywords: ours,tête,tete
+emojis.1f43c.name: Tête de panda
+emojis.1f43c.keywords: tête,tete,panda
+emojis.1f428.name: Koala
+emojis.1f428.keywords: ours,koala
+emojis.1f42f.name: Tête de tigre
+emojis.1f42f.keywords: tête,tete,tigre
+emojis.1f981.name: Tête de lion
+emojis.1f981.keywords: tête,tete,lion,zodiaque
+emojis.1f42e.name: Tête de vache
+emojis.1f42e.keywords: vache,tête,tete
+emojis.1f437.name: Tête de cochon
+emojis.1f437.keywords: tête,tete,cochon,porc
+emojis.1f43d.name: Nez de cochon
+emojis.1f43d.keywords: tête,tete,nez,groin,cochon,porc
+emojis.1f438.name: Tête de grenouille
+emojis.1f438.keywords: tête,tete,grenouille
+emojis.1f435.name: Tête de singe
+emojis.1f435.keywords: tête,tete,singe
+emojis.1f648.name: Singe qui ne voit rien
+emojis.1f648.keywords: méchant,mechant,visage,interdit,geste,singe,non,voir
+emojis.1f649.name: Singe qui n'entend rien
+emojis.1f649.keywords: méchant,mechant,visage,interdit,signe,entendre,singe,non
+emojis.1f64a.name: Singe qui ne dit rien
+emojis.1f64a.keywords: méchant,mechant,visage,interdit,geste,singe,non,parler
+emojis.1f412.name: Singe
+emojis.1f412.keywords: singe
+emojis.1f98d.name: Gorille
+emojis.1f98d.keywords: gorille
+emojis.1f414.name: Poulet
+emojis.1f414.keywords: poulet
+emojis.1f427.name: Manchot
+emojis.1f427.keywords: pingouin,manchot
+emojis.1f426.name: Oiseau
+emojis.1f426.keywords: oiseau
+emojis.1f424.name: Poussin
+emojis.1f424.keywords: bébé,bebe,poussin
+emojis.1f423.name: Poussin qui brise sa coquille
+emojis.1f423.keywords: bébé,bebe,poussin,éclosion,eclosion
+emojis.1f425.name: Poussin de face
+emojis.1f425.keywords: bébé,bebe,poussin
+emojis.1f43a.name: Tête de loup
+emojis.1f43a.keywords: tête,tete,loup
+emojis.1f98a.name: Tête de renard
+emojis.1f98a.keywords: tête,tete,renard
+emojis.1f417.name: Sanglier 
+emojis.1f417.keywords: sanglier,cochon
+emojis.1f434.name: Tête de cheval
+emojis.1f434.keywords: tête,tete,cheval
+emojis.1f993.name: Zèbre
+emojis.1f993.keywords: zèbre,face
+emojis.1f992.name: Girafe
+emojis.1f992.keywords: girafe,face
+emojis.1f98c.name: Chevreuil
+emojis.1f98c.keywords: chevreuil
+emojis.1f984.name: Tête de licorne
+emojis.1f984.keywords: tête,tete,licorne
+emojis.1f41d.name: Abeille
+emojis.1f41d.keywords: abeille,miel,insecte
+emojis.1f41b.name: Insecte
+emojis.1f41b.keywords: insecte,bestiole
+emojis.1f98b.name: Papillon
+emojis.1f98b.keywords: papillon,insecte,joli
+emojis.1f40c.name: Escargot
+emojis.1f40c.keywords: escargot
+emojis.1f41e.name: Coccinelle
+emojis.1f41e.keywords: scarabée,scarabee,insecte,coccinelle,bête à bon dieu,bete a bon dieu
+emojis.1f41c.name: Fourmi
+emojis.1f41c.keywords: fourmi,insecte
+emojis.1f997.name: Cricket
+emojis.1f997.keywords: grillon,orthoptère,orthoptere,insecte,sauterelle,criquet
+emojis.1f577.name: Araignée
+emojis.1f577.keywords: insecte,araignée,araignee
+emojis.1f578.name: Toile d'araignée
+emojis.1f578.keywords: araignée,araignee,toile
+emojis.1f982.name: Scorpion
+emojis.1f982.keywords: scorpion,scorpion,scorpion,zodiaque
+emojis.1f422.name: Tortue
+emojis.1f422.keywords: tortue
+emojis.1f40d.name: Serpent
+emojis.1f40d.keywords: porteur,ophiuchus,serpentaire,serpent,zodiaque
+emojis.1f98e.name: Lézard
+emojis.1f98e.keywords: lézard,lezard,reptile
+emojis.1f980.name: Crabe
+emojis.1f980.keywords: cancer,crabe,zodiaque
+emojis.1f991.name: Poulpe
+emojis.1f991.keywords: mollusque,calamar,encornet
+emojis.1f419.name: Pieuvre
+emojis.1f419.keywords: poulpe
+emojis.1f990.name: Crevette
+emojis.1f990.keywords: crustacé,crustace,crevette,petite
+emojis.1f420.name: Poisson tropical
+emojis.1f420.keywords: poisson,tropical
+emojis.1f41f.name: Poisson
+emojis.1f41f.keywords: poisson,zodiaque
+emojis.1f421.name: Poisson-globe
+emojis.1f421.keywords: poisson-globe,poisson
+emojis.1f42c.name: Dauphin
+emojis.1f42c.keywords: dauphin,nageoire
+emojis.1f988.name: Requin
+emojis.1f988.keywords: poisson,requin
+emojis.1f433.name: Baleine qui respire
+emojis.1f433.keywords: tête,tete,respire,évent,event,jet,baleine
+emojis.1f40b.name: Baleine
+emojis.1f40b.keywords: baleine
+emojis.1f40a.name: Crocodile
+emojis.1f40a.keywords: crocodile
+emojis.1f406.name: Léopard
+emojis.1f406.keywords: léopard,leopard
+emojis.1f405.name: Tigre
+emojis.1f405.keywords: tigre
+emojis.1f403.name: Buffle d'eau
+emojis.1f403.keywords: buffle,eau
+emojis.1f402.name: Bœuf
+emojis.1f402.keywords: taureau,bœuf,boeuf,zodiaque
+emojis.1f404.name: Vache
+emojis.1f404.keywords: vache
+emojis.1f42a.name: Dromadaire
+emojis.1f42a.keywords: camélidé,camelide,dromadaire,bosse
+emojis.1f42b.name: Chameau
+emojis.1f42b.keywords: chameau à deux bosses,chameau a deux bosses,camélidé,camelide,bactrien,chameau,bosse
+emojis.1f418.name: Éléphant
+emojis.1f418.keywords: éléphant,elephant
+emojis.1f98f.name: Rhinocéros
+emojis.1f98f.keywords: rhinocéros,rhinoceros
+emojis.1f410.name: Chèvre
+emojis.1f410.keywords: capricorne,chèvre,chevre,zodiaque
+emojis.1f40f.name: Bélier
+emojis.1f40f.keywords: bélier,belier,mouton,zodiaque
+emojis.1f411.name: Mouton
+emojis.1f411.keywords: brebis,mouton
+emojis.1f40e.name: Cheval
+emojis.1f40e.keywords: cheval,course de chevaux,courses
+emojis.1f416.name: Cochon
+emojis.1f416.keywords: cochon,truie
+emojis.1f987.name: Chauve-souris
+emojis.1f987.keywords: chauve-souris,vampire
+emojis.1f413.name: Coq
+emojis.1f413.keywords: coq
+emojis.1f983.name: Dinde
+emojis.1f983.keywords: dinde
+emojis.1f54a.name: Colombe de la paix
+emojis.1f54a.keywords: oiseau,colombe,vol,paix
+emojis.1f985.name: Aigle
+emojis.1f985.keywords: oiseau,aigle
+emojis.1f986.name: Canard
+emojis.1f986.keywords: oiseau,canard
+emojis.1f989.name: Hibou
+emojis.1f989.keywords: oiseau,hibou,sage
+emojis.1f415.name: Chien
+emojis.1f415.keywords: chien,animal de compagnie
+emojis.1f429.name: Caniche
+emojis.1f429.keywords: chien,caniche
+emojis.1f408.name: Chat
+emojis.1f408.keywords: chat,animal de compagnie
+emojis.1f407.name: Lapin
+emojis.1f407.keywords: lapin,animal de compagnie
+emojis.1f400.name: Rat
+emojis.1f400.keywords: rat
+emojis.1f401.name: Souris
+emojis.1f401.keywords: souris
+emojis.1f43f.name: Tamia
+emojis.1f43f.keywords: tamia,rongeur
+emojis.1f994.name: Hérisson
+emojis.1f994.keywords: hérisson,herisson,face
+emojis.1f43e.name: Empreintes de pattes
+emojis.1f43e.keywords: pieds,patte,empreinte
+emojis.1f409.name: Dragon
+emojis.1f409.keywords: dragon,conte de fées,conte de fees
+emojis.1f432.name: Tête de dragon
+emojis.1f432.keywords: dragon,visage,conte de fées,conte de fees
+emojis.1f995.name: Sauropode
+emojis.1f995.keywords: brachiosaure,brontosaure,diplodocus,dinosaure
+emojis.1f996.name: Tyrannosaure
+emojis.1f996.keywords: tyrannosaure rex,trex,t-rex,t rex,dinosaure
+emojis.1f335.name: Cactus
+emojis.1f335.keywords: cactus,plante
+emojis.1f384.name: Sapin de noël
+emojis.1f384.keywords: activité,activite,célébration,celebration,fête,fete,noël,noel,divertissement,arbre
+emojis.1f332.name: Arbre à feuilles persistantes
+emojis.1f332.keywords: conifère,conifere,résineux,resineux,plante,arbre
+emojis.1f333.name: Arbre à feuilles caduques
+emojis.1f333.keywords: caduque,feuillu,plante,perte,arbre
+emojis.1f334.name: Palmier
+emojis.1f334.keywords: palmier,plante,arbre
+emojis.1f331.name: Plant
+emojis.1f331.keywords: plante,plant,jeune
+emojis.1f33f.name: Herbe
+emojis.1f33f.keywords: herbe,feuille,plante
+emojis.2618.name: Trèfle
+emojis.2618.keywords: plante,trèfle,trefle
+emojis.1f340.name: Trèfle à quatre feuilles
+emojis.1f340.keywords: 4,trèfle,trefle,quatre,feuille,plante
+emojis.1f38d.name: Décoration en pin
+emojis.1f38d.keywords: activité,activite,bambou,fête,fete,japonais,pin,plante
+emojis.1f38b.name: Arbre à voeux
+emojis.1f38b.keywords: activité,activite,bannière,banniere,fête,fete,divertissement,japonais,arbre
+emojis.1f343.name: Feuille virevoltante dans le vent
+emojis.1f343.keywords: fleurir,voltiger,feuille,plante,vent
+emojis.1f342.name: Feuille morte
+emojis.1f342.keywords: morte,feuille,plante
+emojis.1f341.name: Feuille d'érable
+emojis.1f341.keywords: morte,feuille,érable,erable,plante
+emojis.1f33e.name: Épi de riz
+emojis.1f33e.keywords: gerbe de riz,épi,epi,plante,riz
+emojis.1f33a.name: Hibiscus
+emojis.1f33a.keywords: fleur,hibiscus,plante
+emojis.1f33b.name: Tournesol
+emojis.1f33b.keywords: fleur,plante,soleil,tournesol
+emojis.1f339.name: Rose
+emojis.1f339.keywords: fleur,plante,rose
+emojis.1f940.name: Fleur fanée
+emojis.1f940.keywords: fleur,fanée,fanee
+emojis.1f337.name: Tulipe
+emojis.1f337.keywords: fleur,plante,tulipe
+emojis.1f33c.name: Fleur
+emojis.1f33c.keywords: fleur,plante
+emojis.1f338.name: Fleur de cerisier
+emojis.1f338.keywords: fleur,cerisier,plante
+emojis.1f490.name: Bouquet
+emojis.1f490.keywords: bouquet,fleur,plante,romantisme
+emojis.1f344.name: Champignon
+emojis.1f344.keywords: champignon,plante
+emojis.1f330.name: Châtaigne
+emojis.1f330.keywords: châtaigne,chataigne,marron,plante
+emojis.1f41a.name: Coquille en spirale
+emojis.1f41a.keywords: coquillage,spirale
+emojis.1f30e.name: Globe terrestre Amériques
+emojis.1f30e.keywords: amérique,amerique,terre,globe,monde
+emojis.1f30d.name: Globe terrestre Europe-Afrique
+emojis.1f30d.keywords: afrique,terre,europe,globe,monde
+emojis.1f30f.name: Globe terrestre Asie-Australie
+emojis.1f30f.keywords: asie,australie,terre,globe,monde
+emojis.1f315.name: Symbole pleine lune
+emojis.1f315.keywords: pleine,lune,espace,météo,meteo,temps
+emojis.1f316.name: Symbole lune gibbeuse décroissante
+emojis.1f316.keywords: gibbeuse,lune,espace,descendante,météo,meteo,temps
+emojis.1f317.name: Symbole dernier quartier de lune
+emojis.1f317.keywords: lune,quartier,espace,météo,meteo,temps
+emojis.1f318.name: Symbole dernier croissant de lune
+emojis.1f318.keywords: croissant,lune,espace,descendante,météo,meteo,temps
+emojis.1f311.name: Symbole nouvelle lune
+emojis.1f311.keywords: nouvelle,lune,espace,météo,meteo,temps
+emojis.1f312.name: Symbole premier croissant de lune
+emojis.1f312.keywords: croissant,lune,espace,croissante,météo,meteo,temps
+emojis.1f313.name: Symbole premier quartier de lune
+emojis.1f313.keywords: lune,quartier,espace,météo,meteo,temps
+emojis.1f314.name: Symbole lune gibbeuse croissante 
+emojis.1f314.keywords: gibbeuse,lune,espace,montante,météo,meteo,temps
+emojis.1f31a.name: Nouvelle lune avec visage
+emojis.1f31a.keywords: visage,lune,espace,météo,meteo,temps
+emojis.1f31d.name: Pleine lune avec visage
+emojis.1f31d.keywords: joyeux,visage,pleine,lune,espace,météo,meteo,temps
+emojis.1f31b.name: Premier quartier de lune avec visage
+emojis.1f31b.keywords: visage,lune,quartier,espace,météo,meteo,temps
+emojis.1f31c.name: Dernier quartier de lune avec visage
+emojis.1f31c.keywords: visage,lune,quartier,espace,météo,meteo,temps
+emojis.1f31e.name: Soleil avec visage
+emojis.1f31e.keywords: joyeux,visage,espace,soleil,météo,meteo,temps
+emojis.1f319.name: Croissant de lune
+emojis.1f319.keywords: croissant,lune,espace,météo,meteo,temps
+emojis.2b50.name: Étoile moyenne
+emojis.2b50.keywords: étoile,etoile
+emojis.1f31f.name: Étoile scintillante
+emojis.1f31f.keywords: briller,lueur,brillant,éclat,eclat,étoile,etoile
+emojis.1f4ab.name: Symbole étourdi
+emojis.1f4ab.keywords: comique,étourdi,etourdi,étoile,etoile
+emojis.2728.name: Étincelles
+emojis.2728.keywords: divertissement,éclat,eclat,scintiller,étoile,etoile
+emojis.2604.name: Comète
+emojis.2604.keywords: comète,comete,espace
+emojis.2600.name: Soleil avec rayons
+emojis.2600.keywords: brillant,rayons,espace,soleil,ensoleillé,ensoleille,météo,meteo,temps
+emojis.1f324.name: Soleil avec petit nuage
+emojis.1f324.keywords: nuage,soleil,météo,meteo,temps
+emojis.26c5.name: Soleil derrière un nuage
+emojis.26c5.keywords: nuage,soleil,météo,meteo,temps
+emojis.1f325.name: Soleil derrière un gros nuage
+emojis.1f325.keywords: nuage,soleil,météo,meteo,temps
+emojis.1f326.name: Soleil derrière un nuage avec de la pluie
+emojis.1f326.keywords: nuage,pluie,soleil,météo,meteo,temps
+emojis.2601.name: Nuage
+emojis.2601.keywords: nuage,météo,meteo,temps
+emojis.1f327.name: Nuage avec pluie
+emojis.1f327.keywords: nuage,pluie,météo,meteo,temps
+emojis.26c8.name: Nuage d'orage et pluie
+emojis.26c8.keywords: nuage,pluie,orage,météo,meteo,temps
+emojis.1f329.name: Nuage avec éclair
+emojis.1f329.keywords: nuage,éclair,eclair,météo,meteo,temps
+emojis.26a1.name: Signe de haute tension
+emojis.26a1.keywords: danger,électrique,electrique,électricité,electricite,éclair,eclair,voltage,tension
+emojis.1f525.name: Feu
+emojis.1f525.keywords: feu,flamme,outil
+emojis.1f4a5.name: Symbole de collision
+emojis.1f4a5.keywords: boom,collision,comique
+emojis.2744.name: Flocon de neige
+emojis.2744.keywords: froid,neige,flocon de neige,météo,meteo,temps
+emojis.1f328.name: Nuage avec neige
+emojis.1f328.keywords: nuage,froid,neige,météo,meteo,temps
+emojis.2603.name: Bonhomme de neige
+emojis.2603.keywords: froid,neige,bonhomme de neige,météo,meteo,temps
+emojis.26c4.name: Bonhomme de neige
+emojis.26c4.keywords: froid,neige,bonhomme de neige,météo,meteo,temps
+emojis.1f32c.name: Visage qui souffle du vent
+emojis.1f32c.keywords: vent,nuage,visage,météo,meteo,temps
+emojis.1f4a8.name: Mouvement précipité
+emojis.1f4a8.keywords: comique,précipité,precipite,courant,vitesse
+emojis.1f32a.name: Nuage avec une tornade
+emojis.1f32a.keywords: nuage,tornade,météo,meteo,temps,tourbillon
+emojis.1f32b.name: Brouillard
+emojis.1f32b.keywords: nuage,brouillard,météo,meteo,temps
+emojis.2614.name: Parapluie avec des gouttes de pluie
+emojis.2614.keywords: vêtements,vetements,goutte,pluie,parapluie,météo,meteo,temps
+emojis.1f4a7.name: Gouttelette
+emojis.1f4a7.keywords: froid,comique,goutte,sueur,météo,meteo,temps
+emojis.1f4a6.name: Symbole éclaboussures de sueur
+emojis.1f4a6.keywords: comique,éclaboussures,eclaboussures,transpirer,sueur
+emojis.1f30a.name: Vague
+emojis.1f30a.keywords: océan,ocean,eau,vague,météo,meteo,temps
+emojis.1f34f.name: Pomme verte
+emojis.1f34f.keywords: pomme,fruit,verte,plante
+emojis.1f34e.name: Pomme rouge
+emojis.1f34e.keywords: pomme,fruit,plante,rouge
+emojis.1f350.name: Poire
+emojis.1f350.keywords: fruit,poire,plante
+emojis.1f34a.name: Mandarine
+emojis.1f34a.keywords: fruit,orange,plante,tangerine,mandarine
+emojis.1f34b.name: Citron
+emojis.1f34b.keywords: agrume,fruit,citron,plante
+emojis.1f34c.name: Banane
+emojis.1f34c.keywords: banane,fruit,plante
+emojis.1f349.name: Pastèque
+emojis.1f349.keywords: fruit,plante,pastèque,pasteque
+emojis.1f347.name: Raisins
+emojis.1f347.keywords: fruit,raisin,plante
+emojis.1f353.name: Fraise
+emojis.1f353.keywords: baie,fruit,plante,fraise
+emojis.1f348.name: Melon
+emojis.1f348.keywords: fruit,melon,plante
+emojis.1f352.name: Cerises
+emojis.1f352.keywords: cerise,fruit,plante
+emojis.1f351.name: Pêche
+emojis.1f351.keywords: fruit,pêche,peche,plante
+emojis.1f34d.name: Ananas
+emojis.1f34d.keywords: fruit,ananas,plante
+emojis.1f965.name: Noix de coco
+emojis.1f965.keywords: noix de coco,fruit
+emojis.1f95d.name: Kiwi
+emojis.1f95d.keywords: fruit,kiwi
+emojis.1f345.name: Tomate
+emojis.1f345.keywords: plante,tomate,légume,legume
+emojis.1f951.name: Avocat
+emojis.1f951.keywords: avocat,fruit
+emojis.1f346.name: Aubergine
+emojis.1f346.keywords: aubergine,plante,légume,legume
+emojis.1f336.name: Piment
+emojis.1f336.keywords: piment,plante
+emojis.1f952.name: Concombre
+emojis.1f952.keywords: concombre,cornichon,légume,legume
+emojis.1f966.name: Brocoli
+emojis.1f966.keywords: brocoli,légume,legume
+emojis.1f33d.name: Épi de maïs
+emojis.1f33d.keywords: maïs,mais,épi,epi,plante
+emojis.1f955.name: Carotte
+emojis.1f955.keywords: carotte,légume,legume
+emojis.1f957.name: Salade verte
+emojis.1f957.keywords: verte,salade
+emojis.1f954.name: Pomme de terre
+emojis.1f954.keywords: patate,légume,legume,pomme de terre
+emojis.1f360.name: Patate douce rôtie
+emojis.1f360.keywords: patate,rôtie,rotie,grillée,grillee,douce
+emojis.1f95c.name: Cacahuètes
+emojis.1f95c.keywords: noix,arachide,cacahuète,cacahuete,légume,legume
+emojis.1f36f.name: Pot de miel
+emojis.1f36f.keywords: miel,pot de miel,pot,sucré,sucre
+emojis.1f35e.name: Pain
+emojis.1f35e.keywords: pain,miche
+emojis.1f950.name: Croissant
+emojis.1f950.keywords: pain,croissant,français,francais
+emojis.1f956.name: Baguette de pain
+emojis.1f956.keywords: baguette,pain,français,francais
+emojis.1f968.name: Bretzel
+emojis.1f968.keywords: bretzel,mauricette,pain,pain alsacien
+emojis.1f95e.name: Pancakes
+emojis.1f95e.keywords: crêpe,crepe,pancake
+emojis.1f9c0.name: Morceau de fromage
+emojis.1f9c0.keywords: fromage
+emojis.1f357.name: Cuisse de volaille
+emojis.1f357.keywords: os,poulet,cuisse,volaille
+emojis.1f356.name: Viande avec os
+emojis.1f356.keywords: os,viande
+emojis.1f969.name: Morceau de viande
+emojis.1f969.keywords: viande,côtelette,cotelette,côtelette d'agneau,cotelette d'agneau,côtelette de porc,cotelette de porc,steak,bifteck
+emojis.1f364.name: Crevette frite
+emojis.1f364.keywords: frit,crevette,tempura
+emojis.1f95a.name: Œuf
+emojis.1f95a.keywords: œuf,oeuf
+emojis.1f373.name: Cuisine
+emojis.1f373.keywords: cuisiner,œuf,oeuf,friture,poêle,poele
+emojis.1f953.name: Bacon
+emojis.1f953.keywords: bacon,viande
+emojis.1f354.name: Hamburger
+emojis.1f354.keywords: burger,hamburger
+emojis.1f35f.name: Frites
+emojis.1f35f.keywords: frites,pommes frites
+emojis.1f32d.name: Hot dog
+emojis.1f32d.keywords: saucisse,hot dog,hot-dog
+emojis.1f355.name: Part de pizza
+emojis.1f355.keywords: fromage,pizza,part
+emojis.1f35d.name: Spaghetti
+emojis.1f35d.keywords: pâtes,pates,spaghetti
+emojis.1f96a.name: Sandwich
+emojis.1f96a.keywords: pain,légumes,legumes,fromage,viande,traiteur
+emojis.1f959.name: Galette farcie
+emojis.1f959.keywords: falafel,galette,gyro,kebab,farci
+emojis.1f32e.name: Taco
+emojis.1f32e.keywords: mexicain,taco
+emojis.1f32f.name: Burrito
+emojis.1f32f.keywords: burrito,mexicain
+emojis.1f35c.name: Bol fumant
+emojis.1f35c.keywords: bol,nouille,ramen,fumant
+emojis.1f958.name: Poêle remplie de nourriture
+emojis.1f958.keywords: plat,paella,poêle,poele,fait-tout
+emojis.1f372.name: Marmite de nourriture
+emojis.1f372.keywords: marmite,ragoût,ragout
+emojis.1f96b.name: Boîte de conserve
+emojis.1f96b.keywords: conserve,nourriture,boîte,boite
+emojis.1f365.name: Croquettes de poisson avec un motif tourbillon
+emojis.1f365.keywords: gâteau,gateau,poisson,pâtisserie,patisserie,tourbillon,spirale,narutomaki
+emojis.1f363.name: Sushi
+emojis.1f363.keywords: sushi
+emojis.1f371.name: Bento
+emojis.1f371.keywords: bento,boîte,boite
+emojis.1f35b.name: Riz au curry
+emojis.1f35b.keywords: curry,riz
+emojis.1f359.name: Boule de riz 
+emojis.1f359.keywords: boule,japonais,riz
+emojis.1f35a.name: Riz cuisiné
+emojis.1f35a.keywords: cuisiné,cuisine,riz
+emojis.1f358.name: Galette de riz
+emojis.1f358.keywords: galette,riz
+emojis.1f95f.name: Petit chausson
+emojis.1f95f.keywords: petit chausson,empanada,raviolis japonais,raviolis chinois,raviolis polonais
+emojis.1f362.name: Pot-au-feu japonais
+emojis.1f362.keywords: kebab,oden,fruits de mer,brochette,pic
+emojis.1f361.name: Dango
+emojis.1f361.keywords: dango,dessert,japonais,brochette,pic,sucré,sucre
+emojis.1f367.name: Glace pilée
+emojis.1f367.keywords: dessert,glace,pilée,pilee,sucré,sucre
+emojis.1f368.name: Crème glacée
+emojis.1f368.keywords: crème,creme,dessert,glace,sucré,sucre
+emojis.1f366.name: Glace à l'italienne
+emojis.1f366.keywords: crème,creme,dessert,glace,crème glacée,creme glacee,doux,sucré,sucre
+emojis.1f370.name: Part de gâteau
+emojis.1f370.keywords: gâteau,gateau,dessert,pâtisserie,patisserie,tarte,part,sucré,sucre
+emojis.1f382.name: Gâteau d'anniversaire
+emojis.1f382.keywords: anniversaire,gâteau,gateau,fête,fete,dessert,pâtisserie,patisserie,sucré,sucre
+emojis.1f967.name: Tarte
+emojis.1f967.keywords: tarte,dessert,sucré,sucre
+emojis.1f36e.name: Crème anglaise
+emojis.1f36e.keywords: crème anglaise,creme anglaise,dessert,pudding,sucré,sucre
+emojis.1f36d.name: Sucette
+emojis.1f36d.keywords: bonbons,dessert,sucette,sucré,sucre
+emojis.1f36c.name: Bonbons
+emojis.1f36c.keywords: bonbons,dessert,sucré,sucre
+emojis.1f36b.name: Barre de chocolat
+emojis.1f36b.keywords: barre,chocolat,dessert,sucré,sucre
+emojis.1f37f.name: Popcorn
+emojis.1f37f.keywords: popcorn
+emojis.1f369.name: Donut
+emojis.1f369.keywords: dessert,donut,beigne,beignet,sucré,sucre
+emojis.1f36a.name: Cookie
+emojis.1f36a.keywords: biscuit,cookie,dessert,sucré,sucre
+emojis.1f960.name: Biscuit chinois
+emojis.1f960.keywords: biscuit,chinois
+emojis.2615.name: Boisson chaude 
+emojis.2615.keywords: boisson,café,cafe,chaud,fumant,thé,the
+emojis.1f375.name: Tasse de thé sans anse
+emojis.1f375.keywords: boisson,tasse,thé,the,tasse de thé,tasse de the
+emojis.1f963.name: Bol et cuillère
+emojis.1f963.keywords: petit déjeuner,petit dejeuner,petit-déjeuner,petit-dejeuner,céréales,cereales,soupe de riz,flocons d'avoine,porridge,vaisselle
+emojis.1f37c.name: Biberon
+emojis.1f37c.keywords: bébé,bebe,bouteille,boire,lait
+emojis.1f964.name: Tasse et paille
+emojis.1f964.keywords: jus,soda,malt,boisson gazeuse,boisson non alcoolisée,boisson non alcoolisee,eau,vaisselle
+emojis.1f95b.name: Verre de lait
+emojis.1f95b.keywords: boire,verre,lait
+emojis.1f37a.name: Chope de bière 
+emojis.1f37a.keywords: bar,bière,biere,boisson,chope
+emojis.1f37b.name: Chopes de bière qui s'entrechoquent
+emojis.1f37b.keywords: bar,bière,biere,trinquer,boire,chope
+emojis.1f377.name: Verre de vin
+emojis.1f377.keywords: bar,boisson,boire,verre,vin
+emojis.1f942.name: Verres qui tintent
+emojis.1f942.keywords: célébrer,celebrer,trinquer,boire,verre
+emojis.1f943.name: Gobelet en verre
+emojis.1f943.keywords: verre,liqueur,alcool,spiritueux,shot,verre à cocktails,verre a cocktails,whisky,whiskey,bourbon
+emojis.1f378.name: Cocktail
+emojis.1f378.keywords: bar,cocktail,boisson,verre
+emojis.1f379.name: Boisson tropicale
+emojis.1f379.keywords: bar,boisson,tropicale
+emojis.1f37e.name: Bouteille avec un bouchon qui saute
+emojis.1f37e.keywords: bar,bouteille,champagne,bouchon,boisson,verre,bulles,fête,fete
+emojis.1f376.name: Bouteille et verre à saké
+emojis.1f376.keywords: bar,boisson,bouteille,tasse,saké,sake
+emojis.1f944.name: Cuillère
+emojis.1f944.keywords: cuillère,vaisselle
+emojis.1f374.name: Couteau et fourchette 
+emojis.1f374.keywords: cuisine,fourchette,couteau,vaisselle
+emojis.1f37d.name: Fourchette et couteau avec assiette
+emojis.1f37d.keywords: cuisine,fourchette,couteau,assiette,vaisselle
+emojis.1f962.name: Baguettes
+emojis.1f962.keywords: baguettes,couverts asiatiques,couverts chinois,couverts coréens,couverts coreens,couverts japonais
+emojis.1f961.name: Boîte de take-away
+emojis.1f961.keywords: take-away,take away,boîte,boite
+emojis.26bd.name: Ballon de football
+emojis.26bd.keywords: ballon,football,foot
+emojis.1f3c0.name: Basket-ball 
+emojis.1f3c0.keywords: ballon,basket-ball,basket,cerceau,anneau,cercle,panier
+emojis.1f3c8.name: Football américain
+emojis.1f3c8.keywords: américain,americain,ballon,football
+emojis.26be.name: Baseball
+emojis.26be.keywords: balle,baseball
+emojis.1f3be.name: Balle de tennis
+emojis.1f3be.keywords: balle,raquette,tennis
+emojis.1f3d0.name: Volley-ball
+emojis.1f3d0.keywords: balle,jeu,volley-ball
+emojis.1f3c9.name: Rugby
+emojis.1f3c9.keywords: balle,football,foot,rugby
+emojis.1f3b1.name: Billard
+emojis.1f3b1.keywords: 8,boule numéro 8,boule,billard,huit,jeu
+emojis.1f3d3.name: Raquette et balle de tennis de table
+emojis.1f3d3.keywords: balle,raquette,jeu,tennis de table,ping-pong
+emojis.1f3f8.name: Raquette et volant de badminton
+emojis.1f3f8.keywords: badminton,moineau,jeu,raquette,volant
+emojis.1f945.name: Filet de but
+emojis.1f945.keywords: but,filet
+emojis.1f3d2.name: Crosse et palet de hockey sur glace
+emojis.1f3d2.keywords: jeu,hockey,glace,palet,crosse
+emojis.1f3d1.name: Crosse et palet de hockey sur gazon
+emojis.1f3d1.keywords: balle,terrain,jeu,hockey,crosse
+emojis.1f3cf.name: Batte et balle de cricket
+emojis.1f3cf.keywords: balle,terrain,cricket,jeu
+emojis.1f94c.name: Pierre de curling
+emojis.1f94c.keywords: curling,pierre
+emojis.26f3.name: Drapeau dans un trou
+emojis.26f3.keywords: drapeau,golf,trou
+emojis.1f3f9.name: Arc et flèche
+emojis.1f3f9.keywords: archer,flèche,fleche,arc,sagittaire,outil,arme,zodiaque
+emojis.1f3a3.name: Canne à pêche et poisson
+emojis.1f3a3.keywords: divertissement,pêche,peche,canne
+emojis.1f94a.name: Gant de boxe
+emojis.1f94a.keywords: boxe,gant
+emojis.1f94b.name: Uniforme d'arts martiaux
+emojis.1f94b.keywords: judo,karaté,karate,arts martiaux,taekwondo,uniforme
+emojis.26f8.name: Patin à glace
+emojis.26f8.keywords: glace,patin
+emojis.1f3bf.name: Ski et chaussure de ski
+emojis.1f3bf.keywords: skis,ski,neige
+emojis.1f6f7.name: Luge
+emojis.1f6f7.keywords: luge,traîneau,traineau,toboggan
+emojis.26f7.name: Skieur
+emojis.26f7.keywords: ski,neige
+emojis.1f3c2.name: Snowboardeur
+emojis.1f3c2.keywords: ski,neige,snowboard
+emojis.1f3cb-fe0f-200d-2640-fe0f.name: Femme haltérophile
+emojis.1f3cb-fe0f-200d-2640-fe0f.keywords: haltérophile,halterophile,poids,femme,femmes
+emojis.1f3cb-fe0f-200d-2642-fe0f.name: Homme haltérophile
+emojis.1f3cb-fe0f-200d-2642-fe0f.keywords: haltérophile,halterophile,poids,homme,hommes
+emojis.1f3cb.name: Haltérophile
+emojis.1f3cb.keywords: haltérophile,halterophile,poids,homme,hommes
+emojis.1f93a.name: Escrimeur
+emojis.1f93a.keywords: escrimeur,escrime,épée,epee
+emojis.1f93c-200d-2640-fe0f.name: Lutteuses
+emojis.1f93c-200d-2640-fe0f.keywords: lutte,lutteuse,femme,femmes
+emojis.1f93c-200d-2642-fe0f.name: Lutteurs
+emojis.1f93c-200d-2642-fe0f.keywords: lutte,lutteur,homme,hommes
+emojis.1f93c.name: Lutteurs
+emojis.1f93c.keywords: lutte,lutteur,homme,hommes
+emojis.1f938.name: Personne faisant la roue
+emojis.1f938.keywords: roue,gymnastique,femme,femmes
+emojis.1f938-200d-2640-fe0f.name: Femme faisant la roue
+emojis.1f938-200d-2640-fe0f.keywords: roue,gymnastique,femme,femmes
+emojis.1f938-200d-2642-fe0f.name: Homme faisant la roue
+emojis.1f938-200d-2642-fe0f.keywords: roue,gymnastique,homme,hommes
+emojis.26f9-fe0f-200d-2640-fe0f.name: Femme avec un ballon
+emojis.26f9-fe0f-200d-2640-fe0f.keywords: ballon,femme,femmes
+emojis.26f9-fe0f-200d-2642-fe0f.name: Homme avec un ballon
+emojis.26f9-fe0f-200d-2642-fe0f.keywords: ballon,homme,hommes
+emojis.26f9.name: Personne avec une balle
+emojis.26f9.keywords: ballon,homme,hommes
+emojis.1f93e.name: Handball
+emojis.1f93e.keywords: ballon,handball,femme,femmes
+emojis.1f93e-200d-2640-fe0f.name: Handballeuse
+emojis.1f93e-200d-2640-fe0f.keywords: ballon,handball,femme,femmes
+emojis.1f93e-200d-2642-fe0f.name: Handballeur
+emojis.1f93e-200d-2642-fe0f.keywords: ballon,handball,homme,hommes
+emojis.1f9d7.name: Personne faisant de l'escalade
+emojis.1f9d7.keywords: escalade,rocher,femme,féminin,feminin,femmes
+emojis.1f9d7-200d-2640-fe0f.name: Femme faisant de l'escalade
+emojis.1f9d7-200d-2640-fe0f.keywords: escalade,rocher,femme,féminin,feminin,femmes
+emojis.1f9d7-200d-2642-fe0f.name: Homme faisant de l'escalade
+emojis.1f9d7-200d-2642-fe0f.keywords: escalade,rocher,homme,masculin,hommes
+emojis.1f3cc-fe0f-200d-2640-fe0f.name: Golfeuse
+emojis.1f3cc-fe0f-200d-2640-fe0f.keywords: balle,golf,golfeuse,jouer au golf,femme,femmes
+emojis.1f3cc-fe0f-200d-2642-fe0f.name: Golfeur
+emojis.1f3cc-fe0f-200d-2642-fe0f.keywords: balle,golf,golfeur,jouer au golf,homme,hommes
+emojis.1f3cc.name: Golfeur
+emojis.1f3cc.keywords: balle,golf,golfeur,jouer au golf,homme,hommes
+emojis.1f9d8.name: Personne en position du lotus
+emojis.1f9d8.keywords: meditation,méditation,yoga,serenite,sérénité,femme,féminin,feminin,femmes
+emojis.1f9d8-200d-2640-fe0f.name: Femme en position du lotus
+emojis.1f9d8-200d-2640-fe0f.keywords: meditation,méditation,yoga,serenite,sérénité,femme,féminin,feminin,femmes
+emojis.1f9d8-200d-2642-fe0f.name: Homme en position du lotus
+emojis.1f9d8-200d-2642-fe0f.keywords: meditation,méditation,yoga,serenite,sérénité,homme,masculin,hommes
+emojis.1f9d6.name: Personne au sauna
+emojis.1f9d6.keywords: sauna,hammam,femme,femmes,féminin,feminin
+emojis.1f9d6-200d-2640-fe0f.name: Femme au sauna
+emojis.1f9d6-200d-2640-fe0f.keywords: sauna,hammam,femme,femmes,féminin,feminin
+emojis.1f9d6-200d-2642-fe0f.name: Homme au sauna
+emojis.1f9d6-200d-2642-fe0f.keywords: sauna,hammam,homme,hommes,masculin
+emojis.1f3c4-200d-2640-fe0f.name: Surfeuse
+emojis.1f3c4-200d-2640-fe0f.keywords: surfeuse,surf,femme,femmes
+emojis.1f3c4.name: Surfeur
+emojis.1f3c4.keywords: surfeur,surf,homme,hommes
+emojis.1f3c4-200d-2642-fe0f.name: Surfeur
+emojis.1f3c4-200d-2642-fe0f.keywords: surfeur,surf,homme,hommes
+emojis.1f3ca-200d-2640-fe0f.name: Nageuse
+emojis.1f3ca-200d-2640-fe0f.keywords: nage,nageuse,femme,femmes
+emojis.1f3ca-200d-2642-fe0f.name: Nageur
+emojis.1f3ca-200d-2642-fe0f.keywords: nage,nageur,homme,hommes
+emojis.1f3ca.name: Nageur
+emojis.1f3ca.keywords: nage,nageur,homme,hommes
+emojis.1f93d-200d-2640-fe0f.name: Joueuse de water-polo
+emojis.1f93d-200d-2640-fe0f.keywords: polo,water,femme,femmes
+emojis.1f93d-200d-2642-fe0f.name: Joueur de water-polo
+emojis.1f93d-200d-2642-fe0f.keywords: polo,water,homme,hommes
+emojis.1f93d.name: Water-polo
+emojis.1f93d.keywords: polo,water,homme,hommes
+emojis.1f6a3-200d-2640-fe0f.name: Femme qui rame
+emojis.1f6a3-200d-2640-fe0f.keywords: bateau,barque,canoë,canoé,canoe,véhicule,vehicule,aviron,rame,femme,femmes
+emojis.1f6a3-200d-2642-fe0f.name: Homme qui rame
+emojis.1f6a3-200d-2642-fe0f.keywords: bateau,barque,canoë,canoé,canoe,véhicule,vehicule,aviron,rame,homme,hommes
+emojis.1f6a3.name: Barque
+emojis.1f6a3.keywords: bateau,barque,canoë,canoé,canoe,véhicule,vehicule,aviron,rame,homme,hommes
+emojis.1f3c7.name: Courses de chevaux
+emojis.1f3c7.keywords: cheval,jockey,course de chevaux,course
+emojis.1f6b4-200d-2640-fe0f.name: Femme en vélo
+emojis.1f6b4-200d-2640-fe0f.keywords: vélo,velo,cycliste,femme,femmes
+emojis.1f6b4-200d-2642-fe0f.name: Homme en vélo
+emojis.1f6b4-200d-2642-fe0f.keywords: vélo,velo,cycliste,homme,hommes
+emojis.1f6b4.name: Cycliste
+emojis.1f6b4.keywords: vélo,velo,cycliste,homme,hommes
+emojis.1f6b5-200d-2640-fe0f.name: Femme qui fait du VTT
+emojis.1f6b5-200d-2640-fe0f.keywords: vététiste,vetetiste,vttiste,vélo,velo,cycliste,montagne,femme,femmes
+emojis.1f6b5-200d-2642-fe0f.name: Homme qui fait du VTT
+emojis.1f6b5-200d-2642-fe0f.keywords: vététiste,vetetiste,vttiste,vélo,velo,cycliste,montagne,homme,hommes
+emojis.1f6b5.name: Grimpeur cycliste
+emojis.1f6b5.keywords: vététiste,vetetiste,vttiste,vélo,velo,cycliste,montagne,homme,hommes
+emojis.1f3bd.name: Maillot de course avec une écharpe de vainqueur
+emojis.1f3bd.keywords: course,écharpe,echarpe,maillot
+emojis.1f396.name: Médaille militaire
+emojis.1f396.keywords: célébration,celebration,médaille,medaille,militaire
+emojis.1f3c5.name: Médaille sportive
+emojis.1f3c5.keywords: médaille,medaille
+emojis.1f947.name: Médaille de la première place
+emojis.1f947.keywords: premier,or,médaille,medaille
+emojis.1f948.name: Médaille de la seconde place
+emojis.1f948.keywords: médaille,medaille,deuxième,deuxieme,argent
+emojis.1f949.name: Médaille de la troisième place
+emojis.1f949.keywords: bronze,médaille,medaille,troisième,troisieme
+emojis.1f3c6.name: Trophée
+emojis.1f3c6.keywords: prix,récompense,recompense,trophée,trophee
+emojis.1f3f5.name: Rosette
+emojis.1f3f5.keywords: plante,rosette
+emojis.1f397.name: Ruban de rappel
+emojis.1f397.keywords: célébration,celebration,souvenir,ruban
+emojis.1f3ab.name: Ticket
+emojis.1f3ab.keywords: activité,activite,admission,entrée,entree,divertissement,ticket,billet
+emojis.1f39f.name: Billets d'entrée
+emojis.1f39f.keywords: admission,entrée,entree,divertissement,ticket,billet
+emojis.1f3aa.name: Chapiteau de cirque
+emojis.1f3aa.keywords: activité,activite,cirque,divertissement,chapiteau,tente
+emojis.1f939-200d-2640-fe0f.name: Jongleuse
+emojis.1f939-200d-2640-fe0f.keywords: équilibre,equilibre,jongler,multitâche,multitache,compétence,competence,femme,femmes
+emojis.1f939-200d-2642-fe0f.name: Jongleur
+emojis.1f939-200d-2642-fe0f.keywords: équilibre,equilibre,jongler,multitâche,multitache,compétence,competence,homme,hommes
+emojis.1f939.name: Jonglerie
+emojis.1f939.keywords: équilibre,equilibre,jongler,multitâche,multitache,compétence,competence,homme,hommes
+emojis.1f3ad.name: Arts du spectacle 
+emojis.1f3ad.keywords: activité,activite,art,divertissement,masque,jouer,rôle,role,théâtre,theatre
+emojis.1f3a8.name: Palette de peinture
+emojis.1f3a8.keywords: activité,activite,art,divertissement,musée,musee,peinture,palette
+emojis.1f3ac.name: Clap de cinéma
+emojis.1f3ac.keywords: activité,activite,clap,divertissement,film
+emojis.1f3a4.name: Micro
+emojis.1f3a4.keywords: activité,activite,divertissement,karaoké,karaoke,micro,microphone
+emojis.1f3a7.name: Casque audio
+emojis.1f3a7.keywords: activité,activite,écouteurs,ecouteurs,divertissement,casque
+emojis.1f3bc.name: Partition musicale
+emojis.1f3bc.keywords: activité,activite,divertissement,musique,partition
+emojis.1f3b9.name: Clavier de musique
+emojis.1f3b9.keywords: activité,activite,divertissement,instrument,clavier,musique,piano
+emojis.1f941.name: Tambour avec baguettes
+emojis.1f941.keywords: tambour,baguettes,musique
+emojis.1f3b7.name: Saxophone
+emojis.1f3b7.keywords: activité,activite,divertissement,instrument,musique,saxo,saxophone
+emojis.1f3ba.name: Trompette
+emojis.1f3ba.keywords: activité,activite,divertissement,instrument,musique,trompette
+emojis.1f3b8.name: Guitare
+emojis.1f3b8.keywords: activité,activite,divertissement,guitare,instrument,musique
+emojis.1f3bb.name: Violon
+emojis.1f3bb.keywords: activité,activite,divertissement,instrument,musique,violon
+emojis.1f3b2.name: Dé
+emojis.1f3b2.keywords: dés,des,dé,de,divertissement,jeu
+emojis.1f3af.name: Dans le mille
+emojis.1f3af.keywords: activité,activite,bulle,centre de cible,fléchettes,flechettes,divertissement,centre,jeu,toucher,cible
+emojis.1f3b3.name: Bowling
+emojis.1f3b3.keywords: boule,bowling,jeu
+emojis.1f3ae.name: Jeu vidéo
+emojis.1f3ae.keywords: manette,divertissement,jeu,jeu vidéo,jeu video
+emojis.1f47e.name: Monstre extraterrestre
+emojis.1f47e.keywords: extraterrestre,créature,creature,visage,conte de fées,conte de fees,fantaisie,fantastique,monstre,espace,ovni
+emojis.1f3b0.name: Machine à sous
+emojis.1f3b0.keywords: activité,activite,jeu,fente,machine à sous,machine a sous
+emojis.1f697.name: Automobile 
+emojis.1f697.keywords: automobile,voiture,véhicule,vehicule
+emojis.1f695.name: Taxi
+emojis.1f695.keywords: taxi,véhicule,vehicule
+emojis.1f699.name: Camping-car
+emojis.1f699.keywords: camping-car,autocaravane,véhicule,vehicule
+emojis.1f68c.name: Bus
+emojis.1f68c.keywords: bus,véhicule,vehicule
+emojis.1f68e.name: Trolleybus
+emojis.1f68e.keywords: bus,tramway,tram,trolleybus,véhicule,vehicule
+emojis.1f3ce.name: Voiture de course
+emojis.1f3ce.keywords: voiture,course
+emojis.1f693.name: Voiture de police
+emojis.1f693.keywords: voiture,patrouille,police,véhicule,vehicule
+emojis.1f691.name: Ambulance
+emojis.1f691.keywords: ambulance,véhicule,vehicule
+emojis.1f692.name: Camion de pompiers
+emojis.1f692.keywords: camion de pompiers,pompier,feu,camion,véhicule,vehicule
+emojis.1f690.name: Minibus
+emojis.1f690.keywords: bus,minibus,véhicule,vehicule
+emojis.1f69a.name: Camion de livraison
+emojis.1f69a.keywords: livraison,camion,véhicule,vehicule
+emojis.1f69b.name: Semi-remorque
+emojis.1f69b.keywords: semi-remorque,semi,camion,véhicule,vehicule
+emojis.1f69c.name: Tracteur
+emojis.1f69c.keywords: tracteur,véhicule,vehicule
+emojis.1f3cd.name: Moto de course
+emojis.1f3cd.keywords: moto,course
+emojis.1f6f5.name: Scooter à moteur
+emojis.1f6f5.keywords: vespa,scooter
+emojis.1f6b2.name: Vélo
+emojis.1f6b2.keywords: bicyclette,vélo,velo,véhicule,vehicule
+emojis.1f6f4.name: Scooter
+emojis.1f6f4.keywords: trottinette,patinette
+emojis.1f6a8.name: Gyrophare de police
+emojis.1f6a8.keywords: gyrophare,voiture,lumière,lumiere,police,tournant,véhicule,vehicule
+emojis.1f694.name: Voiture de police de face
+emojis.1f694.keywords: voiture,approche,police,véhicule,vehicule
+emojis.1f68d.name: Bus de face
+emojis.1f68d.keywords: bus,approche,véhicule,vehicule
+emojis.1f698.name: Automobile de face
+emojis.1f698.keywords: automobile,auto,voiture,approche,véhicule,vehicule
+emojis.1f696.name: Taxi de face
+emojis.1f696.keywords: approche,taxi,véhicule,vehicule
+emojis.1f6a1.name: Téléphérique
+emojis.1f6a1.keywords: aérien,aerien,câble,cable,voiture,nacelle,cabine,téléphérique,telepherique,tramway,véhicule,vehicule
+emojis.1f6a0.name: Téléphérique
+emojis.1f6a0.keywords: câble,cable,nacelle,cabine,montagne,véhicule,vehicule
+emojis.1f69f.name: Train suspendu
+emojis.1f69f.keywords: chemin de fer,suspension,véhicule,vehicule
+emojis.1f683.name: Wagon
+emojis.1f683.keywords: voiture,électrique,electrique,chemin de fer,train,tramway,trolleybus,véhicule,vehicule
+emojis.1f68b.name: Voiture de tramway
+emojis.1f68b.keywords: voiture,tramway,trolley,véhicule,vehicule
+emojis.1f69d.name: Monorail
+emojis.1f69d.keywords: monorail,véhicule,vehicule
+emojis.1f684.name: Train à grande vitesse
+emojis.1f684.keywords: chemin de fer,shinkansen,grande,vitesse,train,véhicule,vehicule
+emojis.1f685.name: Train à grande vitesse avec une tête arrondie
+emojis.1f685.keywords: chemin de fer,shinkansen,rapide,grande,vitesse,train,véhicule,vehicule
+emojis.1f688.name: Métro léger
+emojis.1f688.keywords: wagon,véhicule,vehicule
+emojis.1f69e.name: Chemin de fer de montagne
+emojis.1f69e.keywords: voiture,montagne,chemin de fer,véhicule,vehicule
+emojis.1f682.name: Locomotive à vapeur
+emojis.1f682.keywords: moteur,locomotive,chemin de fer,vapeur,train,véhicule,vehicule
+emojis.1f686.name: Train
+emojis.1f686.keywords: wagon,rame,train,véhicule,vehicule
+emojis.1f687.name: Métro
+emojis.1f687.keywords: métro,metro,véhicule,vehicule
+emojis.1f68a.name: Tramway
+emojis.1f68a.keywords: tramway,trolley,véhicule,vehicule
+emojis.1f689.name: Gare
+emojis.1f689.keywords: chemin de fer,gare,train,véhicule,vehicule
+emojis.1f681.name: Hélicoptère
+emojis.1f681.keywords: hélicoptère,helicoptere,véhicule,vehicule
+emojis.1f6e9.name: Petit avion
+emojis.1f6e9.keywords: avion,véhicule,vehicule
+emojis.2708.name: Avion
+emojis.2708.keywords: avion,véhicule,vehicule
+emojis.1f6eb.name: Décollage d'un avion
+emojis.1f6eb.keywords: avion,check-in,enregistrement,départ,depart,départs,departs,véhicule,vehicule
+emojis.1f6ec.name: Avion qui atterrie
+emojis.1f6ec.keywords: avion,arrivées,arrivees,débarquement,debarquement,atterrissage,véhicule,vehicule
+emojis.1f6f6.name: Canoë
+emojis.1f6f6.keywords: bateau,canoë,canoe
+emojis.26f5.name: Voilier
+emojis.26f5.keywords: bateau,station balnéaire,station balneaire,voilier,mer,véhicule,vehicule,yacht
+emojis.1f6e5.name: Bateau à moteur
+emojis.1f6e5.keywords: bateau,bateau à moteur,bateau a moteur,véhicule,vehicule
+emojis.1f6a4.name: Vedette
+emojis.1f6a4.keywords: bateau,vedette,hors-bord,véhicule,vehicule
+emojis.26f4.name: Ferry
+emojis.26f4.keywords: bateau,ferry
+emojis.1f6f3.name: Navire à passagers
+emojis.1f6f3.keywords: passager,vaisseau,véhicule,vehicule
+emojis.1f680.name: Fusée
+emojis.1f680.keywords: fusée,fusee,espace,véhicule,vehicule
+emojis.1f6f8.name: Soucoupe volante
+emojis.1f6f8.keywords: ovni,extraterrestre,espace,fantasie
+emojis.1f6f0.name: Satellite
+emojis.1f6f0.keywords: satellite,espace,véhicule,vehicule,engin
+emojis.1f4ba.name: Siège 
+emojis.1f4ba.keywords: chaise,siège,siege
+emojis.2693.name: Ancre
+emojis.2693.keywords: ancre,bateau,outil
+emojis.1f6a7.name: Panneau chantier 
+emojis.1f6a7.keywords: barrière,barriere,construction
+emojis.26fd.name: Pompe à essence
+emojis.26fd.keywords: carburant,pompe à essence,pompe a essence,essence,pompe,station
+emojis.1f68f.name: Arrêt de bus
+emojis.1f68f.keywords: bus,arrêt de bus,arret de bus,arrêt,arret
+emojis.1f6a6.name: Feu de signalisation vertical
+emojis.1f6a6.keywords: feu,signalisation,trafic,circulation,sémaphore,semaphore
+emojis.1f6a5.name: Feu de signalisation horizontal
+emojis.1f6a5.keywords: feu,signalisation,trafic,circulation,sémaphore,semaphore
+emojis.1f6d1.name: Panneau octogonal
+emojis.1f6d1.keywords: octogonal,arrêt,arret,stop
+emojis.1f6a2.name: Navire
+emojis.1f6a2.keywords: bateau,véhicule,vehicule
+emojis.1f3a1.name: Grande roue
+emojis.1f3a1.keywords: activité,activite,parc d'attractions,divertissement,grande,roue
+emojis.1f3a2.name: Montagnes russes
+emojis.1f3a2.keywords: activité,activite,parc d'attractions,montagnes russes,divertissement,grand huit
+emojis.1f3a0.name: Cheval de manège
+emojis.1f3a0.keywords: activité,activite,manège,manege,divertissement,cheval
+emojis.1f3d7.name: Bâtiment en construction
+emojis.1f3d7.keywords: bâtiment,batiment,construction
+emojis.1f301.name: Brumeux
+emojis.1f301.keywords: brouillard,temps,météo,meteo
+emojis.1f5fc.name: Tour de Tokyo
+emojis.1f5fc.keywords: tokyo,tour
+emojis.1f3ed.name: Usine
+emojis.1f3ed.keywords: bâtiment,batiment,usine,manufacture
+emojis.26f2.name: Fontaine
+emojis.26f2.keywords: fontaine
+emojis.1f391.name: Fête de la lune
+emojis.1f391.keywords: activité,activite,fête,fete,cérémonie,ceremonie,divertissement,lune
+emojis.26f0.name: Montagne
+emojis.26f0.keywords: montagne
+emojis.1f3d4.name: Montagne avec sommet enneigé
+emojis.1f3d4.keywords: froid,montagne,neige
+emojis.1f5fb.name: Mont Fuji
+emojis.1f5fb.keywords: fuji,mont
+emojis.1f30b.name: Volcan
+emojis.1f30b.keywords: éruption,eruption,montagne,volcan,météo,meteo,temps
+emojis.1f5fe.name: Silhouette du Japon
+emojis.1f5fe.keywords: japon,carte
+emojis.1f3d5.name: Camping
+emojis.1f3d5.keywords: camping
+emojis.26fa.name: Tente
+emojis.26fa.keywords: camping,tente
+emojis.1f3de.name: Parc national
+emojis.1f3de.keywords: parc national,parc
+emojis.1f6e3.name: Autoroute
+emojis.1f6e3.keywords: route nationale,autoroute,route
+emojis.1f6e4.name: Chemin de fer
+emojis.1f6e4.keywords: voie ferrée,voie ferree,train
+emojis.1f305.name: Lever du soleil
+emojis.1f305.keywords: matin,soleil,lever du soleil,météo,meteo,temps
+emojis.1f304.name: Lever de soleil sur les montagnes
+emojis.1f304.keywords: matin,montagne,soleil,aube,lever de soleil,météo,meteo,temps
+emojis.1f3dc.name: Désert
+emojis.1f3dc.keywords: désert,desert
+emojis.1f3d6.name: Plage avec un parasol
+emojis.1f3d6.keywords: plage,parasol
+emojis.1f3dd.name: Île déserte
+emojis.1f3dd.keywords: déserte,deserte,île,ile
+emojis.1f307.name: Coucher de soleil sur les toits de la ville
+emojis.1f307.keywords: bâtiment,batiment,crépuscule,crepuscule,soleil,coucher de soleil,météo,meteo,temps
+emojis.1f306.name: Paysage urbain au crépuscule
+emojis.1f306.keywords: bâtiment,batiment,ville,crépuscule,crepuscule,soir,paysage,soleil,coucher de soleil,météo,meteo,temps
+emojis.1f3d9.name: Paysage urbain
+emojis.1f3d9.keywords: bâtiment,batiment,immeuble,ville
+emojis.1f303.name: Nuit étoilée
+emojis.1f303.keywords: nuit,étoile,etoile,météo,meteo,temps
+emojis.1f309.name: Pont de nuit
+emojis.1f309.keywords: pont,nuit,météo,meteo,temps
+emojis.1f30c.name: Voie lactée 
+emojis.1f30c.keywords: voie lactée,voie lactee,espace,météo,meteo,temps
+emojis.1f320.name: Étoile filante
+emojis.1f320.keywords: activité,activite,filante,espace,étoile,etoile,bolide,météore,meteore,météorite,meteorite,aérolithe,aerolithe
+emojis.1f387.name: Cierge magique
+emojis.1f387.keywords: activité,activite,fête,fete,divertissement,feux d'artifice,étincelle,etincelle
+emojis.1f386.name: Feux d'artifice
+emojis.1f386.keywords: activité,activite,fête,fete,divertissement,feux d'artifice
+emojis.1f308.name: Arc-en-ciel
+emojis.1f308.keywords: pluie,arc-en-ciel,arc en ciel,météo,meteo,temps
+emojis.1f3d8.name: Maisons en construction
+emojis.1f3d8.keywords: bâtiment,batiment,immeuble,maison
+emojis.1f3f0.name: Château européen
+emojis.1f3f0.keywords: bâtiment,batiment,château,chateau,européen,europeen
+emojis.1f3ef.name: Château japonais
+emojis.1f3ef.keywords: bâtiment,batiment,château,chateau,japonais
+emojis.1f3df.name: Stade
+emojis.1f3df.keywords: stade
+emojis.1f5fd.name: Statue de la liberté
+emojis.1f5fd.keywords: liberté,liberte,statue
+emojis.1f3e0.name: Maison
+emojis.1f3e0.keywords: bâtiment,batiment,domicile,maison
+emojis.1f3e1.name: Maison avec jardin
+emojis.1f3e1.keywords: bâtiment,batiment,jardin,domicile,maison
+emojis.1f3da.name: Construction de maison délaissée
+emojis.1f3da.keywords: bâtiment,batiment,abandonnée,abandonnee,maison
+emojis.1f3e2.name: Immeuble de bureaux
+emojis.1f3e2.keywords: bâtiment,batiment,immeuble
+emojis.1f3ec.name: Grand magasin
+emojis.1f3ec.keywords: bâtiment,batiment,grand magasin,galeries
+emojis.1f3e3.name: Bureau de poste japonais
+emojis.1f3e3.keywords: bâtiment,batiment,japonais,bureau de poste,poste
+emojis.1f3e4.name: Bureau de poste européen
+emojis.1f3e4.keywords: bâtiment,batiment,européen,europeen,bureau de poste,poste
+emojis.1f3e5.name: Hôpital
+emojis.1f3e5.keywords: bâtiment,batiment,docteur,hôpital,hopital,médecine,medecine,médicament,medicament
+emojis.1f3e6.name: Banque
+emojis.1f3e6.keywords: banque,bâtiment,batiment
+emojis.1f3e8.name: Hôtel
+emojis.1f3e8.keywords: bâtiment,batiment,hôtel,hotel
+emojis.1f3ea.name: Supérette
+emojis.1f3ea.keywords: bâtiment,batiment,épicerie,epicerie,supérette,superette,kombini,magasin
+emojis.1f3eb.name: École
+emojis.1f3eb.keywords: bâtiment,batiment,école,ecole
+emojis.1f3e9.name: Love hotel
+emojis.1f3e9.keywords: bâtiment,batiment,hôtel,hotel,love hotel,amour
+emojis.1f492.name: Mariage
+emojis.1f492.keywords: activité,activite,chapelle,amour,mariage
+emojis.1f3db.name: Immeuble classique
+emojis.1f3db.keywords: bâtiment,batiment,classique
+emojis.26ea.name: Église
+emojis.26ea.keywords: bâtiment,batiment,chrétien,chretien,église,eglise,croix,religion
+emojis.1f54c.name: Mosquée
+emojis.1f54c.keywords: islam,mosquée,musulman,religion
+emojis.1f54d.name: Synagogue
+emojis.1f54d.keywords: juif,juive,israélite,israelite,religion,synagogue,temple
+emojis.1f54b.name: Kaaba
+emojis.1f54b.keywords: islam,kaaba,musulman,religion
+emojis.26e9.name: Sanctuaire shinto
+emojis.26e9.keywords: religion,shinto,sanctuaire
+emojis.e50a.name: Shibuya
+emojis.e50a.keywords: 109,shibuya
+emojis.231a.name: Montre
+emojis.231a.keywords: horloge,montre
+emojis.1f4f1.name: Téléphone mobile
+emojis.1f4f1.keywords: portable,communication,mobile,téléphone,telephone
+emojis.1f4f2.name: Flèche vers la droite pointant vers un téléphone mobile
+emojis.1f4f2.keywords: flèche,fleche,appel,portable,communication,mobile,téléphone,telephone,recevoir
+emojis.1f4bb.name: Ordinateur
+emojis.1f4bb.keywords: ordinateur portable,ordinateur,pc,personnel
+emojis.2328.name: Clavier
+emojis.2328.keywords: ordinateur,clavier
+emojis.1f5a5.name: Ordinateur de bureau
+emojis.1f5a5.keywords: ordinateur,bureau
+emojis.1f5a8.name: Imprimante
+emojis.1f5a8.keywords: ordinateur,imprimante
+emojis.1f5b1.name: Souris à trois boutons
+emojis.1f5b1.keywords: 3,bouton,souris,trois
+emojis.1f5b2.name: Boule de commande
+emojis.1f5b2.keywords: ordinateur,boule de commande,boule roulante,trackball
+emojis.1f579.name: Manette
+emojis.1f579.keywords: divertissement,jeu,manette,jeu vidéo,jeu video
+emojis.1f5dc.name: Compression
+emojis.1f5dc.keywords: compression,outil,étau
+emojis.1f4bd.name: Minidisc
+emojis.1f4bd.keywords: ordinateur,disque,divertissement,minidisque,optique
+emojis.1f4be.name: Disquette
+emojis.1f4be.keywords: ordinateur,disque,disquette
+emojis.1f4bf.name: Disque optique 
+emojis.1f4bf.keywords: blu-ray,cd,ordinateur,disque,dvd,optique
+emojis.1f4c0.name: DVD
+emojis.1f4c0.keywords: blu-ray,cd,ordinateur,disque,dvd,divertissement,optique
+emojis.1f4fc.name: Cassette vidéo
+emojis.1f4fc.keywords: divertissement,cassette,vhs,vidéo,video,cassette vidéo,cassette video
+emojis.1f4f7.name: Appareil photo
+emojis.1f4f7.keywords: appareil photo,divertissement,vidéo,video
+emojis.1f4f8.name: Appareil photo avec flash
+emojis.1f4f8.keywords: appareil photo,flash,vidéo,video
+emojis.1f4f9.name: Caméscope
+emojis.1f4f9.keywords: appareil photo,divertissement,vidéo,video
+emojis.1f3a5.name: Caméra de cinéma
+emojis.1f3a5.keywords: activité,activite,caméra,camera,cinema,divertissement,film
+emojis.1f4fd.name: Projecteur de film
+emojis.1f4fd.keywords: cinéma,cinema,divertissement,film,projecteur,vidéo,video
+emojis.1f39e.name: Pellicule
+emojis.1f39e.keywords: cinéma,cinema,divertissement,film,images
+emojis.1f4de.name: Combiné téléphonique
+emojis.1f4de.keywords: communication,téléphone,telephone,combiné,combine
+emojis.260e.name: Téléphone
+emojis.260e.keywords: téléphone,telephone
+emojis.1f4df.name: Bipeur
+emojis.1f4df.keywords: communication,bip,téléavertisseur,teleavertisseur
+emojis.1f4e0.name: Télécopieur 
+emojis.1f4e0.keywords: communication,fax,télécopieur,telecopieur
+emojis.1f4fa.name: Télévision
+emojis.1f4fa.keywords: divertissement,télévision,television,télé,tele,TV,vidéo,video
+emojis.1f4fb.name: Radio
+emojis.1f4fb.keywords: divertissement,radio,vidéo,video
+emojis.1f399.name: Microphone de studio
+emojis.1f399.keywords: micro,microphone,musique,studio
+emojis.1f39a.name: Curseur
+emojis.1f39a.keywords: niveau,musique,curseur
+emojis.1f39b.name: Boutons de contrôle
+emojis.1f39b.keywords: commande,boutons,musique
+emojis.23f1.name: Chronomètre
+emojis.23f1.keywords: horloge,chronomètre,chronometre
+emojis.23f2.name: Minuteur
+emojis.23f2.keywords: horloge,minuteur
+emojis.23f0.name: Réveil
+emojis.23f0.keywords: alarme,réveil,reveil
+emojis.1f570.name: Horloge de bureau
+emojis.1f570.keywords: horloge,pendule
+emojis.23f3.name: Sablier avec écoulement du sable
+emojis.23f3.keywords: sablier,sable,minuteur
+emojis.231b.name: Sablier
+emojis.231b.keywords: sablier,sable,minuteur
+emojis.1f4e1.name: Antenne satellite
+emojis.1f4e1.keywords: antenne,communication,parabole,satellite
+emojis.1f50b.name: Pile
+emojis.1f50b.keywords: pile,batterie
+emojis.1f50c.name: Prise électrique
+emojis.1f50c.keywords: électrique,electrique,électricité,electricite,prise
+emojis.1f4a1.name: Ampoule électrique
+emojis.1f4a1.keywords: ampoule,comique,électrique,electrique,idée,idee,lumière,lumiere
+emojis.1f526.name: Lampe de poche 
+emojis.1f526.keywords: électrique,electrique,lampe de poche,lumière,lumiere,outil,torche
+emojis.1f56f.name: Bougie
+emojis.1f56f.keywords: bougie,lumière,lumiere
+emojis.1f5d1.name: Poubelle
+emojis.1f5d1.keywords: poubelle,corbeille à papier
+emojis.1f6e2.name: Bidon d'huile
+emojis.1f6e2.keywords: bidon,huile
+emojis.1f6d2.name: Chariot de courses
+emojis.1f6d2.keywords: panier,courses,shopping,chariot
+emojis.1f4b8.name: Argent avec des ailes
+emojis.1f4b8.keywords: banque,billet de banque,billet,dollar,vol,monnaie,argent,papier,ailes
+emojis.1f4b5.name: Billet de banque avec le symbole du dollar
+emojis.1f4b5.keywords: banque,billet de banque,billet,devise,dollar,monnaie,argent,papier
+emojis.1f4b4.name: Billet de banque avec le symbole du yen
+emojis.1f4b4.keywords: banque,billet de banque,billet,devise,monnaie,argent,papier,yen
+emojis.1f4b6.name: Billet de banque avec le symbole euro
+emojis.1f4b6.keywords: banque,billet de banque,billet,devise,euro,argent,monnaie,papier
+emojis.1f4b7.name: Billet de banque avec le symbole de la livre
+emojis.1f4b7.keywords: banque,billet de banque,billet,devise,argent,monnaie,papier,livre
+emojis.1f4b0.name: Sac d'argent
+emojis.1f4b0.keywords: sac,dollar,argent,sac d'argent
+emojis.1f4b3.name: Carte de crédit
+emojis.1f4b3.keywords: banque,carte,crédit,credit,argent
+emojis.1f48e.name: Pierre précieuse
+emojis.1f48e.keywords: diamant,gemme,bijou,joyau,amour
+emojis.2696.name: Échelles
+emojis.2696.keywords: balance,justice,outil,poids,zodiaque
+emojis.1f527.name: Clé
+emojis.1f527.keywords: outil,clé à molette,cle a molette
+emojis.1f528.name: Marteau
+emojis.1f528.keywords: marteau,outil
+emojis.2692.name: Marteau et pioche
+emojis.2692.keywords: marteau,pioche,outil
+emojis.1f6e0.name: Marteau et clé à molette
+emojis.1f6e0.keywords: marteau,outil,clé à molette,cle a molette,clef à molette,clef a molette,molette
+emojis.26cf.name: Pioche
+emojis.26cf.keywords: exploitation minière,exploitation miniere,mine,pioche,outil
+emojis.1f529.name: Boulon
+emojis.1f529.keywords: boulon,écrou,ecrou,outil
+emojis.2699.name: Équipement
+emojis.2699.keywords: équipement,equipement,outil,matériel,materiel
+emojis.26d3.name: Chaînes
+emojis.26d3.keywords: chaîne,chaine
+emojis.1f52b.name: Pistolet
+emojis.1f52b.keywords: arme à feu,arme a feu,arme de poing,pistolet,revolver,outil,arme
+emojis.1f4a3.name: Bombe
+emojis.1f4a3.keywords: bombe,comique
+emojis.1f52a.name: Couteau de cuisine
+emojis.1f52a.keywords: couteau de cuisine,cuisine,couteau de chef,couteau,outil,arme
+emojis.1f5e1.name: Poignard
+emojis.1f5e1.keywords: poignard,couteau,arme
+emojis.2694.name: Épées croisées
+emojis.2694.keywords: croisées,croisees,épées,epees,arme
+emojis.1f6e1.name: Bouclier
+emojis.1f6e1.keywords: bouclier,arme
+emojis.1f6ac.name: Symbole fumeur
+emojis.1f6ac.keywords: activité,fumer
+emojis.26b0.name: Cercueil
+emojis.26b0.keywords: cercueil,mort
+emojis.26b1.name: Urne funéraire
+emojis.26b1.keywords: mort,funérailles,funerailles,enterrement,obsèques,obseques,urne
+emojis.1f3fa.name: Amphore
+emojis.1f3fa.keywords: amphore,verseau,cuisine,boisson,cruche,outil,arme,zodiaque
+emojis.1f52e.name: Boule de cristal
+emojis.1f52e.keywords: boule,cristal,conte de fée,conte de fee,fantastique,fantaisie,destin,outil
+emojis.1f4ff.name: Chapelets
+emojis.1f4ff.keywords: perles,vêtement,vetement,collier,prière,priere,religion
+emojis.1f488.name: Enseigne de barbier
+emojis.1f488.keywords: coiffeur,coupe de cheveux,enseigne
+emojis.2697.name: Alambic
+emojis.2697.keywords: alambic,chimie,outil
+emojis.1f52d.name: Télescope
+emojis.1f52d.keywords: télescope,telescope,outil
+emojis.1f52c.name: Microscope
+emojis.1f52c.keywords: microscope,outil
+emojis.1f573.name: Trou
+emojis.1f573.keywords: trou
+emojis.1f48a.name: Pilule
+emojis.1f48a.keywords: docteur,médicaments,medicaments,cachet,malade
+emojis.1f489.name: Seringue
+emojis.1f489.keywords: docteur,médicaments,medicaments,aiguille,dose,malade,seringue,outil
+emojis.1f321.name: Thermomètre
+emojis.1f321.keywords: thermomètre,thermometre,météo,meteo,temps
+emojis.1f3f7.name: Étiquette
+emojis.1f3f7.keywords: étiquette,etiquette
+emojis.1f516.name: Marque-page 
+emojis.1f516.keywords: favoris,signet
+emojis.1f6bd.name: Cuvette de toilette
+emojis.1f6bd.keywords: toilettes
+emojis.1f6bf.name: Douche
+emojis.1f6bf.keywords: douche,eau
+emojis.1f6c1.name: Baignoire
+emojis.1f6c1.keywords: bain,baignoire
+emojis.1f6c0.name: Bain
+emojis.1f6c0.keywords: bain,baignoire
+emojis.1f511.name: Clé
+emojis.1f511.keywords: clé,cle,clef,verrouillé,verrouille,mot de passe
+emojis.1f5dd.name: Vieille clé
+emojis.1f5dd.keywords: indice,clé,cle,clef,serrure,vieille
+emojis.1f6cb.name: Canapé et lampe
+emojis.1f6cb.keywords: canapé,canape,sofa,hôtel,hotel,lampe
+emojis.1f6cc.name: Couchage
+emojis.1f6cc.keywords: personne au lit,hôtel,hotel,sommeil,dormir,lit
+emojis.1f6cf.name: Lit
+emojis.1f6cf.keywords: lit,hôtel,hotel,dormir
+emojis.1f6aa.name: Porte
+emojis.1f6aa.keywords: porte
+emojis.1f6ce.name: Sonnette
+emojis.1f6ce.keywords: cloche,sonnette,hôtel,hotel
+emojis.1f5bc.name: Cadre avec photo
+emojis.1f5bc.keywords: art,cadre,musée,musee,peinture,photo
+emojis.1f5fa.name: Carte du monde
+emojis.1f5fa.keywords: carte,monde
+emojis.26f1.name: Parapluie par terre
+emojis.26f1.keywords: pluie,soleil,parapluie,météo,meteo,temps
+emojis.1f5ff.name: Tête de moaï
+emojis.1f5ff.keywords: moaï,moai,visage,tête de moaï,tete de moai,île de pâques,ile de paques,statue
+emojis.1f6cd.name: Sacs à provisions
+emojis.1f6cd.keywords: sac,hôtel,hotel,courses
+emojis.1f388.name: Ballon de baudruche
+emojis.1f388.keywords: activité,activite,ballon,fête,fete,divertissement
+emojis.1f38f.name: Serpentin de carpes
+emojis.1f38f.keywords: activité,activite,carpe,fête,fete,divertissement,drapeau,banderole,koinobori
+emojis.1f380.name: Ruban
+emojis.1f380.keywords: fête,fete,ruban
+emojis.1f381.name: Cadeau emballé
+emojis.1f381.keywords: boîte,boite,fête,fete,divertissement,cadeau,présent,present,emballé,emballe
+emojis.1f38a.name: Boule de confettis
+emojis.1f38a.keywords: activité,activite,boule,fête,fete,confetti,divertissement
+emojis.1f389.name: Bombe de table
+emojis.1f389.keywords: activité,activite,fête,fete,divertissement,bombe de table,tada
+emojis.1f38e.name: Poupées japonaises
+emojis.1f38e.keywords: activité,activite,fête,fete,poupée,poupee,divertissement,festival,japonais
+emojis.1f390.name: Carillon éolien
+emojis.1f390.keywords: activité,activite,cloche,fête,fete,carillon,divertissement,vent,fūrin,furin
+emojis.1f3ee.name: Lanterne chochin
+emojis.1f3ee.keywords: lanterne de papier rouge,lanterne en papier rouge,bar,japonais,lanterne,lampe,rouge
+emojis.2709.name: Enveloppe
+emojis.2709.keywords: e-mail,e mail,email,courrier électronique,courrier electronique,enveloppe
+emojis.1f4e9.name: Enveloppe avec flèche vers le bas au-dessus
+emojis.1f4e9.keywords: flèche,fleche,communication,bas,vers le bas,e-mail,email,courriel,enveloppe,lettre,courrier,sortant,envoyé,envoye
+emojis.1f4e8.name: Enveloppe entrante
+emojis.1f4e8.keywords: communication,e-mail,email,courriel,enveloppe,entrant,lettre,courrier,recevoir
+emojis.1f4e7.name: Symbole email
+emojis.1f4e7.keywords: communication,e-mail,e mail,email,lettre,courrier,mail,courriel,courrier électronique,courrier electronique
+emojis.1f48c.name: Lettre d'amour
+emojis.1f48c.keywords: cœur,coeur,lettre,amour,courrier,romantisme
+emojis.1f4ee.name: Boîte postale
+emojis.1f4ee.keywords: communication,courrier,boîte aux lettres,boite aux lettres,boîte postale,boite postale
+emojis.1f4ea.name: Boîte aux lettres fermée avec drapeau baissé
+emojis.1f4ea.keywords: fermé,ferme,communication,drapeau,baissé,baisse,courrier,boîte aux lettres,boite aux lettres,boîte postale,boite postale
+emojis.1f4eb.name: Boîte aux lettres fermée avec le drapeau levé
+emojis.1f4eb.keywords: fermé,ferme,communication,drapeau,courrier,boîte aux lettres,boite aux lettres,boîte postale,boite postale
+emojis.1f4ec.name: Boîte aux lettres ouverte avec le drapeau levé
+emojis.1f4ec.keywords: communication,drapeau,courrier,boîte aux lettres,boite aux lettres,ouvert,boîte postale,boite postale
+emojis.1f4ed.name: Boîte aux lettres ouverte avec drapeau baissé
+emojis.1f4ed.keywords: communication,drapeau,baissé,baisse,courrier,boîte aux lettres,boite aux lettres,ouvert,boîte postale,boite postale
+emojis.1f4e6.name: Paquet
+emojis.1f4e6.keywords: boîte,boite,communication,paquet,colis
+emojis.1f4ef.name: Cor postal
+emojis.1f4ef.keywords: communication,divertissement,cor,poste,postal
+emojis.1f4e5.name: Bac à courrier entrant
+emojis.1f4e5.keywords: boîte,boite,communication,boîte de réception,boite de reception,lettre,courrier,recevoir,bac
+emojis.1f4e4.name: Bac à courrier sortant
+emojis.1f4e4.keywords: boîte,boite,communication,lettre,courrier,boîte d'envoi,boite d'envoi,envoyé,envoye,bac
+emojis.1f4dc.name: Parchemin
+emojis.1f4dc.keywords: papier,parchemin
+emojis.1f4c3.name: Page enroulée
+emojis.1f4c3.keywords: enroulé,enroule,parchemin,document,page
+emojis.1f4d1.name: Marque-pages
+emojis.1f4d1.keywords: marque-page,marque,signet,onglets
+emojis.1f4ca.name: Diagramme à barres
+emojis.1f4ca.keywords: barre,diagramme,graphique
+emojis.1f4c8.name: Graphique avec tendance à la hausse
+emojis.1f4c8.keywords: graphique à la hausse,graphique a la hausse,graphique,croissance,graphique,tendance,à la hausse,a la hausse
+emojis.1f4c9.name: Graphique avec tendance à la baisse
+emojis.1f4c9.keywords: graphique à la baisse,graphique a la baisse,graphique,à la baisse,a la baisse,graphique,tendance
+emojis.1f4c4.name: Page recto
+emojis.1f4c4.keywords: document,page
+emojis.1f4c5.name: Calendrier
+emojis.1f4c5.keywords: calendrier,date
+emojis.1f4c6.name: Calendrier à effeuiller
+emojis.1f4c6.keywords: calendrier
+emojis.1f5d3.name: Calendrier à spirale
+emojis.1f5d3.keywords: calendrier à spirale,calendrier a spirale,calendrier,carnet,spirale
+emojis.1f4c7.name: Fichier rotatif
+emojis.1f4c7.keywords: carte,index,rolodex
+emojis.1f5c3.name: Boîte à fiches
+emojis.1f5c3.keywords: boîte,boite,carte,fichier
+emojis.1f5f3.name: Urne avec bulletin
+emojis.1f5f3.keywords: bulletin,urne
+emojis.1f5c4.name: Classeur
+emojis.1f5c4.keywords: classeur,fichier
+emojis.1f4cb.name: Porte-bloc
+emojis.1f4cb.keywords: porte-bloc
+emojis.1f5d2.name: Carnet à spirale
+emojis.1f5d2.keywords: carnet à spirale,carnet a spirale,note,bloc-notes,spirale
+emojis.1f4c1.name: Dossier
+emojis.1f4c1.keywords: fichier,dossier
+emojis.1f4c2.name: Dossier ouvert
+emojis.1f4c2.keywords: fichier,dossier,ouvrir
+emojis.1f5c2.name: Intercalaires
+emojis.1f5c2.keywords: fiche,intercalaires,index
+emojis.1f5de.name: Journal roulé
+emojis.1f5de.keywords: actualités,actualites,journal,roulé,roule
+emojis.1f4f0.name: Journal
+emojis.1f4f0.keywords: communication,actualités,actualites,journal
+emojis.1f4d3.name: Cahier
+emojis.1f4d3.keywords: carnet,bloc-notes,bloc notes
+emojis.1f4d5.name: Livre fermé
+emojis.1f4d5.keywords: livre,fermé,ferme
+emojis.1f4d7.name: Livre vert
+emojis.1f4d7.keywords: livre,vert
+emojis.1f4d8.name: Livre bleu
+emojis.1f4d8.keywords: bleu,livre
+emojis.1f4d9.name: Livre orange
+emojis.1f4d9.keywords: livre,orange
+emojis.1f4d4.name: Cahier avec couverture
+emojis.1f4d4.keywords: livre,couverture,décoré,decore,bloc-notes,bloc notes,carnet
+emojis.1f4d2.name: Registre
+emojis.1f4d2.keywords: registre,carnet,bloc-notes,bloc notes
+emojis.1f4da.name: Livres
+emojis.1f4da.keywords: livre,livres
+emojis.1f4d6.name: Livre ouvert
+emojis.1f4d6.keywords: livre,ouvert
+emojis.1f517.name: Symbole du lien
+emojis.1f517.keywords: lien
+emojis.1f4ce.name: Trombone
+emojis.1f4ce.keywords: trombone
+emojis.1f587.name: Trombones liés
+emojis.1f587.keywords: communication,lien,trombone
+emojis.2702.name: Ciseaux
+emojis.2702.keywords: ciseaux,outil
+emojis.1f4d0.name: Équerre
+emojis.1f4d0.keywords: règle,regle,équerre,equerre,triangle
+emojis.1f4cf.name: Règle à mesurer
+emojis.1f4cf.keywords: règle,regle,angle droit
+emojis.1f4cc.name: Punaise
+emojis.1f4cc.keywords: épingle,epingle,punaise
+emojis.1f4cd.name: Punaise ronde
+emojis.1f4cd.keywords: épingle,epingle,punaise
+emojis.1f510.name: Cadenas verrouillé avec une clé
+emojis.1f510.keywords: fermé,ferme,clé,cle,clef,cadenas,sécurisé,securise
+emojis.1f512.name: Cadenas
+emojis.1f512.keywords: verrouillé,verrouille,cadenas,fermé,ferme
+emojis.1f513.name: Cadenas ouvert
+emojis.1f513.keywords: verrouiller,ouvrir,déverrouiller,deverrouiller
+emojis.1f50f.name: Cadenas avec un stylo plume
+emojis.1f50f.keywords: encre,cadenas,plume,stylo,confidentialité,confidentialite
+emojis.1f58a.name: Stylo à bille vers le bas à gauche
+emojis.1f58a.keywords: stylo à bille,stylo a bille,stylo-bille,stylo bille,communication,stylo
+emojis.1f58b.name: Stylo plume vers le bas à gauche
+emojis.1f58b.keywords: communication,plume,stylo
+emojis.2712.name: Plume
+emojis.2712.keywords: plume,stylo
+emojis.1f4dd.name: Mémo
+emojis.1f4dd.keywords: communication,note,mémo,memo,crayon
+emojis.270f.name: Crayon
+emojis.270f.keywords: crayon
+emojis.1f58d.name: Crayon vers le bas à gauche
+emojis.1f58d.keywords: communication,crayon,crayon de couleur
+emojis.1f58c.name: Pinceau vers le bas à gauche
+emojis.1f58c.keywords: communication,pinceau,peinture
+emojis.1f50d.name: Loupe pointant vers la gauche
+emojis.1f50d.keywords: verre,loupe,rechercher,outil
+emojis.1f50e.name: Loupe pointant vers la droite
+emojis.1f50e.keywords: verre,loupe,rechercher,outil
+emojis.2764.name: Cœur rouge en gras
+emojis.2764.keywords: cœur,coeur
+emojis.1f9e1.name: Cœur orange
+emojis.1f9e1.keywords: cœur,coeur,orange
+emojis.1f49b.name: Cœur jaune
+emojis.1f49b.keywords: cœur,coeur,jaune
+emojis.1f49a.name: Cœur vert
+emojis.1f49a.keywords: cœur,coeur,vert
+emojis.1f499.name: Cœur bleu
+emojis.1f499.keywords: cœur,coeur,bleu
+emojis.1f49c.name: Cœur violet
+emojis.1f49c.keywords: cœur,coeur,violet,mauve
+emojis.1f5a4.name: Cœur noir
+emojis.1f5a4.keywords: cœur,coeur,noir,mauvais,méchant,mechant
+emojis.1f494.name: Cœur brisé
+emojis.1f494.keywords: cœur,coeur,briser,brisé,brise
+emojis.2763.name: Point d'exclamation en forme de gros cœur
+emojis.2763.keywords: cœur,coeur,exclamation,point,ponctuation
+emojis.1f495.name: Deux cœurs
+emojis.1f495.keywords: cœur,coeur,amour
+emojis.1f49e.name: Cœurs tournants
+emojis.1f49e.keywords: cœur,coeur,tournant
+emojis.1f493.name: Cœur qui bat
+emojis.1f493.keywords: cœur,coeur,qui bat,battement de cœur,battement de coeur,pulsation
+emojis.1f497.name: Cœur croissant
+emojis.1f497.keywords: cœur,coeur,excité,excite,croissant,pulsation,pouls,nerveux
+emojis.1f496.name: Cœur étincellant
+emojis.1f496.keywords: cœur,coeur,excité,excite,enthousiaste,étincelle,etincelle,éclat,eclat
+emojis.1f498.name: Cœur traversé d’une flèche
+emojis.1f498.keywords: cœur,coeur,flèche,fleche,cupidon,amour
+emojis.1f49d.name: Cœur avec un ruban
+emojis.1f49d.keywords: cœur,coeur,ruban,valentin
+emojis.1f49f.name: Cœur de décoration
+emojis.1f49f.keywords: cœur,coeur
+emojis.262e.name: Symbole de paix
+emojis.262e.keywords: paix
+emojis.271d.name: Croix latine
+emojis.271d.keywords: chrétien,chretien,croix,religion
+emojis.262a.name: Étoile et croissant
+emojis.262a.keywords: islam,musulman,religion
+emojis.1f549.name: Symbole Om̐
+emojis.1f549.keywords: hindou,om̐,om,religion
+emojis.2638.name: Roue du dharma
+emojis.2638.keywords: bouddhiste,dharma,religion,roue
+emojis.2721.name: Étoile de David
+emojis.2721.keywords: david,juif,juive,israélite,israelite,religion,étoile,etoile
+emojis.1f52f.name: Étoile à six branches avec un point au milieu
+emojis.1f52f.keywords: destin,étoile,etoile
+emojis.1f54e.name: Menorah avec neuf branches
+emojis.1f54e.keywords: candélabre,candelabre,chandelier,menorah,religion
+emojis.262f.name: Yin yang
+emojis.262f.keywords: religion,tao,taoïste,taoiste,yang,yin
+emojis.2626.name: Croix orthodoxe
+emojis.2626.keywords: chrétien,chretien,croix,religion
+emojis.1f6d0.name: Lieu de culte
+emojis.1f6d0.keywords: religion,culte
+emojis.26ce.name: Serpentaire
+emojis.26ce.keywords: porteur,ophiuchus,serpentaire,serpent,zodiaque
+emojis.2648.name: Bélier
+emojis.2648.keywords: bélier,belier,zodiaque
+emojis.2649.name: Taureau
+emojis.2649.keywords: taureau,bœuf,boeuf,zodiaque
+emojis.264a.name: Gémeaux
+emojis.264a.keywords: gémeaux,gemeaux,jumeaux,zodiaque
+emojis.264b.name: Cancer
+emojis.264b.keywords: cancer,crabe,zodiaque
+emojis.264c.name: Lion
+emojis.264c.keywords: lion,zodiaque
+emojis.264d.name: Vierge
+emojis.264d.keywords: vierge,zodiaque
+emojis.264e.name: Balance
+emojis.264e.keywords: balance,justice,balances,zodiaque
+emojis.264f.name: Scorpion
+emojis.264f.keywords: scorpion,scorpion,scorpion,zodiaque
+emojis.2650.name: Sagittaire
+emojis.2650.keywords: archer,sagittaire,zodiaque
+emojis.2651.name: Capricorne
+emojis.2651.keywords: capricorne,chèvre,chevre,zodiaque
+emojis.2652.name: Verseau
+emojis.2652.keywords: verseau,porteur,eau,zodiaque
+emojis.2653.name: Poissons
+emojis.2653.keywords: poisson,zodiaque
+emojis.1f194.name: ID encadré
+emojis.1f194.keywords: id,identité,identite
+emojis.269b.name: Symbole d'atome
+emojis.269b.keywords: athée,athee,atome
+emojis.2695.name: Bâton d'Esculape
+emojis.2695.keywords: santé,sante,soin,docteur,médicaments,medicaments,médecine,medecine,bâton,baton,serpent
+emojis.2622.name: Symbole radioactif
+emojis.2622.keywords: radioactif
+emojis.2623.name: Symbole danger biologique
+emojis.2623.keywords: risque biologique,danger biologique,biorisque
+emojis.1f4f4.name: Téléphone mobile désactivé
+emojis.1f4f4.keywords: portable,communication,mobile,désactivé,desactive,téléphone,telephone
+emojis.1f4f3.name: Mode vibreur
+emojis.1f4f3.keywords: portable,communication,mobile,mode,téléphone,telephone,vibreur
+emojis.1f236.name: Idéogramme unifié cjc-6709 encadré
+emojis.1f236.keywords: idéogramme,ideogramme,encadré,encadre,existant,existence,japonais
+emojis.1f21a.name: Idéogramme unifié cjc-7121 encadré
+emojis.1f21a.keywords: idéogramme,ideogramme,négation,negation,encadré,encadre,japonais
+emojis.1f238.name: Idéogramme unifié cjc-7533 encadré
+emojis.1f238.keywords: idéogramme,ideogramme,application,encadré,encadre,chinois
+emojis.1f23a.name: Idéogramme unifié cjc-55b6 encadré
+emojis.1f23a.keywords: idéogramme,ideogramme,opération,operation,encadré,encadre,chinois
+emojis.1f237.name: Idéogramme unifié cjc-6708 encadré
+emojis.1f237.keywords: idéogramme,ideogramme,lune,encadré,encadre,japonais
+emojis.2734.name: Étoile à huit branches
+emojis.2734.keywords: étoile,etoile
+emojis.1f19a.name: VS encadré
+emojis.1f19a.keywords: contre,vs,versus
+emojis.1f251.name: Idéogramme accepter encerclé
+emojis.1f251.keywords: idéogramme,ideogramme,accepter,encerclé,encercle,chinois
+emojis.1f4ae.name: Fleur blanche
+emojis.1f4ae.keywords: fleur
+emojis.1f250.name: Idéogramme bonne affaire encerclé
+emojis.1f250.keywords: idéogramme,ideogramme,avantage,encerclé,encercle,japonais
+emojis.3299.name: Idéogramme secret encerclé
+emojis.3299.keywords: idéogramme,ideogramme,secret,encerclé,encercle,chinois
+emojis.3297.name: Idéogramme de félicitations encerclé
+emojis.3297.keywords: idéogramme,ideogramme,félicitation,felicitation,encerclé,encercle,chinois
+emojis.1f234.name: Idéogramme unifié cjc-5408 encadré
+emojis.1f234.keywords: idéogramme,ideogramme,encadré,encadre,ensemble,chinois
+emojis.1f235.name: Idéogramme unifié cjc-6e80 encadré
+emojis.1f235.keywords: encadré,encadre,idéogramme,ideogramme,plénitude,plenitude,chinois
+emojis.1f239.name: Idéogramme unifié cjc-5272 encadré
+emojis.1f239.keywords: idéogramme,ideogramme,encadré,encadre,division,japonais
+emojis.1f232.name: Idéogramme unifié cjc-7981 encadré
+emojis.1f232.keywords: idéogramme,ideogramme,encadré,encadre,interdit,interdiction,japonais
+emojis.1f170.name: Lettre majuscule latine A encadrée en négatif
+emojis.1f170.keywords: a,sang
+emojis.1f171.name: Lettre majuscule latine B encadrée en négatif
+emojis.1f171.keywords: b,sang
+emojis.1f18e.name: AB encadré en négatif
+emojis.1f18e.keywords: ab,sang
+emojis.1f191.name: CL encadré
+emojis.1f191.keywords: cl
+emojis.1f17e.name: Lettre majuscule latine O encadrée en négatif
+emojis.1f17e.keywords: sang,o
+emojis.1f198.name: SOS encadré
+emojis.1f198.keywords: aide,sos
+emojis.26d4.name: Défense d'entrer
+emojis.26d4.keywords: entrée,entree,interdit,non,trafic
+emojis.1f4db.name: Badge nominatif
+emojis.1f4db.keywords: badge,nom
+emojis.1f6ab.name: Panneau défense d'entrer
+emojis.1f6ab.keywords: entrée,entree,interdit,non
+emojis.274c.name: Croix
+emojis.274c.keywords: annuler,marque,multiplication,multiplier,x
+emojis.2b55.name: Cercle de grande taille en gras
+emojis.2b55.keywords: cercle,o
+emojis.1f4a2.name: Symbole de colère
+emojis.1f4a2.keywords: énervé,enerve,comique,fâché,fache
+emojis.2668.name: Sources thermales
+emojis.2668.keywords: chaud,sources thermales,sources,vapeur
+emojis.1f6b7.name: Interdit aux piétons
+emojis.1f6b7.keywords: interdit,non,piéton,pieton
+emojis.1f6af.name: Symbole ne pas jeter sur la voie publique
+emojis.1f6af.keywords: interdiction de jeter des détritus,interdiction de jeter des detritus,interdit,déchets,dechets,détritus,detritus,non
+emojis.1f6b3.name: Interdit aux vélos
+emojis.1f6b3.keywords: vélo,velo,interdit,non,véhicule,vehicule
+emojis.1f6b1.name: Symbole eau non potable
+emojis.1f6b1.keywords: eau non-potable,boire,interdit,non,potable,eau
+emojis.1f51e.name: Symbole interdit aux moins de 18 ans
+emojis.1f51e.keywords: 18,restriction d'âge,restriction d'age,dix-huit,interdit,non,interdit,mineur
+emojis.1f4f5.name: Interdit aux téléphones mobiles
+emojis.1f4f5.keywords: portable,communication,interdit,mobile,non,ne pas,téléphone,telephone
+emojis.1f6ad.name: Symbole défense de fumer
+emojis.1f6ad.keywords: interdiction de fumer,interdit,non,ne pas,fumer
+emojis.2757.name: Symbole de point d'exclamation rouge
+emojis.2757.keywords: exclamation,point,ponctuation
+emojis.2755.name: Point d'exclamation blanc décoratif
+emojis.2755.keywords: exclamation,point,souligné,souligne,ponctuation
+emojis.2753.name: Point d'interrogation décoratif rouge
+emojis.2753.keywords: point,ponctuation,question
+emojis.2754.name: Point d'interrogation blanc décoratif
+emojis.2754.keywords: point,souligné,souligne,ponctuation,question
+emojis.203c.name: Double point d'exclamation
+emojis.203c.keywords: deux points d'exclamation,2 points d'exclamation,point d'exclamation double,exclamation,point,ponctuation
+emojis.2049.name: Point exclarrogatif 
+emojis.2049.keywords: exclamation,point exclarrogatif,point,ponctuation,question
+emojis.1f4af.name: Symbole cent points
+emojis.1f4af.keywords: 100,complet,cent,score
+emojis.1f505.name: Symbole de faible luminosité
+emojis.1f505.keywords: luminosité,luminosite,sombre,faible
+emojis.1f506.name: Symbole luminosité élevée
+emojis.1f506.keywords: clair,lumineux,brillant,luminosité,luminosite,
+emojis.1f531.name: Emblème du trident
+emojis.1f531.keywords: ancre,emblème,embleme,bateau,outil,trident
+emojis.269c.name: Fleur de lys
+emojis.269c.keywords: fleur de lys
+emojis.303d.name: Symbole de changement de personnage
+emojis.303d.keywords: symbole,début,debut,chant,ioriten
+emojis.26a0.name: Panneau d'avertissement
+emojis.26a0.keywords: avertissement
+emojis.1f6b8.name: Traversée d'enfants
+emojis.1f6b8.keywords: enfant,passage,piéton,pieton,trafic
+emojis.1f530.name: Symbole japonais pour jeune conducteur
+emojis.1f530.keywords: débutant,debutant,chevron,vert,japonais,feuille,outil,jaune
+emojis.267b.name: Symbole universel de recyclage
+emojis.267b.keywords: recyclage,recycler
+emojis.1f22f.name: Idéogramme unifié cjc-6307 encadré
+emojis.1f22f.keywords: idéogramme,ideogramme,doigt,encadré,encadre,désigné,designe,pointé,pointe,japonais
+emojis.1f4b9.name: Graphique avec courbe croissante et le symbole du yen
+emojis.1f4b9.keywords: graphique croissant avec le yen,banque,graphique,devise,croissance,marché,marche,argent,hausse,tendance,yen
+emojis.2747.name: Éclat
+emojis.2747.keywords: éclat,eclat
+emojis.2733.name: Astérisque à huit rayons
+emojis.2733.keywords: astérisque,asterisque
+emojis.274e.name: Croix encadrée en négatif
+emojis.274e.keywords: marque,symbole,carré,carre
+emojis.2705.name: Coche blanche en gras
+emojis.2705.keywords: coché,coche,sélectionné,selectionne,marque,symbole
+emojis.1f4a0.name: Forme de diamant avec un point à l'intérieur
+emojis.1f4a0.keywords: comique,carreau,géométrique,geometrique,à l'intérieur,a l'interieur
+emojis.1f300.name: Cyclone
+emojis.1f300.keywords: cyclone,vertige,tornade,typhon,météo,meteo,temps
+emojis.27bf.name: Double boucle
+emojis.27bf.keywords: boucle,double
+emojis.1f310.name: Globe avec méridiens
+emojis.1f310.keywords: terre,globe,méridiens,meridiens,monde
+emojis.24c2.name: Lettre majuscule latine M encerclée
+emojis.24c2.keywords: cercle,m
+emojis.1f3e7.name: Distributeur automatique de billets
+emojis.1f3e7.keywords: symbole dab,dab,automatique,banque,distributeur
+emojis.1f6be.name: WC
+emojis.1f6be.keywords: toilettes,wc,waters
+emojis.267f.name: Symbole fauteuil roulant
+emojis.267f.keywords: accès,acces,fauteuil roulant
+emojis.1f17f.name: Lettre majuscule latine P encadrée en négatif
+emojis.1f17f.keywords: parking
+emojis.1f233.name: Idéogramme unifié cjc-7a7a encadré 
+emojis.1f233.keywords: idéogramme,ideogramme,encadré,encadre,vide,chinois
+emojis.1f202.name: Katakana sa encadré
+emojis.1f202.keywords: japonais
+emojis.1f6c2.name: Contrôle des passeports
+emojis.1f6c2.keywords: contrôle,controle,passeport
+emojis.1f6c3.name: Douane
+emojis.1f6c3.keywords: douane
+emojis.1f6c4.name: Zone bagage
+emojis.1f6c4.keywords: bagage,livraison
+emojis.1f6c5.name: Consigne
+emojis.1f6c5.keywords: bagage,consigne,casier
+emojis.1f6b0.name: Symbole eau potable
+emojis.1f6b0.keywords: boire,potable,eau
+emojis.1f6b9.name: Symbole Hommes
+emojis.1f6b9.keywords: toilettes pour hommes,toilettes,homme,toilettes,wc,hommes,masculin
+emojis.2642.name: Symbole masculin
+emojis.2642.keywords: masculin,homme,hommes
+emojis.1f6ba.name: Symbole Femmes
+emojis.1f6ba.keywords: toilettes pour femmes,toilettes,toilettes,wc,femme,femmes,féminin,feminin
+emojis.2640.name: Symbole féminin
+emojis.2640.keywords: féminin,feminin,femme,femmes
+emojis.1f6bc.name: Symbole bébé
+emojis.1f6bc.keywords: bébé,bebe,changer,couche,table à langer,table a langer
+emojis.1f6bb.name: Toilettes
+emojis.1f6bb.keywords: toilettes,wc,latrines
+emojis.1f6ae.name: Symbole jeter les déchets ici
+emojis.1f6ae.keywords: jeter,poubelle,détritus,detritus,déchets,dechets,ordures,litière,litiere
+emojis.1f3a6.name: Cinéma
+emojis.1f3a6.keywords: activité,activite,caméra,camera,cinéma,cinema,divertissement,pellicule,film
+emojis.1f4f6.name: Intensité de signal excellente
+emojis.1f4f6.keywords: antenne,barre,portable,communication,mobile,téléphone,telephone,signal
+emojis.1f201.name: Katakana koko encadré
+emojis.1f201.keywords: japonais
+emojis.1f196.name: NG encadré
+emojis.1f196.keywords: ng
+emojis.1f197.name: OK encadré
+emojis.1f197.keywords: ok
+emojis.1f199.name: UP avec point d'exclamation encadré
+emojis.1f199.keywords: balise,haut
+emojis.1f192.name: COOL encadré
+emojis.1f192.keywords: cool
+emojis.1f195.name: NEW encadré
+emojis.1f195.keywords: nouveau
+emojis.1f193.name: FREE encadré
+emojis.1f193.keywords: gratuit
+emojis.30-20e3.name: Touche chiffre  zéro
+emojis.30-20e3.keywords: 0,touche,zéro,zero
+emojis.31-20e3.name: Touche 1
+emojis.31-20e3.keywords: 1,touche,un
+emojis.32-20e3.name: Touche 2
+emojis.32-20e3.keywords: 2,touche,deux
+emojis.33-20e3.name: Touche 3
+emojis.33-20e3.keywords: 3,touche,trois
+emojis.34-20e3.name: Touche chiffre quatre
+emojis.34-20e3.keywords: 4,quatre,touche
+emojis.35-20e3.name: Touche chiffre cinq
+emojis.35-20e3.keywords: 5,cinq,touche
+emojis.36-20e3.name: Touche chiffre six
+emojis.36-20e3.keywords: 6,touche,six
+emojis.37-20e3.name: Touche chiffre sept
+emojis.37-20e3.keywords: 7,touche,sept
+emojis.38-20e3.name: Touche chiffre huit
+emojis.38-20e3.keywords: 8,huit,touche
+emojis.39-20e3.name: Touche chiffre neuf
+emojis.39-20e3.keywords: 9,touche,neuf
+emojis.1f51f.name: Touche dix
+emojis.1f51f.keywords: 10,touche,dix
+emojis.1f522.name: Symbole d'entrée pour les chiffres
+emojis.1f522.keywords: 1234,entrée,entree,saisie,chiffres
+emojis.25b6.name: Triangle pointant vers la droite
+emojis.25b6.keywords: bouton de lecture,flèche,fleche,lecture,droite,triangle
+emojis.23f8.name: Double barre verticale
+emojis.23f8.keywords: bouton de pause,barre,double,pause,vertical
+emojis.23ef.name: Triangle pointant vers la droite avec double barre verticale
+emojis.23ef.keywords: bouton de lecture ou de pause,flèche,fleche,pause,lecture,droite,triangle
+emojis.23f9.name: Carré pour arrêter
+emojis.23f9.keywords: bouton d'arrêt,bouton d'arret,bouton stop,carré,carre,arrêt,arret
+emojis.23fa.name: Cercle pour enregistrement
+emojis.23fa.keywords: bouton d'enregistrement,cercle,enregistrer
+emojis.23cf.name: Symbole d'éjection
+emojis.23cf.keywords: bouton éjecter,bouton ejecter
+emojis.23ed.name: Double triangle pointant vers la droite avec barre verticale
+emojis.23ed.keywords: bouton prochain titre,flèche,fleche,prochaine scène,prochaine scene,prochain titre,triangle
+emojis.23ee.name: Double triangle pointant vers la gauche avec barre verticale
+emojis.23ee.keywords: bouton dernier titre,flèche,fleche,scène précédente,scene precedente,titre précédent,titre precedent,triangle
+emojis.23e9.name: Double triangle pointant vers la droite
+emojis.23e9.keywords: bouton d'avance rapide,flèche,fleche,double,rapide,avance
+emojis.23ea.name: Double triangle pointant vers la gauche
+emojis.23ea.keywords: bouton de retour rapide,flèche,fleche,double,rembobiner
+emojis.1f500.name: Flèches entrelacées vers la droite
+emojis.1f500.keywords: bouton lecture aléatoire,bouton lecture aleatoire,flèche,fleche,croisé,croise
+emojis.1f501.name: Flèches en cercle ouvert vers la droite et vers la gauche en sens horaire
+emojis.1f501.keywords: bouton répéter,bouton repeter,flèche,fleche,sens horaire,répétition,repetition
+emojis.1f502.name: Flèches en cercle ouvert vers la droite et vers la gauche en sens horaire superposé d'un un encerclé
+emojis.1f502.keywords: bouton répéter,bouton repeter,flèche,fleche,sens horaire,une fois
+emojis.25c0.name: Triangle pointant vers la gauche
+emojis.25c0.keywords: bouton inverser,flèche,fleche,gauche,inverse,triangle
+emojis.1f53c.name: Triangle pointant vers le haut
+emojis.1f53c.keywords: bouton vers le haut,flèche,fleche,bouton,rouge
+emojis.1f53d.name: Triangle pointant vers le bas
+emojis.1f53d.keywords: bouton vers le bas,flèche,fleche,bouton,bas,rouge
+emojis.23eb.name: Double triangle pointant vers le haut
+emojis.23eb.keywords: bouton de montée rapide,bouton de montee rapide,flèche,fleche,double,haut
+emojis.23ec.name: Double triangle pointant vers le bas
+emojis.23ec.keywords: bouton de descente rapide,flèche,fleche,double,vers le bas
+emojis.27a1.name: Flèche vers la droite
+emojis.27a1.keywords: flèche vers la droite,fleche vers la droite,flèche,fleche,cardinal,direction,est
+emojis.2b05.name: Flèche vers la gauche
+emojis.2b05.keywords: flèche vers la gauche,fleche vers la gauche,flèche,fleche,cardinal,direction,ouest
+emojis.2b06.name: Flèche vers le haut
+emojis.2b06.keywords: flèche vers le haut,fleche vers le haut,flèche,fleche,cardinal,direction,nord
+emojis.2b07.name: Flèche vers le bas
+emojis.2b07.keywords: flèche vers le bas,fleche vers le bas,flèche,fleche,direction,cardinal,sud
+emojis.2197.name: Flèche nord-est
+emojis.2197.keywords: flèche haut-droite,fleche haut-droite,flèche,fleche,direction,cardinal,nord-est
+emojis.2198.name: Flèche sud-est
+emojis.2198.keywords: flèche bas-droite,fleche bas-droite,flèche,fleche,direction,cardinal,sud-est
+emojis.2199.name: Flèche sud-ouest
+emojis.2199.keywords: flèche bas-gauche,fleche bas-gauche,flèche,fleche,direction,cardinal,sud-ouest
+emojis.2196.name: Flèche nord-ouest
+emojis.2196.keywords: flèche haut-gauche,fleche haut-gauche,flèche,fleche,direction,cardinal,nord-ouest
+emojis.2195.name: Flèche haut-bas
+emojis.2195.keywords: flèche haut-bas,fleche haut-bas,flèche,fleche,direction,cardinal,nord-sud
+emojis.2194.name: Flèche gauche droite
+emojis.2194.keywords: flèche gauche-droite,fleche gauche-droite,flèche,fleche
+emojis.1f504.name: Flèches en cercle ouvert vert le haut et vers le bas en sens antihoraire
+emojis.1f504.keywords: antihoraire,flèche,fleche,antihoraire,dans le sens inverse des aiguilles d'une montre
+emojis.21aa.name: Flèche vers la droite avec crochet
+emojis.21aa.keywords: flèche courbée à droite,fleche courbee a droite,flèche,fleche
+emojis.21a9.name: Flèche vers la gauche avec crochet
+emojis.21a9.keywords: flèche courbée à gauche,fleche courbee a gauche,flèche,fleche
+emojis.1f503.name: Flèches en cercle ouvert vers le haut et vers le bas en sens horaire
+emojis.1f503.keywords: flèches verticales,fleches verticales,flèche,fleche,sens horaire,recharger
+emojis.2934.name: Flèche vers la droite avec pointe vers le haut
+emojis.2934.keywords: flèche courbée vers le haut,fleche courbee vers le haut,flèche,fleche,haut,montée,montee
+emojis.2935.name: Flèche vers la droite avec pointe vers le bas
+emojis.2935.keywords: flèche courbée vers le bas,fleche courbee vers le bas,flèche,fleche,bas,descente
+emojis.23-20e3.name: Touche de verrou numérique
+emojis.23-20e3.keywords: dièse,diese,touche,croisillon,livre,lb,carré,carre
+emojis.2a-20e3.name: Touche astérisque
+emojis.2a-20e3.keywords: astérisque,asterisque,touche,étoile,etoile
+emojis.2139.name: Point d'informations
+emojis.2139.keywords: i,information
+emojis.1f524.name: Symbole d'entrée pour les lettres latines
+emojis.1f524.keywords: abc,alphabet,entrée,entree,latin,lettres
+emojis.1f521.name: Symbole d'entrée pour les lettres minuscules latines
+emojis.1f521.keywords: abcd,entrée,entree,latin,lettres,minuscules
+emojis.1f520.name: Symbole d'entrée pour les lettres majuscules latines
+emojis.1f520.keywords: entrée,entree,saisie,latin,lettres,majuscule
+emojis.1f523.name: Symbole d'entrée pour les symboles
+emojis.1f523.keywords: entrée,entree,saisie
+emojis.1f3b5.name: Note de musique
+emojis.1f3b5.keywords: activité,activite,divertissement,musique,note
+emojis.1f3b6.name: Plusieurs notes de musique
+emojis.1f3b6.keywords: activité,activite,divertissement,musique,note,notes
+emojis.3030.name: Tiret ondulé
+emojis.3030.keywords: tiret,ponctuation,ondulé,ondule
+emojis.27b0.name: Boucle
+emojis.27b0.keywords: boucle
+emojis.2714.name: Coche en gras
+emojis.2714.keywords: coché,coche,sélectionné,selectionne,marque,symbole
+emojis.2795.name: Signe de l'addition en gras
+emojis.2795.keywords: maths,plus
+emojis.2796.name: Signe de la soustraction en gras
+emojis.2796.keywords: maths,moins
+emojis.2797.name: Signe de la division en gras
+emojis.2797.keywords: division,maths
+emojis.2716.name: Signe de la multiplication en gras
+emojis.2716.keywords: annuler,multiplication,multiplier,x
+emojis.1f4b2.name: Symbole du dollar en gras
+emojis.1f4b2.keywords: devise,dollar,argent
+emojis.1f4b1.name: Change de devises
+emojis.1f4b1.keywords: banque,monnaie,change,argent
+emojis.1f51a.name: END avec flèche pointant vers la gauche au-dessus
+emojis.1f51a.keywords: flèche,fleche,fin
+emojis.1f519.name: BACK avec flèche vers la gauche au-dessus
+emojis.1f519.keywords: flèche,fleche,retour
+emojis.1f51b.name: ON avec un point d'exclamation et une flèche gauche droite au-dessus
+emojis.1f51b.keywords: flèche,fleche,balise,on,ici
+emojis.1f51d.name: TOP avec flèche vers le haut au-dessus
+emojis.1f51d.keywords: flèche,fleche,haut
+emojis.1f51c.name: SOON avec flèche pointant vers la droite au-dessus
+emojis.1f51c.keywords: flèche,fleche,bientôt,bientot,soon
+emojis.2611.name: Carré avec coche
+emojis.2611.keywords: case cochée,case cochee,case,cochée,cochee
+emojis.1f518.name: Bouton radio
+emojis.1f518.keywords: bouton,géométrique,geometrique,case d'option
+emojis.26aa.name: Cercle blanc de taille moyenne
+emojis.26aa.keywords: cercle,géométrique,geometrique
+emojis.26ab.name: Cercle noir de taille moyenne
+emojis.26ab.keywords: cercle,géométrique,geometrique
+emojis.1f534.name: Cercle rouge de grande taille
+emojis.1f534.keywords: cercle,géométrique,geometrique,rouge
+emojis.1f535.name: Cercle bleu de grande taille
+emojis.1f535.keywords: bleu,cercle,géométrique,geometrique
+emojis.1f538.name: Carreau orange de petite taille
+emojis.1f538.keywords: losange,géométrique,geometrique,orange
+emojis.1f539.name: Carreau bleu de petite taille
+emojis.1f539.keywords: bleu,losange,géométrique,geometrique
+emojis.1f536.name: Carreau orange de grande taille
+emojis.1f536.keywords: losange,géométrique,geometrique,orange
+emojis.1f537.name: Carreau bleu de grande taille
+emojis.1f537.keywords: bleu,losange,géométrique,geometrique
+emojis.1f53a.name: Triangle rouge pointant vers le haut
+emojis.1f53a.keywords: géométrique,geometrique,rouge
+emojis.25aa.name: Carré noir de petite taille
+emojis.25aa.keywords: géométrique,geometrique,carré,carre
+emojis.25ab.name: Carré blanc de petite taille
+emojis.25ab.keywords: géométrique,geometrique,carré,carre
+emojis.2b1b.name: Carré noir de grande taille
+emojis.2b1b.keywords: géométrique,geometrique,carré,carre
+emojis.2b1c.name: Carré blanc de grande taille
+emojis.2b1c.keywords: géométrique,geometrique,carré,carre
+emojis.1f53b.name: Triangle rouge pointant vers le bas
+emojis.1f53b.keywords: vers le bas,géométrique,geometrique,rouge
+emojis.25fc.name: Carré noir de taille moyenne
+emojis.25fc.keywords: géométrique,geometrique,carré,carre
+emojis.25fb.name: Carré blanc de taille moyenne
+emojis.25fb.keywords: géométrique,geometrique,carré,carre
+emojis.25fe.name: Carré noir de taille moyenne
+emojis.25fe.keywords: géométrique,geometrique,carré,carre
+emojis.25fd.name: Carré blanc de taille moyenne
+emojis.25fd.keywords: géométrique,geometrique,carré,carre
+emojis.1f532.name: Bouton carré noir
+emojis.1f532.keywords: bouton,géométrique,geometrique,carré,carre
+emojis.1f533.name: Bouton carré blanc
+emojis.1f533.keywords: bouton,géométrique,geometrique,souligné,souligne,carré,carre
+emojis.1f508.name: Haut-parleur
+emojis.1f508.keywords: haut-parleur,haut parleur,volume
+emojis.1f509.name: Haut-parleur avec une onde sonore
+emojis.1f509.keywords: haut-parleur activé,haut-parleur active,haut parleur activé,haut parleur active,bas,haut-parleur,haut parleur,volume,onde sonore
+emojis.1f50a.name: Haut-parleur avec trois ondes sonores
+emojis.1f50a.keywords: haut-parleur fort,haut parleur fort,3,divertissement,haut,fort,haut-parleur,haut parleur,trois,volume
+emojis.1f507.name: Haut-parleur avec son coupé
+emojis.1f507.keywords: haut-parleur désactivé,haut parleur désactivé,haut-parleur desactive,haut parleur desactive,muet,calme,silencieux,haut-parleur,haut parleur,volume
+emojis.1f4e3.name: Mégaphone
+emojis.1f4e3.keywords: acclamations,communication,mégaphone,megaphone
+emojis.1f4e2.name: Haut-parleur d'extérieur
+emojis.1f4e2.keywords: communication,fort,haut-parleur,haut parleur,sonorisation
+emojis.1f514.name: Cloche
+emojis.1f514.keywords: cloche
+emojis.1f515.name: Cloche barrée
+emojis.1f515.keywords: cloche barrée,cloche barree,cloche,interdit,muet,non,ne pas,prohibé,calme,silencieux
+emojis.1f0cf.name: Carte à jouer joker
+emojis.1f0cf.keywords: carte,divertissement,jeu,joker,jouer
+emojis.1f004.name: Tuile de Mahjong dragon rouge
+emojis.1f004.keywords: jeu,mah-jong,mah jong,mahjong,rouge
+emojis.2660.name: Pique
+emojis.2660.keywords: carte,jeu,pique,couleur
+emojis.2663.name: Trèfle
+emojis.2663.keywords: carte,trèfle,trefle,trèfles,trefles,jeu,couleur
+emojis.2665.name: Cœur
+emojis.2665.keywords: carte,jeu,cœur,coeur,cœurs,coeurs,couleur
+emojis.2666.name: Carreau
+emojis.2666.keywords: carte,carreau,carreaux,jeu,couleur
+emojis.1f3b4.name: Jeu de cartes floral
+emojis.1f3b4.keywords: activité,activite,carte,divertissement,fleur,jeu,japonais,jouer
+emojis.1f441-200d-1f5e8.name: Œil dans une bulle de dialogue
+emojis.1f441-200d-1f5e8.keywords: bulle,œil,oeil,discours,témoin
+emojis.1f5e8.name: Bulle de dialogue gauche
+emojis.1f5e8.keywords: dialogue,discours
+emojis.1f4ad.name: Bulle de pensée
+emojis.1f4ad.keywords: ballon,bulle,bande dessinée,bande dessinee,pensée,pensee,idée,idee
+emojis.1f5ef.name: Bulle de colère droite
+emojis.1f5ef.keywords: en colère,en colere,ballon,bulle,furieux
+emojis.1f4ac.name: Bulle de dialogue
+emojis.1f4ac.keywords: ballon,bulle,bande dessinée,bande dessinee,dialogue,discours
+emojis.1f550.name: Cadran affichant une heure
+emojis.1f550.keywords: 00,1,1h00,heure,pile,une
+emojis.1f551.name: Cadran affichant deux heures
+emojis.1f551.keywords: 00,2,2h00,heures,pile,deux
+emojis.1f552.name: Cadran affichant trois heures
+emojis.1f552.keywords: 00,3,3h00,heures,pile,trois
+emojis.1f553.name: Cadran affichant quatre heures
+emojis.1f553.keywords: 00,4,4h00,heures,quatre,pile
+emojis.1f554.name: Cadran affichant cinq heures
+emojis.1f554.keywords: 00,5,5h00,heures,cinq,pile
+emojis.1f555.name: Cadran affichant six heures
+emojis.1f555.keywords: 00,6,6h00,heures,pile,six
+emojis.1f556.name: Cadran affichant sept heures
+emojis.1f556.keywords: 00,7,7h00,heures,pile,sept
+emojis.1f557.name: Cadran affichant huit heures
+emojis.1f557.keywords: 00,8,8h00,heures,huit,pile
+emojis.1f558.name: Cadran affichant neuf heures
+emojis.1f558.keywords: 00,9,9h00,heures,neuf,pile
+emojis.1f559.name: Cadran affichant dix heures
+emojis.1f559.keywords: 00,10,10h00,heures,pile,dix
+emojis.1f55a.name: Cadran affichant onze heures
+emojis.1f55a.keywords: 00,11,11h00,heures,onze,pile
+emojis.1f55b.name: Cadran affichant douze heures
+emojis.1f55b.keywords: 00,12,12h00,heures,pile,douze,midi,minuit
+emojis.1f55c.name: Cadran affichant une heure trente
+emojis.1f55c.keywords: 1,1h30,30,heure,une,trente
+emojis.1f55d.name: Cadran affichant deux heures trente
+emojis.1f55d.keywords: 2,2h30,30,heures,trente,deux
+emojis.1f55e.name: Cadran affichant trois heures trente
+emojis.1f55e.keywords: 3,3h30,30,heures,trente,trois
+emojis.1f55f.name: Cadran affichant quatre heures trente
+emojis.1f55f.keywords: 30,4,4h30,heures,quatre,trente
+emojis.1f560.name: Cadran affichant cinq heures trente
+emojis.1f560.keywords: 30,5,5h30,heures,cinq,trente
+emojis.1f561.name: Cadran affichant six heures trente
+emojis.1f561.keywords: 30,6,6h30,heures,six,trente
+emojis.1f562.name: Cadran affichant sept heures trente
+emojis.1f562.keywords: 30,7,7h30,heures,sept,trente
+emojis.1f563.name: Cadran affichant huit heures trente
+emojis.1f563.keywords: 30,8,8h30,heures,huit,trente
+emojis.1f564.name: Cadran affichant neuf heures trente
+emojis.1f564.keywords: 30,9,9h30,heures,neuf,trente
+emojis.1f565.name: Cadran affichant dix heures trente
+emojis.1f565.keywords: 10,10h30,30,heures,dix,trente
+emojis.1f566.name: Cadran affichant onze heures trente
+emojis.1f566.keywords: 11,11h30,30,heures,onze,trente
+emojis.1f567.name: Cadran affichant douze heures trente
+emojis.1f567.keywords: 12,12h30,30,heures,trente,douze,midi,minuit
+emojis.1f1e6.name: Lettre symbole d'indicateur régional A
+emojis.1f1e6.keywords: 
+emojis.1f1e7.name: Lettre symbole d'indicateur régional B
+emojis.1f1e7.keywords: 
+emojis.1f1e8.name: Lettre symbole d'indicateur régional C
+emojis.1f1e8.keywords: 
+emojis.1f1e9.name: Lettre symbole d'indicateur régional d
+emojis.1f1e9.keywords: 
+emojis.1f1ea.name: Lettre symbole d'indicateur régional E
+emojis.1f1ea.keywords: 
+emojis.1f1eb.name: Lettre symbole d'indicateur régional F
+emojis.1f1eb.keywords: 
+emojis.1f1ec.name: Lettre symbole d'indicateur régional G
+emojis.1f1ec.keywords: 
+emojis.1f1ed.name: Lettre symbole d'indicateur régional H
+emojis.1f1ed.keywords: 
+emojis.1f1ee.name: Lettre symbole d'indicateur régional i
+emojis.1f1ee.keywords: 
+emojis.1f1ef.name: Lettre symbole d'indicateur régional J
+emojis.1f1ef.keywords: 
+emojis.1f1f0.name: Lettre symbole d'indicateur régional K
+emojis.1f1f0.keywords: 
+emojis.1f1f1.name: Lettre symbole d'indicateur régional L
+emojis.1f1f1.keywords: 
+emojis.1f1f2.name: Lettre symbole d'indicateur régional M
+emojis.1f1f2.keywords: 
+emojis.1f1f3.name: Lettre symbole d'indicateur régional N
+emojis.1f1f3.keywords: 
+emojis.1f1f4.name: Lettre symbole d'indicateur régional O
+emojis.1f1f4.keywords: 
+emojis.1f1f5.name: Lettre symbole d'indicateur régional P
+emojis.1f1f5.keywords: 
+emojis.1f1f6.name: Lettre symbole d'indicateur régional Q
+emojis.1f1f6.keywords: 
+emojis.1f1f7.name: Lettre symbole d'indicateur régional R
+emojis.1f1f7.keywords: 
+emojis.1f1f8.name: Lettre symbole d'indicateur régional S
+emojis.1f1f8.keywords: 
+emojis.1f1f9.name: Lettre symbole d'indicateur régional T
+emojis.1f1f9.keywords: 
+emojis.1f1fa.name: Lettre symbole d'indicateur régional U
+emojis.1f1fa.keywords: 
+emojis.1f1fb.name: Lettre symbole d'indicateur régional V
+emojis.1f1fb.keywords: 
+emojis.1f1fc.name: Lettre symbole d'indicateur régional W
+emojis.1f1fc.keywords: 
+emojis.1f1fd.name: Indicateur régional lettre symbole x
+emojis.1f1fd.keywords: 
+emojis.1f1fe.name: Lettre symbole d'indicateur régional Y
+emojis.1f1fe.keywords: 
+emojis.1f1ff.name: Lettre symbole d'indicateur régional Z
+emojis.1f1ff.keywords: 
+emojis.1f3f3.name: Drapeau blanc flottant
+emojis.1f3f3.keywords: drapeau,flottant
+emojis.1f3f4.name: Drapeau noir flottant
+emojis.1f3f4.keywords: drapeau,flottant
+emojis.1f3c1.name: Drapeau à damier 
+emojis.1f3c1.keywords: à damiers,a damiers,drapeau,course
+emojis.1f6a9.name: Drapeau triangulaire sur un poteau
+emojis.1f6a9.keywords: drapeau,poteau
+emojis.1f38c.name: Drapeaux croisés
+emojis.1f38c.keywords: activité,activite,fête,fete,croix,croisés,drapeau,japonais
+emojis.1f3f4-200d-2620-fe0f.name: Drapeau pirate
+emojis.1f3f4-200d-2620-fe0f.keywords: drapeau,pirate
+emojis.1f3f3-fe0f-200d-1f308.name: Drapeau arc-en-ciel
+emojis.1f3f3-fe0f-200d-1f308.keywords: drapeau,arc-en-ciel,arc en ciel
+emojis.1f1e6-1f1e8.name: Drapeau de l'Île de l'Ascension
+emojis.1f1e6-1f1e8.keywords: ascension,drapeau,île,ile
+emojis.1f1e6-1f1e9.name: Drapeau d'Andorre
+emojis.1f1e6-1f1e9.keywords: andorre,drapeau
+emojis.1f1e6-1f1ea.name: Drapeau des Émirats Arabes Unis
+emojis.1f1e6-1f1ea.keywords: émirats,emirats,drapeau,eau,unis
+emojis.1f1e6-1f1eb.name: Drapeau de l'Afghanistan
+emojis.1f1e6-1f1eb.keywords: afghanistan,drapeau
+emojis.1f1e6-1f1ec.name: Drapeau d'Antigua-et-Barbuda
+emojis.1f1e6-1f1ec.keywords: antigua,barbuda,drapeau
+emojis.1f1e6-1f1ee.name: Drapeau d'Anguilla
+emojis.1f1e6-1f1ee.keywords: anguilla,drapeau
+emojis.1f1e6-1f1f1.name: Drapeau de l'Albanie
+emojis.1f1e6-1f1f1.keywords: albanie,drapeau
+emojis.1f1e6-1f1f2.name: Drapeau de l'Arménie
+emojis.1f1e6-1f1f2.keywords: arménie,armenie,drapeau
+emojis.1f1e6-1f1f4.name: Drapeau de l'Angola
+emojis.1f1e6-1f1f4.keywords: angola,drapeau
+emojis.1f1e6-1f1f6.name: Drapeau de l'Antarctique
+emojis.1f1e6-1f1f6.keywords: antarctique,drapeau
+emojis.1f1e6-1f1f7.name: Drapeau de l'Argentine
+emojis.1f1e6-1f1f7.keywords: argentine,drapeau
+emojis.1f1e6-1f1f8.name: Drapeau des Samoa Américaines
+emojis.1f1e6-1f1f8.keywords: américaines,americaines,drapeau,samoa
+emojis.1f1e6-1f1f9.name: Drapeau de l'Autriche
+emojis.1f1e6-1f1f9.keywords: autriche,drapeau
+emojis.1f1e6-1f1fa.name: Drapeau de l'Australie
+emojis.1f1e6-1f1fa.keywords: australie,drapeau,heard,mcdonald
+emojis.1f1e6-1f1fc.name: Drapeau d'Aruba
+emojis.1f1e6-1f1fc.keywords: aruba,drapeau
+emojis.1f1e6-1f1fd.name: Drapeau des Îles Åland
+emojis.1f1e6-1f1fd.keywords: åland,aland,drapeau
+emojis.1f1e6-1f1ff.name: Drapeau d'Azerbaïdjan
+emojis.1f1e6-1f1ff.keywords: azerbaïdjan,azerbaidjan,drapeau
+emojis.1f1e7-1f1e6.name: Drapeau de la Bosnie-Herzégovine
+emojis.1f1e7-1f1e6.keywords: bosnie,drapeau,herzégovine,herzegovine
+emojis.1f1e7-1f1e7.name: Drapeau de la Barbade
+emojis.1f1e7-1f1e7.keywords: barbade,drapeau
+emojis.1f1e7-1f1e9.name: Drapeau du Bangladesh
+emojis.1f1e7-1f1e9.keywords: bangladesh,drapeau
+emojis.1f1e7-1f1ea.name: Drapeau de la Belgique
+emojis.1f1e7-1f1ea.keywords: belgique,drapeau
+emojis.1f1e7-1f1eb.name: Drapeau du Burkina Faso
+emojis.1f1e7-1f1eb.keywords: burkina,burkina faso,drapeau
+emojis.1f1e7-1f1ec.name: Drapeau de la Bulgarie
+emojis.1f1e7-1f1ec.keywords: bulgarie,drapeau
+emojis.1f1e7-1f1ed.name: Drapeau du Bahreïn
+emojis.1f1e7-1f1ed.keywords: bahreïn,bahrein,drapeau
+emojis.1f1e7-1f1ee.name: Drapeau du Burundi
+emojis.1f1e7-1f1ee.keywords: burundi,drapeau
+emojis.1f1e7-1f1ef.name: Drapeau du Bénin
+emojis.1f1e7-1f1ef.keywords: bénin,benin,drapeau
+emojis.1f1e7-1f1f1.name: Drapeau de Saint-Barthélemy
+emojis.1f1e7-1f1f1.keywords: barthélemy,barthelemy,drapeau,saint
+emojis.1f1e7-1f1f2.name: Drapeau des Bermudes
+emojis.1f1e7-1f1f2.keywords: bermudes,drapeau
+emojis.1f1e7-1f1f3.name: Drapeau du Brunei
+emojis.1f1e7-1f1f3.keywords: brunei,darussalam,drapeau
+emojis.1f1e7-1f1f4.name: Drapeau de la Bolivie
+emojis.1f1e7-1f1f4.keywords: bolivie,drapeau
+emojis.1f1e7-1f1f6.name: Drapeau des Antilles Néerlandaises
+emojis.1f1e7-1f1f6.keywords: bonaire,antilles,eustache,drapeau,pays-bas,pays bas,saba,saint
+emojis.1f1e7-1f1f7.name: Drapeau du Brésil
+emojis.1f1e7-1f1f7.keywords: brésil,bresil,drapeau
+emojis.1f1e7-1f1f8.name: Drapeau des Bahamas
+emojis.1f1e7-1f1f8.keywords: bahamas,drapeau
+emojis.1f1e7-1f1f9.name: Drapeau du Bhoutan
+emojis.1f1e7-1f1f9.keywords: bhoutan,drapeau
+emojis.1f1e7-1f1fc.name: Drapeau du Botswana
+emojis.1f1e7-1f1fc.keywords: botswana,drapeau
+emojis.1f1e7-1f1fe.name: Drapeau de la Biélorussie
+emojis.1f1e7-1f1fe.keywords: biélorussie,bielorussie,drapeau,bélarus,belarus
+emojis.1f1e7-1f1ff.name: Drapeau du Belize
+emojis.1f1e7-1f1ff.keywords: belize,drapeau,bélize
+emojis.1f1e8-1f1e6.name: Drapeau du Canada
+emojis.1f1e8-1f1e6.keywords: canada,drapeau
+emojis.1f1e8-1f1e8.name: Drapeau des Îles Cocos
+emojis.1f1e8-1f1e8.keywords: cocos,drapeau,îles,iles,keeling
+emojis.1f1e8-1f1e9.name: Drapeau de la République Démocratique du Congo - Kinshasa
+emojis.1f1e8-1f1e9.keywords: congo,congo-kinshasa,congo kinshasa,république démocratique du congo,republique democratique du congo,rdc,drapeau,kinshasa,république,republique
+emojis.1f1e8-1f1eb.name: Drapeau de la République centrafricaine
+emojis.1f1e8-1f1eb.keywords: république centrafricaine,republique centrafricaine,drapeau,république,république,centrafrique
+emojis.1f1e8-1f1ec.name: Drapeau de la République du Congo
+emojis.1f1e8-1f1ec.keywords: brazzaville,congo,république du congo,republique du congo,congo-brazzaville,congo brazzaville,drapeau,république
+emojis.1f1e8-1f1ed.name: Drapeau de la Suisse
+emojis.1f1e8-1f1ed.keywords: drapeau,suisse
+emojis.1f1e8-1f1ee.name: Drapeau de la Côte d'Ivoire
+emojis.1f1e8-1f1ee.keywords: côte d'ivoire,cote d'ivoire,drapeau,côte ivoire,cote ivoire
+emojis.1f1e8-1f1f0.name: Drapeau des Îles Cook
+emojis.1f1e8-1f1f0.keywords: cook,drapeau,île,ile
+emojis.1f1e8-1f1f1.name: Drapeau du Chili
+emojis.1f1e8-1f1f1.keywords: chili,drapeau
+emojis.1f1e8-1f1f2.name: Drapeau du Cameroun
+emojis.1f1e8-1f1f2.keywords: cameroun,drapeau
+emojis.1f1e8-1f1f3.name: Drapeau de la Chine
+emojis.1f1e8-1f1f3.keywords: chine,drapeau
+emojis.1f1e8-1f1f4.name: Drapeau de la Colombie
+emojis.1f1e8-1f1f4.keywords: colombie,drapeau
+emojis.1f1e8-1f1f7.name: Drapeau du Costa Rica
+emojis.1f1e8-1f1f7.keywords: costa rica,drapeau
+emojis.1f1e8-1f1fa.name: Drapeau de Cuba
+emojis.1f1e8-1f1fa.keywords: cuba,drapeau
+emojis.1f1e8-1f1fb.name: Drapeau du Cap-Vert
+emojis.1f1e8-1f1fb.keywords: cap-vert,cap vert,cap,drapeau,vert
+emojis.1f1e8-1f1fc.name: Drapeau de Curaçao
+emojis.1f1e8-1f1fc.keywords: antilles,curaçao,curacao,drapeau
+emojis.1f1e8-1f1fd.name: Drapeau de l'Île Christmas
+emojis.1f1e8-1f1fd.keywords: christmas,drapeau,île,ile
+emojis.1f1e8-1f1fe.name: Drapeau de Chypre
+emojis.1f1e8-1f1fe.keywords: chypre,drapeau
+emojis.1f1e8-1f1ff.name: Drapeau de la République Tchèque
+emojis.1f1e8-1f1ff.keywords: république tchèque,republique tcheque,drapeau
+emojis.1f1e9-1f1ea.name: Drapeau de l'Allemagne
+emojis.1f1e9-1f1ea.keywords: drapeau,allemagne
+emojis.1f1e9-1f1ef.name: Drapeau de Djibouti
+emojis.1f1e9-1f1ef.keywords: djibouti,drapeau
+emojis.1f1e9-1f1f0.name: Drapeau du Danemark
+emojis.1f1e9-1f1f0.keywords: danemark,drapeau
+emojis.1f1e9-1f1f2.name: Drapeau de la Dominique
+emojis.1f1e9-1f1f2.keywords: dominique,drapeau
+emojis.1f1e9-1f1f4.name: Drapeau de la République Dominicaine
+emojis.1f1e9-1f1f4.keywords: république dominicaine,republique dominicaine,drapeau
+emojis.1f1e9-1f1ff.name: Drapeau de l'Algérie
+emojis.1f1e9-1f1ff.keywords: algérie,algerie,drapeau
+emojis.1f1ea-1f1e8.name: Drapeau de l'Équateur
+emojis.1f1ea-1f1e8.keywords: équateur,equateur,drapeau
+emojis.1f3f4-e0067-e0062-e0065-e006e-e0067-e007f.name: Drapeau de l'Angleterre
+emojis.1f3f4-e0067-e0062-e0065-e006e-e0067-e007f.keywords: angleterre,drapeau
+emojis.1f1ea-1f1ea.name: Drapeau de l'Estonie
+emojis.1f1ea-1f1ea.keywords: estonie,drapeau
+emojis.1f1ea-1f1ec.name: Drapeau de l'Égypte
+emojis.1f1ea-1f1ec.keywords: égypte,egypte,drapeau
+emojis.1f1ea-1f1ed.name: Drapeau du Sahara occidental
+emojis.1f1ea-1f1ed.keywords: drapeau,sahara,ouest,sahara occidental
+emojis.1f1ea-1f1f7.name: Drapeau de l'Érythrée
+emojis.1f1ea-1f1f7.keywords: érythrée,erythree,drapeau
+emojis.1f1ea-1f1f8.name: Drapeau de l'Espagne
+emojis.1f1ea-1f1f8.keywords: drapeau,espagne,ceuta,melilla
+emojis.1f1ea-1f1f9.name: Drapeau de l'Éthiopie
+emojis.1f1ea-1f1f9.keywords: éthiopie,ethiopie,drapeau
+emojis.1f1ea-1f1fa.name: Drapeau de l'Union européenne
+emojis.1f1ea-1f1fa.keywords: union européenne,union europeenne,drapeau,ue
+emojis.1f1eb-1f1ee.name: Drapeau de la Finlande
+emojis.1f1eb-1f1ee.keywords: finlande,drapeau
+emojis.1f1eb-1f1ef.name: Drapeau des Fidji
+emojis.1f1eb-1f1ef.keywords: fidji,drapeau
+emojis.1f1eb-1f1f0.name: Drapeau des îles Malouines
+emojis.1f1eb-1f1f0.keywords: malouine,malouines,drapeau,île,ile,îles,iles
+emojis.1f1eb-1f1f2.name: Drapeau de la Micronésie
+emojis.1f1eb-1f1f2.keywords: drapeau,micronésie,micronesie
+emojis.1f1eb-1f1f4.name: Drapeau des Îles Féroé
+emojis.1f1eb-1f1f4.keywords: féroé,feroe,drapeau,îles,iles
+emojis.1f1eb-1f1f7.name: Drapeau de la France
+emojis.1f1eb-1f1f7.keywords: drapeau,france,île de clipperton,ile de clipperton,saint-martin,saint martin
+emojis.1f1ec-1f1e6.name: Drapeau du Gabon
+emojis.1f1ec-1f1e6.keywords: drapeau,gabon
+emojis.1f1ec-1f1e7.name: Drapeau du Royaume-Uni
+emojis.1f1ec-1f1e7.keywords: grande-bretagne,grande bretagne,britannique,cornouailles,angleterre,drapeau,irlande,irlande du nord,écosse,ecosse,uk,union jack,uni,royaume-uni,royaume uni,pays de galles
+emojis.1f1ec-1f1e9.name: Drapeau de Grenade
+emojis.1f1ec-1f1e9.keywords: drapeau,grenade
+emojis.1f1ec-1f1ea.name: Drapeau de la Géorgie
+emojis.1f1ec-1f1ea.keywords: drapeau,géorgie,georgie
+emojis.1f1ec-1f1eb.name: Drapeau de la Guyane Française
+emojis.1f1ec-1f1eb.keywords: drapeau,français,francais,guyane
+emojis.1f1ec-1f1ec.name: Drapeau de Guernesey
+emojis.1f1ec-1f1ec.keywords: drapeau,guernesey
+emojis.1f1ec-1f1ed.name: Drapeau du Ghana
+emojis.1f1ec-1f1ed.keywords: drapeau,ghana
+emojis.1f1ec-1f1ee.name: Drapeau de Gibraltar
+emojis.1f1ec-1f1ee.keywords: drapeau,gibraltar
+emojis.1f1ec-1f1f1.name: Drapeau du Groenland
+emojis.1f1ec-1f1f1.keywords: drapeau,groenland
+emojis.1f1ec-1f1f2.name: Drapeau de la Gambie
+emojis.1f1ec-1f1f2.keywords: drapeau,gambie
+emojis.1f1ec-1f1f3.name: Drapeau de la Guinée
+emojis.1f1ec-1f1f3.keywords: drapeau,guinée,guinee
+emojis.1f1ec-1f1f5.name: Drapeau de la Guadeloupe
+emojis.1f1ec-1f1f5.keywords: drapeau,guadeloupe
+emojis.1f1ec-1f1f6.name: Drapeau de la Guinée équatoriale
+emojis.1f1ec-1f1f6.keywords: guinée équatoriale,guinee equatoriale,drapeau,guinée,guinee
+emojis.1f1ec-1f1f7.name: Drapeau de la Grèce
+emojis.1f1ec-1f1f7.keywords: drapeau,grèce,grece
+emojis.1f1ec-1f1f8.name: Drapeau de la Géorgie du Sud et des Îles Sandwich du Sud
+emojis.1f1ec-1f1f8.keywords: drapeau,géorgie,georgie,île,ile,sud,géorgie-du-sud,géorgie du sud,georgie-du-sud,georgie du sud,sandwich-du-sud,sandwich du sud
+emojis.1f1ec-1f1f9.name: Drapeau du Guatemala
+emojis.1f1ec-1f1f9.keywords: drapeau,guatemala,guatémala
+emojis.1f1ec-1f1fa.name: Drapeau de Guam
+emojis.1f1ec-1f1fa.keywords: drapeau,guam
+emojis.1f1ec-1f1fc.name: Drapeau de la Guinée-Bissau
+emojis.1f1ec-1f1fc.keywords: bissau,drapeau,guinée,guinee
+emojis.1f1ec-1f1fe.name: Drapeau du Guyana
+emojis.1f1ec-1f1fe.keywords: drapeau,guyana
+emojis.1f1ed-1f1f0.name: Drapeau de Hong Kong
+emojis.1f1ed-1f1f0.keywords: chine,drapeau,hong kong,hong-kong
+emojis.1f1ed-1f1f3.name: Drapeau du Honduras
+emojis.1f1ed-1f1f3.keywords: drapeau,honduras
+emojis.1f1ed-1f1f7.name: Drapeau de la Croatie
+emojis.1f1ed-1f1f7.keywords: croatie,drapeau
+emojis.1f1ed-1f1f9.name: Drapeau d'Haïti
+emojis.1f1ed-1f1f9.keywords: drapeau,haïti,haiti
+emojis.1f1ed-1f1fa.name: Drapeau de la Hongrie
+emojis.1f1ed-1f1fa.keywords: drapeau,hongrie
+emojis.1f1ee-1f1e8.name: Drapeau des Îles Canaries
+emojis.1f1ee-1f1e8.keywords: canaries,drapeau,île,ile
+emojis.1f1ee-1f1e9.name: Drapeau de l'Indonésie
+emojis.1f1ee-1f1e9.keywords: drapeau,indonésie,indonesie
+emojis.1f1ee-1f1ea.name: Drapeau de l'Irlande
+emojis.1f1ee-1f1ea.keywords: drapeau,irlande
+emojis.1f1ee-1f1f1.name: Drapeau d'Israël
+emojis.1f1ee-1f1f1.keywords: drapeau,israël,israel
+emojis.1f1ee-1f1f2.name: Drapeau de l'île de Man
+emojis.1f1ee-1f1f2.keywords: drapeau,île de man,ile de man
+emojis.1f1ee-1f1f3.name: Drapeau de l'Inde
+emojis.1f1ee-1f1f3.keywords: drapeau,inde
+emojis.1f1ee-1f1f4.name: Drapeau du Territoire britannique de l'océan Indien
+emojis.1f1ee-1f1f4.keywords: britannique,chagos,drapeau,océan indien,ocean indien,île,ile,diego garcia
+emojis.1f1ee-1f1f6.name: Drapeau de l'Irak
+emojis.1f1ee-1f1f6.keywords: drapeau,irak
+emojis.1f1ee-1f1f7.name: Drapeau de l'Iran
+emojis.1f1ee-1f1f7.keywords: drapeau,iran
+emojis.1f1ee-1f1f8.name: Drapeau de l'Islande
+emojis.1f1ee-1f1f8.keywords: drapeau,islande
+emojis.1f1ee-1f1f9.name: Drapeau d'Italie
+emojis.1f1ee-1f1f9.keywords: drapeau,italie
+emojis.1f1ef-1f1ea.name: Drapeau de Jersey
+emojis.1f1ef-1f1ea.keywords: drapeau,jersey
+emojis.1f1ef-1f1f2.name: Drapeau de la Jamaïque
+emojis.1f1ef-1f1f2.keywords: drapeau,jamaïque,jamaique
+emojis.1f1ef-1f1f4.name: Drapeau de la Jordanie
+emojis.1f1ef-1f1f4.keywords: drapeau,jordanie
+emojis.1f1ef-1f1f5.name: Drapeau du Japon
+emojis.1f1ef-1f1f5.keywords: drapeau,japon
+emojis.1f1f0-1f1ea.name: Drapeau du Kenya
+emojis.1f1f0-1f1ea.keywords: drapeau,kenya
+emojis.1f1f0-1f1ec.name: Drapeau du Kirghizistan
+emojis.1f1f0-1f1ec.keywords: drapeau,kirghizistan,kirghizstan
+emojis.1f1f0-1f1ed.name: Drapeau du Cambodge
+emojis.1f1f0-1f1ed.keywords: cambodge,drapeau
+emojis.1f1f0-1f1ee.name: Drapeau des Kiribati
+emojis.1f1f0-1f1ee.keywords: drapeau,kiribati
+emojis.1f1f0-1f1f2.name: Drapeau des Comores
+emojis.1f1f0-1f1f2.keywords: comores,drapeau
+emojis.1f1f0-1f1f3.name: Drapeau  de Saint Kitts & Nevis
+emojis.1f1f0-1f1f3.keywords: drapeau,kitts,nevis,saint
+emojis.1f1f0-1f1f5.name: Drapeau de la Corée du Nord
+emojis.1f1f0-1f1f5.keywords: drapeau,corée,coree,nord,corée du nord,coree du nord
+emojis.1f1f0-1f1f7.name: Drapeau de la Corée du Sud
+emojis.1f1f0-1f1f7.keywords: drapeau,corée,coree,sud,corée du sud,coree du sud
+emojis.1f1f0-1f1fc.name: Drapeau du Koweït
+emojis.1f1f0-1f1fc.keywords: drapeau,koweït,koweit,kuwait
+emojis.1f1f0-1f1fe.name: Drapeau des Îles Caïmans
+emojis.1f1f0-1f1fe.keywords: caïmans,caimans,drapeau,îles,iles
+emojis.1f1f0-1f1ff.name: Drapeau du Kazakhstan
+emojis.1f1f0-1f1ff.keywords: drapeau,kazakhstan
+emojis.1f1f1-1f1e6.name: Drapeau du Laos
+emojis.1f1f1-1f1e6.keywords: drapeau,laos
+emojis.1f1f1-1f1e7.name: Drapeau du Liban
+emojis.1f1f1-1f1e7.keywords: drapeau,liban
+emojis.1f1f1-1f1e8.name: Drapeau de Sainte-Lucie
+emojis.1f1f1-1f1e8.keywords: drapeau,lucie,sainte
+emojis.1f1f1-1f1ee.name: Drapeau du Liechtenstein
+emojis.1f1f1-1f1ee.keywords: drapeau,liechtenstein
+emojis.1f1f1-1f1f0.name: Drapeau du Sri Lanka
+emojis.1f1f1-1f1f0.keywords: drapeau,sri lanka
+emojis.1f1f1-1f1f7.name: Drapeau du Liberia
+emojis.1f1f1-1f1f7.keywords: drapeau,liberia
+emojis.1f1f1-1f1f8.name: Drapeau du Lesotho
+emojis.1f1f1-1f1f8.keywords: drapeau,lesotho
+emojis.1f1f1-1f1f9.name: Drapeau de la Lituanie
+emojis.1f1f1-1f1f9.keywords: drapeau,lituanie
+emojis.1f1f1-1f1fa.name: Drapeau du Luxembourg
+emojis.1f1f1-1f1fa.keywords: drapeau,luxembourg
+emojis.1f1f1-1f1fb.name: Drapeau de la Lettonie
+emojis.1f1f1-1f1fb.keywords: drapeau,lettonie
+emojis.1f1f1-1f1fe.name: Drapeau de la Libye
+emojis.1f1f1-1f1fe.keywords: drapeau,libye
+emojis.1f1f2-1f1e6.name: Drapeau du Maroc
+emojis.1f1f2-1f1e6.keywords: drapeau,maroc
+emojis.1f1f2-1f1e8.name: Drapeau de Monaco
+emojis.1f1f2-1f1e8.keywords: drapeau,monaco
+emojis.1f1f2-1f1e9.name: Drapeau de la Moldavie
+emojis.1f1f2-1f1e9.keywords: drapeau,moldavie
+emojis.1f1f2-1f1ea.name: Drapeau du Monténégro
+emojis.1f1f2-1f1ea.keywords: drapeau,monténégro,montenegro
+emojis.1f1f2-1f1ec.name: Drapeau de Madagascar
+emojis.1f1f2-1f1ec.keywords: drapeau,madagascar
+emojis.1f1f2-1f1ed.name: Drapeau des Îles Marshall
+emojis.1f1f2-1f1ed.keywords: drapeau,îles,iles,marshall
+emojis.1f1f2-1f1f0.name: Drapeau de la Macédoine
+emojis.1f1f2-1f1f0.keywords: drapeau,macédoine,macedoine
+emojis.1f1f2-1f1f1.name: Drapeau du Mali
+emojis.1f1f2-1f1f1.keywords: drapeau,mali
+emojis.1f1f2-1f1f2.name: Drapeau du Myanmar
+emojis.1f1f2-1f1f2.keywords: birmanie,drapeau,myanmar
+emojis.1f1f2-1f1f3.name: Drapeau de la Mongolie
+emojis.1f1f2-1f1f3.keywords: drapeau,mongolie
+emojis.1f1f2-1f1f4.name: Drapeau de Macao
+emojis.1f1f2-1f1f4.keywords: chine,drapeau,macao
+emojis.1f1f2-1f1f5.name: Drapeau des Îles Mariannes du Nord
+emojis.1f1f2-1f1f5.keywords: drapeau,îles,iles,mariannes,nord,mariannes-du-nord,mariannes du nord
+emojis.1f1f2-1f1f6.name: Drapeau de la Martinique
+emojis.1f1f2-1f1f6.keywords: drapeau,martinique
+emojis.1f1f2-1f1f7.name: Drapeau de la Mauritanie
+emojis.1f1f2-1f1f7.keywords: drapeau,mauritanie
+emojis.1f1f2-1f1f8.name: Drapeau de Montserrat
+emojis.1f1f2-1f1f8.keywords: drapeau,montserrat
+emojis.1f1f2-1f1f9.name: Drapeau de Malte
+emojis.1f1f2-1f1f9.keywords: drapeau,malte
+emojis.1f1f2-1f1fa.name: Drapeau de l'Île Maurice
+emojis.1f1f2-1f1fa.keywords: drapeau,maurice
+emojis.1f1f2-1f1fb.name: Drapeau des Maldives
+emojis.1f1f2-1f1fb.keywords: drapeau,maldives
+emojis.1f1f2-1f1fc.name: Drapeau du Malawi
+emojis.1f1f2-1f1fc.keywords: drapeau,malawi
+emojis.1f1f2-1f1fd.name: Drapeau du Mexique
+emojis.1f1f2-1f1fd.keywords: drapeau,mexique
+emojis.1f1f2-1f1fe.name: Drapeau de la Malaisie
+emojis.1f1f2-1f1fe.keywords: drapeau,malaisie
+emojis.1f1f2-1f1ff.name: Drapeau du Mozambique
+emojis.1f1f2-1f1ff.keywords: drapeau,mozambique
+emojis.1f1f3-1f1e6.name: Drapeau de la Namibie
+emojis.1f1f3-1f1e6.keywords: drapeau,namibie
+emojis.1f1f3-1f1e8.name: Drapeau de la Nouvelle-Calédonie
+emojis.1f1f3-1f1e8.keywords: drapeau,nouvelle,nouvelle-calédonie,nouvelle calédonie,nouvelle-caledonie,nouvelle caledonie
+emojis.1f1f3-1f1ea.name: Drapeau du Niger
+emojis.1f1f3-1f1ea.keywords: drapeau,niger
+emojis.1f1f3-1f1eb.name: Drapeau de l'Île Norfolk
+emojis.1f1f3-1f1eb.keywords: drapeau,île,ile,norfolk
+emojis.1f1f3-1f1ec.name: Drapeau du Nigéria
+emojis.1f1f3-1f1ec.keywords: drapeau,nigeria,nigéria
+emojis.1f1f3-1f1ee.name: Drapeau du Nicaragua
+emojis.1f1f3-1f1ee.keywords: drapeau,nicaragua
+emojis.1f1f3-1f1f1.name: Drapeau des Pays-Bas
+emojis.1f1f3-1f1f1.keywords: drapeau,pays-bas,pays bas
+emojis.1f1f3-1f1f4.name: Drapeau de la Norvège
+emojis.1f1f3-1f1f4.keywords: drapeau,norvège,norvege,bouvet,svalbard,jan mayen
+emojis.1f1f3-1f1f5.name: Drapeau du Népal
+emojis.1f1f3-1f1f5.keywords: drapeau,népal,nepal
+emojis.1f1f3-1f1f7.name: Drapeau de Nauru
+emojis.1f1f3-1f1f7.keywords: drapeau,nauru
+emojis.1f1f3-1f1fa.name: Drapeau de Niue
+emojis.1f1f3-1f1fa.keywords: drapeau,niue
+emojis.1f1f3-1f1ff.name: Drapeau de la Nouvelle-Zélande
+emojis.1f1f3-1f1ff.keywords: drapeau,nouvelle,nouvelle-zélande,nouvelle-zelande,nouvelle zélande,nouvelle zelande
+emojis.1f1f4-1f1f2.name: Drapeau d'Oman
+emojis.1f1f4-1f1f2.keywords: drapeau,oman
+emojis.1f1f5-1f1e6.name: Drapeau du Panama
+emojis.1f1f5-1f1e6.keywords: drapeau,panama
+emojis.1f1f5-1f1ea.name: Drapeau du Pérou
+emojis.1f1f5-1f1ea.keywords: drapeau,pérou,perou
+emojis.1f1f5-1f1eb.name: Drapeau de la Polynésie Française
+emojis.1f1f5-1f1eb.keywords: drapeau,française,francaise,polynésie,polynesie
+emojis.1f1f5-1f1ec.name: Drapeau de la Papouasie-Nouvelle-Guinée
+emojis.1f1f5-1f1ec.keywords: drapeau,guinée,guinee,nouvelle,papouasie-nouvelle-guinée,papouasie-nouvelle-guinee,papouasie nouvelle guinée,papouasie nouvelle guinee
+emojis.1f1f5-1f1ed.name: Drapeau des Philippines
+emojis.1f1f5-1f1ed.keywords: drapeau,philippines
+emojis.1f1f5-1f1f0.name: Drapeau du Pakistan
+emojis.1f1f5-1f1f0.keywords: drapeau,pakistan
+emojis.1f1f5-1f1f1.name: Drapeau de la Pologne
+emojis.1f1f5-1f1f1.keywords: drapeau,pologne
+emojis.1f1f5-1f1f2.name: Drapeau de Saint-Pierre-et-Miquelon
+emojis.1f1f5-1f1f2.keywords: drapeau,miquelon,pierre,saint
+emojis.1f1f5-1f1f3.name: Drapeau des Îles Pitcairn
+emojis.1f1f5-1f1f3.keywords: drapeau,îles,iles,pitcairn
+emojis.1f1f5-1f1f7.name: Drapeau de Porto Rico
+emojis.1f1f5-1f1f7.keywords: drapeau,porto rico
+emojis.1f1f5-1f1f8.name: Drapeau des Territoires Palestiniens
+emojis.1f1f5-1f1f8.keywords: drapeau,palestine
+emojis.1f1f5-1f1f9.name: Drapeau du Portugal
+emojis.1f1f5-1f1f9.keywords: drapeau,portugal
+emojis.1f1f5-1f1fc.name: Drapeau des Palaos
+emojis.1f1f5-1f1fc.keywords: drapeau,palaos,palau,carolines
+emojis.1f1f5-1f1fe.name: Drapeau du Paraguay
+emojis.1f1f5-1f1fe.keywords: drapeau,paraguay
+emojis.1f1f6-1f1e6.name: Drapeau du Qatar
+emojis.1f1f6-1f1e6.keywords: drapeau,qatar
+emojis.1f1f7-1f1ea.name: Drapeau de la Réunion
+emojis.1f1f7-1f1ea.keywords: drapeau,réunion,reunion
+emojis.1f1f7-1f1f4.name: Drapeau de la Roumanie
+emojis.1f1f7-1f1f4.keywords: drapeau,roumanie
+emojis.1f1f7-1f1f8.name: Drapeau de la Serbie
+emojis.1f1f7-1f1f8.keywords: drapeau,serbie
+emojis.1f1f7-1f1fa.name: Drapeau de la Russie
+emojis.1f1f7-1f1fa.keywords: drapeau,russie
+emojis.1f1f7-1f1fc.name: Drapeau du Rwanda
+emojis.1f1f7-1f1fc.keywords: drapeau,rwanda
+emojis.1f1f8-1f1e6.name: Drapeau de l'Arabie Saoudite
+emojis.1f1f8-1f1e6.keywords: drapeau,arabie saoudite
+emojis.1f3f4-e0067-e0062-e0073-e0063-e0074-e007f.name: Drapeau de l'Écosse
+emojis.1f3f4-e0067-e0062-e0073-e0063-e0074-e007f.keywords: écosse,ecosse,drapeau
+emojis.1f1f8-1f1e7.name: Drapeau des Îles Salomon
+emojis.1f1f8-1f1e7.keywords: drapeau,île,ile,salomon
+emojis.1f1f8-1f1e8.name: Drapeau des Seychelles
+emojis.1f1f8-1f1e8.keywords: drapeau,seychelles
+emojis.1f1f8-1f1e9.name: Drapeau du Soudan
+emojis.1f1f8-1f1e9.keywords: drapeau,soudan
+emojis.1f1f8-1f1ea.name: Drapeau de la Suède
+emojis.1f1f8-1f1ea.keywords: drapeau,suède,suede
+emojis.1f1f8-1f1ec.name: Drapeau de Singapour
+emojis.1f1f8-1f1ec.keywords: drapeau,singapour
+emojis.1f1f8-1f1ed.name: Drapeau de Sainte-Hélène
+emojis.1f1f8-1f1ed.keywords: drapeau,hélène,helene,saint
+emojis.1f1f8-1f1ee.name: Drapeau de la Slovénie
+emojis.1f1f8-1f1ee.keywords: drapeau,slovénie,slovenie
+emojis.1f1f8-1f1f0.name: Drapeau de la Slovaquie
+emojis.1f1f8-1f1f0.keywords: drapeau,slovaquie
+emojis.1f1f8-1f1f1.name: Drapeau de la Sierra Leone
+emojis.1f1f8-1f1f1.keywords: drapeau,sierra leone
+emojis.1f1f8-1f1f2.name: Drapeau de Saint-Marin
+emojis.1f1f8-1f1f2.keywords: drapeau,saint-marin,saint marin
+emojis.1f1f8-1f1f3.name: Drapeau du Sénégal
+emojis.1f1f8-1f1f3.keywords: drapeau,sénégal,senegal
+emojis.1f1f8-1f1f4.name: Drapeau de la Somalie
+emojis.1f1f8-1f1f4.keywords: drapeau,somalie
+emojis.1f1f8-1f1f7.name: Drapeau du Suriname
+emojis.1f1f8-1f1f7.keywords: drapeau,suriname,surinam
+emojis.1f1f8-1f1f8.name: Drapeau du Soudan du Sud
+emojis.1f1f8-1f1f8.keywords: drapeau,sud,soudan du sud,soudan
+emojis.1f1f8-1f1f9.name: Drapeau du Sao Tomé-et-Principe
+emojis.1f1f8-1f1f9.keywords: drapeau,principe,príncipe,sao tome,são tomé
+emojis.1f1f8-1f1fb.name: Drapeau du Salvador
+emojis.1f1f8-1f1fb.keywords: salvador,drapeau
+emojis.1f1f8-1f1fd.name: Drapeau de Sint-Maarten
+emojis.1f1f8-1f1fd.keywords: drapeau,martin,saint
+emojis.1f1f8-1f1fe.name: Drapeau de la Syrie
+emojis.1f1f8-1f1fe.keywords: drapeau,syrie
+emojis.1f1f8-1f1ff.name: Drapeau du Swaziland
+emojis.1f1f8-1f1ff.keywords: drapeau,swaziland
+emojis.1f1f9-1f1e6.name: Drapeau de Tristan da Cunha
+emojis.1f1f9-1f1e6.keywords: drapeau,tristan da cunha
+emojis.1f1f9-1f1e8.name: Drapeau des Îles Turques-et-Caïques
+emojis.1f1f9-1f1e8.keywords: caicos,drapeau,île,ile,turks
+emojis.1f1f9-1f1e9.name: Drapeau du Tchad
+emojis.1f1f9-1f1e9.keywords: tchad,drapeau
+emojis.1f1f9-1f1eb.name: Drapeau des Terres australes et antarctiques françaises
+emojis.1f1f9-1f1eb.keywords: antarctique,drapeau,français,francais
+emojis.1f1f9-1f1ec.name: Drapeau du Togo
+emojis.1f1f9-1f1ec.keywords: drapeau,togo
+emojis.1f1f9-1f1ed.name: Drapeau de la Thaïlande
+emojis.1f1f9-1f1ed.keywords: drapeau,thaïlande,thailande
+emojis.1f1f9-1f1ef.name: Drapeau du Tajikistan
+emojis.1f1f9-1f1ef.keywords: drapeau,tadjikistan
+emojis.1f1f9-1f1f0.name: Drapeau des Tokelau
+emojis.1f1f9-1f1f0.keywords: drapeau,tokelau
+emojis.1f1f9-1f1f1.name: Drapeau du Timor Oriental
+emojis.1f1f9-1f1f1.keywords: est,timor est,drapeau,timor oriental
+emojis.1f1f9-1f1f2.name: Drapeau du Turkménistan
+emojis.1f1f9-1f1f2.keywords: drapeau,turkménistan,turkmenistan
+emojis.1f1f9-1f1f3.name: Drapeau de la Tunisie
+emojis.1f1f9-1f1f3.keywords: drapeau,tunisie
+emojis.1f1f9-1f1f4.name: Drapeau du Tonga
+emojis.1f1f9-1f1f4.keywords: drapeau,tonga
+emojis.1f1f9-1f1f7.name: Drapeau de la Turquie
+emojis.1f1f9-1f1f7.keywords: drapeau,turquie
+emojis.1f1f9-1f1f9.name: Drapeau de Trinité-et-Tobago
+emojis.1f1f9-1f1f9.keywords: drapeau,tobago,trinité,trinite
+emojis.1f1f9-1f1fb.name: Drapeau du Tuvalu
+emojis.1f1f9-1f1fb.keywords: drapeau,tuvalu
+emojis.1f1f9-1f1fc.name: Drapeau de Taïwan
+emojis.1f1f9-1f1fc.keywords: chine,drapeau,taïwan,taiwan
+emojis.1f1f9-1f1ff.name: Drapeau de la Tanzanie
+emojis.1f1f9-1f1ff.keywords: drapeau,tanzanie
+emojis.1f1fa-1f1e6.name: Drapeau de l'Ukraine
+emojis.1f1fa-1f1e6.keywords: drapeau,ukraine
+emojis.1f1fa-1f1ec.name: Drapeau de l'Ouganda
+emojis.1f1fa-1f1ec.keywords: drapeau,ouganda
+emojis.1f1fa-1f1f3.name: Drapeau de l'ONU
+emojis.1f1fa-1f1f3.keywords: drapeau,onu,unies,nations
+emojis.1f1fa-1f1f8.name: Drapeau des États-Unis
+emojis.1f1fa-1f1f8.keywords: amérique,amerique,drapeau,unis,états,etats,us,usa,îles éloignées,iles eloignees
+emojis.1f1fa-1f1fe.name: Drapeau de l'Uruguay
+emojis.1f1fa-1f1fe.keywords: drapeau,uruguay
+emojis.1f1fa-1f1ff.name: Drapeau de l'Ouzbékistan
+emojis.1f1fa-1f1ff.keywords: drapeau,ouzbékistan,ouzbekistan
+emojis.1f1fb-1f1e6.name: Drapeau de la Cité du Vatican
+emojis.1f1fb-1f1e6.keywords: drapeau,vatican
+emojis.1f1fb-1f1e8.name: Drapeau de Saint-Vincent-et-les-Grenadines
+emojis.1f1fb-1f1e8.keywords: drapeau,grenadines,saint,vincent
+emojis.1f1fb-1f1ea.name: Drapeau du Venezuela
+emojis.1f1fb-1f1ea.keywords: drapeau,venezuela,vénézuela
+emojis.1f1fb-1f1ec.name: Drapeau des Îles Vierges Britanniques
+emojis.1f1fb-1f1ec.keywords: britanniques,drapeau,îles,iles,vierges,royaume-uni,royaume uni
+emojis.1f1fb-1f1ee.name: Drapeau des Îles Vierges Américaines
+emojis.1f1fb-1f1ee.keywords: amérique,amerique,drapeau,île,ile,états-unis,etats-unis,états unis,etats unis,us,usa,vierges
+emojis.1f1fb-1f1f3.name: Drapeau du Viêt Nam
+emojis.1f1fb-1f1f3.keywords: drapeau,viêtnam,vietnam,viêt nam,viet nam
+emojis.1f1fb-1f1fa.name: Drapeau du Vanuatu
+emojis.1f1fb-1f1fa.keywords: drapeau,vanuatu
+emojis.1f3f4-e0067-e0062-e0077-e006c-e0073-e007f.name: Drapeau du pays de Galles
+emojis.1f3f4-e0067-e0062-e0077-e006c-e0073-e007f.keywords: pays de galles,drapeau
+emojis.1f1fc-1f1eb.name: Drapeau de Wallis-et-Futuna
+emojis.1f1fc-1f1eb.keywords: drapeau,futuna,wallis
+emojis.1f1fc-1f1f8.name: Drapeau des Samoa
+emojis.1f1fc-1f1f8.keywords: drapeau,samoa
+emojis.1f1fd-1f1f0.name: Drapeau du Kosovo
+emojis.1f1fd-1f1f0.keywords: drapeau,kosovo
+emojis.1f1fe-1f1ea.name: Drapeau du Yémen
+emojis.1f1fe-1f1ea.keywords: drapeau,yémen,yemen
+emojis.1f1fe-1f1f9.name: Drapeau de Mayotte
+emojis.1f1fe-1f1f9.keywords: drapeau,mayotte
+emojis.1f1ff-1f1e6.name: Drapeau de l'Afrique du Sud
+emojis.1f1ff-1f1e6.keywords: drapeau,sud,afrique du sud
+emojis.1f1ff-1f1f2.name: Drapeau de la Zambie
+emojis.1f1ff-1f1f2.keywords: drapeau,zambie
+emojis.1f1ff-1f1fc.name: Drapeau du Zimbabwe
+emojis.1f1ff-1f1fc.keywords: drapeau,zimbabwe
+emojis.1f1e7-1f1fb.name: Drapeau de l'Île Bouvet
+emojis.1f1e7-1f1fb.keywords: drapeau,bouvet,île,ile
+emojis.1f1e8-1f1f5.name: Drapeau de l'Île de Clipperton
+emojis.1f1e8-1f1f5.keywords: drapeau,clipperton,île,ile
+emojis.1f1e9-1f1ec.name: Drapeau de Diego Garcia
+emojis.1f1e9-1f1ec.keywords: drapeau,diego garcia
+emojis.1f1ea-1f1e6.name: Drapeau de Ceuta et Melilla
+emojis.1f1ea-1f1e6.keywords: drapeau,ceuta,melilla
+emojis.1f1ed-1f1f2.name: Drapeau des Îles Heard-et-MacDonald
+emojis.1f1ed-1f1f2.keywords: drapeau,heard,île,ile,macdonald
+emojis.1f1f2-1f1eb.name: Drapeau de Saint-Martin
+emojis.1f1f2-1f1eb.keywords: drapeau,français,francais,martin,saint
+emojis.1f1f8-1f1ef.name: Drapeau du Svalbard et Jan Mayen
+emojis.1f1f8-1f1ef.keywords: drapeau,jan mayen,svalbard
+emojis.1f1fa-1f1f2.name: Drapeau des Îles mineures éloignées des États-Unis
+emojis.1f1fa-1f1f2.keywords: drapeau,amérique,île,ile,mineures éloignées,mineures eloignees,unis, états-unis,etats-unis,états unis,etats unis,us,usa

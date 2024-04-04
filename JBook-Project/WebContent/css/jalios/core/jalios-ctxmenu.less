@@ -1,0 +1,217 @@
+
+/* ----------------------------------------------- */
+/*  SubMenu for Bootstrap3                         */
+/*                                                 */
+/* The dropdown-submenu has been removed in        */ 
+/* Bootstrap 3. In the words of Bootstrap author   */ 
+/* Mark Otto..                                     */
+/*                                                 */
+/* "Submenus just don't have much of a place on    */
+/* the web right now, especially the mobile web.   */
+/* They will be removed with 3.0"                  */
+/* ----------------------------------------------- */
+
+.dropdown-submenu{position:relative;}
+.dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
+.dropdown-submenu:hover>.dropdown-menu{display:block;}
+.dropdown-submenu>a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#cccccc;margin-top:5px;margin-right:-10px;}
+.dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
+
+/* ----------------------------------------------- */
+/*  DROPDOWN                                       */
+/* ----------------------------------------------- */
+
+.flag-dropdown {
+  position: relative;
+  bottom: 25px;
+  left: 56px;
+}
+
+.flag-dropdown.ctx-caret::after {
+  color: @white;
+}
+
+.flag-dropdown-menu {
+  right: 275px;
+  left: auto !important;
+}
+
+// TO remove when migrating to bootstrap 5 since buttons should be handled in dropdowns
+.dropdown-menu {
+  max-width: 300px;
+  
+  > LI > A {
+    padding-left:  10px;
+    .text-overflow();
+    IMG.icon {
+      padding-right: 4px;
+    } 
+  }
+  > LI > BUTTON {
+    display: block;
+    padding: 3px 20px 3px 10px;
+    clear: both;
+    font-weight: 400;
+    line-height: @line-height-base;
+    color: @dropdown-link-color;
+    white-space: nowrap; // prevent links from randomly breaking onto new lines
+    border: 0 none;
+    background-color: transparent;
+    width: 100%;
+    text-align: left;
+    .text-overflow();
+    
+    IMG.icon {
+      padding-right: 4px;
+    }    
+    &:hover,
+    &:focus {
+      color: @dropdown-link-hover-color;
+      text-decoration: none;
+      background-color: @dropdown-link-hover-bg;
+    }
+  }
+  
+  .jalios-icon {
+    color: @gray;
+  }
+}
+
+
+.dropdown-menu .list-group-item.active {
+  .jalios-icon {
+    color: #FFF;
+  }
+}
+
+@media (max-width: @grid-float-breakpoint-max) {
+  // Dropdowns get custom display when collapsed
+  .navbar-nav .dropdown-menu {
+    max-width: none;
+  }
+}
+
+.dropdown-menu.open {
+  display: block;
+  top: auto;
+  
+  &.ctx-add-menu {
+    max-height: 75vh;
+    overflow: auto;
+  }    
+	IMG.thumbnail{
+	  border: 0 none;
+	  margin: 0 auto;
+	  .box-shadow(none);
+	}
+}
+
+.dropdown-menu .dropdown-menu-title {
+	padding: 0 20px 0 10px;
+	font-weight:bold;
+}
+
+.dropdown-menu-right {
+  .dropdown-submenu > .dropdown-menu {
+    left:  auto;
+    right: 95%;
+    margin-left: -100%;
+    .border-radius(6px 0px 6px 6px);
+  }
+}
+
+
+.dropdown-menu LI.section A {
+  text-align: center;
+  font-weight: bold;
+}
+
+.dropdown-menu LI.block A {
+  white-space: normal;
+}
+
+.dropdown-menu LI.ctx-image A {
+  text-align: center;
+  padding-left: 20px;
+}
+
+// JCMS-6790: FIX for submenu stacked by tabdrop
+.tabdrop .dropdown:hover > .dropdown-menu { 
+  display: block;
+}
+
+/* ----------------------------------------------- */
+/*  Code for specific ctx menu items               */
+/* ----------------------------------------------- */
+// Available in the delegation logout ctx menu
+.dropdown-menu > LI.logout-ctx-menu-item >  A{
+  color: @brand-danger;
+}
+
+.ctx-caret {
+  white-space: nowrap;
+}
+.ctx-caret-white.ctx-caret:after {
+  color: white;
+}
+
+.ctx-caret:after {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 4px;
+  vertical-align: middle;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  content: '';
+  color: inherit;
+}
+.ctx-caret.jalios-icon:after {
+  vertical-align: super;
+}
+
+// Handle potentials empty list items in a ctx menu which leads to unecessary dividers
+.dropdown-menu .divider:last-child,
+.dropdown-menu .divider:first-child,  
+.dropdown-menu .divider + .divider {
+  height: 0;
+  margin: 0;
+  background-color: @dropdown-bg;
+}
+
+// Prevent too large thumbnails
+ul#ctxAjaxMenu .thumbnail {
+    max-width: 200px;
+    height: auto;
+}
+
+
+.dropdown-radio > LI > LABEL  {
+  font-weight: normal;
+  display: block;
+  padding: 3px 20px 3px 10px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333;
+  cursor: pointer;
+  &:hover {
+    background-color: #f5f5f5;
+    text-decoration: none;
+    color: #262626;
+  }
+  INPUT {
+    display: none;
+    font-weight: normal;
+  }
+}
+
+.navbar .dropdown,
+.dropdown-menu {
+  .jalios-icon {
+    font-size: @icon-size;
+    color: @jalios-color-icon;
+    margin-right: 4px;
+  }
+}

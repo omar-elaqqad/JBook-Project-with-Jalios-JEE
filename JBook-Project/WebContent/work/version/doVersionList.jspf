@@ -1,0 +1,195 @@
+<%
+Date minDate = ((Publication)versionList.get(0)).getCdate();
+Date maxDate = lastPub.getMdate();
+String minDateStr = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT, userLocale).format(minDate);
+String maxDateStr = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT, userLocale).format(maxDate);
+
+%>
+<div  role="tabpanel" class="tab-pane active" id="versionHistory">
+  <%@ include file='/jcore/doMessageBox.jspf' %>
+
+  <p><%= glp("ui.work.ver.summary", "" + versionList.size(), minDateStr, maxDateStr) %></p>
+  <form action="work/version/version.jsp" name="editForm" method="POST">
+  <input type="hidden" name="id"  value="<%= lastPub.getId() %>" />
+  <div class="table-responsive">
+  <table id='versionTable' class="table-data table-condensed">
+    <thead>
+      <tr>
+        <th class="fit"></th>
+        <th class="fit"></th>
+        <th class="fit"><%= glp("ui.com.lbl.status") %></th>
+        <th class="nowrap expand"><%= glp("ui.com.lbl.title") %></th>
+        <th class="fit"><%= glp("ui.com.lbl.author") %></th>
+        <th class="fit"><%= glp("ui.com.lbl.op-author") %></th>
+        <th class="fit"><%= glp("ui.com.lbl.op-delegate") %></th>
+        <th class="fit"><%= glp("ui.work.ver.lbl.cat") %></th>
+        <th class="fit"><%= glp("ui.com.lbl.rights") %></th>
+        <th class="fit"><%= glp("ui.com.lbl.pdate") %></th>
+        <th class="fit"><%= glp("ui.com.lbl.edate") %></th>
+        <th class="fit"><%= glp("ui.com.lbl.mdate") %></th>
+        <th class="fit"></th>
+      </tr>
+    </thead>
+    <jalios:pager name='vPagerHandler' declare='true' action='init' size='<%= rVersionList.size() %>'/>
+    <%
+    String noChangeClass = "class='no-change'";
+    int lastPos = rVersionList.size() - 1;
+    %>
+    <tbody>
+    <jalios:foreach name='itPub' type='Publication' collection='<%= rVersionList %>'
+                    max='<%= vPagerHandler.getPageSize() %>'
+                    skip='<%= vPagerHandler.getStart() %>'>
+      <%
+      int pos = (itCounter.intValue()-1) + vPagerHandler.getStart() ;
+      boolean deleted  = channel.getData(itPub.getId()) == null;
+      int itVersion = rVersionList.size() - (itCounter.intValue() + vPagerHandler.getStart());
+      boolean lastIteration = pos == lastPos;
+      Publication nextPub = lastIteration ? null : (Publication)rVersionList.get(pos + 1);
+      boolean cmpNext = nextPub != null;
+      String cssClass = "";
+      WFNote wfNote = formHandler.getWFNote(itPub);
+      boolean majorUpdate = nextPub == null || itPub.getMajorVersion() != nextPub.getMajorVersion();
+      boolean merge = nextPub != null && itPub.getMergeDate() != nextPub.getMergeDate();
+      boolean newUpload = itPub instanceof FileDocument && (nextPub == null || !((FileDocument)itPub).getUploadDate().equals(((FileDocument)nextPub).getUploadDate()));
+      %>
+    <tr class="vTop">
+      <td class='text-right' nowrap="nowrap"><input name="vids" type="checkbox" value="<%= itVersion %>" <%= formHandler.isSelectedVersion(itVersion) ? "checked" : "" %>></td>
+
+      <%-- VALUE / VERSION --%>
+      <td align='right' nowrap="nowrap">
+      <% if (majorUpdate) { %><strong><% } %>
+      v. <%= itPub.getVersionString() %>
+      <% if (majorUpdate) { %></strong><% } %>
+      </td>
+      <%-- VALUE / STATE --%>
+      <% String stateClass = "class='" + (itPub.isInVisibleState() ? "pub-state" : "work-state") +"'"; %>
+      <% boolean noChange = cmpNext && itPub.getPstatus() == nextPub.getPstatus(); %>
+      <% cssClass = noChange ? noChangeClass : stateClass; %>
+      <td align='left' nowrap="nowrap">
+        <jalios:icon src='wf' />
+        <% if (noChange) { %>
+        <span <%= noChangeClass %>><%= itPub.getWFStateLabel(userLang) %></span>
+        <% } else { %>
+        <%= (null != wf) ? itPub.getWFStateLabelHtml(userLang) : "No Workflow" %>
+        </span>
+        <% } %>
+        <% if (wfNote != null) {%>
+          <jalios:tooltip icon="wfnote">
+             <% if (Util.notEmpty(wfNote.getNote())){ %>
+             <jalios:wiki><%= wfNote.getNote() %></jalios:wiki>
+             <% } %>
+             <jalios:link data='<%= wfNote.getAuthor() %>'/>
+          </jalios:tooltip>
+        <% } %>
+        <% if (newUpload) {%>
+        <jalios:fileicon doc='<%= (FileDocument)itPub %>' />
+        <% } %>
+        <% if (merge) {%>
+        <a href='work/version/version.jsp?id=<%= itPub.getMergeId() %>'><jalios:icon src="duplicate-merge" title='<%= glp("ui.work.ver.lbl.merge") %>'  /></a>
+        <% } %>
+       </td>
+
+      <%-- VALUE / TITLE --%>
+      <% cssClass = cmpNext && Util.isSameContent(itPub.getTitle(), nextPub.getTitle()) ? noChangeClass : ""; %>
+      <td <%= cssClass %> align='left'>
+        <a href='work/version/version.jsp?id=<%= itPub.getId() %>&amp;vid=<%= itVersion %>'>
+        <%= itPub.getTitle(userLang) %>
+        </a>
+     </td>
+
+      <%-- VALUE / AUTHOR --%>
+      <% cssClass = cmpNext && itPub.getAuthor() == nextPub.getAuthor() ? noChangeClass : ""; %>
+      <td <%= cssClass %> nowrap="nowrap">
+        <jalios:link data='<%= itPub.getAuthor() %>'/>
+      </td>
+
+      <%-- VALUE / OPAUTHOR --%>
+      <% cssClass = cmpNext && itPub.getOpAuthor() == nextPub.getOpAuthor() ? noChangeClass : ""; %>
+      <td <%= cssClass %> nowrap="nowrap">
+      <% if (itPub.getOpAuthor() != null) { %>
+        <jalios:link data='<%= itPub.getOpAuthor() %>'/>
+      <% } else { %>
+        <%= glp("ui.com.lbl.no-op-author") %>
+      <% } %>
+      </td>
+
+      <%-- VALUE / OPDELEGATE --%>
+      <% cssClass = cmpNext && itPub.getOpDelegate() == nextPub.getOpDelegate() ? noChangeClass : ""; %>
+      <td <%= cssClass %> nowrap="nowrap">
+      <% if (itPub.getOpDelegate() != null) { %>
+        <jalios:link data='<%= itPub.getOpDelegate() %>'/>
+      <% } %>
+      </td>
+
+      <%-- VALUE / CATEGORIES --%>
+      <td nowrap="nowrap">
+       <% if (cmpNext && Util.isSameContent(itPub.getCategories(), nextPub.getCategories())) { %>
+        <span <%= noChangeClass %>><%= glp("ui.work.ver.lbl.nochange")%></span>
+        <% } else { %>
+        <ul>
+        <jalios:foreach array="<%= itPub.getCategories() %>" type="Category" name="itCat" counter="catCounter">
+          <li><%= itCat != null ? itCat.toString() : "" %></li>
+        </jalios:foreach>
+        </ul>
+        <% } %>
+      </td>
+
+      <%-- VALUE / RIGHTS --%>
+      <td nowrap="nowrap">
+       <% if (cmpNext && Util.isSameContent(itPub.getAuthorizedMemberSet(), nextPub.getAuthorizedMemberSet())
+                      && Util.isSameContent(itPub.getAuthorizedGroupSet(), nextPub.getAuthorizedGroupSet())) { %>
+        <span <%= noChangeClass %>><%= glp("ui.work.ver.lbl.nochange")%></span>
+        <% } else { %>
+        <ul>
+        <jalios:foreach collection="<%= itPub.getAuthorizedGroupSet() %>" type="Group" name="itGrp" counter="grpCounter">
+          <li><%= itGrp != null ? itGrp.toString() : "" %></li>
+        </jalios:foreach>
+        <jalios:foreach collection="<%= itPub.getAuthorizedMemberSet() %>" type="Member" name="itMbr" counter="mbrCounter">
+          <li><% if (itMbr != null) { %><jalios:link data='<%= itMbr %>'/><% }%></li>
+        </jalios:foreach>
+        </ul>
+        <% } %>
+      </td>
+
+      <%-- VALUE / PDATE --%>
+      <% cssClass = cmpNext && Util.isSameContent(itPub.getPdate(), nextPub.getPdate()) ? noChangeClass : ""; %>
+      <td <%= cssClass %> align='right' nowrap="nowrap">
+        <jalios:date date='<%= itPub.getPdate() %>' format='<%= "short" %>'/>&nbsp;<jalios:time date='<%= itPub.getPdate() %>' format='<%= "short" %>'/>
+      </td>
+
+      <%-- VALUE / EDATE --%>
+      <% cssClass = cmpNext && Util.isSameContent(itPub.getEdate(), nextPub.getEdate()) ? noChangeClass : ""; %>
+      <td <%= cssClass %> align='right' nowrap="nowrap">
+        <jalios:date date='<%= itPub.getEdate() %>' format='<%= "short" %>'/>&nbsp;<jalios:time date='<%= itPub.getEdate() %>' format='<%= "short" %>'/>
+      </td>
+
+      <%-- VALUE / MDATE --%>
+      <% cssClass = cmpNext && Util.isSameContent(itPub.getMdate(), nextPub.getMdate()) ? noChangeClass : ""; %>
+      <td <%= cssClass %> align='right' nowrap="nowrap">
+        <jalios:date date='<%= itPub.getMdate() %>' format='<%= "short" %>'/>&nbsp;<jalios:time date='<%= itPub.getMdate() %>' format='<%= "short" %>'/>
+      </td>
+
+      <%-- VALUE / DELETE --%>
+      <td>       
+        <% if (pos > 0 && itPub instanceof DBData) {
+          String deleteUrl = "work/version/version.jsp?opDelete=true&amp;id=" + itPub.getId() + "&amp;vid="+ itVersion;
+          deleteUrl = HttpUtil.getUrlWithCSRFToken(deleteUrl, request, true);
+        %>
+        <a class="modal confirm-danger btn btn-rounded" href="<%= deleteUrl %>" title="<%= glp("ui.com.btn.delete") %>"><jalios:icon src="delete" /></a>
+        <% } %>
+      </td>
+    </tr>
+    </jalios:foreach>
+    </tbody>
+  </table>
+  </div>
+  <p>
+    <input class='btn btn-primary' type="submit" value='<%= glp("ui.work.ver.btn.diff") %>' />
+    <% if (!isDeleted) { %>
+    <jalios:link data="<%= lastPub %>" css="btn btn-default"><%= glp("ui.work.ver.btn.display") %></jalios:link>
+    <% } %>
+  </p>
+  </form>
+
+  <jalios:pager name='vPagerHandler' />
+</div>

@@ -1,0 +1,10 @@
+<% 
+  jcmsContext.addCSSHeader("css/jalios/core/app/jalios-app-custom-properties.css");
+  jcmsContext.addCSSHeader("css/jalios/core/app/jalios-app.css");
+  jcmsContext.addJavaScript("js/jalios/core/app/jalios-app.js");
+  request.setAttribute(PortalManager.APP_PORTAL_ATTR, Boolean.TRUE);
+  
+  if (workspace.isCollaborativeSpace()) {
+    jcmsContext.addCSSHeader("css/jalios/core/app/jalios-app-collaborative-space.css");
+  }
+%>

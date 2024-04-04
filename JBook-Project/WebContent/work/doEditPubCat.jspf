@@ -1,0 +1,84 @@
+<%@page import="com.jalios.jcms.upload.DocUploadHandler"%>
+<% { %>
+  <%
+  Set typeRemovedCatSet = (Set) request.getAttribute(documentTypeShortName + ".removedCatSet");
+  boolean showOtherCategories = true;
+  Set<Category> wsCategorySet = formHandler.getAvailableWorkspace().getCatSet();
+  if (wsCategorySet == null || Util.getFirst(wsCategorySet) == channel.getRootCategory()) {
+    wsCategorySet = channel.getRootCategory().getChildrenSet();
+    showOtherCategories = false;
+  }
+  Set catSet = ((DocUploadHandler)formHandler).getAvailableCategorySet(); 
+  %>
+ <% if (formHandler.isCategoryTabHidden()) {%>
+  <jalios:foreach collection="<%= formHandler.getHiddenCatSet(typeRemovedCatSet) %>" name="itCat" type="Category">
+  <input type="hidden" name="cids" value="<%= itCat.getId() %>">
+  </jalios:foreach>
+ <% } else { %>
+  <% if (typeRemovedCatSet == null || !typeRemovedCatSet.contains(channel.getRootCategory())) { %>
+
+    <%
+    // JCMS-8422 - Only provide the "default/custom" choice during creation of a Content, nor during update
+    boolean provideDefaultChoice = formHandler.getPublication() == null && Util.isEmpty(formHandler.getAvailableCategories());
+    EnumerateSettings useDefaultCategoriesSettings = new EnumerateSettings()
+      .disableInline()
+      .enumLabels("ui.work.form.lbl.categories.use-default", "ui.work.form.lbl.categories.use-custom")
+      .enumLabelAppends(TooltipTag.getTooltipForText(glp("ui.work.form.lbl.categories.use-default.h")), "")
+      .enumValues("true", "false")
+      .dataAttribute("jalios-action", "toggle:hide")
+      .dataAttribute("jalios-target", ".use-categories-options");
+    
+    CategoryTreeSettings wsCategorySetSettings = new CategoryTreeSettings()
+        .root(wsCategorySet)
+        .multiple()
+        .removed(typeRemovedCatSet)
+        .opened(wsCategorySet);
+    CategoryTreeSettings otherCategorySetSettings = new CategoryTreeSettings()
+        .root(channel.getRootCategory().getChildrenSet())
+        .removed(Util.unionSet(wsCategorySet, typeRemovedCatSet))
+        .multiple();
+    %>
+    
+    <% if (provideDefaultChoice) { %>
+      <jalios:field name="useDefaultCategories" value="<%= formHandler.getAvailableUseDefaultCategories() %>" resource="field-vertical">
+        <jalios:control settings='<%= useDefaultCategoriesSettings %>' />
+      </jalios:field>
+      
+      <div class="use-categories-options use-default-categories <% if (!formHandler.getAvailableUseDefaultCategories()) { %>hide<% }%>">
+      
+        <%-- Default WS Categories ------------------------------------------------------------ --%> 
+        <jalios:field label='<%= showOtherCategories ? "ui.work.form.lbl.ws-cat" : "" %>' name="defaultWsCategoriesIdsDisabled" value="<%= catSet %>" disabled="true" resource="field-vertical" css="nodnd">
+          <jalios:control settings="<%= wsCategorySetSettings.opened((String[])null) %>" />
+        </jalios:field>
+  
+        <%-- Default other Categories ------------------------------------------------------------ --%> 
+        <% if (showOtherCategories) { %>
+        <jalios:field label="ui.work.form.lbl.other-cat" name="defaultOtherCategoriesIdsDisabled" value='<%= catSet %>' disabled="true" resource="field-vertical">
+          <jalios:control settings='<%= otherCategorySetSettings.opened((String[])null) %>' />
+        </jalios:field>
+        <% } %>
+      </div>
+    <% } %>
+   
+   <% if (provideDefaultChoice) { %>
+    <div class="use-categories-options use-custom-categories <% if (formHandler.getAvailableUseDefaultCategories()) { %>hide<% }%>">
+    <% } %>
+      <%-- Custom WS Categories ------------------------------------------------------------ --%> 
+      <jalios:field name='cids' label='<%= showOtherCategories ? "ui.work.form.lbl.ws-cat" : "" %>' value='<%= catSet %>' resource="field-vertical">
+        <jalios:control settings='<%= wsCategorySetSettings %>' />
+      </jalios:field>
+  
+    <%-- Custom other Categories ------------------------------------------------------------ --%> 
+    <% if (showOtherCategories) { %>
+      <jalios:field name='cids' label="ui.work.form.lbl.other-cat" value='<%= catSet %>' resource="field-vertical">
+        <jalios:control settings='<%= otherCategorySetSettings %>' />
+      </jalios:field>
+    <% } %>
+   <% if (provideDefaultChoice) { %>
+   </div>
+    <% } %>
+  <% } else { %>
+    <jalios:message msg="msg.treecat.not-selectable-category" dismissable="false" />
+  <% } %>
+ <% } %>
+<% } %>

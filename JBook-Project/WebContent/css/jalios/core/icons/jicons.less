@@ -1,0 +1,308 @@
+@import "../init-mixins.less";
+
+@icon-font-jicons-path: '../../../fonts/jicons';
+@icon-font-jicons-name: 'jicons';
+
+// IMPORT FONTS
+.include-custom-font-woff2(@icon-font-jicons-path, @icon-font-jicons-name, normal, normal);
+
+[class^="jicons-"], [class*=" jicons-"] {
+  font-family: "jicons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  font-smoothing: antialiased;
+  line-height: 1;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  vertical-align:middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  speak: none;
+}
+
+@jicons-appstore: "\f242";
+@jicons-archive: "\f243";
+@jicons-bell: "\f244";
+@jicons-bell-blocked: "\f245";
+@jicons-bell-cross: "\e903";
+@jicons-bin: "\f24a";
+@jicons-bubble-blocked: "\f248";
+@jicons-bubble-text: "\f262";
+@jicons-caddy: "\f246";
+@jicons-caddy-in: "\e902";
+@jicons-caddy-out: "\e901";
+@jicons-clip: "\f253";
+@jicons-community: "\e908";
+@jicons-eye: "\f25a";
+@jicons-file: "\f24b";
+@jicons-file-link: "\e904";
+@jicons-file-network: "\f25c";
+@jicons-file-template: "\f25e";
+@jicons-file-text: "\f259";
+@jicons-folder-key: "\e90c";
+@jicons-folder2-key: "\e90b";
+@jicons-form: "\f24e";
+@jicons-guest: "\e900";
+@jicons-history: "\f263";
+@jicons-info: "\f250";
+@jicons-key: "\f252";
+@jicons-key2: "\f258";
+@jicons-lock: "\f254";
+@jicons-lock2: "\e905";
+@jicons-pencil: "\f24c";
+@jicons-portal: "\f256";
+@jicons-printer: "\f257";
+@jicons-share: "\f25b";
+@jicons-stack-blocked: "\f265";
+@jicons-star: "\f25d";
+@jicons-star2: "\e909";
+@jicons-stethoscope: "\f251";
+@jicons-text: "\e906";
+@jicons-triangle-down: "\f25f";
+@jicons-triangle-right: "\f260";
+@jicons-unlock: "\f261";
+@jicons-unlock2: "\e907";
+@jicons-user: "\f255";
+@jicons-user2: "\e90a";
+@jicons-users: "\f24f";
+@jicons-vcard: "\f249";
+@jicons-workflow: "\f264";
+
+.jicons-appstore {
+  &:before {
+    content: @jicons-appstore; 
+  }
+}
+.jicons-archive {
+  &:before {
+    content: @jicons-archive; 
+  }
+}
+.jicons-bell {
+  &:before {
+    content: @jicons-bell; 
+  }
+}
+.jicons-bell-blocked {
+  &:before {
+    content: @jicons-bell-blocked; 
+  }
+}
+.jicons-bell-cross {
+  &:before {
+    content: @jicons-bell-cross; 
+  }
+}
+.jicons-bin {
+  &:before {
+    content: @jicons-bin; 
+  }
+}
+.jicons-bubble-blocked {
+  &:before {
+    content: @jicons-bubble-blocked; 
+  }
+}
+.jicons-bubble-text {
+  &:before {
+    content: @jicons-bubble-text; 
+  }
+}
+.jicons-caddy {
+  &:before {
+    content: @jicons-caddy; 
+  }
+}
+.jicons-caddy-in {
+  &:before {
+    content: @jicons-caddy-in; 
+  }
+}
+.jicons-caddy-out {
+  &:before {
+    content: @jicons-caddy-out; 
+  }
+}
+.jicons-clip {
+  &:before {
+    content: @jicons-clip; 
+  }
+}
+.jicons-community {
+  &:before {
+    content: @jicons-community; 
+  }
+}
+.jicons-eye {
+  &:before {
+    content: @jicons-eye; 
+  }
+}
+.jicons-file {
+  &:before {
+    content: @jicons-file; 
+  }
+}
+.jicons-file-link {
+  &:before {
+    content: @jicons-file-link; 
+  }
+}
+.jicons-file-network {
+  &:before {
+    content: @jicons-file-network; 
+  }
+}
+.jicons-file-template {
+  &:before {
+    content: @jicons-file-template; 
+  }
+}
+.jicons-file-text {
+  &:before {
+    content: @jicons-file-text; 
+  }
+}
+.jicons-folder-key {
+  &:before {
+    content: @jicons-folder-key; 
+  }
+}
+.jicons-folder2-key {
+  &:before {
+    content: @jicons-folder2-key; 
+  }
+}
+.jicons-form {
+  &:before {
+    content: @jicons-form; 
+  }
+}
+.jicons-guest {
+  &:before {
+    content: @jicons-guest; 
+  }
+}
+.jicons-history {
+  &:before {
+    content: @jicons-history; 
+  }
+}
+.jicons-info {
+  &:before {
+    content: @jicons-info; 
+  }
+}
+.jicons-key {
+  &:before {
+    content: @jicons-key; 
+  }
+}
+.jicons-key2 {
+  &:before {
+    content: @jicons-key2; 
+  }
+}
+.jicons-lock {
+  &:before {
+    content: @jicons-lock; 
+  }
+}
+.jicons-lock2 {
+  &:before {
+    content: @jicons-lock2; 
+  }
+}
+.jicons-pencil {
+  &:before {
+    content: @jicons-pencil; 
+  }
+}
+.jicons-portal {
+  &:before {
+    content: @jicons-portal; 
+  }
+}
+.jicons-printer {
+  &:before {
+    content: @jicons-printer; 
+  }
+}
+.jicons-share {
+  &:before {
+    content: @jicons-share; 
+  }
+}
+.jicons-stack-blocked {
+  &:before {
+    content: @jicons-stack-blocked; 
+  }
+}
+.jicons-star {
+  &:before {
+    content: @jicons-star; 
+  }
+}
+.jicons-star2 {
+  &:before {
+    content: @jicons-star2; 
+  }
+}
+.jicons-stethoscope {
+  &:before {
+    content: @jicons-stethoscope; 
+  }
+}
+.jicons-text {
+  &:before {
+    content: @jicons-text; 
+  }
+}
+.jicons-triangle-down {
+  &:before {
+    content: @jicons-triangle-down; 
+  }
+}
+.jicons-triangle-right {
+  &:before {
+    content: @jicons-triangle-right; 
+  }
+}
+.jicons-unlock {
+  &:before {
+    content: @jicons-unlock; 
+  }
+}
+.jicons-unlock2 {
+  &:before {
+    content: @jicons-unlock2; 
+  }
+}
+.jicons-user {
+  &:before {
+    content: @jicons-user; 
+  }
+}
+.jicons-user2 {
+  &:before {
+    content: @jicons-user2; 
+  }
+}
+.jicons-users {
+  &:before {
+    content: @jicons-users; 
+  }
+}
+.jicons-vcard {
+  &:before {
+    content: @jicons-vcard; 
+  }
+}
+.jicons-workflow {
+  &:before {
+    content: @jicons-workflow; 
+  }
+}
+

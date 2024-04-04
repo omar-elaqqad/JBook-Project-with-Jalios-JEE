@@ -1,0 +1,123 @@
+<%@page import="java.util.HashMap"%>
+<%@page import="com.jalios.jcms.uicomponent.UIComponentsUtils"%>
+<%@page import="com.jalios.jcms.uicomponent.DataAttribute"%>
+<%@page import="java.util.Map"%><%
+%><%@page import="java.util.Arrays"%><%
+%><%@page import="java.util.Collection"%><%
+%><%@page import="com.jalios.util.Util"%><%
+%><%@page import="com.jalios.jcms.JcmsUtil"%><%
+%><%@page import="com.jalios.jcms.Category"%><%
+%><%@page import="com.jalios.jcms.taglib.TreeViewTag"%><%
+%><%@page import="com.jalios.jcms.taglib.TreeViewDecorator"%><%
+%><%@page import="com.jalios.jcms.taglib.CategoryFilter"%><%
+%><%@page import="com.jalios.jcms.taglib.settings.BasicSettings"%><%
+%><%@page import="com.jalios.jcms.taglib.settings.SelectorSettings"%><%
+%><%@page import="com.jalios.jcms.taglib.settings.impl.CategorySettings"%><%
+%><%@page import="com.jalios.jcms.taglib.settings.impl.CategoryTreeSettings"%><%
+%><%@page import="com.jalios.jcms.taglib.settings.AbstractCategorySettings"%><%
+%><%
+Category[] rootCategories = categorySettings.resolveRootCategories();
+
+Category[] disabledCategories = fieldDisabled.booleanValue() || fieldReadOnly.booleanValue() ? rootCategories : null;
+
+Collection<Category> openedCategories = new HashSet<Category>();
+String[] openedCat = getOption(CategoryTreeSettings.OPENED_CATEGORIES, null);
+if(openedCat != null) {
+  openedCategories = Util.getHashSet(JcmsUtil.stringArrayToDataArray(Category.class, openedCat));
+}
+// If there are selected categories in the control, we open the parents of the selected categories
+Category[] selectedCategories = JcmsUtil.stringArrayToDataArray(Category.class, fieldValuesArray);
+if(selectedCategories != null) {
+  for(Category selectedCat : selectedCategories) {
+    if(selectedCat != null && selectedCat.getParent() != null) {
+      openedCategories.add(selectedCat.getParent());
+    }
+  }
+}
+Category[] checkedCategories = JcmsUtil.stringArrayToDataArray(Category.class, (String[]) getOption(CategoryTreeSettings.CHECKED_CATEGORIES, fieldValuesArray));
+Category[] highlightedCategories = JcmsUtil.stringArrayToDataArray(Category.class, (String[]) getOption(CategoryTreeSettings.HIGHLIGHTED_CATEGORIES, fieldValuesArray));
+Category[] removedCat = JcmsUtil.stringArrayToDataArray(Category.class, (String[]) getOption(CategoryTreeSettings.REMOVED_CATEGORIES, null));
+Collection<?> removedCategories = removedCat != null ? Util.getArrayList(removedCat): (Collection<?>) request.getAttribute("removedCatSet");
+Category[] retainedCat = JcmsUtil.stringArrayToDataArray(Category.class, (String[]) getOption(CategoryTreeSettings.RETAINED_CATEGORIES, null));
+Collection<?> retainedCategories = retainedCat != null ? Util.getArrayList(retainedCat): null;
+
+String type = getOption(SelectorSettings.MULTIPLE, false) ? "checkbox" : "radio";
+boolean search = getOption(CategoryTreeSettings.SEARCH, false);
+String css = getOption(BasicSettings.CSS, "");
+css = (search ? "autocomplete" : "") + (Util.notEmpty(css) ? " " + css : "");
+
+int level = getOption(CategoryTreeSettings.LEVEL, -1);
+CategoryFilter categoryFilter = getOption(AbstractCategorySettings.CATEGORY_FILTER, CategoryFilter.USE);
+boolean selectable = getOption(AbstractCategorySettings.SELECTABLE, true);
+boolean dragdrop = getOption(CategoryTreeSettings.DRAGDROP, true);
+boolean ctxMenu = getOption(CategoryTreeSettings.CTXMENU, true);
+boolean rightsIcon = getOption(CategoryTreeSettings.RIGHTS_ICON, false);
+boolean workspaceIcon = getOption(CategoryTreeSettings.WORKSPACE_ICON, false);
+boolean portalIcon = getOption(CategoryTreeSettings.PORTAL_ICON, false);
+boolean exactRoot = getOption(CategoryTreeSettings.EXACT_ROOT, false);
+
+Category root = (Category) getOption(AbstractCategorySettings.ORIGINAL_ROOT_CATEGORY, null);
+
+Map<String, Object> memo = new HashMap<String, Object>();
+if(loggedMember != null && loggedMember.isWorker() && rootCategories.length == 0) {
+  memo.put("originalCategoryRoot", root);
+}
+if(Util.toBoolean(getOption(SelectorSettings.REQUIRED, fieldRequired), false)) {
+  memo.put("required", true);
+}
+Map<String, Object> dataAttributes = getOption(BasicSettings.DATA_ATTRIBUTES, (Map<String, Object>) null);
+DataAttribute dataAttribute = new DataAttribute(dataAttributes);
+Map<String, Object> ariaAttributesMap = getOption(BasicSettings.ARIA_ATTRIBUTES, (Map<String, Object>) null);
+
+TreeViewDecorator decorator = getOption(CategoryTreeSettings.DECORATOR, null);
+
+String placeholder = getOption(BasicSettings.PLACEHOLDER, "");
+
+DataAttribute treeDataAttribute = new DataAttribute();
+Map<String, Object> searchInputDataAttr = new HashMap<>();
+if (Util.notEmpty(placeholder)) {
+  searchInputDataAttr.put("placeholder", placeholder);
+}
+if (Util.notEmpty(ariaAttributesMap) && Util.notEmpty(ariaAttributesMap.get("label"))) {
+  searchInputDataAttr.put("ariaLabel", ariaAttributesMap.get("label"));
+}
+if (Util.notEmpty(treeDataAttribute)) {
+  treeDataAttribute.addData("jalios-categorytree-search-input-context", UIComponentsUtils.getJsonString(searchInputDataAttr));
+}
+%>
+<jalios:treecatview
+    prefix="<%= fieldId %>"
+    input="<%= fieldName %>"
+    type="<%= type %>"
+    dataAttribute="<%= dataAttribute %>"
+    treeDataAttribute="<%= treeDataAttribute %>"
+    collection="<%= Util.getArrayList(rootCategories) %>"
+    
+    opened="<%= openedCategories %>"
+    checked="<%= checkedCategories != null ? Util.getArrayList(checkedCategories) : null %>"
+    highlighted="<%= highlightedCategories != null ? Util.getArrayList(highlightedCategories) : null %>"
+    removed="<%= removedCategories %>"
+    retains="<%= retainedCategories %>"
+
+    disabled="<%= disabledCategories != null ? Util.getArrayList(disabledCategories) : null %>"
+    disable="<%= TreeViewTag.DESCENDANT %>"
+
+    level="<%= level %>"
+    filter="<%= categoryFilter %>"
+
+    selectable="<%= selectable %>"
+    dragdrop="<%= dragdrop %>"
+    showCtxMenu="<%= ctxMenu %>"
+    showRights="<%= rightsIcon %>"
+    showWorkspaceIcon="<%= workspaceIcon %>"
+    showPortal="<%= portalIcon %>"
+    exactRoot="<%= exactRoot %>"
+    css="<%= css %>"
+    
+    decorator="<%= decorator %>"
+    
+    memo="<%= memo %>"
+/>
+<%= getIncludeString("CONTROL_APPEND", "") %>
+<% setIncludeString("isMulti", "false"); // Set isMulti to 'false' to prevent the parent tag to loop multiple times on this tag %>
+<% setIncludeString("fieldId", ""); // Remove generated id on the field label because there is no coresponding input since inputs are generated per category %>

@@ -1,0 +1,3196 @@
+emojis.categories.recent: Legutóbb használt
+emojis.categories.new: Új!
+emojis.categories.people: Szmájlik és emberek
+emojis.categories.nature: Állatok és természet
+emojis.categories.food: Ételek és italok
+emojis.categories.activity: Tevékenység
+emojis.categories.travel: Utazás és helyek
+emojis.categories.objects: Tárgyak
+emojis.categories.symbols: Szimbólumok
+emojis.categories.flags: Zászlók
+emojis.1f600.name: Vigyorgó arc
+emojis.1f600.keywords: face,grin,happy
+emojis.1f62c.name: Grimaszt vágó arc
+emojis.1f62c.keywords: arc,grimasz
+emojis.1f601.name: Vigyorgó arc mosolygó szemekkel
+emojis.1f601.keywords: eye,face,grin,smile
+emojis.1f602.name: Örömkönnyekben úszó arc
+emojis.1f602.keywords: face,joy,laugh,tear
+emojis.1f603.name: Teli szájjal mosolygó arc
+emojis.1f603.keywords: face,mouth,open,smile,happy
+emojis.1f604.name: Teli szájjal mosolygó arc, mosolygó szemekkel
+emojis.1f604.keywords: eye,face,mouth,open,smile,happy
+emojis.1f923.name: Fetrengve röhögő arc
+emojis.1f923.keywords: face,floor,laugh,lol,rofl,rolling
+emojis.1f605.name: Teli szájjal mosolygó, hideg verítékben úszó arc
+emojis.1f605.keywords: cold,face,open,smile,sweat
+emojis.1f606.name: Teli szájjal mosolygó arc, szorosan behunyt szemekkel
+emojis.1f606.keywords: face,laugh,mouth,open,satisfied,smile
+emojis.1f607.name: Mosolygó arc glóriával
+emojis.1f607.keywords: angel,face,fairy tale,fantasy,halo,innocent,smile
+emojis.1f609.name: Kacsintó arc
+emojis.1f609.keywords: arc,kacsintás
+emojis.1f60a.name: Mosolygó arc mosolygó szemekkel
+emojis.1f60a.keywords: blush,eye,face,smile
+emojis.1f642.name: Kicsit mosolygó arc
+emojis.1f642.keywords: arc,mosoly,boldog
+emojis.1f643.name: Fejjel lefelé álló arc
+emojis.1f643.keywords: arc, fejjel lefelé
+emojis.263a.name: Mosolygó arc
+emojis.263a.keywords: face,outlined,relaxed,smile
+emojis.1f60b.name: Finom ételt élvező arc
+emojis.1f60b.keywords: delicious,face,savouring,smile,um,yum
+emojis.1f60c.name: Megkönnyebbült arc
+emojis.1f60c.keywords: arc,megkönnyebbült
+emojis.1f60d.name: Mosolygó arc szív alakú szemekkel
+emojis.1f60d.keywords: eye,face,heart,love,smile
+emojis.1f618.name: Puszit küldő arc
+emojis.1f618.keywords: arc,szív,csók
+emojis.1f617.name: Csókoló arc
+emojis.1f617.keywords: arc,csók
+emojis.1f619.name: Csókoló arc mosolygó szemekkel
+emojis.1f619.keywords: szem,arc,csók,mosoly
+emojis.1f61a.name: Lehunyt szemmel csókoló arc 
+emojis.1f61a.keywords: lehunyt,szem,arc,csók
+emojis.1f92a.name: Őrült arc
+emojis.1f92a.keywords: eyes,grinning,crazy,excited,wild
+emojis.1f61c.name: Nyelvet nyújtó és kacsintó arc
+emojis.1f61c.keywords: szem,arc,vicc,nyelv,kacsintás
+emojis.1f61d.name: Nyelvet nyújtó, szorosan behunyt szemű arc
+emojis.1f61d.keywords: eye,face,horrible,taste,tongue
+emojis.1f61b.name: Nyelvet nyújtó arc
+emojis.1f61b.keywords: arc,nyelv
+emojis.1f911.name: Nyitott szájú arc
+emojis.1f911.keywords: arc,pénz,száj
+emojis.1f60e.name: Napszemüveges, mosolygó arc
+emojis.1f60e.keywords: bright,cool,eye,eyewear,face,glasses,smile,sun,sunglasses,weather
+emojis.1f913.name: Okostojás fej
+emojis.1f913.keywords: face,geek,nerd
+emojis.1f9d0.name: Monoklis arc
+emojis.1f9d0.keywords: stuffy,wealthy,rich
+emojis.1f920.name: Cowboykalapos arc
+emojis.1f920.keywords: cowboy,cowgirl,face,hat
+emojis.1f917.name: Ölelő kart nyújtó, mosolygó arc
+emojis.1f917.keywords: face,hug,hugging
+emojis.1f921.name: Bohócarc
+emojis.1f921.keywords: bohóc,arc
+emojis.1f60f.name: Önelégülten mosolygó arc
+emojis.1f60f.keywords: face,smirk
+emojis.1f636.name: Száj nélküli arc
+emojis.1f636.keywords: arc,száj,halk,csendes
+emojis.1f610.name: Semleges arc
+emojis.1f610.keywords: deadpan,face,neutral
+emojis.1f611.name: Kifejezéstelen arc
+emojis.1f611.keywords: expressionless,face,inexpressive,unexpressive
+emojis.1f612.name: Unatkozó arc
+emojis.1f612.keywords: face,unamused,unhappy
+emojis.1f644.name: Arc körbe-körbe forgó szemekkel
+emojis.1f644.keywords: eyes,face,rolling
+emojis.1f928.name: Arc felhúzott szemöldökkel
+emojis.1f928.keywords: distrust,skeptic,disapproval,disbelief,mild surprise,scepticism
+emojis.1f914.name: Gondolkodó arc
+emojis.1f914.keywords: face,thinking
+emojis.1f92b.name: Pisszegő arc
+emojis.1f92b.keywords: shh,quiet,hush
+emojis.1f92d.name: Arc kézzel a szája előtt
+emojis.1f92d.keywords: eyes,smiling,covering,mouth,hand
+emojis.1f925.name: Hazudós arc
+emojis.1f925.keywords: face,lie,pinocchio
+emojis.1f633.name: Piruló arc
+emojis.1f633.keywords: dazed,face,flushed
+emojis.1f61e.name: Csalódott arc
+emojis.1f61e.keywords: csalódott,arc
+emojis.1f61f.name: Aggódó arc
+emojis.1f61f.keywords: arc,aggódó
+emojis.1f620.name: Mérges arc
+emojis.1f620.keywords: angry,face,mad
+emojis.1f621.name: Duzzogó arc
+emojis.1f621.keywords: angry,face,mad,pouting,rage,red
+emojis.1f92c.name: Arc szimbólumokkal az arca előtt
+emojis.1f92c.keywords: cursing,swearing,cussing
+emojis.1f614.name: Töprengő arc
+emojis.1f614.keywords: dejected,face,pensive
+emojis.1f615.name: Zavarodott arc
+emojis.1f615.keywords: zavarodott,arc
+emojis.1f641.name: Kissé bosszús arc
+emojis.1f641.keywords: face,frown,sad,unhappy
+emojis.2639.name: Bosszankodó arc
+emojis.2639.keywords: face,frown,sad,unhappy
+emojis.1f623.name: Elszánt arc
+emojis.1f623.keywords: face,persevere
+emojis.1f616.name: Meghökkent arc
+emojis.1f616.keywords: confounded,face
+emojis.1f62b.name: Fáradt arc
+emojis.1f62b.keywords: arc,fáradt
+emojis.1f629.name: Szenvedő arc
+emojis.1f629.keywords: face,tired,weary
+emojis.1f624.name: Győzelmi mámorban úszó arc
+emojis.1f624.keywords: face,triumph,won
+emojis.1f62e.name: Arc nyitott szájjal
+emojis.1f62e.keywords: face,mouth,open,sympathy
+emojis.1f631.name: Félelmében sikoltó arc
+emojis.1f631.keywords: face,fear,fearful,munch,scared,scream
+emojis.1f628.name: Ijedt arc
+emojis.1f628.keywords: face,fear,fearful,scared
+emojis.1f630.name: Tátott szájú és hideg verítékben úszó arc
+emojis.1f630.keywords: blue,cold,face,mouth,open,rushed,sweat
+emojis.1f62f.name: Megnyugtatott arc
+emojis.1f62f.keywords: face,hushed,stunned,surprised
+emojis.1f626.name: Tátott szájjal bosszankodó arc
+emojis.1f626.keywords: face,frown,mouth,open
+emojis.1f627.name: Aggódó arc
+emojis.1f627.keywords: anguished,face
+emojis.1f622.name: Síró arc
+emojis.1f622.keywords: cry,face,sad,tear
+emojis.1f625.name: Csalódott, de megkönnyebbült arc
+emojis.1f625.keywords: disappointed,face,relieved,whew
+emojis.1f62a.name: Álmos arc
+emojis.1f62a.keywords: arc,alvó
+emojis.1f924.name: Nyálcsorgató arc
+emojis.1f924.keywords: nyálcsorgató,arc
+emojis.1f613.name: Hideg verítékben úszó arc
+emojis.1f613.keywords: hideg,arc,veríték
+emojis.1f62d.name: Hangosan síró arc
+emojis.1f62d.keywords: cry,face,sad,sob,tear
+emojis.1f929.name: Sztárimádat
+emojis.1f929.keywords: eyes,face,grinning,star,starry eyed
+emojis.1f635.name: Szédülő arc
+emojis.1f635.keywords: szédülő,arc
+emojis.1f632.name: Döbbent arc
+emojis.1f632.keywords: astonished,face,shocked,totally
+emojis.1f92f.name: Felrobbanó fej
+emojis.1f92f.keywords: face,shocked,explosion,mad,mind blowing
+emojis.1f910.name: Bezipzározott szájú arc
+emojis.1f910.keywords: face,mouth,zipper
+emojis.1f637.name: Műtősmaszkos arc
+emojis.1f637.keywords: cold,doctor,face,mask,medicine,sick
+emojis.1f915.name: Bekötött fejű arc
+emojis.1f915.keywords: bandage,face,hurt,injury
+emojis.1f912.name: Hőmérős arc
+emojis.1f912.keywords: face,ill,sick,thermometer
+emojis.1f92e.name: Hányó arc
+emojis.1f92e.keywords: sick,vomit,ill,puke
+emojis.1f922.name: Émelygő arc
+emojis.1f922.keywords: face,nauseated,vomit
+emojis.1f927.name: Tüsszentő arc
+emojis.1f927.keywords: face,gesundheit,sneeze
+emojis.1f634.name: Alvó arc
+emojis.1f634.keywords: face,sleep,zzz
+emojis.1f4a4.name: Alvás szimbóluma
+emojis.1f4a4.keywords: comic,sleep,zzz
+emojis.1f608.name: Mosolygó arc szarvakkal
+emojis.1f608.keywords: face,fairy tale,fantasy,horns,smile
+emojis.1f47f.name: Kisördög
+emojis.1f47f.keywords: demon,devil,face,fairy tale,fantasy,imp
+emojis.1f479.name: Japán ogre
+emojis.1f479.keywords: creature,face,fairy tale,fantasy,japanese,monster,ogre
+emojis.1f47a.name: Japán kobold
+emojis.1f47a.keywords: creature,face,fairy tale,fantasy,goblin,japanese,monster
+emojis.1f4a9.name: Egy kupac kaki
+emojis.1f4a9.keywords: comic,dung,face,monster,poo,poop
+emojis.1f47b.name: Kísértet
+emojis.1f47b.keywords: creature,face,fairy tale,fantasy,ghost,monster
+emojis.1f480.name: Koponya
+emojis.1f480.keywords: body,death,face,fairy tale,monster,skull
+emojis.2620.name: Halálfej keresztbetett csontokkal
+emojis.2620.keywords: body,crossbones,death,face,monster,skull
+emojis.1f47d.name: Földönkívüli
+emojis.1f47d.keywords: alien,creature,extraterrestrial,face,fairy tale,fantasy,monster,space,ufo
+emojis.1f916.name: Robotarc
+emojis.1f916.keywords: face,monster,robot
+emojis.1f383.name: Töklámpás
+emojis.1f383.keywords: tevékenység,ünnep,szórakozás,halloween,töklámpás,lámpás,tök
+emojis.1f63a.name: Teli szájjal mosolygó macskaarc
+emojis.1f63a.keywords: cat,face,mouth,open,smile
+emojis.1f638.name: Mosolygó szemű, vigyorgó macskaarc
+emojis.1f638.keywords: cat,eye,face,grin,smile
+emojis.1f639.name: Örömkönnyekben úszó macskaarc
+emojis.1f639.keywords: cat,face,joy,tear
+emojis.1f63b.name: Mosolygó macskaarc szív alakú szemekkel
+emojis.1f63b.keywords: cat,eye,face,heart,love,smile
+emojis.1f63c.name: Macskaarc torz mosollyal
+emojis.1f63c.keywords: cat,face,ironic,smile,wry
+emojis.1f63d.name: Csukott szemű, csókot dobó macskaarc
+emojis.1f63d.keywords: macska,szem,arc,csók
+emojis.1f640.name: Kiakadt cicus
+emojis.1f640.keywords: cat,face,oh,surprised,weary
+emojis.1f63f.name: Síró macskaarc
+emojis.1f63f.keywords: cat,cry,face,sad,tear
+emojis.1f63e.name: Duzzogó macska
+emojis.1f63e.keywords: cat,face,pouting
+emojis.1f450.name: Nyitott tenyerek
+emojis.1f450.keywords: body,hand,open
+emojis.1f932.name: Két tenyér felfelé
+emojis.1f932.keywords: prayer,cupped hands
+emojis.1f64c.name: Örömében karjaival integető ember 
+emojis.1f64c.keywords: body,celebration,gesture,hand,hooray,raised
+emojis.1f44f.name: Tapsolás jel
+emojis.1f44f.keywords: clapping hands,body,clap,hand
+emojis.1f64f.name: Összekulcsolt kezű alak
+emojis.1f64f.keywords: ask,body,bow,folded,gesture,hand,please,pray,thanks
+emojis.1f91d.name: Kézfogás
+emojis.1f91d.keywords: agreement,hand,handshake,meeting,shake
+emojis.1f44d.name: Feltartott hüvelykujj
+emojis.1f44d.keywords: test,felfelé,kéz,hüvelykujj,feltartott hüvelykujj,+1
+emojis.1f44e.name: Lefelé fordított hüvelykujj
+emojis.1f44e.keywords: test,lefelé,kéz,hüvelykujj,lefelé fordított hüvelykujj,-1
+emojis.1f44a.name: Ökölbe szorított kéz
+emojis.1f44a.keywords: body,clenched,fist,hand,punch
+emojis.270a.name: Felemelt ököl
+emojis.270a.keywords: body,clenched,fist,hand,punch
+emojis.1f91b.name: Balra mutató ököl
+emojis.1f91b.keywords: fist,leftwards
+emojis.1f91c.name: Jobbra mutató ököl
+emojis.1f91c.keywords: fist,rightwards
+emojis.1f91e.name: Kéz keresztezett mutató- és középső ujjakkal
+emojis.1f91e.keywords: cross,finger,hand,luck
+emojis.270c.name: Győzelem jel
+emojis.270c.keywords: body,hand,v,victory
+emojis.1f918.name: Szarvjel (két sört kérek)
+emojis.1f918.keywords: body,finger,hand,horns,rock-on
+emojis.1f91f.name: Szeretlek mozdulat
+emojis.1f91f.keywords: ily,i love you,hand
+emojis.1f44c.name: Oké-kézjel
+emojis.1f44c.keywords: test,kéz,oké-kézjel
+emojis.1f448.name: Balra mutató ujj
+emojis.1f448.keywords: backhand,body,finger,hand,index,point
+emojis.1f449.name: Jobbra mutató ujj
+emojis.1f449.keywords: backhand,body,finger,hand,index,point
+emojis.1f446.name: Felfelé mutató ujj
+emojis.1f446.keywords: backhand,body,finger,hand,index,point,up
+emojis.1f447.name: Lefelé mutató ujj
+emojis.1f447.keywords: backhand,body,down,finger,hand,index,point
+emojis.261d.name: Felfelé mutató ujj
+emojis.261d.keywords: body,finger,hand,index,point,up
+emojis.270b.name: Felemelt kéz
+emojis.270b.keywords: test,kéz
+emojis.1f91a.name: Felemelt kézhát
+emojis.1f91a.keywords: backhand,raised
+emojis.1f590.name: Feltartott kéz, széttárt ujjakkal
+emojis.1f590.keywords: body,finger,hand,splayed
+emojis.1f596.name: Felemelt kéz, a mutató- és a középső ujj között V alakot formázva
+emojis.1f596.keywords: body,finger,hand,spock,vulcan
+emojis.1f44b.name: Integető kéz
+emojis.1f44b.keywords: body,hand,wave,waving
+emojis.1f919.name: 'Hívj fel'-jel
+emojis.1f919.keywords: hívj fel,kéz
+emojis.1f4aa.name: Megfeszített bicepsz
+emojis.1f4aa.keywords: biceps,body,comic,flex,muscle
+emojis.1f595.name: Kézfej, felfelé mutató középső ujjal
+emojis.1f595.keywords: body,finger,hand,middle finger
+emojis.270d.name: Kéz, amely éppen ír
+emojis.270d.keywords: test,kéz,írás
+emojis.1f933.name: Szelfi
+emojis.1f933.keywords: kamera,telefon,szelfi
+emojis.1f485.name: Körömápolás
+emojis.1f485.keywords: body,care,cosmetics,manicure,nail,polish
+emojis.1f444.name: Száj
+emojis.1f444.keywords: test,ajkak,száj
+emojis.1f445.name: Nyelv
+emojis.1f445.keywords: test,nyelv
+emojis.1f442.name: Fül
+emojis.1f442.keywords: test,orr
+emojis.1f443.name: Orr
+emojis.1f443.keywords: test,orr
+emojis.1f441.name: Szem
+emojis.1f441.keywords: test,szem
+emojis.1f440.name: Szemek
+emojis.1f440.keywords: test,szem,arc
+emojis.1f9e0.name: Agy
+emojis.1f9e0.keywords: body,organ,intelligent,smart
+emojis.1f464.name: Felsőtest sziluettje
+emojis.1f464.keywords: felsőtest,sziluett
+emojis.1f465.name: Felsőtestek sziluettje
+emojis.1f465.keywords: felsőtest,sziluett
+emojis.1f5e3.name: Beszélő fej sziluettje
+emojis.1f5e3.keywords: face,head,silhouette,speak,speaking
+emojis.1f476.name: Baba
+emojis.1f476.keywords: baba
+emojis.1f9d2.name: Gyerek
+emojis.1f9d2.keywords: person,child,boy,girl
+emojis.1f466.name: Fiú
+emojis.1f466.keywords: boy,child
+emojis.1f467.name: Lány
+emojis.1f467.keywords: girl,maiden,virgin,virgo,zodiac,child
+emojis.1f9d1.name: Felnőtt tartalom
+emojis.1f9d1.keywords: person,adult,man,woman,male,female,men,women
+emojis.1f468.name: Férfi
+emojis.1f468.keywords: man,mustache,male,men
+emojis.1f9d4.name: Szakállas ember
+emojis.1f9d4.keywords: beard,bewhiskered,man,male,men
+emojis.1f471-200d-2642-fe0f.name: Szőke férfi
+emojis.1f471-200d-2642-fe0f.keywords: szőke,szőke hajú,haj,férfi,férfi,férfiak
+emojis.1f471.name: Szőke hajú ember
+emojis.1f471.keywords: szőke,szőke hajú,haj,férfi,férfi,férfiak
+emojis.1f469.name: Nő
+emojis.1f469.keywords: woman,female,women
+emojis.1f471-200d-2640-fe0f.name: Szőke nő
+emojis.1f471-200d-2640-fe0f.keywords: szőke,szőke hajú,haj,nő,női,nők
+emojis.1f9d3.name: Idősebb felnőtt
+emojis.1f9d3.keywords: person,old,man,woman,male,female,men,women
+emojis.1f474.name: Idősebb férfi
+emojis.1f474.keywords: idős,férfi,férfi,férfiak
+emojis.1f475.name: Idősebb nő
+emojis.1f475.keywords: idős,nő,női,nők
+emojis.1f472.name: Férfi gua pi maóban (kínai sapka)
+emojis.1f472.keywords: gua pi mao,kalap,férfi,férfi,férfiak
+emojis.1f473-200d-2640-fe0f.name: Turbános nő
+emojis.1f473-200d-2640-fe0f.keywords: turbán,nő,női,nők
+emojis.1f473-200d-2642-fe0f.name: Turbános férfi
+emojis.1f473-200d-2642-fe0f.keywords: turbán,férfi,férfi,férfiak
+emojis.1f473.name: Turbános férfi
+emojis.1f473.keywords: turbán,férfi,férfi,férfiak
+emojis.1f9d5.name: Nő fejkendőben
+emojis.1f9d5.keywords: headscarf,hijab,mantilla,tichel,bandana,head kerchief,woman,female,women
+emojis.1f46e-200d-2640-fe0f.name: Rendőrnő
+emojis.1f46e-200d-2640-fe0f.keywords: rendőr,köztisztviselő,rendőrség,nő,női,nők
+emojis.1f46e-200d-2642-fe0f.name: Rendőr
+emojis.1f46e-200d-2642-fe0f.keywords: rendőr,köztisztviselő,rendőrség,férfi,férfi,férfiak
+emojis.1f46e.name: Rendőr
+emojis.1f46e.keywords: rendőr,köztisztviselő,rendőrség,férfi,férfi,férfiak
+emojis.1f469-200d-1f692.name: Tűzoltónő
+emojis.1f469-200d-1f692.keywords: tűz,tűzoltó,nő,női,nők
+emojis.1f468-200d-1f692.name: Tűzoltó
+emojis.1f468-200d-1f692.keywords: tűz,tűzoltó,férfi,férfi,férfiak
+emojis.1f477-200d-2640-fe0f.name: Női építőmunkás
+emojis.1f477-200d-2640-fe0f.keywords: építőipar,munkás,nő,női,nők
+emojis.1f477-200d-2642-fe0f.name: Építőmunkás
+emojis.1f477-200d-2642-fe0f.keywords: építőipar,munkás
+emojis.1f477.name: Építőmunkás
+emojis.1f477.keywords: építőipar,munkás
+emojis.1f469-200d-1f3ed.name: Gyári munkásnő
+emojis.1f469-200d-1f3ed.keywords: gyár,ipar,hegesztő,nő,női,nők
+emojis.1f468-200d-1f3ed.name: Gyári munkás
+emojis.1f468-200d-1f3ed.keywords: gyár,ipar,hegesztő,férfi,férfi,férfiak
+emojis.1f469-200d-1f527.name: Gépésznő
+emojis.1f469-200d-1f527.keywords: kereskedő,vízvezetékszerelő,villanyszerelő,szerelő,nő,női,nők
+emojis.1f468-200d-1f527.name: Gépész
+emojis.1f468-200d-1f527.keywords: kereskedő,vízvezetékszerelő,villanyszerelő,szerelő,férfi,férfi,férfiak
+emojis.1f469-200d-1f33e.name: Gazdálkodó nő
+emojis.1f469-200d-1f33e.keywords: farmer,farmer,kertész,mezőgazdasági,nő,női,nők
+emojis.1f468-200d-1f33e.name: Gazdálkodó
+emojis.1f468-200d-1f33e.keywords: farmer,farmer,kertész,mezőgazdasági,férfi,férfi,férfiak
+emojis.1f469-200d-1f373.name: Szakácsnő
+emojis.1f469-200d-1f373.keywords: étel,felszolgálás,séf,szakács,főzés,nő,női,nők
+emojis.1f468-200d-1f373.name: Szakács
+emojis.1f468-200d-1f373.keywords: étel,felszolgálás,séf,szakács,főzés,férfi,férfi,férfiak
+emojis.1f469-200d-1f3a4.name: Énekesnő
+emojis.1f469-200d-1f3a4.keywords: zene,zenész,rocker,rocksztár,előadóművész,nő,női,nők
+emojis.1f468-200d-1f3a4.name: Énekes
+emojis.1f468-200d-1f3a4.keywords: zene,zenész,rocker,rocksztár,előadóművész,férfi,férfi,férfiak
+emojis.1f469-200d-1f3a8.name: Művésznő
+emojis.1f469-200d-1f3a8.keywords: művészet,művész,festmény,festőművész,nő,női,nők
+emojis.1f468-200d-1f3a8.name: Művész
+emojis.1f468-200d-1f3a8.keywords: művészet,művész,festmény,festőművész,férfi,férfi,férfiak
+emojis.1f469-200d-1f3eb.name: Tanárnő
+emojis.1f469-200d-1f3eb.keywords: oktatás,tanár,egyetemi tanár,oktató,instruktor,nő,női,nők
+emojis.1f468-200d-1f3eb.name: Tanár
+emojis.1f468-200d-1f3eb.keywords: oktatás,tanár,egyetemi tanár,oktató,instruktor,férfi,férfi,férfiak
+emojis.1f469-200d-1f393.name: Egyetemista lány
+emojis.1f469-200d-1f393.keywords: tanuló,végzős,oktatás,iskola,nő,női,nők
+emojis.1f468-200d-1f393.name: Egyetemista
+emojis.1f468-200d-1f393.keywords: tanuló,végzős,oktatás,iskola,férfi,férfi,férfiak
+emojis.1f469-200d-1f4bc.name: Irodista nő
+emojis.1f469-200d-1f4bc.keywords: hivatal,könyvelő,bankár,menedzser,tanácsadó,ügyintéző,elemző,nő,női,nők
+emojis.1f468-200d-1f4bc.name: Irodista férfi
+emojis.1f468-200d-1f4bc.keywords: hivatal,könyvelő,bankár,menedzser,tanácsadó,ügyintéző,elemző,férfi,férfi,férfiak
+emojis.1f469-200d-1f4bb.name: Női technológus
+emojis.1f469-200d-1f4bb.keywords: technológia,szoftver,mérnök,kódoló,laptop,nő,női,nők
+emojis.1f468-200d-1f4bb.name: Technológus
+emojis.1f468-200d-1f4bb.keywords: technológia,szoftver,mérnök,kódoló,laptop,férfi,férfi,férfiak
+emojis.1f469-200d-1f52c.name: Tudós nő
+emojis.1f469-200d-1f52c.keywords: tudós,vegyész,mérnök,matematikus,fizikus,biológus,laboráns,nő,női,nők
+emojis.1f468-200d-1f52c.name: Tudós férfi
+emojis.1f468-200d-1f52c.keywords: tudós,vegyész,mérnök,matematikus,fizikus,biológus,laboráns,férfi,férfi,férfiak
+emojis.1f469-200d-1f680.name: Női űrhajós
+emojis.1f469-200d-1f680.keywords: űr,csillagok,hold,bolygók,nő,női,nők
+emojis.1f468-200d-1f680.name: Férfi űrhajós
+emojis.1f468-200d-1f680.keywords: űr,csillagok,hold,bolygók,férfi,férfi,férfiak
+emojis.1f469-200d-2695-fe0f.name: Ápolónő
+emojis.1f469-200d-2695-fe0f.keywords: doktor,orvos,orvosdoktor,nővér,fogorvos,egészségügyiszakdolgozó,terapeuta,nő,női,nők
+emojis.1f468-200d-2695-fe0f.name: Ápoló
+emojis.1f468-200d-2695-fe0f.keywords: doktor,orvos,orvosdoktor,nővér,fogorvos,egészségügyiszakdolgozó,terapeuta,férfi,férfi,férfiak
+emojis.1f469-200d-2696-fe0f.name: Bírónő
+emojis.1f469-200d-2696-fe0f.keywords: bíró,bíróság,nő,női,nők
+emojis.1f468-200d-2696-fe0f.name: Bíró
+emojis.1f468-200d-2696-fe0f.keywords: bíró,bíróság,férfi,férfi,férfiak
+emojis.1f469-200d-2708-fe0f.name: Női pilóta
+emojis.1f469-200d-2708-fe0f.keywords: pilta,repülőgép,aviátor,nő,női,nők
+emojis.1f468-200d-2708-fe0f.name: Pilóta
+emojis.1f468-200d-2708-fe0f.keywords: pilta,repülőgép,aviátor,férfi,férfi,férfiak
+emojis.1f482-200d-2640-fe0f.name: Női őr
+emojis.1f482-200d-2640-fe0f.keywords: őrség,őr,nő,női,nők
+emojis.1f482-200d-2642-fe0f.name: Férfi őr
+emojis.1f482-200d-2642-fe0f.keywords: őrség,őr,férfi,férfi,férfiak
+emojis.1f482.name: Őr
+emojis.1f482.keywords: őrség,őr,férfi,férfi,férfiak
+emojis.1f575-fe0f-200d-2640-fe0f.name: Női nyomozó
+emojis.1f575-fe0f-200d-2640-fe0f.keywords: detektív,női nyomozó,kémnő,nő,női,nők
+emojis.1f575-fe0f-200d-2642-fe0f.name: Nyomozó
+emojis.1f575-fe0f-200d-2642-fe0f.keywords: detektív,nyomozó,kém,férfi,férfi,férfiak
+emojis.1f575.name: Kém
+emojis.1f575.keywords: detektív,nyomozó,kém,férfi,férfi,férfiak
+emojis.1f385.name: Télapó
+emojis.1f385.keywords: tevékenység,ünneplés,karácsony,apa,mikulás,férfi,férfi,férfiak
+emojis.1f936.name: Télanyó
+emojis.1f936.keywords: tevékenység,ünneplés,karácsony,anya,női mikulás,nő,női,nők
+emojis.1f47c.name: Kisangyal
+emojis.1f47c.keywords: angel,baby,face,fairy tale,fantasy
+emojis.1f478.name: Hercegnő
+emojis.1f478.keywords: mese,fantázia,hercegnő,nő,női,nők
+emojis.1f934.name: Herceg
+emojis.1f934.keywords: mese,fantázia,herceg,férfi,férfi,férfiak
+emojis.1f470.name: Menyasszony fátyollal
+emojis.1f470.keywords: menyasszony,fátyol,esküvő,nő,női,nők
+emojis.1f935.name: Szmokingos ember
+emojis.1f935.keywords: vőlegény,szmoking,férfi,férfi,férfiak
+emojis.1f574.name: Lebegő, öltönyös ember
+emojis.1f574.keywords: üzlet,öltöny,férfi,férfi,férfiak
+emojis.1f9d9.name: Mágus
+emojis.1f9d9.keywords: fantasy,sorcerer,wizard,man,male,men
+emojis.1f9d9-200d-2640-fe0f.name: Nő mágus
+emojis.1f9d9-200d-2640-fe0f.keywords: fantasy,sorceress,witch,woman,female,women
+emojis.1f9d9-200d-2642-fe0f.name: Férfi mágus
+emojis.1f9d9-200d-2642-fe0f.keywords: fantasy,sorcerer,wizard,man,male,men
+emojis.1f9dd.name: Kobold
+emojis.1f9dd.keywords: fantasy,elf,pointed ears,man,male,men
+emojis.1f9dd-200d-2640-fe0f.name: Nő kobold
+emojis.1f9dd-200d-2640-fe0f.keywords: fantasy,elf,pointed ears,woman,female,women
+emojis.1f9dd-200d-2642-fe0f.name: Férfi kobold
+emojis.1f9dd-200d-2642-fe0f.keywords: fantasy,elf,pointed ears,man,male,men
+emojis.1f9da.name: Tündér
+emojis.1f9da.keywords: fantasy,titania,wings,woman,female,women
+emojis.1f9da-200d-2640-fe0f.name: Nő tündér
+emojis.1f9da-200d-2640-fe0f.keywords: fantasy,titania,wings,woman,female,women
+emojis.1f9da-200d-2642-fe0f.name: Férfi tündér
+emojis.1f9da-200d-2642-fe0f.keywords: fantasy,oberon,puck,man,male,men
+emojis.1f9de.name: Dzsinn
+emojis.1f9de.keywords: fantasy,djinn,man,male,men
+emojis.1f9de-200d-2640-fe0f.name: Nő dzsinn
+emojis.1f9de-200d-2640-fe0f.keywords: fantasy,djinn,woman,female,women
+emojis.1f9de-200d-2642-fe0f.name: Férfi dzsinn
+emojis.1f9de-200d-2642-fe0f.keywords: fantasy,djinn,man,male,men
+emojis.1f9dc.name: Sellő
+emojis.1f9dc.keywords: fantasy,merman,man,male,men
+emojis.1f9dc-200d-2640-fe0f.name: Hableány
+emojis.1f9dc-200d-2640-fe0f.keywords: fantasy,merwoman,woman,female,women
+emojis.1f9dc-200d-2642-fe0f.name: Triton
+emojis.1f9dc-200d-2642-fe0f.keywords: fantasy,merman,man,male,men
+emojis.1f9db.name: Vámpír
+emojis.1f9db.keywords: fantasy,dracula,undead,man,male,men
+emojis.1f9db-200d-2640-fe0f.name: Nő vámpír
+emojis.1f9db-200d-2640-fe0f.keywords: fantasy,unded,woman,female,women
+emojis.1f9db-200d-2642-fe0f.name: Férfi vámpír
+emojis.1f9db-200d-2642-fe0f.keywords: fantasy,dracula,undead,man,male,men
+emojis.1f9df.name: Zombi
+emojis.1f9df.keywords: fantasy,undead,man,male,men
+emojis.1f9df-200d-2640-fe0f.name: Nő zombi
+emojis.1f9df-200d-2640-fe0f.keywords: fantasy,undead,woman,female,women
+emojis.1f9df-200d-2642-fe0f.name: Férfi zombi
+emojis.1f9df-200d-2642-fe0f.keywords: fantasy,undead,man,male,men
+emojis.1f647-200d-2640-fe0f.name: Mélyen meghajló nő
+emojis.1f647-200d-2640-fe0f.keywords: bocsánatkérés,csokor,gesztus,sajnálat,nő,női,nők
+emojis.1f647-200d-2642-fe0f.name: Mélyen meghajló férfi
+emojis.1f647-200d-2642-fe0f.keywords: bocsánatkérés,csokor,gesztus,sajnálat,férfi,férfi,férfiak
+emojis.1f647.name: Mélyen meghajló alak
+emojis.1f647.keywords: bocsánatkérés,csokor,gesztus,sajnálat,férfi,férfi,férfiak
+emojis.1f481.name: Információs
+emojis.1f481.keywords: kéz,segítség, információ,pimasz,nő,női,nők
+emojis.1f481-200d-2640-fe0f.name: Tenyerét felfelé tartó nő
+emojis.1f481-200d-2640-fe0f.keywords: kéz,segítség, információ,pimasz,nő,női,nők
+emojis.1f481-200d-2642-fe0f.name: Tenyerét felfelé tartó férfi
+emojis.1f481-200d-2642-fe0f.keywords: kéz,segítség,információ,pimasz,férfi,férfi,férfiak
+emojis.1f645.name: Arc „nem jó” jelzéssel
+emojis.1f645.keywords: megbocsátás,gesztus,kéz,nem,nem,tilos,nő,női,nők
+emojis.1f645-200d-2640-fe0f.name: Nem okét mutató nő
+emojis.1f645-200d-2640-fe0f.keywords: megbocsátás,gesztus,kéz,nem,nem,tilos,nő,női,nők
+emojis.1f645-200d-2642-fe0f.name: Nem okét mutató férfi
+emojis.1f645-200d-2642-fe0f.keywords: megbocsátás,gesztus,kéz,nem,nem,tilos,férfi,férfi,férfiak
+emojis.1f646.name: Arc „rendben van” arckifejezéssel
+emojis.1f646.keywords: gesztus,kéz,rendben,nő,női,nők
+emojis.1f646-200d-2640-fe0f.name: Okét mutató nő
+emojis.1f646-200d-2640-fe0f.keywords: gesztus,kéz,rendben,nő,női,nők
+emojis.1f646-200d-2642-fe0f.name: Okét mutató férfi
+emojis.1f646-200d-2642-fe0f.keywords: gesztus,kéz,rendben,férfi,férfi,férfiak
+emojis.1f937.name: Lövésem sincsen
+emojis.1f937.keywords: kétely,figyelmen kívül hagyás,közöny,vállat von,nő,női,nők
+emojis.1f937-200d-2640-fe0f.name: Vállát vonogató nő
+emojis.1f937-200d-2640-fe0f.keywords: kétely,figyelmen kívül hagyás,közöny,vállat von,nő,női,nők
+emojis.1f937-200d-2642-fe0f.name: Vállát vonogató férfi
+emojis.1f937-200d-2642-fe0f.keywords: kétely,figyelmen kívül hagyás,közöny,vállat von,férfi,férfi,férfiak
+emojis.1f64b.name: Boldog ember feltartott kézzel
+emojis.1f64b.keywords: gesztus,kéz,boldog,felemelt,nő,női,nők
+emojis.1f64b-200d-2640-fe0f.name: Kezét felemelő nő
+emojis.1f64b-200d-2640-fe0f.keywords: gesztus,kéz,boldog,felemelt,nő,női,nők
+emojis.1f64b-200d-2642-fe0f.name: Kezét felemelő férfi
+emojis.1f64b-200d-2642-fe0f.keywords: gesztus,kéz,boldog,felemelt,férfi,férfi,férfiak
+emojis.1f926.name: Arcát a kezébe temető arc
+emojis.1f926.keywords: hitetlenség,ingerültség,arc,pálma,nő,női,nők
+emojis.1f926-200d-2640-fe0f.name: Arcát a kezébe temető nő
+emojis.1f926-200d-2640-fe0f.keywords: hitetlenség,ingerültség,arc,pálma,nő,női,nők
+emojis.1f926-200d-2642-fe0f.name: Arcát a kezébe temető férfi
+emojis.1f926-200d-2642-fe0f.keywords: hitetlenkedő,ingerült,arc,pálma,férfi,férfi,emberek
+emojis.1f64e.name: Duzzogó arcú ember
+emojis.1f64e.keywords: gesztus,ajakbiggyesztés,nő,női,nők
+emojis.1f64e-200d-2640-fe0f.name: Ajkát lebiggyesztő nő
+emojis.1f64e-200d-2640-fe0f.keywords: gesztus,ajakbiggyesztés,nő,női,nők
+emojis.1f64e-200d-2642-fe0f.name: Ajkát lebiggyesztő férfi
+emojis.1f64e-200d-2642-fe0f.keywords: gesztus,ajakbiggyesztés,férfi,férfi,férfiak
+emojis.1f64d.name: Bosszankodó ember
+emojis.1f64d.keywords: homlokráncolás,gesztus,nő,női,nők
+emojis.1f64d-200d-2640-fe0f.name: Bosszankodó nő
+emojis.1f64d-200d-2640-fe0f.keywords: homlokráncolás,gesztus,nő,női,nők
+emojis.1f64d-200d-2642-fe0f.name: Bosszankodó férfi
+emojis.1f64d-200d-2642-fe0f.keywords: homlokráncolás,gesztus,férfi,férfi,férfiak
+emojis.1f487.name: Hajvágás
+emojis.1f487.keywords: fodrász,szépség,hajvágás,szalon,nő,női,nők
+emojis.1f487-200d-2640-fe0f.name: Hajat vágató nő
+emojis.1f487-200d-2640-fe0f.keywords: fodrász,szépség,hajvágás,szalon,nő,női,nők
+emojis.1f487-200d-2642-fe0f.name: Hajat vágató férfi
+emojis.1f487-200d-2642-fe0f.keywords: borbély,szépség,hajvágás,szalon,férfi,férfi,férfiak
+emojis.1f486.name: Arcmasszázs
+emojis.1f486.keywords: masszázs,szalon,nő,női,nők
+emojis.1f486-200d-2640-fe0f.name: Arcmasszíroztató nő
+emojis.1f486-200d-2640-fe0f.keywords: masszázs,szalon,nő,női,nők
+emojis.1f486-200d-2642-fe0f.name: Arcmasszíroztató férfi
+emojis.1f486-200d-2642-fe0f.keywords: masszázs,szalon,férfi,férfi,férfiak
+emojis.1f930.name: Terhes nő
+emojis.1f930.keywords: pregnant,baby,woman,female,women
+emojis.1f931.name: Szoptatás
+emojis.1f931.keywords: breast,baby,infant,mother,child,nursing,milk,woman,female,women
+emojis.1f6b6-200d-2640-fe0f.name: Sétáló nő
+emojis.1f6b6-200d-2640-fe0f.keywords: túra,gyalogos,séta,séta,nő,női,nők
+emojis.1f6b6-200d-2642-fe0f.name: Sétáló férfi
+emojis.1f6b6-200d-2642-fe0f.keywords: túra,gyalogos,séta,séta,férfi,férfi,férfiak
+emojis.1f6b6.name: Gyalogos
+emojis.1f6b6.keywords: túra,gyalogos,séta,séta,férfi,férfi,férfiak
+emojis.1f3c3-200d-2640-fe0f.name: Futónő
+emojis.1f3c3-200d-2640-fe0f.keywords: maraton,futó,futás,nő,női,nők
+emojis.1f3c3-200d-2642-fe0f.name: Futó
+emojis.1f3c3-200d-2642-fe0f.keywords: maraton,futó,futás,férfi,férfi,férfiak
+emojis.1f3c3.name: Futó
+emojis.1f3c3.keywords: maraton,futó,futás,férfi,férfi,férfiak
+emojis.1f483.name: Táncos
+emojis.1f483.keywords: tánc,táncol,táncos,nő,női,nők
+emojis.1f57a.name: Táncoló ember
+emojis.1f57a.keywords: tánc,táncol,táncos,férfi,férfi,férfiak
+emojis.1f46f.name: Nyuszifüles nő
+emojis.1f46f.keywords: nyuszi,táncos,nő,női,nők
+emojis.1f46f-200d-2640-fe0f.name: Nyuszifüles nő
+emojis.1f46f-200d-2640-fe0f.keywords: nyuszi,táncos,nő,női,nők
+emojis.1f46f-200d-2642-fe0f.name: Nyuszifüles férfi
+emojis.1f46f-200d-2642-fe0f.keywords: nyuszi,táncos,férfi,férfi,férfiak
+emojis.1f46b.name: Férfi és nő kéz a kézben
+emojis.1f46b.keywords: pár,kéz,kézenfogva,férfi,nő,férfi,női,férfiak,nők
+emojis.1f46c.name: Két férfi kéz a kézben
+emojis.1f46c.keywords: pár,kéz,kézenfogva,férfi,férfi,férfiak
+emojis.1f46d.name: Két nő kéz a kézben
+emojis.1f46d.keywords: pár,kéz,kézenfogva,nő,női,nők
+emojis.1f491.name: Pár, szívecskével
+emojis.1f491.keywords: pár,szív,szerelem,románc,férfi,nő,férfi,női,férfiak,nők
+emojis.1f469-200d-2764-fe0f-200d-1f469.name: Pár, szívecskével (két nő)
+emojis.1f469-200d-2764-fe0f-200d-1f469.keywords: pár,szív,szerelem,románc,nő,női,nők
+emojis.1f468-200d-2764-fe0f-200d-1f468.name: Pár, szívecskével (két férfi)
+emojis.1f468-200d-2764-fe0f-200d-1f468.keywords: pár,szív,szerelem,románc,férfi,férfi,férfiak
+emojis.1f48f.name: Csók
+emojis.1f48f.keywords: pár,csók,szív,szerelem,románc,férfi,nő,férfi,női,férfiak,nők
+emojis.1f469-200d-2764-fe0f-200d-1f48b-200d-1f469.name: Csók (két nő)
+emojis.1f469-200d-2764-fe0f-200d-1f48b-200d-1f469.keywords: pár,csók,szív,szerelem,románc,nő,női,nők
+emojis.1f468-200d-2764-fe0f-200d-1f48b-200d-1f468.name: Csók (két férfi)
+emojis.1f468-200d-2764-fe0f-200d-1f48b-200d-1f468.keywords: pár,csók,szív,szerelem,románc,férfi,férfi,férfiak
+emojis.1f46a.name: Család
+emojis.1f46a.keywords: család,apa,anya,férfi,nő,férfi,női,férfiak,nők,kisfiú,gyermek
+emojis.1f468-200d-1f469-200d-1f467.name: Család (férfi, nő, kislány)
+emojis.1f468-200d-1f469-200d-1f467.keywords: család,apa,anya,férfi,nő,férfi,női,férfiak,nők,kislány,gyermek
+emojis.1f468-200d-1f469-200d-1f467-200d-1f466.name: Család (férfi, nő, kisfiú, kislány)
+emojis.1f468-200d-1f469-200d-1f467-200d-1f466.keywords: család,apa,anya,férfi,nő,férfi,női,férfiak,nők,kisfiú,kislány,gyermek
+emojis.1f468-200d-1f469-200d-1f466-200d-1f466.name: Család (férfi, nő, két kisfiú)
+emojis.1f468-200d-1f469-200d-1f466-200d-1f466.keywords: család,apa,anya,férfi,nő,férfi,női,férfiak,nők,kisfiú,gyermek
+emojis.1f468-200d-1f469-200d-1f467-200d-1f467.name: Család (férfi, nő, két kislány)
+emojis.1f468-200d-1f469-200d-1f467-200d-1f467.keywords: család,apa,anya,férfi,nő,férfi,női,férfiak,nők,kislány,gyermek
+emojis.1f469-200d-1f469-200d-1f466.name: Család (két nő, kisfiú)
+emojis.1f469-200d-1f469-200d-1f466.keywords: család,anya,nő,női,nők,kisfiú,gyermek
+emojis.1f469-200d-1f469-200d-1f467.name: Család (két nő, kislány)
+emojis.1f469-200d-1f469-200d-1f467.keywords: család,anya,nő,női,nők,kislány,gyermek
+emojis.1f469-200d-1f469-200d-1f467-200d-1f466.name: Család (két nő, kisfiú, kislány)
+emojis.1f469-200d-1f469-200d-1f467-200d-1f466.keywords: család,anya,nő,női,nők,kislány,kisfiú,gyermek
+emojis.1f469-200d-1f469-200d-1f466-200d-1f466.name: Család (két nő, két kisfiú)
+emojis.1f469-200d-1f469-200d-1f466-200d-1f466.keywords: család,anya,nő,női,nők,kisfiú,gyermek
+emojis.1f469-200d-1f469-200d-1f467-200d-1f467.name: Család (két nő, két kislány)
+emojis.1f469-200d-1f469-200d-1f467-200d-1f467.keywords: család,anya,nő,női,nők,kislány,gyermek
+emojis.1f468-200d-1f468-200d-1f466.name: Család (két férfi, kisfiú)
+emojis.1f468-200d-1f468-200d-1f466.keywords: család,apa,férfi,férfi,férfiak,kisfiú,gyermek
+emojis.1f468-200d-1f468-200d-1f467.name: Család (két férfi, kislány)
+emojis.1f468-200d-1f468-200d-1f467.keywords: család,apa,férfi,férfi,férfiak,kislány,gyermek
+emojis.1f468-200d-1f468-200d-1f467-200d-1f466.name: Család (két férfi, kisfiú, kislány)
+emojis.1f468-200d-1f468-200d-1f467-200d-1f466.keywords: család,apa,férfi,férfi,férfiak,kisfiú,kislány,gyermek
+emojis.1f468-200d-1f468-200d-1f466-200d-1f466.name: Család (két férfi, két kisfiú)
+emojis.1f468-200d-1f468-200d-1f466-200d-1f466.keywords: család,apa,férfi,férfi,férfiak,kisfiú,gyermek
+emojis.1f468-200d-1f468-200d-1f467-200d-1f467.name: Család (két férfi, két kislány)
+emojis.1f468-200d-1f468-200d-1f467-200d-1f467.keywords: család,apa,férfi,férfi,férfiak,kislány,gyermek
+emojis.1f469-200d-1f466.name: Család (nő, kisfiú)
+emojis.1f469-200d-1f466.keywords: család,anya,nő,női,nők,kisfiú,gyermek
+emojis.1f469-200d-1f467.name: Család (nő, kislány)
+emojis.1f469-200d-1f467.keywords: család,anya,nő,női,nők,kislány,gyermek
+emojis.1f469-200d-1f467-200d-1f466.name: Család (nő, kislány, kisfiú)
+emojis.1f469-200d-1f467-200d-1f466.keywords: család,anya,nő,nő,férfi,kislány,kisfiú,gyermek
+emojis.1f469-200d-1f466-200d-1f466.name: Család (nő, két kisfiú)
+emojis.1f469-200d-1f466-200d-1f466.keywords: család,anya,nő,női,nők,kisfiú,gyermek
+emojis.1f469-200d-1f467-200d-1f467.name: Család (nő, két kislány)
+emojis.1f469-200d-1f467-200d-1f467.keywords: család,anya,nő,női,nők,kislány,gyermek
+emojis.1f468-200d-1f466.name: Család (férfi, kisfiú)
+emojis.1f468-200d-1f466.keywords: család,apa,férfi,férfi,férfiak,kisfiú,gyermek
+emojis.1f468-200d-1f467.name: Család (férfi, kislány)
+emojis.1f468-200d-1f467.keywords: család,apa,férfi,férfi,nő,kislány,gyermek
+emojis.1f468-200d-1f467-200d-1f466.name: Család (férfi, kisfiú, kislány)
+emojis.1f468-200d-1f467-200d-1f466.keywords: család,apa,férfi,férfi,férfiak,kisfiú,kislány,gyermek
+emojis.1f468-200d-1f466-200d-1f466.name: Család (férfi, két kisfiú)
+emojis.1f468-200d-1f466-200d-1f466.keywords: család,apa,férfi,férfi,férfiak,kisfiú,gyermek
+emojis.1f468-200d-1f467-200d-1f467.name: Család (férfi, két kislány)
+emojis.1f468-200d-1f467-200d-1f467.keywords: család,apa,férfi,férfi,nő,kislány,gyermek
+emojis.1f45a.name: Női ruhák
+emojis.1f45a.keywords: clothing,woman
+emojis.1f455.name: Póló
+emojis.1f455.keywords: clothing,shirt,tshirt
+emojis.1f9e5.name: Kabát
+emojis.1f9e5.keywords: clothing,coat,jacket
+emojis.1f456.name: Farmer
+emojis.1f456.keywords: clothing,jeans,pants,trousers
+emojis.1f454.name: Nyakkendő
+emojis.1f454.keywords: clothing,necktie
+emojis.1f457.name: Ruha
+emojis.1f457.keywords: clothing,dress
+emojis.1f459.name: Bikini
+emojis.1f459.keywords: bikini,clothing,swim
+emojis.1f458.name: Kimonó
+emojis.1f458.keywords: clothing,kimono
+emojis.1f484.name: Ajakrúzs
+emojis.1f484.keywords: cosmetics,lipstick,makeup
+emojis.1f48b.name: Csóknyom
+emojis.1f48b.keywords: heart,kiss,lips,mark,romance
+emojis.1f463.name: Lábnyomok
+emojis.1f463.keywords: body,clothing,footprint,print
+emojis.1f9e6.name: Zoknik
+emojis.1f9e6.keywords: clothing,socks,pair of
+emojis.1f460.name: Magassarkú cipő
+emojis.1f460.keywords: clothing,heel,shoe,woman
+emojis.1f461.name: Női szandál
+emojis.1f461.keywords: clothing,sandal,shoe,woman
+emojis.1f462.name: Női csizma
+emojis.1f462.keywords: boot,clothing,shoe,woman
+emojis.1f45e.name: Férficipő
+emojis.1f45e.keywords: clothing,man,shoe
+emojis.1f45f.name: Sportcipő
+emojis.1f45f.keywords: athletic,clothing,shoe,sneaker
+emojis.1f9e2.name: Baseballsapka
+emojis.1f9e2.keywords: clothing,baseball,cap,hat
+emojis.1f452.name: Női kalap
+emojis.1f452.keywords: clothing,hat,woman
+emojis.1f3a9.name: Cilinder
+emojis.1f3a9.keywords: activity,clothing,entertainment,hat,top,tophat
+emojis.1f393.name: Magisztersapka
+emojis.1f393.keywords: activity,cap,celebration,clothing,graduation,hat
+emojis.1f451.name: Korona
+emojis.1f451.keywords: clothing,crown,king,queen
+emojis.26d1.name: Fehér keresztes sisak
+emojis.26d1.keywords: aid,cross,face,hat,helmet
+emojis.1f392.name: Iskolatáska
+emojis.1f392.keywords: activity,bag,satchel,school
+emojis.1f45d.name: Kistáska
+emojis.1f45d.keywords: bag,clothing,pouch
+emojis.1f45b.name: Pénztárca
+emojis.1f45b.keywords: clothing,coin,purse
+emojis.1f45c.name: Kézitáska
+emojis.1f45c.keywords: bag,clothing,handbag
+emojis.1f4bc.name: Aktatáska
+emojis.1f4bc.keywords: briefcase
+emojis.1f453.name: Szemüveg
+emojis.1f453.keywords: clothing,eye,eyeglasses,eyewear,glasses
+emojis.1f576.name: Sötét napszemüveg
+emojis.1f576.keywords: dark,eye,eyewear,glasses,sunglasses
+emojis.1f9e3.name: Sál
+emojis.1f9e3.keywords: clothing,scarf,neck
+emojis.1f9e4.name: Kesztyűk
+emojis.1f9e4.keywords: clothing,gloves,hands
+emojis.1f48d.name: Gyűrű
+emojis.1f48d.keywords: diamond,ring,romance
+emojis.1f302.name: Becsukott esernyő
+emojis.1f302.keywords: clothing,rain,umbrella,weather
+emojis.2602.name: Esernyő
+emojis.2602.keywords: clothing,rain,umbrella,weather
+emojis.1f3fb.name: (világos bőrszín)
+emojis.1f3fb.keywords: emoji modifier,fitzpatrick,skin,tone
+emojis.1f3fc.name: (közepesen világos bőrszín)
+emojis.1f3fc.keywords: emoji modifier,fitzpatrick,skin,tone
+emojis.1f3fd.name: (átlagos bőrszín)
+emojis.1f3fd.keywords: emoji modifier,fitzpatrick,skin,tone
+emojis.1f3fe.name: (közepesen sötét bőrszín)
+emojis.1f3fe.keywords: emoji modifier,fitzpatrick,skin,tone
+emojis.1f3ff.name: (sötét bőrszín)
+emojis.1f3ff.keywords: emoji modifier,fitzpatrick,skin,tone
+emojis.1f469-200d-2764-fe0f-200d-1f48b-200d-1f468.name: Csók (nő, férfi)
+emojis.1f469-200d-2764-fe0f-200d-1f48b-200d-1f468.keywords: pár,csók,szív,szerelem,románc,férfi,nő,férfi,női,férfiak,nők
+emojis.1f469-200d-2764-fe0f-200d-1f468.name: Pár, szívecskével (nő, férfi)
+emojis.1f469-200d-2764-fe0f-200d-1f468.keywords: pár,szív,szerelem,románc,férfi,nő,férfi,női,férfiak,nők
+emojis.1f468-200d-1f469-200d-1f466.name: Család (férfi, nő, kisfiú)
+emojis.1f468-200d-1f469-200d-1f466.keywords: család,apa,anya,férfi,nő,férfi,női,férfiak,nők,kisfiú,gyermek
+emojis.1f436.name: Kutyafej
+emojis.1f436.keywords: dog,face,pet
+emojis.1f431.name: Macskaarc
+emojis.1f431.keywords: cat,face,pet
+emojis.1f42d.name: Egérarc
+emojis.1f42d.keywords: face,mouse
+emojis.1f439.name: Hörcsögarc
+emojis.1f439.keywords: face,hamster,pet
+emojis.1f430.name: Nyusziarc
+emojis.1f430.keywords: bunny,face,pet,rabbit
+emojis.1f43b.name: Medvearc
+emojis.1f43b.keywords: medve,arc
+emojis.1f43c.name: Pandaarc
+emojis.1f43c.keywords: arc,panda
+emojis.1f428.name: Koala
+emojis.1f428.keywords: medve,koala
+emojis.1f42f.name: Tigrisarc
+emojis.1f42f.keywords: arc,tigris
+emojis.1f981.name: Oroszlánfej
+emojis.1f981.keywords: face,leo,lion,zodiac
+emojis.1f42e.name: Tehénfej
+emojis.1f42e.keywords: cow,face
+emojis.1f437.name: Malacfej
+emojis.1f437.keywords: arc,malac
+emojis.1f43d.name: Malacorr
+emojis.1f43d.keywords: arc,orr,malac
+emojis.1f438.name: Békaarc
+emojis.1f438.keywords: arc,béka
+emojis.1f435.name: Majomarc
+emojis.1f435.keywords: arc,majom
+emojis.1f648.name: Szemét eltakaró (nem látó) majom
+emojis.1f648.keywords: evil,face,forbidden,gesture,monkey,no,not,prohibited,see
+emojis.1f649.name: Fülét befogó (nem halló) majom
+emojis.1f649.keywords: evil,face,forbidden,gesture,hear,monkey,no,not,prohibited
+emojis.1f64a.name: Száját betapasztó (nem beszélő) majom
+emojis.1f64a.keywords: evil,face,forbidden,gesture,monkey,no,not,prohibited,speak
+emojis.1f412.name: Majom
+emojis.1f412.keywords: majom
+emojis.1f98d.name: Gorilla
+emojis.1f98d.keywords: gorilla
+emojis.1f414.name: Csirke
+emojis.1f414.keywords: csirke
+emojis.1f427.name: Pingvin
+emojis.1f427.keywords: pingvin
+emojis.1f426.name: Madár
+emojis.1f426.keywords: madár
+emojis.1f424.name: Kiscsirke
+emojis.1f424.keywords: kis,csirke
+emojis.1f423.name: Tojásból kikelő csibe
+emojis.1f423.keywords: kis,csirke,kikel
+emojis.1f425.name: Csibe szemből
+emojis.1f425.keywords: kis,csirke
+emojis.1f43a.name: Farkasfej
+emojis.1f43a.keywords: face,wolf
+emojis.1f98a.name: Rókafej
+emojis.1f98a.keywords: fej,róka
+emojis.1f417.name: Vaddisznó
+emojis.1f417.keywords: boar,pig
+emojis.1f434.name: Lófej
+emojis.1f434.keywords: fej,ló
+emojis.1f993.name: Zebra
+emojis.1f993.keywords: zebra,face
+emojis.1f992.name: Zsiráf
+emojis.1f992.keywords: giraffe,face
+emojis.1f98c.name: Őzike
+emojis.1f98c.keywords: őz
+emojis.1f984.name: Unikornisfej
+emojis.1f984.keywords: fej,unikornis
+emojis.1f41d.name: Méh
+emojis.1f41d.keywords: bee,honeybee,insect
+emojis.1f41b.name: Hiba
+emojis.1f41b.keywords: bug,insect
+emojis.1f98b.name: Pillangó
+emojis.1f98b.keywords: butterfly,insect,pretty
+emojis.1f40c.name: Csiga
+emojis.1f40c.keywords: snail
+emojis.1f41e.name: Katicabogár
+emojis.1f41e.keywords: beetle,insect,lady beetle,ladybird,ladybug
+emojis.1f41c.name: Hangya
+emojis.1f41c.keywords: ant,insect
+emojis.1f997.name: Krikett
+emojis.1f997.keywords: cricket,orthoptera,insect
+emojis.1f577.name: Pók
+emojis.1f577.keywords: insect,spider
+emojis.1f578.name: Pókháló
+emojis.1f578.keywords: pók,háló
+emojis.1f982.name: Skorpió
+emojis.1f982.keywords: scorpio,scorpion,scorpius,zodiac
+emojis.1f422.name: Teknős
+emojis.1f422.keywords: teknős
+emojis.1f40d.name: Kígyó
+emojis.1f40d.keywords: bearer,ophiuchus,serpent,snake,zodiac
+emojis.1f98e.name: Gyík
+emojis.1f98e.keywords: lizard,reptile
+emojis.1f980.name: Rák
+emojis.1f980.keywords: cancer,crab,zodiac
+emojis.1f991.name: Polip
+emojis.1f991.keywords: molusc,squid
+emojis.1f419.name: Polip
+emojis.1f419.keywords: polip
+emojis.1f990.name: Garnélarák
+emojis.1f990.keywords: shellfish,shrimp,small
+emojis.1f420.name: Déltengeri hal
+emojis.1f420.keywords: fish,tropical
+emojis.1f41f.name: Hal
+emojis.1f41f.keywords: fish,pisces,zodiac
+emojis.1f421.name: Gömbhal
+emojis.1f421.keywords: blowfish,fish
+emojis.1f42c.name: Delfin
+emojis.1f42c.keywords: dolphin,flipper
+emojis.1f988.name: Cápa
+emojis.1f988.keywords: fish,shark
+emojis.1f433.name: Vizet lövellő bálna
+emojis.1f433.keywords: face,spouting,whale
+emojis.1f40b.name: Bálna
+emojis.1f40b.keywords: bálna
+emojis.1f40a.name: Krokodil
+emojis.1f40a.keywords: krokodil
+emojis.1f406.name: Leopárd
+emojis.1f406.keywords: leopárd
+emojis.1f405.name: Tigris
+emojis.1f405.keywords: tigris
+emojis.1f403.name: Vízibivaly
+emojis.1f403.keywords: bivaly,vízi
+emojis.1f402.name: Ökör
+emojis.1f402.keywords: bull,ox,taurus,zodiac
+emojis.1f404.name: Tehén
+emojis.1f404.keywords: tehén
+emojis.1f42a.name: Dromedár
+emojis.1f42a.keywords: camel,dromedary,hump
+emojis.1f42b.name: Kétpúpú teve
+emojis.1f42b.keywords: two-hump camel,bactrian,camel,hump
+emojis.1f418.name: Elefánt
+emojis.1f418.keywords: elefánt
+emojis.1f98f.name: Rinocérosz
+emojis.1f98f.keywords: rinocérosz
+emojis.1f410.name: Kecske
+emojis.1f410.keywords: capricorn,goat,zodiac
+emojis.1f40f.name: Kos
+emojis.1f40f.keywords: aries,ram,sheep,zodiac
+emojis.1f411.name: Birka
+emojis.1f411.keywords: ewe,sheep
+emojis.1f40e.name: Ló
+emojis.1f40e.keywords: horse,racehorse,racing
+emojis.1f416.name: Malac
+emojis.1f416.keywords: pig,sow
+emojis.1f987.name: Denevér
+emojis.1f987.keywords: denevér,vámpír
+emojis.1f413.name: Kakas
+emojis.1f413.keywords: kakas
+emojis.1f983.name: Törökország
+emojis.1f983.keywords: pulyka
+emojis.1f54a.name: Békegalamb
+emojis.1f54a.keywords: madár,galamb,repül,béke
+emojis.1f985.name: Sas
+emojis.1f985.keywords: bird,eagle
+emojis.1f986.name: Kacsa
+emojis.1f986.keywords: madár,kacsa
+emojis.1f989.name: Bagoly
+emojis.1f989.keywords: madár,bagoly,bölcs
+emojis.1f415.name: Kutya
+emojis.1f415.keywords: kutya,háziállat
+emojis.1f429.name: Uszkár
+emojis.1f429.keywords: kutya,pudli
+emojis.1f408.name: Macska
+emojis.1f408.keywords: macska,háziállat
+emojis.1f407.name: Nyúl
+emojis.1f407.keywords: nyuszi,háziállat,nyúl
+emojis.1f400.name: Patkány
+emojis.1f400.keywords: patkány
+emojis.1f401.name: Egér
+emojis.1f401.keywords: egér
+emojis.1f43f.name: Csíkosmókus
+emojis.1f43f.keywords: csíkosmókus
+emojis.1f994.name: Süni
+emojis.1f994.keywords: hedgehog,face
+emojis.1f43e.name: Mancsnyomatok
+emojis.1f43e.keywords: feet,paw,print
+emojis.1f409.name: Sárkány
+emojis.1f409.keywords: dragon,fairy tale
+emojis.1f432.name: Sárkányfej
+emojis.1f432.keywords: dragon,face,fairy tale
+emojis.1f995.name: Sauropoda
+emojis.1f995.keywords: brachiosaurus,brontosaurus,diplodocus,dinosaur
+emojis.1f996.name: T-Rex
+emojis.1f996.keywords: tyrannosaurus rex,trex,dinosaur
+emojis.1f335.name: Kaktusz
+emojis.1f335.keywords: kaktusz,növény
+emojis.1f384.name: Karácsonyfa
+emojis.1f384.keywords: activity,celebration,christmas,entertainment,tree
+emojis.1f332.name: Örökzöld fa
+emojis.1f332.keywords: evergreen,plant,tree
+emojis.1f333.name: Lombhullató fa
+emojis.1f333.keywords: deciduous,plant,shedding,tree
+emojis.1f334.name: Pálmafa
+emojis.1f334.keywords: palm,plant,tree
+emojis.1f331.name: Palánta
+emojis.1f331.keywords: plant,seedling,young
+emojis.1f33f.name: Fűszernövény
+emojis.1f33f.keywords: herb,leaf,plant
+emojis.2618.name: Háromlevelű lóhere
+emojis.2618.keywords: plant,shamrock
+emojis.1f340.name: Négylevelű lóhere
+emojis.1f340.keywords: 4,clover,four,leaf,plant
+emojis.1f38d.name: Karácsonyfadísz
+emojis.1f38d.keywords: activity,bamboo,celebration,japanese,pine,plant
+emojis.1f38b.name: Tanabata fa
+emojis.1f38b.keywords: activity,banner,celebration,entertainment,japanese,tree
+emojis.1f343.name: Szélfútta levél
+emojis.1f343.keywords: blow,flutter,leaf,plant,wind
+emojis.1f342.name: Lehullott levél
+emojis.1f342.keywords: falling,leaf,plant
+emojis.1f341.name: Juharlevél
+emojis.1f341.keywords: falling,leaf,maple,plant
+emojis.1f33e.name: Rizskalász
+emojis.1f33e.keywords: sheaf of rice,ear,plant,rice
+emojis.1f33a.name: Hibiszkusz
+emojis.1f33a.keywords: flower,hibiscus,plant
+emojis.1f33b.name: Napraforgó
+emojis.1f33b.keywords: flower,plant,sun,sunflower
+emojis.1f339.name: Rózsa
+emojis.1f339.keywords: flower,plant,rose
+emojis.1f940.name: Hervadt virág
+emojis.1f940.keywords: flower,wilted
+emojis.1f337.name: Tulipán
+emojis.1f337.keywords: flower,plant,tulip
+emojis.1f33c.name: Virág
+emojis.1f33c.keywords: blossom,flower,plant
+emojis.1f338.name: Cseresznyevirág
+emojis.1f338.keywords: blossom,cherry,flower,plant
+emojis.1f490.name: Virágcsokor
+emojis.1f490.keywords: bouquet,flower,plant,romance
+emojis.1f344.name: Gomba
+emojis.1f344.keywords: mushroom,plant
+emojis.1f330.name: Gesztenye
+emojis.1f330.keywords: chestnut,plant
+emojis.1f41a.name: Csavart kagyló
+emojis.1f41a.keywords: kagyló,csavart
+emojis.1f30e.name: Földgömb Amerikával
+emojis.1f30e.keywords: americas,earth,globe,world
+emojis.1f30d.name: Földgömb Európával és Afrikával
+emojis.1f30d.keywords: africa,earth,europe,globe,world
+emojis.1f30f.name: Földgömb Ázsiával és Ausztráliával
+emojis.1f30f.keywords: asia,australia,earth,globe,world
+emojis.1f315.name: Telihold
+emojis.1f315.keywords: full,moon,space,weather
+emojis.1f316.name: Telihold utáni fogyó hold
+emojis.1f316.keywords: gibbous,moon,space,waning,weather
+emojis.1f317.name: Utolsó holdnegyed
+emojis.1f317.keywords: moon,quarter,space,weather
+emojis.1f318.name: Fogyó holdsarló
+emojis.1f318.keywords: crescent,moon,space,waning,weather
+emojis.1f311.name: Újhold
+emojis.1f311.keywords: dark,moon,space,weather
+emojis.1f312.name: Dagadó holdsarló
+emojis.1f312.keywords: crescent,moon,space,waxing,weather
+emojis.1f313.name: Első holdnegyed
+emojis.1f313.keywords: moon,quarter,space,weather
+emojis.1f314.name: Telihold előtti növekvő hold
+emojis.1f314.keywords: gibbous,moon,space,waxing,weather
+emojis.1f31a.name: Mosolygó újhold
+emojis.1f31a.keywords: face,moon,space,weather
+emojis.1f31d.name: Mosolygó telihold
+emojis.1f31d.keywords: bright,face,full,moon,space,weather
+emojis.1f31b.name: Mosolygó első holdnegyed
+emojis.1f31b.keywords: face,moon,quarter,space,weather
+emojis.1f31c.name: Mosolygó utolsó holdnegyed
+emojis.1f31c.keywords: face,moon,quarter,space,weather
+emojis.1f31e.name: Mosolygó napocska
+emojis.1f31e.keywords: bright,face,space,sun,weather
+emojis.1f319.name: Holdsarló
+emojis.1f319.keywords: crescent,moon,space,weather
+emojis.2b50.name: Közepes csillag
+emojis.2b50.keywords: csillag
+emojis.1f31f.name: Ragyogó csillag
+emojis.1f31f.keywords: glittery,glow,shining,sparkle,star
+emojis.1f4ab.name: Szédülés szimbóluma
+emojis.1f4ab.keywords: comic,dizzy,star
+emojis.2728.name: Csillámok
+emojis.2728.keywords: entertainment,sparkle,star
+emojis.2604.name: Üstökös
+emojis.2604.keywords: comet,space
+emojis.2600.name: Nap sugarakkal
+emojis.2600.keywords: bright,rays,space,sun,sunny,weather
+emojis.1f324.name: Nap kicsi felhővel
+emojis.1f324.keywords: cloud,sun,weather
+emojis.26c5.name: Nap felhő mögött
+emojis.26c5.keywords: cloud,sun,weather
+emojis.1f325.name: Nap egy nagy felhő mögött
+emojis.1f325.keywords: cloud,sun,weather
+emojis.1f326.name: Nap a felhő mögött esővel
+emojis.1f326.keywords: cloud,rain,sun,weather
+emojis.2601.name: Felhő
+emojis.2601.keywords: felhő,időjárás
+emojis.1f327.name: Felhő, amelyből eső esik
+emojis.1f327.keywords: cloud,rain,weather
+emojis.26c8.name: Villámló felhő és eső
+emojis.26c8.keywords: cloud,rain,thunder,weather
+emojis.1f329.name: Felhő villámmal
+emojis.1f329.keywords: cloud,lightning,weather
+emojis.26a1.name: Nagyfeszültség jel
+emojis.26a1.keywords: danger,electric,electricity,lightning,voltage,zap
+emojis.1f525.name: Tűz
+emojis.1f525.keywords: fire,flame,tool
+emojis.1f4a5.name: Ütközés szimbóluma
+emojis.1f4a5.keywords: boom,collision,comic
+emojis.2744.name: Hópehely
+emojis.2744.keywords: cold,snow,snowflake,weather
+emojis.1f328.name: Felhő, amelyből hó esik
+emojis.1f328.keywords: cloud,cold,snow,weather
+emojis.2603.name: Hóember
+emojis.2603.keywords: cold,snow,snowman,weather
+emojis.26c4.name: Hóember hó nélkül
+emojis.26c4.keywords: cold,snow,snowman,weather
+emojis.1f32c.name: Szelet fújó arc
+emojis.1f32c.keywords: blow,cloud,face,weather,wind
+emojis.1f4a8.name: Nekiiramodás szimbóluma
+emojis.1f4a8.keywords: comic,dash,running
+emojis.1f32a.name: Felhő tornádóval
+emojis.1f32a.keywords: cloud,tornado,weather,whirlwind
+emojis.1f32b.name: Köd
+emojis.1f32b.keywords: cloud,fog,weather
+emojis.2614.name: Ernyő esőcseppekkel
+emojis.2614.keywords: clothing,drop,rain,umbrella,weather
+emojis.1f4a7.name: Csepp
+emojis.1f4a7.keywords: cold,comic,drop,sweat,weather
+emojis.1f4a6.name: Fröccsenő izzadságcseppek
+emojis.1f4a6.keywords: comic,splashing,sweat
+emojis.1f30a.name: Hullám
+emojis.1f30a.keywords: ocean,water,wave,weather
+emojis.1f34f.name: Zöld alma
+emojis.1f34f.keywords: apple,fruit,green,plant
+emojis.1f34e.name: Piros alma
+emojis.1f34e.keywords: apple,fruit,plant,red
+emojis.1f350.name: Körte
+emojis.1f350.keywords: fruit,pear,plant
+emojis.1f34a.name: Mandarin
+emojis.1f34a.keywords: fruit,orange,plant,tangerine
+emojis.1f34b.name: Citrom
+emojis.1f34b.keywords: citrus,fruit,lemon,plant
+emojis.1f34c.name: Banán
+emojis.1f34c.keywords: banana,fruit,plant
+emojis.1f349.name: Görögdinnye
+emojis.1f349.keywords: fruit,plant,watermelon
+emojis.1f347.name: Szőlő
+emojis.1f347.keywords: fruit,grape,plant
+emojis.1f353.name: Eper
+emojis.1f353.keywords: berry,fruit,plant,strawberry
+emojis.1f348.name: Sárgadinnye
+emojis.1f348.keywords: fruit,melon,plant
+emojis.1f352.name: Cseresznye
+emojis.1f352.keywords: cherry,fruit,plant
+emojis.1f351.name: Őszibarack
+emojis.1f351.keywords: fruit,peach,plant
+emojis.1f34d.name: Ananász
+emojis.1f34d.keywords: fruit,pineapple,plant
+emojis.1f965.name: Kókusz
+emojis.1f965.keywords: coconut,fruit
+emojis.1f95d.name: Kiwi
+emojis.1f95d.keywords: fruit,kiwi
+emojis.1f345.name: Paradicsom
+emojis.1f345.keywords: plant,tomato,vegetable
+emojis.1f951.name: Avokádó
+emojis.1f951.keywords: avocado,fruit
+emojis.1f346.name: Padlizsán
+emojis.1f346.keywords: aubergine,eggplant,plant,vegetable
+emojis.1f336.name: Erős paprika
+emojis.1f336.keywords: hot,pepper,plant
+emojis.1f952.name: Uborka
+emojis.1f952.keywords: cucumber,pickle,vegetable
+emojis.1f966.name: Brokkoli
+emojis.1f966.keywords: broccoli,vegetable
+emojis.1f33d.name: Kukoricacső
+emojis.1f33d.keywords: corn,ear,maize,maze,plant
+emojis.1f955.name: Sárgarépa
+emojis.1f955.keywords: carrot,vegetable
+emojis.1f957.name: Saláta
+emojis.1f957.keywords: green,salad
+emojis.1f954.name: Krumpli
+emojis.1f954.keywords: potato,vegetable
+emojis.1f360.name: Sült édesburgonya
+emojis.1f360.keywords: potato,roasted,sweet
+emojis.1f95c.name: Amerikai mogyoró
+emojis.1f95c.keywords: nut,peanut,vegetable
+emojis.1f36f.name: Mézescsupor
+emojis.1f36f.keywords: honey,honeypot,pot,sweet
+emojis.1f35e.name: Kenyér
+emojis.1f35e.keywords: kenyér,vekni
+emojis.1f950.name: Croissant
+emojis.1f950.keywords: bread,crescent roll,croissant,french
+emojis.1f956.name: Bagett
+emojis.1f956.keywords: bagett,kenyér,francia
+emojis.1f968.name: Perec
+emojis.1f968.keywords: pretzel,soft pretzel,pretzel twist,bread
+emojis.1f95e.name: Palacsinta
+emojis.1f95e.keywords: crêpe,hotcake,pancake
+emojis.1f9c0.name: Sajtszelet
+emojis.1f9c0.keywords: cheese
+emojis.1f357.name: Csirkecomb
+emojis.1f357.keywords: bone,chicken,leg,poultry
+emojis.1f356.name: Hús csonton
+emojis.1f356.keywords: bone,meat
+emojis.1f969.name: Hússzelet
+emojis.1f969.keywords: meat,chop,lambchop,porkchop,steak
+emojis.1f364.name: Sült garnéla
+emojis.1f364.keywords: fried,prawn,shrimp,tempura
+emojis.1f95a.name: Tojás
+emojis.1f95a.keywords: tojás
+emojis.1f373.name: Főzés
+emojis.1f373.keywords: cooking,egg,frying,pan
+emojis.1f953.name: Bacon
+emojis.1f953.keywords: bacon,meat
+emojis.1f354.name: Hamburger
+emojis.1f354.keywords: burger,hamburger
+emojis.1f35f.name: Sült burgonya
+emojis.1f35f.keywords: french,fries
+emojis.1f32d.name: Hotdog
+emojis.1f32d.keywords: frankfurter,hot dog,hotdog,sausage
+emojis.1f355.name: Pizzaszelet
+emojis.1f355.keywords: cheese,pizza,slice
+emojis.1f35d.name: Spagetti
+emojis.1f35d.keywords: pasta,spaghetti
+emojis.1f96a.name: Szendvics
+emojis.1f96a.keywords: bread,vegetables,cheese,meat,deli
+emojis.1f959.name: Töltött pita
+emojis.1f959.keywords: falafel,pita,gyros,kebab,töltött
+emojis.1f32e.name: Taco
+emojis.1f32e.keywords: mexikói,taco
+emojis.1f32f.name: Burrito
+emojis.1f32f.keywords: burrito,mexikói
+emojis.1f35c.name: Gőzölgő tál
+emojis.1f35c.keywords: bowl,noodle,ramen,steaming
+emojis.1f958.name: Paella
+emojis.1f958.keywords: casserole,paella,pan,shallow
+emojis.1f372.name: Egy tál étel
+emojis.1f372.keywords: pot,stew
+emojis.1f96b.name: Konzerv
+emojis.1f96b.keywords: can,food,preserve
+emojis.1f365.name: Haltekercs
+emojis.1f365.keywords: cake,fish,pastry,swirl
+emojis.1f363.name: Szusi
+emojis.1f363.keywords: sushi
+emojis.1f371.name: Bentó
+emojis.1f371.keywords: bento,box
+emojis.1f35b.name: Currys rizs
+emojis.1f35b.keywords: curry,rice
+emojis.1f359.name: Rizslabda
+emojis.1f359.keywords: ball,japanese,rice
+emojis.1f35a.name: Főtt rizs
+emojis.1f35a.keywords: cooked,rice
+emojis.1f358.name: Rizspehely
+emojis.1f358.keywords: cracker,rice
+emojis.1f95f.name: Gombóc
+emojis.1f95f.keywords: dumpling,empanada,gyōza,gyoza,jiaozi,pierogi,potsticker
+emojis.1f362.name: Oden
+emojis.1f362.keywords: kebab,oden,seafood,skewer,stick
+emojis.1f361.name: Japán gombóc (dango)
+emojis.1f361.keywords: dango,dessert,japanese,skewer,stick,sweet
+emojis.1f367.name: Jégdara
+emojis.1f367.keywords: dessert,ice,shaved,sweet
+emojis.1f368.name: Fagylaltkehely
+emojis.1f368.keywords: cream,dessert,ice,sweet
+emojis.1f366.name: Fagylalt
+emojis.1f366.keywords: cream,dessert,ice,icecream,soft,sweet
+emojis.1f370.name: Tortaszelet
+emojis.1f370.keywords: cake,dessert,pastry,shortcake,slice,sweet
+emojis.1f382.name: Szülinapi torta
+emojis.1f382.keywords: birthday,cake,celebration,dessert,pastry,sweet
+emojis.1f967.name: Pite
+emojis.1f967.keywords: pie,dessert,sweet
+emojis.1f36e.name: Puding
+emojis.1f36e.keywords: custard,dessert,pudding,sweet
+emojis.1f36d.name: Nyalóka
+emojis.1f36d.keywords: candy,dessert,lollipop,sweet
+emojis.1f36c.name: Cukorka
+emojis.1f36c.keywords: candy,dessert,sweet
+emojis.1f36b.name: Csokoládétábla
+emojis.1f36b.keywords: bar,chocolate,dessert,sweet
+emojis.1f37f.name: Pattogatott kukorica
+emojis.1f37f.keywords: popcorn
+emojis.1f369.name: Fánk
+emojis.1f369.keywords: dessert,donut,doughnut,sweet
+emojis.1f36a.name: Süti
+emojis.1f36a.keywords: cookie,dessert,sweet
+emojis.1f960.name: Szerencsesüti
+emojis.1f960.keywords: fortune,cookie
+emojis.2615.name: Forró ital
+emojis.2615.keywords: beverage,coffee,drink,hot,steaming,tea
+emojis.1f375.name: Fületlen teáscsésze
+emojis.1f375.keywords: beverage,cup,drink,tea,teacup
+emojis.1f963.name: Tányér kanállal
+emojis.1f963.keywords: breakfast,cereal,congee,oatmeal,porridge,tableware
+emojis.1f37c.name: Cumisüveg
+emojis.1f37c.keywords: baby,bottle,drink,milk
+emojis.1f964.name: Pohár szívószállal
+emojis.1f964.keywords: juice,soda,malt,soft drink,water,tableware
+emojis.1f95b.name: Egy pohár tej
+emojis.1f95b.keywords: drink,glass,milk
+emojis.1f37a.name: Söröskorsó
+emojis.1f37a.keywords: bar,beer,drink,mug
+emojis.1f37b.name: Koccintó söröskorsók
+emojis.1f37b.keywords: bar,beer,clink,drink,mug
+emojis.1f377.name: Borospohár
+emojis.1f377.keywords: bar,beverage,drink,glass,wine
+emojis.1f942.name: Koccintás
+emojis.1f942.keywords: celebrate,clink,drink,glass
+emojis.1f943.name: Viszkispohár
+emojis.1f943.keywords: üveg,likőr,feles,pohár,whisky,bourbon
+emojis.1f378.name: Koktélpohár
+emojis.1f378.keywords: bar,cocktail,drink,glass
+emojis.1f379.name: Trópusi koktél
+emojis.1f379.keywords: bar,drink,tropical
+emojis.1f37e.name: Dugót kilövő üveg
+emojis.1f37e.keywords: bár,üveg,pezsgő,dugó,ivás,durran,parti
+emojis.1f376.name: Szakésüveg és -pohár
+emojis.1f376.keywords: bar,beverage,bottle,cup,drink,sake
+emojis.1f944.name: Kanál
+emojis.1f944.keywords: spoon,tableware
+emojis.1f374.name: Kés és villa
+emojis.1f374.keywords: cooking,fork,knife,tableware
+emojis.1f37d.name: Villa és kés tányérral
+emojis.1f37d.keywords: cooking,fork,knife,plate,tableware
+emojis.1f962.name: Evőpálcikák
+emojis.1f962.keywords: hashi,jeotgarak,kuaizi
+emojis.1f961.name: Ételszállító doboz
+emojis.1f961.keywords: take out,container,oyster pail
+emojis.26bd.name: Futball-labda
+emojis.26bd.keywords: ball,soccer
+emojis.1f3c0.name: Kosárlabda
+emojis.1f3c0.keywords: ball,basketball,hoop
+emojis.1f3c8.name: Amerikai futball
+emojis.1f3c8.keywords: american,ball,football
+emojis.26be.name: Baseball
+emojis.26be.keywords: ball,baseball
+emojis.1f3be.name: Teniszlabda
+emojis.1f3be.keywords: ball,racquet,tennis
+emojis.1f3d0.name: Röplabda
+emojis.1f3d0.keywords: ball,game,volleyball
+emojis.1f3c9.name: Rögbi
+emojis.1f3c9.keywords: ball,football,rugby
+emojis.1f3b1.name: Biliárd
+emojis.1f3b1.keywords: 8,8 ball,ball,billiard,eight,game
+emojis.1f3d3.name: Pingpongütő és labda
+emojis.1f3d3.keywords: ball,bat,game,paddle,table tennis
+emojis.1f3f8.name: Tollasütő és tollaslabda
+emojis.1f3f8.keywords: badminton,birdie,game,racquet,shuttlecock
+emojis.1f945.name: Focikapu hálója
+emojis.1f945.keywords: goal,net
+emojis.1f3d2.name: Jéghokiütő és korong
+emojis.1f3d2.keywords: game,hockey,ice,puck,stick
+emojis.1f3d1.name: Gyephokiütő és labda
+emojis.1f3d1.keywords: ball,field,game,hockey,stick
+emojis.1f3cf.name: Krikettütő és labda
+emojis.1f3cf.keywords: ball,field,cricket,game
+emojis.1f94c.name: Curling kő
+emojis.1f94c.keywords: curling,stone
+emojis.26f3.name: Zászló lyukban golfpályán
+emojis.26f3.keywords: flag,golf,hole
+emojis.1f3f9.name: Íj és nyíl
+emojis.1f3f9.keywords: archer,arrow,bow,sagittarius,tool,weapon,zodiac
+emojis.1f3a3.name: Horgászbot és hal
+emojis.1f3a3.keywords: entertainment,fish,pole
+emojis.1f94a.name: Boxkesztyű
+emojis.1f94a.keywords: boxing,glove
+emojis.1f94b.name: Karate-gi
+emojis.1f94b.keywords: judo,karate,martial arts,taekwondo,uniform
+emojis.26f8.name: Jégkorcsolya
+emojis.26f8.keywords: ice,skate
+emojis.1f3bf.name: Síléc és sícipő
+emojis.1f3bf.keywords: skis,ski,snow
+emojis.1f6f7.name: Szánkó
+emojis.1f6f7.keywords: sledge,sleigh,luge,toboggan
+emojis.26f7.name: Síelő
+emojis.26f7.keywords: ski,snow
+emojis.1f3c2.name: Snowboardos
+emojis.1f3c2.keywords: ski,snow,snowboard
+emojis.1f3cb-fe0f-200d-2640-fe0f.name: Súlyemelő nő
+emojis.1f3cb-fe0f-200d-2640-fe0f.keywords: súlyemelő,súly,nő,női,nők
+emojis.1f3cb-fe0f-200d-2642-fe0f.name: Súlyemelő
+emojis.1f3cb-fe0f-200d-2642-fe0f.keywords: súlyemelő,súly,férfi,férfi,férfiak
+emojis.1f3cb.name: Súlyemelő
+emojis.1f3cb.keywords: súlyemelő,súly,férfi,férfi,férfiak
+emojis.1f93a.name: Vívó
+emojis.1f93a.keywords: fencer,fencing,sword
+emojis.1f93c-200d-2640-fe0f.name: Birkózó nő
+emojis.1f93c-200d-2640-fe0f.keywords: pankráció,pankrátor,nő,női,nők
+emojis.1f93c-200d-2642-fe0f.name: Birkózó
+emojis.1f93c-200d-2642-fe0f.keywords: pankráció,pankrátor,férfi,férfi,férfiak
+emojis.1f93c.name: Birkózók
+emojis.1f93c.keywords: pankráció,pankrátor,férfi,férfi,férfiak
+emojis.1f938.name: Cigánykereket hányó fiú
+emojis.1f938.keywords: cigánykerék,gimnasztika,nő,női,nők
+emojis.1f938-200d-2640-fe0f.name: Cigánykereket hányó nő
+emojis.1f938-200d-2640-fe0f.keywords: cigánykerék,gimnasztika,nő,női,nők
+emojis.1f938-200d-2642-fe0f.name: Cigánykereket hányó férfi
+emojis.1f938-200d-2642-fe0f.keywords: cigánykerék,gimnasztika férfi,férfi,férfiak
+emojis.26f9-fe0f-200d-2640-fe0f.name: Nő labdával
+emojis.26f9-fe0f-200d-2640-fe0f.keywords: labda,nő,női,nők
+emojis.26f9-fe0f-200d-2642-fe0f.name: Férfi labdával
+emojis.26f9-fe0f-200d-2642-fe0f.keywords: labda,férfi,férfi,férfiak
+emojis.26f9.name: Ember labdával
+emojis.26f9.keywords: labda,férfi,férfi,férfiak
+emojis.1f93e.name: Kézilabda
+emojis.1f93e.keywords: labda,kézilabda,nő,női,nők
+emojis.1f93e-200d-2640-fe0f.name: Kézilabdázó nő
+emojis.1f93e-200d-2640-fe0f.keywords: labda,kézilabda,nő,női,nők
+emojis.1f93e-200d-2642-fe0f.name: Kézilabdázó
+emojis.1f93e-200d-2642-fe0f.keywords: labda,kézilabda,férfi,férfi,férfiak
+emojis.1f9d7.name: Mászó személy
+emojis.1f9d7.keywords: climbing,rock,woman,female,women
+emojis.1f9d7-200d-2640-fe0f.name: Mászó nő
+emojis.1f9d7-200d-2640-fe0f.keywords: climbing,rock,woman,female,women
+emojis.1f9d7-200d-2642-fe0f.name: Mászó férfi
+emojis.1f9d7-200d-2642-fe0f.keywords: climbing,rock,man,male,men
+emojis.1f3cc-fe0f-200d-2640-fe0f.name: Golfozó nő
+emojis.1f3cc-fe0f-200d-2640-fe0f.keywords: labda,golf,golfozó,golfozás,nő,női,nők
+emojis.1f3cc-fe0f-200d-2642-fe0f.name: Golfozó férfi
+emojis.1f3cc-fe0f-200d-2642-fe0f.keywords: labda,golf,golfozó,golfozás,férfi,férfi,férfiak
+emojis.1f3cc.name: Golfozó
+emojis.1f3cc.keywords: labda,golf,golfozó,golfozás,férfi,férfi,férfiak
+emojis.1f9d8.name: Egy személy lótuszülésben
+emojis.1f9d8.keywords: meditation,yoga,serenity,woman,female,women
+emojis.1f9d8-200d-2640-fe0f.name: Nő lótuszülésben
+emojis.1f9d8-200d-2640-fe0f.keywords: meditation,yoga,serenity,woman,female,women
+emojis.1f9d8-200d-2642-fe0f.name: Férfi lótuszülésben
+emojis.1f9d8-200d-2642-fe0f.keywords: meditation,yoga,serenity,man,male,men
+emojis.1f9d6.name: Egy személy egy párás szobában
+emojis.1f9d6.keywords: sauna,steam room,hamam,steambath,woman,female,women
+emojis.1f9d6-200d-2640-fe0f.name: Egy nő egy párás szobában
+emojis.1f9d6-200d-2640-fe0f.keywords: sauna,steam room,hamam,steambath,woman,female,women
+emojis.1f9d6-200d-2642-fe0f.name: Egy férfi egy párás szobában
+emojis.1f9d6-200d-2642-fe0f.keywords: sauna,steam room,hamam,steambath,man,male,men
+emojis.1f3c4-200d-2640-fe0f.name: Szörföző nő
+emojis.1f3c4-200d-2640-fe0f.keywords: szörfös,szörföző,nő,női,nők
+emojis.1f3c4.name: Hullámlovas
+emojis.1f3c4.keywords: szörfös,szörfözés,férfi,férfi,férfiak
+emojis.1f3c4-200d-2642-fe0f.name: Szörföző férfi
+emojis.1f3c4-200d-2642-fe0f.keywords: szörfös,szörfözés,férfi,férfi,férfiak
+emojis.1f3ca-200d-2640-fe0f.name: Úszó nő
+emojis.1f3ca-200d-2640-fe0f.keywords: úszás,úszó,nő,női,nők
+emojis.1f3ca-200d-2642-fe0f.name: Úszó férfi
+emojis.1f3ca-200d-2642-fe0f.keywords: úszás,úszó,férfi,férfi,férfiak
+emojis.1f3ca.name: Úszó
+emojis.1f3ca.keywords: úszás,úszó,férfi,férfi,férfiak
+emojis.1f93d-200d-2640-fe0f.name: Vízipólózó nő
+emojis.1f93d-200d-2640-fe0f.keywords: póló,vízi,nő,női,nők
+emojis.1f93d-200d-2642-fe0f.name: Vízipólózó
+emojis.1f93d-200d-2642-fe0f.keywords: póló,vízi,férfi,férfi,férfiak
+emojis.1f93d.name: Vízipóló
+emojis.1f93d.keywords: póló,vízi,férfi,férfi,férfiak
+emojis.1f6a3-200d-2640-fe0f.name: Csónakban evező nő
+emojis.1f6a3-200d-2640-fe0f.keywords: csónak,evezős,jármű,evezni,nő,női,nők
+emojis.1f6a3-200d-2642-fe0f.name: Csónakban evező férfi
+emojis.1f6a3-200d-2642-fe0f.keywords: csónak,evezős,jármű,evezni,férfi,férfi,férfiak
+emojis.1f6a3.name: Evezős
+emojis.1f6a3.keywords: csónak,evezős,jármű,evezni,férfi,férfi,férfiak
+emojis.1f3c7.name: Lóverseny
+emojis.1f3c7.keywords: horse,jockey,racehorse,racing
+emojis.1f6b4-200d-2640-fe0f.name: Bicikliző nő
+emojis.1f6b4-200d-2640-fe0f.keywords: kerékpár,kerékpáros,bicikli,kerékpáros,nő,nő,nők
+emojis.1f6b4-200d-2642-fe0f.name: Bicikliző férfi
+emojis.1f6b4-200d-2642-fe0f.keywords: kerékpár,kerékpáros,bicikli,kerékpáros,férfi,férfi,férfiak
+emojis.1f6b4.name: Kerékpáros
+emojis.1f6b4.keywords: kerékpár,kerékpáros,bicikli,kerékpáros,férfi,férfi,férfiak
+emojis.1f6b5-200d-2640-fe0f.name: Hegyikerékpáros nő
+emojis.1f6b5-200d-2640-fe0f.keywords: hegyikerékpáros,kerékpár,kerékpáros,bicikli,kerékpáros,hegy,nő,női,nők
+emojis.1f6b5-200d-2642-fe0f.name: Hegyikerékpáros férfi
+emojis.1f6b5-200d-2642-fe0f.keywords: hegyikerékpáros,kerékpár,kerékpáros,bicikli,biciklista,hegy,férfi,férfi,férfiak
+emojis.1f6b5.name: Terepkerékpáros
+emojis.1f6b5.keywords: hegyikerékpáros,kerékpár,kerékpáros,bicikli,biciklista,hegy,férfi,férfi,férfiak
+emojis.1f3bd.name: Futóatléta vállszalaggal
+emojis.1f3bd.keywords: running,sash,shirt
+emojis.1f396.name: Katonai kitüntetés
+emojis.1f396.keywords: celebration,medal,military
+emojis.1f3c5.name: Érem
+emojis.1f3c5.keywords: érem
+emojis.1f947.name: Aranyérem
+emojis.1f947.keywords: first,gold,medal
+emojis.1f948.name: Ezüstérem
+emojis.1f948.keywords: medal,second,silver
+emojis.1f949.name: Bronzérem
+emojis.1f949.keywords: bronze,medal,third
+emojis.1f3c6.name: Trófea
+emojis.1f3c6.keywords: prize,trophy
+emojis.1f3f5.name: Rozetta
+emojis.1f3f5.keywords: plant,rosette
+emojis.1f397.name: Emlékeztető szalag
+emojis.1f397.keywords: celebration,reminder,ribbon
+emojis.1f3ab.name: Jegy
+emojis.1f3ab.keywords: activity,admission,entertainment,ticket
+emojis.1f39f.name: Belépőjegyek
+emojis.1f39f.keywords: admission,entertainment,ticket
+emojis.1f3aa.name: Cirkuszi sátor
+emojis.1f3aa.keywords: activity,circus,entertainment,tent
+emojis.1f939-200d-2640-fe0f.name: Női zsonglőr
+emojis.1f939-200d-2640-fe0f.keywords: egyensúly,zsonglőrködés, multitask, készség,nő,nő,nők
+emojis.1f939-200d-2642-fe0f.name: Férfi zsonglőr
+emojis.1f939-200d-2642-fe0f.keywords: egyensúly,zsonglőrködés, multitask, készség,ember,férfi,férfiak
+emojis.1f939.name: Zsonglőr
+emojis.1f939.keywords: egyensúly,zsonglőrködés, multitask, készség,ember,férfi,férfiak
+emojis.1f3ad.name: Előadóművészet
+emojis.1f3ad.keywords: activity,art,entertainment,mask,performing,theater,theatre
+emojis.1f3a8.name: Festőpaletta
+emojis.1f3a8.keywords: activity,art,entertainment,museum,painting,palette
+emojis.1f3ac.name: Csapó
+emojis.1f3ac.keywords: activity,clapper,entertainment,movie
+emojis.1f3a4.name: Mikrofon
+emojis.1f3a4.keywords: activity,entertainment,karaoke,mic,microphone
+emojis.1f3a7.name: Fejhallgató
+emojis.1f3a7.keywords: activity,earbud,entertainment,headphone
+emojis.1f3bc.name: Hangjegy
+emojis.1f3bc.keywords: activity,entertainment,music,score
+emojis.1f3b9.name: Zongorabillentyűk
+emojis.1f3b9.keywords: activity,entertainment,instrument,keyboard,music,piano
+emojis.1f941.name: Dob dobverőkkel
+emojis.1f941.keywords: drum,drumsticks,music
+emojis.1f3b7.name: Szaxofon
+emojis.1f3b7.keywords: activity,entertainment,instrument,music,sax,saxophone
+emojis.1f3ba.name: Trombita
+emojis.1f3ba.keywords: activity,entertainment,instrument,music,trumpet
+emojis.1f3b8.name: Gitározás
+emojis.1f3b8.keywords: activity,entertainment,guitar,instrument,music
+emojis.1f3bb.name: Hegedű
+emojis.1f3bb.keywords: activity,entertainment,instrument,music,violin
+emojis.1f3b2.name: Dobókocka
+emojis.1f3b2.keywords: dice,die,entertainment,game
+emojis.1f3af.name: Telitalálat
+emojis.1f3af.keywords: activity,bull,bullseye,dart,entertainment,eye,game,hit,target
+emojis.1f3b3.name: Teke
+emojis.1f3b3.keywords: golyó,bowling,játék
+emojis.1f3ae.name: Videójáték
+emojis.1f3ae.keywords: controller,entertainment,game,video game
+emojis.1f47e.name: Földönkívüli szörny
+emojis.1f47e.keywords: alien,creature,extraterrestrial,face,fairy tale,fantasy,monster,space,ufo
+emojis.1f3b0.name: Nyerőgép
+emojis.1f3b0.keywords: activity,game,slot
+emojis.1f697.name: Autók
+emojis.1f697.keywords: gépjármű,autó,jármű
+emojis.1f695.name: Taxi
+emojis.1f695.keywords: taxi,jármű
+emojis.1f699.name: Szabadidőautó
+emojis.1f699.keywords: szabadidő,szj,jármű
+emojis.1f68c.name: Autóbusz
+emojis.1f68c.keywords: busz,jármű
+emojis.1f68e.name: Trolibusz
+emojis.1f68e.keywords: busz,villamos,troli,trolibusz,jármű
+emojis.1f3ce.name: Versenyautó
+emojis.1f3ce.keywords: car,racing
+emojis.1f693.name: Rendőrautó
+emojis.1f693.keywords: car,patrol,police,vehicle
+emojis.1f691.name: Mentőautó
+emojis.1f691.keywords: mentőautó,jármű
+emojis.1f692.name: Tűzoltóautó
+emojis.1f692.keywords: engine,fire,truck,vehicle
+emojis.1f690.name: Minibusz
+emojis.1f690.keywords: bus,minibus,vehicle
+emojis.1f69a.name: Kamion
+emojis.1f69a.keywords: delivery,truck,vehicle
+emojis.1f69b.name: Nyerges vontató
+emojis.1f69b.keywords: lorry,semi,truck,vehicle
+emojis.1f69c.name: Traktor
+emojis.1f69c.keywords: tractor,vehicle
+emojis.1f3cd.name: Versenymotor
+emojis.1f3cd.keywords: motorcycle,racing
+emojis.1f6f5.name: Motorbicikli
+emojis.1f6f5.keywords: motor,scooter
+emojis.1f6b2.name: Kerékpár
+emojis.1f6b2.keywords: bicycle,bike,vehicle
+emojis.1f6f4.name: Roller
+emojis.1f6f4.keywords: kick,scooter
+emojis.1f6a8.name: Rendőrségi villogó
+emojis.1f6a8.keywords: beacon,car,light,police,revolving,vehicle
+emojis.1f694.name: Szembejövő rendőrautó
+emojis.1f694.keywords: car,oncoming,police,vehicle
+emojis.1f68d.name: Szembejövő busz
+emojis.1f68d.keywords: bus,oncoming,vehicle
+emojis.1f698.name: Szembejövő autó
+emojis.1f698.keywords: automobile,car,oncoming,vehicle
+emojis.1f696.name: Szembejövő taxi
+emojis.1f696.keywords: oncoming,taxi,vehicle
+emojis.1f6a1.name: Drótkötélpályás felvonó
+emojis.1f6a1.keywords: aerial,cable,car,gondola,ropeway,tramway,vehicle
+emojis.1f6a0.name: Sífelvonó
+emojis.1f6a0.keywords: cable,gondola,mountain,vehicle
+emojis.1f69f.name: Függővasút
+emojis.1f69f.keywords: railway,suspension,vehicle
+emojis.1f683.name: Vasúti kocsi
+emojis.1f683.keywords: car,electric,railway,train,tram,trolleybus,vehicle
+emojis.1f68b.name: Villamos
+emojis.1f68b.keywords: car,tram,trolleybus,vehicle
+emojis.1f69d.name: Egysínű vasút
+emojis.1f69d.keywords: monorail,vehicle
+emojis.1f684.name: Gyorsvasút
+emojis.1f684.keywords: railway,shinkansen,speed,train,vehicle
+emojis.1f685.name: Kúpos orrú szuperexpressz
+emojis.1f685.keywords: bullet,railway,shinkansen,speed,train,vehicle
+emojis.1f688.name: HÉV
+emojis.1f688.keywords: railway,vehicle
+emojis.1f69e.name: Hegyi vasút
+emojis.1f69e.keywords: car,mountain,railway,vehicle
+emojis.1f682.name: Gőzmozdony
+emojis.1f682.keywords: engine,locomotive,railway,steam,train,vehicle
+emojis.1f686.name: Vonat
+emojis.1f686.keywords: railway,train,vehicle
+emojis.1f687.name: Metró
+emojis.1f687.keywords: metro,subway,vehicle
+emojis.1f68a.name: Villamos
+emojis.1f68a.keywords: tram,trolleybus,vehicle
+emojis.1f689.name: Állomás
+emojis.1f689.keywords: railway,station,train,vehicle
+emojis.1f681.name: Helikopter
+emojis.1f681.keywords: helicopter,vehicle
+emojis.1f6e9.name: Kisrepülő
+emojis.1f6e9.keywords: airplane,vehicle
+emojis.2708.name: Repülőgép
+emojis.2708.keywords: airplane,vehicle
+emojis.1f6eb.name: Felszálló repülőgép
+emojis.1f6eb.keywords: airplane,check-in,departure,departures,vehicle
+emojis.1f6ec.name: Leszálló repülőgép
+emojis.1f6ec.keywords: airplane,arrivals,arriving,landing,vehicle
+emojis.1f6f6.name: Kenu
+emojis.1f6f6.keywords: csónak,kenu
+emojis.26f5.name: Vitorlás
+emojis.26f5.keywords: boat,resort,sailboat,sea,vehicle,yacht
+emojis.1f6e5.name: Motorcsónak
+emojis.1f6e5.keywords: boat,motorboat,vehicle
+emojis.1f6a4.name: Motorcsónak
+emojis.1f6a4.keywords: boat,speedboat,vehicle
+emojis.26f4.name: Komp
+emojis.26f4.keywords: boat,ferry
+emojis.1f6f3.name: Utasszállító hajó
+emojis.1f6f3.keywords: passenger,ship,vehicle
+emojis.1f680.name: Rakéta
+emojis.1f680.keywords: rocket,space,vehicle
+emojis.1f6f8.name: Repülő csészealj
+emojis.1f6f8.keywords: ufo,alien,extraterrestrial,space,fantasy
+emojis.1f6f0.name: Műholdas
+emojis.1f6f0.keywords: satellite,space,vehicle
+emojis.1f4ba.name: Ülés
+emojis.1f4ba.keywords: chair,seat
+emojis.2693.name: Horgony
+emojis.2693.keywords: anchor,ship,tool
+emojis.1f6a7.name: Építési terület
+emojis.1f6a7.keywords: barrier,construction
+emojis.26fd.name: Üzemanyagtöltő
+emojis.26fd.keywords: fuel,fuelpump,gas,pump,station
+emojis.1f68f.name: Buszmegálló 
+emojis.1f68f.keywords: bus,busstop,stop
+emojis.1f6a6.name: Függőleges közlekedési jelzőlámpa
+emojis.1f6a6.keywords: light,signal,traffic
+emojis.1f6a5.name: Vízszintes közlekedési jelzőlámpa
+emojis.1f6a5.keywords: light,signal,traffic
+emojis.1f6d1.name: Nyolcszögletű tábla
+emojis.1f6d1.keywords: octagonal,stop
+emojis.1f6a2.name: Hajó
+emojis.1f6a2.keywords: hajó,jármű
+emojis.1f3a1.name: Óriáskerék
+emojis.1f3a1.keywords: activity,amusement park,entertainment,ferris,wheel
+emojis.1f3a2.name: Hullámvasút
+emojis.1f3a2.keywords: activity,amusement park,coaster,entertainment,roller
+emojis.1f3a0.name: Körhintaló
+emojis.1f3a0.keywords: activity,carousel,entertainment,horse
+emojis.1f3d7.name: Építkezés
+emojis.1f3d7.keywords: building,construction
+emojis.1f301.name: Ködös táj
+emojis.1f301.keywords: köd,időjárás
+emojis.1f5fc.name: Tokiói torony
+emojis.1f5fc.keywords: Tokiói,torony
+emojis.1f3ed.name: Gyár
+emojis.1f3ed.keywords: épület,gyár
+emojis.26f2.name: Szökőkút
+emojis.26f2.keywords: szökőkút
+emojis.1f391.name: Holdünnep
+emojis.1f391.keywords: activity,celebration,ceremony,entertainment,moon
+emojis.26f0.name: Hegy
+emojis.26f0.keywords: mountain
+emojis.1f3d4.name: Havas hegycsúcs
+emojis.1f3d4.keywords: cold,mountain,snow
+emojis.1f5fb.name: Fudzsi hegy
+emojis.1f5fb.keywords: fuji,mountain
+emojis.1f30b.name: Vulkán
+emojis.1f30b.keywords: eruption,mountain,volcano,weather
+emojis.1f5fe.name: Japán körvonala
+emojis.1f5fe.keywords: japan,map
+emojis.1f3d5.name: Kempingezés
+emojis.1f3d5.keywords: kemping
+emojis.26fa.name: Sátor
+emojis.26fa.keywords: kemping,sátor
+emojis.1f3de.name: Nemzeti park
+emojis.1f3de.keywords: nemzeti park,park
+emojis.1f6e3.name: Autópálya
+emojis.1f6e3.keywords: highway,motorway,road
+emojis.1f6e4.name: Sín
+emojis.1f6e4.keywords: vasút,vonat
+emojis.1f305.name: Napkelte
+emojis.1f305.keywords: morning,sun,sunrise,weather
+emojis.1f304.name: Napfelkelte a hegyek felett
+emojis.1f304.keywords: morning,mountain,sun,sunrise,weather
+emojis.1f3dc.name: Sivatag
+emojis.1f3dc.keywords: sivatag
+emojis.1f3d6.name: Strand esernyővel
+emojis.1f3d6.keywords: nap,esernyő
+emojis.1f3dd.name: Lakatlan sziget
+emojis.1f3dd.keywords: lakatlan,sziget
+emojis.1f307.name: Naplemente a házak felett
+emojis.1f307.keywords: building,dusk,sun,sunset,weather
+emojis.1f306.name: Alkonyati városkép
+emojis.1f306.keywords: building,city,dusk,evening,landscape,sun,sunset,weather
+emojis.1f3d9.name: Városkép
+emojis.1f3d9.keywords: épület,város
+emojis.1f303.name: Csillagos éjszaka
+emojis.1f303.keywords: éjszaka,csillag,időjárás
+emojis.1f309.name: Éjszakai híd
+emojis.1f309.keywords: híd,éjszaka,időjárás
+emojis.1f30c.name: Tejút
+emojis.1f30c.keywords: milky way,space,weather
+emojis.1f320.name: Hullócsillag
+emojis.1f320.keywords: activity,falling,shooting,space,star
+emojis.1f387.name: Csillagszóró
+emojis.1f387.keywords: activity,celebration,entertainment,fireworks,sparkle
+emojis.1f386.name: Tűzijáték
+emojis.1f386.keywords: activity,celebration,entertainment,fireworks
+emojis.1f308.name: Szivárvány
+emojis.1f308.keywords: eső,szivárvány,időjárás
+emojis.1f3d8.name: Lakóépületek
+emojis.1f3d8.keywords: épület,ház
+emojis.1f3f0.name: Európai kastély
+emojis.1f3f0.keywords: building,castle,european
+emojis.1f3ef.name: Japán kastély
+emojis.1f3ef.keywords: building,castle,japanese
+emojis.1f3df.name: Stadion
+emojis.1f3df.keywords: stadion
+emojis.1f5fd.name: Szabadság-szobor
+emojis.1f5fd.keywords: szabadság,szobor
+emojis.1f3e0.name: Lakóépület
+emojis.1f3e0.keywords: building,home,house
+emojis.1f3e1.name: Kertes ház
+emojis.1f3e1.keywords: building,garden,home,house
+emojis.1f3da.name: Elhagyott lakóépület
+emojis.1f3da.keywords: building,derelict,house
+emojis.1f3e2.name: Irodaépület
+emojis.1f3e2.keywords: épület
+emojis.1f3ec.name: Áruház
+emojis.1f3ec.keywords: building,department,store
+emojis.1f3e3.name: Japán postahivatal
+emojis.1f3e3.keywords: building,japanese,post
+emojis.1f3e4.name: Európai postahivatal
+emojis.1f3e4.keywords: building,european,post
+emojis.1f3e5.name: Kórház
+emojis.1f3e5.keywords: building,doctor,hospital,medicine
+emojis.1f3e6.name: Bank
+emojis.1f3e6.keywords: bank,épület
+emojis.1f3e8.name: Szálloda
+emojis.1f3e8.keywords: épület,szálloda
+emojis.1f3ea.name: Vegyesbolt
+emojis.1f3ea.keywords: building,convenience,store
+emojis.1f3eb.name: Iskola
+emojis.1f3eb.keywords: épület,iskola
+emojis.1f3e9.name: Vágyszálló
+emojis.1f3e9.keywords: building,hotel,love
+emojis.1f492.name: Esküvő
+emojis.1f492.keywords: activity,chapel,romance,wedding
+emojis.1f3db.name: Műemlék épület
+emojis.1f3db.keywords: building,classical
+emojis.26ea.name: Templom
+emojis.26ea.keywords: building,christian,church,cross,religion
+emojis.1f54c.name: Mecset
+emojis.1f54c.keywords: islam,mosque,muslim,religion
+emojis.1f54d.name: Zsinagóga
+emojis.1f54d.keywords: jew,jewish,religion,synagogue,temple
+emojis.1f54b.name: Kaaba
+emojis.1f54b.keywords: islam,kaaba,muslim,religion
+emojis.26e9.name: Sintó szentély
+emojis.26e9.keywords: religion,shinto,shrine
+emojis.e50a.name: Sibuja
+emojis.e50a.keywords: 109,shibuya
+emojis.231a.name: Karóra
+emojis.231a.keywords: clock,watch
+emojis.1f4f1.name: Mobiltelefon
+emojis.1f4f1.keywords: cell,communication,mobile,phone,telephone
+emojis.1f4f2.name: Mobiltelefon, bal oldalán jobbra mutató nyíllal
+emojis.1f4f2.keywords: arrow,call,cell,communication,mobile,phone,receive,telephone
+emojis.1f4bb.name: Személyi számítógép
+emojis.1f4bb.keywords: laptop computer,computer,pc,personal
+emojis.2328.name: Billentyűzet
+emojis.2328.keywords: számítógép,billentyűzet
+emojis.1f5a5.name: Asztali számítógép
+emojis.1f5a5.keywords: asztali,számítógép
+emojis.1f5a8.name: Nyomtató
+emojis.1f5a8.keywords: számítógép,nyomtató
+emojis.1f5b1.name: Háromgombos egér
+emojis.1f5b1.keywords: 3,button,computer,mouse,three
+emojis.1f5b2.name: Hanyattegér
+emojis.1f5b2.keywords: computer,trackball
+emojis.1f579.name: Botkormány
+emojis.1f579.keywords: entertainment,game,joystick,video game
+emojis.1f5dc.name: Tömörítés
+emojis.1f5dc.keywords: compression,tool,vice
+emojis.1f4bd.name: Minidisc
+emojis.1f4bd.keywords: computer,disk,entertainment,minidisk,optical
+emojis.1f4be.name: Hajlékonylemez
+emojis.1f4be.keywords: computer,disk,floppy
+emojis.1f4bf.name: Optikai lemez
+emojis.1f4bf.keywords: blu-ray,cd,computer,disk,dvd,optical
+emojis.1f4c0.name: DVD
+emojis.1f4c0.keywords: blu-ray,cd,computer,disk,dvd,entertainment,optical
+emojis.1f4fc.name: Videokazetta
+emojis.1f4fc.keywords: entertainment,tape,vhs,video,videocassette
+emojis.1f4f7.name: Kamera
+emojis.1f4f7.keywords: camera,entertainment,video
+emojis.1f4f8.name: Kamera vakuval
+emojis.1f4f8.keywords: camera,flash,video
+emojis.1f4f9.name: Videókamera
+emojis.1f4f9.keywords: camera,entertainment,video
+emojis.1f3a5.name: Filmkamera
+emojis.1f3a5.keywords: activity,camera,cinema,entertainment,movie
+emojis.1f4fd.name: Filmvetítő
+emojis.1f4fd.keywords: cinema,entertainment,film,movie,projector,video
+emojis.1f39e.name: Filmkockák
+emojis.1f39e.keywords: cinema,entertainment,film,frames,movie
+emojis.1f4de.name: Telefonkagyló
+emojis.1f4de.keywords: communication,phone,receiver,telephone
+emojis.260e.name: Telefon
+emojis.260e.keywords: telefon,telefon
+emojis.1f4df.name: Személyhívó
+emojis.1f4df.keywords: kommunikáció,személyhívó
+emojis.1f4e0.name: Telefax
+emojis.1f4e0.keywords: kommunikáció,fax
+emojis.1f4fa.name: Televízió
+emojis.1f4fa.keywords: szórakozás,televízió,tv,videó
+emojis.1f4fb.name: Rádió
+emojis.1f4fb.keywords: szórakozás,rádió,videó
+emojis.1f399.name: Stúdiómikrofon
+emojis.1f399.keywords: mikrofon,mikrofon,zene,stúdió
+emojis.1f39a.name: Szintszabályzó
+emojis.1f39a.keywords: level,music,slider
+emojis.1f39b.name: Vezérlőgombok
+emojis.1f39b.keywords: control,knobs,music
+emojis.23f1.name: Stopperóra
+emojis.23f1.keywords: clock,stopwatch
+emojis.23f2.name: Ébresztőóra
+emojis.23f2.keywords: clock,timer
+emojis.23f0.name: Ébresztőóra
+emojis.23f0.keywords: ébresztő,óra
+emojis.1f570.name: Kandalló óra
+emojis.1f570.keywords: clock
+emojis.23f3.name: Homokóra lepergő homokkal
+emojis.23f3.keywords: homokóra,homok,időzítő
+emojis.231b.name: Homokóra
+emojis.231b.keywords: homokóra,homok,időzítő
+emojis.1f4e1.name: Műholdvevő antenna
+emojis.1f4e1.keywords: antenna,communication,dish,satellite
+emojis.1f50b.name: Elem
+emojis.1f50b.keywords: elem
+emojis.1f50c.name: Villásdugó
+emojis.1f50c.keywords: electric,electricity,plug
+emojis.1f4a1.name: Villanykörte
+emojis.1f4a1.keywords: bulb,comic,electric,idea,light
+emojis.1f526.name: Elemlámpa
+emojis.1f526.keywords: electric,flashlight,light,tool,torch
+emojis.1f56f.name: Gyertya
+emojis.1f56f.keywords: gyertya,fény
+emojis.1f5d1.name: Szemétkosár
+emojis.1f5d1.keywords: szemétkosár
+emojis.1f6e2.name: Olajos hordó
+emojis.1f6e2.keywords: drum,oil
+emojis.1f6d2.name: Bevásárlókocsi
+emojis.1f6d2.keywords: cart,shopping,trolley
+emojis.1f4b8.name: Szárnyas bankjegy
+emojis.1f4b8.keywords: bank,banknote,bill,dollar,fly,money,note,wings
+emojis.1f4b5.name: Bankjegy dollárjellel
+emojis.1f4b5.keywords: bank,banknote,bill,currency,dollar,money,note
+emojis.1f4b4.name: Bankjegy jenjellel
+emojis.1f4b4.keywords: bank,banknote,bill,currency,money,note,yen
+emojis.1f4b6.name: Bankjegy eurojellel
+emojis.1f4b6.keywords: bank,banknote,bill,currency,euro,money,note
+emojis.1f4b7.name: Bankjegy fontjellel
+emojis.1f4b7.keywords: bank,banknote,bill,currency,money,note,pound
+emojis.1f4b0.name: Pénzeszsák
+emojis.1f4b0.keywords: bag,dollar,money,moneybag
+emojis.1f4b3.name: Hitelkártya
+emojis.1f4b3.keywords: bank,kártya,hitel,pénz
+emojis.1f48e.name: Drágakő
+emojis.1f48e.keywords: diamond,gem,jewel,romance
+emojis.2696.name: Mérleg
+emojis.2696.keywords: balance,justice,libra,scales,tool,weight,zodiac
+emojis.1f527.name: Villáskulcs
+emojis.1f527.keywords: eszköz,villáskulcs
+emojis.1f528.name: Kalapács
+emojis.1f528.keywords: kalapács,eszköz
+emojis.2692.name: Kalapács és csákány
+emojis.2692.keywords: kalapács,csákány,eszköz
+emojis.1f6e0.name: Kalapács és villáskulcs
+emojis.1f6e0.keywords: hammer,tool,wrench
+emojis.26cf.name: Csákány
+emojis.26cf.keywords: mining,pick,tool
+emojis.1f529.name: Csavar és anya
+emojis.1f529.keywords: bolt,nut,tool
+emojis.2699.name: Fogaskerék
+emojis.2699.keywords: gear,tool
+emojis.26d3.name: Lánc
+emojis.26d3.keywords: chain
+emojis.1f52b.name: Pisztoly
+emojis.1f52b.keywords: gun,handgun,pistol,revolver,tool,weapon
+emojis.1f4a3.name: Bomba
+emojis.1f4a3.keywords: bomb,comic
+emojis.1f52a.name: Angolnafiléző kés (hocho)
+emojis.1f52a.keywords: kitchen knife,cooking,hocho,knife,tool,weapon
+emojis.1f5e1.name: Tőrkés
+emojis.1f5e1.keywords: dagger,knife,weapon
+emojis.2694.name: Keresztbe tett kardok
+emojis.2694.keywords: crossed,swords,weapon
+emojis.1f6e1.name: Pajzs
+emojis.1f6e1.keywords: pajzs,fegyver
+emojis.1f6ac.name: Dohányzás jele
+emojis.1f6ac.keywords: activity,smoking
+emojis.26b0.name: Koporsó
+emojis.26b0.keywords: coffin,death
+emojis.26b1.name: Urna
+emojis.26b1.keywords: halál,temetés,urna
+emojis.1f3fa.name: Amfora
+emojis.1f3fa.keywords: amphora,aquarius,cooking,drink,jug,tool,weapon,zodiac
+emojis.1f52e.name: Üveggömb
+emojis.1f52e.keywords: ball,crystal,fairy tale,fantasy,fortune,tool
+emojis.1f4ff.name: Rózsafüzér
+emojis.1f4ff.keywords: beads,clothing,necklace,prayer,religion
+emojis.1f488.name: Borbélycégér
+emojis.1f488.keywords: barber,haircut,pole
+emojis.2697.name: Lombik
+emojis.2697.keywords: alembic,chemistry,tool
+emojis.1f52d.name: Távcső
+emojis.1f52d.keywords: távcső,eszköz
+emojis.1f52c.name: Mikroszkóp
+emojis.1f52c.keywords: mikroszkóp,eszköz
+emojis.1f573.name: Lyuk
+emojis.1f573.keywords: hole
+emojis.1f48a.name: Kapszula
+emojis.1f48a.keywords: doctor,medicine,pill,sick
+emojis.1f489.name: Fecskendő
+emojis.1f489.keywords: doctor,medicine,needle,shot,sick,syringe,tool
+emojis.1f321.name: Hőmérő
+emojis.1f321.keywords: thermometer,weather
+emojis.1f3f7.name: Címke
+emojis.1f3f7.keywords: címke
+emojis.1f516.name: Könyvjelző
+emojis.1f516.keywords: könyvjelző,jelzés
+emojis.1f6bd.name: WC
+emojis.1f6bd.keywords: toilet
+emojis.1f6bf.name: Zuhany
+emojis.1f6bf.keywords: zuhany,víz
+emojis.1f6c1.name: Fürdőkád
+emojis.1f6c1.keywords: fürdő,fürdőkád
+emojis.1f6c0.name: Fürdő
+emojis.1f6c0.keywords: fürdő,fürdőkád
+emojis.1f511.name: Kulcs
+emojis.1f511.keywords: key,lock,password
+emojis.1f5dd.name: Régi kulcs
+emojis.1f5dd.keywords: clue,key,lock,old
+emojis.1f6cb.name: Kanapé és lámpa
+emojis.1f6cb.keywords: kanapé,hotel,lámpa
+emojis.1f6cc.name: Alvóhely
+emojis.1f6cc.keywords: ágyban fekvő ember,hotel,alvás,ágy
+emojis.1f6cf.name: Ágy
+emojis.1f6cf.keywords: ágy,szálloda,alvás
+emojis.1f6aa.name: Ajtó
+emojis.1f6aa.keywords: door
+emojis.1f6ce.name: Asztali csengő
+emojis.1f6ce.keywords: bell,bellhop,hotel
+emojis.1f5bc.name: Keretezett kép
+emojis.1f5bc.keywords: art,frame,museum,painting,picture
+emojis.1f5fa.name: Világtérkép
+emojis.1f5fa.keywords: térkép,világ
+emojis.26f1.name: Esernyő a földön
+emojis.26f1.keywords: eső,nap,esernyő,időjárás
+emojis.1f5ff.name: Moyai (egy emberformájú kő neve a tokiói Shibuya metróállomás mellett)
+emojis.1f5ff.keywords: moai,face,moyai,statue
+emojis.1f6cd.name: Bevásárlószatyrok
+emojis.1f6cd.keywords: táska,szálloda,vásárlás
+emojis.1f388.name: Léggömb
+emojis.1f388.keywords: activity,balloon,celebration,entertainment
+emojis.1f38f.name: Pontyszalag
+emojis.1f38f.keywords: activity,carp,celebration,entertainment,flag,streamer
+emojis.1f380.name: Szalag
+emojis.1f380.keywords: ünneplés,szalag
+emojis.1f381.name: Becsomagolt ajándék
+emojis.1f381.keywords: box,celebration,entertainment,gift,present,wrapped
+emojis.1f38a.name: Konfettigömb
+emojis.1f38a.keywords: activity,ball,celebration,confetti,entertainment
+emojis.1f389.name: Robbanó partitölcsér
+emojis.1f389.keywords: activity,celebration,entertainment,party,popper,tada
+emojis.1f38e.name: Japán babák
+emojis.1f38e.keywords: activity,celebration,doll,entertainment,festival,japanese
+emojis.1f390.name: Szélcsengő
+emojis.1f390.keywords: activity,bell,celebration,chime,entertainment,wind
+emojis.1f3ee.name: Izakaya (piros papír-) lámpás
+emojis.1f3ee.keywords: red paper lantern,bar,japanese,lantern,light,red
+emojis.2709.name: Boríték
+emojis.2709.keywords: e-mail,email,boríték
+emojis.1f4e9.name: Boríték, felette lefelé mutató nyíllal
+emojis.1f4e9.keywords: arrow,communication,down,e-mail,email,envelope,letter,mail,outgoing,sent
+emojis.1f4e8.name: Beérkező boríték
+emojis.1f4e8.keywords: communication,e-mail,email,envelope,incoming,letter,mail,receive
+emojis.1f4e7.name: E-mail szimbólum
+emojis.1f4e7.keywords: communication,e-mail,email,letter,mail
+emojis.1f48c.name: Szerelmes levél
+emojis.1f48c.keywords: heart,letter,love,mail,romance
+emojis.1f4ee.name: Levelesláda
+emojis.1f4ee.keywords: communication,mail,mailbox,postbox
+emojis.1f4ea.name: Zárt postaláda lehajtott zászlóval
+emojis.1f4ea.keywords: closed,communication,flag,lowered,mail,mailbox,postbox
+emojis.1f4eb.name: Zárt postaláda álló zászlóval
+emojis.1f4eb.keywords: closed,communication,flag,mail,mailbox,postbox
+emojis.1f4ec.name: Nyitott postaláda álló zászlóval
+emojis.1f4ec.keywords: communication,flag,mail,mailbox,open,postbox
+emojis.1f4ed.name: Nyitott postaláda lehajtott zászlóval
+emojis.1f4ed.keywords: communication,flag,lowered,mail,mailbox,open,postbox
+emojis.1f4e6.name: Csomag
+emojis.1f4e6.keywords: box,communication,package,parcel
+emojis.1f4ef.name: Postakürt
+emojis.1f4ef.keywords: communication,entertainment,horn,post,postal
+emojis.1f4e5.name: Beérkezett üzenetek tálcája
+emojis.1f4e5.keywords: box,communication,inbox,letter,mail,receive,tray
+emojis.1f4e4.name: Kimenő iratok tálcája
+emojis.1f4e4.keywords: box,communication,letter,mail,outbox,sent,tray
+emojis.1f4dc.name: Tekercs
+emojis.1f4dc.keywords: papír,tekercs
+emojis.1f4c3.name: Felkunkorodó lap
+emojis.1f4c3.keywords: kunkor,irat,lap
+emojis.1f4d1.name: Könyvjelzőfülek
+emojis.1f4d1.keywords: könyvjelző,jelzés,jelző,fülek
+emojis.1f4ca.name: Oszlopdiagram
+emojis.1f4ca.keywords: oszlop,diagram,grafikon
+emojis.1f4c8.name: Grafikon emelkedő trenddel
+emojis.1f4c8.keywords: chart increasing,chart,graph,growth,trend,upward
+emojis.1f4c9.name: Grafikon csökkenő trenddel
+emojis.1f4c9.keywords: csökkenő grafikon,grafikon,le,gráf,trend
+emojis.1f4c4.name: Lap szöveggel
+emojis.1f4c4.keywords: dokumentum,oldal
+emojis.1f4c5.name: Naptár
+emojis.1f4c5.keywords: naptár,dátum
+emojis.1f4c6.name: Tömbnaptár
+emojis.1f4c6.keywords: naptár
+emojis.1f5d3.name: spirálos naptár
+emojis.1f5d3.keywords: spirális naptár,naptár,tömb,spirál
+emojis.1f4c7.name: Névjegykártyatartó
+emojis.1f4c7.keywords: névjegykártya,tartó,állványos asztali névjegytartó
+emojis.1f5c3.name: Névjegytartó doboz
+emojis.1f5c3.keywords: doboz,kártya,fájl
+emojis.1f5f3.name: Szavazóláda szavazócédulával
+emojis.1f5f3.keywords: szavazócédula,láda
+emojis.1f5c4.name: Iratszekrény
+emojis.1f5c4.keywords: iratszekrény,fájl
+emojis.1f4cb.name: Vágólap
+emojis.1f4cb.keywords: csíptetős tábla
+emojis.1f5d2.name: Spirál jegyzetfüzet
+emojis.1f5d2.keywords: spirál jegyzetfüzet,jegyzet,tömb,spirál
+emojis.1f4c1.name: Fájlmappa
+emojis.1f4c1.keywords: fájl,mappa
+emojis.1f4c2.name: Nyitott fájlmappa
+emojis.1f4c2.keywords: fájl,mappa,nyitott
+emojis.1f5c2.name: Katalóguscímkék
+emojis.1f5c2.keywords: katalógus,elosztó,címke
+emojis.1f5de.name: Összetekert újság
+emojis.1f5de.keywords: hírek,újság,papír, összetekert
+emojis.1f4f0.name: Újság
+emojis.1f4f0.keywords: communication,news,newspaper,paper
+emojis.1f4d3.name: Jegyzettömb
+emojis.1f4d3.keywords: jegyzettömb
+emojis.1f4d5.name: Csukott könyv
+emojis.1f4d5.keywords: könyv,csukott
+emojis.1f4d7.name: Zöld könyv
+emojis.1f4d7.keywords: könyv,zöld
+emojis.1f4d8.name: Kék könyv
+emojis.1f4d8.keywords: kék,könyv
+emojis.1f4d9.name: Narancsszínű könyv
+emojis.1f4d9.keywords: könyv,narancssárga
+emojis.1f4d4.name: Jegyzettömb díszkötésben
+emojis.1f4d4.keywords: könyv,borító,díszkötés,jegyzettömb
+emojis.1f4d2.name: Nyilvántartás
+emojis.1f4d2.keywords: nyilvántartás,jegyzettömb
+emojis.1f4da.name: Könyvek
+emojis.1f4da.keywords: könyv,könyvek
+emojis.1f4d6.name: Nyitott könyv
+emojis.1f4d6.keywords: könyv,nyitott
+emojis.1f517.name: Kapocs szimbólum
+emojis.1f517.keywords: hivatkozás
+emojis.1f4ce.name: Iratkapocs
+emojis.1f4ce.keywords: iratkapocs
+emojis.1f587.name: Összefűzött iratkapcsok
+emojis.1f587.keywords: kommunikáció,hivatkozás,iratkapocs
+emojis.2702.name: Olló
+emojis.2702.keywords: olló,eszköz
+emojis.1f4d0.name: Derékszögű vonalzó
+emojis.1f4d0.keywords: vonalzó,készlet,háromszög
+emojis.1f4cf.name: Egyenes vonalzó
+emojis.1f4cf.keywords: vonalzó,egyenes
+emojis.1f4cc.name: Rajzszög
+emojis.1f4cc.keywords: kitűzés,rajzszög
+emojis.1f4cd.name: Gombfejű rajzszeg
+emojis.1f4cd.keywords: kitűzés,rajzszög
+emojis.1f510.name: Zárt lakat kulccsal
+emojis.1f510.keywords: zárt,lakat,zár,biztonságos
+emojis.1f512.name: Zárolás
+emojis.1f512.keywords: zárt,lakat
+emojis.1f513.name: Nyitott zár
+emojis.1f513.keywords: zár,nyitva,kinyit
+emojis.1f50f.name: Lakat töltőtollal
+emojis.1f50f.keywords: tinta,lakat,tollhegy,toll,magánszféra
+emojis.1f58a.name: Balra lefelé mutató golyóstoll
+emojis.1f58a.keywords: golyóstoll,kommunikáció,toll
+emojis.1f58b.name: Balra lefelé mutató töltőtoll
+emojis.1f58b.keywords: kommunikáció,szökőkút,toll
+emojis.2712.name: Tollhegy
+emojis.2712.keywords: tollhegy,toll
+emojis.1f4dd.name: Feljegyzés
+emojis.1f4dd.keywords: kommunikáció,feljegyzés,ceruza
+emojis.270f.name: Ceruza
+emojis.270f.keywords: ceruza
+emojis.1f58d.name: Balra lefelé mutató kréta
+emojis.1f58d.keywords: kommunikáció,kréta
+emojis.1f58c.name: Balra lefelé mutató ecset
+emojis.1f58c.keywords: kommunikáció,ecset, festmény
+emojis.1f50d.name: Balra dőlő nagyító
+emojis.1f50d.keywords: üveg,nagyító,keresés,eszköz
+emojis.1f50e.name: Jobbra dőlő nagyító
+emojis.1f50e.keywords: üveg,nagyító,keresés,eszköz
+emojis.2764.name: Mélyvörös szív
+emojis.2764.keywords: szív
+emojis.1f9e1.name: Narancs szív
+emojis.1f9e1.keywords: heart,orange
+emojis.1f49b.name: Sárga szív
+emojis.1f49b.keywords: szív,sárga
+emojis.1f49a.name: Zöld szív
+emojis.1f49a.keywords: szív,zöld
+emojis.1f499.name: Kék szív
+emojis.1f499.keywords: szív,kék
+emojis.1f49c.name: Lila szív
+emojis.1f49c.keywords: szív,lila
+emojis.1f5a4.name: Fekete szív
+emojis.1f5a4.keywords: szív,fekete,gonosz,bűnös
+emojis.1f494.name: Összetört szív
+emojis.1f494.keywords: szív,összetör,megtört
+emojis.2763.name: Szív alakú felkiáltójel
+emojis.2763.keywords: szív,felkiáltó,jel,központozás
+emojis.1f495.name: Két szív
+emojis.1f495.keywords: szív,szerelem
+emojis.1f49e.name: Forgó szívek
+emojis.1f49e.keywords: szív,forgó
+emojis.1f493.name: Dobogó szív
+emojis.1f493.keywords: szív,szívverés,szívdobogás,pulzálás
+emojis.1f497.name: Növekvő szív
+emojis.1f497.keywords: szív,izgatott,erősödő,pulzus,ideges
+emojis.1f496.name: Sziporkázó szív
+emojis.1f496.keywords: szív,izgatott,sziporkázó
+emojis.1f498.name: Nyíllal átlőtt szív
+emojis.1f498.keywords: szív,nyíl,Cupido,románc
+emojis.1f49d.name: Szív szalaggal
+emojis.1f49d.keywords: szív,szalag,Valentin
+emojis.1f49f.name: Szíves dekoráció
+emojis.1f49f.keywords: szív
+emojis.262e.name: Békejel
+emojis.262e.keywords: béke
+emojis.271d.name: Latin kereszt
+emojis.271d.keywords: keresztény,kereszt,vallás
+emojis.262a.name: Hold és csillag
+emojis.262a.keywords: iszlám,muszlim,vallás
+emojis.1f549.name: Om szimbólum
+emojis.1f549.keywords: hindu,om,vallás
+emojis.2638.name: Dharmacsakra
+emojis.2638.keywords: buddhista,dharmacsakra,vallás,kerék
+emojis.2721.name: Dávid-csillag
+emojis.2721.keywords: Dávid,zsidó,zsidó,vallás,csillag
+emojis.1f52f.name: Hatágú csillag ponttal a közepén
+emojis.1f52f.keywords: szerencse,csillag
+emojis.1f54e.name: Kilencágú gyertyatartó
+emojis.1f54e.keywords: kandeláber,gyertyaszál,menóra,vallás
+emojis.262f.name: Jin-jang
+emojis.262f.keywords: vallás,tao,taoista,jang,jin
+emojis.2626.name: Ortodox kereszt
+emojis.2626.keywords: keresztény,kereszt,vallás
+emojis.1f6d0.name: Kegyhely
+emojis.1f6d0.keywords: vallás,istennek való szolgálat
+emojis.26ce.name: Kígyótartó
+emojis.26ce.keywords: bearer,ophiuchus,serpent,snake,zodiac
+emojis.2648.name: Kos
+emojis.2648.keywords: kos,kos,csillagjegy
+emojis.2649.name: Bika
+emojis.2649.keywords: bull,ox,taurus,zodiac
+emojis.264a.name: Ikrek
+emojis.264a.keywords: gemini,ikrek,csillagjegy
+emojis.264b.name: Rák
+emojis.264b.keywords: cancer,crab,zodiac
+emojis.264c.name: Oroszlán
+emojis.264c.keywords: leo,oroszlán,csillagjegy
+emojis.264d.name: Szűz
+emojis.264d.keywords: szűz,szűz,virgo,csillagjegy
+emojis.264e.name: Mérleg
+emojis.264e.keywords: egyensúly,igazság,könyv,mérleg,csillagjegy
+emojis.264f.name: Skorpió
+emojis.264f.keywords: scorpio,scorpion,scorpius,zodiac
+emojis.2650.name: Nyilas
+emojis.2650.keywords: nyilas,sagittarius,csillagjegy
+emojis.2651.name: Bak
+emojis.2651.keywords: capricorn,goat,zodiac
+emojis.2652.name: Vízöntő
+emojis.2652.keywords: vízöntő,hordozó,víz,csillagjegy
+emojis.2653.name: Halak
+emojis.2653.keywords: fish,pisces,zodiac
+emojis.1f194.name: Bekeretezett ID (azonosító) felirat
+emojis.1f194.keywords: azonosító,személyazonosság
+emojis.269b.name: Atom szimbólum
+emojis.269b.keywords: ateista,atom
+emojis.2695.name: Egészségügyi személyzet
+emojis.2695.keywords: egészség,gondozás,orvos,gyógyszer,rúd,kígyó
+emojis.2622.name: Radioaktivitás jele
+emojis.2622.keywords: radioaktív
+emojis.2623.name: Biológia veszély jele
+emojis.2623.keywords: biológiai veszély
+emojis.1f4f4.name: Mobiltelefon kikapcsolva
+emojis.1f4f4.keywords: cella,kommunikáció,mobil,ki,telefon,telefon
+emojis.1f4f3.name: Rezgő mód
+emojis.1f4f3.keywords: cella,kommunikáció,mobil,üzemmód,telefon,telefon,rezgés
+emojis.1f236.name: Bekeretezett 6709-es egyesített kínai, japán és koreai képírásjel
+emojis.1f236.keywords: bekeretezett létezés képírásjel,japán
+emojis.1f21a.name: Bekeretezett 7121-es egyesített kínai, japán és koreai képírásjel
+emojis.1f21a.keywords: bekeretezett tagadás képírásjel,japán
+emojis.1f238.name: Bekeretezett 7533-as egyesített kínai, japán és koreai képírásjel
+emojis.1f238.keywords: bekeretezett alkalmaz képírásjel,kínai
+emojis.1f23a.name: Bekeretezett 55b6-os egyesített kínai, japán és koreai ideogramma
+emojis.1f23a.keywords: bekeretezett üzemel képírásjel,kínai
+emojis.1f237.name: Bekeretezett 6708-as egyesített kínai, japán és koreai képírásjel
+emojis.1f237.keywords: bekeretezett hold képírásjel,japán
+emojis.2734.name: Nyolcágú csillag
+emojis.2734.keywords: csillag
+emojis.1f19a.name: Bekeretezett VS (kontra) felirat
+emojis.1f19a.keywords: kontra (versus),vs
+emojis.1f251.name: Az elfogadás bekarikázott képírásjele
+emojis.1f251.keywords: az elfogadás bekarikázott képírásjele,kínai
+emojis.1f4ae.name: Fehér virág
+emojis.1f4ae.keywords: virág
+emojis.1f250.name: Az előny bekarikázott képírásjele
+emojis.1f250.keywords: circled advantage ideograph,japanese
+emojis.3299.name: A titok bekarikázott képírásjele
+emojis.3299.keywords: circled secret ideograph,chinese,ideograph,secret
+emojis.3297.name: A gratuláció bekarikázott képírásjele
+emojis.3297.keywords: circled congratulate ideograph,chinese
+emojis.1f234.name: Bekeretezett 5408-as egyesített kínai, japán és koreai képírásjel
+emojis.1f234.keywords: squared together ideograph,chinese
+emojis.1f235.name: Bekeretezett 6e80-as egyesített kínai, japán és koreai ideogramma
+emojis.1f235.keywords: squared fullness ideograph,chinese
+emojis.1f239.name: Bekeretezett 5272-es egyesített kínai, japán és koreai ideogramma
+emojis.1f239.keywords: bekeretezett osztott képírásjel,japán
+emojis.1f232.name: Bekeretezett 7981-es egyesített kínai, japán és koreai ideogramma
+emojis.1f232.keywords: squared prohibit ideograph,japanese
+emojis.1f170.name: Bekeretezett negatív latin a nagybetű
+emojis.1f170.keywords: A,vér
+emojis.1f171.name: Bekeretezett negatív latin b nagybetű
+emojis.1f171.keywords: v,vér
+emojis.1f18e.name: Bekeretezett negatív AB felirat
+emojis.1f18e.keywords: AB,vér
+emojis.1f191.name: Bekeretezett C és L betű
+emojis.1f191.keywords: cl
+emojis.1f17e.name: Bekeretezett negatív latin o nagybetű
+emojis.1f17e.keywords: vércsoport,0
+emojis.1f198.name: Bekeretezett SOS felirat
+emojis.1f198.keywords: segítség,sos
+emojis.26d4.name: Behajtani tilos
+emojis.26d4.keywords: belépés,tilos,nem,nem,tilos,forgalom
+emojis.1f4db.name: Névtábla
+emojis.1f4db.keywords: jelvény,név
+emojis.1f6ab.name: Belépni tilos jel
+emojis.1f6ab.keywords: belépés,tilos,nem,nem,tilos
+emojis.274c.name: Kereszt
+emojis.274c.keywords: mégse,számjegy,szorzás,szoroz,x
+emojis.2b55.name: Vastag nagy kör
+emojis.2b55.keywords: kör,o
+emojis.1f4a2.name: Düh szimbóluma
+emojis.1f4a2.keywords: mérges,komikus,őrült
+emojis.2668.name: Termálvizek
+emojis.2668.keywords: forró,termálvizek,források,gőzölög
+emojis.1f6b7.name: Gyalogosforgalom tilos
+emojis.1f6b7.keywords: tilos,nem,nem,gyalogos,tilos
+emojis.1f6af.name: Ne szemetelj szimbólum
+emojis.1f6af.keywords: szemetelni tilos,tilos,szemét,nem,nem,tilos
+emojis.1f6b3.name: Kerékpározni tilos
+emojis.1f6b3.keywords: bicikli,kerékpár,tilos,nem,nem,tilos,jármű
+emojis.1f6b1.name: Nem ivóvíz szimbólum
+emojis.1f6b1.keywords: nem ivóvíz,inni,tilos,nem,nem,tilos,víz
+emojis.1f51e.name: 18 éves kor alatt belépni tilos jel
+emojis.1f51e.keywords: 18,korhatár,tizennyolc,tilos,nem,nem,tilos,kiskorú
+emojis.1f4f5.name: Mobiltelefon használata tilos
+emojis.1f4f5.keywords: cella,kommunikáció,tilos,mobil,nem,nem,telefon,tilos,telefon
+emojis.1f6ad.name: Dohányozni tilos szimbólum
+emojis.1f6ad.keywords: tilos a dohányzás,tilos,ne,nem,tilos,dohányzás
+emojis.2757.name: Piros felkiáltójel
+emojis.2757.keywords: felkiáltó,jel,központozás
+emojis.2755.name: Fehér felkiáltójel díszítőelem
+emojis.2755.keywords: felkiáltó,jel,kiemelés,központozás
+emojis.2753.name: Piros kérdőjel
+emojis.2753.keywords: jel,központozás,kérdő
+emojis.2754.name: Fehér kérdőjel díszítőelem
+emojis.2754.keywords: mark,outlined,punctuation,question
+emojis.203c.name: Kettős felkiáltójel
+emojis.203c.keywords: bangbang,exclamation,mark,punctuation
+emojis.2049.name: Felkiáltójel és kérdőjel párosa
+emojis.2049.keywords: felkiáltó,interrobang,jelölés,központozás,kérdő
+emojis.1f4af.name: Száz pont szimbólum
+emojis.1f4af.keywords: 100,kerek egész,száz,pont
+emojis.1f505.name: Kis fényerő szimbólum
+emojis.1f505.keywords: fényerő,parázsfény,alacsony
+emojis.1f506.name: Nagy fényerő szimbólum
+emojis.1f506.keywords: világos,fényerő
+emojis.1f531.name: Háromágú szigony embléma
+emojis.1f531.keywords: horgony,embléma,hajó,szerszám,háromágú szigony
+emojis.269c.name: Liliom
+emojis.269c.keywords: liliom
+emojis.303d.name: Részváltó jel
+emojis.303d.keywords: jelzés,rész
+emojis.26a0.name: Figyelmeztető jelzés
+emojis.26a0.keywords: figyelmeztető jelzés
+emojis.1f6b8.name: Vigyázat, gyerekek!
+emojis.1f6b8.keywords: gyermek,átkelés,gyalogos,forgalom
+emojis.1f530.name: Zöld-sárga nyíl (a kezdő autóvezetők jele Japánban)
+emojis.1f530.keywords: kezdő,chevron,zöld,japán,levél,eszköz,sárga
+emojis.267b.name: Egyetemes újrahasznosítási szimbólum
+emojis.267b.keywords: újrahasznosítás
+emojis.1f22f.name: Bekeretezett 6307-es egyesített kínai, japán és koreai képírásjel
+emojis.1f22f.keywords: bekeretezett ujj képírásjel,japán
+emojis.1f4b9.name: Grafikon emelkedő trenddel és jen szimbólummal 
+emojis.1f4b9.keywords: grafikon emelkedő jen-árfolyammal,bank,grafikon, pénznem,gráf,növekedés,piac,pénz, emelkedés,felfelé,jen
+emojis.2747.name: Szikra
+emojis.2747.keywords: csillám
+emojis.2733.name: Nyolcágú csillag
+emojis.2733.keywords: csillag
+emojis.274e.name: Bekeretezett negatív x
+emojis.274e.keywords: pipa,négyzet
+emojis.2705.name: Bekeretezett vastag pipajel
+emojis.2705.keywords: pipa jel, jel
+emojis.1f4a0.name: Gyémánt ponttal a közepén
+emojis.1f4a0.keywords: képregény,káró,geometriai,belső
+emojis.1f300.name: Ciklon
+emojis.1f300.keywords: ciklon,szédülés,sodrás,forgószél,időjárás
+emojis.27bf.name: Dupla kötélhurok
+emojis.27bf.keywords: görbület,dupla,hurok
+emojis.1f310.name: Földgömb délkörökkel
+emojis.1f310.keywords: föld,földgömb,délkörök,világ
+emojis.24c2.name: Bekarikázott latin m nagybetű
+emojis.24c2.keywords: bekarikázott,m betű
+emojis.1f3e7.name: Pénzkiadó automata
+emojis.1f3e7.keywords: atm-jelzés,atm,automata,bank,kiadó
+emojis.1f6be.name: WC
+emojis.1f6be.keywords: mosdó,mosdó,mellékhelyiség,víz,wc
+emojis.267f.name: Kerekesszék szimbólum
+emojis.267f.keywords: megközelíthetőség,kerekesszék
+emojis.1f17f.name: Bekeretezett negatív latin p nagybetű
+emojis.1f17f.keywords: parkolás
+emojis.1f233.name: Bekeretezett 7a7a egyesített kínai, japán és koreai ideogramma
+emojis.1f233.keywords: bekeretezett üres képírásjel,kínai
+emojis.1f202.name: Bekeretezett katakana sa szimbólum
+emojis.1f202.keywords: japán
+emojis.1f6c2.name: Útlevél-ellenőrzés
+emojis.1f6c2.keywords: ellenőrzés,útlevél
+emojis.1f6c3.name: Vám
+emojis.1f6c3.keywords: vám
+emojis.1f6c4.name: Poggyászátvétel
+emojis.1f6c4.keywords: poggyász,kereső
+emojis.1f6c5.name: Csomagmegőrző
+emojis.1f6c5.keywords: csomag,elvesztett csomag,zár,bőrönd
+emojis.1f6b0.name: Ivóvíz szimbólum
+emojis.1f6b0.keywords: inni,ivóvíz,víz
+emojis.1f6b9.name: Férfi szimbólum
+emojis.1f6b9.keywords: férfi mosdó,mosdó,férfi,mellékhelyiség,wc,férfiak,férfi
+emojis.2642.name: Férfi nemi szimbólum
+emojis.2642.keywords: férfi,férfi,férfiak
+emojis.1f6ba.name: Nő szimbólum
+emojis.1f6ba.keywords: női mosdó,mosdó,mellékhelyiség,wc,nő,nők,női
+emojis.2640.name: Női nemi szimbólum
+emojis.2640.keywords: női,nő,nők
+emojis.1f6bc.name: Baba szimbólum
+emojis.1f6bc.keywords: baba,csere
+emojis.1f6bb.name: Mosdó
+emojis.1f6bb.keywords: mosdó,mellékhelyiség,wc
+emojis.1f6ae.name: Dobd a szemetet a szemetesbe szimbólum
+emojis.1f6ae.keywords: szemét a szemetesben szimbólum,hulladék,szemetes
+emojis.1f3a6.name: Mozi
+emojis.1f3a6.keywords: tevékenység,kamera,mozi,szórakozás,film, mozifilm
+emojis.1f4f6.name: Antenna térerőjelzéssel
+emojis.1f4f6.keywords: antenna,rúd,cella,kommunikáció,mobil,telefon,jel,telefon
+emojis.1f201.name: Bekeretezett katakana koko szimbólum
+emojis.1f201.keywords: japán
+emojis.1f196.name: Bekeretezett NG (nem jó) felirat
+emojis.1f196.keywords: nem jó
+emojis.1f197.name: Kék mezőben OK felirat
+emojis.1f197.keywords: rendben
+emojis.1f199.name: Bekeretezett UP! (Fel!) felirat
+emojis.1f199.keywords: jelzés,felfelé
+emojis.1f192.name: Bekeretezett COOL (király) felirat
+emojis.1f192.keywords: király
+emojis.1f195.name: Bekeretezett NEW (új) felirat
+emojis.1f195.keywords: új
+emojis.1f193.name: Bekeretezett FREE (ingyenes) felirat
+emojis.1f193.keywords: ingyenes
+emojis.30-20e3.name: Nulla billentyű
+emojis.30-20e3.keywords: 0,billentyű,nulla
+emojis.31-20e3.name: 1-es billentyű
+emojis.31-20e3.keywords: 1,billentyű,egy
+emojis.32-20e3.name: 2-es billentyű
+emojis.32-20e3.keywords: 2,billentyű,kettő
+emojis.33-20e3.name: 3-as billentyű
+emojis.33-20e3.keywords: 3,billentyű,három
+emojis.34-20e3.name: 4-es billentyű
+emojis.34-20e3.keywords: 4,négy,billentyű
+emojis.35-20e3.name: 5-ös billentyű
+emojis.35-20e3.keywords: 5,öt,billentyű
+emojis.36-20e3.name: 6-os billentyű
+emojis.36-20e3.keywords: 6,billentyű,hat
+emojis.37-20e3.name: 7-es billentyű
+emojis.37-20e3.keywords: 7,billentyű,hét
+emojis.38-20e3.name: 8-as billentyű
+emojis.38-20e3.keywords: 8,nyolc,billentyű
+emojis.39-20e3.name: 9-es billentyű
+emojis.39-20e3.keywords: 9,billentyű,kilenc
+emojis.1f51f.name: 10-es billentyű
+emojis.1f51f.keywords: 10,billentyű,tíz
+emojis.1f522.name: Adatbeviteli szimbólum számokhoz
+emojis.1f522.keywords: 1234,bevitel,számok
+emojis.25b6.name: Jobbra mutató háromszög
+emojis.25b6.keywords: lejátszás gomb,nyíl,lejátszás,jobb,háromszög
+emojis.23f8.name: Két függőleges vonal
+emojis.23f8.keywords: szünet gomb,sáv,dupla,szünet,függőleges
+emojis.23ef.name: Jobbra mutató háromszög két függőleges vonallal
+emojis.23ef.keywords: lejátszás vagy szünet gomb,nyíl,szünet,lejátszás,jobb,háromszög
+emojis.23f9.name: Megállítást jelző négyzet
+emojis.23f9.keywords: megállj gomb,négyzet,leállítás
+emojis.23fa.name: Felvételt jelző kör
+emojis.23fa.keywords: felvétel gomb,kör,felvétel
+emojis.23cf.name: Kiadás szimbóluma
+emojis.23cf.keywords: kiadás gomb
+emojis.23ed.name: Két jobbra mutató háromszög függőleges vonallal
+emojis.23ed.keywords: következő szám gomb,nyíl,következő jelenet,következő zeneszám,háromszög
+emojis.23ee.name: Két balra mutató háromszög függőleges vonallal
+emojis.23ee.keywords: ugrás az utolsó számra gomb,nyíl,előző jelenet,előző zeneszám,háromszög
+emojis.23e9.name: Két jobbra mutató háromszög
+emojis.23e9.keywords: gyors előretekerés gomb,nyíl,dupla,gyors,előretekerés
+emojis.23ea.name: Két balra mutató háromszög
+emojis.23ea.keywords: gyors visszatekerés gomb,nyíl,dupla,visszatekerés
+emojis.1f500.name: Jobbra mutató, egymást keresztező nyilak
+emojis.1f500.keywords: random lejátszás gomb, nyíl,keresztezett
+emojis.1f501.name: Az óramutató járása szerint körbeforduló nyilak
+emojis.1f501.keywords: ismétlés gomb,nyíl,az óramutató járása szerint,ismétlés
+emojis.1f502.name: Óramutató járásával megegyezően, balra és jobbra körbe mutató nyilak bekarikázott egyessel
+emojis.1f502.keywords: ismétlés gomb,nyíl,az óramutató járása szerint,egyszer
+emojis.25c0.name: Balra mutató háromszög
+emojis.25c0.keywords: visszajátszás gomb,nyíl,bal,vissza,háromszög
+emojis.1f53c.name: Felfelé mutató háromszög
+emojis.1f53c.keywords: felfelé mutató gomb,nyíl,gomb,piros
+emojis.1f53d.name: Lefelé mutató háromszög
+emojis.1f53d.keywords: lefelé mutató gomb,nyíl,gomb,le,piros
+emojis.23eb.name: Két felfelé mutató háromszög
+emojis.23eb.keywords: felfelé mutató gyorsgomb,nyíl,dupla
+emojis.23ec.name: Két lefelé mutató háromszög
+emojis.23ec.keywords: lefelé mutató gyorsgomb,nyíl,dupla,le
+emojis.27a1.name: Jobbra mutató nyíl
+emojis.27a1.keywords: jobbra mutató nyíl,nyíl,irány,fő égtájak közötti,keleti
+emojis.2b05.name: Balra mutató nyíl
+emojis.2b05.keywords: balra mutató nyíl,nyíl,irány,fő égtájak közötti,nyugati
+emojis.2b06.name: Felfelé mutató nyíl
+emojis.2b06.keywords: felfelé mutató nyíl,nyíl,irány,fő égtájak közötti,észak
+emojis.2b07.name: Lefelé mutató nyíl
+emojis.2b07.keywords: lefelé mutató nyíl,nyíl,irány,fő égtájak közötti,lefelé,dél
+emojis.2197.name: Északkeletre mutató nyíl
+emojis.2197.keywords: jobbra felfelé mutató nyíl,nyíl,irány,fő égtájak közötti,észak-keleti
+emojis.2198.name: Délkeletre mutató nyíl
+emojis.2198.keywords: jobbra lefelé mutató nyíl,nyíl,irány,fő égtájak közötti,dél-keleti
+emojis.2199.name: Délnyugatra mutató nyíl
+emojis.2199.keywords: balra lefelé mutató nyíl,nyíl,irány,fő égtájak közötti,délnyugati
+emojis.2196.name: Északnyugatra mutató nyíl
+emojis.2196.keywords: balra felfelé mutató nyíl,nyíl,irány,fő égtájak közötti,északnyugati
+emojis.2195.name: Fel-le mutató nyíl
+emojis.2195.keywords: fel-le mutató nyíl,nyíl,irány,fő égtájak közötti,északnyugati
+emojis.2194.name: Balra-jobbra mutató nyíl
+emojis.2194.keywords: balra-jobbra mutató nyíl,nyíl
+emojis.1f504.name: Óramutató járásával ellentétesen, fel- és lefelé körbe mutató nyilak
+emojis.1f504.keywords: óramutató járásával ellentétesen,nyíl,óramutató járásával ellentétesen,visszafelé
+emojis.21aa.name: Jobbra kanyarodó nyíl
+emojis.21aa.keywords: jobbra kanyarodó nyíl,nyíl
+emojis.21a9.name: Balra kanyarodó nyíl
+emojis.21a9.keywords: balra kanyarodó nyíl,nyíl
+emojis.1f503.name: Óramutató járásával megegyezően, fel- és lefelé körbe mutató nyilak
+emojis.1f503.keywords: az óramutató járása szerint körbeforduló nyilak,nyíl,az óramutató járása szerint,újratöltés
+emojis.2934.name: Jobbra kanyarodó, felfelé mutató nyíl
+emojis.2934.keywords: jobbra mutató, felfelé kanyarodó nyíl,nyíl
+emojis.2935.name: Jobbra kanyarodó, lefelé mutató nyíl
+emojis.2935.keywords: jobbra mutató, lefelé kanyarodó nyíl,nyíl,lefelé
+emojis.23-20e3.name: Számot jelölő billentyű
+emojis.23-20e3.keywords: kettős kereszt,billentyű,font
+emojis.2a-20e3.name: Csillag billentyű
+emojis.2a-20e3.keywords: csillag,kalap,csillag
+emojis.2139.name: Információforrás
+emojis.2139.keywords: i,információ
+emojis.1f524.name: Adatbeviteli szimbólum latin betűkhöz
+emojis.1f524.keywords: abc,ábécé,adatbevitel,latin,betűk
+emojis.1f521.name: Adatbeviteli szimbólum latin kisbetűkhöz
+emojis.1f521.keywords: abc,adatbevitel,latin,betűk,kisbetű
+emojis.1f520.name: Adatbeviteli szimbólum latin nagybetűkhöz
+emojis.1f520.keywords: adatbevitel,latin,betűk,nagybetű
+emojis.1f523.name: Adatbeviteli szimbólum jelekhez
+emojis.1f523.keywords: bevitel
+emojis.1f3b5.name: Hangjegy
+emojis.1f3b5.keywords: tevékenység,szórakozás,zene,kotta
+emojis.1f3b6.name: Több hangjegy
+emojis.1f3b6.keywords: tevékenység,szórakozás,zene,hangjegy,kotta
+emojis.3030.name: Hullámvonal
+emojis.3030.keywords: hullámvonal,központozás,hullámos
+emojis.27b0.name: Kötélhurok
+emojis.27b0.keywords: görbület,hurok
+emojis.2714.name: Vastag pipajel
+emojis.2714.keywords: pipa jel, jel
+emojis.2795.name: Vastag összeadásjel
+emojis.2795.keywords: matematika,pozitív
+emojis.2796.name: Vastag kivonásjel
+emojis.2796.keywords: matematika,negatív
+emojis.2797.name: Vastag osztásjel
+emojis.2797.keywords: osztás,matematika
+emojis.2716.name: Vastag szorzásjel
+emojis.2716.keywords: mégse,szorzás,szoroz,x
+emojis.1f4b2.name: Vastag dollárjel
+emojis.1f4b2.keywords: pénznem,dollár,pénz
+emojis.1f4b1.name: Pénzváltó
+emojis.1f4b1.keywords: bank,pénznem,pénzváltás,pénz
+emojis.1f51a.name: END (vége) felirat, felette balra mutató nyíllal
+emojis.1f51a.keywords: nyíl,vége
+emojis.1f519.name: BACK (vissza) felirat, felette balra mutató nyíllal
+emojis.1f519.keywords: nyíl,vissza
+emojis.1f51b.name: ON! (műsoron)  felirat, felette balra-jobbra mutató nyíllal
+emojis.1f51b.keywords: nyíl,(írás),jel,be
+emojis.1f51d.name: TOP (fent) felirat, felette felfelé mutató nyíllal
+emojis.1f51d.keywords: nyíl,fent,fel
+emojis.1f51c.name: SOON (rövidesen) felirat, felette jobbra mutató nyíllal
+emojis.1f51c.keywords: nyíl,rövidesen
+emojis.2611.name: Kipipált négyzet
+emojis.2611.keywords: szavazás,négyzet,pipa
+emojis.1f518.name: Rádió gomb
+emojis.1f518.keywords: gomb,geometriai,rádió
+emojis.26aa.name: Közepes fehér kör
+emojis.26aa.keywords: kör,geometriai
+emojis.26ab.name: Közepes fekete kör
+emojis.26ab.keywords: kör,geometriai
+emojis.1f534.name: Nagy piros kör
+emojis.1f534.keywords: kör,geometriai,piros
+emojis.1f535.name: Nagy kék kör
+emojis.1f535.keywords: kék,kör,geometriai
+emojis.1f538.name: Kis narancsszínű rombusz
+emojis.1f538.keywords: káró,geometriai,narancsszínű
+emojis.1f539.name: Kis kék rombusz
+emojis.1f539.keywords: kék,káró,geometriai
+emojis.1f536.name: Nagy narancsszínű rombusz
+emojis.1f536.keywords: káró,geometriai,narancsszínű
+emojis.1f537.name: Nagy kék rombusz
+emojis.1f537.keywords: kék,káró,geometriai
+emojis.1f53a.name: Felfelé mutató piros háromszög
+emojis.1f53a.keywords: geometriai,piros
+emojis.25aa.name: Kis fekete négyzet
+emojis.25aa.keywords: geometriai,négyzet
+emojis.25ab.name: Kis fehér négyzet
+emojis.25ab.keywords: geometriai,négyzet
+emojis.2b1b.name: Nagy fekete négyzet
+emojis.2b1b.keywords: geometriai,négyzet
+emojis.2b1c.name: Nagy fehér négyzet
+emojis.2b1c.keywords: geometriai,négyzet
+emojis.1f53b.name: Lefelé mutató piros háromszög
+emojis.1f53b.keywords: le,geometriai,piros
+emojis.25fc.name: Közepes fekete négyzet
+emojis.25fc.keywords: geometriai,négyzet
+emojis.25fb.name: Közepes fehér négyzet
+emojis.25fb.keywords: geometriai,négyzet
+emojis.25fe.name: Közepesen kicsi fekete négyzet
+emojis.25fe.keywords: geometriai,négyzet
+emojis.25fd.name: Közepesen kicsi fehér négyzet
+emojis.25fd.keywords: geometriai,négyzet
+emojis.1f532.name: Fekete négyzet gomb
+emojis.1f532.keywords: gomb,geometriai,négyzet
+emojis.1f533.name: Fehér négyzet gomb
+emojis.1f533.keywords: gomb,geometriai,körberajzolt,négyzet
+emojis.1f508.name: Hangszóró
+emojis.1f508.keywords: hangszóró,hangerő
+emojis.1f509.name: Hangszóró egy hanghullámmal
+emojis.1f509.keywords: bekapcsolt hangszóró,alacsony,hangszóró,hangerő,hullám
+emojis.1f50a.name: Hangszóró három hanghullámmal
+emojis.1f50a.keywords: hangos hangszóró,3,szórakozás,nagyon,hangos,hangszóró,három,hangerő
+emojis.1f507.name: Áthúzott hangszóró
+emojis.1f507.keywords: kikapcsolt hangszóró,némítás,csendes,hangszóró,hangerő
+emojis.1f4e3.name: Megafon
+emojis.1f4e3.keywords: szurkolás,kommunikáció,megafon
+emojis.1f4e2.name: Hangosbemondó
+emojis.1f4e2.keywords: kommunikáció,hangos,hangosbemondó,nyilvánosság
+emojis.1f514.name: Csengő
+emojis.1f514.keywords: csengő
+emojis.1f515.name: Áthúzott csengő
+emojis.1f515.keywords: áthúzott harang,harang,tilos,némít,ne,nem,tilos,csendes,néma
+emojis.1f0cf.name: Joker kártyalap
+emojis.1f0cf.keywords: kártya,szórakozás,játék,,joker,játszik
+emojis.1f004.name: A madzsong vörös sárkányos köve
+emojis.1f004.keywords: játék,madzsong,piros
+emojis.2660.name: Pikk
+emojis.2660.keywords: kártyalap,játék,pikk,fekete lándzsahegy
+emojis.2663.name: Treff
+emojis.2663.keywords: kártya,treff,treffek,játék,fekete háromlevelű lóhere
+emojis.2665.name: Kőr
+emojis.2665.keywords: játék, kártyalap,szív,szívek,kőr
+emojis.2666.name: Káró
+emojis.2666.keywords: kártya,káró,kárók,játék,rombusz
+emojis.1f3b4.name: Virágos kártya
+emojis.1f3b4.keywords: tevékenység,kártya,szórakozás,virág,játék,japán,játszani
+emojis.1f441-200d-1f5e8.name: Szem egy szövegbuborékban
+emojis.1f441-200d-1f5e8.keywords: buborék,szem,beszéd,tanú
+emojis.1f5e8.name: Bal oldali szövegbuborék
+emojis.1f5e8.keywords: párbeszéd,beszéd
+emojis.1f4ad.name: Gondolatbuborék
+emojis.1f4ad.keywords: léggömb,buborék,képregény,gondolat
+emojis.1f5ef.name: Jobb oldali mérges szövegbuborék
+emojis.1f5ef.keywords: mérges,léggömb,buborék,őrült
+emojis.1f4ac.name: Szövegbuborék
+emojis.1f4ac.keywords: léggömb,buborék,képregény,beszélgetés,beszéd
+emojis.1f550.name: Óralap – 1 óra
+emojis.1f550.keywords: 00,1,1:00,óra,óra,egy
+emojis.1f551.name: Óralap – 2 óra
+emojis.1f551.keywords: 00,2,2:00,óra,óra,kettő
+emojis.1f552.name: Óralap – 3 óra
+emojis.1f552.keywords: 00,3,3:00,óra,óra,három
+emojis.1f553.name: Óralap – 4 óra
+emojis.1f553.keywords: 00,4,4:00,óra,négy,óra
+emojis.1f554.name: Óralap – 5 óra
+emojis.1f554.keywords: 00,5,5:00,óra,öt,óra
+emojis.1f555.name: Óralap – 6 óra
+emojis.1f555.keywords: 00,6,6:00,óra,óra,hat
+emojis.1f556.name: Óralap – 7 óra
+emojis.1f556.keywords: 00,7,7:00,óra,hét,óra
+emojis.1f557.name: Óralap – 8 óra
+emojis.1f557.keywords: 00,8,8:00,óra,nyolc,óra
+emojis.1f558.name: Óralap – 9 óra
+emojis.1f558.keywords: 00,9,9:00,óra,kilenc,óra
+emojis.1f559.name: Óralap – 10 óra
+emojis.1f559.keywords: 00,10,10:00,óra,óra,tíz
+emojis.1f55a.name: Óralap – 11 óra
+emojis.1f55a.keywords: 00,11,11:00,óra,tizenegy,óra
+emojis.1f55b.name: Óralap – 12 óra
+emojis.1f55b.keywords: 00,12,12:00,óra,óra,tizenkettő
+emojis.1f55c.name: Óralap – 1:30
+emojis.1f55c.keywords: 1,1:30,30,óra,egy,harminc
+emojis.1f55d.name: Óralap – 2:30
+emojis.1f55d.keywords: 2,2:30,30,óra,harminc,kettő
+emojis.1f55e.name: Óralap – 3:30
+emojis.1f55e.keywords: 3,3:30,30,óra,harminc,három
+emojis.1f55f.name: Óralap – 4:30
+emojis.1f55f.keywords: 30,4,4:30,óra,négy,harminc
+emojis.1f560.name: Óralap – 5:30
+emojis.1f560.keywords: 30,5,5:30,óra,öt,harminc
+emojis.1f561.name: Óralap – 6:30
+emojis.1f561.keywords: 30,6,6:30,óra,hat,harminc
+emojis.1f562.name: Óralap – 7:30
+emojis.1f562.keywords: 30,7,7:30,óra,hét,harminc
+emojis.1f563.name: Óralap – 8:30
+emojis.1f563.keywords: 30,8,8:30,óra,nyolc,harminc
+emojis.1f564.name: Óralap – 9:30
+emojis.1f564.keywords: 30,9,9:30,óra,kilenc,harminc
+emojis.1f565.name: Óralap – 10:30
+emojis.1f565.keywords: 10,10:30,30,óra,tíz,harminc
+emojis.1f566.name: Óralap – 11:30
+emojis.1f566.keywords: 11,11:30,30,óra,tizenegy,harminc
+emojis.1f567.name: Óralap – 12:30
+emojis.1f567.keywords: 12,12:30,30,óra,harminc,tizenkettő
+emojis.1f1e6.name: Felségjelzés a betű
+emojis.1f1e6.keywords: 
+emojis.1f1e7.name: Felségjelzés b betű
+emojis.1f1e7.keywords: 
+emojis.1f1e8.name: Felségjelzés c betű
+emojis.1f1e8.keywords: 
+emojis.1f1e9.name: Felségjelzés d betű
+emojis.1f1e9.keywords: 
+emojis.1f1ea.name: Felségjelzés e betű
+emojis.1f1ea.keywords: 
+emojis.1f1eb.name: Felségjelzés f betű
+emojis.1f1eb.keywords: 
+emojis.1f1ec.name: Felségjelzés g betű
+emojis.1f1ec.keywords: 
+emojis.1f1ed.name: Felségjelzés h betű
+emojis.1f1ed.keywords: 
+emojis.1f1ee.name: Felségjelzés i betű
+emojis.1f1ee.keywords: 
+emojis.1f1ef.name: Felségjelzés j betű
+emojis.1f1ef.keywords: 
+emojis.1f1f0.name: Felségjelzés k betű
+emojis.1f1f0.keywords: 
+emojis.1f1f1.name: Felségjelzés l betű
+emojis.1f1f1.keywords: 
+emojis.1f1f2.name: Felségjelzés m betű
+emojis.1f1f2.keywords: 
+emojis.1f1f3.name: Felségjelzés n betű
+emojis.1f1f3.keywords: 
+emojis.1f1f4.name: Felségjelzés o betű
+emojis.1f1f4.keywords: 
+emojis.1f1f5.name: Felségjelzés p betű
+emojis.1f1f5.keywords: 
+emojis.1f1f6.name: Felségjelzés q betű
+emojis.1f1f6.keywords: 
+emojis.1f1f7.name: Felségjelzés r betű
+emojis.1f1f7.keywords: 
+emojis.1f1f8.name: Felségjelzés s betű
+emojis.1f1f8.keywords: 
+emojis.1f1f9.name: Felségjelzés t betű
+emojis.1f1f9.keywords: 
+emojis.1f1fa.name: Felségjelzés u betű
+emojis.1f1fa.keywords: 
+emojis.1f1fb.name: Felségjelzés v betű
+emojis.1f1fb.keywords: 
+emojis.1f1fc.name: Felségjelzés w betű
+emojis.1f1fc.keywords: 
+emojis.1f1fd.name: Felségjelzés x betű
+emojis.1f1fd.keywords: 
+emojis.1f1fe.name: Felségjelzés y betű
+emojis.1f1fe.keywords: 
+emojis.1f1ff.name: Felségjelzés z betű
+emojis.1f1ff.keywords: 
+emojis.1f3f3.name: Lengedező fehér zászló
+emojis.1f3f3.keywords: zászló,lengetés
+emojis.1f3f4.name: Lengedező fekete zászló
+emojis.1f3f4.keywords: zászló,lengetés
+emojis.1f3c1.name: Kockás zászló
+emojis.1f3c1.keywords: tarka,kockás,zászló,autóversenyzés
+emojis.1f6a9.name: Háromszögű zászló póznán
+emojis.1f6a9.keywords: zászló,pózna
+emojis.1f38c.name: Keresztbe tett zászlók
+emojis.1f38c.keywords: tevékenység,ünneplés,keresztbe,keresztezett,zászló,japán
+emojis.1f3f4-200d-2620-fe0f.name: Halálfejes zászló
+emojis.1f3f4-200d-2620-fe0f.keywords: zászló,kalóz
+emojis.1f3f3-fe0f-200d-1f308.name: Szivárványszínű zászló
+emojis.1f3f3-fe0f-200d-1f308.keywords: zászló,szivárvány
+emojis.1f1e6-1f1e8.name: Az Ascension-sziget zászlaja
+emojis.1f1e6-1f1e8.keywords: Ascension,zászló,sziget
+emojis.1f1e6-1f1e9.name: Andorra zászlaja
+emojis.1f1e6-1f1e9.keywords: Andorra,zászló
+emojis.1f1e6-1f1ea.name: Az Egyesült Arab Emírségek zászlaja
+emojis.1f1e6-1f1ea.keywords: Emírségek,zászló,EEA,Egyesült
+emojis.1f1e6-1f1eb.name: Afganisztán zászlaja
+emojis.1f1e6-1f1eb.keywords: Afganisztán,zászló
+emojis.1f1e6-1f1ec.name: Antigua és Barbuda zászlaja
+emojis.1f1e6-1f1ec.keywords: Antigua,Barbuda,zászló
+emojis.1f1e6-1f1ee.name: Anguilla zászlaja
+emojis.1f1e6-1f1ee.keywords: Anguilla,zászló
+emojis.1f1e6-1f1f1.name: Albánia zászlaja
+emojis.1f1e6-1f1f1.keywords: Albánia,zászló
+emojis.1f1e6-1f1f2.name: Örményország zászlaja
+emojis.1f1e6-1f1f2.keywords: Örményország,zászló
+emojis.1f1e6-1f1f4.name: Angola zászlaja
+emojis.1f1e6-1f1f4.keywords: Angola,zászló
+emojis.1f1e6-1f1f6.name: Az Antarktisz zászlaja
+emojis.1f1e6-1f1f6.keywords: Antarktisz,zászló
+emojis.1f1e6-1f1f7.name: Argentína zászlaja
+emojis.1f1e6-1f1f7.keywords: Argentína,zászló
+emojis.1f1e6-1f1f8.name: Amerikai Szamoa zászlaja
+emojis.1f1e6-1f1f8.keywords: Amerikai,zászló,Szamoa
+emojis.1f1e6-1f1f9.name: Ausztria zászlaja
+emojis.1f1e6-1f1f9.keywords: Ausztria,zászló
+emojis.1f1e6-1f1fa.name: Ausztrália zászlaja
+emojis.1f1e6-1f1fa.keywords: Ausztrália,zászló,Heard-sziget,McDonald-szigetek
+emojis.1f1e6-1f1fc.name: Aruba zászlaja
+emojis.1f1e6-1f1fc.keywords: Aruba,zászló
+emojis.1f1e6-1f1fd.name: Az Åland-szigetek zászlaja
+emojis.1f1e6-1f1fd.keywords: Åland-szigetek, zászló
+emojis.1f1e6-1f1ff.name: Azerbajdzsán zászlaja
+emojis.1f1e6-1f1ff.keywords: Azerbajdzsán,zászló
+emojis.1f1e7-1f1e6.name: Bosznia és Hercegovina zászlaja
+emojis.1f1e7-1f1e6.keywords: Bosznia,zászló,Hercegovina
+emojis.1f1e7-1f1e7.name: Barbados zászlaja
+emojis.1f1e7-1f1e7.keywords: Barbados,zászló
+emojis.1f1e7-1f1e9.name: Banglades zászlaja
+emojis.1f1e7-1f1e9.keywords: Banglades,zászló
+emojis.1f1e7-1f1ea.name: Belgium zászlaja
+emojis.1f1e7-1f1ea.keywords: Belgium,zászló
+emojis.1f1e7-1f1eb.name: Burkina Faso zászlaja
+emojis.1f1e7-1f1eb.keywords: Burkina Faso,zászló
+emojis.1f1e7-1f1ec.name: Bulgária zászlaja
+emojis.1f1e7-1f1ec.keywords: Bulgária,zászló
+emojis.1f1e7-1f1ed.name: Bahrein zászlaja
+emojis.1f1e7-1f1ed.keywords: Bahrein,zászló
+emojis.1f1e7-1f1ee.name: Burundi zászlaja
+emojis.1f1e7-1f1ee.keywords: Burundi,zászló
+emojis.1f1e7-1f1ef.name: Benin zászlaja
+emojis.1f1e7-1f1ef.keywords: Benin,zászló
+emojis.1f1e7-1f1f1.name: Saint Barthélemy zászlaja
+emojis.1f1e7-1f1f1.keywords: Barthelemy,Barthélemy,zászló,Saint
+emojis.1f1e7-1f1f2.name: Bermuda zászlaja
+emojis.1f1e7-1f1f2.keywords: Bermuda,zászló
+emojis.1f1e7-1f1f3.name: Brunei zászlaja
+emojis.1f1e7-1f1f3.keywords: Brunei,Darussalam,zászló
+emojis.1f1e7-1f1f4.name: Bolívia zászlaja
+emojis.1f1e7-1f1f4.keywords: Bolívia,zászló
+emojis.1f1e7-1f1f6.name: Karibi Hollandia zászlaja
+emojis.1f1e7-1f1f6.keywords: Bonaire,karibi,Eustatius, zászló,Hollandia,Saba,Sint
+emojis.1f1e7-1f1f7.name: Brazília zászlaja
+emojis.1f1e7-1f1f7.keywords: Brazília,zászló
+emojis.1f1e7-1f1f8.name: A Bahama-szigetek zászlaja
+emojis.1f1e7-1f1f8.keywords: Bahama-szigetek,zászló
+emojis.1f1e7-1f1f9.name: Bhután zászlaja
+emojis.1f1e7-1f1f9.keywords: Bhután,zászló
+emojis.1f1e7-1f1fc.name: Botswana zászlaja
+emojis.1f1e7-1f1fc.keywords: Botswana,zászló
+emojis.1f1e7-1f1fe.name: A Belarusz Köztársaság zászlaja
+emojis.1f1e7-1f1fe.keywords: Belarusz Köztársaság,zászló
+emojis.1f1e7-1f1ff.name: Belize zászlaja
+emojis.1f1e7-1f1ff.keywords: Belize,zászló
+emojis.1f1e8-1f1e6.name: Kanada zászlaja
+emojis.1f1e8-1f1e6.keywords: Kanada,zászló
+emojis.1f1e8-1f1e8.name: A Kókusz-szigetek zászlaja
+emojis.1f1e8-1f1e8.keywords: Kókusz-szigetek,zászló,sziget,Keeling
+emojis.1f1e8-1f1e9.name: Kongó – Kinshasa zászlaja
+emojis.1f1e8-1f1e9.keywords: Kongó,Kongó – Kinshasa,Kongói Demokratikus Köztársaság,KDR,zászló,Kingshasa,köztársaság
+emojis.1f1e8-1f1eb.name: A Közép-afrikai Köztársaság zászlaja
+emojis.1f1e8-1f1eb.keywords: Közép-afrikai Köztársaság,zászló,köztársaság
+emojis.1f1e8-1f1ec.name: Kongó - Brazzaville zászlaja
+emojis.1f1e8-1f1ec.keywords: Brazzaville,Kongó,Kongói Köztársaság,Kongó - Brazzaville,zászló,köztársaság,Kongói Köztársaság
+emojis.1f1e8-1f1ed.name: Svájc zászlaja
+emojis.1f1e8-1f1ed.keywords: zászló,Svájc
+emojis.1f1e8-1f1ee.name: Côte d’Ivoire zászlaja
+emojis.1f1e8-1f1ee.keywords: Côte d’Ivoire, zászló,Elefántcsontpart
+emojis.1f1e8-1f1f0.name: A Cook-szigetek zászlaja
+emojis.1f1e8-1f1f0.keywords: Cook,zászló,sziget
+emojis.1f1e8-1f1f1.name: Chile zászlaja
+emojis.1f1e8-1f1f1.keywords: Chile,zászló
+emojis.1f1e8-1f1f2.name: Kamerun zászlaja
+emojis.1f1e8-1f1f2.keywords: Kamerun,zászló
+emojis.1f1e8-1f1f3.name: Kína zászlaja
+emojis.1f1e8-1f1f3.keywords: Kína,zászló
+emojis.1f1e8-1f1f4.name: Kolumbia zászlaja
+emojis.1f1e8-1f1f4.keywords: Kolumbia,zászló
+emojis.1f1e8-1f1f7.name: Costa Rica zászlaja
+emojis.1f1e8-1f1f7.keywords: Costa Rica,zászló
+emojis.1f1e8-1f1fa.name: Kuba zászlaja
+emojis.1f1e8-1f1fa.keywords: Kuba,zászló
+emojis.1f1e8-1f1fb.name: A Zöld-foki-szigetek zászlaja
+emojis.1f1e8-1f1fb.keywords: fok,Zöld-foki,zászló,zöld
+emojis.1f1e8-1f1fc.name: Curaçao zászlaja
+emojis.1f1e8-1f1fc.keywords: Antillák,Curacao,Curaçao,zászló
+emojis.1f1e8-1f1fd.name: A Karácsony-sziget zászlaja
+emojis.1f1e8-1f1fd.keywords: Karácsony,zászló,sziget
+emojis.1f1e8-1f1fe.name: Ciprus zászlaja
+emojis.1f1e8-1f1fe.keywords: Ciprus,zászló
+emojis.1f1e8-1f1ff.name: A Cseh Köztársaság zászlaja
+emojis.1f1e8-1f1ff.keywords: Cseh Köztársaság,zászló
+emojis.1f1e9-1f1ea.name: Németország zászlaja
+emojis.1f1e9-1f1ea.keywords: zászló,Németország
+emojis.1f1e9-1f1ef.name: Dzsibuti zászlaja
+emojis.1f1e9-1f1ef.keywords: Dzsibuti,zászló
+emojis.1f1e9-1f1f0.name: Dánia zászlaja
+emojis.1f1e9-1f1f0.keywords: Dánia,zászló
+emojis.1f1e9-1f1f2.name: Dominika zászlaja
+emojis.1f1e9-1f1f2.keywords: Dominika,zászló
+emojis.1f1e9-1f1f4.name: A Dominikai Köztársaság zászlaja
+emojis.1f1e9-1f1f4.keywords: Dominikai Köztársaság,zászló
+emojis.1f1e9-1f1ff.name: Algéria zászlaja
+emojis.1f1e9-1f1ff.keywords: Algéria,zászló
+emojis.1f1ea-1f1e8.name: Ecuador zászlaja
+emojis.1f1ea-1f1e8.keywords: Ecuador,zászló
+emojis.1f3f4-e0067-e0062-e0065-e006e-e0067-e007f.name: Anglia zászlaja
+emojis.1f3f4-e0067-e0062-e0065-e006e-e0067-e007f.keywords: england,flag
+emojis.1f1ea-1f1ea.name: Észtország zászlaja
+emojis.1f1ea-1f1ea.keywords: Észtország,zászló
+emojis.1f1ea-1f1ec.name: Egyiptom zászlaja
+emojis.1f1ea-1f1ec.keywords: Egyiptom,zászló
+emojis.1f1ea-1f1ed.name: Nyugat-Szahara zászlaja
+emojis.1f1ea-1f1ed.keywords: zászló,Szahara,nyugat,Nyugat-Szahara
+emojis.1f1ea-1f1f7.name: Eritrea zászlaja
+emojis.1f1ea-1f1f7.keywords: Eritrea,zászló
+emojis.1f1ea-1f1f8.name: Spanyol zászló
+emojis.1f1ea-1f1f8.keywords: zászló,Spanyolország,Ceuta,Melilla
+emojis.1f1ea-1f1f9.name: Etiópia zászlaja
+emojis.1f1ea-1f1f9.keywords: Etiópia,zászló
+emojis.1f1ea-1f1fa.name: Az Európai Unió zászlaja
+emojis.1f1ea-1f1fa.keywords: Európai Unió,zászló
+emojis.1f1eb-1f1ee.name: Finnország zászlaja
+emojis.1f1eb-1f1ee.keywords: Finnország,zászló
+emojis.1f1eb-1f1ef.name: A Fidzsi-szigetek zászlaja
+emojis.1f1eb-1f1ef.keywords: Fidzsi-szigetek,zászló
+emojis.1f1eb-1f1f0.name: A Falkland-szigetek zászlaja
+emojis.1f1eb-1f1f0.keywords: Falkland,Falkland-szigetek,zászló,sziget,Islas,Malvinas
+emojis.1f1eb-1f1f2.name: Mikronézia zászlaja
+emojis.1f1eb-1f1f2.keywords: zászló,Mikronézia
+emojis.1f1eb-1f1f4.name: A \n\n                                Feröer-szigetek zászlaja
+emojis.1f1eb-1f1f4.keywords: Feröer,zászló,sziget
+emojis.1f1eb-1f1f7.name: Francia zászló
+emojis.1f1eb-1f1f7.keywords: zászló,francia,Clipperton-sziget,Szent Márton,Szent Márton-sziget
+emojis.1f1ec-1f1e6.name: Gabon zászlaja
+emojis.1f1ec-1f1e6.keywords: zászló,Gabon
+emojis.1f1ec-1f1e7.name: Az Egyesült Királyság zászlaja
+emojis.1f1ec-1f1e7.keywords: Britannia,brit,Cornwall,Anglia,zászló,Nagy-Britannia,Írország,Észak-Írország,Skócia,EK,Union Jack,egyesült,Egyesült Királyság,Wales
+emojis.1f1ec-1f1e9.name: Grenada zászlaja
+emojis.1f1ec-1f1e9.keywords: zászló,Grenada
+emojis.1f1ec-1f1ea.name: Grúzia zászlaja
+emojis.1f1ec-1f1ea.keywords: zászló,Grúzia
+emojis.1f1ec-1f1eb.name: Francia Guyana zászlaja
+emojis.1f1ec-1f1eb.keywords: zászló,Francia,Guyana
+emojis.1f1ec-1f1ec.name: Guernsey zászlaja
+emojis.1f1ec-1f1ec.keywords: zászló,Guernsey
+emojis.1f1ec-1f1ed.name: Ghána zászlaja
+emojis.1f1ec-1f1ed.keywords: zászló,Ghána
+emojis.1f1ec-1f1ee.name: Gibraltár zászlaja
+emojis.1f1ec-1f1ee.keywords: zászló,Gibraltár
+emojis.1f1ec-1f1f1.name: Grönland zászlaja
+emojis.1f1ec-1f1f1.keywords: zászló,Grönland
+emojis.1f1ec-1f1f2.name: Gambia zászlaja
+emojis.1f1ec-1f1f2.keywords: zászló,Gambia
+emojis.1f1ec-1f1f3.name: Guinea zászlaja
+emojis.1f1ec-1f1f3.keywords: zászló,Guinea
+emojis.1f1ec-1f1f5.name: Guadeloupe zászlaja
+emojis.1f1ec-1f1f5.keywords: zászló,Guadeloupe
+emojis.1f1ec-1f1f6.name: Egyenlítői-Guinea zászlaja
+emojis.1f1ec-1f1f6.keywords: Egyenlítői-Guinea,zászló,Guinea
+emojis.1f1ec-1f1f7.name: Görögország zászlaja
+emojis.1f1ec-1f1f7.keywords: zászló,Görögország
+emojis.1f1ec-1f1f8.name: Dél-Georgia és a Déli-Sandwich-szigetek zászlaja
+emojis.1f1ec-1f1f8.keywords: zászló,Georgia, sziget,dél,Dél-Georgia,Déli-Sandwich-szigetek
+emojis.1f1ec-1f1f9.name: Guatemala zászlaja
+emojis.1f1ec-1f1f9.keywords: zászló,Guatemala
+emojis.1f1ec-1f1fa.name: Guam zászlaja
+emojis.1f1ec-1f1fa.keywords: zászló,Guam
+emojis.1f1ec-1f1fc.name: Bissau-Guinea zászlaja
+emojis.1f1ec-1f1fc.keywords: Bissau,zászló,Guinea
+emojis.1f1ec-1f1fe.name: Guyana zászlaja
+emojis.1f1ec-1f1fe.keywords: zászló,Guyana
+emojis.1f1ed-1f1f0.name: Hongkong zászlaja
+emojis.1f1ed-1f1f0.keywords: Kína,zászló,Hongkong
+emojis.1f1ed-1f1f3.name: Honduras zászlaja
+emojis.1f1ed-1f1f3.keywords: zászló,Honduras
+emojis.1f1ed-1f1f7.name: Horvátország zászlaja
+emojis.1f1ed-1f1f7.keywords: Horvátország,zászló
+emojis.1f1ed-1f1f9.name: Haiti zászlaja
+emojis.1f1ed-1f1f9.keywords: zászló,Haiti
+emojis.1f1ed-1f1fa.name: Magyarország zászlaja
+emojis.1f1ed-1f1fa.keywords: zászló,Magyarország
+emojis.1f1ee-1f1e8.name: A Kanári-szigetek zászlaja
+emojis.1f1ee-1f1e8.keywords: Kanári,zászló,sziget
+emojis.1f1ee-1f1e9.name: Indonézia zászlaja
+emojis.1f1ee-1f1e9.keywords: zászló,Indonézia
+emojis.1f1ee-1f1ea.name: Írország zászlaja
+emojis.1f1ee-1f1ea.keywords: zászló,Írország
+emojis.1f1ee-1f1f1.name: Izrael zászlaja
+emojis.1f1ee-1f1f1.keywords: zászló,Izrael
+emojis.1f1ee-1f1f2.name: A Man-sziget zászlaja
+emojis.1f1ee-1f1f2.keywords: zászló,Man-sziget
+emojis.1f1ee-1f1f3.name: India zászlaja
+emojis.1f1ee-1f1f3.keywords: zászló,India
+emojis.1f1ee-1f1f4.name: A \n\n                                Brit indiai-óceáni terület zászlaja
+emojis.1f1ee-1f1f4.keywords: brit,Chagos,zászló,Indiai-óceán,sziget,Diego Garcia
+emojis.1f1ee-1f1f6.name: Irak zászlaja
+emojis.1f1ee-1f1f6.keywords: zászló,Irak
+emojis.1f1ee-1f1f7.name: Irán zászlaja
+emojis.1f1ee-1f1f7.keywords: zászló,Irán
+emojis.1f1ee-1f1f8.name: Izland zászlaja
+emojis.1f1ee-1f1f8.keywords: zászló,Izland
+emojis.1f1ee-1f1f9.name: Olasz zászló
+emojis.1f1ee-1f1f9.keywords: zászló,Olaszország
+emojis.1f1ef-1f1ea.name: Jersey zászlaja
+emojis.1f1ef-1f1ea.keywords: zászló,Jersey
+emojis.1f1ef-1f1f2.name: Jamaica zászlaja
+emojis.1f1ef-1f1f2.keywords: zászló,Jamaica
+emojis.1f1ef-1f1f4.name: Jordánia zászlaja
+emojis.1f1ef-1f1f4.keywords: zászló,Jordánia
+emojis.1f1ef-1f1f5.name: Japán zászlaja
+emojis.1f1ef-1f1f5.keywords: zászló,Japán
+emojis.1f1f0-1f1ea.name: Kenya zászlaja
+emojis.1f1f0-1f1ea.keywords: zászló,Kenya
+emojis.1f1f0-1f1ec.name: Kirgizisztán zászlaja
+emojis.1f1f0-1f1ec.keywords: zászló,Kirgizisztán
+emojis.1f1f0-1f1ed.name: Kambodzsa zászlaja
+emojis.1f1f0-1f1ed.keywords: zászló,Kambodzsa
+emojis.1f1f0-1f1ee.name: Kiribati zászlaja
+emojis.1f1f0-1f1ee.keywords: zászló,Kiribati
+emojis.1f1f0-1f1f2.name: A Comore-szigetek zászlaja
+emojis.1f1f0-1f1f2.keywords: Comore-szigetek,zászló
+emojis.1f1f0-1f1f3.name: Saint Kitts és Nevis zászlaja
+emojis.1f1f0-1f1f3.keywords: zászló,Kitts,Nevis,Saint
+emojis.1f1f0-1f1f5.name: Észak-Korea zászlaja
+emojis.1f1f0-1f1f5.keywords: zászló,Korea,észak,Észak-Korea
+emojis.1f1f0-1f1f7.name: Dél-Korea zászlaja
+emojis.1f1f0-1f1f7.keywords: zászló,Korea,dél,Dél-Korea
+emojis.1f1f0-1f1fc.name: Kuvait zászlaja
+emojis.1f1f0-1f1fc.keywords: zászló,Kuvait
+emojis.1f1f0-1f1fe.name: A Kajmán-szigetek zászlaja
+emojis.1f1f0-1f1fe.keywords: Kajmán,zászló,szigetek
+emojis.1f1f0-1f1ff.name: Kazahsztán zászlaja
+emojis.1f1f0-1f1ff.keywords: zászló,Kazahsztán
+emojis.1f1f1-1f1e6.name: Laosz zászlaja
+emojis.1f1f1-1f1e6.keywords: zászló,Laosz
+emojis.1f1f1-1f1e7.name: Libanon zászlaja
+emojis.1f1f1-1f1e7.keywords: zászló,Libanon
+emojis.1f1f1-1f1e8.name: St. Lucia zászlaja
+emojis.1f1f1-1f1e8.keywords: zászló,Lucia,Saint
+emojis.1f1f1-1f1ee.name: Liechtenstein zászlaja
+emojis.1f1f1-1f1ee.keywords: zászló,Liechtenstein
+emojis.1f1f1-1f1f0.name: Srí Lanka zászlaja
+emojis.1f1f1-1f1f0.keywords: zászló,Srí Lanka
+emojis.1f1f1-1f1f7.name: Libéria zászlaja
+emojis.1f1f1-1f1f7.keywords: zászló,Libéria
+emojis.1f1f1-1f1f8.name: Lesotho zászlaja
+emojis.1f1f1-1f1f8.keywords: zászló,Lesotho
+emojis.1f1f1-1f1f9.name: Litvánia zászlaja
+emojis.1f1f1-1f1f9.keywords: zászló,Litvánia
+emojis.1f1f1-1f1fa.name: Luxemburg zászlaja
+emojis.1f1f1-1f1fa.keywords: zászló,Luxemburg
+emojis.1f1f1-1f1fb.name: Lettország zászlaja
+emojis.1f1f1-1f1fb.keywords: zászló,Lettország
+emojis.1f1f1-1f1fe.name: Líbia zászlaja
+emojis.1f1f1-1f1fe.keywords: zászló,Líbia
+emojis.1f1f2-1f1e6.name: Marokkó zászlaja
+emojis.1f1f2-1f1e6.keywords: zászló,Marokkó
+emojis.1f1f2-1f1e8.name: Monaco zászlaja
+emojis.1f1f2-1f1e8.keywords: zászló,Monaco
+emojis.1f1f2-1f1e9.name: Moldova zászlaja
+emojis.1f1f2-1f1e9.keywords: zászló,Moldova
+emojis.1f1f2-1f1ea.name: Montenegró zászlaja
+emojis.1f1f2-1f1ea.keywords: zászló,Montenegró
+emojis.1f1f2-1f1ec.name: Madagaszkár zászlaja
+emojis.1f1f2-1f1ec.keywords: zászló,Madagaszkár
+emojis.1f1f2-1f1ed.name: A Marshall-szigetek zászlaja
+emojis.1f1f2-1f1ed.keywords: zászló,sziget,Marshall
+emojis.1f1f2-1f1f0.name: Macedónia zászlaja
+emojis.1f1f2-1f1f0.keywords: zászló,Macedónia
+emojis.1f1f2-1f1f1.name: Mali zászlaja
+emojis.1f1f2-1f1f1.keywords: zászló,Mali
+emojis.1f1f2-1f1f2.name: Mianmar zászlaja
+emojis.1f1f2-1f1f2.keywords: Burma,zászló,Mianmar
+emojis.1f1f2-1f1f3.name: Mongólia zászlaja
+emojis.1f1f2-1f1f3.keywords: zászló,Mongólia
+emojis.1f1f2-1f1f4.name: Makaó zászlaja
+emojis.1f1f2-1f1f4.keywords: kína,zászló,Makaó,Makaó
+emojis.1f1f2-1f1f5.name: Az Északi Mariana-szigetek zászlaja
+emojis.1f1f2-1f1f5.keywords: zászló,sziget,Mariana,észak,Északi Mariana-szigetek
+emojis.1f1f2-1f1f6.name: Martinique zászlaja
+emojis.1f1f2-1f1f6.keywords: zászló,Martinique
+emojis.1f1f2-1f1f7.name: Mauritánia zászlaja
+emojis.1f1f2-1f1f7.keywords: zászló,Mauritánia
+emojis.1f1f2-1f1f8.name: Montserrat zászlaja
+emojis.1f1f2-1f1f8.keywords: zászló,Montserrat
+emojis.1f1f2-1f1f9.name: Málta zászlaja
+emojis.1f1f2-1f1f9.keywords: zászló,Málta
+emojis.1f1f2-1f1fa.name: Mauritius zászlaja
+emojis.1f1f2-1f1fa.keywords: zászló,Mauritius
+emojis.1f1f2-1f1fb.name: A Maldív-szigetek zászlaja
+emojis.1f1f2-1f1fb.keywords: zászló,Maldív-szigetek
+emojis.1f1f2-1f1fc.name: Malawi zászlaja
+emojis.1f1f2-1f1fc.keywords: zászló,Malawi
+emojis.1f1f2-1f1fd.name: Mexikó zászlaja
+emojis.1f1f2-1f1fd.keywords: zászló,Mexikó
+emojis.1f1f2-1f1fe.name: Malajzia zászlaja
+emojis.1f1f2-1f1fe.keywords: zászló,Malajzia
+emojis.1f1f2-1f1ff.name: Mozambik zászlaja
+emojis.1f1f2-1f1ff.keywords: zászló,Mozambik
+emojis.1f1f3-1f1e6.name: Namíbia zászlaja
+emojis.1f1f3-1f1e6.keywords: zászló,Namíbia
+emojis.1f1f3-1f1e8.name: Új-Kaledónia zászlaja
+emojis.1f1f3-1f1e8.keywords: zászló,új,Új-Kaledónia
+emojis.1f1f3-1f1ea.name: Niger zászlaja
+emojis.1f1f3-1f1ea.keywords: zászló,Niger
+emojis.1f1f3-1f1eb.name: A Norfolk-sziget zászlaja
+emojis.1f1f3-1f1eb.keywords: zászló,sziget,Norfolk-sziget
+emojis.1f1f3-1f1ec.name: Nigéria zászlaja
+emojis.1f1f3-1f1ec.keywords: zászló,Nigéria
+emojis.1f1f3-1f1ee.name: Nicaragua zászlaja
+emojis.1f1f3-1f1ee.keywords: zászló,Nicaragua
+emojis.1f1f3-1f1f1.name: Hollandia zászlaja
+emojis.1f1f3-1f1f1.keywords: zászló,Hollandia
+emojis.1f1f3-1f1f4.name: Norvégia zászlaja
+emojis.1f1f3-1f1f4.keywords: zászló,Norvégia,Bouvet,Spitzbergák,Jan Mayen-sziget
+emojis.1f1f3-1f1f5.name: Nepál zászlaja
+emojis.1f1f3-1f1f5.keywords: zászló,Nepál
+emojis.1f1f3-1f1f7.name: Nauru zászlaja
+emojis.1f1f3-1f1f7.keywords: zászló,Nauru
+emojis.1f1f3-1f1fa.name: Niue zászlaja
+emojis.1f1f3-1f1fa.keywords: zászló,Niue
+emojis.1f1f3-1f1ff.name: Új-Zéland zászlaja
+emojis.1f1f3-1f1ff.keywords: zászló,új,Új-Zéland
+emojis.1f1f4-1f1f2.name: Omán zászlaja
+emojis.1f1f4-1f1f2.keywords: zászló,Omán
+emojis.1f1f5-1f1e6.name: Panama zászlaja
+emojis.1f1f5-1f1e6.keywords: zászló,Panama
+emojis.1f1f5-1f1ea.name: Peru zászlaja
+emojis.1f1f5-1f1ea.keywords: zászló,Peru
+emojis.1f1f5-1f1eb.name: Francia Polinézia zászlaja
+emojis.1f1f5-1f1eb.keywords: zászló,Francia,Polinézia
+emojis.1f1f5-1f1ec.name: Pápua Új-Guinea zászlaja
+emojis.1f1f5-1f1ec.keywords: zászló,Guinea,új,Pápua Új-Guinea
+emojis.1f1f5-1f1ed.name: A Fülöp-szigetek zászlaja
+emojis.1f1f5-1f1ed.keywords: zászló,Fülöp-szigetek
+emojis.1f1f5-1f1f0.name: Pakisztán zászlaja
+emojis.1f1f5-1f1f0.keywords: zászló,Pakisztán
+emojis.1f1f5-1f1f1.name: Lengyelország zászlaja
+emojis.1f1f5-1f1f1.keywords: zászló,Lengyelország
+emojis.1f1f5-1f1f2.name: St. Pierre és Miquelon zászlaja
+emojis.1f1f5-1f1f2.keywords: zászló,Miquelon,Pierre,Saint
+emojis.1f1f5-1f1f3.name: A Pitcairn-szigetek zászlaja
+emojis.1f1f5-1f1f3.keywords: zászló,sziget,Pitcairn
+emojis.1f1f5-1f1f7.name: Puerto Rico zászlaja
+emojis.1f1f5-1f1f7.keywords: zászló,Puerto Rico
+emojis.1f1f5-1f1f8.name: A Palesztin területek zászlaja
+emojis.1f1f5-1f1f8.keywords: zászló,Palesztina
+emojis.1f1f5-1f1f9.name: Portugália zászlaja
+emojis.1f1f5-1f1f9.keywords: zászló,Portugália
+emojis.1f1f5-1f1fc.name: Palau zászlaja
+emojis.1f1f5-1f1fc.keywords: zászló,Palau
+emojis.1f1f5-1f1fe.name: Paraguay zászlaja
+emojis.1f1f5-1f1fe.keywords: zászló,Paraguay
+emojis.1f1f6-1f1e6.name: Katar zászlaja
+emojis.1f1f6-1f1e6.keywords: zászló,Katar
+emojis.1f1f7-1f1ea.name: Réunion zászlaja
+emojis.1f1f7-1f1ea.keywords: zászló,Reunion,Réunion
+emojis.1f1f7-1f1f4.name: Románia zászlaja
+emojis.1f1f7-1f1f4.keywords: zászló,Románia
+emojis.1f1f7-1f1f8.name: Szerbia zászlaja
+emojis.1f1f7-1f1f8.keywords: zászló,Szerbia
+emojis.1f1f7-1f1fa.name: Orosz zászló
+emojis.1f1f7-1f1fa.keywords: zászló,Oroszország
+emojis.1f1f7-1f1fc.name: Ruanda zászlaja
+emojis.1f1f7-1f1fc.keywords: zászló,Ruanda
+emojis.1f1f8-1f1e6.name: Szaúd-Arábia zászlaja
+emojis.1f1f8-1f1e6.keywords: zászló,Szaúd-Arábia
+emojis.1f3f4-e0067-e0062-e0073-e0063-e0074-e007f.name: Skócia zászlaja
+emojis.1f3f4-e0067-e0062-e0073-e0063-e0074-e007f.keywords: scotland,flag
+emojis.1f1f8-1f1e7.name: A Salamon-szigetek zászlaja
+emojis.1f1f8-1f1e7.keywords: zászló,sziget,Salamon
+emojis.1f1f8-1f1e8.name: A Seychelle-szigetek zászlaja
+emojis.1f1f8-1f1e8.keywords: zászló,Seychelle-szigetek
+emojis.1f1f8-1f1e9.name: Szudán zászlaja
+emojis.1f1f8-1f1e9.keywords: zászló,Szudán
+emojis.1f1f8-1f1ea.name: Svédország zászlaja
+emojis.1f1f8-1f1ea.keywords: zászló,Svédország
+emojis.1f1f8-1f1ec.name: Szingapúr zászlaja
+emojis.1f1f8-1f1ec.keywords: zászló,Szingapúr
+emojis.1f1f8-1f1ed.name: Szent Ilona zászlaja
+emojis.1f1f8-1f1ed.keywords: zászló,Ilona,szent
+emojis.1f1f8-1f1ee.name: Szlovénia zászlaja
+emojis.1f1f8-1f1ee.keywords: zászló,Szlovénia
+emojis.1f1f8-1f1f0.name: Szlovákia zászlaja
+emojis.1f1f8-1f1f0.keywords: zászló,Szlovákia
+emojis.1f1f8-1f1f1.name: Sierra Leone zászlaja
+emojis.1f1f8-1f1f1.keywords: zászló,Sierra Leone
+emojis.1f1f8-1f1f2.name: San Marino zászlaja
+emojis.1f1f8-1f1f2.keywords: zászló,San Marino
+emojis.1f1f8-1f1f3.name: Szenegál zászlaja
+emojis.1f1f8-1f1f3.keywords: zászló,Szenegál
+emojis.1f1f8-1f1f4.name: Szomália zászlaja
+emojis.1f1f8-1f1f4.keywords: zászló,Szomália
+emojis.1f1f8-1f1f7.name: Suriname zászlaja
+emojis.1f1f8-1f1f7.keywords: zászló,Suriname
+emojis.1f1f8-1f1f8.name: Dél-Szudán zászlaja
+emojis.1f1f8-1f1f8.keywords: zászló,dél,Dél-Szudán,Szudán
+emojis.1f1f8-1f1f9.name: São Tomé és Príncipe zászlaja
+emojis.1f1f8-1f1f9.keywords: zászló,Principe,Príncipe,Sao Tome,São Tomé
+emojis.1f1f8-1f1fb.name: Salvador zászlaja
+emojis.1f1f8-1f1fb.keywords: El Salvador,zászló
+emojis.1f1f8-1f1fd.name: Sint Maarten zászlaja
+emojis.1f1f8-1f1fd.keywords: zászló,Maarten,Sint
+emojis.1f1f8-1f1fe.name: Szíria zászlaja
+emojis.1f1f8-1f1fe.keywords: zászló,Szíria
+emojis.1f1f8-1f1ff.name: Szváziföld zászlaja
+emojis.1f1f8-1f1ff.keywords: zászló,Szváziföld
+emojis.1f1f9-1f1e6.name: Tristan da Cunha zászlaja
+emojis.1f1f9-1f1e6.keywords: zászló,Tristan da Cunha
+emojis.1f1f9-1f1e8.name: A Turks- és Caicos-szigetek zászlaja
+emojis.1f1f9-1f1e8.keywords: Caicos-,zászló,sziget,Turks-sziget
+emojis.1f1f9-1f1e9.name: Csád zászlaja
+emojis.1f1f9-1f1e9.keywords: Csád,zászló
+emojis.1f1f9-1f1eb.name: A Francia Déli Területek zászlaja
+emojis.1f1f9-1f1eb.keywords: Antarktisz,zászló,francia
+emojis.1f1f9-1f1ec.name: Togo zászlaja
+emojis.1f1f9-1f1ec.keywords: zászló,Togo
+emojis.1f1f9-1f1ed.name: Thaiföld zászlaja
+emojis.1f1f9-1f1ed.keywords: zászló,Thaiföld
+emojis.1f1f9-1f1ef.name: Tádzsikisztán zászlaja
+emojis.1f1f9-1f1ef.keywords: zászló,Tádzsikisztán
+emojis.1f1f9-1f1f0.name: Tokelau zászlaja
+emojis.1f1f9-1f1f0.keywords: zászló,Tokelau
+emojis.1f1f9-1f1f1.name: Timor-Leste zászlaja
+emojis.1f1f9-1f1f1.keywords: kelet,Kelet-Timor,zászló,Kelet-timori Kötársaság
+emojis.1f1f9-1f1f2.name: Türkmenisztán zászlaja
+emojis.1f1f9-1f1f2.keywords: zászló,Türkmenisztán
+emojis.1f1f9-1f1f3.name: Tunézia zászlaja
+emojis.1f1f9-1f1f3.keywords: zászló,Tunézia
+emojis.1f1f9-1f1f4.name: Tonga zászlaja
+emojis.1f1f9-1f1f4.keywords: zászló,Tonga
+emojis.1f1f9-1f1f7.name: Törökország zászlaja
+emojis.1f1f9-1f1f7.keywords: zászló,Törökország
+emojis.1f1f9-1f1f9.name: Trinidad és Tobago zászlaja
+emojis.1f1f9-1f1f9.keywords: zászló,Tobago,Trinidad
+emojis.1f1f9-1f1fb.name: Tuvalu zászlaja
+emojis.1f1f9-1f1fb.keywords: zászló,Tuvalu
+emojis.1f1f9-1f1fc.name: Tajvan zászlaja
+emojis.1f1f9-1f1fc.keywords: Kína,zászló,Tajvan
+emojis.1f1f9-1f1ff.name: Tanzánia zászlaja
+emojis.1f1f9-1f1ff.keywords: zászló,Tanzánia
+emojis.1f1fa-1f1e6.name: Ukrajna zászlaja
+emojis.1f1fa-1f1e6.keywords: zászló,Ukrajna
+emojis.1f1fa-1f1ec.name: Uganda zászlaja
+emojis.1f1fa-1f1ec.keywords: zászló,Uganda
+emojis.1f1fa-1f1f3.name: Az ENSZ zászlaja
+emojis.1f1fa-1f1f3.keywords: zászló,ENSZ,egyesült,nemzetek
+emojis.1f1fa-1f1f8.name: Az Egyesült Államok zászlaja
+emojis.1f1fa-1f1f8.keywords: Amerika,zászló,Egyesült,Államok,US,USA,lakatlan külbirtok
+emojis.1f1fa-1f1fe.name: Uruguay zászlaja
+emojis.1f1fa-1f1fe.keywords: zászló,Uruguay
+emojis.1f1fa-1f1ff.name: Üzbegisztán zászlaja
+emojis.1f1fa-1f1ff.keywords: zászló,Üzbegisztán
+emojis.1f1fb-1f1e6.name: Vatikánváros zászlaja
+emojis.1f1fb-1f1e6.keywords: zászló,Vatikán
+emojis.1f1fb-1f1e8.name: Saint Vincent és Grenadines zászlaja
+emojis.1f1fb-1f1e8.keywords: zászló,Grenadines,Saint,Vincent
+emojis.1f1fb-1f1ea.name: Venezuela zászlaja
+emojis.1f1fb-1f1ea.keywords: zászló,Venezuela
+emojis.1f1fb-1f1ec.name: A Brit Virgin-szigetek zászlaja
+emojis.1f1fb-1f1ec.keywords: brit,zászló,sziget,Virgin
+emojis.1f1fb-1f1ee.name: Az Amerikai Virgin-szigetek zászlaja
+emojis.1f1fb-1f1ee.keywords: Amerika,zászló,sziget,Egyesült,Államok,US,USA,Virgin
+emojis.1f1fb-1f1f3.name: Vietnam zászlaja
+emojis.1f1fb-1f1f3.keywords: zászló,Vietnam,Vietnam
+emojis.1f1fb-1f1fa.name: Vanuatu zászlaja
+emojis.1f1fb-1f1fa.keywords: zászló,Vanuatu
+emojis.1f3f4-e0067-e0062-e0077-e006c-e0073-e007f.name: Wales zászlaja
+emojis.1f3f4-e0067-e0062-e0077-e006c-e0073-e007f.keywords: wales,flag
+emojis.1f1fc-1f1eb.name: Wallis és Futuna zászlaja
+emojis.1f1fc-1f1eb.keywords: zászló,Futuna,Wallis
+emojis.1f1fc-1f1f8.name: Szamoa zászlaja
+emojis.1f1fc-1f1f8.keywords: zászló,Szamoa
+emojis.1f1fd-1f1f0.name: Koszovó zászlaja
+emojis.1f1fd-1f1f0.keywords: zászló,Koszovó
+emojis.1f1fe-1f1ea.name: Jemen zászlaja
+emojis.1f1fe-1f1ea.keywords: zászló,Jemen
+emojis.1f1fe-1f1f9.name: Mayotte zászlaja
+emojis.1f1fe-1f1f9.keywords: zászló,Mayotte
+emojis.1f1ff-1f1e6.name: Dél-Afrika zászlaja
+emojis.1f1ff-1f1e6.keywords: zászló,dél,Dél-Afrika
+emojis.1f1ff-1f1f2.name: Zambia zászlaja
+emojis.1f1ff-1f1f2.keywords: zászló,Zambia
+emojis.1f1ff-1f1fc.name: Zimbabwe zászlaja
+emojis.1f1ff-1f1fc.keywords: zászló,Zimbabwe
+emojis.1f1e7-1f1fb.name: A\n\n                                Bouvet-sziget zászlaja
+emojis.1f1e7-1f1fb.keywords: zászló,Bouvet,sziget
+emojis.1f1e8-1f1f5.name: A Clipperton-sziget zászlaja
+emojis.1f1e8-1f1f5.keywords: zászló,Clipperton,sziget
+emojis.1f1e9-1f1ec.name: Diego Garcia zászlaja
+emojis.1f1e9-1f1ec.keywords: zászló,Diego Garcia
+emojis.1f1ea-1f1e6.name: Ceuta és Melilla zászlaja
+emojis.1f1ea-1f1e6.keywords: zászló,Ceuta,Melilla
+emojis.1f1ed-1f1f2.name: A Heard-sziget és a McDonald-szigetek zászlaja
+emojis.1f1ed-1f1f2.keywords: zászló,Heard,sziget,McDonald
+emojis.1f1f2-1f1eb.name: Szent Márton-sziget zászlaja
+emojis.1f1f2-1f1eb.keywords: zászló,francia,Márton,szent
+emojis.1f1f8-1f1ef.name: Spitzbergák és Jan Mayen-sziget zászlaja
+emojis.1f1f8-1f1ef.keywords: zászló,Jan Mayen-sziget,Spitzbergák
+emojis.1f1fa-1f1f2.name: Az Amerikai Egyesült Államok lakatlan külbirtokainak zászlaja
+emojis.1f1fa-1f1f2.keywords: zászló,Amerika, sziget,lakatlan külbirtok, Egyesült,Egyesült Államok,US,USA

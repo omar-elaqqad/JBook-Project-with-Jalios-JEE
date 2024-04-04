@@ -1,0 +1,30 @@
+.Portlet.panel {
+  
+  .panel-heading {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 6px;
+    background-color: ~'var(--portlet-secondary-color)';
+    color: ~'var(--portlet-primary-color)';
+    
+    H2,H3,H4,H5,H6 {
+      margin: initial;
+      font-size: inherit;
+      font-weight: inherit;
+    }    
+  }  
+  .panel-title {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 8px;
+    justify-content: space-between;
+    .skinTitle {
+      flex-grow: 1;
+    }
+    .portlet-header-actions {
+      flex-shrink: 0;
+    }
+  }
+
+} 

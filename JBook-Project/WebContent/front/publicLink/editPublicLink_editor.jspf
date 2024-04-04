@@ -1,0 +1,71 @@
+<%
+List<FileDocument> docList = formHandler.getAvailableDocList();
+
+boolean showOption = formHandler.showOptions();
+String hiddenOption = "toggle-wrapper-state " + (showOption ? "" : "hide");
+String shownOption  = "toggle-wrapper-state " + (showOption ? "hide" : "");
+%>
+<jalios:modal title="<%= formHandler.getModalTitle() %>"
+              url="front/publicLink/editPublicLink.jsp"
+              css="modal-lg edit-public-link edit-public-link-editor toggle-wrapper"
+              op="<%= formHandler.getModalAction() %>"
+              button="ui.com.btn.save">
+
+  <% if (formHandler.showDocList()) { %>  
+  <jalios:field name="docIds" label="ui.fo.public-link.lbl.docs" value="<%= docList %>" required="true" mv="0">
+    <jalios:control settings="<%= new PublicationSettings().superType(FileDocument.class).disableFileInput() %>" />
+  </jalios:field>
+  <% } %>
+  
+  <jalios:field name="name" label="ui.fo.public-link.lbl.name" value="<%= formHandler.getAvailableName() %>" description="ui.fo.public-link.lbl.name.h" required="true">
+    <jalios:control settings='<%= new TextFieldSettings().placeholder("ui.fo.public-link.lbl.name.placeholder") %>' />
+  </jalios:field>
+
+  <jalios:field name="hasAccessCode" label="ui.fo.public-link.lbl.add-access-code" value="<%= formHandler.getAvailableHasAccessCode() %>" required="true">
+    <jalios:control settings="<%= new BooleanSettings() %>" /> 
+  </jalios:field>  
+  
+  <% if (formHandler.showFileType()) { %>
+  <jalios:field name="fileType" label="ui.fo.public-link.lbl.file-type" value="<%= formHandler.getAvailableFileType() %>" required="true" css="<%= hiddenOption %>">
+    <jalios:control settings='<%= new EnumerateSettings().select().enumLabels(formHandler.getDocTypeInfo(), "ui.fo.public-link.lbl.file-type.pdf").enumValues(formHandler.FILE_TYPE_ORIGINAL, formHandler.FILE_TYPE_PDF) %>' /> 
+  </jalios:field>
+  <% } %>
+  
+  <% if (formHandler.showVersion()) { %>  
+  <jalios:field name="version" label="ui.fo.public-link.lbl.version" value="<%= formHandler.getAvailableVersion() %>" required="true" css="<%= hiddenOption %>">
+    <jalios:control settings='<%= new EnumerateSettings().select().enumLabels("ui.fo.public-link.lbl.version.current", "ui.fo.public-link.lbl.version.frozen").enumValues(formHandler.VERSION_CURRENT, formHandler.VERSION_FROZEN) %>' /> 
+  </jalios:field>
+  <% } %>
+
+  <jalios:field name="maxDownload" label="ui.fo.public-link.lbl.max-download" value="<%= formHandler.getAvailableMaxDownload() %>" required="true" css="<%= hiddenOption %>">
+    <jalios:control settings='<%= new NumberSettings().numberType(Integer.class) %>' /> 
+  </jalios:field>
+
+  <jalios:field name="sendDownloadAlert" label="ui.fo.public-link.lbl.send-download-alert" value="<%= formHandler.getAvailableSendDownloadAlert() %>" required="true" css="<%= hiddenOption %>">
+    <jalios:control settings='<%= new BooleanSettings() %>' /> 
+  </jalios:field>
+
+  <jalios:field name="expiryDate" label="ui.fo.public-link.lbl.expiry-date" value="<%= formHandler.getAvailableExpiryDate() %>" required="true" css="<%= hiddenOption %>">
+    <jalios:control settings='<%= new DateSettings().displayDateOnly() %>' /> 
+  </jalios:field>
+
+  <% if (Util.notEmpty(formHandler.getPublicLinkId())) { %>
+  <input type="hidden" name="id" value="<%= formHandler.getPublicLinkId() %>" />
+  <% } %>
+  
+  <input type="hidden" name="refreshAfterClose" value="<%= formHandler.getAvailableRefreshAfterClose() %>" />
+
+  <jalios:buffer name="MODAL_BUTTON">
+  <button class="btn btn-default" data-jalios-action="toggle:hide" data-jalios-target=".toggle-wrapper .toggle-wrapper-state">
+    <span class="<%= shownOption %>"><%= glp("ui.fo.public-link.editor.btn.show-options") %></span>
+    <span class="<%= hiddenOption %>"><%= glp("ui.fo.public-link.editor.btn.hide-options") %></span>
+  </button>
+  </jalios:buffer>
+
+</jalios:modal>
+
+
+
+
+
+

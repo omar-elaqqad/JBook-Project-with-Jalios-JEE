@@ -1,0 +1,44 @@
+<%@page import="com.jalios.util.Util"%><%
+%><%@page import="com.jalios.jcms.HttpUtil"%><%
+%><%@page import="com.jalios.jcms.JcmsUtil"%><%
+%><%@page import="com.jalios.jcms.taglib.ControlType"%><%
+%><%@page import="com.jalios.jcms.taglib.settings.BasicSettings"%><%
+%><%@page import="com.jalios.jcms.taglib.settings.AbstractAreaSettings"%><%
+%><%
+String prepend = getIncludeString("PREPEND", getOption(BasicSettings.PREPEND, ""));
+String append = getIncludeString("APPEND", getOption(BasicSettings.APPEND, ""));
+String divPrepend = getIncludeString("DIV_PREPEND", "");
+String divAppend = getIncludeString("DIV_APPEND", "");
+
+String css = getOption(BasicSettings.CSS, "");
+
+String title = formatAttribute("title='%s'", getOption("title", ""));
+
+Map<String, Object> ariaAttributesMap = getOption(BasicSettings.ARIA_ATTRIBUTES, (Map<String, Object>) null);
+ControlUtils.autoFillAriaAttributes(ariaAttributesMap, fieldResource, fieldLabelId);
+String ariaAttributes = formatAriaAttributes(ariaAttributesMap);
+
+dataMap.put("data-selector", "#" + fieldId);
+String dataAttributes = formatDataAttributes(dataMap);
+
+String htmlAttributes = getOption(BasicSettings.HTML_ATTRIBUTES, "");
+
+String contentValue = resolveFieldValue(fieldValue);
+boolean isEmptyPrepend = Util.isEmpty(prepend);
+boolean isEmptyAppend = Util.isEmpty(append);
+
+setIncludeString("isArea", String.valueOf(isEmptyPrepend && isEmptyAppend));
+%>
+<% if (!isEmptyPrepend) { %><span class="input-group-addon"><%= prepend %></span><% } %>
+<% if (Util.notEmpty(divPrepend)) { %><%= divPrepend %><% } %>
+  <div id="<%= HttpUtil.encodeForHTMLAttribute(fieldId) %>" 
+       class="<%= css %> wysiwyg-inline"
+       <%= JcmsUtil.getLangAttributes(cptLang) %>
+       <%= title %>
+       <%= dataAttributes %>
+       <%= ariaAttributes %> role="textbox" aria-multiline="true"
+       <%= htmlAttributes %>>
+    <%= contentValue %>
+  </div>
+<% if (Util.notEmpty(divAppend)) { %><%= divAppend %><% } %>
+<% if (!isEmptyAppend) { %><span class="input-group-addon"><%= append %></span><% } %>

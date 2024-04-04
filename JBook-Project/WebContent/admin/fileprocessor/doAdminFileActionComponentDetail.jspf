@@ -1,0 +1,46 @@
+<%@page import="com.jalios.jcms.fileprocessor.processingmanagement.*"%>
+<%
+  FileActionComponent itActionComponent = repository.getActionComponent(itActionComponentClass);
+  if (itActionComponent != null) {
+    String message = log.getMessage();
+    ProcessingStatus status  = log.getStatusEnum();
+    ProcessingType processingType = log.getProcessingTypeEnum();
+    indiceProcessor++;
+    formName = "blackListForm_" + formPrefix + "_" + indiceProcessor;
+%>
+<li>
+ <strong class='processorName' title='<%= encodeForHTMLAttribute(itActionComponent.getDescription() + "\n\n" + itActionComponentClass.getName())%>'><%= itActionComponent.getName() %></strong>
+ <ul>
+  <li>
+   <%= getStatusIconHtml(log) %> 
+   <%= glp("fileprocessor.adm.filestatus.label." + ((processingType == ProcessingType.PARSING) ? "indexingstatus" : "processingstatus")) %>:
+   <strong><%= status.getText(userLang) %> <% if (status == ProcessingStatus.POSTPONED && log.getAttempt() >= 1) { %> - <%= glp("fileprocessor.adm.filestatus.label.attempt", log.getAttempt()) %><% } %></strong>
+  </li>
+  <% if (Util.notEmpty(message)) { %>
+   <li>
+    <%= glp("fileprocessor.adm.filestatus.label.message") %>:
+    <strong>
+    <% if (message.length() < 100) { %>
+      <%= encodeForHTML(message) %>
+    <% } else { %>
+      <span title="<%= encodeForHTMLAttribute(message) %>">
+        <jalios:truncate length="100" suffix="..." ><%= encodeForHTML(message) %></jalios:truncate>
+      </span>
+    <% } %>
+    </strong>
+   </li>
+  <% } %>
+  <li>
+   <%= glp("fileprocessor.adm.filestatus.label.udate") %>:
+   <%= DateUtil.formatRfc822Date((log.getUdate() != null) ? log.getUdate() : log.getCdate()) %>
+  </li>
+  <% if (log.getDuration() > 0) { %>
+  <li>
+   <%= glp("fileprocessor.adm.filestatus.label.duration") %>:
+   <%= DateUtil.formatDuration(log.getDuration()) %>
+  </li>
+  <% } %>
+ </ul>
+</li>
+<% //  } 
+} %>

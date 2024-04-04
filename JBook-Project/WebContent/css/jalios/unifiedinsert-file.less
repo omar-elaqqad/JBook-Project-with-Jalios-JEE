@@ -1,0 +1,23 @@
+// Include variables and mixins
+@import "../../css/jalios/core/init-mixins.less";  
+@import "../../css/jalios/core/app/jalios-app-variables.less";
+
+
+#jalios-unified-insert-file {
+
+  .plupload-field-filename {
+    margin-top: 28px; // hard coded value to align plupload zone to first item of unified insert list
+  }
+  
+  .plupload_droptext {
+    min-height: 200px; // hard coded value requested by PM
+    
+    background-image: url(../../images/jalios/wysiwyg/unified-insert-file-bg.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 25px;
+    
+    padding-top: 125px;; // to position "Drag files here." text "below" background image
+  }
+  
+}

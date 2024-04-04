@@ -1,0 +1,30 @@
+<% if (formHandler.INFO_STEP == step) { %>
+
+<%-- Document Type Selector --%>
+<% 
+Class documentType = formHandler.getPublicationClass();
+List docClassList = formHandler.getDocumentClassList(); 
+%>
+<% if (Util.getSize(docClassList) == 1) { %>
+<input type="hidden" name="type" value="<%= documentType.getName() %>" />
+<% } else { %>
+<jalios:field  name='type' label="ui.com.lbl.type"  value='<%= documentType %>'>
+  <select name="type" class="form-control">
+    <jalios:foreach collection="<%= docClassList %>" name="itClass" type="Class">
+    <option value="<%= itClass.getName() %>" <%= documentType == itClass ? "selected='selected'" : "" %>><%= channel.getTypeLabel(itClass, userLang) %></option>
+    </jalios:foreach>
+  </select>
+</jalios:field>
+<% } %>
+
+<jalios:field name="title" formHandler="<%= formHandler %>" css="focus">
+  <jalios:control />
+</jalios:field>
+
+<jalios:field name="description" formHandler="<%= formHandler %>">
+  <jalios:control />
+</jalios:field>
+
+
+<% } %>
+

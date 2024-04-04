@@ -1,0 +1,240 @@
+/* ----------------------------------------------- */
+/*  TYPEAHEAD                                      */
+/* ----------------------------------------------- */
+.typeahead {
+  margin-top: 0; //Reset bootstrap since our .typeahead is used to display the input
+}
+
+.typeahead-menu {
+  position: absolute;
+  z-index: @zindexTypeAhead;
+
+  .dropdown-menu.list-group {
+    margin: 0;
+    padding: 0;
+
+    LI {
+      margin: 0 0 -1px;
+    }
+
+    .ac-pub-title {
+      font-weight: bold;
+    }
+  }
+
+  UL.dropdown-menu {
+    display: block;
+    max-width: 350px; // Gracefull degradation for IE7/8
+    overflow: hidden;
+
+    .info {
+      font-size: @font-size-small;
+      .text-overflow();
+      display: block;
+    }
+
+    &.typeahead-photo LI {
+      &:not(.nomatch):not(.results):not(.next):not(.previous) {
+        A {
+          min-height: 44px;
+        }
+      }
+      A {
+        position: relative;
+        padding-left: 42px;
+      
+        .wrapper-photo {
+          padding: 0;
+          border: 0px none;
+          .photo-anchor {
+            display: none;
+          }
+        }
+        .thumb {
+          position: absolute;
+          left: 6px;
+          top: 6px;
+          width: 28px;
+          height: 28px;
+          border-radius: 4px;
+          display: block;
+          zoom: 1;
+          border: 1px solid @gray-light;
+          overflow: hidden;
+          background-color: #FFF;
+          text-align: center;
+        }
+        &.member-link {
+          .thumb {
+            border-radius: 50%;
+            border-color: transparent;
+            &.has-no-photo {
+              border-color: transparent;
+            }
+          }
+        }
+      }
+      &.active,
+      &:hover {
+        A.member-link {
+          .thumb {
+            border-color: white;
+            // 2px border on hover|active
+            left: 5px;
+            top: 5px;
+            width: 30px;
+            height: 30px;
+            border-width: 2px;
+          }
+        }
+      } 
+    }
+
+    LI {
+      A {
+        border-bottom: 1px dotted #CCC;
+      }
+
+      &:last-child A {
+        border-bottom: none;
+      }
+
+      &.nomatch A {
+        font-weight: bold;
+        padding-left: 10px;
+      }
+
+      &.next A {
+        color: @blue;
+        font-weight: bold;
+        text-align: right;
+      }
+
+      &.previous A {
+        color: @blue;
+        font-weight: bold;
+        padding-left: 15px;
+      }
+
+      &.add A {
+        color: @brand-success;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      &.add.active A {
+        background-color: @brand-info;
+        color: #FFF;
+      }
+
+      &.next,
+      &.previous {
+        &.active A {
+          background-color: @blue;
+          color: #FFF;
+        }
+      }
+
+      &.active {
+        .meta-text {
+          color: #EEEEEE;
+        }
+      }
+
+      &.results {
+        border-bottom: 1px dotted #CCC;
+        text-align: center;
+        padding-left: 0px;
+        A {
+          border-bottom-width: 0px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        &.active A {
+          background-color: transparent;
+          color: inherit;
+        }
+      }
+    }
+  }
+  /*
+  * Search autocomplete
+  */
+  &.typeahead-search {
+    margin-top: 2px;
+    max-width: 300px;
+    width: 300px;
+
+    UL.list-group {
+      .typeahead-search-full {
+        A {
+          color: @blue;
+          font-weight: bold;
+        }
+
+        &.active A {
+          background: @blue;
+          &, .jalios-icon {
+            color: #FFF;
+          }
+        }
+      }
+
+      .typeahead-layout {
+        background: none repeat scroll 0 0 #585858;
+        border-bottom: 1px solid #E8E8E8;
+        padding: 5px 5px 5px 10px;
+        text-align: left;
+        color: white;
+        font-weight: bold;
+        cursor: default;
+
+        &.nomatch {
+          background-color: white;
+          color: @text-color;
+        }
+      }
+      padding-top: 0;
+
+      LI {
+        text-align: left;
+
+        A {
+          padding: 10px 15px;
+          .text-overflow();
+        }
+      }
+    }
+  }
+}
+/* ----------------------------------------------- */
+/*  AUTOCOMPLETE                                   */
+/* ----------------------------------------------- */
+
+BODY.body {
+  INPUT.form-control-autocomplete {
+    background: @autocomplete-bg url('../../../images/jalios/assets/16x16/autocomplete.png') no-repeat 2px center;
+    background-position: 7px;
+    padding-left: 28px;
+  }
+
+  INPUT.treecatcomplete {
+    background-color: @autocomplete-bg;
+    max-width: @baseline*10;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  INPUT.treecatcomplete + UL.treeview {
+    clear: left;
+  }
+
+  INPUT.treecatrefresh {
+    font-weight: bold;
+    background-color: #FFFF70;
+  }
+
+  .disabled .form-control-autocomplete {
+    background-color: @inputDisabledBackground; // see input[disabled]
+  }
+}

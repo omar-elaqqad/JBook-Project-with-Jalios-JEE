@@ -1,0 +1,214 @@
+<%-- ####################################################### --%>
+<%-- #################### MENU LEVEL 1 ##################### --%>
+<%-- ####################################################### --%>
+
+<jalios:scrollbar css="app-sidebar-sections-wrapper">
+
+<jalios:include target="ADMIN_HEADER_LEFT" targetContext="li" />
+<% if (checkAccess("admin/users/")) { %>
+  <jalios:buffer name="usersMenuContent">
+    <% if (checkAccess("admin/users/member")) { %>
+      <li class='menu-item-members <%= memberSubAdminMenu ? "active" : "" %>'><a href="admin/memberList.jsp"><jalios:icon src="<%= ResourceHelper.getMemberDefaultIcon() %>"   /> <%= glp("ui.adm.mn.users.members") %></a></li>
+    <% } %>
+    <% if (checkAccess("admin/users/dbmember")) { %>
+      <li class='menu-item-dbmembers <%= dbmemberSubAdminMenu ? "active" : "" %>'><a href="admin/dbmemberList.jsp"><jalios:icon src="<%= ResourceHelper.getDBMemberDefaultIcon() %>"   /> <%= glp("ui.adm.mn.users.dbmembers") %></a></li>
+    <% } %>
+    <% if (checkAccess("admin/users/group")) { %>
+      <li class='menu-item-groups <%= groupSubAdminMenu ? "active" : "" %>'><a href="admin/groupList.jsp" ><jalios:icon src='group'  /> <%= glp("ui.adm.mn.users.groups") %></a></li>
+    <% } %>
+    <% if (isAdmin) { %>
+      <li class='menu-item-acl <%= aclManagerSubAdminMenu ? "active" : "" %>'><a href="admin/accessManager.jsp"><jalios:icon src='key'  /> <%= glp("accesscontrol.manager") %></a></li>
+    <% } %>
+    <jalios:include target="ADMIN_USERS_SUBMENU" targetContext="li"/>  
+  </jalios:buffer>
+  <% boolean isUsersMenuOpened = usersAdminMenu || Util.toBoolean(request.getAttribute("usersAdminMenu") , false); %>
+  <% if (Util.notEmpty(usersMenuContent)) { %>
+    <jalios:appSidebarSection name="users" htmlAttributes="id=\"usersAdminMenu\"" collapsable="true" collapsed="<%= !isUsersMenuOpened %>" title="ui.adm.mn.users">
+      <ul class="app-sidebar-menu">
+        <%= usersMenuContent %>
+      </ul>    
+    </jalios:appSidebarSection>
+  <% } %>
+<% } %>
+
+<% if (checkAccess("admin/work/")) { %>
+  <jalios:buffer name="workMenuContent">
+    <% if (checkAccess("admin/work/workspace")) { %>
+      <li class='menu-item-workspace <%= workspaceSubAdminMenu ? "active" : "" %>'><a href="work/workspace/workspaceList.jsp"><jalios:icon src='<%= Workspace.WORKSPACE_ICON %>'   /> <%= glp("ui.adm.mn.work.ws") %></a></li>
+    <% } %>
+    <% if (checkAccess("admin/work/workflow")) { %>
+      <li class='menu-item-workflow <%= workflowListSubAdminMenu ? "active" : "" %>'><a href="admin/wfList.jsp"><jalios:icon src='wf'  /> <%= glp("ui.adm.mn.work.wf") %></a></li>
+    <% } %>
+    <jalios:include target="ADMIN_WORK_SUBMENU" targetContext="li"/>
+  </jalios:buffer>
+  <% boolean isWorkMenuOpened = workAdminMenu || Util.toBoolean(request.getAttribute("workAdminMenu") , false); %>
+  <% if (Util.notEmpty(workMenuContent)) { %>
+    <jalios:appSidebarSection name="work" htmlAttributes="id=\"workAdminMenu\"" collapsable="true" collapsed="<%= !isWorkMenuOpened %>" title="ui.adm.mn.work">
+      <ul class="app-sidebar-menu">
+        <%= workMenuContent %>
+      </ul>
+    </jalios:appSidebarSection>
+  <% } %>
+<% } %>
+
+<%-- -------------------- --%>
+<%--    Menu Caddy        --%>
+<%-- -------------------- --%>
+<%@ include file='/jcore/caddy/doCaddyMenu.jspf' %>
+
+<% if (checkAccess("admin/reporting/")) { %>
+  <jalios:buffer name="reportingMenuContent">
+    <% if (checkAccess("admin/reporting/analytics")) { %>    
+      <li class='menu-item-analytics <%= analyticsReportSubAdminMenu ? "active" : "" %>'><a href='admin/analytics/report/index.jsp'><jalios:icon src="analytics"  /> <%= glp("ui.adm.mn.files.analytics-report") %></a></li>                  
+    <% } %>
+    <% if (checkAccess("admin/reporting/data-report")) { %>
+      <li class='menu-item-datareport <%= dataReportSubAdminMenu ? "active" : "" %>'><a href="admin/dataReport.jsp"><jalios:icon src='list'  /> <%= glp("ui.adm.mn.reporting.data") %></a></li>
+    <% } %>
+    <% if (checkAccess("admin/reporting/friendly-urls")) { %>
+      <li class='menu-item-friendly-urls <%= friendlyUrlSubAdminMenu ? "active" : "" %>'><a href="admin/friendlyURLs.jsp"><jalios:icon src='www'  /> <%= glp("ui.com.lbl.friendly-urls") %></a></li>
+    <% } %> 
+    <% if (checkAccess("admin/reporting/file-size")) { %>    
+      <li class='menu-item-file-size <%= fileSizeSubAdminMenu ? "active" : "" %>'><a href="admin/fileSizeMap.jsp"><jalios:icon src="drive"  /> <%= glp("ui.adm.mn.files.file-size-map") %></a></li>
+    <% } %>
+    <% if (checkAccess("admin/reporting/quota")) { %>    
+      <li class='menu-item-quota <%= quotaSubAdminMenu ? "active" : "" %>'><a href="admin/viewQuota.jsp"><jalios:icon src="drive"  /> <%= glp("ui.adm.mn.files.view-quota") %></a></li>
+    <% } %>
+    <jalios:include target="ADMIN_REPORTING_SUBMENU" targetContext="li"/>
+  </jalios:buffer>
+  <% boolean isReportingMenuOpened = reportingAdminMenu || Util.toBoolean(request.getAttribute("reportingAdminMenu") , false); %>
+  <% if (Util.notEmpty(reportingMenuContent)) { %>
+    <jalios:appSidebarSection name="reporting" htmlAttributes="id=\"reportingAdminMenu\"" collapsable="true" collapsed="<%= !isReportingMenuOpened %>" title="ui.adm.mn.reporting">
+      <ul class="app-sidebar-menu">
+        <%= reportingMenuContent %>
+      </ul>    
+    </jalios:appSidebarSection>
+  <% } %>
+<% } %>
+<% if (checkAccess("admin/monitoring/")) { %>
+  <jalios:buffer name="monitoringMenuContent">
+    <% if (checkAccess("admin/monitoring/site-info")) { %>
+      <li class='menu-item-site-info <%= siteInfoSubAdminMenu ? "active" : "" %>'><a href='admin/siteInfo.jsp'><jalios:icon src='status'  /> <%= glp("ui.adm.mn.info.site") %></a></li>
+    <% } %>
+    <% if (checkAccess("admin/monitoring/monitoring")) { %>
+      <li class='menu-item-monitoring <%= monitoringSubAdminMenu ? "active" : "" %>'><a href='admin/monitoring.jsp'><jalios:icon src='monitoring'  /> <%= glp("ui.adm.mn.info.monitoring") %></a></li>
+    <% } %>
+    <% if (checkAccess("admin/monitoring/store-info")) { %>
+      <li class='menu-item-store-info <%= storeInfoSubAdminMenu ? "active" : "" %>'><a href='admin/storeInfo.jsp'><jalios:icon src='store'  /> <%= glp("ui.adm.mn.info.store") %></a></li>
+    <% } %>
+    <% if (checkAccess("admin/monitoring/db-info")) { %>
+      <li class='menu-item-db-info <%= dbInfoSubAdminMenu ? "active" : "" %>'><a href='admin/dbInfo.jsp'><jalios:icon src='db'  /> <%= glp("ui.adm.mn.info.db") %></a></li>
+    <% } %>
+    <% if (checkAccess("admin/monitoring/mail-info")) { %>
+      <li class='menu-item-mail-info <%= mailInfoSubAdminMenu ? "active" : "" %>'><a href='admin/mailInfo.jsp'><jalios:icon src='mail-open'  /> <%= glp("ui.adm.mn.info.mail") %></a></li>
+    <% } %>
+    <% if (checkAccess("admin/monitoring/check-integrity")) { %>
+      <li class='menu-item-check-integrity <%= integritySubAdminMenu ? "active" : "" %>'><a href="admin/checkIntegrity.jsp"><jalios:icon src='check-integrity'  /> <%= glp("ui.adm.dic.title") %></a></li>
+    <% } %>
+    <% if (checkAccess("admin/monitoring/lib-info")) { %>
+      <li class='menu-item-lib-info <%= libInfoSubAdminMenu ? "active" : "" %>'><a href='admin/libInfo.jsp'><jalios:icon src='jar'  /> <%= glp("ui.adm.mn.info.lib") %></a></li>
+    <% } %>
+    <% if (checkAccess("admin/monitoring/logs")) { %>
+      <li class='menu-item-logs <%= eventLogsSubAdminMenu ? "active" : "" %>'><a href='admin/logs.jsp'><jalios:icon src='log-icon'  /> <%= glp("ui.adm.logs.title") %></a></li>
+    <% } %>
+    <jalios:include target="ADMIN_MONITORING_SUBMENU" targetContext="li"/>
+  </jalios:buffer>
+  <% boolean isMonitoringMenuOpened = monitoringAdminMenu || Util.toBoolean(request.getAttribute("monitoringAdminMenu") , false); %>
+  <% if (Util.notEmpty(monitoringMenuContent)) { %>
+    <jalios:appSidebarSection name="monitoring" htmlAttributes="id=\"monitoringAdminMenu\"" collapsable="true" collapsed="<%= !isMonitoringMenuOpened %>" title="ui.adm.mn.info">
+      <ul class="app-sidebar-menu" id="monitoringAdminMenuToggle">
+        <%= monitoringMenuContent %>
+      </ul>    
+    </jalios:appSidebarSection>
+  <% } %>
+<% } %>
+<% if (checkAccess("admin/operation/")) { %>
+  <jalios:buffer name="operationMenuContent">
+    <% if (checkAccess("admin/operation/properties")) { %>
+      <li class='menu-item-properties <%= propertiesSubAdminMenu ? "active" : "" %>'><a href="admin/adminProperties.jsp"><jalios:icon src='properties'  /> <%= glp("ui.adm.mn.conf.prop") %></a></li>
+    <% } %>
+    <% if (checkAccess("admin/operation/plugin-mgr")) { %>
+      <li class='menu-item-plugin-mgr <%= pluginManagerSubAdminMenu ? "active" : "" %>'><a href="admin/pluginManager.jsp"><jalios:icon src='plugin'  /> <%= glp("ui.adm.mn.op.plugin-mgr") %></a></li>
+    <% } %>
+    <% if (checkAccess("admin/operation/search-engines")) { %>
+      <li class='menu-item-search-engines <%= searchSubAdminMenu ? "active" : "" %>'><a href="admin/adminSearchEngines.jsp"><jalios:icon src="search"  /> <%= glp("ui.adm.mn.op.index-mgr") %></a></li>
+    <% } %>
+    <% if (checkAccess("admin/operation/cache-mgr")) { %>
+      <li class='menu-item-cache-mgr <%= cacheSubAdminMenu ? "active" : "" %>'><a href="admin/cacheManager.jsp"><jalios:icon src="caches"  /> <%= glp("ui.adm.mn.op.cache-mgr") %></a></li>
+    <% } %>
+    <% if (checkAccess("admin/operation/jsync")) { %>
+      <% if (channel.isJSyncEnabled()) { %>
+      <li class='menu-item-jsync <%= jsyncSubAdminMenu ? "active" : "" %>'><a href="admin/jsync/jsync.jsp"><jalios:icon src='replica-lone'  /> <%= glp("ui.adm.mn.op.jsync") %></a></li>
+      <% } %>
+    <% } %>
+    <% if (checkAccess("admin/operation/auth-key")) { %>
+      <li class='menu-item-auth-key <%= authKeySubAdminMenu ? "active" : "" %>'><a href="admin/createAuthKey.jsp"><jalios:icon src='auth-key'  /> <%= glp("ui.adm.mn.op.authkey") %></a></li>
+    <% } %>
+    <% if (checkAccess("admin/operation/deploy-mgr")) { %>
+      <% if (channel.isDeployManagerEnabled()) { %>
+      <li class='menu-item-deploy-mgr <%= deploySubAdminMenu ? "active" : "" %>'><a href="admin/deploy/deployMgr.jsp"><jalios:icon src="deploy"  /> <%= glp("ui.adm.mn.op.deploy-mgr") %></a></li>
+      <% } %>
+    <% } %>
+    <% if (checkAccess("admin/operation/import-mgr")) { %>
+      <% if (com.jalios.jcms.mashup.ImportManager.getInstance().isEnabled()) { %> 
+      <li class='menu-item-import-mgr <%= importSubAdminMenu ? "active" : "" %>'><a href="admin/importManager.jsp"><jalios:icon src="import-mgr"  /> <%= glp("ui.adm.mn.op.import-mgr") %></a></li>
+      <% } %>
+    <% } %>
+    <% if (checkAccess("admin/operation/file-processor") && com.jalios.jcms.fileprocessor.processingmanagement.FileProcessorManager.isEnabled()) { %>
+      <li class='menu-item-file-processor <%= fileProcessorSubAdminMenu ? "active" : "" %>'><a href="admin/fileprocessor/adminFileProcessor.jsp"><jalios:icon src='fp-icon'  /> <%= glp("fileprocessor.adminlink") %></a></li>
+    <% } %>
+    <% if (checkAccess("admin/operation/admin-custom")) { %>
+      <% if (Util.toBoolean(channel.getProperty("adm.custom.menu.enabled"), false)) { %>
+      <li class='menu-item-admin-custom <%= customAdminMenu ? "active" : "" %>'><a href='custom/jcms/adminCustom.jsp'><jalios:icon src='<%= channel.getProperty("adm.custom.menu.icon") %>'   /> <%= glp("ui.adm.custom.menu") %></a></li>
+      <% } %>
+    <% } %>    
+    <% if (checkAccess("admin/operation/analytics")) { %>
+      <li class='menu-item-operation-analytics <%= analyticsSubAdminMenu ? "active" : "" %>'><a href='admin/analytics/index.jsp'><jalios:icon src="analytics"  /> <%= glp("ui.adm.mn.files.analytics-admin") %></a></li>                  
+    <% } %>
+    <jalios:include target="ADMIN_OPERATION_SUBMENU" targetContext="li"/>    
+  </jalios:buffer>
+  <% boolean isOperationMenuOpened = operationAdminMenu || Util.toBoolean(request.getAttribute("operationAdminMenu") , false); %>
+  <% if (Util.notEmpty(operationMenuContent)) { %>
+    <jalios:appSidebarSection name="operation" htmlAttributes="id=\"operationAdminMenu\"" collapsable="true" collapsed="<%= !isOperationMenuOpened %>" title="ui.adm.mn.op">
+      <ul class="app-sidebar-menu">
+        <%= operationMenuContent %>
+      </ul>    
+    </jalios:appSidebarSection>
+  <% } %>
+<% } %>
+<% if (Util.toBoolean(channel.getProperty("channel.dev-tools.enabled"), true) && checkAccess("admin/dev/")) { %>
+  <jalios:buffer name="devMenuContent">
+    <% if (checkAccess("admin/dev/types")) { %>
+     <li class='menu-item-dev-content-types <%= contentTypeListSubAdminMenu ? "active" : "" %>'><a href="admin/typeListEditor.jsp?rootClass=com.jalios.jcms.Content"><jalios:icon src='form'  /> <%= glp("ui.adm.mn.dev.content-types") %></a></li>
+     <li class='menu-item-dev-ugc-types <%= ugcTypeListSubAdminMenu ? "active" : "" %>'><a href="admin/typeListEditor.jsp?rootClass=com.jalios.jcms.UserContent" ><jalios:icon src='form'  /> <%= glp("ui.adm.mn.dev.ugc-types") %></a></li>
+     <li class='menu-item-dev-portlet-types <%= portletTypeListSubAdminMenu ? "active" : "" %>'><a href="admin/typeListEditor.jsp?rootClass=com.jalios.jcms.portlet.PortalElement" ><jalios:icon src='form'  /> <%= glp("ui.adm.mn.dev.portlet-types") %></a></li>
+     <li class='menu-item-dev-form-types <%= formTypeListSubAdminMenu ? "active" : "" %>'><a href="admin/typeListEditor.jsp?rootClass=com.jalios.jcms.Form" ><jalios:icon src='form'  /> <%= glp("ui.adm.mn.dev.form-types") %></a></li>
+    <% } %>
+    <% if (checkAccess("admin/dev/upgrade-mgr")) { %>
+     <li class='menu-item-upgrade-mgr <%= upgradeSubAdminMenu ? "active" : "" %>'><a href="admin/deploy/upgradeMgr.jsp" ><jalios:icon src="diff"  /> <%= glp("ui.adm.mn.dev.upgrade-mgr") %></a></li>
+    <% } %>
+    <% if (checkAccess("admin/dev/store-cleaner")) { %>
+     <li class='menu-item-store-cleaner <%= cleanerSubAdminMenu ? "active" : "" %>'><a href="admin/storeCleaner.jsp" ><jalios:icon src="store-cleaner"  /> <%= glp("ui.adm.mn.dev.store-cleaner") %></a></li>
+    <% } %>
+    <% if (checkAccess("admin/dev/portal-profiler")) { %>
+     <li class='menu-item-portal-profiler <%= profilerSubAdminMenu ? "active" : "" %>'><a href="admin/portalProfiler.jsp" ><jalios:icon src="gauge"  /> <%= glp("ui.profiler.title") %></a></li>
+    <% } %>
+    <jalios:include target="ADMIN_DEV_SUBMENU" targetContext="li"/>
+  </jalios:buffer>
+  <% boolean isDevMenuOpened = devAdminMenu || Util.toBoolean(request.getAttribute("devAdminMenu") , false); %>
+  <% if (Util.notEmpty(devMenuContent)) { %>
+    <jalios:appSidebarSection name="dev" htmlAttributes="id=\"devAdminMenu\"" collapsable="true" collapsed="<%= !isDevMenuOpened %>" title="ui.adm.mn.dev">
+      <ul class="app-sidebar-menu">
+        <%= devMenuContent %>
+      </ul>
+    </jalios:appSidebarSection>
+  <% } %>
+<% } %>
+<jalios:include target="ADMIN_HEADER_MENU" targetContext="li" />
+<a onclick="return false;" class="btn btn-default admin-notes-toggle">
+  <% if (hasAdminNote) { %>
+    <%= glp("ui.adm.admin-notes.display-note") %>
+  <% } else { %> 
+    <jalios:icon src="add" /> <%= glp("ui.adm.admin-notes.add-note") %>
+  <% } %>
+</a>
+</jalios:scrollbar>

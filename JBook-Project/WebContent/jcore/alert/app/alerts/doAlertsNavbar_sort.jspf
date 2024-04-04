@@ -1,0 +1,37 @@
+<%-- 
+  Common navbar reverse sort option
+--%><%
+%><%@ page contentType="text/html; charset=UTF-8" %><%
+
+if (showReverseLinks) {
+  String reverseOnRefreshUrl = MessageFormat.format("{0}?{1}={2}", ServletUtil.getUrl(request), AlertHandler.PARAM_ALERT_PAGER_REVERSE, String.valueOf(Boolean.TRUE));
+  String reverseOffRefreshUrl = MessageFormat.format("{0}?{1}={2}", ServletUtil.getUrl(request), AlertHandler.PARAM_ALERT_PAGER_REVERSE, String.valueOf(Boolean.FALSE));
+  String reverseLabel = formHandler.isReverse() ? glp("ui.sort-by.cdate-dsc") : glp("ui.sort-by.cdate-asc");
+  %>
+  <ul class="nav navbar-nav alert-app-pager-reverse">
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" onclick="return false;"><jalios:icon src="sorting" /> 
+        <%= reverseLabel %>
+        <jalios:icon src="caret" />
+      </a>
+      
+      <%-- Reverse links do submit FORM by JS --%>
+      <ul class="dropdown-menu" role="menu">        
+        <li class='<%= formHandler.isReverse() ? "":"active" %>'>
+          <a href="#" onclick="return false;"
+              class="alerts-pager-reverse-parameter-link js-alert-app-pager-reverse" 
+              data-jalios-options='{ "params" : { "<%= AlertHandler.PARAM_ALERT_PAGER_REVERSE%>" : false }}'>
+            <%= glp("ui.sort-by.cdate-asc") %>
+          </a>
+        </li>
+        <li class='<%= formHandler.isReverse() ? "active":"" %>'>
+          <a href="#" onclick="return false;"
+              class="alerts-pager-reverse-parameter-link js-alert-app-pager-reverse" 
+              data-jalios-options='{ "params" : { "<%= AlertHandler.PARAM_ALERT_PAGER_REVERSE%>" : true }}'>
+            <%= glp("ui.sort-by.cdate-dsc") %>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+<% } %>

@@ -1,0 +1,36 @@
+.publication-related H2 {
+  border-bottom: 1px solid #EEE;
+  padding-bottom: 4px;
+  margin-bottom: 24px;
+  font-family: embedded-roboto-condensed, embedded-roboto, Helvetica, Arial, sans-serif;
+  font-size: 24px;
+}
+.publication-related .card-related {
+  width: 160px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.publication-related .card-related .card-image {
+  margin-bottom: 10px;
+}
+.publication-related .card-related .card-image IMG {
+  width: 160px;
+  height: 90px;
+  object-fit: cover;
+  image-rendering: -webkit-optimize-contrast;
+}
+.publication-related .card-related .card-date {
+  color: #AAA;
+  font-family: embedded-roboto-condensed, embedded-roboto, Helvetica, Arial, sans-serif;
+}
+.publication-related .card-related .card-title {
+  font-weight: 500;
+  font-family: embedded-roboto-condensed, embedded-roboto, Helvetica, Arial, sans-serif;
+  color: #333333;
+}
+.publication-related .card-related:last-child {
+  margin-right: 0;
+}
+/*# sourceMappingURL=jalios-pub-related.css.map */

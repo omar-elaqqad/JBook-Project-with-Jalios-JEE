@@ -1,0 +1,88 @@
+<%--
+  @Summary: Admin footer
+  @Category: Admin / Presentation
+  @Author: Oliver Dedieu
+  @Copyright: Jalios SA
+  @Customizable: False
+  @Requestable: False
+  @Deprecated: False
+  @Since: jcms-2.0
+--%>
+<div id="jalios-bottombar" class="row">
+  <div class="col-xs-6">
+    <jalios:date nowifnull="<%= true %>" />
+    <% if (channel.isJSyncEnabled()) { %>
+      <% String status = channel.getJSyncReplica().getStatus(); %>
+      - <jalios:icon src='<%= "replica-" + status %>'  title='<%= glp("ui.adm.jsync.r-st." + status) %>'  /> <%= glp("ui.adm.jsync.st.replica") %> <%= channel.getUrid() %>
+    <% } %>
+    <jalios:include target="ADMIN_FOOTER" />
+  </div>
+  <div class="col-xs-6 text-right">
+    <a href="https://www.jalios.com/"><% /* %>Powered by Jalios<% */ %><%= glp("ui.com.foot.powered") %></a>
+  </div>
+</div>
+<div id="jalios-bottombar-placeholder"></div>
+
+</div><!-- EOF app-body -->
+</div><!-- EOF app-main -->
+</div><!-- EOF app -->
+</div><!-- EOF AdminArea / WorkArea -->
+
+
+<script>
+  //Create Element.remove() function if not exist
+  if (!('remove' in Element.prototype)) {
+      Element.prototype.remove = function() {
+          if (this.parentNode) {
+              this.parentNode.removeChild(this);
+          }
+      };
+  }
+
+  let pageHeaderElement = document.querySelector(".page-header > H1");
+  if (pageHeaderElement) {
+    let breacrumbCurrent = document.querySelector(".page-header > H1").textContent.replace(/(\r\n|\n|\r)/gm, "").trim();
+    document.querySelector(".page-header").remove();
+    document.querySelector(".admin-breadcrumb .currentNode .breadcrumb-item-label").innerText = breacrumbCurrent;
+  } else {
+    let currentNode = document.querySelector(".admin-breadcrumb .currentNode");
+    if (currentNode) {
+      currentNode.remove();
+    }
+  }
+
+  // Add full height class directly in DOM to avoid FOUC
+  var nodes = [];
+  var fullHeightIndex;
+  var elements = document.querySelectorAll(".app-body, .app-sidebar-sections-wrapper");
+  
+  for (fullHeightIndex = 0; fullHeightIndex < elements.length; ++fullHeightIndex) {
+    var element = elements[fullHeightIndex];
+    element.classList.add('full-height');
+    while(element.parentNode) {
+      element = element.parentNode;
+      if (element && element.classList) {
+        element.classList.add('full-height');
+      }
+    }
+  }
+  
+  var spliterLayout = document.querySelector(".app-body > .layout.spliter");
+  if (spliterLayout) {
+    document.querySelector(".app-body").classList.add('is-spliter-layout');
+  }
+</script>
+
+<script id="jalios-app-sidebar-burger" type="text/x-handlebars-template">
+  <a href="" class="js-toggle-sidebar"><jalios:icon src="app-sidebar-burger" /><jalios:icon src="app-sidebar-burger-close" /></a>
+</script>
+ 
+<% jcmsContext.addJavaScript("js/jalios/core/jalios-admin-backoffice.js"); %> 
+<%-- ** JAVASCRIPT REDIRECT ** --%>
+<% if (Util.notEmpty(request.getAttribute("redirect"))) { %>
+<jalios:javascript>
+document.location = "<%= encodeForJavaScript((String) request.getAttribute("redirect")) %>";
+</jalios:javascript>
+
+<% } %>
+<%@ include file="/jcore/doEmptyFooter.jspf" %>

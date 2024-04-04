@@ -1,0 +1,1 @@
+<%@ include file='../PortletQueryForeach/doPortletQueryForeachPubListImageDetailed.jsp'     %>

@@ -1,0 +1,36 @@
+<%--
+  @Summary: Display JcmsToastr
+  @Category: Internal
+  @Copyright: Jalios SA
+  @Customizable: False
+  @Requestable: False
+  @Deprecated: False
+  @Since: jcms-10.0.0
+--%><%@page import="java.util.Set"%><%
+%><%@page import="com.jalios.jcms.context.JcmsToastr"%><%
+%><%@page import="com.jalios.jcms.JcmsConstants"%><%
+%><%@page import="com.jalios.jcms.context.JcmsContext"%><%
+%><%@page import="com.jalios.util.Util"%><%
+
+Set<JcmsToastr> toastrCollection = JcmsContext.getToastrCollection(request);
+if (Util.isEmpty(toastrCollection)) {
+  toastrCollection = JcmsContext.getToastrSessionCollection(request);
+} else {     
+  Set<JcmsToastr> toastrSessionList = JcmsContext.getToastrSessionCollection(request);
+  if(toastrSessionList != null) {
+    toastrCollection.addAll(toastrSessionList);
+  }
+}
+
+if (Util.notEmpty(toastrCollection)) {
+  
+  %><jalios:foreach collection="<%= toastrCollection %>"  name="itToastr" type="JcmsToastr"><%
+  %><jalios:toastr message="<%= glp(itToastr.getMessage()) %>" level="<%= itToastr.getLevel() %>" optionMap="<%= itToastr.getOptionMap() %>"/><%
+  %></jalios:foreach><%
+
+  // Clear toastr collection
+  toastrCollection.clear();
+  request.getSession().removeAttribute(JcmsConstants.JCMS_TOASTR_COLLECTION);  
+}
+
+%>

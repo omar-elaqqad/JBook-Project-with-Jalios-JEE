@@ -1,0 +1,55 @@
+// Include variables and mixins
+@import "../../init-mixins.less";
+
+.list-group-item-media {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid rgba(190, 190, 190, 0.36);
+
+  &:last-child {
+    border-bottom: 0 none;
+  }
+
+  .media-heading {
+    color: #666;
+    font-weight: 500;
+    font-family: @font-family-condensed;
+    margin-top: 4px;
+  }
+
+  .media-image {
+    background-color: rgba(156, 156, 156, 0.1);
+    position: relative;
+
+    > IMG {
+      object-fit: cover;
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+.list-group-item.media-sticky {
+  .media-heading {
+    .text-overflow();
+    color: #666;
+    font-weight: 500;
+    font-family: @font-family-condensed;
+  }
+
+  .media-description {
+    .text-overflow();
+  }
+}
+
+.list-group-item.media-heading-centered {
+  .media-heading {
+    color: #666;
+    font-weight: 500;
+    font-family: @font-family-condensed;
+    margin-bottom: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

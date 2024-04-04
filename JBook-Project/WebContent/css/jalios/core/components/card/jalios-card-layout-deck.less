@@ -1,0 +1,327 @@
+// Include variables and mixins
+@import "../../init-mixins.less";
+
+// DECK LAYOUT
+@card-responsive-layout-gutter-double: @card-responsive-layout-gutter*2;
+/*
+.card-responsive-layout {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-gap: 16px;
+  
+  
+  &.card-count-2 {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+  &.card-count-3 {
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+  }  
+  &.card-count-4 {
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+  }
+  &.card-count-5 {
+    grid-template-columns: repeat(5, minmax(250px, 1fr));
+  }  
+  &.card-count-6 {
+    grid-template-columns: repeat(6, minmax(250px, 1fr));
+  }  
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    .card-block {
+      flex: 1 1 auto; //Pushes siblings to the bottom
+    }
+    .card-img {
+      height: 150px;
+    }
+  }
+  > A {
+    .card {
+      //Flex to put footer at the bottom of the card
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      //Reset default behavior when in a link
+      .card-block {
+        flex: 1 1 auto; //Pushes siblings to the bottom
+      }
+    }
+    &.is-same-image-height {
+      .card-img {
+        height: 150px;
+      }
+    }
+  }
+}
+*/
+.card-responsive-layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -@card-responsive-layout-gutter;
+  margin-right: -@card-responsive-layout-gutter;
+
+  // Stack latest item on left
+  &:after {
+    content: "";
+    flex: auto;
+  }
+
+  &.card-count-6 > .card {
+    flex-basis: calc(~"16.66%" - @card-responsive-layout-gutter-double);
+  }
+
+  &.card-count-5 > .card {
+    flex-basis: calc(~"20%" - @card-responsive-layout-gutter-double);
+  }
+
+  &.card-count-4 > .card {
+    flex-basis: calc(~"25%" - @card-responsive-layout-gutter-double);
+  }
+
+  &.card-count-3 > .card {
+    flex-basis: calc(~"33.33%" - @card-responsive-layout-gutter-double);
+  }
+
+  &.card-count-2 > .card,
+  &.card-count-2 > .card-link {
+    flex-basis: calc(~"50%" - @card-responsive-layout-gutter-double);
+  }
+
+  &.card-count-1 > .card {
+    flex-basis: calc(~"100%" - @card-responsive-layout-gutter-double);
+  }
+
+  &.card-count-6 > A {
+    flex-basis: calc(~"16.66%" - @card-responsive-layout-gutter-double);
+    .card {
+      -ms-flex-basis: 0;
+      flex-basis: initial;
+    }
+  }
+
+  &.card-count-5 > A {
+    flex-basis: calc(~"20%" - @card-responsive-layout-gutter-double);
+    .card {
+      -ms-flex-basis: 0;
+      flex-basis: initial;
+    }
+  }
+
+  &.card-count-4 > A {
+    flex-basis: calc(~"25%" - @card-responsive-layout-gutter-double);
+    .card {
+      -ms-flex-basis: 0;
+      flex-basis: initial;
+    }
+  }
+
+  &.card-count-3 > A {
+    flex-basis: calc(~"33.33%" - @card-responsive-layout-gutter-double);
+    .card {
+      -ms-flex-basis: 0;
+      flex-basis: initial;
+    }
+  }
+
+  &.card-count-2 > A {
+    flex-basis: calc(~"50%" - @card-responsive-layout-gutter-double);
+    .card {
+      -ms-flex-basis: 0;
+      flex-basis: initial;
+    }
+  }
+  
+  &.card-count-1 > A {
+    flex-basis: calc(~"100%" - @card-responsive-layout-gutter-double);
+    .card {
+      -ms-flex-basis: 0;
+      flex-basis: initial;
+    }
+  }
+
+  .card {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(~"25%" - @card-responsive-layout-gutter-double);
+    margin-bottom: 2em;
+    margin-left: @card-responsive-layout-gutter;
+    margin-right: @card-responsive-layout-gutter;
+    //Flex to put footer at the bottom of the card
+    display: flex;
+    flex-direction: column;
+    .card-block {
+      flex: 1 1 auto; //Pushes siblings to the bottom
+      
+      &.no-shrink{
+        flex-shrink: 0;
+      }
+      
+      &.no-grow{
+        flex-grow: 0;
+      }
+    }
+    .card-img {
+      height: 150px;
+    }
+  }
+
+  > A {
+    flex-basis: calc(~"25%" - @card-responsive-layout-gutter-double);
+
+    margin-bottom: 2em;
+    margin-left: @card-responsive-layout-gutter;
+    margin-right: @card-responsive-layout-gutter;
+
+    .card {
+      flex-grow: 0;
+      flex-shrink: 1;
+      //Flex to put footer at the bottom of the card
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      //Reset default behavior when in a link
+      margin-left: 0;
+      margin-right: 0;
+      flex-basis: initial;
+      margin-bottom: 0;
+
+      .card-block {
+        flex: 1 1 auto; //Pushes siblings to the bottom
+      }
+    }
+
+    &.is-same-image-height {
+      .card-img {
+        height: 150px;
+      }
+    }
+  }
+}
+
+// 4 or 5 cards per line
+
+.card-count-6.card-responsive-layout[max-width~="1440px"] > A when(@enable-cards-layout-deck-element-queries) {
+  flex-basis: calc(~"20%" - @card-responsive-layout-gutter-double);
+}
+
+.card-count-6.card-responsive-layout[max-width~="1200px"] > A when(@enable-cards-layout-deck-element-queries) {
+  flex-basis: calc(~"25%" - @card-responsive-layout-gutter-double);
+}
+
+.card-count-6.card-responsive-layout[max-width~="900px"] > A when(@enable-cards-layout-deck-element-queries) {
+  flex-basis: calc(~"33.33%" - @card-responsive-layout-gutter-double);
+}
+
+.card-count-6.card-responsive-layout[max-width~="600px"] > A when(@enable-cards-layout-deck-element-queries) {
+  flex-basis: calc(~"50%" - @card-responsive-layout-gutter-double);
+}
+
+.card-count-5.card-responsive-layout[max-width~="1200px"] > A when(@enable-cards-layout-deck-element-queries) {
+  flex-basis: calc(~"25%" - @card-responsive-layout-gutter-double);
+}
+
+.card-count-5.card-responsive-layout[max-width~="900px"] > A when(@enable-cards-layout-deck-element-queries) {
+  flex-basis: calc(~"33.33%" - @card-responsive-layout-gutter-double);
+}
+
+.card-count-4.card-responsive-layout[max-width~="900px"] > A when(@enable-cards-layout-deck-element-queries) {
+  flex-basis: calc(~"33.33%" - @card-responsive-layout-gutter-double);
+}
+
+.card-count-5.card-responsive-layout[max-width~="1200px"] > .card when(@enable-cards-layout-deck-element-queries) {
+  flex-basis: calc(~"25%" - @card-responsive-layout-gutter-double);
+}
+
+.card-count-5.card-responsive-layout[max-width~="900px"] > .card when(@enable-cards-layout-deck-element-queries) {
+  flex-basis: calc(~"33.33%" - @card-responsive-layout-gutter-double);
+}
+
+.card-count-4.card-responsive-layout[max-width~="900px"] > .card when(@enable-cards-layout-deck-element-queries) {
+  flex-basis: calc(~"33.33%" - @card-responsive-layout-gutter-double);
+}
+
+// Global rules when no cards per line have been set
+
+.card-responsive-layout[max-width~="900px"] > A when(@enable-cards-layout-deck-element-queries) {
+  flex-basis: calc(~"33.33%" - @card-responsive-layout-gutter-double);
+}
+
+.card-responsive-layout[max-width~="900px"] > .card when(@enable-cards-layout-deck-element-queries) {
+  flex-basis: calc(~"33.33%" - @card-responsive-layout-gutter-double);
+}
+
+.card-responsive-layout[max-width~="600px"] > .card when(@enable-cards-layout-deck-element-queries) {
+  flex-basis: calc(~"33.33%" - @card-responsive-layout-gutter-double);
+}
+
+.card-responsive-layout[max-width~="300px"] > .card when(@enable-cards-layout-deck-element-queries) {
+  flex-basis: calc(~"100%" - @card-responsive-layout-gutter-double);
+}
+
+.card-responsive-layout[min-width~="@{screen-phone}"][max-width~="720px"]
+  > .card
+  when(@enable-cards-layout-deck-element-queries) {
+  flex-basis: calc(~"50%" - @card-responsive-layout-gutter-double);
+}
+
+.card-responsive-layout[max-width~="@{screen-phone}"] > A when(@enable-cards-layout-deck-element-queries) {
+  flex-basis: calc(~"100%" - @card-responsive-layout-gutter-double) !important;
+  .card {
+    flex-basis: initial;
+  }
+}
+
+.card-responsive-layout[max-width~="@{screen-phone}"] > .card when(@enable-cards-layout-deck-element-queries) {
+  flex-basis: calc(~"100%" - @card-responsive-layout-gutter-double) !important;
+}
+
+.card-responsive-layout[min-width~="@{screen-phone}"][max-width~="720px"]
+  > A
+  when(@enable-cards-layout-deck-element-queries) {
+  flex-basis: calc(~"50%" - @card-responsive-layout-gutter-double);
+  .card {
+    flex-basis: initial;
+  }
+}
+
+@media screen and (max-width: @screen-sm-min) {
+  .card-responsive-layout > A when(@enable-cards-layout-deck-media-queries) {
+    flex-basis: calc(~"50%" - @card-responsive-layout-gutter-double) !important;
+    .card {
+      flex-basis: initial;
+    }
+  }
+}
+
+@media screen and (max-width: @screen-phone) {
+  .card-responsive-layout > A when(@enable-cards-layout-deck-media-queries) {
+    flex-basis: calc(~"100%" - @card-responsive-layout-gutter-double) !important;
+    .card {
+      flex-basis: initial;
+    }
+  }
+}
+
+@media screen and (max-width: @screen-sm-min) {
+  .card-responsive-layout > .card when(@enable-cards-layout-deck-media-queries) {
+    flex-basis: calc(~"50%" - @card-responsive-layout-gutter-double) !important;
+  }
+}
+
+@media screen and (max-width: @screen-phone) {
+  .card-responsive-layout > .card when(@enable-cards-layout-deck-media-queries) {
+    flex-basis: calc(~"100%" - @card-responsive-layout-gutter-double) !important;
+  }
+}
+
+// Specific case to reset bottom margin on borderless cards
+.card-responsive-layout.card-borderless > .card-link {
+  margin-bottom: 8px;
+}

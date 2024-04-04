@@ -1,0 +1,54 @@
+/* ----------------------------------------------- */
+/*  WFSTATE                                        */
+/* ----------------------------------------------- */
+
+.wfstate {
+  #JCMS > .badge();
+  background-color: @pstatus-not-visible;
+  
+  &.pstatus-10               { background-color: @pstatus-scheduled; }
+  &.pstatus0                 { background-color: @pstatus-published; }
+  &.pstatus10                { background-color: @pstatus-expired;   }
+  &.pstatus20                { background-color: @pstatus-archived;   }
+  &.pstatus1884              { background-color: @pstatus-trash;   }
+  &.pstatus-visible          { background-color: @pstatus-visible;   }
+  &.pstatus0.pstatus-visible { background-color: @pstatus-published; }
+  
+}
+
+// Fix for firefox
+.browser-Firefox .wfstate {
+  padding-top: 2px;
+}
+
+/* ----------------------------------------------- */
+/*  PREVIEW                                        */
+/* ----------------------------------------------- */
+
+.stateSelection,
+.stateInfo {
+  margin-bottom: @baseline/2;
+}
+
+.stateSelection {
+  FORM { display: inline; }
+}
+  
+.stateHistory {
+  border: 1px solid #EEE;
+}
+
+/* ----------------------------------------------- */
+/*  Workflow View                                  */
+/* ----------------------------------------------- */
+.workflow-view .node:not(.wf-node-start) .label div {
+  color: #fff;
+}
+
+.workflow-view .edgeLabel {
+  background-color: #fff !important;
+}
+
+.workflow-view .node .label {
+  color: #fff;
+}

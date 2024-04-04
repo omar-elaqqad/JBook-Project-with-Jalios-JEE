@@ -1,0 +1,37 @@
+{
+   "jBlocks":[
+      {
+         "ui":{
+            "gridSizeMd":12
+         },
+         "options":null,
+         "jportlet":null,
+         "jblocks":[
+            {
+               "ui":{
+                  "gridSizeMd":3
+               },
+               "options":null,
+               "jportlet":null,
+               "jblocks":[
+
+               ]
+            },
+            {
+               "ui":{
+                  "gridSizeMd":9
+               },
+               "options":null,
+               "jportlet":null,
+               "jblocks":[
+
+               ]
+            }
+         ]
+      }
+   ],
+   
+   "ui": {
+    "container": "container"
+   }
+}

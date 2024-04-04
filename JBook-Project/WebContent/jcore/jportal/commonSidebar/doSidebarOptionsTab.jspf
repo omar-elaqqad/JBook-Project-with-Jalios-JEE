@@ -1,0 +1,3 @@
+<a href="#EDIT_OPTIONS" data-toggle="tab" onclick="return false;" aria-controls="paths" role="tab">
+  <jalios:icon src="jportal-sidebar-tab-options" />  
+</a>

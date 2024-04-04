@@ -1,0 +1,13 @@
+<%--
+  @Summary: Fragment template to print a Publication's abstract field in a card
+  @Category: Template
+  @Customizable: True
+  @Requestable: False
+  @Since: jcms-10
+--%><% 
+String resultAbstract = pub.getAbstractAsText(userLocale);
+if (Util.notEmpty(resultAbstract)) { %>
+  <div class="card-text" <%= JcmsUtil.getFieldLangAttributes(pub, "abstract", userLang) %>>
+	  <jalios:truncate advancedHtml="<%= true %>" length="200" suffix='...'><%= encodeForHTML(resultAbstract) %></jalios:truncate>
+  </div>
+<% } %>

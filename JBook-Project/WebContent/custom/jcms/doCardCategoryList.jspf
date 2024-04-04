@@ -1,0 +1,4 @@
+<% if (Util.notEmpty(categories)) { %>
+  <% request.setAttribute("category-list-no-link", true); %>
+  <%@ include file='/custom/jcms/doCategoryList.jspf' %>
+<% } %>

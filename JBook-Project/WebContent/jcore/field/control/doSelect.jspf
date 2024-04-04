@@ -1,0 +1,142 @@
+<%@page import="com.jalios.jcms.taglib.settings.impl.HiddenSettings"%>
+<%@page import="com.jalios.jcms.uicomponent.DataAttribute"%>
+<%@page import="com.jalios.jcms.taglib.settings.ControlUtils.SelectDataItem"%>
+<%@page import="com.jalios.jcms.taglib.settings.ControlUtils"%>
+<%@page import="java.util.Collection"%><%
+%><%@page import="java.util.Iterator"%><%
+%><%@page import="com.jalios.util.Util"%><%
+%><%@page import="com.jalios.jcms.HttpUtil"%><%
+%><%@page import="com.jalios.jcms.JcmsUtil"%><%
+%><%@page import="com.jalios.jcms.taglib.settings.BasicSettings"%><%
+%><%@page import="com.jalios.jcms.taglib.settings.SelectorSettings"%><%
+%><%
+Object[] optionValues = (Object[]) getOption(SelectorSettings.ENUM_VALUES, null);
+String[] optionLabels = (String[]) getOption(SelectorSettings.ENUM_LABELS, null);
+List<DataAttribute> optionDataAttributes = (List<DataAttribute>) getOption(SelectorSettings.ENUM_DATA_ATTRIBUTES, null);
+
+String prepend = getIncludeString("PREPEND", getOption(BasicSettings.PREPEND, ""));
+String append = getIncludeString("APPEND", getOption(BasicSettings.APPEND, ""));
+fieldRequired = getOption(SelectorSettings.REQUIRED, fieldRequired); // Check if required is overrided by the control
+String required = fieldRequired.booleanValue() ? "aria-required=\"true\"" : "";
+String disabled = fieldDisabled.booleanValue() || fieldReadOnly.booleanValue() ? "disabled=\"disabled\"" : "";
+boolean isMultiple = getOption(SelectorSettings.MULTIPLE, false);
+boolean enableSearch = getOption(SelectorSettings.ENABLE_SEARCH, false);
+String title = Util.notEmpty(getOption(BasicSettings.TITLE, "")) ? " title=\"" + glp(getOption(BasicSettings.TITLE, "")) + "\" " : "";
+
+String multiple = isMultiple ? "multiple=\"multiple\"" : "";
+String css = getOption(BasicSettings.CSS, "");
+css = "form-control" + (Util.notEmpty(css) ? " " + css : "");
+css += " " +request.getAttribute("additionalCss");
+String htmlAttributes = getOption(BasicSettings.HTML_ATTRIBUTES, "");
+String dataAttributes = formatDataAttributes(getOption(BasicSettings.DATA_ATTRIBUTES, (Map<String, Object>) null));
+Map<String, Object> ariaAttributesMap = getOption(BasicSettings.ARIA_ATTRIBUTES, (Map<String, Object>) null);
+ControlUtils.autoFillAriaAttributes(ariaAttributesMap, fieldResource, fieldLabelId);
+String ariaAttributes = formatAriaAttributes(ariaAttributesMap);
+
+String dataEvent = formatAttribute("data-jalios-event='%s'", getOption(BasicSettings.TRIGGER_EVENT, ""));
+String dataAction = formatAttribute("data-jalios-action='%s'", getOption(BasicSettings.TRIGGER_ACTION, ""));
+String options = getIncludeString("SELECT_OPTIONS", null);
+
+boolean selectItemEmptyValue = getOption(SelectorSettings.SELECT_ITEM_EMPTY_VALUE, false);
+String emptyValueLabel = getOption(SelectorSettings.SELECT_ITEM_EMPTY_VALUE_LABEL, Util.getString(request.getAttribute("empty-value-label"),"&nbsp;"));
+
+if (isMultiple) {
+  // Set isMulti to 'false' to prevent the parent tag to loop multiple times on this tag
+  setIncludeString("isMulti", "false");
+}
+
+if (!enableSearch && Util.notEmpty(optionValues)) {
+  // Automatically enable search if there's enough values
+  int selectSearchLimit = channel.getIntegerProperty("widget.select.enableSearch.limit", 8);
+  enableSearch = selectSearchLimit > 0 && optionValues.length > selectSearchLimit;
+}
+
+boolean useSelect2 = Util.toBoolean(request.getAttribute("useSelect2"), false) || enableSearch || SelectorSettings.SelectorType.SELECT2.equals(selectorType);
+if (useSelect2) {
+  jcmsContext.addJavaScript("frontlib/select2/js/select2.full.js");
+  jcmsContext.addJavaScript("frontlib/select2/js/i18n/fr.js");
+  jcmsContext.addCSSHeader("frontlib/select2/css/select2.css");
+  jcmsContext.addCSSHeader("frontlib/select2bootstraptheme/select2-bootstrap.css");
+  jcmsContext.addJavaScript("js/jalios/core/components/form/jalios-form-select.js");
+}
+
+%><%
+%><% if (Util.notEmpty(prepend)) { %><span class="input-group-addon"><%= prepend %></span><% } %>
+<select id="<%= HttpUtil.encodeForHTMLAttribute(fieldId) %>"
+        name="<%= HttpUtil.encodeForHTMLAttribute(fieldName) %>"
+        class="<%= css %> <%= Util.toBoolean(request.getAttribute("useSelect2"), false) || enableSearch || useSelect2 ? "select2-enumerate" : ""  %>"
+        <%= JcmsUtil.getLangAttributes(cptLang) %>
+        <%= required %>
+        <%= disabled %>
+        <%= multiple %>
+        <%= title %>
+        <%= dataEvent %>
+        <%= dataAction %>
+        <%= dataAttributes %>
+        <%= ariaAttributes %>
+        <%= htmlAttributes %>>
+  <% if (!fieldRequired.booleanValue() || selectItemEmptyValue) { %><option value=""><%= emptyValueLabel %></option><% } %>
+  <% if(optionValues != null) { %>
+    <%
+    String[] labelPrepends = (String[]) getOption(SelectorSettings.ENUM_LABEL_PREPENDS, null);
+    String[] labelAppends = (String[]) getOption(SelectorSettings.ENUM_LABEL_APPENDS, null);
+    for (int i = 0; i < optionValues.length; i++) {
+      String label = optionLabels != null && optionLabels.length > i ? optionLabels[i] : null;
+      String value = resolveValue(optionValues[i]);
+      String labelPrepend = labelPrepends != null && labelPrepends.length > i ? labelPrepends[i] + " " : "";
+      String labelAppend = labelAppends != null && labelAppends.length > i ? labelAppends[i] + " " : "";
+      String selected = (isMultiple ? fieldValues.contains(value) : value.equals(fieldValue)) ? "selected='selected'" : "";
+      SelectDataItem selectDataItem = useSelect2 ? ControlUtils.resolveSelectData(value, selectMode) : null;
+      
+    %>
+    <option <%= Util.notEmpty(optionDataAttributes) ? optionDataAttributes.get(i) : "" %> <%= useSelect2 && selectDataItem != null ? selectDataItem.getDataAttribute() : "" %> value="<%= value %>" <%= selected %>><%= labelPrepend %><%= encodeForHTML(resolveLabel(optionValues[i], label)) %><%= labelAppend %></option>
+    <% } // End for %>
+  <% } else if (options != null) { %>
+    <%= options %>
+  <% } %>
+</select>
+<% if (isMultiple) { %>
+  <jalios:control settings='<%= new HiddenSettings().name(fieldName).value("") %>' /> 
+<% } %>
+<% if (Util.notEmpty(append)) { %><span class="input-group-addon"><%= append %></span><% } %><%
+%><%= getIncludeString("CONTROL_APPEND", "") %>
+<% if (useSelect2) { %>
+<jalios:buffer name="formSelect">
+<script id="hdb-form-select" class="hdb-template" type="text/x-handlebars-template"><%--
+--%><span class="select-enumerate {{selectOptionCss}}">
+  {{#if textOnly}}
+    {{state.text}}
+  {{else if displayIcon}}
+    <img src="{{icon}}" class="select-image {{iconCss}}" alt="" /> {{state.text}}
+  {{else if displayIconHtml}}
+    {{{iconHtml}}} {{state.text}}
+  {{else if displayInitials}}
+    <span class="initials select-image select-image-Member" style="background-color:{{initialsColor}};">{{initials}}</span>{{state.text}}  
+  {{else if displayIconWrapper}}
+    <span class="img-file-wrapper">
+      {{#if isIconGlyph}}
+        <span class="{{src}} select-image select-image-{{type}}" alt=""></span>
+      {{else}}
+        <img src="{{src}}" class="select-image select-image-{{type}}" alt="" />
+      {{/if}}
+    </span>{{state.text}}
+   {{else}}
+     <img src="{{src}}" class="select-image select-image-{{type}}" alt="" data-jalios-initials="{{initials}}" data-jalios-initials-color="{{initialsColor}}" />{{state.text}}
+   {{/if}}
+ </span>
+        <%--
+--%></script>
+</jalios:buffer>
+<jalios:buffer name="formSelected">
+  <script class="hdb-template" id="hdb-form-selected" type="text/x-handlebars-template"><%--
+    --%>{{#if displayIcon}}
+      <span class="option-value-{{state.id}}"><img src="{{icon}}" class="select-image {{iconCss}}" alt="" /> {{state.text}}</span>
+    {{else}}
+      <span class="option-value-{{state.id}}">{{{imgHtml}}} {{state.text}}</span>
+    {{/if}}
+  </script>
+</jalios:buffer>
+<%= jcmsContext.addHandlebarTemplate("formSelect", formSelect) %>
+<%= jcmsContext.addHandlebarTemplate("formSelected", formSelected) %>
+
+<% } %>

@@ -1,0 +1,15 @@
+.app-theme-from-color(@name, @color) {
+  .app-@{name} {
+    .app-header {
+      background-color: @color;
+
+      .app-publication-actions .list-group-item.pub-action-toggle {
+        background-color: @color;
+      }
+    }
+
+    .app-sidebar .app-sidebar-icon .jalios-icon {
+      color: @color;
+    }
+  }
+}

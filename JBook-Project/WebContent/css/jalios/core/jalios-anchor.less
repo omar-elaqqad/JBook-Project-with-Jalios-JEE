@@ -1,0 +1,27 @@
+/* ----------------------------------------------- */
+/*  ANCHOR                                         */
+/* ----------------------------------------------- */
+
+/* Fix anchor displayed under the topbar
+ * Use the .target for custom target declaration
+ * The :target pseudo selector automatically targets anchored id element
+ * */
+ 
+@anchorHeight: @tb-height + @topbar-navigation-height + @baseline;
+
+:not(.toc-anchor):target {
+  scroll-margin-top: @anchorHeight;
+}  
+ 
+BODY.is-topbar-displayed.is-topbar-with-navigation-expanded .toc-anchor {
+  scroll-margin-top: @anchorHeight;
+} 
+ 
+BODY.is-topbar-displayed:not(.is-topbar-with-navigation-expanded) .toc-anchor {
+  @anchorHeight: @tb-height + @baseline;
+  scroll-margin-top: @anchorHeight;
+}
+
+.printView IMG.anchor {
+  display: none;
+}

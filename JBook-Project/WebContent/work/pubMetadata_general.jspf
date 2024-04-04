@@ -1,0 +1,192 @@
+<%@page import="com.jalios.jcms.tracking.ReaderTrackerManager"%>
+<%@page import="com.jalios.jcms.DescriptiveURLs"%>
+<%@page import="org.apache.commons.lang3.StringUtils"%>
+<%@page import="com.jalios.util.Util"%>
+<div class="tab-pane active" id="general">
+
+  <table class="table-data table-not-striped">
+    <thead>
+      <tr>
+       <th><%= glp("ui.adm.data-inspector.lbl.attribute") %></th>
+       <th><%= glp("ui.adm.data-inspector.lbl.value") %></th>
+     </tr>  
+   </thead>
+   
+   <tbody>
+     <% if (pub.isWorkCopy()) { %>
+     <tr>
+       <td class="fit nowrap"><span class="wfstate"><%= glp("ui.com.lbl.workcopy") %></span></td>
+       <td><%= glp("ui.com.lbl.workcopyof", pub.getMainInstance().getDisplayLink(userLocale)) %></td>           
+       
+     </tr> 
+     <% } %>
+        
+      <tr>
+        <td class="fit nowrap"><%= glp("ui.com.lbl.title") %></td>
+        <td><jalios:edit data="<%= pub %>" /> <%= pub.getTitle(userLang) %></td>           
+      </tr>
+      
+     <tr>
+       <td class="fit nowrap"><%= glp("ui.adm.type-list.lbl.name") %></td>
+       <td><jalios:dataicon addTextualAlternative="true" data="<%= pub %>" /> <%= channel.getTypeLabel(pub.getClass(), userLang) %></td>           
+     </tr> 
+  
+   
+      <tr>
+        <td class="fit nowrap"><%= glp("ui.com.lbl.workspace") %></td>
+        <td><jalios:dataicon data="<%= pub.getWorkspace() %>" /> <jalios:link data="<%= pub.getWorkspace() %>" /></td>           
+      </tr>
+     
+      <% if (pub.getHasAttachWS() && channel.isWSAttachmentEnabled()) { %>
+      <tr>
+        <td class="fit nowrap"><%= glp("ui.com.lbl.attach-workspaces") %></td>
+        <td>
+          <ul class="list-unstyled">
+          <% request.setAttribute(DescriptiveURLs.FORCE_ORIGINAL_PORTAL, Boolean.TRUE); %>
+          <jalios:foreach collection="<%= pub.getAttachWorkspaceSet() %>" name="itWs" type="Workspace">
+            <% if (isAdmin || loggedMember.belongsToWorkspace(itWs)) { %>
+            <% PortalInterface itPortal = itWs.getHomePortal(); %>
+            <li>
+              <jalios:dataicon data="<%= itWs %>" /> 
+              <% if (itPortal != null) { %>
+              <jalios:link data="<%= pub %>" params='<%= "portal=" + itPortal.getId() %>'><%= itWs.getTitle(userLang) %></jalios:link>
+              <% } else { %>
+              <jalios:link data="<%= itWs %>" />
+              <% } %>
+            </li>
+            <% } %>
+          </jalios:foreach>
+          <% request.removeAttribute(DescriptiveURLs.FORCE_ORIGINAL_PORTAL); %>
+        </td>           
+      </tr>
+     <% } %>
+     
+      <tr>
+        <td class="fit nowrap"><%= glp("ui.com.lbl.author") %></td>
+        <td><jalios:memberphoto focusable="false" htmlAttributes='tabindex=\"-1\"' member="<%= pub.getAuthor() %>" size="<%= PhotoSize.ICON %>"/> <jalios:link data="<%= pub.getAuthor() %>" /></td>           
+      </tr>
+     
+      <% Category[] categories = pub.getCategories(loggedMember); %>
+      <% if (Util.notEmpty(categories)) { %>
+      <tr>
+        <td class="fit nowrap"><%= glp("ui.com.lbl.categories") %></td>
+        <td>
+          <% request.setAttribute("addCategoryListTitle", false); %>
+	        <%@ include file="/custom/jcms/doCategoryList.jspf"  %>      
+        </td>           
+      </tr>
+      <% } %>
+  
+       <% String permalink = channel.getUrl() + PortalManager.getPermalink(pub, userLocale); %>
+       <tr>
+        <td class="fit nowrap"><%= glp("ui.com.title.permalink") %></td>
+        <td><a href="<%= permalink %>"><%= permalink %></a></td>           
+      </tr>
+             
+      <% if (Util.notEmpty(pub.getFriendlyURLSet())) { %>
+        <tr>
+          <td  class="fit nowrap"><%= glp("ui.com.lbl.friendly-urls") %></td>
+          <td>
+            <ul class="list-unstyled">
+            <% for (String friendlyUrl : pub.getFriendlyURLSet()) { %>
+              <% 
+                String friendlyUrlHref = channel.getUrl() + (StringUtils.substring(friendlyUrl, 1)); 
+              %>
+              <li><jalios:icon src='www'  /> <a href="<%= friendlyUrlHref %>"><%= friendlyUrlHref %></a></li>
+            <% } %>
+            </ul>
+          </td>           
+        </tr>
+      <% } %>
+      
+      <% if (ReaderTrackerManager.getInstance().canAccessReaderTracker(pub,loggedMember)) { %>
+       <tr>
+         <td  class="fit nowrap"><%= glp("ui.work.form.lbl.track") %></td>
+         <td><%= glp("ui.com.lbl." + pub.isTracked()) %></td>           
+       </tr>
+       
+       <tr>
+         <td  class="fit nowrap"><%= glp("ui.com.alt.readers") %></td>
+         <td><a class="modal" href="front/readerTracking/readerTrackingModal.jsp?trackedPubId=<%= pub.getId() %>"><%= pub.getReaderCount() %></a></td>           
+       </tr>
+       <% } %>
+   
+  
+  
+     <% if (pub instanceof FileDocument) { %>
+     <%   FileDocument doc = (FileDocument)pub; %>
+     <tr>
+       <td class="fit nowrap"><%= glp("ui.filedocument.lbl.upload-date") %></td>
+       <td><jalios:date date="<%= doc.getUploadDate() %>" format="full" /> <jalios:time date="<%= doc.getUploadDate() %>" format="full" /></td>           
+     </tr> 
+     <tr>
+       <td class="fit nowrap"><%= glp("ui.filedocument.lbl.file-type") %></td>
+       <td><jalios:dataicon data="<%= doc %>" /> <%= doc.getTypeInfo(userLang) %></td>           
+     </tr> 
+     <% if (Util.notEmpty(doc.getRemoteUri())) { %>
+     <tr>
+       <td class="fit nowrap"><%= glp("ui.filedocument.lbl.remote-uri") %></td>
+       <td><a href="<%= encodeForHTMLAttribute(doc.getRemoteUri()) %>"><%= encodeForHTML(doc.getRemoteUri()) %></a></td>           
+     </tr>    
+     <% } %>
+     <%   if (Util.notEmpty(doc.getFilename())) { %>
+     <tr>
+       <td class="fit nowrap"><%= glp("ui.filedocument.lbl.filename") %></td>
+       <td><%= doc.getFilename() %></td>           
+     </tr>    
+  
+      <tr>
+       <td class="fit nowrap"><%= glp("ui.filedocument.lbl.size") %></td>
+       <td><%= Util.formatFileSize(doc.getSize(), userLocale) %></td>           
+     </tr> 
+     <%     if (doc.isImage() && doc.getDimensions() != null) {  %>
+     <tr>
+       <td class="fit nowrap"><%= glp("ui.filedocument.lbl.dimensions") %></td>
+       <td><%= doc.getDimensions() %></td>           
+     </tr> 
+     <%     } %>
+     <%     if (doc.hasDuration()) {  %>
+     <tr>
+       <td class="fit nowrap"><%= glp("ui.filedocument.lbl.duration") %></td>
+       <td><%= DateUtil.formatDuration(doc.getDuration(), userLocale) %></td>           
+     </tr> 
+     <%     } %>
+     <%   } %>      
+     <% } %>
+  
+     <%-- READ RIGHTS --%>
+     <% if (Util.notEmpty(pub.getAuthorizedMemberSet()) || Util.notEmpty(pub.getAuthorizedGroupSet())) { %>
+     <tr>
+       <td class="fit nowrap"><%= glp("ui.work.form.lbl.read-rights") %></td>
+       <td>
+         <ul class="list-unstyled">
+           <jalios:foreach collection="<%= pub.getAuthorizedMemberSet() %>" name="itMember" type="Member">
+             <li><jalios:memberphoto member="<%= itMember %>" size="<%= PhotoSize.ICON %>"/> <jalios:link data="<%= itMember%>" /></li>
+           </jalios:foreach>
+           <jalios:foreach collection="<%= pub.getAuthorizedGroupSet() %>" name="itGroup" type="Group">
+             <li><jalios:dataicon data="<%= itGroup %>" /> <%= itGroup.getName(userLang) %></li>
+           </jalios:foreach>
+         </ul>
+       </td>           
+     </tr>
+     <% } %>
+    
+     <%-- UPDATE RIGHTS --%>
+     <% if (Util.notEmpty(pub.getUpdateMemberSet()) || Util.notEmpty(pub.getUpdateGroupSet())) { %>
+     <tr>
+       <td class="fit nowrap"><%=  pub.getRestrictUpdateRights() ? glp("ui.work.form.lbl.update-rights.rectricted") : glp("ui.work.form.lbl.update-rights.extended") %></td>
+       <td>
+         <ul class="list-unstyled">
+           <jalios:foreach collection="<%= pub.getUpdateMemberSet() %>" name="itMember" type="Member">
+             <li><jalios:memberphoto member="<%= itMember %>" size="<%= PhotoSize.ICON %>"/> <jalios:link data="<%= itMember%>" /></li>
+           </jalios:foreach>
+           <jalios:foreach collection="<%= pub.getUpdateGroupSet() %>" name="itGroup" type="Group">
+             <li><jalios:dataicon data="<%= itGroup %>" /> <%= itGroup.getName(userLang) %></li>
+           </jalios:foreach>
+         </ul>
+       </td>           
+     </tr>
+     <% } %>   
+   </tbody>
+  </table>
+</div>

@@ -1,0 +1,7 @@
+<% if (channel.isMultilingual() &&  com.jalios.jcms.handler.EditPublicationHandler.class.isInstance(genericFormHandler)){
+  java.lang.reflect.Method showLanguageChooser_Method = genericFormHandler.getClass().getMethod("showLanguageChooser");
+  if ((Boolean)showLanguageChooser_Method.invoke(genericFormHandler)) {
+    java.lang.reflect.Method getAvailableMainLanguage_Method = genericFormHandler.getClass().getMethod("getAvailableMainLanguage");
+    String lang = (String)(getAvailableMainLanguage_Method.invoke(genericFormHandler));
+%><a href="#" lang="<%= lang %>" class="ctxLangForm ctxmenu lang-fix langStatus btn btn-default"><%= glp("ui.com.lbl.language.edit") %> <jalios:lang lang='<%= lang %>' /></a><% } %><% } %>
+              

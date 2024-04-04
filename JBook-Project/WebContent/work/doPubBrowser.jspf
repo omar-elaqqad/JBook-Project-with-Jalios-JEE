@@ -1,0 +1,187 @@
+<%@page import="com.jalios.jcms.HttpUtil"%><%
+%><%@page import="com.jalios.jcms.taglib.settings.impl.GroupSettings"%><%
+%><%@page import="com.jalios.jcms.Category"%><%
+%><%@page import="com.jalios.jcms.ajax.PublicationCtxMenu"%><% 
+// Setup Contextual Menu
+PublicationCtxMenu pcm = (PublicationCtxMenu) request.getAttribute("PublicationCtxMenu");
+if (pcm != null) {
+  pcm.setCategoryParam(jcmsContext, "cid");
+}
+
+boolean isTextFieldPubLink = getBooleanParameter("textFieldPubLink", false);
+
+Class currentClass = formHandler.getCurrentClass();
+int pubCount = formHandler.getPubCount();
+boolean pubBrowserShowCategories = formHandler.showCategories();
+boolean pubBrowserShowNavbar = !formHandler.isDeleteMode();
+boolean pubBrowserShowVerticalSeparator = !formHandler.isDeleteMode();
+boolean pubBrowserShowChooserMenu = Util.toBoolean(request.getAttribute("jcms.pubbrowser.chooser.menu"),false);
+Category pubBrowserRefineCat = formHandler.getCategory();
+String pbDesc = formHandler.getPubBrowserDescription();
+%>
+
+<table class='layout spliter'>
+  <tr>
+    <%-- *** CATEGORIES ******************************************* --%>
+    <% if (pubBrowserShowCategories) { %>
+      <td class="sidebar">
+       <div class="overflowing-panel">
+        <%
+        Set<Category> openedSet = new HashSet<Category>();
+        Set<Category> highlightSet = new HashSet<Category>();
+        if (pubBrowserRefineCat != null) {
+          openedSet.add(pubBrowserRefineCat);
+          highlightSet.add(pubBrowserRefineCat);
+        }
+        
+        Set<Category> wsCatSet = workspace.getCatSet();
+        if (wsCatSet == null) { 
+          wsCatSet = Util.EMPTY_TREESET;
+        }
+        for (Category curWsCat : wsCatSet) {
+          if (curWsCat.getParent() != null) {
+            openedSet.add(formHandler.isPortletMode()? curWsCat : curWsCat.getParent());
+          }
+        }
+        
+        Category root = channel.getRootCategory();
+        if (!workspaceFilter && !formHandler.isAllWorkspaceFilter()) {
+          wsCatSet = new TreeSet();
+          for (Workspace mbrWorkspace : loggedMember.getWorkspaceSet()) {
+            if (mbrWorkspace != null && mbrWorkspace.getCatSet() != null) {
+              if (mbrWorkspace.getCatSet().contains(root)) {
+              wsCatSet.addAll(root.getChildrenSet());
+              } else {
+                wsCatSet.addAll(mbrWorkspace.getCatSet(loggedMember));
+              }
+            }
+          }
+        } else if (!workspaceFilter || wsCatSet.contains(root) || formHandler.isAllWorkspaceFilter()) {
+          wsCatSet = new TreeSet();
+          if (formHandler.isPortletMode()) {
+            wsCatSet.add(root);
+          } else {
+            wsCatSet.addAll(root.getChildrenSet());
+          }
+        }
+        %>
+        <jalios:treecatview 
+                  prefix="pubbrowser"
+                  link='<%= ServletUtil.getUrlWithUpdatedParams(request, new String[] {"cid", "start", "skip", "pagerAll"}, new String[] {"_NODE_ID_", null, null, null}) %>'
+                  collection="<%= wsCatSet %>"
+                  opened="<%= openedSet %>"
+                  highlighted="<%= highlightSet %>"
+                  dragdrop="true"
+                  showCtxMenu="true"
+                  showPortal="<%= formHandler.isPortletMode() %>"
+                  memo='<%= formHandler.isPortletMode() ? Util.getHashMap("display-portal-link", true) : null %>'
+                  css="autocomplete" />
+        <% if (formHandler.getPortals().size() == 1) { %>
+          <% PortalElement elm = (PortalElement)formHandler.getPortals().first(); %>
+          <label>&nbsp;&nbsp;<%= elm.getTitle(userLang) %>:</label>
+          <jalios:treeview
+                  prefix="treeportlet-pubbrowser"
+                  collection="<%= formHandler.getPortals() %>"
+                  link='<%= "work/displayWork.jsp?id=" + TreeViewTag.RXP_NODE_ID %>' />
+        <% } %>
+        </div>
+      </td>
+    <% } %>
+
+    <%-- *** VERTICAL SEPARATOR ******************************************* --%>
+    <% if (pubBrowserShowVerticalSeparator) { %>
+      <td class="split">
+        <% if (pubBrowserShowCategories) { %>
+          <a href='<%= ServletUtil.getUrlWithUpdatedParams(request, new String[] {"showCategories"}, new String[] {"false"}) %>'><jalios:icon src='arrowbk' /></a>
+        <% } else { %>
+          <a href='<%= ServletUtil.getUrlWithUpdatedParams(request, new String[] {"showCategories"}, new String[] {"true"}) %>'><jalios:icon src='arrow' /></a>
+        <% } %>
+      </td>
+    <% } %>
+
+    <%-- *** PUBLICATION LIST ******************************************* --%>
+    <td>
+      <%@ include file='/work/doInsertLinkParams.jspf' %>
+      <% if (popupEdition) { %>
+        <%@ include file='/work/doInsertLinkPopup.jspf' %>
+      <% } %>
+      <%
+      Set resultSet = formHandler.getResultSet();
+      List<Class<?>> subTypeList = formHandler.getSubTypeList();
+      // Make sure when redirecting back there that we do not display the content of the caddy
+      String redirect = ServletUtil.encodeURL(ServletUtil.getAbsUrlWithUpdatedParam(request,"opCaddy",null));
+      %>
+      <jalios:pager name='plPagerHandler' declare="true" action='init' 
+                    sort='<%= formHandler.isDeleteMode() ? "ddate" : "mdate" %>' 
+                    showLastLink='<%= !formHandler.isHybrid() %>' 
+                    sizeAccurate='<%= formHandler.isPubCountAccurate() %>'/>
+
+      <div class="WorkArea">
+        <%@ include file='/jcore/doMessageBox.jspf' %>
+        
+        <%-- *** TITLE ******************************************* --%>
+        <% if (pubBrowserShowChooserMenu) { %>  
+          <h4 class="pub-chooser-menu">
+            <% if (popupEdition && formHandler.isAllWorkspaceFilter()) { %>
+              <%= glp("ui.work.mn.allworkspaces") %>
+            <% } else if (popupEdition ) { %>
+              <%= formHandler.getWorkspace() == null && !formHandler.isAllWorkspaceFilter() ? glp("ui.work.mn.allworkspace") : formHandler.getWorkspace().getTitle(userLang)  %>:
+            <% } %>
+          <%= formHandler.getPubBrowserTitle(null) %>
+          <% if (pubBrowserRefineCat != null) { %>&nbsp;&gt;&nbsp;<%= pubBrowserRefineCat.getName(userLang) %><%/*%>Category<%*/%><% } %>
+          (<%= pubCount %><%/*%>Pub count<%*/%><% if (formHandler.showQueryStatusMessage()) { %> <jalios:icon src="info" title='<%= formHandler.getQueryStatusMessage(userLang) %>'/><% } %>)
+          </h4>
+        <% } else { %>  
+        <div class="page-header">
+          <h1 class="boTitle icon iconContent">
+            <% Set wspcSet = Workspace.getAllWorkspaceSet(); %>
+            <% if (showWorkspaceFilter && (wspcSet != null) && (wspcSet.size() > 1)) { %>
+              <a href='<%= ServletUtil.getUrlWithUpdatedParam(request , "workspaceFilter" , ""+!workspaceFilter) %>'>
+                <jalios:icon src='<%= workspaceFilter ? "work-filter-off" : "work-filter-on"%>' title='<%= workspaceFilter ? glp("ui.work.mn.allworkspaces") : glp("ui.work.mn.alt.filter",workspace.getTitle(userLang)) %>' />
+              </a>
+            <% } %>
+            <% if (popupEdition) { %><%= formHandler.getWorkspace() == null ? glp("ui.work.mn.allworkspaces") : formHandler.getWorkspace().getTitle(userLang)  %>:<% } %>
+            <%= formHandler.getPubBrowserTitle(null) %>
+            <% if (pubBrowserRefineCat != null) { %>&nbsp;&gt;&nbsp;<%= pubBrowserRefineCat.getName(userLang) %><%/*%>Category<%*/%><% } %>
+            (<%= pubCount %><%/*%>Pub count<%*/%><% if (formHandler.showQueryStatusMessage()) { %> <jalios:icon src="info" title='<%= formHandler.getQueryStatusMessage(userLang) %>'/><% } %>)
+          </h1>
+        </div>
+        <% } %>
+        
+        <%-- *** DESCRIPTION ******************************************* --%>
+        <% if (Util.notEmpty(pbDesc)) { %><p class="br"><em><jalios:wysiwyg><%= pbDesc %></jalios:wysiwyg></em></p><% } %>
+        
+        <%-- *** NAVBAR ******************************************* --%>
+        <% if (pubBrowserShowNavbar) { %>
+          <%@ include file='/work/doPubBrowserNavbar.jspf' %>
+        <% } %>
+
+        <% 
+        if (!formHandler.isDeleteMode()){
+          request.setAttribute("plQueryString",    formHandler.getQueryHandler().getQueryString());
+        }
+        request.setAttribute("plPubSet",           resultSet); 
+        request.setAttribute("plPubCount",         pubCount); 
+        request.setAttribute("plShowRefineLink",   Boolean.TRUE); 
+        request.setAttribute("plShowRadioInsert",  Boolean.valueOf(showRadioInsert)); 
+        request.setAttribute("plShowCheckInsert",  Boolean.valueOf(showCheckInsert)); 
+        request.setAttribute("plShowAuthor",       Boolean.valueOf(formHandler.isAllMode() || formHandler.isDeleteMode())); 
+        request.setAttribute("plShowWorkspace",    Boolean.valueOf(!workspaceFilter) || getBooleanParameter("allWorkspaceFilter", false));
+        request.setAttribute("plShowCaddy",        Boolean.valueOf(showCaddy && !formHandler.isDeleteMode()));
+        request.setAttribute("plShowCSVExport",    Boolean.valueOf(showCSVExport && !formHandler.isDeleteMode()));
+        request.setAttribute("plShowVersion",      Boolean.valueOf(showVersion));
+        request.setAttribute("plShowWorkMerge",    Boolean.valueOf(showWorkMerge)); 
+        request.setAttribute("plShowPreviewIcon",  Boolean.valueOf(showPreviewIcon));  
+        request.setAttribute("plShowDeepDuplicate",Boolean.valueOf(showDeepDuplicate));
+        request.setAttribute("plIsDeleteMode",     Boolean.valueOf(formHandler.isDeleteMode()));
+        request.setAttribute("plIsContentMode",    Boolean.valueOf(formHandler.isContentMode()));  
+        request.setAttribute("plIsPortletMode",    Boolean.valueOf(formHandler.isPortletMode()));  
+        request.setAttribute("plIsFormMode",       Boolean.valueOf(formHandler.isFormMode()));  
+        request.setAttribute("plIsHybrid",         Boolean.valueOf(formHandler.isHybrid()));  
+        request.setAttribute("plIsPubCountAccurate", Boolean.valueOf(formHandler.isPubCountAccurate()));  
+        %>
+        <jsp:include page='/work/doPubList.jsp'/>
+      </div><%-- class="WorkArea" --%>
+    </td>
+  </tr>
+</table>

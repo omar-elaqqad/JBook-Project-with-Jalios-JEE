@@ -1,0 +1,54 @@
+<div class="tab-page">
+  <h2 class="tab"><%= glp("ui.adm.jsync.tab.status") %></h2>
+
+  <table class='table-data is-auto'>
+    <tr>
+      <th class='formLabel' scope="row"><%= glp("ui.adm.jsync.st.r-st") %></th>
+      <td class='formInfo'><jalios:icon src='<%= "replica-" + formHandler.getReplicaStatus() %>' /> <%= glp("ui.adm.jsync.r-st." + formHandler.getReplicaStatus()) %></td>
+    </tr>
+    <% if (replica.isJoined()) { %>
+    <tr>
+      <th class='formLabel' scope="row"><%= glp("ui.adm.jsync.st.l-urid") %></th>
+      <td class='formInfo'><%= replica.getLeader().getUrid() %></td>
+    </tr>
+    <tr>
+      <th class='formLabel' scope="row"><%= glp("ui.adm.jsync.st.need-upd") %></th>
+      <td class='formInfo'><%= replica.needForUpdate() %></td>
+    </tr>
+    <% } %>
+    <tr>
+      <th class='formLabel' scope="row"><%= glp("ui.adm.jsync.st.pt") %></th>
+      <td class='formInfo'>
+        <% Map map = replica.getProgressTable().getMap(); %>
+        <table class="table-data table-condensed">
+          <tr>
+            <th><%= glp("ui.com.lbl.urid") %></th>
+            <th><%= glp("ui.com.lbl.stamp") %></th>
+          </tr>
+          <jalios:foreach collection="<%= map.entrySet() %>" type="Map.Entry" name="itEntry">
+          <tr>
+            <td class="fit"><code><%= itEntry.getKey() %></code></td>
+            <td><%= itEntry.getValue() %></td>
+          </tr>  
+          </jalios:foreach>
+        </table>
+      
+    </tr>
+  </table>
+  
+  <%-- *** BUTTONS ************************************************** --%>
+  <form action='admin/jsync/jsync.jsp' method="post">
+    <% if (replica.isJoined()) { %>
+    <input class='btn btn-default' type='submit' name='opUpdateLeader' value='<%= glp("ui.adm.jsync.btn.upd-leader") %>' /> 
+    <input class='btn btn-default' type='submit' name='opDisjoin' value='<%= glp("ui.adm.jsync.btn.disjoin") %>' />
+    <% } else if (Util.notEmpty(formHandler.getLeaderUrl())) {%>
+    <input class='btn btn-primary' type='submit' name='opJoin' value='<%= glp("ui.adm.jsync.btn.join") %>' />
+    <% } %>
+    <% if (replica.isLeader()) { %>
+    <input class='btn btn-default' type='submit' name='opUpdateGroup' value='<%= glp("ui.adm.jsync.btn.upd-grp") %>' />
+    <% } %>
+  </form>
+</div>
+
+
+

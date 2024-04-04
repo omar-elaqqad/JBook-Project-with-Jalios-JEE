@@ -1,0 +1,32 @@
+<%-- 
+  Common alerts iterator template 
+--%><%
+%><%@ page contentType="text/html; charset=UTF-8" %><%
+%><%@page import="com.jalios.jcms.alert.*"%><%
+
+PageResult<Alert> pageResult = formHandler.getAlertsPageResult();
+if (pageResult.getTotalSize() == 0) {
+  %><jalios:appBodyNoResult text="<%= formHandler.getNoResultsMessage() %>" icon="<%= formHandler.getNoResultsIcon() %>" />
+<% } else { %>
+  <jalios:pager name='alertPagerHandler' paramPrefix="<%= formHandler.PARAM_PAGER_PEFIX %>" action='init' declare='true' size='<%= pageResult.getTotalSize() %>' pageSize='<%= formHandler.getPageSize() %>'/>
+  <jalios:foreach name="alert" type="Alert" collection="<%= pageResult.getResultList() %>" skip='<%= alertPagerHandler.getStart() %>' max="<%= alertPagerHandler.getPageSize() %>">
+    <% request.setAttribute("jcms.alertlist.alert", alert); %>
+    <jalios:include jsp="<%= WebAlertChannel.getJspPath(alert) %>"/>
+    <% request.removeAttribute("jcms.alertlist.alert"); %>
+  </jalios:foreach>
+
+  <%-- More action --%>
+  <% if (formHandler.hasMore()) { %>
+    <% String moreUniqueId = ServletUtil.generateUniqueDOMId(request, "js-alerts-ajax-inner"); %>
+    <div id="<%= moreUniqueId %>" class="js-show-alerts-more-items show-alerts-more-items-wrapper">
+      <a href="#" data-jalios-action="ajax-refresh" 
+          data-jalios-ajax-refresh="noscroll" 
+          data-jalios-options='<%= formHandler.getMoreAlertParams() %>' 
+          data-jalios-ajax-refresh-url="jcore/alert/app/alerts/doAlertsMore.jsp" 
+          data-jalios-ajax-refresh-inner="#<%= moreUniqueId %>" 
+          class="no-focus btn btn-default btn-block alert-app-more-alerts">
+        <%= glp("ui.com.txt.more-results") %>
+      </a>
+    </div><%-- EOF.js-show-alerts-more-items --%>
+  <% } %>
+<% } %>

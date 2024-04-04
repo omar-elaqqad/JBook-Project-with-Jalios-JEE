@@ -1,0 +1,116 @@
+<div class="tab-page">
+  <h2 class="tab"><%= glp("ui.adm.jsync.tab.log") %></h2>
+
+  <% List logList = formHandler.getLogList(); %>    
+  <div class='navbar navbar-default <%= Util.notEmpty(logList) ? "navbar-table-header" : "" %>'>
+    <form action='admin/jsync/jsync.jsp' name='logForm' method="post" class="navbar-form">
+      <div class="navbar-left">
+      <span class="navbar-label"><%= glp("ui.adm.jsync.log.since") %></span>
+      <jalios:field name="duration" value="<%= formHandler.getDuration() %>" resource="field-vertical">
+        <jalios:control settings="<%= new DurationSettings().resolution(DurationSettings.Resolution.HOUR) %>" />
+      </jalios:field>
+      <button class='btn btn-primary' type='submit' name='opRefreshLog' value='true'><%= glp("ui.com.btn.refresh") %></button>
+      </div>
+    </form>    
+  </div>
+  
+  <%-- No logs --%>
+  <% if (Util.isEmpty(logList)) { %>
+  <jalios:message msg="ui.adm.jsync.log.nolog" title="" dismissable=""/>
+  
+  <%-- Logs table --%>
+  <% } else { %>
+  <table id='logTable' class='table-data'>
+    <thead>
+      <tr>
+        <th class="fit nowrap"><a href="admin/jsync/exportCSVJSyncLog.jsp?duration=<%= formHandler.getDuration() %>"><jalios:icon src="csv" /></a></th>
+        <th class="fit nowrap"><%= glp("ui.com.lbl.date") %></th>
+        <th class="fit nowrap"><%= glp("ui.com.lbl.urid") %></th>
+        <th class="fit nowrap"><%= glp("ui.com.lbl.type") %></th>
+        <th class="fit nowrap"><%= glp("ui.adm.jsync.log.action") %></th>
+        <th class="fit nowrap"><%= glp("ui.com.lbl.status") %></th>
+        <th class="fit nowrap"><%= glp("ui.work.report.lbl.duration") %></th>
+        <th><%= glp("ui.adm.jsync.log.extra") %></th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <%
+      boolean isLeader = channel.getJSyncReplica().isLeader();
+      String myUrid = channel.getUrid();
+      String leaderUrid = "";
+      if (isLeader) {
+        leaderUrid = myUrid;
+      } else {
+        ReplicaInfo leader = channel.getJSyncReplica().getLeader();
+        if (leader != null) {
+          leaderUrid = leader.getUrid();
+        }
+      }
+      %>
+      <jalios:pager name="pager" declare="true" action="init" size="<%= logList.size() %>"/>
+      <jalios:foreach collection='<%= logList %>' 
+                      name='itElt' 
+                      type='org.jdom.Element'
+                      max="<%= pager.getPageSize() %>"
+                      skip="<%= pager.getStart() %>">
+      <% 
+      Date date = new Date(Util.toLong(itElt.getAttributeValue("date"), 0)); 
+      String type = itElt.getAttributeValue("type");
+      String action = itElt.getAttributeValue("action");
+      String typeIcon = (type.equals("in") ? "images/jalios/icons/arrowleft.gif" : (type.equals("out") ? "images/jalios/icons/arrowright.gif" : "s.gif"));
+      String urid = itElt.getAttributeValue("urid");
+      String uridIcon = null;
+      if (leaderUrid.equals(urid)) {
+        uridIcon = "replica-leader";
+      } 
+      if (myUrid.equals(urid)) {
+        uridIcon = "replica-member";        
+      } 
+      else {
+        uridIcon = "replica-lone";
+      }
+      
+      int sc = JSyncUtil.cleanStatusCode(Util.toInt(itElt.getAttributeValue("sc"), 0));
+      long duration = Util.toLong(itElt.getAttributeValue("duration"), 0);
+      int nbOps = Util.toInt(itElt.getAttributeValue("nbOps"), -1);
+      int nbFiles = Util.toInt(itElt.getAttributeValue("nbFiles"), -1);
+      boolean merge = Util.toBoolean(itElt.getAttributeValue("merge"), false);
+      boolean partial = Util.toBoolean(itElt.getAttributeValue("partial"), false);
+      int nbUU = Util.toInt(itElt.getAttributeValue("nbUU"), 0);
+      int nbUD = Util.toInt(itElt.getAttributeValue("nbUD"), 0);
+      int nbDU = Util.toInt(itElt.getAttributeValue("nbDU"), 0);
+      int nbDD = Util.toInt(itElt.getAttributeValue("nbDD"), 0);
+      int nbConflict = nbUU + nbUD + nbDU + nbDD;
+      boolean isError = sc != JSyncConstants.SC_OK;
+      %> 
+      <% String trClass = type.equals("in") ? "listJsyncLogIn" : ( type.equals("out") ? "listJsyncLogOut" : "listJsyncLogInternal"); %>
+      <tr class="<%= trClass %>">
+        <td class="fit nowrap text-right"><%= itCounter %></td>
+        <td class="fit nowrap text-right"><jalios:date date='<%= date %>' format='<%= "short" %>'/> <jalios:time date='<%= date %>' format='<%= "short" %>'/></td>
+        <td class="fit nowrap"><jalios:icon src='<%= uridIcon %>' /><code><%= urid %></code></td>
+        <td class="text-center"><jalios:icon src='<%= typeIcon %>' /></td>
+        <td class="fit nowrap"><%= action %></td>
+        <td class="fit nowrap <%= isError ? "listJsyncLogError" : ""%>"><span class="label <%= sc == 0 ? "label-info" : (sc == JSyncConstants.SC_OK ? "label-success" : "label-warning") %>"><%= sc %> - <%= replica.getStatusLabel(sc, userLocale) %></span></td>
+        <td class="fit nowrap text-right">
+           <% if (duration > 0) {%>
+             <% if (duration < 1000) { duration = 1000; } %>
+             <jalios:duration time='<%= duration %>'/>
+          <% } %>
+        </td>
+        <td>
+          <ul>
+          <% if (nbOps > 0) {%><li><%= glp("ui.adm.jsync.log.ops", nbOps) %><% } %>
+          <% if (nbFiles > 0) {%><li><%= glp("ui.adm.jsync.log.files", nbFiles) %><% } %>
+          <% if (merge) {%><li><%= glp("ui.adm.jsync.log.merge") %><% } %>
+          <% if (partial) {%><li><%= glp("ui.adm.jsync.log.partial") %><% } %>
+          <% if (nbConflict > 0) {%><li><%= glp("ui.adm.jsync.log.conf", nbConflict) %> (<%= nbUU %> UU, <%= nbUD %> UD, <%= nbDU %> DU, <%= nbDD %> DD)<% } %>
+          </ul>
+        </td>
+      </tr>
+      </jalios:foreach>
+    </tbody>
+  </table>
+  <jalios:pager name="pager"/>
+  <% } %>
+</div>

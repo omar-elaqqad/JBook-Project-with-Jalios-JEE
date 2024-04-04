@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<lucene>
+  <analyzer>
+    <charFilter name="mapping" mapping="jalios/lucene/mapping-FoldToASCII.txt"/>
+    <tokenizer name="uax29urlemail" maxTokenLength="255"/>
+    <filter name="lowercase" />
+    <filter name="classic" />
+  </analyzer>
+</lucene>

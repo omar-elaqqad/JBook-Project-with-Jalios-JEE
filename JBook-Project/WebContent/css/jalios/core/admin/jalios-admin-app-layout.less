@@ -1,0 +1,74 @@
+
+
+HTML.is-admin-app-displayed {
+  overflow-y: hidden;
+  
+  .AdminArea, .WorkArea {
+    padding: 0;
+  }
+  .app-body .AdminArea, .app-body .WorkArea {
+    padding: 0 20px;
+  }
+  
+  .app-body .nav-tabs-underlined {
+    margin-left: 0;
+  }
+  
+}
+
+.app.app-admin {
+  .app-main {
+    background-color: white;
+  }
+
+  .app-sidebar .app-sidebar-icon {
+    height: 92px;
+    A > SPAN.jalios-icon {
+      font-size: 34px;
+    }
+  }
+
+  .app-main .app-body {
+    display: flex;
+    flex-direction: column;
+    height: calc(~"100%" - @app-body-bottom-height);
+    overflow: auto;
+    padding: 23px 16px 48px 32px;
+    &.is-spliter-layout {
+      padding: 23px 0 0 0;
+      .admin-breadcrumb {
+        padding-left: 40px;
+      }
+      
+      .layout.spliter {
+        border-top: 1px solid #EFEFEF;
+        .split {
+          background-color: #fafafa;
+          border: 0;
+          border-right: 1px solid #EFEFEF;
+          A {
+            opacity: 0.4;
+          }
+        }
+        .sidebar {
+          padding: 20px;
+        }
+        .WorkArea, .AdminArea {
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+  .app-sidebar-sections-wrapper {
+    overflow: hidden;
+    height: calc(~"100%" - 187px);
+    position: relative;
+    
+    .app-sidebar-menu {
+      LI > A > IMG.jalios-icon {
+        filter: grayscale(1);
+        opacity: 0.6;
+      }
+    }
+  }
+}

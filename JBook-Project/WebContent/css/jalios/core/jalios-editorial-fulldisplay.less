@@ -1,0 +1,128 @@
+// Include variables and mixins
+@import "init-mixins.less";
+
+// Editorial full display
+// ----------------------
+.editorial-fulldisplay {
+  .publication-intro {
+    font-size: 16px;
+  }
+
+  // Typography
+  .publication-content {
+    font-size: 20px;
+    #JCMS > .br();
+    line-height: @editorial-line-height;
+    font-weight: @font-weight-light;
+
+    P {
+      margin-top: 29px;
+    }
+    .jcms-message P {
+      margin-top: initial;
+    } 
+
+    H1 + P, H2 + P, H3 + P, H4 + P, H5 + P, H6 + P {
+      margin-top: initial;
+    }
+
+    H1, H2, H3, H4, H5, H6 {
+      font-family: @font-family-condensed;
+      border-bottom: 0;
+      padding: 0;
+    }
+
+    H1 {
+      font-size: 40px;
+      margin-top: 45px;
+    }
+
+    H2 {
+      font-size: 34px;
+      margin-top: 45px;
+    }
+
+    H3 {
+      font-size: 30px;
+      margin-top: 33px;
+    }
+
+    H4 {
+      font-size: 26px;
+      margin-top: 33px;
+    }
+
+    H5, H6 {
+      font-size: 24px;
+      margin-top: 33px;
+    }
+
+    BLOCKQUOTE,
+    .wiki BLOCKQUOTE, 
+    .wysiwyg BLOCKQUOTE, 
+    .mce-content-body BLOCKQUOTE {
+      &, & P {
+        font-size: 20px;
+        line-height: @editorial-line-height;
+      }
+      *:first-child {
+        margin-top: 0;
+      }
+    }
+
+    LI {
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .publication-picture {
+    max-width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    IMG {
+      max-width: 100%;
+    }
+  }
+  @media (min-width: @screen-lg-min) {
+    .publication-picture {
+      max-width: 960px;
+    }
+  }
+  .publication-metadata {
+    margin-bottom: 20px;
+
+    & > SPAN,
+    & > DIV {
+      border-right: 1px solid #AAA;
+      padding-right: 10px;
+      margin-right: 10px;
+      &:last-child {
+        border: 0;
+      }
+      A {
+        color: @text-color;
+      }
+    }
+    & > DIV { display:inline; }
+    .date { color: @meta-text; }
+  }
+
+  .publication-body {
+    max-width: 712px;
+    margin: auto;
+    .publication-title {
+      word-break: break-word;
+    }
+    .publication-title:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .publication-intro {
+    margin-bottom: @baseline;
+  }
+}

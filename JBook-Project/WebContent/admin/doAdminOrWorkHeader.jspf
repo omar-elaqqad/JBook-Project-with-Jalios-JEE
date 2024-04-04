@@ -1,0 +1,16 @@
+<%--
+  @Summary: Display admin or work header
+  @Category: Admin or Work Area / Presentation
+  @Author: Sylvain Devaux
+  @Copyright: Jalios SA
+  @Customizable: False
+  @Requestable: False
+  @Deprecated: False
+  @Since: jcms-10.0.6 
+--%><%
+if (getBooleanParameter("adminArea", false)) {
+  %><%@ include file='/admin/doAdminHeader.jspf' %><%
+} else {
+  %><%@ include file='/work/doWorkHeader.jspf' %><%
+}
+%>
