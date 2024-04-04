@@ -1,0 +1,213 @@
+@import "../core/init-mixins.less"; /* ----------------------------------------------- */
+/*  SEARCH                                         */
+/* ----------------------------------------------- */
+.app-theme-from-color(query, @jalios-color-blue);
+
+.search-header {
+  .alert {
+    margin-top: 0;
+  }
+}
+
+.card.search-result {
+  // Prevent too much space between blocks
+  .media-body .card-block + .card-block {
+    padding-top: 0;
+  }
+
+  H3 {
+    IMG.jalios-icon {
+      vertical-align: middle;
+    }
+
+    SPAN.jalios-icon {
+      vertical-align: baseline;
+    }
+  }
+
+  .search-result-header {
+    H3 {
+      margin: 0 0 (@line-height-computed /2) 0;
+      font-weight: bold;
+      font-size: @font-size-large;
+    }
+  }
+
+  .card-title > A {
+    .hyphens();
+    // These are technically the same, but use both
+    overflow-wrap: break-word;
+    // Instead use this non-standard one:
+    word-break: break-word;
+    display: block;
+  }
+
+  .card-block > .abstract {
+    color: @gray;
+    margin-bottom: 15px;
+  }
+}
+
+.search {
+  // Design of the Bubble Search
+  &.bubble {
+    H3 {
+      margin-top: 0;
+    }
+    margin-right: @baseline*16; // see .search-facets
+
+    .querySortBar {
+      font-size: @font-size-base - 2;
+
+      .sort {
+        color: @grayDark;
+      }
+    }
+  }
+}
+
+.search-facets {
+  .panel {
+    margin-bottom: -1px;
+
+    .panel-heading H4 {
+      font-size: @font-size-base;
+      line-height: 22px;
+
+      A {
+        display: block;
+      }
+    }
+
+    .panel-body {
+      max-height: @baseline*10;
+      overflow: auto;
+    }
+  }
+
+  LABEL {
+    font-weight: normal;
+    cursor: pointer;
+  }
+
+  INPUT[type=checkbox],
+  INPUT[type=radio] {
+    display: none;
+  }
+
+  .add-field {
+    display: none;
+  }
+}
+
+.search-facets.advanced {
+  .panel-body {
+    INPUT[type=checkbox],
+    INPUT[type=radio] {
+      display: inline-block;
+    }
+  }
+}
+
+.search-facets .checked LABEL {
+  background-color: @highlight;
+}
+
+.search-members {
+  .alert {
+    margin-top: 0;
+  }
+}
+
+.app-query {
+  .app-body {
+    .clearfix();
+  }
+
+  .alert-info {
+    background-color: #FFF;
+    border-color: #DDD;
+    color: @text-color;
+    border-width: 1px;
+  }
+
+  .app-sidebar {
+    .filter-fields {
+      margin-top: 8px;
+    }
+
+    .app-sidebar-section-title > div {
+      margin-top: 5px;
+    }
+    
+    .app-query-filter-text UL.app-sidebar-menu LI {
+      padding-left: 20px;
+    }
+    
+    .app-sidebar-section-types {
+    
+      .widget-content {
+        float: none;
+        padding: 0;
+      }
+      
+      .select2-container--bootstrap .select2-selection--multiple {
+      
+        border-radius: 4px !important;
+        
+        .select2-selection__choice {
+          margin: 0 4px 4px 0;
+          overflow: hidden;
+        }
+        
+       .select2-selection__rendered {
+          white-space: initial;
+        }
+
+        .select2-search--inline .select2-search__field {
+          padding: 0;
+        } 
+      }
+
+      .input-group > .select2-hidden-accessible:first-child + .select2-container--bootstrap > .selection > .select2-selection,
+      .input-group > .select2-hidden-accessible:first-child + .select2-container--bootstrap > .selection > .select2-selection.form-control {
+        border-radius: 4px !important;
+        padding: 4px 8px;
+      }
+
+    }
+    
+    
+  }
+}
+// Specific code for search in a collaborative space
+
+.cs-portal .app-query {
+
+  .app-header {
+    .clearfix();
+
+    H1 {
+      padding-bottom: 16px;
+      .make-xs-column(@app-cards-horizontal-wrapper-grid-size-xs);
+      .make-md-column(@app-cards-horizontal-wrapper-grid-size-md);
+      .make-lg-column(@app-cards-horizontal-wrapper-grid-size-lg);
+      .make-lg-column-offset(@app-cards-horizontal-wrapper-grid-size-lg-offset);
+    }
+  }
+}
+
+.browser-Edge .card.search-result h3 img.jalios-icon,
+.browser-IE11 .card.search-result h3 img.jalios-icon {
+  float: left;
+  vertical-align: bottom;
+  margin-right: 5px;
+  position: relative;
+  top: 4px;
+}
+
+@media screen and (max-width: 480px) {
+  #cs-search-form {
+    display: none;
+  }
+}

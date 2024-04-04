@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates type="AbstractPortletSkinable" version="5.0">
+  <template name="default" file="doAbstractPortletSkinableFullDisplay.jsp" usage="box" />
+  <template name="default" file="doAbstractPortletSkinableFullDisplay.jsp" usage="full" />
+  <template name="jalios" file="doDefaultSkin.jsp" usage="box" />
+  <template name="light" file="doLightSkin.jsp" usage="box" />
+  <template name="light" file="doLightSkin.jsp" usage="full" />
+  <template name="panelSquare" file="doSquareSkin.jsp" usage="box" />
+  <template name="borderless" file="doBorderlessSkin.jsp" usage="box" />
+</templates>

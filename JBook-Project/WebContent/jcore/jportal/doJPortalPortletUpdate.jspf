@@ -1,0 +1,19 @@
+<jalios:javascript>
+  jQuery(".jportal-editor-sidebar .jportal-sidebar").refresh({
+    params: { "jPortal":"<%= getDataIdParameter("jPortal") %>","portletClassName" : "<%= formHandler.getPublicationClass().getSimpleName() %>"}
+  });
+</jalios:javascript>
+<% 
+  boolean isOpUpdate = getBooleanParameter("opUpdate", false);
+  if(isOpUpdate){
+%>
+  <jalios:javascript>
+    jQuery(".jportal-wrapper").trigger({
+      type: "JPORTLET_UPDATE",
+      id : "<%= formHandler.getPublication().getId() %>",
+      portletName : "<%= formHandler.getPublication().getTitle() %>"
+    });
+</jalios:javascript>
+<%
+  }
+%>

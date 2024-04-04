@@ -1,0 +1,25 @@
+<%--
+  @Summary: Retrieve the caddy.
+  @Category: Work Area / Admin Area / Caddy
+  @Author: Sylvain Devaux
+  @Copyright: Jalios SA
+  @Customizable: False
+  @Requestable: False
+  @Deprecated: False
+  @Since: jcms-10.0.6 
+--%><%
+
+boolean caddyPublicationMenu = request.getAttribute("caddyPublicationMenu")  != null;
+boolean caddyCategoryMenu    = request.getAttribute("caddyCategoryMenu")     != null;
+boolean caddyWorkspaceMenu   = request.getAttribute("caddyWorkspaceMenu")    != null;
+boolean caddyGroupMenu       = request.getAttribute("caddyGroupMenu")        != null;
+boolean caddyMemberMenu      = request.getAttribute("caddyMemberMenu")       != null;
+boolean caddyDBMemberMenu    = request.getAttribute("caddyDBMemberMenu")     != null;
+boolean caddyWAMenu          = caddyPublicationMenu  || 
+                               caddyCategoryMenu     || 
+                               caddyWorkspaceMenu    || 
+                               caddyGroupMenu        || 
+                               caddyMemberMenu       ||
+                               caddyDBMemberMenu     ||
+                               request.getAttribute("caddyWAMenu") != null;
+%>

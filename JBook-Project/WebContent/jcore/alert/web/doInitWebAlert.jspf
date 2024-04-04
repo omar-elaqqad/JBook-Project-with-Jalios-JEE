@@ -1,0 +1,28 @@
+<%@page import="com.jalios.jcms.alert.AlertHandler"%><%
+%><%@page import="com.jalios.jcms.alert.Alert"%><%
+%><%@ include file='/jcore/doInitPage.jspf' %><%
+
+Alert alert = (Alert) request.getAttribute("jcms.alertlist.alert");
+if (alert == null) {
+  return;
+}
+
+boolean isDataWriteEnabled = channel.isDataWriteEnabled();
+
+String commonParams = (String) request.getAttribute("jcms.alertlist.params");
+String params = "&amp;alert=" + alert.getId() ;
+if (Util.notEmpty(commonParams)) {
+  params += commonParams;
+}
+
+Data data = alert.getData();  
+Member author = alert.getAuthor();
+
+String alertCss = "card alert-card";
+alertCss += " alert-id-" + alert.getId();
+alertCss += " alert-level-border-" + alert.getLevel().getKey();
+alertCss += alert.isRead() ? " alert-read" : " alert-not-read";
+
+boolean isReadAllAlert = AlertHandler.isReadAllAlert(alert);
+
+%>

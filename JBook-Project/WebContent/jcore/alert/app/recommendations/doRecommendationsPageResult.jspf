@@ -1,0 +1,35 @@
+<%-- 
+  Common recommendations iterator template 
+--%><%
+%><%@page import="com.jalios.jcms.alert.*"%><%
+%><%@page import="com.jalios.jcms.recommendation.Recommendation"%><%
+%><%@ page contentType="text/html; charset=UTF-8" %><%
+
+PageResult<Recommendation> pageResult = formHandler.getRecommendationsPageResult();
+if (pageResult.getTotalSize() == 0) {
+  request.setAttribute("app.no-result.text", formHandler.getNoResultsMessage());
+  request.setAttribute("app.no-result.icon", formHandler.getNoResultsIcon());
+  %><%@ include file="/front/app/doAppNoResult.jspf" %>
+<% } else { %>
+  <jalios:pager name='recoPagerHandler' paramPrefix="<%= formHandler.PARAM_PAGER_PEFIX %>" action='init' declare='true' size='<%= pageResult.getTotalSize() %>' pageSize='<%= formHandler.getPageSize() %>'/>
+  <jalios:foreach name="recommendation" type="Recommendation" collection="<%= pageResult.getResultList() %>" skip='<%= recoPagerHandler.getStart() %>' max="<%= recoPagerHandler.getPageSize() %>">
+    <% request.setAttribute("jcms.recommendationlist.reco", recommendation); %>
+    <jalios:include jsp="/jcore/alert/app/recommendations/doRecommendationCard.jsp" />
+    <% request.removeAttribute("jcms.recommendationlist.reco"); %>
+  </jalios:foreach>
+
+  <%-- More action --%>
+  <% if (formHandler.hasMore()) { %>
+    <% String moreUniqueId = ServletUtil.generateUniqueDOMId(request, "js-alerts-ajax-inner"); %>
+    <div id="<%= moreUniqueId %>" class="js-show-alerts-more-items show-alerts-more-items-wrapper">
+      <a href="#" data-jalios-action="ajax-refresh" 
+          data-jalios-ajax-refresh="noscroll" 
+          data-jalios-options='<%= formHandler.getMoreAlertParams() %>' 
+          data-jalios-ajax-refresh-url="/jcore/alert/app/recommendations/doRecommendationsMore.jsp" 
+          data-jalios-ajax-refresh-inner="#<%= moreUniqueId %>" 
+          class="no-focus btn btn-default btn-block alert-app-more-alerts">
+        <%= glp("ui.com.txt.more-results") %>
+      </a>
+    </div><%-- EOF.js-show-alerts-more-items --%>
+  <% } %>
+<% } %>

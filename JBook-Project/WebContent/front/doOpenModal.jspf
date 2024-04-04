@@ -1,0 +1,26 @@
+<%@page import="com.jalios.util.Util"%>
+<%@page import="java.util.Map"%>
+<%@page import="org.codehaus.jackson.map.ObjectMapper"%>
+<%@page import="com.jalios.jcms.JcmsUtil"%>
+<%@page import="com.jalios.jcms.HttpUtil"%>
+<%
+String modalJsp = HttpUtil.getUntrustedStringParameter(request, "modal", null); // Validated below
+
+if (Util.notEmpty(modalJsp)) {
+  String relativePath = modalJsp;
+  int qmPos = relativePath.indexOf('?');
+  if (qmPos > 0) {
+    relativePath = relativePath.substring(0, qmPos);
+  }
+  
+  if(JcmsUtil.isLegalFile(relativePath)) {
+    Map<String, Map<String, String[]>> ajaxParams = Util.getHashMap("params" , request.getParameterMap()); // JspChecker.VERIFIED_FOR_SECURITY
+    String jsonParams = new ObjectMapper().writeValueAsString(ajaxParams);
+%><jalios:javascript>
+      var jsp = '<%=modalJsp%>';
+      var params = <%=jsonParams%>;
+      jQuery.jalios.ui.Modal.openFromUrl(jsp, params);
+    </jalios:javascript><%
+  }
+}
+%>

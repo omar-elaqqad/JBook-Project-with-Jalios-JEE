@@ -1,0 +1,179 @@
+// PHOTO WRAPPER
+// -----------------------------------------------
+//Rounded photo
+
+.member-profile .profile-header.media .wrapper-photo .photo.profile-picture {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper-photo {
+  .border-radius(50%);
+  position: relative;
+  // Inline block ?
+  display: block;
+  float: left;
+  padding: 2px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  .box-shadow(none);
+
+  .photo {
+    image-rendering: -webkit-optimize-contrast; // https://stackoverflow.com/questions/37906602/blurry-downscaled-images-in-chrome
+    border: 0;
+    .border-radius(50%);
+  }
+
+  .photo-anchor {
+    position: relative;
+    .guest-icon,
+    .contact-icon {
+      display: none;
+    }
+  }
+
+  &.icon-photo,
+  &.iconPhoto {
+    display: inline;
+    float: none;
+    padding: 0;
+    border-width: 0;
+
+    IMG.photo {
+      border: 1px solid @gray-light;
+      .border-radius(3px);
+    }
+    background: none;
+
+    A:hover {
+      text-decoration: initial;
+    }
+  }
+
+  IMG.jalios-icon {
+    vertical-align: middle;
+  }
+
+  .photo-anchor IMG.jalios-icon {
+    position: absolute;
+  }
+
+  .photo-icon-bottom-right {
+    right: 0;
+    bottom: 0;
+  }
+
+  .photo-icon-bottom-left {
+    left: 0;
+    bottom: 0;
+  }
+
+  &.tiny-photo {
+    padding: 0;
+    border-width: 0;
+
+    IMG.jalios-icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    .photo {
+      width: @jalios-member-tiny-width;
+      height: @jalios-member-tiny-height;
+    }
+
+    .photo-anchor {
+      .photo-icon-bottom-right {
+        right: -4px;
+        bottom: -4px;
+      }
+
+      .photo-icon-bottom-left {
+        left: -4px;
+        bottom: -4px;
+      }
+    }
+  }
+
+  &.small-photo {
+    .photo {
+      min-width: 80px;
+    }
+
+    .photo-anchor {
+      .photo-icon-bottom-right {
+        right: -6px;
+        bottom: -6px;
+      }
+
+      .photo-icon-bottom-left {
+        left: -6px;
+        bottom: -6px;
+      }
+
+      .mbr-status {
+        right: -8px;
+        bottom: -10px;
+      }
+    }
+  }
+
+  &.large-photo {
+    .photo {
+      min-width: 140px;
+    }
+  }
+
+  &.large-photo,
+  &.normal-photo {
+    .photo-anchor {
+      .photo-icon-bottom-right {
+        right: -4px;
+        bottom: -4px;
+      }
+
+      .photo-icon-bottom-left {
+        left: -4px;
+        bottom: -4px;
+      }
+    }
+  }
+
+  &.large-photo,
+  &.normal-photo,
+  &.small-photo {
+    IMG.mbr-status {
+      margin-bottom: 8px;
+    }
+  }
+
+  &.large-photo,
+  &.normal-photo,
+  &.small-photo {
+    IMG.disabled-icon {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+LI .wrapper-photo.icon-photo {
+  line-height: 20px;
+}
+// Member Status
+
+IMG {
+  &.mbr-status,
+  &.mbr-status-0,
+  &.mbr-status-1,
+  &.mbr-status-2,
+  &.mbr-status-3 {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+
+// For media component : 
+.media .wrapper-photo.pull-left {
+  padding-right: 10px;
+}

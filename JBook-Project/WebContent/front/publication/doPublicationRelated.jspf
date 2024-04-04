@@ -1,0 +1,26 @@
+<% if (Util.notEmpty(pubRelatedCollection)) { %>
+<% 
+jcmsContext.addJavaScript("js/lib/clamp/clamp.js");
+jcmsContext.addJavaScript("js/jalios/core/jalios-truncate.js");
+jcmsContext.addCSSHeader("css/jalios/core/components/related/jalios-pub-related.css");
+%>
+
+<div class="publication-related">
+  <h2><%= glp("ui.pub-related.see-also") %></h2>
+  <jalios:foreach collection="<%= pubRelatedCollection %>" name="itRelated" type="Publication" max="<%= pubRelatedMax %>">
+    <div class="card-related">
+      <jalios:link data="<%= itRelated %>">
+      <div class="card-image">
+        <% if (Util.notEmpty(itRelated.getDataImage())) { %>
+        <jalios:thumbnail data="<%= itRelated %>" width="160" height="160"/>
+        <% } else { %>
+        <img src="images/jalios/layout/article.png"  width="160" height="90" alt=""/>
+        <% } %>
+      </div>
+      <div class="card-date"><jalios:date date="<%= itRelated.getPdate() %>" format="MMMM yyyy" /></div>
+      <div class="card-title" data-jalios-truncate='{"value" : 3}'><%= itRelated.getTitle(userLang) %></div>
+      </jalios:link>
+    </div>
+  </jalios:foreach>
+</div>
+<% } %>    

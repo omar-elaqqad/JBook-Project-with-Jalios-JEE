@@ -1,0 +1,37 @@
+<%@page import="com.jalios.jcms.alert.AlertHandler"%><%
+%><%@ page contentType="text/html; charset=UTF-8" %><%
+%><div class="alert-header media">
+  <div class="alert-actions"><%
+  if (channel.isDataWriteEnabled()){ %>
+    <a class="<%= alert.isRead() ? "hide " : "" %>card-action-item btn btn-rounded card-action-item-mark-as-read js-alert-mark-as-read" data-jalios-topbar-menu-action="markAsRead"<%
+      %> role="button" tabindex="0" title="<%= encodeForHTMLAttribute(glp("alert.list.lbl.mark-as-read")) %>"><%
+      %> <jalios:icon src="alert-mark-as-read" /><%
+    %></a>
+    <a class="<%= !alert.isRead() ? "hide " : "" %>card-action-item btn btn-rounded card-action-item-mark-as-unread js-alert-mark-as-read" <%
+      %> role="button" tabindex="0" title="<%= encodeForHTMLAttribute(glp("alert.list.lbl.mark-as-not-read")) %>" data-jalios-topbar-menu-action="markAsRead"><%
+      %> <jalios:icon src="alert-mark-as-unread" /><%
+    %></a><%
+  } %>
+		<%
+		if (channel.isDataWriteEnabled() && !alert.isRead()) { %>
+		  <jalios:buffer name="alertMenuDropdown">
+		    <% if (isReadAllAlert && AlertHandler.isUnfollowableAlert(alert, loggedMember)) { %>
+		      <li><a class="js-no-slide alert-unfollow-action" role="button" tabindex="0"  data-jalios-alert-action="opUnfollow" data-jalios-alert-parent-data-id="<%= AlertHandler.getAlertParentDataId(alert) %>"><%= glp("alert.action.unfollow") %></a></li>
+		    <% } %>
+		    <% if (isReadAllAlert) { %>
+		      <li><a class="js-no-slide alert-read-action" role="button" tabindex="0" data-jalios-alert-action="opReadAllPub" data-jalios-alert-parent-data-id="<%= AlertHandler.getAlertParentDataId(alert) %>"><%= glp("alert.action.read") %></a></li>           
+		    <% } %>       
+		    <li><a class="modal js-no-slide" href="jcore/alert/editAlertRule.jsp?alert=<%= alert.getId() %>" ><%= glp("alert.action.filter") %></a></li>
+		  </jalios:buffer>
+		  <% if (Util.notEmpty(alertMenuDropdown)) { %>
+		    <jalios:dropdown wrapperCss="alert-menu-dropdown dropdown-menu-right" triggerTitle="alert.action.menu-title" triggerCss="btn btn-rounded js-no-slide" triggerIcon="alert-menu-actions"><%= alertMenuDropdown %></jalios:dropdown> 
+		  <% } %>
+		  <%
+		}
+		%>  
+  </div>
+  <jalios:memberphoto focusable="false" css="pull-left" size="<%= PhotoSize.TINY %>" member="<%= alert.getAuthor() %>" />
+  <div class="description media-body">
+    <%= alert.getDescription() %>
+  </div>
+</div>

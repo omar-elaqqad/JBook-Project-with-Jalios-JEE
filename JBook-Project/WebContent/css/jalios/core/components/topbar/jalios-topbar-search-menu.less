@@ -1,0 +1,441 @@
+@import "../../../core/init-mixins.less";
+
+.topbar-search-results-dummy.is-searching {
+  z-index: 1080;
+
+  .search-global {
+    animation: slide-in linear 0.5s;
+  }
+}
+
+.search-global {
+  display: flex;
+  position: fixed;
+  z-index: @z-index-sidebar;
+  top: 65px !important;
+  left: 50% !important;
+  margin-left: -592px;
+  padding: @topbar-baseline*2;
+  border: 1px solid #E8e8e8;
+  width: @topbar-width;
+  background-color: white;
+  box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.4);
+}
+
+.topbar-search-results-full-wrapper {
+  min-height: 150px;
+  flex-shrink: 0;
+  max-height: 84vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .topbar-search-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #666;
+    font-size: 16px;
+  }
+}
+// :before + :after => triangle to link topbar search input and results block
+@media screen and (min-width: @screen-md-min + 1) {
+  .topbar-search-results-full-wrapper {
+    &:before {
+      content: "";
+      top: -13px;
+      left: 50%;
+      margin-left: -12px;
+      position: absolute;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 12px 12px 12px;
+      border-color: transparent transparent rgba(0, 0, 0, 0.15) transparent;
+      top: 40px;
+      border-color: #ffffff red red #ffffff;
+      border-width: 12px 12px 0 12px;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      border-top-color: white;
+    }
+
+    &:after {
+      content: "";
+      top: -12px;
+      left: 50%;
+      margin-left: -12px;
+      position: absolute;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 12px 12px 12px;
+      border-color: transparent transparent #ffffff transparent;
+    }
+  }
+}
+@media screen and (max-width: @screen-md-min) {
+  BODY.has-search-overlay {
+    // Déplacer le triangle pour etre sur le .input-group (puisque centré à gauche en <SM)
+    .topbar-search-wrapper .search-container {
+      &:before {
+        content: "";
+        top: 40px;
+        left: 50%;
+        margin-left: -12px;
+        margin-left: -8px;
+        position: absolute;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 12px 12px 12px;
+        border-color: transparent transparent rgba(0, 0, 0, 0.15) transparent;
+      }
+
+      &:after {
+        content: "";
+        top: 41px;
+        left: 50%;
+        margin-left: -12px;
+        margin-left: -8px;
+        position: absolute;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 12px 12px 12px;
+        border-color: transparent transparent #ffffff transparent;
+      }
+    }
+  }
+}
+
+.topbar-search-footer {
+  text-align: center;
+
+  .btn-full-search {
+    display: inline-block;
+  }
+}
+
+.topbar-search-inner {
+  display: flex;
+  width: 100%;
+  margin-bottom: 24px;
+  flex-direction: column;
+  overflow: hidden;
+
+  .ajax-loading-component-waves {
+    position: relative;
+  }
+
+  .loading-label {
+    display: block;
+    white-space: nowrap;
+    position: absolute;
+    bottom: -27px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .columns-header {
+    display: flex;
+    width: 100%;
+    flex-shrink: 0;
+
+    .topbar-search-results-title {
+      flex: 1;
+      padding-bottom: 12px;
+      margin-left: 12px;
+      margin-right: 12px;
+      border-bottom: 1px solid #E8E8E8;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+  }
+
+  .columns-body {
+    display: flex;
+    overflow: hidden;
+
+    > .topbar-search-results-wrapper {
+      flex: 1;
+      overflow-y: auto;
+      position: relative;
+      padding-left: 12px;
+      padding-right: 12px;
+      overflow-x: hidden;
+
+      .ps__scrollbar-y-rail {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .topbar-search-results-title {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+
+  .topbar-search-result-item {
+    border-top: 1px solid #E8E8E8;
+    flex-shrink: 0;
+
+    &:first-child {
+      border-top: 0 none;
+    }
+  }
+
+  .topbar-search-no-result-wrapper {
+    padding: 16px 0;
+    border-bottom: 1px solid #E8E8E8;
+    color: #AAA;
+  }
+
+  .topbar-search-member-list A.typeahead-link:hover {
+    text-decoration: none;
+  }
+
+  .topbar-search-member-list .topbar-search-result-member {
+    cursor: pointer;
+    color: #666;
+
+    .info {
+      .text-overflow();
+    }
+
+    &:hover {
+      background-color: #F9F9F9;
+      .transition(background-color 200ms ease-in);
+      will-change: background-color;
+      text-decoration: none;
+
+      .media-heading {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .topbar-search-publication-list .topbar-search-result-publication {
+    padding: 16px 8px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    .hyphens();
+    // These are technically the same, but use both
+    overflow-wrap: break-word;
+    // Instead use this non-standard one:
+    word-break: break-word;
+    display: block;
+
+    &:hover {
+      background-color: #F9F9F9;
+      .transition(background-color 200ms ease-in);
+      will-change: background-color;
+    }
+
+    .jalios-icon {
+      margin-right: 4px;
+    }
+  }
+
+  .topbar-search-workspace-list .topbar-search-result-workspace {
+    padding: 16px 8px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #F9F9F9;
+      .transition(background-color 200ms ease-in);
+      will-change: background-color;
+    }
+
+    .jalios-icon {
+      margin-right: 4px;
+    }
+  }
+
+  .topbar-search-result-member {
+    padding: 16px;
+    .clearfix();
+
+    .media-heading {
+      font-size: 16px;
+      color: #000;
+    }
+
+    .wrapper-photo {
+      margin-right: 16px;
+    }
+  }
+}
+// Takes full screen under minimum width
+@media screen and (max-width: @topbar-width) {
+  .search-global {
+    width: 100%;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 auto;
+    max-width: 95vw;
+  }
+}
+
+.topbar-item.topbar-search-wrapper {
+  display: none;
+
+  .btn-topbar-search {
+    position: absolute;
+    top: 3px;
+    right: 4px;
+    background-color: white;
+    border-radius: 20px;
+    transition: background-color 200ms ease-in;
+    height: 34px; // force height for Firefox and IE
+    width: 34px;
+    margin-left: 0;
+    border-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:active {
+      outline: none;
+    }
+
+    &:hover {
+      background-color: @topbar-item-color-hover;
+
+      .jalios-icon {
+        color: white;
+      }
+    }
+
+    .jalios-icon {
+      color: #666;
+      font-size: @icon-size;
+      transition: color 200ms ease-in;
+    }
+  }
+  //Resets default field
+  .topbar-search-query {
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #999;
+    box-shadow: none;
+    -webkit-appearance: none;
+    padding-left: 17px;
+    padding-right: 44px;
+
+    &:focus + .btn {
+      background-color: @topbar-item-color-hover;
+
+      .jalios-icon {
+        color: white;
+      }
+    }
+  }
+}
+// Hidden by default, visible if enough width
+
+.topbar-inner .PortletSearch {
+  display: none;
+  width: 100%;
+  position: relative;
+  margin-left: 24px;
+}
+
+.topbar .topbar-search-wrapper {
+  z-index: @z-index-sidebar;
+  padding: 0 !important;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  // Needed for it to be over the overlay when searching
+}
+@media screen and (min-width: @screen-sm-min) {
+  .topbar-inner .PortletSearch {
+    display: block;
+  }
+
+  .topbar .topbar-search-wrapper {
+    display: block;
+    width: @topbar-search-wrapper-width-sm;
+  }
+
+  .topbar-search-results-full-wrapper {
+    width: 100%;
+    left: 24px !important;
+    right: 24px !important;
+    margin: 0;
+  }
+}
+@media screen and (min-width: @screen-md-min) {
+  .topbar-inner .PortletSearch {
+    width: @topbar-search-wrapper-width-md;
+    margin-left: 0;
+  }
+
+  .topbar .topbar-search-wrapper {
+    width: auto;
+  }
+}
+@media screen and (min-width: @topbar-width) {
+  .topbar-inner .PortletSearch {
+    position: inherit;
+  }
+
+  .topbar .topbar-search-wrapper {
+    width: @topbar-search-wrapper-width-md;
+    margin-left: -@topbar-search-wrapper-width-md/2;
+    left: 50%;
+    max-width: inherit;
+  }
+
+  .topbar-search-results-full-wrapper {
+    width: 94%;
+  }
+}
+@media screen and (min-width: @screen-lg-min) {
+  .topbar .topbar-search-wrapper {
+    width: @topbar-search-wrapper-width-lg;
+    margin-left: -@topbar-search-wrapper-width-lg/2;
+  }
+}
+/* The backdrop displayed when the sidebar is opened */
+
+.topbar-search-overlay {
+  &.full {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: @z-index-sidebar - 1;
+    background-color: @modal-backdrop-bg;
+  }
+  // Fade for backdrop
+  &.fade {
+    .opacity(0);
+  }
+
+  &.in {
+    .opacity(@modal-backdrop-opacity);
+  }
+}
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

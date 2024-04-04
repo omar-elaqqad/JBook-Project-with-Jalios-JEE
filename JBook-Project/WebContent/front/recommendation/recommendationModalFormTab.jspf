@@ -1,0 +1,22 @@
+<%@page import="com.jalios.jcms.recommendation.RecommendationHandler"%>
+<div class="tab-pane fade in<%= isRecommendationFormTab ? " active" : "" %>" id="recommendation-form">
+  <div class="modal-body">
+    <%@ include file="/front/recommendation/recommendationForm.jspf" %>
+  </div>
+  <div class="modal-footer">
+    <div class="buttons">
+      <input type="hidden" name="<%= RecommendationHandler.RECOMMENDATION_MODAL_TAB_PARAM %>" value="formTab"/>
+      <input type="hidden" name="<%= RecommendationHandler.RECOMMENDED_DATA_ID_PARAM %>" value="<%= recommendedData.getId() %>" />
+      <% if (isReaderTrackingForm) { %>
+      <input type="hidden" name="trackedPubId" value="<%= recommendedData.getId() %>" />
+      <input type="hidden" name="<%= RecommendationHandler.RECOMMENDATION_MODAL_TAB_TRACKING %>" value="recommendTab" />
+      <% } %>                
+      
+      <button type="button" class="btn btn-default" data-dismiss="modal"><%= glp("ui.com.btn.cancel") %></button>
+      <input type="submit" class="ajax-refresh btn btn-primary" name="opSend" value="<%= encodeForHTMLAttribute(glp("ui.com.btn.share")) %>"/>
+      <% if (hasAlreadyRecommended) { %>
+      <input type="submit" class="ajax-refresh btn btn-primary" name="opForceSend" value="<%= encodeForHTMLAttribute(glp("ui.recommendation.modal.lbl.force-send")) %>"/>
+      <% } %>
+    </div>
+  </div>  
+</div>

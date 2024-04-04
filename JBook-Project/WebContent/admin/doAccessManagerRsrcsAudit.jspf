@@ -1,0 +1,209 @@
+<%--
+  @Summary: Access Control Manager
+  @Since: jcms-7.0 
+--%><%@page import="com.jalios.jcms.Group"%>
+<%@page import="com.jalios.jcms.Member"%>
+<%@page import="com.jalios.jcms.accesscontrol.*"%>
+
+  <%-- ************************************************************* --%>
+  <%-- *** Resources Audit ***************************************** --%>
+
+<div class="tab-page" id="rsrcs-audit">
+  <h2 class="tab"><% /* %>Audit<% */ %><%= glp("accesscontrol.resource-audit.title") %></h2>
+
+    <div class="alert alert-info"><%= glp("accesscontrol.resource-audit.intro2") %></div>
+  
+    <table class="table-data table-condensed acls">
+     <thead>
+      <tr>
+       <th class="text-overflow"><%= glp("accesscontrol.resource-audit.resource") %></th>
+       <th><%= glp("accesscontrol.resource-audit.authorized-acl") %></th>
+     </thead>
+     <tbody>
+     <%
+       for (Map.Entry<String,Integer> entry : AccessControlUtil.getOrderedResourcesAndLevelMap().entrySet()) {
+         String resource = entry.getKey();
+         int level = entry.getValue();
+         Set<Group> authorizedGroupSet = new TreeSet<Group>(Group.getNameComparator(userLang));
+         boolean isNotWorkspaceAdminResource = !AccessControlUtil.isWorkspaceAdminResource(resource);
+         if (aclWorkspaceFilter && isNotWorkspaceAdminResource) {
+           continue;
+         }
+         String resourceLabelProp = "acl.resource." + resource;
+         String resourceLabelHelpProp = "acl.resource." + resource + ".h";
+         boolean hasHelp = !resourceLabelHelpProp.equals(glp(resourceLabelHelpProp)); 
+     %>
+        <tr class="acl level<%= level %>">
+          <td class="formLabel">
+            <a href="<%= refreshUrl %>?rsrc=<%= encodeForURL(resource) %>" data-jalios-action="ajax-refresh"><%= glp(resourceLabelProp) %></a> 
+            <% if (hasHelp) { %><jalios:tooltip property='<%= resourceLabelHelpProp %>' /><% } %>
+          </td>
+          <td>
+           <ul><%
+            for (AccessControlList acl : aclSet) {
+              Boolean aclResourceAuthorization = (acl != null) ? acl.getExplicitAccessAuthorization(resource) : null;
+              if (aclResourceAuthorization != null && aclResourceAuthorization.booleanValue()) {
+                %>
+                <li>
+                 <jalios:icon src="acl" alt="acl" />
+                 <a href="<%= refreshUrl %>?id=<%= acl.getId()%>" data-jalios-action="ajax-refresh"><%= acl.getName() %> (<%= acl.getGroupSet().size() %>)</a>
+                 <jalios:edit data="<%= acl %>" css="btn btn-rounded" />
+                </li><%
+                // Build Authorized Group Set
+                authorizedGroupSet.addAll(acl.getGroupSet());
+              }
+            }
+           %>
+           </ul>
+          </td>
+        </tr>
+     <% } %>
+     </tbody>
+    </table>
+  </div>
+  
+<%
+
+String auditedResource = getUntrustedStringParameter("rsrc", null);
+if (aclWorkspaceFilter && !AccessControlUtil.isWorkspaceAdminResource(auditedResource)) {
+  auditedResource = null;
+}
+
+boolean isAuditRequested = Util.notEmpty(auditedResource);
+boolean displayMembers = channel.getBooleanProperty("accesscontrol.manager.resource-audit.show-mbrs", true); // kill switch if performance are bad with members
+
+if (isAuditRequested) {
+%>
+<div class="tab-page" id="rsrc-audit">
+  <h2 class="tab"><% /* %>Audit<% */ %><%= glp("accesscontrol.resource-audit.rsrc-title", glp(encodeForHTML("acl.resource."+auditedResource))) %></h2>
+
+    <table class="table-data table-condensed acls">
+     <thead>
+      <tr>
+       <th class="text-overflow"><%= glp("accesscontrol.resource-audit.resource") %></th>
+       <th><%= glp("accesscontrol.resource-audit.short.authorized-acl") %>
+       <th><%= glp("accesscontrol.resource-audit.short.authorized-groups") %> <jalios:tooltip property='accesscontrol.resource-audit.authorized-groups' /></th>
+       <% if (displayMembers) { %>
+       <th><%= glp("accesscontrol.resource-audit.short.authorized-members") %> <jalios:tooltip property='accesscontrol.resource-audit.authorized-members' /></th>
+       <th><%= glp("accesscontrol.resource-audit.short.authorized-delegation") %> <jalios:tooltip property='accesscontrol.resource-audit.authorized-delegation"' /></th>
+       <% } %>
+     </thead>
+     <tbody>
+     <%
+       for (Map.Entry<String,Integer> entry : AccessControlUtil.getOrderedResourcesAndLevelMap().entrySet()) {
+         String resource = entry.getKey();
+         int level = entry.getValue();
+         Set<Group> authorizedGroupSet = new TreeSet<Group>();
+         boolean isNotWorkspaceAdminResource = !AccessControlUtil.isWorkspaceAdminResource(resource);
+         if (aclWorkspaceFilter && isNotWorkspaceAdminResource) {
+           continue;
+         }
+         String resourceLabelProp = "acl.resource." + resource;
+         String resourceLabelHelpProp = "acl.resource." + resource + ".h";
+         boolean hasHelp = !resourceLabelHelpProp.equals(glp(resourceLabelHelpProp)); 
+         // Check if current iterated resource is a children of the resource request for audit
+         boolean isResourceAudited = resource.startsWith(auditedResource);
+         // Check if current iterated resource is the same or a parent of the resource request for audit
+         if (!isResourceAudited) {
+           for (String curAuditRsrc = auditedResource; curAuditRsrc != null; curAuditRsrc = AccessControlUtil.getParentResource(curAuditRsrc)) {
+             if (curAuditRsrc.equals(resource)) {
+               isResourceAudited = true;
+               break;
+             }
+           }
+         }
+         if (!isResourceAudited) {
+           continue;
+         }
+     %>
+        <tr class="acl level<%= level %>">
+          <td class="formLabel">
+            <%= glp(resourceLabelProp) %> 
+            <% if (hasHelp) { %><jalios:tooltip property='<%= resourceLabelHelpProp %>' /><% } %>
+          </td>
+          <td>
+          <%
+          Set<AccessControlList> selectedAclSet = new TreeSet<>(AccessControlList.getNameComparator());
+          for (AccessControlList acl : aclSet) {
+            Boolean aclResourceAuthorization = (acl != null) ? acl.getExplicitAccessAuthorization(resource) : null;
+            if (aclResourceAuthorization != null && aclResourceAuthorization.booleanValue()) {
+              selectedAclSet.add(acl);
+              // Build Authorized Group Set
+              authorizedGroupSet.addAll(acl.getGroupSet());
+            }
+          }
+          %>
+           <span><%= glp("accesscontrol.nbr-acls", selectedAclSet.size()) %></span>
+           <ul><% for (AccessControlList acl : selectedAclSet) { %>
+                <li>
+                 <jalios:icon src="acl" alt="acl" />
+                 <a href="<%= refreshUrl %>?id=<%= acl.getId()%>" data-jalios-action="ajax-refresh"><%= acl.getName() %></a>
+                 <jalios:edit data="<%= acl %>" css="show-on-li-hover btn btn-rounded" />
+                </li><% } %>
+           </ul>
+          </td>
+          <td>
+          <%
+          if (aclWorkspaceFilter) {
+            JcmsUtil.applyDataSelector(authorizedGroupSet, new Group.WorkspaceSelector(workspace.getId()));
+          }
+          %>
+           <span><%= glp("accesscontrol.nbr-groups", authorizedGroupSet.size()) %></span>
+           <ul><% 
+            for (Group group : authorizedGroupSet) {
+              %><li>
+              <jalios:dataicon data="<%= group %>"/>
+              <%= group.getName(userLang) %>
+              <jalios:edit data='<%= group %>' css="show-on-li-hover btn btn-rounded" />
+              </li><% 
+            }
+           %>
+           </ul>
+          </td>
+          <% if (displayMembers) {
+            Set<Member> authorizedMemberSet = new TreeSet<Member>(Member.getNameComparator());
+            Set<Member> authorizedMemberDelegationSet = new TreeSet<Member>(Member.getNameComparator());
+            // Build Set of Members authorized through groups
+            for (Group group : authorizedGroupSet) {
+              authorizedMemberSet.addAll(group.getMemberSet());
+            }
+            // Build Set of Members authorized through delegation
+            for (Member mbr : authorizedMemberSet) {
+              if (Util.notEmpty(mbr.getDelegateMemberSet())) {
+                authorizedMemberDelegationSet.addAll(mbr.getDelegateMemberSet());
+              }
+            } 
+            if (aclWorkspaceFilter) {
+              JcmsUtil.applyDataSelector(authorizedMemberSet, new Member.BelongsToWorkspaceOrChildSelector(workspace));
+              JcmsUtil.applyDataSelector(authorizedMemberDelegationSet, new Member.BelongsToWorkspaceOrChildSelector(workspace));
+            }
+          %>
+          <td>
+           <span><%= glp("accesscontrol.nbr-members", authorizedMemberSet.size()) %></span>
+           <%
+            String authorizedMemberSetId = "aclMbrSet-"+resource+"-mbrSet";
+            request.setAttribute("aclMbrSetAttrId", authorizedMemberSetId); 
+            jcmsContext.setAjaxRequestAttribute(authorizedMemberSetId, authorizedMemberSet);
+           %>
+           <jalios:include jsp="admin/doAccessManagerRsrcsAuditMbrList.jsp"/>
+          </td>
+          <td>
+           <span><%= glp("accesscontrol.nbr-members", authorizedMemberDelegationSet.size()) %></span>
+           <%
+            String authorizedMemberDelegationSetId = "aclMbrSet-"+resource+"-delegateMbrSet";
+            request.setAttribute("aclMbrSetAttrId", authorizedMemberDelegationSetId); 
+            jcmsContext.setAjaxRequestAttribute(authorizedMemberDelegationSetId, authorizedMemberDelegationSet);
+           %>
+           <jalios:include jsp="admin/doAccessManagerRsrcsAuditMbrList.jsp"/>
+          </td>
+          <% } // displayMembers %>
+        </tr>
+     <% } %>
+     </tbody>
+    </table>
+  </div>
+  <jalios:javascript>
+     setSelectedTab("aclManagerTab", 2);
+  </jalios:javascript>
+<% } // isAuditRequested %>  
+  

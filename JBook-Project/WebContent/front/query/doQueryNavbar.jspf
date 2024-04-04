@@ -1,0 +1,48 @@
+<%@page import="com.jalios.jcms.mashup.ExportManager"%>
+
+<%
+boolean showMemberSearch = queryHandler.showMemberSearch();
+boolean showWorkspaceSearch = queryHandler.showWorkspaceSearch();
+
+boolean showOtherSearch = showMemberSearch || showWorkspaceSearch;
+
+boolean noResults = Util.isEmpty(resultSet);
+%>
+
+<div class="navbar navbar-default">
+  <div class="container-fluid">
+    <% if (!noResults) { %>
+    <div class="navbar-header">
+      <p class="navbar-brand">
+        <%= glp("ui.work.query.txt.result", resultSize) %>
+      </p>
+    </div>
+    <% } %>
+  
+    <div class="navbar-collapse collapse" id="query-navbar-collapse">
+      <% if (!noResults) { %>
+      <ul class="nav navbar-nav navbar-left">
+        <%@ include file='/front/doQueryNavbar_sort.jspf' %>
+        <%@ include file='/front/doQueryNavbar_actions.jspf' %>
+      </ul>
+      <% } %>
+      
+      <% if (showOtherSearch) { %>
+      <ul class="nav navbar-nav navbar-right">      
+        <% if (showMemberSearch) { %>
+        <li><a href="<%= queryHandler.getMemberSearchUrl() %>"><jalios:icon src="redirect"/> <%= glp("ui.fo.query.member-tab") %></a></li>
+        <% } %>      
+        <% if (showWorkspaceSearch) { %>
+        <li><a href="<%= queryHandler.getWorkspaceSearchUrl() %>"><jalios:icon src="redirect"/> <%= glp("ui.fo.query.workspace-tab") %></a></li>
+        <% } %>        
+      </ul>
+      <% } %>
+
+      
+    </div>
+    
+  </div>
+</div>
+
+
+

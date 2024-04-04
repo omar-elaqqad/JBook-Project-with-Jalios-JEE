@@ -1,0 +1,111 @@
+@import '../../../../css/jalios/core/init-mixins';
+.jportal-fixed-bottom {
+  display: flex;
+  position: fixed;
+  bottom: 40px;
+  height: 50px;
+  right: 20px;
+  flex-direction: row;
+  z-index: 100;
+  align-items: center;
+
+  .fixed-bottom__link {
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    border-radius: 35px;
+    margin-left: 8px;
+
+    .transition(all 0.3s ease);
+    display: flex;
+    justify-content: center;
+
+    .jalios-icon {
+      color: #fff;
+      margin: 0;
+      position: relative;
+      font-size: 19px;
+      .transition(all 0.3s ease);
+    }
+  }
+
+  // RETURN TO TOP
+  #jportal-return-to-top {
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+
+    .jalios-icon {
+      margin: 0;
+      position: relative;
+      left: 16px;
+      top: 13px;
+      font-size: 19px;
+    }
+  }
+
+  #jportal-return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+  }
+
+  #jportal-return-to-top:hover .jalios-icon {
+    top: 10px;
+  }
+
+  // SIMPLE-EDITION
+  #jportal-simple-edition {
+    background-color: @jalios-color-red;
+    opacity: 0.3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 44px;
+    width: auto;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 10px 16px;
+    color: white;
+    box-shadow: 0 4px 14px #00000026;
+    border: 2px solid white;
+
+    .simple-edit-stop {
+      margin-right: 4px;
+    }
+
+    &:hover {
+      background-color: darken(@jalios-color-red, 10%);
+      opacity: 1;
+    }
+  }
+}
+
+.jportal-wrapper {
+  #jportal-simple-edition {
+    display: none;
+  }
+  &.simple-editing {
+    .jportal-fixed-bottom {
+      display: flex;
+      #jportal-simple-edition {
+        opacity: 1;
+        display: flex;
+      }
+
+      .simple-edit-stop {
+        display: block;
+      }
+      .simple-edit-start {
+        display: none;
+      }
+    }
+  }
+
+  .jportal-fixed-bottom {
+    .simple-edit-stop {
+      display: none;
+    }
+    .simple-edit-start {
+      display: block;
+    }
+  }
+}

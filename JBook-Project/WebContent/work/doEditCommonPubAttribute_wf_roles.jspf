@@ -1,0 +1,119 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.jalios.jcms.taglib.settings.impl.MemberSettings"%>
+<%@page import="com.jalios.jcms.taglib.ControlType"%>
+<% if (formHandler.showWFRole()) { 
+  boolean isWfRole = false; 
+
+%><jalios:buffer name="wfRoleBuffer">
+<%
+	List<String> opendWfRoleAlwaysDisplayed = new ArrayList();
+	// check if initial state have role which should be set 
+	WFState initState = wf.getInitState();
+	for(WFRole initStateWFRole : initState.getRoleSet()){
+	  	WKRole initialWkRole = pub != null ? pub.getWorkspace().getRole(initStateWFRole) : workspace.getRole(initStateWFRole);
+		// For an open role, the role must be assigned to be choosen
+	 	if(WKRole.isOpenAndRequired(initialWkRole) && pub != null && !pub.isRoleAssigned(initStateWFRole.getId())) {
+	 	 	opendWfRoleAlwaysDisplayed.add(initStateWFRole.getId());
+	 	}
+	}
+%>
+  <jalios:foreach collection="<%= wf.getRoleSet() %>" name='wfRole' type='WFRole'>
+  <% WKRole wkRole = pub != null ? pub.getWorkspace().getRole(wfRole) : workspace.getRole(wfRole); %>
+  <% if (wkRole != null) { 
+    isWfRole = true;
+    Set<WFState> wfStateSet = wf.getWorkStateSet(wfRole);
+    boolean isDisplayed = false;
+    String displayedPstatus= "";
+    if (Util.notEmpty(wfStateSet)) { 
+      int wfStateIdx = 0;
+      for (WFState wfState : wfStateSet) { 
+        if( pstatus == wfState.getPstatus()){
+          isDisplayed = true;
+        }
+        displayedPstatus += wfState.getPstatus()+",";
+      }      
+  	}  	
+  %>
+      <%-- NOT OPEN ROLE --%>
+      <div id="role_choice_substitute_<%= wfRole.getId() %>" class="<%=(WKRole.isOpen(wkRole) )?"hide":""%>" data-jalios-displayed-pstatus=<%=encodeForHTMLAttribute(displayedPstatus) %> style=" <%=isDisplayed ? "": "display:none" %>">
+        <jalios:field label="<%= wfRole.getName(userLang) %>">
+          <p class='form-control-static'><%= glp("ui.work.form.lbl.wf.role-closed") %></p>
+        </jalios:field>
+      </div>
+      <%-- OPEN ROLE --%>
+      <%
+      String alwaysDisplayedAttribute = "";
+      if( opendWfRoleAlwaysDisplayed.contains(wfRole.getId())){
+        alwaysDisplayedAttribute =  "data-jalios-always-displayed='true'";
+        isDisplayed = true; 
+      }
+      %>
+      <div id="role_choice_<%= wfRole.getId() %>" <%=alwaysDisplayedAttribute %> data-jalios-displayed-pstatus=<%=encodeForHTMLAttribute(displayedPstatus) %>
+      style=" <%=isDisplayed ? "": "display:none" %>">  
+      <% if (WKRole.isOpen(wkRole)) { %>
+          <% 
+          Set allWorkerSet = JcmsUtil.select(wkRole.getWorkerSet(pub, true, formHandler.getPublicationClass()), null, new Member.FirstNameComparator());
+          String openRoleDescription = null;
+          int groupWeight = wkRole.getWeightForGroup(0);
+          if (Util.getSize(wkRole.getGroupList()) == 1 && !wkRole.isPercentageForGroup(0)) {
+            if (wkRole.isOpenAndRequired(wkRole)) {
+              openRoleDescription = glp("ui.publication-edit.open-role.min-weight-required", groupWeight);
+            } else {
+              openRoleDescription = glp("ui.publication-edit.open-role.min-weight", groupWeight);          
+            }
+          }
+          %>
+          <input type="hidden" name="roleId" value="<%= wfRole.getId() %>" />
+          <%
+          Set<Member> workerSet = formHandler.getMemberSetAssignedToRole(wfRole.getId());
+          int missingEntriesCount = groupWeight - Util.getSize(workerSet);
+          int mv =  groupWeight > 1 ? 1 : -1;
+          %>
+          <jalios:field name='<%= "roleMbr_" + wfRole.getId() %>' label="<%= wfRole.getName(userLang) %>" mv="<%= mv %>" description='<%= openRoleDescription %>' value="<%= workerSet%>"  disabled='<%= formHandler.getFieldStatus("roleMbr_" + wfRole.getId()).isDisabled() %>'>
+            <jalios:control settings='<%= new EnumerateSettings().select().enumValues(allWorkerSet) %>' />
+          </jalios:field>
+      <% } %>
+      </div>
+  <% } %>
+  </jalios:foreach>
+  <jalios:javascript>
+    !function ($) {
+        $(':input[name=pstatus]').on('change', function(){
+          isWfRoleFiledSetDisplayed = false;
+          var selectedPStatus = $(this).val();
+          $('DIV[data-jalios-displayed-pstatus]').each(function(index, elt){
+            displayedPStatus = $(elt).data("jalios-displayed-pstatus").split(",");
+            isShown = false
+            if( $(elt).data("jalios-always-displayed") == "true"){
+            	isShown = true
+            }
+            else {
+	            for(var i= 0; i < displayedPStatus.length; i++){
+	              pstatus = displayedPStatus[i];
+	              if(selectedPStatus == pstatus){
+	                isShown = true;
+	                isWfRoleFiledSetDisplayed = true;
+	              }
+	            }
+	        }
+            if(isShown){
+              $(elt).show();
+            }
+            else{
+              $(elt).hide();
+            }
+          });
+          $('.wfRoleFieldSet').toggle(isWfRoleFiledSetDisplayed);
+        });
+    }(window.jQuery); 
+    </jalios:javascript>
+</jalios:buffer>
+
+<% if(isWfRole) { %>
+<fieldset class="wfRoleFieldSet">
+  <legend><%= glp("ui.work.form.tab.wf-role") %></legend>
+  <%= ((Map<String, Object>) request.getAttribute("BUFFER_CONTEXT")).get("wfRoleBuffer") %> 
+</fieldset>
+    <% } %>
+<% } %>
+

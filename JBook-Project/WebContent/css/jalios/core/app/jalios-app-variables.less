@@ -1,0 +1,92 @@
+//== Global utils
+//
+//##
+@app-baseline: 16px;
+@app-baseline-half: @app-baseline / 2;
+
+//== App layout
+//
+//## The app layout variables
+@app-sidebar-lg-width: percentage(2/12);
+@app-sidebar-md-width: percentage(3/12);
+@app-sidebar-sm-width: percentage(4/12);
+@app-sidebar-width: percentage(4/12);
+@app-body-lg-width: percentage(10/12);
+@app-body-md-width: percentage(9/12);
+@app-body-sm-width: percentage(8/12);
+@app-body-width: percentage(8/12);
+//@app-body-content-max-width: 1144px;
+@app-body-content-max-width: 1167px;
+@app-header-height: 112px;
+
+@app-lg-min: @screen-lg-min;
+@app-md-min: @screen-md-min;
+@app-sm-min: @screen-sm-min;
+
+//== App sidebar
+//
+//## The app sidebar variables
+@app-sidebar-color: ~'var(--app-sidebar-text-color)';
+@app-sidebar-color-active: #fff;
+@app-sidebar-selection: @jalios-color-blue;
+@app-sidebar-bgcolor: #eeeeee;
+@app-sidebar-collaborativespace-bgcolor: @app-sidebar-bgcolor;
+@app-sidebar-color-light: #aaa;
+@app-sidebar-border-color: @app-sidebar-color-light;
+@app-sidebar-title-color: ~'var(--app-sidebar-text-color)';
+@app-sidebar-section-fontsize: 16px;
+@app-sidebar-section-icon-fontsize: 16px;
+@app-sidebar-icon-size: 64px;
+@app-sidebar-icon-size-lg: 96px;
+@app-sidebar-hover-bgcolor: #ccc;
+@app-sidebar-active-children-bgcolor: #9cdcff;
+@app-sidebar-field-border-radius: 16px;
+@app-sidebar-horizontal-padding: 24px;
+
+//== App forms
+//
+//## Variables for forms
+@app-input-main-color: white;
+@app-input-text-bgcolor: white;
+@app-input-placeholder-color: @input-color-placeholder;
+@app-btn-primary-bgcolor: @jalios-color-blue;
+@app-btn-default-bgcolor: white;
+
+//== App body
+//
+//## The app body variables
+@app-body-bgcolor: white;
+@app-body-collaborativespace-bgcolor: @app-body-bgcolor;
+@app-body-navbar-bgcolor: transparent;
+@app-body-navbar-border-color: transparent;
+@app-body-centered-width: 1144px;
+
+//== App header
+//
+//## The app header variables
+@app-default-color: @jalios-color-blue; // Color used for themes
+@app-header-bgcolor: @app-default-color;
+@app-header-color: #fff;
+@app-header-tab-active-color: #555;
+@app-header-bgcolor-light: lighten(@app-header-bgcolor, 10%);
+@app-header-height: 112px;
+
+//== App table
+//
+//## The app table variables
+@app-table-th-border-bottom: 1px solid #999;
+@app-table-member-photo-tiny-size: 32px;
+@app-zindex-pub-actions-header: @zindexPublicationActions + 1;
+
+//
+//##
+// Search app
+@app-cards-horizontal-wrapper-grid-size-xs: 12;
+@app-cards-horizontal-wrapper-grid-size-md: 12;
+@app-cards-horizontal-wrapper-grid-size-lg: 8;
+@app-cards-horizontal-wrapper-grid-size-lg-offset: 2;
+
+//
+//##
+// Collaborative space
+@app-header-tab-active-border-bottom-color: @brand-primary;

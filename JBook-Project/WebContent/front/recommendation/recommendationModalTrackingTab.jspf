@@ -1,0 +1,24 @@
+<%@ page contentType="text/html; charset=UTF-8" %><%
+%><%@ page import="com.jalios.jcms.tracking.*" %><%
+%><%@page import="com.jalios.jcms.context.MessageLevel"%>
+
+<% if (canAccessReaderTrackingTab) { %>
+<div class="tab-pane fade in<%= isReaderTrackingTab ? " active" : "" %>" id="recommendation-tracking">
+  <%
+  boolean isLast = true;
+  Recommendation recommendation = recoTrack;
+  %>
+  <div class="recommendation-tracking">
+    <div class="modal-body">
+      <%@ include file="/front/recommendation/recommendation.jspf" %>
+      <jalios:include jsp="/front/recommendation/doRecommendationTracking.jsp" />
+    </div><!-- EOF .modal-body -->
+  
+    <div class="modal-footer">
+      <div class="buttons">
+        <button type="button" class="btn btn-primary" data-dismiss="modal"><%= glp("ui.com.btn.close") %></button>
+      </div><%-- EOF .buttons --%>
+    </div><%-- EOF .modal-footer --%>
+  </div><!-- EOF .recommendation-tracking -->
+</div>
+<% } %>

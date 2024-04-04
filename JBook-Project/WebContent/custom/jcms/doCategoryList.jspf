@@ -1,0 +1,73 @@
+<%@page import="com.jalios.jcms.categorybrowser.*"%>
+<%
+if (Util.notEmpty(categories)) {
+  // Hook: allows to customize the number of categories displayed by default
+  int maxDefaultCategoriesCount = Util.toInt(request.getAttribute("category-list-max-items"), 4);
+  // Hook (JCMS-6468) render categories as "SPAN.clickable" instead of "A.clickable" + no toggler in this case
+  boolean noLink = Util.toBoolean(request.getAttribute("category-list-no-link"), false);
+  String refresh = Util.toBoolean(request.getAttribute("query.facets.ajax"),false) ? " ajax-refresh" : "";
+  // Improvement JCMS-5084 propagate current portal if none specified
+  PortalInterface categorySearchPortal = (displayPortal != null && displayPortal.getWorkspace().isCollaborativeSpace()) ? displayPortal : null;
+  // Hook: allows to customize the query to the search engine
+  String querySuffix = Util.getString(request.getAttribute("category-list-query-suffix"), "");
+  boolean showCategoryToggler = categories.length > maxDefaultCategoriesCount;
+
+  Publication pubCat = (Publication)request.getAttribute("publication");
+  
+  String categoryListTitle = Util.toBoolean(request.getAttribute("addCategoryListTitle"), true) ? "ui.com.lbl.categories" : "";
+  
+  %><jalios:icon src="category" title="<%= categoryListTitle %>" /><%
+  %><jalios:foreach array="<%= categories %>" name="cat" type="Category" counter="itCatCounter" max="<%= noLink ? maxDefaultCategoriesCount : categories.length %>"><%
+  List<CategoryBrowser> categoryBrowserList = null;
+  
+  CategoryBrowserContext categoryBrowserCtx = new CategoryBrowserContext(cat, pubCat, workspace, loggedMember, jcmsContext, userLang, userLocale);
+  
+  if (!noLink) {
+    categoryBrowserList = CategoryBrowserManager.getInstance().getCategoryBrowserList(categoryBrowserCtx);
+  }
+  int size = Util.getSize(categoryBrowserList);
+  boolean oneLink = false;
+  if (size == 0) {
+    noLink = true;
+  } 
+  else if (size == 1) {
+    oneLink = true;
+  }
+  String catUrl = null;
+  CategoryBrowser categoryBrowser = Util.getFirst(categoryBrowserList);
+  if (categoryBrowser != null) {
+    catUrl = categoryBrowser.getUrl(categoryBrowserCtx);
+  }
+  %>
+  
+  <%-- NO LINK / ONE LINK --%>
+  <% if (noLink || oneLink) { %>
+    <% if (noLink) { %> 
+    <span class="meta-cat clickable<%= refresh %>" <% if (Util.notEmpty(catUrl)) { %>data-jalios-url="<%= catUrl %>"<% } %>>
+    <% } else { %> 
+    <%   String catLinkCss = "meta-cat"+ (itCatCounter > maxDefaultCategoriesCount ? " hide meta-category-toggler" : "") + refresh; %>
+    <a href="<%= catUrl %>" title="<%= glp("ui.com.lbl.metadata.category.search", encodeForHTMLAttribute(cat.getName(userLang), true)) %>" class="<%= catLinkCss %> <%= categoryBrowser.getLinkCss() %>" <%= categoryBrowser.getLinkAttributes() %>>
+    <% } %>
+    <%= cat.getName(userLang) %>
+    <% if (noLink) { %></span><% } else { %></a><% } %>
+  
+  <%-- MANY LINKS --%>
+  <% } else { %>
+  <% 
+    String dropdownId = "categoryMenu_" + cat.getId() + "_" + pubCat.getId();
+    String dropdownCss = "meta-cat-dropdown-wrapper";
+    dropdownCss += itCatCounter > maxDefaultCategoriesCount ? " hide meta-category-toggler" : "";
+  %>
+  <jalios:dropdown wrapperCss="<%= dropdownCss %>" dropdownId="<%= dropdownId %>" triggerCss="ctx-caret meta-cat dropdown-toggle" triggerLabel='<%= cat.getName(userLang) %>' triggerTitle='<%= glp("ui.com.lbl.metadata.category.search", encodeForHTMLAttribute(cat.getName(userLang), true)) %>'>
+	  <jalios:foreach collection="<%= categoryBrowserList %>" name="itCategoryBrowser" type="CategoryBrowser" counter="c2">
+		  <li><jalios:button button="<%= itCategoryBrowser.getButton(categoryBrowserCtx) %>" /></li>
+	  </jalios:foreach>
+  </jalios:dropdown>
+  <% } %>
+  </jalios:foreach><%
+  if (showCategoryToggler && !noLink) { 
+    %><button type="button" title="<%= encodeForHTMLAttribute(glp("ui.com.lbl.metadata.show-all-cat")) %>" aria-label="<%= encodeForHTMLAttribute(glp("ui.com.lbl.metadata.show-all-cat")) %>" class="meta-cat meta-category-toggler" data-jalios-action="toggle:hide" data-jalios-target=".meta-category-toggler" onclick="return false;">&hellip;</button><%
+  }
+  request.removeAttribute("category-list-max-items");
+  request.removeAttribute("category-list-no-link");
+} %>

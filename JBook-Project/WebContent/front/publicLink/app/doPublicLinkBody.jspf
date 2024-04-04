@@ -1,0 +1,172 @@
+<%
+String appRedirect = encodeForURL(appHandler.getAppUrl());
+List<PublicLink> publicLinkList = appHandler.getPublicLinkList();
+int publicLinkCount = appHandler.getPublicLinkCount();
+int firstResult = appHandler.getFirstResult();
+
+boolean noResult = publicLinkCount == 0;
+
+boolean showEditAction = appHandler.showEditAction();
+boolean showDuplicateAction = appHandler.showDuplicateAction();
+boolean showDeleteAction = appHandler.showDeleteAction();
+%>
+
+<%-- NO RESULT --%>
+<% if (noResult) { %>
+  <jalios:appBodyNoResult text="ui.fo.public-link.app.no-result" />
+<%-- TABLE --%>
+<% } else { %>
+
+<jalios:pager name='pagerHandler' declare='true' action='init'
+                size='<%= publicLinkCount %>'/>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <span class="navbar-brand"><%= glp("ui.fo.public-link.app.count", publicLinkCount) %></span>
+      </div>
+    </div>
+  </nav>
+  
+  <table class="table table-data table-app">
+    <caption class="sr-only"><%= appHandler.isAllPublicLinksView() ? glp("ui.fo.public-link.app.view.all-links") : glp("ui.fo.public-link.app.view.my-links") %></caption>
+    <thead>
+      <tr>
+        <td></td>
+        <th scope="col"><%= glp("ui.com.lbl.documents") %></th>
+        <th scope="col"><%= glp("ui.fo.public-link.app.table.downloads") %></th>
+        <th scope="col"><jalios:icon src="key" title='<%= glp("ui.fo.public-link.lbl.access-code") %>' alt='<%= glp("ui.fo.public-link.lbl.access-code") %>' /></th>
+        <th scope="col"><%= glp("ui.fo.public-link.lbl.name") %></th>
+        <% if (appHandler.showAuthors()) { %>
+        <th scope="col"><%= glp("ui.com.lbl.member") %></th>
+        <% } %>
+        <th scope="col"><%= glp("ui.com.lbl.cdate") %></th>
+        <th scope="col"><%= glp("ui.fo.public-link.lbl.expiry-date") %></th>
+        <td></td>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <jalios:foreach collection="<%= publicLinkList %>" name="publicLink" type="PublicLink" counter="itCounter">
+      <%
+      List<FileDocument> docList = publicLink.getDocList();
+      boolean oneDoc = Util.getSize(docList) == 1;
+      FileDocument doc = oneDoc ? Util.getFirst(docList) : null;
+      Date expiryDate = publicLink.getExpiryDate();
+      boolean isExpired = expiryDate != null && expiryDate.getTime() < System.currentTimeMillis();
+      %>
+      <tr class="align-top">
+      
+        <%-- COUNTER --%>
+        <td class="numeric fit"><%= itCounter + firstResult %>.</td>
+        
+        <%-- DOCUMENTS --%>
+        <td>
+          <% if (oneDoc) { %>
+          <jalios:fileicon doc="<%= doc %>" /> <jalios:link data="<%= doc %>" />
+          <% if (publicLink.isFrozenVersion()) { %>
+          <span class="doc-version">(<%=glp("ui.fo.public-link.lbl.version-abbr") %> <a title="<%= encodeForHTMLAttribute(glp("ui.fo.public-link.lbl.version.frozen")) %>" href="<%= Util.getFirst(publicLink.getDocFileList()) %>"><%= Util.getFirst(publicLink.getDocVersionList()) %></a>)</span>
+          <% } %>
+          
+          <% } else { %>
+          <jalios:icon src="zip" /> 
+          <a href="#" role="button" data-jalios-action="toggle:hide toggle:dropup"  data-jalios-target="#zip-content-<%= itCounter %>|this" >
+            <%= Util.getSize(docList) %> <%= glp("ui.com.lbl.documents") %> 
+            <jalios:icon src="caret" />
+          </a >  
+          <div id="zip-content-<%= itCounter %>" class="zip-content hide">
+            <ul class="list-unstyled">
+            <% if (publicLink.isFrozenVersion()) { %>
+            <%
+            List<String> docVersionList = publicLink.getDocVersionList();
+            List<String> docFileList = publicLink.getDocFileList();
+            %>
+            <% for(int i=0; i < docList.size(); i++) { %>
+            <% 
+            FileDocument zipDoc = docList.get(i);
+            String zipDocVersion = docVersionList.get(i);
+            String zipDocFile = docFileList.get(i);
+            %>
+            <li><jalios:fileicon doc="<%= zipDoc %>" /> <jalios:link data="<%= zipDoc %>" />
+            <span class="doc-version">(<%=glp("ui.fo.public-link.lbl.version-abbr") %> <a title="<%= encodeForHTMLAttribute(glp("ui.fo.public-link.lbl.version.frozen")) %>" href="<%= zipDocFile %>"><%= zipDocVersion %></a>)</span>
+            </li>
+            <% } %>
+            <% } else { %>
+            <jalios:foreach collection="<%= docList %>" name="zipDoc" type="FileDocument" counter="itZipCounter">
+              <li><jalios:fileicon doc="<%= zipDoc %>" /> <jalios:link data="<%= zipDoc %>" /></li>
+            </jalios:foreach>
+            <% } %>
+            </ul>
+          </div >  
+          
+          <% } %>
+        </td>
+        
+        <%-- DOWNLOADS --%>      
+        <td class="numeric fit">
+          <% int downloadCount = publicLink.getDownloadCount(); %>
+          <% if (downloadCount > 0) { %>
+          <a href="front/publicLink/publicLinkInfo.jsp?tab=downloads&amp;id=<%= publicLink.getId() %>" class="modal"><jalios:icon src="download"/> <%= downloadCount %></a>
+          <% } else { %>
+          <span class="no-download">0</span>
+          <% } %>
+        </td>
+  
+        <%-- ACCESS CODE --%>
+        <td class="fit nowrap">   
+          <% if (Util.notEmpty(publicLink.getAccessCode())) { %>
+          <jalios:tooltip icon="key"><%= glp("ui.fo.public-link.lbl.access-code") %> : <%= publicLink.getAccessCode() %></jalios:tooltip>
+          <% } %>
+        </td>
+        
+        <%-- NAME --%>
+        <td>
+          <%= encodeForHTML(publicLink.getName()) %>
+        </td>
+  
+        <%-- MEMBER --%>      
+        <% if (appHandler.showAuthors()) { %>
+        <td class="fit nowrap">
+        <jalios:memberphoto member="<%= publicLink.getAuthor() %>" size="<%= PhotoSize.ICON %>" />   
+        <jalios:link data="<%= publicLink.getAuthor() %>" />
+        <% } %>
+        
+        <%-- CDATE --%>
+        <td class="date-time fit">
+          <jalios:date format="short" date="<%= publicLink.getCdate() %>" />
+        </td>
+        
+        <%-- EXPIRY DATE --%>
+        <td class="date-time fit">
+          <% if (expiryDate != null) { %>
+          <span class="label <%= isExpired ? "label-danger" : "label-success" %>">
+          <jalios:date format="short" date="<%= expiryDate %>" />
+          <% } %>
+          </span>
+          
+        </td>
+        
+        <%-- ACTION MENU --%>
+        <td class="fit">
+        
+          <jalios:dropdown triggerTitle="ui.fo.public-link.app.open-link-actions" triggerIcon="more-v" triggerCss="btn btn-rounded"  >
+            <% if (showEditAction) { %>
+            <li><a role="button" href="front/publicLink/editPublicLink.jsp?id=<%= publicLink.getId() %>" class="modal"><jalios:icon src="edit" /> <%= glp("ui.com.alt.edit") %></a></li>
+            <% } %>
+            <% if (showDuplicateAction) { %>
+            <li><a role="button" href="front/publicLink/editPublicLink.jsp?refreshAfterClose=true&amp;publicLinkModel=<%= publicLink.getId() %>" class="modal"><jalios:icon src="duplicate" /> <%= glp("ui.com.alt.duplicate") %></a></li>
+            <% } %>
+            <li><a role="button" href="front/publicLink/publicLinkInfo.jsp?id=<%= publicLink.getId() %>" class="modal"><jalios:icon src="info" /> <%= glp("ui.com.lbl.infos") %></a></li>
+            <% if (showDeleteAction) { %>
+            <li role="separator" class="divider"></li>
+            <li><a role="button" href="front/publicLink/editPublicLink.jsp?opDelete=true&amp;id=<%= publicLink.getId() %>&amp;redirect=<%= appRedirect %>" class="modal confirm-danger"><jalios:icon src="delete" /> <%= glp("ui.com.btn.delete") %></a></li>
+            <% } %>
+          </jalios:dropdown>        
+        </td>
+        
+      </tr>
+      </jalios:foreach>
+    </tbody>
+  </table>
+  <jalios:pager name="pagerHandler" />
+<% } %>

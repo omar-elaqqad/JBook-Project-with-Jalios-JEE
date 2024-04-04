@@ -1,0 +1,169 @@
+<%-- ICON --%>
+<%@page import="com.jalios.jcms.taglib.settings.impl.TextFieldSettings"%>
+<%@page import="com.jalios.jcms.HttpUtil"%>
+<%@page import="com.jalios.jcms.taglib.settings.impl.EnumerateSettings"%>
+<%@page import="com.jalios.jcms.taglib.settings.impl.DateSettings"%>
+<%@page import="com.jalios.jcms.taglib.settings.impl.MemberSettings"%>
+<%@page import="com.jalios.jcms.PhotoSize"%>
+<div class="app-sidebar-icon">
+  <a href="debug/app/debugAppFullDisplay.jsp" title="Return to app home">
+    <jalios:icon src="image-editor-free-crop" />
+  </a>
+</div>
+
+<div class="app-sidebar-section">
+  <div class="app-sidebar-section-title"><a href="#">Clickable section</a></div>
+</div>
+
+<div class="app-sidebar-section">
+  <div class="app-sidebar-section-title">Section with blocks</div>
+  <div class="app-sidebar-block">
+    Campos mortales unda meis arce passim illic. Sectamque quod fecit mundo habentem?
+  </div>
+  <div class="app-sidebar-block">
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+        60%
+      </div>
+    </div>
+  </div>  
+  
+</div>
+
+<div class="app-sidebar-section" role="search">
+  <div class="app-sidebar-section-title"><%= glp("ui.app.sidebar-section.filters") %></div>
+  <jalios:field name='text' resource="field-light" css="app-sidebar-field">
+    <jalios:control settings='<%= new TextFieldSettings().placeholder("ui.com.placeholder.search").css("no-focus") %>' />
+    <span class="input-group-btn">
+      <button class="btn btn-primary ajax-refresh" name="opSearch" type="submit"><jalios:icon src="app-search"/></button>
+    </span>
+  </jalios:field>
+</div>
+
+<!-- <div class="app-sidebar-section"> -->
+<!--   <div class="app-sidebar-section-title">Section with LI without A</div> -->
+<!--   <ul class="app-sidebar-menu"> -->
+<%--     <li class="<%= true ? "active" : "" %>"><jalios:icon src="app-list-chevron" css="app-list-right-icon"/> <input type="checkbox" class="hide" />Checkbox 1</li> --%>
+<%--     <li class="<%= false ? "active" : "" %>"><input type="checkbox" class="hide" />Checkbox 2</li> --%>
+<%--     <li class="<%= false ? "active" : "" %>"><input type="checkbox" class="hide" />Checkbox 3</li> --%>
+<!--   </ul> -->
+<!-- </div> -->
+
+<div class="app-sidebar-section">
+  <div class="app-sidebar-section-title">Section with buttons</div>
+  <a class="btn btn-default app-sidebar-button">Perform this action</a>
+  <a class="btn btn-primary app-sidebar-button">Perform this primary action</a>
+</div>
+
+<div class="app-sidebar-section">
+  <ul class="app-sidebar-menu app-sidebar-menu-no-title" >
+    <li class="<%= false ? "active" : "" %>"><a href="#"><jalios:memberphoto link="false" size="<%= PhotoSize.ICON %>" member="<%= loggedMember %>" /> Section with a member photo</a></li>
+    <li class="<%= false ? "active" : "" %>"><a href="#">My second link</a></li>
+    <li class="<%= true ? "active" : "" %>"><a href="#" class="app-sidebar-menu-node">My multi level link</a>
+      <ul class="app-sidebar-menu">
+        <li><a href="#" class="app-sidebar-menu-node">Second level link</a></li>
+        <li>
+          <ul>
+            <li><a href="#" class="app-sidebar-menu-node">Third level link</a></li>
+          </ul>  
+        </li>    
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<%-- Togglable section example --%>
+<div class="app-sidebar-section">
+  <div class="app-sidebar-section-title"><a data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample" onclick="return false;" class="collapsed">Togglable section <jalios:icon src="caret"/></a></div>
+  <ul class="app-sidebar-menu collapse"  id="collapseExample">
+    <li class="<%= false ? "active" : "" %>"><a href="#">My first link</a></li>
+    <li class="<%= false ? "active" : "" %>"><a href="#">My second link with a very long text to test multilines menu items</a></li>
+  </ul>
+</div>
+
+<%-- Togglable section example (Expanded by default) --%>
+<div class="app-sidebar-section">
+  <div class="app-sidebar-section-title"><a data-toggle="collapse" href="#collapseExample2" aria-expanded="true" aria-controls="collapseExample2" onclick="return false;" class="collapsed dropup">Togglable section (Expanded by default) <jalios:icon src="caret" /></a></div>
+  <ul class="app-sidebar-menu collapse in"  id="collapseExample2">
+    <li class="<%= false ? "active" : "" %>"><a href="#">My first link</a></li>
+    <li class="<%= false ? "active" : "" %>"><a href="#">My second link with a very long text to test multilines menu items</a></li>
+  </ul>
+</div>
+
+<div class="app-sidebar-section">
+  <div class="app-sidebar-section-title">Section with title (Multilevel)</div>
+  <ul class="app-sidebar-menu" >
+    <li class="<%= false ? "active" : "" %>"><a href="#">My first link</a></li>
+    <li class="<%= false ? "active" : "" %>"><a href="#">My second link with a very long text to test multilines menu items</a></li>
+    <li class="<%= false ? "active" : "" %>"><a href="#" class="app-sidebar-menu-node">My third link</a>
+      <ul class="app-sidebar-menu">
+        <li class="<%= true ? "active" : "" %>">
+          <jalios:icon src="app-list-chevron" css="app-list-right-icon"/> <a href="#" class="app-sidebar-menu-node">Second level link</a>
+          <ul class="app-sidebar-menu">
+            <li><a href="#">Third level link</a></li>
+          </ul>  
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<div class="app-sidebar-section">
+  <div class="app-sidebar-section-title">Disabled inputs</div>
+  <jalios:field name='memberChooser' resource="field-light" css="app-sidebar-field">
+    <jalios:control settings='<%= new TextFieldSettings().placeholder("Member").disable() %>' />
+  </jalios:field>
+  <jalios:field name='dateChooser' resource="field-light" css="app-sidebar-field">
+    <jalios:control settings='<%= new DateSettings().placeholder("Date").disable() %>' />
+  </jalios:field>
+</div>
+
+<div class="app-sidebar-section">
+  <div class="app-sidebar-section-title">Section with choosers</div>
+  <jalios:field name='memberChooser' resource="field-light" css="app-sidebar-field">
+    <jalios:control settings='<%= new MemberSettings().placeholder("Member") %>' />
+  </jalios:field>
+  <jalios:field name='dateChooser' resource="field-light" css="app-sidebar-field">
+    <jalios:control settings='<%= new DateSettings().placeholder("Date") %>' />
+  </jalios:field>
+</div>
+
+<div class="app-sidebar-section">
+  <div class="app-sidebar-section-title">Section with icon menu</div>
+  <ul class="app-sidebar-menu" >
+    <li class="active"><jalios:icon src="app-list-chevron" css="app-list-right-icon" /><a href="#"><jalios:icon src="image-editor-rotate90" css="app-list-icon-prefix" /> My first link</a></li>
+    <li class="<%= false ? "active" : "" %>"><a href="#"><jalios:icon src="image-editor-rotate90" css="app-list-icon-prefix" /> My second link</a></li>
+    <li class="<%= false ? "active" : "" %>"><a href="#"><jalios:icon src="image-editor-rotate270" css="app-list-icon-prefix" /> My third link</a></li>
+    <li class="<%= false ? "active" : "" %>"><a href="#"><jalios:icon src="image-editor-free-crop" css="app-list-icon-prefix" /> My fourth link</a></li>
+    <li class="<%= false ? "active" : "" %>"><a href="#"><jalios:icon src="current-state" css="app-list-icon-prefix" /> My fifth link</a></li>
+  </ul>                                      
+</div>
+
+<% String[] enumerateValues = new String[] {"value1", "value2", "value3"}; %>
+<% String[] checkboxValues = new String[] {"checkbox1", "checkbox2", "checkbox3"}; %>
+<% String[] radioValues = new String[] {"radio1", "radio2", "radio3"}; %>
+
+<div class="app-sidebar-section">
+  <div class="app-sidebar-section-title">Section with multiple form components</div>
+   <jalios:field name="checkboxSidebar" value='<%= getStringParameterValues("checkboxSidebar", HttpUtil.ALPHANUM_REGEX) %>' resource="field-light">
+     <jalios:control settings='<%= new EnumerateSettings().checkbox().enumValues(checkboxValues).dataAttribute("jalios-action", "ajax-refresh") %>' />
+   </jalios:field>
+  
+  <%-- Value on control instead of field to prevent weird duplicate radio --%>
+   <jalios:field name="radioSidebar" resource="field-light">
+     <jalios:control settings='<%= new EnumerateSettings().radio().enumValues(radioValues).value(getStringParameterValues("radioSidebar", HttpUtil.ALPHANUM_REGEX)).dataAttribute("jalios-action", "ajax-refresh") %>' />
+   </jalios:field>
+   
+  <jalios:field name="mySelect" resource="field-light">
+	  <jalios:control settings='<%= new EnumerateSettings().select().enumValues(enumerateValues) %>' />
+  </jalios:field>
+  <jalios:field name='memberChooser' resource="field-light" css="app-sidebar-field">
+    <jalios:control settings='<%= new MemberSettings().placeholder("Member") %>' />
+  </jalios:field>
+  <jalios:field name='dateChooser' resource="field-light" css="app-sidebar-field">
+    <jalios:control settings='<%= new DateSettings().placeholder("Date") %>' />
+  </jalios:field>
+  
+  <a class="btn btn-default app-sidebar-button">Perform this action</a>
+  <a class="btn btn-primary app-sidebar-button">Perform this primary action</a>
+</div>

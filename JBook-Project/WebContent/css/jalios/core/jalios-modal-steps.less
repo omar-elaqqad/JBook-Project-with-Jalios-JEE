@@ -1,0 +1,45 @@
+
+.modal-steps {
+  padding: 0 20px;
+  background-color: @modal-steps-bg;
+  border-bottom: 1px solid @gray-lighter;
+
+  .nav-steps {
+    margin: 0;
+
+    > LI {
+      margin-bottom: 0;
+
+      > A {
+        padding: 16px 0;
+        color: #666;
+        opacity: 0.6;
+        font-size: 16px;
+      }
+
+      &.active > A {
+        background-color: transparent;
+        opacity: 1;
+        color: @modal-steps-active-color;
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          height: 4px;
+          width: 100%;
+          left: 0;
+          background-color: @modal-steps-active-color;
+        }
+      }
+
+      &.clickable-step > A {
+        cursor: pointer;
+      }
+    }
+
+    .tabdrop .dropdown-menu A {
+      color: #333333;
+    }
+  }
+}

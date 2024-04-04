@@ -1,0 +1,3 @@
+<a href="#UI" data-toggle="tab" onclick="return false;" aria-controls="paths" role="tab">
+  <jalios:icon src="jportal-sidebar-tab-ui"/>
+</a>

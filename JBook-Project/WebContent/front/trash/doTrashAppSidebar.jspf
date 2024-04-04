@@ -1,0 +1,59 @@
+<jalios:appSidebar css="no-focus" icon="jcms-trash-app" iconTitleProp="jcms.trashapp.title" appUrl="front/trash/trashApp.jsp">
+  <jalios:appSidebarSectionSearch value="<%= appHandler.getText() %>" label="jcms.trashapp.sidebar.search-in-trash" placeholder="jcms.trashapp.sidebar.search-in-trash" />
+  
+  <%-- VIEWS --%>
+  <% if (appHandler.showViews()) { %>
+    <jalios:appSidebarSection title="ui.app.sidebar-section.views" name="views">
+      <jalios:field resource="field-app"> 
+        <jalios:control settings='<%= appHandler.getViewSettings() %>' />
+      </jalios:field>
+    </jalios:appSidebarSection>
+  <% } %>
+
+  <%-- OpAuthor filter --%>
+  <% if (appHandler.isAllView()) { %>
+  <jalios:appSidebarSection title="ui.com.lbl.member" name="author" icon="member" collapsable="true" collapsed="<%= Util.isEmpty(appHandler.getMidsOpAuthor()) %>">
+    <jalios:field resource="field-app" mv="1"
+             value="<%= appHandler.getMidsOpAuthor() %>" > 
+      <jalios:control settings='<%= appHandler.getOpAuthorSettings() %>' />
+    </jalios:field>
+  </jalios:appSidebarSection>
+  <% } %>
+
+  <%
+  jcmsContext.addCSSHeader("css/queryresult.css");  
+  jcmsContext.addCSSHeader("css/jalios/ux/jalios-search.css");
+  jcmsContext.addJavaScript("js/jalios/core/jalios-search.js");
+  
+  request.setAttribute("query.queryHandler", appHandler);
+  request.setAttribute("query.queryResultSet", queryResultSet);
+  request.setAttribute("query.facets.prefix","TrashAppFilter_");
+  request.setAttribute("query.facets.handler", appHandler);
+  request.setAttribute("query.facets.date",      "2");
+  request.setAttribute("query.facets.types",      "2");
+  request.setAttribute("query.facets.docs",      "2");
+  request.setAttribute("query.facets.date.show-date-type", "false");
+  %>
+ <div class="search-facets">
+  <%-- FACET DATE --%>
+  <jalios:include jsp='/front/query/doFacetDate.jsp' />
+  
+  <%-- FACET TYPE --%>
+  <jalios:include jsp='/front/query/doFacetType.jsp' /> 
+  
+  <%-- FACET DOCUMENT TYPE --%>
+  <jalios:include jsp='/front/query/doFacetDocs.jsp' />
+
+  <%-- FILTER by Workspaces --%>
+  <jalios:appSidebarSection title="jcms.trashapp.sidebar.filter-workspaces" name="workspace" icon="workspaces" collapsable="true" collapsed="<%= Util.isEmpty(appHandler.getAvailableTrashWorkspaceSet()) %>">
+     <jalios:field
+             name="trashWrkspc" 
+             value="<%= appHandler.getAvailableTrashWorkspaceSet() %>" 
+             resource="field-app" 
+             mv="1">
+       <jalios:control settings='<%= appHandler.getWorkspacesSettings() %>' />
+     </jalios:field>
+  </jalios:appSidebarSection>
+ </div>
+  
+</jalios:appSidebar>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<type name="DBWebPage" superclass="generated.WebPage" debatable="false" unitFieldEdition="true" audienced="false" categoryTab="true" readRightTab="true" updateRightTab="false" templateTab="false" workflowTab="true" advancedTab="true" database="true" hbm="true" revision="true" openRole="true">
+  <title ml="true" searchable="true"/>
+  <fields>
+    <field type="super" />
+  </fields>
+</type>
+

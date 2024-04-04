@@ -1,0 +1,32 @@
+          <tr>
+            <td
+              style="border: 1px solid #dbdbdb; background: #f0f0f0; font-size: 14px; margin-top: 10px;">
+              <div style="text-align: center;">
+               <% if (alert.getRecipient() != null && alert.getRecipient().isValidAccount()) { %>
+                <%  
+                  StringBuilder myProfileLinkSB = new StringBuilder();
+                  if (alert.getRecipient() != null) {
+                     alert.getRecipient().printDisplayLinkStart(myProfileLinkSB, alert.getRecipient().getLocale(), channel.getUrl(), null, null, null, null, null, null, null, false, null, null, null);
+                     myProfileLinkSB.append(glp("ui.mail.footer.lbl.profile"));
+                     alert.getRecipient().printDisplayLinkEnd(myProfileLinkSB);
+                  }
+                %>
+                <%= myProfileLinkSB.toString() %>
+                
+                <%
+                String appAlertUrl = channel.getUrl() + "/jcore/alert/app/alertApp.jsp?editAlertRules=true";
+                String editRuleModalUrl = "jcore/alert/editAlertRule.jsp?opMode=opAdd&alertDomain=" + alert.getDomain() + "&alertName=" + alert.getName();
+                String editRuleUrl = appAlertUrl + "&modal=" + com.jalios.jcms.HttpUtil.encodeForURL(editRuleModalUrl);
+                %>
+                &middot; <a href="<%= editRuleUrl %>"><%= glp("ui.mail.footer.lbl.add-rule") %></a> &middot; 
+               <% } %>
+                <a href="<%= channel.getUrl() %>"><%= glp("ui.mail.footer.lbl.home") %></a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="margin-top: 10px;">
+              <div
+                style="font-size: 11px; color: #999; width: 100%; text-align: center;"><%= glp("ui.mail.footer.text",channel.getName()) %></div>
+            </td>
+          </tr>

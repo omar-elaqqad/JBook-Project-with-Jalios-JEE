@@ -1,0 +1,70 @@
+<%@page import="com.jalios.util.Util"%><%
+%><%@page import="com.jalios.jcms.HttpUtil"%><%
+%><%@page import="com.jalios.jcms.JcmsUtil"%><%
+%><%@page import="com.jalios.jcms.taglib.settings.BasicSettings"%><%
+%><%
+String inputFieldName = fieldName;
+String inputFieldValue = fieldValue;
+
+boolean hiddenField = Util.toBoolean(getIncludeObject("hiddenField", false), false);
+
+if(hiddenField) {
+  inputFieldName = fieldName + "Display";
+  
+  String fieldValueDisplay = getIncludeString("fieldValueDisplay", null); // Use when we add the field value in a hidden field
+  if(fieldValueDisplay != null) {
+    inputFieldValue = fieldValueDisplay;
+  }
+}
+
+String placeholder = formatAttribute("placeholder=\"%s\"", getOption(BasicSettings.PLACEHOLDER, ""));
+String prepend = glp(getIncludeString("PREPEND", getOption(BasicSettings.PREPEND, "")));
+String prependHtmlAttributes = Util.getString(request.getAttribute("prepend_html_attributes"), "");
+String append = glp(getIncludeString("APPEND", getOption(BasicSettings.APPEND, "")));
+String required = Util.toBoolean(fieldRequired, false) ? "aria-required='true'" : "";
+String disabled = Util.toBoolean(fieldDisabled, false) ? "disabled=\"disabled\"" : "";
+String readonly = Util.toBoolean(fieldReadOnly, false) ? "readonly=\"readonly\"" : "";
+String css = getOption(BasicSettings.CSS, "");
+String title = Util.notEmpty(getOption(BasicSettings.TITLE, "")) ? " title=\"" + glp(getOption(BasicSettings.TITLE, "")) + "\" " : "";
+css = "form-control" + (Util.notEmpty(css) ? " " + css : "") + (!hiddenField ? " form-control-value" : " form-control-display");
+String autofocus = Util.toBoolean(getOption(BasicSettings.AUTOFOCUS, false), false) ? "autofocus=\"autofocus\"" : "";
+Integer maxLength = getOption(BasicSettings.MAX_LENGTH, -1);
+String htmlAttributes = getOption(BasicSettings.HTML_ATTRIBUTES, "");
+String dataAttributes = formatDataAttributes(getOption(BasicSettings.DATA_ATTRIBUTES, (Map<String, Object>) null));
+Map<String, Object> ariaAttributesMap = getOption(BasicSettings.ARIA_ATTRIBUTES, (Map<String, Object>) null);
+ControlUtils.autoFillAriaAttributes(ariaAttributesMap, fieldResource, fieldLabelId);
+String ariaAttributes = formatAriaAttributes(ariaAttributesMap);
+String dataEvent = formatAttribute("data-jalios-event='%s'", getOption(BasicSettings.TRIGGER_EVENT, ""));
+String dataAction = formatAttribute("data-jalios-action='%s'", getOption(BasicSettings.TRIGGER_ACTION, ""));
+%><%
+%><% if (Util.notEmpty(prepend)) { %><span class="input-group-addon" <%= prependHtmlAttributes %>><%= prepend %></span><% } %>
+<input <%= Util.notEmpty(fieldId)?"id='"+encodeForHTMLAttribute(fieldId)+"'":"" %>
+      <%= Util.notEmpty(inputFieldName)?"name='"+encodeForHTMLAttribute(inputFieldName)+"'":"" %>
+      type="text"
+      class="<%= css %>"
+      value="<%= encodeForHTMLAttribute(inputFieldValue) %>"
+      <%= JcmsUtil.getLangAttributes(cptLang) %>
+      <%= placeholder %>
+      <%= autofocus %>
+      <%= disabled %>
+      <%= title %>
+      <%= readonly %>
+      <%= required %>
+      <% if(maxLength > 0) { %>maxlength="<%= HttpUtil.encodeForHTMLAttribute(String.valueOf(maxLength)) %>"<% } %>
+      <%= !hiddenField ? dataEvent : "" %>
+      <%= !hiddenField ? dataAction : "" %>
+      <%= !hiddenField ? dataAttributes : "" %>
+      <%= !hiddenField ? ariaAttributes : "" %>
+      <%= htmlAttributes %> />
+<% if(hiddenField) { %>
+<input name="<%= encodeForHTMLAttribute(fieldName) %>"
+      type="text"
+      class="form-control form-control-value hide"
+      value="<%= encodeForHTMLAttribute(resolveFieldValue(fieldValue)) %>"
+      <%= hiddenField ? dataEvent : "" %>
+      <%= hiddenField ? dataAction : "" %>
+      <%= hiddenField ? dataAttributes : "" %> />
+<% } %><%
+%><% if (Util.notEmpty(append)) { %><span class="input-group-addon"><%= append %></span><% } %><%
+%><%= getIncludeString("CONTROL_APPEND", "") %><%
+%><%@ include file='/jcore/field/control/doTextButtonAction.jspf' %>

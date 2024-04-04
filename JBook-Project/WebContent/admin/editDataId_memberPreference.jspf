@@ -1,0 +1,31 @@
+<%@page import="com.jalios.jcms.memberpreference.*"%>
+<% List<MemberPreference> mbrPrefList = MemberPreferenceManager.getInstance().getMemberPreferenceList((Member)data); %>
+<% if (Util.notEmpty(mbrPrefList)) { %>
+<h4>MemberPreference (<%= Util.getSize(mbrPrefList) %>)</h4>
+<table class="<%= tableCSS %>">
+  <thead>
+  <tr>
+    <th>#</th>    
+    <th><%= glp("ui.com.lbl.name") %></th>
+    <th><%= glp("ui.adm.data-inspector.lbl.value") %></th>
+  </tr>
+  </thead>
+  <jalios:pager name="pagerHandler" declare="true" action="init" size="<%= Util.getSize(mbrPrefList) %>" paramPrefix="inspector_ExtraDBData_" />  
+  <tbody>
+  <jalios:foreach collection="<%= mbrPrefList %>" 
+                  name="mbrPref" 
+                  type="MemberPreference"
+                  max="<%= pagerHandler.getPageSize() %>"
+                  skip="<%= pagerHandler.getStart() %>">  
+  <tr>
+    <td class="fit numeric"><%= itCounter %></td>
+    <td class="fit norwrap"><%= mbrPref.getKey() %></td>
+    <td><pre><%= encodeForXML(Util.truncate(mbrPref.getValue(), 300, "..."))  %></pre></td>
+  </tr>
+  </jalios:foreach>
+  </tbody>
+</table>
+<jalios:pager name="pagerHandler" />  
+<% } %>
+       
+ 

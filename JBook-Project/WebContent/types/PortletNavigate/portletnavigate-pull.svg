@@ -1,0 +1,6 @@
+<svg class="topbar-pull" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 23">
+  <path class="topbar-pull-shape" d="M48.63,4.38A9.85,9.85,0,0,1,56,0H0A9.85,9.85,0,0,1,7.37,4.38C10.58,9.2,13.11,18,28,18S45.42,9.2,48.63,4.38Z"/>
+  <rect class="topbar-pull-handle" x="29" y="8" rx="1" ry="1" transform="translate(41 -23) rotate(90)"/>
+  <rect class="topbar-pull-handle" x="25" y="8" rx="1" ry="1" transform="translate(37 -19) rotate(90)"/>
+  <rect class="topbar-pull-handle" x="21" y="8" rx="1" ry="1" transform="translate(33 -15) rotate(90)"/>
+</svg>

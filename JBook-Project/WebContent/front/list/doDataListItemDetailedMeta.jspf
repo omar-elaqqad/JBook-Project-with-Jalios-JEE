@@ -1,0 +1,16 @@
+<%@page import="com.jalios.jcms.taglib.list.ListItemTag"%><%
+if (Util.toBoolean(request.getAttribute(DataListItemTag.DISPLAY_META_REQUEST_ATTR), true)) {
+%><jalios:buffer name='LIST_ITEM_META'><%
+  String meta = getIncludeString(ListItemTag.BUFFER_LIST_ITEM_META, "");
+  String appendMeta = getIncludeString(ListItemTag.BUFFER_LIST_ITEM_META_APPEND, "");
+  String prependMeta = getIncludeString(ListItemTag.BUFFER_LIST_ITEM_META_PREPREND, "");
+  if (Util.isEmpty(meta)) {
+    %><%= prependMeta %><%
+    %><%@ include file="/front/list/doDataListItemDate.jspf" %><%
+    %> <% if (Util.toBoolean(getIncludeObject("showDate", null),true)) { %>&middot;<% } %> <%= data.getAuthor() != null && data.getAuthor().canBeReadBy(loggedMember) ? data.getAuthor().getFullName() : glp("ui.com.lbl.restricted-mbr")  %><%
+    %><%= appendMeta %><%
+  } else {
+    %><%= meta %><%
+  }
+%></jalios:buffer>
+<% } %>

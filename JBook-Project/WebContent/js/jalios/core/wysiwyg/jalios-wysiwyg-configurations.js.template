@@ -1,0 +1,31 @@
+!function ($) {
+
+  // Namespace
+  if (!$.jalios) { $.jalios = {}; }
+  
+  /**
+   * Jalios WYSIWYG Configuration.<br/>
+   * <br/>
+   * <h5>Description</h5>
+   * 
+   * @namespace $.jalios.WysiwygConfiguration
+   */
+  $.jalios.WysiwygConfiguration = {
+    
+    /**
+     * Documentation of the publicFunction
+     * @param {String} param1 the param1 description
+     * 
+     * @example
+     * 
+     * var value = $.jalios.WysiwygConfiguration.getConfiguration('default');
+     */
+    getConfiguration: function(configId){
+      var wysiwygConfiguration = configurations[configId];
+      return wysiwygConfiguration || configurations['default'];
+    }
+  };
+
+  var configurations = $REPLACE_HERE$;
+
+}(window.jQuery);

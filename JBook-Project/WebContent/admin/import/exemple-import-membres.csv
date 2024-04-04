@@ -1,0 +1,5 @@
+Nom;Prénom;E-mail;Login;Organisation;Service;Fonction;Téléphone;Mobile;Voie et numéro;Code postal;Boîte postale;Département / Région;Ville;Code Pays (code ISO 3166)
+# Utiliser le caractère '#' en début de ligne pour un commentaire
+Dupont;Alice;alice.dupont@example.com;alicedupont;ACME;Département Marketing;Directrice Marketing;01 23 45 67 89;06 07 08 09 10;58 Rue POTTIER;78150;;;Le CHESNAY;FR
+Legrand;Alain;alain.legrand@example.com;;ACME;Département Vente; Ingénieur d'Affaire; ;06 05 04 03 02
+Lepetit;Jérôme;jerome.lepetit@example.com;;ACME;;;01 02 03 04 05

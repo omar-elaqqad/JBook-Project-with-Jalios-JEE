@@ -1,0 +1,46 @@
+<%-- 
+ @Summary: Prints the value of a propertyDispatch on the page which explains Wiki formatting rules, in the right language
+ @Usage : the following variables must be declared before static inclusion of this JSP : 
+   String printedPropValue;
+   String printedPropTitle;
+--%><%@page import="com.jalios.jcms.JcmsUtil"%>
+<%
+{
+ final List<Data> correspondingDataList = JcmsUtil.stringToDataList(printedPropValue, ", \t");
+ final boolean isDataProperty = Util.notEmpty(correspondingDataList);
+ final boolean hasUnresolvedValue = isDataProperty && !printedPropValue.replaceAll("(, \t)+", " ").trim().equals(JcmsUtil.dataListToString(correspondingDataList, " "));
+ // Do not print the value a complete data table can be generated 
+ final boolean printRawValue = !isDataProperty || hasUnresolvedValue;
+ 
+ 
+ if (printRawValue) {
+   if (Util.isEmpty(printedPropValue)) {
+     %><em><%= glp("ui.adm.prop-editor.prop-value.empty") %></em><%     
+   } else {
+     final String htmlAttribute = (printedPropValue != null && printedPropValue.contains("\n")) ? "pre" : "code";
+     %><<%= htmlAttribute %> <% if (Util.notEmpty(printedPropTitle)){ %>title="<%= encodeForHTMLAttribute(printedPropTitle)%>"<% } %>><%
+     %><%= encodeForHTML(printedPropValue) %><%
+     %></<%= htmlAttribute %>><%
+   }
+ }
+
+ if (Util.notEmpty(correspondingDataList)) {
+ %>
+  <% if (printRawValue) { %><p><% } %>
+  <table class="table-data table-condensed property-table">
+  <tbody>
+   <% for (Data correspondingData : correspondingDataList) { %>
+   <tr>
+    <td class="expand">
+      <jalios:dataicon data="<%= correspondingData %>"  /> <jalios:link data="<%= correspondingData %>" />
+      <span class="property-data-value-edit"><jalios:edit data="<%= correspondingData %>" /></span>
+    </td>
+    <td class="fit nowrap"><code><%= Util.getClassShortName(correspondingData) %></code></td>
+    <td><code><%= JcmsUtil.getId(correspondingData) %></code></td>
+   <% } %>
+  </tbody>
+  </table><%
+ }
+ 
+}
+%>

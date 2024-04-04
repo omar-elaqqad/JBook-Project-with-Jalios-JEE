@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<!-- LOG4J Configuration Properties File for Jalios JCMS Junit-->
+
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+	<!-- 1. RENDERERs ******************************************************** -->
+
+
+	<!-- 2. APPENDERs ******************************************************** -->
+	<!-- # CONSOLE Appender # Output to console (System.out). # simple pattern 
+		: "time priority [ChannelName] [logger] - message" -->
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ABSOLUTE} %p [%X{ChannelName}] [%c{1}] - %m%n" />
+		</layout>
+	</appender>
+
+	<!-- # LOGFILE Appender -->
+	<appender name="LOGFILE" class="org.apache.log4j.FileAppender">
+		<param name="File" value="./dist/logs/junit_${com.jalios.junit.project-name}.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %p [%t] [%X{ChannelName}] [%c{2}] %x - %m%n" />
+		</layout>
+	</appender>
+
+	<!-- 3. LOGGERs ********************************************************** -->
+
+  <logger name="com.jalios">
+    <level value="INFO" />
+  </logger>
+  <logger name="org.apache.commons.httpclient">
+    <level value="ERROR" />
+  </logger>
+	<root>
+		<priority value="WARN" />
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="LOGFILE" />
+	</root>
+
+</log4j:configuration>
+

@@ -1,0 +1,95 @@
+
+.nav-tabs.nav-tabs-underlined {
+  margin-bottom: 24px;
+  border-bottom: 1px solid #eee;
+  padding: 0;
+  display: flex;
+
+  &.is-left-aligned {
+    display: block;
+    > LI {
+      flex-basis: initial;
+      flex-grow: initial;
+    }
+  }
+
+  &.no-border {
+    border-bottom: 0;
+  }
+
+  > LI {
+    margin-bottom: 0;
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align: center;
+
+    &:not(.active) {
+      IMG {
+        filter: grayscale(1);
+        opacity: 0.6;
+      }
+    }
+
+    &:after {
+      content: "";
+      transition: opacity 400ms ease-in-out;
+      opacity: 0;
+      will-change: transform;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: @topbar-item-color-hover;
+      position: absolute;
+      height: 2px;
+    }
+
+    &.active:after,
+    &:hover:after {
+      opacity: 1;
+    }
+
+    > A {
+      transition: all 200ms ease-in;
+      padding: 10px 15px;
+      border: 0 none;
+      opacity: 1;
+      margin: 0;
+      white-space: nowrap;
+      color: #aaa;
+
+      &:focus {
+        background-color: transparent;
+      }
+
+      &:active,
+      &:focus,
+      &:hover {
+        border-radius: 0;
+        border: 0 none;
+      }
+    }
+
+    &.active > A {
+      background-color: transparent;
+      color: @jalios-color-blue;
+    }
+  }
+}
+/* ------------------------------------------ */
+/*  Specific code to reset panel padding      */
+/* ------------------------------------------ */
+
+.panel-body {
+  .nav-tabs-underlined {
+    margin-top: -15px;
+    padding: 0 16px;
+  }
+}
+
+.browser-IE11 {
+  .nav-tabs.nav-tabs-underlined.is-left-aligned > LI {
+    flex-basis: auto;
+    flex-grow: 0;
+  }
+}

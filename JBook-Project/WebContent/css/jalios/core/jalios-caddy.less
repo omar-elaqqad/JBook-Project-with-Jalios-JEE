@@ -1,0 +1,30 @@
+@import "init-mixins.less";
+
+.form-caddy {
+  .caddy-item-title {
+    min-width: 300px;
+  }
+}
+
+// Override jalios-table-data.less being nowrap on small screen
+@media (max-width: @screen-xs-max) {
+  .form-caddy {
+    .table-responsive {
+      > .table-data {
+        > THEAD,
+        > TBODY,
+        > TFOOT {
+          > TR {
+            > TH,
+            > TD {
+              // Ensure the content can wrap
+              &.caddy-item-title {
+                white-space: inherit;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

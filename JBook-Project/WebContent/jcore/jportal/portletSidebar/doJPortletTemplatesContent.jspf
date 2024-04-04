@@ -1,0 +1,14 @@
+<%-- JPortal --%>
+<% if(request.getAttribute("is-create-portlet") == null){ %>
+  <h3 class="sidebar-tab-title"><%= glp("jportal.edition.sidebar.portlet-edit.templates.title") %></h3>
+<% } %>
+<div class="jportal-sidebar-group">
+	<jalios:include jsp="jcore/jportal/doEditJPortletFooter.jsp" />
+  <%-- SkinFooter ----------------------------------------------%>
+  <% if (isSkinablePortlet) { %>
+    <% HashMap<String,String> skinFooterML  = ((EditPortletSkinableHandler)genericFormHandler).getAllAvailableSkinFooterML(); %>
+    <jalios:field name='<%= "skinFooter" %>' label="types.AbstractPortletSkinable.fields.skinFooter.label" value='<%= skinFooterML %>' ml="true">
+      <jalios:control settings='<%= new WysiwygSettings().configurationId("light").rows(3) %>' />
+    </jalios:field>
+  <% } %>
+</div>

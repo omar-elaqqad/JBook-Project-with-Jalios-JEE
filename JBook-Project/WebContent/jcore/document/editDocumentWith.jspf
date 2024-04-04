@@ -1,0 +1,19 @@
+<%@ page import="com.jalios.jcms.document.editor.*" %>
+<%
+request.setAttribute("editDocumentWith", Boolean.TRUE);
+List<DocumentEditor> editorList = DocumentEditorManager.getInstance().getDocumentEditorList(doc, loggedMember, userLang);
+int editorCount = Util.getSize(editorList);
+
+if (editorCount == 1) {
+  DocumentEditor editor = Util.getFirst(editorList);
+  String editorUrl = editor.getUrl(doc, loggedMember, ServletUtil.getBaseUrl(request));
+%>
+<a <% if (Util.notEmpty(editorUrl)) { %> href="<%= editorUrl %>"<% } %> class="btn btn-primary document-editor-<%=editor.getKey() %> <%= Util.getString(editor.getLinkCss(), "") %>" <%= editor.getLinkAttributes() %> <%= editor.getLinkAttributes(userLang, doc, loggedMember) %>><%= editor.getButtonLabel(userLang, doc, loggedMember) %></a>
+<% } else if (editorCount > 1) { %>
+<jalios:dropdown wrapperCss="btn-group" triggerCss="btn btn-primary ctx-caret" triggerLabel="ui.com.btn.edit-with-many">
+	<jalios:foreach collection="<%= editorList %>" type="DocumentEditor" name="editor" >
+    <% String editorUrl = editor.getUrl(doc, loggedMember, ServletUtil.getBaseUrl(request)); %>
+	  <li><a <% if (Util.notEmpty(editorUrl)) { %> href="<%= editorUrl %>"<% } %> class="document-editor-<%=editor.getKey() %> <%= Util.getString(editor.getLinkCss(), "") %>" <%= editor.getLinkAttributes() %> <%= editor.getLinkAttributes(userLang, doc, loggedMember) %>><jalios:icon src="<%= editor.getIcon(doc, loggedMember) %>" /><%= editor.getMenuLabel(userLang, doc, loggedMember) %></a></li>
+  </jalios:foreach>  
+</jalios:dropdown>
+<% } %>

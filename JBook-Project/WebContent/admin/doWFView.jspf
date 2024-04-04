@@ -1,0 +1,5 @@
+<h3><%= glp("ui.adm.wf-edit.view", encodeForHTML(xmlWFLabel)) %></h3>
+<%-- SVG rendering --%>
+<% String workflowDataJSP = "work/workflowJson.jsp";
+%><%@ include file='/admin/doWFD3.jspf' %>
+

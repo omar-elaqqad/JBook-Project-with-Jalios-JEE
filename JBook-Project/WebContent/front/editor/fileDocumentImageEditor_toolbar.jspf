@@ -1,0 +1,51 @@
+<div class="navbar navbar-default image-editor-toolbar">
+  <div class="container-fluid">
+    <div class="navbar-left navbar-form">
+      <div class="btn-group">
+        <button type="button" class="btn btn-default" data-jalios-cropper-method="rotate" data-jalios-option="-90" title="<%= glp("ui.filedocument.image-editor.rotate.90") %>">
+          <jalios:icon src="image-editor-rotate90"/>
+        </button>
+        <button type="button" class="btn btn-default" data-jalios-cropper-method="rotate" data-jalios-option="90" title="<%= glp("ui.filedocument.image-editor.rotate.270") %>">
+          <jalios:icon src="image-editor-rotate270"/>
+        </button>
+      </div>
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-default" title="<%= glp("ui.filedocument.image-editor.ratio-free") %>">
+          <input type="radio" class="sr-only" name="aspectRatio" value="NaN">
+          <jalios:icon src="image-editor-free-crop"/>
+        </label>        
+        <label class="btn btn-default" title="<%= glp("ui.filedocument.image-editor.ratio", "16/9") %>">
+          <input type="radio" class="sr-only" name="aspectRatio" value="1.7777777777777777">
+          16:9
+        </label>
+        <label class="btn btn-default" title="<%= glp("ui.filedocument.image-editor.ratio", "4/3") %>">
+          <input type="radio" class="sr-only" name="aspectRatio" value="1.3333333333333333">
+          4:3
+        </label>
+        <label class="btn btn-default" title="<%= glp("ui.filedocument.image-editor.ratio", "1/1") %>">
+          <input type="radio" class="sr-only" name="aspectRatio" value="1">
+          1:1
+        </label>
+        <label class="btn btn-default" title="<%= glp("ui.filedocument.image-editor.ratio", "2/3") %>">
+          <input type="radio" class="sr-only" name="aspectRatio" value="0.6666666666666666">
+          2:3
+        </label>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-default" data-jalios-cropper-method="zoom" data-jalios-option="0.1" title="<%= glp("ui.filedocument.image-editor.zoom") %>">
+          <jalios:icon src="image-editor-zoom-in"/>
+        </button>
+        <button type="button" class="btn btn-default" data-jalios-cropper-method="zoom" data-jalios-option="-0.1" title="<%= glp("ui.filedocument.image-editor.unzoom") %>">
+          <jalios:icon src="image-editor-zoom-out"/>
+        </button>
+      </div>
+    </div>
+    <div class="navbar-right navbar-form">
+      <a class="btn btn-default" href="<%= document.getDisplayUrl(userLocale) %>">
+        <%= glp("ui.com.btn.cancel") %>
+      </a>
+      <button class="btn btn-default create-new-image" type=button name="promptNew" data-jalios-prompt-title="<%= glp("ui.filedocument.image-editor.create-prompt") %>" data-jalios-image-title="<%= document.getTitle(userLang) %>" value="true"><%= glp("ui.filedocument.image-editor.create") %></button>
+      <button class="btn btn-danger confirm modal" data-jalios-text="<%= glp("ui.filedocument.image-editor.update-confirm-title") %>" type="submit" name="opCropReplace" value="true"><%= glp("ui.com.btn.save") %></button>
+    </div>
+  </div>
+</div>

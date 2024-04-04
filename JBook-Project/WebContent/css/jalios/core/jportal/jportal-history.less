@@ -1,0 +1,99 @@
+@import '../../../../css/jalios/core/init-mixins';
+
+.jportal-history {
+  display: flex;
+  position: absolute;
+  top: 48px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 1040;
+
+  .jportal-history-overlay {
+    position: absolute;
+    left: 0;
+    right: 23px;
+    bottom: 0;
+    top: 0;
+    z-index: 1050;
+  }
+
+  .jportal-history-sidebar {
+    overflow-y: auto;
+    width: 300px;
+    border-right: 2px solid #ccc;
+    overflow-x: hidden;
+
+    .jportal-history-item {
+      cursor: pointer;
+      border-right: 0;
+      border-left: 0;
+      margin-right: -1px;
+      padding-left: 40px;
+
+      &:hover {
+        background-color: #efefef;
+      }
+
+      .jportal-history-item-meta {
+        margin-bottom: 8px;
+      }
+
+      .jportal-history-item-date {
+        font-size: 12px;
+        color: #888;
+      }
+
+      .jalios-icon.jportal-history-published {
+        position: absolute;
+        left: 15px;
+        font-size: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .right-arrow {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+      }
+
+      &.history-selected {
+        background-color: #e91e63;
+        color: white;
+
+        .jportal-history-item-date {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .jportal-history-preview {
+    flex: 1;
+    position: relative;
+
+    IFRAME {
+      border: 0 none;
+    }
+  }
+  .jportal-state {
+    height: 16px;
+    width: 16px;
+    background-color: grey;
+    display: block;
+    position: absolute;
+    left: 14px;
+    top: 12px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    &.published-state {
+      background-color: @jalios-color-green-light;
+    }
+    &.saved-state {
+      background-color: @jalios-color-orange;
+    }
+  }
+}

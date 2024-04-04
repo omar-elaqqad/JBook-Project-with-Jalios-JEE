@@ -1,0 +1,15 @@
+<%@ page contentType="text/html; charset=UTF-8" %><%
+%><%@page import="com.jalios.jcms.taglib.list.ListItemTag.LinkTarget"%><%
+%><%@ include file="/jcore/doInitPage.jspf" %><%
+String css = getIncludeString("css", "").trim();
+String link = getIncludeString("link", null);
+String icon = getIncludeString("icon", null);
+String iconAlt = getIncludeString("iconAlt", null);
+String text = getIncludeString("text", null);
+jcmsContext.addCSSHeader("css/jalios/core/components/list/jalios-list-item.css");
+String linkCss = getIncludeString("linkCss", "");
+DataAttribute dataAttribute = (DataAttribute) getIncludeObject("dataAttribute", null);
+DataAttribute linkDataAttribute = (DataAttribute) getIncludeObject("linkDataAttribute", null);
+String linkHtmlAttributes = getIncludeString("linkHtmlAttributes", null);
+LinkTarget linkTarget = (LinkTarget) getIncludeObject("linkTarget", null);
+%>

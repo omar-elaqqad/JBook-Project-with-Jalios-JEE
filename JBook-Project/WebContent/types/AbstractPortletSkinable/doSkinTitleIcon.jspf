@@ -1,0 +1,1 @@
+<% if (Util.notEmpty(portletUI.getHeaderIcon())) {%><jalios:icon htmlAttributes='<%= portletUI.getHeaderIconHtmlAttributes() %>' css="skin-header-icon" src="<%= encodeForHTMLAttribute(portletUI.getHeaderIcon()) %>" /><% } %>

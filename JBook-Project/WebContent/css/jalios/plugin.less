@@ -1,0 +1,100 @@
+@import "core/init-mixins.less";
+
+DIV.tabinfo {
+  background-color: #FFFFCC;
+  padding: 1em;
+  margin:  0 1px 0.5em 1px;
+  border: 1px solid #666666;
+  A {
+    color: @gray-dark;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+DIV.pre {
+  font: normal 9pt "Courier New", Courier, monospace;
+  background-color: #FFFFFF; 
+  border: 1px solid #666666; 
+  overflow: scroll; 
+  white-space: pre; 
+  width:  99%; 
+  height: 30em; 
+  padding-left: 0.5em;
+}
+
+IMG.thumb {
+  border: 1px solid #666666; 
+  padding: 4px; 
+  max-height: 160px;
+  max-width: 100%;
+}
+
+.doc-iframe {
+  border: 1px solid #666666; 
+  width:  99%;
+  height: 30em; 
+  min-width: 900px;
+}
+
+#pluginMenu {
+  font-size: 10pt;
+  UL {
+    list-style-type: none;
+    margin: 2px 0 0 4px;
+    padding: 0;
+  }
+  LI {
+    padding:2px 0px;
+  }
+  A {
+    text-decoration: none;
+    color: #444444;
+    &:hover {
+      text-decoration: underline;
+    }
+    &.mainButton {
+      color: #5577AA;
+      background: transparent;
+      border: none;
+    }
+    &.mainButton:hover {
+      border: none;
+    }
+    &.seriousButton {
+      color: #CC6666;
+      background: transparent;
+      border: none;
+    }
+    &.seriousButton:hover {
+      border: none;
+    }
+  }
+  IMG.icon {
+    margin-right: 5px;
+  }
+}
+
+TR.warn TD { background-color: #EEBB33 !important; }
+TR.miss TD { background-color: #FCF0CE !important; }
+
+.plugin-actions.sticky-action-group {
+  margin-top: -15px;
+  margin-bottom: -15px;
+  margin-left: -15px;
+  margin-right: -15px;
+  .list-group-item {
+    border: 0 none;
+  }
+}
+.table-data.plugin-informations {
+  A.plugin-url {
+    color: @link-color;
+  }
+  .plugin-url {
+    word-wrap: break-word;
+    word-break: break-all; 
+  }
+}

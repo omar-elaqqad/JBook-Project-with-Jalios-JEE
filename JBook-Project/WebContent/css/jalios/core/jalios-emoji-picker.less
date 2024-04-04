@@ -1,0 +1,127 @@
+@import "init-mixins.less";
+
+.emoji-picker {
+  padding: 2px;
+  width: 260px;
+  /* (commenter since border styles provided by tinymce pannel button)
+  border: 1px solid #e6ecf0;
+  border-radius: 4px;
+  */
+  
+  .emoji-category-column {
+    border-right: 1px solid #e6ecf0;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 100%;
+    padding: 5px;
+    vertical-align: top;
+    width: 40px;
+    font-size: 20px;
+    text-align: center;
+    .category-link {
+      display: inline-block;
+	    background-image: none,url(../../../images/jalios/emoji/emoji-categories.png);
+	    background-repeat: no-repeat;
+	    background-size: 48px 216px,48px 216px;
+	    height: 24px;
+	    margin: 3px 14px 3px 0;
+	    width: 24px;
+	    
+			&.category-recent { background-position: 0 0,-24px 0 }
+			&.category-people   { background-position: 0 -24px,-24px -24px; }
+			&.category-nature   { background-position: 0 -48px,-24px -48px; }
+			&.category-food     { background-position: 0 -72px,-24px -72px; }
+			&.category-activity { background-position: 0 -96px,-24px -96px; }
+			&.category-travel   { background-position: 0 -120px,-24px -120px; }
+			&.category-objects  { background-position: 0 -144px,-24px -144px; }
+			&.category-symbols  { background-position: 0 -168px,-24px -168px; }
+			&.category-flags    { background-position: 0 -192px,-24px -192px; }
+			&.category-new      { background-position: 0 -216px,-216px -216px; }
+    }
+		
+		.category-link.is-active,
+		.category-link:active,
+		.category-link:not([disabled]):hover,
+		.category-link:focus {
+		    background-image: url(../../../images/jalios/emoji/emoji-categories.png),none
+		}
+  }
+  
+  .emoji-main-column {
+    width: 210px;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+  
+  
+    .emoji-search {
+      padding: 5px 2px;
+    }
+    
+    .emoji-categories {
+      padding: 8px 12px;
+      width: 206px;
+      height: 260px;
+      overflow-y: scroll; 
+      border-bottom: 1px solid #e6ecf0;
+      border-top: 1px solid #e6ecf0;
+      
+      .emoji-category {
+      
+        H1 {
+          line-height: 22px;
+          font-size: 14px;
+          font-weight: normal;
+          padding: 6px 14px 4px 0px;
+          margin: 2px;
+          border-bottom: 1px solid #e6ecf0; 
+          color: #657786;
+        }
+        BUTTON {
+          background-color: white;
+          box-sizing: border-box;
+          padding: 0px;
+          margin: 1.5px;
+          border: none;
+        }
+        .emoji { transition: all .1s; }
+        BUTTON:hover .emoji { transform: scale(1.5); }
+      }
+      
+    }
+    
+    
+    .emoji-skin-tone {
+      padding: 5px 25px 0 0;
+      text-align: right;
+      INPUT {
+        height: 17px;
+        width: 17px;
+        margin-left: 5px;
+        opacity: 0;
+        padding: 0;
+        display: none;
+      }
+      
+      LABEL {
+        cursor: pointer;
+        width: 17px;
+        height: 17px;
+        border-radius: 2px;
+        margin-left: 1px;
+        &.active {
+           background-image: url('../../../images/jalios/emoji/checkmark.png'); 
+           background-position-x: 1px;
+        }
+        &.no-skin-tone { background-color: #ffcc4d; }
+        &.light { background-color: #f7dece; }
+        &.medium-light { background-color: #f3d2a2; }
+        &.medium { background-color: #d5ab88; }
+        &.medium-dark { background-color: #af7e57; }
+        &.dark { background-color: #7c533e; }
+      }
+    }
+    
+  }
+  
+}

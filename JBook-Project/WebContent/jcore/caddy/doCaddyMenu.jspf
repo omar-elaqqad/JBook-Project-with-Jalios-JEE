@@ -1,0 +1,83 @@
+<%--
+  @Summary: Retrieve the caddy.
+  @Category: Work Area / Admin Area / Caddy
+  @Author: Sylvain Devaux
+  @Copyright: Jalios SA
+  @Customizable: False
+  @Requestable: False
+  @Deprecated: False
+  @Since: jcms-10.0.6 
+--%><%
+
+Caddy caddy = Caddy.getCaddy(request);
+if (!caddy.isEmpty()) {
+  boolean isAdminCaddy = Util.toBoolean("AdminArea".equals(request.getAttribute("zone")), false);
+  boolean isCaddyMenuOpened = caddyWAMenu;
+  boolean checkCaddyAccessPublication = Caddy.checkCaddyAccess(Publication.class, loggedMember, workspace) && Util.notEmpty(caddy.getPublicationList()) && !isAdminCaddy;
+  boolean checkCaddyAccessCategory    = Caddy.checkCaddyAccess(Category.class, loggedMember, workspace) && Util.notEmpty(caddy.getCategoryList());
+  boolean checkCaddyAccessWorkspace   = Caddy.checkCaddyAccess(Workspace.class, loggedMember, workspace) && Util.notEmpty(caddy.getWorkspaceList());
+  boolean checkCaddyAccessGroup       = Caddy.checkCaddyAccess(Group.class, loggedMember, workspace) && Util.notEmpty(caddy.getGroupList());
+  boolean checkCaddyAccessMember      = Caddy.checkCaddyAccess(Member.class, loggedMember, workspace) && Util.notEmpty(caddy.getMemberList());
+  boolean checkCaddyAccessDBMember    = Caddy.checkCaddyAccess(DBMember.class, loggedMember, workspace) && Util.notEmpty(caddy.getDBMemberList());
+  boolean isAdminTopbar = Util.toBoolean("AdminArea".equals(request.getAttribute("zone")), false);
+  String caddyLinkParams = isAdminCaddy ? "?adminArea=true" : "";
+  %><jalios:buffer name="caddyMenuContent">
+    <%-- See CaddyTag for detail information of caddy "access right" --%><%
+    if (checkCaddyAccessPublication) {
+      %><li class='menu-item-caddy-pub <%= caddyPublicationMenu ? "active" : "" %>'><%
+        %><a href="work/caddy/publicationCaddyManager.jsp<%= caddyLinkParams %>" ><%
+          %><jalios:icon src='txt' /> <% /* %> Publication <% */ %><%= glp("ui.com.lbl.publications") %><%
+        %></a><%
+      %></li><%
+    }
+    if (checkCaddyAccessCategory) {
+      %><li class='menu-item-caddy-category <%= caddyCategoryMenu ? "active" : "" %>'><%
+        %><a href="work/caddy/categoryCaddyManager.jsp<%= caddyLinkParams %>"><%
+          %><jalios:icon src='categories' /> <% /* %> Categories <% */ %><%= glp("ui.com.lbl.categories") %><%
+        %></a><%
+      %></li><%
+    }
+    if (checkCaddyAccessWorkspace) {
+      %><li class='menu-item-caddy-workspace <%= caddyWorkspaceMenu ? "active" : "" %>'><%
+        %><a href="work/caddy/workspaceCaddyManager.jsp<%= caddyLinkParams %>"><%
+          %><jalios:icon src='work' /> <% /* %> Workspaces <% */ %><%= glp("ui.com.lbl.workspaces") %><%
+        %></a><%
+      %></li><%
+    }
+    if (checkCaddyAccessGroup) {
+      %><li class='menu-item-caddy-groups <%= caddyGroupMenu ? "active" : "" %>'><%
+        %><a href="work/caddy/groupCaddyManager.jsp<%= caddyLinkParams %>"><%
+          %><jalios:icon src='group' /> <% /* %> Groups <% */ %><%= glp("ui.com.lbl.groups") %><%
+        %></a><%
+      %></li><%
+    }
+    if (checkCaddyAccessMember) { %><%
+      %><li class='menu-item-caddy-members <%= caddyMemberMenu ? "active" : "" %>'><%
+        %><a href="work/caddy/memberCaddyManager.jsp<%= caddyLinkParams %>"><%
+          %><jalios:icon src="<%= ResourceHelper.getMemberDefaultIcon() %>"/> <% /* %> Members <% */ %><%= glp("ui.com.lbl.members") %><%
+        %></a><%
+      %></li><%
+    }
+    if (checkCaddyAccessDBMember) {
+      %><li class='menu-item-caddy-dbmembers <%= caddyDBMemberMenu ? "active" : "" %>'><%
+        %><a href="work/caddy/dbmemberCaddyManager.jsp<%= caddyLinkParams %>"><%
+          %><jalios:icon src="<%= ResourceHelper.getDBMemberDefaultIcon() %>"/> <% /* %> DB Members <% */ %><%= glp("ui.com.lbl.dbmembers") %><%
+        %></a><%
+      %></li><%
+    }
+  %></jalios:buffer><%
+  
+  if (Util.notEmpty(caddyMenuContent)) {
+    %><div class="app-sidebar-section" id="caddyMenuWA"><%
+      %><div class="app-sidebar-section-title"><%
+        %><a href="#caddyMenuToggle" data-toggle="collapse" aria-expanded="true" aria-controls="caddyMenuToggle" onclick="return false;" class="collapsed <%= isCaddyMenuOpened ? "dropup" : "" %>"><%
+          %><%= glp("ui.work.mn.caddy") %> <jalios:icon src="caret" /><%
+        %></a><%
+      %></div><%
+      %><ul class="app-sidebar-menu collapse <%= isCaddyMenuOpened ? "in" : "" %>" id="caddyMenuToggle"><%
+        %><%= caddyMenuContent %><%
+      %></ul><%
+    %></div><%
+  }
+}
+%>

@@ -1,0 +1,57 @@
+@import "../core/init-mixins.less";
+
+/* ----------------------------------------------- */
+/*  JCMS analytics                                 */
+/* ----------------------------------------------- */
+
+.report-element  {
+  padding-bottom :18px;
+  padding-left :18px;
+  
+  
+  TD.report-chart, 
+  TD.report-legend { 
+    vertical-align: top;
+    TABLE TR.tr-checked TD {
+      padding-right: 2px;
+    }    
+    .legendLabel{
+       padding-left:5px;
+    }
+  }
+  .chart { 
+    float:left;
+  }
+   
+  .legend, 
+  .custom-legend { 
+    float:left; 
+    padding :3px;
+    .legendLabel LABEL {
+      color: #545454;
+      font-size: smaller;
+    }
+    .legendRadio INPUT {
+      display:none;
+    }
+    .unchecked-img {
+      display:block;
+    }
+    .checked-img {
+      display:none;
+    }
+    .tr-checked {
+      .unchecked-img {
+        display:none;
+      }
+      .checked-img {
+        display:block;
+      }
+    }
+  }
+  .key {
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,90 @@
+<div class="tab-page">
+  <h2 class="tab"><%= glp("ui.adm.jsync.tab.replicas") %></h2>
+      <%-- --- REPLICA LIST -------------------------------------------  --%>
+      <% if (replica.isLeader()) { %>
+          <fieldset>
+            <legend class='formLabel'><%= glp("ui.adm.jsync.st.list") %></legend>
+            <table id='replicaTable' class='table-data'>
+              <thead>
+               <tr>
+                 <th class="listHeader" scope="col"><%= glp("ui.adm.jsync.st.replica") %></th>
+                 <th class="listHeader" scope="col"><%= glp("ui.com.lbl.url") %></th>
+                 <th class="listHeader" scope="col"><%= glp("ui.adm.jsync.st.pt") %></th>
+                 <th class="listHeader" scope="col"><%= glp("ui.adm.jsync.st.lst-join") %></th>
+                 <th class="listHeader" scope="col"><%= glp("ui.adm.jsync.st.lst-upd") %></th>
+                 <th class="listHeader" scope="col"><%= glp("ui.adm.jsync.st.lst-ack") %></th>
+                 <th class="listHeader" scope="col"><%= glp("ui.adm.jsync.st.ood") %></th>
+                 <th class="listHeader" scope="col">&nbsp;</th>
+               </tr>
+             </thead>
+             
+             <tbody>
+               <jalios:foreach collection='<%= replica.getReplicaMap().values() %>' name='itReplica' type='ReplicaInfo'>
+               <tr>
+                 <td><jalios:icon src='server'  /> <%= itReplica.getUrid() %></td>
+                 <td><%= itReplica.getUrl() %></td>
+                 <td><%= itReplica.getProgressTable() %></td>
+                 <td align='right'><jalios:time date='<%= itReplica.getJoinDate() %>' format='<%= "short" %>'/> <jalios:date date='<%= itReplica.getJoinDate() %>' format='<%= "short" %>'/></td>
+                 <td align='right'><jalios:time date='<%= itReplica.getLastUpdateDate() %>' format='<%= "short" %>'/> <jalios:date date='<%= itReplica.getLastUpdateDate() %>' format='<%= "short" %>'/></td>
+                 <td align='right'><jalios:time date='<%= itReplica.getLastAckDate() %>' format='<%= "short" %>'/> <jalios:date date='<%= itReplica.getLastAckDate() %>' format='<%= "short" %>'/></td>
+                 <td align='center'><%= itReplica.isOutOfDate(replica.getProgressTable()) ? channel.getProperty("list.boolean.on", "X") : channel.getProperty("list.boolean.off", "&nbsp;") %></td>
+                 <td>
+                   <a href='admin/jsync/jsync.jsp?opRemoveReplica=true&amp;urid=<%= itReplica.getUrid() %>' class="modal confirm">
+                   <jalios:icon src="trash-empty" title='<%= glp("ui.com.alt.remove") %>'/>
+                   </a>
+                 </td>
+               </tr>
+               </jalios:foreach>
+             </tbody>
+            </table>
+         </fieldset>    
+    <% } %>
+    
+    <%-- --- PREVIOUS REPLICA LIST -------------------------------------------  --%>
+    <% Set previousReplica = channel.getJSyncPreviousReplicaManager().getPreviousReplica(); %>        
+    <% if (Util.notEmpty(previousReplica)) { %>
+        <fieldset>
+         <legend class='formLabel'><%= glp("ui.adm.jsync.st.previous-replica") %></legend>
+         <table id='previousReplicaTable' class="table-data table-condensed">
+           <thead>
+             <th>&nbsp;</th>
+             <th class="listHeader" scope="col" width="100%"><%= glp("ui.adm.jsync.st.replica") %></th>
+             <th>&nbsp;</th>
+           </thead>
+         <jalios:foreach collection='<%= previousReplica %>' name='itPreviousReplica' type='String' counter="itCounterReplica">
+           <tr>
+             <td class="text-right"><%= itCounterReplica.intValue() %>.</td>
+             <td><%= itPreviousReplica %></td>
+             <td>
+               <form action='admin/jsync/jsync.jsp' method="post">
+                 <input type="hidden" name="replicaUrl" value="<%= ServletUtil.encodeURL(itPreviousReplica) %>" /> 
+                 <input class='btn btn-default' type='submit' name='opSuggestJoin' value='<%= glp("ui.adm.jsync.st.suggest-join") %>' /> 
+               </form>
+             </td>
+           </tr>
+         </jalios:foreach>
+         </table>
+        <% if (Util.getSize(previousReplica) > 1) { %>
+        <form action='admin/jsync/jsync.jsp' method="pos">
+          <input class='btn btn-default' type='submit' name='opGlobalSuggestJoin' value='<%= glp("ui.adm.jsync.st.btn.global-suggest-join") %>' /> 
+        </form>
+        <% } %>
+        </fieldset>
+  <% } %>
+
+  <%-- *** BUTTONS ************************************************** --%>
+  <form action='admin/jsync/jsync.jsp' method="post">
+    <% if (replica.isJoined()) { %>
+    <input class='btn btn-default' type='submit' name='opUpdateLeader' value='<%= glp("ui.adm.jsync.btn.upd-leader") %>' /> 
+    <input class='btn btn-default' type='submit' name='opDisjoin' value='<%= glp("ui.adm.jsync.btn.disjoin") %>' />
+    <% } else if (Util.notEmpty(formHandler.getLeaderUrl())) {%>
+    <input class='btn btn-primary' type='submit' name='opJoin' value='<%= glp("ui.adm.jsync.btn.join") %>' />
+    <% } %>
+    <% if (replica.isLeader()) { %>
+    <input class='btn btn-default' type='submit' name='opUpdateGroup' value='<%= glp("ui.adm.jsync.btn.upd-grp") %>' />
+    <% } %>
+  </form>
+</div>
+
+
+

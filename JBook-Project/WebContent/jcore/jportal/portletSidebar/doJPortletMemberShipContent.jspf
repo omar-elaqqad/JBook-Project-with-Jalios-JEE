@@ -1,0 +1,69 @@
+<%@page import="com.jalios.jcms.taglib.settings.impl.MemberSettings"%>
+<%@page import="com.jalios.jcms.portlet.EditPortalElementHandler"%>
+<%@page import="com.jalios.jcms.taglib.settings.impl.DurationSettings"%>
+<%@page import="com.jalios.jcms.handler.EditPublicationHandler"%>
+<%@page import="com.jalios.jcms.Publication"%>
+<%@page import="java.util.List"%>
+<%@page import="com.jalios.util.Util"%>
+<%@page import="generated.AbstractPortlet"%>
+<%@page import="com.jalios.jcms.taglib.settings.impl.EnumerateSettings"%>
+<div class="jportal-sidebar-group is-accordion jportal-sidebar-group-separated">
+  <a class="sidebar-subtitle collapsed" data-toggle="collapse" href="#membership" aria-expanded="false" aria-controls="structureblocks"><jalios:icon src="caret" />
+    <%= glp("ui.work.form.adv.membership") %>
+  </a>
+  <div class="sidebar-collapsed-group collapse " id="membership">
+  <% request.setAttribute("field-vertical", true); %>
+  
+   <%-- AUTHOR --------------------------------------------------------------- --%>
+    <% Member author = genericFormHandler.getAvailableAuthor(); %>
+    <% if (isAdmin || (isLogged && loggedMember.isWorkAdmin())) { %> 
+      <jalios:field name="author" label="ui.com.lbl.author" required="true" value="<%= author %>">
+        <jalios:control settings='<%= new MemberSettings().filter(MemberSettings.MemberFilter.ACCOUNT) %>' />
+      </jalios:field>
+    
+    <% } else if (author != null) { %> 
+      <jalios:field name="author" label="ui.com.lbl.author">
+        <p class="form-control-static"><%= author %></p>
+      </jalios:field>
+      <input type="hidden" name="author" value="<%= author.getId() %>" />
+    <% }  %>
+                          
+    <%-- WORKSPACE --------------------------------------------------------------- --%>
+    <% if (isAdmin) { %>
+      <jalios:field  name="ws" label="ui.com.lbl.workspace" required="true" value="<%= genericFormHandler.getAvailableWorkspace() %>">
+        <jalios:control type="<%= ControlType.WORKSPACE %>" />
+      </jalios:field>
+    <% } else { %>
+      <%
+      // Compute a set of workspace in which member can publish the type of document being worked on
+      Set<Workspace> mbrWsSet = (loggedMember != null) ? loggedMember.getWorkspaceSet() : new TreeSet<Workspace>();
+      Set<Workspace> mbrWsCanPublishSet = new TreeSet<Workspace>(Workspace.getNameComparator(userLang));
+      if (genericFormHandler.getPublication() != null) {
+        mbrWsCanPublishSet.add(genericFormHandler.getPublication().getWorkspace()); // Fix JCMS-3606 - Force the current WS + Fix JCMS-7017 : use pub.getWorkspace() instead of workspace
+      }
+    
+      for (Workspace itWs : mbrWsSet) {
+        if (loggedMember.canPublish(genericFormHandler.getPublicationClass(), itWs)) {
+          mbrWsCanPublishSet.add(itWs);
+        }
+      }
+      // If the user can publish same data in other workspace, display a select of those workspace
+      if (mbrWsCanPublishSet.size() > 1) { %>
+        <jalios:field name="ws" label="ui.com.lbl.workspace">
+          <select name="ws" class="form-control form-control-inline">
+            <% for (Workspace itWs : mbrWsCanPublishSet) { %>
+              <option value="<%= itWs.getId() %>"   <% if (genericFormHandler.getAvailableWorkspace() == itWs) { %>selected="selected"<% } %>><%= encodeForHTML(itWs.getTitle(userLang)) %></option>
+            <% } %>
+          </select>
+        </jalios:field>
+      <%
+      // Otherwise : simply display the current workspace title
+      } else { %>
+        <jalios:field name="ws" label="ui.com.lbl.workspace">
+          <p class="form-control-static"><%= genericFormHandler.getAvailableWorkspace().getTitle(userLang) %></p>
+        </jalios:field>
+        <input type="hidden" name="ws" value="<%= genericFormHandler.getAvailableWorkspace().getId() %>" />
+      <% } %>
+    <% } %>
+  </div>
+</div>

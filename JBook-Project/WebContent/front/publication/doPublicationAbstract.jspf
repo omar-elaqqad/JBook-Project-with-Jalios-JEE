@@ -1,0 +1,22 @@
+<%--
+  @Summary: Fragment template to print a Publication's abstract field
+  @Category: Template
+  @Author: Sylvain DEVAUX
+  @Customizable: True
+  @Requestable: False
+  @Since: jcms-9.0.1
+--%><% 
+String resultAbstract = pub.getAbstract(userLang);
+if (Util.notEmpty(resultAbstract)) { %>
+  <div class="abstract" <%= JcmsUtil.getFieldLangAttributes(pub, "abstract", userLang) %>>
+    <jalios:buffer name="truncSuffix">...&nbsp;<a href='<%= JcmsUtil.getDisplayUrl(pub, userLocale) %>'><%= glp("ui.com.txt.read-more") %></a></jalios:buffer>
+    <%
+    TypeFieldEntry tfe = channel.getTypeAbstractFieldEntry(pub.getClass());
+    int truncateLength = tfe != null ? tfe.getAbstractLength() : 400;
+    if (tfe != null && tfe.isWysiwyg()) { %>
+      <jalios:wysiwyg truncateLength="<%= truncateLength %>" truncateSuffix="<%= truncSuffix.toString() %>"><%= resultAbstract %></jalios:wysiwyg>
+    <% } else { %>
+      <jalios:wiki truncateLength="<%= truncateLength %>" truncateSuffix="<%= truncSuffix.toString() %>"><%= resultAbstract %></jalios:wiki>
+    <% } %>
+  </div>
+<% } %>

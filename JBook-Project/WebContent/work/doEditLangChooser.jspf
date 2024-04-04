@@ -1,0 +1,8 @@
+<% if (channel.isMultilingual()) { %>
+<jalios:field name="" label="">
+ <% String editLang = formHandler.getAvailableMainLanguage(); %>
+ <div class="widget-content">
+ <a href="#" lang="<%= editLang %>" class="ctxLangForm ctxmenu lang-fix langStatus btn btn-default"><%= glp("ui.com.lbl.language.edit") %> <jalios:lang lang='<%= editLang %>' /></a>
+ </div>
+</jalios:field>
+<% } %>

@@ -1,0 +1,10 @@
+<%
+/* ACL Audit require TRUE ADMIN ACCESS */ 
+if (!checkAccess("admin-ws/users/acl-audit")) {
+  sendForbidden(request, response);
+  return;
+}
+boolean aclWorkspaceFilter = true;
+boolean manageAcl = false;
+String refreshUrl = "work/acl/audit/workAccessAudit.jsp";
+%>

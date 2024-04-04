@@ -1,0 +1,45 @@
+<%
+String accessUrl = formHandler.getAccessUrl();
+String linkName = formHandler.getLinkName();
+String expiryDateStr = formHandler.getExpiryDateAsString();
+%>
+<jalios:modal title="<%= formHandler.getModalTitle() %>"
+              url="front/publicLink/editPublicLink.jsp"
+              css="modal-lg edit-public-link edit-public-link-info"
+              op="opClose"
+              button="ui.com.btn.close"
+              >
+  <p><%= glp("ui.fo.public-link.msg.created.info-intro", formHandler.getDocumentCount(), formHandler.getDuration()) %></p>
+  
+  <p><code class="access-url"><%= accessUrl %></code></p>
+
+  <p>
+  <% if (Util.notEmpty(formHandler.getAccessCode())) { %>
+  <%= glp("ui.fo.public-link.msg.created.info-code", formHandler.getAccessCode()) %>
+  <% } %>
+  <%= glp("ui.fo.public-link.msg.created.info-app") %>
+  </p>
+  
+  <%-- BUTTONS --%>  
+  <jalios:buffer name="MODAL_BUTTONS">
+  <% if (formHandler.getAvailableRefreshAfterClose()) { %>
+  <button type="submit" class="btn btn-default" name="opClose" data-jalios-action="ajax-refresh" value="true"><%= glp("ui.com.btn.close") %></button>
+  <% } else { %>
+  <button class="btn btn-default" data-dismiss="modal"><%= glp("ui.com.btn.close") %></button>
+  <% } %>
+  
+  <%@ include file='/front/publicLink/doPublicLinkCopy.jspf' %>
+  
+  <button type="submit" class="btn btn-danger confirm" name='opDelete' data-jalios-action="ajax-refresh" value="true"><%= glp("ui.com.btn.delete") %></button>  
+  <a class="btn btn-primary" href="mailto:?subject=<%= formHandler.getMailSubject() %>&amp;body=<%=  formHandler.getMailBody() %>"><%= glp("ui.fo.public-link.btn.send-mail") %></a>
+  <% if (Util.notEmpty(formHandler.getPublicLinkId())) { %>
+  <input type="hidden" name="id" value="<%= formHandler.getPublicLinkId() %>" />
+  <% } %>
+  </jalios:buffer>
+  
+</jalios:modal>
+
+
+
+
+

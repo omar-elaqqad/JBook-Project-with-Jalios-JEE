@@ -1,0 +1,84 @@
+<%@page import="com.jalios.jcms.taglib.settings.SelectorSettings.SelectMode"%>
+<%@ page import="com.jalios.jcms.taglib.settings.ControlSettings" %><%
+%><%@page import="com.jalios.jcms.taglib.settings.BasicSettings"%><%
+%><%@page import="com.jalios.jcms.taglib.settings.ControlUtils"%><%
+%><%@ include file="/jcore/doInitPage.jspf" %><%
+%><%!
+String resolveLabel(Object value, String label) {
+  return resolveLabel(value, label, false);
+}
+
+String resolveLabel(Object value, String label, boolean multiple) {
+  return ControlUtils.resolveLabel(value, label, multiple, userLangTL.get());
+}
+
+String resolveFieldValue(Object value) {
+  String resolvedValue = resolveValue(value);
+  return Util.notEmpty(resolvedValue) ? resolvedValue : getIncludeString("fieldValue", resolvedValue);
+}
+
+String resolveValue(Object value) {
+  return ControlUtils.resolveValue(value);
+}
+
+String[] resolveValues(Object[] values) {
+  return ControlUtils.resolveValues(values);
+}
+
+String[] resolveValues(Object values) {
+  return ControlUtils.resolveValues(values);
+}
+
+<T> T addOption(String optionName, T optionValues) {
+  ControlSettings settings = (ControlSettings) getIncludeObject(ControlTag.CONTROL_SETTINGS, null);
+  return ControlUtils.addOption(settings, optionName, optionValues);
+}
+
+<T> T getOption(String optionName, T defaultValue) {
+  ControlSettings settings = (ControlSettings) getIncludeObject(ControlTag.CONTROL_SETTINGS, null);
+  return ControlUtils.getOption(settings, optionName, defaultValue);
+}
+
+String formatAttribute(String attrFormat, String... args) {
+  return ControlUtils.formatAttribute(userLangTL.get(), attrFormat, args);
+}
+
+String formatDataAttributes(Map<String, Object> dataAttributes) {
+  return ControlUtils.formatDataAttributes(dataAttributes);
+}
+
+String formatAriaAttributes(Map<String, Object> ariaAttributes) {
+  return ControlUtils.formatAriaAttributes(ariaAttributes);
+}
+/**
+ * Method to include a value for the current control but not forwarded to the parent Field
+ */
+void includeLocalObject(String name, Object obj) {
+  HttpServletRequest request = channel.getCurrentServletRequest();
+  Map<String, Object> map = (Map<String, Object>) request.getAttribute(IncludeTag.INCLUDE_CONTEXT);
+  if (map == null) {
+    map = new HashMap<String, Object>();
+    request.setAttribute(IncludeTag.INCLUDE_CONTEXT, map);
+  }
+  map.put(name, obj);
+}
+
+%><%-- END Util methods --%><%
+
+String fieldName = Util.toString(request.getAttribute(FieldTag.FIELD_NAME), "");
+String fieldValue = Util.toString(request.getAttribute(FieldTag.FIELD_VALUE), "");
+String fieldId = Util.getString(request.getAttribute(FieldTag.FIELD_ID), "");
+String fieldLabelId = Util.getString(request.getAttribute(FieldTag.FIELD_LABEL_ID), "");
+String fieldLabel = Util.getString(request.getAttribute(FieldTag.FIELD_LABEL), "");
+String fieldResource = Util.getString(request.getAttribute(FieldTag.FIELD_RESOURCE), "");
+String cptLang = (String) request.getAttribute(FieldTag.CPT_LANG);
+Integer cptField = (Integer) request.getAttribute(FieldTag.CPT_FIELD);
+Integer cptMax = (Integer) request.getAttribute(FieldTag.CPT_MAX);
+String[] fieldValuesArray = (String[]) request.getAttribute(FieldTag.FIELD_VALUES);
+List<String> fieldValues = Arrays.asList(fieldValuesArray != null ? fieldValuesArray : new String[] {});
+Boolean fieldDisabled = Util.toBoolean(request.getAttribute(FieldTag.FIELD_DISABLED), false);
+Boolean fieldReadOnly = Util.toBoolean(request.getAttribute(FieldTag.FIELD_READONLY), false);
+Boolean fieldRequired = Util.toBoolean(request.getAttribute(FieldTag.FIELD_REQUIRED), false);
+ControlType controlType = (ControlType) getIncludeObject(ControlTag.CONTROL_TYPE, null);
+SelectMode selectMode = SelectMode.DATA;
+%>

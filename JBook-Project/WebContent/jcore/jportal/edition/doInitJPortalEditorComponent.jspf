@@ -1,0 +1,9 @@
+<%@page import="com.jalios.jcms.jportal.JPortalEditorHandler"%>
+<%@ include file='/jcore/doInitPage.jspf' %><%
+JPortalEditorHandler jportalEditorHandler = (JPortalEditorHandler) request.getAttribute("jportalEditorHandler");
+
+if (jportalEditorHandler == null) {%>
+  <jalios:include jsp="jcore/jportal/edition/jportalEditorHandler.jsp" />
+<% }
+jportalEditorHandler = (JPortalEditorHandler) request.getAttribute("jportalEditorHandler");
+%>

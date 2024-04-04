@@ -1,0 +1,318 @@
+.app-sidebar .widget {
+  padding: 0 @app-sidebar-horizontal-padding;
+  width: 100%;
+  margin-bottom: 16px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  + .widget {
+    margin-top: 16px;
+  }
+
+  /*  .select2-container {
+    max-width: initial;
+    width: initial;
+  }*/
+
+  &.multivalued {
+    .input-group-list-item {
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .form-control {
+    border-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .input-group {
+    max-width: initial;
+  }
+
+  SELECT {
+    background-color: ~'var(--app-sidebar-input-bg-color)';
+    padding-left: 12px;
+    color: ~'var(--app-sidebar-select-default-color)';
+
+    background-image: ~'var(--app-sidebar-select-down-arrow-svg)';
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 16px 12px;
+    /* border: 1px solid #ced4da; */
+    border-radius: 0.25rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  INPUT[type='text'] {
+    background: 0 none;
+    background: initial;
+    background-color: ~'var(--app-sidebar-input-bg-color)';
+    padding-left: 12px;
+    transition: background-color 200ms ease-in;
+
+    &:-ms-input-placeholder {
+      color: ~'var(--app-sidebar-input-placeholder-color)';
+    }
+
+    &::-ms-input-placeholder {
+      color: ~'var(--app-sidebar-input-placeholder-color)';
+    }
+
+    &::-webkit-input-placeholder {
+      color: ~'var(--app-sidebar-input-placeholder-color)';
+    }
+
+    &::placeholder {
+      color: ~'var(--app-sidebar-input-placeholder-color)';
+    }
+
+    &.has-value,
+    &:focus {
+      background-color: white;
+    }
+  }
+
+  .form-control-autocomplete {
+    background: initial;
+    background-color: ~'var(--app-sidebar-input-bg-color)';
+    padding-left: 12px;
+    transition: background-color 200ms ease-in;
+
+    &.has-value,
+    &:focus {
+      background-color: ~'var(--app-sidebar-input-bg-color-has-value)';
+    }
+  }
+}
+
+.app-sidebar {
+  .select2-container--bootstrap .select2-selection,
+  SELECT {
+    background-color: ~'var(--app-sidebar-input-bg-color)';
+    padding-left: 12px;
+    color: ~'var(--app-sidebar-text-color)';
+    box-shadow: initial;
+    border: 0;
+    border-radius: 16px !important;
+  }
+}
+
+.app-sidebar .input-group-btn {
+  .btn {
+    margin: 0;
+    margin-left: -1px;
+    display: inline-block;
+    &.btn-primary {
+      background-color: ~'var(--app-sidebar-input-default-btn-bg-color)';
+      border-radius: 0;
+      border-color: ~'var(--app-sidebar-input-default-btn-bg-color)';
+      &:hover {
+        background-color: 1px solid ~'var(--app-sidebar-input-primary-btn-group-bg-color-hover)';
+        border: 1px solid ~'var(--app-sidebar-input-primary-btn-group-bg-color-hover)';
+      }
+    }
+    &.btn-default {
+      background-color: ~'var(--app-sidebar-input-default-btn-bg-color)';
+      border: 1px solid ~'var(--app-sidebar-input-default-btn-bg-color)';
+
+      &:hover {
+        border: 1px solid ~'var(--app-sidebar-input-default-btn-bg-color-hover)';
+        background-color: ~'var(--app-sidebar-input-default-btn-bg-color-hover)';
+      }
+
+      &:disabled {
+        opacity: 0.4;
+      }
+
+      .jalios-icon {
+        color: ~'var(--app-sidebar-icon-color)';
+      }
+    }
+  }
+}
+
+.app-sidebar .btn {
+  display: block;
+  margin: 0 @app-sidebar-horizontal-padding @app-baseline;
+  transition: all 200ms ease-in;
+
+  &.btn-primary {
+    color: ~'var(--app-sidebar-btn-primary-color)';
+    background-color: ~'var(--app-sidebar-input-primary-btn-bg-color)';
+    border: 1px solid ~'var(--app-sidebar-input-primary-btn-bg-color)';
+    .jalios-icon {
+      color: ~'var(--app-sidebar-icon-color)';
+    }
+    &:hover {
+      background-color: ~'var(--app-sidebar-input-primary-btn-bg-color-hover)';
+    }
+  }
+
+  &.btn-default {
+    color: ~'var(--app-sidebar-btn-default-color)';
+    background-color: ~'var(--app-sidebar-input-default-btn-bg-color)';
+    border: 1px solid ~'var(--app-sidebar-input-default-btn-bg-color)';
+    .jalios-icon {
+      color: ~'var(--app-sidebar-icon-color)';
+      margin-right: 4px;
+    }
+    &:hover {
+      background-color: ~'var(--app-sidebar-input-default-btn-bg-color-hover)';
+      border: 1px solid ~'var(--app-sidebar-input-default-btn-bg-color-hover)';
+    }
+  }
+
+}
+
+// Specific case for real buttons used as an action button which does not take full width (Reset by the button margin)
+.app-sidebar-section > button.app-sidebar-button,
+.app-sidebar-section > button.btn-default,
+.app-sidebar-section > button.btn-primary {
+  @sidebarbuttonNegativeMargin: @app-sidebar-horizontal-padding * 2;
+  width: calc(~"100%" - @sidebarbuttonNegativeMargin);
+}
+
+.app-sidebar {
+  .widget INPUT:disabled {
+    opacity: 0.6;
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+
+  .datepicker-wrapper {
+    width: 100%;
+  }
+
+  .widget.field-enumerate .checkbox,
+  .widget.field-enumerate .radio {
+    margin: 0 -@app-sidebar-horizontal-padding;
+
+    &.active LABEL {
+      background-color: @app-sidebar-selection;
+      color: ~'var(--app-sidebar-active-text-color)';
+      line-height: 20px;
+
+      &:after {
+        content: '\ed71';
+        color: ~'var(--app-sidebar-active-text-color)';
+        font-family: @icon-font-icomoon-name;
+        position: absolute;
+        right: 10px;
+      }
+      &:hover {
+        color: ~'var(--app-sidebar-active-text-color)';
+      }
+    }
+
+    LABEL {
+      display: block;
+      padding: 6px @app-sidebar-horizontal-padding;
+      transition: background-color 200ms ease-in, color 200ms ease-in;
+
+      &:hover {
+        color: ~'var(--app-sidebar-text-color)';
+      }
+
+      &.active .jalios-icon {
+        color: ~'var(--app-sidebar-active-text-color)';
+      }
+
+      &.active:hover {
+        color: ~'var(--app-sidebar-active-text-color)';
+      }
+
+      INPUT {
+        display: none;
+      }
+      .dropdown-menu {
+        .jalios-icon {
+          color: @text-color;
+        }
+      }
+    }
+  }
+
+  .app-sidebar-menu-formitems {
+    LI.active > .control-enumerate > LABEL {
+      color: ~'var(--app-sidebar-active-text-color)';
+      .jalios-icon {
+        color: ~'var(--app-sidebar-active-text-color)';
+      }
+    }
+    LI.active > UL > LI LABEL {
+      color: ~'var(--app-sidebar-section-list-sub-child-color)';
+    }
+
+    > LI > UL > LI > LABEL {
+      padding-left: @app-sidebar-horizontal-padding*2;
+
+      > UL > LI > LABEL {
+        padding-left: @app-sidebar-horizontal-padding*3;
+      }
+    }
+    LI.active {
+      > LABEL {
+        color: ~'var(--app-sidebar-active-text-color)';
+      }
+    }
+
+    LABEL {
+      display: block;
+      padding: 6px @app-sidebar-horizontal-padding;
+      text-decoration: none;
+      color: ~'var(--app-sidebar-text-color)';
+      font-weight: normal;
+      cursor: pointer;
+      margin-bottom: 0;
+    }
+
+    .checkbox,
+    .radio {
+      min-height: initial;
+      margin-top: 0;
+      margin-bottom: 0;
+
+      INPUT {
+        display: none;
+      }
+    }
+  }
+}
+
+// Rounded inputs
+.app .app-sidebar .app-sidebar-section {
+  .widget {
+    .form-control:only-child {
+      border-radius: @app-sidebar-field-border-radius;
+    }
+    .form-control:first-child {
+      border-top-left-radius: @app-sidebar-field-border-radius;
+      border-bottom-left-radius: @app-sidebar-field-border-radius;
+    }
+    .input-group-btn .btn:last-child,
+    .is-last-visible-btn {
+      border-top-right-radius: @app-sidebar-field-border-radius;
+      border-bottom-right-radius: @app-sidebar-field-border-radius;
+    }
+  }
+}
+.app .app-sidebar.ui-resizable .select2-container {
+  max-width: 100vw;
+  @media (min-width: @screen-sm-min) {
+    max-width: 33.33vw;
+  }
+  @media (min-width: @screen-md-min) {
+    max-width: 25vw;
+  }
+  @media (min-width: @screen-lg-min) {
+    max-width: 16.666667vw
+  }
+}

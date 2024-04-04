@@ -1,0 +1,27 @@
+<%--
+  @Summary: Checks for rights to display members of a specified Group.
+            Must be logged, but does not require specific "users" ACL.
+  @Category: Group / Member
+  @Author: Sylvain DEVAUX
+  @Copyright: Jalios SA
+  @Customizable: False
+  @Requestable: True
+  @Deprecated: False
+  @Since: jcms-9.0.3
+--%><%
+if (!isLogged) {
+  sendRedirect("index.jsp");
+  return;
+}
+
+Group grp = getGroupParameter("gid");
+if (grp == null) {
+  sendRedirect("index.jsp");
+  return;
+}
+
+if (!grp.canBeReadBy(loggedMember)) {
+  sendForbidden(request, response);
+  return;
+}
+%>

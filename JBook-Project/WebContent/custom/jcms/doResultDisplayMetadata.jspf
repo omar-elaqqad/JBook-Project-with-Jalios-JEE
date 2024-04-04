@@ -1,0 +1,52 @@
+<%
+Category[] categories = obj.getCategories(loggedMember);
+boolean printWS = Util.toBoolean(request.getAttribute("query.result.showWs"), false);
+Workspace forcedWS = getWorkspaceParameter("wrkspc");
+Workspace searchedWS = forcedWS != null ? forcedWS : workspace;
+
+//JCMS-8493 - Search results: display the same date used for sorting (or pdate, or cdate)
+Date pubDate = obj.getDate(channel.getProperty("query.sort.fo"), obj.getPdate());
+if (pubDate == null) {
+  pubDate = obj.getCdate();
+}
+%>
+<div class="search-result-footer">
+  <div class="search-result-meta meta-text">
+    <% if (obj.hasAnyReadRights()) { %>
+      <jalios:icon src='key' title='<%= glp("ui.com.alt.restricted", obj.getReadRightsString(5)) %>'  />
+      &middot;
+    <% } %>
+
+    <% if (obj.getAuthor() != null) { %>
+      <jalios:memberphoto member="<%= obj.getAuthor() %>" size="<%= PhotoSize.ICON %>" />
+      <jalios:link data='<%= obj.getAuthor() %>' /> &middot;
+    <% } %>
+    <jalios:link css="meta-link" data="<%= obj.getWorkspace() %>"/> &middot;
+    <%= JcmsUtil.getFriendlyDate(getZonedDateTime(pubDate), java.time.format.FormatStyle.SHORT, true, userLocale) %>
+    <%
+    // ----------------------------------------------------------------------
+    // Hierarchical Workspaces
+    // ----------------------------------------------------------------------
+    if (printWS) {
+      %> <span class='workspace-membership<%= searchedWS.getAllSubWorkspaces().contains(obj.getWorkspace()) ? " sub-workspace" : "" %>'><%
+        %><%= glp("ui.work.query.txt.workspace") %> <jalios:link data='<%= obj.getWorkspace() %>' /><%
+      %></span><%
+    }
+    %>
+  </div>
+
+  <% if (obj instanceof FileDocument) { %>
+    <% FileDocument doc = (FileDocument)obj; %>
+    <div class="search-result-meta search-result-document-meta meta-text">
+      <jalios:filesize doc='<%= doc %>' />
+      <% if (doc.isImage()) { %>&middot; <%= doc.getDimensions() %><% } %>
+      <% if (doc.getDuration() > 0) { %>&middot; <jalios:duration time='<%= doc.getDuration() %>'/><% } %>
+    </div>
+  <% } %>
+
+  <% if (Util.notEmpty(categories)) { %>
+    <div class="search-result-meta search-result-categories">
+      <%@ include file="/custom/jcms/doCategoryList.jspf"  %>
+    </div>
+  <% } %>
+</div>

@@ -1,0 +1,162 @@
+<%--
+  @Summary: Admin header
+  @Category: Admin / Presentation
+  @Author: Oliver Dedieu
+  @Copyright: Jalios SA
+  @Customizable: False
+  @Requestable: False
+  @Deprecated: False
+  @Since: jcms-2.0
+--%><%
+%><%@page import="com.jalios.jcms.uicomponent.topbar.TopbarHandler"%><%
+%><%@ include file='/jcore/caddy/doInitCaddy.jspf' %><%
+%><jsp:useBean id='adminDisplayHandler' scope='page' class='com.jalios.jcms.backoffice.BackOfficeDisplayHandler'><%
+%><jsp:setProperty name="adminDisplayHandler" property="pageContext" value="<%= pageContext %>"/><%
+%><jsp:setProperty name='adminDisplayHandler' property='*' /><%
+%></jsp:useBean><%
+  if (!checkAccess("admin/") || !channel.isValidAdminIP(request)) {
+    sendForbidden(request, response);
+    return;
+  }
+
+  // Users
+  boolean groupSubAdminMenu        = request.getAttribute("groupSubAdminMenu") != null;
+  boolean memberSubAdminMenu       = request.getAttribute("memberSubAdminMenu") != null;
+  boolean dbmemberSubAdminMenu     = request.getAttribute("dbmemberSubAdminMenu") != null;
+  boolean aclManagerSubAdminMenu   = request.getAttribute("aclManagerSubAdminMenu") != null;
+  boolean mailSubAdminMenu         = request.getAttribute("mailSubAdminMenu") != null;
+  boolean usersAdminMenu           = groupSubAdminMenu || 
+                                     memberSubAdminMenu ||
+                                     dbmemberSubAdminMenu ||
+                                     aclManagerSubAdminMenu || 
+                                     mailSubAdminMenu ||
+                                     request.getAttribute("usersAdminMenu") != null;
+                                    
+  // Reporting
+  boolean dataReportSubAdminMenu   = request.getAttribute("dataReportSubAdminMenu") != null;
+  boolean statSubAdminMenu         = request.getAttribute("statSubAdminMenu") != null;
+  boolean friendlyUrlSubAdminMenu  = request.getAttribute("friendlyUrlSubAdminMenu") != null;
+  boolean fileSizeSubAdminMenu     = request.getAttribute("fileSizeSubAdminMenu") != null;
+  boolean quotaSubAdminMenu        = request.getAttribute("quotaSubAdminMenu") != null;
+  boolean analyticsReportSubAdminMenu        = request.getAttribute("analyticsReportSubAdminMenu") != null;  
+  boolean reportingAdminMenu       = dataReportSubAdminMenu ||
+                                     statSubAdminMenu ||
+                                     friendlyUrlSubAdminMenu ||
+                                     fileSizeSubAdminMenu ||
+                                     quotaSubAdminMenu ||
+                                     analyticsReportSubAdminMenu ||
+                                     request.getAttribute("reportingAdminMenu") != null;
+
+  // Work Management
+  boolean workspaceSubAdminMenu    = request.getAttribute("workspaceSubAdminMenu") != null;
+  boolean workflowListSubAdminMenu = request.getAttribute("workflowListSubAdminMenu") != null;
+  boolean workAdminMenu            = workspaceSubAdminMenu || 
+                                     workflowListSubAdminMenu ||
+                                     request.getAttribute("workAdminMenu") != null;
+  // Monitoring
+  boolean siteInfoSubAdminMenu      = request.getAttribute("siteInfoSubAdminMenu") != null;
+  boolean monitoringSubAdminMenu    = request.getAttribute("monitoringSubAdminMenu") != null;
+  boolean storeInfoSubAdminMenu     = request.getAttribute("storeInfoSubAdminMenu") != null;
+  boolean dbInfoSubAdminMenu        = request.getAttribute("dbInfoSubAdminMenu") != null;
+  boolean mailInfoSubAdminMenu      = request.getAttribute("mailInfoSubAdminMenu") != null;
+  boolean integritySubAdminMenu     = request.getAttribute("integritySubAdminMenu") != null;
+  boolean libInfoSubAdminMenu       = request.getAttribute("libInfoSubAdminMenu") != null;
+  boolean eventLogsSubAdminMenu     = request.getAttribute("eventLogsSubAdminMenu") != null;
+  boolean monitoringAdminMenu       = siteInfoSubAdminMenu || 
+                                      monitoringSubAdminMenu ||
+                                      storeInfoSubAdminMenu ||
+                                      dbInfoSubAdminMenu ||
+                                      mailInfoSubAdminMenu ||
+                                      integritySubAdminMenu || 
+                                      libInfoSubAdminMenu || 
+                                      eventLogsSubAdminMenu ||
+                                      request.getAttribute("monitoringAdminMenu") != null;
+                                      
+  // Operation
+  boolean pluginManagerSubAdminMenu = request.getAttribute("pluginManagerSubAdminMenu")  != null;
+  boolean propertiesSubAdminMenu    = request.getAttribute("propertiesSubAdminMenu") != null;
+  boolean deploySubAdminMenu        = request.getAttribute("deploySubAdminMenu") != null;
+  boolean authKeySubAdminMenu       = request.getAttribute("authKeySubAdminMenu") != null;
+  boolean searchSubAdminMenu        = request.getAttribute("searchSubAdminMenu") != null;
+  boolean cacheSubAdminMenu         = request.getAttribute("cacheSubAdminMenu") != null;
+  boolean importSubAdminMenu        = request.getAttribute("importSubAdminMenu") != null;
+  boolean jsyncSubAdminMenu         = request.getAttribute("jsyncSubAdminMenu") != null;
+  boolean fileProcessorSubAdminMenu = request.getAttribute("fileProcessorSubAdminMenu") != null;
+  boolean customAdminMenu           = request.getAttribute("customAdminMenu") != null;
+  boolean analyticsSubAdminMenu     = request.getAttribute("analyticsSubAdminMenu") != null;
+  boolean operationAdminMenu        = propertiesSubAdminMenu ||
+                                      deploySubAdminMenu || 
+                                      authKeySubAdminMenu ||
+                                      searchSubAdminMenu ||
+                                      cacheSubAdminMenu || 
+                                      importSubAdminMenu ||
+                                      jsyncSubAdminMenu || 
+                                      pluginManagerSubAdminMenu ||
+                                      customAdminMenu ||
+                                      fileProcessorSubAdminMenu ||
+                                      analyticsSubAdminMenu ||
+                                      request.getAttribute("operationAdminMenu") != null;
+  
+  // Development
+  boolean contentTypeListSubAdminMenu = request.getAttribute("contentTypeListSubAdminMenu") != null;
+  boolean ugcTypeListSubAdminMenu     = request.getAttribute("ugcTypeListSubAdminMenu") != null;
+  boolean portletTypeListSubAdminMenu = request.getAttribute("portletTypeListSubAdminMenu") != null;
+  boolean formTypeListSubAdminMenu    = request.getAttribute("formTypeListSubAdminMenu") != null;
+  boolean upgradeSubAdminMenu         = request.getAttribute("upgradeSubAdminMenu") != null;
+  boolean cleanerSubAdminMenu         = request.getAttribute("cleanerSubAdminMenu") != null;
+  boolean profilerSubAdminMenu        = request.getAttribute("profilerSubAdminMenu") != null;
+  boolean devAdminMenu                = contentTypeListSubAdminMenu || 
+                                        ugcTypeListSubAdminMenu || 
+                                        portletTypeListSubAdminMenu || 
+                                        formTypeListSubAdminMenu || 
+                                        upgradeSubAdminMenu || 
+                                        cleanerSubAdminMenu ||
+                                        profilerSubAdminMenu ||
+                                        request.getAttribute("devAdminMenu") != null;
+
+  boolean isSubMenu = usersAdminMenu ||
+                      workAdminMenu ||
+                      monitoringAdminMenu ||
+                      operationAdminMenu ||
+                      devAdminMenu;
+
+  boolean boMenuOff = Util.toBoolean(request.getAttribute("boMenuOff"),false);
+  request.setAttribute("title",Util.getString(Util.html2Ascii((String)request.getAttribute("title")) , glp("ui.com.alt.admin")));
+  request.setAttribute("zone","AdminArea");
+  jcmsContext.forceEditIcon(true);
+
+  jcmsContext.addCSSHeader("css/jalios/core/app/jalios-app-custom-properties.css");
+  jcmsContext.addCSSHeader("css/jalios/core/app/jalios-app.css");
+  jcmsContext.addJavaScript("js/jalios/core/app/jalios-app.js");
+%><%
+%><jalios:buffer name="topbarBuffer"><jalios:include jsp="<%= TopbarHandler.getTopbarResource(TopbarHandler.Zone.AdminArea) %>" /></jalios:buffer><%
+%><jalios:buffer name="sidebarBuffer"><jalios:include jsp='<%= ResourceHelper.getSidebar() %>' /></jalios:buffer><%
+%><%@ include file='/jcore/doEmptyHeader.jspf' %><%
+%><%@ include file='/admin/doAdminNotes.jspf' %><%
+%><%= topbarBuffer %><%
+%><%= sidebarBuffer %><%
+%><%
+  // Code duplicated in doWorkHeader/doAdminHeader.jsp
+  String customCSS = Util.getString(request.getAttribute("boHeaderCSS"),"");
+  String jspCssName = ServletUtil.getResourcePath(request);
+  jspCssName = Util.replace(jspCssName, "s!\\.jsp!!g"); // remove ".jsp"
+  jspCssName = Util.replace(jspCssName, "s![\\./]!-!g"); // replace '/' and '.'  with "-"
+%>
+<script>
+  let htmlTag = document.querySelector("HTML");
+  htmlTag.classList.add('is-admin-app-displayed');
+</script>
+
+<div class="AdminArea <%= jspCssName %> <%= customCSS %> ">
+    <div class="app app-admin <%= adminDisplayHandler.isSidebarOpened() ? "" : "is-sidebar-folded" %>">
+      <jalios:appSidebar appUrl='<%= "admin/" %>' iconTitleProp="ui.adm.app.home.title" icon="app-admin">
+        <%@ include file='/admin/doAdminMenu.jspf' %>
+      </jalios:appSidebar>
+      <div class="app-main full-height">
+        <div class="app-body full-height">
+        <%@ include file="/front/app/doAppSidebarToggler.jspf" %>
+        <%@ include file='/admin/doAdminBreadCrumb.jspf' %>
+	<% /* %>
+</body>
+</html>
+<% */ %>

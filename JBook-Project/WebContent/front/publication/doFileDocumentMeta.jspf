@@ -1,0 +1,28 @@
+<div class="filedocument-meta meta-text"><%--
+  --%><jalios:include target="PUBLICATION_META_FILEDOCUMENT_TOP" />
+    <div class="filedocument-file">
+    <% { %>
+    <% FileDocument _doc = (FileDocument)pub; %>
+    <% if (_doc.isLocalFile() || !"unknown".equals(_doc.getContentType())) { %>
+    <jalios:fileicon doc='<%= _doc %>' /> <%= _doc.getTypeInfo(userLang) %>
+    <% } %>
+    <% if (_doc.isLocalFile()) { %> 
+    (<%--
+     --%><jalios:filesize doc='<%= _doc %>'/><%--
+     --%><% if (_doc.isImage()) { %> &middot; <%= _doc.getDimensions() %><% } %><%--
+     --%><% if (_doc.hasDuration()) { %> &middot; <jalios:duration time='<%= _doc.getDuration() %>'/><% } %><%--
+     --%>)
+     <% } %>
+    </div>
+    <% if (_doc.isRemote()) { %>
+    <div class="remote-doc"> 
+      <jalios:icon src="remote-document" /> <%= glp("ui.com.lbl.remote-document") %>
+    </div>
+    <% } %>
+    <% } %>
+    
+    
+    <%--
+--%>
+<jalios:include target="PUBLICATION_META_FILEDOCUMENT_BOTTOM" />
+</div><%-- EOF. filedocument-meta --%>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<lucene>
+  <analyzer type='index'>
+    <charFilter name="mapping" mapping="jalios/lucene/mapping-FoldToASCII.txt"/>
+    <tokenizer class="com.jalios.jcms.search.analysis.JcmsTokenizerFactory" maxTokenLength="255"/>
+    <filter name="lowercase" />
+    <filter name="classic" />
+    <filter name="elision" articles="jalios/lucene/french-articles.txt"/>
+    <filter class="com.jalios.jcms.search.analysis.ContextualStopFilterFactory" ignoreCase="true" useSuggestStopFilter="false"/>
+  </analyzer>
+  <analyzer type='query'>
+    <charFilter name="mapping" mapping="jalios/lucene/mapping-FoldToASCII.txt"/>
+    <tokenizer class="com.jalios.jcms.search.analysis.JcmsTokenizerFactory" maxTokenLength="255"/>
+    <filter name="lowercase" />
+    <filter name="classic" />
+    <filter name="elision" articles="jalios/lucene/french-articles.txt"/>
+    <filter class="com.jalios.jcms.search.analysis.ContextualStopFilterFactory" ignoreCase="true"/>
+  </analyzer>
+  <similarity class="com.jalios.jcms.search.CustomSimilarity"/>
+</lucene>

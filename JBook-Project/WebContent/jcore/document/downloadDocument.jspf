@@ -1,0 +1,12 @@
+<% if (doc.isRemote()) {
+    String url = doc.getDownloadUrl();
+	if( Util.notEmpty(url)){%>
+		<a class="btn btn-success" href="<%= url %>" download="<%= encodeForHTMLAttribute(doc.getDownloadName(userLang)) %>" aria-label='<%= ariaLabel %>' target='_blank'>
+			<%= glp("ui.com.btn.access-doc") %>
+		</a>
+	<%}%>
+<% } else { %>
+	<a class="btn btn-default" href="<%= doc.getDownloadUrl() %>" download="<%= encodeForHTMLAttribute(doc.getDownloadName(userLang)) %>" aria-label='<%= ariaLabel %>'>
+		<%= glp("ui.com.btn.download") %>
+	</a>
+<% } %>

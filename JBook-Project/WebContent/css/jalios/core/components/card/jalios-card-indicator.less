@@ -1,0 +1,274 @@
+// Include variables and mixins
+@import '../../init-mixins.less';
+
+.card.card-indicator {
+  color: #777;
+  &:hover {
+    box-shadow: 0px 0px 0px 0 #ffffff3d, 0 0 0 1px #EEE;
+  }
+
+  &.is-right-aligned {
+    .indicator-content {
+      text-align: right;
+    }
+  }
+
+  &.is-center-aligned {
+    .indicator-icon {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      
+    }
+
+    .indicator-content {
+      text-align: center;
+    }
+  }
+
+  > .card-block {
+    display: flex;
+    .indicator-icon {
+      margin-right: 10px;
+      font-size: 36px;
+      display: flex;
+      align-items: center;
+      max-height: 160px;
+      width: auto;
+    
+      &.success {
+        color: @card-indicator-success;
+      }
+      &.warning {
+        color: @card-indicator-warning;
+      }
+      &.danger {
+        color: @card-indicator-danger;
+      }
+      &.primary {
+        color: @card-indicator-primary;
+      }
+    }
+
+    .indicator-content {
+      align-self: end;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .indicator-text {
+        font-size: 14px;
+      }
+
+      .indicator-number {
+        font-size: 25px;
+        margin-bottom: 15px;
+        A, button {
+          color: #777;
+          text-decoration: none;
+          background-color: transparent;
+          border: 0 none;
+        }
+      }
+    }
+  }
+}
+
+.card.card-indicator.bg-danger,
+.card.card-indicator.bg-success,
+.card.card-indicator.bg-warning,
+.card.card-indicator.bg-primary {
+  color: white;
+  .indicator-icon {
+    color: white;
+  }
+}
+
+.card.card-indicator {
+  &.bg-primary {
+    background-color: @card-indicator-primary;
+  }
+  &.bg-warning {
+    background-color: @card-indicator-warning;
+  }
+  &.bg-danger {
+    background-color: @card-indicator-danger;
+  }
+  &.bg-success {
+    background-color: @card-indicator-success;
+  }
+}
+
+.card-indicator-group {
+  padding-top: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  background-color: white;
+  /* width: 100%; */
+  /* flex-grow: 1; */
+  flex: 2 1 auto;
+  .if(@card-rounded-corners,  border-radius, @card-border-radius);
+
+  > .card {
+    width: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    border: 0 none;
+    border-right: 1px solid #efefef;
+    border-radius: 0;
+    &:hover {
+      box-shadow: none;
+    }
+    &:last-child {
+      border-right: 0 none;
+    }
+  }
+
+  &.bg-danger {
+    background-color: @card-indicator-danger;
+    .indicator-icon {
+      color: white;
+    }
+    > .card {
+      color: white;
+      border-right: 1px solid white;
+    }
+  }
+
+  &.bg-warning {
+    background-color: @card-indicator-warning;
+    .indicator-icon {
+      color: white;
+    }
+
+    > .card {
+      color: white;
+      border-right: 1px solid white;
+    }
+  }
+
+  &.bg-success {
+    background-color: @card-indicator-success;
+    .indicator-icon {
+      color: white;
+    }
+
+    > .card {
+      color: white;
+      border-right: 1px solid white;
+    }
+  }
+
+  &.bg-primary {
+    background-color: @card-indicator-primary;
+    .indicator-icon {
+      color: white;
+    }
+
+    > .card {
+      color: white;
+      border-right: 1px solid white;
+    }
+  }
+}
+
+.card-indicator-group .card-indicator-vertical {
+  > .card-block {
+    padding: 0;
+  }
+}
+
+.card-indicator-group .card-indicator {
+  > .card-block {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+.card.card-indicator-vertical {
+  align-items: center;
+  .card-block .indicator-content {
+    align-items: center;
+    .indicator-number {
+      font-size: 30px;
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+// Text modifiers
+
+.indicator-number.success {
+  color: @card-indicator-success;
+}
+.indicator-number.danger {
+  color: @card-indicator-danger;
+}
+.indicator-number.primary {
+  color: @card-indicator-primary;
+}
+.indicator-number.warning {
+  color: @card-indicator-warning;
+}
+
+.card-indicator,
+.card-indicator-vertical {
+  .progress {
+    margin-top: 8px;
+    height: 6px;
+    box-shadow: none;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+
+    &.is-sticky {
+      border-radius: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .progress-bar {
+      box-shadow: none;
+    }
+    .progress-bar-success {
+      background-color: @card-indicator-success;
+    }
+    .progress-bar-primary {
+      background-color: @card-indicator-primary;
+    }
+    .progress-bar-warning {
+      background-color: @card-indicator-warning;
+    }
+    .progress-bar-danger {
+      background-color: @card-indicator-danger;
+    }
+  }
+}
+
+.card-indicator-vertical .progress {
+  width: 90%;
+  &.is-sticky {
+    width: 100%;
+    border-bottom-left-radius: @jalios-block-border-radius;
+    border-bottom-right-radius: @jalios-block-border-radius;
+  }
+}
+
+.card-indicator .progress.is-sticky {
+  border-bottom-left-radius: @jalios-block-border-radius;
+  border-bottom-right-radius: @jalios-block-border-radius;
+}
+
+.card-indicator-group .card-indicator .progress.is-sticky,
+.card-indicator-group .card-indicator .progress {
+  margin-top: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+  width: auto;
+}

@@ -1,0 +1,126 @@
+// Include variables and mixins
+@import '../../init-mixins.less';
+
+.card-inline-layout {
+  
+  &.is-centered {
+    max-width: 1167px;
+    margin: auto;
+  }
+
+  .card-flip-wrapper {
+    width: 253px;
+    height: 324px;
+    display: inline-block;
+    margin: 0 36px @card-baseline*7 0;
+  }
+
+  .card {
+    width: 253px;
+    height: 324px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 36px @card-baseline*7 0;
+    position: relative;
+
+    .card-img {
+      height: 162px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .card-img {
+      height: 163px;
+    }
+
+    &.has-footer {
+      padding-bottom: @card-baseline*4;
+
+      .card-block-footer {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: @card-baseline*5;
+        padding: 0;
+        margin: 0 @card-baseline*2;
+        background-color: white;
+
+        &.card-block-footer-default {
+          margin: 0;
+        }
+
+        &.card-block-sm {
+          height: @card-baseline*4;
+        }
+      }
+    }
+  }
+
+  .card-link:focus {
+    outline: 0 none;
+  }
+
+  .card-link:focus-visible > .card {
+    outline: 2px solid black;
+    border-radius: 8px;
+    -moz-outline-radius: @card-border-radius;
+    outline-offset: 1px;
+  }
+
+  .card.card-member {
+    height: 364px; //Add footer
+
+    .card-footer {
+      height: 40px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #575757;
+      line-height: 40px;
+      padding: 0 16px;
+      font-size: 18px;
+      color: #fff;
+    }
+  }
+
+  // .card.card-publication:after {
+  //   content: "";
+  //   position: absolute;
+  //   left: 0;
+  //   height: @card-baseline*6;
+  //   bottom: 0;
+  //   right: 0;
+  //   background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+  // }
+}
+
+.card-inline-layout .card-flip-wrapper .card {
+  overflow: inherit;
+}
+
+@media screen and (max-width: 480px) {
+  .card-inline-layout {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .card {
+      margin: 0 0 20px;
+    }
+  }
+}
+@media screen and (min-width: 1550px) {
+  .app .card-inline-layout {
+    
+    &:not(.is-centered) {
+      margin-right: -48px;
+      .card {
+        margin: 0 48px @card-baseline*7 0;
+      }
+      .card-flip-wrapper {
+        margin: 0 48px @card-baseline*7 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+<%@page import="java.util.Iterator"%><%
+%><%@page import="java.util.Map.Entry"%><%
+%><%!
+/**
+ * Get the slice with are interested in, from a collection, and pager params
+ **/
+public static <T> Collection<T> getColSlice(Collection<T> col, com.jalios.jcms.handler.PagerHandler ph) {
+  if (col == null) {
+    return col;
+  }
+  int start = ph.getStart();
+  int sliceSize = ph.getPageSize();
+  int fromIndex = start;
+  int toIndex = start+sliceSize;
+  if (toIndex > col.size()) {
+    toIndex = col.size();
+  }
+  Collection<T>  ret = col != null ? (List<T>) Util.getArrayList(col.toArray()).subList(fromIndex, toIndex) : null;
+  return ret;
+}
+
+/**
+ * Builds a JSON value for the "params" JSON parameter of a data-jalios-options HTML data attribute.
+ * Output is like:
+ * "p1":"v1","p2":"v2"
+ **/
+public static String getJaliosOptionsRefreshParams(Map<String, String> paramsMap) {
+  StringBuilder urlParamsBuilder = new StringBuilder();
+  Iterator<Map.Entry<String, String>> it = paramsMap.entrySet().iterator();
+  for (;it.hasNext();) {
+    Entry<String, String> entry = it.next();
+    urlParamsBuilder.append("\"");
+    urlParamsBuilder.append(entry.getKey());
+    urlParamsBuilder.append("\"");
+    urlParamsBuilder.append(":");
+    urlParamsBuilder.append("\"");
+    urlParamsBuilder.append(entry.getValue());
+    urlParamsBuilder.append("\"");
+    if (it.hasNext()) {
+      urlParamsBuilder.append(",");
+    }
+  }
+  return urlParamsBuilder.toString();
+}
+%>

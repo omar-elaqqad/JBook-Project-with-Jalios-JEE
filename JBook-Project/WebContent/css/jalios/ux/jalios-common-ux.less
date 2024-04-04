@@ -1,0 +1,25 @@
+.fulldisplay,.fullDisplay {
+	.intro {
+	  font-size: @font-size-large;
+	}
+}
+
+
+// ----------------------------------------------
+// editLangChooser
+// ----------------------------------------------
+.btn.ctxLangForm.langStatus span {
+  margin-left: 4px;
+  &:after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 4px;
+    vertical-align: middle;
+    border-top:   @caret-width-base solid;
+    border-right: @caret-width-base solid transparent;
+    border-left:  @caret-width-base solid transparent;
+    content: '';
+    color: @text-color;
+  }
+}

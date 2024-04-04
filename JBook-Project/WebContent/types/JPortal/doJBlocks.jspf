@@ -1,0 +1,15 @@
+<%@page import="com.jalios.jcms.jportal.json.JBlockMapping"%>
+<%@page import="com.jalios.util.Util"%>
+<%@page import="com.jalios.util.ServletUtil"%>
+<div class="jportal-block col-md-<%= jBlock.getUi().getGridSizeMd() %>">
+  <% if (Util.notEmpty(jBlock.getPortletId())) { %>
+	  <jalios:include id="<%= jBlock.getPortletId() %>" />
+  <% } else if (Util.notEmpty(jBlock.getJBlocks())) { %>
+    <%
+    ServletUtil.backupAttribute(pageContext, attribute);
+    %>
+    <% for (JBlockMapping itJBlock : jBlock.getJBlocks()) { %>
+	    <%@ include file='/types/JPortal/doJBlocks.jspf' %>
+	  <% } %>
+  <% } %>
+</div>

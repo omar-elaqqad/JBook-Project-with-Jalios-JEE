@@ -1,0 +1,75 @@
+<%@page import="com.jalios.util.Util"%><%
+%><%@page import="com.jalios.jcms.taglib.ControlTag"%><%
+%><%@page import="com.jalios.jcms.taglib.FieldTag"%><%
+%><%@page import="com.jalios.jcms.taglib.settings.BasicSettings"%><%
+%><%@page import="com.jalios.jcms.taglib.settings.ControlSettings"%><%
+%><%@page import="com.jalios.jcms.taglib.settings.ChooserConstants"%><%
+%><%
+String disabledButton = Util.toBoolean(fieldDisabled, false) ? " disabled='disabled'" : "";
+String disabledLink = Util.toBoolean(fieldDisabled, false) ? " disabled" : "";
+
+// Append the language chooser when LANGUAGE_CHOOSER option is true and field is multilingual 
+boolean showLanguageChooser = channel.isMultilingual() && getOption(BasicSettings.LANGUAGE_CHOOSER, false) && Util.toBoolean(request.getAttribute(FieldTag.FIELD_MULTILINGUAL), false);
+
+// Append the clear button
+boolean appendedClearButton = getOption(BasicSettings.CLEAR_BUTTON, false);
+// Hide the clear button in the DOM
+boolean hideClearButton = getOption(BasicSettings.HIDE_CLEAR_BUTTON, false);
+
+//JCMS-7802 - Keyword field : prevent user to remove non usable categories
+if (Util.notEmpty(encodeForHTMLAttribute(resolveFieldValue(fieldValue)))) {
+  Category cat = channel.getCategory(encodeForHTMLAttribute(resolveFieldValue(fieldValue)));
+  if (Util.notEmpty(cat) && !cat.canBeUsedBy(loggedMember)) {
+    disabledButton = "disabled='disabled'";
+    hideClearButton = true;
+  }    
+}
+
+if (Util.isEmpty(getIncludeString("BTN_ACTION", ""))) {
+  String chooserName = getOption(ChooserConstants.CHOOSER_NAME, null);
+  
+  if(chooserName != null) { // Chooser control
+    String chooserIcon = getOption(ChooserConstants.CHOOSER_ICON, chooserName);
+    String chooserTitle = formatAttribute(" title='%s'", getOption(ChooserConstants.CHOOSER_TITLE, ""));
+    String dataOptions = formatAttribute(" data-jalios-options='%s'", getOption(ChooserConstants.CHOOSER_OPTION, ""));
+    String dataChooserPopupWidth = formatAttribute(" data-jalios-chooser-popup-width='%s'", String.valueOf(getOption(ChooserConstants.POPUP_WIDTH, "")));
+    String dataChooserPopupHeight = formatAttribute(" data-jalios-chooser-popup-height='%s'", String.valueOf(getOption(ChooserConstants.POPUP_HEIGHT, "")));
+  %>
+  <div class="input-group-btn">
+    <%= getIncludeString("PREPREND_BTN_ACTION", "") %>
+    <button type="button" class="btn btn-default btn-chooser" aria-label="<%= encodeForHTMLAttribute(glp(getOption(ChooserConstants.CHOOSER_TITLE, ""))) %>" data-jalios-action="chooser:<%= chooserName %>"<%= dataOptions %><%= dataChooserPopupWidth %><%= dataChooserPopupHeight %><%= disabledButton %><%= chooserTitle %>>
+      <jalios:icon src="<%= chooserIcon %>" />
+    </button>
+    <%= getIncludeString("APPEND_BTN_ACTION", "") %>
+    <% if(showLanguageChooser) { %>
+      <a href="#" class="ctxLangForm ctxmenu langStatus btn btn-default icon<%= disabledLink %>"><jalios:lang lang="<%= cptLang %>" /></a>
+    <% } %>
+    <% if(appendedClearButton) { %>
+      <button type="button" title="<%= glp("ui.com.alt.clear") %>" class='btn btn-default btn-remove<%= hideClearButton ? " hide" : "" %>' data-jalios-action="widget:clear"<%= disabledButton %> aria-label="<%= glp("ui.com.alt.remove") %>"><jalios:icon src="clear" /></button>
+    <% } %>
+  </div>
+  <%
+  } else if(showLanguageChooser || appendedClearButton) { // Simple text control (eg. TextField)
+  %>
+  <div class="input-group-btn">
+    <%= getIncludeString("PREPREND_BTN_ACTION", "") %>
+    <%= getIncludeString("APPEND_BTN_ACTION", "") %>
+    <% if(showLanguageChooser) { %>
+      <a href="#" class="ctxLangForm ctxmenu langStatus btn btn-default icon<%= disabledLink %>" onclick="return false;"><jalios:lang lang="<%= cptLang %>" /></a>
+    <% } %>
+    <% if(appendedClearButton) { %>
+      <button title="<%= glp("ui.com.alt.remove") %>" type="button" class='btn btn-default btn-remove<%= hideClearButton ? " hide" : "" %>' aria-label="<%= glp("ui.com.alt.remove") %>" data-jalios-action="widget:clear"<%= disabledButton %>><jalios:icon src="clear" /></button>
+    <% } %>
+  </div>
+  <%
+  }
+} else { // Custom action buttons %>
+  <div class="input-group-btn">
+    <%= getIncludeString("PREPREND_BTN_ACTION", "") %>
+    <%= getIncludeString("BTN_ACTION", "") %>
+    <%= getIncludeString("APPEND_BTN_ACTION", "") %>
+    <% if(showLanguageChooser) { %>
+      <a href="#" class="ctxLangForm ctxmenu langStatus btn btn-default icon<%= disabledLink %>"><jalios:lang lang="<%= cptLang %>" /></a>
+    <% } %>
+  </div>
+<% } %>

@@ -1,0 +1,7 @@
+<% { %>
+  <% 
+    String langChooserBtnDefaultLanguage = Util.getString(request.getAttribute("langChooserBtnDefaultLanguage"), channel.getLanguage());
+    String langChooserBtnTarget = Util.getString(request.getAttribute("langChooserBtnTarget"), "");
+  %>
+  <a href="#" lang="<%= langChooserBtnDefaultLanguage %>" class="ctxLangForm ctxmenu lang-fix langStatus btn btn-default" <%= Util.notEmpty(langChooserBtnTarget) ? "data-jalios-target=\"" + langChooserBtnTarget + "\"" : "" %>><%= glp("ui.com.lbl.language.edit") %> <jalios:lang lang='<%= langChooserBtnDefaultLanguage %>' /></a>
+<% } %>       

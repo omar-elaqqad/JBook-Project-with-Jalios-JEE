@@ -1,0 +1,55 @@
+<%-- 
+ @Summary: Prints the original values of the specified property key.
+ @Usage : the following variables must be declared before static inclusion of this JSP : 
+   PropertiesEditorHandler formHandler;
+   String printedOriginalPropKey;
+   String printedOriginalPropValue;
+--%><%@page import="com.jalios.jcms.handler.PropertiesEditorHandler"%><%
+%><%@page import="org.apache.commons.lang3.StringUtils" %><%
+%><%@page import="com.jalios.jcms.widget.WidgetUtil" %><%
+{
+  int variationCount = 0;
+  int declarationCount = 0;
+  File lastDeclaredFile = null;
+  for (Map.Entry<File,JProperties> originalEntry : PropertiesEditorHandler.getOriginalPropertiesPerFileLoaded().entrySet()) {
+    final File originalFile = originalEntry.getKey();
+    final JProperties originalProperties = originalEntry.getValue();
+    
+    // Determine the property key to read in the original file : 
+    // if the propKey exist as is in the original file, use it, otherwise, attempt to use the short key without editor
+    final String printedOriginalPropKeyWithoutSuffix = PropertiesEditorHandler.getUnsuffixedProperty(printedOriginalPropKey);
+    final String propKeyToLookForInOriginal = printedOriginalPropKeyWithoutSuffix == null || originalProperties.containsKey(printedOriginalPropKey) ? printedOriginalPropKey : printedOriginalPropKeyWithoutSuffix;
+    
+    // Retrieve original value
+    final String originalPropertyValue = originalProperties.get(propKeyToLookForInOriginal);
+    
+    final boolean fileContainsOriginal = originalProperties.containsKey(propKeyToLookForInOriginal);
+    final boolean originalDiffers = fileContainsOriginal && !StringUtils.equals(printedOriginalPropValue, originalPropertyValue);
+    if (fileContainsOriginal) {
+      declarationCount++;
+      lastDeclaredFile = originalFile;
+    }
+    if (fileContainsOriginal && originalDiffers) {
+      if (variationCount>0) {
+        %><p><%
+      }
+        
+      variationCount++;
+      final String printedPropValue = originalPropertyValue;
+      final String printedPropTitle = channel.getRelativePath(originalFile);
+      %><%@ include file="doPrintPropertyValue.jspf" %><br/>
+      <jalios:icon src="file-empty"/><code><%= encodeForHTML(printedPropTitle) %></code><%
+    }
+  }
+  if (variationCount == 0) {
+    if (declarationCount <= 1) {
+      boolean isCustomProperty = (lastDeclaredFile != null) && lastDeclaredFile.getName().equals("custom.prop");
+      %><em <% if (lastDeclaredFile != null) { %>title="<%= encodeForHTMLAttribute(channel.getRelativePath(lastDeclaredFile)) %>"<% } %>>
+      <%= glp(isCustomProperty ? "ui.adm.prop-editor.prop-value.undefined" : "ui.adm.prop-editor.prop-value.unmodified") %>
+      </em><%         
+    } else {
+      %><em><%= glp("ui.adm.prop-editor.prop-value.idem") %></em><%     
+    }
+  }
+}
+%>

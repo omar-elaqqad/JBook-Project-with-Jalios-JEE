@@ -1,0 +1,98 @@
+//
+// Buttons
+// --------------------------------------------------
+
+.btn-text-info {
+  color: @btn-text-color-info;
+}
+.btn-text-warning {
+  color: @btn-text-color-warning;
+}
+.btn-text-success {
+  color: @btn-text-color-success;
+}
+.btn-text-danger {
+  color: @btn-text-color-danger;
+}
+
+A[role=button] {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn.btn-rounded {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: @jalios-color-icon;
+  box-shadow: none;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all .2s ease-in;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  background-color: transparent;
+  
+  &:focus-visible {
+    outline: 5px auto Highlight;
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+  
+  > SPAN:not(.jalios-icon) {
+    font-size: @font-size-base;
+  }
+  
+  &:hover {
+    &:before {
+      transform: scale(1);
+    }
+  }
+  &:before {
+    z-index: 0;
+    content: "";
+    height: 30px;
+    width: 30px;
+    transform: scale(0);
+    border-radius: 50%;
+    background-color: rgba(222,222,222,0.5);
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    z-index: -1;
+    transition-timing-function: cubic-bezier(0.4,0,0,1);
+    transition-duration: .3s;
+    transition-property: transform,background-color;
+  }  
+  
+  &.ctx-caret:not(.has-no-caret) {
+    width: 40px;
+    border-radius: 8px;
+    &:before {
+      width: 40px;
+      border-radius: 8px;
+    }
+  }
+  
+  &.btn-text {
+    width: auto;  
+    display: inline-flex;
+    border-radius: 8px;
+    color: @jalios-color-icon;
+    &:before {
+      width: auto;
+      right: -1px;
+      border-radius: 8px;
+    }
+  }
+  
+  .jalios-icon {
+    color: @jalios-color-icon;
+    margin-right: 0;
+  }
+}

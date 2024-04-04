@@ -1,0 +1,76 @@
+<%@page import="com.jalios.jcms.taglib.settings.ControlUtils"%>
+<%@page import="com.jalios.jcms.taglib.settings.SelectorSettings"%>
+<%@page import="com.jalios.util.Util"%><%
+%><%@page import="com.jalios.jcms.HttpUtil"%><%
+%><%@page import="com.jalios.jcms.JcmsUtil"%><%
+%><%@page import="com.jalios.jcms.taglib.settings.BasicSettings"%><%
+%><%@page import="com.jalios.jcms.taglib.settings.ChooserConstants"%><%
+%><%
+String acChooserName = getOption(ChooserConstants.AC_CHOOSER_NAME, null);
+
+String fieldValueDisplay = getIncludeString("fieldValueDisplay", resolveLabel(fieldValue, null, getOption(SelectorSettings.MULTIPLE, false)));
+String placeholder = formatAttribute("placeholder=\"%s\"", getOption(BasicSettings.PLACEHOLDER, ""));
+String prepend = getIncludeString("PREPEND", getOption(BasicSettings.PREPEND, ""));
+String append = getIncludeString("APPEND", getOption(BasicSettings.APPEND, ""));
+String required = Util.toBoolean(fieldRequired, false) ? "aria-required='true'" : "";
+String disabled = Util.toBoolean(fieldDisabled, false) || Util.toBoolean(getIncludeObject("INPUT_DISABLED", false), false) ? "disabled='disabled'" : "";
+String readonly = Util.toBoolean(fieldReadOnly, false) || Util.toBoolean(getIncludeObject("INPUT_READONLY", false), false) ? "readonly='readonly'" : "";
+String css = getOption(BasicSettings.CSS, "");
+css = "form-control form-control-autocomplete form-control-display" + (" jalios-" + controlType.toString().toLowerCase() + "-display") + (Util.notEmpty(css) ? " " + css : "");
+String title = Util.notEmpty(getOption(BasicSettings.TITLE, "")) ? " title=\"" + glp(getOption(BasicSettings.TITLE, "")) + "\" " : "";
+String htmlAttributes = getOption(BasicSettings.HTML_ATTRIBUTES, "");
+String dataAttributes = formatDataAttributes(getOption(BasicSettings.DATA_ATTRIBUTES, (Map<String, Object>) null));
+Map<String, Object> ariaAttributesMap = getOption(BasicSettings.ARIA_ATTRIBUTES, (Map<String, Object>) null);
+ControlUtils.autoFillAriaAttributes(ariaAttributesMap, fieldResource, fieldLabelId);
+String ariaAttributes = formatAriaAttributes(ariaAttributesMap);
+String dataEvent = formatAttribute("data-jalios-event='%s'", getOption(BasicSettings.TRIGGER_EVENT, ""));
+String dataAction = formatAttribute("data-jalios-action='%s'", getOption(BasicSettings.TRIGGER_ACTION, ""));
+String dataChooserAction = formatAttribute("data-jalios-ac-action='acChooser:%s'", acChooserName);
+String dataChooserOptions = formatAttribute(" data-jalios-ac-options='%s'", getOption(ChooserConstants.AC_CHOOSER_OPTION, ""));
+%><%
+%><% if (Util.notEmpty(prepend)) { %><span class="input-group-addon"><%= prepend %></span><% } %>
+<% 
+  String encodedFieldValueDisplay = encodeForHTMLAttribute(fieldValueDisplay);
+
+  //JCMS-7802 - Keyword field : prevent user to remove non usable categories
+  if (Util.notEmpty(encodeForHTMLAttribute(resolveFieldValue(fieldValue)))) {
+    Category cat = channel.getCategory(encodeForHTMLAttribute(resolveFieldValue(fieldValue)));
+    if (Util.notEmpty(cat) && !cat.canBeUsedBy(loggedMember)) {
+      disabled = "disabled='disabled'";
+    }    
+  }
+
+%>
+<input 
+      <% if (Util.toBoolean(request.getAttribute("form-control-id"), true)) { %>id='<%= HttpUtil.encodeForHTMLAttribute(fieldId) %>' <% } %>
+      name="<%= HttpUtil.encodeForHTMLAttribute(fieldName) %>ChooserDisplay"
+      type="text"
+      class="<%= css %>"
+      value="<%= encodedFieldValueDisplay %>"
+      <%= JcmsUtil.getLangAttributes(cptLang) %>
+      <%= placeholder %>
+      <%= disabled %>
+      <%= readonly %>
+      <%= title %>
+      <% if (Util.isEmpty(title) && Util.notEmpty(encodedFieldValueDisplay)) { %>
+	      title="<%= encodedFieldValueDisplay %>"
+      <% } %>
+      <%= required %>
+      <%= dataChooserAction %>
+      <%= dataChooserOptions %>
+      <%= ariaAttributes %>
+      <%= htmlAttributes %> />
+<input name="<%= encodeForHTMLAttribute(fieldName) %>"
+      type="text"
+      class="form-control form-control-value hide <%= "jalios-" + controlType.toString().toLowerCase() %>"
+      value="<%= encodeForHTMLAttribute(resolveFieldValue(fieldValue)) %>"
+      <%= disabled %>
+      <%= readonly %>
+      <%= required %>
+      <%= dataEvent %>
+      <%= dataAction %>
+      <%= dataAttributes %> />
+
+<% if (Util.notEmpty(append)) { %><span class="input-group-addon"><%= append %></span><% } %><%
+%><%= getIncludeString("CONTROL_APPEND", "") %><%
+%><%@ include file='/jcore/field/control/doTextButtonAction.jspf' %>

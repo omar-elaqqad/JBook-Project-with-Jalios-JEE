@@ -1,0 +1,91 @@
+<%@page import="com.jalios.jcms.taglib.settings.impl.MemberSettings"%>
+<%@page import="com.jalios.jcms.portlet.EditPortalElementHandler"%>
+<%@page import="com.jalios.jcms.taglib.settings.impl.DurationSettings"%>
+<%@page import="com.jalios.jcms.handler.EditPublicationHandler"%>
+<%@page import="com.jalios.jcms.Publication"%>
+<%@page import="java.util.List"%>
+<%@page import="com.jalios.util.Util"%>
+<%@page import="generated.AbstractPortlet"%>
+<%@page import="com.jalios.jcms.taglib.settings.impl.EnumerateSettings"%>
+<div class="jportal-sidebar-group is-accordion jportal-sidebar-group-separated">
+  <a class="sidebar-subtitle collapsed" data-toggle="collapse" href="#rights" aria-expanded="false" aria-controls="structureblocks"><jalios:icon src="caret" />
+    <%= glp("jportal.edition.sidebar.portlet-edit.advanced.rights.title") %>
+  </a>
+  <div class="sidebar-collapsed-group collapse" id="rights">  
+    <% if (!genericFormHandler.isReadRightTabHidden()) { %>
+    <div class="tab-page br">
+      <b class="tab">
+        <%= glp("ui.work.form.lbl.read-rights") %>
+      </b>
+      <jalios:include target="EDIT_PUB_READRIGHTTAB_HEADER" />
+
+      <%
+      EnumerateSettings useDefaultReadRightsSettings = new EnumerateSettings()
+        .disableInline()
+        .enumLabels("ui.work.form.lbl.read-rights.use-default", "ui.work.form.lbl.read-rights.use-custom")
+        .enumValues("true", "false")
+        .dataAttribute("jalios-action", "toggle:hide")
+        .dataAttribute("jalios-target", ".use-read-rights-options");
+      %>
+      <jalios:field name="useDefaultReadRights" value="<%= genericFormHandler.getAvailableUseDefaultReadRights() %>" resource="field-vertical">
+        <jalios:control settings='<%= useDefaultReadRightsSettings %>' />
+      </jalios:field>
+           	
+     <div class="use-read-rights-options use-custom-read-rights <% if (genericFormHandler.getAvailableUseDefaultReadRights()) { %>hide<% }%>">
+      <jalios:message msg="ui.work.form.lbl.read-rights.info" title="" dismissable="false" css="widget-content"/>
+
+      <%-- AuthorizedGroupSet ------------------------------------------------------------ --%> 
+      <jalios:field label="ui.work.form.lbl.grp-read-rights" name="authorizedGroupIds" value="<%= genericFormHandler.getAvailableAuthorizedGroupSet() %>" mv="1" resource="field-vertical" css="nodnd">
+        <jalios:control type="<%= ControlType.GROUP %>" />
+      </jalios:field>
+
+      <%-- AuthorizedMemberSet ------------------------------------------------------------ --%> 
+      <jalios:field label="ui.work.form.lbl.mbr-read-rights" name="authorizedMemberIds" value="<%= genericFormHandler.getAvailableAuthorizedMemberSet() %>" mv="1" resource="field-vertical" css="nodnd">
+        <jalios:control settings="<%= new MemberSettings().filter(MemberSettings.MemberFilter.ACCOUNT) %>" />
+      </jalios:field>
+     </div>
+
+      <jalios:include target="EDIT_PUB_READRIGHTTAB_FOOTER" />
+    </div>
+    <% } %>
+  
+    <%-- UPDATE RIGHT ------------------------------------------------------------ --%> 
+    <% if (!genericFormHandler.isUpdateRightTabHidden()) { %>
+    <div class="tab-page">
+      <b class="tab">
+        <%= glp("ui.work.form.lbl.update-rights") %>
+      </b>
+      <jalios:include target="EDIT_PUB_UPDATERIGHTTAB_HEADER" />
+  
+      <%
+      EnumerateSettings useDefaultUpdateRightsSettings = new EnumerateSettings()
+        .disableInline()
+        .enumLabels("ui.work.form.lbl.update-rights.use-default", "ui.work.form.lbl.update-rights.use-custom")
+        .enumValues("true", "false")
+        .dataAttribute("jalios-action", "toggle:hide")
+        .dataAttribute("jalios-target", ".use-update-rights-options");
+      %>
+      <jalios:field name="useDefaultUpdateRights" value="<%= genericFormHandler.getAvailableUseDefaultUpdateRights() %>" resource="field-vertical">
+        <jalios:control settings='<%= useDefaultUpdateRightsSettings %>' />
+      </jalios:field>
+      
+      
+     <div class="use-update-rights-options use-custom-update-rights <% if (genericFormHandler.getAvailableUseDefaultUpdateRights()) { %>hide<% }%>">
+      <jalios:message msg="ui.work.form.lbl.update-rights.info" title="" dismissable="false" css="widget-content"/>
+        
+      <%-- UpdateGroupSet ------------------------------------------------------------ --%> 
+      <jalios:field label="ui.work.form.lbl.grp-update-rights" name="updateGroupIds" value="<%= genericFormHandler.getAvailableUpdateGroupSet() %>" mv="1" resource="field-vertical" css="nodnd">
+        <jalios:control type="<%= ControlType.GROUP %>" />
+      </jalios:field>
+  
+      <%-- UpdateMemberSet ------------------------------------------------------------ --%> 
+      <jalios:field label="ui.work.form.lbl.mbr-update-rights" name="updateMemberIds" value="<%= genericFormHandler.getAvailableUpdateMemberSet() %>" mv="1" resource="field-vertical" css="nodnd">
+        <jalios:control settings="<%= new MemberSettings().filter(MemberSettings.MemberFilter.ACCOUNT) %>" />
+      </jalios:field>
+     </div>
+  
+      <jalios:include target="EDIT_PUB_UPDATERIGHTTAB_FOOTER" />
+    </div>
+    <% } %>
+  </div>
+</div>

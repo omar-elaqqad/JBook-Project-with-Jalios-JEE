@@ -1,0 +1,22 @@
+<%@page import="com.jalios.util.ServletUtil"%>
+<%
+boolean allWorkspaceFilter = getBooleanParameter("allWorkspaceFilter", false);
+
+String topbarItemLabel =  "";
+if (allWorkspaceFilter) {
+  topbarItemLabel = glp("ui.work.mn.allworkspaces");
+} else if (!wkspcFilter) {
+  topbarItemLabel = glp("ui.topbar.myworkspaces");
+} else {
+  topbarItemLabel = workspace.getTitle(userLang);
+}
+%>
+<div class="admin-breadcrumb">
+	<a class="breadcrumb-item" href="work/"><span class="breadcrumb-item-label"><%= topbarItemLabel %></span></a>
+	<% if (Util.notEmpty(request.getAttribute("breadcrumbTitle"))) { %>
+    <a class="breadcrumb-item" href="<%= ServletUtil.getUrl(request) %>"><span class="breadcrumb-item-label"><%= request.getAttribute("breadcrumbTitle") %></span></a>
+	<% } else { %>
+	  <%-- Search for a page-header in page with javascript (in doAdminFooter.jspf) --%>
+	  <a class="breadcrumb-item currentNode" href="<%= ServletUtil.getUrl(request) %>"><span class="breadcrumb-item-label"></span></a>
+	<% } %>
+</div>

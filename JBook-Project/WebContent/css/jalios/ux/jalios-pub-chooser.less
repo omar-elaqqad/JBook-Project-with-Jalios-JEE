@@ -1,0 +1,391 @@
+@import "../core/init-mixins.less";
+
+@import "jalios-pub-chooser-navbar.less";
+
+.multi-select-values {
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  background-color: white;
+  left: 0;
+  right: 0;
+  padding: 8px;
+  background-color: white;
+  box-shadow: 0 2px 6px 2px #00000087;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  .multi-select-values-wrapper {
+    padding-right: 10px;
+  }
+}
+
+.pub-chooser-results {
+  min-height: 400px;
+  position: relative;
+  .ajax-loading .ajax-loading-display {
+    background-color: rgba(255, 255, 255, 0.69);
+    align-items: baseline;
+    padding-top: 120px;
+  }
+}
+
+.no-result-wrapper {
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 54px;
+  text-align: center;
+  .jalios-icon {
+    margin-bottom: 16px;
+  }
+  P {
+    color: #333;
+    font-family: @font-family-condensed;
+    font-size: @font-size-large;
+    line-height: floor((@font-size-large * @line-height-base));
+    margin-bottom: 30px;
+  }
+}
+
+.table-data.table-chooser {
+  border: 0;
+
+  .btn-show-more {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  & > THEAD > TR {
+    border-bottom: @app-table-th-border-bottom;
+  }
+
+  & > THEAD > TR > TH {
+    background-color: @app-body-bgcolor;
+    border: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  TR.is-selectable {
+    cursor: pointer;
+    > TD {
+      cursor: pointer;
+    }
+    &.active TD {
+      background-color: #e6feff;
+    }
+  }
+
+  & > tbody > TR > TD,
+  & > tbody > TR > TH {
+    vertical-align: middle;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    padding: 16px;
+    background-color: white;
+    font-weight: normal;
+  }
+  & > tbody > TR:nth-child(odd):hover > td {
+    background-color: #f5f5f5;
+  }
+  & > tbody > TR:nth-child(odd) > td {
+    background-color: white;
+  }
+  .jalios-icon {
+    font-size: @icon-size;
+  }
+}
+
+.pub-item {
+  display: inline-block;
+  background-color: #aaa;
+  color: white !important;
+  padding: 4px 10px;
+  border-radius: 3px;
+  border-bottom-right-radius: 3px;
+  max-width: 100px;
+  overflow: hidden;
+  padding-right: 25px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: relative;
+  margin-right: 5px;
+  margin-bottom: -4px;
+  .pub-item-remove {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 7px;
+    padding: 1px 4px;
+    transition: background-color 200ms ease;
+    border-radius: 4px;
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background-color: lighten(#aaa, 10%);
+      color: white;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.bottom-bar-placeholder {
+  height: 30px;
+}
+
+.has-hidden-filters {
+  .chooser-navbar-bottom {
+    display: none;
+  }
+  .navbar-placeholder {
+    height: 52px;
+  }
+}
+.pub-chooser .dropzone-full-forbidden {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1035;
+  width: 100%;
+  height: 100%;
+  transition: visibility 175ms, opacity 175ms;
+  display: table;
+  color: #fff;
+  background: rgba(113, 46, 46, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .dropzone-full-content {
+    display: flex;
+    flex-direction: column;
+    animation-duration: 500ms;
+    animation-name: dropzone;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;    
+    justify-content: center;
+    align-items: center;
+    .jalios-icon {
+      font-size: 100px;
+      margin-bottom: 24px;
+      text-shadow: initial;
+    }
+    P {
+      font-size: 28px;
+    }
+  }
+}
+
+.pub-chooser .dropzone-full {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1035;
+  width: 100%;
+  height: 100%;
+  transition: visibility 175ms, opacity 175ms;
+  display: table;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .dropzone-full-content {
+    display: flex;
+    flex-direction: column;
+    animation-duration: 500ms;
+    animation-name: dropzone;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;    
+    justify-content: center;
+    align-items: center;
+    .jalios-icon {
+      font-size: 100px;
+      margin-bottom: 24px;
+      text-shadow: initial;
+    }
+    P {
+      font-size: 28px;
+    }
+  }
+
+}
+
+.browser-IE11 {
+  .chooser-navbar .chooser-navbar-filters {
+    width: 80%;
+  }
+  .select2-noinput .select2-container--bootstrap .select2-selection .select2-selection__arrow b {
+    left: auto;
+  }
+}
+
+.upload-previews {
+  visibility: hidden;
+  width: 360px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #fff;
+  //border: 1px solid #DDD;
+  opacity: 0;
+  /* display: none; */
+  border-radius: 4px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+  transform: translate3d(0, -20px, 0);
+  transition: all 200ms ease-in;
+
+  &.is-displayed {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .upload-previews-header {
+    height: 35px;
+    padding: 10px;
+    background-color: #00adb8;
+    color: white;
+    line-height: 12px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    position: relative;
+    .close-preview {
+      &:hover {
+        background-color: darken(#00adb8, 3%);
+      }
+      transition: background-color 200ms ease-in;
+      color: white;
+      cursor: pointer;
+      position: absolute;
+      right: 6px;
+      top: 3px;
+    }
+  }
+
+  .dz-preview {
+    display: flex;
+    padding-right: 30px;
+    position: relative;
+    padding: 10px 43px 10px 10px;
+    transition: background-color 200ms ease-in;
+    cursor: pointer;
+    &:hover {
+      background-color: #96d8fb54;
+      color: #1967d2;
+    }
+
+    + .dz-preview {
+      padding-top: 10px;
+      border-top: 1px solid #efefef;
+    }
+    .dz-image {
+      width: 55px;
+      height: 55px;
+      margin-right: 10px;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .dz-image > IMG {
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+    .dz-details {
+      overflow: hidden;
+      width: 100%;
+    }
+    .dz-filename {
+      .text-overflow();
+    }
+
+    .dz-upload {
+      height: 15px;
+      background-color: #cccccc5c;
+      width: 100%;
+      display: block;
+      content: attr(data-dz-uploadprogress);
+      text-align: center;
+      border-radius: 2px;
+    }
+
+    .dz-progress {
+      position: relative;
+      background-color: #fafafa;
+      .progress-text {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .dz-upload {
+        background-color: #5cb85c;
+      }
+    }
+
+    .upload-state {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 20px;
+      .jalios-icon {
+        opacity: 0;
+        transform: translateY(-5px);
+        transition: all 200ms ease-in;
+        display: block;
+      }
+      .pubchooser-upload-success {
+        color: #42c10e;
+        font-size: 18px;
+      }
+      .pubchooser-upload-failed {
+        color: #fb0700;
+        font-size: 18px;
+      }
+    }
+
+    // States
+    &.dz-success {
+      .pubchooser-upload-success {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    &.dz-error {
+      background-color: #ffd7d7;
+      .pubchooser-upload-failed {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+.pub-chooser-author:hover {
+  text-decoration: none;
+}
+
+@keyframes dropzone {
+  from {
+    transform: translateY(-3px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

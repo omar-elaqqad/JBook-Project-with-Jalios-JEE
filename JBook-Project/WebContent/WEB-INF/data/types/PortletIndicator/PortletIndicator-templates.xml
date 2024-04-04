@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates version="5.0">
+  <template name="default" file="doPortletIndicatorBoxDonutDisplay.jsp" usage="box" />
+  <template name="card" file="doPortletIndicatorBoxCardDisplay.jsp" usage="box" />
+</templates>

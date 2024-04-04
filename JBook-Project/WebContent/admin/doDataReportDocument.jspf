@@ -1,0 +1,77 @@
+<%@page import="com.jalios.jcms.HttpUtil"%>
+<%@ page import="com.jalios.jcms.quota.*"%>
+<%-- Disk quota --%>
+<%
+if(!jcmsContext.isAjaxRequest()){
+	jcmsContext.addJavaScript("js/jalios/ux/jalios-file-size-map.js");
+}
+
+	boolean opRefreshFileSizeMap = getBooleanParameter("opRefreshFileSizeMap", false);
+	String workspaceId = getDataIdParameter("requestedWS");
+	WorkspaceFileSizeResult fileSizeResult = itWorkspace.getFileAnalyzer((itWorkspace.getId().equals(workspaceId)) ? opRefreshFileSizeMap : false);
+	boolean isWSArea = "WorkArea".equals(Util.toString(request.getAttribute("zone"), null));
+	String  wsRefreshUrl = "work/refreshDataReportDocument.jsp";
+	String adminRefreshUrl = "admin/refreshDataReportDocument.jsp";
+	String refreshUrl = HttpUtil.encodeForHTMLAttribute(isWSArea ? wsRefreshUrl : adminRefreshUrl);
+%>
+<div class="fileSizeMap ajax-refresh-div" data-jalios-ajax-refresh-url="<%=refreshUrl%>" data-jalios-ajax-refresh-periodical="<%=fileSizeResult ==null ? 3:0 %>">
+<input type="hidden" name="requestedWS" value="<%=Util.isEmpty(workspaceId) ? (itWorkspace == null ? "": itWorkspace.getId()): workspaceId %>" />
+<%
+	QuotaManager mgr = QuotaManager.getInstance();
+	if(mgr.isQuotaFeatureEnabled()){
+		if (mgr.isQuotaEnabled() && itWorkspace.getFileAnalyzer(false) != null) {
+			Map<Workspace, QuotaElement> elements = mgr.getElements();
+			QuotaElement element = elements.get(itWorkspace);
+			if (element != null) {
+		      boolean isAlert = element.isAlert();
+		      boolean isOver = element.isOver();
+		      long quotaValue = element.getQuota();
+		      long quotaMaxValue = element.getQuotaMaxValue();
+		      int alertThreshold = element.getAlertThreshold();
+		      int percentValue = Math.round((100 * quotaValue) / quotaMaxValue);
+		      String progressBarStyle = isOver ? "progress-bar-danger" : (isAlert ? "progress-bar-warning" : "progress-bar-success");
+			%>
+			<h3><%=glp("ui.adm.mn.files.quota-for-the-workspace")%></h3>
+			<div style="max-width: 500px;">
+				<div class="pull-right" style="margin-left: 10px;">
+					<jalios:filesize size="<%=quotaValue%>" />
+					/
+					<jalios:filesize size="<%=quotaMaxValue%>" />
+				</div>
+				<div class="progress">
+					<div class="progress-bar <%=progressBarStyle%>"
+						style="width:<%=percentValue%>%;"><%=percentValue%>%
+					</div>
+				</div>
+			</div>
+			<%
+	  	}
+ 	 }
+	} else {
+		  jcmsContext.addMsg(new JcmsMessage(JcmsMessage.Level.WARN, glp("ui.adm.quota-feature-disabled")));
+		  %><%@ include file='/jcore/doMessageBox.jspf' %><%
+	}
+
+	if(mgr.isQuotaFeatureEnabled()){
+%>
+
+<%-- Documents Size --%>
+<h3><%=glp("ui.adm.data-report.doc.size")%></h3>
+<%
+	  if (fileSizeResult != null) {
+	    ObjectLongTreeMap fileSizeMap = fileSizeResult.getFileSizeMap();
+	    ObjectLongTreeMap fileSizeMapWithSatellite = fileSizeResult.getFileSizeMapWithSatellite();
+	    String fileSizeMapLinkPrefix = "work/queryWork.jsp?types=com.jalios.jcms.FileDocument&amp;types=com.jalios.jcms.DBFileDocument&amp;mode=advanced&amp;wrkspc=" + itWorkspace.getId() + "&amp;text=";
+%>
+<%@ include file="/admin/doFileSizeMap.jspf"%>
+<%
+		  } else {
+		    int completeness = itWorkspace.getCurrentAnalyzerThread() == null ? 0 : itWorkspace.getCurrentAnalyzerThread().getCompleteness();
+%><jalios:message
+	msg='<%=glp("ui.adm.data-report.file-analyze-in-progress", completeness)%>'
+	title="" dismissable="false" />
+<%
+  		}
+	}
+%>
+</div>

@@ -1,0 +1,18 @@
+<%--
+  @Summary: Display members of specified Group, for a Front Office context.
+            Must be logged, but does not require specific "users" ACL.
+  @Category: Group / Member
+  @Author: Sylvain DEVAUX
+  @Copyright: Jalios SA
+  @Customizable: False
+  @Requestable: True
+  @Deprecated: False
+  @Since: jcms-9.0.3
+--%><%
+// Do NOT display member back card (email) in this particular UI
+request.setAttribute("card-member-no-back-card", Boolean.TRUE);
+%>
+<%@ include file="/front/doMemberCards.jspf" %>
+<%
+request.removeAttribute("card-member-no-back-card");
+%>

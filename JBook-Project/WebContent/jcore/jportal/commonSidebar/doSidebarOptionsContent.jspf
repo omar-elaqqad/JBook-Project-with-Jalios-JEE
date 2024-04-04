@@ -1,0 +1,76 @@
+<%@page import="com.jalios.jcms.taglib.settings.impl.EnumerateSettings"%>
+<%@page import="com.jalios.jcms.JcmsConstants"%>
+<%@page import="com.jalios.jcms.taglib.settings.impl.NumberSettings"%>
+<div class="jblock-parameters jblock-options">
+	<h3 class="sidebar-tab-title"><%= glp("jportal.edition.sidebar.options.title") %></h3>
+  <div class="jportal-sidebar-group">
+	  <jalios:field resource="field-vertical" name="isPortletSelection" description="jportal.edition.sidebar.options.selection.description" label="jportal.edition.sidebar.options.selection.label" value="false">
+	    <jalios:control type="<%= ControlType.BOOLEAN %>"></jalios:control>
+	  </jalios:field>
+	  <jalios:field resource="field-vertical" css="js-selection-headers-toggle" name="displaySelectionHeaders" label="jportal.edition.sidebar.options.selection.display-headers" value="false">
+	    <jalios:control type="<%= ControlType.BOOLEAN %>"></jalios:control>
+	  </jalios:field>
+  </div>
+  <% if(!Util.toBoolean(request.getAttribute("is-main-block"), false)){ %>
+	  <div class="jportal-sidebar-group">
+	    <div class="sidebar-subtitle"><%= glp("jportal.edition.sidebar.options.display-conditions.title") %></div>
+		  <jalios:field resource="field-vertical" label="jportal.edition.sidebar.options.display-conditions.login.label" value="all"> 
+        <% 
+          EnumerateSettings loggedEnumerateSettings = jPortalHandler.getEnumerateSettings("jportal.jblock-option.logged-display-condition");
+          loggedEnumerateSettings.select().required().name("loggedDisplayCondition");
+        %>
+		    <jalios:control settings='<%= loggedEnumerateSettings %>' />
+		  </jalios:field>
+		  
+		  <jalios:field resource="field-vertical" label="jportal.edition.sidebar.options.display-conditions.publication.label" value="all"> 
+		    <% 
+	        EnumerateSettings pubEnumerateSettings = jPortalHandler.getEnumerateSettings("jportal.jblock-option.publication-display-condition");
+		    pubEnumerateSettings.select().required().name("publicationDisplayCondition");
+        %>
+		    <jalios:control settings='<%= pubEnumerateSettings %>' />
+		  </jalios:field>
+		  
+		  <div class="form-group jblock-device-conditions">
+		    <div class="control-label clearfix">
+		      <label><%= glp("jportal.edition.sidebar.no-display.label")%></label>
+		    </div>
+		    <div class="widget-content">
+			    <label>
+			      <input type="checkbox" name="removeOnPhone"  />
+	          <%= glp("jportal.edition.sidebar.no-display.phone.label") %>
+	        </label>
+	        <label>
+            <input type="checkbox" name="removeOnTablet"  />
+            <%= glp("jportal.edition.sidebar.no-display.tablet.label") %>
+          </label>
+          <label>
+            <input type="checkbox" name="removeOnMediumScreen"  />
+            <%= glp("jportal.edition.sidebar.no-display.medium-desktop.label") %>
+          </label>
+          <label>
+            <input type="checkbox" name="removeOnLargeScreen"  />
+            <%= glp("jportal.edition.sidebar.no-display.large-desktop.label") %>
+          </label>
+        </div>
+      </div>
+      
+      <% if(isJPortletEdition){ %>
+        <jalios:field resource="field-vertical" label="jportal.edition.sidebar.options.ajax-periodical.label">
+          <jalios:control settings='<%= new NumberSettings().name("periodicalValue") %>' />
+        </jalios:field>
+      <% } %>
+      <% if(channel.getLanguageList().size() > 1){ %>
+        <div class="form-group jblock-languages-conditions">
+        <div class="control-label clearfix">
+          <label><%= glp("jportal.edition.sidebar.no-display.languages.label")%></label>
+        </div>
+        <div class="widget-content">
+          <% for(String language : channel.getLanguageListOrdered()){ %>
+	          <label> <input type="checkbox" name="languagesRemoved" value="<%=language%>"/> <jalios:lang lang='<%= language %>'/> <%= glp("lang." + language) %></label>
+          <% } %>
+        </div>
+      </div>
+      <% } %>
+	  </div>
+  <% } %>
+</div>

@@ -1,0 +1,14 @@
+{
+  "minify": false,
+  "options": [
+    "mq",
+    "testStyles",
+    "setClasses"
+  ],
+  "feature-detects": [
+    "test/input",
+    "test/inputtypes",
+    "test/css/animations",
+    "test/forms/placeholder"
+  ]
+}

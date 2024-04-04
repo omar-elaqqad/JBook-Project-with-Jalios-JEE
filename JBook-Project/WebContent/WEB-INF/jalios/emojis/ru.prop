@@ -1,0 +1,3196 @@
+emojis.categories.recent: Недавно использованные
+emojis.categories.new: Новое!
+emojis.categories.people: Эмоции и люди
+emojis.categories.nature: Животные и природа
+emojis.categories.food: Еда и напитки
+emojis.categories.activity: Действия
+emojis.categories.travel: Путешествия и места
+emojis.categories.objects: Объекты
+emojis.categories.symbols: Символы
+emojis.categories.flags: Флаги
+emojis.1f600.name: Ухмыляющееся лицо
+emojis.1f600.keywords: лицо,усмешка,радость
+emojis.1f62c.name: Гримасничающее лицо
+emojis.1f62c.keywords: лицо,гримаса
+emojis.1f601.name: Усмехающееся лицо с улыбающимися глазами
+emojis.1f601.keywords: глаз,лицо,усмешка,улыбка
+emojis.1f602.name: Лицо со слезами радости
+emojis.1f602.keywords: лицо,радость,смех,слезы
+emojis.1f603.name: Улыбающееся лицо с открытым ртом
+emojis.1f603.keywords: лицо,рот,открытый,улыбка,счастье
+emojis.1f604.name: Улыбающееся лицо с открытым ртом и радостными глазами
+emojis.1f604.keywords: глаз,лицо,рот,открытый,улыбка,счастье
+emojis.1f923.name: Катаюсь по полу, смеясь
+emojis.1f923.keywords: face,floor,laugh,lol,rofl,rolling
+emojis.1f605.name: Улыбающееся лицо с открытым ртом и в холодном поту
+emojis.1f605.keywords: cold,face,open,smile,sweat
+emojis.1f606.name: Улыбающееся лицо с открытым ртом и закрытыми глазами
+emojis.1f606.keywords: face,laugh,mouth,open,satisfied,smile
+emojis.1f607.name: Улыбающееся лицо с нимбом
+emojis.1f607.keywords: angel,face,fairy tale,fantasy,halo,innocent,smile
+emojis.1f609.name: Подмигивающее лицо
+emojis.1f609.keywords: лицо,подмигивание
+emojis.1f60a.name: Улыбающееся лицо со счастливыми глазами
+emojis.1f60a.keywords: румянец,глаз,лицо,улыбка
+emojis.1f642.name: Слегка улыбающееся лицо
+emojis.1f642.keywords: face,smile,happy
+emojis.1f643.name: Перевернутое лицо
+emojis.1f643.keywords: face,upside-down
+emojis.263a.name: Улыбающееся лицо
+emojis.263a.keywords: face,outlined,relaxed,smile
+emojis.1f60b.name: Лицо, наслаждающееся вкусной едой
+emojis.1f60b.keywords: delicious,face,savouring,smile,um,yum
+emojis.1f60c.name: Спокойное лицо
+emojis.1f60c.keywords: face,relieved
+emojis.1f60d.name: Улыбающееся лицо с глазами в форме сердца
+emojis.1f60d.keywords: eye,face,heart,love,smile
+emojis.1f618.name: Воздушный поцелуй
+emojis.1f618.keywords: лицо,сердце,поцелуй
+emojis.1f617.name: Целующее лицо 
+emojis.1f617.keywords: лицо,поцелуй
+emojis.1f619.name: Целующее лицо с улыбающимися глазами
+emojis.1f619.keywords: глаз,лицо,поцелуй,улыбка
+emojis.1f61a.name: Поцелуй с закрытыми глазами
+emojis.1f61a.keywords: closed,eye,face,kiss
+emojis.1f92a.name: Сумасшедший
+emojis.1f92a.keywords: eyes,grinning,crazy,excited,wild
+emojis.1f61c.name: Лицо с высунутом языком и подмигивающим глазом
+emojis.1f61c.keywords: eye,face,joke,tongue,wink
+emojis.1f61d.name: Лицо с высунутым языком и плотно закрытыми глазами
+emojis.1f61d.keywords: eye,face,horrible,taste,tongue
+emojis.1f61b.name: Лицо с высунутым языком
+emojis.1f61b.keywords: лицо,язык
+emojis.1f911.name: Смайлик алчности
+emojis.1f911.keywords: лицо,деньги,рот
+emojis.1f60e.name: Улыбающееся лицо в солнцезащитных очках
+emojis.1f60e.keywords: bright,cool,eye,eyewear,face,glasses,smile,sun,sunglasses,weather
+emojis.1f913.name: Ботаник
+emojis.1f913.keywords: face,geek,nerd
+emojis.1f9d0.name: Монокль
+emojis.1f9d0.keywords: stuffy,wealthy,rich
+emojis.1f920.name: Голова ковбоя
+emojis.1f920.keywords: cowboy,cowgirl,face,hat
+emojis.1f917.name: Смайлик, который хочет обниматься
+emojis.1f917.keywords: face,hug,hugging
+emojis.1f921.name: Лицо клоуна
+emojis.1f921.keywords: клоун,лицо
+emojis.1f60f.name: Ухмыляющееся лицо 
+emojis.1f60f.keywords: лицо,ухмылка
+emojis.1f636.name: Лицо безо рта
+emojis.1f636.keywords: face,mouth,quiet,silent
+emojis.1f610.name: Спокойное лицо
+emojis.1f610.keywords: deadpan,face,neutral
+emojis.1f611.name: Лицо, не выражающее никаких эмоций
+emojis.1f611.keywords: expressionless,face,inexpressive,unexpressive
+emojis.1f612.name: Недовольное лицо
+emojis.1f612.keywords: face,unamused,unhappy
+emojis.1f644.name: Смайлик, закатывающий глаза
+emojis.1f644.keywords: eyes,face,rolling
+emojis.1f928.name: Поднятая бровь
+emojis.1f928.keywords: distrust,skeptic,disapproval,disbelief,mild surprise,scepticism
+emojis.1f914.name: Задумчивый смайлик
+emojis.1f914.keywords: face,thinking
+emojis.1f92b.name: Тсс!
+emojis.1f92b.keywords: shh,quiet,hush
+emojis.1f92d.name: Молчу!
+emojis.1f92d.keywords: eyes,smiling,covering,mouth,hand
+emojis.1f925.name: Лживое лицо
+emojis.1f925.keywords: face,lie,pinocchio
+emojis.1f633.name: Покрасневшее лицо
+emojis.1f633.keywords: dazed,face,flushed
+emojis.1f61e.name: Расстроенное лицо
+emojis.1f61e.keywords: disappointed,face
+emojis.1f61f.name: Обеспокоенное лицо
+emojis.1f61f.keywords: лицо,обеспокоенное
+emojis.1f620.name: Сердитое лицо
+emojis.1f620.keywords: angry,face,mad
+emojis.1f621.name: Разгневанное лицо
+emojis.1f621.keywords: angry,face,mad,pouting,rage,red
+emojis.1f92c.name: Проклятия
+emojis.1f92c.keywords: cursing,swearing,cussing
+emojis.1f614.name: Задумчивое лицо
+emojis.1f614.keywords: dejected,face,pensive
+emojis.1f615.name: Растерянное лицо
+emojis.1f615.keywords: confused,face
+emojis.1f641.name: Слегка нахмурившееся лицо
+emojis.1f641.keywords: face,frown,sad,unhappy
+emojis.2639.name: Нахмурившееся лицо
+emojis.2639.keywords: face,frown,sad,unhappy
+emojis.1f623.name: Лицо, выражающее настойчивость
+emojis.1f623.keywords: face,persevere
+emojis.1f616.name: Смущенное лицо
+emojis.1f616.keywords: смущенное,лицо
+emojis.1f62b.name: Уставшее лицо 
+emojis.1f62b.keywords: лицо,уставшее
+emojis.1f629.name: Усталое лицо
+emojis.1f629.keywords: face,tired,weary
+emojis.1f624.name: Надменное лицо
+emojis.1f624.keywords: face,triumph,won
+emojis.1f62e.name: Лицо с открытым ртом
+emojis.1f62e.keywords: face,mouth,open,sympathy
+emojis.1f631.name: Лицо, кричащее от страха
+emojis.1f631.keywords: face,fear,fearful,munch,scared,scream
+emojis.1f628.name: Испуганное лицо
+emojis.1f628.keywords: face,fear,fearful,scared
+emojis.1f630.name: Лицо с открытым ртом в холодном поту
+emojis.1f630.keywords: blue,cold,face,mouth,open,rushed,sweat
+emojis.1f62f.name: Удивленное лицо
+emojis.1f62f.keywords: face,hushed,stunned,surprised
+emojis.1f626.name: Нахмурившееся лицо с открытым ртом
+emojis.1f626.keywords: face,frown,mouth,open
+emojis.1f627.name: Лицо, выражающее страдание
+emojis.1f627.keywords: anguished,face
+emojis.1f622.name: Плачущее лицо 
+emojis.1f622.keywords: cry,face,sad,tear
+emojis.1f625.name: Лицо, выражающее одновременно разочарование и облегчение
+emojis.1f625.keywords: disappointed,face,relieved,whew
+emojis.1f62a.name: Сонное лицо
+emojis.1f62a.keywords: лицо,сон
+emojis.1f924.name: Истекающее слюной лицо
+emojis.1f924.keywords: drooling,face
+emojis.1f613.name: Лицо в холодном поту
+emojis.1f613.keywords: cold,face,sweat
+emojis.1f62d.name: Рыдающее лицо
+emojis.1f62d.keywords: cry,face,sad,sob,tear
+emojis.1f929.name: Радостное возбуждение
+emojis.1f929.keywords: eyes,face,grinning,star,starry eyed
+emojis.1f635.name: Условное\nобозначение головокружения
+emojis.1f635.keywords: головокружение,лицо
+emojis.1f632.name: Удивлённое лицо
+emojis.1f632.keywords: astonished,face,shocked,totally
+emojis.1f92f.name: Взрыв мозга
+emojis.1f92f.keywords: face,shocked,explosion,mad,mind blowing
+emojis.1f910.name: Лицо с застежкой-молнией вместо рта
+emojis.1f910.keywords: face,mouth,zipper
+emojis.1f637.name: Лицо в медицинской маске
+emojis.1f637.keywords: cold,doctor,face,mask,medicine,sick
+emojis.1f915.name: Перебинтованный смайлик
+emojis.1f915.keywords: bandage,face,hurt,injury
+emojis.1f912.name: Лицо с градусником
+emojis.1f912.keywords: face,ill,sick,thermometer
+emojis.1f92e.name: Рвота
+emojis.1f92e.keywords: sick,vomit,ill,puke
+emojis.1f922.name: Отвращающееся лицо
+emojis.1f922.keywords: face,nauseated,vomit
+emojis.1f927.name: Чихающее лицо
+emojis.1f927.keywords: face,gesundheit,sneeze
+emojis.1f634.name: Сонное лицо
+emojis.1f634.keywords: face,sleep,zzz
+emojis.1f4a4.name: Символ сна
+emojis.1f4a4.keywords: comic,sleep,zzz
+emojis.1f608.name: Улыбающееся лицо с рожками
+emojis.1f608.keywords: face,fairy tale,fantasy,horns,smile
+emojis.1f47f.name: Чертёнок
+emojis.1f47f.keywords: demon,devil,face,fairy tale,fantasy,imp
+emojis.1f479.name: Японский великан-людоед
+emojis.1f479.keywords: creature,face,fairy tale,fantasy,japanese,monster,ogre
+emojis.1f47a.name: Японский гоблин
+emojis.1f47a.keywords: creature,face,fairy tale,fantasy,goblin,japanese,monster
+emojis.1f4a9.name: Кучка экскрементов
+emojis.1f4a9.keywords: comic,dung,face,monster,poo,poop
+emojis.1f47b.name: Привидение
+emojis.1f47b.keywords: creature,face,fairy tale,fantasy,ghost,monster
+emojis.1f480.name: Череп
+emojis.1f480.keywords: body,death,face,fairy tale,monster,skull
+emojis.2620.name: Череп и скрещенные кости
+emojis.2620.keywords: body,crossbones,death,face,monster,skull
+emojis.1f47d.name: Инопланетянин
+emojis.1f47d.keywords: alien,creature,extraterrestrial,face,fairy tale,fantasy,monster,space,ufo
+emojis.1f916.name: Голова робота
+emojis.1f916.keywords: face,monster,robot
+emojis.1f383.name: Фонарь из тыквы
+emojis.1f383.keywords: activity,celebration,entertainment,halloween,jack,lantern,pumpkin
+emojis.1f63a.name: Улыбающийся кот с открытым ртом
+emojis.1f63a.keywords: cat,face,mouth,open,smile
+emojis.1f638.name: Усмехающаяся кошачья мордочка
+emojis.1f638.keywords: cat,eye,face,grin,smile
+emojis.1f639.name: Смеющаяся до слез кошачья мордочка
+emojis.1f639.keywords: cat,face,joy,tear
+emojis.1f63b.name: Улыбающаяся морда кота с глазами в форме сердечек
+emojis.1f63b.keywords: cat,eye,face,heart,love,smile
+emojis.1f63c.name: Морда кота с перекошенной улыбкой 
+emojis.1f63c.keywords: cat,face,ironic,smile,wry
+emojis.1f63d.name: Целующаяся морда кота с закрытыми глазами
+emojis.1f63d.keywords: cat,eye,face,kiss
+emojis.1f640.name: Зевающая кошка
+emojis.1f640.keywords: cat,face,oh,surprised,weary
+emojis.1f63f.name: Плачущая кошачья мордочка
+emojis.1f63f.keywords: cat,cry,face,sad,tear
+emojis.1f63e.name: Недовольный кот
+emojis.1f63e.keywords: cat,face,pouting
+emojis.1f450.name: Открытые руки
+emojis.1f450.keywords: body,hand,open
+emojis.1f932.name: Сведенные ладони
+emojis.1f932.keywords: prayer,cupped hands
+emojis.1f64c.name: Руки, поднятые в знак радости
+emojis.1f64c.keywords: body,celebration,gesture,hand,hooray,raised
+emojis.1f44f.name: Знак аплодисментов 
+emojis.1f44f.keywords: clapping hands,body,clap,hand
+emojis.1f64f.name: Сложенные вместе руки
+emojis.1f64f.keywords: ask,body,bow,folded,gesture,hand,please,pray,thanks
+emojis.1f91d.name: Рукопожатие
+emojis.1f91d.keywords: agreement,hand,handshake,meeting,shake
+emojis.1f44d.name: Палец вверх
+emojis.1f44d.keywords: body,up,hand,thumb,thumbs up,+1
+emojis.1f44e.name: Большой палец, направленный вниз
+emojis.1f44e.keywords: body,down,hand,thumb,thumbs down,-1
+emojis.1f44a.name: Кулак
+emojis.1f44a.keywords: body,clenched,fist,hand,punch
+emojis.270a.name: Поднятый кулак
+emojis.270a.keywords: body,clenched,fist,hand,punch
+emojis.1f91b.name: Кулак, направленный влево
+emojis.1f91b.keywords: кулак,влево
+emojis.1f91c.name: Кулак, направленный вправо
+emojis.1f91c.keywords: кулак,вправо
+emojis.1f91e.name: Рука со скрещёнными указательным и средним пальцами
+emojis.1f91e.keywords: cross,finger,hand,luck
+emojis.270c.name: Победный жест
+emojis.270c.keywords: body,hand,v,victory
+emojis.1f918.name: Жест «Коза»
+emojis.1f918.keywords: body,finger,hand,horns,rock-on
+emojis.1f91f.name: Жест «Коза»
+emojis.1f91f.keywords: ily,i love you,hand
+emojis.1f44c.name: Жест «ОК»
+emojis.1f44c.keywords: body,hand,ok
+emojis.1f448.name: Указательный палец, направленный влево
+emojis.1f448.keywords: backhand,body,finger,hand,index,point
+emojis.1f449.name: Указательный палец, направленный вправо
+emojis.1f449.keywords: backhand,body,finger,hand,index,point
+emojis.1f446.name: Палец, указывающий вверх
+emojis.1f446.keywords: backhand,body,finger,hand,index,point,up
+emojis.1f447.name: Указательный палец, направленный вниз
+emojis.1f447.keywords: backhand,body,down,finger,hand,index,point
+emojis.261d.name: Указательный палец, направленный вверх
+emojis.261d.keywords: body,finger,hand,index,point,up
+emojis.270b.name: Поднятая рука
+emojis.270b.keywords: тело,рука
+emojis.1f91a.name: Поднятая тыльная сторона ладони
+emojis.1f91a.keywords: backhand,raised
+emojis.1f590.name: Ладонь с растопыренными пальцами
+emojis.1f590.keywords: body,finger,hand,splayed
+emojis.1f596.name: Вулканский салют
+emojis.1f596.keywords: body,finger,hand,spock,vulcan
+emojis.1f44b.name: Приветственный жест рукой
+emojis.1f44b.keywords: body,hand,wave,waving
+emojis.1f919.name: Жест «позвони мне»
+emojis.1f919.keywords: call,hand
+emojis.1f4aa.name: Согнутый бицепс
+emojis.1f4aa.keywords: biceps,body,comic,flex,muscle
+emojis.1f595.name: Рука с выставленным средним пальцем
+emojis.1f595.keywords: body,finger,hand,middle finger
+emojis.270d.name: Пишущая рука
+emojis.270d.keywords: тело,рука,писать
+emojis.1f933.name: Селфи
+emojis.1f933.keywords: camera,phone,selfie
+emojis.1f485.name: Лак для ногтей
+emojis.1f485.keywords: body,care,cosmetics,manicure,nail,polish
+emojis.1f444.name: Рот
+emojis.1f444.keywords: тело,губы,рот
+emojis.1f445.name: Язык
+emojis.1f445.keywords: тело,язык
+emojis.1f442.name: Ухо
+emojis.1f442.keywords: тело,нос
+emojis.1f443.name: Нос
+emojis.1f443.keywords: тело,нос
+emojis.1f441.name: Глаз
+emojis.1f441.keywords: тело,глаз
+emojis.1f440.name: Глаза
+emojis.1f440.keywords: тело,глаз,лицо
+emojis.1f9e0.name: Мозг
+emojis.1f9e0.keywords: body,organ,intelligent,smart
+emojis.1f464.name: Силуэт головы
+emojis.1f464.keywords: bust,silhouette
+emojis.1f465.name: Силуэты голов
+emojis.1f465.keywords: bust,silhouette
+emojis.1f5e3.name: Силуэт говорящей головы
+emojis.1f5e3.keywords: face,head,silhouette,speak,speaking
+emojis.1f476.name: Младенец 
+emojis.1f476.keywords: baby
+emojis.1f9d2.name: Ребенок
+emojis.1f9d2.keywords: person,child,boy,girl
+emojis.1f466.name: Мальчик
+emojis.1f466.keywords: boy,child
+emojis.1f467.name: Девочка
+emojis.1f467.keywords: girl,maiden,virgin,virgo,zodiac,child
+emojis.1f9d1.name: Взрослый
+emojis.1f9d1.keywords: person,adult,man,woman,male,female,men,women
+emojis.1f468.name: Мужчина
+emojis.1f468.keywords: man,mustache,male,men
+emojis.1f9d4.name: Мужчина с бородой
+emojis.1f9d4.keywords: beard,bewhiskered,man,male,men
+emojis.1f471-200d-2642-fe0f.name: Блондин
+emojis.1f471-200d-2642-fe0f.keywords: блондин,светлые,волосы,мужчина,мужской пол,мужчины
+emojis.1f471.name: Блондин
+emojis.1f471.keywords: блондин,светлые,волосы,мужчина,мужской пол,мужчины
+emojis.1f469.name: Женщина
+emojis.1f469.keywords: woman,female,women
+emojis.1f471-200d-2640-fe0f.name: Блондинка
+emojis.1f471-200d-2640-fe0f.keywords: блондинка,светлые,волосы,женщина,женский пол,женщины
+emojis.1f9d3.name: Пожилой человек
+emojis.1f9d3.keywords: person,old,man,woman,male,female,men,women
+emojis.1f474.name: Пожилой мужчина
+emojis.1f474.keywords: пожилой,мужчина,мужской пол,мужчины
+emojis.1f475.name: Пожилая женщина
+emojis.1f475.keywords: пожилая,женщина,женский пол,женщины
+emojis.1f472.name: Человек в китайской шапочке
+emojis.1f472.keywords: китайская,шапочка,мужчина,мужской пол,мужчины
+emojis.1f473-200d-2640-fe0f.name: Женщина в тюрбане
+emojis.1f473-200d-2640-fe0f.keywords: тюрбан,женщина,женский,женский пол,женщины
+emojis.1f473-200d-2642-fe0f.name: Мужчина в тюрбане
+emojis.1f473-200d-2642-fe0f.keywords: тюрбан,мужчина,мужской,мужской пол,мужчины
+emojis.1f473.name: Мужчина в тюрбане
+emojis.1f473.keywords: тюрбан,мужчина,мужской,мужской пол,мужчины
+emojis.1f9d5.name: Женщина в хиджабе
+emojis.1f9d5.keywords: headscarf,hijab,mantilla,tichel,bandana,head kerchief,woman,female,women
+emojis.1f46e-200d-2640-fe0f.name: Женщина-полицейский
+emojis.1f46e-200d-2640-fe0f.keywords: полицейский,сотрудница,полиция,женщина,женский пол,женщины
+emojis.1f46e-200d-2642-fe0f.name: Полицейский
+emojis.1f46e-200d-2642-fe0f.keywords: полицейский,сотрудник,полиция,мужчина,мужской пол,мужчины
+emojis.1f46e.name: Полицейский
+emojis.1f46e.keywords: полицейский,сотрудник,полиция,мужчина,мужской пол,мужчины
+emojis.1f469-200d-1f692.name: Женщина-пожарный
+emojis.1f469-200d-1f692.keywords: пожар,пожарный,женщина,женский пол,женщины
+emojis.1f468-200d-1f692.name: Пожарный
+emojis.1f468-200d-1f692.keywords: пожар,пожарный,мужчина,мужской пол,мужчины
+emojis.1f477-200d-2640-fe0f.name: Женщина-строитель
+emojis.1f477-200d-2640-fe0f.keywords: строитель,женщина,женский пол,женщины
+emojis.1f477-200d-2642-fe0f.name: Строитель
+emojis.1f477-200d-2642-fe0f.keywords: construction,worker
+emojis.1f477.name: Строитель
+emojis.1f477.keywords: construction,worker
+emojis.1f469-200d-1f3ed.name: Работница
+emojis.1f469-200d-1f3ed.keywords: завод,фабрика,промышленное предприятие,сварщица,женщина,женский пол,женщины
+emojis.1f468-200d-1f3ed.name: Рабочий
+emojis.1f468-200d-1f3ed.keywords: завод,фабрика,промышленное предприятие,сварщик,мужчина,мужской пол,мужчины
+emojis.1f469-200d-1f527.name: Женщина-механик
+emojis.1f469-200d-1f527.keywords: мастер,водопроводчик,сантехник,электрик,ремонтник,женщина,женский пол,женщины
+emojis.1f468-200d-1f527.name: Механик
+emojis.1f468-200d-1f527.keywords: мастер,водопроводчик,сантехник,электрик,ремонтник,мужчина,мужской пол,мужчины
+emojis.1f469-200d-1f33e.name: Фермерша
+emojis.1f469-200d-1f33e.keywords: работница фермы,фермер,садовница,сельское хозяйство,женщина,женский пол,женщины
+emojis.1f468-200d-1f33e.name: Фермер
+emojis.1f468-200d-1f33e.keywords: работник фермы,фермер,садовник,сельское хозяйство,мужчина,мужской пол,мужчины
+emojis.1f469-200d-1f373.name: Повариха
+emojis.1f469-200d-1f373.keywords: еда,обслуживание,шеф,повар,кулинария,приготовление пищи,готовка,женщина,женский пол,женщины
+emojis.1f468-200d-1f373.name: Повар
+emojis.1f468-200d-1f373.keywords: еда,обслуживание,шеф,повар,кулинария,приготовление пищи,готовка,мужчина,мужской пол,мужчины
+emojis.1f469-200d-1f3a4.name: Певица
+emojis.1f469-200d-1f3a4.keywords: музыка,музыкант,рокер,рок-звезда,естрадная артистка,женщина,женский пол,женщины
+emojis.1f468-200d-1f3a4.name: Певец
+emojis.1f468-200d-1f3a4.keywords: музыка,музыкант,рокер,рок-звезда,эстрадный артист,мужчина,мужской пол,мужчины
+emojis.1f469-200d-1f3a8.name: Художница
+emojis.1f469-200d-1f3a8.keywords: искусство,художница,краска,живописец,женщина,женский пол,женщины
+emojis.1f468-200d-1f3a8.name: Художник
+emojis.1f468-200d-1f3a8.keywords: искусство,художник,краска,живописец,мужчина,мужской пол,мужчины
+emojis.1f469-200d-1f3eb.name: Учительница
+emojis.1f469-200d-1f3eb.keywords: образование,учительница,преподавательница,воспитательница,педагог,инструктор,женщина,женский пол,женщины
+emojis.1f468-200d-1f3eb.name: Учитель
+emojis.1f468-200d-1f3eb.keywords: образование,учитель,преподаватель,воспитатель,педагог,инструктор,мужчина,мужской пол,мужчины
+emojis.1f469-200d-1f393.name: Студентка
+emojis.1f469-200d-1f393.keywords: ученица,выпускница,образование,школа,женщина,женский пол,женщины
+emojis.1f468-200d-1f393.name: Студент
+emojis.1f468-200d-1f393.keywords: ученик,выпускник,образование,школа,мужчина,мужской пол,мужчины
+emojis.1f469-200d-1f4bc.name: Офисная сотрудница
+emojis.1f469-200d-1f4bc.keywords: офис,бухгалтер,банкир,менеджер,консультант,делопроизводитель,клерк,аналитик,женщина,женский пол,женщины
+emojis.1f468-200d-1f4bc.name: Офисный сотрудник
+emojis.1f468-200d-1f4bc.keywords: офис,бухгалтер,банкир,менеджер,консультант,делопроизводитель,клерк,аналитик,мужчина,мужской пол,мужчины
+emojis.1f469-200d-1f4bb.name: Женщина — технический специалист
+emojis.1f469-200d-1f4bb.keywords: технологии,программное обеспечение,инженер,программист,кодировщик,ноутбук,женщина,женский пол,женщины
+emojis.1f468-200d-1f4bb.name: Технический специалист
+emojis.1f468-200d-1f4bb.keywords: технологии,программное обеспечение,инженер,программист,кодировщик,ноутбук,мужчина,мужской пол,мужчины
+emojis.1f469-200d-1f52c.name: Женщина-ученый
+emojis.1f469-200d-1f52c.keywords: ученый,химик,инженер,математик,физик,биолог,лаборант,женщина,женский пол,женщины
+emojis.1f468-200d-1f52c.name: Ученый
+emojis.1f468-200d-1f52c.keywords: ученый,химик,инженер,математик,физик,биолог,лаборант,мужчина,мужской пол,мужчины
+emojis.1f469-200d-1f680.name: Женщина-космонавт
+emojis.1f469-200d-1f680.keywords: космос,звезды,луна,планеты,женщина,женский пол,женщины
+emojis.1f468-200d-1f680.name: Космонавт
+emojis.1f468-200d-1f680.keywords: космос,звезды,луна,планеты,мужчина,мужской пол,мужчины
+emojis.1f469-200d-2695-fe0f.name: Женщина-медработник
+emojis.1f469-200d-2695-fe0f.keywords: доктор,врач,доктор медицины,медсестра,стоматолог,работница здравоохранения,терапевт,женщина,женский пол,женщины
+emojis.1f468-200d-2695-fe0f.name: Медработник
+emojis.1f468-200d-2695-fe0f.keywords: доктор,врач,доктор медицины,медбрат,стоматолог,работник здравоохранения,терапевт,мужчина,мужской пол,мужчины
+emojis.1f469-200d-2696-fe0f.name: Женщина-судья
+emojis.1f469-200d-2696-fe0f.keywords: судья,суд,закон,женщина,женский пол,женщины
+emojis.1f468-200d-2696-fe0f.name: Судья
+emojis.1f468-200d-2696-fe0f.keywords: судья,суд,закон,мужчина,мужской пол,мужчины
+emojis.1f469-200d-2708-fe0f.name: Летчица
+emojis.1f469-200d-2708-fe0f.keywords: пилот,самолет,летчица,авиатор,авиация,женщина,женский пол,женщины
+emojis.1f468-200d-2708-fe0f.name: Летчик
+emojis.1f468-200d-2708-fe0f.keywords: пилот,самолет,летчица,авиатор,авиация,мужчина,мужской пол,мужчины
+emojis.1f482-200d-2640-fe0f.name: Женщина-гвардеец
+emojis.1f482-200d-2640-fe0f.keywords: гвардия,гвардеец,женщина,женский пол,женщины
+emojis.1f482-200d-2642-fe0f.name: Гвардеец
+emojis.1f482-200d-2642-fe0f.keywords: гвардия,гвардеец,мужчина,мужской пол,мужчины
+emojis.1f482.name: Гвардеец
+emojis.1f482.keywords: гвардия,гвардеец,мужчина,мужской пол,мужчины
+emojis.1f575-fe0f-200d-2640-fe0f.name: Сыщица
+emojis.1f575-fe0f-200d-2640-fe0f.keywords: детектив,сыщица,шпионка,женщина,женский пол,женщины
+emojis.1f575-fe0f-200d-2642-fe0f.name: Сыщик
+emojis.1f575-fe0f-200d-2642-fe0f.keywords: детектив,сыщик,шпион,мужчина,мужской пол,мужчины
+emojis.1f575.name: Сыщик или шпион
+emojis.1f575.keywords: детектив,сыщик,шпион,мужчина,мужской пол,мужчины
+emojis.1f385.name: Дед Мороз
+emojis.1f385.keywords: activity,celebration,christmas,father,santa,claus,man,male,men
+emojis.1f936.name: Миссис Клаус
+emojis.1f936.keywords: activity,celebration,christmas,mother,mrs. claus,santa,claus,woman,female,women
+emojis.1f47c.name: Ангелочек
+emojis.1f47c.keywords: angel,baby,face,fairy tale,fantasy
+emojis.1f478.name: Принцесса
+emojis.1f478.keywords: сказка,фэнтези,принцесса,женщина,женский пол,женщины
+emojis.1f934.name: Принц
+emojis.1f934.keywords: сказка,фэнтези,принц,мужчина,мужской пол,мужчины
+emojis.1f470.name: Невеста с фатой
+emojis.1f470.keywords: невеста,фата,свадьба,женщина,женский пол,женщины
+emojis.1f935.name: Человек в смокинге
+emojis.1f935.keywords: жених,смокинг,мужчина,мужской пол,мужчины
+emojis.1f574.name: Левитирующий мужчина в костюме
+emojis.1f574.keywords: бизнес,костюм,мужчина,мужской,мужской пол,мужчины
+emojis.1f9d9.name: Волшебник
+emojis.1f9d9.keywords: fantasy,sorcerer,wizard,man,male,men
+emojis.1f9d9-200d-2640-fe0f.name: Волшебница
+emojis.1f9d9-200d-2640-fe0f.keywords: fantasy,sorceress,witch,woman,female,women
+emojis.1f9d9-200d-2642-fe0f.name: Волшебник
+emojis.1f9d9-200d-2642-fe0f.keywords: fantasy,sorcerer,wizard,man,male,men
+emojis.1f9dd.name: Эльф
+emojis.1f9dd.keywords: fantasy,elf,pointed ears,man,male,men
+emojis.1f9dd-200d-2640-fe0f.name: Женщина-эльф
+emojis.1f9dd-200d-2640-fe0f.keywords: fantasy,elf,pointed ears,woman,female,women
+emojis.1f9dd-200d-2642-fe0f.name: Мужчина-эльф
+emojis.1f9dd-200d-2642-fe0f.keywords: fantasy,elf,pointed ears,man,male,men
+emojis.1f9da.name: Фея
+emojis.1f9da.keywords: fantasy,titania,wings,woman,female,women
+emojis.1f9da-200d-2640-fe0f.name: Фея
+emojis.1f9da-200d-2640-fe0f.keywords: fantasy,titania,wings,woman,female,women
+emojis.1f9da-200d-2642-fe0f.name: Мужчина-фея
+emojis.1f9da-200d-2642-fe0f.keywords: fantasy,oberon,puck,man,male,men
+emojis.1f9de.name: Джинн
+emojis.1f9de.keywords: fantasy,djinn,man,male,men
+emojis.1f9de-200d-2640-fe0f.name: Джинири
+emojis.1f9de-200d-2640-fe0f.keywords: fantasy,djinn,woman,female,women
+emojis.1f9de-200d-2642-fe0f.name: Джинн
+emojis.1f9de-200d-2642-fe0f.keywords: fantasy,djinn,man,male,men
+emojis.1f9dc.name: Тритон или русалка
+emojis.1f9dc.keywords: fantasy,merman,man,male,men
+emojis.1f9dc-200d-2640-fe0f.name: Русалка
+emojis.1f9dc-200d-2640-fe0f.keywords: fantasy,merwoman,woman,female,women
+emojis.1f9dc-200d-2642-fe0f.name: Тритон
+emojis.1f9dc-200d-2642-fe0f.keywords: fantasy,merman,man,male,men
+emojis.1f9db.name: Вампир
+emojis.1f9db.keywords: fantasy,dracula,undead,man,male,men
+emojis.1f9db-200d-2640-fe0f.name: Женщина-вампир
+emojis.1f9db-200d-2640-fe0f.keywords: fantasy,unded,woman,female,women
+emojis.1f9db-200d-2642-fe0f.name: Мужчина-вампир
+emojis.1f9db-200d-2642-fe0f.keywords: fantasy,dracula,undead,man,male,men
+emojis.1f9df.name: Зомби
+emojis.1f9df.keywords: fantasy,undead,man,male,men
+emojis.1f9df-200d-2640-fe0f.name: Женщина-зомби
+emojis.1f9df-200d-2640-fe0f.keywords: fantasy,undead,woman,female,women
+emojis.1f9df-200d-2642-fe0f.name: Мужчина-зомби
+emojis.1f9df-200d-2642-fe0f.keywords: fantasy,undead,man,male,men
+emojis.1f647-200d-2640-fe0f.name: Кланяющаяся женщина
+emojis.1f647-200d-2640-fe0f.keywords: apology,bow,gesture,sorry,woman,female,women
+emojis.1f647-200d-2642-fe0f.name: Кланяющийся мужчина
+emojis.1f647-200d-2642-fe0f.keywords: apology,bow,gesture,sorry,man,male,men
+emojis.1f647.name: Низко кланяющийся человек
+emojis.1f647.keywords: apology,bow,gesture,sorry,man,male,men
+emojis.1f481.name: Сотрудница стола справок
+emojis.1f481.keywords: hand,help,information,sassy,woman,female,women
+emojis.1f481-200d-2640-fe0f.name: Женщина с ладонью наотлет
+emojis.1f481-200d-2640-fe0f.keywords: hand,help,information,sassy,woman,female,women
+emojis.1f481-200d-2642-fe0f.name: Мужчина с ладонью наотлет
+emojis.1f481-200d-2642-fe0f.keywords: hand,help,information,sassy,man,male,men
+emojis.1f645.name: Человек, делающий жест отрицания
+emojis.1f645.keywords: forbidden,gesture,hand,no,not,prohibited,woman,female,women
+emojis.1f645-200d-2640-fe0f.name: Женщина, делающая жест несогласия
+emojis.1f645-200d-2640-fe0f.keywords: forbidden,gesture,hand,no,not,prohibited,woman,female,women
+emojis.1f645-200d-2642-fe0f.name: Мужчина, делающий жест несогласия
+emojis.1f645-200d-2642-fe0f.keywords: forbidden,gesture,hand,no,not,prohibited,man,male,men
+emojis.1f646.name: Женщина, делающая жест согласия
+emojis.1f646.keywords: жест,рука,ок,женщина,женский,женщины
+emojis.1f646-200d-2640-fe0f.name: Женщина, делающая жест согласия
+emojis.1f646-200d-2640-fe0f.keywords: жест,рука,ок,женщина,женский,женщины
+emojis.1f646-200d-2642-fe0f.name: Мужчина, делающий жест согласия
+emojis.1f646-200d-2642-fe0f.keywords: жест,рука,ok,ок,согласие,мужчина,мужской пол,мужчины
+emojis.1f937.name: Даже не знаю...
+emojis.1f937.keywords: сомнение,невежество,равнодушие,пожимание плечами,женщина,женский,женщины
+emojis.1f937-200d-2640-fe0f.name: Женщина, пожимающая плечами
+emojis.1f937-200d-2640-fe0f.keywords: сомнение,невежество,равнодушие,пожимание плечами,женщина,женский,женщины
+emojis.1f937-200d-2642-fe0f.name: Мужчина, пожимающий плечами
+emojis.1f937-200d-2642-fe0f.keywords: сомнение,невежество,равнодушие,пожимание плечами,мужчина,мужской,мужчины
+emojis.1f64b.name: Счастливый человек, поднимающий руку
+emojis.1f64b.keywords: жест,рука,счастливый,поднятая,женщина,женский,женщины
+emojis.1f64b-200d-2640-fe0f.name: Женщина, поднимающая руку
+emojis.1f64b-200d-2640-fe0f.keywords: жест,рука,счастливый,поднятая,женщина,женский,женщины
+emojis.1f64b-200d-2642-fe0f.name: Мужчина,  поднимающий руку
+emojis.1f64b-200d-2642-fe0f.keywords: жест,рука,счастливый,поднятая,мужчина,мужской пол,мужчины
+emojis.1f926.name: Фэйспалм
+emojis.1f926.keywords: disbelief,exasperation,face,palm,woman,female,women
+emojis.1f926-200d-2640-fe0f.name: Женщина, закрывающая лицо рукой
+emojis.1f926-200d-2640-fe0f.keywords: disbelief,exasperation,face,palm,woman,female,women
+emojis.1f926-200d-2642-fe0f.name: Мужчина, закрывающий лицо рукой
+emojis.1f926-200d-2642-fe0f.keywords: disbelief,exasperation,face,palm,man,male,men
+emojis.1f64e.name: Недовольная женщина
+emojis.1f64e.keywords: gesture,pouting,woman,female,women
+emojis.1f64e-200d-2640-fe0f.name: Женщина с надутыми губами
+emojis.1f64e-200d-2640-fe0f.keywords: gesture,pouting,woman,female,women
+emojis.1f64e-200d-2642-fe0f.name: Мужчина с надутыми губами
+emojis.1f64e-200d-2642-fe0f.keywords: gesture,pouting,man,male,men
+emojis.1f64d.name: Нахмурившаяся женщина
+emojis.1f64d.keywords: frown,gesture,woman,female,women
+emojis.1f64d-200d-2640-fe0f.name: Нахмурившаяся женщина
+emojis.1f64d-200d-2640-fe0f.keywords: frown,gesture,woman,female,women
+emojis.1f64d-200d-2642-fe0f.name: Нахмурившийся мужчина
+emojis.1f64d-200d-2642-fe0f.keywords: frown,gesture,man,male,men
+emojis.1f487.name: Стрижка
+emojis.1f487.keywords: парикмахер,красота,стрижка,парикмахерская,женщина,женский пол,женщины
+emojis.1f487-200d-2640-fe0f.name: Женщина в парикмахерской
+emojis.1f487-200d-2640-fe0f.keywords: парикмахер,красота,стрижка,парикмахерская,женщина,женский пол,женщины
+emojis.1f487-200d-2642-fe0f.name: Мужчина в парикмахерской
+emojis.1f487-200d-2642-fe0f.keywords: парикмахер,красота,стрижка,парикмахерская,мужчина,мужской пол,мужчины
+emojis.1f486.name: Массаж головы
+emojis.1f486.keywords: массаж,массажный салон,женщина,женский,женский пол,женщины
+emojis.1f486-200d-2640-fe0f.name: Женщина, которой делают массаж лица
+emojis.1f486-200d-2640-fe0f.keywords: массаж,массажный салон,женщина,женский,женский пол,женщины
+emojis.1f486-200d-2642-fe0f.name: Мужчина, которому делают массаж лица
+emojis.1f486-200d-2642-fe0f.keywords: массаж,массажный салон,мужчина,мужской пол,мужчины
+emojis.1f930.name: Беременная женщина
+emojis.1f930.keywords: pregnant,baby,woman,female,women
+emojis.1f931.name: Breastfeeding
+emojis.1f931.keywords: breast,baby,infant,mother,child,nursing,milk,woman,female,women
+emojis.1f6b6-200d-2640-fe0f.name: Идущая женщина
+emojis.1f6b6-200d-2640-fe0f.keywords: поход,пеший,пешеход,ходить,гулять,ходьба,женщина,женский пол,женщины
+emojis.1f6b6-200d-2642-fe0f.name: Идущий мужчина
+emojis.1f6b6-200d-2642-fe0f.keywords: поход,пеший,пешеход,ходить,гулять,ходьба,мужчина,мужской пол,мужчины
+emojis.1f6b6.name: Пешеход
+emojis.1f6b6.keywords: поход,пеший,пешеход,ходить,гулять,ходьба,мужчина,мужской пол,мужчины
+emojis.1f3c3-200d-2640-fe0f.name: Бегунья
+emojis.1f3c3-200d-2640-fe0f.keywords: марафон,бегунья,бег,женщина,женский пол,женщины
+emojis.1f3c3-200d-2642-fe0f.name: Бегун
+emojis.1f3c3-200d-2642-fe0f.keywords: марафон,бегун,бег,мужчина,мужской пол,мужчины
+emojis.1f3c3.name: Бегун
+emojis.1f3c3.keywords: марафон,бегун,бег,мужчина,мужской пол,мужчины
+emojis.1f483.name: Танцовщица
+emojis.1f483.keywords: танец,танцы,танцевать,танцовщица,женщина,женский пол,женщины
+emojis.1f57a.name: Танцующий человек
+emojis.1f57a.keywords: танец,танцы,танцевать,танцор,мужчина,мужской пол,мужчины
+emojis.1f46f.name: Женщины с заячьими ушками
+emojis.1f46f.keywords: зайчик,танцовщица,женщина,женский пол,женщины
+emojis.1f46f-200d-2640-fe0f.name: Женщины с заячьими ушками
+emojis.1f46f-200d-2640-fe0f.keywords: зайчик,танцовщица,женщина,женский пол,женщины
+emojis.1f46f-200d-2642-fe0f.name: Мужчины с заячьими ушками
+emojis.1f46f-200d-2642-fe0f.keywords: зайчик,танцор,мужчина,мужской пол,мужчины
+emojis.1f46b.name: Мужчина и женщина, держащиеся за руки
+emojis.1f46b.keywords: пара,рука,держать,мужчина,женщина,мужской пол,женский пол,мужчины,женщины
+emojis.1f46c.name: Двое мужчин держатся за руки
+emojis.1f46c.keywords: пара,рука,держать,мужчина,мужской пол,мужчины
+emojis.1f46d.name: Две девушки держатся за руки
+emojis.1f46d.keywords: пара,рука,держать,женщина,женская,женский пол,женщины
+emojis.1f491.name: Пара с сердцем
+emojis.1f491.keywords: пара,сердце,любовь,романтика,мужчина,женщина,мужской пол,женский пол,мужчины,женщины
+emojis.1f469-200d-2764-fe0f-200d-1f469.name: Влюбленная пара (женщина, женщина)
+emojis.1f469-200d-2764-fe0f-200d-1f469.keywords: пара,сердце,любовь,романтика,женщина,женский пол,женщины
+emojis.1f468-200d-2764-fe0f-200d-1f468.name: Влюбленная пара (мужчина, мужчина)
+emojis.1f468-200d-2764-fe0f-200d-1f468.keywords: пара,сердце,любовь,романтика,мужчина,мужской пол,мужчины
+emojis.1f48f.name: Поцелуй 
+emojis.1f48f.keywords: пара,поцелуй,сердце,любовь,романтика,мужчина,женщина,мужской пол,женский пол,мужчины,женщины
+emojis.1f469-200d-2764-fe0f-200d-1f48b-200d-1f469.name: Поцелуй (женщина, женщина)
+emojis.1f469-200d-2764-fe0f-200d-1f48b-200d-1f469.keywords: пара,поцелуй,сердце,любовь,романтика,женщина,женский пол,женщины
+emojis.1f468-200d-2764-fe0f-200d-1f48b-200d-1f468.name: Поцелуй (мужчина, мужчина)
+emojis.1f468-200d-2764-fe0f-200d-1f48b-200d-1f468.keywords: пара,поцелуй,сердце,любовь,романтика,мужчина,мужской пол,мужчины
+emojis.1f46a.name: Семья
+emojis.1f46a.keywords: семья,отец,мать,мама,мужчина,женщина,мужской пол,женский пол,мужчины,женщины,мальчик,ребенок
+emojis.1f468-200d-1f469-200d-1f467.name: Семья (мужчина, женщина, девочка)
+emojis.1f468-200d-1f469-200d-1f467.keywords: семья,отец,мать,мама,мужчина,женщина,мужской пол,женский пол,мужчины,женщины,девочка,ребенок
+emojis.1f468-200d-1f469-200d-1f467-200d-1f466.name: Семья (мужчина, женщина, девочка, мальчик)
+emojis.1f468-200d-1f469-200d-1f467-200d-1f466.keywords: семья,отец,мать,мужчина,женщина,мужской,женский,мужчины,женщины,мальчик,девочка,ребенок
+emojis.1f468-200d-1f469-200d-1f466-200d-1f466.name: Семья (мужчина, женщина, мальчик, мальчик)
+emojis.1f468-200d-1f469-200d-1f466-200d-1f466.keywords: семья,отец,мать,мама,мужчина,женщина,мужской пол,женский пол,мужчины,женщины,мальчик,ребенок
+emojis.1f468-200d-1f469-200d-1f467-200d-1f467.name: Семья (мужчина, женщина, девочка, девочка)
+emojis.1f468-200d-1f469-200d-1f467-200d-1f467.keywords: семья,отец,мать,мужчина,женщина,мужской,женский,мужчины,женщины,девочка,ребенок
+emojis.1f469-200d-1f469-200d-1f466.name: Семья (женщина, женщина, мальчик)
+emojis.1f469-200d-1f469-200d-1f466.keywords: семья,мать,мама,женщина,женский пол,женщины,мальчик,ребенок
+emojis.1f469-200d-1f469-200d-1f467.name: Семья (женщина, женщина, девочка)
+emojis.1f469-200d-1f469-200d-1f467.keywords: семья,мать,женщина,женский,женщины,девочка,ребенок
+emojis.1f469-200d-1f469-200d-1f467-200d-1f466.name: Семья (женщина, женщина, девочка, мальчик)
+emojis.1f469-200d-1f469-200d-1f467-200d-1f466.keywords: семья,мать,мама,женщина,женский пол,женщины,мальчик,девочка,ребенок
+emojis.1f469-200d-1f469-200d-1f466-200d-1f466.name: Семья (женщина, женщина, мальчик, мальчик)
+emojis.1f469-200d-1f469-200d-1f466-200d-1f466.keywords: семья,мать,мама,женщина,женский пол,женщины,мальчик,ребенок
+emojis.1f469-200d-1f469-200d-1f467-200d-1f467.name: Семья (женщина, женщина, девочка, девочка)
+emojis.1f469-200d-1f469-200d-1f467-200d-1f467.keywords: семья,мать,женщина,женский,женщины,девочка,ребенок
+emojis.1f468-200d-1f468-200d-1f466.name: Семья (мужчина, мужчина, мальчик)
+emojis.1f468-200d-1f468-200d-1f466.keywords: семья,отец,мужчина,мужской пол,мужчины,мальчик,ребенок
+emojis.1f468-200d-1f468-200d-1f467.name: Семья (мужчина, мужчина, девочка)
+emojis.1f468-200d-1f468-200d-1f467.keywords: семья,отец,мужчина,мужской пол,мужчины,девочка,ребенок
+emojis.1f468-200d-1f468-200d-1f467-200d-1f466.name: Семья (мужчина, мужчина, девочка, мальчик)
+emojis.1f468-200d-1f468-200d-1f467-200d-1f466.keywords: семья,отец,мужчина,мужской пол,мужчины,мальчик,девочка,ребенок
+emojis.1f468-200d-1f468-200d-1f466-200d-1f466.name: Семья (мужчина, мужчина, мальчик, мальчик)
+emojis.1f468-200d-1f468-200d-1f466-200d-1f466.keywords: семья,отец,мужчина,мужской пол,мужчины,мальчик,ребенок
+emojis.1f468-200d-1f468-200d-1f467-200d-1f467.name: Семья (мужчина, мужчина, девочка, девочка)
+emojis.1f468-200d-1f468-200d-1f467-200d-1f467.keywords: семья,отец,мужчина,мужской пол,мужчины,девочка,ребенок
+emojis.1f469-200d-1f466.name: Семья (женщина, мальчик)
+emojis.1f469-200d-1f466.keywords: семья,мать,мама,женщина,женский пол,женщины,мальчик,ребенок
+emojis.1f469-200d-1f467.name: Семья (женщина, девочка)
+emojis.1f469-200d-1f467.keywords: семья,мать,женщина,женский,женщины,девочка,ребенок
+emojis.1f469-200d-1f467-200d-1f466.name: Семья (женщина, девочка, мальчик)
+emojis.1f469-200d-1f467-200d-1f466.keywords: семья,мать,мама,женщина,женский пол,мужской пол,девочка,мальчик,ребенок
+emojis.1f469-200d-1f466-200d-1f466.name: Семья (женщина, мальчик, мальчик)
+emojis.1f469-200d-1f466-200d-1f466.keywords: семья,мать,мама,женщина,женский пол,женщины,мальчик,ребенок
+emojis.1f469-200d-1f467-200d-1f467.name: Семья (женщина, девочка, девочка)
+emojis.1f469-200d-1f467-200d-1f467.keywords: семья,мать,женщина,женский,женщины,девочка,ребенок
+emojis.1f468-200d-1f466.name: Семья (мужчина, мальчик)
+emojis.1f468-200d-1f466.keywords: семья,отец,мужчина,мужской пол,мужчины,мальчик,ребенок
+emojis.1f468-200d-1f467.name: Семья (мужчина, девочка)
+emojis.1f468-200d-1f467.keywords: семья,отец,мужчина,мужской пол,женский пол,девочка,ребенок
+emojis.1f468-200d-1f467-200d-1f466.name: Семья (мужчина, девочка, мальчик)
+emojis.1f468-200d-1f467-200d-1f466.keywords: семья,отец,мужчина,мужской пол,мужчины,мальчик,девочка,ребенок
+emojis.1f468-200d-1f466-200d-1f466.name: Семья (мужчина, мальчик, мальчик)
+emojis.1f468-200d-1f466-200d-1f466.keywords: семья,отец,мужчина,мужской пол,мужчины,мальчик,ребенок
+emojis.1f468-200d-1f467-200d-1f467.name: Семья (мужчина, девочка, девочка)
+emojis.1f468-200d-1f467-200d-1f467.keywords: семья,отец,мужчина,мужской пол,женский пол,девочка,ребенок
+emojis.1f45a.name: Женская одежда
+emojis.1f45a.keywords: одежда,женщина
+emojis.1f455.name: Футболка
+emojis.1f455.keywords: одежда,рубашка,футболка
+emojis.1f9e5.name: Пальто
+emojis.1f9e5.keywords: clothing,coat,jacket
+emojis.1f456.name: Джинсы
+emojis.1f456.keywords: одежда,джинсы,штаны,брюки
+emojis.1f454.name: Галстук
+emojis.1f454.keywords: одежда,галстук
+emojis.1f457.name: Платье
+emojis.1f457.keywords: одежда,платье
+emojis.1f459.name: Бикини
+emojis.1f459.keywords: бикини,одежда,плавать
+emojis.1f458.name: Кимоно
+emojis.1f458.keywords: одежда,кимоно
+emojis.1f484.name: Губная помада
+emojis.1f484.keywords: косметика,помада,макияж
+emojis.1f48b.name: Условное обозначение поцелуя
+emojis.1f48b.keywords: heart,kiss,lips,mark,romance
+emojis.1f463.name: Следы ног
+emojis.1f463.keywords: body,clothing,footprint,print
+emojis.1f9e6.name: Носки
+emojis.1f9e6.keywords: clothing,socks,pair of
+emojis.1f460.name: Обувь на высоком каблуке
+emojis.1f460.keywords: clothing,heel,shoe,woman
+emojis.1f461.name: Босоножка
+emojis.1f461.keywords: clothing,sandal,shoe,woman
+emojis.1f462.name: Женские ботинки
+emojis.1f462.keywords: boot,clothing,shoe,woman
+emojis.1f45e.name: Мужской ботинок
+emojis.1f45e.keywords: clothing,man,shoe
+emojis.1f45f.name: Спортивная обувь
+emojis.1f45f.keywords: athletic,clothing,shoe,sneaker
+emojis.1f9e2.name: Бейсболка
+emojis.1f9e2.keywords: clothing,baseball,cap,hat
+emojis.1f452.name: Женская шляпка
+emojis.1f452.keywords: clothing,hat,woman
+emojis.1f3a9.name: Цилиндр
+emojis.1f3a9.keywords: activity,clothing,entertainment,hat,top,tophat
+emojis.1f393.name: Шляпа выпускника
+emojis.1f393.keywords: activity,cap,celebration,clothing,graduation,hat
+emojis.1f451.name: Корона
+emojis.1f451.keywords: clothing,crown,king,queen
+emojis.26d1.name: Шлем с белым крестом
+emojis.26d1.keywords: aid,cross,face,hat,helmet
+emojis.1f392.name: Школьный ранец
+emojis.1f392.keywords: activity,bag,satchel,school
+emojis.1f45d.name: Сумочка
+emojis.1f45d.keywords: bag,clothing,pouch
+emojis.1f45b.name: Кошелёк 
+emojis.1f45b.keywords: clothing,coin,purse
+emojis.1f45c.name: Сумочка
+emojis.1f45c.keywords: bag,clothing,handbag
+emojis.1f4bc.name: Портфель
+emojis.1f4bc.keywords: портфель
+emojis.1f453.name: Очки
+emojis.1f453.keywords: clothing,eye,eyeglasses,eyewear,glasses
+emojis.1f576.name: Темные солнцезащитные очки
+emojis.1f576.keywords: dark,eye,eyewear,glasses,sunglasses
+emojis.1f9e3.name: Шарф
+emojis.1f9e3.keywords: clothing,scarf,neck
+emojis.1f9e4.name: Перчатки
+emojis.1f9e4.keywords: clothing,gloves,hands
+emojis.1f48d.name: Кольцо
+emojis.1f48d.keywords: diamond,ring,romance
+emojis.1f302.name: Сложенный зонт
+emojis.1f302.keywords: clothing,rain,umbrella,weather
+emojis.2602.name: Зонт
+emojis.2602.keywords: clothing,rain,umbrella,weather
+emojis.1f3fb.name: (светлый тон кожи)
+emojis.1f3fb.keywords: emoji modifier,fitzpatrick,skin,tone
+emojis.1f3fc.name: (средний светлый тон кожи)
+emojis.1f3fc.keywords: emoji modifier,fitzpatrick,skin,tone
+emojis.1f3fd.name: (средний тон кожи)
+emojis.1f3fd.keywords: emoji modifier,fitzpatrick,skin,tone
+emojis.1f3fe.name: (средний темный тон кожи)
+emojis.1f3fe.keywords: emoji modifier,fitzpatrick,skin,tone
+emojis.1f3ff.name: (темный тон кожи)
+emojis.1f3ff.keywords: emoji modifier,fitzpatrick,skin,tone
+emojis.1f469-200d-2764-fe0f-200d-1f48b-200d-1f468.name: Поцелуй (женщина, мужчина)
+emojis.1f469-200d-2764-fe0f-200d-1f48b-200d-1f468.keywords: пара,поцелуй,сердце,любовь,романтика,мужчина,женщина,мужской пол,женский пол,мужчины,женщины
+emojis.1f469-200d-2764-fe0f-200d-1f468.name: Влюбленная пара (женщина, мужчина)
+emojis.1f469-200d-2764-fe0f-200d-1f468.keywords: пара,сердце,любовь,романтика,мужчина,женщина,мужской пол,женский пол,мужчины,женщины
+emojis.1f468-200d-1f469-200d-1f466.name: Семья (мужчина, женщина, мальчик)
+emojis.1f468-200d-1f469-200d-1f466.keywords: семья,отец,мать,мама,мужчина,женщина,мужской пол,женский пол,мужчины,женщины,мальчик,ребенок
+emojis.1f436.name: Голова собаки
+emojis.1f436.keywords: dog,face,pet
+emojis.1f431.name: Голова кошки
+emojis.1f431.keywords: cat,face,pet
+emojis.1f42d.name: Голова мыши
+emojis.1f42d.keywords: face,mouse
+emojis.1f439.name: Морда хомяка
+emojis.1f439.keywords: face,hamster,pet
+emojis.1f430.name: Голова кролика
+emojis.1f430.keywords: bunny,face,pet,rabbit
+emojis.1f43b.name: Медвежья морда
+emojis.1f43b.keywords: bear,face
+emojis.1f43c.name: Голова панды
+emojis.1f43c.keywords: face,panda
+emojis.1f428.name: Коала
+emojis.1f428.keywords: bear,koala
+emojis.1f42f.name: Голова тигра
+emojis.1f42f.keywords: face,tiger
+emojis.1f981.name: Голова льва
+emojis.1f981.keywords: голова,лев,зодиак
+emojis.1f42e.name: Морда коровы
+emojis.1f42e.keywords: cow,face
+emojis.1f437.name: Голова свиньи
+emojis.1f437.keywords: face,pig
+emojis.1f43d.name: Пятак свиньи
+emojis.1f43d.keywords: face,nose,pig
+emojis.1f438.name: Голова лягушки
+emojis.1f438.keywords: face,frog
+emojis.1f435.name: Голова обезьяны
+emojis.1f435.keywords: face,monkey
+emojis.1f648.name: Обезьяна, прикрывающая глаза
+emojis.1f648.keywords: evil,face,forbidden,gesture,monkey,no,not,prohibited,see
+emojis.1f649.name: Обезьяна, прикрывающая уши
+emojis.1f649.keywords: evil,face,forbidden,gesture,hear,monkey,no,not,prohibited
+emojis.1f64a.name: Обезьяна, прикрывающая рот
+emojis.1f64a.keywords: evil,face,forbidden,gesture,monkey,no,not,prohibited,speak
+emojis.1f412.name: Обезьяна
+emojis.1f412.keywords: обезьяна
+emojis.1f98d.name: Горилла
+emojis.1f98d.keywords: горилла
+emojis.1f414.name: Курица
+emojis.1f414.keywords: chicken
+emojis.1f427.name: Пингвин
+emojis.1f427.keywords: penguin
+emojis.1f426.name: Птица
+emojis.1f426.keywords: bird
+emojis.1f424.name: Цыплёнок
+emojis.1f424.keywords: baby,chick
+emojis.1f423.name: Вылупившийся цыплёнок
+emojis.1f423.keywords: baby,chick,hatching
+emojis.1f425.name: Цыплёнок в анфас
+emojis.1f425.keywords: baby,chick
+emojis.1f43a.name: Морда волка
+emojis.1f43a.keywords: face,wolf
+emojis.1f98a.name: Голова лисицы
+emojis.1f98a.keywords: face,fox
+emojis.1f417.name: Кабан
+emojis.1f417.keywords: boar,pig
+emojis.1f434.name: Голова лошади
+emojis.1f434.keywords: face,horse
+emojis.1f993.name: Зебра
+emojis.1f993.keywords: zebra,face
+emojis.1f992.name: Жираф
+emojis.1f992.keywords: giraffe,face
+emojis.1f98c.name: Олень
+emojis.1f98c.keywords: олень
+emojis.1f984.name: Голова единорога
+emojis.1f984.keywords: face,unicorn
+emojis.1f41d.name: Пчела
+emojis.1f41d.keywords: bee,honeybee,insect
+emojis.1f41b.name: Жук
+emojis.1f41b.keywords: жук,насекомое
+emojis.1f98b.name: Бабочка
+emojis.1f98b.keywords: butterfly,insect,pretty
+emojis.1f40c.name: Улитка
+emojis.1f40c.keywords: улитка
+emojis.1f41e.name: Божья коровка
+emojis.1f41e.keywords: beetle,insect,lady beetle,ladybird,ladybug
+emojis.1f41c.name: Муравей
+emojis.1f41c.keywords: ant,insect
+emojis.1f997.name: Крикет
+emojis.1f997.keywords: cricket,orthoptera,insect
+emojis.1f577.name: Паук
+emojis.1f577.keywords: insect,spider
+emojis.1f578.name: Паутина
+emojis.1f578.keywords: паук,паутина
+emojis.1f982.name: Скорпион
+emojis.1f982.keywords: скорпион,зодиак
+emojis.1f422.name: Черепаха
+emojis.1f422.keywords: черепаха
+emojis.1f40d.name: Змея
+emojis.1f40d.keywords: носитель,змееносец,змей,змея,зодиак
+emojis.1f98e.name: Ящерица
+emojis.1f98e.keywords: lizard,reptile
+emojis.1f980.name: Краб
+emojis.1f980.keywords: рак,краб,зодиак
+emojis.1f991.name: Кальмар
+emojis.1f991.keywords: моллюск,кальмар
+emojis.1f419.name: Осьминог
+emojis.1f419.keywords: осьминог
+emojis.1f990.name: Креветка
+emojis.1f990.keywords: shellfish,shrimp,small
+emojis.1f420.name: Тропическая рыба
+emojis.1f420.keywords: fish,tropical
+emojis.1f41f.name: Рыба
+emojis.1f41f.keywords: рыба,рыбы,зодиак
+emojis.1f421.name: Рыба-собака
+emojis.1f421.keywords: blowfish,fish
+emojis.1f42c.name: Дельфин
+emojis.1f42c.keywords: dolphin,flipper
+emojis.1f988.name: Акула
+emojis.1f988.keywords: fish,shark
+emojis.1f433.name: Кит, пускающий фонтан
+emojis.1f433.keywords: face,spouting,whale
+emojis.1f40b.name: Кит
+emojis.1f40b.keywords: кит
+emojis.1f40a.name: Крокодил
+emojis.1f40a.keywords: крокодил
+emojis.1f406.name: Леопард 
+emojis.1f406.keywords: леопард
+emojis.1f405.name: Тигр 
+emojis.1f405.keywords: тигр
+emojis.1f403.name: Азиатский буйвол
+emojis.1f403.keywords: буйвол,азиатский
+emojis.1f402.name: Вол
+emojis.1f402.keywords: бык,вол,телец,зодиак
+emojis.1f404.name: Корова 
+emojis.1f404.keywords: корова
+emojis.1f42a.name: Одногорбый верблюд
+emojis.1f42a.keywords: camel,dromedary,hump
+emojis.1f42b.name: Двугорбый верблюд
+emojis.1f42b.keywords: two-hump camel,bactrian,camel,hump
+emojis.1f418.name: Слон
+emojis.1f418.keywords: слон
+emojis.1f98f.name: Носорог
+emojis.1f98f.keywords: носорог
+emojis.1f410.name: Козёл 
+emojis.1f410.keywords: козерог,козел,зодиак
+emojis.1f40f.name: Барашек
+emojis.1f40f.keywords: овен,барашек,овца,зодиак
+emojis.1f411.name: Овца
+emojis.1f411.keywords: овца,баран
+emojis.1f40e.name: Лошадь 
+emojis.1f40e.keywords: horse,racehorse,racing
+emojis.1f416.name: Свинья
+emojis.1f416.keywords: свинья,свиноматка
+emojis.1f987.name: Летучая мышь
+emojis.1f987.keywords: летучая мышь,вампир
+emojis.1f413.name: Петух 
+emojis.1f413.keywords: петух
+emojis.1f983.name: Турция
+emojis.1f983.keywords: индейка
+emojis.1f54a.name: Голубь мира
+emojis.1f54a.keywords: bird,dove,fly,peace
+emojis.1f985.name: Орёл
+emojis.1f985.keywords: птица,орел
+emojis.1f986.name: Утка
+emojis.1f986.keywords: птица,утка
+emojis.1f989.name: Сова
+emojis.1f989.keywords: птица,сова,мудрая
+emojis.1f415.name: Собака 
+emojis.1f415.keywords: собака,домашнее животное
+emojis.1f429.name: Пудель
+emojis.1f429.keywords: собака,пудель
+emojis.1f408.name: Кошка 
+emojis.1f408.keywords: cat,pet
+emojis.1f407.name: Кролик 
+emojis.1f407.keywords: кролик,домашнее животное,зайчик,заяц
+emojis.1f400.name: Крыса 
+emojis.1f400.keywords: крыса
+emojis.1f401.name: Мышь 
+emojis.1f401.keywords: мышь
+emojis.1f43f.name: Бурундук
+emojis.1f43f.keywords: chipmunk
+emojis.1f994.name: Еж
+emojis.1f994.keywords: hedgehog,face
+emojis.1f43e.name: Следы от лап
+emojis.1f43e.keywords: feet,paw,print
+emojis.1f409.name: Дракон 
+emojis.1f409.keywords: dragon,fairy tale
+emojis.1f432.name: Голова дракона
+emojis.1f432.keywords: dragon,face,fairy tale
+emojis.1f995.name: Зауропод
+emojis.1f995.keywords: brachiosaurus,brontosaurus,diplodocus,dinosaur
+emojis.1f996.name: Тиранозавр
+emojis.1f996.keywords: tyrannosaurus rex,trex,dinosaur
+emojis.1f335.name: Кактус
+emojis.1f335.keywords: cactus,plant
+emojis.1f384.name: Новогодняя ёлка
+emojis.1f384.keywords: activity,celebration,christmas,entertainment,tree
+emojis.1f332.name: Вечнозелёное дерево
+emojis.1f332.keywords: evergreen,plant,tree
+emojis.1f333.name: Лиственное дерево
+emojis.1f333.keywords: deciduous,plant,shedding,tree
+emojis.1f334.name: Пальма
+emojis.1f334.keywords: palm,plant,tree
+emojis.1f331.name: Рассада
+emojis.1f331.keywords: plant,seedling,young
+emojis.1f33f.name: Растение
+emojis.1f33f.keywords: трава,лист,растение
+emojis.2618.name: Трилистник
+emojis.2618.keywords: растение,трилистник
+emojis.1f340.name: Четырёхлистный клевер
+emojis.1f340.keywords: 4,клевер,четыре,листья,растение
+emojis.1f38d.name: Кадомацу
+emojis.1f38d.keywords: activity,bamboo,celebration,japanese,pine,plant
+emojis.1f38b.name: Дерево Танабата
+emojis.1f38b.keywords: activity,banner,celebration,entertainment,japanese,tree
+emojis.1f343.name: Лист на ветру
+emojis.1f343.keywords: blow,flutter,leaf,plant,wind
+emojis.1f342.name: Опавшие листья
+emojis.1f342.keywords: falling,leaf,plant
+emojis.1f341.name: Кленовый лист
+emojis.1f341.keywords: falling,leaf,maple,plant
+emojis.1f33e.name: Рисовый колос
+emojis.1f33e.keywords: sheaf of rice,ear,plant,rice
+emojis.1f33a.name: Гибискус
+emojis.1f33a.keywords: flower,hibiscus,plant
+emojis.1f33b.name: Подсолнух 
+emojis.1f33b.keywords: flower,plant,sun,sunflower
+emojis.1f339.name: Роза
+emojis.1f339.keywords: flower,plant,rose
+emojis.1f940.name: Увядший цветок
+emojis.1f940.keywords: flower,wilted
+emojis.1f337.name: Тюльпан 
+emojis.1f337.keywords: flower,plant,tulip
+emojis.1f33c.name: Цветок
+emojis.1f33c.keywords: blossom,flower,plant
+emojis.1f338.name: Цветок вишни
+emojis.1f338.keywords: blossom,cherry,flower,plant
+emojis.1f490.name: Букет 
+emojis.1f490.keywords: bouquet,flower,plant,romance
+emojis.1f344.name: Гриб
+emojis.1f344.keywords: mushroom,plant
+emojis.1f330.name: Каштан
+emojis.1f330.keywords: chestnut,plant
+emojis.1f41a.name: Ракушка
+emojis.1f41a.keywords: shell,spiral
+emojis.1f30e.name: Америка на земном шаре
+emojis.1f30e.keywords: americas,earth,globe,world
+emojis.1f30d.name: Европа и Африка на земном шаре
+emojis.1f30d.keywords: africa,earth,europe,globe,world
+emojis.1f30f.name: Азия и Австралия на земном шаре
+emojis.1f30f.keywords: asia,australia,earth,globe,world
+emojis.1f315.name: Полнолуние
+emojis.1f315.keywords: full,moon,space,weather
+emojis.1f316.name: Условное обозначение убывающей луны
+emojis.1f316.keywords: gibbous,moon,space,waning,weather
+emojis.1f317.name: Последняя четверть луны
+emojis.1f317.keywords: moon,quarter,space,weather
+emojis.1f318.name: Символ убывающей Луны
+emojis.1f318.keywords: crescent,moon,space,waning,weather
+emojis.1f311.name: Условное\nобозначение новолуния
+emojis.1f311.keywords: dark,moon,space,weather
+emojis.1f312.name: Растущая луна
+emojis.1f312.keywords: crescent,moon,space,waxing,weather
+emojis.1f313.name: Первая четверть луны
+emojis.1f313.keywords: moon,quarter,space,weather
+emojis.1f314.name: Условное обозначение растущей луны
+emojis.1f314.keywords: gibbous,moon,space,waxing,weather
+emojis.1f31a.name: Новая Луна с лицом
+emojis.1f31a.keywords: face,moon,space,weather
+emojis.1f31d.name: Улыбающаяся полная Луна
+emojis.1f31d.keywords: bright,face,full,moon,space,weather
+emojis.1f31b.name: Полумесяц с лицом
+emojis.1f31b.keywords: face,moon,quarter,space,weather
+emojis.1f31c.name: Улыбающийся месяц
+emojis.1f31c.keywords: face,moon,quarter,space,weather
+emojis.1f31e.name: Улыбающееся солнце
+emojis.1f31e.keywords: bright,face,space,sun,weather
+emojis.1f319.name: Полумесяц
+emojis.1f319.keywords: crescent,moon,space,weather
+emojis.2b50.name: Звезда среднего размера
+emojis.2b50.keywords: звезда
+emojis.1f31f.name: Сверкающая звезда
+emojis.1f31f.keywords: glittery,glow,shining,sparkle,star
+emojis.1f4ab.name: Звездочки в глазах
+emojis.1f4ab.keywords: comic,dizzy,star
+emojis.2728.name: Искры
+emojis.2728.keywords: entertainment,sparkle,star
+emojis.2604.name: Комета
+emojis.2604.keywords: comet,space
+emojis.2600.name: Сияющее солнце
+emojis.2600.keywords: bright,rays,space,sun,sunny,weather
+emojis.1f324.name: Солнце и облачко
+emojis.1f324.keywords: cloud,sun,weather
+emojis.26c5.name: Солнце за облаком
+emojis.26c5.keywords: cloud,sun,weather
+emojis.1f325.name: Солнце за большим облаком
+emojis.1f325.keywords: cloud,sun,weather
+emojis.1f326.name: Слепой дождь
+emojis.1f326.keywords: cloud,rain,sun,weather
+emojis.2601.name: Туча
+emojis.2601.keywords: облако,погода
+emojis.1f327.name: Туча и капли дождя
+emojis.1f327.keywords: облако,туча,дождь,погода
+emojis.26c8.name: Грозовая туча и дождь
+emojis.26c8.keywords: облако,туча,дождь,гром,погода
+emojis.1f329.name: Туча и молния
+emojis.1f329.keywords: cloud,lightning,weather
+emojis.26a1.name: Условное обозначение высокого напряжения
+emojis.26a1.keywords: danger,electric,electricity,lightning,voltage,zap
+emojis.1f525.name: Огонь
+emojis.1f525.keywords: огонь,пламя,инструмент
+emojis.1f4a5.name: Условное обозначение столкновения
+emojis.1f4a5.keywords: boom,collision,comic
+emojis.2744.name: Снежинка
+emojis.2744.keywords: cold,snow,snowflake,weather
+emojis.1f328.name: Облако и снег
+emojis.1f328.keywords: cloud,cold,snow,weather
+emojis.2603.name: Снеговик
+emojis.2603.keywords: cold,snow,snowman,weather
+emojis.26c4.name: Снеговик
+emojis.26c4.keywords: cold,snow,snowman,weather
+emojis.1f32c.name: Лицо, выдувающее ветер
+emojis.1f32c.keywords: blow,cloud,face,weather,wind
+emojis.1f4a8.name: Символ стремительного движения
+emojis.1f4a8.keywords: comic,dash,running
+emojis.1f32a.name: Облако с торнадо
+emojis.1f32a.keywords: туча,облако,торнадо,погода,ураган
+emojis.1f32b.name: Туман
+emojis.1f32b.keywords: cloud,fog,weather
+emojis.2614.name: Зонтик с каплями дождя
+emojis.2614.keywords: clothing,drop,rain,umbrella,weather
+emojis.1f4a7.name: Капелька
+emojis.1f4a7.keywords: cold,comic,drop,sweat,weather
+emojis.1f4a6.name: Капли пота
+emojis.1f4a6.keywords: comic,splashing,sweat
+emojis.1f30a.name: Волна
+emojis.1f30a.keywords: ocean,water,wave,weather
+emojis.1f34f.name: Зеленое яблоко 
+emojis.1f34f.keywords: яблоко,фрукт,зеленое,растение
+emojis.1f34e.name: Красное яблоко 
+emojis.1f34e.keywords: яблоко,фрукт,растение,красное
+emojis.1f350.name: Груша
+emojis.1f350.keywords: фрукт,груша,растение
+emojis.1f34a.name: Мандарин
+emojis.1f34a.keywords: фрукт,апельсин,растение,мандарин
+emojis.1f34b.name: Лимон
+emojis.1f34b.keywords: цитрус,фрукт,лимон,растение
+emojis.1f34c.name: Банан
+emojis.1f34c.keywords: банан,фрукт,растение
+emojis.1f349.name: Арбуз
+emojis.1f349.keywords: фрукт,растение,арбуз
+emojis.1f347.name: Виноград
+emojis.1f347.keywords: фрукт,виноград,растение
+emojis.1f353.name: Клубника
+emojis.1f353.keywords: ягода,фрукт,растение,клубника
+emojis.1f348.name: Дыня
+emojis.1f348.keywords: фрукт,дыня,растение
+emojis.1f352.name: Вишня
+emojis.1f352.keywords: вишня,фрукт,растение
+emojis.1f351.name: Персик 
+emojis.1f351.keywords: фрукт,персик,растение
+emojis.1f34d.name: Ананас
+emojis.1f34d.keywords: фрукт,ананас,растение
+emojis.1f965.name: Кокос
+emojis.1f965.keywords: coconut,fruit
+emojis.1f95d.name: Киви
+emojis.1f95d.keywords: фрукт,киви
+emojis.1f345.name: Помидор
+emojis.1f345.keywords: растение,томат,помидор,овощ
+emojis.1f951.name: Авокадо
+emojis.1f951.keywords: авокадо,фрукт
+emojis.1f346.name: Баклажан
+emojis.1f346.keywords: баклажан,растение,овощ
+emojis.1f336.name: Острый перец
+emojis.1f336.keywords: hot,pepper,plant
+emojis.1f952.name: Огурец
+emojis.1f952.keywords: огурец,соленый огурец,овощ
+emojis.1f966.name: Брокколи
+emojis.1f966.keywords: broccoli,vegetable
+emojis.1f33d.name: Початок кукурузы
+emojis.1f33d.keywords: corn,ear,maize,maze,plant
+emojis.1f955.name: Морковка
+emojis.1f955.keywords: морковь,морковка,овощ
+emojis.1f957.name: Зеленый салат
+emojis.1f957.keywords: green,salad
+emojis.1f954.name: Картошка
+emojis.1f954.keywords: картошка,картофель,овощ
+emojis.1f360.name: Сладкий жареный картофель
+emojis.1f360.keywords: potato,roasted,sweet
+emojis.1f95c.name: Арахис
+emojis.1f95c.keywords: nut,peanut,vegetable
+emojis.1f36f.name: Горшочек мёда
+emojis.1f36f.keywords: honey,honeypot,pot,sweet
+emojis.1f35e.name: Хлеб 
+emojis.1f35e.keywords: bread,loaf
+emojis.1f950.name: Круассан
+emojis.1f950.keywords: bread,crescent roll,croissant,french
+emojis.1f956.name: Французский багет
+emojis.1f956.keywords: baguette,bread,french
+emojis.1f968.name: Крендель
+emojis.1f968.keywords: pretzel,soft pretzel,pretzel twist,bread
+emojis.1f95e.name: Блины
+emojis.1f95e.keywords: crêpe,hotcake,pancake
+emojis.1f9c0.name: Ломтик сыра
+emojis.1f9c0.keywords: cheese
+emojis.1f357.name: Куриная ножка
+emojis.1f357.keywords: bone,chicken,leg,poultry
+emojis.1f356.name: Мясо на кости
+emojis.1f356.keywords: bone,meat
+emojis.1f969.name: Кусок мяса
+emojis.1f969.keywords: meat,chop,lambchop,porkchop,steak
+emojis.1f364.name: Жареная креветка
+emojis.1f364.keywords: fried,prawn,shrimp,tempura
+emojis.1f95a.name: Яйцо
+emojis.1f95a.keywords: яйцо
+emojis.1f373.name: Готовка
+emojis.1f373.keywords: cooking,egg,frying,pan
+emojis.1f953.name: Бекон
+emojis.1f953.keywords: бекон,мясо
+emojis.1f354.name: Гамбургер
+emojis.1f354.keywords: бургер,гамбургер
+emojis.1f35f.name: Картофель фри
+emojis.1f35f.keywords: french,fries
+emojis.1f32d.name: Хот-дог
+emojis.1f32d.keywords: frankfurter,hot dog,hotdog,sausage
+emojis.1f355.name: Кусок пиццы
+emojis.1f355.keywords: cheese,pizza,slice
+emojis.1f35d.name: Спагетти 
+emojis.1f35d.keywords: pasta,spaghetti
+emojis.1f96a.name: Сэндвич
+emojis.1f96a.keywords: bread,vegetables,cheese,meat,deli
+emojis.1f959.name: Фаршированная лепешка
+emojis.1f959.keywords: falafel,flatbread,gyro,kebab,stuffed
+emojis.1f32e.name: Тако
+emojis.1f32e.keywords: mexican,taco
+emojis.1f32f.name: Буррито
+emojis.1f32f.keywords: burrito,mexican
+emojis.1f35c.name: Чашка с дымящейся едой
+emojis.1f35c.keywords: bowl,noodle,ramen,steaming
+emojis.1f958.name: Неглубокая кастрюля с едой
+emojis.1f958.keywords: casserole,paella,pan,shallow
+emojis.1f372.name: Горшочек с едой
+emojis.1f372.keywords: pot,stew
+emojis.1f96b.name: Консервы
+emojis.1f96b.keywords: can,food,preserve
+emojis.1f365.name: Рыбный пирог с завитушкой
+emojis.1f365.keywords: cake,fish,pastry,swirl
+emojis.1f363.name: Суши 
+emojis.1f363.keywords: суши
+emojis.1f371.name: Японский ланч-бокс
+emojis.1f371.keywords: bento,box
+emojis.1f35b.name: Карри и рис
+emojis.1f35b.keywords: curry,rice
+emojis.1f359.name: Рисовый шарик
+emojis.1f359.keywords: ball,japanese,rice
+emojis.1f35a.name: Варёный рис
+emojis.1f35a.keywords: cooked,rice
+emojis.1f358.name: Рисовое печенье
+emojis.1f358.keywords: cracker,rice
+emojis.1f95f.name: Пельмень
+emojis.1f95f.keywords: dumpling,empanada,gyōza,gyoza,jiaozi,pierogi,potsticker
+emojis.1f362.name: Одэн
+emojis.1f362.keywords: kebab,oden,seafood,skewer,stick
+emojis.1f361.name: Данго
+emojis.1f361.keywords: dango,dessert,japanese,skewer,stick,sweet
+emojis.1f367.name: Колотый лед
+emojis.1f367.keywords: dessert,ice,shaved,sweet
+emojis.1f368.name: Мороженое 
+emojis.1f368.keywords: cream,dessert,ice,sweet
+emojis.1f366.name: Мороженное
+emojis.1f366.keywords: cream,dessert,ice,icecream,soft,sweet
+emojis.1f370.name: Кусок пирога
+emojis.1f370.keywords: cake,dessert,pastry,shortcake,slice,sweet
+emojis.1f382.name: Праздничный торт
+emojis.1f382.keywords: birthday,cake,celebration,dessert,pastry,sweet
+emojis.1f967.name: Пирог
+emojis.1f967.keywords: pie,dessert,sweet
+emojis.1f36e.name: Заварной крем
+emojis.1f36e.keywords: custard,dessert,pudding,sweet
+emojis.1f36d.name: Леденец
+emojis.1f36d.keywords: candy,dessert,lollipop,sweet
+emojis.1f36c.name: Конфета
+emojis.1f36c.keywords: candy,dessert,sweet
+emojis.1f36b.name: Плитка шоколада
+emojis.1f36b.keywords: bar,chocolate,dessert,sweet
+emojis.1f37f.name: Очень интересно! Продолжайте.
+emojis.1f37f.keywords: popcorn
+emojis.1f369.name: Пончик
+emojis.1f369.keywords: dessert,donut,doughnut,sweet
+emojis.1f36a.name: Печенье
+emojis.1f36a.keywords: cookie,dessert,sweet
+emojis.1f960.name: Печенье с предсказанием
+emojis.1f960.keywords: fortune,cookie
+emojis.2615.name: Горячий напиток
+emojis.2615.keywords: beverage,coffee,drink,hot,steaming,tea
+emojis.1f375.name: Чашка без ручки
+emojis.1f375.keywords: beverage,cup,drink,tea,teacup
+emojis.1f963.name: Миска с ложкой
+emojis.1f963.keywords: breakfast,cereal,congee,oatmeal,porridge,tableware
+emojis.1f37c.name: Детская бутылочка
+emojis.1f37c.keywords: baby,bottle,drink,milk
+emojis.1f964.name: Стаканчик с соломинкой
+emojis.1f964.keywords: juice,soda,malt,soft drink,water,tableware
+emojis.1f95b.name: Стакан молока
+emojis.1f95b.keywords: drink,glass,milk
+emojis.1f37a.name: Кружка пива
+emojis.1f37a.keywords: bar,beer,drink,mug
+emojis.1f37b.name: Звон пивных кружек
+emojis.1f37b.keywords: bar,beer,clink,drink,mug
+emojis.1f377.name: Бокал вина
+emojis.1f377.keywords: bar,beverage,drink,glass,wine
+emojis.1f942.name: Чоканье бокалов
+emojis.1f942.keywords: celebrate,clink,drink,glass
+emojis.1f943.name: Бокал для виски
+emojis.1f943.keywords: glass,liquor,shot,tumbler,whisky,bourbon
+emojis.1f378.name: Коктейльный бокал
+emojis.1f378.keywords: bar,cocktail,drink,glass
+emojis.1f379.name: Тропический коктейль
+emojis.1f379.keywords: bar,drink,tropical
+emojis.1f37e.name: Бутылка с вылетающей пробкой
+emojis.1f37e.keywords: bar,bottle,champagne,cork,drink,popping,party
+emojis.1f376.name: Бутылка саке и чашка
+emojis.1f376.keywords: bar,beverage,bottle,cup,drink,sake
+emojis.1f944.name: Ложка
+emojis.1f944.keywords: spoon,tableware
+emojis.1f374.name: Вилка и нож
+emojis.1f374.keywords: cooking,fork,knife,tableware
+emojis.1f37d.name: Тарелка, вилка и нож
+emojis.1f37d.keywords: cooking,fork,knife,plate,tableware
+emojis.1f962.name: Палочки для еды
+emojis.1f962.keywords: hashi,jeotgarak,kuaizi
+emojis.1f961.name: Еда на вынос
+emojis.1f961.keywords: take out,container,oyster pail
+emojis.26bd.name: Футбольный мяч 
+emojis.26bd.keywords: мяч,футбол
+emojis.1f3c0.name: Баскетбол
+emojis.1f3c0.keywords: мяч,баскетбол,кольцо
+emojis.1f3c8.name: Американский футбол
+emojis.1f3c8.keywords: американский,мяч,футбол
+emojis.26be.name: Бейсбол
+emojis.26be.keywords: мяч,бейсбол
+emojis.1f3be.name: Теннисный мяч
+emojis.1f3be.keywords: мяч,ракетка,теннис
+emojis.1f3d0.name: Волейбол
+emojis.1f3d0.keywords: мяч,игра,волейбол
+emojis.1f3c9.name: Регби 
+emojis.1f3c9.keywords: мяч,американский футбол,регби
+emojis.1f3b1.name: Бильярд
+emojis.1f3b1.keywords: 8,восьмерка,шар,бильярд,восемь,игра
+emojis.1f3d3.name: Ракетка и шарик для настольного тенниса
+emojis.1f3d3.keywords: ball,bat,game,paddle,table tennis
+emojis.1f3f8.name: Ракетка и волан для бадминтона
+emojis.1f3f8.keywords: badminton,birdie,game,racquet,shuttlecock
+emojis.1f945.name: Ворота
+emojis.1f945.keywords: goal,net
+emojis.1f3d2.name: Хоккейная клюшка и шайба
+emojis.1f3d2.keywords: game,hockey,ice,puck,stick
+emojis.1f3d1.name: Клюшка и мяч для хоккея на траве
+emojis.1f3d1.keywords: ball,field,game,hockey,stick
+emojis.1f3cf.name: Бита и мяч для крикета
+emojis.1f3cf.keywords: ball,field,cricket,game
+emojis.1f94c.name: Камень для керлинга
+emojis.1f94c.keywords: curling,stone
+emojis.26f3.name: Флаг в лунке
+emojis.26f3.keywords: флаг,гольф,лунка
+emojis.1f3f9.name: Лук и стрела
+emojis.1f3f9.keywords: лучник,стрела,лук,стрелец,инструмент,оружие,зодиак
+emojis.1f3a3.name: Удочка и рыба
+emojis.1f3a3.keywords: entertainment,fish,pole
+emojis.1f94a.name: Боксерская перчатка
+emojis.1f94a.keywords: боксерская,перчатка
+emojis.1f94b.name: Кимоно для боевых искусств
+emojis.1f94b.keywords: judo,karate,martial arts,taekwondo,uniform
+emojis.26f8.name: Конек для катания на льду
+emojis.26f8.keywords: ice,skate
+emojis.1f3bf.name: Лыжа и лыжный ботинок
+emojis.1f3bf.keywords: лыжи,лыжа,снег
+emojis.1f6f7.name: Сани
+emojis.1f6f7.keywords: sledge,sleigh,luge,toboggan
+emojis.26f7.name: Лыжник
+emojis.26f7.keywords: лыжа,снег
+emojis.1f3c2.name: Сноубордист
+emojis.1f3c2.keywords: ski,snow,snowboard
+emojis.1f3cb-fe0f-200d-2640-fe0f.name: Женщина, поднимающая штангу
+emojis.1f3cb-fe0f-200d-2640-fe0f.keywords: штангистка,штанга,женщина,женский пол,женщины
+emojis.1f3cb-fe0f-200d-2642-fe0f.name: Мужчина, поднимающий штангу
+emojis.1f3cb-fe0f-200d-2642-fe0f.keywords: штангист,штанга,мужчина,мужской пол,мужчины
+emojis.1f3cb.name: Штангист
+emojis.1f3cb.keywords: штангист,штанга,мужчина,мужской пол,мужчины
+emojis.1f93a.name: Фехтовальщик
+emojis.1f93a.keywords: fencer,fencing,sword
+emojis.1f93c-200d-2640-fe0f.name: Женская борьба
+emojis.1f93c-200d-2640-fe0f.keywords: борьба,борец,женщина,женская,женский пол,женщины
+emojis.1f93c-200d-2642-fe0f.name: Мужская борьба
+emojis.1f93c-200d-2642-fe0f.keywords: борьба,борец,мужчина,мужской пол,мужчины
+emojis.1f93c.name: Рестлеры
+emojis.1f93c.keywords: борьба,борец,мужчина,мужской пол,мужчины
+emojis.1f938.name: Человек, делающий «колесо»
+emojis.1f938.keywords: колесо,гимнастика,женщина,женская,женский пол,женщины
+emojis.1f938-200d-2640-fe0f.name: Женщина, делающая «колесо»
+emojis.1f938-200d-2640-fe0f.keywords: колесо,гимнастика,женщина,женская,женский пол,женщины
+emojis.1f938-200d-2642-fe0f.name: Мужчина, делающий «колесо»
+emojis.1f938-200d-2642-fe0f.keywords: колесо,гимнастика,мужчина,мужской пол,мужчины
+emojis.26f9-fe0f-200d-2640-fe0f.name: Женщина с мячом
+emojis.26f9-fe0f-200d-2640-fe0f.keywords: мяч,женщина,женский,женщины
+emojis.26f9-fe0f-200d-2642-fe0f.name: Мужчина с мячом
+emojis.26f9-fe0f-200d-2642-fe0f.keywords: мяч,мужчина,мужской пол,мужчины
+emojis.26f9.name: Человек с мячом
+emojis.26f9.keywords: мяч,мужчина,мужской пол,мужчины
+emojis.1f93e.name: Гандбол
+emojis.1f93e.keywords: мяч,гандбол,женщина,женский пол,женщины
+emojis.1f93e-200d-2640-fe0f.name: Женщина, играющая в гандбол
+emojis.1f93e-200d-2640-fe0f.keywords: мяч,гандбол,женщина,женский пол,женщины
+emojis.1f93e-200d-2642-fe0f.name: Мужчина, играющий в гандбол
+emojis.1f93e-200d-2642-fe0f.keywords: мяч,гандбол,мужчина,мужской пол,мужчины
+emojis.1f9d7.name: Скалолаз
+emojis.1f9d7.keywords: climbing,rock,woman,female,women
+emojis.1f9d7-200d-2640-fe0f.name: Женщина-скалолаз
+emojis.1f9d7-200d-2640-fe0f.keywords: climbing,rock,woman,female,women
+emojis.1f9d7-200d-2642-fe0f.name: Мужчина-скалолаз
+emojis.1f9d7-200d-2642-fe0f.keywords: climbing,rock,man,male,men
+emojis.1f3cc-fe0f-200d-2640-fe0f.name: Женщина, играющая в гольф
+emojis.1f3cc-fe0f-200d-2640-fe0f.keywords: мяч,гольф,гольфистка,игра в гольф,женщина,женский пол,женщины
+emojis.1f3cc-fe0f-200d-2642-fe0f.name: Мужчина, играющий в гольф
+emojis.1f3cc-fe0f-200d-2642-fe0f.keywords: мяч,гольф,гольфист,игра в гольф,мужчина,мужской пол,мужчины
+emojis.1f3cc.name: Гольфист
+emojis.1f3cc.keywords: мяч,гольф,гольфист,игра в гольф,мужчина,мужской пол,мужчины
+emojis.1f9d8.name: Человек в позе лотоса
+emojis.1f9d8.keywords: meditation,yoga,serenity,woman,female,women
+emojis.1f9d8-200d-2640-fe0f.name: Женщина в позе лотоса
+emojis.1f9d8-200d-2640-fe0f.keywords: meditation,yoga,serenity,woman,female,women
+emojis.1f9d8-200d-2642-fe0f.name: Мужчина в позе лотоса
+emojis.1f9d8-200d-2642-fe0f.keywords: meditation,yoga,serenity,man,male,men
+emojis.1f9d6.name: Человек в парной
+emojis.1f9d6.keywords: sauna,steam room,hamam,steambath,woman,female,women
+emojis.1f9d6-200d-2640-fe0f.name: Женщина в парной
+emojis.1f9d6-200d-2640-fe0f.keywords: sauna,steam room,hamam,steambath,woman,female,women
+emojis.1f9d6-200d-2642-fe0f.name: Мужчина в парной
+emojis.1f9d6-200d-2642-fe0f.keywords: sauna,steam room,hamam,steambath,man,male,men
+emojis.1f3c4-200d-2640-fe0f.name: Женщина, занимающаяся серфингом
+emojis.1f3c4-200d-2640-fe0f.keywords: серфер,серфинг,женщина,женский,женщины
+emojis.1f3c4.name: Сёрфингист
+emojis.1f3c4.keywords: серфер,серфинг,мужчина,мужской,мужчины
+emojis.1f3c4-200d-2642-fe0f.name: Мужчина, занимающийся серфингом
+emojis.1f3c4-200d-2642-fe0f.keywords: серфер,серфинг,мужчина,мужской,мужчины
+emojis.1f3ca-200d-2640-fe0f.name: Плывущая женщина
+emojis.1f3ca-200d-2640-fe0f.keywords: плаванье,пловец,женщина,женский,женщины
+emojis.1f3ca-200d-2642-fe0f.name: Плывущий мужчина
+emojis.1f3ca-200d-2642-fe0f.keywords: плавание,пловец,мужчина,мужской,мужчины
+emojis.1f3ca.name: Пловец
+emojis.1f3ca.keywords: плавание,пловец,мужчина,мужской,мужчины
+emojis.1f93d-200d-2640-fe0f.name: Женщина, играющая в водное поло
+emojis.1f93d-200d-2640-fe0f.keywords: поло,водное,женщина,женское,женский пол,женщины
+emojis.1f93d-200d-2642-fe0f.name: Мужчина, играющий в водное поло
+emojis.1f93d-200d-2642-fe0f.keywords: поло,водное,мужчина,мужской пол,мужчины
+emojis.1f93d.name: Водное поло
+emojis.1f93d.keywords: поло,водное,мужчина,мужской пол,мужчины
+emojis.1f6a3-200d-2640-fe0f.name: Женщина в гребной лодке
+emojis.1f6a3-200d-2640-fe0f.keywords: лодка,гребная,транспортное средство,гребля,женщина,женский пол,женщины
+emojis.1f6a3-200d-2642-fe0f.name: Мужчина в гребной лодке
+emojis.1f6a3-200d-2642-fe0f.keywords: лодка,гребная,транспортное средство,гребля,мужчина,мужской пол,мужчины
+emojis.1f6a3.name: Лодка с вёслами
+emojis.1f6a3.keywords: лодка,гребная,транспортное средство,гребля,мужчина,мужской пол,мужчины
+emojis.1f3c7.name: Скачки
+emojis.1f3c7.keywords: лошадь,жокей,скаковая лошадь,скачки
+emojis.1f6b4-200d-2640-fe0f.name: Женщина на велосипеде
+emojis.1f6b4-200d-2640-fe0f.keywords: велосипед,велосипедистка,велик,женщина,женский,женский пол,женщины
+emojis.1f6b4-200d-2642-fe0f.name: Мужчина на велосипеде
+emojis.1f6b4-200d-2642-fe0f.keywords: велосипед,велосипедист,велик,мужчина,мужской пол,мужчины
+emojis.1f6b4.name: Велосипедист
+emojis.1f6b4.keywords: велосипед,велосипедист,велик,мужчина,мужской пол,мужчины
+emojis.1f6b5-200d-2640-fe0f.name: Женщина на горном велосипеде
+emojis.1f6b5-200d-2640-fe0f.keywords: горный велосипед,велосипед,велосипедистка,велик,гора,горный,женщина,женский,женский пол,женщины
+emojis.1f6b5-200d-2642-fe0f.name: Мужчина на горном велосипеде
+emojis.1f6b5-200d-2642-fe0f.keywords: горный велосипед,велосипед,велосипедист,велик,гора,горный,мужчина,мужской пол,мужчины
+emojis.1f6b5.name: Горный велосипедист
+emojis.1f6b5.keywords: горный велосипед,велосипед,велосипедист,велик,гора,горный,мужчина,мужской пол,мужчины
+emojis.1f3bd.name: Футболка с полосой
+emojis.1f3bd.keywords: running,sash,shirt
+emojis.1f396.name: Военная медаль
+emojis.1f396.keywords: celebration,medal,military
+emojis.1f3c5.name: Спортивная медаль
+emojis.1f3c5.keywords: медаль
+emojis.1f947.name: Медаль за первое место
+emojis.1f947.keywords: first,gold,medal
+emojis.1f948.name: Медаль за второе место
+emojis.1f948.keywords: medal,second,silver
+emojis.1f949.name: Медаль за третье место
+emojis.1f949.keywords: bronze,medal,third
+emojis.1f3c6.name: Кубок
+emojis.1f3c6.keywords: prize,trophy
+emojis.1f3f5.name: Геральдическая роза
+emojis.1f3f5.keywords: plant,rosette
+emojis.1f397.name: Памятная ленточка
+emojis.1f397.keywords: celebration,reminder,ribbon
+emojis.1f3ab.name: Билет
+emojis.1f3ab.keywords: activity,admission,entertainment,ticket
+emojis.1f39f.name: Входные билеты
+emojis.1f39f.keywords: admission,entertainment,ticket
+emojis.1f3aa.name: Цирковой шатёр
+emojis.1f3aa.keywords: activity,circus,entertainment,tent
+emojis.1f939-200d-2640-fe0f.name: Жонглирующая женщина
+emojis.1f939-200d-2640-fe0f.keywords: балансировать,жонглировать,многозадачность,навык,женщина,женский пол,женщины
+emojis.1f939-200d-2642-fe0f.name: Жонглирующий мужчина
+emojis.1f939-200d-2642-fe0f.keywords: баланс,жонглировать,многозадачность,навык,мужчина,мужской пол,мужчины
+emojis.1f939.name: Жонглирование
+emojis.1f939.keywords: баланс,жонглировать,многозадачность,навык,мужчина,мужской пол,мужчины
+emojis.1f3ad.name: Театральное искусство
+emojis.1f3ad.keywords: activity,art,entertainment,mask,performing,theater,theatre
+emojis.1f3a8.name: Палитра
+emojis.1f3a8.keywords: activity,art,entertainment,museum,painting,palette
+emojis.1f3ac.name: Хлопушка
+emojis.1f3ac.keywords: activity,clapper,entertainment,movie
+emojis.1f3a4.name: Микрофон 
+emojis.1f3a4.keywords: activity,entertainment,karaoke,mic,microphone
+emojis.1f3a7.name: Наушники
+emojis.1f3a7.keywords: activity,earbud,entertainment,headphone
+emojis.1f3bc.name: Музыкальная партитура
+emojis.1f3bc.keywords: activity,entertainment,music,score
+emojis.1f3b9.name: Клавиатура
+emojis.1f3b9.keywords: activity,entertainment,instrument,keyboard,music,piano
+emojis.1f941.name: Барабан с барабанными палочками
+emojis.1f941.keywords: drum,drumsticks,music
+emojis.1f3b7.name: Саксофон 
+emojis.1f3b7.keywords: activity,entertainment,instrument,music,sax,saxophone
+emojis.1f3ba.name: Труба
+emojis.1f3ba.keywords: activity,entertainment,instrument,music,trumpet
+emojis.1f3b8.name: Гитара
+emojis.1f3b8.keywords: activity,entertainment,guitar,instrument,music
+emojis.1f3bb.name: Скрипка
+emojis.1f3bb.keywords: activity,entertainment,instrument,music,violin
+emojis.1f3b2.name: Игральная кость
+emojis.1f3b2.keywords: dice,die,entertainment,game
+emojis.1f3af.name: Точное попадание 
+emojis.1f3af.keywords: activity,bull,bullseye,dart,entertainment,eye,game,hit,target
+emojis.1f3b3.name: Боулинг
+emojis.1f3b3.keywords: ball,bowling,game
+emojis.1f3ae.name: Видеоигра
+emojis.1f3ae.keywords: controller,entertainment,game,video game
+emojis.1f47e.name: Инопланетянин
+emojis.1f47e.keywords: alien,creature,extraterrestrial,face,fairy tale,fantasy,monster,space,ufo
+emojis.1f3b0.name: Игровой автомат
+emojis.1f3b0.keywords: activity,game,slot
+emojis.1f697.name: Автомобиль
+emojis.1f697.keywords: automobile,car,vehicle
+emojis.1f695.name: Такси
+emojis.1f695.keywords: taxi,vehicle
+emojis.1f699.name: Внедорожник
+emojis.1f699.keywords: recreational,rv,vehicle
+emojis.1f68c.name: Автобус
+emojis.1f68c.keywords: bus,vehicle
+emojis.1f68e.name: Троллейбус
+emojis.1f68e.keywords: bus,tram,trolley,trolleybus,vehicle
+emojis.1f3ce.name: Гоночный автомобиль
+emojis.1f3ce.keywords: car,racing
+emojis.1f693.name: Полицейская машина
+emojis.1f693.keywords: car,patrol,police,vehicle
+emojis.1f691.name: Машина скорой помощи
+emojis.1f691.keywords: ambulance,vehicle
+emojis.1f692.name: Пожарная машина
+emojis.1f692.keywords: engine,fire,truck,vehicle
+emojis.1f690.name: Микроавтобус
+emojis.1f690.keywords: bus,minibus,vehicle
+emojis.1f69a.name: Грузовик
+emojis.1f69a.keywords: delivery,truck,vehicle
+emojis.1f69b.name: Автопоезд
+emojis.1f69b.keywords: lorry,semi,truck,vehicle
+emojis.1f69c.name: Трактор
+emojis.1f69c.keywords: tractor,vehicle
+emojis.1f3cd.name: Гоночный мотоцикл
+emojis.1f3cd.keywords: motorcycle,racing
+emojis.1f6f5.name: Мотороллер
+emojis.1f6f5.keywords: motor,scooter
+emojis.1f6b2.name: Велосипед
+emojis.1f6b2.keywords: велосипед,велик,транспортное средство
+emojis.1f6f4.name: Самокат
+emojis.1f6f4.keywords: самокат
+emojis.1f6a8.name: Полицейская мигалка
+emojis.1f6a8.keywords: beacon,car,light,police,revolving,vehicle
+emojis.1f694.name: Встречная полицейская машина
+emojis.1f694.keywords: car,oncoming,police,vehicle
+emojis.1f68d.name: Прибывающий автобус
+emojis.1f68d.keywords: bus,oncoming,vehicle
+emojis.1f698.name: Встречный автомобиль
+emojis.1f698.keywords: automobile,car,oncoming,vehicle
+emojis.1f696.name: Такси
+emojis.1f696.keywords: oncoming,taxi,vehicle
+emojis.1f6a1.name: Фуникулер
+emojis.1f6a1.keywords: aerial,cable,car,gondola,ropeway,tramway,vehicle
+emojis.1f6a0.name: Канатная дорога
+emojis.1f6a0.keywords: cable,gondola,mountain,vehicle
+emojis.1f69f.name: Подвесная железная дорога
+emojis.1f69f.keywords: railway,suspension,vehicle
+emojis.1f683.name: Вагон
+emojis.1f683.keywords: car,electric,railway,train,tram,trolleybus,vehicle
+emojis.1f68b.name: Трамвай
+emojis.1f68b.keywords: car,tram,trolleybus,vehicle
+emojis.1f69d.name: Монорельс
+emojis.1f69d.keywords: monorail,vehicle
+emojis.1f684.name: Скоростной поезд
+emojis.1f684.keywords: railway,shinkansen,speed,train,vehicle
+emojis.1f685.name: Скоростной поезд с закруглённой носовой частью
+emojis.1f685.keywords: bullet,railway,shinkansen,speed,train,vehicle
+emojis.1f688.name: Монорельс
+emojis.1f688.keywords: railway,vehicle
+emojis.1f69e.name: Горная железная дорога
+emojis.1f69e.keywords: car,mountain,railway,vehicle
+emojis.1f682.name: Паровоз
+emojis.1f682.keywords: engine,locomotive,railway,steam,train,vehicle
+emojis.1f686.name: Поезд
+emojis.1f686.keywords: railway,train,vehicle
+emojis.1f687.name: Метро
+emojis.1f687.keywords: metro,subway,vehicle
+emojis.1f68a.name: Трамвай
+emojis.1f68a.keywords: tram,trolleybus,vehicle
+emojis.1f689.name: Станция
+emojis.1f689.keywords: railway,station,train,vehicle
+emojis.1f681.name: Вертолёт
+emojis.1f681.keywords: helicopter,vehicle
+emojis.1f6e9.name: Маленький самолет
+emojis.1f6e9.keywords: airplane,vehicle
+emojis.2708.name: Самолёт
+emojis.2708.keywords: airplane,vehicle
+emojis.1f6eb.name: Взлетающий самолет
+emojis.1f6eb.keywords: airplane,check-in,departure,departures,vehicle
+emojis.1f6ec.name: Идущий на посадку самолет
+emojis.1f6ec.keywords: airplane,arrivals,arriving,landing,vehicle
+emojis.1f6f6.name: Каноэ
+emojis.1f6f6.keywords: boat,canoe
+emojis.26f5.name: Парусное судно
+emojis.26f5.keywords: boat,resort,sailboat,sea,vehicle,yacht
+emojis.1f6e5.name: Моторная лодка
+emojis.1f6e5.keywords: boat,motorboat,vehicle
+emojis.1f6a4.name: Катер
+emojis.1f6a4.keywords: boat,speedboat,vehicle
+emojis.26f4.name: Паром
+emojis.26f4.keywords: boat,ferry
+emojis.1f6f3.name: Пассажирское судно
+emojis.1f6f3.keywords: passenger,ship,vehicle
+emojis.1f680.name: Ракета
+emojis.1f680.keywords: rocket,space,vehicle
+emojis.1f6f8.name: Летающая тарелка
+emojis.1f6f8.keywords: ufo,alien,extraterrestrial,space,fantasy
+emojis.1f6f0.name: Спутник
+emojis.1f6f0.keywords: satellite,space,vehicle
+emojis.1f4ba.name: Кресло
+emojis.1f4ba.keywords: chair,seat
+emojis.2693.name: Якорь
+emojis.2693.keywords: anchor,ship,tool
+emojis.1f6a7.name: Знак «Идет строительство»
+emojis.1f6a7.keywords: barrier,construction
+emojis.26fd.name: Бензоколонка
+emojis.26fd.keywords: fuel,fuelpump,gas,pump,station
+emojis.1f68f.name: Автобусная остановка
+emojis.1f68f.keywords: bus,busstop,stop
+emojis.1f6a6.name: Вертикальный светофор
+emojis.1f6a6.keywords: light,signal,traffic
+emojis.1f6a5.name: Горизонтальный светофор
+emojis.1f6a5.keywords: light,signal,traffic
+emojis.1f6d1.name: Восьмиконечный знак
+emojis.1f6d1.keywords: octagonal,stop
+emojis.1f6a2.name: Корабль
+emojis.1f6a2.keywords: ship,vehicle
+emojis.1f3a1.name: Колесо обозрения
+emojis.1f3a1.keywords: activity,amusement park,entertainment,ferris,wheel
+emojis.1f3a2.name: Американские горки
+emojis.1f3a2.keywords: activity,amusement park,coaster,entertainment,roller
+emojis.1f3a0.name: Карусельная лошадка
+emojis.1f3a0.keywords: activity,carousel,entertainment,horse
+emojis.1f3d7.name: Стройка
+emojis.1f3d7.keywords: building,construction
+emojis.1f301.name: Туман
+emojis.1f301.keywords: туман,погода
+emojis.1f5fc.name: Токийская телевизионная башня
+emojis.1f5fc.keywords: tokyo,tower
+emojis.1f3ed.name: Завод
+emojis.1f3ed.keywords: building,factory
+emojis.26f2.name: Фонтан
+emojis.26f2.keywords: фонтан
+emojis.1f391.name: Церемония наблюдения за луной
+emojis.1f391.keywords: activity,celebration,ceremony,entertainment,moon
+emojis.26f0.name: Гора
+emojis.26f0.keywords: гора
+emojis.1f3d4.name: Гора с заснеженной вершиной
+emojis.1f3d4.keywords: cold,mountain,snow
+emojis.1f5fb.name: Фудзияма
+emojis.1f5fb.keywords: fuji,mountain
+emojis.1f30b.name: Вулкан
+emojis.1f30b.keywords: eruption,mountain,volcano,weather
+emojis.1f5fe.name: Карта японских островов
+emojis.1f5fe.keywords: japan,map
+emojis.1f3d5.name: Кемпинг
+emojis.1f3d5.keywords: camping
+emojis.26fa.name: Палатка
+emojis.26fa.keywords: camping,tent
+emojis.1f3de.name: Национальный парк
+emojis.1f3de.keywords: national park,park
+emojis.1f6e3.name: Шоссе
+emojis.1f6e3.keywords: highway,motorway,road
+emojis.1f6e4.name: Железнодорожный путь
+emojis.1f6e4.keywords: railway,train
+emojis.1f305.name: Восход
+emojis.1f305.keywords: morning,sun,sunrise,weather
+emojis.1f304.name: Восход солнца в горах
+emojis.1f304.keywords: morning,mountain,sun,sunrise,weather
+emojis.1f3dc.name: Пустыня
+emojis.1f3dc.keywords: пустыня
+emojis.1f3d6.name: Зонт на пляже
+emojis.1f3d6.keywords: пляж,зонт,зонтик
+emojis.1f3dd.name: Пустынный остров
+emojis.1f3dd.keywords: пустыня,остров
+emojis.1f307.name: Закат над домами
+emojis.1f307.keywords: building,dusk,sun,sunset,weather
+emojis.1f306.name: Вечерний городской пейзаж
+emojis.1f306.keywords: building,city,dusk,evening,landscape,sun,sunset,weather
+emojis.1f3d9.name: Городской пейзаж
+emojis.1f3d9.keywords: building,city
+emojis.1f303.name: Звёздная ночь
+emojis.1f303.keywords: night,star,weather
+emojis.1f309.name: Мост ночью
+emojis.1f309.keywords: bridge,night,weather
+emojis.1f30c.name: Млечный путь
+emojis.1f30c.keywords: milky way,space,weather
+emojis.1f320.name: Падающая звезда
+emojis.1f320.keywords: activity,falling,shooting,space,star
+emojis.1f387.name: Фейерверк
+emojis.1f387.keywords: activity,celebration,entertainment,fireworks,sparkle
+emojis.1f386.name: Фейерверк
+emojis.1f386.keywords: activity,celebration,entertainment,fireworks
+emojis.1f308.name: Радуга
+emojis.1f308.keywords: rain,rainbow,weather
+emojis.1f3d8.name: Жилые дома
+emojis.1f3d8.keywords: building,house
+emojis.1f3f0.name: Европейский замок
+emojis.1f3f0.keywords: building,castle,european
+emojis.1f3ef.name: Японская крепость
+emojis.1f3ef.keywords: building,castle,japanese
+emojis.1f3df.name: Стадион
+emojis.1f3df.keywords: стадион
+emojis.1f5fd.name: Статуя свободы 
+emojis.1f5fd.keywords: liberty,statue
+emojis.1f3e0.name: Дом
+emojis.1f3e0.keywords: building,home,house
+emojis.1f3e1.name: Дом с садом 
+emojis.1f3e1.keywords: building,garden,home,house
+emojis.1f3da.name: Заброшенный дом
+emojis.1f3da.keywords: building,derelict,house
+emojis.1f3e2.name: Офисное здание
+emojis.1f3e2.keywords: здание
+emojis.1f3ec.name: Универмаг
+emojis.1f3ec.keywords: building,department,store
+emojis.1f3e3.name: Японский почтамт
+emojis.1f3e3.keywords: building,japanese,post
+emojis.1f3e4.name: Европейский почтамт
+emojis.1f3e4.keywords: building,european,post
+emojis.1f3e5.name: Больница
+emojis.1f3e5.keywords: building,doctor,hospital,medicine
+emojis.1f3e6.name: Банк
+emojis.1f3e6.keywords: банк,здание
+emojis.1f3e8.name: Гостиница
+emojis.1f3e8.keywords: здание,гостиница
+emojis.1f3ea.name: Круглосуточный магазин 
+emojis.1f3ea.keywords: здание,круглосуточный,магазин
+emojis.1f3eb.name: Школа
+emojis.1f3eb.keywords: здание,школа
+emojis.1f3e9.name: Гостиница для влюбленных
+emojis.1f3e9.keywords: здание,гостиница,любовь
+emojis.1f492.name: Свадьба
+emojis.1f492.keywords: activity,chapel,romance,wedding
+emojis.1f3db.name: Здание в классическом стиле
+emojis.1f3db.keywords: здание,классический стиль
+emojis.26ea.name: Церковь 
+emojis.26ea.keywords: building,christian,church,cross,religion
+emojis.1f54c.name: Мечеть
+emojis.1f54c.keywords: islam,mosque,muslim,religion
+emojis.1f54d.name: Синагога
+emojis.1f54d.keywords: jew,jewish,religion,synagogue,temple
+emojis.1f54b.name: Кааба
+emojis.1f54b.keywords: islam,kaaba,muslim,religion
+emojis.26e9.name: Синтоистская святыня
+emojis.26e9.keywords: religion,shinto,shrine
+emojis.e50a.name: Сибуя
+emojis.e50a.keywords: 109,сибуя
+emojis.231a.name: Наручные часы
+emojis.231a.keywords: часы
+emojis.1f4f1.name: Мобильный телефон 
+emojis.1f4f1.keywords: cell,communication,mobile,phone,telephone
+emojis.1f4f2.name: Мобильный телефон с расположенной слева от него стрелкой, указывающей направо
+emojis.1f4f2.keywords: arrow,call,cell,communication,mobile,phone,receive,telephone
+emojis.1f4bb.name: Персональный компьютер 
+emojis.1f4bb.keywords: laptop computer,computer,pc,personal
+emojis.2328.name: Клавиатура
+emojis.2328.keywords: компьютер,клавиатура
+emojis.1f5a5.name: Настольный компьютер
+emojis.1f5a5.keywords: компьютер,настольный
+emojis.1f5a8.name: Принтер
+emojis.1f5a8.keywords: компьютер,принтер
+emojis.1f5b1.name: Трехкнопочная мышь
+emojis.1f5b1.keywords: 3,button,computer,mouse,three
+emojis.1f5b2.name: Трекбол
+emojis.1f5b2.keywords: компьютер,трекбол
+emojis.1f579.name: Джойстик
+emojis.1f579.keywords: entertainment,game,joystick,video game
+emojis.1f5dc.name: Тиски
+emojis.1f5dc.keywords: compression,tool,vice
+emojis.1f4bd.name: Минидиск
+emojis.1f4bd.keywords: computer,disk,entertainment,minidisk,optical
+emojis.1f4be.name: Дискета
+emojis.1f4be.keywords: computer,disk,floppy
+emojis.1f4bf.name: Компакт-диск
+emojis.1f4bf.keywords: blu-ray,cd,computer,disk,dvd,optical
+emojis.1f4c0.name: DVD
+emojis.1f4c0.keywords: blu-ray,cd,computer,disk,dvd,entertainment,optical
+emojis.1f4fc.name: Видеокассета
+emojis.1f4fc.keywords: entertainment,tape,vhs,video,videocassette
+emojis.1f4f7.name: Фотоаппарат
+emojis.1f4f7.keywords: camera,entertainment,video
+emojis.1f4f8.name: Фотоаппарат со вспышкой
+emojis.1f4f8.keywords: camera,flash,video
+emojis.1f4f9.name: Видеокамера 
+emojis.1f4f9.keywords: camera,entertainment,video
+emojis.1f3a5.name: Кинокамера
+emojis.1f3a5.keywords: activity,camera,cinema,entertainment,movie
+emojis.1f4fd.name: Кинопроектор
+emojis.1f4fd.keywords: cinema,entertainment,film,movie,projector,video
+emojis.1f39e.name: Кинопленка
+emojis.1f39e.keywords: cinema,entertainment,film,frames,movie
+emojis.1f4de.name: Телефонная трубка
+emojis.1f4de.keywords: communication,phone,receiver,telephone
+emojis.260e.name: Телефон
+emojis.260e.keywords: телефон
+emojis.1f4df.name: Пейджер
+emojis.1f4df.keywords: communication,pager
+emojis.1f4e0.name: Факс
+emojis.1f4e0.keywords: communication,fax
+emojis.1f4fa.name: Телевидение
+emojis.1f4fa.keywords: entertainment,television,tv,video
+emojis.1f4fb.name: Радио
+emojis.1f4fb.keywords: entertainment,radio,video
+emojis.1f399.name: Студийный микрофон
+emojis.1f399.keywords: мик,микрофон,музыка,студийный
+emojis.1f39a.name: Ползунок
+emojis.1f39a.keywords: уровень,музыка,ползунок
+emojis.1f39b.name: Ручки регулировки
+emojis.1f39b.keywords: control,knobs,music
+emojis.23f1.name: Секундомер
+emojis.23f1.keywords: часы,секундомер
+emojis.23f2.name: Таймер
+emojis.23f2.keywords: часы,таймер
+emojis.23f0.name: Будильник
+emojis.23f0.keywords: будильник,часы
+emojis.1f570.name: Каминные часы
+emojis.1f570.keywords: часы
+emojis.23f3.name: Песочные часы
+emojis.23f3.keywords: hourglass,sand,timer
+emojis.231b.name: Песочные часы
+emojis.231b.keywords: hourglass,sand,timer
+emojis.1f4e1.name: Спутниковая антенна
+emojis.1f4e1.keywords: antenna,communication,dish,satellite
+emojis.1f50b.name: Аккумулятор
+emojis.1f50b.keywords: аккумулятор
+emojis.1f50c.name: Штепсель
+emojis.1f50c.keywords: electric,electricity,plug
+emojis.1f4a1.name: Электрическая лампочка
+emojis.1f4a1.keywords: bulb,comic,electric,idea,light
+emojis.1f526.name: Электрический фонарь
+emojis.1f526.keywords: electric,flashlight,light,tool,torch
+emojis.1f56f.name: Свеча
+emojis.1f56f.keywords: свеча,свет
+emojis.1f5d1.name: Мусорная корзина
+emojis.1f5d1.keywords: мусорная корзина
+emojis.1f6e2.name: Бочка для нефтепродуктов
+emojis.1f6e2.keywords: бочка,нефтепродукты
+emojis.1f6d2.name: Тележка для покупок
+emojis.1f6d2.keywords: корзина,покупки,тележка
+emojis.1f4b8.name: Банкнота с крыльями
+emojis.1f4b8.keywords: bank,banknote,bill,dollar,fly,money,note,wings
+emojis.1f4b5.name: Банкнота с символом доллара
+emojis.1f4b5.keywords: bank,banknote,bill,currency,dollar,money,note
+emojis.1f4b4.name: Банкнота с символом иены
+emojis.1f4b4.keywords: bank,banknote,bill,currency,money,note,yen
+emojis.1f4b6.name: Банкнота с символом евро
+emojis.1f4b6.keywords: bank,banknote,bill,currency,euro,money,note
+emojis.1f4b7.name: Банкнота с символом фунта
+emojis.1f4b7.keywords: bank,banknote,bill,currency,money,note,pound
+emojis.1f4b0.name: Мешок с деньгами
+emojis.1f4b0.keywords: bag,dollar,money,moneybag
+emojis.1f4b3.name: Кредитная карта
+emojis.1f4b3.keywords: банк,карта,кредитная,кредит,деньги
+emojis.1f48e.name: Драгоценный камень
+emojis.1f48e.keywords: diamond,gem,jewel,romance
+emojis.2696.name: Весы
+emojis.2696.keywords: весы,справедливость,правосудие,инструмент,вес,зодиак
+emojis.1f527.name: Гаечный ключ
+emojis.1f527.keywords: инструмент,гаечный ключ
+emojis.1f528.name: Молоток
+emojis.1f528.keywords: молоток,инструмент
+emojis.2692.name: Молот и кирка
+emojis.2692.keywords: молоток,кирка,инструмент
+emojis.1f6e0.name: Молоток и гаечный ключ
+emojis.1f6e0.keywords: hammer,tool,wrench
+emojis.26cf.name: Кирка
+emojis.26cf.keywords: mining,pick,tool
+emojis.1f529.name: Гайка и болт
+emojis.1f529.keywords: болт,гайка,инструмент
+emojis.2699.name: Шестеренка
+emojis.2699.keywords: шестеренка,инструмент
+emojis.26d3.name: Цепи
+emojis.26d3.keywords: цепь
+emojis.1f52b.name: Пистолет 
+emojis.1f52b.keywords: gun,handgun,pistol,revolver,tool,weapon
+emojis.1f4a3.name: Бомба 
+emojis.1f4a3.keywords: bomb,comic
+emojis.1f52a.name: Нож
+emojis.1f52a.keywords: kitchen knife,cooking,hocho,knife,tool,weapon
+emojis.1f5e1.name: Кинжал
+emojis.1f5e1.keywords: кинжал,нож,оружие
+emojis.2694.name: Скрещенные мечи
+emojis.2694.keywords: скрещенные,мечи,оружие
+emojis.1f6e1.name: Щит
+emojis.1f6e1.keywords: щит,оружие
+emojis.1f6ac.name: Условное\nобозначение курения
+emojis.1f6ac.keywords: activity,smoking
+emojis.26b0.name: Гроб
+emojis.26b0.keywords: гроб,смерть
+emojis.26b1.name: Погребальная урна
+emojis.26b1.keywords: смерть,погребальная,урна
+emojis.1f3fa.name: Амфора
+emojis.1f3fa.keywords: амфоры,водолей,готовка,напиток,кувшин,инструмент,оружие,зодиак
+emojis.1f52e.name: Хрустальный шар
+emojis.1f52e.keywords: ball,crystal,fairy tale,fantasy,fortune,tool
+emojis.1f4ff.name: Четки
+emojis.1f4ff.keywords: beads,clothing,necklace,prayer,religion
+emojis.1f488.name: Парикмахерский столб
+emojis.1f488.keywords: парикмахер,стрижка,парикмахерский столб
+emojis.2697.name: Перегонный куб
+emojis.2697.keywords: alembic,chemistry,tool
+emojis.1f52d.name: Телескоп 
+emojis.1f52d.keywords: телескоп,прибор,инструмент
+emojis.1f52c.name: Микроскоп 
+emojis.1f52c.keywords: микроскоп,инструмент
+emojis.1f573.name: Лунка
+emojis.1f573.keywords: лунка
+emojis.1f48a.name: Таблетка
+emojis.1f48a.keywords: доктор,лекарство,таблетка,больной
+emojis.1f489.name: Шприц
+emojis.1f489.keywords: doctor,medicine,needle,shot,sick,syringe,tool
+emojis.1f321.name: Термометр
+emojis.1f321.keywords: термометр,градусник,погода
+emojis.1f3f7.name: Этикетка
+emojis.1f3f7.keywords: этикетка
+emojis.1f516.name: Закладка
+emojis.1f516.keywords: закладка,отметка
+emojis.1f6bd.name: Туалет
+emojis.1f6bd.keywords: туалет
+emojis.1f6bf.name: Душ
+emojis.1f6bf.keywords: душ,вода
+emojis.1f6c1.name: Ванна
+emojis.1f6c1.keywords: ванна
+emojis.1f6c0.name: Ванна
+emojis.1f6c0.keywords: ванна
+emojis.1f511.name: Ключ
+emojis.1f511.keywords: ключ,замок,пароль
+emojis.1f5dd.name: Старый ключ
+emojis.1f5dd.keywords: ключ,замок,старый
+emojis.1f6cb.name: Диван с торшером
+emojis.1f6cb.keywords: диван,гостиница,торшер
+emojis.1f6cc.name: Место для ночлега
+emojis.1f6cc.keywords: человек в постели,отель,сон,кровать
+emojis.1f6cf.name: Кровать
+emojis.1f6cf.keywords: кровать,гостиница,сон
+emojis.1f6aa.name: Дверь 
+emojis.1f6aa.keywords: дверь
+emojis.1f6ce.name: Гостиничный звонок
+emojis.1f6ce.keywords: колокольчик,гостиничный звонок,гостиница
+emojis.1f5bc.name: Картина в раме
+emojis.1f5bc.keywords: art,frame,museum,painting,picture
+emojis.1f5fa.name: Карта мира
+emojis.1f5fa.keywords: карта,мир
+emojis.26f1.name: Зонт, воткнутый в песок
+emojis.26f1.keywords: дождь,солнце,зонт,зонтик,погода
+emojis.1f5ff.name: Голова с острова Пасхи
+emojis.1f5ff.keywords: голова с острова пасхи,лицо,голова,моаи,статуя
+emojis.1f6cd.name: Сумки для покупок
+emojis.1f6cd.keywords: сумка,гостиница,покупки
+emojis.1f388.name: Воздушный шарик
+emojis.1f388.keywords: действия,воздушный шарик,празднование,развлечение
+emojis.1f38f.name: Стример на карпа
+emojis.1f38f.keywords: activity,carp,celebration,entertainment,flag,streamer
+emojis.1f380.name: Лента 
+emojis.1f380.keywords: празднование,лента
+emojis.1f381.name: Упакованный подарок
+emojis.1f381.keywords: коробка,празднование,развлечения,развлечение,дар,подарок,упакованный
+emojis.1f38a.name: Конфетти
+emojis.1f38a.keywords: действия,шар,празднование,конфетти,развлечение,развлечения
+emojis.1f389.name: Хлопушка
+emojis.1f389.keywords: действия,празднование,развлечение,развлечения,вечеринка,хлопушка
+emojis.1f38e.name: Японские куклы 
+emojis.1f38e.keywords: activity,celebration,doll,entertainment,festival,japanese
+emojis.1f390.name: Музыка ветра
+emojis.1f390.keywords: activity,bell,celebration,chime,entertainment,wind
+emojis.1f3ee.name: Японский фонарик
+emojis.1f3ee.keywords: red paper lantern,bar,japanese,lantern,light,red
+emojis.2709.name: Конверт
+emojis.2709.keywords: электронная почта,адрес электронной почты,конверт
+emojis.1f4e9.name: Конверт с расположенной над ним стрелкой, указывающей вниз
+emojis.1f4e9.keywords: arrow,communication,down,e-mail,email,envelope,letter,mail,outgoing,sent
+emojis.1f4e8.name: Входящее сообщение
+emojis.1f4e8.keywords: communication,e-mail,email,envelope,incoming,letter,mail,receive
+emojis.1f4e7.name: Условное\nобозначение электронной почты
+emojis.1f4e7.keywords: communication,e-mail,email,letter,mail
+emojis.1f48c.name: Любовное письмо
+emojis.1f48c.keywords: heart,letter,love,mail,romance
+emojis.1f4ee.name: Почтовый ящик
+emojis.1f4ee.keywords: communication,mail,mailbox,postbox
+emojis.1f4ea.name: Закрытый почтовый ящик с опущенным флажком
+emojis.1f4ea.keywords: closed,communication,flag,lowered,mail,mailbox,postbox
+emojis.1f4eb.name: Закрытый почтовый ящик с поднятым флажком
+emojis.1f4eb.keywords: closed,communication,flag,mail,mailbox,postbox
+emojis.1f4ec.name: Открытый почтовый ящик с поднятым флажком 
+emojis.1f4ec.keywords: communication,flag,mail,mailbox,open,postbox
+emojis.1f4ed.name: Открытый почтовый ящик с опущенным флажком
+emojis.1f4ed.keywords: communication,flag,lowered,mail,mailbox,open,postbox
+emojis.1f4e6.name: Упаковка
+emojis.1f4e6.keywords: box,communication,package,parcel
+emojis.1f4ef.name: Почтовый рожок
+emojis.1f4ef.keywords: communication,entertainment,horn,post,postal
+emojis.1f4e5.name: Входящая почта
+emojis.1f4e5.keywords: box,communication,inbox,letter,mail,receive,tray
+emojis.1f4e4.name: Исходящая почта
+emojis.1f4e4.keywords: box,communication,letter,mail,outbox,sent,tray
+emojis.1f4dc.name: Свиток
+emojis.1f4dc.keywords: бумага,свиток
+emojis.1f4c3.name: Загнутая страница
+emojis.1f4c3.keywords: curl,document,page
+emojis.1f4d1.name: Закладки
+emojis.1f4d1.keywords: закладка,пометка,маркер,вкладки
+emojis.1f4ca.name: Гистограмма
+emojis.1f4ca.keywords: гистограмма,график
+emojis.1f4c8.name: Диаграмма с восходящим трендом
+emojis.1f4c8.keywords: chart increasing,chart,graph,growth,trend,upward
+emojis.1f4c9.name: Диаграмма с нисходящим графиком
+emojis.1f4c9.keywords: chart decreasing,chart,down,graph,trend
+emojis.1f4c4.name: Страница с загнутым верхним уголком
+emojis.1f4c4.keywords: документ,страница
+emojis.1f4c5.name: Календарь
+emojis.1f4c5.keywords: календарь,дата
+emojis.1f4c6.name: Отрывной календарь
+emojis.1f4c6.keywords: календарь
+emojis.1f5d3.name: Отрывной календарь
+emojis.1f5d3.keywords: отрывной календарь,календарь,блокнот,спираль
+emojis.1f4c7.name: Картотека
+emojis.1f4c7.keywords: карта,картотека,указатель,ролодекс,rolodex
+emojis.1f5c3.name: Картотечный ящик
+emojis.1f5c3.keywords: коробка,картотечный ящик,карта,файл
+emojis.1f5f3.name: Избирательная урна с бюллетенем
+emojis.1f5f3.keywords: избирательная,урна
+emojis.1f5c4.name: Картотека
+emojis.1f5c4.keywords: картотека,файл
+emojis.1f4cb.name: Планшет для бумаги
+emojis.1f4cb.keywords: планшет для бумаги
+emojis.1f5d2.name: Отрывной блокнот
+emojis.1f5d2.keywords: отрывной блокнот,записка,блокнот,отрывной
+emojis.1f4c1.name: Папка для бумаг
+emojis.1f4c1.keywords: файл,папка
+emojis.1f4c2.name: Открытая папка для бумаг
+emojis.1f4c2.keywords: бумаги,файл,папка,открытая
+emojis.1f5c2.name: Картотечные указатели
+emojis.1f5c2.keywords: карта,картотечный,указатель,картотека
+emojis.1f5de.name: Свернутая газета
+emojis.1f5de.keywords: новости,газета,бумага,свернутая
+emojis.1f4f0.name: Газета 
+emojis.1f4f0.keywords: communication,news,newspaper,paper
+emojis.1f4d3.name: Записная книжка
+emojis.1f4d3.keywords: записная книжка,блокнот
+emojis.1f4d5.name: Закрытая книга 
+emojis.1f4d5.keywords: книга,закрытая
+emojis.1f4d7.name: Зелёная книга
+emojis.1f4d7.keywords: книга,зеленая
+emojis.1f4d8.name: Синяя книга
+emojis.1f4d8.keywords: синяя,книга
+emojis.1f4d9.name: Оранжевая книга
+emojis.1f4d9.keywords: книга,оранжевая
+emojis.1f4d4.name: Блокнот с декоративной обложкой
+emojis.1f4d4.keywords: book,cover,decorated,notebook
+emojis.1f4d2.name: Бухгалтерская книга
+emojis.1f4d2.keywords: бухгалтерская книга,записная книжка
+emojis.1f4da.name: Книги
+emojis.1f4da.keywords: книга,книги
+emojis.1f4d6.name: Открытая книга 
+emojis.1f4d6.keywords: книга,открытая
+emojis.1f517.name: Звено цепи
+emojis.1f517.keywords: ссылка
+emojis.1f4ce.name: Скрепка
+emojis.1f4ce.keywords: скрепка
+emojis.1f587.name: Сцепленные скрепки
+emojis.1f587.keywords: communication,link,paperclip
+emojis.2702.name: Ножницы
+emojis.2702.keywords: ножницы,инструмент
+emojis.1f4d0.name: Треугольная линейка
+emojis.1f4d0.keywords: линейка,набор,треугольник
+emojis.1f4cf.name: Линейка
+emojis.1f4cf.keywords: линейка
+emojis.1f4cc.name: Кнопка
+emojis.1f4cc.keywords: закрепить,кнопка
+emojis.1f4cd.name: Кнопка с круглой головкой
+emojis.1f4cd.keywords: закрепить,кнопка
+emojis.1f510.name: Закрытый замок с ключом
+emojis.1f510.keywords: closed,key,lock,secure
+emojis.1f512.name: Замок 
+emojis.1f512.keywords: закрытый,закрыто,замок
+emojis.1f513.name: Открытый замок
+emojis.1f513.keywords: замок,открыть,закрыть
+emojis.1f50f.name: Замок и перьевая ручка
+emojis.1f50f.keywords: ink,lock,nib,pen,privacy
+emojis.1f58a.name: Шариковая ручка, направленная пишущим концом в нижний левый угол
+emojis.1f58a.keywords: ballpoint,communication,pen
+emojis.1f58b.name: Перьевая ручка, направленная пишущим концом в нижний левый угол
+emojis.1f58b.keywords: communication,fountain,pen
+emojis.2712.name: Металлическое перо
+emojis.2712.keywords: металлическое перо,ручка
+emojis.1f4dd.name: Заметка
+emojis.1f4dd.keywords: communication,memo,pencil
+emojis.270f.name: Карандаш 
+emojis.270f.keywords: карандаш
+emojis.1f58d.name: Цветной карандаш, направленный пишущим концом в нижний левый угол
+emojis.1f58d.keywords: communication,crayon
+emojis.1f58c.name: Кисть, направленная щетиной в нижний левый угол
+emojis.1f58c.keywords: communication,paintbrush,painting
+emojis.1f50d.name: Лупа, направленная налево 
+emojis.1f50d.keywords: лупа,стекло,увеличительное,поиск,инструмент
+emojis.1f50e.name: Лупа, повернутая в правую сторону
+emojis.1f50e.keywords: лупа,стекло,увеличительное,поиск,инструмент
+emojis.2764.name: Большое красное сердце
+emojis.2764.keywords: сердце
+emojis.1f9e1.name: Оранжевое сердечко
+emojis.1f9e1.keywords: heart,orange
+emojis.1f49b.name: Жёлтое сердце
+emojis.1f49b.keywords: желтое,сердце
+emojis.1f49a.name: Зелёное сердце
+emojis.1f49a.keywords: сердце,зеленый
+emojis.1f499.name: Голубое сердце
+emojis.1f499.keywords: сердце,синий
+emojis.1f49c.name: Фиолетовое сердце
+emojis.1f49c.keywords: сердце,фиолетовое
+emojis.1f5a4.name: Черное сердце
+emojis.1f5a4.keywords: heart,black,evil,wicked
+emojis.1f494.name: Разбитое сердце
+emojis.1f494.keywords: сердце,разбить,разбитое
+emojis.2763.name: Восклицательный знак в виде сердца
+emojis.2763.keywords: heart,exclamation,mark,punctuation
+emojis.1f495.name: Два сердца 
+emojis.1f495.keywords: сердце,любовь
+emojis.1f49e.name: Крутящиеся сердечки
+emojis.1f49e.keywords: heart,revolving
+emojis.1f493.name: Бьющееся сердце
+emojis.1f493.keywords: сердце,бьется,биение,сердцебиение,пульсирует
+emojis.1f497.name: Бьющееся сердце
+emojis.1f497.keywords: сердце, взволнован, бьется, сердцебиение, нервный
+emojis.1f496.name: Искрящееся сердце
+emojis.1f496.keywords: сердце,возбуждение,восторг,искра,искриться
+emojis.1f498.name: Стрела в сердце
+emojis.1f498.keywords: сердце,стрела,купидон,романтика
+emojis.1f49d.name: Сердечко с ленточкой
+emojis.1f49d.keywords: heart,ribbon,valentine
+emojis.1f49f.name: Сердечко
+emojis.1f49f.keywords: сердце
+emojis.262e.name: Пацифик
+emojis.262e.keywords: мир
+emojis.271d.name: Католический крест
+emojis.271d.keywords: христианин,крест,религия
+emojis.262a.name: Звезда и полумесяц
+emojis.262a.keywords: islam,muslim,religion
+emojis.1f549.name: Символ «Ом»
+emojis.1f549.keywords: hindu,om,religion
+emojis.2638.name: Колесо Дхармы
+emojis.2638.keywords: buddhist,dharma,religion,wheel
+emojis.2721.name: Звезда Давида
+emojis.2721.keywords: david,jew,jewish,religion,star
+emojis.1f52f.name: Шестиконечная звезда с точкой посередине
+emojis.1f52f.keywords: удача,звезда
+emojis.1f54e.name: Ханукия
+emojis.1f54e.keywords: candelabrum,candlestick,menorah,religion
+emojis.262f.name: Инь и ян
+emojis.262f.keywords: religion,tao,taoist,yang,yin
+emojis.2626.name: Православный крест
+emojis.2626.keywords: христианин,крест,религия
+emojis.1f6d0.name: Место для молитвы
+emojis.1f6d0.keywords: religion,worship
+emojis.26ce.name: Змееносец
+emojis.26ce.keywords: носитель,змееносец,змей,змея,зодиак
+emojis.2648.name: Овен
+emojis.2648.keywords: овен,барашек,зодиак
+emojis.2649.name: Телец
+emojis.2649.keywords: бык,вол,телец,зодиак
+emojis.264a.name: Близнецы
+emojis.264a.keywords: близнецы,двойнята,зодиак
+emojis.264b.name: Рак
+emojis.264b.keywords: рак,краб,зодиак
+emojis.264c.name: Лев
+emojis.264c.keywords: лев,зодиак
+emojis.264d.name: Дева
+emojis.264d.keywords: дева,зодиак
+emojis.264e.name: Весы
+emojis.264e.keywords: весы,справедливость,правосудие,зодиак
+emojis.264f.name: Скорпион
+emojis.264f.keywords: скорпион,зодиак
+emojis.2650.name: Стрелец
+emojis.2650.keywords: лучник,стрелец,зодиак
+emojis.2651.name: Козерог
+emojis.2651.keywords: козерог,козел,зодиак
+emojis.2652.name: Водолей
+emojis.2652.keywords: водолей,носильщик,вода,зодиак
+emojis.2653.name: Рыбы
+emojis.2653.keywords: рыба,рыбы,зодиак
+emojis.1f194.name: Буквы «id» в квадрате
+emojis.1f194.keywords: id,identity
+emojis.269b.name: Символ атома
+emojis.269b.keywords: atheist,atom
+emojis.2695.name: Посох Асклепия
+emojis.2695.keywords: health,care,doctor,medicine,rod,snake
+emojis.2622.name: Знак радиоактивности
+emojis.2622.keywords: радиоактивность
+emojis.2623.name: Знак биологической опасности
+emojis.2623.keywords: биологическая опасность
+emojis.1f4f4.name: Знак «Мобильный телефон выключен»
+emojis.1f4f4.keywords: cell,communication,mobile,off,phone,telephone
+emojis.1f4f3.name: Режим вибрации
+emojis.1f4f3.keywords: cell,communication,mobile,mode,phone,telephone,vibration
+emojis.1f236.name: Восточноазиатский\n унифицированный иероглиф-6709 в квадрате
+emojis.1f236.keywords: squared exist ideograph,japanese
+emojis.1f21a.name: Восточноазиатский\nунифицированный иероглиф-7121 в квадрате
+emojis.1f21a.keywords: squared negation ideograph,japanese
+emojis.1f238.name: Восточно-азиатская унифицированная идеограмма-7533 в квадрате
+emojis.1f238.keywords: squared apply ideograph,chinese
+emojis.1f23a.name: Восточноазиатский\nунифицированный иероглиф-55b6 в квадрате
+emojis.1f23a.keywords: squared operating ideograph,chinese
+emojis.1f237.name: Восточно-азиатская унифицированная идеограмма-6708 в квадрате
+emojis.1f237.keywords: squared moon ideograph,japanese
+emojis.2734.name: Восьмиконечная звезда
+emojis.2734.keywords: звезда
+emojis.1f19a.name: Буквы «VS» в квадрате
+emojis.1f19a.keywords: против
+emojis.1f251.name: Иероглиф 可 в кружочке
+emojis.1f251.keywords: circled accept ideograph,chinese
+emojis.1f4ae.name: Белый цветок
+emojis.1f4ae.keywords: цветок
+emojis.1f250.name: Иероглиф, означающий специальную цену, в круге
+emojis.1f250.keywords: circled advantage ideograph,japanese
+emojis.3299.name: Идеограмма 秘 в кружочке
+emojis.3299.keywords: circled secret ideograph,chinese,ideograph,secret
+emojis.3297.name: Иероглиф 祝 в кружочке
+emojis.3297.keywords: circled congratulate ideograph,chinese
+emojis.1f234.name: Восточноазиатский\nунифицированный иероглиф-5408 в квадрате
+emojis.1f234.keywords: squared together ideograph,chinese
+emojis.1f235.name: Восточноазиатский\nунифицированный иероглиф-6e80 в квадрате
+emojis.1f235.keywords: squared fullness ideograph,chinese
+emojis.1f239.name: Восточноазиатский\nунифицированный иероглиф-5272 в квадрате
+emojis.1f239.keywords: squared divide ideograph,japanese
+emojis.1f232.name: Восточноазиатский\nунифицированный иероглиф-7981 в квадрате
+emojis.1f232.keywords: squared prohibit ideograph,japanese
+emojis.1f170.name: Белая латинская заглавная буква A, вписанная в квадрат с цветной заливкой
+emojis.1f170.keywords: a,вторая группа,вторая,II,кровь
+emojis.1f171.name: Белая латинская заглавная буква B, вписанная в квадрат с цветной заливкой
+emojis.1f171.keywords: b,третья группа,третья,III,кровь
+emojis.1f18e.name: Буквы AB, вписанные в квадрат с цветной заливкой
+emojis.1f18e.keywords: ab,четвертая группа,четвертая,IV,кровь
+emojis.1f191.name: Буквы «CL» в квадрате
+emojis.1f191.keywords: cl
+emojis.1f17e.name: Белая латинская заглавная буква O, вписанная в квадрат с цветной заливкой
+emojis.1f17e.keywords: кровь,первая группа,первая,I,o
+emojis.1f198.name: Буквы «SOS» в квадрате
+emojis.1f198.keywords: помогите,помощь,сос,sos
+emojis.26d4.name: Знак «Нет проезда»
+emojis.26d4.keywords: entry,forbidden,no,not,prohibited,traffic
+emojis.1f4db.name: Бейджик с именем
+emojis.1f4db.keywords: бейджик,имя
+emojis.1f6ab.name: Знак «Не входить»
+emojis.1f6ab.keywords: entry,forbidden,no,not,prohibited
+emojis.274c.name: Крестик
+emojis.274c.keywords: cancel,mark,multiplication,multiply,x
+emojis.2b55.name: Жирный круг
+emojis.2b55.keywords: круг,о
+emojis.1f4a2.name: Условное обозначение гнева
+emojis.1f4a2.keywords: angry,comic,mad
+emojis.2668.name: Горячие источники
+emojis.2668.keywords: hot,hotsprings,springs,steaming
+emojis.1f6b7.name: Знак «Проход запрещён»
+emojis.1f6b7.keywords: forbidden,no,not,pedestrian,prohibited
+emojis.1f6af.name: Символ «Не мусорить»
+emojis.1f6af.keywords: no littering,forbidden,litter,no,not,prohibited
+emojis.1f6b3.name: Знак «Движение на велосипеде запрещено»
+emojis.1f6b3.keywords: bicycle,bike,forbidden,no,not,prohibited,vehicle
+emojis.1f6b1.name: Символ непитьевой воды
+emojis.1f6b1.keywords: non-potable water,drink,forbidden,no,not,potable,prohibited,water
+emojis.1f51e.name: Знак «18+»
+emojis.1f51e.keywords: 18,age restriction,eighteen,forbidden,no,not,prohibited,underage
+emojis.1f4f5.name: Знак «Пользоваться мобильным телефоном запрещено»
+emojis.1f4f5.keywords: cell,communication,forbidden,mobile,no,not,phone,prohibited,telephone
+emojis.1f6ad.name: Знак «Не курить!»
+emojis.1f6ad.keywords: no smoking,forbidden,no,not,prohibited,smoking
+emojis.2757.name: Красный восклицательный знак
+emojis.2757.keywords: exclamation,mark,punctuation
+emojis.2755.name: Белый восклицательный знак
+emojis.2755.keywords: exclamation,mark,outlined,punctuation
+emojis.2753.name: Красный вопросительный знак
+emojis.2753.keywords: mark,punctuation,question
+emojis.2754.name: Белый вопросительный знак
+emojis.2754.keywords: mark,outlined,punctuation,question
+emojis.203c.name: Двойной восклицательный знак
+emojis.203c.keywords: bangbang,exclamation,mark,punctuation
+emojis.2049.name: Вопросительный и восклицательный знаки
+emojis.2049.keywords: exclamation,interrobang,mark,punctuation,question
+emojis.1f4af.name: Сто баллов
+emojis.1f4af.keywords: 100,full,hundred,score
+emojis.1f505.name: Значок низкой яркости
+emojis.1f505.keywords: brightness,dim,low
+emojis.1f506.name: Символ высокой яркости
+emojis.1f506.keywords: bright,brightness
+emojis.1f531.name: Трезубец
+emojis.1f531.keywords: anchor,emblem,ship,tool,trident
+emojis.269c.name: Геральдическая лилия
+emojis.269c.keywords: геральдическая лилия
+emojis.303d.name: Символ начала вокальной партии в караоке
+emojis.303d.keywords: mark,part
+emojis.26a0.name: Предупреждающий знак
+emojis.26a0.keywords: предупреждение
+emojis.1f6b8.name: Знак «Осторожно, дети!»
+emojis.1f6b8.keywords: child,crossing,pedestrian,traffic
+emojis.1f530.name: Японский символ, обозначающий новичка
+emojis.1f530.keywords: beginner,chevron,green,japanese,leaf,tool,yellow
+emojis.267b.name: Универсальный символ переработки вторсырья
+emojis.267b.keywords: переработка
+emojis.1f22f.name: Восточноазиатский\nунифицированный иероглиф-6307 в квадрате
+emojis.1f22f.keywords: squared finger ideograph,japanese
+emojis.1f4b9.name: Диаграмма с восходящем трендом и знаком иены
+emojis.1f4b9.keywords: chart increasing with yen,bank,chart,currency,graph,growth,market,money,rise,trend,upward,yen
+emojis.2747.name: Искра
+emojis.2747.keywords: искра
+emojis.2733.name: Восьмиконечная звезда
+emojis.2733.keywords: звездочка
+emojis.274e.name: Крестик в квадрате на контрастном фоне
+emojis.274e.keywords: mark,square
+emojis.2705.name: Жирная белая галочка
+emojis.2705.keywords: галочка,отметка
+emojis.1f4a0.name: Ромб с точкой внутри
+emojis.1f4a0.keywords: comic,diamond,geometric,inside
+emojis.1f300.name: Циклон
+emojis.1f300.keywords: cyclone,dizzy,twister,typhoon,weather
+emojis.27bf.name: Двойная петля
+emojis.27bf.keywords: завиток,двойной,двойная,петля
+emojis.1f310.name: Земной шар с меридианами
+emojis.1f310.keywords: земля,земной шар,меридианы,мир
+emojis.24c2.name: Заглавная латинская буква M в кружочке
+emojis.24c2.keywords: круг,m,м
+emojis.1f3e7.name: Банкомат
+emojis.1f3e7.keywords: atm sign,atm,automated,bank,teller
+emojis.1f6be.name: Туалет
+emojis.1f6be.keywords: closet,lavatory,restroom,water,wc
+emojis.267f.name: Условное обозначение инвалида-колясочника
+emojis.267f.keywords: access,wheelchair
+emojis.1f17f.name: Белая латинская заглавная буква P, вписанная в квадрат с цветной заливкой
+emojis.1f17f.keywords: парковка
+emojis.1f233.name: Восточноазиатский\nунифицированный иероглиф-7a7a в квадрате
+emojis.1f233.keywords: squared empty ideograph,chinese
+emojis.1f202.name: Японский иероглиф «sa» в квадрате
+emojis.1f202.keywords: японский
+emojis.1f6c2.name: Паспортный контроль
+emojis.1f6c2.keywords: контроль,паспортный,паспорт
+emojis.1f6c3.name: Таможня
+emojis.1f6c3.keywords: таможня
+emojis.1f6c4.name: Выдача багажа
+emojis.1f6c4.keywords: baggage,claim
+emojis.1f6c5.name: Камера хранения
+emojis.1f6c5.keywords: baggage,left luggage,locker,luggage
+emojis.1f6b0.name: Условное обозначение питьевой воды
+emojis.1f6b0.keywords: drink,potable,water
+emojis.1f6b9.name: Условное\nобозначение мужчины
+emojis.1f6b9.keywords: мужской туалет,санузел,мужчина,уборная,туалет,мужчины,мужской,мужской пол
+emojis.2642.name: Мужской символ
+emojis.2642.keywords: мужской,мужчина,мужчины
+emojis.1f6ba.name: Условное\nобозначение женщины
+emojis.1f6ba.keywords: дамская комната,уборная,комната отдыха,туалет,женщина,женщины,женский
+emojis.2640.name: Женский символ
+emojis.2640.keywords: женский,женщина,женщины
+emojis.1f6bc.name: Условное\nобозначение ребёнка
+emojis.1f6bc.keywords: baby,changing
+emojis.1f6bb.name: Туалет
+emojis.1f6bb.keywords: санузел,уборная,туалет
+emojis.1f6ae.name: Символ «Не надо мусорить!»
+emojis.1f6ae.keywords: litter in bin sign,litter,litterbox
+emojis.1f3a6.name: Кино
+emojis.1f3a6.keywords: activity,camera,cinema,entertainment,film,movie
+emojis.1f4f6.name: Условное\nобозначение уровня приёма
+emojis.1f4f6.keywords: antenna,bar,cell,communication,mobile,phone,signal,telephone
+emojis.1f201.name: Японский иероглиф «koko» в квадрате
+emojis.1f201.keywords: японский
+emojis.1f196.name: Буквы «NG» в квадрате
+emojis.1f196.keywords: ng
+emojis.1f197.name: Буквы «ОК» в квадрате
+emojis.1f197.keywords: ок
+emojis.1f199.name: Слово «UP!» в квадрате
+emojis.1f199.keywords: mark,up
+emojis.1f192.name: Слово «COOL» в квадрате
+emojis.1f192.keywords: круто,cool
+emojis.1f195.name: Слово «NEW» в квадрате
+emojis.1f195.keywords: новый
+emojis.1f193.name: Слово «FREE» в квадрате
+emojis.1f193.keywords: бесплатно
+emojis.30-20e3.name: Клавиша «0»
+emojis.30-20e3.keywords: 0,клавиша,ноль
+emojis.31-20e3.name: Клавиша «1»
+emojis.31-20e3.keywords: 1,клавиша,один
+emojis.32-20e3.name: Клавиша «2»
+emojis.32-20e3.keywords: 2,клавиша,два
+emojis.33-20e3.name: Клавиша «3»
+emojis.33-20e3.keywords: 3,клавиша,три
+emojis.34-20e3.name: Клавиша «4»
+emojis.34-20e3.keywords: 4,четыре,клавиша
+emojis.35-20e3.name: Клавиша «5»
+emojis.35-20e3.keywords: 5,пять,клавиша
+emojis.36-20e3.name: Клавиша «6»
+emojis.36-20e3.keywords: 6,клавиша,шесть
+emojis.37-20e3.name: Клавиша «7»
+emojis.37-20e3.keywords: 7,клавиша,семь
+emojis.38-20e3.name: Клавиша «8»
+emojis.38-20e3.keywords: 8,восемь,клавиша
+emojis.39-20e3.name: Клавиша «9»
+emojis.39-20e3.keywords: 9,клавиша,девять
+emojis.1f51f.name: Клавиша «10»
+emojis.1f51f.keywords: 10,клавиша,десять
+emojis.1f522.name: Символ ввода цифр
+emojis.1f522.keywords: 1234,ввод,цифры,числа
+emojis.25b6.name: Треугольник, направленный вершиной вправо
+emojis.25b6.keywords: play button,arrow,play,right,triangle
+emojis.23f8.name: Две вертикальные полоски
+emojis.23f8.keywords: pause button,bar,double,pause,vertical
+emojis.23ef.name: Два треугольника, обращенные вершинами вправо, с двумя вертикальными полосками
+emojis.23ef.keywords: play or pause button,arrow,pause,play,right,triangle
+emojis.23f9.name: Символ остановки воспроизведения
+emojis.23f9.keywords: stop button,square,stop
+emojis.23fa.name: Символ записи
+emojis.23fa.keywords: record button,circle,record
+emojis.23cf.name: Символ «Извлечь»
+emojis.23cf.keywords: кнопка извлечения
+emojis.23ed.name: Два треугольника, обращенные вершинами вправо, с вертикальной полоской
+emojis.23ed.keywords: next track button,arrow,next scene,next track,triangle
+emojis.23ee.name: Два треугольника, обращенные вершинами влево, с вертикальной полоской
+emojis.23ee.keywords: last track button,arrow,previous scene,previous track,triangle
+emojis.23e9.name: Два треугольника, обращенные вершинами вправо
+emojis.23e9.keywords: fast-forword button,arrow,double,fast,forward
+emojis.23ea.name: Два треугольника, обращенные вершинами влево
+emojis.23ea.keywords: fast reverse button,arrow,double,rewind
+emojis.1f500.name: Перекрещивающиеся стрелки, указывающие направо
+emojis.1f500.keywords: shuffle tracks button,arrow,crossed
+emojis.1f501.name: Круговые стрелки, направленные влево и вправо и указывающие движение по часовой стрелке
+emojis.1f501.keywords: repeat button,arrow,clockwise,repeat
+emojis.1f502.name: Круговые\nстрелки, направленные влево и вправо, указывающие движение по часовой стрелке и\nперекрывающиеся кружком с цифрой 1
+emojis.1f502.keywords: repeat button,arrow,clockwise,once
+emojis.25c0.name: Треугольник, обращенный вершиной влево
+emojis.25c0.keywords: reverse button,arrow,left,reverse,triangle
+emojis.1f53c.name: Треугольник, направленный вершиной вверх
+emojis.1f53c.keywords: up button,arrow,button,red
+emojis.1f53d.name: Треугольник, направленный вершиной вниз
+emojis.1f53d.keywords: down button,arrow,button,down,red
+emojis.23eb.name: Два треугольника, обращенные вершинами вверх
+emojis.23eb.keywords: fast up button,arrow,double
+emojis.23ec.name: Два треугольника, обращенные вершинами вниз
+emojis.23ec.keywords: fast down button,arrow,double,down
+emojis.27a1.name: Стрелка «Вправо»
+emojis.27a1.keywords: right arrow,arrow,cardinal,direction,east
+emojis.2b05.name: Стрелка «Влево»
+emojis.2b05.keywords: left arrow,arrow,cardinal,direction,west
+emojis.2b06.name: Стрелка «Вверх»
+emojis.2b06.keywords: up arrow,arrow,cardinal,direction,north
+emojis.2b07.name: Стрелка «Вниз»
+emojis.2b07.keywords: down arrow,arrow,cardinal,direction,down,south
+emojis.2197.name: Стрелка, указывающая на северо-восток
+emojis.2197.keywords: up-right arrow,arrow,direction,intercardinal,northeast
+emojis.2198.name: Стрелка, указывающая на юго-восток
+emojis.2198.keywords: down-right arrow,arrow,direction,intercardinal,southeast
+emojis.2199.name: Стрелка, указывающая на юго-запад
+emojis.2199.keywords: down-left arrow,arrow,direction,intercardinal,southwest
+emojis.2196.name: Стрелка, указывающая на северо-запад
+emojis.2196.keywords: up-left arrow,arrow,direction,intercardinal,northwest
+emojis.2195.name: Стрелка, указывающая вверх и вниз
+emojis.2195.keywords: up-down arrow,arrow,direction,intercardinal,northwest
+emojis.2194.name: Стрелка, указывающая влево и вправо
+emojis.2194.keywords: left-right arrow,arrow
+emojis.1f504.name: Круговые\nстрелки, направленные вверх и вниз и указывающие движение против часовой стрелки
+emojis.1f504.keywords: anticlockwise,arrow,counterclockwise,withershins
+emojis.21aa.name: Стрелка направо с крючком
+emojis.21aa.keywords: arrow curving right,arrow
+emojis.21a9.name: Закруглённая стрелка, указывающая влево
+emojis.21a9.keywords: arrow curving left,arrow
+emojis.1f503.name: Круговые стрелки, направленные вверх и вниз и указывающие движение по часовой стрелке
+emojis.1f503.keywords: clockwise vertical arrows,arrow,clockwise,reload
+emojis.2934.name: Стрелка,\nзакруглённая вправо и указывающая вверх
+emojis.2934.keywords: right arrow curving up,arrow
+emojis.2935.name: Стрелка,\nзакруглённая вправо и указывающая вниз
+emojis.2935.keywords: right arrow curving down,arrow,down
+emojis.23-20e3.name: Символ «Решетка»
+emojis.23-20e3.keywords: hash,keycap,pound
+emojis.2a-20e3.name: Клавиша со звездочкой
+emojis.2a-20e3.keywords: звездочка,клавиша,звезда
+emojis.2139.name: Источник информации
+emojis.2139.keywords: информация
+emojis.1f524.name: Символ ввода латинских букв
+emojis.1f524.keywords: abc,alphabet,input,latin,letters
+emojis.1f521.name: Символ ввода строчных латинских букв
+emojis.1f521.keywords: abcd,input,latin,letters,lowercase
+emojis.1f520.name: Символ ввода заглавных латинских букв
+emojis.1f520.keywords: input,latin,letters,uppercase
+emojis.1f523.name: Символ ввода символов
+emojis.1f523.keywords: ввод
+emojis.1f3b5.name: Нота
+emojis.1f3b5.keywords: activity,entertainment,music,note
+emojis.1f3b6.name: Несколько нот
+emojis.1f3b6.keywords: activity,entertainment,music,note,notes
+emojis.3030.name: Волнистая линия
+emojis.3030.keywords: dash,punctuation,wavy
+emojis.27b0.name: Петля
+emojis.27b0.keywords: завиток,петля
+emojis.2714.name: Жирная галочка
+emojis.2714.keywords: галочка,отметка
+emojis.2795.name: Жирный плюс
+emojis.2795.keywords: математика,плюс
+emojis.2796.name: Жирный минус
+emojis.2796.keywords: математика,минус
+emojis.2797.name: Жирный знак деления
+emojis.2797.keywords: деление,математика
+emojis.2716.name: Жирный знак умножения
+emojis.2716.keywords: cancel,multiplication,multiply,x
+emojis.1f4b2.name: Жирный знак доллара
+emojis.1f4b2.keywords: валюта,доллар,деньги
+emojis.1f4b1.name: Обмен валют
+emojis.1f4b1.keywords: банк,валюта,обмен,деньги
+emojis.1f51a.name: Слово «End» со стрелкой, указывающей налево, над ним
+emojis.1f51a.keywords: стрелка,конец
+emojis.1f519.name: Слово «Back» со стрелкой, указывающей налево, над ним
+emojis.1f519.keywords: стрелка,назад
+emojis.1f51b.name: Слово «ON!» с размещённой над ним стрелкой вправо и влево
+emojis.1f51b.keywords: arrow,mark,on
+emojis.1f51d.name: Слово «TOP» с размещённой над ним стрелкой вверх
+emojis.1f51d.keywords: arrow,top,up
+emojis.1f51c.name: Слово «SOON» с размещённой над ним стрелкой вправо
+emojis.1f51c.keywords: стрелка,скоро,soon
+emojis.2611.name: Галочка в квадрате
+emojis.2611.keywords: ballot,box,check
+emojis.1f518.name: Переключатель
+emojis.1f518.keywords: кнопка,геометрическая,радио
+emojis.26aa.name: Средний белый круг
+emojis.26aa.keywords: круг,геометрический
+emojis.26ab.name: Средний черный круг
+emojis.26ab.keywords: круг,геометрический
+emojis.1f534.name: Большой красный круг
+emojis.1f534.keywords: круг,геометрический,красный
+emojis.1f535.name: Большой синий круг
+emojis.1f535.keywords: синий,круг,геометрический
+emojis.1f538.name: Маленький оранжевый ромб
+emojis.1f538.keywords: ромб,геометрический,оранжевый
+emojis.1f539.name: Маленький синий ромб
+emojis.1f539.keywords: синий,ромб,геометрический
+emojis.1f536.name: Большой оранжевый ромб
+emojis.1f536.keywords: ромб,геометрический,оранжевый
+emojis.1f537.name: Большой синий ромб
+emojis.1f537.keywords: синий,ромб,геометрический
+emojis.1f53a.name: Красный треугольник, направленный вершиной вверх
+emojis.1f53a.keywords: geometric,red
+emojis.25aa.name: Маленький черный квадрат 
+emojis.25aa.keywords: geometric,square
+emojis.25ab.name: Маленький белый квадрат
+emojis.25ab.keywords: geometric,square
+emojis.2b1b.name: Большой черный квадрат
+emojis.2b1b.keywords: geometric,square
+emojis.2b1c.name: Большой белый квадрат
+emojis.2b1c.keywords: geometric,square
+emojis.1f53b.name: Красный треугольник, направленный вершиной вниз
+emojis.1f53b.keywords: вниз,геометрический,красный
+emojis.25fc.name: Средний черный квадрат
+emojis.25fc.keywords: geometric,square
+emojis.25fb.name: Средний белый квадрат
+emojis.25fb.keywords: geometric,square
+emojis.25fe.name: Средне-малый черный квадрат
+emojis.25fe.keywords: geometric,square
+emojis.25fd.name: Средне-малый белый квадрат
+emojis.25fd.keywords: geometric,square
+emojis.1f532.name: Черная квадратная кнопка
+emojis.1f532.keywords: button,geometric,square
+emojis.1f533.name: Белая квадратная кнопка 
+emojis.1f533.keywords: button,geometric,outlined,square
+emojis.1f508.name: Динамик
+emojis.1f508.keywords: динамик,громкость
+emojis.1f509.name: Динамик с одной звуковой волной
+emojis.1f509.keywords: speaker on,low,speaker,volume,wave
+emojis.1f50a.name: Динамик с тремя звуковыми волнами
+emojis.1f50a.keywords: speaker loud,3,entertainment,high,loud,speaker,three,volume
+emojis.1f507.name: Перечёркнутый динамик
+emojis.1f507.keywords: speaker off,mute,quiet,silent,speaker,volume
+emojis.1f4e3.name: Мегафон
+emojis.1f4e3.keywords: cheering,communication,megaphone
+emojis.1f4e2.name: Громкоговоритель
+emojis.1f4e2.keywords: communication,loud,loudspeaker,public address
+emojis.1f514.name: Колокольчик
+emojis.1f514.keywords: колокольчик
+emojis.1f515.name: Зачёркнутый колокольчик
+emojis.1f515.keywords: bell with slash,bell,forbidden,mute,no,not,prohibited,quiet,silent
+emojis.1f0cf.name: Игральная карта «Джокер»
+emojis.1f0cf.keywords: card,entertainment,game,joker,playing
+emojis.1f004.name: Плитка маджонг «Красный дракон»
+emojis.1f004.keywords: игра,маджонг,красный
+emojis.2660.name: Пиковая масть
+emojis.2660.keywords: карта,игра,пики,масть
+emojis.2663.name: Трефовая масть
+emojis.2663.keywords: карта,трефы,игра,масть
+emojis.2665.name: Червовая масть
+emojis.2665.keywords: карта,игра,черви,масть
+emojis.2666.name: Бубновая масть
+emojis.2666.keywords: карта,бубны,игра,масть
+emojis.1f3b4.name: Цветочные игральные карты
+emojis.1f3b4.keywords: activity,card,entertainment,flower,game,japanese,playing
+emojis.1f441-200d-1f5e8.name: Глаз в виде выноски для текста
+emojis.1f441-200d-1f5e8.keywords: bubble,eye,speech,witness
+emojis.1f5e8.name: Выноска для текста слева от говорящего персонажа
+emojis.1f5e8.keywords: диалог,речь
+emojis.1f4ad.name: Выноска для текста
+emojis.1f4ad.keywords: balloon,bubble,comic,thought
+emojis.1f5ef.name: Выноска для текста, обозначающая раздражение, справа от говорящего персонажа
+emojis.1f5ef.keywords: angry,balloon,bubble,mad
+emojis.1f4ac.name: Выноска для прямой речи
+emojis.1f4ac.keywords: balloon,bubble,comic,dialog,speech
+emojis.1f550.name: На часах 1:00
+emojis.1f550.keywords: 00,1,1:00,часы,час,один
+emojis.1f551.name: На часах 2:00
+emojis.1f551.keywords: 00,2,2:00,часы,часа,два
+emojis.1f552.name: На часах 3:00
+emojis.1f552.keywords: 00,3,3:00,часы,часа,три
+emojis.1f553.name: На часах 4:00
+emojis.1f553.keywords: 00,4,4:00,часы,четыре,часа
+emojis.1f554.name: На часах 5:00
+emojis.1f554.keywords: 00,5,5:00,часы,пять,часов
+emojis.1f555.name: На часах 6:00
+emojis.1f555.keywords: 00,6,6:00,часы,часов,шесть
+emojis.1f556.name: На часах 7:00
+emojis.1f556.keywords: 00,7,7:00,часы,часов,семь
+emojis.1f557.name: На часах 8:00
+emojis.1f557.keywords: 00,8,8:00,часы,восемь,часов
+emojis.1f558.name: На часах 9:00
+emojis.1f558.keywords: 00,9,9:00,часы,девять,часов
+emojis.1f559.name: На часах 10:00
+emojis.1f559.keywords: 00,10,10:00,часы,часов,десять
+emojis.1f55a.name: На часах 11:00
+emojis.1f55a.keywords: 00,11,11:00,часы,одиннадцать,часов
+emojis.1f55b.name: На часах 12:00
+emojis.1f55b.keywords: 00,12,12:00,часы,часов,двенадцать
+emojis.1f55c.name: На часах 1:30
+emojis.1f55c.keywords: 1,1:30,30,часы,час,тридцать,половина,второго,полвторого
+emojis.1f55d.name: На часах 2:30
+emojis.1f55d.keywords: 2,2:30,30,часы,два,тридцать,половина,третьего,полтретьего
+emojis.1f55e.name: На часах 3:30
+emojis.1f55e.keywords: 3,3:30,30,часы,три,тридцать,половина,четвертого,полчетвертого
+emojis.1f55f.name: На часах 4:30
+emojis.1f55f.keywords: 30,4,4:30,часы,четыре,тридцать,половина,пятого,полпятого
+emojis.1f560.name: На часах 5:30
+emojis.1f560.keywords: 30,5,5:30,часы,пять,тридцать,половина,шестого,полшестого
+emojis.1f561.name: На часах 6:30
+emojis.1f561.keywords: 30,6,6:30,часы,шесть,тридцать,половина,седьмого,полседьмого
+emojis.1f562.name: На часах 7:30
+emojis.1f562.keywords: 30,7,7:30,часы,семь,тридцать,половина,восьмого,полвосьмого
+emojis.1f563.name: На часах 8:30
+emojis.1f563.keywords: 30,8,8:30,часы,восемь,тридцать,половина,девятого,полдевятого
+emojis.1f564.name: На часах 9:30
+emojis.1f564.keywords: 30,9,9:30,часы,девять,тридцать,половина,десятого,полдесятого
+emojis.1f565.name: На часах 10:30
+emojis.1f565.keywords: 10,10:30,30,часы,десять,тридцать,половина,одиннадцатого,пол-одиннадцатого
+emojis.1f566.name: На часах 11:30
+emojis.1f566.keywords: 11,11:30,30,часы,одиннадцать,тридцать,половина,двенадцатого,полдвенадцатого
+emojis.1f567.name: На часах 12:30 
+emojis.1f567.keywords: 12,12:30,30,часы,тридцать,двенадцать,половина,первого,полпервого
+emojis.1f1e6.name: Региональная буква-индикатор A
+emojis.1f1e6.keywords: 
+emojis.1f1e7.name: Региональная буква-индикатор B
+emojis.1f1e7.keywords: 
+emojis.1f1e8.name: Региональная буква-индикатор C
+emojis.1f1e8.keywords: 
+emojis.1f1e9.name: Региональная буква-индикатор D
+emojis.1f1e9.keywords: 
+emojis.1f1ea.name: Региональная буква-индикатор E
+emojis.1f1ea.keywords: 
+emojis.1f1eb.name: Региональная буква-индикатор F
+emojis.1f1eb.keywords: 
+emojis.1f1ec.name: Региональная буква-индикатор G
+emojis.1f1ec.keywords: 
+emojis.1f1ed.name: Региональная буква-индикатор H
+emojis.1f1ed.keywords: 
+emojis.1f1ee.name: Региональная буква-индикатор I
+emojis.1f1ee.keywords: 
+emojis.1f1ef.name: Региональная буква-индикатор J
+emojis.1f1ef.keywords: 
+emojis.1f1f0.name: Региональная буква-индикатор K
+emojis.1f1f0.keywords: 
+emojis.1f1f1.name: Региональная буква-индикатор L
+emojis.1f1f1.keywords: 
+emojis.1f1f2.name: Региональная буква-индикатор M
+emojis.1f1f2.keywords: 
+emojis.1f1f3.name: Региональная буква-индикатор N
+emojis.1f1f3.keywords: 
+emojis.1f1f4.name: Региональная буква-индикатор O
+emojis.1f1f4.keywords: 
+emojis.1f1f5.name: Региональная буква-индикатор P
+emojis.1f1f5.keywords: 
+emojis.1f1f6.name: Региональная буква-индикатор Q
+emojis.1f1f6.keywords: 
+emojis.1f1f7.name: Региональная буква-индикатор R
+emojis.1f1f7.keywords: 
+emojis.1f1f8.name: Региональная буква-индикатор S
+emojis.1f1f8.keywords: 
+emojis.1f1f9.name: Региональная буква-индикатор T
+emojis.1f1f9.keywords: 
+emojis.1f1fa.name: Региональная буква-индикатор U
+emojis.1f1fa.keywords: 
+emojis.1f1fb.name: Региональная буква-индикатор V
+emojis.1f1fb.keywords: 
+emojis.1f1fc.name: Региональная буква-индикатор W
+emojis.1f1fc.keywords: 
+emojis.1f1fd.name: Региональная буква-индикатор X
+emojis.1f1fd.keywords: 
+emojis.1f1fe.name: Региональная буква-индикатор Y
+emojis.1f1fe.keywords: 
+emojis.1f1ff.name: Региональная буква-индикатор Z
+emojis.1f1ff.keywords: 
+emojis.1f3f3.name: Развевающийся белый флаг
+emojis.1f3f3.keywords: флаг,развевающийся
+emojis.1f3f4.name: Развевающийся черный флаг
+emojis.1f3f4.keywords: флаг,развевающийся
+emojis.1f3c1.name: Клетчатый флаг
+emojis.1f3c1.keywords: checkered,chequered,flag,racing
+emojis.1f6a9.name: Треугольный флажок на флагштоке
+emojis.1f6a9.keywords: флаг,флагшток
+emojis.1f38c.name: Скрещенные флаги
+emojis.1f38c.keywords: activity,celebration,cross,crossed,flag,japanese
+emojis.1f3f4-200d-2620-fe0f.name: Пиратский флаг
+emojis.1f3f4-200d-2620-fe0f.keywords: флаг,пират,пиратский
+emojis.1f3f3-fe0f-200d-1f308.name: Радужный флаг
+emojis.1f3f3-fe0f-200d-1f308.keywords: флаг,радуга
+emojis.1f1e6-1f1e8.name: Флаг острова Вознесения
+emojis.1f1e6-1f1e8.keywords: вознесения,флаг,остров
+emojis.1f1e6-1f1e9.name: Флаг Андорры
+emojis.1f1e6-1f1e9.keywords: андорра,флаг
+emojis.1f1e6-1f1ea.name: Флаг ОАЭ
+emojis.1f1e6-1f1ea.keywords: эмираты,флаг,оаэ,объединенные
+emojis.1f1e6-1f1eb.name: Флаг Афганистана
+emojis.1f1e6-1f1eb.keywords: афганистан,флаг
+emojis.1f1e6-1f1ec.name: Флаг Антигуа и Барбуды
+emojis.1f1e6-1f1ec.keywords: антигуа,барбуда,флаг
+emojis.1f1e6-1f1ee.name: Флаг Ангильи
+emojis.1f1e6-1f1ee.keywords: ангилья,флаг
+emojis.1f1e6-1f1f1.name: Флаг Албании
+emojis.1f1e6-1f1f1.keywords: албания,флаг
+emojis.1f1e6-1f1f2.name: Флаг Армении
+emojis.1f1e6-1f1f2.keywords: армения,флаг
+emojis.1f1e6-1f1f4.name: Флаг Анголы
+emojis.1f1e6-1f1f4.keywords: ангола,флаг
+emojis.1f1e6-1f1f6.name: Флаг Антарктиды
+emojis.1f1e6-1f1f6.keywords: антарктида,флаг
+emojis.1f1e6-1f1f7.name: Флаг Аргентины
+emojis.1f1e6-1f1f7.keywords: аргентина,флаг
+emojis.1f1e6-1f1f8.name: Флаг Американского Самоа
+emojis.1f1e6-1f1f8.keywords: американский,флаг,самоа
+emojis.1f1e6-1f1f9.name: Флаг Австрии
+emojis.1f1e6-1f1f9.keywords: австрия,флаг
+emojis.1f1e6-1f1fa.name: Флаг Австралии
+emojis.1f1e6-1f1fa.keywords: австралия,флаг,херд,макдональд
+emojis.1f1e6-1f1fc.name: Флаг Арубы
+emojis.1f1e6-1f1fc.keywords: аруба,флаг
+emojis.1f1e6-1f1fd.name: Флаг Аландских островов
+emojis.1f1e6-1f1fd.keywords: аландские острова,флаг
+emojis.1f1e6-1f1ff.name: Флаг Азербайджанской Республики
+emojis.1f1e6-1f1ff.keywords: азербайджан,флаг
+emojis.1f1e7-1f1e6.name: Флаг Боснии и Герцеговины
+emojis.1f1e7-1f1e6.keywords: босния,флаг,герцеговина
+emojis.1f1e7-1f1e7.name: Флаг Барбадоса
+emojis.1f1e7-1f1e7.keywords: барбадос,флаг
+emojis.1f1e7-1f1e9.name: Флаг Бангладеш
+emojis.1f1e7-1f1e9.keywords: бангладеш,флаг
+emojis.1f1e7-1f1ea.name: Флаг Бельгии
+emojis.1f1e7-1f1ea.keywords: бельгия,флаг
+emojis.1f1e7-1f1eb.name: Флаг Буркина-Фасо
+emojis.1f1e7-1f1eb.keywords: буркина-фасо,флаг
+emojis.1f1e7-1f1ec.name: Флаг Болгарии
+emojis.1f1e7-1f1ec.keywords: болгария,флаг
+emojis.1f1e7-1f1ed.name: Флаг Бахрейна
+emojis.1f1e7-1f1ed.keywords: бахрейн,флаг
+emojis.1f1e7-1f1ee.name: Флаг Бурунди
+emojis.1f1e7-1f1ee.keywords: бурунди,флаг
+emojis.1f1e7-1f1ef.name: Флаг Бенина
+emojis.1f1e7-1f1ef.keywords: бенин,флаг
+emojis.1f1e7-1f1f1.name: Флаг Сен-Бартелеми
+emojis.1f1e7-1f1f1.keywords: barthelemy,barthélemy,flag,saint
+emojis.1f1e7-1f1f2.name: Флаг Бермуд
+emojis.1f1e7-1f1f2.keywords: бермуды,флаг
+emojis.1f1e7-1f1f3.name: Флаг Брунея
+emojis.1f1e7-1f1f3.keywords: бруней,даруссалам,флаг
+emojis.1f1e7-1f1f4.name: Флаг Боливии
+emojis.1f1e7-1f1f4.keywords: боливия,флаг
+emojis.1f1e7-1f1f6.name: Флаг Карибских Нидерландов
+emojis.1f1e7-1f1f6.keywords: bonaire,caribbean,eustatius,flag,netherlands,saba,sint
+emojis.1f1e7-1f1f7.name: Флаг Бразилии
+emojis.1f1e7-1f1f7.keywords: бразилия,флаг
+emojis.1f1e7-1f1f8.name: Флаг Багамских Островов
+emojis.1f1e7-1f1f8.keywords: багамы,флаг
+emojis.1f1e7-1f1f9.name: Флаг Бутана
+emojis.1f1e7-1f1f9.keywords: бутан,флаг
+emojis.1f1e7-1f1fc.name: Флаг Ботсваны
+emojis.1f1e7-1f1fc.keywords: ботсвана,флаг
+emojis.1f1e7-1f1fe.name: Флаг Республики Беларусь
+emojis.1f1e7-1f1fe.keywords: беларусь,флаг
+emojis.1f1e7-1f1ff.name: Флаг Белиза
+emojis.1f1e7-1f1ff.keywords: белиз,флаг
+emojis.1f1e8-1f1e6.name: Флаг Канады
+emojis.1f1e8-1f1e6.keywords: канада,флаг
+emojis.1f1e8-1f1e8.name: Флаг Кокосовых островов
+emojis.1f1e8-1f1e8.keywords: кокосовые,флаг,остров,килинг
+emojis.1f1e8-1f1e9.name: Флаг Демократической Республики Конго
+emojis.1f1e8-1f1e9.keywords: congo,congo-kinshasa,democratic republic of congo,drc,flag,kinshasa,republic
+emojis.1f1e8-1f1eb.name: Флаг Центральноафриканской Республики
+emojis.1f1e8-1f1eb.keywords: центральноафриканская республика,флаг,республика
+emojis.1f1e8-1f1ec.name: Флаг Республики Конго
+emojis.1f1e8-1f1ec.keywords: браззавиль,конго,республика конго,конго-браззавиль,флаг,республика
+emojis.1f1e8-1f1ed.name: Флаг Швейцарии
+emojis.1f1e8-1f1ed.keywords: флаг,швейцария
+emojis.1f1e8-1f1ee.name: Флаг Кот-д’Ивуара
+emojis.1f1e8-1f1ee.keywords: кот-д’ивуар,флаг,берег слоновой кости
+emojis.1f1e8-1f1f0.name: Флаг Островов Кука
+emojis.1f1e8-1f1f0.keywords: кук,флаг,остров
+emojis.1f1e8-1f1f1.name: Флаг Чили
+emojis.1f1e8-1f1f1.keywords: чили,флаг
+emojis.1f1e8-1f1f2.name: Флаг Камеруна
+emojis.1f1e8-1f1f2.keywords: камерун,флаг
+emojis.1f1e8-1f1f3.name: Флаг Китая
+emojis.1f1e8-1f1f3.keywords: китай,флаг
+emojis.1f1e8-1f1f4.name: Флаг Колумбии
+emojis.1f1e8-1f1f4.keywords: колумбия,флаг
+emojis.1f1e8-1f1f7.name: Флаг Коста-Рики
+emojis.1f1e8-1f1f7.keywords: коста-рика,флаг
+emojis.1f1e8-1f1fa.name: Флаг Кубы
+emojis.1f1e8-1f1fa.keywords: куба,флаг
+emojis.1f1e8-1f1fb.name: Флаг Кабо-Верде
+emojis.1f1e8-1f1fb.keywords: кабо,флаг,верде
+emojis.1f1e8-1f1fc.name: Флаг Кюрасао
+emojis.1f1e8-1f1fc.keywords: антильские острова,кюрасао,флаг
+emojis.1f1e8-1f1fd.name: Флаг Острова Рождества
+emojis.1f1e8-1f1fd.keywords: рождество,флаг,остров
+emojis.1f1e8-1f1fe.name: Флаг Республики Кипр
+emojis.1f1e8-1f1fe.keywords: кипр,флаг
+emojis.1f1e8-1f1ff.name: Флаг Чехии
+emojis.1f1e8-1f1ff.keywords: чехия,флаг
+emojis.1f1e9-1f1ea.name: Флаг Германии
+emojis.1f1e9-1f1ea.keywords: флаг,германия
+emojis.1f1e9-1f1ef.name: Флаг Джибути
+emojis.1f1e9-1f1ef.keywords: джибути,флаг
+emojis.1f1e9-1f1f0.name: Флаг Дании
+emojis.1f1e9-1f1f0.keywords: дания,флаг
+emojis.1f1e9-1f1f2.name: Флаг Доминики
+emojis.1f1e9-1f1f2.keywords: доминика,флаг
+emojis.1f1e9-1f1f4.name: Флаг Доминиканской Республики
+emojis.1f1e9-1f1f4.keywords: доминиканская республика,флаг
+emojis.1f1e9-1f1ff.name: Флаг Алжира
+emojis.1f1e9-1f1ff.keywords: алжир,флаг
+emojis.1f1ea-1f1e8.name: Флаг Эквадора
+emojis.1f1ea-1f1e8.keywords: эквадор,флаг
+emojis.1f3f4-e0067-e0062-e0065-e006e-e0067-e007f.name: Флаг Англии
+emojis.1f3f4-e0067-e0062-e0065-e006e-e0067-e007f.keywords: england,flag
+emojis.1f1ea-1f1ea.name: Флаг Эстонии
+emojis.1f1ea-1f1ea.keywords: эстония,флаг
+emojis.1f1ea-1f1ec.name: Флаг Египта
+emojis.1f1ea-1f1ec.keywords: египет,флаг
+emojis.1f1ea-1f1ed.name: Флаг Сахарской Арабской Демократической Республики
+emojis.1f1ea-1f1ed.keywords: флаг,сахара,запад,западная сахара
+emojis.1f1ea-1f1f7.name: Флаг Эритреи
+emojis.1f1ea-1f1f7.keywords: эритрея,флаг
+emojis.1f1ea-1f1f8.name: Флаг Испании
+emojis.1f1ea-1f1f8.keywords: флаг,испания,сеута,мелилья
+emojis.1f1ea-1f1f9.name: Флаг Эфиопии
+emojis.1f1ea-1f1f9.keywords: эфиопия,флаг
+emojis.1f1ea-1f1fa.name: Флаг Европейского Союза
+emojis.1f1ea-1f1fa.keywords: европейский союз,флаг
+emojis.1f1eb-1f1ee.name: Флаг Финляндии
+emojis.1f1eb-1f1ee.keywords: финляндия,флаг
+emojis.1f1eb-1f1ef.name: Флаг Фиджи
+emojis.1f1eb-1f1ef.keywords: фиджи,флаг
+emojis.1f1eb-1f1f0.name: Флаг Фолклендских островов
+emojis.1f1eb-1f1f0.keywords: фолкленд,фолклендские,флаг,остов,острова,мальвинские
+emojis.1f1eb-1f1f2.name: Флаг Федеративных Штатов Микронезии
+emojis.1f1eb-1f1f2.keywords: флаг,федеративные штаты микронезии
+emojis.1f1eb-1f1f4.name: Флаг Фарерских островов
+emojis.1f1eb-1f1f4.keywords: фареры,фарерские,флаг,остров
+emojis.1f1eb-1f1f7.name: Флаг Франции
+emojis.1f1eb-1f1f7.keywords: флаг,франция,клиппертон,сен-мартен
+emojis.1f1ec-1f1e6.name: Флаг Габона
+emojis.1f1ec-1f1e6.keywords: флаг,габон
+emojis.1f1ec-1f1e7.name: Флаг Великобритании
+emojis.1f1ec-1f1e7.keywords: britain,british,cornwall,england,flag,great britain,ireland,northern ireland,scotland,uk,union jack,united,united kingdom,wales
+emojis.1f1ec-1f1e9.name: Флаг Гренады
+emojis.1f1ec-1f1e9.keywords: флаг,гренада
+emojis.1f1ec-1f1ea.name: Флаг Грузии
+emojis.1f1ec-1f1ea.keywords: флаг,грузия
+emojis.1f1ec-1f1eb.name: Флаг Французской Гвианы
+emojis.1f1ec-1f1eb.keywords: флаг,французская,гвиана
+emojis.1f1ec-1f1ec.name: Флаг Гернси
+emojis.1f1ec-1f1ec.keywords: флаг,гернси
+emojis.1f1ec-1f1ed.name: Флаг Ганы
+emojis.1f1ec-1f1ed.keywords: флаг,гана
+emojis.1f1ec-1f1ee.name: Флаг Гибралтара
+emojis.1f1ec-1f1ee.keywords: флаг,гибралтар
+emojis.1f1ec-1f1f1.name: Флаг Гренландии
+emojis.1f1ec-1f1f1.keywords: флаг,гренландия
+emojis.1f1ec-1f1f2.name: Флаг Гамбии
+emojis.1f1ec-1f1f2.keywords: флаг,гамбия
+emojis.1f1ec-1f1f3.name: Флаг Гвинеи
+emojis.1f1ec-1f1f3.keywords: флаг,гвинея
+emojis.1f1ec-1f1f5.name: Флаг Гваделупы
+emojis.1f1ec-1f1f5.keywords: флаг,гваделупа
+emojis.1f1ec-1f1f6.name: Флаг Экваториальной Гвинеи
+emojis.1f1ec-1f1f6.keywords: экваториальная гвинея,флаг,гвинея
+emojis.1f1ec-1f1f7.name: Флаг Греции
+emojis.1f1ec-1f1f7.keywords: флаг,греция
+emojis.1f1ec-1f1f8.name: Флаг Южной Георгии и Южных Сандвичевых Островов
+emojis.1f1ec-1f1f8.keywords: флаг,георгия,остров,юг,южная георгия,южные сандвичевы
+emojis.1f1ec-1f1f9.name: Флаг Гватемалы
+emojis.1f1ec-1f1f9.keywords: флаг,гватемала
+emojis.1f1ec-1f1fa.name: Флаг Гуама
+emojis.1f1ec-1f1fa.keywords: флаг,гуам
+emojis.1f1ec-1f1fc.name: Флаг Гвинеи-Бисау
+emojis.1f1ec-1f1fc.keywords: бисау,флаг,гвинея
+emojis.1f1ec-1f1fe.name: Флаг Гайаны
+emojis.1f1ec-1f1fe.keywords: флаг,гайана
+emojis.1f1ed-1f1f0.name: Флаг Гонконга
+emojis.1f1ed-1f1f0.keywords: китай,флаг,гонконг
+emojis.1f1ed-1f1f3.name: Флаг Гондураса
+emojis.1f1ed-1f1f3.keywords: флаг,гондурас
+emojis.1f1ed-1f1f7.name: Флаг Хорватии
+emojis.1f1ed-1f1f7.keywords: хорватия,флаг
+emojis.1f1ed-1f1f9.name: Флаг Гаити
+emojis.1f1ed-1f1f9.keywords: флаг,гаити
+emojis.1f1ed-1f1fa.name: Флаг Венгрии
+emojis.1f1ed-1f1fa.keywords: флаг,венгрия
+emojis.1f1ee-1f1e8.name: Флаг Канарских островов
+emojis.1f1ee-1f1e8.keywords: канары,канарские,флаг,остров
+emojis.1f1ee-1f1e9.name: Флаг Индонезии
+emojis.1f1ee-1f1e9.keywords: флаг,индонезия
+emojis.1f1ee-1f1ea.name: Флаг Ирландии
+emojis.1f1ee-1f1ea.keywords: флаг,ирландия
+emojis.1f1ee-1f1f1.name: Флаг Израиля
+emojis.1f1ee-1f1f1.keywords: флаг,израиль
+emojis.1f1ee-1f1f2.name: Флаг острова Мэн
+emojis.1f1ee-1f1f2.keywords: флаг,остров мэн
+emojis.1f1ee-1f1f3.name: Флаг Индии
+emojis.1f1ee-1f1f3.keywords: флаг,индия
+emojis.1f1ee-1f1f4.name: Флаг Британской Территории в Индийском Океане
+emojis.1f1ee-1f1f4.keywords: британские,чагос,флаг,индийский океан,остров,диего-гарсия
+emojis.1f1ee-1f1f6.name: Флаг Ирака
+emojis.1f1ee-1f1f6.keywords: флаг,ирак
+emojis.1f1ee-1f1f7.name: Флаг Ирана
+emojis.1f1ee-1f1f7.keywords: флаг,иран
+emojis.1f1ee-1f1f8.name: Флаг Исландии
+emojis.1f1ee-1f1f8.keywords: флаг,исландия
+emojis.1f1ee-1f1f9.name: Флаг Италии
+emojis.1f1ee-1f1f9.keywords: флаг,италия
+emojis.1f1ef-1f1ea.name: Флаг Джерси
+emojis.1f1ef-1f1ea.keywords: флаг,джерси
+emojis.1f1ef-1f1f2.name: Флаг Ямайки
+emojis.1f1ef-1f1f2.keywords: флаг,ямайка
+emojis.1f1ef-1f1f4.name: Флаг Иордании
+emojis.1f1ef-1f1f4.keywords: флаг,иордания
+emojis.1f1ef-1f1f5.name: Флаг Японии
+emojis.1f1ef-1f1f5.keywords: флаг,япония
+emojis.1f1f0-1f1ea.name: Флаг Кении
+emojis.1f1f0-1f1ea.keywords: флаг,кения
+emojis.1f1f0-1f1ec.name: Флаг Киргизии
+emojis.1f1f0-1f1ec.keywords: флаг,киргизия
+emojis.1f1f0-1f1ed.name: Флаг Камбоджи
+emojis.1f1f0-1f1ed.keywords: камбоджа,флаг
+emojis.1f1f0-1f1ee.name: Флаг Кирибати
+emojis.1f1f0-1f1ee.keywords: флаг,кирибати
+emojis.1f1f0-1f1f2.name: Флаг Коморских островов
+emojis.1f1f0-1f1f2.keywords: коморские острова,флаг
+emojis.1f1f0-1f1f3.name: Флаг Сент-Китса и Невиса
+emojis.1f1f0-1f1f3.keywords: флаг,китс,невис,сент
+emojis.1f1f0-1f1f5.name: Флаг Северной Кореи
+emojis.1f1f0-1f1f5.keywords: флаг,корея,север,северная корея
+emojis.1f1f0-1f1f7.name: Флаг Южной Кореи
+emojis.1f1f0-1f1f7.keywords: флаг,корея,юг,южная корея
+emojis.1f1f0-1f1fc.name: Флаг Кувейта
+emojis.1f1f0-1f1fc.keywords: флаг,кувейт
+emojis.1f1f0-1f1fe.name: Флаг Каймановых островов
+emojis.1f1f0-1f1fe.keywords: кайман,флаг,остров
+emojis.1f1f0-1f1ff.name: Флаг Казахстана
+emojis.1f1f0-1f1ff.keywords: флаг,казахстан
+emojis.1f1f1-1f1e6.name: Флаг Лаоса
+emojis.1f1f1-1f1e6.keywords: флаг,лаос
+emojis.1f1f1-1f1e7.name: Флаг Ливана
+emojis.1f1f1-1f1e7.keywords: флаг,ливан
+emojis.1f1f1-1f1e8.name: Флаг Сент-Люсии
+emojis.1f1f1-1f1e8.keywords: флаг,люсия,сент
+emojis.1f1f1-1f1ee.name: Флаг Лихтенштейна
+emojis.1f1f1-1f1ee.keywords: флаг,лихтенштейн
+emojis.1f1f1-1f1f0.name: Флаг Шри-Ланки
+emojis.1f1f1-1f1f0.keywords: флаг,шри-ланка
+emojis.1f1f1-1f1f7.name: Флаг Либерии
+emojis.1f1f1-1f1f7.keywords: флаг,либерия
+emojis.1f1f1-1f1f8.name: Флаг Лесото
+emojis.1f1f1-1f1f8.keywords: флаг,лесото
+emojis.1f1f1-1f1f9.name: Флаг Литвы
+emojis.1f1f1-1f1f9.keywords: флаг,литва
+emojis.1f1f1-1f1fa.name: Флаг Люксембурга
+emojis.1f1f1-1f1fa.keywords: флаг,люксембург
+emojis.1f1f1-1f1fb.name: Флаг Латвии
+emojis.1f1f1-1f1fb.keywords: флаг,латвия
+emojis.1f1f1-1f1fe.name: Флаг Ливии
+emojis.1f1f1-1f1fe.keywords: флаг,ливия
+emojis.1f1f2-1f1e6.name: Флаг Марокко
+emojis.1f1f2-1f1e6.keywords: флаг,марокко
+emojis.1f1f2-1f1e8.name: Флаг Монако
+emojis.1f1f2-1f1e8.keywords: флаг,монако
+emojis.1f1f2-1f1e9.name: Флаг Молдовы
+emojis.1f1f2-1f1e9.keywords: флаг,молдова
+emojis.1f1f2-1f1ea.name: Флаг Черногории
+emojis.1f1f2-1f1ea.keywords: флаг,черногория
+emojis.1f1f2-1f1ec.name: Флаг Мадагаскара
+emojis.1f1f2-1f1ec.keywords: флаг,мадагаскар
+emojis.1f1f2-1f1ed.name: Флаг Маршалловых Островов
+emojis.1f1f2-1f1ed.keywords: флаг,остров,маршалловы
+emojis.1f1f2-1f1f0.name: Флаг Македонии
+emojis.1f1f2-1f1f0.keywords: флаг,македония
+emojis.1f1f2-1f1f1.name: Флаг Мали
+emojis.1f1f2-1f1f1.keywords: флаг,мали
+emojis.1f1f2-1f1f2.name: Флаг Мьянмы
+emojis.1f1f2-1f1f2.keywords: бирма,флаг,мьянма
+emojis.1f1f2-1f1f3.name: Флаг Монголии
+emojis.1f1f2-1f1f3.keywords: флаг,монголия
+emojis.1f1f2-1f1f4.name: Флаг Макао
+emojis.1f1f2-1f1f4.keywords: китай,флаг,макао
+emojis.1f1f2-1f1f5.name: Флаг Северных Марианских островов
+emojis.1f1f2-1f1f5.keywords: флаг,остров,марианские,северные,северные марианские
+emojis.1f1f2-1f1f6.name: Флаг Мартиники
+emojis.1f1f2-1f1f6.keywords: флаг,мартиника
+emojis.1f1f2-1f1f7.name: Флаг Мавритании
+emojis.1f1f2-1f1f7.keywords: флаг,мавритания
+emojis.1f1f2-1f1f8.name: Флаг Монтсеррата
+emojis.1f1f2-1f1f8.keywords: флаг,монтсеррат
+emojis.1f1f2-1f1f9.name: Флаг Мальты
+emojis.1f1f2-1f1f9.keywords: флаг,мальта
+emojis.1f1f2-1f1fa.name: Флаг Маврикия
+emojis.1f1f2-1f1fa.keywords: флаг,маврикий
+emojis.1f1f2-1f1fb.name: Флаг Мальдив
+emojis.1f1f2-1f1fb.keywords: флаг,мальдивы
+emojis.1f1f2-1f1fc.name: Флаг Малави
+emojis.1f1f2-1f1fc.keywords: флаг,малави
+emojis.1f1f2-1f1fd.name: Флаг Мексики
+emojis.1f1f2-1f1fd.keywords: флаг,мексика
+emojis.1f1f2-1f1fe.name: Флаг Малайзии
+emojis.1f1f2-1f1fe.keywords: флаг,малайзия
+emojis.1f1f2-1f1ff.name: Флаг Мозамбика
+emojis.1f1f2-1f1ff.keywords: флаг,мозамбик
+emojis.1f1f3-1f1e6.name: Флаг Намибии
+emojis.1f1f3-1f1e6.keywords: флаг,намибия
+emojis.1f1f3-1f1e8.name: Флаг Новой Каледонии
+emojis.1f1f3-1f1e8.keywords: флаг,новая,новая каледония
+emojis.1f1f3-1f1ea.name: Флаг Нигера
+emojis.1f1f3-1f1ea.keywords: флаг,нигер
+emojis.1f1f3-1f1eb.name: Флаг Острова Норфолк
+emojis.1f1f3-1f1eb.keywords: флаг,остров,норфолк
+emojis.1f1f3-1f1ec.name: Флаг Нигерии
+emojis.1f1f3-1f1ec.keywords: флаг,нигерия
+emojis.1f1f3-1f1ee.name: Флаг Никарагуа
+emojis.1f1f3-1f1ee.keywords: флаг,никарагуа
+emojis.1f1f3-1f1f1.name: Флаг Нидерландов
+emojis.1f1f3-1f1f1.keywords: флаг,нидерланды,голландия
+emojis.1f1f3-1f1f4.name: Флаг Норвегии
+emojis.1f1f3-1f1f4.keywords: флаг,норвегия,буве,шпицберген,ян-майен
+emojis.1f1f3-1f1f5.name: Флаг Непала
+emojis.1f1f3-1f1f5.keywords: флаг,непал
+emojis.1f1f3-1f1f7.name: Флаг Науру
+emojis.1f1f3-1f1f7.keywords: флаг,науру
+emojis.1f1f3-1f1fa.name: Флаг Ниуэ
+emojis.1f1f3-1f1fa.keywords: флаг,ниуэ
+emojis.1f1f3-1f1ff.name: Флаг Новой Зеландии
+emojis.1f1f3-1f1ff.keywords: флаг,новая,новая зеландия
+emojis.1f1f4-1f1f2.name: Флаг Омана
+emojis.1f1f4-1f1f2.keywords: флаг,оман
+emojis.1f1f5-1f1e6.name: Флаг Панамы
+emojis.1f1f5-1f1e6.keywords: флаг,панама
+emojis.1f1f5-1f1ea.name: Флаг Перу
+emojis.1f1f5-1f1ea.keywords: флаг,перу
+emojis.1f1f5-1f1eb.name: Флаг Французской Полинезии
+emojis.1f1f5-1f1eb.keywords: флаг,французская,полинезия
+emojis.1f1f5-1f1ec.name: Флаг Папуа-Новой Гвинеи
+emojis.1f1f5-1f1ec.keywords: флаг,гвинея,новая,папуа-новая гвинея
+emojis.1f1f5-1f1ed.name: Флаг Филиппин
+emojis.1f1f5-1f1ed.keywords: флаг,филиппины
+emojis.1f1f5-1f1f0.name: Флаг Пакистана
+emojis.1f1f5-1f1f0.keywords: флаг,пакистан
+emojis.1f1f5-1f1f1.name: Флаг Польши
+emojis.1f1f5-1f1f1.keywords: флаг,польша
+emojis.1f1f5-1f1f2.name: Флаг Сен-Пьера и Микелона
+emojis.1f1f5-1f1f2.keywords: флаг,микелон,пьер,сен
+emojis.1f1f5-1f1f3.name: Флаг Питкэрна
+emojis.1f1f5-1f1f3.keywords: флаг,остров,питкэрн
+emojis.1f1f5-1f1f7.name: Флаг Пуэрто-Рико
+emojis.1f1f5-1f1f7.keywords: флаг,пуэрто-рико
+emojis.1f1f5-1f1f8.name: Флаг Палестины
+emojis.1f1f5-1f1f8.keywords: флаг,палестина
+emojis.1f1f5-1f1f9.name: Флаг Португалии
+emojis.1f1f5-1f1f9.keywords: флаг,португалия
+emojis.1f1f5-1f1fc.name: Флаг Палау
+emojis.1f1f5-1f1fc.keywords: флаг,палау
+emojis.1f1f5-1f1fe.name: Флаг Парагвая
+emojis.1f1f5-1f1fe.keywords: флаг,парагвай
+emojis.1f1f6-1f1e6.name: Флаг Катара
+emojis.1f1f6-1f1e6.keywords: флаг,катар
+emojis.1f1f7-1f1ea.name: Флаг Реюньона
+emojis.1f1f7-1f1ea.keywords: флаг,реюньон
+emojis.1f1f7-1f1f4.name: Флаг Румынии
+emojis.1f1f7-1f1f4.keywords: флаг,румыния
+emojis.1f1f7-1f1f8.name: Флаг Сербии
+emojis.1f1f7-1f1f8.keywords: флаг,сербия
+emojis.1f1f7-1f1fa.name: Флаг Российской Федерации
+emojis.1f1f7-1f1fa.keywords: флаг,российская федерация
+emojis.1f1f7-1f1fc.name: Флаг Руанды
+emojis.1f1f7-1f1fc.keywords: флаг,руанда
+emojis.1f1f8-1f1e6.name: Флаг Саудовской Аравии
+emojis.1f1f8-1f1e6.keywords: флаг,саудовская аравия
+emojis.1f3f4-e0067-e0062-e0073-e0063-e0074-e007f.name: Флаг Шотландии
+emojis.1f3f4-e0067-e0062-e0073-e0063-e0074-e007f.keywords: scotland,flag
+emojis.1f1f8-1f1e7.name: Флаг Соломоновых Островов
+emojis.1f1f8-1f1e7.keywords: флаг,остров,соломоновы
+emojis.1f1f8-1f1e8.name: Флаг Сейшельских Островов
+emojis.1f1f8-1f1e8.keywords: флаг,сейшельские острова
+emojis.1f1f8-1f1e9.name: Флаг Судана
+emojis.1f1f8-1f1e9.keywords: флаг,судан
+emojis.1f1f8-1f1ea.name: Флаг Швеции
+emojis.1f1f8-1f1ea.keywords: флаг,швеция
+emojis.1f1f8-1f1ec.name: Флаг Сингапура
+emojis.1f1f8-1f1ec.keywords: флаг,сингапур
+emojis.1f1f8-1f1ed.name: Флаг острова Святой Елены
+emojis.1f1f8-1f1ed.keywords: флаг,остров святой елены
+emojis.1f1f8-1f1ee.name: Флаг Словении
+emojis.1f1f8-1f1ee.keywords: флаг,словения
+emojis.1f1f8-1f1f0.name: Флаг Словакии
+emojis.1f1f8-1f1f0.keywords: флаг,словакия
+emojis.1f1f8-1f1f1.name: Флаг Сьерра-Леоне
+emojis.1f1f8-1f1f1.keywords: флаг,сьерра-леоне
+emojis.1f1f8-1f1f2.name: Флаг Сан-Марино
+emojis.1f1f8-1f1f2.keywords: флаг,сан-марино
+emojis.1f1f8-1f1f3.name: Флаг Сенегала
+emojis.1f1f8-1f1f3.keywords: флаг,сенегал
+emojis.1f1f8-1f1f4.name: Флаг Сомали
+emojis.1f1f8-1f1f4.keywords: флаг,сомали
+emojis.1f1f8-1f1f7.name: Флаг Суринама
+emojis.1f1f8-1f1f7.keywords: флаг,суринам
+emojis.1f1f8-1f1f8.name: Флаг Южного Судана
+emojis.1f1f8-1f1f8.keywords: флаг,юг,южный,южный судан,судан
+emojis.1f1f8-1f1f9.name: Флаг Сан-Томе и Принсипи
+emojis.1f1f8-1f1f9.keywords: флаг,принсипи,сан-томе
+emojis.1f1f8-1f1fb.name: Флаг Сальвадора
+emojis.1f1f8-1f1fb.keywords: сальвадор,флаг
+emojis.1f1f8-1f1fd.name: Флаг Синт-Мартена
+emojis.1f1f8-1f1fd.keywords: флаг,мартен,синт
+emojis.1f1f8-1f1fe.name: Флаг Сирии
+emojis.1f1f8-1f1fe.keywords: флаг,сирия
+emojis.1f1f8-1f1ff.name: Флаг Свазиленда
+emojis.1f1f8-1f1ff.keywords: флаг,свазиленд
+emojis.1f1f9-1f1e6.name: Флаг островов Тристан-да-Кунья
+emojis.1f1f9-1f1e6.keywords: флаг,тристан-да-кунья
+emojis.1f1f9-1f1e8.name: Флаг островов Теркс и Кайкос
+emojis.1f1f9-1f1e8.keywords: кайкос,флаг,остров,теркс
+emojis.1f1f9-1f1e9.name: Флаг Чада
+emojis.1f1f9-1f1e9.keywords: чад,флаг
+emojis.1f1f9-1f1eb.name: Флаг Французских Южных территорий
+emojis.1f1f9-1f1eb.keywords: антарктида,флаг,французский
+emojis.1f1f9-1f1ec.name: Флаг Того
+emojis.1f1f9-1f1ec.keywords: флаг,того
+emojis.1f1f9-1f1ed.name: Флаг Таиланда
+emojis.1f1f9-1f1ed.keywords: флаг,таиланд
+emojis.1f1f9-1f1ef.name: Флаг Таджикистана
+emojis.1f1f9-1f1ef.keywords: флаг,таджикистан
+emojis.1f1f9-1f1f0.name: Флаг Токелау
+emojis.1f1f9-1f1f0.keywords: флаг,токелау
+emojis.1f1f9-1f1f1.name: Флаг Восточного Тимора
+emojis.1f1f9-1f1f1.keywords: восток,восточный тимор,флаг,тимор-лесте
+emojis.1f1f9-1f1f2.name: Флаг Туркмении
+emojis.1f1f9-1f1f2.keywords: флаг,туркмения
+emojis.1f1f9-1f1f3.name: Флаг Туниса
+emojis.1f1f9-1f1f3.keywords: флаг,тунис
+emojis.1f1f9-1f1f4.name: Флаг Тонга
+emojis.1f1f9-1f1f4.keywords: флаг,тонга
+emojis.1f1f9-1f1f7.name: Флаг Турции
+emojis.1f1f9-1f1f7.keywords: флаг,турция
+emojis.1f1f9-1f1f9.name: Флаг Тринидада и Тобаго
+emojis.1f1f9-1f1f9.keywords: флаг,тобаго,тринидад
+emojis.1f1f9-1f1fb.name: Флаг Тувалу
+emojis.1f1f9-1f1fb.keywords: флаг,тувалу
+emojis.1f1f9-1f1fc.name: Флаг Китайской Республики
+emojis.1f1f9-1f1fc.keywords: китай,флаг,тайвань,китайская республика
+emojis.1f1f9-1f1ff.name: Флаг Танзании
+emojis.1f1f9-1f1ff.keywords: флаг,танзания
+emojis.1f1fa-1f1e6.name: Флаг Украины
+emojis.1f1fa-1f1e6.keywords: флаг,украина
+emojis.1f1fa-1f1ec.name: Флаг Уганды
+emojis.1f1fa-1f1ec.keywords: флаг,уганда
+emojis.1f1fa-1f1f3.name: Флаг ООН
+emojis.1f1fa-1f1f3.keywords: флаг,оон,организация,объединенных,наций
+emojis.1f1fa-1f1f8.name: Флаг США
+emojis.1f1fa-1f1f8.keywords: америка,флаг,соединенные,штаты,сша,внешние малые острова
+emojis.1f1fa-1f1fe.name: Флаг Уругвая
+emojis.1f1fa-1f1fe.keywords: флаг,уругвай
+emojis.1f1fa-1f1ff.name: Флаг Узбекистана
+emojis.1f1fa-1f1ff.keywords: флаг,узбекистан
+emojis.1f1fb-1f1e6.name: Флаг Ватикана
+emojis.1f1fb-1f1e6.keywords: флаг,ватикан
+emojis.1f1fb-1f1e8.name: Флаг Сент-Винсента и Гренадин
+emojis.1f1fb-1f1e8.keywords: флаг,гренадины,святой,сент,винсент
+emojis.1f1fb-1f1ea.name: Флаг Венесуэлы
+emojis.1f1fb-1f1ea.keywords: флаг,венесуэла
+emojis.1f1fb-1f1ec.name: Флаг Британских Виргинских островов
+emojis.1f1fb-1f1ec.keywords: британские,флаг,остров,виргинские
+emojis.1f1fb-1f1ee.name: Флаг Американских Виргинских островов
+emojis.1f1fb-1f1ee.keywords: америка,флаг,остров,соединенные штаты,сша,виргинские
+emojis.1f1fb-1f1f3.name: Флаг Вьетнама
+emojis.1f1fb-1f1f3.keywords: флаг,вьетнам
+emojis.1f1fb-1f1fa.name: Флаг Вануату
+emojis.1f1fb-1f1fa.keywords: флаг,вануату
+emojis.1f3f4-e0067-e0062-e0077-e006c-e0073-e007f.name: Флаг Уэльса
+emojis.1f3f4-e0067-e0062-e0077-e006c-e0073-e007f.keywords: wales,flag
+emojis.1f1fc-1f1eb.name: Флаг Уоллис и Футуна
+emojis.1f1fc-1f1eb.keywords: флаг,футуна,уоллис
+emojis.1f1fc-1f1f8.name: Флаг Самоа
+emojis.1f1fc-1f1f8.keywords: флаг,самоа
+emojis.1f1fd-1f1f0.name: Флаг Косово
+emojis.1f1fd-1f1f0.keywords: флаг,косово
+emojis.1f1fe-1f1ea.name: Флаг Йемена
+emojis.1f1fe-1f1ea.keywords: флаг,йемен
+emojis.1f1fe-1f1f9.name: Флаг Майотты
+emojis.1f1fe-1f1f9.keywords: флаг,майотта
+emojis.1f1ff-1f1e6.name: Флаг Южно-Африканской Республики
+emojis.1f1ff-1f1e6.keywords: флаг,юг,южная африка
+emojis.1f1ff-1f1f2.name: Флаг Замбии
+emojis.1f1ff-1f1f2.keywords: флаг,замбия
+emojis.1f1ff-1f1fc.name: Флаг Зимбабве
+emojis.1f1ff-1f1fc.keywords: флаг,зимбабве
+emojis.1f1e7-1f1fb.name: Флаг острова Буве
+emojis.1f1e7-1f1fb.keywords: флаг,буве,остров
+emojis.1f1e8-1f1f5.name: Флаг Клиппертона
+emojis.1f1e8-1f1f5.keywords: флаг,клиппертон,остров
+emojis.1f1e9-1f1ec.name: Флаг Диего-Гарсии
+emojis.1f1e9-1f1ec.keywords: флаг,диего-гарсия
+emojis.1f1ea-1f1e6.name: Флаг Сеуты и Мелильи
+emojis.1f1ea-1f1e6.keywords: флаг,сеута,мелилья
+emojis.1f1ed-1f1f2.name: Флаг острова Херд и островов Макдональд
+emojis.1f1ed-1f1f2.keywords: флаг,херд,остров,макдональд
+emojis.1f1f2-1f1eb.name: Флаг Сен-Мартена
+emojis.1f1f2-1f1eb.keywords: флаг,французский,мартен,святой,сен
+emojis.1f1f8-1f1ef.name: Флаг Шпицбергена и Ян-Майена
+emojis.1f1f8-1f1ef.keywords: флаг,ян-майен,шпицберген
+emojis.1f1fa-1f1f2.name: Флаг Внешних малых островов США
+emojis.1f1fa-1f1f2.keywords: flag,america,island,minor outlying,united,united states,us,usa

@@ -1,0 +1,66 @@
+<%--
+  @Summary: Inits a Publication's oriented dataImage
+  @Category: Template
+  @Deprecated: False
+  @Customizable: True
+  @Requestable: False
+  @Since: jcms-9.0.1
+--%><%@page import="java.io.File"%>
+<%@page import="com.jalios.jcms.JcmsUtil"%>
+<%@page import="java.math.BigDecimal"%><%
+%><%@page import="java.awt.Dimension"%><%
+%><%@page import="com.jalios.jcms.FileDocument"%><%
+%><%@page import="com.jalios.util.Orientation"%><%
+  // Public
+String dataImage = pub.getDataImage(userLang);
+Orientation imageOrientation = null;
+String dataImageTitle = "";
+boolean isLandscape = false;
+boolean isPortrait = false;
+boolean isSquare = false;
+boolean hasImage = false;
+
+{
+  // Internal / private
+  if (Util.notEmpty(dataImage)) {
+    hasImage = true;
+
+    File imageFile = new File(channel.getRealPath(dataImage));
+    if (imageFile.canRead() && imageFile.isFile()) {
+      FileDocument imageFd = FileDocument.getFileDocumentFromFile(imageFile);
+      if (imageFd != null && imageFd.getWidth() > 0 && imageFd.getHeight() > 0) {
+        // Reuse FileDocument's dimensions when available
+        int w = new BigDecimal(imageFd.getWidth()).intValueExact();
+        int h = new BigDecimal(imageFd.getHeight()).intValueExact();
+        imageOrientation = new Orientation(new Dimension(w, h));
+        if (imageFd.canBeReadBy(loggedMember)) {
+          // Compute a label for the IMG's title attribute
+          dataImageTitle = imageFd.getTitle(userLang, true);
+        }
+      } else {
+        imageOrientation = new Orientation(imageFile);
+      }
+
+      // HOOK: Check minimum width for image to be Landscape
+      Integer landscapeMinWidth = (Integer)request.getAttribute("publication-image-landscape-min-width");
+      if (landscapeMinWidth == null) {
+        landscapeMinWidth = 800;  // Default minimum width for an image to be "Landscape"
+      }
+      double dataImageWidth = imageOrientation.getWidth();
+      boolean isValidLandscape = dataImageWidth >= landscapeMinWidth;
+
+      // Fill variables
+      isLandscape = isValidLandscape && imageOrientation.isLandscape();
+      isPortrait = imageOrientation.isPortrait();
+      isSquare = imageOrientation.isSquare();
+    }
+  }
+  request.removeAttribute("publication-image-landscape-min-width");
+}
+%>
+<%-- dataImage: <%= dataImage %>,<br /> --%>
+<%-- hasImage: <%= hasImage %>,<br /> --%>
+<%-- isLandscape: <%= isLandscape %>,<br /> --%>
+<%-- isPortrait: <%= isPortrait %>,<br /> --%>
+<%-- isSquare: <%= isSquare %>,<br /> --%>
+<%-- imageOrientation: <%= imageOrientation %> --%>

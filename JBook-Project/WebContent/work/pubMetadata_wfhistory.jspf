@@ -1,0 +1,5 @@
+<% if (showWorkflowHistory) { %>
+<div class="tab-pane" id="wfhistory">
+  <%@ include file='/work/workflow/doDisplayWFNoteList.jspf' %>
+</div>
+<% } %>

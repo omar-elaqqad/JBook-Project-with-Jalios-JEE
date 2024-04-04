@@ -1,0 +1,5 @@
+<%@page import="com.jalios.jcms.uicomponent.topbar.TopbarHandler"%><%
+%><%@page import="com.jalios.jcms.uicomponent.topbar.TopbarManager"%><%
+%><%@ include file="/jcore/doInitPage.jspf" %><%
+TopbarHandler topbarHandler = (TopbarHandler) request.getAttribute(TopbarManager.TOPBAR_HANDLER_REQUEST_ATTR);
+%>

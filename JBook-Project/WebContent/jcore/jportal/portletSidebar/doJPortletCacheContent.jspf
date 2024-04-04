@@ -1,0 +1,71 @@
+<%@page import="com.jalios.jcms.portlet.EditPortalElementHandler"%>
+<%@page import="com.jalios.jcms.taglib.settings.impl.DurationSettings"%>
+<%@page import="com.jalios.jcms.handler.EditPublicationHandler"%>
+<%@page import="com.jalios.jcms.Publication"%>
+<%@page import="java.util.List"%>
+<%@page import="com.jalios.util.Util"%>
+<%@page import="generated.AbstractPortlet"%>
+<%@page import="com.jalios.jcms.taglib.settings.impl.EnumerateSettings"%>
+<div class="jportal-sidebar-group is-accordion jportal-sidebar-group-separated">
+	<a class="sidebar-subtitle collapsed" data-toggle="collapse" href="#caches" aria-expanded="false" aria-controls="structureblocks"><jalios:icon src="caret" />
+	  <%= glp("jportal.edition.sidebar.portlet-edit.advanced.cache.title") %>
+	</a>
+  <div class="sidebar-collapsed-group collapse" id="caches">  
+		<%-- CacheType ------------------------------------------------------------ --%> 
+    <% String cacheType = Util.getString(genericFormHandler.getAvailableCacheType(),""); %>
+    <jalios:field name='<%= "cacheType" %>' label='<%= glp("ui.editportlet.cachetype") %>' tooltip='<%= glp("ui.editportlet.title.cachetype") %>' required='<%= true %>' value='<%= cacheType %>'>
+      <jalios:control settings='<%= new EnumerateSettings().select().enumValues(AbstractPortlet.getCacheTypeValues()).enumLabels(AbstractPortlet.getCacheTypeLabels(userLang)) %>' />
+    </jalios:field>
+
+        
+    <%-- CacheSensibility ------------------------------------------------------------ --%> 
+    <% String cacheSensibility = Util.getString(genericFormHandler.getAvailableCacheSensibility(),""); %>
+    <jalios:field name='<%= "cacheSensibility" %>' label='<%= glp("ui.editportlet.cacherefine") %>' description='<%= glp("ui.editportlet.title.cacherefine") %>' required='<%= true %>' value='<%= cacheSensibility %>'>
+      <jalios:control settings='<%= new EnumerateSettings().select().enumValues(AbstractPortlet.getCacheSensibilityValues()).enumLabels(AbstractPortlet.getCacheSensibilityLabels(userLang)) %>' />
+    </jalios:field>
+
+    <%-- CacheData ------------------------------------------------------------ --%> 
+    <% 
+      String[] invalidClassArray   = genericFormHandler.getAvailableInvalidClass();
+      
+      List<String> enumValues = new ArrayList<String>();
+      enumValues.add("Data");
+      enumValues.add("Category");
+      enumValues.add("Member");
+      enumValues.add("Group");
+      enumValues.add("Content");
+      enumValues.add("PortalElement");
+      enumValues.add("Publication");
+      
+      
+      List<String> enumLabels = new ArrayList<String>();
+      enumLabels.add(glp("ui.com.lbl.datas"));
+      enumLabels.add(glp("ui.com.lbl.categories"));
+      enumLabels.add(glp("ui.com.lbl.members"));
+      enumLabels.add(glp("ui.com.lbl.groups"));
+      enumLabels.add(glp("ui.com.lbl.contents"));
+      enumLabels.add(glp("ui.com.lbl.portalelements"));
+      enumLabels.add(glp("ui.com.lbl.publications"));
+    
+    
+      List classList = channel.getSubTypeList(Publication.class, userLang);
+      for (Iterator it = classList.iterator(); it.hasNext(); ){
+        Class itClass = (Class) it.next();
+        enumValues.add(itClass.getName());
+        enumLabels.add(channel.getTypeLabel(itClass,genericFormHandler.getWorkspace(), userLang));
+      }
+    %>
+    
+    <jalios:field name='<%= "invalidClass" %>' label='<%= glp("ui.editportlet.cachedata") %>' value='<%= invalidClassArray %>' mv='<%= 1 %>'>
+	    <jalios:control settings='<%= new EnumerateSettings().select().enumValues(enumValues).enumLabels(enumLabels) %>' />
+    </jalios:field>
+        
+    <% if (genericFormHandler.isFieldEdition("invalidtime")) { %>
+      <%-- Invalidtime ------------------------------------------------------------ --%>
+      <% long invalidtimeValues = genericFormHandler.getAvailableInvalidTime(); %>
+      <jalios:field name='<%= "invalidTime" %>' label="ui.editportlet.cachetimeout" description="ui.editportlet.title.cachetimeout" value='<%= ""+invalidtimeValues %>'>
+        <jalios:control settings='<%= new DurationSettings().resolution(DurationSettings.Resolution.MINUTE) %>' />
+      </jalios:field>
+    <% } %>
+  </div>
+</div>

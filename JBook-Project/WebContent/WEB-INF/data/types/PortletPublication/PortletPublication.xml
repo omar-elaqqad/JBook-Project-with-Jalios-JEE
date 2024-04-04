@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<type name="PortletPublication" superclass="generated.AbstractPortletSkinable" debatable="false" unitFieldEdition="true" audienced="false" categoryTab="true" readRightTab="true" updateRightTab="true" templateTab="true" workflowTab="true" advancedTab="true" hbm="true" authgroups="||" categories="">
+  <title ml="true" />
+  <fields>
+    <field name="pub" editor="link" required="true" compactDisplay="false" type="com.jalios.jcms.Publication" parent="false" ml="false" descriptionType="tooltip" searchable="false" html="false" checkHtml="true" />
+    <field name="template" editor="textfield" required="false" compactDisplay="false" type="String" searchable="false" size="80" ml="false" html="false" checkHtml="true" />
+    <field name="showDisplayHeader" editor="boolean" required="false" compactDisplay="false" type="boolean" default="on" />
+    <field name="showDisplayFooter" editor="boolean" required="false" compactDisplay="false" type="boolean" default="on" />
+    <field type="super" />
+  </fields>
+</type>
+

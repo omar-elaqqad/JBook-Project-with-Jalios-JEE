@@ -1,0 +1,37 @@
+<fieldset>
+  <legend><%= glp("ui.work.form.lbl.wf.sched") %></legend>                
+  <% if (wf.isPublishWorkflow()) { %>
+  <%-- WF / PDATE ------------------------------------------------------------ --%> 
+  <jalios:field name="pdate" label="ui.work.form.lbl.pdate" value='<%= formHandler.getAvailablePdate() %>' disabled='<%= formHandler.getFieldStatus("pdate").isDisabled() %>'>
+    <jalios:control settings='<%= new DateSettings().displayTime() %>' />
+  </jalios:field>
+
+  <%-- WF / EDATE ------------------------------------------------------------ --%> 
+  <jalios:field name="edate" label="ui.work.form.lbl.edate" value='<%= formHandler.getAvailableEdate() %>' disabled='<%= formHandler.getFieldStatus("edate").isDisabled() %>'>
+    <jalios:control settings='<%= new DateSettings().displayTime() %>' />
+  </jalios:field>
+
+  <% } %>
+  <%-- WF / ADATE ------------------------------------------------------------ --%>
+  <% if (!isPortlet) { %> 
+    <% boolean disabled = formHandler.getFieldStatus("adate").isDisabled() || !((pub == null || pub.canBeArchived(loggedMember)) && loggedMember.canArchive(pub)); %>
+    <jalios:field name='<%= "adate" %>' label='<%= glp("ui.work.form.lbl.adate") %>' value='<%= formHandler.getAvailableAdate() %>' disabled='<%= disabled %>'>
+      <jalios:control settings='<%= new DateSettings().displayTime() %>' />
+    </jalios:field>
+  <% } %>
+</fieldset>
+  <jalios:javascript>
+    !function ($) {
+        $(':input[name=pstatus]').on('change', function(){
+          var selectedPStatus = $(this).val();
+          //clear edate if expired status is changed
+          var currentPublicationStatus = $(':input[name=currentPublicationStatus]').val();
+          if(currentPublicationStatus == 10){
+	          if(selectedPStatus != 10 && selectedPStatus != 20){
+		        var $eltToUpdate = $(".widget-name-edate").find("input.control-date");
+		        $eltToUpdate.val("");
+	          }
+          }
+        });
+    }(window.jQuery); 
+    </jalios:javascript>

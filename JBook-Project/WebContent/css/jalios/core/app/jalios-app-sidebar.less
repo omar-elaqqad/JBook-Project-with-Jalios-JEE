@@ -1,0 +1,408 @@
+/* App sidebar */
+// SIDEBAR FORM ITEMS, Work in progress
+
+.app-sidebar {
+  .app-sidebar-block {
+    padding-left: @app-sidebar-horizontal-padding;
+    padding-right: @app-sidebar-horizontal-padding;
+    margin-bottom: @app-baseline;
+  }
+}
+
+.app.has-tabs .app-sidebar .app-sidebar-icon {
+  height: 160px;
+}
+
+.app .app-sidebar {
+  color: ~'var(--app-sidebar-text-color)';
+
+  A {
+    text-decoration: none;
+    color: @app-sidebar-color;
+
+    .jalios-icon {
+      color: ~'var(--app-sidebar-icon-color)';
+    }
+  }
+
+  .app-sidebar-icon {
+    height: @app-header-height;
+    font-size: @app-sidebar-icon-size;
+    text-align: center;
+    position: relative;
+
+    .jalios-icon,
+    IMG {
+      color: @app-header-bgcolor;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: @app-sidebar-icon-size;
+    }
+    @media (min-width: @app-lg-min) {
+      font-size: @app-sidebar-icon-size-lg;
+    }
+  }
+
+  .app-sidebar-section {
+    box-shadow: 0 20px 0px -19px #e2e2e2;
+    margin-bottom: 16px;
+    padding-bottom: 16px;    margin-bottom: @app-baseline;
+    padding-bottom: @app-baseline;
+
+    &.is-sticky {
+      margin-bottom: 0;
+    }
+
+    &.app-sidebar-section-search,
+    &:last-of-type,
+    &:last-child {
+      box-shadow: initial;
+    }
+
+
+    .collapsable-content {
+      padding-top: 8px;
+    }
+
+    A.app-sidebar-section-title {
+      position: relative;
+      display: block;
+      padding: 2px 24px;
+      
+      &:before {
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        transition: background-color 200ms ease-in;
+        background-color: transparent;
+        position: absolute;
+      }
+      &:hover:before {
+        background-color: #86868642;
+      }
+    }
+
+    H2.app-sidebar-section-title {
+      font-size: @app-sidebar-section-fontsize;
+      font-weight: 400;
+      margin: 0;
+      line-height: 1.45;
+    }
+
+    .app-sidebar-section-title {
+      font-size: @app-sidebar-section-fontsize;
+      text-transform: uppercase;
+      padding: 0 @app-sidebar-horizontal-padding;
+      color: ~'var(--app-sidebar-section-title-color)';
+      line-height: 1.45;
+      
+      H2 {
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0;
+        line-height: 1.45;
+      }
+
+      &:only-child {
+        margin-bottom: 0;
+      }
+
+      &.active {
+        background-color: @app-sidebar-selection;
+        color: ~'var(--app-sidebar-active-text-color)';
+
+        .jalios-icon,
+        A {
+          color: ~'var(--app-sidebar-active-text-color)';
+        }
+      }
+
+      > A {
+        position: relative;
+        &:before {
+          content: '';
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          pointer-events: none;
+          transition: background-color 200ms ease-in;
+          background-color: transparent;
+          position: absolute;
+        }
+
+        &:not(.btn):hover:before {
+          background-color: #86868642;
+        }
+
+        margin: 0 -@app-sidebar-horizontal-padding;
+        padding: 0 @app-sidebar-horizontal-padding;
+        display: block;
+        color: ~'var(--app-sidebar-section-title-color)';
+        transition: background-color 200ms ease-in, color 200ms ease-in;
+
+        &:hover {
+          A {
+            color: @app-sidebar-color-active;
+          }
+        }
+      }
+
+      .jalios-icon {
+        font-size: @app-sidebar-section-icon-fontsize;
+        vertical-align: baseline;
+      }
+    }
+  }
+
+  //Render arrows (carets)
+  .app-sidebar-menu-arrow-collapsed() {
+    width: 0;
+    height: 0;
+    border-top: 4px solid;
+    border-bottom: 0;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+  }
+
+  .app-sidebar-menu-arrow-expanded() {
+    width: 0;
+    height: 0;
+    border-top: 0;
+    border-bottom: 4px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+  }
+
+  //Add this class when a LI has children in the sidebar menus
+  LI A.app-sidebar-menu-node:after {
+    display: inline-block;
+
+    margin-left: 5px;
+    vertical-align: middle;
+    content: '';
+    color: @app-sidebar-color;
+    .app-sidebar-menu-arrow-collapsed;
+  }
+  LI.active A.app-sidebar-menu-node:after {
+    color: ~'var(--app-sidebar-text-color)';
+  }
+
+  LI A.app-sidebar-menu-node.dropup:after,
+  LI A.app-sidebar-menu-node.expanded:after {
+    .app-sidebar-menu-arrow-expanded;
+  }
+
+  LI A.app-sidebar-menu-node.collapsed:after {
+    .app-sidebar-menu-arrow-collapsed;
+  }
+
+  LI.active A.app-sidebar-menu-node {
+    padding-right: 37px;
+  }
+
+  LI.active A.app-sidebar-menu-node:after {
+    color: ~'var(--app-sidebar-text-color)';
+  }
+
+  LI.active > A.app-sidebar-menu-node:after {
+    color: @app-sidebar-color-active;
+  }
+
+  // Common hover rule for all LI / LABELS
+  LI {
+    position: relative;
+    
+    &.is-checked:after {
+      content: '\ed71';
+      color: ~'var(--app-sidebar-active-text-color)';
+      font-family: 'icomoon';
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    > .control-enumerate:before,
+    > LABEL:before,
+    > A:before {
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      transition: background-color 200ms ease-in;
+      background-color: transparent;
+      position: absolute;
+    }
+    > .control-enumerate:hover:before,
+    > LABEL:hover:before,
+    > A:not(.btn):hover:before {
+      background-color: #86868642;
+    }
+  }
+
+  .widget.field-enumerate {
+    .checkbox:before,
+    .radio:before {
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      transition: background-color 200ms ease-in;
+      background-color: transparent;
+      position: absolute;
+    }
+    .checkbox:hover:before,
+    .radio:hover:before {
+      background-color: #86868642;
+    }
+  }
+
+  .app-sidebar-field > .control-enumerate {
+    &:before {
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      transition: background-color 200ms ease-in;
+      background-color: transparent;
+      position: absolute;
+    }
+    &:hover:before {
+      background-color: #86868642;
+    }
+  }
+
+  UL.app-sidebar-menu {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    // Apply list style reset on children list items
+    UL {
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style: none;
+    }
+    // Shift Sub level menus to the right
+    > LI > UL > LI {
+      > A {
+        padding-left: @app-sidebar-horizontal-padding*2;
+      }
+
+      > UL > LI {
+        > A {
+          padding-left: @app-sidebar-horizontal-padding*3;
+        }
+
+        > UL > LI {
+          > A {
+            padding-left: @app-sidebar-horizontal-padding*4;
+          }
+
+          > UL > LI > A {
+            padding-left: @app-sidebar-horizontal-padding*5;
+          }
+        }
+      }
+    }
+    // Style applied on all sub LI
+    LI {
+      line-height: 20px;
+
+      &.active {
+        background-color: ~'var(--app-sidebar-active-bg-color)';
+        A {
+          color: ~'var(--app-sidebar-text-color)';
+        }
+
+        .jalios-icon {
+          color: ~'var(--app-sidebar-active-text-color)';
+        }
+        UL LI {
+          A {
+            color: ~'var(--app-sidebar-text-color)';
+          }
+
+          .jalios-icon {
+            color: ~'var(--app-sidebar-text-color)';
+          }
+        }
+      }
+
+      &.active > A {
+        color: ~'var(--app-sidebar-active-text-color)';
+        .jalios-icon {
+          color: ~'var(--app-sidebar-active-text-color)';
+        }
+      }
+      &.active > .jalios-icon {
+        color: ~'var(--app-sidebar-active-text-color)';
+      }
+
+      .app-list-right-icon {
+        float: right;
+        padding-right: 12px;
+        line-height: 29px;
+      }
+
+      .app-list-icon-prefix {
+        padding-right: @app-sidebar-horizontal-padding / 2;
+      }
+    }
+
+    LI:not(.active) > A:not(.btn):hover {
+      color: ~'var(--app-sidebar-text-color)';
+    }
+
+    > LI {
+      UL LI {
+        background-color: ~'var(--app-sidebar-section-list-sub-child-bg-color)';
+      }
+      //Apply a background on children active elements
+      &.active > UL LI {
+        color: ~'var(--app-sidebar-text-color)';
+        > A {
+          color: ~'var(--app-sidebar-text-color)';
+        }
+
+        &.active > A {
+          color: ~'var(--app-sidebar-active-text-color)';
+        }
+
+        &.active {
+          background-color: @app-sidebar-selection;
+        }
+      }
+      &.active {
+        background-color: @app-sidebar-selection;
+      }
+      A {
+        padding: 6px @app-sidebar-horizontal-padding;
+        display: block;
+        transition: background-color 200ms ease-in, color 200ms ease-in;
+      }
+    }
+  }
+
+  .app-sidebar-icon {
+    .jalios-icon,
+    IMG {
+      font-size: @app-sidebar-icon-size;
+    }
+  }
+
+  .jalios-icon {
+    font-size: @icon-size;
+  }
+}

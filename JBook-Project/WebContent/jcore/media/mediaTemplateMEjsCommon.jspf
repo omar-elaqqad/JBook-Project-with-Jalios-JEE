@@ -1,0 +1,18 @@
+<%--
+  @Summary: JSPF used by all MediaElement.js templates
+--%><%
+
+final String mejslangFile = channel.getProperty("mejs.languagefile-mapping." + userLang, channel.getProperty("mejs.languagekey-mapping." + userLang, "")); 
+final String mejslang = channel.getProperty("mejs.languagekey-mapping." + userLang, "");
+
+if(!Util.toBoolean(request.getAttribute("jcms.plugin.smartphone.smartphone-resource"), false)){ // prevent to use jcmsContext.addJavascript - addCSSHeader on smartphone
+	jcmsContext.addJavaScript("js/lib/mejs/mediaelement-and-player.js");
+	if (Util.notEmpty(mejslangFile)) {
+	  jcmsContext.addJavaScript("js/lib/mejs/lang/" + mejslangFile + ".js");
+	}
+	jcmsContext.addCSSHeader("js/lib/mejs/mediaelementplayer.css");
+	jcmsContext.addCSSHeader("css/jalios/media/mejs.css");
+	jcmsContext.addJavaScript("js/jalios/media/jalios-mediaelement.js");
+}
+
+%>

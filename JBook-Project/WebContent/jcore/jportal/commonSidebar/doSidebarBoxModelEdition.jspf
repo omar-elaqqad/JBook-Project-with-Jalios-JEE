@@ -1,0 +1,64 @@
+<div class="box-edition">
+  <a class="box-edition-help"><jalios:icon src="jportal-sidebar-box-edition-help" /></a>
+
+  <div class="box-edition-margin">
+    <span class="box-edition-text box-edition-corner-left"><%= glp("jportal.edition.sidebar.ui.margin.label") %></span>
+    <jalios:field resource="field-light" name="marginTop" label="Padding top" css="box-edition-field box-edition-top"> 
+      <jalios:control settings='<%= new TextFieldSettings().css("jblock-css") %>' />
+    </jalios:field>         
+    <jalios:field resource="field-light" name="marginLeft" label="Padding top" css="box-edition-field box-edition-left"> 
+      <jalios:control settings='<%= new TextFieldSettings().css("jblock-css") %>' />
+    </jalios:field>         
+    <jalios:field resource="field-light" name="marginRight" label="Padding right" css="box-edition-field box-edition-right"> 
+      <jalios:control settings='<%= new TextFieldSettings().css("jblock-css") %>' />
+    </jalios:field>         
+    <jalios:field resource="field-light" name="marginBottom" label="Padding bottom" css="box-edition-field box-edition-bottom"> 
+      <jalios:control settings='<%= new TextFieldSettings().css("jblock-css") %>' />
+    </jalios:field>
+    <div class="box-edition-border">
+      <span class="box-edition-text box-edition-corner-left"><%= glp("jportal.edition.sidebar.ui.border.label") %></span>
+      <jalios:field resource="field-light" name="borderTopWidth" label="Padding top" css="box-edition-field box-edition-top"> 
+        <jalios:control settings='<%= new TextFieldSettings().css("jblock-css") %>' />
+      </jalios:field>         
+      <jalios:field resource="field-light" name="borderLeftWidth" label="Padding top" css="box-edition-field box-edition-left"> 
+        <jalios:control settings='<%= new TextFieldSettings().css("jblock-css") %>' />
+      </jalios:field>         
+      <jalios:field resource="field-light" name="borderRightWidth" label="Padding right" css="box-edition-field box-edition-right"> 
+        <jalios:control settings='<%= new TextFieldSettings().css("jblock-css") %>' />
+      </jalios:field>         
+      <jalios:field resource="field-light" name="borderBottomWidth" label="Padding bottom" css="box-edition-field box-edition-bottom"> 
+        <jalios:control settings='<%= new TextFieldSettings().css("jblock-css") %>' />
+      </jalios:field>       
+    
+      <jalios:field resource="field-light" name="borderTopLeftRadius" label="Border radius" css="box-edition-field box-edition-top-left-corner"> 
+        <jalios:control settings='<%= new TextFieldSettings().css("jblock-css") %>' />
+      </jalios:field>
+      <jalios:field resource="field-light" name="borderTopRightRadius" label="Border radius" css="box-edition-field box-edition-top-right-corner"> 
+        <jalios:control settings='<%= new TextFieldSettings().css("jblock-css") %>' />
+      </jalios:field> 
+      <jalios:field resource="field-light" name="borderBottomLeftRadius" label="Border radius" css="box-edition-field box-edition-bottom-left-corner"> 
+        <jalios:control settings='<%= new TextFieldSettings().css("jblock-css") %>' />
+      </jalios:field>
+      <jalios:field resource="field-light" name="borderBottomRightRadius" label="Border radius" css="box-edition-field box-edition-bottom-right-corner"> 
+        <jalios:control settings='<%= new TextFieldSettings().css("jblock-css") %>' />
+      </jalios:field>       
+    
+    
+      <div class="box-edition-padding">
+        <span class="box-edition-text box-edition-corner-left"><%= glp("jportal.edition.sidebar.ui.padding.label") %></span>
+        <jalios:field resource="field-light" name="paddingTop" label="Padding top" css="box-edition-field box-edition-top"> 
+          <jalios:control settings='<%= new TextFieldSettings().css("jblock-css") %>' />
+        </jalios:field>         
+        <jalios:field resource="field-light" name="paddingLeft" label="Padding top" css="box-edition-field box-edition-left"> 
+          <jalios:control settings='<%= new TextFieldSettings().css("jblock-css") %>' />
+        </jalios:field>         
+        <jalios:field resource="field-light" name="paddingRight" label="Padding right" css="box-edition-field box-edition-right"> 
+          <jalios:control settings='<%= new TextFieldSettings().css("jblock-css") %>' />
+        </jalios:field>         
+        <jalios:field resource="field-light" name="paddingBottom" label="Padding bottom" css="box-edition-field box-edition-bottom"> 
+          <jalios:control settings='<%= new TextFieldSettings().css("jblock-css") %>' />
+        </jalios:field>         
+      </div>
+    </div>
+  </div>
+</div>
