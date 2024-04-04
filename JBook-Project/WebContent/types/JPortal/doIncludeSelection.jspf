@@ -1,7 +1,0 @@
-<% if(jBlock.getOptions().isPortletSelection()){ %>
-	<% 
-	Publication pub = (Publication) request.getAttribute(PortalManager.PORTAL_PUBLICATION);
-  if(Util.notEmpty(pub)){ %>
-		<jalios:include id='<%= pub.getId() %>' />
-	<% } %>
-<% } %>

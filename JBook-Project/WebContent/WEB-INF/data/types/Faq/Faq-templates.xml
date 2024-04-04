@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<templates version="5.0">
-  <template name="default" usage="box" file="doFaqFullDisplay.jsp" />
-  <template name="default" usage="edit" file="editFaq.jsp" />
-  <template name="default" usage="full" file="doFaqFullDisplayAccordion.jsp" />
-  <template name="anchors" usage="full" file="doFaqFullDisplay.jsp" />
-  <template name="default" usage="query" file="doFaqResultDisplay.jsp" />
-  <template name="default" usage="fullDisplayEditModal" file="editFaqModal.jsp" />
-</templates>

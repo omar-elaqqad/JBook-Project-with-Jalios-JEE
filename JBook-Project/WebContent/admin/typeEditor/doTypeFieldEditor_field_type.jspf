@@ -1,6 +1,0 @@
-<%-- SUPER TYPES ------------------------------------------------------- --%> 
-<% if (isType) { %>
-<jalios:field name="superTypes" label="ui.adm.type-edit.lbl.type-ch" tooltip="ui.adm.type-edit.lbl.type-ch.h" value="<%= formHandler.getFieldSuperTypes() %>" >
-  <jalios:control settings='<%= new com.jalios.jcms.taglib.settings.impl.TypeSettings().uniqueValue(" ").superType(Content.class, UserContent.class, Portlet.class, Form.class).acceptSuperType().multiple() %>' />
-</jalios:field>
-<% } %>

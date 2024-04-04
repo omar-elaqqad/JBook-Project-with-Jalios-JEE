@@ -1,5 +1,0 @@
-<%@ include file="/front/card/layout/doInitCards.jspf" %><%
-Collection collection = (Collection) getIncludeObject("collection", null);
-String cardTemplate = getIncludeString("template", "");
-String titleTag = getIncludeString("titleTag", CardDataTag.DEFAULT_TITLE_TAG);
-%>

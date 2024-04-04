@@ -1,1 +1,0 @@
-jQuery.console.warn("portal-dnd.js is deprecated, please remove declaration...");

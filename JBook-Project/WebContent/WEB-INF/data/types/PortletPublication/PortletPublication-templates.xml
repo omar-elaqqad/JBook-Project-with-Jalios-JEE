@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<templates version="5.0">
-  <template name="default" usage="box" file="doPortletPublicationFullDisplay.jsp" />
-  <template name="default" usage="full" file="doPortletPublicationFullDisplay.jsp" />
-  <template name="default" usage="edit" file="editPortletPublication.jsp" />
-</templates>

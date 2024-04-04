@@ -1,9 +1,0 @@
-<%@ page contentType="text/html; charset=UTF-8" %><%
-%><%@page import="com.jalios.jcms.alert.*"%><%
-%><%@page import="com.jalios.jcms.alert.AlertAppHandler"%><%
-
-AlertAppHandler formHandler = (AlertAppHandler) request.getAttribute("formHandler");
-if (formHandler == null) {
-  return;
-}
-%>

@@ -1,1 +1,0 @@
-<%@ include file='/types/AbstractPortletSkinable/doAbstractPortletSkinableFullDisplay.jsp' %>

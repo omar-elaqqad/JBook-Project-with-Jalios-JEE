@@ -1,8 +1,0 @@
-<% 
-String noResultText = Util.isEmpty(request.getAttribute("no-result.text")) ? glp("ui.com.lbl.no-result") : (String) request.getAttribute("no-result.text"); 
-String noResultButton = (String) request.getAttribute("app.no-result.button");
-%>
-<div class="no-results">
-  <jalios:icon css="no-result-icon" src="no-result" />
-  <p><%= noResultText %></p>
-</div>

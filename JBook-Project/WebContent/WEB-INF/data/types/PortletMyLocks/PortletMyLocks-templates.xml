@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<templates version="5.0">
-  <template name="default" file="doPortletMyLocksFullDisplay.jsp" usage="box" />
-  <template name="itemBox" file="doPortletMyLocksItemBox.jsp" usage="box" />
-</templates>
-

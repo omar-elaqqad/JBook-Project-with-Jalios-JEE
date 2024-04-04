@@ -1,3 +1,0 @@
-<div class="topbar-search-no-result-wrapper">
-  <div class="additional-message"><%= glp("ui.work.search.topbar.no-result") %></div>
-</div>

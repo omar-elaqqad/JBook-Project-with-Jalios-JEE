@@ -1,9 +1,0 @@
-<a tabindex="0" role="button" class="sidebar-pull-wrapper" title="<%= glp("ui.app.sidebar-toggler") %>">
-  <svg aria-hidden="true" focusable="false" class="app-sidebar-pull" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 56">
-    <path class="sidebar-pull-shape"  d="M18,28C18,13.11,9.2,10.58,4.38,7.37A9.85,9.85,0,0,1,0,0V56a9.85,9.85,0,0,1,4.38-7.37C9.2,45.42,18,42.89,18,28Z" transform="translate(0)"/>
-    <path class="sidebar-pull-handle" d="M6,32H6a1,1,0,0,1,1-1h4a1,1,0,0,1,1,1h0a1,1,0,0,1-1,1H7A1,1,0,0,1,6,32Z" transform="translate(0)"/>
-    <path class="sidebar-pull-handle" d="M6,28H6a1,1,0,0,1,1-1h4a1,1,0,0,1,1,1h0a1,1,0,0,1-1,1H7A1,1,0,0,1,6,28Z" transform="translate(0)"/>
-    <path class="sidebar-pull-handle" d="M6,24H6a1,1,0,0,1,1-1h4a1,1,0,0,1,1,1h0a1,1,0,0,1-1,1H7A1,1,0,0,1,6,24Z" transform="translate(0)"/>
-  </svg>
-  <span class="sr-only"><%= glp("ui.app.sidebar-toggler") %></span>
-</a>

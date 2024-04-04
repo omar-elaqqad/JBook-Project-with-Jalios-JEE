@@ -1,4 +1,0 @@
-<%@page import="com.jalios.jcms.taglib.card.*"%><%
-%><%@ include file="/jcore/doInitPage.jspf" %><%
-String css = getIncludeString("css", "");
-%>

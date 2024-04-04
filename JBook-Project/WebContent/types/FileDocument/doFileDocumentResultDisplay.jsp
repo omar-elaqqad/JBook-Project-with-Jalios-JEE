@@ -1,1 +1,0 @@
-<%@ include file='/custom/jcms/doResultDisplay.jsp' %>

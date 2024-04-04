@@ -1,7 +1,0 @@
-<%@page import="com.jalios.jcms.taglib.list.ListItemTag"%>
-<jalios:buffer name='LIST_ITEM_IMAGE'><%
-  String image = getIncludeString(ListItemTag.BUFFER_LIST_ITEM_IMAGE, "");
-  if (Util.notEmpty(image)) { %>
-    <%= image %>
-  <% } %>
-</jalios:buffer>

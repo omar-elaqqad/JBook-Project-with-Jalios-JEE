@@ -1,1 +1,0 @@
-<%@ include file='/jcore/portal/doPortletJspInterfaceFullDisplay.jspf' %>
