@@ -1,0 +1,1 @@
+!function(c){const a="admin/action/handleBackofficeAction.jsp";const b=function(){c(document).on("show.jalios.sidebar start-hide.jalios.sidebar",function(d){c.ajax({url:a,traditional:true,data:{sidebarOpened:d.type==="show",opSaveSidebarPreference:true},type:"post"})})};c(document).ready(function(){b()})}(window.jQuery);

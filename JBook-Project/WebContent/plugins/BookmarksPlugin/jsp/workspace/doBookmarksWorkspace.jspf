@@ -1,0 +1,98 @@
+<div class="bookmark-list-view" data-jalios-bookmark-folder="<%=(Util.isEmpty(bookmarkSearchText)) ? currentFolderId : "search-bookmark"%>">
+  <div class="navbar navbar-default">
+	  <form name="bookmarkForm"
+			    action="plugins/BookmarksPlugin/jsp/manageBookmarksListView.jsp"
+			    class="navbar-form navbar-right">
+
+	    <input type='hidden'
+				     name='<%=BookmarkConstants.PARAMETER_WORKSPACE_ID%>'
+				     value='<%=workspace.getId()%>' />
+
+			<div class="form-group">
+		    <jalios:field name='bookmarkSearchText'
+					css="workspace-bookmark-search" value="<%=bookmarkSearchText%>"
+					resource="field-light">
+					<jalios:control
+						settings='<%= bookmarkHandler.getSearchFieldSettings() %>' />
+					<span class="input-group-btn">
+						<button class="btn btn-default ajax-refresh" name="opSearch"
+							type="submit">
+							<jalios:icon src="search" />
+						</button> 
+						<% if (bookmarkHandler.hasBookmarkSearch()) { %> <a href="?bookmarkSearchText="
+						class="ajax-refresh btn btn-default add-on"
+						title='<%=glp("ui.com.btn.reset")%>'><jalios:icon src="cross"
+								alt="ui.com.btn.reset" /></a> <%
+   }
+ %>
+					</span>
+				</jalios:field>
+			</div>
+		</form>
+	</div>
+
+	<% if (Util.notEmpty(breadcrumb)) { %>
+	<div class="bookmark-breadcrumb">
+		<%=breadcrumb%>
+	</div>
+	<% } %>
+
+	<div class="container-fluid" style="text-align: center;">
+		<% if (Util.getSize(bookmarkItemList) == 0) { %>
+    <%@ include file='/front/app/doAppNoResult.jspf' %>
+    <% } %>
+	</div>
+	<% int itemIndex = 0; %>
+	<jalios:list>
+		<jalios:foreach collection="<%=bookmarkItemList%>" name="item" type="BookmarkItem">
+
+			<% String url = "";
+			   String customCss = "";
+			   String title;
+			   if (item instanceof BookmarkFolder) {
+			        url = "plugins/BookmarksPlugin/jsp/manageBookmarksFullDisplay.jsp?" + BookmarkConstants.PARAMETER_CURRENT_FOLDER_ID + "=" + item.getId();
+			        customCss = "ajax-refresh";
+			%>
+			<jalios:listItem text="<%=item.getName()%>" link="<%=url%>" linkCss="ajax-refresh" icon="<%=item.getDataIcon()%>" />
+
+			<%-- BOOKMARK ITEM --%>
+			<%
+			  } else if (item instanceof Bookmark) {
+			        Bookmark bookmark = (Bookmark) item;
+			        if (bookmark.isFileDocument() || bookmark.isData()) {
+			          customCss = "ctxTooltipCard ID_" + bookmark.getData().getId();
+			          url = encodeForHTMLAttribute(bookmark.getData().getDisplayUrl(userLocale));
+			%>
+			<jalios:listItem text="<%=bookmark.getData().getDataName(userLang)%>" linkCss="<%=customCss%>" icon="<%=bookmark.getDataIcon()%>" link="<%=url%>" />
+			<%
+			  } else if (bookmark.isQuery()) {
+			          url = encodeForHTMLAttribute(bookmark.getQueryUrl(), true);
+			          title = encodeForHTMLAttribute(bookmark.getTitle(), true);
+			%>
+			<jalios:listItem text="<%=title%>" icon="<%=item.getDataIcon()%>"
+				link="<%=url%>" />
+			<%
+			  } else {
+			          boolean isExternalLink = bookmarkHandler.isExternalLinks(bookmark.getAnyUrl());
+			          boolean isInNewWindows = bookmarkHandler.getExternalLinksInNewWindow(null, isExternalLink);
+			          title = Util.getString(bookmark.getTitle(), bookmark.getAnyUrl());
+			          url = encodeForHTMLAttribute(bookmark.getAnyUrl(), true);
+			          customCss += "\" target='blank'";
+			%>
+			<jalios:listItem linkCss="<%=isInNewWindows ? customCss : null%>"
+				text="<%=title%>" icon="<%=item.getDataIcon()%>" link="<%=url%>" />
+			  <%
+			  }
+			}
+		%>
+		</jalios:foreach>
+	</jalios:list>
+	<% if (canEdit) { %>
+
+	<a class="btn btn-sm btn-default itemlist-action ajax-refresh"
+		href="?editionMode=true"> <jalios:icon src="itemlist-action" /> <%=glp("jcmsplugin.bookmarks.edition-mode")%>
+	</a>
+	<%
+	  }
+	%>
+</div>

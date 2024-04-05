@@ -1,0 +1,89 @@
+BODY #filerobot-image-editor-root .modal-overlay {
+  background: #0000009c;
+  opacity: 1;
+}
+BODY .FIE_topbar .FIE_topbar-save-wrapper {
+  width: auto !important;
+}
+BODY #filerobot-image-editor-root .dFpbxG {
+  border-radius: 4px;
+}
+BODY #SfxPopper {
+  z-index: 2000;
+  position: absolute;
+}
+BODY .eLItJu {
+  z-index: 100000;
+}
+BODY .FIE_root {
+  font-family: embedded-roboto, Helvetica, Arial, sans-serif;
+}
+BODY .coKTDi {
+  background-color: #009ef5;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+BODY .coKTDi:hover {
+  background-color: #007dc2;
+  border-color: #0077b8;
+}
+BODY .FIE_topbar-reset-button {
+  display: none;
+}
+BODY .FIE_tabs {
+  overflow: visible;
+}
+BODY .FIE_tab {
+  overflow: visible;
+}
+BODY .FIE_tab label {
+  justify-content: center;
+  overflow: visible;
+}
+BODY .iYPUYF {
+  width: 94px;
+}
+DIV.image-editor-wrapper.image-editor-inline {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 24px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+.image-editor-wrapper:not(.image-editor-inline) {
+  height: 80vh;
+  position: fixed;
+  width: 85vw;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2000;
+  background-color: white;
+  margin: auto;
+  padding: 16px;
+  border-radius: 8px;
+}
+.image-editor-wrapper label {
+  margin-bottom: 0;
+}
+.image-editor-wrapper .bigDRF,
+.image-editor-wrapper .dGgFET,
+.image-editor-wrapper .nmZBt .sc-lxwit0-0 {
+  font-family: embedded-roboto, Helvetica, Arial, sans-serif;
+}
+.image-editor-wrapper.image-editor-inline .FIE_topbar-close-button {
+  visibility: hidden;
+}
+.image-editor-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1040;
+  background-color: #000000b8;
+}
+/*# sourceMappingURL=jalios-image-editor.css.map */

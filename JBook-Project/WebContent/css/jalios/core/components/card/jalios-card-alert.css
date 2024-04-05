@@ -1,0 +1,137 @@
+.alert-card {
+  background-color: white;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  position: relative;
+  padding-top: 24px;
+  border-left-width: 8px;
+  border-left-style: solid;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.alert-card .alert-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
+.alert-card.alert-level-border-info {
+  border-left-color: #009EF5;
+}
+.alert-card.alert-level-border-warning {
+  border-left-color: #d9534f;
+}
+.alert-card.alert-level-border-action {
+  border-left-color: #F89406;
+}
+.alert-card .alert-header {
+  padding: 0 24px;
+  margin-bottom: 16px;
+}
+.alert-card .alert-header A.card-action-item {
+  color: #666;
+  text-decoration: none;
+}
+.alert-card .alert-header .description P:last-child {
+  margin-bottom: 0;
+}
+.alert-card.recommendation-card .alert-card-header-metadata {
+  margin-right: 10px;
+}
+.alert-card .alert-footer {
+  padding: 0 24px;
+}
+.alert-card .alert-footer:before,
+.alert-card .alert-footer:after {
+  content: " ";
+  display: table;
+}
+.alert-card .alert-footer:after {
+  clear: both;
+}
+.alert-card .alert-footer:before,
+.alert-card .alert-footer:after {
+  display: table;
+  content: " ";
+}
+.alert-card .alert-footer:after {
+  clear: both;
+}
+.alert-card .alert-body {
+  padding: 0 24px;
+}
+.alert-card .alert-body .abstract {
+  color: #777;
+  font-size: 12px;
+}
+.alert-card .message {
+  position: relative;
+  background: #EDF8FE;
+  border: 1px solid #DAEDF9;
+  padding: 15px;
+  margin-bottom: 16px;
+  border-radius: 5px;
+}
+.alert-card .message:after {
+  content: "";
+  top: -12px;
+  left: 11px;
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 12px 12px 12px;
+  border-color: transparent transparent #EDF8FE transparent;
+}
+.alert-card .message:before {
+  content: "";
+  top: -13px;
+  left: 11px;
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 12px 12px 12px;
+  border-color: transparent transparent #DAEDF9 transparent;
+}
+.alert-card .message P:last-child {
+  margin-bottom: 0;
+}
+.alert-card .card-metadata-item {
+  font-size: 12px;
+  margin-right: 5px;
+}
+.alert-card .metadata {
+  color: #555555;/* color is here for .badge color compliance */
+  padding-bottom: 10px;
+}
+.alert-card .alert-content {
+  padding: 10px;
+}
+.alert-card.alert-read {
+  background-color: #F7F7F7;
+  border-bottom: 1px solid #DDDDDD;
+  color: #555555;
+  border-top: 1px solid #DDDDDD;
+}
+.alert-card .icons {
+  float: right;
+  margin-left: 10px;
+}
+.alert-card .card-footer-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.alert-card .card-footer-actions .card-action-item {
+  margin-right: 0;
+}
+.alert-card .card-footer-actions .card-action-item.vote-tag {
+  display: inline-flex;
+}
+/*# sourceMappingURL=jalios-card-alert.css.map */

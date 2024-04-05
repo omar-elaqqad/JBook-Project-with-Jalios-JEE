@@ -1,0 +1,288 @@
+/*
+DRAG HELPER
+*/
+.jportlet-drag-helper {
+  height: 50px;
+  width: 100px;
+  background-color: #009ef5;
+  border-radius: 4px;
+  z-index: 100;
+}
+.jportlet-drag-helper.animate-helper {
+  transition: width 0.2s ease-in, height 0.2s ease-in;
+}
+/**
+GLOBAL OVERLAY
+**/
+.jportal-global-overlay {
+  background-color: rgba(102, 102, 102, 0.4);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/**
+OVERLAY
+**/
+.portlet-edition-overlay {
+  transition: border-color 0.2s ease-in;
+  border-radius: 4px;
+  outline: 4px solid #009ef5;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #bbbbbb66;
+  z-index: 10;
+}
+.portlet-edition-overlay .add-portlet__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  position: absolute;
+  height: 0;
+}
+.portlet-edition-overlay .edition_menu {
+  display: flex;
+  justify-content: center;
+  margin-top: -4px;
+  z-index: 50;
+}
+.portlet-edition-overlay .edition_menu .menu__grab {
+  cursor: grab;
+}
+.portlet-edition-overlay .edition_menu > a {
+  background-color: #009ef5;
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  height: 32px;
+  align-items: center;
+  transition: background 200ms;
+  text-decoration: none;
+}
+.portlet-edition-overlay .edition_menu > a:hover {
+  text-decoration: none;
+}
+.portlet-edition-overlay .edition_menu > a .jalios-icon {
+  color: white;
+}
+.portlet-edition-overlay .edition_menu > a:hover {
+  background-color: #007dc2;
+}
+.portlet-edition-overlay .edition_menu__sides {
+  height: 32px;
+  width: 32px;
+  position: relative;
+  overflow: hidden;
+}
+.portlet-edition-overlay .edition_menu__left::before {
+  content: "";
+  position: absolute;
+  left: 40%;
+  width: 100%;
+  height: 200%;
+  background-color: #009ef5;
+  bottom: 0;
+  transform: rotate(145deg);
+}
+.portlet-edition-overlay .edition_menu__right::before {
+  content: "";
+  position: absolute;
+  left: -40%;
+  width: 100%;
+  height: 200%;
+  background-color: #009ef5;
+  bottom: 0;
+  transform: rotate(35deg);
+}
+/**
+EMPTY BLOCK
+**/
+.jportal-wrapper.simple-editing .empty-block {
+  height: 100px;
+  border-radius: 4px;
+  z-index: 10;
+  outline: 2px dotted #009ef5;
+  margin-bottom: 20px;
+  transition: background-color 0.2s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  background-color: #c4d4f173;
+}
+.jportal-wrapper.simple-editing .empty-block.activate {
+  background-color: rgba(89, 213, 225, 0.75);
+}
+.jportal-wrapper.simple-editing .empty-block.activate .jalios-icon {
+  font-size: 42px;
+}
+/**
+ADD PORTLET BUTTON
+**/
+.jportal-wrapper .btn-add-portlet {
+  background-color: #009ef5;
+  padding: 16px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  width: 36px;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.15s ease-in, padding 0.15s ease, opacity 0.2s ease-in-out;
+  box-shadow: 0 4px 14px #00000026;
+}
+.jportal-wrapper .btn-add-portlet:hover {
+  background-color: #42bcff;
+  padding: 26px;
+}
+.jportal-wrapper .empty-block .btn-add-portlet {
+  position: relative;
+  bottom: 0;
+}
+.portlet-overlay__drop-arrow {
+  opacity: 0;
+}
+/**
+DRAGGING 
+**/
+.jportal-wrapper.is-dragging {
+  cursor: grabbing;
+}
+.jportal-wrapper.is-dragging .jblock-portlet.portlet-dragging .portlet-overlay_split > .jalios-icon {
+  display: none;
+}
+.jportal-wrapper.is-dragging .btn-add-portlet {
+  display: none;
+}
+.jportal-wrapper.is-dragging .portlet-edition-overlay {
+  opacity: 1;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.jportal-wrapper.is-dragging .portlet-edition-overlay:hover .portlet-overlay_split .portlet-overlay__drop-arrow {
+  opacity: 1;
+  display: flex;
+}
+.jportal-wrapper.is-dragging .portlet-edition-overlay .edition_menu {
+  display: none;
+}
+.jportal-wrapper.is-dragging .portlet-edition-overlay .portlet-overlay_split {
+  transition: background-color 0.2s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.jportal-wrapper.is-dragging .portlet-edition-overlay .portlet-overlay_split .portlet-overlay__drop-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #009ef5;
+  padding: 16px;
+  border-radius: 50%;
+  height: 36px;
+  width: 36px;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.15s ease-in, opacity 0.15s ease-in, padding 0.15s ease-in;
+  box-shadow: 0 4px 14px #00000026;
+  position: absolute;
+}
+.jportal-wrapper.is-dragging .portlet-edition-overlay .portlet-overlay_split .portlet-overlay__drop-arrow.activate {
+  padding: 26px;
+}
+.jportal-wrapper.is-dragging .portlet-edition-overlay .portlet-overlay_split .portlet-overlay__drop-arrow .jalios-icon {
+  transition: font-size 0.2s;
+  font-size: 22px;
+  color: white;
+}
+.jportal-wrapper.is-dragging .portlet-edition-overlay .portlet-overlay_split .portlet-overlay__drop-arrow.overlay__bottom .jalios-icon {
+  rotate: 180deg;
+}
+.jportal-wrapper.is-dragging .portlet-edition-overlay .portlet-overlay_split .portlet-overlay__drop-arrow.activate {
+  background-color: #42bcff;
+}
+/***
+NOT DRAGGING
+***/
+.jportal-wrapper:not(.is-dragging) .portlet-edition-overlay {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  align-items: center;
+}
+.jportal-wrapper:not(.is-dragging) .portlet-edition-overlay .portlet-overlay_split > .jalios-icon {
+  display: none;
+}
+.jportal-wrapper:not(.is-dragging) .portlet-edition-overlay .btn-add-portlet {
+  opacity: 0;
+}
+.jportal-wrapper:not(.is-dragging) .jblock-portlet:hover .portlet-edition-overlay {
+  opacity: 1;
+}
+.jportal-wrapper:not(.is-dragging) .jblock-portlet:hover .portlet-edition-overlay .btn-add-portlet {
+  opacity: 1;
+}
+.jportal-wrapper:not(.is-dragging) .jblock-portlet:hover .portlet-edition-overlay .portlet-overlay_split {
+  display: none;
+}
+.jportal-add-portlet-modal .jportal-component {
+  display: flex;
+  gap: 16px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+.jportal-add-portlet-modal .jportal-component .jportal-component-content {
+  width: 100%;
+}
+.jportal-add-portlet-modal .jportal-component .jportal-component-metas {
+  margin-bottom: 16px;
+  color: #999;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.jportal-add-portlet-modal .jportal-component .jportal-component-template-title {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.jportal-add-portlet-modal .jportal-component .buttons {
+  display: flex;
+  justify-content: end;
+}
+.jportal-add-portlet-modal .jportal-component .jportal-component-label {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.jportal-add-portlet-modal .jportal-component .jportal-component-description {
+  margin-bottom: 16px;
+}
+/**
+PORTLET DELETE
+**/
+.jportal-wrapper.simple-editing .jportal-block {
+  transition: scale 0.3s ease-in, height 0.3s ease-in;
+  transform-origin: top;
+}
+/**
+STOP EDITION 
+**/
+.stop-jportal-edition-btn {
+  z-index: 1000;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
+/*# sourceMappingURL=jportal-simple-edition.css.map */

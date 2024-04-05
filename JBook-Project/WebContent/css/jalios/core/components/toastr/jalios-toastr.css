@@ -1,0 +1,42 @@
+#toast-container .toast-info,
+#toast-container .toast-success,
+#toast-container .toast-warning,
+#toast-container .toast-error {
+  background-image: none!important;
+  background-color: inherit;
+  padding: 0;
+  opacity: 1;
+  border-radius: 18px;
+}
+#toast-container .toast-info .toast-progress,
+#toast-container .toast-success .toast-progress,
+#toast-container .toast-warning .toast-progress,
+#toast-container .toast-error .toast-progress {
+  background-color: #ababab;
+}
+#toast-container .toast-info {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+#toast-container .toast-success {
+  background-color: rgba(115, 181, 115, 0.75);
+}
+#toast-container .toast-warning {
+  background-color: rgba(249, 169, 55, 0.75);
+}
+#toast-container .toast-error {
+  background-color: #ca5e58;
+}
+#toast-container .toast-message {
+  text-align: center;
+  padding: 15px;
+}
+.toast-top-center {
+  top: 80px;
+}
+.toast-top-left {
+  top: 80px;
+}
+.toast-top-right {
+  top: 80px;
+}
+/*# sourceMappingURL=jalios-toastr.css.map */

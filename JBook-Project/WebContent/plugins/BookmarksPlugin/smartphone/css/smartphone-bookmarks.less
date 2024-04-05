@@ -1,0 +1,80 @@
+// Hook for JCMS
+@import "../../../../plugins/SmartPhonePlugin/css/smartphone-init.less"; // -------------------------------------------------------------------
+// PLUGINS LESS VARIABLES
+// -------------------------------------------------------------------
+@service-bookmark-color: #fadd0b; // Hook for JCMS
+@import "../../../../plugins/SmartPhonePlugin/css/smartphone-plugin-override.less"; // -------------------------------------------------------------------
+//  PLUGIN CSS DECLARATION
+// -------------------------------------------------------------------
+.smartphone-drawer-service(bookmark);
+.service-colored-header(bookmark);
+
+.service-drawer .service-bookmark .service-icon {
+  padding-top: 14px;
+  padding-left: 4px;
+}
+
+.service-bookmark-page {
+  .folder-back.ui-link {
+    display: flex;
+    padding: 14px 14px 14px 9px;
+    color: #666;
+
+    .jalios-icon {
+      padding-right: 14px;
+    }
+  }
+}
+
+/*
+Bookmarks context menu
+*/
+.bookmarks-ctx-menu {
+  &.is-bookmarked {
+    .bookmark-remove {
+      display: block;
+    }
+
+    .bookmark-add {
+      display: none;
+    }
+  }
+  .bookmark-remove {
+    display: none;
+  }
+
+  .bookmark-add {
+    display: block;
+  }
+}
+
+/* **************************** */
+/* Bookmark-specific input icon */
+/* **************************** */
+.hierarchical-header(bookmark);
+
+.bookmark-service-header {
+  padding-bottom: 5px;
+}
+
+.service-bookmark-content {
+  .ui-listview {
+    li.ui-listview-nofilter a.ui-btn {
+      display: flex;
+      padding-left: 8px;
+      align-items: center;
+
+      img.jalios-icon {
+        position: relative;
+        width: 16px;
+        height: 16px;
+        margin-right: 14px;
+      }
+    }
+  }
+}
+
+.bookmark-service-header.can-return-to-parent {
+  padding-top: 0;
+  padding-bottom: 0;
+}

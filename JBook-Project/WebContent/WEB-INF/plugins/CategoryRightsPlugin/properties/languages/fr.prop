@@ -1,0 +1,67 @@
+jcmsplugin.categoryrights.types: Types
+jcmsplugin.categoryrights.types.help: Types de contenu à contrôler (séparés par des espaces ou des virgules)
+jcmsplugin.categoryrights.cat-ids: Catégories (ids)
+jcmsplugin.categoryrights.cat-ids.help: Identifiant des branches de catégories à contrôler (séparés par des espaces ou des virgules).
+
+jcmsplugin.categoryrights.propagate-rights.title: Propager les droits aux contenus
+jcmsplugin.categoryrights.propagate-rights.yes-inherited: Oui (hérité) 
+jcmsplugin.categoryrights.propagate-rights.description: Activez cette option pour propager les droits de la catégorie et des sous catégories aux droits des publications qui y sont rattachées : les droits de consultations des catégories sont propagés en droits de consultations sur les publications, les droits d'usage en droits de contribution et de modifications, et les droits de gestions en droits de contribution, de modification et de suppression.
+jcmsplugin.categoryrights.propagate-rights.forbidden: Vous n'êtes pas habilité à modifier l'option "Propager les droits aux contenus"
+
+jcmsplugin.categoryrights.propagate-rights.disabled.msg: Les droits que vous définissez ne portent que sur la catégorie elle-même. Ces droits ne s'appliquent pas sur les contenus placés dans cette catégorie.<p>Pour appliquer ces droits aux contenus de la catégorie, vous devez demander à un administrateur d'activer ce comportement sur cette catégorie.
+
+jcmsplugin.categoryrights.publish-types.title: Types de publication autorisés à la création
+jcmsplugin.categoryrights.publish-types.description: Sélectionnez les types de publication autorisés à la création par les utilisateurs spécifiés dans les droits d'usages. 
+jcmsplugin.categoryrights.publish-types.forbidden: Vous n'êtes pas habilité à modifier l'option "Types de publication"
+
+jcmsplugin.categoryrights.group-use-right.forbidden: La catégorie '{0}' utilise une politique de droit spécifique : les droits d'usage de cette catégorie ne peuvent être accordés sur un groupe, ils doivent être définis sur la catégorie ou sur ses parents. 
+jcmsplugin.categoryrights.member-use-right.forbidden: La catégorie '{0}' utilise une politique de droit spécifique : les droits d'usage de cette catégorie ne peuvent être accordés sur un membre, ils doivent être définis sur la catégorie ou sur ses parents. 
+jcmsplugin.categoryrights.group-manage-right.forbidden: La catégorie '{0}' utilise une politique de droit spécifique : les droits de gestion de cette catégorie ne peuvent être accordés sur un groupe, ils doivent être définis sur la catégorie ou sur ses parents. 
+jcmsplugin.categoryrights.member-manage-right.forbidden: La catégorie '{0}' utilise une politique de droit spécifique : les droits de gestion de cette catégorie ne peuvent être accordés sur un membre, ils doivent être définis sur la catégorie ou sur ses parents. 
+
+jcmsplugin.categoryrights.decategorization.forbidden: Vous n'êtes pas autorisé à faire cette opération, car elle modifie les droits de consultation.<br>La publication se trouve dans une arborescence de catégories contrôlée, vous devez conserver au moins une catégorie de cette arborescence.<p>Si vous souhaitez néanmoins retirer la publication de cette catégorie, demandez à votre administrateur d'effectuer l'opération.
+jcmsplugin.categoryrights.decategorization.warning: Suite à cette modification, il est possible que les droits sur le contenu aient été modifiés.<p>Il est recommandé de vérifier que le contenu n'est accessible qu'aux membres ayant l'autorisation d'y accéder.
+
+jcmsplugin.categoryrights.pub.impossible-mbr-read-rights-assignment: Vous ne pouvez pas accorder de droits de consultation à '{0}' sur cette publication, car ces membres ne sont pas autorisés à consulter les catégories de la publication. 
+jcmsplugin.categoryrights.pub.impossible-grp-read-rights-assignment: Vous ne pouvez pas accorder de droits de consultation à '{0}' sur cette publication, car ces groupes ne sont pas autorisés à consulter les catégories de la publication. 
+
+jcmsplugin.categoryrights.pub.impossible-mbr-read-rights-assignment.explorer-move: Le déplacement demandé ne peut pas être réalisé car '{0}' perdrait le droit de consultation.
+jcmsplugin.categoryrights.pub.impossible-mbr-read-rights-assignment.explorer-move: Le déplacement demandé ne peut pas être réalisé car '{0}' perdrait le droit de consultation.
+
+jcmsplugin.categoryrights.impossible-mbr-read-rights-assignment: Vous ne pouvez pas accorder de droits de consultation à '{0}' sur cette catégorie, car ce membre n'est pas autorisé à consulter la catégorie parente.
+jcmsplugin.categoryrights.impossible-grp-read-rights-assignment: Vous ne pouvez pas accorder de droits de consultation au groupe '{0}' sur cette catégorie, car ce groupe n'est pas autorisé à consulter la catégorie parente.
+jcmsplugin.categoryrights.impossible-mbr-use-rights-assignment: Vous ne pouvez pas accorder de droits d'usage à '{0}' sur cette catégorie, car ce membre n'est pas autorisé à consulter la catégorie ou ses parents.
+jcmsplugin.categoryrights.impossible-mbr-manage-rights-assignment: Vous ne pouvez pas accorder de droits de gestion à '{0}' sur cette catégorie, car ce membre n'est pas autorisé à consulter la catégorie ou ses parents.
+
+jcmsplugin.categoryrights.impossible-mbr-read-rights-assignment.explorer: Vous ne pouvez pas accorder de droits de consultation à '{0}' sur ce dossier, car ce membre n'est pas autorisé à consulter le dossier parent.
+jcmsplugin.categoryrights.impossible-grp-read-rights-assignment.explorer: Vous ne pouvez pas accorder de droits de consultation au groupe '{0}' sur ce dossier, car ce groupe n'est pas autorisé à consulter le dossier parent.
+jcmsplugin.categoryrights.impossible-mbr-use-rights-assignment.explorer: Vous ne pouvez pas accorder de droits d'usage à '{0}' sur ce dossier, car ce membre n'est pas autorisé à consulter le dossier ou ses parents.
+jcmsplugin.categoryrights.impossible-mbr-manage-rights-assignment.explorer: Vous ne pouvez pas accorder de droits de gestion à '{0}' sur ce dossier, car ce membre n'est pas autorisé à consulter le dossier ou ses parents.
+
+jcmsplugin.categoryrights.impossible-mbr-read-rights-assignment.explorer-move: Le déplacement demandé ne peut pas être réalisé, car '{0}', dans les droits de consultation du dossier déplacé, n'est pas autorisé(e) à consulter le dossier de destination.
+jcmsplugin.categoryrights.impossible-grp-read-rights-assignment.explorer-move: Le déplacement demandé ne peut pas être réalisé, car '{0}', dans les droits de consultation du dossier déplacé, n'est pas autorisé à consulter le dossier de destination.
+jcmsplugin.categoryrights.impossible-mbr-use-rights-assignment.explorer-move: Le déplacement demandé ne peut pas être réalisé, car '{0}', dans les droits d'usage du dossier déplacé, n'est pas autorisé(e) à consulter le dossier de destination.
+jcmsplugin.categoryrights.impossible-mbr-manage-rights-assignment.explorer-move: Le déplacement demandé ne peut pas être réalisé, car '{0}', dans les droits de gestion du dossier déplacé, n'est pas autorisé(e) à consulter le dossier de destination.
+
+jcmsplugin.categoryrights.restricted-workspace.impossible-mbr-read-rights-assignment: Vous ne pouvez pas accorder de droits de consultation à '{0}' sur cette catégorie, car ce membre n'appartient pas à l'espace '{1}'.
+jcmsplugin.categoryrights.restricted-workspace.impossible-grp-read-rights-assignment: Vous ne pouvez pas accorder de droits de consultation au groupe '{0}' sur cette catégorie, car ce groupe n'appartient pas à l'espace '{1}'.
+jcmsplugin.categoryrights.restricted-workspace.impossible-mbr-use-rights-assignment: Vous ne pouvez pas accorder de droits d'usage à '{0}' sur cette catégorie, car ce membre n'appartient pas à l'espace '{1}'.
+jcmsplugin.categoryrights.restricted-workspace.impossible-grp-use-rights-assignment: Vous ne pouvez pas accorder de droits d'usage à '{0}' sur cette catégorie, car ce groupe n'appartient pas à l'espace '{1}'.
+jcmsplugin.categoryrights.restricted-workspace.impossible-mbr-manage-rights-assignment: Vous ne pouvez pas accorder de droits de gestion à '{0}' sur cette catégorie, car ce membre n'appartient pas à l'espace '{1}'.
+jcmsplugin.categoryrights.restricted-workspace.impossible-grp-manage-rights-assignment: Vous ne pouvez pas accorder de droits de gestion à '{0}' sur cette catégorie, car ce groupe n'appartient pas à l'espace '{1}'.
+
+jcmsplugin.categoryrights.restricted-workspace.impossible-mbr-read-rights-assignment.explorer: Vous ne pouvez pas accorder de droits de consultation à '{0}' sur ce dossier, car ce membre n'appartient pas à l'espace '{1}'.
+jcmsplugin.categoryrights.restricted-workspace.impossible-grp-read-rights-assignment.explorer: Vous ne pouvez pas accorder de droits de consultation au groupe '{0}' sur ce dossier, car ce groupe n'appartient pas à l'espace '{1}'.
+jcmsplugin.categoryrights.restricted-workspace.impossible-mbr-use-rights-assignment.explorer: Vous ne pouvez pas accorder de droits d'usage à '{0}' sur ce dossier, car ce membre n'appartient pas à l'espace '{1}'.
+jcmsplugin.categoryrights.restricted-workspace.impossible-grp-use-rights-assignment.explorer: Vous ne pouvez pas accorder de droits d'usage à '{0}' sur ce dossier, car ce groupe n'appartient pas à l'espace '{1}'.
+jcmsplugin.categoryrights.restricted-workspace.impossible-mbr-manage-rights-assignment.explorer: Vous ne pouvez pas accorder de droits de gestion à '{0}' sur ce dossier, car ce membre n'appartient pas à l'espace '{1}'.
+jcmsplugin.categoryrights.restricted-workspace.impossible-grp-manage-rights-assignment.explorer: Vous ne pouvez pas accorder de droits de gestion à '{0}' sur ce dossier, car ce groupe n'appartient pas à l'espace '{1}'.
+
+# ------------------------------------------------------------
+# ACL
+# ------------------------------------------------------------
+
+acl.resource.plugins: Modules
+acl.resource.plugins/categoryrights: Category Rights
+acl.resource.plugins/categoryrights/propagate-rights: Propager les droits aux contenus
+acl.resource.plugins/categoryrights/propagate-rights.h: Autorise les utilisateurs à modifier l'option "Propager les droits aux contenus", sur les catégories qu'ils peuvent gérer.    

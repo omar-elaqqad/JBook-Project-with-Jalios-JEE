@@ -1,0 +1,372 @@
+# ------------------------------------------------------------
+#  BLOG VIRTUAL ID
+# ------------------------------------------------------------
+jcmsplugin.blog.create-blogosphere: 블로고스피어 만들기
+
+$id.Blog.model.help:   서비스를 복사할 모델 사용하기
+$id.jcmsplugin.blog.blogosphere:                블로그 회원 작업공간 ID
+$id.jcmsplugin.blog.blogosphere.category.root:  블로고스피어 루트 범주 ID
+$id.jcmsplugin.blog.blogger.group-attendees:    블로고스피어 회원 그룹 ID
+# ------------------------------------------------------------
+#  BLOG Terms and conditions Agreement
+# ------------------------------------------------------------
+jcmsplugin.blog.agreement.btn.agree:          동의합니다
+jcmsplugin.blog.agreement.btn.disagree:       동의하지 않습니다
+# ------------------------------------------------------------
+#  BLOG LABELS
+# ------------------------------------------------------------
+jcmsplugin.blog.label.blog:             블로그
+jcmsplugin.blog.label.blogosphere:      블로고스피어
+jcmsplugin.blog.label.blog-post-count:  {0} 블로그 게시물
+jcmsplugin.blog.label.category:         {0} 범주
+jcmsplugin.blog.label.create-ws-blog:   이 작업공간에 블로그 만들기
+jcmsplugin.blog.label.no-workspace-blog:이 작업공간에 블로그가 없습니다.
+jcmsplugin.blog.label.pending-request:  블로그 개설  요청이 진행 중입니다.
+jcmsplugin.blog.label.rejected-request: 블로그 개설 요청이 거부되었습니다.
+jcmsplugin.blog.label.blog-request:     블로그 개설 요청하기
+jcmsplugin.blog.label.blog-create:      내 블로그 만들기
+jcmsplugin.blog.label.blog-ws-create:   작업공간 블로그 만들기
+jcmsplugin.blog.label.add-blog-post:    내 블로그에 게시물 추가하기
+jcmsplugin.blog.label.already-has-blog: 이미 블로그가 있습니다.
+jcmsplugin.blog.label.add-blog-post-ws: 게시물 게시하기
+jcmsplugin.blog.label.delete-comment-confirm: 삭제하겠습니까:
+jcmsplugin.blog.label.access-full-blog: 회원 블로그 액세스.
+jcmsplugin.blog.label.access-my-blog:   내 블로그 액세스.
+jcmsplugin.blog.label.all-blog:         전체 블로그
+jcmsplugin.blog.label.access-blog:      블로그 액세스: {0}
+jcmsplugin.blog.label.no-comments:      귀하의 블로그에 댓글이 없습니다.
+jcmsplugin.blog.label.no-posts:         귀하의 블로그에 게시물이 없습니다.
+jcmsplugin.blog.label.blog-attendees:   블로고스피어 회원
+jcmsplugin.blog.label.blog-validators:  블로고스피어 검증자
+jcmsplugin.blog.label.bloggers:         블로거
+jcmsplugin.blog.label.unread:           읽지 않음
+jcmsplugin.blog.label.draft:            초안
+jcmsplugin.blog.label.my-blog:          내 블로그
+jcmsplugin.blog.label.new-comment:      {0} {0,choice,0#새 댓글|1#새 댓글|2#새 댓글}
+jcmsplugin.blog.label.portlet.type-subject: 여기에 새 블로그 게시물 제목을 입력하십시오.
+jcmsplugin.blog.label.continue:         계속...
+jcmsplugin.blog.label.no-blog-under-ws: 블로그가 아직 생성되지 않았습니다
+jcmsplugin.blog.label.activate-blog:    블로그 활성화
+jcmsplugin.blog.label.my-actions:       내 작업
+jcmsplugin.blog.label.access-member-blog:   내 블로그
+jcmsplugin.blog.label.access-ws-blog:       블로그 공동 공간에 액세스
+jcmsplugin.blog.tab.last-blog-post:     블로그 게시물
+jcmsplugin.blog.label.the-blog-of:      {0}의 블로그
+jcmsplugin.blog.tab.last-blog:          블로그
+jcmsplugin.blog.tab.my-blog-post:       내 블로그 게시물
+jcmsplugin.blog.tab.blog-choice:        블로그 선택:
+jcmsplugin.blog.tab.posted-by:          게시자
+jcmsplugin.blog.label.by:               에 의해
+jcmsplugin.blog.submit:                 제출
+jcmsplugin.blog.edit.complete:          편집 완료
+jcmsplugin.blog.follow:                 블로그에 구독하기
+jcmsplugin.blog.follow-message:         귀하는 이제 새 게시물을 구독합니다.
+jcmsplugin.blog.unfollow:               블로그에서 탈퇴하기
+jcmsplugin.blog.unfollow-message:       귀하는 새 게시물을 더 이상 구독하지 않습니다
+jcmsplugin.blog.app-sidebar.follow:     구독
+jcmsplugin.blog.manage-posts.title:     게시물 관리
+jcmsplugin.blog.manage-posts.table-caption: 블로그 게시물 목록
+jcmsplugin.blog.app-sidebar.follow.tooltip: 새로운 게시물에 구독
+jcmsplugin.blog.app-sidebar.unfollow:   탈퇴
+jcmsplugin.blog.app-sidebar.unfollow.tooltip: 새로운 게시물에서 탈퇴
+jcmsplugin.blog.label.all-authors: 모든 작성자
+jcmsplugin.blog.msg.edit.delete-blog-no-post: 게시물이 있는 블로그는 삭제할 수 없습니다.
+
+# ------------------------------------------------------------
+#  BLOG LISTS
+# ------------------------------------------------------------
+jcmsplugin.blog.label.empty:                이 블로그에는 아직 게시물이 없습니다.
+jcmsplugin.blog.label.empty-search:         검색 결과가 반환되지 않았습니다.
+jcmsplugin.blog.label.empty-drafts:         현재 초안이 없습니다.
+jcmsplugin.blog.label.empty-cat:            이 범주에 게시물이 없습니다.
+# ------------------------------------------------------------
+#  BLOG POST
+# ------------------------------------------------------------
+
+jcmsplugin.blog.label.stats.visit-count:    읽음
+jcmsplugin.blog.label.stats.unique-visit:   독자
+
+jcmsplugin.blog.label.action.follow:        이 블로그에 가입하기
+jcmsplugin.blog.label.action.unfollow:      이 블로그에서  탈퇴하기
+
+jcmsplugin.blog.label.action.follow-blog:   이 블로그에 가입하기
+jcmsplugin.blog.label.action.unfollow-blog: 이 블로그에서  탈퇴하기
+jcmsplugin.blog.label.action.follow-blog-text:   이 블로그의 최근 게시물을 이메일로 수신하시겠습니까?
+jcmsplugin.blog.label.action.unfollow-blog-text: 이 블로그의 최근 게시물에 대한 이메일 수신을 중단하시겠습니까?
+
+
+jcmsplugin.blog.label.info.in:              속에:
+jcmsplugin.blog.label.info.comments:        {0,choice,0#코멘트|1#코멘트|2#코멘트}
+
+jcmsplugin.blog.label.read-more:            자세히 보기
+jcmsplugin.blog.label.blog.desc.show-more:  더 보기
+jcmsplugin.blog.blog-desc.btn.show-more.title: 설명 표시
+jcmsplugin.blog.blog-desc.btn.show-less.title: 설명 숨기기
+
+jcmsplugin.blog.title.add-post:             새 블로그 게시물 추가하기
+jcmsplugin.blog.title.save-as-draft:        초안
+jcmsplugin.blog.label.action.publish:       게시하기
+# ------------------------------------------------------------
+#  BLOG SIDEBAR
+# ------------------------------------------------------------
+jcmsplugin.blog.title.admin:      관리
+jcmsplugin.blog.title.archive:    아카이브
+jcmsplugin.blog.title.authors:    작성자
+jcmsplugin.blog.title.categories: 범주
+jcmsplugin.blog.title.recent-post:최근 게시물
+jcmsplugin.blog.title.no-category:범주 없음
+jcmsplugin.blog.label.edit-blog:      블로그 편집하기
+jcmsplugin.blog.label.action.add-post:      게시물 게시하기
+jcmsplugin.blog.label.action.add-post-wf:   게시물 게시하기
+jcmsplugin.blog.label.action.see-draft:     초안 참조
+jcmsplugin.blog.label.action.add-category:  범주 추가
+jcmsplugin.blog.label.action.add-sub-category:  하위-범주 추가
+jcmsplugin.blog.label.action.add-sub-authors:  공동-작성자 추가
+jcmsplugin.blog.label.action.search:  검색
+jcmsplugin.blog.label.action.search-post.placeholer: 게시물 검색...
+jcmsplugin.blog.label.action.see-all-authors:  모든 작성자 보기
+jcmsplugin.blog.label.post-in-cat:  {0,choice,1#{0} 게시물이 {1} 범주에 있습니다|2#{0} 게시물이 {1} 범주에 있습니다}
+jcmsplugin.blog.app.sidebar.all-posts-link: 모든 게시물
+# ------------------------------------------------------------
+#  BLOG MODAL
+# ------------------------------------------------------------
+jcmsplugin.blog.title.ws-blog:       작업공간 블로그
+
+jcmsplugin.blog.title.add-cat:       범주 추가
+jcmsplugin.blog.title.add-sub-cat:   {0}에 하위 범주 추가
+jcmsplugin.blog.label.add-cat:       추가할 범주 이름을 입력하십시오(쉼표로 구분)
+
+jcmsplugin.blog.title.blog-request:  블로그 개설 요청
+jcmsplugin.blog.title.edit-comment:  댓글 편집
+
+jcmsplugin.blog.blog-root.label:     루트
+jcmsplugin.blog.blog-root.description:     블로그 범주의 루트
+# ------------------------------------------------------------
+#  BLOG LAYOUT
+# ------------------------------------------------------------
+
+jcmsplugin.blog.label.add-blog:      블로그 만들기
+jcmsplugin.blog.label.edit-blog:     블로그 편집하기
+jcmsplugin.blog.label.add-post:      블로그 게시물 올리기
+jcmsplugin.blog.label.edit-post:     블로그 게시물 편집하기
+jcmsplugin.blog.label.author:        게시자 {0}
+jcmsplugin.blog.label.last-post:     최근 게시물
+jcmsplugin.blog.label.search:        검색
+
+# ------------------------------------------------------------
+#  BLOG REQUEST
+# ------------------------------------------------------------
+
+jcmsplugin.blog.agreement.required:            블로그 약관과 조건 동의
+$id.jcmsplugin.blog.agreement.terms.pub:       블로그 약관과 조건 - 게시
+jcmsplugin.blog.agreement.terms.field:         블로그 약관과 조건 - 필드
+jcmsplugin.blog.agreement.btn.agree:           동의합니다
+jcmsplugin.blog.agreement.btn.disagree:        거부합니다
+jcmsplugin.blog.agreement.date:      블로그: 약관과 조건 동의 날짜
+jcmsplugin.blog.agreement.title:               약관과 조건
+jcmsplugin.blog.agreement.text:                블로그 약관과 조건이 정의되지 않았습니다. <code>{0}</code> 및 <code>{1}</code> 속성을 업데이트하십시오.
+
+# ------------------------------------------------------------
+#  BLOG PORTLET
+# ------------------------------------------------------------
+
+$id.jcmsplugin.blog.portlet.categories:       블로그 - 범주
+$id.jcmsplugin.blog.portlet.recent-post:      블로그 - 최근 게시물
+$id.jcmsplugin.blog.portlet.archive:          블로그 - 아카이브
+$id.jcmsplugin.blog.portlet.member-profile:   블로그 - 회원 프로필
+$id.jcmsplugin.blog.portlet.post-list:        블로그 - 게시물 목록
+$id.jcmsplugin.blog.portlet.post-full:        블로그 - 게시물
+$id.jcmsplugin.blog.portlet.admin:            블로그 - 관리자
+$id.jcmsplugin.blog.portlet.add-post:         블로그 - 게시물 추가
+$id.jcmsplugin.blog.portlet.authors:          블로그 - 작성자 목록
+$id.jcmsplugin.blog.portlet.handle-posts:     블로그 - 게시물 관리
+# ------------------------------------------------------------
+#  BLOG ADMIN
+# ------------------------------------------------------------
+jcmsplugin.blog.admin.author:                 작성자
+jcmsplugin.blog.admin.modify:                 변경
+jcmsplugin.blog.admin.add-authors:            작성자 관리
+jcmsplugin.blog.admin.add-authors-description: <b>{0}</b>에 게시물 추가할 수 있는 회원을 선택하십시오.
+jcmsplugin.blog.admin.delete:                 삭제
+jcmsplugin.blog.admin.handle-posts:           게시물 관리
+jcmsplugin.blog.admin.handle.unique-visitor:  읽음
+jcmsplugin.blog.admin.handle.total-visitor:   독자
+jcmsplugin.blog.admin.handle.comment-count:   댓글
+jcmsplugin.blog.admin.handle.vote-count:      투표
+jcmsplugin.blog.admin.handle.post-date:       변경
+jcmsplugin.blog.admin.handle.sort-by:         게시물 정렬 기준
+jcmsplugin.blog.admin.handle.or:              또는
+jcmsplugin.blog.label.title:                  제목
+jcmsplugin.blog.label.date:                   날짜
+jcmsplugin.blog.admin.author-list:            작성자 목록
+jcmsplugin.blog.admin.see-my-post:            내 게시물 보기
+jcmsplugin.blog.admin.see-member-post:        게시물 보기
+jcmsplugin.blog.admin.see-all-post:           모든 게시물 보기
+
+# ------------------------------------------------------------
+#  BLOG WARNING
+# ------------------------------------------------------------
+
+jcmsplugin.blog.warning.ws-has-a-blog:             귀하의 작업공간에 이미 블로그({0})가 있습니다.
+jcmsplugin.blog.warning.duplicate-same:            현재 작업공간에 같은 이름의 블로그가 이미 존재합니다
+jcmsplugin.blog.warning.text:                      텍스트를 입력하십시오
+jcmsplugin.blog.warning.member-has-a-blog:         "{0}" 회원은 이미 블로고스피어에 블로그가 있습니다: {1}.
+jcmsplugin.blog.warning.blogosphere-root-cat:      블로그에 대한 블로고스피어 루트 범주가이 존재하지 않습니다. 플러그인 속성에서 업데이트하십시오.
+jcmsplugin.blog.warning.blogosphere-forbidden-blog:다음 블로그에 블로그 게시물을 게시할 권한이 없습니다: "{0}"
+jcmsplugin.blog.warning.forbidden-blog:            다음 협력 블로그에서 블로그 게시물을 게시할 권한이 없습니다: "{0}"
+jcmsplugin.blog.warning.forbidden-blog-create:     블로그를 생성할 권한이 없습니다.
+
+# ------------------------------------------------------------
+#  BLOG ACL
+# ------------------------------------------------------------
+acl.resource.admin/work/blogospherecreation: 블로그 - 블로고스피어에 블로그 추가
+
+
+# ------------------------------------------------------------
+#  PUBLISH MENU
+# ------------------------------------------------------------
+jcmsplugin.blog.publish-menu.add-cs:   블로그 게시물
+jcmsplugin.blog.publish-menu.add-mine: 내 블로그에 게시하기
+
+
+# ------------------------------------------------------------
+#  CategoryBrowser
+# ------------------------------------------------------------
+category.category-browser.blog: 블로그에서 검색
+
+
+# ----------------------------------------------------------------------
+# Alert
+# ----------------------------------------------------------------------
+alert.name.jcmsplugin-blog:                               블로그
+
+alert.name.jcmsplugin-blog.new-blogpost:                  새 블로그 게시물:
+alert.msg.jcmsplugin-blog.new-blogpost.title:             새 블로그 게시물: {data}
+alert.msg.jcmsplugin-blog.new-blogpost.short-description: {author}이(가) {parent} 에 새 블로그 게시물 {data}을(를) 올렸습니다.{data.url}
+alert.msg.jcmsplugin-blog.new-blogpost.description:       <p>{author}이(가) {parent.link}에 새 블로그 게시물 {data}을(를) 올렸습니다.</p> 
+
+alert.name.jcmsplugin-blog.update-blogpost:               블로그 게시물 업데이트
+alert.msg.jcmsplugin-blog.update-blogpost.title:          블로그 게시물이 업데이트되었습니다: {data}
+alert.msg.jcmsplugin-blog.update-blogpost.short-description: {author}이(가) {parent}에 블로그 게시물 {data}을(를) 업데이트했습니다.{data.url}
+alert.msg.jcmsplugin-blog.update-blogpost.description:       <p>{author}이(가) {parent.link}에 블로그 게시물 {data}을(를) 업데이트했습니다.</p> 
+
+alert.name.jcmsplugin-blog.blog-opening:                  블로그 개설 요청 인증
+alert.msg.jcmsplugin-blog.blog-opening.title:             블로그 개설 요청이 인증되었습니다
+alert.msg.jcmsplugin-blog.blog-opening.short-description: {author}이(가) 블로그 개설 요청을 인증했습니다: {data}. {data.url}
+alert.msg.jcmsplugin-blog.blog-opening.description:       <p>{author}이(가) 블로그 개설 요청을 인증했습니다: {data}:</p> 
+
+# ------------------------------------------------------------
+#  BLOG TOOLS
+# ------------------------------------------------------------
+
+jcmsplugin.blog.tools.title:  BlogPost(스토어)에서 BlogPost(데이타베이스)로 로드하기- 2 번째 단계
+jcmsplugin.blog.tools.text1:  블로그 가져오기 정보
+jcmsplugin.blog.tools.text2:  1. BlogPost를 스토어에서 데이터베이스로 가져오기
+jcmsplugin.blog.tools.text3:  2. 새 파라미터로 모든 블로그를 초기화하십시오
+ui.adm.jcms5-loader.btn.load:        데이터 로드
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From Blog-templates.xml
+types.Blog.templates.editFront.default.label: Front Office 편집 템플릿
+types.Blog.templates.editFrontOld.default.label: 이전 Front Office 편집 템플릿
+types.Blog.templates.query.default.label: 기본 템플릿
+types.Blog.templates.box.default.label: 기본 템플릿
+types.Blog.templates.edit.default.label: Front Office 편집 템플릿
+types.Blog.templates.fullold.default.label: 이전 템플릿
+types.Blog.templates.full.old.label: 이전 템플릿
+types.Blog.templates.full.default.label: 기본 JNews 템플릿
+ui.editportlet.usage.fullold: 이전 템플릿
+
+# From Blog.xml
+types.Blog.fields.bloggerGroup.label: 블로거 그룹
+types.Blog.title.label: 제목
+types.Blog.fields.description.label: 블로그 설명
+types.Blog.label: 블로그
+
+# From BlogPost-templates.xml
+types.BlogPost.templates.editFront.default.label: Front Office 편집 템플릿
+types.BlogPost.templates.editFrontOld.default.label: 이전 Front Office 편집 템플릿
+types.BlogPost.templates.query.default.label: 기본 템플릿
+types.BlogPost.templates.edit.default.label: 템플릿 편집
+types.BlogPost.templates.full.default.label: 기본 템플릿
+types.BlogPost.templates.fullold.default.label: 이전 템플릿
+types.BlogPost.templates.full.default.label: 기본 템플릿
+types.BlogPost.templates.appBody.default.label: 앱 본문 표시용 가벼운 템플릿
+
+# From BlogPost.xml
+types.BlogPost.fields.summary.description: 게시물에 대한 요약 정보이고 게시물 목록과 구독자에게 전송되는 이메일에 표시됩니다.
+types.BlogPost.fields.blog.label: 블로그
+types.BlogPost.fields.category.description: 여러 범주를 선택할 수 있습니다.
+types.BlogPost.fields.content.label: 텍스트
+types.BlogPost.label: BlogPost
+types.BlogPost.title.label: 제목
+types.BlogPost.fields.category.label: 범주
+types.BlogPost.fields.summary.label: 개요
+types.BlogPost.fields.featuredImage.label: 이미지
+types.BlogPost.fields.featuredImage.description: 이 이미지는 16/9 형식의 큰 이미지라야 합니다(예, 960x540).
+types.BlogPost.fields.featuredImageAlt.label: 이미지의 대체 텍스트
+types.BlogPost.fields.featuredImageAlt.description: 이 텍스트는 이미지의 alt 속성으로 사용됩니다
+types.BlogPost.fields.thumbnailImage.label: 썸네일 이미지
+types.BlogPost.fields.thumbnailImage.description: 썸네일 이미지는 이미지에서 생성됩니다. 그러나 다른 썸네일을 선택할 수도 있습니다. 300x150 보다 커야 하고 4/3 또는 16/9 형식이 좋습니다.
+types.BlogPost.fields.thumbnailImageAlt.label: 썸네일 이미지의 대체 텍스트
+types.BlogPost.fields.thumbnailImageAlt.description: 이 텍스트는 썸네일 미지의 alt 속성으로 사용됩니다
+types.BlogPost.fields.imageAltText.label: 대체 텍스트
+types.BlogPost.btn.show-options: 추가 옵션...
+types.BlogPost.btn.hide-options: 옵션 적게 표시...
+
+# From BlogRequest.xml
+types.BlogRequest.fields.description.label: 설명
+types.BlogRequest.title.label: 블로그 이름
+types.BlogRequest.label: 블로그 개설 요청
+
+# From PortletBlog-templates.xml
+types.PortletBlog.templates.box.default.label: 기본 템플릿
+types.PortletBlog.templates.box.default.description: 이 포트릿에 대한 기본 템플릿
+types.PortletBlog.templates.box.itembox.label: 항목 상자로 스타일 지정된 목록
+types.PortletBlog.templates.box.itembox.description: 항목 상자로 스타일 지정된 목록
+types.PortletBlog.templates.edit.default.label: 기본 템플릿
+types.PortletBlog.templates.edit.default.description: 이 포트릿에 대한 기본 템플릿
+types.PortletBlog.templates.full.default.label: 기본 템플릿
+types.PortletBlog.templates.full.default.description: 이 포트릿에 대한 기본 템플릿
+types.PortletBlog.templates.query.default.label: 기본 템플릿
+types.PortletBlog.templates.query.default.description: 이 포트릿에 대한 기본 템플릿
+
+# From PortletBlog.xml
+types.PortletBlog.label: 블로그 포틀릿
+types.PortletBlog.fields.displayedList.labelList: 블로그와 모든 작업공간의  게시물|작업공간 게시물
+types.PortletBlog.fields.displayedList.label: 표시된 목록
+types.PortletBlog.title.label: 제목
+types.PortletBlog.description: 블로그 게시물 목록과 블로그를 표시합니다
+
+# From wfblogrequest.xml
+workflows.wfblogrequest.label: 블로그 - 블로그 개설 요청 워크플로
+workflows.wfblogrequest.states.60.description: 요청이 승인되어, 블로그가 생성되었습니다.
+workflows.wfblogrequest.states.50.description: 이 블로그 요청이 거부되었습니다. 블로그가 생성되지 않습니다. 자세한 내용은 워크플로 주석을 참조하십시오.
+workflows.wfblogrequest.states.-200.label: 제출됨
+workflows.wfblogrequest.roles.blogValidator.description: 블로그 개설 요청 수락/거절
+workflows.wfblogrequest.roles.blogValidator.name: 확인자
+workflows.wfblogrequest.states.60.label: 동의됨
+workflows.wfblogrequest.states.50.label: 거부됨
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.blog:     블로그
+jcmsplugin.smartphone.workspace-service.PortletBlog: 블로그
+jcmsplugin.blog.smartphone.lbl.blogpost-list: 게시물
+jcmsplugin.blog.smartphone.lbl.blog: 블로그
+jcmsplugin.blog.smartphone.lbl.blog.my-blogs: 내 블로그
+jcmsplugin.blog.smartphone.lbl.blog.other-blogs: 기타 블로그
+
+# ----------------------------------------------------------------------
+# BlogPost Form
+# ----------------------------------------------------------------------
+jcmsplugin.blog.filter-author: 작성자별로 필터
+jcmsplugin.blog.filter-pstatus: 상태 필터링
+jcmsplugin.blog.filter-startDate: 시작 날짜
+jcmsplugin.blog.filter-endDate: 종료 날짜
+jcmsplugin.blog.sort-by-vote: 투표 횟수

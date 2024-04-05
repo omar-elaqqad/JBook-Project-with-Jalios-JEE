@@ -1,0 +1,104 @@
+.bookmarks-full-display {
+  max-width: 1167px;
+  margin: auto;
+}
+.app.app-bookmark .app-body {
+  background: white;
+}
+.app-bookmark .app-header {
+  background-color: #8ec255;
+}
+.bookmark-actions {
+  display: none;
+}
+.bookmark-item {
+  max-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.bookmark-item-action.bookmark-action-disabled {
+  color: #888888;
+}
+.bookmarks-items-checkbox {
+  margin: 0 0;
+  padding: 0 10px;
+}
+.bookmark-draggable-item:hover .bookmark-actions {
+  display: block;
+}
+.table-bookmarks .bookmark-draggable-item:hover TD {
+  background-color: #f5f5f5;
+}
+.bookmark-sortable-item-touch-device {
+  display: block;
+}
+.table-bookmarks THEAD TR TH {
+  border-bottom: none;
+}
+/* 
+@media (max-width: @screen-md-min) { 
+  .bookmark-list-view{    
+    .navbar-form{
+      display: none;
+    }
+  }
+  .dropdown-toggle{
+    display:block;
+  }
+}
+
+@media (min-width: @screen-md-min) {
+  .bookmark-list-view{    
+    .navbar-form{
+      display: block;
+    }
+  }
+  .dropdown-toggle{
+    display:none;
+  }
+}
+ */
+.table-bookmarks.table-bookmarks-noEdit TD {
+  padding: 0;
+}
+/* Bookmark items */
+.table-bookmarks .bookmark-draggable-item TD {
+  border: none;
+}
+.table-bookmarks .bookmark-search-result-item TD {
+  border: none;
+}
+/* Bookmark separator */
+.table-bookmarks .bookmark-separator TD {
+  border: 0px;
+  height: 2px;
+  padding: 0;
+}
+/*background-color: @bookmark-table-separator-background-color;*/
+.table-bookmarks .bookmark-separator TD .bookmark-separator-line {
+  padding: 0;
+  margin: 0;
+  height: 1px;
+  background-color: #DDD;
+  vertical-align: middle;
+  margin: 2px 0;
+}
+.table-bookmarks .bookmark-droppable-target A,
+.table-bookmarks .bookmark-droppable-target:hover A {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.table-bookmarks .bookmark-droppable-target.bookmark-draggable-item TD,
+.table-bookmarks .bookmark-droppable-target:hover.bookmark-draggable-item TD {
+  background-color: #009EF5;
+}
+.table-bookmarks .bookmark-droppable-target.bookmark-separator TD,
+.table-bookmarks .bookmark-droppable-target:hover.bookmark-separator TD {
+  background-color: #009EF5;
+}
+.table-bookmarks .bookmark-droppable-target.bookmark-separator TD .bookmark-separator-line,
+.table-bookmarks .bookmark-droppable-target:hover.bookmark-separator TD .bookmark-separator-line {
+  background-color: transparent;
+}
+/*# sourceMappingURL=bookmarks.css.map */

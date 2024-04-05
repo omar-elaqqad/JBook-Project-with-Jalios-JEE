@@ -1,0 +1,67 @@
+jcmsplugin.categoryrights.types: Typen
+jcmsplugin.categoryrights.types.help: Zu kontrollierende Inhaltstypen (getrennt durch Leerzeichen oder Kommata)
+jcmsplugin.categoryrights.cat-ids: Kategorien (IDs)
+jcmsplugin.categoryrights.cat-ids.help: Kennungen der zu kontrollierenden Stammkategorien (getrennt durch Leerzeichen oder Kommata)
+
+jcmsplugin.categoryrights.propagate-rights.title: Veröffentlichungsrechte propagieren
+jcmsplugin.categoryrights.propagate-rights.yes-inherited: Ja (geerbt) 
+jcmsplugin.categoryrights.propagate-rights.description: Aktivieren Sie diese Option, um die Rechte der Kategorie und der Unterkategorien auf die Rechte der Veröffentlichungen zu übertragen, die Ihnen zugeordnet sind: Die Leserechte der Kategorie werden als Leserechte für die Veröffentlichungen, die Verwendungsrechte als Erstellungs- und Änderungsrechte und die Verwaltungsrechte als Erstellungs-, Änderungs- und Löschrechte propagiert.
+jcmsplugin.categoryrights.propagate-rights.forbidden: Sie sind nicht berechtigt, die Option „Veröffentlichungsrechte propagieren“ zu ändern.
+
+jcmsplugin.categoryrights.propagate-rights.disabled.msg: Die von Ihnen definierten Rechte gelten nur für die Kategorie selbst. Diese Rechte gelten nicht für Inhalte, die in dieser Kategorie platziert werden.<p>Um diese Rechte auf Kategorieinhalte anzuwenden, müssen Sie einen Administrator bitten, dieses Verhalten für diese Kategorie zu aktivieren.
+
+jcmsplugin.categoryrights.publish-types.title: Für die Erstellung berechtigte Veröffentlichungstypen
+jcmsplugin.categoryrights.publish-types.description: Wählen Sie die für die Erstellung autorisierten Veröffentlichungstypen für den Benutzer, der in den Nutzungsrechten für Kategorien angegeben ist, aus. 
+jcmsplugin.categoryrights.publish-types.forbidden: Sie sind nicht berechtigt, die Option „Veröffentlichungstypen“ zu ändern. 
+
+jcmsplugin.categoryrights.group-use-right.forbidden: Die Kategorie „{0}“ verwendet eine bestimmte Richtlinie für Rechte: Nutzungsrechte dieser Kategorie können nicht für eine Gruppe erteilt, sondern müssen für die Kategorie oder ihre übergeordneten Elemente definiert werden. 
+jcmsplugin.categoryrights.member-use-right.forbidden: Die Kategorie „{0}“ verwendet eine bestimmte Richtlinie für Rechte: Nutzungsrechte dieser Kategorie können nicht für ein Mitglied erteilt, sondern müssen für die Kategorie oder ihre übergeordneten Elemente definiert werden. 
+jcmsplugin.categoryrights.group-manage-right.forbidden: Die Kategorie „{0}“ verwendet eine bestimmte Richtlinie für Rechte: Verwaltungsrechte dieser Kategorie können nicht für eine Gruppe erteilt, sondern müssen für die Kategorie oder ihre übergeordneten Elemente definiert werden. 
+jcmsplugin.categoryrights.member-manage-right.forbidden: Die Kategorie „{0}“ verwendet eine bestimmte Richtlinie für Rechte: Verwaltungsrechte dieser Kategorie können nicht für ein Mitglied erteilt, sondern müssen für die Kategorie oder ihre übergeordneten Elemente definiert werden. 
+
+jcmsplugin.categoryrights.decategorization.forbidden: Dieser Vorgang ist unzulässig, da er Leseberechtigungen ändert.<br>Die Veröffentlichung befindet sich in einem überwachten Kategoriebaum, daher müssen Sie mindestens eine Kategorie in diesem Baum beibehalten.<p>Wenn Sie die Veröffentlichung entfernen möchten, bitten Sie Ihren Administrator, den Vorgang auszuführen.
+jcmsplugin.categoryrights.decategorization.warning: Nach dieser Änderung können sich die Rechte für den Inhalt geändert haben.<p>Wir empfehlen, dass Sie überprüfen, ob der Inhalt nur für Mitglieder zugänglich ist, die berechtigt sind, darauf zuzugreifen.
+
+jcmsplugin.categoryrights.pub.impossible-mbr-read-rights-assignment: Sie können „{0}“ keine Leserechte für diese Veröffentlichung erteilen, da diese Mitglieder nicht berechtigt sind, die Kategorien der Veröffentlichung zu lesen. 
+jcmsplugin.categoryrights.pub.impossible-grp-read-rights-assignment: Sie können „{0}“ keine Leserechte für diese Veröffentlichung erteilen, da diese Gruppen nicht berechtigt sind, die Kategorien der Veröffentlichung zu lesen. 
+
+jcmsplugin.categoryrights.pub.impossible-mbr-read-rights-assignment.explorer-move: Die angeforderte Verschiebung kann nicht durchgeführt werden, da „{0}“ die Leserechte verlieren würde.
+jcmsplugin.categoryrights.pub.impossible-mbr-read-rights-assignment.explorer-move: Die angeforderte Verschiebung kann nicht durchgeführt werden, da „{0}“ die Leserechte verlieren würde.
+
+jcmsplugin.categoryrights.impossible-mbr-read-rights-assignment: Sie können „{0}“ keine Leserechte für diese Kategorie erteilen, da dieses Mitglied nicht berechtigt ist, die übergeordnete Kategorie zu lesen.
+jcmsplugin.categoryrights.impossible-grp-read-rights-assignment: Sie können „{0}“ keine Leserechte für diese Kategorie erteilen, da diese Gruppe nicht berechtigt ist, die übergeordnete Kategorie zu lesen.
+jcmsplugin.categoryrights.impossible-mbr-use-rights-assignment: Sie können „{0}“ keine Nutzungsrechte für diese Kategorie erteilen, da dieses Mitglied nicht berechtigt ist, die Kategorie oder ihre übergeordneten Elemente zu lesen.
+jcmsplugin.categoryrights.impossible-mbr-manage-rights-assignment: Sie können „{0}“ keine Verwaltungsrechte für diese Kategorie erteilen, da dieses Mitglied nicht berechtigt ist, die Kategorie oder ihre übergeordneten Elemente zu lesen.
+
+jcmsplugin.categoryrights.impossible-mbr-read-rights-assignment.explorer: Sie können „{0}“ keine Leserechte für diesen Ordner erteilen, da dieses Mitglied nicht berechtigt ist, den übergeordneten Ordner zu lesen.
+jcmsplugin.categoryrights.impossible-grp-read-rights-assignment.explorer: Sie können „{0}“ keine Leserechte für diesen Ordner erteilen, da diese Gruppe nicht berechtigt ist, den übergeordneten Ordner zu lesen.
+jcmsplugin.categoryrights.impossible-mbr-use-rights-assignment.explorer: Sie können „{0}“ keine Nutzungsrechte für diesen Ordner erteilen, da dieses Mitglied nicht berechtigt ist, den Ordner oder seine übergeordneten Elemente zu lesen.
+jcmsplugin.categoryrights.impossible-mbr-manage-rights-assignment.explorer: Sie können „{0}“ keine Verwaltungsrechte für diesen Ordner erteilen, da dieses Mitglied nicht berechtigt ist, den Ordner oder seine übergeordneten Elemente zu lesen.
+
+jcmsplugin.categoryrights.impossible-mbr-read-rights-assignment.explorer-move: Die angeforderte Verschiebung kann nicht ausgeführt werden, da Mitglied „{0}“, das in den Leseberechtigungen des verschobenen Ordners deklariert ist, nicht zum Lesen des Zielordners berechtigt ist.
+jcmsplugin.categoryrights.impossible-grp-read-rights-assignment.explorer-move: Die angeforderte Verschiebung kann nicht ausgeführt werden, da Mitglied „{0}“, das in den Leseberechtigungen des verschobenen Ordners deklariert ist, nicht zum Lesen des Zielordners berechtigt ist.
+jcmsplugin.categoryrights.impossible-mbr-use-rights-assignment.explorer-move: Die angeforderte Verschiebung kann nicht ausgeführt werden, da Mitglied „{0}“, das für den verschobenen Ordner verwendet wurde, nicht berechtigt ist, den Zielordner zu lesen.
+jcmsplugin.categoryrights.impossible-mbr-manage-rights-assignment.explorer-move: Die angeforderte Verschiebung kann nicht ausgeführt werden, da Mitglied „{0}“, das für den verschobenen Ordner verwendet wurde, nicht berechtigt ist, den Zielordner zu lesen.
+
+jcmsplugin.categoryrights.restricted-workspace.impossible-mbr-read-rights-assignment: Sie können „{0}“ keine Leserechte für diese Kategorie erteilen, da dieses Mitglied nicht zum Arbeitsbereich „{1}“ gehört.
+jcmsplugin.categoryrights.restricted-workspace.impossible-grp-read-rights-assignment: Sie können „{0}“ keine Leserechte für diese Kategorie erteilen, da diese Gruppe nicht zum Arbeitsbereich „{1}“ gehört.
+jcmsplugin.categoryrights.restricted-workspace.impossible-mbr-use-rights-assignment: Sie können „{0}“ keine Nutzungsrechte für diese Kategorie erteilen, da dieses Mitglied nicht zum Arbeitsbereich „{1}“ gehört.
+jcmsplugin.categoryrights.restricted-workspace.impossible-grp-use-rights-assignment: Sie können „{0}“ keine Nutzungsrechte für diese Kategorie erteilen, da dieses Mitglied nicht zum Arbeitsbereich „{1}“ gehört.
+jcmsplugin.categoryrights.restricted-workspace.impossible-mbr-manage-rights-assignment: Sie können „{0}“ keine Verwaltungsrechte für diese Kategorie erteilen, da dieses Mitglied nicht zum Arbeitsbereich „{1}“ gehört.
+jcmsplugin.categoryrights.restricted-workspace.impossible-grp-manage-rights-assignment: Sie können „{0}“ keine Verwaltungsrechte für diese Kategorie erteilen, da dieses Mitglied nicht zum Arbeitsbereich „{1}“ gehört.
+
+jcmsplugin.categoryrights.restricted-workspace.impossible-mbr-read-rights-assignment.explorer: Sie können „{0}“ keine Leserechte für diesen Ordner erteilen, da dieses Mitglied nicht zum Arbeitsbereich „{1}“ gehört.
+jcmsplugin.categoryrights.restricted-workspace.impossible-grp-read-rights-assignment.explorer: Sie können „{0}“ keine Leserechte für diesen Ordner erteilen, da diese Gruppe nicht zum Arbeitsbereich „{1}“ gehört.
+jcmsplugin.categoryrights.restricted-workspace.impossible-mbr-use-rights-assignment.explorer: Sie können „{0}“ keine Nutzungsrechte für diesen Ordner erteilen, da dieses Mitglied nicht zum Arbeitsbereich „{1}“ gehört.
+jcmsplugin.categoryrights.restricted-workspace.impossible-grp-use-rights-assignment.explorer: Sie können „{0}“ keine Nutzungsrechte für diesen Ordner erteilen, da dieses Mitglied nicht zum Arbeitsbereich „{1}“ gehört.
+jcmsplugin.categoryrights.restricted-workspace.impossible-mbr-manage-rights-assignment.explorer: Sie können „{0}“ keine Verwaltungsrechte für diesen Ordner erteilen, da dieses Mitglied nicht zum Arbeitsbereich „{1}“ gehört.
+jcmsplugin.categoryrights.restricted-workspace.impossible-grp-manage-rights-assignment.explorer: Sie können „{0}“ keine Verwaltungsrechte für diesen Ordner erteilen, da dieses Mitglied nicht zum Arbeitsbereich „{1}“ gehört.
+
+# ------------------------------------------------------------
+# ACL
+# ------------------------------------------------------------
+
+acl.resource.plugins: Plug-ins
+acl.resource.plugins/categoryrights: Kategorierechte
+acl.resource.plugins/categoryrights/propagate-rights: Rechte übertragen 
+acl.resource.plugins/categoryrights/propagate-rights.h: Benutzern erlauben, die Optionen für das „propagieren von Rechten“ für die Kategorien zu ändern, die sie verwalten können.    

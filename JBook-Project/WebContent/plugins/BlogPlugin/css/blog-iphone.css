@@ -1,0 +1,202 @@
+#webapp .blog-iphone .post .post-title {
+		background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5F92BF), color-stop(0.6, #6FA3CF));
+		border: 2px solid #6FA3CF;
+		color: white;
+		font-size: 14px;
+		line-height: 25px;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 0px;
+		padding-left: 7px;
+		text-shadow: rgba(0, 0, 0, 0.292969) 0px 1px 1px;
+		border-bottom-left-radius:0;
+		border-bottom-right-radius:0;
+		margin-bottom:0;
+		font-weight:bold;
+}
+#webapp .blog-iphone .post .post-info {
+    background-color:#EAEAEA;
+    font-size:11px;
+    width:100%;
+    padding:6px 0;
+    position:relative;
+    margin-left:auto;
+    margin-bottom:-7px;
+    margin-top: 0px;
+    border-radius:0;
+}
+#WebApp .blog-iphone .post .post-info .blogPost-author-photo{
+    background-color: #EAEAEA;
+    top: 0px;
+    float: left;
+    left: 9px;
+    position: absolute;
+}  
+ #WebApp .blog-iphone .post .post-info .blogPost-info-text{
+    background-color:#EAEAEA;
+    margin-left:27px;
+    position:relative;
+    margin-top:0;
+    margin-bottom:0;
+}
+#WebApp .blog-iphone .post .post-info  a,
+#WebApp .blog-iphone .post .post-info  a:visited,
+#WebApp .blog-iphone .post .post-info  a:active{
+    display:block;
+    text-decoration:none;
+    color:#333;
+    
+}
+ #WebApp .blog-iphone .post .post-info .blogPost-info-text .chevron{
+position:absolute;
+top:8px;
+right:7px;
+}
+ #WebApp .blog-iphone .post .post-info .blogPost-info-text .comment-count{
+    background-color: #A7A7A7;
+    border-radius: 15px;
+    color: #F6F6F6;
+    margin-right: 20px;
+    padding: 1px 4px;
+		 text-shadow: rgba(100, 100, 100, 0.292969) 0px 1px 1px;
+		 font-weight:bold;
+		 position:absolute;
+		top:8px;
+		right:18px;
+}
+
+
+#WebApp .blog-iphone .post .blogPost-text , #WebApp .blog-iphone .post .wysiwyg{
+    color:#373737;
+    padding: 0px 5px;
+}
+#webapp .blog-iphone .post .wysiwyg.classic {
+  max-width:98%;
+  min-height:10px;
+  overflow-x:auto;
+  overflow-y:auto;
+  word-wrap:break-word;
+}
+#WebApp .blog-iphone .post li{
+    font:15px  "Arial, sans-serif";
+    line-height: 1.625;
+}
+#WebApp .blog-iphone .post .wysiwyg p{
+    font:15px  "Arial, sans-serif";
+    line-height: 1.625;
+}
+
+#WebApp .blog-iphone .post .wysiwyg img{
+    max-width: 97.5%;
+    height: auto;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    float: left;
+    margin: 10px;
+    padding: 4px;
+}
+
+#webapp .blog-iphone .post p ,#webapp .blog-iphone .post div{
+border:0 none;
+
+}  
+
+
+#webapp .blog-iphone .iList li.blogPost{
+    min-height:26px;
+}
+#webapp .blog-iphone .iList li.blogPost .post-title{
+    font-size:14px;
+    width:85%;
+}
+#webapp .blog-iphone .iList li.blogPost .post-cat{
+    font-size:11px;
+    color:#666;
+}
+#webapp .blog-iphone .iList li.blogPost .post-info{
+    font-size:11px;
+    color:#666;
+    width:88%;
+}
+#webapp .blog-iphone .iList li.blogPost .post-info .new{
+    border-radius:3px 3px 3px 3px;
+    -moz-border-radius:3px 3px 3px 3px;
+    background-color:#455FA5;
+    color:white;
+    font-size:100%;
+    padding:1px 3px 1px;
+    text-shadow:0 1px 1px rgba(0, 0, 0, 0.3);
+    vertical-align:top;
+    float:none;
+}
+#webapp .blog-iphone .iList li.blogPost .unread{
+    background-color: #455FA5;
+    border-radius: 6px;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    margin-right: 20px;
+    padding: 0px 9px;
+    margin-right:20px;
+        margin-top: 15px;
+    
+}
+
+#webapp .blog-iphone .iList li.blogPost .post-info IMG{
+    padding:1px 5px 0 0;
+    margin:0;
+}
+
+#webapp .blog-iphone .iList li.blogPost .comment-count{
+    margin-top: 15px;
+    color:white;
+    background-color:#CACACA;
+    margin-right:20px;
+    padding:1px 6px;
+    border-radius:15px;
+    font-size:13px;
+    font-weight:bold;
+}
+#webapp .blog-iphone .iList li.blogPost .comment-count img{
+margin-bottom:0;
+  margin-left:0;
+  margin-right:0;
+  margin-top:0;
+  padding-bottom:0;
+  padding-left:0;
+  padding-right:3px;
+  padding-top:0;
+}
+#webapp .blog-iphone .blog-actions-tab{
+    background-color: #999;
+    width: 100%;
+    height:40px;
+    background-color: #999;
+border-bottom: 2px solid #EEE;
+height: 40px;
+width: 100%;
+}
+
+#webapp .blog-iphone .blog-actions-tab .action{
+    padding:7px 10px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#535353), color-stop(100%,black)); /* webkit */
+    color:#999999;
+    margin:0 7px;
+    font-size:10px;
+    width:25%;
+    font-weight:bold;
+    text-align:center;
+}
+#webapp .blog-iphone .blog-actions-tab .action:active{
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#222222), color-stop(100%,#666666)); /* webkit */
+}
+#webapp .blog-iphone .blog-actions-tab .action a,#WebApp .pub-actions-tab .action a{
+    color:#999999;
+    text-decoration:none;
+    display: block;
+}
+#webapp .blog-iphone .blog-actions-tab .action:active,#WebApp .pub-actions-tab .action:active{
+    background-color:#111111;
+}
+  

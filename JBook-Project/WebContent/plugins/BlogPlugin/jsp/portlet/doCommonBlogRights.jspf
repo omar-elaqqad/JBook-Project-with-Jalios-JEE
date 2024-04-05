@@ -1,0 +1,11 @@
+<%--
+  @Author: Sylvain DEVAUX <sylvain.devaux@jalios.com>
+  @Deprecated: since blog-9.4, see BlogDisplayHandler
+--%><%@page import="com.jalios.jcmsplugin.blog.BlogPostQueryHandler"%><%
+  boolean isBlogAuthor = BlogPostQueryHandler.isBlogAuthor(blog, loggedMember);
+  boolean canPublishPostInBlog = BlogPostQueryHandler.canPublishPostInBlog(loggedMember, blog);
+  boolean isPostWorkflowMinimal = BlogPostQueryHandler.isPostWorkflowMinimal(blog, loggedMember);
+  boolean isAdminOrAuthor = BlogPostQueryHandler.isAdminOrAuthor(blog, loggedMember);
+  boolean canHandleBlogAuthors = BlogPostQueryHandler.canHandleBlogAuthors(blog, loggedMember);
+  boolean isDataWriteEnabled = channel.isDataWriteEnabled();
+%>

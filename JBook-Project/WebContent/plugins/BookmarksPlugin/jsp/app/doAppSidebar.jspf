@@ -1,0 +1,12 @@
+<%-- ICON --%>
+<div class="app-sidebar-icon">
+  <a href="#" data-jalios-action="ajax-refresh">
+    <jalios:icon src="jcmsplugin-bookmark-app-image" />  
+  </a>
+</div>
+
+<div class="app-bookmark-sidebar">
+
+ 
+</div>
+

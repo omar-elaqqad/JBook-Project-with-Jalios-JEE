@@ -1,0 +1,148 @@
+# ----------------------------------------------------------------------
+# Folder
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.folder.lbl.new: Folder nou
+jcmsplugin.bookmarks.folder.lbl.add: Adaugă un folder
+jcmsplugin.bookmarks.folder.btn.lbl.add: Adaugă un folder...
+jcmsplugin.bookmarks.folder.lbl.edit: Editează un folder
+jcmsplugin.bookmarks.folder.action.delete.warn-msg: Atenție, conținutul folderului va fi șters de asemenea
+jcmsplugin.bookmarks.folder.menu.action.delete.warn-msg: Atenție, conținutul folderelor va fi șters de asemenea
+jcmsplugin.bookmarks.folder.lbl.name:  Nume folder
+jcmsplugin.bookmarks.folder.lbl.name1: Nume
+jcmsplugin.bookmarks.folder.lbl.name.parent:  Folder părinte
+jcmsplugin.bookmarks.folder.lbl.name.parent1: Părinte
+jcmsplugin.bookmarks.folder.name.error: Introdu un nume de folder
+jcmsplugin.bookmarks.folder.name.error.duplicate: Un folder are deja acest nume
+jcmsplugin.bookmarks.folder.contains-data: Şterge înainte conținutul acestui folder
+jcmsplugin.bookmarks.folder.no-result: Nu există marcaje în document.
+jcmsplugin.bookmarks.folder.root: Până la rădăcină
+jcmsplugin.bookmarks.folder.lbl.root: Rădăcină
+jcmsplugin.bookmarks.folder.upper: Până la {0}
+jcmsplugin.bookmarks.folder.lbl: Folder
+jcmsplugin.bookmarks.folder.menu.action: Acțiuni
+jcmsplugin.bookmarks.folder.action.move.empty: Selecția nu poate fi mutată în niciun folder
+jcmsplugin.bookmarks.items.lbl.shift: Deplasează selecția
+jcmsplugin.bookmarks.items.lbl.delete: Șterge selecția
+jcmsplugin.bookmarks.menu.search.placeholder: Caută un marcaj în document
+jcmsplugin.bookmarks.already-bookmarked: Această publicație este marcată deja.
+jcmsplugin.bookmarks.app.title: Marcaje în document
+
+#DISABLED
+jcmsplugin.bookmarks.plugin-disabled.message: Momentan, pluginul de marcaje în document este dezactivat.
+
+#SIDEBAR
+jcmsplugin.bookmarks.topbar.title: Marcajele mele în document
+jcms.sidebar-tab.bookmarks: Marcaje în document
+jcms.sidebar-tab.bookmarks.icon: Marcaje în document
+jcmsplugin.bookmarks.topbar.search: Caută un marcaj...
+
+#PUBLICATION
+jcmsplugin.bookmarks.toastr.add: Adaugă la marcajele în document
+jcmsplugin.bookmarks.toastr.remove: Eliminat dintre marcajele în document
+
+#MENU
+jcmsplugin.bookmarks.msg.no-result: Nu a fost găsit niciun marcaj în document
+
+jcmsplugin.bookmarks.lbl.bookmarks: Marcaje în document
+jcmsplugin.bookmarks.lbl.link: Legătură externă
+jcmsplugin.bookmarks.lbl.pub:  Conținut
+jcmsplugin.bookmarks.lbl.search: Căutare
+
+jcmsplugin.bookmarks.lbl.url:    URL
+jcmsplugin.bookmarks.lbl.title:  Titlu
+jcmsplugin.bookmarks.btn.add:    Adaugă
+jcmsplugin.bookmarks.btn.update: Salvează
+jcmsplugin.bookmarks.btn.remove: Elimină acest marcaj în document
+
+jcmsplugin.bookmarks.lbl.add-bookmark: Adaugă un marcaj în document
+jcmsplugin.bookmarks.lbl.remove-bookmark: Elimină dintre marcajele în document
+
+jcmsplugin.bookmarks.lbl.action: Acțiuni
+jcmsplugin.bookmarks.lbl.add:    Adaugă un marcaj în document...
+jcmsplugin.bookmarks.lbl.edit: 	 Editează un marcaj în document
+jcmsplugin.bookmarks.msg.remove: Ești sigur că dorești să ștergi marcajul în document <em>{0}</em>?
+
+jcmsplugin.bookmarks.adm.max:    Nr. maxim de marcaje în document per utilizator
+jcmsplugin.bookmarks.msg.adm.max:Nu ai atins nr. maxim de marcaje în document!
+
+jcmsplugin.bookmarks.lbl.bookmark.error: Acest marcaj în document nu este valid.
+jcmsplugin.bookmarks.lbl.url.error: URL-ul nu este valid.
+jcmsplugin.bookmarks.title.error: Introdu un titlu.
+
+jcmsplugin.bookmarks.lbl.manage-bookmark: Gestionează marcajele în document
+
+jcmsplugin.bookmarks.isExternalLink.title: Legătură externă
+# ----------------------------------------------------------------------
+# Analytics
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.analytics.top-section: Cele mai adăugate marcaje în document
+jcmsplugin.bookmarks.analytics.top-section.help: Top zece marcaje în document utilizatori
+jcmsplugin.bookmarks.analytics.top-bookmarks-section: Membrii cu cele mai multe marcaje în document
+jcmsplugin.bookmarks.analytics.top-bookmarks-section.help: Top 10 membri cu cele mai multe marcaje în document
+jcmsplugin.bookmarks.analytics.rank-number-column.label: #
+jcmsplugin.bookmarks.analytics.bookmark-column.label: Marcaje în document
+jcmsplugin.bookmarks.analytics.bookmark-add-column.label: Nume de ori adăugat
+jcmsplugin.bookmarks.analytics.report.average-bookmarks: Nr. mediu de marcaje în document
+jcmsplugin.bookmarks.analytics.report.average-bookmarks.h: Nr. mediu per utilizator
+jcmsplugin.bookmarks.analytics.author-column.label: Utilizatori
+jcmsplugin.bookmarks.analytics.bookmark-number-column.label: Numărul de marcaje în document
+jcmsplugin.bookmarks.analytics.indicator.average-bookmarks: Nr. de marcaje în document per utilizator
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks: Cea mai marcată publicație
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks.h: Top 10 publicații marcate
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks.table.pub.title: Publicație
+ui.analytics.BookmarksAgent.name: Marcaje în document
+
+# ----------------------------------------------------------------------
+# Icones
+# ----------------------------------------------------------------------
+icon.jcmsplugin.bookmarks.bookmarkWhite: Marcaje în document
+icon.jcmsplugin.bookmarks.edit:          Editează marcajul în document
+icon.jcmsplugin.bookmarks.delete:        Șterge marcajul în document
+icon.jcmsplugin.bookmarks.add:           Adaugă marcajul în document
+icon.jcmsplugin.bookmarks.star:          Marcaje în document
+
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+jcmsplugin.bookmarks.displayExternalUrl: Deschide legăturile externe într-o fereastră nouă
+
+# From PortletBookmarks-templates.xml
+types.PortletBookmarks.templates.query.default.label: Șablon implicit
+types.PortletBookmarks.templates.box.default.label: Șablon implicit
+
+# From PortletBookmarks.xml
+types.PortletBookmarks.title.label: Titlu
+types.PortletBookmarks.fields.openLinksInNewWindow.label: Deschide legăturile externe într-o fereastră nouă
+types.PortletBookmarks.fields.openLinksInNewWindow.onLabel: Da
+types.PortletBookmarks.label: Portlet marcaje în document
+types.PortletBookmarks.description: Acest portlet permite membrilor conectați să-și gestioneze marcajele.
+types.PortletBookmarks.fields.openLinksInNewWindow.offLabel: Nu
+
+# From PortletWorkspaceBookmarks.xml
+types.PortletWorkspaceBookmarks.label: Portlet marcaje în document pentru spațiul de lucru
+types.PortletWorkspaceBookmarks.title.label: Titlu
+types.PortletWorkspaceBookmarks.description: Acest portlet permite administratorului spațiului de lucru să gestioneze marcajele spațiului de lucru.
+
+jcmsplugin.bookmarks.edition-mode: Comută la mod editare
+jcmsplugin.bookmarks.remove-edition-mode: Oprește editarea
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.bookmark:   Marcaje în document
+jcmsplugin.bookmarks.smartphone.lbl.bookmark.filter: Caută în marcaje...
+jcmsplugin.bookmarks.smartphone.lbl.bookmark.no-result: Niciun marcaj în document
+jcmsplugin.bookmarks.smartphone.menu.bookmark.added.lbl: Marcaj adăugat
+jcmsplugin.bookmarks.smartphone.menu.bookmark.removed.lbl: Marcaj eliminat
+
+# Shortcut
+data.$id.shortcut.jcmsplugin.bookmarks.title: Marcaje în document
+data.$id.shortcut.jcmsplugin.bookmarks.text: Accesează și gestionează marcajele în publicații, rezultate de căutări și pagini externe.
+
+# ----------------------------------------------------------------------
+# JTasks project
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.app.project.sidebar.favorite-projects.label: Favoritele mele

@@ -1,0 +1,372 @@
+# ------------------------------------------------------------
+#  BLOG VIRTUAL ID
+# ------------------------------------------------------------
+jcmsplugin.blog.create-blogosphere: Creează blogosferă
+
+$id.Blog.model.help:   Utilizează modelul pentru a copia servicii
+$id.jcmsplugin.blog.blogosphere:                ID spațiu de lucru blog membri
+$id.jcmsplugin.blog.blogosphere.category.root:  ID categorie rădăcină blogosferă
+$id.jcmsplugin.blog.blogger.group-attendees:    ID grup membru blogosferă
+# ------------------------------------------------------------
+#  BLOG Terms and conditions Agreement
+# ------------------------------------------------------------
+jcmsplugin.blog.agreement.btn.agree:          Sunt de acord
+jcmsplugin.blog.agreement.btn.disagree:       Nu sunt de acord
+# ------------------------------------------------------------
+#  BLOG LABELS
+# ------------------------------------------------------------
+jcmsplugin.blog.label.blog:             Blog
+jcmsplugin.blog.label.blogosphere:      Blogosferă
+jcmsplugin.blog.label.blog-post-count:  {0} post blog
+jcmsplugin.blog.label.category:         {0} categorie
+jcmsplugin.blog.label.create-ws-blog:   Creează un blog în acest spațiu de lucru
+jcmsplugin.blog.label.no-workspace-blog:Nu există niciun blog în acest spațiu de lucru.
+jcmsplugin.blog.label.pending-request:  Solicitarea ta de a deschide un blog este în curs de procesare.
+jcmsplugin.blog.label.rejected-request: Solicitarea ta de a deschide un blog a fost respinsă.
+jcmsplugin.blog.label.blog-request:     Solicită deschiderea unui blog
+jcmsplugin.blog.label.blog-create:      Creează blogul meu
+jcmsplugin.blog.label.blog-ws-create:   Creează un blog în spațiul de lucru
+jcmsplugin.blog.label.add-blog-post:    Publică o postare în blogul meu
+jcmsplugin.blog.label.already-has-blog: Ai deja un blog
+jcmsplugin.blog.label.add-blog-post-ws: Publică o publicație
+jcmsplugin.blog.label.delete-comment-confirm: Ești sigur că dorești să ștergi:
+jcmsplugin.blog.label.access-full-blog: Accesează un blog al unui membru.
+jcmsplugin.blog.label.access-my-blog:   Accesează blogul meu.
+jcmsplugin.blog.label.all-blog:         Toate blogurile
+jcmsplugin.blog.label.access-blog:      Accesează blogul: {0}
+jcmsplugin.blog.label.no-comments:      Încă nu există comentarii pentru blogul tău.
+jcmsplugin.blog.label.no-posts:         Încă nu există publicații pentru blogul tău.
+jcmsplugin.blog.label.blog-attendees:   Membri blogosferă
+jcmsplugin.blog.label.blog-validators:  Validatori blogosferă
+jcmsplugin.blog.label.bloggers:         Bloggeri
+jcmsplugin.blog.label.unread:           Necitite
+jcmsplugin.blog.label.draft:            Schiță
+jcmsplugin.blog.label.my-blog:          Blogul meu
+jcmsplugin.blog.label.new-comment:      {0} {0,choice,0#Comentarii noi|1#comentariu nou|2#comentarii noi}
+jcmsplugin.blog.label.portlet.type-subject: Tastează titlul noii tale publicații aici.
+jcmsplugin.blog.label.continue:         Continuă...
+jcmsplugin.blog.label.no-blog-under-ws: Blogul nu a fost creat încă
+jcmsplugin.blog.label.activate-blog:    Activează blogul
+jcmsplugin.blog.label.my-actions:       Acțiunile mele
+jcmsplugin.blog.label.access-member-blog:   Blogul meu
+jcmsplugin.blog.label.access-ws-blog:       Accesează blogul spațiului de colaborare
+jcmsplugin.blog.tab.last-blog-post:     Publicație blog
+jcmsplugin.blog.label.the-blog-of:      Blogul lui {0}
+jcmsplugin.blog.tab.last-blog:          Blog
+jcmsplugin.blog.tab.my-blog-post:       Publicarea mea pe blog
+jcmsplugin.blog.tab.blog-choice:        Alegere blog:
+jcmsplugin.blog.tab.posted-by:          Publicat de
+jcmsplugin.blog.label.by:               de
+jcmsplugin.blog.submit:                 Trimite
+jcmsplugin.blog.edit.complete:          Finalizează editarea
+jcmsplugin.blog.follow:                 Abonează-te la blog
+jcmsplugin.blog.follow-message:         Acum ești abonat la postări noi
+jcmsplugin.blog.unfollow:               Dezabonează-te de la blog
+jcmsplugin.blog.unfollow-message:       Nu mai ești abonat la postări noi
+jcmsplugin.blog.app-sidebar.follow:     Abonează-te
+jcmsplugin.blog.manage-posts.title:     Gestionarea postărilor
+jcmsplugin.blog.manage-posts.table-caption: Lista postărilor de blog
+jcmsplugin.blog.app-sidebar.follow.tooltip: Abonează-te la postări noi
+jcmsplugin.blog.app-sidebar.unfollow:   Dezabonează-te
+jcmsplugin.blog.app-sidebar.unfollow.tooltip: Dezabonează-te de la postări noi
+jcmsplugin.blog.label.all-authors: Toți autorii
+jcmsplugin.blog.msg.edit.delete-blog-no-post: Un blog cu postări nu poate fi șters.
+
+# ------------------------------------------------------------
+#  BLOG LISTS
+# ------------------------------------------------------------
+jcmsplugin.blog.label.empty:                Acest blog nu are încă publicații.
+jcmsplugin.blog.label.empty-search:         Căutarea ta nu returnează niciun rezultat.
+jcmsplugin.blog.label.empty-drafts:         În acest moment nu ai schițe.
+jcmsplugin.blog.label.empty-cat:            Nu există publicații în această categorie.
+# ------------------------------------------------------------
+#  BLOG POST
+# ------------------------------------------------------------
+
+jcmsplugin.blog.label.stats.visit-count:    Citite
+jcmsplugin.blog.label.stats.unique-visit:   Cititori
+
+jcmsplugin.blog.label.action.follow:        Abonează-te la această publicație
+jcmsplugin.blog.label.action.unfollow:      Dezabonează-te de la această publicație
+
+jcmsplugin.blog.label.action.follow-blog:   Abonează-te la această publicație
+jcmsplugin.blog.label.action.unfollow-blog: Dezabonează-te de la această publicație
+jcmsplugin.blog.label.action.follow-blog-text:   Dorești să primești ultimele publicări de pe acest blog pe e-mail?
+jcmsplugin.blog.label.action.unfollow-blog-text: Dorești să nu mai primești ultimele publicări de pe acest blog pe e-mail?
+
+
+jcmsplugin.blog.label.info.in:              În:
+jcmsplugin.blog.label.info.comments:        {0,choice,0#comemnarii|1#comentariu|2#comemntarii}
+
+jcmsplugin.blog.label.read-more:            Citește mai mult
+jcmsplugin.blog.label.blog.desc.show-more:  Arată mai mult
+jcmsplugin.blog.blog-desc.btn.show-more.title: Afișează descriere
+jcmsplugin.blog.blog-desc.btn.show-less.title: Ascunde descriere
+
+jcmsplugin.blog.title.add-post:             Adaugă o nouă publicație la blog
+jcmsplugin.blog.title.save-as-draft:        Schiță
+jcmsplugin.blog.label.action.publish:       Publică
+# ------------------------------------------------------------
+#  BLOG SIDEBAR
+# ------------------------------------------------------------
+jcmsplugin.blog.title.admin:      Administrare
+jcmsplugin.blog.title.archive:    Arhive
+jcmsplugin.blog.title.authors:    Autori
+jcmsplugin.blog.title.categories: Categorii
+jcmsplugin.blog.title.recent-post:Publicații recente
+jcmsplugin.blog.title.no-category:Nicio categorie
+jcmsplugin.blog.label.edit-blog:      Editează blogul
+jcmsplugin.blog.label.action.add-post:      Publică o publicație
+jcmsplugin.blog.label.action.add-post-wf:   Publică o publicație
+jcmsplugin.blog.label.action.see-draft:     Vezi schițe
+jcmsplugin.blog.label.action.add-category:  Adaugă categorii...
+jcmsplugin.blog.label.action.add-sub-category:  Adaugă sub-categorii
+jcmsplugin.blog.label.action.add-sub-authors:  Adaugă coautori
+jcmsplugin.blog.label.action.search:  Căutare
+jcmsplugin.blog.label.action.search-post.placeholer: Caută postări...
+jcmsplugin.blog.label.action.see-all-authors:  Vezi toți autorii
+jcmsplugin.blog.label.post-in-cat:  {0,choice,1#{0} publică în categoria {1}|2#{0} publică în categoria {1}}
+jcmsplugin.blog.app.sidebar.all-posts-link: Toate postările
+# ------------------------------------------------------------
+#  BLOG MODAL
+# ------------------------------------------------------------
+jcmsplugin.blog.title.ws-blog:       Blog spațiu de lucru
+
+jcmsplugin.blog.title.add-cat:       Adaugă categorii...
+jcmsplugin.blog.title.add-sub-cat:   Adaugă sub-categorii la {0}
+jcmsplugin.blog.label.add-cat:       Introdu numele categoriilor de adăugat (separate prin virgulă)
+
+jcmsplugin.blog.title.blog-request:  Solicitare de deschidere de blog
+jcmsplugin.blog.title.edit-comment:  Editează comentariu
+
+jcmsplugin.blog.blog-root.label:     Rădăcină
+jcmsplugin.blog.blog-root.description:     Rădăcina pentru categoriile blogului
+# ------------------------------------------------------------
+#  BLOG LAYOUT
+# ------------------------------------------------------------
+
+jcmsplugin.blog.label.add-blog:      Creează un blog
+jcmsplugin.blog.label.edit-blog:     Editează blogul
+jcmsplugin.blog.label.add-post:      Publică o postare în blog
+jcmsplugin.blog.label.edit-post:     Editează publicația blogului
+jcmsplugin.blog.label.author:        Publicat de {0}
+jcmsplugin.blog.label.last-post:     Ultimele publicații
+jcmsplugin.blog.label.search:        Căutare
+
+# ------------------------------------------------------------
+#  BLOG REQUEST
+# ------------------------------------------------------------
+
+jcmsplugin.blog.agreement.required:            Acceptă termenii și condițiile blogului
+$id.jcmsplugin.blog.agreement.terms.pub:       Termenii și condițiile Blogului - Publicație
+jcmsplugin.blog.agreement.terms.field:         Termenii și condițiile Blogului - Câmp
+jcmsplugin.blog.agreement.btn.agree:           Accept
+jcmsplugin.blog.agreement.btn.disagree:        Refuz
+jcmsplugin.blog.agreement.date:      Blog: Data acceptării termenilor și condițiilor
+jcmsplugin.blog.agreement.title:               Termeni și condiții
+jcmsplugin.blog.agreement.text:                Termenii și condițiile Blogului nu sunt definite. Actualizează proprietățile <code>{0}</code> și <code>{1}</code>.
+
+# ------------------------------------------------------------
+#  BLOG PORTLET
+# ------------------------------------------------------------
+
+$id.jcmsplugin.blog.portlet.categories:       Blog - categorii
+$id.jcmsplugin.blog.portlet.recent-post:      Blog - publicații recente
+$id.jcmsplugin.blog.portlet.archive:          Blog - arhive
+$id.jcmsplugin.blog.portlet.member-profile:   Blog - profilul membrului
+$id.jcmsplugin.blog.portlet.post-list:        Blog - listă publicații
+$id.jcmsplugin.blog.portlet.post-full:        Blog - Publicație
+$id.jcmsplugin.blog.portlet.admin:            Blog - Administrator
+$id.jcmsplugin.blog.portlet.add-post:         Blog - Adaugă publicație
+$id.jcmsplugin.blog.portlet.authors:          Blog - Listă autori
+$id.jcmsplugin.blog.portlet.handle-posts:     Blog - Gestionare postări
+# ------------------------------------------------------------
+#  BLOG ADMIN
+# ------------------------------------------------------------
+jcmsplugin.blog.admin.author:                 Autor
+jcmsplugin.blog.admin.modify:                 Modifică
+jcmsplugin.blog.admin.add-authors:            Gestionare autori
+jcmsplugin.blog.admin.add-authors-description: Selectează membrii care pot adăuga postări în <b>{0}</b>.
+jcmsplugin.blog.admin.delete:                 Șterge
+jcmsplugin.blog.admin.handle-posts:           Gestionare postări
+jcmsplugin.blog.admin.handle.unique-visitor:  Citite
+jcmsplugin.blog.admin.handle.total-visitor:   Cititori
+jcmsplugin.blog.admin.handle.comment-count:   Comentarii
+jcmsplugin.blog.admin.handle.vote-count:      Voturi
+jcmsplugin.blog.admin.handle.post-date:       Modifică
+jcmsplugin.blog.admin.handle.sort-by:         Publicații sortate după
+jcmsplugin.blog.admin.handle.or:              sau
+jcmsplugin.blog.label.title:                  Titlu
+jcmsplugin.blog.label.date:                   Data
+jcmsplugin.blog.admin.author-list:            Listă autori
+jcmsplugin.blog.admin.see-my-post:            Vezi posturile mele
+jcmsplugin.blog.admin.see-member-post:        Vezi posturi
+jcmsplugin.blog.admin.see-all-post:           Vezi toate posturile
+
+# ------------------------------------------------------------
+#  BLOG WARNING
+# ------------------------------------------------------------
+
+jcmsplugin.blog.warning.ws-has-a-blog:             Există deja un blog ({0}) în spațiul tău de lucru.
+jcmsplugin.blog.warning.duplicate-same:            Există deja un blog cu același nume în spațiul de lucru curent.
+jcmsplugin.blog.warning.text:                      Tastează un text
+jcmsplugin.blog.warning.member-has-a-blog:         Membrul „{0}” are deja un blog în blogosferă: {1}.
+jcmsplugin.blog.warning.blogosphere-root-cat:      Categoria rădăcină a blogosferei pentru bloguri nu există. Actualizeaz-o în proprietățile plugin-ului.
+jcmsplugin.blog.warning.blogosphere-forbidden-blog:Nu ești autorizat să publici o publicare de blog pe următorul blog: „{0}”
+jcmsplugin.blog.warning.forbidden-blog:            Nu ești autorizat să publici o publicare de blog pe următorul blog de colaborare: „{0}”
+jcmsplugin.blog.warning.forbidden-blog-create:     Nu ești autorizat să creezi un blog.
+
+# ------------------------------------------------------------
+#  BLOG ACL
+# ------------------------------------------------------------
+acl.resource.admin/work/blogospherecreation: Blog - Adaugă un blog la blogosferă
+
+
+# ------------------------------------------------------------
+#  PUBLISH MENU
+# ------------------------------------------------------------
+jcmsplugin.blog.publish-menu.add-cs:   Publicație blog
+jcmsplugin.blog.publish-menu.add-mine: Publică în blogul meu
+
+
+# ------------------------------------------------------------
+#  CategoryBrowser
+# ------------------------------------------------------------
+category.category-browser.blog: Caută în blogul meu
+
+
+# ----------------------------------------------------------------------
+# Alert
+# ----------------------------------------------------------------------
+alert.name.jcmsplugin-blog:                               Blog
+
+alert.name.jcmsplugin-blog.new-blogpost:                  O nouă publicație pe blog
+alert.msg.jcmsplugin-blog.new-blogpost.title:             O nouă publicație pe blog: {data}
+alert.msg.jcmsplugin-blog.new-blogpost.short-description: {author} a publicat o nouă publicație pe blog {data} în {parent}. {data.url}
+alert.msg.jcmsplugin-blog.new-blogpost.description:       <p>{author} a publicat o nouă publicație pe blog {data} în {parent.link}.</p> 
+
+alert.name.jcmsplugin-blog.update-blogpost:               Actualizare publicație blog
+alert.msg.jcmsplugin-blog.update-blogpost.title:          O publicație de pe blog a fost actualizată: {data}
+alert.msg.jcmsplugin-blog.update-blogpost.short-description: {author} a actualizat publicația de pe blog {data} în {parent}. {data.url}
+alert.msg.jcmsplugin-blog.update-blogpost.description:       <p>{author} a actualizat publicația de pe blog {data} în {parent.link}.</p> 
+
+alert.name.jcmsplugin-blog.blog-opening:                  Validare solicitare de deschidere de blog
+alert.msg.jcmsplugin-blog.blog-opening.title:             Solicitarea ta de deschidere a blogului a fost validată
+alert.msg.jcmsplugin-blog.blog-opening.short-description: {author} a validat solicitarea ta de deschidere a blogului: {data}. {data.url}
+alert.msg.jcmsplugin-blog.blog-opening.description:       <p>{author} a validat solicitarea ta de deschidere a blogului: {data}:</p> 
+
+# ------------------------------------------------------------
+#  BLOG TOOLS
+# ------------------------------------------------------------
+
+jcmsplugin.blog.tools.title:  Încarcă BlogPost (Store) în BlogPost (Baza de date) - Pasul 2
+jcmsplugin.blog.tools.text1:  Informații despre importul blogului
+jcmsplugin.blog.tools.text2:  1. Importă BlogPost din baza de date în BlogPost în baza de date
+jcmsplugin.blog.tools.text3:  2. Repornește toate blogurile cu parametrii noi
+ui.adm.jcms5-loader.btn.load:        Încarcă date
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From Blog-templates.xml
+types.Blog.templates.editFront.default.label: Șablon de editare Front Office
+types.Blog.templates.editFrontOld.default.label: Şablon editare Front-office anterior
+types.Blog.templates.query.default.label: Șablon implicit
+types.Blog.templates.box.default.label: Șablon implicit
+types.Blog.templates.edit.default.label: Șablon de editare Front Office
+types.Blog.templates.fullold.default.label: Şablon anterior
+types.Blog.templates.full.old.label: Şablon anterior
+types.Blog.templates.full.default.label: Șablon implicit JNews
+ui.editportlet.usage.fullold: Şablon anterior
+
+# From Blog.xml
+types.Blog.fields.bloggerGroup.label: Grup bloggeri
+types.Blog.title.label: Titlu
+types.Blog.fields.description.label: Descriere blog
+types.Blog.label: Blog
+
+# From BlogPost-templates.xml
+types.BlogPost.templates.editFront.default.label: Șablon de editare Front Office
+types.BlogPost.templates.editFrontOld.default.label: Şablon editare Front-office anterior
+types.BlogPost.templates.query.default.label: Șablon implicit
+types.BlogPost.templates.edit.default.label: Şablon editare
+types.BlogPost.templates.full.default.label: Șablon implicit
+types.BlogPost.templates.fullold.default.label: Şablon anterior
+types.BlogPost.templates.full.default.label: Șablon implicit
+types.BlogPost.templates.appBody.default.label: Șablon simplu pentru afișarea corpului aplicației
+
+# From BlogPost.xml
+types.BlogPost.fields.summary.description: Este un rezumat al publicației ce va fi afișată în lista de publicații și în e-mailul trimis abonaților.
+types.BlogPost.fields.blog.label: Blog
+types.BlogPost.fields.category.description: Poți selecta mai multe categorii.
+types.BlogPost.fields.content.label: Text
+types.BlogPost.label: Publicație blog
+types.BlogPost.title.label: Titlu
+types.BlogPost.fields.category.label: Categorie
+types.BlogPost.fields.summary.label: Rezumat
+types.BlogPost.fields.featuredImage.label: Imagine
+types.BlogPost.fields.featuredImage.description: Imaginea trebuie să aibă dimensiuni mari, de preferat în format 16/9 (de ex. 960x540).
+types.BlogPost.fields.featuredImageAlt.label: Alternativă textuală la imagine
+types.BlogPost.fields.featuredImageAlt.description: Textul va fi utilizat ca atribut Alt pentru imagine
+types.BlogPost.fields.thumbnailImage.label: Imagine miniatură
+types.BlogPost.fields.thumbnailImage.description: Din imagine se generează o imagine în miniatură. Poți alege o altă miniatură. Trebuie să fie mai mare de 300x150, și preferabil în format 4/3 sau 16/9.
+types.BlogPost.fields.thumbnailImageAlt.label: Alternativă textuală la imagine în miniatură
+types.BlogPost.fields.thumbnailImageAlt.description: Textul va fi utilizat ca atribut Alt pentru imaginea în miniatură
+types.BlogPost.fields.imageAltText.label: Alternativă textuală
+types.BlogPost.btn.show-options: Mai multe opțiuni...
+types.BlogPost.btn.hide-options: Mai puține opțiuni...
+
+# From BlogRequest.xml
+types.BlogRequest.fields.description.label: Descriere
+types.BlogRequest.title.label: Nume blog
+types.BlogRequest.label: Solicitare de deschidere de blog
+
+# From PortletBlog-templates.xml
+types.PortletBlog.templates.box.default.label: Șablon implicit
+types.PortletBlog.templates.box.default.description: Șablonul implicit pentru acest portlet
+types.PortletBlog.templates.box.itembox.label: Listă cu aspect item-box
+types.PortletBlog.templates.box.itembox.description: Listă cu aspect item-box
+types.PortletBlog.templates.edit.default.label: Șablon implicit
+types.PortletBlog.templates.edit.default.description: Șablonul implicit pentru acest portlet
+types.PortletBlog.templates.full.default.label: Șablon implicit
+types.PortletBlog.templates.full.default.description: Șablonul implicit pentru acest portlet
+types.PortletBlog.templates.query.default.label: Șablon implicit
+types.PortletBlog.templates.query.default.description: Șablonul implicit pentru acest portlet
+
+# From PortletBlog.xml
+types.PortletBlog.label: Portlet blog
+types.PortletBlog.fields.displayedList.labelList: Bloguri și publicații din toate spațiile de lucru|Publicații din spațiile de lucru
+types.PortletBlog.fields.displayedList.label: Lista afișată
+types.PortletBlog.title.label: Titlu
+types.PortletBlog.description: Afișează lista publicărilor de blog și a blogurilor
+
+# From wfblogrequest.xml
+workflows.wfblogrequest.label: Blog - Fluxul de lucru al solicitărilor de deschidere de blog
+workflows.wfblogrequest.states.60.description: Solicitare autorizată, s-a creat un blog.
+workflows.wfblogrequest.states.50.description: Această solicitare de blog a fost respinsă. Blogul nu va fi creat. Consultă notele fluxului de lucru pentru mai multe detalii.
+workflows.wfblogrequest.states.-200.label: Remis
+workflows.wfblogrequest.roles.blogValidator.description: Acceptă/Respinge solicitările de deschidere de blog
+workflows.wfblogrequest.roles.blogValidator.name: Validator
+workflows.wfblogrequest.states.60.label: Acceptate
+workflows.wfblogrequest.states.50.label: Respins
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.blog:     Blog
+jcmsplugin.smartphone.workspace-service.PortletBlog: Blog
+jcmsplugin.blog.smartphone.lbl.blogpost-list: Publicări
+jcmsplugin.blog.smartphone.lbl.blog: Bloguri
+jcmsplugin.blog.smartphone.lbl.blog.my-blogs: Blogurile mele
+jcmsplugin.blog.smartphone.lbl.blog.other-blogs: Alte bloguri
+
+# ----------------------------------------------------------------------
+# BlogPost Form
+# ----------------------------------------------------------------------
+jcmsplugin.blog.filter-author: Filtrare în funcție de Autor
+jcmsplugin.blog.filter-pstatus: Filtrează în funcție de stare
+jcmsplugin.blog.filter-startDate: Data de începere
+jcmsplugin.blog.filter-endDate: Data de finalizare
+jcmsplugin.blog.sort-by-vote: Votare contor

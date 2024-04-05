@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plugin PUBLIC "-//JALIOS//DTD JCMS-PLUGIN 1.7//EN" "https://community.jalios.com/dtd/jcms-plugin-1.7.dtd">
+<plugin name="CategoryRightsPlugin" 
+        version="3.0.3" 
+        jcms="(10.0.[7-9]).*"
+        author="Jalios SA" license="Jalios"         
+        url="https://community.jalios.com/plugin/categoryrights" 
+        jsync="true" initialize="true">
+
+  <label xml:lang="en">Category Rights Plugin</label>
+  <label xml:lang="fr">Module Category Rights</label>
+
+  <description xml:lang="en">This plugin provides a new read access policy for the publications based on the category rights. A publication is not visible for a member if it uses at least one category this member cannot access.</description>
+  <description xml:lang="fr">Ce module fournit un contrôle d'accès aux publications basé sur les droits des catégories. Il permet de gérer la visibilité des publications selon la visibilité des catégories auxquelles elles sont rattachées.</description>
+
+  <java-classes>
+    <java package="com.jalios.jcmsplugin.categoryrights" />
+    <java package="com.jalios.jcmsplugin.categoryrights.listener" />
+    <java package="com.jalios.jcmsplugin.categoryrights.controller" />
+  </java-classes>
+
+  <plugincomponents>
+    <storelistener         class="com.jalios.jcmsplugin.categoryrights.listener.CrpWorkspaceListener"   types="com.jalios.jcms.workspace.Workspace" beforeStoreLoad="true" repeat="true" />
+    <storelistener         class="com.jalios.jcmsplugin.categoryrights.listener.CrpCategoryListener"    types="com.jalios.jcms.Category" beforeStoreLoad="false" repeat="true" />
+    <storelistener         class="com.jalios.jcmsplugin.categoryrights.listener.CrpGroupListener"       types="com.jalios.jcms.Group" beforeStoreLoad="false" repeat="true" />
+    <storelistener         class="com.jalios.jcmsplugin.categoryrights.listener.CrpMemberListener"      types="com.jalios.jcms.Member" beforeStoreLoad="false" repeat="true" />
+    <storelistener         class="com.jalios.jcmsplugin.categoryrights.listener.CrpPublicationListener" types="Publication" beforeStoreLoad="false" repeat="true" />
+    <dblistener            class="com.jalios.jcmsplugin.categoryrights.listener.CrpMemberListener"      types="com.jalios.jcms.dbmember.DBMember" />
+    <dblistener            class="com.jalios.jcmsplugin.categoryrights.listener.CrpPublicationListener" types="Publication" />
+    
+    <datacontroller        class="com.jalios.jcmsplugin.categoryrights.controller.CrpCategoryDataController"    types="Category" />
+    <datacontroller        class="com.jalios.jcmsplugin.categoryrights.controller.CrpPublicationDataController" types="Publication" />
+    <datacontroller        class="com.jalios.jcmsplugin.categoryrights.controller.CrpGroupDataController"       types="Group" />
+    <datacontroller        class="com.jalios.jcmsplugin.categoryrights.controller.CrpMemberDataController"      types="Member" />
+    
+    <policyfilter          class="com.jalios.jcmsplugin.categoryrights.CategoryRightsRightPolicyFilter" />
+    <policyfilter          class="com.jalios.jcmsplugin.categoryrights.CategoryRightsDataIconPolicyFilter" />
+  </plugincomponents>
+
+  <private-files>
+    <directory path="properties" />
+  </private-files>
+  <public-files>
+    <file path="docs/images/preview.jpg" />
+    <file path="docs/images/icon.gif" />
+    <file path="jsp/doEditCategoryRights.jsp" include="EDIT_CAT_RIGHTSTAB_HEADER"/>
+    <file path="jsp/doEditCategoryUseRightsTypes.jsp" include="EDIT_CAT_USERIGHTTAB_FOOTER"/>
+    <directory path="docs/javadoc" />
+  </public-files>
+</plugin>
+

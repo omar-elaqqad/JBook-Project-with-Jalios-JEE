@@ -1,0 +1,148 @@
+# ----------------------------------------------------------------------
+# Folder
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.folder.lbl.new: Nowy folder
+jcmsplugin.bookmarks.folder.lbl.add: Dodaj folder
+jcmsplugin.bookmarks.folder.btn.lbl.add: Dodaj folder...
+jcmsplugin.bookmarks.folder.lbl.edit: Edytuj folder
+jcmsplugin.bookmarks.folder.action.delete.warn-msg: Ostrzeżenie, zawartość folderu również zostanie usunięta.
+jcmsplugin.bookmarks.folder.menu.action.delete.warn-msg: Ostrzeżenie, zawartość folderów również zostanie usunięta
+jcmsplugin.bookmarks.folder.lbl.name:  Nazwa folderu
+jcmsplugin.bookmarks.folder.lbl.name1: Nazwisko
+jcmsplugin.bookmarks.folder.lbl.name.parent:  Folder nadrzędny
+jcmsplugin.bookmarks.folder.lbl.name.parent1: Kategoria nadrzędna
+jcmsplugin.bookmarks.folder.name.error: Wprowadź nazwę folderu
+jcmsplugin.bookmarks.folder.name.error.duplicate: Istnieje już folder o tej nazwie.
+jcmsplugin.bookmarks.folder.contains-data: Najpierw usuń zawartość tego folderu
+jcmsplugin.bookmarks.folder.no-result: Nie ma żadnych zakładek.
+jcmsplugin.bookmarks.folder.root: W górę do głównego
+jcmsplugin.bookmarks.folder.lbl.root: Główny
+jcmsplugin.bookmarks.folder.upper: W górę do {0}
+jcmsplugin.bookmarks.folder.lbl: Folder
+jcmsplugin.bookmarks.folder.menu.action: Działania
+jcmsplugin.bookmarks.folder.action.move.empty: Zaznaczonych pozycji nie można przenieść do żadnego folderu.
+jcmsplugin.bookmarks.items.lbl.shift: Przesuń zaznaczenie
+jcmsplugin.bookmarks.items.lbl.delete: Usuń zaznaczenie
+jcmsplugin.bookmarks.menu.search.placeholder: Szukaj zakładki
+jcmsplugin.bookmarks.already-bookmarked: Ta publikacja ma już zakładkę.
+jcmsplugin.bookmarks.app.title: Zakładki
+
+#DISABLED
+jcmsplugin.bookmarks.plugin-disabled.message: Ulubiony moduł jest obecnie nieaktywny
+
+#SIDEBAR
+jcmsplugin.bookmarks.topbar.title: Moje zakładki
+jcms.sidebar-tab.bookmarks: Zakładki
+jcms.sidebar-tab.bookmarks.icon: Zakładki
+jcmsplugin.bookmarks.topbar.search: Szukaj zakładki...
+
+#PUBLICATION
+jcmsplugin.bookmarks.toastr.add: Dodane do zakładek
+jcmsplugin.bookmarks.toastr.remove: Usunięte z zakładek
+
+#MENU
+jcmsplugin.bookmarks.msg.no-result: Nie znaleziono zakładki
+
+jcmsplugin.bookmarks.lbl.bookmarks: Zakładki
+jcmsplugin.bookmarks.lbl.link: Link zewnętrzny
+jcmsplugin.bookmarks.lbl.pub:  Treść
+jcmsplugin.bookmarks.lbl.search: Szukaj
+
+jcmsplugin.bookmarks.lbl.url:    URL
+jcmsplugin.bookmarks.lbl.title:  Tytuł
+jcmsplugin.bookmarks.btn.add:    Dodaj
+jcmsplugin.bookmarks.btn.update: Zapisz
+jcmsplugin.bookmarks.btn.remove: Usuń tę zakładkę
+
+jcmsplugin.bookmarks.lbl.add-bookmark: Dodaj zakładkę
+jcmsplugin.bookmarks.lbl.remove-bookmark: Usuń z zakładek
+
+jcmsplugin.bookmarks.lbl.action: Działania
+jcmsplugin.bookmarks.lbl.add:    Dodaj zakładkę...
+jcmsplugin.bookmarks.lbl.edit: 	 Edytuj zakładkę
+jcmsplugin.bookmarks.msg.remove: Czy na pewno chcesz usunąć zakładkę <em>{0}</em>?
+
+jcmsplugin.bookmarks.adm.max:    Maks. liczba zakładek na użytkownika
+jcmsplugin.bookmarks.msg.adm.max:Osiągnąłeś maksymalną liczbę zakładek!
+
+jcmsplugin.bookmarks.lbl.bookmark.error: Ta zakładka jest nieprawidłowa.
+jcmsplugin.bookmarks.lbl.url.error: Adres URL jest nieprawidłowy.
+jcmsplugin.bookmarks.title.error: Wprowadź tytuł.
+
+jcmsplugin.bookmarks.lbl.manage-bookmark: Zarządzaj zakładkami
+
+jcmsplugin.bookmarks.isExternalLink.title: Link zewnętrzny
+# ----------------------------------------------------------------------
+# Analytics
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.analytics.top-section: Najczęściej dodawane zakładki
+jcmsplugin.bookmarks.analytics.top-section.help: Pierwsza dziesiątka zakładek użytkowników
+jcmsplugin.bookmarks.analytics.top-bookmarks-section: Członkowie z największą liczbą zakładek
+jcmsplugin.bookmarks.analytics.top-bookmarks-section.help: Pierwszych 10 członków z największą liczbą zakładek
+jcmsplugin.bookmarks.analytics.rank-number-column.label: #
+jcmsplugin.bookmarks.analytics.bookmark-column.label: Zakładki
+jcmsplugin.bookmarks.analytics.bookmark-add-column.label: Ile razy dodano
+jcmsplugin.bookmarks.analytics.report.average-bookmarks: Średnia liczba zakładek
+jcmsplugin.bookmarks.analytics.report.average-bookmarks.h: Średnia liczba na użytkownika
+jcmsplugin.bookmarks.analytics.author-column.label: Użytkownicy
+jcmsplugin.bookmarks.analytics.bookmark-number-column.label: Liczba zakładek
+jcmsplugin.bookmarks.analytics.indicator.average-bookmarks: Liczba zakładek na użytkownika
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks: Najczęściej zaznaczana publikacja
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks.h: Pierwsze 10 najczęściej zaznaczanych publikacji
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks.table.pub.title: Publikacja
+ui.analytics.BookmarksAgent.name: Zakładki
+
+# ----------------------------------------------------------------------
+# Icones
+# ----------------------------------------------------------------------
+icon.jcmsplugin.bookmarks.bookmarkWhite: Zakładki
+icon.jcmsplugin.bookmarks.edit:          Edytuj zakładkę
+icon.jcmsplugin.bookmarks.delete:        Usuń zakładkę
+icon.jcmsplugin.bookmarks.add:           Dodaj zakładkę
+icon.jcmsplugin.bookmarks.star:          Zakładki
+
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+jcmsplugin.bookmarks.displayExternalUrl: Otwórz linki zewnętrzne w nowym oknie
+
+# From PortletBookmarks-templates.xml
+types.PortletBookmarks.templates.query.default.label: Szablon domyślny
+types.PortletBookmarks.templates.box.default.label: Szablon domyślny
+
+# From PortletBookmarks.xml
+types.PortletBookmarks.title.label: Tytuł
+types.PortletBookmarks.fields.openLinksInNewWindow.label: Otwórz linki zewnętrzne w nowym oknie
+types.PortletBookmarks.fields.openLinksInNewWindow.onLabel: Tak
+types.PortletBookmarks.label: Portlet zakładek
+types.PortletBookmarks.description: Ten portlet umożliwia zalogowanym użytkownikom zarządzanie swoimi zakładkami.
+types.PortletBookmarks.fields.openLinksInNewWindow.offLabel: Nie
+
+# From PortletWorkspaceBookmarks.xml
+types.PortletWorkspaceBookmarks.label: Portlet zakładek obszaru roboczego
+types.PortletWorkspaceBookmarks.title.label: Tytuł
+types.PortletWorkspaceBookmarks.description: Ten portlet umożliwia administratorowi obszaru roboczego zarządzanie zakładkami obszaru roboczego.
+
+jcmsplugin.bookmarks.edition-mode: Przełącz się do trybu edycji
+jcmsplugin.bookmarks.remove-edition-mode: Zatrzymaj edycję
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.bookmark:   Zakładki
+jcmsplugin.bookmarks.smartphone.lbl.bookmark.filter: Szukaj w zakładkach...
+jcmsplugin.bookmarks.smartphone.lbl.bookmark.no-result: Brak zakładek
+jcmsplugin.bookmarks.smartphone.menu.bookmark.added.lbl: Dodano zakładkę
+jcmsplugin.bookmarks.smartphone.menu.bookmark.removed.lbl: Usunięto zakładkę
+
+# Shortcut
+data.$id.shortcut.jcmsplugin.bookmarks.title: Zakładki
+data.$id.shortcut.jcmsplugin.bookmarks.text: Uzyskaj dostęp do zakładek publikacji, wyników wyszukiwania i stron zewnętrznych oraz zarządzaj nimi.
+
+# ----------------------------------------------------------------------
+# JTasks project
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.app.project.sidebar.favorite-projects.label: Ulubione

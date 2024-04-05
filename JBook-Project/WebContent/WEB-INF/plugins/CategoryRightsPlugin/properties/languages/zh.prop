@@ -1,0 +1,4 @@
+jcmsplugin.categoryrights.types: 类型
+jcmsplugin.categoryrights.types.help: 受控的内容类型（用空格或逗号分隔）
+jcmsplugin.categoryrights.cat-ids: 类别（ids）
+jcmsplugin.categoryrights.cat-ids.help: 受控的类别根标识符（用空格或逗号分隔）

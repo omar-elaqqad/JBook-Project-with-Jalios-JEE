@@ -1,0 +1,148 @@
+# ----------------------------------------------------------------------
+# Folder
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.folder.lbl.new: Nova pasta
+jcmsplugin.bookmarks.folder.lbl.add: Adicionar uma pasta
+jcmsplugin.bookmarks.folder.btn.lbl.add: Adicionar uma pasta...
+jcmsplugin.bookmarks.folder.lbl.edit: Editar uma pasta
+jcmsplugin.bookmarks.folder.action.delete.warn-msg: Aviso: O conteúdo da pasta também será apagado
+jcmsplugin.bookmarks.folder.menu.action.delete.warn-msg: Aviso: O conteúdo das pastas também será apagado
+jcmsplugin.bookmarks.folder.lbl.name:  Nome da pasta
+jcmsplugin.bookmarks.folder.lbl.name1: Nome
+jcmsplugin.bookmarks.folder.lbl.name.parent:  Pasta de origem
+jcmsplugin.bookmarks.folder.lbl.name.parent1: Origem
+jcmsplugin.bookmarks.folder.name.error: Por favor, insira um nome da pasta
+jcmsplugin.bookmarks.folder.name.error.duplicate: Já existe uma pasta com este nome
+jcmsplugin.bookmarks.folder.contains-data: Por favor, apague primeiro o conteúdo desta pasta
+jcmsplugin.bookmarks.folder.no-result: Não existem marcadores.
+jcmsplugin.bookmarks.folder.root: Até à raiz
+jcmsplugin.bookmarks.folder.lbl.root: Raiz
+jcmsplugin.bookmarks.folder.upper: Até {0}
+jcmsplugin.bookmarks.folder.lbl: Pasta
+jcmsplugin.bookmarks.folder.menu.action: Ações
+jcmsplugin.bookmarks.folder.action.move.empty: A seleção não pode ser movida para nenhuma pasta
+jcmsplugin.bookmarks.items.lbl.shift: Transferir a seleção
+jcmsplugin.bookmarks.items.lbl.delete: Apagar a seleção
+jcmsplugin.bookmarks.menu.search.placeholder: Procurar um marcador
+jcmsplugin.bookmarks.already-bookmarked: Esta publicação já está marcada.
+jcmsplugin.bookmarks.app.title: Marcadores
+
+#DISABLED
+jcmsplugin.bookmarks.plugin-disabled.message: O módulo marcadores está atualmente desativado
+
+#SIDEBAR
+jcmsplugin.bookmarks.topbar.title: Os meus marcadores
+jcms.sidebar-tab.bookmarks: Marcadores
+jcms.sidebar-tab.bookmarks.icon: Marcadores
+jcmsplugin.bookmarks.topbar.search: Procurar um marcador...
+
+#PUBLICATION
+jcmsplugin.bookmarks.toastr.add: Adicionado aos marcadores
+jcmsplugin.bookmarks.toastr.remove: Retirado dos marcadores
+
+#MENU
+jcmsplugin.bookmarks.msg.no-result: Nenhum marcador encontrado
+
+jcmsplugin.bookmarks.lbl.bookmarks: Marcadores
+jcmsplugin.bookmarks.lbl.link: Link externo
+jcmsplugin.bookmarks.lbl.pub:  Conteúdo
+jcmsplugin.bookmarks.lbl.search: Procurar
+
+jcmsplugin.bookmarks.lbl.url:    URL
+jcmsplugin.bookmarks.lbl.title:  Título
+jcmsplugin.bookmarks.btn.add:    Adicionar
+jcmsplugin.bookmarks.btn.update: Guardar
+jcmsplugin.bookmarks.btn.remove: Remover este marcador
+
+jcmsplugin.bookmarks.lbl.add-bookmark: Adicionar um marcador
+jcmsplugin.bookmarks.lbl.remove-bookmark: Retirar dos marcadores
+
+jcmsplugin.bookmarks.lbl.action: Ações
+jcmsplugin.bookmarks.lbl.add:    Adicionar um marcador...
+jcmsplugin.bookmarks.lbl.edit: 	 Editar um marcador
+jcmsplugin.bookmarks.msg.remove: Deseja realmente apagar o marcador <em>{0}</em>?
+
+jcmsplugin.bookmarks.adm.max:    Marcadores máx por utilizador
+jcmsplugin.bookmarks.msg.adm.max:Atingiu o máximo de marcadores!
+
+jcmsplugin.bookmarks.lbl.bookmark.error: Este marcador é inválido.
+jcmsplugin.bookmarks.lbl.url.error: O URL é inválido.
+jcmsplugin.bookmarks.title.error: Por favor, insira um título.
+
+jcmsplugin.bookmarks.lbl.manage-bookmark: Gerir marcadores
+
+jcmsplugin.bookmarks.isExternalLink.title: Link externo
+# ----------------------------------------------------------------------
+# Analytics
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.analytics.top-section: Marcadores mais adicionados
+jcmsplugin.bookmarks.analytics.top-section.help: Top dez dos marcadores dos utilizadores
+jcmsplugin.bookmarks.analytics.top-bookmarks-section: Membros com mais marcadores
+jcmsplugin.bookmarks.analytics.top-bookmarks-section.help: Top dez dos membros com mais marcadores
+jcmsplugin.bookmarks.analytics.rank-number-column.label: #
+jcmsplugin.bookmarks.analytics.bookmark-column.label: Marcadores
+jcmsplugin.bookmarks.analytics.bookmark-add-column.label: Número de vezes adicionado
+jcmsplugin.bookmarks.analytics.report.average-bookmarks: Média de marcadores
+jcmsplugin.bookmarks.analytics.report.average-bookmarks.h: Média por utilizador
+jcmsplugin.bookmarks.analytics.author-column.label: Utilizadores
+jcmsplugin.bookmarks.analytics.bookmark-number-column.label: Número do marcador
+jcmsplugin.bookmarks.analytics.indicator.average-bookmarks: Marcadores por utilizador
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks: Publicação com mais marcadores
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks.h: Top dez das publicações com marcadores
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks.table.pub.title: Publicação
+ui.analytics.BookmarksAgent.name: Marcadores
+
+# ----------------------------------------------------------------------
+# Icones
+# ----------------------------------------------------------------------
+icon.jcmsplugin.bookmarks.bookmarkWhite: Marcadores
+icon.jcmsplugin.bookmarks.edit:          Editar marcador
+icon.jcmsplugin.bookmarks.delete:        Eliminar marcador
+icon.jcmsplugin.bookmarks.add:           Adicionar marcador
+icon.jcmsplugin.bookmarks.star:          Marcadores
+
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+jcmsplugin.bookmarks.displayExternalUrl: Abrir links externos numa nova janela
+
+# From PortletBookmarks-templates.xml
+types.PortletBookmarks.templates.query.default.label: Modelo predefinido
+types.PortletBookmarks.templates.box.default.label: Modelo predefinido
+
+# From PortletBookmarks.xml
+types.PortletBookmarks.title.label: Título
+types.PortletBookmarks.fields.openLinksInNewWindow.label: Abrir links externos numa nova janela
+types.PortletBookmarks.fields.openLinksInNewWindow.onLabel: Sim
+types.PortletBookmarks.label: Portlet Marcadores
+types.PortletBookmarks.description: Este portlet permite aos membros conectados gerirem os seus marcadores.
+types.PortletBookmarks.fields.openLinksInNewWindow.offLabel: Não
+
+# From PortletWorkspaceBookmarks.xml
+types.PortletWorkspaceBookmarks.label: Portlet Marcadores do Espaço de Trabalho
+types.PortletWorkspaceBookmarks.title.label: Título
+types.PortletWorkspaceBookmarks.description: Este portlet permite ao administrador do espaço de trabalho gerir os marcadores do espaço de trabalho.
+
+jcmsplugin.bookmarks.edition-mode: Passar para o modo de edição
+jcmsplugin.bookmarks.remove-edition-mode: Parar a edição
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.bookmark:   Marcadores
+jcmsplugin.bookmarks.smartphone.lbl.bookmark.filter: Procurar nos marcadores...
+jcmsplugin.bookmarks.smartphone.lbl.bookmark.no-result: Sem marcadores
+jcmsplugin.bookmarks.smartphone.menu.bookmark.added.lbl: Marcador adicionado
+jcmsplugin.bookmarks.smartphone.menu.bookmark.removed.lbl: Marcador removido
+
+# Shortcut
+data.$id.shortcut.jcmsplugin.bookmarks.title: Marcadores
+data.$id.shortcut.jcmsplugin.bookmarks.text: Aceda e efetue a gestão dos seus marcadores em publicações, resultados da procura e páginas externas.
+
+# ----------------------------------------------------------------------
+# JTasks project
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.app.project.sidebar.favorite-projects.label: Os meus favoritos

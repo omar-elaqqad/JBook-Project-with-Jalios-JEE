@@ -1,0 +1,4 @@
+jcmsplugin.categoryrights.types: Типы
+jcmsplugin.categoryrights.types.help: Типы контента, подлежащие управлению (разделенные пробелами или запятыми)
+jcmsplugin.categoryrights.cat-ids: Категории (идентификаторы)
+jcmsplugin.categoryrights.cat-ids.help: Идентификаторы корней категории, подлежащие управлению (разделенные пробелами или запятыми)

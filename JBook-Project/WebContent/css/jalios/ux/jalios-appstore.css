@@ -1,0 +1,470 @@
+.app-appstore .app-header {
+  background-color: #00cef1;
+}
+.app-appstore .app-header .app-publication-actions .list-group-item.pub-action-toggle {
+  background-color: #00cef1;
+}
+.app-appstore .app-sidebar .app-sidebar-icon .jalios-icon {
+  color: #00cef1;
+}
+.app.app-appstore .btn-tab-rename {
+  margin-right: 4px;
+}
+.app.app-appstore .app-header .appstore-main-title {
+  font-weight: 300;
+  margin-top: 10px;
+}
+.app.app-appstore .app-header .appstore-main-title A {
+  color: white;
+}
+.app.app-appstore .app-header H2 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: -18px;
+  font-family: embedded-roboto-condensed, embedded-roboto, Helvetica, Arial, sans-serif;
+}
+.app.app-appstore .app-store-add-tab {
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+  justify-content: center;
+  padding-left: 14px;
+  padding-right: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+.app.app-appstore .app-store-add-tab:hover {
+  color: #ababab;
+}
+.app.app-appstore .app-main.is-admin-page {
+  background-color: white;
+}
+.app.app-appstore .app-main.is-admin-page .nav-admin > LI {
+  flex-basis: initial;
+  flex-grow: initial;
+}
+.app.app-appstore .app-main.is-admin-page .nav-admin {
+  margin-left: 0;
+}
+.app.app-appstore .application-default-chooser {
+  max-width: 800px;
+  padding: 20px;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+}
+.app.app-appstore .application-default-chooser .nav-tabs-underlined {
+  display: inline-block;
+  float: left;
+}
+.app.app-appstore .application-default-chooser .nav-tabs-underlined .ui-sortable-helper {
+  background-color: #eee;
+}
+.app.app-appstore .application-default-chooser .nav-tabs-underlined .tab-dropdown {
+  padding: 5px;
+  transition: background-color 200ms ease-in;
+}
+.app.app-appstore .application-default-chooser .nav-tabs-underlined .tab-dropdown:hover {
+  background-color: #e8e8e8;
+}
+.app.app-appstore .application-default-chooser .nav-tabs-underlined .dropdown-menu LI.active > A {
+  background-color: #fff;
+  color: #666;
+}
+.app.app-appstore .application-default-chooser .nav-tabs-underlined > li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.app.app-appstore .application-default-chooser .nav-tabs-underlined > li > .dropdown {
+  display: none;
+}
+.app.app-appstore .application-default-chooser .nav-tabs-underlined > li.active > .dropdown {
+  display: block;
+}
+.app.app-appstore .application-default-chooser .nav-tabs-underlined > li.active a:hover {
+  cursor: pointer;
+}
+.app.app-appstore H2 {
+  width: 100%;
+  padding-left: 15px;
+  margin-bottom: 20px;
+  font-family: embedded-roboto-condensed, embedded-roboto, Helvetica, Arial, sans-serif;
+}
+.app.app-appstore .card-appstore-layout .card {
+  padding-bottom: 40px;
+  cursor: pointer;
+}
+.app.app-appstore .card-appstore-layout .card .buttons {
+  opacity: 0;
+  transition: opacity 200ms ease-in;
+}
+.app.app-appstore .card-appstore-layout .card .card-title A {
+  color: #333333;
+}
+.app.app-appstore .card-appstore-layout .card .card-title A:hover {
+  text-decoration: none;
+}
+.app.app-appstore .card-appstore-layout .card .card-title A:focus-visible {
+  text-decoration: underline;
+}
+.app.app-appstore .card-appstore-layout .card:focus-visible {
+  display: none;
+}
+.app.app-appstore .card-appstore-layout .card:hover .buttons {
+  opacity: 1;
+}
+.app.app-appstore .card-appstore-layout .card .ribbon-top-left {
+  display: none;
+}
+.app.app-appstore .card-appstore-layout .card .app-uninstall {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 8px;
+  opacity: 0;
+  transition: opacity 200ms ease-in;
+  display: none;
+}
+.app.app-appstore .card-appstore-layout .card.is-installed .ribbon-top-left {
+  display: block;
+}
+.app.app-appstore .card-appstore-layout .card.is-installed .app-uninstall {
+  display: block;
+}
+.app.app-appstore .card-appstore-layout .card:focus-within.is-installed .app-uninstall,
+.app.app-appstore .card-appstore-layout .card:focus-visible.is-installed .app-uninstall,
+.app.app-appstore .card-appstore-layout .card:hover.is-installed .app-uninstall {
+  opacity: 1;
+}
+.app.app-appstore .card-appstore-layout .card .ribbon-top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  border-top: solid 30px #4cd963;
+  border-left: solid 30px #4cd963;
+  border-right: solid 30px transparent;
+  border-bottom: solid 30px transparent;
+  border-top-left-radius: 8px;
+}
+.app.app-appstore .card-appstore-layout .card .ribbon-top-left .jalios-icon {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+.app.app-appstore .card-appstore-layout .card .card-title {
+  text-align: center;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.app.app-appstore .card-appstore-layout .card .card-description {
+  margin-bottom: 8px;
+}
+.app.app-appstore .card-appstore-layout .card:hover .application-action {
+  color: #4d4d4d;
+  opacity: 1;
+}
+.app.app-appstore .card-appstore-layout .card .install-count {
+  display: inline-flex;
+  line-height: 20px;
+  cursor: default;
+  align-items: center;
+  position: absolute;
+  bottom: 14px;
+  margin-left: 8px;
+  color: #999;
+}
+.app.app-appstore .card-appstore-layout .card .install-count .counter {
+  line-height: 12px;
+}
+.app.app-appstore .card-appstore-layout .card .application-hashtags {
+  margin-bottom: 10px;
+}
+.app.app-appstore .card-appstore-layout .card .application-hashtags .label {
+  font-size: 12px;
+  font-weight: normal;
+  color: #666;
+  background-color: white;
+  border: 1px solid #ccc;
+  line-height: 2;
+  cursor: pointer;
+  transition: background-color 200ms ease-in;
+}
+.app.app-appstore .card-appstore-layout .card .application-hashtags .label:hover {
+  background-color: #e8e8e8;
+}
+.app.app-appstore .card-appstore-layout .card .appstore-add {
+  cursor: pointer;
+  padding-right: 8px;
+}
+.app.app-appstore .card-appstore-layout .card .appstore-add > .jalios-icon {
+  display: none;
+  line-height: 20px;
+}
+.app.app-appstore .card-appstore-layout .card .appstore-add.is-installed > .jalios-icon {
+  display: inline-block;
+}
+.app.app-appstore .card-appstore-layout .card .application-footer {
+  margin-top: 16px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px;
+}
+.app.app-appstore .card-appstore-layout .card .dropdown {
+  float: right;
+}
+.app.app-appstore .card-appstore-layout .card .app-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  padding: 40px 20px;
+  position: relative;
+  border-bottom: 1px solid #efefef;
+}
+.app.app-appstore .card-appstore-layout .card .app-icon-wrapper:before {
+  content: "";
+  border: 1px solid #DDD;
+  height: 96px;
+  width: 96px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 0;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.app.app-appstore .card-appstore-layout .card .app-icon-wrapper .app-icon {
+  width: 48px;
+  height: 48px;
+}
+.displayed-application-buttons {
+  width: 600px;
+  margin: 0 auto 20px;
+}
+.displayed-application-buttons .appstore-add {
+  padding-right: 8px;
+}
+.displayed-application-buttons .appstore-add .jalios-icon {
+  line-height: 20px;
+}
+.displayed-application-buttons > .dropdown {
+  display: inline-block;
+}
+.displayed-application-buttons > .dropdown > A:after {
+  color: white;
+}
+.displayed-application-social {
+  width: 600px;
+  margin: 0 auto 20px;
+}
+.displayed-application-social .vote-footer {
+  margin: 0 0 5px;
+  padding: 20px;
+  border: 0;
+  background-color: #fff;
+  font-weight: normal;
+  font-size: 18px;
+}
+.displayed-application-social .dbcomments {
+  background-color: #fff;
+  padding: 20px;
+}
+.displayed-application-social .dbcomments .dbcommentCount {
+  margin-top: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-size: 18px;
+}
+.app-appstore .breadcrumb-nav,
+.app-appstore .displayed-application-test-wrapper {
+  width: 600px;
+  margin: 0 auto 20px;
+}
+.app-appstore .breadcrumb-nav {
+  margin-left: auto;
+}
+.displayed-application {
+  position: relative;
+  width: 600px;
+  margin: 0 auto 20px;
+  background-color: white;
+  padding-bottom: 10px;
+  border-radius: 0 8px 8px 8px;
+  overflow: hidden;
+}
+.displayed-application .displayed-application-title {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+  margin-bottom: 20px;
+}
+.displayed-application .application-hashtags {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 10px;
+}
+.displayed-application .application-hashtags .label {
+  font-size: 12px;
+  font-weight: normal;
+  color: #666;
+  background-color: white;
+  border: 1px solid #ccc;
+}
+.displayed-application .app-icon-wrapper {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #eee;
+}
+.displayed-application .app-icon-wrapper .app-icon {
+  width: 48px;
+  height: 48px;
+}
+.displayed-application .displayed-application-footer {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+.displayed-application .displayed-application-description {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 40px;
+}
+.displayed-application > H2 {
+  margin-top: 0;
+  font-family: embedded-roboto-condensed, embedded-roboto, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.displayed-application .ribbon-top-left {
+  display: none;
+}
+.displayed-application.is-installed .ribbon-top-left {
+  display: block;
+}
+.displayed-application.is-installed .app-uninstall {
+  display: block;
+}
+.displayed-application .ribbon-top-left {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 50px 0 0;
+  border-color: #4cd963 transparent transparent transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.displayed-application .ribbon-top-left .jalios-icon {
+  position: absolute;
+  top: -43px;
+  left: 6px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+.displayed-application .buttons {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  display: flex;
+}
+.displayed-application .application-action {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  color: #666;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: background-color 200ms ease-in;
+  cursor: pointer;
+  font-size: 18px;
+}
+.displayed-application .application-action:hover {
+  background-color: #e0e0e0;
+}
+.displayed-application:hover .application-action {
+  color: #4d4d4d;
+  opacity: 1;
+}
+.displayed-application .install-count {
+  display: inline-flex;
+  line-height: 20px;
+  cursor: default;
+  align-items: center;
+  /* position: absolute; */
+  bottom: 14px;
+  color: #999;
+  float: left;
+  height: 22px;
+  margin-right: 10px;
+}
+.displayed-application .install-count .counter {
+  line-height: 12px;
+}
+.appstore-add {
+  cursor: pointer;
+}
+.appstore-add > .jalios-icon {
+  display: none;
+}
+.appstore-add.is-installed > .jalios-icon {
+  display: inline-block;
+}
+.app.app-appstore .card-appstore-layout[max-width~='800px'] > .card {
+  width: calc(50% - 40px);
+}
+.app.app-appstore .card-appstore-layout[max-width~='500px'] > .card {
+  width: calc(100% - 40px);
+}
+@media screen and (max-width: 480px) {
+  .app.app-appstore .app-body .card-appstore-layout > .card {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .app.app-appstore .app-body .application-footer .buttons {
+    opacity: 1;
+  }
+  .app.app-appstore .navbar {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+.suggestions-wrapper {
+  max-width: 1200px;
+  /* background-color: white; */
+  margin: 0 auto;
+  padding-top: 10px;
+  /* border-radius: 4px; */
+  margin-bottom: 40px;
+}
+.suggestions-wrapper:after {
+  content: '';
+  width: calc(100% - 32px);
+  height: 1px;
+  background-color: #ccc;
+  display: block;
+}
+.suggestions-wrapper H2 {
+  margin-top: 0;
+}
+.suggestions-wrapper .suggestions-wrapper-header {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+/*# sourceMappingURL=jalios-appstore.css.map */

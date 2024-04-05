@@ -1,0 +1,38 @@
+.jalios-smartinsert {
+  display: block;
+  position: absolute;
+  min-width: 160px;
+}
+.jalios-smartinsert .loading {
+  background: url("../../../../../../../images/jalios/icons/waitsmall.gif") center no-repeat;
+  height: 16px;
+}
+.jalios-smartinsert .dropdown-menu {
+  display: block;
+  position: static;
+}
+.jalios-smartinsert .dropdown-menu LI.active .jalios-icon {
+  color: #FFF;
+}
+.jalios-smartinsert .dropdown-menu .info {
+  font-style: italic;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+.jalios-smartinsert .dropdown-menu .thumb {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  width: 28px;
+  height: 28px;
+  display: block;
+  zoom: 1;
+  border: 1px solid #777777;
+  overflow: hidden;
+  background-color: #FFF;
+  text-align: center;
+}
+/*# sourceMappingURL=plugin.css.map */

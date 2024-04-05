@@ -1,0 +1,368 @@
+# ------------------------------------------------------------
+#  BLOG VIRTUAL ID
+# ------------------------------------------------------------
+jcmsplugin.blog.create-blogosphere: Créer la Blogosphère
+
+$id.Blog.model.help:   Recopie les services du modèle
+$id.jcmsplugin.blog.blogosphere:                Id de l'espace de travail de la Blogosphère
+$id.jcmsplugin.blog.blogosphere.category.root:  Id de la catégorie racine de la Blogosphère
+$id.jcmsplugin.blog.blogger.group-attendees:    Id du groupe des membres de la Blogosphère
+# ------------------------------------------------------------
+#  BLOG Terms and conditions Agreement
+# ------------------------------------------------------------
+jcmsplugin.blog.agreement.btn.agree:           J'accepte les conditions d'utilisation
+jcmsplugin.blog.agreement.btn.disagree:        Je n'accepte pas les conditions d'utilisation
+# ------------------------------------------------------------
+#  BLOG LABELS
+# ------------------------------------------------------------
+jcmsplugin.blog.label.blog:             Blog
+jcmsplugin.blog.label.blogosphere:      Blogosphere
+jcmsplugin.blog.label.blog-post-count:  {0} {0,choice,0#billet|1#billet|2#billets}
+jcmsplugin.blog.label.category:         {0} {0,choice,0#catégorie|1#catégorie|2#catégories}
+jcmsplugin.blog.label.create-ws-blog:   Créer un blog dans cet espace.
+jcmsplugin.blog.label.no-workspace-blog:Il n'y a pas de Blog dans cet espace.
+jcmsplugin.blog.label.pending-request:  Votre demande d'ouverture est en cours de traitement.
+jcmsplugin.blog.label.rejected-request: Votre demande d'ouverture a été rejetée.
+jcmsplugin.blog.label.blog-request:     Demande d'ouverture de blog
+jcmsplugin.blog.label.blog-create:      Créer mon blog
+jcmsplugin.blog.label.blog-ws-create:   Créer un blog d'espace
+jcmsplugin.blog.label.add-blog-post:    Publier un billet dans mon blog
+jcmsplugin.blog.label.add-blog-post-ws: Publier un billet
+jcmsplugin.blog.label.already-has-blog: Vous avez déjà un blog.
+jcmsplugin.blog.label.delete-comment-confirm: Voulez-vous vraiment supprimer :
+jcmsplugin.blog.label.access-full-blog: Accéder au blog du membre.
+jcmsplugin.blog.label.access-my-blog:   Accéder à mon blog
+jcmsplugin.blog.label.all-blog:         Tous les blogs
+jcmsplugin.blog.label.access-blog:      Accéder à : {0}
+jcmsplugin.blog.label.no-comments:      Il n'y a pas encore de commentaire pour votre blog.
+jcmsplugin.blog.label.no-posts:         Il n'y a pas encore de billet dans votre blog.
+jcmsplugin.blog.label.blog-attendees:   Membres de la Blogosphère
+jcmsplugin.blog.label.blog-validators:  Validateurs de la Blogosphère
+jcmsplugin.blog.label.bloggers:         Bloggueurs
+jcmsplugin.blog.label.unread:           Non lu
+jcmsplugin.blog.label.draft:            Brouillon
+jcmsplugin.blog.label.my-blog:          Mon blog
+jcmsplugin.blog.label.new-comment:      {0} {0,choice,0#nouveau commentaire|1#nouveau commentaire|2#nouveaux commentaires}
+jcmsplugin.blog.label.portlet.type-subject: Saisissez le titre de votre nouveau sujet ici.
+jcmsplugin.blog.label.continue:         Continuer...
+jcmsplugin.blog.label.no-blog-under-ws: Le blog n'est pas encore créé.
+jcmsplugin.blog.label.activate-blog:    Activer le blog
+jcmsplugin.blog.label.my-actions:       Mes actions
+jcmsplugin.blog.label.access-member-blog:   Mon blog
+jcmsplugin.blog.label.access-ws-blog:       Accéder au blog de l'espace de travail
+jcmsplugin.blog.label.the-blog-of:      Le blog de {0}
+jcmsplugin.blog.tab.last-blog-post:     Billets
+jcmsplugin.blog.tab.last-blog:          Blogs
+jcmsplugin.blog.tab.my-blog-post:       Mes billets
+jcmsplugin.blog.tab.blog-choice:        Choix du blog :
+jcmsplugin.blog.tab.posted-by:          Posté par
+jcmsplugin.blog.label.by:               par
+jcmsplugin.blog.submit:                 Soumettre
+jcmsplugin.blog.edit.complete:          Édition complète
+jcmsplugin.blog.follow:                 M'abonner au blog
+jcmsplugin.blog.follow-message:         Vous êtes maintenant abonné aux nouveaux billets
+jcmsplugin.blog.unfollow:               Me désabonner
+jcmsplugin.blog.unfollow-message:       Vous n'êtes plus abonné aux nouveaux billets
+jcmsplugin.blog.app-sidebar.follow:     M'abonner
+jcmsplugin.blog.manage-posts.title:     Gestion des billets
+jcmsplugin.blog.manage-posts.table-caption: Liste des billets du blog
+jcmsplugin.blog.app-sidebar.follow.tooltip: M'abonner aux nouveaux billets
+jcmsplugin.blog.app-sidebar.unfollow:   Me désabonner
+jcmsplugin.blog.app-sidebar.unfollow.tooltip: Me désabonner des nouveaux billets
+jcmsplugin.blog.label.all-authors:      Tous les auteurs
+jcmsplugin.blog.msg.edit.delete-blog-no-post: Un blog avec des billets ne peut pas être supprimé.
+
+# ------------------------------------------------------------
+#  BLOG LISTS
+# ------------------------------------------------------------
+jcmsplugin.blog.label.empty:                Ce blog ne contient pas encore de billet.
+jcmsplugin.blog.label.empty-search:         Votre recherche ne comporte pas de résultat.
+jcmsplugin.blog.label.empty-drafts:         Vous n'avez pas de brouillons en cours.
+jcmsplugin.blog.label.empty-cat:            Pas de billets dans cette catégorie.
+# ------------------------------------------------------------
+#  BLOG POST
+# ------------------------------------------------------------
+
+jcmsplugin.blog.label.stats.visit-count:    Lectures
+jcmsplugin.blog.label.stats.unique-visit:   Lecteurs
+
+jcmsplugin.blog.label.action.follow:        Suivre les mises à jour sur ce billet de blog ?
+jcmsplugin.blog.label.action.unfollow:      Ne plus suivre les mises à jour sur ce billet de blog ?
+
+jcmsplugin.blog.label.action.follow-blog:   S'abonner au blog
+jcmsplugin.blog.label.action.unfollow-blog: Se désabonner du blog
+jcmsplugin.blog.label.action.follow-blog-text:   Recevoir les derniers billets publiés sur le blog par mail ?
+jcmsplugin.blog.label.action.unfollow-blog-text: Ne plus recevoir les derniers billets publiés sur le blog par mail ?
+
+jcmsplugin.blog.label.info.in:              Dans :
+jcmsplugin.blog.label.info.comments:        {0,choice,0#commentaire|1#commentaire|2#commentaires}
+
+jcmsplugin.blog.label.read-more:            Lire la suite
+jcmsplugin.blog.label.blog.desc.show-more:  En savoir plus
+jcmsplugin.blog.blog-desc.btn.show-more.title: Afficher la description
+jcmsplugin.blog.blog-desc.btn.show-less.title: Masquer la description
+
+jcmsplugin.blog.title.add-post:             Ajout d'un nouveau billet de blog
+jcmsplugin.blog.title.save-as-draft:        Brouillon
+jcmsplugin.blog.label.action.publish:       Publier
+# ------------------------------------------------------------
+#  BLOG SIDEBAR
+# ------------------------------------------------------------
+jcmsplugin.blog.title.admin:      Administration
+jcmsplugin.blog.title.archive:    Archives
+jcmsplugin.blog.title.authors:    Auteurs
+jcmsplugin.blog.title.categories: Catégories
+jcmsplugin.blog.title.recent-post:Billets récents
+jcmsplugin.blog.title.no-category:Sans catégorie
+jcmsplugin.blog.label.edit-blog:  Modifier le blog
+jcmsplugin.blog.label.action.add-post:      Publier un billet
+jcmsplugin.blog.label.action.add-post-wf:   Publier un billet
+jcmsplugin.blog.label.action.see-draft:     Voir les brouillons
+jcmsplugin.blog.label.action.add-category:  Ajouter des catégories
+jcmsplugin.blog.label.action.add-sub-category:  Ajouter des sous-catégories
+jcmsplugin.blog.label.action.add-sub-authors:  Ajouter des co-auteurs.
+jcmsplugin.blog.label.action.search:  Rechercher
+jcmsplugin.blog.label.action.search-post.placeholer: Rechercher des billets...
+jcmsplugin.blog.label.action.see-all-authors:  Voir tous les auteurs
+jcmsplugin.blog.label.post-in-cat:  {0,choice,1#{0} billet dans la catégorie {1}|2#{0} billets dans la catégorie {1}}
+jcmsplugin.blog.app.sidebar.all-posts-link: Tous les billets
+# ------------------------------------------------------------
+#  BLOG MODAL
+# ------------------------------------------------------------
+jcmsplugin.blog.title.ws-blog:       Blog d'espace de travail
+
+jcmsplugin.blog.title.add-cat:       Ajouter des catégories
+jcmsplugin.blog.title.add-sub-cat:   Ajouter des sous-catégories à {0}
+jcmsplugin.blog.label.add-cat:       Saisissez le nom des catégories à ajouter (séparées par des virgules)
+
+jcmsplugin.blog.title.blog-request:  Demande d'ouverture de blog
+jcmsplugin.blog.title.edit-comment:  Édition du commentaire
+
+jcmsplugin.blog.blog-root.label:     Racine
+jcmsplugin.blog.blog-root.description:     La racine des catégories du Blog
+
+# ------------------------------------------------------------
+#  BLOG LAYOUT
+# ------------------------------------------------------------
+
+jcmsplugin.blog.label.add-blog:      Créer un blog
+jcmsplugin.blog.label.edit-blog:     Éditer le blog
+jcmsplugin.blog.label.add-post:      Publier un billet
+jcmsplugin.blog.label.edit-post:     Modifier le billet
+jcmsplugin.blog.label.author:        Publié par {0}
+jcmsplugin.blog.label.last-post:     Derniers Billets
+jcmsplugin.blog.label.search:        Recherche
+
+# ------------------------------------------------------------
+#  BLOG REQUEST
+# ------------------------------------------------------------
+
+jcmsplugin.blog.agreement.required:            Accepter les conditions d'utilisation des Blogs
+$id.jcmsplugin.blog.agreement.terms.pub:       Conditions d'utilisation des Blogs - Publication
+jcmsplugin.blog.agreement.terms.field:         Conditions d'utilisation des Blogs - Champ
+jcmsplugin.blog.agreement.btn.agree:           J'accepte les conditions d'utilisation
+jcmsplugin.blog.agreement.btn.disagree:        Je n'accepte pas les conditions d'utilisation
+jcmsplugin.blog.agreement.date:    Blog : Date d'acceptation de la charte
+jcmsplugin.blog.agreement.title:               Conditions d'utilisation
+jcmsplugin.blog.agreement.text:                Les conditions d'utilisation des blogs ne sont pas définies. Mettez à jour "{0}" et "{1}"
+
+# ------------------------------------------------------------
+#  BLOG PORTLET
+# ------------------------------------------------------------
+
+$id.jcmsplugin.blog.portlet.categories:       Blog - Catégories
+$id.jcmsplugin.blog.portlet.recent-post:      Blog - Billets récents
+$id.jcmsplugin.blog.portlet.archive:          Blog - Archives
+$id.jcmsplugin.blog.portlet.member-profile:   Blog - Profil du membre
+$id.jcmsplugin.blog.portlet.post-list:        Blog - Liste des billets
+$id.jcmsplugin.blog.portlet.post-full:        Blog - Billet
+$id.jcmsplugin.blog.portlet.admin:            Blog - Admin
+$id.jcmsplugin.blog.portlet.add-post:         Blog - Ajouter un billet
+$id.jcmsplugin.blog.portlet.authors:          Blog - Liste des auteurs
+$id.jcmsplugin.blog.portlet.handle-posts:     Blog - Gestion des billets
+# ------------------------------------------------------------
+#  BLOG ADMIN
+# ------------------------------------------------------------
+jcmsplugin.blog.admin.author:                 Auteur
+jcmsplugin.blog.admin.modify:                 Modifier
+jcmsplugin.blog.admin.delete:                 Supprimer
+jcmsplugin.blog.admin.add-authors:            Gérer les auteurs
+jcmsplugin.blog.admin.add-authors-description: Sélectionnez les membres qui peuvent publier des billets dans <b>{0}</b>.
+jcmsplugin.blog.admin.handle-posts:           Gérer les billets
+jcmsplugin.blog.admin.handle.unique-visitor:  Lecteurs
+jcmsplugin.blog.admin.handle.total-visitor:   Lectures
+jcmsplugin.blog.admin.handle.comment-count:   Commentaires
+jcmsplugin.blog.admin.handle.vote-count:      Votes
+jcmsplugin.blog.admin.handle.post-date:       Modifier
+jcmsplugin.blog.admin.handle.sort-by:         Billets triés par
+jcmsplugin.blog.admin.handle.or:              ou
+jcmsplugin.blog.label.title:                  Titre
+jcmsplugin.blog.label.date:                   Date
+jcmsplugin.blog.admin.author-list:            Liste des auteurs
+jcmsplugin.blog.admin.see-my-post:            Voir mes billets
+jcmsplugin.blog.admin.see-member-post:        Voir les billets
+jcmsplugin.blog.admin.see-all-post:           Voir tous les billets
+
+# ------------------------------------------------------------
+#  BLOG WARNING
+# ------------------------------------------------------------
+
+jcmsplugin.blog.warning.ws-has-a-blog:             Il existe déjà un blog ({0}) dans votre espace de travail.
+jcmsplugin.blog.warning.duplicate-same:            Il existe déjà un blog du même nom dans l'espace de travail.
+jcmsplugin.blog.warning.text:                      Veuillez saisir un texte
+jcmsplugin.blog.warning.member-has-a-blog:         Le membre "{0}" possède déjà un blog dans la Blogosphère : {1}.
+jcmsplugin.blog.warning.blogosphere-root-cat:      La catégorie racine de la Blogosphère pour les blogs n'existe pas. Veuillez la saisir dans les propriétés du module.
+jcmsplugin.blog.warning.blogosphere-forbidden-blog:Vous n'avez pas le droit de publier de billet dans le Blog suivant : "{0}"
+jcmsplugin.blog.warning.forbidden-blog:            Vous n'avez pas le droit de publier de billet dans le blog collaboratif suivant : "{0}"
+jcmsplugin.blog.warning.forbidden-blog-create:     Vous n'avez pas le droit de créer un blog.
+
+# ------------------------------------------------------------
+#  BLOG ACL
+# ------------------------------------------------------------
+acl.resource.admin/work/blogospherecreation: Blog - Ajout d'un blog dans la Blogosphère
+
+# ------------------------------------------------------------
+#  PUBLISH MENU
+# ------------------------------------------------------------
+jcmsplugin.blog.publish-menu.add-cs:   Un billet de blog
+jcmsplugin.blog.publish-menu.add-mine: Un billet à mon blog
+
+# ------------------------------------------------------------
+#  CategoryBrowser
+# ------------------------------------------------------------
+category.category-browser.blog: Rechercher dans le blog
+
+# ------------------------------------------------------------
+#  BLOG TOOLS
+# ------------------------------------------------------------
+
+jcmsplugin.blog.tools.title:  Chargement des BlogPost (Store) vers BlogPost (base de données) - Étape 2
+jcmsplugin.blog.tools.text1:  Infos import blog
+jcmsplugin.blog.tools.text2:  1. Import des BlogPost du store vers les BlogPost de la base de données.
+jcmsplugin.blog.tools.text3:  2. Réinitialisation des blogs avec les nouveaux paramètres.
+ui.adm.jcms5-loader.btn.load: Charger les données
+# ----------------------------------------------------------------------
+# Alert
+# ----------------------------------------------------------------------
+alert.name.jcmsplugin-blog:                               Blog
+
+alert.name.jcmsplugin-blog.new-blogpost:                  Nouveau Billet de Blog
+alert.msg.jcmsplugin-blog.new-blogpost.title:             Nouveau Billet de Blog : {data}
+alert.msg.jcmsplugin-blog.new-blogpost.short-description: {author} a publié un nouveau billet de Blog {data} dans {parent}. {data.url}
+alert.msg.jcmsplugin-blog.new-blogpost.description:       <p>{author} a publié un nouveau billet de Blog {data} dans {parent.link}.</p> 
+
+alert.name.jcmsplugin-blog.update-blogpost:               Mise à jour d'un billet de blog
+alert.msg.jcmsplugin-blog.update-blogpost.title:          Mise à jour du billet : {data}
+alert.msg.jcmsplugin-blog.update-blogpost.short-description: {author} a mis à jour le billet {data} dans {parent}. {data.url}
+alert.msg.jcmsplugin-blog.update-blogpost.description:       <p>{author} a mis à jour le billet {data} dans {parent.link}.</p> 
+
+alert.name.jcmsplugin-blog.blog-opening:                  Validation de demande d'ouverture de blog 
+alert.msg.jcmsplugin-blog.blog-opening.title:             Votre demande d'ouverture de blog a été validée
+alert.msg.jcmsplugin-blog.blog-opening.short-description: {author} a validé votre demande d'ouverture de votre blog : {data}. {data.url}
+alert.msg.jcmsplugin-blog.blog-opening.description:       <p>{author} a validé votre demande d'ouverture de votre blog : {data} :</p> 
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From Blog-templates.xml
+types.Blog.templates.editFront.default.label: Gabarit d'édition portail
+types.Blog.templates.editFrontOld.default.label: Ancien gabarit d'édition
+types.Blog.templates.query.default.label: Gabarit par défaut
+types.Blog.templates.box.default.label: Gabarit par défaut
+types.Blog.templates.edit.default.label: Gabarit d'édition portail
+types.Blog.templates.fullold.default.label: Ancien gabarit
+types.Blog.templates.full.old.label: Ancien gabarit
+types.Blog.templates.full.default.label: Gabarit JNews par défaut
+ui.editportlet.usage.fullold: Ancien gabarit
+
+# From Blog.xml
+types.Blog.fields.bloggerGroup.label: Groupe de bloggers
+types.Blog.title.label: Titre
+types.Blog.fields.description.label: Description du Blog
+types.Blog.label: Blog
+
+# From BlogPost-templates.xml
+types.BlogPost.templates.editFront.default.label: Gabarit d'édition portail
+types.BlogPost.templates.editFrontOld.default.label: Ancien gabarit d'édition portail
+types.BlogPost.templates.query.default.label: Gabarit par défaut
+types.BlogPost.templates.edit.default.label: Gabarit d'édition portail
+types.BlogPost.templates.full.default.label: Gabarit par défaut
+types.BlogPost.templates.fullold.default.label: Ancien gabarit
+types.BlogPost.templates.full.default.label: Gabarit par défaut
+types.BlogPost.templates.appBody.default.label: Gabarit simplifié pour affichage dans application
+
+# From BlogPost.xml
+types.BlogPost.fields.summary.description: C'est un résumé de l'article qui sera affiché dans le mail envoyé aux abonnés, et dans la liste des billets de Blog.
+types.BlogPost.fields.blog.label: Blog
+types.BlogPost.fields.category.description: Vous pouvez choisir plusieurs catégories.
+types.BlogPost.fields.content.label: Texte
+types.BlogPost.label: Billet
+types.BlogPost.title.label: Titre
+types.BlogPost.fields.category.label: Catégorie
+types.BlogPost.fields.summary.label: Résumé
+types.BlogPost.fields.featuredImage.label: Image
+types.BlogPost.fields.featuredImage.description: L'image doit être de grande taille, de préférence au format 16/9 (p.ex 960x540).
+types.BlogPost.fields.featuredImageAlt.label: Image alternative textuelle
+types.BlogPost.fields.featuredImageAlt.description: Ce texte sera utilisé comme attribut alt de l'image
+types.BlogPost.fields.thumbnailImage.label: Image miniature
+types.BlogPost.fields.thumbnailImage.description: Une image miniature est générée à partir de l'image. Mais vous pouvez choisir une autre miniature. Celle-ci doit faire au moins 300x150 et de préférence être au format 4/3 ou 16/9.
+types.BlogPost.fields.thumbnailImageAlt.label: Image miniature alternative textuelle
+types.BlogPost.fields.thumbnailImageAlt.description: Ce texte sera utilisé comme attribut alt de l'image miniature
+types.BlogPost.fields.imageAltText.label: Alternative textuelle
+types.BlogPost.btn.show-options: Plus d'options...
+types.BlogPost.btn.hide-options: Moins d'options...
+
+# From BlogRequest.xml
+types.BlogRequest.fields.description.label: Description
+types.BlogRequest.title.label: Nom du blog
+types.BlogRequest.label: Demande d'ouverture de Blog
+
+# From PortletBlog-templates.xml
+types.PortletBlog.templates.box.default.label: Gabarit par défaut
+types.PortletBlog.templates.box.default.description: Le gabarit par défaut pour cette publication
+types.PortletBlog.templates.box.itembox.label: Liste de publications style item-box
+types.PortletBlog.templates.box.itembox.description: Ce template affiche les publications en liste avec le style item-box
+types.PortletBlog.templates.edit.default.label: Gabarit par défaut
+types.PortletBlog.templates.edit.default.description: Le gabarit par défaut pour cette publication
+types.PortletBlog.templates.full.default.label: Gabarit par défaut
+types.PortletBlog.templates.full.default.description: Le gabarit par défaut pour cette publication
+types.PortletBlog.templates.query.default.label: Gabarit par défaut
+types.PortletBlog.templates.query.default.description: Le gabarit par défaut pour cette publication
+
+# From PortletBlog.xml
+types.PortletBlog.label: Portlet Blog
+types.PortletBlog.fields.displayedList.labelList: Billets des blogs de tous les espaces|Billets de l'espace de travail
+types.PortletBlog.fields.displayedList.label: Liste affichée
+types.PortletBlog.title.label: Titre
+types.PortletBlog.description: Affiche la liste des billets d'un ou de plusieurs blogs
+
+# From wfblogrequest.xml
+workflows.wfblogrequest.label: Blog - Worfklow d'ouverture de blog
+workflows.wfblogrequest.states.60.description: La requête a été acceptée un blog a été créé.
+workflows.wfblogrequest.states.50.description: Cette demande d'ouverture de Blog a été rejetée. Le blog n'a pas été créé. Veuillez consulter les notes de workflow pour plus de détails.
+workflows.wfblogrequest.states.-200.label: Soumis
+workflows.wfblogrequest.roles.blogValidator.description: Accepte/rejette les demandes d'ouverture de blog
+workflows.wfblogrequest.roles.blogValidator.name: Valideur
+workflows.wfblogrequest.states.60.label: Accepté
+workflows.wfblogrequest.states.50.label: Rejeté
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.blog:     Blog
+jcmsplugin.smartphone.workspace-service.PortletBlog: Blog
+jcmsplugin.blog.smartphone.lbl.blogpost-list: Billets
+jcmsplugin.blog.smartphone.lbl.blog: Blogs
+jcmsplugin.blog.smartphone.lbl.blog.my-blogs: Mes blogs
+jcmsplugin.blog.smartphone.lbl.blog.other-blogs: Autres blogs
+
+# ----------------------------------------------------------------------
+# BlogPost Form
+# ----------------------------------------------------------------------
+jcmsplugin.blog.filter-author: Filtrer par auteur
+jcmsplugin.blog.filter-pstatus: Filtrer par état
+jcmsplugin.blog.filter-startDate: Date de début
+jcmsplugin.blog.filter-endDate: Date de fin
+jcmsplugin.blog.sort-by-vote: Le nombre de vote

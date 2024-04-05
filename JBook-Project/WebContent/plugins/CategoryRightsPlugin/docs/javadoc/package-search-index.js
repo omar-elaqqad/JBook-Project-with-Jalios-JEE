@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.jalios.jcmsplugin.categoryrights"},{"l":"com.jalios.jcmsplugin.categoryrights.controller"},{"l":"com.jalios.jcmsplugin.categoryrights.listener"}]

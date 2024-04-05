@@ -1,0 +1,148 @@
+# ----------------------------------------------------------------------
+# Folder
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.folder.lbl.new: 새로운 폴더
+jcmsplugin.bookmarks.folder.lbl.add: 폴더 추가
+jcmsplugin.bookmarks.folder.btn.lbl.add: 폴더 추가...
+jcmsplugin.bookmarks.folder.lbl.edit: 폴더 편집하기
+jcmsplugin.bookmarks.folder.action.delete.warn-msg: 경고, 폴더 컨텐츠도 삭제됩니다
+jcmsplugin.bookmarks.folder.menu.action.delete.warn-msg: 경고, 폴더 컨텐츠도 삭제됩니다
+jcmsplugin.bookmarks.folder.lbl.name:  폴더 이름
+jcmsplugin.bookmarks.folder.lbl.name1: 이름
+jcmsplugin.bookmarks.folder.lbl.name.parent:  상위 폴더
+jcmsplugin.bookmarks.folder.lbl.name.parent1: 부모
+jcmsplugin.bookmarks.folder.name.error: 폴더 이름을 입력하세요
+jcmsplugin.bookmarks.folder.name.error.duplicate: 한 폴더가 이미 이 이름이 있습니다
+jcmsplugin.bookmarks.folder.contains-data: 이 폴더의 컨텐츠를 먼저 삭제하십시오
+jcmsplugin.bookmarks.folder.no-result: 즐겨찾기가 없습니다.
+jcmsplugin.bookmarks.folder.root: 루트까지
+jcmsplugin.bookmarks.folder.lbl.root: 루트
+jcmsplugin.bookmarks.folder.upper: {0} 까지
+jcmsplugin.bookmarks.folder.lbl: 폴더
+jcmsplugin.bookmarks.folder.menu.action: 작업
+jcmsplugin.bookmarks.folder.action.move.empty: 선택은 어떤 폴더로도 이동될 수 없습니다
+jcmsplugin.bookmarks.items.lbl.shift: 선택 이동하기
+jcmsplugin.bookmarks.items.lbl.delete: 선택 삭제하기
+jcmsplugin.bookmarks.menu.search.placeholder: 즐겨찾기 검색하기
+jcmsplugin.bookmarks.already-bookmarked: 이 게시물은 이미 즐겨찾기에 있습니다.
+jcmsplugin.bookmarks.app.title: 즐겨찾기
+
+#DISABLED
+jcmsplugin.bookmarks.plugin-disabled.message: 즐겨찾기 모듈이 현재 비활성화되었습니다.
+
+#SIDEBAR
+jcmsplugin.bookmarks.topbar.title: 즐겨찾기
+jcms.sidebar-tab.bookmarks: 즐겨찾기
+jcms.sidebar-tab.bookmarks.icon: 즐겨찾기
+jcmsplugin.bookmarks.topbar.search: 즐겨찾기 검색...
+
+#PUBLICATION
+jcmsplugin.bookmarks.toastr.add: 즐겨찾기에 추가됨
+jcmsplugin.bookmarks.toastr.remove: 즐겨찾기에서 제거됨
+
+#MENU
+jcmsplugin.bookmarks.msg.no-result: 즐겨찾기 없음
+
+jcmsplugin.bookmarks.lbl.bookmarks: 즐겨찾기
+jcmsplugin.bookmarks.lbl.link: 외부 링크
+jcmsplugin.bookmarks.lbl.pub:  콘텐츠
+jcmsplugin.bookmarks.lbl.search: 검색
+
+jcmsplugin.bookmarks.lbl.url:    URL
+jcmsplugin.bookmarks.lbl.title:  제목
+jcmsplugin.bookmarks.btn.add:    추가
+jcmsplugin.bookmarks.btn.update: 저장
+jcmsplugin.bookmarks.btn.remove: 이 즐겨찾기 제거
+
+jcmsplugin.bookmarks.lbl.add-bookmark: 즐겨찾기 추가하기
+jcmsplugin.bookmarks.lbl.remove-bookmark: 즐겨찾기에서 제거
+
+jcmsplugin.bookmarks.lbl.action: 작업
+jcmsplugin.bookmarks.lbl.add:    즐겨찾기 추가하기...
+jcmsplugin.bookmarks.lbl.edit: 	 즐겨찾기 편집하기
+jcmsplugin.bookmarks.msg.remove: 정말로 즐겨찾기 <em>{0}</em>를 삭제하시겠습니까?
+
+jcmsplugin.bookmarks.adm.max:    사용자당 최대 즐겨찾기
+jcmsplugin.bookmarks.msg.adm.max:즐겨찾기 최대에 도달했습니다!
+
+jcmsplugin.bookmarks.lbl.bookmark.error: 이 즐겨찾기가 유효하지 않습니다.
+jcmsplugin.bookmarks.lbl.url.error: URL이 유효하지 않습니다.
+jcmsplugin.bookmarks.title.error: 제목을 입력하세요.
+
+jcmsplugin.bookmarks.lbl.manage-bookmark: 즐겨찾기 관리
+
+jcmsplugin.bookmarks.isExternalLink.title: 외부 링크
+# ----------------------------------------------------------------------
+# Analytics
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.analytics.top-section: 베스트 즐겨찾기
+jcmsplugin.bookmarks.analytics.top-section.help: 사용자 톱텐 즐겨찾기
+jcmsplugin.bookmarks.analytics.top-bookmarks-section: 베스트 즐겨찾기 회원
+jcmsplugin.bookmarks.analytics.top-bookmarks-section.help: 베스트 즐겨찾기 톱 10 회원
+jcmsplugin.bookmarks.analytics.rank-number-column.label: #
+jcmsplugin.bookmarks.analytics.bookmark-column.label: 즐겨찾기
+jcmsplugin.bookmarks.analytics.bookmark-add-column.label: 추가한 횟수
+jcmsplugin.bookmarks.analytics.report.average-bookmarks: 즐겨찾기 평균
+jcmsplugin.bookmarks.analytics.report.average-bookmarks.h: 사용자당 평균
+jcmsplugin.bookmarks.analytics.author-column.label: 사용자
+jcmsplugin.bookmarks.analytics.bookmark-number-column.label: 즐겨찾기 수
+jcmsplugin.bookmarks.analytics.indicator.average-bookmarks: 사용자당 북마크
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks: 베스트 즐겨찾기 게시물
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks.h: 톱 10 즐겨찾기 게시물
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks.table.pub.title: 게시물
+ui.analytics.BookmarksAgent.name: 즐겨찾기
+
+# ----------------------------------------------------------------------
+# Icones
+# ----------------------------------------------------------------------
+icon.jcmsplugin.bookmarks.bookmarkWhite: 즐겨찾기
+icon.jcmsplugin.bookmarks.edit:          즐겨찾기 수정하기
+icon.jcmsplugin.bookmarks.delete:        즐겨찾기 삭제하기
+icon.jcmsplugin.bookmarks.add:           즐겨찾기 추가하기
+icon.jcmsplugin.bookmarks.star:          즐겨찾기
+
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+jcmsplugin.bookmarks.displayExternalUrl: 새 창에서 외부 링크 열기
+
+# From PortletBookmarks-templates.xml
+types.PortletBookmarks.templates.query.default.label: 기본 템플릿
+types.PortletBookmarks.templates.box.default.label: 기본 템플릿
+
+# From PortletBookmarks.xml
+types.PortletBookmarks.title.label: 제목
+types.PortletBookmarks.fields.openLinksInNewWindow.label: 새 창에서 외부 링크 열기
+types.PortletBookmarks.fields.openLinksInNewWindow.onLabel: 예
+types.PortletBookmarks.label: 즐겨찾기 포틀릿
+types.PortletBookmarks.description: 이 포틀릿은 로그인 회원이 즐겨찾기를 관리할 수 있도록 해줍니다.
+types.PortletBookmarks.fields.openLinksInNewWindow.offLabel: 아니오
+
+# From PortletWorkspaceBookmarks.xml
+types.PortletWorkspaceBookmarks.label: 작업공간 즐겨찾기 포틀릿
+types.PortletWorkspaceBookmarks.title.label: 제목
+types.PortletWorkspaceBookmarks.description: 이 포틀릿은 작업공간 관리자로 하여금 작업공간 즐겨찾기를 관리할 수 있도록 해줍니다.
+
+jcmsplugin.bookmarks.edition-mode: 편집 모드로 전환
+jcmsplugin.bookmarks.remove-edition-mode: 편집 중지
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.bookmark:   즐겨찾기
+jcmsplugin.bookmarks.smartphone.lbl.bookmark.filter: 즐겨찾기에서 검색하기...
+jcmsplugin.bookmarks.smartphone.lbl.bookmark.no-result: 즐겨찾기 없음
+jcmsplugin.bookmarks.smartphone.menu.bookmark.added.lbl: 즐겨찾기 추가됨
+jcmsplugin.bookmarks.smartphone.menu.bookmark.removed.lbl: 즐겨찾기 제거됨
+
+# Shortcut
+data.$id.shortcut.jcmsplugin.bookmarks.title: 즐겨찾기
+data.$id.shortcut.jcmsplugin.bookmarks.text: 게시물, 검색 결과 및 외부 페이지에 대한 귀하의 즐겨찾기에 액세스하고 관리하십시오.
+
+# ----------------------------------------------------------------------
+# JTasks project
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.app.project.sidebar.favorite-projects.label: 내 즐겨찾기

@@ -1,0 +1,372 @@
+# ------------------------------------------------------------
+#  BLOG VIRTUAL ID
+# ------------------------------------------------------------
+jcmsplugin.blog.create-blogosphere: Создать блогосферу
+
+$id.Blog.model.help:   Использовать модель для копирования сервисов
+$id.jcmsplugin.blog.blogosphere:                Идентификатор рабочего пространства блога участников
+$id.jcmsplugin.blog.blogosphere.category.root:  Идентификатор корневой категории блогосферы
+$id.jcmsplugin.blog.blogger.group-attendees:    Идентификатор группы участника блогосферы
+# ------------------------------------------------------------
+#  BLOG Terms and conditions Agreement
+# ------------------------------------------------------------
+jcmsplugin.blog.agreement.btn.agree:          Я согласен
+jcmsplugin.blog.agreement.btn.disagree:       Я не согласен
+# ------------------------------------------------------------
+#  BLOG LABELS
+# ------------------------------------------------------------
+jcmsplugin.blog.label.blog:             Блог
+jcmsplugin.blog.label.blogosphere:      Блогосфера
+jcmsplugin.blog.label.blog-post-count:  {0} пост в блоге
+jcmsplugin.blog.label.category:         {0} категория
+jcmsplugin.blog.label.create-ws-blog:   Создать блог в этом рабочем пространстве
+jcmsplugin.blog.label.no-workspace-blog:В этом рабочем пространстве нет блога.
+jcmsplugin.blog.label.pending-request:  Ваш запрос на открытие блога обрабатывается.
+jcmsplugin.blog.label.rejected-request: Ваш запрос на открытие блога был отклонен.
+jcmsplugin.blog.label.blog-request:     Запрос на открытие блога
+jcmsplugin.blog.label.blog-create:      Создать мой блог
+jcmsplugin.blog.label.blog-ws-create:   Создать блог рабочего пространства
+jcmsplugin.blog.label.add-blog-post:    Опубликовать пост в моем блоге
+jcmsplugin.blog.label.already-has-blog: У вас уже есть блог.
+jcmsplugin.blog.label.add-blog-post-ws: Опубликовать пост
+jcmsplugin.blog.label.delete-comment-confirm: Вы действительно хотите удалить:
+jcmsplugin.blog.label.access-full-blog: Войти в блог участника.
+jcmsplugin.blog.label.access-my-blog:   Войти в мой блог.
+jcmsplugin.blog.label.all-blog:         Все блоги
+jcmsplugin.blog.label.access-blog:      Войти в блог: {0}
+jcmsplugin.blog.label.no-comments:      Для вашего блога еще нет комментариев.
+jcmsplugin.blog.label.no-posts:         Для вашего блога еще нет постов.
+jcmsplugin.blog.label.blog-attendees:   Участники блогосферы
+jcmsplugin.blog.label.blog-validators:  Валидаторы блогосферы
+jcmsplugin.blog.label.bloggers:         Блоггеры
+jcmsplugin.blog.label.unread:           Не читать
+jcmsplugin.blog.label.draft:            Черновик
+jcmsplugin.blog.label.my-blog:          Мой блог
+jcmsplugin.blog.label.new-comment:      {0} {0,choice,0#новых комментариев|1#новый комментарий|2#новых комментария}
+jcmsplugin.blog.label.portlet.type-subject: Введите здесь заголовок поста вашего нового блога.
+jcmsplugin.blog.label.continue:         Продолжить...
+jcmsplugin.blog.label.no-blog-under-ws: Блог еще не создан
+jcmsplugin.blog.label.activate-blog:    Активировать блог
+jcmsplugin.blog.label.my-actions:       Мои действия
+jcmsplugin.blog.label.access-member-blog:   Мой блог
+jcmsplugin.blog.label.access-ws-blog:       Войти в блог совместного пространства
+jcmsplugin.blog.tab.last-blog-post:     Пост в блоге
+jcmsplugin.blog.label.the-blog-of:      Блог {0}
+jcmsplugin.blog.tab.last-blog:          Блог
+jcmsplugin.blog.tab.my-blog-post:       Мой пост в блоге
+jcmsplugin.blog.tab.blog-choice:        Выбор блога:
+jcmsplugin.blog.tab.posted-by:          Опубликовано
+jcmsplugin.blog.label.by:               к
+jcmsplugin.blog.submit:                 Отправить
+jcmsplugin.blog.edit.complete:          Выполнить редактирование
+jcmsplugin.blog.follow:                 Подписаться на блог
+jcmsplugin.blog.follow-message:         Теперь вы подписаны на новые посты
+jcmsplugin.blog.unfollow:               Отписаться от блога
+jcmsplugin.blog.unfollow-message:       Вы больше не подписаны на новые посты
+jcmsplugin.blog.app-sidebar.follow:     Подписаться
+jcmsplugin.blog.manage-posts.title:     Управление постами
+jcmsplugin.blog.manage-posts.table-caption: Список постов блога
+jcmsplugin.blog.app-sidebar.follow.tooltip: Подписаться на новые посты
+jcmsplugin.blog.app-sidebar.unfollow:   Отказаться от подписки
+jcmsplugin.blog.app-sidebar.unfollow.tooltip: Отписаться от новых постов
+jcmsplugin.blog.label.all-authors: Все авторы
+jcmsplugin.blog.msg.edit.delete-blog-no-post: Блог с постами не может быть удален.
+
+# ------------------------------------------------------------
+#  BLOG LISTS
+# ------------------------------------------------------------
+jcmsplugin.blog.label.empty:                В этом блоге еще нет постов.
+jcmsplugin.blog.label.empty-search:         Ваш поиск не дал результатов.
+jcmsplugin.blog.label.empty-drafts:         В настоящее время у вас нет черновиков.
+jcmsplugin.blog.label.empty-cat:            Нет постов в этой категории.
+# ------------------------------------------------------------
+#  BLOG POST
+# ------------------------------------------------------------
+
+jcmsplugin.blog.label.stats.visit-count:    Чтения
+jcmsplugin.blog.label.stats.unique-visit:   Читатели
+
+jcmsplugin.blog.label.action.follow:        Подписаться на этот блог
+jcmsplugin.blog.label.action.unfollow:      Отписаться от этого блога
+
+jcmsplugin.blog.label.action.follow-blog:   Подписаться на этот блог
+jcmsplugin.blog.label.action.unfollow-blog: Отписаться от этого блога
+jcmsplugin.blog.label.action.follow-blog-text:   Вы хотели бы получать последние опубликованные в этом блоге посты по электронной почте?
+jcmsplugin.blog.label.action.unfollow-blog-text: Вы хотели бы прекратить получать последние опубликованные в этом блоге посты по электронной почте?
+
+
+jcmsplugin.blog.label.info.in:              Через:
+jcmsplugin.blog.label.info.comments:        {0,choice,0#комментариев|1#комментарий|2#комментария}
+
+jcmsplugin.blog.label.read-more:            Подробнее
+jcmsplugin.blog.label.blog.desc.show-more:  Показать больше
+jcmsplugin.blog.blog-desc.btn.show-more.title: Отображать описание
+jcmsplugin.blog.blog-desc.btn.show-less.title: Скрыть описание
+
+jcmsplugin.blog.title.add-post:             Добавить новый пост в блог
+jcmsplugin.blog.title.save-as-draft:        Черновик
+jcmsplugin.blog.label.action.publish:       Опубликовать
+# ------------------------------------------------------------
+#  BLOG SIDEBAR
+# ------------------------------------------------------------
+jcmsplugin.blog.title.admin:      Администрация
+jcmsplugin.blog.title.archive:    Архивы
+jcmsplugin.blog.title.authors:    Авторы
+jcmsplugin.blog.title.categories: Категории
+jcmsplugin.blog.title.recent-post:Последние посты
+jcmsplugin.blog.title.no-category:Нет категории
+jcmsplugin.blog.label.edit-blog:      Редактировать блог
+jcmsplugin.blog.label.action.add-post:      Опубликовать пост
+jcmsplugin.blog.label.action.add-post-wf:   Опубликовать пост
+jcmsplugin.blog.label.action.see-draft:     Смотреть черновики
+jcmsplugin.blog.label.action.add-category:  Добавить категории
+jcmsplugin.blog.label.action.add-sub-category:  Добавить подкатегории
+jcmsplugin.blog.label.action.add-sub-authors:  Добавить соавторов
+jcmsplugin.blog.label.action.search:  Искать
+jcmsplugin.blog.label.action.search-post.placeholer: Поиск постов...
+jcmsplugin.blog.label.action.see-all-authors:  Посмотреть всех авторов
+jcmsplugin.blog.label.post-in-cat:  {0,choice,1#{0} постов в категории {1}|2#{0} пост в категории {1}}
+jcmsplugin.blog.app.sidebar.all-posts-link: Все посты
+# ------------------------------------------------------------
+#  BLOG MODAL
+# ------------------------------------------------------------
+jcmsplugin.blog.title.ws-blog:       Блог рабочего пространства
+
+jcmsplugin.blog.title.add-cat:       Добавить категории
+jcmsplugin.blog.title.add-sub-cat:   Добавить подкатегории {0}
+jcmsplugin.blog.label.add-cat:       Ввести имена категорий, которые следует добавить (через запятую)
+
+jcmsplugin.blog.title.blog-request:  Запрос на открытие блога
+jcmsplugin.blog.title.edit-comment:  Редактировать комментарий
+
+jcmsplugin.blog.blog-root.label:     Корневой каталог
+jcmsplugin.blog.blog-root.description:     Корневой каталог для категорий блога
+# ------------------------------------------------------------
+#  BLOG LAYOUT
+# ------------------------------------------------------------
+
+jcmsplugin.blog.label.add-blog:      Создать блог
+jcmsplugin.blog.label.edit-blog:     Редактировать блог
+jcmsplugin.blog.label.add-post:      Опубликовать пост блога
+jcmsplugin.blog.label.edit-post:     Редактировать пост в блоге
+jcmsplugin.blog.label.author:        Опубликовано {0}
+jcmsplugin.blog.label.last-post:     Последние посты
+jcmsplugin.blog.label.search:        Искать
+
+# ------------------------------------------------------------
+#  BLOG REQUEST
+# ------------------------------------------------------------
+
+jcmsplugin.blog.agreement.required:            Принять общие положения блога
+$id.jcmsplugin.blog.agreement.terms.pub:       Общие положения блога - Публикация
+jcmsplugin.blog.agreement.terms.field:         Общие положения блога - Поле
+jcmsplugin.blog.agreement.btn.agree:           Я принимаю
+jcmsplugin.blog.agreement.btn.disagree:        Я отказываюсь
+jcmsplugin.blog.agreement.date:      Блог: Дата приема общих положений
+jcmsplugin.blog.agreement.title:               Общие положения
+jcmsplugin.blog.agreement.text:                Общие условия блога не определены. Пожалуйста, обновите свойства <code>{0}</code> и <code>{1}</code>.
+
+# ------------------------------------------------------------
+#  BLOG PORTLET
+# ------------------------------------------------------------
+
+$id.jcmsplugin.blog.portlet.categories:       Блог - категории
+$id.jcmsplugin.blog.portlet.recent-post:      Блог - последние посты
+$id.jcmsplugin.blog.portlet.archive:          Блог - архивы
+$id.jcmsplugin.blog.portlet.member-profile:   Блог - профиль участника
+$id.jcmsplugin.blog.portlet.post-list:        Блог - список постов
+$id.jcmsplugin.blog.portlet.post-full:        Блог - Пост
+$id.jcmsplugin.blog.portlet.admin:            Блог - Администратор
+$id.jcmsplugin.blog.portlet.add-post:         Блог - Добавить пост
+$id.jcmsplugin.blog.portlet.authors:          Блог - Список авторов
+$id.jcmsplugin.blog.portlet.handle-posts:     Блог - Управление поста
+# ------------------------------------------------------------
+#  BLOG ADMIN
+# ------------------------------------------------------------
+jcmsplugin.blog.admin.author:                 Автор
+jcmsplugin.blog.admin.modify:                 Модифицировать
+jcmsplugin.blog.admin.add-authors:            Управлять авторами
+jcmsplugin.blog.admin.add-authors-description: Выберите участников, которые могут добавлять посты в <b>{0}</b>.
+jcmsplugin.blog.admin.delete:                 Удалить
+jcmsplugin.blog.admin.handle-posts:           Управлять постами
+jcmsplugin.blog.admin.handle.unique-visitor:  Чтения
+jcmsplugin.blog.admin.handle.total-visitor:   Читатели
+jcmsplugin.blog.admin.handle.comment-count:   Комментарии
+jcmsplugin.blog.admin.handle.vote-count:      Голоса
+jcmsplugin.blog.admin.handle.post-date:       Модифицировать
+jcmsplugin.blog.admin.handle.sort-by:         Посты, отсортированные по
+jcmsplugin.blog.admin.handle.or:              или
+jcmsplugin.blog.label.title:                  Заголовок
+jcmsplugin.blog.label.date:                   Дата
+jcmsplugin.blog.admin.author-list:            Список авторов
+jcmsplugin.blog.admin.see-my-post:            Смотреть мои посты
+jcmsplugin.blog.admin.see-member-post:        Смотреть посты
+jcmsplugin.blog.admin.see-all-post:           Смотреть все посты
+
+# ------------------------------------------------------------
+#  BLOG WARNING
+# ------------------------------------------------------------
+
+jcmsplugin.blog.warning.ws-has-a-blog:             В вашем рабочем пространстве уже есть блог ({0}).
+jcmsplugin.blog.warning.duplicate-same:            В текущем рабочем пространстве уже есть блог с таким же именем
+jcmsplugin.blog.warning.text:                      Пожалуйста, введите текст
+jcmsplugin.blog.warning.member-has-a-blog:         У участника "{0}" уже есть блог в блогосфере: {1}.
+jcmsplugin.blog.warning.blogosphere-root-cat:      Корневая категория блогосферы для блогов не существует. Пожалуйста, обновите ее в свойствах плагина.
+jcmsplugin.blog.warning.blogosphere-forbidden-blog:Вы не авторизованы для публикации поста в следующем блоге: "{0}"
+jcmsplugin.blog.warning.forbidden-blog:            Вы не авторизованы для публикации поста в следующем совместном блоге: "{0}"
+jcmsplugin.blog.warning.forbidden-blog-create:     Вы не авторизованы для создания блога.
+
+# ------------------------------------------------------------
+#  BLOG ACL
+# ------------------------------------------------------------
+acl.resource.admin/work/blogospherecreation: Блог - Добавить блог в блогосферу
+
+
+# ------------------------------------------------------------
+#  PUBLISH MENU
+# ------------------------------------------------------------
+jcmsplugin.blog.publish-menu.add-cs:   Пост в блоге
+jcmsplugin.blog.publish-menu.add-mine: Пост в моем блоге
+
+
+# ------------------------------------------------------------
+#  CategoryBrowser
+# ------------------------------------------------------------
+category.category-browser.blog: Искать в блоге
+
+
+# ----------------------------------------------------------------------
+# Alert
+# ----------------------------------------------------------------------
+alert.name.jcmsplugin-blog:                               Блог
+
+alert.name.jcmsplugin-blog.new-blogpost:                  Новый пост в блоге
+alert.msg.jcmsplugin-blog.new-blogpost.title:             Новый пост в блоге: {data}
+alert.msg.jcmsplugin-blog.new-blogpost.short-description: {author} опубликовал новый пост в блоге {data} в {parent}. {data.url}
+alert.msg.jcmsplugin-blog.new-blogpost.description:       <p>{author} опубликовал новый пост в блоге {data} в {parent.link}.</p> 
+
+alert.name.jcmsplugin-blog.update-blogpost:               Обновление поста в блоге
+alert.msg.jcmsplugin-blog.update-blogpost.title:          Пост в блоге был обновлен: {data}
+alert.msg.jcmsplugin-blog.update-blogpost.short-description: {author} обновил пост в блоге {data} в {parent}. {data.url}
+alert.msg.jcmsplugin-blog.update-blogpost.description:       <p>{author} обновил пост в блоге {data} в {parent.link}.</p> 
+
+alert.name.jcmsplugin-blog.blog-opening:                  Валидация запроса на открытие блога
+alert.msg.jcmsplugin-blog.blog-opening.title:             Ваш запрос на открытие блога был проверен
+alert.msg.jcmsplugin-blog.blog-opening.short-description: {author} проверил ваш запрос на открытие блога: {data}. {data.url}
+alert.msg.jcmsplugin-blog.blog-opening.description:       <p>{author} проверил ваш запрос на открытие блога: {data}:</p> 
+
+# ------------------------------------------------------------
+#  BLOG TOOLS
+# ------------------------------------------------------------
+
+jcmsplugin.blog.tools.title:  Загрузка Поста блога (Store) в Пост блога (База данных) - Шаг 2
+jcmsplugin.blog.tools.text1:  Информация импорта блога
+jcmsplugin.blog.tools.text2:  1. Импортировать пост для блога из Store в пост для блога в базу данных
+jcmsplugin.blog.tools.text3:  2. Повторно инициализировать все блоги с новыми параметрами
+ui.adm.jcms5-loader.btn.load:        Загрузить данные
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From Blog-templates.xml
+types.Blog.templates.editFront.default.label: Шаблон редактирования фронт-офиса
+types.Blog.templates.editFrontOld.default.label: Старый шаблон редактирования фронт-офиса
+types.Blog.templates.query.default.label: Шаблон по умолчанию
+types.Blog.templates.box.default.label: Шаблон по умолчанию
+types.Blog.templates.edit.default.label: Шаблон редактирования фронт-офиса
+types.Blog.templates.fullold.default.label: Старый шаблон
+types.Blog.templates.full.old.label: Старый шаблон
+types.Blog.templates.full.default.label: Шаблон JNews по умолчанию
+ui.editportlet.usage.fullold: Старый шаблон
+
+# From Blog.xml
+types.Blog.fields.bloggerGroup.label: Группа блоггера
+types.Blog.title.label: Заголовок
+types.Blog.fields.description.label: Описание блога
+types.Blog.label: Блог
+
+# From BlogPost-templates.xml
+types.BlogPost.templates.editFront.default.label: Шаблон редактирования фронт-офиса
+types.BlogPost.templates.editFrontOld.default.label: Старый шаблон редактирования фронт-офиса
+types.BlogPost.templates.query.default.label: Шаблон по умолчанию
+types.BlogPost.templates.edit.default.label: Редактировать шаблон
+types.BlogPost.templates.full.default.label: Шаблон по умолчанию
+types.BlogPost.templates.fullold.default.label: Старый шаблон
+types.BlogPost.templates.full.default.label: Шаблон по умолчанию
+types.BlogPost.templates.appBody.default.label: Легкий шаблон для отображения тела приложения
+
+# From BlogPost.xml
+types.BlogPost.fields.summary.description: Это краткое изложение поста, которое будет отображено в списке постов и в электронном сообщении, которое будет отправлено подписчикам.
+types.BlogPost.fields.blog.label: Блог
+types.BlogPost.fields.category.description: Вы можете выбрать множество категорий.
+types.BlogPost.fields.content.label: Текст
+types.BlogPost.label: Пост в блоге
+types.BlogPost.title.label: Заголовок
+types.BlogPost.fields.category.label: Категория
+types.BlogPost.fields.summary.label: Краткий обзор
+types.BlogPost.fields.featuredImage.label: Изображение
+types.BlogPost.fields.featuredImage.description: Это изображение должно иметь большие размеры, желательно в формате 16/9 (напр., 960x540).
+types.BlogPost.fields.featuredImageAlt.label: Текстовая альтернатива изображения
+types.BlogPost.fields.featuredImageAlt.description: Этот текст будет использоваться как альтернативный атрибут для изображения.
+types.BlogPost.fields.thumbnailImage.label: Уменьшенное изображение
+types.BlogPost.fields.thumbnailImage.description: Уменьшенное изображение генерируется из изображения. Но вы можете выбрать другое уменьшенное изображение. Он должен быть больше 300x150 и желательно в формате 4/3 или 16/9.
+types.BlogPost.fields.thumbnailImageAlt.label: Текстовая альтернатива уменьшенного изображения
+types.BlogPost.fields.thumbnailImageAlt.description: Этот текст будет использоваться как альтернативный атрибут для уменьшенного изображения
+types.BlogPost.fields.imageAltText.label: Текстовая альтернатива
+types.BlogPost.btn.show-options: Больше опций...
+types.BlogPost.btn.hide-options: Меньше опций...
+
+# From BlogRequest.xml
+types.BlogRequest.fields.description.label: Описание
+types.BlogRequest.title.label: Имя блога
+types.BlogRequest.label: Запрос на открытие блога
+
+# From PortletBlog-templates.xml
+types.PortletBlog.templates.box.default.label: Шаблон по умолчанию
+types.PortletBlog.templates.box.default.description: Шаблон по умолчанию для этого портлета
+types.PortletBlog.templates.box.itembox.label: Список в стиле item-box
+types.PortletBlog.templates.box.itembox.description: Список в стиле item-box
+types.PortletBlog.templates.edit.default.label: Шаблон по умолчанию
+types.PortletBlog.templates.edit.default.description: Шаблон по умолчанию для этого портлета
+types.PortletBlog.templates.full.default.label: Шаблон по умолчанию
+types.PortletBlog.templates.full.default.description: Шаблон по умолчанию для этого портлета
+types.PortletBlog.templates.query.default.label: Шаблон по умолчанию
+types.PortletBlog.templates.query.default.description: Шаблон по умолчанию для этого портлета
+
+# From PortletBlog.xml
+types.PortletBlog.label: Портлет блога
+types.PortletBlog.fields.displayedList.labelList: Блоги и посты из всех рабочих пространств|Посты рабочих пространств
+types.PortletBlog.fields.displayedList.label: Выведенный на экран список
+types.PortletBlog.title.label: Заголовок
+types.PortletBlog.description: Отображает список блогпостов и блогов
+
+# From wfblogrequest.xml
+workflows.wfblogrequest.label: Блог - Рабочий поток запроса на открытие блога
+workflows.wfblogrequest.states.60.description: Запрос авторизован, блог был создан.
+workflows.wfblogrequest.states.50.description: Этот запрос блога был отклонен. Блог не будет создан. Для получения подробной информации обратитесь к примечаниям рабочего потока.
+workflows.wfblogrequest.states.-200.label: Отправленный
+workflows.wfblogrequest.roles.blogValidator.description: Принимает/отклоняет запросы на открытие блога
+workflows.wfblogrequest.roles.blogValidator.name: Валидатор
+workflows.wfblogrequest.states.60.label: Принят
+workflows.wfblogrequest.states.50.label: Отклонен
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.blog:     Блог
+jcmsplugin.smartphone.workspace-service.PortletBlog: Блог
+jcmsplugin.blog.smartphone.lbl.blogpost-list: Посты
+jcmsplugin.blog.smartphone.lbl.blog: Блоги
+jcmsplugin.blog.smartphone.lbl.blog.my-blogs: Мои блоги
+jcmsplugin.blog.smartphone.lbl.blog.other-blogs: Другие блоги
+
+# ----------------------------------------------------------------------
+# BlogPost Form
+# ----------------------------------------------------------------------
+jcmsplugin.blog.filter-author: Фильтровать по автору
+jcmsplugin.blog.filter-pstatus: Фильтровать по статусам
+jcmsplugin.blog.filter-startDate: Дата начала
+jcmsplugin.blog.filter-endDate: Дата окончания
+jcmsplugin.blog.sort-by-vote: Подсчет голосов

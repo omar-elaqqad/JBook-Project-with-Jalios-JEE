@@ -1,0 +1,1 @@
+!function(c){const a=function(){c(document).on("jalios:refresh",function(d){var e=d.refresh.target;if(e.hasClass("sidebar-bookmarks")&&d.refresh.type==="after"){e.find(".breadcrumb li:first a").focus()}})};const b=function(){a()};c(document).ready(function(d){b()})}(window.jQuery);

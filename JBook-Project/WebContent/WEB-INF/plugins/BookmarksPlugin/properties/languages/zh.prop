@@ -1,0 +1,148 @@
+# ----------------------------------------------------------------------
+# Folder
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.folder.lbl.new: 新文件夹
+jcmsplugin.bookmarks.folder.lbl.add: 添加文件夹
+jcmsplugin.bookmarks.folder.btn.lbl.add: 添加文件夹……
+jcmsplugin.bookmarks.folder.lbl.edit: 编辑一个文件夹
+jcmsplugin.bookmarks.folder.action.delete.warn-msg: 警告，文件夹内容也会被更改
+jcmsplugin.bookmarks.folder.menu.action.delete.warn-msg: 警告，文件夹内容也会被删除
+jcmsplugin.bookmarks.folder.lbl.name:  文件夹名称
+jcmsplugin.bookmarks.folder.lbl.name1: 名称
+jcmsplugin.bookmarks.folder.lbl.name.parent:  母文件夹
+jcmsplugin.bookmarks.folder.lbl.name.parent1: 父级
+jcmsplugin.bookmarks.folder.name.error: 请输入一个文件夹名称
+jcmsplugin.bookmarks.folder.name.error.duplicate: 该文件夹名称已存在
+jcmsplugin.bookmarks.folder.contains-data: 请先删除该文件夹的内容
+jcmsplugin.bookmarks.folder.no-result: 无书签。
+jcmsplugin.bookmarks.folder.root: 至根
+jcmsplugin.bookmarks.folder.lbl.root: 根
+jcmsplugin.bookmarks.folder.upper: 至{0}
+jcmsplugin.bookmarks.folder.lbl: 文件夹
+jcmsplugin.bookmarks.folder.menu.action: 操作
+jcmsplugin.bookmarks.folder.action.move.empty: 选定内容无法移动至文件夹
+jcmsplugin.bookmarks.items.lbl.shift: 移动选定内容
+jcmsplugin.bookmarks.items.lbl.delete: 删除选定内容
+jcmsplugin.bookmarks.menu.search.placeholder: 搜索书签
+jcmsplugin.bookmarks.already-bookmarked: 该发布内容已被书签标记。
+jcmsplugin.bookmarks.app.title: 书签
+
+#DISABLED
+jcmsplugin.bookmarks.plugin-disabled.message: 收藏夹模块现已禁用
+
+#SIDEBAR
+jcmsplugin.bookmarks.topbar.title: 我的书签
+jcms.sidebar-tab.bookmarks: 书签
+jcms.sidebar-tab.bookmarks.icon: 书签
+jcmsplugin.bookmarks.topbar.search: 搜索书签……
+
+#PUBLICATION
+jcmsplugin.bookmarks.toastr.add: 添加至书签
+jcmsplugin.bookmarks.toastr.remove: 已从书签中移除
+
+#MENU
+jcmsplugin.bookmarks.msg.no-result: 未找到书签
+
+jcmsplugin.bookmarks.lbl.bookmarks: 书签
+jcmsplugin.bookmarks.lbl.link: 外部链接
+jcmsplugin.bookmarks.lbl.pub:  内容
+jcmsplugin.bookmarks.lbl.search: 搜索
+
+jcmsplugin.bookmarks.lbl.url:    URL
+jcmsplugin.bookmarks.lbl.title:  指南标题
+jcmsplugin.bookmarks.btn.add:    添加
+jcmsplugin.bookmarks.btn.update: 保存
+jcmsplugin.bookmarks.btn.remove: 移除此书签
+
+jcmsplugin.bookmarks.lbl.add-bookmark: 添加一个书签
+jcmsplugin.bookmarks.lbl.remove-bookmark: 从书签中移除
+
+jcmsplugin.bookmarks.lbl.action: 操作
+jcmsplugin.bookmarks.lbl.add:    添加一个书签……
+jcmsplugin.bookmarks.lbl.edit: 	 编辑一个书签
+jcmsplugin.bookmarks.msg.remove: 您真的希望删除书签 <em>{0}</em>？
+
+jcmsplugin.bookmarks.adm.max:    每位用户可用的最大书签数量
+jcmsplugin.bookmarks.msg.adm.max:您已达到最大书签数量
+
+jcmsplugin.bookmarks.lbl.bookmark.error: 该书签无效。
+jcmsplugin.bookmarks.lbl.url.error: URL无效。
+jcmsplugin.bookmarks.title.error: 请输入一个标题。
+
+jcmsplugin.bookmarks.lbl.manage-bookmark: 管理书签
+
+jcmsplugin.bookmarks.isExternalLink.title: 外部链接
+# ----------------------------------------------------------------------
+# Analytics
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.analytics.top-section: 添加最多的书签
+jcmsplugin.bookmarks.analytics.top-section.help: 用户使用最多的前十个书签
+jcmsplugin.bookmarks.analytics.top-bookmarks-section: 使用书签最多的成员
+jcmsplugin.bookmarks.analytics.top-bookmarks-section.help: 使用书签最多的前十个成员
+jcmsplugin.bookmarks.analytics.rank-number-column.label: #
+jcmsplugin.bookmarks.analytics.bookmark-column.label: 书签
+jcmsplugin.bookmarks.analytics.bookmark-add-column.label: 添加的时间数量
+jcmsplugin.bookmarks.analytics.report.average-bookmarks: 书签平均数量
+jcmsplugin.bookmarks.analytics.report.average-bookmarks.h: 用户平均数量
+jcmsplugin.bookmarks.analytics.author-column.label: 用户
+jcmsplugin.bookmarks.analytics.bookmark-number-column.label: 书签数量
+jcmsplugin.bookmarks.analytics.indicator.average-bookmarks: 用户平均书签
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks: 被书签标记最多的发布内容
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks.h: 被书签标记最多的前十个发布内容
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks.table.pub.title: 发布
+ui.analytics.BookmarksAgent.name: 书签
+
+# ----------------------------------------------------------------------
+# Icones
+# ----------------------------------------------------------------------
+icon.jcmsplugin.bookmarks.bookmarkWhite: 书签
+icon.jcmsplugin.bookmarks.edit:          编辑书签
+icon.jcmsplugin.bookmarks.delete:        删除书签
+icon.jcmsplugin.bookmarks.add:           添加书签
+icon.jcmsplugin.bookmarks.star:          书签
+
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+jcmsplugin.bookmarks.displayExternalUrl: 在新窗口中打开外部链接
+
+# From PortletBookmarks-templates.xml
+types.PortletBookmarks.templates.query.default.label: 默认模板
+types.PortletBookmarks.templates.box.default.label: 默认模板
+
+# From PortletBookmarks.xml
+types.PortletBookmarks.title.label: 指南标题
+types.PortletBookmarks.fields.openLinksInNewWindow.label: 在新窗口中打开外部链接
+types.PortletBookmarks.fields.openLinksInNewWindow.onLabel: 是
+types.PortletBookmarks.label: 书签 Portlet
+types.PortletBookmarks.description: 此portlet允许登录成员管理自己的书签。
+types.PortletBookmarks.fields.openLinksInNewWindow.offLabel: 否
+
+# From PortletWorkspaceBookmarks.xml
+types.PortletWorkspaceBookmarks.label: 工作区书签Portlet
+types.PortletWorkspaceBookmarks.title.label: 指南标题
+types.PortletWorkspaceBookmarks.description: 该书签允许工作区管理员管理工作区书签。
+
+jcmsplugin.bookmarks.edition-mode: 切换至编辑模式
+jcmsplugin.bookmarks.remove-edition-mode: 停止编辑
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.bookmark:   书签
+jcmsplugin.bookmarks.smartphone.lbl.bookmark.filter: 在书签内搜索……
+jcmsplugin.bookmarks.smartphone.lbl.bookmark.no-result: 无书签
+jcmsplugin.bookmarks.smartphone.menu.bookmark.added.lbl: 已添加书签
+jcmsplugin.bookmarks.smartphone.menu.bookmark.removed.lbl: 已移除书签
+
+# Shortcut
+data.$id.shortcut.jcmsplugin.bookmarks.title: 书签
+data.$id.shortcut.jcmsplugin.bookmarks.text: 访问并管理您的文章、搜索结构和外部页面书签。
+
+# ----------------------------------------------------------------------
+# JTasks project
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.app.project.sidebar.favorite-projects.label: 我的收藏夹

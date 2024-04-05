@@ -1,0 +1,21 @@
+.ajax-loading-component-waves {
+  margin: 40px auto;
+  text-align: center;
+}
+.ajax-loading-component-waves .jalios-icon-svg {
+  height: 100px;
+  width: 100px;
+}
+.ajax-loading-component-waves .jalios-icon-svg .circle1 {
+  fill: #8ec255;
+}
+.ajax-loading-component-waves .jalios-icon-svg .circle2 {
+  fill: #009ef5;
+}
+.ajax-loading-component-waves .jalios-icon-svg .circle3 {
+  fill: #ff9400;
+}
+.ajax-loading-component-waves .jalios-icon-svg .circle4 {
+  fill: #00adb8;
+}
+/*# sourceMappingURL=jalios-loading-waves.css.map */

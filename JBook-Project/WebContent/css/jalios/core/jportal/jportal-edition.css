@@ -1,0 +1,1129 @@
+.browser-IE11 .jportal-editor-sidebar .sidebar-body {
+  height: calc(100% - 66px);
+}
+.jportal-sidebar-component.sidebar-component {
+  overflow-y: hidden;
+  background-color: white;
+  height: initial;
+}
+.jportal-sidebar-component.sidebar-component .sidebar-tab-content {
+  position: relative;
+}
+.jportal-editor-sidebar .sidebar-body {
+  position: relative;
+  background-color: #e8e8e8;
+}
+.jportal-editor-sidebar .filters {
+  display: flex;
+  gap: 16px;
+}
+.jportal-editor-sidebar .filters .form-group {
+  width: 50%;
+  flex-shrink: 0;
+}
+.jportal-editor-sidebar .abstract-portlet-fields {
+  display: none;
+}
+.jportal-editor-sidebar .jportal-sidebar-header {
+  font-size: 48px;
+}
+.jportal-editor-sidebar .jportal-sidebar-opener {
+  top: 85px;
+}
+.jportal-editor-sidebar .sidebar-header-icon A {
+  text-decoration: none;
+  cursor: pointer;
+  padding: 8px;
+}
+.jportal-editor-sidebar .sidebar-header-icon A:hover .jalios-icon {
+  color: #cccccc;
+}
+.jportal-editor-sidebar .jportlet-ui-position .jalios-input-group {
+  max-width: 55px;
+}
+.jportal-editor-sidebar.sidebar-tabbed .sidebar-header-icon {
+  background-color: #e91e63;
+}
+.jportal-editor-sidebar.sidebar-tabbed .sidebar-header-icon > A {
+  display: flex;
+}
+.jportal-editor-sidebar.sidebar-tabbed .sidebar-header-icon .jalios-icon {
+  vertical-align: super;
+}
+.jportal-editor-sidebar.sidebar-tabbed .sidebar-tabs > LI.active A {
+  background-color: #e8e8e8;
+}
+.jportal-editor-sidebar.sidebar-tabbed .sidebar-tabs > LI.active A:hover {
+  background-color: #e8e8e8;
+}
+.jportal-editor-sidebar .btn-back {
+  position: absolute;
+  top: 8px;
+  left: 14px;
+  color: #666;
+  font-size: 24px;
+}
+.jportal-editor-sidebar .sidebar-close {
+  z-index: 1;
+}
+.jportal-editor-sidebar .jportal-component-type {
+  font-family: embedded-roboto-condensed;
+  font-weight: 300;
+  font-size: 18px;
+  margin-bottom: 16px;
+  margin-top: 40px;
+}
+.jportal-editor-sidebar .jportal-component-type:first-child {
+  margin-top: 0;
+}
+.jportal-editor-sidebar .jportal-component-type-wrapper:last-child {
+  margin-bottom: 40px;
+}
+.jportal-editor-sidebar .jportal-component {
+  display: flex;
+  flex-direction: column;
+}
+.jportal-editor-sidebar .jportal-component .card-body {
+  padding: 0;
+}
+.jportal-editor-sidebar .jportal-component .card-body:first-child,
+.jportal-editor-sidebar .jportal-component .card-body:last-child {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.jportal-editor-sidebar .jportal-component .jportal-component-overlay {
+  opacity: 0;
+  transition: opacity 200ms ease-in;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  color: #999;
+  cursor: pointer;
+}
+.jportal-editor-sidebar .jportal-component.is-draggable {
+  cursor: grab;
+}
+.jportal-editor-sidebar .jportal-component .jportal-component-icon {
+  object-fit: cover;
+  width: 100%;
+}
+.jportal-editor-sidebar .jportal-component .jportal-component-icon-colored {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 200ms ease-in;
+}
+.jportal-editor-sidebar .jportal-component.jportal-component-portlet .card-img {
+  object-fit: cover;
+  height: 100px;
+}
+.jportal-editor-sidebar .jportal-component.jportal-component-portlet .jportal-component-label {
+  justify-content: inherit;
+  height: auto;
+  padding-top: 16px;
+  margin-bottom: 16px;
+}
+.jportal-editor-sidebar .jportal-component .jportal-component-right-icon {
+  opacity: 0;
+  font-size: 32px;
+  color: #c5c5c5;
+  transition: opacity 200ms ease-in;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.jportal-editor-sidebar .jportal-component .jportal-component-label {
+  font-size: 16px;
+  display: block;
+  text-align: center;
+  margin: 0;
+  color: #333;
+  font-weight: 500;
+  font-family: embedded-roboto-condensed, embedded-roboto, Helvetica, Arial, sans-serif;
+  height: 56px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  line-height: 18px;
+}
+.jportal-editor-sidebar .jportal-component .metadata {
+  font-size: 12px;
+  color: #666;
+}
+.sidebar-close {
+  z-index: 1;
+}
+.jportlet-sidebar {
+  background-color: white;
+  display: flex;
+}
+.jportlet-sidebar .sidebar-body {
+  width: 100%;
+}
+.jportlet-editor-sidebar .buttons {
+  position: fixed;
+  bottom: 0;
+  background-color: #4bccea;
+  left: 56px;
+  right: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  text-align: right;
+  padding-right: 16px;
+}
+.sidebar-subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: block;
+  transition: margin-bottom 200ms ease-in;
+  color: inherit;
+  position: relative;
+}
+.sidebar-subtitle .caret {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sidebar-subtitle.collapsed {
+  margin-bottom: 0;
+}
+.form-group LABEL {
+  font-weight: 500;
+}
+.jportal-sidebar-group {
+  background-color: white;
+  padding: 10px 10px 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+.jportal-sidebar-group.is-accordion {
+  padding: 0;
+}
+.jportal-sidebar-group.is-accordion .sidebar-subtitle {
+  padding: 10px;
+  margin-bottom: 0;
+}
+.jportal-sidebar-group.is-accordion .sidebar-collapsed-group {
+  padding: 10px;
+}
+.jportal-sidebar-group .sidebar-collapsed-group .jportal-sidebar-group {
+  padding: 0;
+}
+.jportal-sidebar-group .form-group:last-child {
+  margin-bottom: 0;
+}
+.jportal-sidebar-group.jportal-sidebar-group-separated .form-group {
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 16px;
+}
+.jportal-sidebar-group.jportal-sidebar-group-separated .form-group:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.jportal-sidebar-group.jportal-sidebar-group-separated .jportal-front-files-uploader .form-group {
+  border-bottom: none;
+}
+.jportal-sidebar-group.jportal-sidebar-group-separated .jportal-front-files-uploader .widget .grip {
+  display: none !important;
+}
+.jportal-sidebar-group.jportal-sidebar-group-separated .jportal-front-files-uploader .front-files-validate-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.jportal-sidebar-group.jportal-sidebar-group-separated .jportal-front-files-uploader .front-files-validate-wrapper .btn-primary {
+  display: block !important;
+}
+.no-display-table .input-group-addon,
+.no-display-table .input-group-btn {
+  display: inline-block !important;
+}
+.input-group.input-group-chained {
+  display: flex;
+  width: 100%;
+}
+.input-group.input-group-chained .form-control {
+  margin-left: -1px;
+  flex-basis: 20%;
+  text-align: center;
+  min-width: 0;
+  display: inline-block;
+}
+.input-group.input-group-chained .form-control:first-child {
+  margin-right: 0;
+}
+.input-group.input-group-chained .input-group-addon {
+  flex-basis: 20%;
+  position: relative;
+  background-color: white;
+}
+.input-group.input-group-chained .input-group-addon.is-chained {
+  background-color: #eeeeee;
+}
+.input-group.input-group-chained .input-group-addon.is-chained .jportal-sidebar-chained-unlink {
+  display: none;
+}
+.input-group.input-group-chained .input-group-addon.is-chained .jportal-sidebar-chained-link {
+  display: block;
+}
+.input-group.input-group-chained .input-group-addon .jportal-sidebar-chained-link {
+  display: none;
+}
+.input-group.input-group-chained .input-group-addon .jportal-sidebar-chained-unlink {
+  display: block;
+}
+.input-group.input-group-chained .input-group-addon LABEL {
+  width: 100%;
+  line-height: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.input-group.input-group-chained .input-group-addon input {
+  display: none;
+}
+.template-wrapper SELECT.form-control {
+  float: none;
+}
+.template-wrapper .template-image {
+  max-width: 144px;
+}
+.jportal-sidebar-home-link {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+}
+.sidebar-body .buttons {
+  text-align: right;
+  margin-bottom: 10px;
+}
+.sidebar-body .buttons .ctxLangForm {
+  float: left;
+}
+.jportal-sidebar-group .widget-content LABEL {
+  font-weight: normal;
+}
+.jportal-sidebar-pull-toggler {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 32px;
+  height: 64px;
+  background-color: #e91e63;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow: 2px 1px 6px 1px rgba(0, 0, 0, 0.22);
+  transition: all 200ms ease-in;
+  z-index: 10;
+  opacity: 1;
+  cursor: pointer;
+}
+.jportal-sidebar-pull-toggler:hover > .jalios-icon {
+  color: white;
+}
+.jportal-sidebar-pull-toggler > A {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.jportal-sidebar-pull-toggler .jportal-sidebar-pull-open {
+  display: flex;
+}
+.jportal-sidebar-pull-toggler .jportal-sidebar-pull-close {
+  display: none;
+}
+.jportal-sidebar-pull-toggler:hover {
+  background-color: #ee4c83;
+}
+.browser-IE11 .jportal-component {
+  height: 200px;
+}
+.jportal-sidebar .card.jportal-component .card-img {
+  height: 100px;
+  margin-bottom: 0;
+}
+.jportal-sidebar .card-count-2.card-responsive-layout[max-width~='480px'] > .card {
+  flex-basis: calc(50% - 30px) !important;
+}
+.box-edition {
+  margin-bottom: 20px;
+  width: 431px;
+  height: 350px;
+  border: 1px solid #EEE;
+  margin: 0 auto 20px;
+  position: relative;
+}
+.box-edition-margin {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #59D5E1;
+}
+.box-edition-border {
+  position: absolute;
+  left: 80px;
+  right: 80px;
+  top: 80px;
+  bottom: 80px;
+  /* background-color: red; */
+  border: 2px solid #fff;
+}
+.box-edition-border .box-edition-top-left-corner {
+  position: absolute;
+  top: -16px;
+  left: -16px;
+}
+.box-edition-border .box-edition-top-left-corner INPUT {
+  border-top-left-radius: 20px;
+}
+.box-edition-border .box-edition-top-right-corner {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+}
+.box-edition-border .box-edition-bottom-left-corner {
+  position: absolute;
+  bottom: -16px;
+  left: -16px;
+}
+.box-edition-border .box-edition-bottom-right-corner {
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+}
+.box-edition-border > .box-edition-field {
+  z-index: 1;
+}
+.box-edition-border > .box-edition-corner-left {
+  top: -20px;
+  left: 36px;
+}
+.box-edition-border .box-edition-left {
+  left: -20px;
+}
+.box-edition-border .box-edition-right {
+  right: -20px;
+}
+.box-edition-border .box-edition-top {
+  top: -20px;
+}
+.box-edition-border .box-edition-bottom {
+  bottom: -20px;
+}
+.box-edition-padding {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #00ADB8;
+}
+.box-edition-padding .box-edition-left {
+  left: 64px;
+}
+.box-edition-padding .box-edition-right {
+  right: 64px;
+}
+.box-edition-padding .box-edition-top {
+  top: 45px;
+}
+.box-edition-padding .box-edition-bottom {
+  bottom: 45px;
+}
+.box-edition-padding .box-edition-corner-left {
+  top: 24px;
+}
+.box-edition-field {
+  width: 40px;
+}
+.box-edition-field INPUT {
+  padding: 0;
+  text-align: center;
+}
+.box-edition-corner-left {
+  top: 12px;
+  left: 38px;
+  color: white;
+  position: absolute;
+}
+.box-edition-left {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.box-edition-right {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.box-edition-top {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.box-edition-bottom {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.jportal-loading {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.jportal-loading-item {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+.jportal-loading-item-1 {
+  background-color: #8ec255;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  animation: item-1_move 1.8s cubic-bezier(.6, .01, .4, 1) infinite;
+}
+.jportal-loading-item-2 {
+  background-color: #009ef5;
+  top: 0;
+  right: 0;
+  animation: item-2_move 1.8s cubic-bezier(.6, .01, .4, 1) infinite;
+}
+.jportal-loading-item-3 {
+  background-color: #ff9400;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  animation: item-3_move 1.8s cubic-bezier(.6, .01, .4, 1) infinite;
+}
+.jportal-loading-item-4 {
+  background-color: #00adb8;
+  bottom: 0;
+  left: 0;
+  animation: item-4_move 1.8s cubic-bezier(.6, .01, .4, 1) infinite;
+}
+@keyframes item-1_move {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0, 100px);
+  }
+  50% {
+    transform: translate(100px, 100px);
+  }
+  75% {
+    transform: translate(100px, 0);
+  }
+}
+@keyframes item-2_move {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-100px, 0);
+  }
+  50% {
+    transform: translate(-100px, 100px);
+  }
+  75% {
+    transform: translate(0, 100px);
+  }
+}
+@keyframes item-3_move {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0, -100px);
+  }
+  50% {
+    transform: translate(-100px, -100px);
+  }
+  75% {
+    transform: translate(-100px, 0);
+  }
+}
+@keyframes item-4_move {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(100px, 0);
+  }
+  50% {
+    transform: translate(100px, -100px);
+  }
+  75% {
+    transform: translate(0, -100px);
+  }
+}
+BODY:not(.is-show-content-mode) .jportlet {
+  position: absolute;
+  background: #00adb8;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  text-align: center;
+}
+BODY.is-show-content-mode .jportal-block .jportlet {
+  position: initial;
+  text-align: inherit;
+  background: none;
+}
+BODY.is-show-content-mode .jportal-block.has-jportlet .jportal-block-inner {
+  min-height: initial;
+  height: initial;
+}
+.container > .jportal-block-line,
+.container-fluid > .jportal-block-line {
+  padding: 0;
+}
+.jportal-topbar {
+  background-color: #293a48;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  z-index: 1040;
+  padding-left: 15px;
+  color: white;
+  top: 0;
+}
+.jportal-topbar a.btn {
+  display: flex;
+  align-items: center;
+}
+.jportal-topbar .btn {
+  border-radius: 0;
+  background-color: #293a48;
+  color: #fff;
+  border: 0;
+  border-left: 1px solid rgba(204, 204, 204, 0.24);
+}
+.jportal-topbar .btn:hover {
+  background-color: #3c5468;
+}
+.jportal-topbar .btn.btn-primary {
+  background-color: #e91e63;
+}
+.jportal-topbar .btn.btn-primary:hover {
+  background-color: #c1134e;
+}
+.jportal-topbar .jportal-topbar-center {
+  display: flex;
+  height: 50px;
+}
+.jportal-topbar .jportal-topbar-center a:first-child {
+  border: none;
+}
+.jportal-topbar .jportal-topbar-center a.is-active {
+  background-color: #e91e63;
+}
+.jportal-topbar .jportal-topbar-right {
+  display: flex;
+  height: 50px;
+  align-self: flex-end;
+}
+.jportal-navigation {
+  display: flex;
+}
+.jportal-navigation A.jportal-navigation-item {
+  cursor: pointer;
+  text-decoration: none;
+}
+.jportal-navigation A.jportal-navigation-item:hover {
+  background-color: #3c5468;
+}
+.jportal-navigation .jportal-navigation-item {
+  color: white;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.jportal-navigation .jportal-navigation-item:before {
+  font-family: icomoon;
+  content: '\edbe';
+  height: 20px;
+  line-height: 20px;
+  margin-right: 8px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.52);
+}
+.jportal-navigation .jportal-navigation-item:first-child {
+  margin-left: 0;
+}
+.jportal-navigation .jportal-navigation-item:first-child:before {
+  content: '';
+  display: none;
+}
+.jportal-sidebar-opener {
+  display: none;
+}
+.jportal-block-line {
+  display: flex;
+  padding: 15px 0;
+  position: relative;
+}
+.jportal-block-line:before,
+.jportal-block-line:after {
+  content: " ";
+  display: table;
+}
+.jportal-block-line:after {
+  clear: both;
+}
+.jportal-block-line:before,
+.jportal-block-line:after {
+  display: table;
+  content: " ";
+}
+.jportal-block-line:after {
+  clear: both;
+}
+/*  Jportal block */
+.jportal-block {
+  height: 100%;
+  transition: width 200ms ease-in;
+  position: relative;
+}
+.jportal-block.jportal-block-overlay-edition > .jportal-jblock-header {
+  background-color: #00cef1 !important;
+  color: white;
+}
+.jportal-block.no-jblock-transition {
+  transition: none;
+}
+.jportal-block.is-portlet-selection > .jportal-jblock-header {
+  background-color: #e91e63;
+  color: white;
+}
+.jportal-block .jportal-block-inner {
+  outline: 1px solid #cccccc33;
+  min-height: 250px;
+  position: relative;
+  flex-direction: column;
+  padding: 0;
+  height: 100%;
+}
+.jportal-block > .jportal-block-line > .jportal-block:first-of-type .jportal-block-inner {
+  padding-left: 0;
+}
+.jportal-block > .jportal-block-line > .jportal-block:first {
+  padding-left: 0;
+}
+.jportal-block > .jportal-block-line > .jportal-block:last-of-type .jportal-block-inner {
+  padding-right: 0;
+}
+.jportal-block > .jportal-block-line > .jportal-block:last-of-type {
+  padding-right: 0;
+}
+.jportal-block .jportlet .jportlet-title {
+  position: relative;
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  font-family: embedded-roboto-condensed;
+}
+.jportal-block .ui-resizable-e {
+  cursor: e-resize;
+  top: 0;
+  height: 100%;
+}
+.jportal-block .ui-resizable-handle {
+  position: absolute;
+  font-size: 0.1px;
+  display: block;
+  touch-action: none;
+  width: 30px;
+  right: -15px;
+}
+.jportal-block .ui-resizable-handle:hover {
+  cursor: e-resize;
+}
+.jportal-block .ui-resizable-handle:hover:after {
+  background: #999;
+  box-shadow: 0 10px 0 #999, 0 20px 0 #999;
+}
+.jportal-block .ui-resizable-handle:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -10px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #666;
+  box-shadow: 0 10px 0 #666, 0 20px 0 #666;
+  transition: all 200ms linear;
+  z-index: 2;
+}
+.jportal-block .jportal-jblock-header {
+  transition: background-color 200ms linear, color 200ms linear;
+  display: flex;
+  background-color: #f1f1f1e6;
+  color: #333;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.jportal-block .jportal-jblock-header-label {
+  flex: 1;
+  cursor: move;
+  font-family: embedded-roboto-condensed, embedded-roboto, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 37px;
+  padding-left: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.jportal-block .jportal-jblock-header-label .js-handle {
+  margin-right: 10px;
+  font-size: 14px;
+}
+.jportal-block .jblock-menu {
+  transition: background-color 200ms linear;
+  padding: 8px;
+}
+.jportal-block .jblock-menu:hover {
+  cursor: pointer;
+  background-color: rgba(179, 179, 179, 0.62);
+  transition: background-color 200ms linear;
+}
+.jportal-block .jportal-drop-block {
+  background-color: #59d5e1;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 200ms linear;
+  z-index: 2;
+}
+.jportal-block .jportal-drop-block.jblock-drag-over {
+  opacity: 1;
+}
+.jportal-block .jportal-drop-block.drop-top {
+  top: 0;
+  left: 15px;
+  right: 15px;
+  height: 15px;
+}
+.jportal-block .jportal-drop-block.drop-bottom {
+  bottom: 0;
+  left: 15px;
+  right: 15px;
+  height: 15px;
+}
+.jportal-block .jportal-drop-block.drop-left {
+  top: 0;
+  left: 0;
+  width: 15px;
+  bottom: 0;
+}
+.jportal-block .jportal-drop-block.drop-right {
+  width: 15px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.jportal-block .jportal-drop-block.drop-center {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.jportal-block .jportal-block-body {
+  flex: 1;
+}
+.jportal-block .block-handle {
+  border: 1px solid black;
+  width: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.jportal-block .block-handle:hover {
+  cursor: move;
+}
+.jportal-block .block-insert {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 45px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  color: #369e2f;
+}
+.jportal-block > .block-create-right,
+.jportal-block > .block-create-left {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  font-size: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.jportal-block > .block-create-right {
+  right: 0;
+}
+.jportal-block > .block-create-left {
+  left: 0;
+}
+.jportal-block:hover > .block-create-left {
+  opacity: 1;
+}
+.jportal-block:hover > .block-create-right {
+  opacity: 1;
+}
+/* Block drag&drop */
+.jblock-helper {
+  background-color: #e91e63;
+  border-radius: 50%;
+  font-weight: normal;
+  font-style: normal;
+  height: 48px;
+  width: 48px;
+  z-index: 3000;
+  line-height: 48px;
+  text-align: center;
+  opacity: 0;
+}
+.jblock-helper::before {
+  color: white;
+  content: '\ed5d';
+  font-family: 'icomoon';
+  font-size: 16px;
+}
+.jblock-helper.jblock-helper-clone {
+  opacity: 1;
+}
+/*  Jportal block main : the highest block containing all other blocks */
+.jblock-structured-footer,
+.jblock-structured-header {
+  padding: 0;
+}
+.jportal-block-main {
+  padding: 0;
+  margin-top: 20px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.35);
+}
+.jportal-block-main > .jportal-block-inner > .jportal-block-line > .jportal-block:first-child {
+  padding-left: 0;
+}
+.jportal-block-main > .jportal-block-inner > .jportal-block-line > .jportal-block:first-child {
+  padding-right: 0;
+}
+.jportal-block-main:before {
+  left: 0;
+}
+.jportal-block-main:after {
+  right: 0;
+}
+.jportal-block-main:after,
+.jportal-block-main:before {
+  content: '';
+  border: 1px dashed rgba(255, 255, 255, 0.35);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.jportal-block-main > .jportal-block-inner {
+  border: 2px dashed #ccc;
+  box-shadow: initial;
+}
+.jportal-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 200ms ease-in;
+  background-color: white;
+  display: flex;
+  z-index: 1038;
+  justify-content: center;
+}
+.jportal-overlay.is-first-load {
+  z-index: 4000;
+}
+.jportal-overlay.is-active {
+  opacity: 1;
+  transition: opacity 0s;
+}
+.topbar-wrapper {
+  top: 50px;
+}
+.jportal-editor-sidebar.sidebar-component {
+  top: 50px;
+  bottom: 0;
+  background-color: #e8e8e8;
+}
+.topbar-placeholder {
+  height: 114px;
+}
+BODY.jportal-overlay-active {
+  overflow-y: hidden;
+}
+BODY.jportal-preview-active {
+  overflow-y: hidden;
+}
+BODY.jportal-history-active {
+  overflow: hidden;
+}
+BODY.is-jportal-sidebar-opened .jportal-wrapper {
+  left: 550px;
+  margin-bottom: 0;
+}
+BODY.is-jportal-sidebar-opened .topbar-wrapper {
+  margin-left: 550px;
+}
+BODY.is-jportal-sidebar-opened .jportal-editor-sidebar.sidebar-left {
+  left: 0;
+}
+BODY.is-jportal-sidebar-opened .jportal-sidebar-pull-open {
+  display: none;
+}
+BODY.is-jportal-sidebar-opened .jportal-sidebar-pull-close {
+  display: flex;
+}
+BODY.is-jportal-sidebar-opened .jportal-sidebar-pull-toggler {
+  left: 550px;
+  opacity: 0.6;
+}
+BODY.is-jportal-sidebar-opened .jportal-sidebar-pull-toggler:hover {
+  opacity: 1;
+}
+.jportal-editor-sidebar.sidebar-left.jportal-sidebar-component {
+  transition: left 200ms ease-in;
+  left: -550px;
+  transform: initial;
+  z-index: 500;
+}
+.jportal-editor-sidebar.sidebar-left.jportal-sidebar-component .jportlet-sidebar {
+  height: 100%;
+  background-color: #e8e8e8;
+}
+.jportal-wrapper {
+  transition: left 200ms ease-in;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50px;
+  bottom: 0;
+  overflow-y: auto;
+}
+.jportal-wrapper .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.jportal-wrapper.is-topbar-displayed {
+  top: 114px;
+}
+.jportal-wrapper .jportal-wrapper-inner {
+  transition: width 200ms ease-in;
+}
+.jportal-wrapper .jportal-wrapper-inner.container-fluid {
+  width: 100%;
+}
+.jportal-wrapper .jportal-wrapper-inner > .row > .jportal-block-line {
+  padding-top: 0;
+}
+.jportal-sidebar-pull-open {
+  display: flex;
+}
+.jportal-sidebar-pull-close {
+  display: none;
+}
+.topbar-wrapper {
+  transition: margin-left 200ms ease-in;
+}
+.topbar-wrapper .topbar {
+  position: absolute;
+  box-shadow: 2px 3px 1px 0 rgba(155, 155, 155, 0.8);
+}
+.jportal-portlet-creation {
+  padding-bottom: 20px;
+}
+.jblock-device-conditions LABEL,
+.jblock-languages-conditions LABEL {
+  display: block;
+}
+.jportal-wrapper.is-jportal-style-mode .jportal-drop-block,
+.jportal-wrapper.is-jportal-style-mode .jportal-jblock-header {
+  display: none;
+}
+.jportal-wrapper.is-jportal-style-mode .jportal-block-line {
+  padding: 0;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.jportal-wrapper.is-jportal-style-mode .jportal-block-inner {
+  border: 0 none;
+}
+.tooltip {
+  z-index: 20000;
+}
+.jportal-wrapper.is-edition-mode .portlet-header-actions-menu {
+  display: block;
+}
+/*# sourceMappingURL=jportal-edition.css.map */

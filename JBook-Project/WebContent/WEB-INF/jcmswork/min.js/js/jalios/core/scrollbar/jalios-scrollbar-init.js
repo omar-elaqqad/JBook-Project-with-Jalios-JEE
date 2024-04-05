@@ -1,0 +1,1 @@
+!function(b){var a=function(c){b(".jalios-scrollbar").scrollbar()};b(document).on("jalios:ready",function(c){a(c)})}(window.jQuery);

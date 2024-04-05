@@ -1,0 +1,25 @@
+<%  if(!jcmsContext.isPrintView()){ %>
+  <div class="blog-side-column col-sm-3"> 
+  	<% if(!Util.toBoolean(request.getAttribute("jcmsplugin.blog.hide-new-blog-btn"),false) && !getUntrustedStringParameter("blogDisplay","").equals("addPost") && BlogManager.getInstance().canPublishPostInBlog(loggedMember,blog)){%>
+  		<jalios:link css="noTooltipCard btn btn-primary br btn-lg btn-block blog-add-post hidden-print" data="<%= blog %>" params="blogDisplay=addPost">
+  		<%= glp("jcmsplugin.blog.label.action.add-post") %>
+  		</jalios:link>
+  	<% } %>      
+  	<jalios:include target="BLOG_SIDE_COLUMN_TOP" targetContext="bloc" />
+    <form class="form-search blog-search-form br hidden-print" action="<jalios:url data="<%= blog %>" />">
+    	<jalios:field name='text' resource="field-light">
+    		<input type="text" class="form-control" placeholder="<%= glp("ui.com.placeholder.search") %>" name="searchedText"/>
+    		<div class="input-group-btn">
+    			<button type="submit" name="opSearch" class="btn btn-default"><jalios:icon src="search" /></button>
+    		</div>
+    	</jalios:field>
+    </form>
+    <jalios:include id="$id.jcmsplugin.blog.portlet.member-profile"/>
+    <jalios:include id="$id.jcmsplugin.blog.portlet.recent-post"/>
+    <jalios:include id="$id.jcmsplugin.blog.portlet.categories"/>
+    <jalios:include id="$id.jcmsplugin.blog.portlet.authors"/>
+    <jalios:include id="$id.jcmsplugin.blog.portlet.archive"/>
+    <jalios:include id="$id.jcmsplugin.blog.portlet.admin"/>
+    <jalios:include target="BLOG_SIDE_COLUMN_BOTTOM" targetContext="bloc" />
+  </div><!-- EOF side-column -->
+<% } %>

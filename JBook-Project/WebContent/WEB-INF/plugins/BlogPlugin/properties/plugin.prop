@@ -1,0 +1,151 @@
+jcmsplugin.blog.blogpost.archive.max: 1000
+jcmsplugin.blog.blogpost.draft.pstatus: -100
+jcmsplugin.blog.blogpost.scheduled.pstatus: -10
+
+# ------------------------------------------------------------
+#  BLOG VIRTUAL ID
+# ------------------------------------------------------------
+jcmsplugin.blog.create-blogosphere.boolean: false
+
+$id.jcmsplugin.blog.blogosphere:
+$id.jcmsplugin.blog.blogosphere.category.root:
+$id.jcmsplugin.blog.blogger.group-attendees:
+$id.jcmsplugin.blog.blogger.group-validators:
+$id.BlogRequest.formAuthor: j_2
+# ------------------------------------------------------------
+#  BLOG AGREEMENT
+# ------------------------------------------------------------
+plugin-mgr.ignore-prop.blog: jcmsplugin.blog.agreement.date
+jcmsplugin.blog.agreement.required.boolean: false
+$id.jcmsplugin.blog.agreement.terms.pub:
+jcmsplugin.blog.agreement.terms.field:
+jcmsplugin.blog.agreement.date:
+# ------------------------------------------------------------
+#  BLOG PORTLET
+# ------------------------------------------------------------
+jcmsplugin.blog.jsp.$id.jcmsplugin.blog.portlet.member-profile:   plugins/BlogPlugin/jsp/portlet/doBlogMemberProfile.jsp
+jcmsplugin.blog.jsp.$id.jcmsplugin.blog.portlet.categories:       plugins/BlogPlugin/jsp/portlet/doBlogCategories.jsp
+jcmsplugin.blog.jsp.$id.jcmsplugin.blog.portlet.recent-post:      plugins/BlogPlugin/jsp/portlet/doBlogRecentPost.jsp
+jcmsplugin.blog.jsp.$id.jcmsplugin.blog.portlet.archive:          plugins/BlogPlugin/jsp/portlet/doBlogArchive.jsp
+jcmsplugin.blog.jsp.$id.jcmsplugin.blog.portlet.post-list:        plugins/BlogPlugin/jsp/portlet/doPostList.jsp
+jcmsplugin.blog.jsp.$id.jcmsplugin.blog.portlet.post-full:        plugins/BlogPlugin/jsp/portlet/doPostFullDisplay.jsp
+jcmsplugin.blog.jsp.$id.jcmsplugin.blog.portlet.admin:            plugins/BlogPlugin/jsp/portlet/doBlogAdmin.jsp
+jcmsplugin.blog.jsp.$id.jcmsplugin.blog.portlet.add-post:         plugins/BlogPlugin/jsp/portlet/doBlogAddPost.jsp
+jcmsplugin.blog.jsp.$id.jcmsplugin.blog.portlet.authors:          plugins/BlogPlugin/jsp/portlet/doBlogAuthorList.jsp
+jcmsplugin.blog.jsp.$id.jcmsplugin.blog.portlet.handle-posts:     plugins/BlogPlugin/jsp/portlet/doBlogHandlePosts.jsp
+
+# ------------------------------------------------------------
+# Topbar
+# ------------------------------------------------------------
+jcms.topbar-application.my-blog:         plugins/BlogPlugin/jsp/topbar/doTopbarApplication_myBlog.jsp
+icon.topbar-app-my-blog:                 plugins/BlogPlugin/images/topbar-application-myblog.png
+
+# ------------------------------------------------------------
+#  BLOG ACL
+# ------------------------------------------------------------
+acl.resource.admin/work/blogospherecreation:
+# ------------------------------------------------------------
+#  Data Icon
+# ------------------------------------------------------------
+types.Blog.icon:            plugins/BlogPlugin/images/blog.png
+types.Blog.thumb:           plugins/BlogPlugin/images/icons/data/Blog64.png
+types.BlogPost.icon:        plugins/BlogPlugin/images/blog.png
+types.BlogPost.thumb:       plugins/BlogPlugin/images/icons/data/Blog64.png
+
+# ------------------------------------------------------------
+#  ESN
+# ------------------------------------------------------------
+jcmsplugin.esn.activity.create.BlogPost.icon:       plugins/BlogPlugin/images/blog.png
+
+# ------------------------------------------------------------
+#  Publish Menu
+# ------------------------------------------------------------
+publish-menu.item.content.31.jcmsplugin.blog: plugins/BlogPlugin/jsp/doCSBlogPublishMenu.jsp
+publish-menu.item.content.32.jcmsplugin.blog: plugins/BlogPlugin/jsp/doMyBlogPublishMenu.jsp
+
+# ------------------------------------------------------------
+#  CategoryBrowser
+# ------------------------------------------------------------
+category.category-browser.blog.class: com.jalios.jcmsplugin.blog.BlogCategoryBrowser
+
+
+# ------------------------------------------------------------
+# JPortal
+# ------------------------------------------------------------
+jportal.portlet-type.PortletBlog: content
+jportal.portlet-type.PortletBlog.icon: plugins/BlogPlugin/images/jportal/PortletBlog_grey.png
+
+# ------------------------------------------------------------
+#  Less
+# ------------------------------------------------------------
+channel.less.plugins/BlogPlugin/css/blog.css: plugins/BlogPlugin/css/blog.less
+channel.less.plugins/BlogPlugin/css/blog-app.css: plugins/BlogPlugin/css/blog-app.less
+channel.less.plugins/BlogPlugin/css/blog-edition.css: plugins/BlogPlugin/css/blog-edition.less
+channel.less.plugins/BlogPlugin/css/blog-handle-posts.css: plugins/BlogPlugin/css/blog-handle-posts.less
+channel.less.plugins/BlogPlugin/css/blogpost-edition.css: plugins/BlogPlugin/css/blogpost-edition.less
+channel.less.plugins/BlogPlugin/css/blog-full-display.css: plugins/BlogPlugin/css/blog-full-display.less
+channel.less.plugins/BlogPlugin/css/blogpost-full-display.css: plugins/BlogPlugin/css/blogpost-full-display.less
+channel.less.plugins/BlogPlugin/css/blog-app-collaborativespace.css: plugins/BlogPlugin/css/blog-app-collaborativespace.less
+channel.less.plugins/BlogPlugin/css/blog-app-jnews.css: plugins/BlogPlugin/css/blog-app-jnews.less
+smartphone.channel.less.plugins/BlogPlugin/smartphone/css/smartphone-blog.css: plugins/BlogPlugin/smartphone/css/smartphone-blog.less
+
+# ------------------------------------------------------------
+#  Icons
+# ------------------------------------------------------------
+icon.alert.jcmsplugin-blog:               plugins/BlogPlugin/images/icons/apps/blog64.png
+icon.jcmsplugin-blog-blog:                sprite: ss_sprite ss_layout_link
+icon.jcmsplugin-blog-add-blog:            sprite: ss_sprite ss_add
+jcmsplugin-blog-modal-add-blog:           sprite: ss_sprite ss_add
+icon.jcmsplugin-blog-follow:              glyph: jicons-bell
+icon.jcmsplugin-blog-unfollow:            glyph: jicons-bell-blocked
+icon.jcmsplugin-blog-user-blog:           plugins/BlogPlugin/images/user-blog.gif
+icon.jcmsplugin-blog-pending-request:     sprite: ss_sprite ss_clock
+icon.jcmsplugin-blog-blogpost-date:       plugins/BlogPlugin/images/calendar-small.gif
+icon.jcmsplugin-blog-blogpost:            plugins/BlogPlugin/images/blog.png
+icon.jcmsplugin-blog-archive:             sprite: ss_sprite ss_date_magnify
+icon.jcmsplugin-blog-modal-add-blog:      plugins/BlogPlugin/images/butt_add_32.png
+icon.jcmsplugin-blog-categories:          plugins/BlogPlugin/images/category.png
+icon.jcmsplugin-blog-comments:            sprite: ss_sprite ss_comment
+icon.jcmsplugin-blog-add-authors:         plugins/BlogPlugin/images/blog.png
+icon.jcmsplugin-blog-blogpost-add:        plugins/BlogPlugin/images/blog.png
+icon.jcmsplugin-blog-workflow:            sprite: ss_sprite ss_note
+icon.jcmsplugin-blog-read-more:           sprite: ss_sprite ss_resultset_next
+icon.jcmsplugin-blog-see-all-posts:       sprite: ss_sprite ss_page_copy
+icon.jcmsplugin-blog-blog-app-full:       plugins/BlogPlugin/images/icons/apps/blog64.png
+icon.jcmsplugin-blog-onboarding:          icon: character-hello
+icon.jcmsplugin-blog-search-no-result:    icon: no-result
+icon.jcmsplugin-blog-not-activated:       icon: no-result
+icon.jcmsplugin-blog-manage-author:       glyph: jicons-users
+icon.jcmsplugin-blog-publish-post:        icon: add
+
+# ------------------------------------------------------------
+# SmartPhone
+# ------------------------------------------------------------
+
+# Css file declaration
+jcmsplugin.smartphone.css.blog: plugins/BlogPlugin/smartphone/css/smartphone-blog.css
+
+# Pub full display mapping
+jcmsplugin.smartphone.link-prefix.Blog:                plugins/BlogPlugin/smartphone/jsp/blogfulldisplay.jsp?id=
+jcmsplugin.smartphone.link-prefix.BlogPost:            plugins/BlogPlugin/smartphone/jsp/blogpost.jsp?id=
+
+# Services
+jcmsplugin.smartphone.service.blog:        plugins/BlogPlugin/smartphone/jsp/service/blog.jsp
+jcmsplugin.smartphone.service.blog.icon:   plugins/SmartPhonePlugin/images/application-blog.png
+
+jcmsplugin.smartphone.workspace-application.PortletBlog: plugins/BlogPlugin/smartphone/jsp/service/workspace/blogWorkspace.jsp
+jcmsplugin.smartphone.workspace-application.PortletBlog.icon: plugins/SmartPhonePlugin/images/application-blog.png
+
+jcmsplugin.blog.old-full-display.boolean: false
+
+# List
+jcms.resource.include.data-list-item.PortletBlog.BlogPost: plugins/BlogPlugin/front/list/doDataListItemPortletBlog_BlogPost.jsp
+
+jcms.resource.include.blog.app.sidebar: plugins/BlogPlugin/jsp/app/doBlogApp_sidebar.jsp
+jcms.resource.include.blog.app.sidebar.views: plugins/BlogPlugin/jsp/app/doBlogApp_sidebarSectionViews.jsp
+
+
+jcms.resource.include.blog.app.sidebar-section.views:    plugins/BlogPlugin/jsp/app/doBlogApp_sidebarSectionViews.jsp
+jcms.resource.include.blog.app.sidebar-section.filters:  plugins/BlogPlugin/jsp/app/doBlogApp_sidebarSectionFilters.jsp
+jcms.resource.include.blog.app.sidebar-section.buttons: plugins/BlogPlugin/jsp/app/doBlogApp_sidebarSectionButtons.jsp
+jcms.resource.include.blog.handle-posts: plugins/BlogPlugin/jsp/admin/blogHandlePosts.jsp

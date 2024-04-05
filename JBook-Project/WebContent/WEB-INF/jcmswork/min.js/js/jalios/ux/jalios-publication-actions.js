@@ -1,0 +1,1 @@
+!function(b){var a=function(){b(document).on("show.bs.collapse hide.bs.collapse",function(d){var c=b(d.target);var e=c.closest(".publication-actions");if(e){var f="";if(d.type==="hide"){f=c.find(".actions-more").text()}else{f=c.find(".actions-less").text()}e.find(".publication-actions-secondary .panel-title A").text(f)}})};b(document).ready(function(c){a()})}(window.jQuery);

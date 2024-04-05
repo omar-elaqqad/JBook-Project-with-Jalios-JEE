@@ -1,0 +1,73 @@
+<%@page import="com.jalios.jcmsplugin.blog.BlogPostDisplayHandler.FeaturedImage"%><%
+formHandler.addFrontEndDependencies();
+%>
+<jalios:buffer name="pubMetadata">
+  <div class="publication-metadata">
+    <span class="date"><jalios:date date="<%= pub.getPdate() %>" format="medium" /></span>
+    <div class="author meta-author">
+      <jalios:memberphoto member="<%= pub.getAuthor() %>" size="<%= PhotoSize.ICON %>" /> <jalios:link data='<%= pub.getAuthor() %>'/>
+    </div>
+    <% Category[] categories = pub.getCategories(loggedMember); %>
+    <% if (Util.notEmpty(categories)) { %>
+      <span class="topics">
+      <%@ include file="/custom/jcms/doCategoryList.jspf"  %> 
+      </span>
+    <% } %>
+    <% if (!pub.isInVisibleState()) { %>
+      <%= pub.getWFStateLabelHtml(userLang) %>
+    <% } %>
+    <% if (pub.isWorkCopy()) { %><span class="wfstate" title="<%= encodeForHTMLAttribute(glp("ui.com.lbl.workcopyof", pub.getMainInstance().getTitle(userLang))) %>"><%= glp("ui.com.lbl.workcopy") %></span><% } %>
+  </div>
+</jalios:buffer>
+
+<div id="Blog" itemscope="itemscope" class="Blog BlogPost fulldisplay editorial-fulldisplay" itemtype="http://schema.org/Blog">
+  <jalios:include jsp='plugins/BlogPlugin/types/BlogPost/doBlogPostContent_breadcrumb.jsp' />
+
+  <% Publication publication = pub; %>
+  <%@ include file='/jcore/doDisplayHeader.jspf' %>
+  
+  <% FeaturedImage featuredImage = formHandler.getFeaturedImage(); %>
+  <%-- TOP PICTURE --%>
+  <% if (featuredImage.isTopPicture()) { %>
+  <div class="publication-picture orientation-landscape">
+    <meta itemprop="image" content="<%= featuredImage.getImagePath() %>" />
+    <jalios:thumbnail path="<%= featuredImage.getImagePath() %>" width='960' height='540' alt='<%= featuredImage.getAlt() %>' />
+  </div>
+  <% } %>
+  
+  <%-- BODY --%> 
+  <div class="publication-body" data-jalios-dataid="<%= pub.getId() %>">
+    <div class="publication-header">
+      <% if (featuredImage.isTopPicture()) { %>
+      <%= pubMetadata %>
+      <% } %>
+      <h1 class="publication-title" <%= gfla(pub, "title") %> itemprop="name"><%= pub.getTitle(userLang) %></h1>
+    </div>
+  
+    <% if (featuredImage.isPortrait()) { %>
+      <div class="publication-picture orientation-portrait">
+        <meta itemprop="image" content="<%= featuredImage.getImagePath() %>" />
+        <jalios:thumbnail path="<%= featuredImage.getImagePath() %>" css='img-thumbnail' width='1999' height='1999' alt='<%= featuredImage.getAlt() %>' />
+      </div>
+    <% } %>
+  
+    <div class="publication-content clearfix" itemprop="content" data-jalios-dataid="<%= pub.getId() %>">
+      <jalios:wysiwyg data='<%= pub %>' field='content'><%= pub.getContent(userLang) %></jalios:wysiwyg>
+    </div>
+    
+    <% if (!featuredImage.isTopPicture()) { %>
+      <%= pubMetadata %>
+    <% } %>
+    <%-- REPLACED FOOTER --%>
+    <div class="fulldisplay-footer">
+      <%-- Related Contents --%>
+      <%
+      Collection pubRelatedCollection = formHandler.getPubRelatedCollection();
+      int pubRelatedMax = 4;
+      %>
+      <%@ include file="/front/publication/doPublicationRelated.jspf" %>
+      <%@ include file='/jcore/doDisplayFooter.jspf' %>         
+      <% request.setAttribute("skipFooter", true); /* for version < 10.0.5 */ %> 
+    </div>
+  </div>
+</div>

@@ -1,0 +1,1 @@
+!function(b){var a=function(){b("[data-jalios-maxlines]").each(function(c,d){$clamp(d,{clamp:d.dataset.jaliosMaxlines})})};b(document).ready(function(){a()})}(window.jQuery);

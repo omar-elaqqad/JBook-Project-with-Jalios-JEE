@@ -1,0 +1,1 @@
+!function(b){var c=function(d){if(d.target.value=="new-folder"){b(".bookmark-new-folder").slideDown("fast")}else{b(".bookmark-new-folder").slideUp("fast")}};var a=function(){b(document).on("change",".bookmark-select-folder",c)};b(document).ready(function(d){a()})}(window.jQuery);

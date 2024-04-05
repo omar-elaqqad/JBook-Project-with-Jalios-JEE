@@ -1,0 +1,26 @@
+.editNotificationCriteria #content-types LI {
+  float: left;
+  width: 270px;
+  list-style: none;
+  padding-right: 10px;
+}
+.editNotificationCriteria .type-label-wrapper LABEL {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.editNotificationCriteria .widget-name-cids OL {
+  margin-bottom: 0;
+}
+.editNotificationCriteria DIV.notification-toggle-option {
+  display: none;
+}
+.editNotificationCriteria .widget A.notification-toggle-option.dropup + DIV.notification-toggle-option {
+  display: block;
+}
+.editNotificationCriteria A.notification-toggle-option {
+  color: #777777;
+  margin-top: 6px;
+  display: inline-block;
+}
+/*# sourceMappingURL=jalios-notification.css.map */

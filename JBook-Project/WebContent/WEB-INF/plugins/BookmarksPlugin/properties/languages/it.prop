@@ -1,0 +1,148 @@
+# ----------------------------------------------------------------------
+# Folder
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.folder.lbl.new: Nuova cartella
+jcmsplugin.bookmarks.folder.lbl.add: Aggiungere una cartella
+jcmsplugin.bookmarks.folder.btn.lbl.add: Aggiungere una cartella...
+jcmsplugin.bookmarks.folder.lbl.edit: Modificare una cartella
+jcmsplugin.bookmarks.folder.action.delete.warn-msg: Attenzione, verrà cancellato anche il contenuto della cartella
+jcmsplugin.bookmarks.folder.menu.action.delete.warn-msg: Attenzione, verrà cancellato anche il contenuto delle cartelle
+jcmsplugin.bookmarks.folder.lbl.name:  Nome cartella
+jcmsplugin.bookmarks.folder.lbl.name1: Nome
+jcmsplugin.bookmarks.folder.lbl.name.parent:  Cartella padre
+jcmsplugin.bookmarks.folder.lbl.name.parent1: Padre
+jcmsplugin.bookmarks.folder.name.error: La preghiamo di inserire un nome di cartella
+jcmsplugin.bookmarks.folder.name.error.duplicate: Una cartella ha già questo nome
+jcmsplugin.bookmarks.folder.contains-data: La preghiamo di eliminare prima il contenuto di questa cartella
+jcmsplugin.bookmarks.folder.no-result: Non ci sono segnalibri.
+jcmsplugin.bookmarks.folder.root: Fino alla radice
+jcmsplugin.bookmarks.folder.lbl.root: Radice
+jcmsplugin.bookmarks.folder.upper: Fino a {0}
+jcmsplugin.bookmarks.folder.lbl: Cartella
+jcmsplugin.bookmarks.folder.menu.action: Azioni
+jcmsplugin.bookmarks.folder.action.move.empty: La selezione non può essere spostata in qualsiasi cartella
+jcmsplugin.bookmarks.items.lbl.shift: Trasferire la selezione
+jcmsplugin.bookmarks.items.lbl.delete: Eliminare la selezione
+jcmsplugin.bookmarks.menu.search.placeholder: Cercare un segnalibro
+jcmsplugin.bookmarks.already-bookmarked: Questa pubblicazione è già stata inserita fra i segnalibri.
+jcmsplugin.bookmarks.app.title: Segnalibri
+
+#DISABLED
+jcmsplugin.bookmarks.plugin-disabled.message: Il modulo preferiti è attualmente disattivato
+
+#SIDEBAR
+jcmsplugin.bookmarks.topbar.title: I miei segnalibri
+jcms.sidebar-tab.bookmarks: Segnalibri
+jcms.sidebar-tab.bookmarks.icon: Segnalibri
+jcmsplugin.bookmarks.topbar.search: Cercare un segnalibro...
+
+#PUBLICATION
+jcmsplugin.bookmarks.toastr.add: Aggiunto ai segnalibri
+jcmsplugin.bookmarks.toastr.remove: Rimosso dai segnalibri
+
+#MENU
+jcmsplugin.bookmarks.msg.no-result: Nessun segnalibro trovato
+
+jcmsplugin.bookmarks.lbl.bookmarks: Segnalibri
+jcmsplugin.bookmarks.lbl.link: Link esterno
+jcmsplugin.bookmarks.lbl.pub:  Contenuto
+jcmsplugin.bookmarks.lbl.search: Ricerca
+
+jcmsplugin.bookmarks.lbl.url:    URL
+jcmsplugin.bookmarks.lbl.title:  Titolo
+jcmsplugin.bookmarks.btn.add:    Aggiungere
+jcmsplugin.bookmarks.btn.update: Salvare
+jcmsplugin.bookmarks.btn.remove: Rimuovere questo segnalibro
+
+jcmsplugin.bookmarks.lbl.add-bookmark: Aggiungere un segnalibro
+jcmsplugin.bookmarks.lbl.remove-bookmark: Rimuovere dai segnalibri
+
+jcmsplugin.bookmarks.lbl.action: Azioni
+jcmsplugin.bookmarks.lbl.add:    Aggiungere un segnalibro...
+jcmsplugin.bookmarks.lbl.edit: 	 Modificare un segnalibro
+jcmsplugin.bookmarks.msg.remove: È sicuro di voler eliminare il segnalibro <em>{0}</em>?
+
+jcmsplugin.bookmarks.adm.max:    Segnalibro massimi per utente
+jcmsplugin.bookmarks.msg.adm.max:Ha raggiunto il numero max di segnalibri!
+
+jcmsplugin.bookmarks.lbl.bookmark.error: Questo segnalibro non è valido.
+jcmsplugin.bookmarks.lbl.url.error: L'URL non è valido.
+jcmsplugin.bookmarks.title.error: La preghiamo di inserire un titolo.
+
+jcmsplugin.bookmarks.lbl.manage-bookmark: Gestione segnalibri
+
+jcmsplugin.bookmarks.isExternalLink.title: Link esterno
+# ----------------------------------------------------------------------
+# Analytics
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.analytics.top-section: Segnalibri più aggiunti
+jcmsplugin.bookmarks.analytics.top-section.help: 10 segnalibri più scelti dagli utenti
+jcmsplugin.bookmarks.analytics.top-bookmarks-section: Membri con più segnalibri
+jcmsplugin.bookmarks.analytics.top-bookmarks-section.help: 10 membri con più segnalibri
+jcmsplugin.bookmarks.analytics.rank-number-column.label: #
+jcmsplugin.bookmarks.analytics.bookmark-column.label: Segnalibri
+jcmsplugin.bookmarks.analytics.bookmark-add-column.label: Numero di aggiunte
+jcmsplugin.bookmarks.analytics.report.average-bookmarks: Media dei segnalibri
+jcmsplugin.bookmarks.analytics.report.average-bookmarks.h: Media per utente
+jcmsplugin.bookmarks.analytics.author-column.label: Utenti
+jcmsplugin.bookmarks.analytics.bookmark-number-column.label: Numero segnalibro
+jcmsplugin.bookmarks.analytics.indicator.average-bookmarks: Segnalibri per utente
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks: Pubblicazione maggiormente inserita fra i segnalibri
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks.h: 10 pubblicazioni maggiormente inserite fra i segnalibri
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks.table.pub.title: Pubblicazione
+ui.analytics.BookmarksAgent.name: Segnalibri
+
+# ----------------------------------------------------------------------
+# Icones
+# ----------------------------------------------------------------------
+icon.jcmsplugin.bookmarks.bookmarkWhite: Segnalibri
+icon.jcmsplugin.bookmarks.edit:          Modificare segnalibro
+icon.jcmsplugin.bookmarks.delete:        Eliminare segnalibro
+icon.jcmsplugin.bookmarks.add:           Aggiungere segnalibro
+icon.jcmsplugin.bookmarks.star:          Segnalibri
+
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+jcmsplugin.bookmarks.displayExternalUrl: Aprire i link esterni in una nuova finestra
+
+# From PortletBookmarks-templates.xml
+types.PortletBookmarks.templates.query.default.label: Template predefinito
+types.PortletBookmarks.templates.box.default.label: Template predefinito
+
+# From PortletBookmarks.xml
+types.PortletBookmarks.title.label: Titolo
+types.PortletBookmarks.fields.openLinksInNewWindow.label: Aprire i link esterni in una nuova finestra
+types.PortletBookmarks.fields.openLinksInNewWindow.onLabel: Sì
+types.PortletBookmarks.label: Portlet segnalibri
+types.PortletBookmarks.description: Questo portlet consente ai membri registrati di gestire i propri segnalibri.
+types.PortletBookmarks.fields.openLinksInNewWindow.offLabel: No
+
+# From PortletWorkspaceBookmarks.xml
+types.PortletWorkspaceBookmarks.label: Portlet segnalibri dello spazio di lavoro
+types.PortletWorkspaceBookmarks.title.label: Titolo
+types.PortletWorkspaceBookmarks.description: Questo portlet consente all'amministratore dello spazio di lavoro di gestire i segnalibri dello spazio di lavoro.
+
+jcmsplugin.bookmarks.edition-mode: Passa a modalità di modifica
+jcmsplugin.bookmarks.remove-edition-mode: Arrestare la modifica
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.bookmark:   Segnalibri
+jcmsplugin.bookmarks.smartphone.lbl.bookmark.filter: Cercare nei segnalibri...
+jcmsplugin.bookmarks.smartphone.lbl.bookmark.no-result: Nessun segnalibro
+jcmsplugin.bookmarks.smartphone.menu.bookmark.added.lbl: Segnalibro aggiunto
+jcmsplugin.bookmarks.smartphone.menu.bookmark.removed.lbl: Segnalibro rimosso
+
+# Shortcut
+data.$id.shortcut.jcmsplugin.bookmarks.title: Segnalibri
+data.$id.shortcut.jcmsplugin.bookmarks.text: Accedere e gestire i propri segnalibri sulle pubblicazioni, cercare risultati e pagine esterne.
+
+# ----------------------------------------------------------------------
+# JTasks project
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.app.project.sidebar.favorite-projects.label: Miei preferiti

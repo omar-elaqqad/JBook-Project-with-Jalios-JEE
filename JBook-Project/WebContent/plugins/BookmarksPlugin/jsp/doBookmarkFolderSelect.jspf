@@ -1,0 +1,28 @@
+<%@page import="com.jalios.jcmsplugin.bookmarks.BookmarkConstants"%>
+<jalios:field label='<%= glp("jcmsplugin.bookmarks.folder.lbl") %>' formHandler="<%= bookmarkHandler %>" id="bookmarkFolderIdTarget">
+  <select name="bookmarkFolderIdTarget" class="form-control bookmark-select-folder">
+      <option value="new-folder"><%=glp("jcmsplugin.bookmarks.folder.lbl.new") %></option>
+      <option value="" disabled="disabled">-----</option>
+      <%  for (int i = 0; i < bookmarkFolderSelectInfo.getKey().size(); i++) {  %>
+        
+      <option value="<%=bookmarkFolderSelectInfo.getValue().get(i) %>" 
+        <% if(bookmarkHandler.getBookmarkFolderIdTarget().equals(bookmarkFolderSelectInfo.getValue().get(i))){ %> selected="selected" <% } %>>
+          <%= bookmarkFolderSelectInfo.getKey().get(i) %>
+      </option> 
+      <% } %>
+  </select>
+</jalios:field>
+
+<% BookmarkManager.BookmarkFolderSelectInfo bookmarkFolderAllSelectInfo = bookmarkFolderSelectInfo; %>
+
+<div class="bookmark-new-folder" style='display:<%=(bookmarkHandler.getBookmarkFolderIdTarget().equals("new-folder")?"block":"none")%>' >
+  <jalios:field name="<%=BookmarkConstants.PARAMETER_BOOKMARK_NEW_FOLDER_NAME %>" label="jcmsplugin.bookmarks.folder.lbl.name" value="<%=bookmarkHandler.getNewFolderName() %>">
+    <jalios:control type="<%= ControlType.TEXTFIELD %>"/>
+  </jalios:field>
+    
+  <%if(BookmarkManager.getInstance().getAllBookmarkFolder(loggedMember).size() > 0){ %>
+    <jalios:field name="<%= BookmarkConstants.PARAMETER_NEW_FOLDER_ID_TARGET %>" label='<%= glp("jcmsplugin.bookmarks.folder.lbl.name.parent") %>' value='<%= bookmarkHandler.getNewBookmarkFolderIdTarget() %>'>
+      <jalios:control settings='<%= new EnumerateSettings().select().enumValues(bookmarkFolderAllSelectInfo.getValue()).enumLabels(bookmarkFolderAllSelectInfo.getKey()).required() %>' />
+    </jalios:field>
+  <% } %>
+</div>

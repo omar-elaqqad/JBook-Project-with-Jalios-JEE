@@ -1,0 +1,22 @@
+DIV.embedly {
+  overflow: auto;
+}
+DIV.embedly .thumb {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+DIV.embedly A {
+  font-weight: bold;
+}
+DIV.embedly .provider {
+  color: gray;
+  padding-left: 10px;
+  font-weight: normal;
+  font-size: smaller;
+}
+DIV.embedly .description {
+  margin-top: 10px;
+  font-style: italic;
+}
+/*# sourceMappingURL=embedly.css.map */

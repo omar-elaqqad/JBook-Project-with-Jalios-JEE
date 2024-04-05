@@ -1,0 +1,37 @@
+/* ----------------------------------------------- */
+/*  Properties Editor                              */
+/* ----------------------------------------------- */
+#properties-editor CODE {
+  color: #333333;
+  background-color: transparent;
+}
+#properties-editor .nowrap CODE {
+  white-space: nowrap;
+}
+#properties-editor UL.dropdown-menu {
+  min-width: 300px;
+  max-width: 500px;
+}
+#properties-editor UL.dropdown-menu > LI > DIV.form-group {
+  padding-left: 10px;
+}
+#properties-editor .navbar-default .dropdown-menu LABEL INPUT {
+  margin-left: -20px;
+}
+#properties-editor .navbar-default .dropdown-menu .container-fluid {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+#properties-editor TBODY TD {
+  padding: 5px;
+}
+.property-table {
+  margin-bottom: 0px;
+}
+.property-data-value-edit {
+  visibility: hidden;
+}
+TD:hover .property-data-value-edit {
+  visibility: visible;
+}
+/*# sourceMappingURL=jalios-propeditor.css.map */

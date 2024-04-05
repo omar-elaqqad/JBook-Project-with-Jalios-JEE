@@ -1,0 +1,4 @@
+jcmsplugin.categoryrights.types: Typy
+jcmsplugin.categoryrights.types.help: Typy obsahu, ktoré budú ovládané (oddelené medzerami alebo čiarkami)
+jcmsplugin.categoryrights.cat-ids: Kategórie (ID)
+jcmsplugin.categoryrights.cat-ids.help: Identifikátory hlavných kategórií, ktoré budú ovládané (oddelené medzerami alebo čiarkami)

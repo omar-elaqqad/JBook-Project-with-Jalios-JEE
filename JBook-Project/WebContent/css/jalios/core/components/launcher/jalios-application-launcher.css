@@ -1,0 +1,446 @@
+.js-store-dropdown-install .appstore-menu-add {
+  padding-right: 8px;
+}
+.js-store-dropdown-install .appstore-menu-add .jalios-icon {
+  line-height: 20px;
+}
+.topbar-application-launcher .topbar-menu.dropdown-menu .topbar-ctxmenu-header-actions {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  float: inherit;
+}
+.application-launcher.display-arrows .scroller {
+  display: flex;
+}
+.application-launcher.display-arrows .nav-tabs-wrapper {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.application-launcher.application-store .application-wrapper {
+  transition: background-color 0.2s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px 10px 20px;
+  border-bottom: 1px solid #e8e8e8;
+  position: relative;
+}
+.application-launcher.application-store .application-wrapper.is-installed .installed-checkmark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.application-launcher.application-store .application-wrapper .installed-checkmark {
+  position: absolute;
+  display: none;
+  top: 2px;
+  right: 14px;
+}
+.application-launcher.application-store .application-wrapper .installed-checkmark .jalios-icon {
+  color: #4cd963;
+  font-size: 14px;
+}
+.application-launcher.application-store .application-wrapper .js-app-install {
+  margin-right: 4px;
+}
+.application-launcher.application-store .application-wrapper .js-app-install .jalios-icon {
+  color: #c5c5c5;
+  transition: color 200ms ease-in;
+  margin-right: 0;
+}
+.application-launcher.application-store .application-wrapper .js-app-install:hover .jalios-icon {
+  color: #555;
+}
+.application-launcher.application-store .application-wrapper .app-store-img {
+  margin-right: 14px;
+  width: 48px;
+}
+.application-launcher.application-store .application-wrapper .app-store-img img {
+  width: 48px;
+  height: 48px;
+}
+.application-launcher.application-store .application-wrapper .app-store-title {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.application-launcher.application-store .application-wrapper .app-store-description {
+  margin-bottom: 0;
+  word-break: break-all;
+}
+.application-launcher .application-launcher-error {
+  padding: 18px;
+}
+.application-launcher .application-launcher-error .jcms-message {
+  margin-bottom: 0;
+}
+.application-launcher .topbar-item-badge {
+  right: 16px;
+  top: 8px;
+  position: absolute;
+  z-index: 1;
+}
+.application-launcher .topbar-item-badge.app-badge-level-info {
+  background-color: #009EF5;
+}
+.application-launcher .topbar-item-badge.app-badge-level-warning {
+  background-color: #F89406;
+}
+.application-launcher .topbar-item-badge.app-badge-level-danger {
+  background-color: #d9534f;
+}
+.application-launcher .nav-tabs-border {
+  position: absolute;
+  width: 100%;
+  height: 48px;
+  border-bottom: 1px solid #eee;
+}
+.application-launcher .scroller {
+  display: none;
+  position: absolute;
+  height: 48px;
+  width: 40px;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: center;
+  transition: background-color 0.2s ease-in-out;
+}
+.application-launcher .scroller:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
+.application-launcher .scroller:active {
+  background-color: #f5f5f5;
+}
+.application-launcher .scroller.scroller-left {
+  left: 0;
+}
+.application-launcher .scroller.scroller-right {
+  right: 0;
+}
+.application-launcher .launcher-application-item.application-sortable-helper img {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.application-launcher .launcher-application-item.application-sortable-helper .label-wrapper {
+  opacity: 1;
+  transition: opacity 0.1s ease-in-out;
+}
+.application-launcher .launcher-application-item.application-sortable-helper.helper-over-tab {
+  background-color: transparent;
+  border: none;
+  padding-top: 0;
+}
+.application-launcher .launcher-application-item.application-sortable-helper.helper-over-tab .label-wrapper {
+  opacity: 0;
+}
+.application-launcher .launcher-application-item.application-sortable-helper.helper-over-tab img {
+  transform: scale(0.6);
+  transform-origin: bottom center;
+  animation: 0.8s ease 0s 1 normal both running wobble-hor-bottom;
+  background-color: white;
+}
+.application-launcher .application-launcher-backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.4;
+  z-index: 10;
+}
+.application-launcher .tab-delete-confirm {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.application-launcher .tab-delete-confirm .delete-tab-msg {
+  padding-bottom: 18px;
+}
+.application-launcher .tab-delete-confirm .btn {
+  margin-right: 4px;
+}
+.application-launcher .tab-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 10px;
+  padding-left: 4px;
+  padding-right: 4px;
+  overflow: hidden;
+}
+.application-launcher .application-trash {
+  position: relative;
+}
+.application-launcher .application-trash .trash-overlay {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 40px;
+  top: -2px;
+}
+.application-launcher .application-trash .trash-animate {
+  display: flex;
+  top: -2px;
+  position: absolute;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 0;
+  overflow: hidden;
+  background-color: #fbfbfb;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  transition: height 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.application-launcher .application-trash .jalios-icon {
+  font-size: 24px;
+  transition: background-color 0.2s ease-in-out;
+}
+.application-launcher .application-trash.active .trash-animate {
+  height: 40px;
+}
+.application-launcher .application-trash.application-over-bin .trash-animate {
+  background-color: #ff5853;
+}
+.application-launcher .application-trash.application-over-bin .trash-animate .jalios-icon {
+  color: #fff;
+}
+.application-launcher .new-tab-display {
+  padding: 14px 14px 0;
+  display: flex;
+}
+.application-launcher .new-tab-display .btn-new-tab {
+  margin-right: 8px;
+}
+.application-launcher .new-tab-display .tab-title {
+  flex: 1;
+  outline: 0 solid transparent;
+  margin-right: 8px;
+  height: 22px;
+}
+.application-launcher .nav-tabs-wrapper {
+  position: relative;
+  overflow: hidden;
+  min-height: 49px;
+}
+.application-launcher .nav-tabs-wrapper.not-active {
+  min-height: 0;
+}
+.application-launcher .nav-tabs-wrapper .topbar-item-badge {
+  top: 13px;
+  right: 9px;
+  border-radius: 50%;
+  height: 5px;
+  width: 5px;
+  padding: 0;
+  position: absolute;
+}
+.application-launcher .nav-tabs-wrapper .applications-launcher-plus {
+  color: #aaa;
+}
+.application-launcher .nav-tabs {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: left 0.2s ease-in-out;
+}
+.application-launcher .nav-tabs.nav-tabs-underlined {
+  display: inline;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  border-bottom: none;
+  height: 100%;
+}
+.application-launcher .nav-tabs.nav-tabs-underlined LI > A {
+  transition: none;
+}
+.application-launcher .nav-tabs.nav-tabs-underlined .ui-sortable-helper A {
+  background-color: #eee;
+}
+.application-launcher .nav-tabs .application-nav-tab-add {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.application-launcher .nav-tabs .application-nav-tab-add .application-nav-tab-link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.application-launcher .nav-tabs .application-nav-tab-add .application-nav-tab-link .jalios-icon {
+  color: #aaa;
+  margin: 0;
+}
+.application-launcher .nav-tabs .application-nav-tab {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.application-launcher .nav-tabs .application-nav-tab A {
+  display: flex;
+  padding: 14px 15px;
+  height: 100%;
+}
+.application-launcher .nav-tabs .application-nav-tab.active A {
+  padding-right: 1px;
+  padding-left: 13px;
+}
+.application-launcher .nav-tabs .application-nav-tab.active A .topbar-item-badge {
+  display: none;
+}
+.application-launcher .nav-tabs .application-nav-tab.active .topbar-item-badge {
+  right: 13px;
+}
+.application-launcher .nav-tabs .application-nav-tab.active .launcher-navtab-menu-btn {
+  display: block;
+  margin-left: 2px;
+  transition: background-color 0.2s ease-in-out;
+}
+.application-launcher .nav-tabs .application-nav-tab.active .launcher-navtab-menu-btn:hover {
+  background-color: #e8e8e8;
+  border-radius: 4px;
+}
+.application-launcher .nav-tabs .application-nav-tab.active .launcher-navtab-menu-btn:hover .jalios-icon {
+  color: #666666;
+}
+.application-launcher .nav-tabs .application-nav-tab.active .launcher-navtab-menu-btn .jalios-icon {
+  color: #009ef5;
+  margin: 8px 4px;
+}
+.application-launcher .nav-tabs .application-nav-tab .launcher-navtab-menu-btn {
+  display: none;
+}
+.application-launcher .nav-tabs li {
+  transition: background-color 0.2s ease-in-out;
+}
+.application-launcher .nav-tabs li.active A:hover {
+  cursor: pointer;
+}
+.application-launcher .nav-tabs li.tab-drop-over {
+  background-color: #009ef5;
+}
+.application-launcher .nav-tabs li.tab-drop-over.active A {
+  color: white;
+}
+.application-launcher .nav-tabs li.tab-drop-over A {
+  color: white;
+}
+.application-launcher .tab-applications {
+  position: relative;
+}
+.application-launcher .tab-applications.active {
+  display: inline-block;
+  min-height: 99px;
+  margin-bottom: 4px;
+}
+.application-launcher .tab-applications .tab-applications-items {
+  position: relative;
+}
+.application-launcher .tab-applications .tab-applications-items .launcher-application-item {
+  position: relative;
+  float: left;
+}
+.application-launcher .tab-applications .tab-applications-clone {
+  position: absolute;
+  background-color: #86777717;
+}
+.application-launcher .launcher-application-item {
+  background-color: white;
+  text-align: center;
+  width: 100px;
+  height: 83px !important;
+  margin-bottom: 16px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 16px;
+  cursor: pointer;
+  border: 1px solid white;
+  padding-top: 10px;
+  -webkit-transition: border 200ms linear;
+  -o-transition: border 200ms linear;
+  transition: border 200ms linear;
+  position: relative;
+}
+.application-launcher .launcher-application-item.is-clone {
+  position: absolute !important;
+}
+.application-launcher .launcher-application-item:hover {
+  border: 1px solid #e8e8e8;
+  text-decoration: none;
+}
+.application-launcher .launcher-application-item .icon-wrapper {
+  display: inline-block;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 8px;
+}
+.application-launcher .launcher-application-item .icon-wrapper > IMG {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+}
+.application-launcher .launcher-application-item .label-wrapper {
+  color: #333;
+  font-size: 12px;
+  display: block;
+}
+.launcher-slit-out-vertical {
+  -webkit-animation: launcher-slit-out-vertical 0.5s ease-in both;
+  animation: launcher-slit-out-vertical 0.5s ease-in both;
+}
+@media screen and (max-width: 480px) {
+  .topbar-application-launcher .dropdown-menu.topbar-menu {
+    bottom: inherit;
+  }
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2019-3-27 11:13:28
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation slit-out-vertical
+ * ----------------------------------------
+ */
+@-webkit-keyframes launcher-slit-out-vertical {
+  0% {
+    -webkit-transform: translateZ(0) rotateY(0);
+    transform: translateZ(0) rotateY(0);
+    opacity: 1;
+  }
+  54% {
+    -webkit-transform: translateZ(-160px) rotateY(87deg);
+    transform: translateZ(-160px) rotateY(87deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateZ(-800px) rotateY(90deg);
+    transform: translateZ(-800px) rotateY(90deg);
+    opacity: 0;
+  }
+}
+@keyframes slit-out-vertical {
+  0% {
+    -webkit-transform: translateZ(0) rotateY(0);
+    transform: translateZ(0) rotateY(0);
+    opacity: 1;
+  }
+  54% {
+    -webkit-transform: translateZ(-160px) rotateY(87deg);
+    transform: translateZ(-160px) rotateY(87deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateZ(-800px) rotateY(90deg);
+    transform: translateZ(-800px) rotateY(90deg);
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=jalios-application-launcher.css.map */

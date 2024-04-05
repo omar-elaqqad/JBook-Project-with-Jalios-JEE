@@ -1,0 +1,1 @@
+(function(e,d,b,g){var c="#jportal-return-to-top";var a=function(h){if(e(this).scrollTop()>=100){e(c).fadeIn(200)}else{e(c).fadeOut(200)}};var f=function(h){e("body,html").animate({scrollTop:0},500)};e(b).ready(function(h){h(b).on("scroll",a);h(b).on("click",c,f)})})(jQuery,window,document);

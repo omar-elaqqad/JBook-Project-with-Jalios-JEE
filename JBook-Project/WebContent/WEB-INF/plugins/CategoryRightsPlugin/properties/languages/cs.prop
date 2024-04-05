@@ -1,0 +1,4 @@
+jcmsplugin.categoryrights.types: Typy
+jcmsplugin.categoryrights.types.help: Typy obsahů, které mají být kontrolovány (oddělené mezerami nebo čárkami)
+jcmsplugin.categoryrights.cat-ids: Kategorie (ID)
+jcmsplugin.categoryrights.cat-ids.help: Identifikátory kořenů kategorií, které mají být kontrolovány (oddělené mezerami nebo čárkami)

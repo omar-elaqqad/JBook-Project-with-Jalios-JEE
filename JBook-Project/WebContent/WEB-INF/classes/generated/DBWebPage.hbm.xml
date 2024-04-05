@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "classpath://org/hibernate/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="generated.DBWebPage" table="G_DBWEBPAGE">
+    <cache usage="read-write" />  
+    <id name="rowId" column="rowId">
+      <generator class="native"/>
+    </id>
+    <property name="cdate" not-null="true" index="IG_DBWEBPAGE_CDATE" />
+    <property name="mdate" not-null="true" index="IG_DBWEBPAGE_MDATE" />
+    <property name="authorId" length="32" index="IG_DBWEBPAGE_AUTHORID" />
+    
+    <property name="pstatus" not-null="true" index="IG_DBWEBPAGE_PSTATUS" />
+    <property name="workspaceId" not-null="true" length="32" index="IG_DBWEBPAGE_WSID" />
+    
+    <property name="pdate"  index="IG_DBWEBPAGE_PDATE" />
+    <property name="edate" />
+    <property name="adate" />
+    <property name="title" />
+    <property name="workflowId" index="IG_DBWEBPAGE_WFID" />
+    <property name="udate" />
+    <property name="majorVersion" />
+    <property name="minorVersion" />
+    <property name="hasNoReadRights" index="IG_DBWEBPAGE_HASNOREADRIGHTS" />
+    <property name="tracked" />
+    <property name="readerCount" index="IG_DBWEBPAGE_READERCOUNT" />
+    <property name="voteCount" not-null="false" index="IG_DBWEBPAGE_VOTECOUNT" />
+    <property name="voteScore" not-null="false" index="IG_DBWEBPAGE_VOTESCORE" />
+    
+    <property name="mainInstanceId" not-null="false" length="32" index="IG_DBWEBPAGE_MAINSTID" />    
+    <property name="mergeId" length="32" />    
+    <property name="mergeDate" />
+    <property name="hasAttachWS" index="IG_DBWEBPAGE_HATHWS"  />
+    <property name="opAuthorId" length="32" index="IG_DBWEBPAGE_OPAUTHORID"  />
+    <property name="readAck" />
+    <property name="restrictUpdateRights" />
+    
+    <property name="roleMapStr" type="text" length="65536" />
+    <property name="titleMLE" type="text" length="1048576" />
+    <property name="mainLanguage" />
+    <property name="url" />
+    
+    
+    <property name="urlToShot" />
+    
+    
+    <property name="description" type="text" length="65536" />
+    
+    
+    <property name="descriptionMLE" type="text" length="1048576" />
+    
+    <!--  COLLECTIONS FOR CATEGORIES -->
+    <set name="catIdSet" table="G_DBWEBPAGE_CATSET" lazy="true">
+      <cache usage="read-write" />
+      <key>
+        <column name="ITEM_ID" index="IG_DBWEBPAGE_CATSET_I"/>
+      </key>
+      <element type="string">
+        <column name="VALUE" length="64" index="IG_DBWEBPAGE_CATSET"/>
+      </element>      
+    </set>
+    
+    <set name="allCatIdSet" table="G_DBWEBPAGE_ALLCATSET"  lazy="true">
+      <cache usage="read-write" />
+      <key>
+        <column name="ITEM_ID" index="IG_DBWEBPAGE_ALLCATSET_I"/>
+      </key>
+      <element type="string">
+        <column name="VALUE" length="64" index="IG_DBWEBPAGE_ALLCATSET"/>
+      </element>      
+    </set>
+    
+    <!--  COLLECTIONS FOR READ-RIGHTS -->
+    <set name="authGrpIdSet" table="G_DBWEBPAGE_AUTHGRPSET" lazy="true">
+      <cache usage="read-write" />
+      <key>
+        <column name="ITEM_ID" index="IG_DBWEBPAGE_AUTHGRPSET_I"/>
+      </key>
+      <element type="string">
+        <column name="VALUE" length="64" index="IG_DBWEBPAGE_AUTHGRPSET"/>
+      </element>      
+    </set>    
+    
+    <set name="authMbrIdSet" table="G_DBWEBPAGE_AUTHMBRSET" lazy="true">
+      <cache usage="read-write" />
+      <key>
+        <column name="ITEM_ID" index="IG_DBWEBPAGE_AUTHMBRSET_I"/>
+      </key>
+      <element type="string">
+        <column name="VALUE" length="64" index="IG_DBWEBPAGE_AUTHMBRSET"/>
+      </element>      
+    </set>
+    
+    <!--  COLLECTIONS FOR UPDATE-RIGHTS -->
+    <set name="updateGrpIdSet" table="G_DBWEBPAGE_UPDATEGRPSET" lazy="true">
+      <cache usage="read-write" />
+      <key>
+        <column name="ITEM_ID" index="IG_DBWEBPAGE_UPDATEGRPSET_I"/>
+      </key>
+      <element type="string">
+        <column name="VALUE" length="64" index="IG_DBWEBPAGE_UPDATEGRPSET"/>
+      </element>      
+    </set>    
+    
+    <set name="updateMbrIdSet" table="G_DBWEBPAGE_UPDATEMBRSET" lazy="true">
+      <cache usage="read-write" />
+      <key>
+        <column name="ITEM_ID" index="IG_DBWEBPAGE_UPDATEMBRSET_I"/>
+      </key>
+      <element type="string">
+        <column name="VALUE" length="64" index="IG_DBWEBPAGE_UPDATEMBRSET"/>
+      </element>      
+    </set>
+    
+    <!--  COLLECTIONS FOR FRIENDLYURL -->
+    <set name="dbFriendlyURLSet" table="G_DBWEBPAGE_FURLSET">
+      <cache usage="read-write" />
+      <key>
+        <column name="ITEM_ID" index="IG_DBWEBPAGE_FURLSET_I"/>
+      </key>
+      <element type="string">
+        <column name="VALUE"/>
+      </element>      
+    </set>    
+    
+    <!--  COLLECTIONS FOR attachWSIdSet -->
+    <set name="attachWSIdSet" table="G_DBWEBPAGE_AWSET">
+      <cache usage="read-write" />
+      <key>
+        <column name="ITEM_ID" index="IG_DBWEBPAGE_AWSET_I"/>
+      </key>
+      <element type="string">
+        <column name="VALUE"/>
+      </element>      
+    </set>    
+  </class>
+</hibernate-mapping>
+<!-- **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY * DO NOT EDIT ANYTHING BELOW THIS LINE *** -->
+<!-- XTcDiTfv9ARMOaHWFvFlZg== -->

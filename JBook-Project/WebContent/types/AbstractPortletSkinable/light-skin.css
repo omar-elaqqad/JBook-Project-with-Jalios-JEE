@@ -1,0 +1,43 @@
+.light-skin {
+  margin-bottom: 40px;
+}
+.light-skin .portlet-header {
+  margin-bottom: 16px;
+}
+.light-skin .light-skin-header.portlet-header-primary {
+  color: var(--portlet-primary-color);
+}
+.light-skin .light-skin-header .title-wrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.light-skin .light-skin-header .title .skin-header-icon {
+  font-size: 24px;
+}
+.light-skin .light-skin-header .btn-portlet-header {
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 8px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.light-skin .light-skin-footer-buttons {
+  display: flex;
+  align-items: center;
+  padding-top: 8px;
+}
+.light-skin .light-skin-footer-buttons.align-centered {
+  justify-content: center;
+}
+.light-skin .light-skin-footer-buttons.align-right {
+  justify-content: end;
+}
+.light-skin .light-skin-header-sub {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 0;
+}
+/*# sourceMappingURL=light-skin.css.map */

@@ -1,0 +1,23 @@
+<%  
+    Category cat = getCategoryParameter("blogCatId");
+    Publication pub = (Publication) request.getAttribute(PortalManager.PORTAL_PUBLICATION);
+    String blogSubTitle = getUntrustedStringParameter("blogDisplay","");
+%>
+<div class="blog-header noTooltipCard br">
+	<ul class="breadcrumb">
+		<li class="blog-title" itemprop="name"><jalios:link data="<%= blog %>"><%= blog.getTitle(userLang,true) %></jalios:link></li>
+		<% if (pub != null && pub instanceof BlogPost) { %>
+			<li class="active">
+		    <%= pub.getDataName(userLang) %>
+			</li>
+		<% } else  if (cat != null) { %>
+			<li class="active"><%= cat.getDataName(userLang) %></li>    
+		<% } else if("addPost".equals(blogSubTitle)){ %>
+			<li class="active"><%= glp("jcmsplugin.blog.label.action.add-post") %></li>    
+		<% } else if("posts".equals(blogSubTitle)){ %>
+			<li class="active"><%= glp("jcmsplugin.blog.admin.handle-posts") %></li>    
+		<% } else if("draft".equals(blogSubTitle)){ %>
+			<li class="active"><%= glp("jcmsplugin.blog.label.action.see-draft") %></li>            
+		<% } %>
+	</ul>  
+</div> 

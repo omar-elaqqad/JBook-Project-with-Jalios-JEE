@@ -1,0 +1,372 @@
+# ------------------------------------------------------------
+#  BLOG VIRTUAL ID
+# ------------------------------------------------------------
+jcmsplugin.blog.create-blogosphere: Blogoszféra létrehozása
+
+$id.Blog.model.help:   Modell használata a szolgáltatások másolására
+$id.jcmsplugin.blog.blogosphere:                Tagok blogjának munkaterületi azonosítója
+$id.jcmsplugin.blog.blogosphere.category.root:  Blogoszféra gyökérkategóriájának azonosítója
+$id.jcmsplugin.blog.blogger.group-attendees:    Blogoszféra-tag csoportazonosítója
+# ------------------------------------------------------------
+#  BLOG Terms and conditions Agreement
+# ------------------------------------------------------------
+jcmsplugin.blog.agreement.btn.agree:          Elfogadom
+jcmsplugin.blog.agreement.btn.disagree:       Nem fogadom el
+# ------------------------------------------------------------
+#  BLOG LABELS
+# ------------------------------------------------------------
+jcmsplugin.blog.label.blog:             Blog
+jcmsplugin.blog.label.blogosphere:      Blogoszféra
+jcmsplugin.blog.label.blog-post-count:  {0} blogbejegyzés
+jcmsplugin.blog.label.category:         {0} kategória
+jcmsplugin.blog.label.create-ws-blog:   Blog létrehozása ezen a munkaterületen
+jcmsplugin.blog.label.no-workspace-blog:Nincsenek blogok ezen a munkaterületen.
+jcmsplugin.blog.label.pending-request:  A blog megnyitására vonatkozó kérése feldolgozás alatt áll.
+jcmsplugin.blog.label.rejected-request: A blog megnyitására vonatkozó kérése el lett utasítva.
+jcmsplugin.blog.label.blog-request:     Blog megnyitásának kérése
+jcmsplugin.blog.label.blog-create:      Saját blog létrehozása
+jcmsplugin.blog.label.blog-ws-create:   Munkaterület blog létrehozása
+jcmsplugin.blog.label.add-blog-post:    Bejegyzés közzététele a blogomban
+jcmsplugin.blog.label.already-has-blog: Önnek már van egy blogja.
+jcmsplugin.blog.label.add-blog-post-ws: Bejegyzés közzététele
+jcmsplugin.blog.label.delete-comment-confirm: Biztosan törölni szeretné ezt:
+jcmsplugin.blog.label.access-full-blog: Tag blogjának elérése.
+jcmsplugin.blog.label.access-my-blog:   Saját blog elérése.
+jcmsplugin.blog.label.all-blog:         Összes blog
+jcmsplugin.blog.label.access-blog:      Blog elérése: {0}
+jcmsplugin.blog.label.no-comments:      Még nincsenek hozzászólások az Ön blogján.
+jcmsplugin.blog.label.no-posts:         Még nincsenek bejegyzések az Ön blogján.
+jcmsplugin.blog.label.blog-attendees:   Blogoszféra tagjai
+jcmsplugin.blog.label.blog-validators:  Blogoszféra érvényesítők
+jcmsplugin.blog.label.bloggers:         Bloggerek
+jcmsplugin.blog.label.unread:           Olvasatlan
+jcmsplugin.blog.label.draft:            Vázlat
+jcmsplugin.blog.label.my-blog:          Saját blog
+jcmsplugin.blog.label.new-comment:      {0} {0,choice,0#új hozzászólás|1#új hozzászólás|2#új hozzászólás}
+jcmsplugin.blog.label.portlet.type-subject: Adja meg itt az új blogbejegyzésének címét.
+jcmsplugin.blog.label.continue:         Folytatás...
+jcmsplugin.blog.label.no-blog-under-ws: A blog még nem lett létrehozva
+jcmsplugin.blog.label.activate-blog:    A blog aktiválása
+jcmsplugin.blog.label.my-actions:       Saját műveletek
+jcmsplugin.blog.label.access-member-blog:   Saját blog
+jcmsplugin.blog.label.access-ws-blog:       Az együttműködési tér blogjának elérése
+jcmsplugin.blog.tab.last-blog-post:     Blogbejegyzés
+jcmsplugin.blog.label.the-blog-of:      {0} blogja
+jcmsplugin.blog.tab.last-blog:          Blog
+jcmsplugin.blog.tab.my-blog-post:       Saját blogbejegyzés
+jcmsplugin.blog.tab.blog-choice:        Blog választás:
+jcmsplugin.blog.tab.posted-by:          Közzétette:
+jcmsplugin.blog.label.by:               a következő által:
+jcmsplugin.blog.submit:                 Elküldés
+jcmsplugin.blog.edit.complete:          Teljes szerkesztés
+jcmsplugin.blog.follow:                 Feliratkozás a blogra
+jcmsplugin.blog.follow-message:         Ön nem iratkozott fel az új bejegyzésekre
+jcmsplugin.blog.unfollow:               Leiratkozás a blogról
+jcmsplugin.blog.unfollow-message:       Ön már nincs feliratkozva új bejegyzésekre
+jcmsplugin.blog.app-sidebar.follow:     Feliratkozás
+jcmsplugin.blog.manage-posts.title:     Bejegyzések kezelése
+jcmsplugin.blog.manage-posts.table-caption: Blogbejegyzések listája
+jcmsplugin.blog.app-sidebar.follow.tooltip: Feliratkozás egy új bejegyzésre
+jcmsplugin.blog.app-sidebar.unfollow:   Leiratkozás
+jcmsplugin.blog.app-sidebar.unfollow.tooltip: Leiratkozás az új bejegyzésekről
+jcmsplugin.blog.label.all-authors: Összes szerző
+jcmsplugin.blog.msg.edit.delete-blog-no-post: A bejegyzéseket tartalmazó blog nem törölhető.
+
+# ------------------------------------------------------------
+#  BLOG LISTS
+# ------------------------------------------------------------
+jcmsplugin.blog.label.empty:                Ebben a blogban még nincsenek hozzászólások.
+jcmsplugin.blog.label.empty-search:         A keresése nem ad eredményt.
+jcmsplugin.blog.label.empty-drafts:         Jelenleg nincsenek vázlatai.
+jcmsplugin.blog.label.empty-cat:            Nincsenek bejegyzések ebben a kategóriában.
+# ------------------------------------------------------------
+#  BLOG POST
+# ------------------------------------------------------------
+
+jcmsplugin.blog.label.stats.visit-count:    Olvasások
+jcmsplugin.blog.label.stats.unique-visit:   Olvasók
+
+jcmsplugin.blog.label.action.follow:        Feliratkozás erre a blogra
+jcmsplugin.blog.label.action.unfollow:      Leiratkozás erről a blogról
+
+jcmsplugin.blog.label.action.follow-blog:   Feliratkozás erre a blogra
+jcmsplugin.blog.label.action.unfollow-blog: Leiratkozás erről a blogról
+jcmsplugin.blog.label.action.follow-blog-text:   Szeretné megkapni a blogon utoljára közzétett bejegyzéseket e-mailben?
+jcmsplugin.blog.label.action.unfollow-blog-text: Szeretné leállítani a blogon utoljára közzétett bejegyzésekkel kapcsolatos e-mailek küldését?
+
+
+jcmsplugin.blog.label.info.in:              A következőben:
+jcmsplugin.blog.label.info.comments:        {0,choice,0#hozzászólás|1#hozzászólás|2#hozzászólás}
+
+jcmsplugin.blog.label.read-more:            Bővebben
+jcmsplugin.blog.label.blog.desc.show-more:  Részletek megjelenítése
+jcmsplugin.blog.blog-desc.btn.show-more.title: Leírás megjelenítése
+jcmsplugin.blog.blog-desc.btn.show-less.title: Leírás elrejtése
+
+jcmsplugin.blog.title.add-post:             Egy új blogbejegyzés hozzáadása
+jcmsplugin.blog.title.save-as-draft:        Vázlat
+jcmsplugin.blog.label.action.publish:       Közzététel
+# ------------------------------------------------------------
+#  BLOG SIDEBAR
+# ------------------------------------------------------------
+jcmsplugin.blog.title.admin:      Adminisztráció
+jcmsplugin.blog.title.archive:    Archívumok
+jcmsplugin.blog.title.authors:    Szerzők
+jcmsplugin.blog.title.categories: Kategóriák
+jcmsplugin.blog.title.recent-post:Friss bejegyzések
+jcmsplugin.blog.title.no-category:Nincs kategória
+jcmsplugin.blog.label.edit-blog:      A blog szerkesztése
+jcmsplugin.blog.label.action.add-post:      Bejegyzés közzététele
+jcmsplugin.blog.label.action.add-post-wf:   Bejegyzés közzététele
+jcmsplugin.blog.label.action.see-draft:     Vázlatok megtekintése
+jcmsplugin.blog.label.action.add-category:  Kategóriák hozzáadása
+jcmsplugin.blog.label.action.add-sub-category:  Alkategóriák hozzáadása
+jcmsplugin.blog.label.action.add-sub-authors:  Társszerzők hozzáadása
+jcmsplugin.blog.label.action.search:  Keresés
+jcmsplugin.blog.label.action.search-post.placeholer: Bejegyzések keresése...
+jcmsplugin.blog.label.action.see-all-authors:  Az összes szerző megtekintése
+jcmsplugin.blog.label.post-in-cat:  {0,choice,1#{0} bejegyzés a kategóriában {1}|2#{0} bejegyzés a kategóriában {1}}
+jcmsplugin.blog.app.sidebar.all-posts-link: Minden bejegyzés
+# ------------------------------------------------------------
+#  BLOG MODAL
+# ------------------------------------------------------------
+jcmsplugin.blog.title.ws-blog:       Munkaterület blogja
+
+jcmsplugin.blog.title.add-cat:       Kategóriák hozzáadása
+jcmsplugin.blog.title.add-sub-cat:   Alkategóriák hozzáadása ehhez: {0}
+jcmsplugin.blog.label.add-cat:       Adja meg a hozzáadandó kategóriák neveit (vesszővel elválasztva)
+
+jcmsplugin.blog.title.blog-request:  Blog megnyitásának kérése
+jcmsplugin.blog.title.edit-comment:  Hozzászólás szerkesztése
+
+jcmsplugin.blog.blog-root.label:     Gyökér
+jcmsplugin.blog.blog-root.description:     A gyökér a Blog kategóriák esetén
+# ------------------------------------------------------------
+#  BLOG LAYOUT
+# ------------------------------------------------------------
+
+jcmsplugin.blog.label.add-blog:      Blog létrehozása
+jcmsplugin.blog.label.edit-blog:     A blog szerkesztése
+jcmsplugin.blog.label.add-post:      Egy blogbejegyzés közzététele
+jcmsplugin.blog.label.edit-post:     A blogbejegyzés szerkesztése
+jcmsplugin.blog.label.author:        Közzétette: {0}
+jcmsplugin.blog.label.last-post:     Legutóbbi bejegyzések
+jcmsplugin.blog.label.search:        Keresés
+
+# ------------------------------------------------------------
+#  BLOG REQUEST
+# ------------------------------------------------------------
+
+jcmsplugin.blog.agreement.required:            A Blog feltételek elfogadása
+$id.jcmsplugin.blog.agreement.terms.pub:       Blog feltételek - Közzététel
+jcmsplugin.blog.agreement.terms.field:         Blog feltételek - Mező
+jcmsplugin.blog.agreement.btn.agree:           Elfogadom
+jcmsplugin.blog.agreement.btn.disagree:        Elutasítom
+jcmsplugin.blog.agreement.date:      Blog: Feltételek elfogadásának dátuma
+jcmsplugin.blog.agreement.title:               Feltételek
+jcmsplugin.blog.agreement.text:                A blog feltételek nincsenek meghatározva. Kérjük, frissítse a tulajdonságokat <code>{0}</code> és <code>{1}</code>.
+
+# ------------------------------------------------------------
+#  BLOG PORTLET
+# ------------------------------------------------------------
+
+$id.jcmsplugin.blog.portlet.categories:       Blog - kategóriák
+$id.jcmsplugin.blog.portlet.recent-post:      Blog - legutóbbi bejegyzések
+$id.jcmsplugin.blog.portlet.archive:          Blog - archívum
+$id.jcmsplugin.blog.portlet.member-profile:   Blog - tagprofil
+$id.jcmsplugin.blog.portlet.post-list:        Blog - bejegyzések listája
+$id.jcmsplugin.blog.portlet.post-full:        Blog - Bejegyzés
+$id.jcmsplugin.blog.portlet.admin:            Blog - Admin
+$id.jcmsplugin.blog.portlet.add-post:         Blog - Bejegyzés hozzáadása
+$id.jcmsplugin.blog.portlet.authors:          Blog - Szerzők listája
+$id.jcmsplugin.blog.portlet.handle-posts:     Blog - Bejegyzés kezelés
+# ------------------------------------------------------------
+#  BLOG ADMIN
+# ------------------------------------------------------------
+jcmsplugin.blog.admin.author:                 Szerző
+jcmsplugin.blog.admin.modify:                 Módosítás
+jcmsplugin.blog.admin.add-authors:            Szerzők kezelése
+jcmsplugin.blog.admin.add-authors-description: Válassza ki azokat a tagokat, akik bejegyzéseket adhatnak hozzá a következőben: <b>{0}</b>.
+jcmsplugin.blog.admin.delete:                 Törlés
+jcmsplugin.blog.admin.handle-posts:           Bejegyzések kezelése
+jcmsplugin.blog.admin.handle.unique-visitor:  Olvasások
+jcmsplugin.blog.admin.handle.total-visitor:   Olvasók
+jcmsplugin.blog.admin.handle.comment-count:   Hozzászólások
+jcmsplugin.blog.admin.handle.vote-count:      Szavazatok
+jcmsplugin.blog.admin.handle.post-date:       Módosítás
+jcmsplugin.blog.admin.handle.sort-by:         A következők szerint rendezett bejegyzések
+jcmsplugin.blog.admin.handle.or:              vagy
+jcmsplugin.blog.label.title:                  Cím
+jcmsplugin.blog.label.date:                   Dátum
+jcmsplugin.blog.admin.author-list:            Szerző-lista
+jcmsplugin.blog.admin.see-my-post:            A bejegyzéseim megtekintése
+jcmsplugin.blog.admin.see-member-post:        Bejegyzések megtekintése
+jcmsplugin.blog.admin.see-all-post:           Összes bejegyzés megtekintése
+
+# ------------------------------------------------------------
+#  BLOG WARNING
+# ------------------------------------------------------------
+
+jcmsplugin.blog.warning.ws-has-a-blog:             Már van egy blog ({0}) a munkaterületén.
+jcmsplugin.blog.warning.duplicate-same:            Már van egy ugyanilyen nevű blog az aktuális munkaterületen
+jcmsplugin.blog.warning.text:                      Kérjük, írjon be egy szöveget
+jcmsplugin.blog.warning.member-has-a-blog:         A/az "{0}" tagnak már van egy blogja a blogoszférában: {1}.
+jcmsplugin.blog.warning.blogosphere-root-cat:      A blogoszféra gyökérkategóriája nem létezik a blogok esetén. Kérjük, frissítse azt a bővítmény tulajdonságaiban.
+jcmsplugin.blog.warning.blogosphere-forbidden-blog:Ön nem jogosult közzétenni egy blogbejegyzést a következő blogban: "{0}"
+jcmsplugin.blog.warning.forbidden-blog:            Ön nem jogosult közzétenni egy blogbejegyzést a következő együttműködési blogban: "{0}"
+jcmsplugin.blog.warning.forbidden-blog-create:     Ön nem jogosult létrehozni egy blogot.
+
+# ------------------------------------------------------------
+#  BLOG ACL
+# ------------------------------------------------------------
+acl.resource.admin/work/blogospherecreation: Blog - Blog hozzáadása a blogoszférához
+
+
+# ------------------------------------------------------------
+#  PUBLISH MENU
+# ------------------------------------------------------------
+jcmsplugin.blog.publish-menu.add-cs:   Blogbejegyzés
+jcmsplugin.blog.publish-menu.add-mine: Bejegyzés a blogomban
+
+
+# ------------------------------------------------------------
+#  CategoryBrowser
+# ------------------------------------------------------------
+category.category-browser.blog: Keresés a blogban
+
+
+# ----------------------------------------------------------------------
+# Alert
+# ----------------------------------------------------------------------
+alert.name.jcmsplugin-blog:                               Blog
+
+alert.name.jcmsplugin-blog.new-blogpost:                  Új blogbejegyzés
+alert.msg.jcmsplugin-blog.new-blogpost.title:             Új blogbejegyzés: {data}
+alert.msg.jcmsplugin-blog.new-blogpost.short-description: {author} közzétett egy új blogbejegyzést {data} itt: {parent}. {data.url}
+alert.msg.jcmsplugin-blog.new-blogpost.description:       <p>{author} közzétett egy új blogbejegyzést {data} itt: {parent.link}.</p> 
+
+alert.name.jcmsplugin-blog.update-blogpost:               Blogbejegyzés frissítés
+alert.msg.jcmsplugin-blog.update-blogpost.title:          Egy blogbejegyzés frissült: {data}
+alert.msg.jcmsplugin-blog.update-blogpost.short-description: {author} frissítette a blogbejegyzést {data} itt: {parent}. {data.url}
+alert.msg.jcmsplugin-blog.update-blogpost.description:       <p>{author} frissítette a blogbejegyzést {data} itt: {parent.link}.</p> 
+
+alert.name.jcmsplugin-blog.blog-opening:                  Blog megnyitási kérés érvényesítése
+alert.msg.jcmsplugin-blog.blog-opening.title:             Az Ön blog megnyitási kérésének érvényesítése megtörtént
+alert.msg.jcmsplugin-blog.blog-opening.short-description: {author} érvényesítette a blogmegnyitási kérelmét: {data}. {data.url}
+alert.msg.jcmsplugin-blog.blog-opening.description:       <p>{author} érvényesítette a blogmegnyitási kérelmét: {data}:</p> 
+
+# ------------------------------------------------------------
+#  BLOG TOOLS
+# ------------------------------------------------------------
+
+jcmsplugin.blog.tools.title:  A blogbejegyzés (tároló) betöltése a blogbejegyzésbe (adatbázis) - 2. lépés
+jcmsplugin.blog.tools.text1:  Blog importálásának információi
+jcmsplugin.blog.tools.text2:  1. A blogbejegyzés importálása a tárolóból az adatbázisban elhelyezkedő blogbejegyzésbe
+jcmsplugin.blog.tools.text3:  2. Minden blog inicializálása az új paraméterekkel
+ui.adm.jcms5-loader.btn.load:        Adatok betöltése
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From Blog-templates.xml
+types.Blog.templates.editFront.default.label: Front Office szerkesztő sablon
+types.Blog.templates.editFrontOld.default.label: Régi Front Office szerkesztő sablon
+types.Blog.templates.query.default.label: Alapértelmezett sablon
+types.Blog.templates.box.default.label: Alapértelmezett sablon
+types.Blog.templates.edit.default.label: Front Office szerkesztő sablon
+types.Blog.templates.fullold.default.label: Régi sablon
+types.Blog.templates.full.old.label: Régi sablon
+types.Blog.templates.full.default.label: Alapértelmezett JNews sablon
+ui.editportlet.usage.fullold: Régi sablon
+
+# From Blog.xml
+types.Blog.fields.bloggerGroup.label: Blogger-csoport
+types.Blog.title.label: Cím
+types.Blog.fields.description.label: Blog leírása
+types.Blog.label: Blog
+
+# From BlogPost-templates.xml
+types.BlogPost.templates.editFront.default.label: Front Office szerkesztő sablon
+types.BlogPost.templates.editFrontOld.default.label: Régi Front Office szerkesztő sablon
+types.BlogPost.templates.query.default.label: Alapértelmezett sablon
+types.BlogPost.templates.edit.default.label: Sablon szerkesztése
+types.BlogPost.templates.full.default.label: Alapértelmezett sablon
+types.BlogPost.templates.fullold.default.label: Régi sablon
+types.BlogPost.templates.full.default.label: Alapértelmezett sablon
+types.BlogPost.templates.appBody.default.label: Világos sablon az alkalmazás törzsének megjelenítéséhez
+
+# From BlogPost.xml
+types.BlogPost.fields.summary.description: Ez a bejegyzés összefoglalása, amely meg lesz jelenítve a bejegyzéslistában és a feliratkozottaknak elküldött e-mailben.
+types.BlogPost.fields.blog.label: Blog
+types.BlogPost.fields.category.description: Több kategóriát kiválaszthat.
+types.BlogPost.fields.content.label: Szöveg
+types.BlogPost.label: Blogbejegyzés
+types.BlogPost.title.label: Cím
+types.BlogPost.fields.category.label: Kategória
+types.BlogPost.fields.summary.label: Összefoglaló
+types.BlogPost.fields.featuredImage.label: Kép
+types.BlogPost.fields.featuredImage.description: Ennek a képnek nagy méretűnek kell lennie, lehetőleg 16/9 formátummal (pl. 960x540).
+types.BlogPost.fields.featuredImageAlt.label: Kép szöveges alternatíva
+types.BlogPost.fields.featuredImageAlt.description: Ez a szöveg lesz alkalmazva a kép alt attribútumaként
+types.BlogPost.fields.thumbnailImage.label: Miniatűr kép
+types.BlogPost.fields.thumbnailImage.description: A képből egy miniatűr kép lesz létrehozva. De választhat másik miniatűr képet. Ennek nagyobbnak kell lennie, mint 300x150, lehetőleg 4/3 vagy 16/9 formátummal.
+types.BlogPost.fields.thumbnailImageAlt.label: Miniatűr kép szöveges alternatíva
+types.BlogPost.fields.thumbnailImageAlt.description: Ez a szöveg lesz alkalmazva a miniatűr kép alt attribútumaként
+types.BlogPost.fields.imageAltText.label: Szöveges alternatíva
+types.BlogPost.btn.show-options: Több opció...
+types.BlogPost.btn.hide-options: Kevesebb opció...
+
+# From BlogRequest.xml
+types.BlogRequest.fields.description.label: Leírás
+types.BlogRequest.title.label: Blog neve
+types.BlogRequest.label: Blog megnyitásának kérése
+
+# From PortletBlog-templates.xml
+types.PortletBlog.templates.box.default.label: Alapértelmezett sablon
+types.PortletBlog.templates.box.default.description: Az alapértelmezett sablon ezen portlet esetén
+types.PortletBlog.templates.box.itembox.label: Lista stílusbeállítása item-box-ként
+types.PortletBlog.templates.box.itembox.description: Lista stílusbeállítása item-box-ként
+types.PortletBlog.templates.edit.default.label: Alapértelmezett sablon
+types.PortletBlog.templates.edit.default.description: Az alapértelmezett sablon ezen portlet esetén
+types.PortletBlog.templates.full.default.label: Alapértelmezett sablon
+types.PortletBlog.templates.full.default.description: Az alapértelmezett sablon ezen portlet esetén
+types.PortletBlog.templates.query.default.label: Alapértelmezett sablon
+types.PortletBlog.templates.query.default.description: Az alapértelmezett sablon ezen portlet esetén
+
+# From PortletBlog.xml
+types.PortletBlog.label: Blog portlet
+types.PortletBlog.fields.displayedList.labelList: Blogok és bejegyzések minden munkaterületről|Munkaterület-bejegyzések
+types.PortletBlog.fields.displayedList.label: Megjelenített lista
+types.PortletBlog.title.label: Cím
+types.PortletBlog.description: Megjeleníti a blogbejegyzések és a blogok listáját
+
+# From wfblogrequest.xml
+workflows.wfblogrequest.label: Blog - Blog megnyitási kérés munkafolyamata
+workflows.wfblogrequest.states.60.description: Kérés engedélyezve, a blog létre lett hozva.
+workflows.wfblogrequest.states.50.description: Ez a blog kérelem el lett utasítva. A blog nem lesz létrehozva. Lásd a Workflow Notes-t a további részletekért.
+workflows.wfblogrequest.states.-200.label: Elküldve
+workflows.wfblogrequest.roles.blogValidator.description: Elfogadja/elutasítja a blog megnyitásának kéréseit
+workflows.wfblogrequest.roles.blogValidator.name: Érvényesítő
+workflows.wfblogrequest.states.60.label: Elfogadva
+workflows.wfblogrequest.states.50.label: Elutasítva
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.blog:     Blog
+jcmsplugin.smartphone.workspace-service.PortletBlog: Blog
+jcmsplugin.blog.smartphone.lbl.blogpost-list: Bejegyzések
+jcmsplugin.blog.smartphone.lbl.blog: Blogok
+jcmsplugin.blog.smartphone.lbl.blog.my-blogs: Saját blogok
+jcmsplugin.blog.smartphone.lbl.blog.other-blogs: Más blogok
+
+# ----------------------------------------------------------------------
+# BlogPost Form
+# ----------------------------------------------------------------------
+jcmsplugin.blog.filter-author: Szűrés szerző szerint
+jcmsplugin.blog.filter-pstatus: Szűrés a következő állapot szerint
+jcmsplugin.blog.filter-startDate: Kezdési dátum
+jcmsplugin.blog.filter-endDate: Befejezési dátum
+jcmsplugin.blog.sort-by-vote: Szavazatok száma

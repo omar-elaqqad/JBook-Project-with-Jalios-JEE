@@ -1,0 +1,24 @@
+.app-public-link .app-header {
+  background-color: #8ec255;
+}
+.app-public-link .app-header .app-publication-actions .list-group-item.pub-action-toggle {
+  background-color: #8ec255;
+}
+.app-public-link .app-sidebar .app-sidebar-icon .jalios-icon {
+  color: #8ec255;
+}
+.app-public-link .zip-content UL {
+  padding-inline-start: 20px;
+  margin-bottom: 0;
+  margin-top: 4px;
+}
+.app-public-link .doc-version {
+  color: #999;
+}
+.app-public-link .doc-version A {
+  color: #999;
+}
+.app-public-link .no-download {
+  color: #999;
+}
+/*# sourceMappingURL=jalios-public-link-app.css.map */

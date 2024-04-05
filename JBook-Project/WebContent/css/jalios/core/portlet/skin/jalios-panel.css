@@ -1,0 +1,30 @@
+.Portlet.panel .panel-heading {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 6px;
+  background-color: var(--portlet-secondary-color);
+  color: var(--portlet-primary-color);
+}
+.Portlet.panel .panel-heading H2,
+.Portlet.panel .panel-heading H3,
+.Portlet.panel .panel-heading H4,
+.Portlet.panel .panel-heading H5,
+.Portlet.panel .panel-heading H6 {
+  margin: initial;
+  font-size: inherit;
+  font-weight: inherit;
+}
+.Portlet.panel .panel-title {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
+}
+.Portlet.panel .panel-title .skinTitle {
+  flex-grow: 1;
+}
+.Portlet.panel .panel-title .portlet-header-actions {
+  flex-shrink: 0;
+}
+/*# sourceMappingURL=jalios-panel.css.map */

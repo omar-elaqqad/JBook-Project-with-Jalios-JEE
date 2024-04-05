@@ -1,0 +1,150 @@
+# ----------------------------------------------------------------------
+# Folder
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.folder.lbl.new: New Folder
+jcmsplugin.bookmarks.folder.lbl.add: Add a folder
+jcmsplugin.bookmarks.folder.btn.lbl.add: Add a folder...
+jcmsplugin.bookmarks.folder.lbl.edit: Edit a folder
+jcmsplugin.bookmarks.folder.action.delete.warn-msg: Warning, the folder content will also be deleted
+jcmsplugin.bookmarks.folder.menu.action.delete.warn-msg: Warning, folders' content will also be deleted
+jcmsplugin.bookmarks.folder.lbl.name:  Folder name
+jcmsplugin.bookmarks.folder.lbl.name1: Name
+jcmsplugin.bookmarks.folder.lbl.name.parent:  Parent folder
+jcmsplugin.bookmarks.folder.lbl.name.parent1: Parent
+jcmsplugin.bookmarks.folder.name.error: Please enter a folder name
+jcmsplugin.bookmarks.folder.name.error.duplicate: A folder already has this name
+jcmsplugin.bookmarks.folder.contains-data: Please first delete the content of this folder
+jcmsplugin.bookmarks.folder.no-result: There are no bookmarks.
+jcmsplugin.bookmarks.folder.root: Up to root
+jcmsplugin.bookmarks.folder.lbl.root: Root
+jcmsplugin.bookmarks.folder.upper: Up to {0}
+jcmsplugin.bookmarks.folder.breadcrumb.label: Bookmark folder - {0}
+jcmsplugin.bookmarks.folder.lbl: Folder
+jcmsplugin.bookmarks.folder.menu.action: Actions
+jcmsplugin.bookmarks.folder.action.move.empty: The selection can't be moved to any folder
+jcmsplugin.bookmarks.items.lbl.shift: Shift the selection
+jcmsplugin.bookmarks.items.lbl.delete: Delete the selection
+jcmsplugin.bookmarks.menu.search.placeholder: Search a bookmark
+jcmsplugin.bookmarks.already-bookmarked: This publication is already bookmarked.
+jcmsplugin.bookmarks.app.title: Bookmarks
+
+#DISABLED
+jcmsplugin.bookmarks.plugin-disabled.message: The bookmarks plugin is currently disabled
+
+#SIDEBAR
+jcmsplugin.bookmarks.topbar.title: My Bookmarks
+jcms.sidebar-tab.bookmarks: Bookmarks
+jcms.sidebar-tab.bookmarks.icon: Bookmarks
+jcmsplugin.bookmarks.topbar.search: Search for a bookmark...
+jcmsplugin.bookmarks.topbar.search.description: Fill in the field to filter the favorites displayed
+
+#PUBLICATION
+jcmsplugin.bookmarks.toastr.add: Added to bookmarks
+jcmsplugin.bookmarks.toastr.remove: Removed from bookmarks
+
+#MENU
+jcmsplugin.bookmarks.msg.no-result: No bookmark found
+
+jcmsplugin.bookmarks.lbl.bookmarks: Bookmarks
+jcmsplugin.bookmarks.lbl.link: External link
+jcmsplugin.bookmarks.lbl.pub:  Content
+jcmsplugin.bookmarks.lbl.search: Search
+
+jcmsplugin.bookmarks.lbl.url:    URL
+jcmsplugin.bookmarks.lbl.title:  Title
+jcmsplugin.bookmarks.btn.add:    Add
+jcmsplugin.bookmarks.btn.update: Save
+jcmsplugin.bookmarks.btn.remove: Remove this bookmark
+
+jcmsplugin.bookmarks.lbl.add-bookmark: Add a bookmark
+jcmsplugin.bookmarks.lbl.remove-bookmark: Remove from bookmarks
+
+jcmsplugin.bookmarks.lbl.action: Actions
+jcmsplugin.bookmarks.lbl.add:    Add a bookmark...
+jcmsplugin.bookmarks.lbl.edit: 	 Edit a bookmark
+jcmsplugin.bookmarks.msg.remove: Do you really want to delete the bookmark <em>{0}</em>?
+
+jcmsplugin.bookmarks.adm.max:    Max bookmarks per user
+jcmsplugin.bookmarks.msg.adm.max:You have reached max bookmarks!
+
+jcmsplugin.bookmarks.lbl.bookmark.error: This bookmark is invalid.
+jcmsplugin.bookmarks.lbl.url.error: The URL is invalid.
+jcmsplugin.bookmarks.title.error: Please enter a title.
+
+jcmsplugin.bookmarks.lbl.manage-bookmark: Manage bookmarks
+
+jcmsplugin.bookmarks.isExternalLink.title: External link
+# ----------------------------------------------------------------------
+# Analytics
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.analytics.top-section: Most added bookmarks
+jcmsplugin.bookmarks.analytics.top-section.help: Users top ten bookmarks
+jcmsplugin.bookmarks.analytics.top-bookmarks-section: Members with most bookmarks
+jcmsplugin.bookmarks.analytics.top-bookmarks-section.help: Top 10 members with most bookmarks
+jcmsplugin.bookmarks.analytics.rank-number-column.label: #
+jcmsplugin.bookmarks.analytics.bookmark-column.label: Bookmarks
+jcmsplugin.bookmarks.analytics.bookmark-add-column.label: Number of times added
+jcmsplugin.bookmarks.analytics.report.average-bookmarks: Average bookmarks
+jcmsplugin.bookmarks.analytics.report.average-bookmarks.h: Average  per user
+jcmsplugin.bookmarks.analytics.author-column.label: Users
+jcmsplugin.bookmarks.analytics.bookmark-number-column.label: Bookmark number
+jcmsplugin.bookmarks.analytics.indicator.average-bookmarks: Bookmarks per user
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks: Most bookmarked publication
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks.h: Top 10 bookmarked publication
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks.table.pub.title: Publication
+ui.analytics.BookmarksAgent.name: Bookmarks
+
+# ----------------------------------------------------------------------
+# Icones
+# ----------------------------------------------------------------------
+icon.jcmsplugin.bookmarks.bookmarkWhite: Bookmarks
+icon.jcmsplugin.bookmarks.edit:          Edit bookmark
+icon.jcmsplugin.bookmarks.delete:        Delete bookmark
+icon.jcmsplugin.bookmarks.add:           Add bookmark
+icon.jcmsplugin.bookmarks.star:          Bookmarks
+
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+jcmsplugin.bookmarks.displayExternalUrl: Open external links in new window
+
+# From PortletBookmarks-templates.xml
+types.PortletBookmarks.templates.query.default.label: Default template
+types.PortletBookmarks.templates.box.default.label: Default template
+
+# From PortletBookmarks.xml
+types.PortletBookmarks.title.label: Title
+types.PortletBookmarks.fields.openLinksInNewWindow.label: Open external links in new window
+types.PortletBookmarks.fields.openLinksInNewWindow.onLabel: Yes
+types.PortletBookmarks.label: Bookmarks Portlet
+types.PortletBookmarks.description: This portlet allows logged in members to manage their bookmarks.
+types.PortletBookmarks.fields.openLinksInNewWindow.offLabel: No
+
+# From PortletWorkspaceBookmarks.xml
+types.PortletWorkspaceBookmarks.label: Workspace Bookmarks Portlet
+types.PortletWorkspaceBookmarks.title.label: Title
+types.PortletWorkspaceBookmarks.description: This portlet allows workspace's administrator to manage the workspace's bookmarks.
+
+jcmsplugin.bookmarks.edition-mode: Switch to edit mode
+jcmsplugin.bookmarks.remove-edition-mode: Stop editing
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.bookmark:   Bookmarks
+jcmsplugin.bookmarks.smartphone.lbl.bookmark.filter: Search in bookmarks...
+jcmsplugin.bookmarks.smartphone.lbl.bookmark.no-result: No bookmarks
+jcmsplugin.bookmarks.smartphone.menu.bookmark.added.lbl: Bookmark added
+jcmsplugin.bookmarks.smartphone.menu.bookmark.removed.lbl: Bookmark removed
+
+# Shortcut
+data.$id.shortcut.jcmsplugin.bookmarks.title: Bookmarks
+data.$id.shortcut.jcmsplugin.bookmarks.text: Access and manage your bookmarks on publications, search results and external pages.
+
+# ----------------------------------------------------------------------
+# JTasks project
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.app.project.sidebar.favorite-projects.label: My favorites

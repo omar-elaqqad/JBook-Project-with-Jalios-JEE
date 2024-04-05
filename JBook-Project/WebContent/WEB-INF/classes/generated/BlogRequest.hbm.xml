@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "classpath://org/hibernate/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="generated.BlogRequest" table="G_BLOGREQUEST">
+    <cache usage="read-write" />  
+    <id name="rowId" column="rowId">
+      <generator class="native"/>
+    </id>
+    <property name="cdate" not-null="true" index="IG_BLOGREQUEST_CDATE" />
+    <property name="mdate" not-null="true" index="IG_BLOGREQUEST_MDATE" />
+    <property name="authorId" length="32" index="IG_BLOGREQUEST_AUTHORID" />
+    
+    <property name="pstatus" not-null="true" index="IG_BLOGREQUEST_PSTATUS" />
+    <property name="workspaceId" not-null="true" length="32" index="IG_BLOGREQUEST_WSID" />
+    
+    <property name="pdate"  index="IG_BLOGREQUEST_PDATE" />
+    <property name="edate" />
+    <property name="adate" />
+    <property name="title" />
+    <property name="workflowId" index="IG_BLOGREQUEST_WFID" />
+    <property name="hasNoReadRights" index="IG_BLOGREQUEST_HASNOREADRIGHTS" />
+    <property name="opAuthorId" length="32" index="IG_BLOGREQUEST_OPAUTHORID"  />
+    <property name="readAck" />
+    
+    <property name="submitMemberId" index="IG_BLOGREQUEST_SUBMID" />
+    <property name="submitRemoteAddr" />
+    <property name="description" type="text" length="65536" />
+    
+    
+    <property name="descriptionMLE" type="text" length="1048576" />
+    
+    <!--  COLLECTIONS FOR READ-RIGHTS -->
+    <set name="authGrpIdSet" table="G_BLOGREQUEST_AUTHGRPSET" lazy="true">
+      <cache usage="read-write" />
+      <key>
+        <column name="ITEM_ID" index="IG_BLOGREQUEST_AUTHGRPSET_I"/>
+      </key>
+      <element type="string">
+        <column name="VALUE" length="64" index="IG_BLOGREQUEST_AUTHGRPSET"/>
+      </element>      
+    </set>    
+    
+    <set name="authMbrIdSet" table="G_BLOGREQUEST_AUTHMBRSET" lazy="true">
+      <cache usage="read-write" />
+      <key>
+        <column name="ITEM_ID" index="IG_BLOGREQUEST_AUTHMBRSET_I"/>
+      </key>
+      <element type="string">
+        <column name="VALUE" length="64" index="IG_BLOGREQUEST_AUTHMBRSET"/>
+      </element>      
+    </set>
+  </class>
+</hibernate-mapping>
+<!-- **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY * DO NOT EDIT ANYTHING BELOW THIS LINE *** -->
+<!-- ERHAMSYNRSYF/opsaQtOnQ== -->

@@ -1,0 +1,148 @@
+# ----------------------------------------------------------------------
+# Folder
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.folder.lbl.new: Új mappa
+jcmsplugin.bookmarks.folder.lbl.add: Mappa hozzáadása
+jcmsplugin.bookmarks.folder.btn.lbl.add: Mappa hozzáadása...
+jcmsplugin.bookmarks.folder.lbl.edit: Mappa szerkesztése
+jcmsplugin.bookmarks.folder.action.delete.warn-msg: Figyelem, a mappa tartalma is törlődik
+jcmsplugin.bookmarks.folder.menu.action.delete.warn-msg: Figyelem, a mappák tartalma is törlődik
+jcmsplugin.bookmarks.folder.lbl.name:  Mappa név
+jcmsplugin.bookmarks.folder.lbl.name1: Név
+jcmsplugin.bookmarks.folder.lbl.name.parent:  Szülőmappa
+jcmsplugin.bookmarks.folder.lbl.name.parent1: Szülő
+jcmsplugin.bookmarks.folder.name.error: Kérjük, adjon meg egy mappanevet.
+jcmsplugin.bookmarks.folder.name.error.duplicate: Egy mappának már ez a neve
+jcmsplugin.bookmarks.folder.contains-data: Kérjük, először törölje a mappa tartalmát
+jcmsplugin.bookmarks.folder.no-result: Nincsenek könyvjelzők.
+jcmsplugin.bookmarks.folder.root: A gyökérhez
+jcmsplugin.bookmarks.folder.lbl.root: Gyökér
+jcmsplugin.bookmarks.folder.upper: Fel ehhez: {0}
+jcmsplugin.bookmarks.folder.lbl: Mappa
+jcmsplugin.bookmarks.folder.menu.action: Műveletek
+jcmsplugin.bookmarks.folder.action.move.empty: A kijelölés nem helyezhető át bármely mappába
+jcmsplugin.bookmarks.items.lbl.shift: A kijelölés eltolása
+jcmsplugin.bookmarks.items.lbl.delete: A kijelölés törlése
+jcmsplugin.bookmarks.menu.search.placeholder: Könyvjelző keresése
+jcmsplugin.bookmarks.already-bookmarked: A közzététel már rendelkezik könyvjelzővel.
+jcmsplugin.bookmarks.app.title: Könyvjelzők
+
+#DISABLED
+jcmsplugin.bookmarks.plugin-disabled.message: A kedvencek modul jelenleg nem aktív
+
+#SIDEBAR
+jcmsplugin.bookmarks.topbar.title: Saját könyvjelzők
+jcms.sidebar-tab.bookmarks: Könyvjelzők
+jcms.sidebar-tab.bookmarks.icon: Könyvjelzők
+jcmsplugin.bookmarks.topbar.search: Könyvjelző keresése...
+
+#PUBLICATION
+jcmsplugin.bookmarks.toastr.add: Hozzáadva a könyvjelzőkhöz
+jcmsplugin.bookmarks.toastr.remove: Eltávolítva a könyvjelzők közül
+
+#MENU
+jcmsplugin.bookmarks.msg.no-result: Nem található könyvjelző
+
+jcmsplugin.bookmarks.lbl.bookmarks: Könyvjelzők
+jcmsplugin.bookmarks.lbl.link: Külső hivatkozás
+jcmsplugin.bookmarks.lbl.pub:  Tartalom
+jcmsplugin.bookmarks.lbl.search: Keresés
+
+jcmsplugin.bookmarks.lbl.url:    URL
+jcmsplugin.bookmarks.lbl.title:  Cím
+jcmsplugin.bookmarks.btn.add:    Hozzáadás
+jcmsplugin.bookmarks.btn.update: Mentés
+jcmsplugin.bookmarks.btn.remove: A könyvjelző eltávolítása
+
+jcmsplugin.bookmarks.lbl.add-bookmark: Könyvjelző hozzáadása
+jcmsplugin.bookmarks.lbl.remove-bookmark: Eltávolítás a könyvjelzők közül
+
+jcmsplugin.bookmarks.lbl.action: Műveletek
+jcmsplugin.bookmarks.lbl.add:    Könyvjelző hozzáadása...
+jcmsplugin.bookmarks.lbl.edit: 	 Könyvjelző szerkesztése
+jcmsplugin.bookmarks.msg.remove: Biztosan törölni szeretné a/az <em>{0}</em> könyvjelzőt?
+
+jcmsplugin.bookmarks.adm.max:    Könyvjelzők maximális száma felhasználónként
+jcmsplugin.bookmarks.msg.adm.max:Elérte könyvjelzők maximális számát!
+
+jcmsplugin.bookmarks.lbl.bookmark.error: Ez a könyvjelző érvénytelen.
+jcmsplugin.bookmarks.lbl.url.error: Az URL érvénytelen
+jcmsplugin.bookmarks.title.error: Kérjük, adjon meg egy címet.
+
+jcmsplugin.bookmarks.lbl.manage-bookmark: Könyvjelzők kezelése
+
+jcmsplugin.bookmarks.isExternalLink.title: Külső hivatkozás
+# ----------------------------------------------------------------------
+# Analytics
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.analytics.top-section: Legtöbbször hozzáadott könyvjelzők
+jcmsplugin.bookmarks.analytics.top-section.help: Felhasználók top tíz könyvjelzői
+jcmsplugin.bookmarks.analytics.top-bookmarks-section: A legtöbb könyvjelzővel rendelkező tagok
+jcmsplugin.bookmarks.analytics.top-bookmarks-section.help: Top 10 legtöbb könyvjelzővel rendelkező tag
+jcmsplugin.bookmarks.analytics.rank-number-column.label: #
+jcmsplugin.bookmarks.analytics.bookmark-column.label: Könyvjelzők
+jcmsplugin.bookmarks.analytics.bookmark-add-column.label: Hozzáadási alkalmak száma
+jcmsplugin.bookmarks.analytics.report.average-bookmarks: Könyvjelzők átlaga
+jcmsplugin.bookmarks.analytics.report.average-bookmarks.h: Átlag / felhasználó
+jcmsplugin.bookmarks.analytics.author-column.label: Felhasználók
+jcmsplugin.bookmarks.analytics.bookmark-number-column.label: Könyvjelző száma
+jcmsplugin.bookmarks.analytics.indicator.average-bookmarks: Könyvjelzők / felhasználó
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks: Legtöbbször könyvjelzővel ellátott közzététel
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks.h: Top 10 könyvjelzővel ellátott közzététel
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks.table.pub.title: Közzététel
+ui.analytics.BookmarksAgent.name: Könyvjelzők
+
+# ----------------------------------------------------------------------
+# Icones
+# ----------------------------------------------------------------------
+icon.jcmsplugin.bookmarks.bookmarkWhite: Könyvjelzők
+icon.jcmsplugin.bookmarks.edit:          Könyvjelző szerkesztése
+icon.jcmsplugin.bookmarks.delete:        Könyvjelző törlése
+icon.jcmsplugin.bookmarks.add:           Könyvjelző hozzáadása
+icon.jcmsplugin.bookmarks.star:          Könyvjelzők
+
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+jcmsplugin.bookmarks.displayExternalUrl: Külső hivatkozások megnyitása új ablakban
+
+# From PortletBookmarks-templates.xml
+types.PortletBookmarks.templates.query.default.label: Alapértelmezett sablon
+types.PortletBookmarks.templates.box.default.label: Alapértelmezett sablon
+
+# From PortletBookmarks.xml
+types.PortletBookmarks.title.label: Cím
+types.PortletBookmarks.fields.openLinksInNewWindow.label: Külső hivatkozások megnyitása új ablakban
+types.PortletBookmarks.fields.openLinksInNewWindow.onLabel: Igen
+types.PortletBookmarks.label: Könyvjelzők Portlet
+types.PortletBookmarks.description: Ez a portlet lehetővé teszi a bejelentkezett tagok számára a könyvjelzőik kezelését.
+types.PortletBookmarks.fields.openLinksInNewWindow.offLabel: Nem
+
+# From PortletWorkspaceBookmarks.xml
+types.PortletWorkspaceBookmarks.label: Munkaterület könyvjelzőinek portletje
+types.PortletWorkspaceBookmarks.title.label: Cím
+types.PortletWorkspaceBookmarks.description: Ez a portlet lehetővé teszi a munkaterület adminisztrátora számára a munkaterület könyvjelzőinek kezelését.
+
+jcmsplugin.bookmarks.edition-mode: Váltás szerkesztés módra
+jcmsplugin.bookmarks.remove-edition-mode: Szerkesztés leállítása
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.bookmark:   Könyvjelzők
+jcmsplugin.bookmarks.smartphone.lbl.bookmark.filter: Keresés a könyvjelzőkben...
+jcmsplugin.bookmarks.smartphone.lbl.bookmark.no-result: Nincs könyvjelző
+jcmsplugin.bookmarks.smartphone.menu.bookmark.added.lbl: Könyvjelző hozzáadva
+jcmsplugin.bookmarks.smartphone.menu.bookmark.removed.lbl: Könyvjelző eltávolítva
+
+# Shortcut
+data.$id.shortcut.jcmsplugin.bookmarks.title: Könyvjelzők
+data.$id.shortcut.jcmsplugin.bookmarks.text: A könyvjelzők elérése és kezelése a kiadványokban, a keresési eredményekben és a külső oldalakon.
+
+# ----------------------------------------------------------------------
+# JTasks project
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.app.project.sidebar.favorite-projects.label: Kedvenceim

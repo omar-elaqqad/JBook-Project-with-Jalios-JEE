@@ -4,11 +4,11 @@
 
 channel.name: JPlatform 10
 channel.url: http://127.0.0.1:80/
-channel.default-email: 
+channel.default-email:
 channel.sign-up: false
 channel.sign-up-validation-required: false
 channel.sign-up-create-dbmember: true
-channel.sign.form: 
+channel.sign.form:
 channel.charter: false
 channel.is-authentication-required: false
 channel.ssl.enabled: false
@@ -16,25 +16,25 @@ channel.ssl.port: 443
 channel.urid: c
 channel.default-group: j_36
 channel.default-admin: j_2
-channel.default-author: 
+channel.default-author:
 channel.java-compiler: internal
 channel.lock-timeout: 60
-channel.keywords: 
-channel.description: 
+channel.keywords:
+channel.description:
 channel.default-show-adminicon: true
 channel.login-casesensitive: true
 channel.login-accentsensitive: true
-channel.devadmin: 
+channel.devadmin:
 channel.devadmin.enabled: false
-channel.admin-ip: 
-channel.workspaces-ip: 
+channel.admin-ip:
+channel.workspaces-ip:
 channel.data-write.enabled: true
-channel.data-write.msg: 
+channel.data-write.msg:
 channel.gzip-filter.enabled: false
 channel.dev-mode.enabled: true
 channel.dev-tools.enabled: true
 channel.webdav.enabled: false
-channel.webdav.ip-filter: 
+channel.webdav.ip-filter:
 channel.webdav.custom-protocol.enabled: false
 channel.webdav.use-http-digest-auth: false
 channel.headless: true
@@ -51,9 +51,9 @@ channel.css-packer.compressor.enabled: true
 channel.css-packer.compressor.line-break: -1
 channel.packer.cache-expiration: 10
 channel.chromeframe.enabled: false
-channel.main-plugin: 
+channel.main-plugin:
 channel.main-plugin.check-at-startup: true
-$channel.tag-root: 
+$channel.tag-root:
 
 bug-report.email: jcms-report@jalios.com
 review.default-rating: 1
@@ -89,17 +89,17 @@ derby.network-enabled: false
 hibernate.cfg.mysql.prop.hibernate.connection.url: jdbc:mysql://localhost:3306/jcmsdb?jdbcCompliantTruncation=false&useUnicode=true&characterEncoding=UTF-8&useSSL=false&sendFractionalSeconds=false
 hibernate.cfg.mysql.prop.hibernate.connection.username: jcms
 hibernate.cfg.mysql.prop.hibernate.connection.password: REVTMzo=GD7Q2xGfa9E=
-hibernate.cfg.mysql.prop.hibernate.connection.datasource: 
+hibernate.cfg.mysql.prop.hibernate.connection.datasource:
 
 hibernate.cfg.oracle-xe.prop.hibernate.connection.url: jdbc:oracle:thin:@localhost:1521:XE
 hibernate.cfg.oracle-xe.prop.hibernate.connection.username: jcms
 hibernate.cfg.oracle-xe.prop.hibernate.connection.password: REVTMzo=GD7Q2xGfa9E=
-hibernate.cfg.oracle-xe.prop.hibernate.connection.datasource: 
+hibernate.cfg.oracle-xe.prop.hibernate.connection.datasource:
 
 hibernate.cfg.oracle.prop.hibernate.connection.url: jdbc:oracle:thin:@host:port:SID
 hibernate.cfg.oracle.prop.hibernate.connection.username: jcms
 hibernate.cfg.oracle.prop.hibernate.connection.password: REVTMzo=GD7Q2xGfa9E=
-hibernate.cfg.oracle.prop.hibernate.connection.datasource: 
+hibernate.cfg.oracle.prop.hibernate.connection.datasource:
 
 # Caching Properties
 hibernate.cfg.common.prop.hibernate.cache.use_second_level_cache: true
@@ -216,7 +216,7 @@ deploy-mgr.sibling-webapps: true
 
 # Custom regexp to ignore directories/files when downloading work copy
 # e.g: (my_webapp_directory_to_ignore.*)|(some_dir/myfile_to_ignore\.dat)
-deploy-mgr.copy-ignore: 
+deploy-mgr.copy-ignore:
 
 
 # ----------------------------------------------------------------------
@@ -224,11 +224,11 @@ deploy-mgr.copy-ignore:
 # ----------------------------------------------------------------------
 
 # Search / Refine / Advanced Refine root categories (a space-separated list of category id)
-query.refine-roots: 
-query.adv-refine-roots: 
-query.search-roots: 
-query.default.types-off: 
-query.default.types-facet-off: 
+query.refine-roots:
+query.adv-refine-roots:
+query.search-roots:
+query.default.types-off:
+query.default.types-facet-off:
 query.sort.fo: relevance
 query.sort.bo: mdate
 query.sort.mbr.fo: name
@@ -256,28 +256,28 @@ query.facets.text.file: false
 # ----------------------------------------------------------------------
 
 mail.enabled: false
-mail.smtp.host: 
-mail.smtp.port: 
-mail.smtp.login: 
-mail.smtp.password: 
+mail.smtp.host:
+mail.smtp.port:
+mail.smtp.login:
+mail.smtp.password:
 
 # ----------------------------------------------------------------------
 # Forward Proxy
 # ----------------------------------------------------------------------
 
 # Common settings for HTTP and HTTPS forward proxy
-http.proxy.enabled: 
-http.nonProxyHosts: 
+http.proxy.enabled:
+http.nonProxyHosts:
 # HTTP forward proxy
-http.proxyHost: 
-http.proxyPort: 
-http.proxy.login: 
-http.proxy.password: 
+http.proxyHost:
+http.proxyPort:
+http.proxy.login:
+http.proxy.password:
 # HTTPS forward proxy
-https.proxyHost: 
-https.proxyPort: 
-https.proxy.login: 
-https.proxy.password: 
+https.proxyHost:
+https.proxyPort:
+https.proxy.login:
+https.proxy.password:
 
 # ----------------------------------------------------------------------
 # LDAP Configuration
@@ -309,7 +309,7 @@ ldap.server.groupobjectclass: posixGroup
 ldap.mapping.login: uid
 ldap.mapping.name: sn
 ldap.mapping.f-name: givenName
-ldap.mapping.salut: 
+ldap.mapping.salut:
 ldap.mapping.organization: organizationName
 ldap.mapping.department: department
 ldap.mapping.job: title
@@ -327,7 +327,7 @@ ldap.mapping.address: postalAddress
 ldap.mapping.info: description
 ldap.grp-mapping.name: cn
 ldap.grp-mapping.member: memberUid
-ldap.grp-mapping.uuid: 
+ldap.grp-mapping.uuid:
 
 # ----------------------------------------------------------------------
 # Cache Manager
@@ -360,8 +360,8 @@ channel.default-index: j_6
 channel.default-portal: j_206
 channel.default-printportal: j_55
 channel.app-portal: j_231
-display.navigate-root: 
-$id.favorite-ws-root: 
+display.navigate-root:
+$id.favorite-ws-root:
 
 # ----------------------------------------------------------------------
 # Reverse Proxy
@@ -372,17 +372,17 @@ channel.reverse-proxy.conf1.ip-addresses: 192.168.0.1, 192.168.0.2
 channel.reverse-proxy.conf1.context-path: /cms
 channel.reverse-proxy.conf1.base-url: http://intranet.example.com/
 channel.reverse-proxy.conf1.ssl-base-url: https://intranet.example.com/
-channel.reverse-proxy.conf2.ip-addresses: 
-channel.reverse-proxy.conf2.context-path: 
-channel.reverse-proxy.conf2.base-url: 
-channel.reverse-proxy.conf2.ssl-base-url: 
+channel.reverse-proxy.conf2.ip-addresses:
+channel.reverse-proxy.conf2.context-path:
+channel.reverse-proxy.conf2.base-url:
+channel.reverse-proxy.conf2.ssl-base-url:
 
 # ----------------------------------------------------------------------
 # JSync
 # ----------------------------------------------------------------------
 jsync.enabled: false
-jsync.replica-url: 
-jsync.leader-url: 
+jsync.replica-url:
+jsync.leader-url:
 jsync.startup-join: 5
 jsync.can-be-joined: true
 jsync.can-leader-join: true
@@ -391,10 +391,10 @@ jsync.stab-delay: 10
 jsync.sync-files: false
 jsync.max-op: 100
 jsync.max-delay: 1000
-jsync.ip: 
-jsync.explicit-replica-list: 
+jsync.ip:
+jsync.explicit-replica-list:
 jsync.replica-startup-join: 0
-jsync.shared-secret: 
+jsync.shared-secret: 5ed23152-7cd9-45f5-a51d-749ee9f7eeb6
 plugin-sync.enabled: true
 prop-sync.enabled: true
 
@@ -412,7 +412,7 @@ auth-mgr.persistent.default-value: false
 # ----------------------------------------------------------------------
 
 audience-rigths.enabled: false
-audience-rigths.axes: 
+audience-rigths.axes:
 
 # ----------------------------------------------------------------------
 # Store backup
@@ -440,13 +440,13 @@ store.backup.max: 10
 import-mgr.enabled: false
 
 # The author for the imported publication (default is admin)
-$id.import-mgr.import-author: 
+$id.import-mgr.import-author:
 
 # The workspace for the imported publication (default is Default Workspace)
-$id.import-mgr.import-ws: 
+$id.import-mgr.import-ws:
 
 # The root category for imported categories (default is "Import")
-$id.import-mgr.import-root: 
+$id.import-mgr.import-root:
 
 # Connection timeout (in seconds)
 import-mgr.connection.timeout: 5
@@ -515,12 +515,12 @@ mail.account.label.default: Default account
 mail.account.default.host: pop.example.com
 mail.account.default.port: 110
 mail.account.default.protocol: pop3
-mail.account.default.login: 
-mail.account.default.password: 
+mail.account.default.login:
+mail.account.default.password:
 mail.account.default.mbox: INBOX
 mail.account.default.schedule: 10
-mail.account.default.author: 
-mail.account.default.ws: 
+mail.account.default.author:
+mail.account.default.ws:
 mail.account.default.expunge: true
 mail.account.default.enabled: true
 mail.account.default.imapssl: true
@@ -530,19 +530,19 @@ mail.account.default.imapssl: true
 # ----------------------------------------------------------------------
 
 # To force the number of proposed results (default is 5)
-autocomplete.proposedresults: 
-autocomplete.proposedresults.publication: 
-autocomplete.proposedresults.category: 
-autocomplete.proposedresults.group: 
-autocomplete.proposedresults.workspace: 
-autocomplete.proposedresults.member: 
+autocomplete.proposedresults:
+autocomplete.proposedresults.publication:
+autocomplete.proposedresults.category:
+autocomplete.proposedresults.group:
+autocomplete.proposedresults.workspace:
+autocomplete.proposedresults.member:
 
 
 # ----------------------------------------------------------------------
 # File Management (associated files and quota)
 # ----------------------------------------------------------------------
 
-migration-associated-files-done: false
+migration-associated-files-done: true
 admin.quota.maximum-site-quota: 10737418240
 admin.quota.default-workspace-quota: 1073741824
 admin.quota.site-alert-threshold: 80
@@ -575,7 +575,7 @@ notification.period.week.start.time: 9:00
 notification.period.month.start.time: 9:00
 notification.period.week.start.day-of-week: 2
 notification.period.month.start.day-of-month: 1
-notification.followed-types: 
+notification.followed-types:
 notification.followed-types-off: Shortcut
 
 # ----------------------------------------------------------------------
@@ -583,7 +583,7 @@ notification.followed-types-off: Shortcut
 # ----------------------------------------------------------------------
 # For each property, you can declare a space-separated list of DataSource name (eg. jdbc/myExternalDB1 jdbc/myExternalDB2)
 # Only DataSources declared in this property can be used in the dedicated fields (DBRecord and SQLQuery)
-channel.external-datasources: 
+channel.external-datasources:
 
 # ----------------------------------------------------------------------
 # Analytics storage handlers
@@ -598,9 +598,9 @@ jcms.analytics.storage-handler.1.isAnalysisProvider: true
 # Client certificate authentication
 # ----------------------------------------------------------------------
 auth.certificate-authentication.enabled: false
-auth.authentication-trustStore-password: 
-auth.authentication-trustStore: 
-auth.authentication-crl-dir-path: 
+auth.authentication-trustStore-password:
+auth.authentication-trustStore:
+auth.authentication-crl-dir-path:
 auth.certificate-authentication.user-regex: jalios:user:(.*)
 
 # ----------------------------------------------------------------------
@@ -615,3 +615,18 @@ channel.mbrpref.cache.max-entries: 10000
 
 channel.less-compile.startup: false
 data-localization.enable: true
+workflow.unprefixed-role.writers: basic-writers
+workflow.unprefixed-role.validators: basic-validators
+workflow.unprefixed-role.writer: wfdraft-writer
+workflow.unprefixed-role.moderators: wfmoderation-moderators
+channel.security.message-encryption-options.key: IK17I717uzU+sF8fU/iAKw==
+channel.security.message-encryption-options.transformation: AES/ECB/PKCS5Padding
+jcms.analytics.migrate-write-report.10SP6.done: true
+$id.application.shortcut.default-application-admin: c_5000
+$id.application.shortcut.default-application-workspace: c_5001
+$id.application.shortcut.default-application-appstore: c_5002
+data-localization.force: false
+applications.shortcut.show-in-tools-page-updated: true
+$id.shortcut.core.trashapp: c_5003
+$id.shortcut.core.public-link: c_5004
+$id.shortcut.jcmsplugin.bookmarks: c_5006

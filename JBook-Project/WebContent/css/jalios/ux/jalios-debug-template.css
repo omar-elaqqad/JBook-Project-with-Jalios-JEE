@@ -1,0 +1,17 @@
+/* --- Debug templates --------------------------------------------------------------------------------- */
+.jalios-debug-template code {
+  color: #333;
+}
+.jalios-debug-template.skin-template .jalios-debug-template-path {
+  background: #f0f2f9;
+}
+.jalios-debug-template.portlet-template .jalios-debug-template-path {
+  background: #f2fdf2;
+}
+.jalios-debug-template.publication-template .jalios-debug-template-path {
+  background: #f9f9f2;
+}
+.cs-portal .jalios-debug-template + DIV DIV.app {
+  margin-top: 0px;
+}
+/*# sourceMappingURL=jalios-debug-template.css.map */

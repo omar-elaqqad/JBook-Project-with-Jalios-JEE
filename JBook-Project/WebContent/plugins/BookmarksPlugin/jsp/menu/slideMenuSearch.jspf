@@ -1,0 +1,9 @@
+<span class="slide-menu-primary-input"> 
+<input class="search-space slide-menu-search-input"
+       placeholder="<%= glp("jcmsplugin.bookmarks.menu.search.placeholder") %>"
+       data-search-url="<%= (String) request.getAttribute("data-search-url") %>"> 
+  <span class="jalios-icon close-button slide-menu-clear-search topbar-space-close glyphicons-remove" ></span>
+</span>
+
+
+

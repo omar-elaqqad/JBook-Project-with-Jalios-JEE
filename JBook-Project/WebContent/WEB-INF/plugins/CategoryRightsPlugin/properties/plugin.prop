@@ -1,0 +1,37 @@
+jcmsplugin.categoryrights.types.chooser-types: Content
+jcmsplugin.categoryrights.cat-ids.chooser-category-multiple:
+
+# This property indicates this plugin version supports the propagation 
+# of read/write rights by configuring an option on a category itself
+# It can be used by other plugins (such as explorer) to trigger specific behavior 
+jcmsplugin.categoryrights.propagate-rights-supported: true
+
+# Category ExtraData used to disable/enable the CRP policy that propagates 
+# read/write/delete rights configured on category to the publications it contains
+# default value is empty to allow category to be edited without an explicit behavior/value from being set
+extra.Category.jcmsplugin.categoryrights.propagate-rights: 
+
+# Category ExtraData used to specify types authorized for creation
+# default value is empty to allow category to be edited without an explicit value from being set
+extra.Category.jcmsplugin.categoryrights.publish-types: 
+
+# Activate extended read rights feature JCMS-10038
+dbpub.search.extended-read-rights.enabled: true
+
+# Configuration of toaster displayed to user on Publication decategorization (CRP-38)
+jcmsplugin.categoryrights.decategorization.warning.toaster-options: {"extendedTimeOut":"0","timeOut":"0"}
+
+# ------------------------------------------------------------
+# Icons
+# ------------------------------------------------------------
+
+# Used by CategoryRightsDataIconPolicyFilter
+icon.jcmsplugin-crp-controlled-cat: glyph: jicons-folder2-key
+
+# ------------------------------------------------------------
+# ACL
+# ------------------------------------------------------------
+
+acl.resource.plugins: 
+acl.resource.plugins/categoryrights:
+acl.resource.plugins/categoryrights/propagate-rights:

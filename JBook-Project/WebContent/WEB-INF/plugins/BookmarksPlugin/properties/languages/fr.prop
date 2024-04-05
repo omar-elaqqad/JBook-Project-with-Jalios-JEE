@@ -1,0 +1,150 @@
+# ----------------------------------------------------------------------
+# Folder
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.folder.lbl.new: Nouveau dossier
+jcmsplugin.bookmarks.folder.lbl.add: Ajouter un dossier
+jcmsplugin.bookmarks.folder.btn.lbl.add: Ajouter un dossier...
+jcmsplugin.bookmarks.folder.lbl.edit: Modifier un dossier
+jcmsplugin.bookmarks.folder.action.delete.warn-msg: Attention, le contenu du dossier sera également supprimé.
+jcmsplugin.bookmarks.folder.menu.action.delete.warn-msg: Attention, le contenu des dossiers sera également supprimé.
+jcmsplugin.bookmarks.folder.lbl.name: Nom du dossier
+jcmsplugin.bookmarks.folder.lbl.name1: Nom
+jcmsplugin.bookmarks.folder.lbl.name.parent: Dossier parent
+jcmsplugin.bookmarks.folder.lbl.name.parent1: Parent
+jcmsplugin.bookmarks.folder.name.error: Veuillez saisir un nom de dossier
+jcmsplugin.bookmarks.folder.name.error.duplicate: Un dossier comporte déja ce nom
+jcmsplugin.bookmarks.folder.contains-data: Veuillez d'abord supprimer le contenu de ce dossier.
+jcmsplugin.bookmarks.folder.no-result: Il n'y a pas de favori.
+jcmsplugin.bookmarks.folder.root: Remonter à la racine
+jcmsplugin.bookmarks.folder.lbl.root: Racine
+jcmsplugin.bookmarks.folder.breadcrumb.label: Dossier de favoris - {0}
+jcmsplugin.bookmarks.folder.lbl: Dossier
+jcmsplugin.bookmarks.folder.upper: Remonter à {0}
+jcmsplugin.bookmarks.folder.menu.action: Actions
+jcmsplugin.bookmarks.folder.action.move.empty: La sélection ne peut être déplacé dans aucun dossier
+jcmsplugin.bookmarks.items.lbl.shift: Déplacer la sélection
+jcmsplugin.bookmarks.items.lbl.delete: Supprimer la sélection
+jcmsplugin.bookmarks.menu.search.placeholder: Rechercher dans les favoris...
+jcmsplugin.bookmarks.already-bookmarked: Cette publication est déja dans vos favoris.
+jcmsplugin.bookmarks.app.title: Favoris
+
+#DISABLED
+jcmsplugin.bookmarks.plugin-disabled.message: Le module favoris est actuellement désactivé
+
+#SIDEBAR
+jcmsplugin.bookmarks.topbar.title: Mes favoris
+jcms.sidebar-tab.bookmarks: Favoris
+jcms.sidebar-tab.bookmarks.icon: Favoris
+jcmsplugin.bookmarks.topbar.search: Rechercher un favori...
+jcmsplugin.bookmarks.topbar.search.description: Renseigner le champ pour filtrer les favoris affichés
+
+#PUBLICATION
+jcmsplugin.bookmarks.toastr.add: Ajouté aux favoris
+jcmsplugin.bookmarks.toastr.remove: Retiré des favoris
+
+#MENU
+jcmsplugin.bookmarks.msg.no-result: Aucun favori trouvé
+
+jcmsplugin.bookmarks.lbl.bookmarks: Favoris
+jcmsplugin.bookmarks.lbl.link: Lien externe
+jcmsplugin.bookmarks.lbl.pub:  Contenu
+jcmsplugin.bookmarks.lbl.search: Recherche
+
+jcmsplugin.bookmarks.lbl.url: URL
+jcmsplugin.bookmarks.lbl.title: Titre
+jcmsplugin.bookmarks.btn.add: Ajouter
+jcmsplugin.bookmarks.btn.update: Enregistrer
+jcmsplugin.bookmarks.btn.remove: Supprimer ce favori
+
+jcmsplugin.bookmarks.lbl.add-bookmark: Ajouter aux favoris
+jcmsplugin.bookmarks.lbl.remove-bookmark: Retirer des favoris
+
+jcmsplugin.bookmarks.lbl.action: Actions
+jcmsplugin.bookmarks.lbl.add:    Ajouter un favori...
+jcmsplugin.bookmarks.lbl.edit:   Modifier un favori
+jcmsplugin.bookmarks.msg.remove: Voulez-vous vraiment supprimer le favori <em>{0}</em> ?
+
+jcmsplugin.bookmarks.adm.max:     Nombre maximum de favoris par utilisateur
+jcmsplugin.bookmarks.msg.adm.max: Vous avez atteint nombre maximum de favoris!
+
+jcmsplugin.bookmarks.lbl.bookmark.error: Ce favori n'est pas valide.
+jcmsplugin.bookmarks.lbl.url.error:  L'URL n'est pas valide.
+jcmsplugin.bookmarks.title.error: Veuillez saisir un titre.
+
+jcmsplugin.bookmarks.lbl.manage-bookmark: Gérer les favoris
+
+jcmsplugin.bookmarks.isExternalLink.title: Lien externe
+# ----------------------------------------------------------------------
+# Analytics
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.analytics.top-section: Favoris les plus ajoutés
+jcmsplugin.bookmarks.analytics.top-section.help: Top 10 des favoris ajoutés
+jcmsplugin.bookmarks.analytics.top-bookmarks-section: Membres avec le plus de favoris
+jcmsplugin.bookmarks.analytics.top-bookmarks-section.help: Top 10 des membres avec le plus de favoris
+jcmsplugin.bookmarks.analytics.rank-number-column.label: #
+jcmsplugin.bookmarks.analytics.bookmark-column.label: Favoris
+jcmsplugin.bookmarks.analytics.bookmark-add-column.label: Nombre d'ajout
+jcmsplugin.bookmarks.analytics.report.average-bookmarks: Nombre de favoris
+jcmsplugin.bookmarks.analytics.report.average-bookmarks.h: Nombre de favoris moyen par utilisateur
+jcmsplugin.bookmarks.analytics.author-column.label: Utilisateurs
+jcmsplugin.bookmarks.analytics.bookmark-number-column.label: Nombre de favoris
+jcmsplugin.bookmarks.analytics.indicator.average-bookmarks: Favoris par utilisateur
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks: Publication les plus présentes
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks.h: Top 10 des publications présentes dans les favoris
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks.table.pub.title: Publications
+ui.analytics.BookmarksAgent.name: Favoris
+
+# ----------------------------------------------------------------------
+# Icones
+# ----------------------------------------------------------------------
+icon.jcmsplugin.bookmarks.bookmarkWhite: Favoris
+icon.jcmsplugin.bookmarks.edit:          Editer favoris
+icon.jcmsplugin.bookmarks.delete:        Supprimer favoris
+icon.jcmsplugin.bookmarks.add:           Ajouter favoris
+icon.jcmsplugin.bookmarks.star:          Favoris
+
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+jcmsplugin.bookmarks.displayExternalUrl: Ouvrir les liens externes dans une nouvelle fenêtre
+
+# From PortletBookmarks-templates.xml
+types.PortletBookmarks.templates.query.default.label: Gabarit par défaut
+types.PortletBookmarks.templates.box.default.label: Gabarit par défaut
+
+# From PortletBookmarks.xml
+types.PortletBookmarks.title.label: Titre
+types.PortletBookmarks.fields.openLinksInNewWindow.label: Ouvrir les liens externes dans une nouvelle fenêtre
+types.PortletBookmarks.fields.openLinksInNewWindow.onLabel: Oui
+types.PortletBookmarks.label: Portlet Favoris
+types.PortletBookmarks.description: Cette portlet permet aux membres connectés de gérer leur favoris.
+types.PortletBookmarks.fields.openLinksInNewWindow.offLabel: Non
+
+# From PortletWorkspaceBookmarks.xml
+types.PortletWorkspaceBookmarks.label: Portlet Favoris d'espace de travail
+types.PortletWorkspaceBookmarks.title.label: Titre
+types.PortletWorkspaceBookmarks.description: Cette portlet permet aux admin d'espace de gérer leur favoris dans l'espace
+
+jcmsplugin.bookmarks.edition-mode: Basculer en mode édition
+jcmsplugin.bookmarks.remove-edition-mode: Arrêter l'édition
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.bookmark:  Favoris
+jcmsplugin.bookmarks.smartphone.lbl.bookmark.filter: Rechercher dans les favoris...
+jcmsplugin.bookmarks.smartphone.lbl.bookmark.no-result: Pas de favoris
+jcmsplugin.bookmarks.smartphone.menu.bookmark.added.lbl: Favori ajouté
+jcmsplugin.bookmarks.smartphone.menu.bookmark.removed.lbl: Favori retiré
+
+# Shortcut
+data.$id.shortcut.jcmsplugin.bookmarks.title: Favoris
+data.$id.shortcut.jcmsplugin.bookmarks.text: Accédez et gérer vos favoris sur des publications, des résultats de recherche et des pages externes.
+
+# ----------------------------------------------------------------------
+# JTasks project
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.app.project.sidebar.favorite-projects.label: Mes favoris

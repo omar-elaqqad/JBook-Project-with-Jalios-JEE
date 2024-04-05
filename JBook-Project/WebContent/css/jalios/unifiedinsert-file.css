@@ -1,0 +1,12 @@
+#jalios-unified-insert-file .plupload-field-filename {
+  margin-top: 28px;
+}
+#jalios-unified-insert-file .plupload_droptext {
+  min-height: 200px;
+  background-image: url(../../images/jalios/wysiwyg/unified-insert-file-bg.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 25px;
+  padding-top: 125px;
+}
+/*# sourceMappingURL=unifiedinsert-file.css.map */

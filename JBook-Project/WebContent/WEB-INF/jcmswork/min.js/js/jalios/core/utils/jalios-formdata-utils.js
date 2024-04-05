@@ -1,0 +1,1 @@
+!function(a){if(!a.jalios){a.jalios={}}if(!a.jalios.Utils){a.jalios.Utils={}}if(!a.jalios.Utils.formdata){a.jalios.Utils.formdata={}}a.jalios.Utils.formdata={getFormData:function(b){var c=new FormData(a(b).get(0));return c},getFormDataAsJsonObject:function(c){var b={};c.forEach(function(e,d){b[d]=e});return b}}}(window.jQuery);

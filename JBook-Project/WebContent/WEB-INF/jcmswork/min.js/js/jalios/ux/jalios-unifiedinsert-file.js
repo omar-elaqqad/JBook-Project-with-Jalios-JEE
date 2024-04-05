@@ -1,0 +1,1 @@
+!function(a){if(!a.jalios){a.jalios={}}if(!a.jalios.UnifiedInsert){a.jalios.UnifiedInsert={}}a.jalios.UnifiedInsert.File={insertAndClose:function(d){for(var c=0;c<d.length;c++){var b=d[c];var e=(c+1==d.length);if(!b.mediaType||b.mediaType==="other"){a.jalios.UnifiedInsert.insertLink(b.id,e)}else{a.jalios.UnifiedInsert.insertMedia(b.id,e)}}window.close()}}}(window.jQuery);

@@ -1,0 +1,148 @@
+# ----------------------------------------------------------------------
+# Folder
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.folder.lbl.new: Nová složka
+jcmsplugin.bookmarks.folder.lbl.add: Přidat složku
+jcmsplugin.bookmarks.folder.btn.lbl.add: Přidat složku...
+jcmsplugin.bookmarks.folder.lbl.edit: Editovat složku
+jcmsplugin.bookmarks.folder.action.delete.warn-msg: Pozor, bude smazán i obsah složky
+jcmsplugin.bookmarks.folder.menu.action.delete.warn-msg: Pozor, bude smazán i obsah složek
+jcmsplugin.bookmarks.folder.lbl.name:  Název složky
+jcmsplugin.bookmarks.folder.lbl.name1: Název
+jcmsplugin.bookmarks.folder.lbl.name.parent:  Nadřízená složka
+jcmsplugin.bookmarks.folder.lbl.name.parent1: Nadřízená kategorie
+jcmsplugin.bookmarks.folder.name.error: Zadejte název složky
+jcmsplugin.bookmarks.folder.name.error.duplicate: Složka s tímto názvem již existuje
+jcmsplugin.bookmarks.folder.contains-data: Smažte nejdřív obsah této složky
+jcmsplugin.bookmarks.folder.no-result: Neexistují žádné záložky.
+jcmsplugin.bookmarks.folder.root: Nahoru ke kořeni
+jcmsplugin.bookmarks.folder.lbl.root: Kořen
+jcmsplugin.bookmarks.folder.upper: Nahoru do {0}
+jcmsplugin.bookmarks.folder.lbl: Složka
+jcmsplugin.bookmarks.folder.menu.action: Akce
+jcmsplugin.bookmarks.folder.action.move.empty: Výběr nelze přesunout do žádné složky
+jcmsplugin.bookmarks.items.lbl.shift: Posunout výběr
+jcmsplugin.bookmarks.items.lbl.delete: Smazat výběr
+jcmsplugin.bookmarks.menu.search.placeholder: Hledat záložku
+jcmsplugin.bookmarks.already-bookmarked: Tato publikace je již v záložkách.
+jcmsplugin.bookmarks.app.title: Záložky
+
+#DISABLED
+jcmsplugin.bookmarks.plugin-disabled.message: Modul oblíbených je momentálně deaktivován.
+
+#SIDEBAR
+jcmsplugin.bookmarks.topbar.title: Moje záložky
+jcms.sidebar-tab.bookmarks: Záložky
+jcms.sidebar-tab.bookmarks.icon: Záložky
+jcmsplugin.bookmarks.topbar.search: Hledat záložku...
+
+#PUBLICATION
+jcmsplugin.bookmarks.toastr.add: Přidat k záložkám
+jcmsplugin.bookmarks.toastr.remove: Odstranit ze záložek
+
+#MENU
+jcmsplugin.bookmarks.msg.no-result: Nebyla nalezena žádná záložka
+
+jcmsplugin.bookmarks.lbl.bookmarks: Záložky
+jcmsplugin.bookmarks.lbl.link: Externí odkaz
+jcmsplugin.bookmarks.lbl.pub:  Obsah
+jcmsplugin.bookmarks.lbl.search: Vyhledávání
+
+jcmsplugin.bookmarks.lbl.url:    URL
+jcmsplugin.bookmarks.lbl.title:  Název
+jcmsplugin.bookmarks.btn.add:    Přidat
+jcmsplugin.bookmarks.btn.update: Uložit
+jcmsplugin.bookmarks.btn.remove: Odstranit tuto záložku
+
+jcmsplugin.bookmarks.lbl.add-bookmark: Přidat záložku
+jcmsplugin.bookmarks.lbl.remove-bookmark: Odstranit ze záložek
+
+jcmsplugin.bookmarks.lbl.action: Akce
+jcmsplugin.bookmarks.lbl.add:    Přidat záložku...
+jcmsplugin.bookmarks.lbl.edit: 	 Editovat záložku
+jcmsplugin.bookmarks.msg.remove: Opravdu chcete odstranit záložku <em>{0}</em>?
+
+jcmsplugin.bookmarks.adm.max:    Max. počet záložek na jednoho uživatele
+jcmsplugin.bookmarks.msg.adm.max:Byl dosažen max. počet záložek!
+
+jcmsplugin.bookmarks.lbl.bookmark.error: Tato záložka je neplatná.
+jcmsplugin.bookmarks.lbl.url.error: Adresa URL jeneplatná.
+jcmsplugin.bookmarks.title.error: Zadejte název.
+
+jcmsplugin.bookmarks.lbl.manage-bookmark: Uspořádat záložky
+
+jcmsplugin.bookmarks.isExternalLink.title: Externí odkaz
+# ----------------------------------------------------------------------
+# Analytics
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.analytics.top-section: Nejčastěji přidávané záložky
+jcmsplugin.bookmarks.analytics.top-section.help: Top 10 záložek přidávaných uživateli
+jcmsplugin.bookmarks.analytics.top-bookmarks-section: Členové s nejvíce záložkami
+jcmsplugin.bookmarks.analytics.top-bookmarks-section.help: Top 10 členů s nejvíce záložkami
+jcmsplugin.bookmarks.analytics.rank-number-column.label: počet
+jcmsplugin.bookmarks.analytics.bookmark-column.label: Záložky
+jcmsplugin.bookmarks.analytics.bookmark-add-column.label: Počet přidání
+jcmsplugin.bookmarks.analytics.report.average-bookmarks: Průměr záložek
+jcmsplugin.bookmarks.analytics.report.average-bookmarks.h: Průměr na uživatele
+jcmsplugin.bookmarks.analytics.author-column.label: Uživatelé
+jcmsplugin.bookmarks.analytics.bookmark-number-column.label: Počet záložek
+jcmsplugin.bookmarks.analytics.indicator.average-bookmarks: Záložek na uživatele
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks: Publikace nejčastěji přidávána do záložek
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks.h: Top 10 publikací nejčastěji přidávaných do záložek
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks.table.pub.title: Publikace
+ui.analytics.BookmarksAgent.name: Záložky
+
+# ----------------------------------------------------------------------
+# Icones
+# ----------------------------------------------------------------------
+icon.jcmsplugin.bookmarks.bookmarkWhite: Záložky
+icon.jcmsplugin.bookmarks.edit:          Editovat záložku
+icon.jcmsplugin.bookmarks.delete:        Odstranit záložku
+icon.jcmsplugin.bookmarks.add:           Přidat záložku
+icon.jcmsplugin.bookmarks.star:          Záložky
+
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+jcmsplugin.bookmarks.displayExternalUrl: Otevírat externí odkazy v novém okně
+
+# From PortletBookmarks-templates.xml
+types.PortletBookmarks.templates.query.default.label: Výchozí šablona
+types.PortletBookmarks.templates.box.default.label: Výchozí šablona
+
+# From PortletBookmarks.xml
+types.PortletBookmarks.title.label: Název
+types.PortletBookmarks.fields.openLinksInNewWindow.label: Otevírat externí odkazy v novém okně
+types.PortletBookmarks.fields.openLinksInNewWindow.onLabel: Ano
+types.PortletBookmarks.label: Portlet Záložky
+types.PortletBookmarks.description: Tento portlet umožňuje přihlášeným členům spravovat své záložky.
+types.PortletBookmarks.fields.openLinksInNewWindow.offLabel: Ne
+
+# From PortletWorkspaceBookmarks.xml
+types.PortletWorkspaceBookmarks.label: Portlet Záložky pracovního prostoru
+types.PortletWorkspaceBookmarks.title.label: Název
+types.PortletWorkspaceBookmarks.description: Tento portlet umožňuje administrátorovi pracovního prostoru správu záložek v pracovním prostoru.
+
+jcmsplugin.bookmarks.edition-mode: Přepnout do režimu editace
+jcmsplugin.bookmarks.remove-edition-mode: Ukončit editaci
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.bookmark:   Záložky
+jcmsplugin.bookmarks.smartphone.lbl.bookmark.filter: Hledat v záložkách...
+jcmsplugin.bookmarks.smartphone.lbl.bookmark.no-result: Žádné záložky
+jcmsplugin.bookmarks.smartphone.menu.bookmark.added.lbl: Záložka byla přidána
+jcmsplugin.bookmarks.smartphone.menu.bookmark.removed.lbl: Záložka byla odstraněna
+
+# Shortcut
+data.$id.shortcut.jcmsplugin.bookmarks.title: Záložky
+data.$id.shortcut.jcmsplugin.bookmarks.text: Zobrazení a správa uložených odkazů na publikace, výsledky vyhledávání a externí stránky.
+
+# ----------------------------------------------------------------------
+# JTasks project
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.app.project.sidebar.favorite-projects.label: Moje oblíbené

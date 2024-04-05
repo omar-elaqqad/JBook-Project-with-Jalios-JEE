@@ -1,0 +1,372 @@
+# ------------------------------------------------------------
+#  BLOG VIRTUAL ID
+# ------------------------------------------------------------
+jcmsplugin.blog.create-blogosphere: 创建博客空间
+
+$id.Blog.model.help:   使用模型来复制服务
+$id.jcmsplugin.blog.blogosphere:                成员博客工作区 id
+$id.jcmsplugin.blog.blogosphere.category.root:  博客空间根类别 id
+$id.jcmsplugin.blog.blogger.group-attendees:    博客空间成员组 id
+# ------------------------------------------------------------
+#  BLOG Terms and conditions Agreement
+# ------------------------------------------------------------
+jcmsplugin.blog.agreement.btn.agree:          同意
+jcmsplugin.blog.agreement.btn.disagree:       不同意
+# ------------------------------------------------------------
+#  BLOG LABELS
+# ------------------------------------------------------------
+jcmsplugin.blog.label.blog:             博客
+jcmsplugin.blog.label.blogosphere:      博客圈
+jcmsplugin.blog.label.blog-post-count:  {0} 博客发布
+jcmsplugin.blog.label.category:         {0} 类别
+jcmsplugin.blog.label.create-ws-blog:   在此工作区内创建一个博客
+jcmsplugin.blog.label.no-workspace-blog:此工作区内没有博客。
+jcmsplugin.blog.label.pending-request:  您提交的博客开通请求正在处理中。
+jcmsplugin.blog.label.rejected-request: 您提交的博客开通请求已被拒绝。
+jcmsplugin.blog.label.blog-request:     请求开通博客
+jcmsplugin.blog.label.blog-create:      创建我的博客
+jcmsplugin.blog.label.blog-ws-create:   创建工作区博客
+jcmsplugin.blog.label.add-blog-post:    在我的博客中发布一个内容
+jcmsplugin.blog.label.already-has-blog: 您已经有了一个博客。
+jcmsplugin.blog.label.add-blog-post-ws: 发布一个项目
+jcmsplugin.blog.label.delete-comment-confirm: 您确定要删除：
+jcmsplugin.blog.label.access-full-blog: 访问成员的博客。
+jcmsplugin.blog.label.access-my-blog:   访问我的博客。
+jcmsplugin.blog.label.all-blog:         所有博客
+jcmsplugin.blog.label.access-blog:      访问博客：{0}
+jcmsplugin.blog.label.no-comments:      您的博客尚无任何评论。
+jcmsplugin.blog.label.no-posts:         您的博客尚无任何发布内容。
+jcmsplugin.blog.label.blog-attendees:   博客空间成员
+jcmsplugin.blog.label.blog-validators:  博客圈确认者
+jcmsplugin.blog.label.bloggers:         博主
+jcmsplugin.blog.label.unread:           未读
+jcmsplugin.blog.label.draft:            草稿
+jcmsplugin.blog.label.my-blog:          我的博客
+jcmsplugin.blog.label.new-comment:      {0} {0,choice,0#新评论|1#新评论|2#新评论}
+jcmsplugin.blog.label.portlet.type-subject: 在这里输入您的博客新发布项标题。
+jcmsplugin.blog.label.continue:         继续...
+jcmsplugin.blog.label.no-blog-under-ws: 博客尚未创建
+jcmsplugin.blog.label.activate-blog:    激活播客
+jcmsplugin.blog.label.my-actions:       我的操作
+jcmsplugin.blog.label.access-member-blog:   我的博客
+jcmsplugin.blog.label.access-ws-blog:       访问协作空间博客
+jcmsplugin.blog.tab.last-blog-post:     博客发布
+jcmsplugin.blog.label.the-blog-of:      {0}的博客
+jcmsplugin.blog.tab.last-blog:          博客
+jcmsplugin.blog.tab.my-blog-post:       我的博客发布
+jcmsplugin.blog.tab.blog-choice:        博客选择：
+jcmsplugin.blog.tab.posted-by:          发布者为
+jcmsplugin.blog.label.by:               由
+jcmsplugin.blog.submit:                 提交
+jcmsplugin.blog.edit.complete:          完成编辑
+jcmsplugin.blog.follow:                 订阅博客
+jcmsplugin.blog.follow-message:         您已订阅新文章
+jcmsplugin.blog.unfollow:               取消订阅博客
+jcmsplugin.blog.unfollow-message:       您已不再订阅新文章
+jcmsplugin.blog.app-sidebar.follow:     订阅
+jcmsplugin.blog.manage-posts.title:     发布管理
+jcmsplugin.blog.manage-posts.table-caption: 博客发布内容列表
+jcmsplugin.blog.app-sidebar.follow.tooltip: 订阅新发布内容
+jcmsplugin.blog.app-sidebar.unfollow:   取消订阅
+jcmsplugin.blog.app-sidebar.unfollow.tooltip: 取消订阅新发布内容
+jcmsplugin.blog.label.all-authors: 所有作者
+jcmsplugin.blog.msg.edit.delete-blog-no-post: 无法删除带有发布内容的博客。
+
+# ------------------------------------------------------------
+#  BLOG LISTS
+# ------------------------------------------------------------
+jcmsplugin.blog.label.empty:                该博客尚无发布内容。
+jcmsplugin.blog.label.empty-search:         您的搜索没有返回任何结果。
+jcmsplugin.blog.label.empty-drafts:         您目前没有草稿。
+jcmsplugin.blog.label.empty-cat:            该类别内没有发布项。
+# ------------------------------------------------------------
+#  BLOG POST
+# ------------------------------------------------------------
+
+jcmsplugin.blog.label.stats.visit-count:    阅读
+jcmsplugin.blog.label.stats.unique-visit:   阅读者
+
+jcmsplugin.blog.label.action.follow:        订阅这个博客
+jcmsplugin.blog.label.action.unfollow:      取消订阅这个博客
+
+jcmsplugin.blog.label.action.follow-blog:   订阅这个博客
+jcmsplugin.blog.label.action.unfollow-blog: 取消订阅这个博客
+jcmsplugin.blog.label.action.follow-blog-text:   您希望通过邮件接收此博客中的最新发布内容吗？
+jcmsplugin.blog.label.action.unfollow-blog-text: 您希望停止通过邮件接收此博客中的最新发布内容吗？
+
+
+jcmsplugin.blog.label.info.in:              在：
+jcmsplugin.blog.label.info.comments:        {0,choice,0#评论|1#评论|2#评论}
+
+jcmsplugin.blog.label.read-more:            阅读更多
+jcmsplugin.blog.label.blog.desc.show-more:  显示更多
+jcmsplugin.blog.blog-desc.btn.show-more.title: 显示说明
+jcmsplugin.blog.blog-desc.btn.show-less.title: 隐藏说明
+
+jcmsplugin.blog.title.add-post:             添加一个新的博客发布项
+jcmsplugin.blog.title.save-as-draft:        草稿
+jcmsplugin.blog.label.action.publish:       发布
+# ------------------------------------------------------------
+#  BLOG SIDEBAR
+# ------------------------------------------------------------
+jcmsplugin.blog.title.admin:      管理
+jcmsplugin.blog.title.archive:    存档
+jcmsplugin.blog.title.authors:    作者
+jcmsplugin.blog.title.categories: 分类
+jcmsplugin.blog.title.recent-post:最近发布
+jcmsplugin.blog.title.no-category:无类别
+jcmsplugin.blog.label.edit-blog:      编辑博客
+jcmsplugin.blog.label.action.add-post:      发布一个项目
+jcmsplugin.blog.label.action.add-post-wf:   发布一个项目
+jcmsplugin.blog.label.action.see-draft:     查看草稿
+jcmsplugin.blog.label.action.add-category:  添加类别
+jcmsplugin.blog.label.action.add-sub-category:  添加子类别
+jcmsplugin.blog.label.action.add-sub-authors:  添加协同作者
+jcmsplugin.blog.label.action.search:  搜索
+jcmsplugin.blog.label.action.search-post.placeholer: 搜索发布……
+jcmsplugin.blog.label.action.see-all-authors:  查看所有作者
+jcmsplugin.blog.label.post-in-cat:  {0,choice,1#{1}类别内有{0} 个发布|2#{1}类别内有{0}个发布}
+jcmsplugin.blog.app.sidebar.all-posts-link: 所有发布内容
+# ------------------------------------------------------------
+#  BLOG MODAL
+# ------------------------------------------------------------
+jcmsplugin.blog.title.ws-blog:       工作区博客
+
+jcmsplugin.blog.title.add-cat:       添加类别
+jcmsplugin.blog.title.add-sub-cat:   添加子类别至 {0}
+jcmsplugin.blog.label.add-cat:       输入要添加的类别名称（逗号分隔）
+
+jcmsplugin.blog.title.blog-request:  博客开通请求
+jcmsplugin.blog.title.edit-comment:  编辑评论
+
+jcmsplugin.blog.blog-root.label:     根
+jcmsplugin.blog.blog-root.description:     博客类别根
+# ------------------------------------------------------------
+#  BLOG LAYOUT
+# ------------------------------------------------------------
+
+jcmsplugin.blog.label.add-blog:      创建博客
+jcmsplugin.blog.label.edit-blog:     编辑博客
+jcmsplugin.blog.label.add-post:      发布新博客内容
+jcmsplugin.blog.label.edit-post:     编辑博客发布项
+jcmsplugin.blog.label.author:        由 {0}发布
+jcmsplugin.blog.label.last-post:     上次发布
+jcmsplugin.blog.label.search:        搜索
+
+# ------------------------------------------------------------
+#  BLOG REQUEST
+# ------------------------------------------------------------
+
+jcmsplugin.blog.agreement.required:            接受博客使用条款
+$id.jcmsplugin.blog.agreement.terms.pub:       博客使用条款 - 发布
+jcmsplugin.blog.agreement.terms.field:         博客使用条款 - 字段
+jcmsplugin.blog.agreement.btn.agree:           我接收
+jcmsplugin.blog.agreement.btn.disagree:        我拒绝
+jcmsplugin.blog.agreement.date:      博客：使用条款接受日期
+jcmsplugin.blog.agreement.title:               使用条款
+jcmsplugin.blog.agreement.text:                尚未定义博客使用条款。请更新属性 <code>{0}</code> 和 <code>{1}</code>。
+
+# ------------------------------------------------------------
+#  BLOG PORTLET
+# ------------------------------------------------------------
+
+$id.jcmsplugin.blog.portlet.categories:       博客 - 类别
+$id.jcmsplugin.blog.portlet.recent-post:      博客 - 近期发布
+$id.jcmsplugin.blog.portlet.archive:          博客 - 存档
+$id.jcmsplugin.blog.portlet.member-profile:   博客 - 成员个人资料
+$id.jcmsplugin.blog.portlet.post-list:        博客 - 发布列表
+$id.jcmsplugin.blog.portlet.post-full:        博客 - 发布
+$id.jcmsplugin.blog.portlet.admin:            博客 - 管理员
+$id.jcmsplugin.blog.portlet.add-post:         博客 - 添加发布
+$id.jcmsplugin.blog.portlet.authors:          博客 - 作者列表
+$id.jcmsplugin.blog.portlet.handle-posts:     博客 - 发布管理
+# ------------------------------------------------------------
+#  BLOG ADMIN
+# ------------------------------------------------------------
+jcmsplugin.blog.admin.author:                 作者
+jcmsplugin.blog.admin.modify:                 修改
+jcmsplugin.blog.admin.add-authors:            管理作者
+jcmsplugin.blog.admin.add-authors-description: 选择可在<b>{0}</b>种添加新发布内容的成员。
+jcmsplugin.blog.admin.delete:                 删除
+jcmsplugin.blog.admin.handle-posts:           管理文章
+jcmsplugin.blog.admin.handle.unique-visitor:  阅读
+jcmsplugin.blog.admin.handle.total-visitor:   阅读者
+jcmsplugin.blog.admin.handle.comment-count:   评论
+jcmsplugin.blog.admin.handle.vote-count:      投票
+jcmsplugin.blog.admin.handle.post-date:       修改
+jcmsplugin.blog.admin.handle.sort-by:         发布分类标准为
+jcmsplugin.blog.admin.handle.or:              或
+jcmsplugin.blog.label.title:                  指南标题
+jcmsplugin.blog.label.date:                   日期
+jcmsplugin.blog.admin.author-list:            作者列表
+jcmsplugin.blog.admin.see-my-post:            查看我的发布
+jcmsplugin.blog.admin.see-member-post:        查看发布
+jcmsplugin.blog.admin.see-all-post:           查看所有发布
+
+# ------------------------------------------------------------
+#  BLOG WARNING
+# ------------------------------------------------------------
+
+jcmsplugin.blog.warning.ws-has-a-blog:             您的工作区内已有一个博客（{0}）。
+jcmsplugin.blog.warning.duplicate-same:            当前工作区内已有一个同名博客
+jcmsplugin.blog.warning.text:                      请输入文本
+jcmsplugin.blog.warning.member-has-a-blog:         成员"{0}"已在博客空间开通博客：{1}。
+jcmsplugin.blog.warning.blogosphere-root-cat:      博客的博客空间根类别不存在。请在插件属性中对其做出更新。
+jcmsplugin.blog.warning.blogosphere-forbidden-blog:您没有在以下博客发布项目的权限："{0}"
+jcmsplugin.blog.warning.forbidden-blog:            您没有在以下协作区博客发布项目的权限："{0}"
+jcmsplugin.blog.warning.forbidden-blog-create:     您还不能创建博客。
+
+# ------------------------------------------------------------
+#  BLOG ACL
+# ------------------------------------------------------------
+acl.resource.admin/work/blogospherecreation: 博客 - 为博客空间添加博客
+
+
+# ------------------------------------------------------------
+#  PUBLISH MENU
+# ------------------------------------------------------------
+jcmsplugin.blog.publish-menu.add-cs:   博客发布
+jcmsplugin.blog.publish-menu.add-mine: 我博客内的发布
+
+
+# ------------------------------------------------------------
+#  CategoryBrowser
+# ------------------------------------------------------------
+category.category-browser.blog: 在博客内搜索
+
+
+# ----------------------------------------------------------------------
+# Alert
+# ----------------------------------------------------------------------
+alert.name.jcmsplugin-blog:                               博客
+
+alert.name.jcmsplugin-blog.new-blogpost:                  新博客发布
+alert.msg.jcmsplugin-blog.new-blogpost.title:             新博客发布：{data}
+alert.msg.jcmsplugin-blog.new-blogpost.short-description: {author}在{parent}内发布了新博客内容{data}。{data.url}
+alert.msg.jcmsplugin-blog.new-blogpost.description:       <p>{author}在{parent.link}内发布了新博客内容{data}。</p> 
+
+alert.name.jcmsplugin-blog.update-blogpost:               博客发布更新
+alert.msg.jcmsplugin-blog.update-blogpost.title:          已更新一项博客发布：{data}
+alert.msg.jcmsplugin-blog.update-blogpost.short-description: {author}在{parent}内更新了博客内容{data}。{data.url}
+alert.msg.jcmsplugin-blog.update-blogpost.description:       <p>{author}在{parent.link}内更新了博客内容{data}。</p> 
+
+alert.name.jcmsplugin-blog.blog-opening:                  博客开通请求确认
+alert.msg.jcmsplugin-blog.blog-opening.title:             您的博客开通请求已通过
+alert.msg.jcmsplugin-blog.blog-opening.short-description: {author}已通过了您的博客开通请求：{data}. {data.url}
+alert.msg.jcmsplugin-blog.blog-opening.description:       <p>{author}已通过了您的博客开通请求：{data}:</p> 
+
+# ------------------------------------------------------------
+#  BLOG TOOLS
+# ------------------------------------------------------------
+
+jcmsplugin.blog.tools.title:  将BlogPost（储存）上载至BlogPost（数据库）- 第二步
+jcmsplugin.blog.tools.text1:  博客导入信息
+jcmsplugin.blog.tools.text2:  1.将储存中的BlogPost导入至数据库中的BlogPost
+jcmsplugin.blog.tools.text3:  2.用新的参数对所有博客进行初始化操作
+ui.adm.jcms5-loader.btn.load:        加载数据
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From Blog-templates.xml
+types.Blog.templates.editFront.default.label: Front Office编辑模板
+types.Blog.templates.editFrontOld.default.label: 旧Front Office编辑模板
+types.Blog.templates.query.default.label: 默认模板
+types.Blog.templates.box.default.label: 默认模板
+types.Blog.templates.edit.default.label: Front Office编辑模板
+types.Blog.templates.fullold.default.label: 旧模板
+types.Blog.templates.full.old.label: 旧模板
+types.Blog.templates.full.default.label: 默认JNews模板
+ui.editportlet.usage.fullold: 旧模板
+
+# From Blog.xml
+types.Blog.fields.bloggerGroup.label: 博主群
+types.Blog.title.label: 指南标题
+types.Blog.fields.description.label: 博客描述
+types.Blog.label: 博客
+
+# From BlogPost-templates.xml
+types.BlogPost.templates.editFront.default.label: Front Office编辑模板
+types.BlogPost.templates.editFrontOld.default.label: 旧Front Office编辑模板
+types.BlogPost.templates.query.default.label: 默认模板
+types.BlogPost.templates.edit.default.label: 编辑模板
+types.BlogPost.templates.full.default.label: 默认模板
+types.BlogPost.templates.fullold.default.label: 旧模板
+types.BlogPost.templates.full.default.label: 默认模板
+types.BlogPost.templates.appBody.default.label: 应用程序主题显示亮模板
+
+# From BlogPost.xml
+types.BlogPost.fields.summary.description: 这是即将在发布列表中和在发送给订阅方邮件中显示的发布内容摘要。
+types.BlogPost.fields.blog.label: 博客
+types.BlogPost.fields.category.description: 您可以选择多种类别。
+types.BlogPost.fields.content.label: 文本
+types.BlogPost.label: BlogPost
+types.BlogPost.title.label: 指南标题
+types.BlogPost.fields.category.label: 分类
+types.BlogPost.fields.summary.label: 摘要
+types.BlogPost.fields.featuredImage.label: 图片
+types.BlogPost.fields.featuredImage.description: 该图片的尺寸应该更大，最好为16/9格式（示例：960x540）
+types.BlogPost.fields.featuredImageAlt.label: 图片文本替代
+types.BlogPost.fields.featuredImageAlt.description: 该文本将用于为图片添加说明
+types.BlogPost.fields.thumbnailImage.label: 缩略图
+types.BlogPost.fields.thumbnailImage.description: 根据图片生产缩略图。但您可以选择另一个缩略图。图片应当大于300x150，最好为4/3或16/9格式。
+types.BlogPost.fields.thumbnailImageAlt.label: 缩略图文本替代
+types.BlogPost.fields.thumbnailImageAlt.description: 该文本将用于为缩略图图片添加说明
+types.BlogPost.fields.imageAltText.label: 文本替代
+types.BlogPost.btn.show-options: 更多选项...
+types.BlogPost.btn.hide-options: 更少选项……
+
+# From BlogRequest.xml
+types.BlogRequest.fields.description.label: 指南说明
+types.BlogRequest.title.label: 博客名称
+types.BlogRequest.label: 博客开通请求
+
+# From PortletBlog-templates.xml
+types.PortletBlog.templates.box.default.label: 默认模板
+types.PortletBlog.templates.box.default.description: 此Portlet的默认模板
+types.PortletBlog.templates.box.itembox.label: 设计为item-box的列表
+types.PortletBlog.templates.box.itembox.description: 设计为item-box的列表
+types.PortletBlog.templates.edit.default.label: 默认模板
+types.PortletBlog.templates.edit.default.description: 此Portlet的默认模板
+types.PortletBlog.templates.full.default.label: 默认模板
+types.PortletBlog.templates.full.default.description: 此Portlet的默认模板
+types.PortletBlog.templates.query.default.label: 默认模板
+types.PortletBlog.templates.query.default.description: 此Portlet的默认模板
+
+# From PortletBlog.xml
+types.PortletBlog.label: 博客 Portlet
+types.PortletBlog.fields.displayedList.labelList: 工作区内的所有博客和发布项|工作区发布项
+types.PortletBlog.fields.displayedList.label: 显示的列表
+types.PortletBlog.title.label: 指南标题
+types.PortletBlog.description: 显示博客文章和播客列表
+
+# From wfblogrequest.xml
+workflows.wfblogrequest.label: 博客 - 博客开通请求工作流
+workflows.wfblogrequest.states.60.description: 请求已通过，博客已创建。
+workflows.wfblogrequest.states.50.description: 该博客请求已被拒绝。博客将不会被开通。在工作流注释中查看更多内容。
+workflows.wfblogrequest.states.-200.label: 已提交
+workflows.wfblogrequest.roles.blogValidator.description: 接受/拒绝博客开通请求
+workflows.wfblogrequest.roles.blogValidator.name: 验证者
+workflows.wfblogrequest.states.60.label: 已接受
+workflows.wfblogrequest.states.50.label: 已拒绝
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.blog:     博客
+jcmsplugin.smartphone.workspace-service.PortletBlog: 博客
+jcmsplugin.blog.smartphone.lbl.blogpost-list: 发布
+jcmsplugin.blog.smartphone.lbl.blog: 博客
+jcmsplugin.blog.smartphone.lbl.blog.my-blogs: 我的博客
+jcmsplugin.blog.smartphone.lbl.blog.other-blogs: 其他博客
+
+# ----------------------------------------------------------------------
+# BlogPost Form
+# ----------------------------------------------------------------------
+jcmsplugin.blog.filter-author: 按作者筛选
+jcmsplugin.blog.filter-pstatus: 状态筛选
+jcmsplugin.blog.filter-startDate: 开始日期
+jcmsplugin.blog.filter-endDate: 结束日期
+jcmsplugin.blog.sort-by-vote: 投票统计

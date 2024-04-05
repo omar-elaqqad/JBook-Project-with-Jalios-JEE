@@ -1,0 +1,123 @@
+<%@ page import="com.jalios.jcms.tracking.*" %><%
+%><%@ page import="com.jalios.jcms.publicationfollower.*" %><%
+  String blogTab = getUntrustedStringParameter("blogDisplay","");
+  boolean isBlogFullDisplay = request.getAttribute(PortalManager.PORTAL_PUBLICATION) instanceof Blog;
+  boolean isDraftDisplay = "draft".equals(blogTab);
+  boolean isCollaborativeSpace = workspace.isCollaborativeSpace();
+  Date postDate = post.getPdate() != null ? post.getPdate() : post.getCdate();
+  Set<Category> categorySet = blogMgr.getBlogPostCategorySet(post, loggedMember);
+  boolean isEsnDisplay = Util.toBoolean(request.getAttribute("isEsnDisplay"),false);
+%>
+<div class="post" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
+  <div class="post-header-container">
+    <div class="media">
+    <jalios:memberphoto css="pull-left post-author" member="<%= post.getAuthor() %>" size="<%= PhotoSize.TINY %>" />
+    <div class="media-body post-meta well well-sm">
+      <% if(postDate != null){
+        boolean isToday = DateUtil.isToday(postDate);
+      %>
+        <div class="post-date pull-left" itemprop="dateCreated" title='<%= encodeForHTMLAttribute(JcmsUtil.getFriendlyDate(postDate, DateFormat.SHORT, true, userLocale)) %>'>
+          <jalios:icon src="jcmsplugin-blog-blogpost-date"/>
+          <% if (isToday) { %><jalios:time format="short" date="<%= postDate %>" /><% } else { %><jalios:date format="dd/MM/yy" date="<%= postDate %>" /><% } %>
+        </div>
+      <% } %>
+      <div class="post-meta-content">
+        <div class="post-infos pull-left">
+          <% if(!isEsnDisplay && post.getAuthor() != null){ %>
+            <span itemprop="author"><%= glp("jcmsplugin.blog.tab.posted-by") %> <jalios:link data="<%= post.getAuthor() %>"/></span>
+          <% } %>
+          <% if(isEsnDisplay){ %>
+            <jalios:link data="<%= post.getBlog() %>"/>
+          <% } %>
+          <% if (!isEsnDisplay) { %>
+            <%
+              int commentCount = dbcommentMgr.getDBCommentCount(post, loggedMember);
+              String commentLinkCssClass = commentCount > 0 ? "" : "no-comment";
+            %>
+            <% if ((commentCount > 0 || postFullDisplay) && !hasParameter("searchedText")){ %>
+              &middot;
+              <span class="noTooltipCard">
+              <jalios:icon src="jcmsplugin-blog-comments"/>
+              <jalios:link data="<%= post %>" anchor="dbcomments" css="<%= commentLinkCssClass %>">
+                  <%= commentCount %> <%= glp("jcmsplugin.blog.label.info.comments",commentCount)%>
+              </jalios:link>
+              </span>
+            <% } %>
+          <% } %>
+        </div>
+        <% if (isBlogFullDisplay && !isEsnDisplay && isDataWriteEnabled && !jcmsContext.isPrintView() && isLogged) { %>
+        <div class="post-icons hidden-xs pull-right">
+          <% if (loggedMember.canWorkOn(post)) { %>
+            <a class="post-icons-edit" href="types/BlogPost/doBlogPostEditDisplay.jsp?id=<%= post.getId() %>"><jalios:icon src="edit"/></a>
+          <% } %>
+          <%
+            String follow;
+            boolean isFollower = post.isFollowedBy(loggedMember);
+          %>
+          <% if (isLogged && isFollower) { %>
+            <% follow = glp("jcmsplugin.blog.label.action.unfollow"); %>
+            <a href="front/follow.jsp?id=<%= post.getId() %>&amp;follow=false&amp;redirect=<%= ServletUtil.encodeURL(ServletUtil.getUrl(request)) %>" class="modal confirm" title="<%= encodeForHTMLAttribute(follow) %>">
+              <jalios:icon src="unfollow" />
+            </a>
+          <% } else if(isLogged) {%>
+            <% follow = glp("jcmsplugin.blog.label.action.follow"); %>
+            <a href="front/follow.jsp?id=<%= post.getId() %>&amp;redirect=<%= ServletUtil.encodeURL(ServletUtil.getUrl(request)) %>" class="modal confirm" title="<%= encodeForHTMLAttribute(follow) %>">
+              <jalios:icon src="follow" />
+            </a>
+          <% } %>
+          <jalios:recommendation data="<%= post %>"><jalios:icon src="recommendation" /></jalios:recommendation>
+        </div>
+        <% } %>
+        </div>
+      </div><!-- EOF .post-meta -->
+      </div>
+      <div class="post-title noTooltipCard">
+        <h2 itemprop="name">
+          <%= post.isInVisibleState() ? "" : post.getWFStateLabelHtml(userLang) %> <jalios:link css="post-title-link" data="<%= post %>" params='<%= isDraftDisplay || !post.isInVisibleState() ? "preview=true" : "" %>'/>
+        </h2>
+        <% if (Util.notEmpty(categorySet)) { %>
+          <%
+          String refresh = Util.toBoolean(request.getAttribute("query.facets.ajax"),false) ? "ajax-refresh" : "";
+          PortalInterface categorySearchPortal = getDataParameter("portal", PortalInterface.class);
+          %>
+          <jalios:icon src="category" title="ui.com.lbl.categories" />
+          <% boolean showCategoryToggler = categorySet.size() > 4; %>
+          <jalios:foreach collection="<%= categorySet %>" name="cat" type="Category" counter="itCatCounter">
+          <a class="meta-cat<%= itCatCounter > 4 ? " hide meta-category-toggler" : "" %><%= refresh %>" href="<%= ResourceHelper.getQuery() %>?types=BlogPost&amp;cids=<%= cat.getId() %><%= categorySearchPortal != null ? "&amp;portal="+categorySearchPortal.getId() : "" %>"><%= cat.getName(userLang) %></a>
+          </jalios:foreach>
+          <% if (showCategoryToggler) { %>
+          <a href="#" title="<%= encodeForHTMLAttribute(glp("ui.com.lbl.metadata.show-all-cat")) %>" class="meta-cat meta-category-toggler" data-jalios-action="toggle:hide" data-jalios-target=".meta-category-toggler" onclick="return false;">&hellip;</a>
+          <% } %>
+        <% } %>
+      </div>
+    </div><!-- EOF post-header-container -->
+    <div class="post-text" itemprop="articleBody">
+    <% if(postFullDisplay){ %>
+      <jalios:wysiwyg data="<%= post %>" field="content">
+        <% if (post.displayFeaturedImage()) { %>
+          <jalios:thumbnail css="post-featured-image" data="<%= post %>" width='300' height='140'/>
+        <% } %>
+        <%= Util.getString(post.getContent(userLang),"") %>
+      </jalios:wysiwyg>
+    <% }else{ %>
+        <% if(Util.notEmpty(post.getSummary(userLang))){%>
+          <jalios:wiki css="clearfix">
+            <% if (post.displayFeaturedImage()) { %>
+              <jalios:thumbnail css="post-featured-image" data="<%= post %>" width='300' height='140'/>
+            <% } %>
+            <%= Util.getString(post.getSummary(userLang),"") %>
+          </jalios:wiki>
+          <div>
+            <br/>
+            <span class="read-more">
+            <jalios:link data="<%= post %>"><%= glp("jcmsplugin.blog.label.read-more") %> <jalios:icon src="jcmsplugin-blog-read-more" /></jalios:link>
+            </span>
+          </div>
+        <% }else{%>
+          <jalios:wysiwyg data="<%= post %>" field="content">
+          <%= Util.getString(post.getContent(userLang),"") %>
+          </jalios:wysiwyg>
+        <% } %>
+    <% } %>
+    </div>
+</div>

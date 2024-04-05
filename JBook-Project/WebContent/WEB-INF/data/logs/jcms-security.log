@@ -1,0 +1,11 @@
+15:21:59,279 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+15:22:07,439 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+15:22:07,480 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+15:22:18,535 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+15:22:19,234 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+15:23:10,003 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+15:23:10,048 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+15:23:13,910 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+15:23:31,476 INFO [http-nio-8080-exec-2] [JPlatform 10] [handlers.LoggingAuthenticationHandler] [0:0:0:0:0:0:0:1, j_2, Admin] [SECURITY] - Administrator "Admin" starts a new session
+15:25:22,986 INFO [Catalina-utility-2] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+15:25:24,803 INFO [Catalina-utility-2] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties

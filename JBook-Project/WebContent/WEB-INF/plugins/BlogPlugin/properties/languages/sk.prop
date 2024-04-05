@@ -1,0 +1,372 @@
+# ------------------------------------------------------------
+#  BLOG VIRTUAL ID
+# ------------------------------------------------------------
+jcmsplugin.blog.create-blogosphere: Vytvoriť blogosféru
+
+$id.Blog.model.help:   Použiť model na kopírovanie služieb
+$id.jcmsplugin.blog.blogosphere:                ID pracovného priestoru blogu člena
+$id.jcmsplugin.blog.blogosphere.category.root:  ID hlavnej kategórie blogosféry
+$id.jcmsplugin.blog.blogger.group-attendees:    ID člena skupiny blogosféry
+# ------------------------------------------------------------
+#  BLOG Terms and conditions Agreement
+# ------------------------------------------------------------
+jcmsplugin.blog.agreement.btn.agree:          Súhlasím
+jcmsplugin.blog.agreement.btn.disagree:       Nesúhlasím
+# ------------------------------------------------------------
+#  BLOG LABELS
+# ------------------------------------------------------------
+jcmsplugin.blog.label.blog:             Blog
+jcmsplugin.blog.label.blogosphere:      Blogosféra
+jcmsplugin.blog.label.blog-post-count:  Príspevok na blogu {0}
+jcmsplugin.blog.label.category:         Kategória {0}
+jcmsplugin.blog.label.create-ws-blog:   Vytvoriť blog v tomto pracovnom priestore
+jcmsplugin.blog.label.no-workspace-blog:Žiadny blog v tomto pracovnom priestore.
+jcmsplugin.blog.label.pending-request:  Vaša žiadosť o otvorenie blogu sa spracováva.
+jcmsplugin.blog.label.rejected-request: Vaša žiadosť o otvorenie blogu bola zamietnutá.
+jcmsplugin.blog.label.blog-request:     Žiadosť o otvorenie blogu
+jcmsplugin.blog.label.blog-create:      Vytvoriť môj blog
+jcmsplugin.blog.label.blog-ws-create:   Vytvoriť blog v pracovnom priestore
+jcmsplugin.blog.label.add-blog-post:    Uverejniť príspevok v mojom blogu
+jcmsplugin.blog.label.already-has-blog: Už máte blog.
+jcmsplugin.blog.label.add-blog-post-ws: Uverejniť príspevok
+jcmsplugin.blog.label.delete-comment-confirm: Naozaj chcete odstrániť:
+jcmsplugin.blog.label.access-full-blog: Otvoriť blog člena.
+jcmsplugin.blog.label.access-my-blog:   Otvoriť môj blog.
+jcmsplugin.blog.label.all-blog:         Všetky blogy
+jcmsplugin.blog.label.access-blog:      Prístup k blogu: {0}
+jcmsplugin.blog.label.no-comments:      Zatiaľ žiadne komentáre k vášmu blogu.
+jcmsplugin.blog.label.no-posts:         Zatiaľ žiadne príspevky na vašom blogu.
+jcmsplugin.blog.label.blog-attendees:   Členovia blogosféry
+jcmsplugin.blog.label.blog-validators:  Nástroje na overovanie v blogosfére
+jcmsplugin.blog.label.bloggers:         Blogeri
+jcmsplugin.blog.label.unread:           Neprečítané
+jcmsplugin.blog.label.draft:            Koncept
+jcmsplugin.blog.label.my-blog:          Môj blog
+jcmsplugin.blog.label.new-comment:      {0} {0,choice,0#nových komentárov|1#nový komentár|2#nové komentáre}
+jcmsplugin.blog.label.portlet.type-subject: Sem napíšte názov svojho príspevku na blog.
+jcmsplugin.blog.label.continue:         Pokračovať...
+jcmsplugin.blog.label.no-blog-under-ws: Blog ešte nie je vytvorený
+jcmsplugin.blog.label.activate-blog:    Aktivovať blog
+jcmsplugin.blog.label.my-actions:       Moje úkony
+jcmsplugin.blog.label.access-member-blog:   Môj blog
+jcmsplugin.blog.label.access-ws-blog:       Otvoriť blog kolaboratívneho priestoru
+jcmsplugin.blog.tab.last-blog-post:     Príspevok na blogu
+jcmsplugin.blog.label.the-blog-of:      Blog {0}
+jcmsplugin.blog.tab.last-blog:          Blog
+jcmsplugin.blog.tab.my-blog-post:       Môj príspevok na blogu
+jcmsplugin.blog.tab.blog-choice:        Voľba blogu:
+jcmsplugin.blog.tab.posted-by:          Pridal/a
+jcmsplugin.blog.label.by:               od
+jcmsplugin.blog.submit:                 Odoslať
+jcmsplugin.blog.edit.complete:          Dokončiť úpravu
+jcmsplugin.blog.follow:                 Odoberať blog
+jcmsplugin.blog.follow-message:         Teraz už odoberáte nové príspevky
+jcmsplugin.blog.unfollow:               Zrušiť odoberanie blogu
+jcmsplugin.blog.unfollow-message:       Momentálne neodoberáte nové príspevky
+jcmsplugin.blog.app-sidebar.follow:     Odoberať
+jcmsplugin.blog.manage-posts.title:     Spravovanie príspevkov
+jcmsplugin.blog.manage-posts.table-caption: Zoznam príspevkov v blogu
+jcmsplugin.blog.app-sidebar.follow.tooltip: Odoberať nové príspevky
+jcmsplugin.blog.app-sidebar.unfollow:   Zrušiť odber
+jcmsplugin.blog.app-sidebar.unfollow.tooltip: Zrušiť odber nových príspevkov
+jcmsplugin.blog.label.all-authors: Všetci autori
+jcmsplugin.blog.msg.edit.delete-blog-no-post: Blog s príspevkami sa nedá vymazať.
+
+# ------------------------------------------------------------
+#  BLOG LISTS
+# ------------------------------------------------------------
+jcmsplugin.blog.label.empty:                Na tomto blogu zatiaľ nie sú žiadne príspevky.
+jcmsplugin.blog.label.empty-search:         Vyhľadávanie neprinieslo žiadne výsledky.
+jcmsplugin.blog.label.empty-drafts:         Momentálne nemáte žiadne koncepty.
+jcmsplugin.blog.label.empty-cat:            Žiadne príspevky v tejto kategórii.
+# ------------------------------------------------------------
+#  BLOG POST
+# ------------------------------------------------------------
+
+jcmsplugin.blog.label.stats.visit-count:    Prečítané
+jcmsplugin.blog.label.stats.unique-visit:   Čitatelia
+
+jcmsplugin.blog.label.action.follow:        Odoberať tento blog
+jcmsplugin.blog.label.action.unfollow:      Zrušiť odoberanie tohto blogu
+
+jcmsplugin.blog.label.action.follow-blog:   Odoberať tento blog
+jcmsplugin.blog.label.action.unfollow-blog: Zrušiť odoberanie tohto blogu
+jcmsplugin.blog.label.action.follow-blog-text:   Chcete e-mailom dostávať najnovšie uverejnené príspevky na tomto blogu?
+jcmsplugin.blog.label.action.unfollow-blog-text: Chcete zastaviť prijímanie najnovších uverejnených príspevkov na tomto blogu e-mailom?
+
+
+jcmsplugin.blog.label.info.in:              V:
+jcmsplugin.blog.label.info.comments:        {0,choice,0#komentárov|1#komentár|2#komentáre}
+
+jcmsplugin.blog.label.read-more:            Ďalšie informácie
+jcmsplugin.blog.label.blog.desc.show-more:  Zobraziť viac
+jcmsplugin.blog.blog-desc.btn.show-more.title: Zobraziť opis
+jcmsplugin.blog.blog-desc.btn.show-less.title: Skryť opis
+
+jcmsplugin.blog.title.add-post:             Pridať nový príspevok na blog
+jcmsplugin.blog.title.save-as-draft:        Koncept
+jcmsplugin.blog.label.action.publish:       Uverejniť
+# ------------------------------------------------------------
+#  BLOG SIDEBAR
+# ------------------------------------------------------------
+jcmsplugin.blog.title.admin:      Správa
+jcmsplugin.blog.title.archive:    Archívy
+jcmsplugin.blog.title.authors:    Autori
+jcmsplugin.blog.title.categories: Kategórie
+jcmsplugin.blog.title.recent-post:Najnovšie príspevky
+jcmsplugin.blog.title.no-category:Žiadna kategória
+jcmsplugin.blog.label.edit-blog:      Upraviť blog
+jcmsplugin.blog.label.action.add-post:      Uverejniť príspevok
+jcmsplugin.blog.label.action.add-post-wf:   Uverejniť príspevok
+jcmsplugin.blog.label.action.see-draft:     Zobraziť koncepty
+jcmsplugin.blog.label.action.add-category:  Pridať kategórie
+jcmsplugin.blog.label.action.add-sub-category:  Pridať podkategórie
+jcmsplugin.blog.label.action.add-sub-authors:  Pridať spoluautorov
+jcmsplugin.blog.label.action.search:  Hľadať
+jcmsplugin.blog.label.action.search-post.placeholer: Hľadať príspevky…
+jcmsplugin.blog.label.action.see-all-authors:  Zobraziť všetkých autorov
+jcmsplugin.blog.label.post-in-cat:  {0,choice,1#{0} príspevok v kategórii {1}|2#{0} príspevky v kategórii {1}}
+jcmsplugin.blog.app.sidebar.all-posts-link: Všetky príspevky
+# ------------------------------------------------------------
+#  BLOG MODAL
+# ------------------------------------------------------------
+jcmsplugin.blog.title.ws-blog:       Blog pracovného priestoru
+
+jcmsplugin.blog.title.add-cat:       Pridať kategórie
+jcmsplugin.blog.title.add-sub-cat:   Pridať podkategórie do {0}
+jcmsplugin.blog.label.add-cat:       Zadajte názvy kategórií, ktoré chcete pridať (oddelené čiarkou)
+
+jcmsplugin.blog.title.blog-request:  Žiadosť o otvorenie blogu
+jcmsplugin.blog.title.edit-comment:  Upraviť komentár
+
+jcmsplugin.blog.blog-root.label:     Hlavný
+jcmsplugin.blog.blog-root.description:     Základná kategória pre kategórie blogu
+# ------------------------------------------------------------
+#  BLOG LAYOUT
+# ------------------------------------------------------------
+
+jcmsplugin.blog.label.add-blog:      Vytvoriť blog
+jcmsplugin.blog.label.edit-blog:     Upraviť blog
+jcmsplugin.blog.label.add-post:      Uverejniť blogový príspevok
+jcmsplugin.blog.label.edit-post:     Upraviť príspevok na blogu
+jcmsplugin.blog.label.author:        Uverejnil/-a: {0}
+jcmsplugin.blog.label.last-post:     Najnovšie príspevky
+jcmsplugin.blog.label.search:        Hľadať
+
+# ------------------------------------------------------------
+#  BLOG REQUEST
+# ------------------------------------------------------------
+
+jcmsplugin.blog.agreement.required:            Prijať zmluvné podmienky blogu
+$id.jcmsplugin.blog.agreement.terms.pub:       Zmluvné podmienky blogu – Publikácia
+jcmsplugin.blog.agreement.terms.field:         Zmluvné podmienky blogu – Pole
+jcmsplugin.blog.agreement.btn.agree:           Súhlasím
+jcmsplugin.blog.agreement.btn.disagree:        Nesúhlasím
+jcmsplugin.blog.agreement.date:      Blog: Dátum súhlasu so zmluvnými podmienkami
+jcmsplugin.blog.agreement.title:               Zmluvné podmienky
+jcmsplugin.blog.agreement.text:                Zmluvné podmienky blogu nie sú stanovené. Aktualizujte vlastnosti <code>{0}</code> a <code>{1}</code>.
+
+# ------------------------------------------------------------
+#  BLOG PORTLET
+# ------------------------------------------------------------
+
+$id.jcmsplugin.blog.portlet.categories:       Blog – kategórie
+$id.jcmsplugin.blog.portlet.recent-post:      Blog – najnovšie príspevky
+$id.jcmsplugin.blog.portlet.archive:          Blog – archívy
+$id.jcmsplugin.blog.portlet.member-profile:   Blog – profil člena
+$id.jcmsplugin.blog.portlet.post-list:        Blog – zoznam príspevkov
+$id.jcmsplugin.blog.portlet.post-full:        Blog – Príspevok
+$id.jcmsplugin.blog.portlet.admin:            Blog – Správca
+$id.jcmsplugin.blog.portlet.add-post:         Blog – Pridať príspevok
+$id.jcmsplugin.blog.portlet.authors:          Blog – Zoznam autorov
+$id.jcmsplugin.blog.portlet.handle-posts:     Blog – Správa príspevku
+# ------------------------------------------------------------
+#  BLOG ADMIN
+# ------------------------------------------------------------
+jcmsplugin.blog.admin.author:                 Autor
+jcmsplugin.blog.admin.modify:                 Zmeniť
+jcmsplugin.blog.admin.add-authors:            Spravovať autorov
+jcmsplugin.blog.admin.add-authors-description: Vybrať členov, ktorí môžu pridávať príspevky do <b>{0}</b>.
+jcmsplugin.blog.admin.delete:                 Odstrániť
+jcmsplugin.blog.admin.handle-posts:           Spravovať príspevky
+jcmsplugin.blog.admin.handle.unique-visitor:  Prečítané
+jcmsplugin.blog.admin.handle.total-visitor:   Čitatelia
+jcmsplugin.blog.admin.handle.comment-count:   Komentáre
+jcmsplugin.blog.admin.handle.vote-count:      Hlasy
+jcmsplugin.blog.admin.handle.post-date:       Zmeniť
+jcmsplugin.blog.admin.handle.sort-by:         Príspevky zoradené podľa
+jcmsplugin.blog.admin.handle.or:              alebo
+jcmsplugin.blog.label.title:                  Názov
+jcmsplugin.blog.label.date:                   Dátum
+jcmsplugin.blog.admin.author-list:            Zoznam autorov
+jcmsplugin.blog.admin.see-my-post:            Zobraziť moje príspevky
+jcmsplugin.blog.admin.see-member-post:        Zobraziť príspevky
+jcmsplugin.blog.admin.see-all-post:           Zobraziť všetky príspevky
+
+# ------------------------------------------------------------
+#  BLOG WARNING
+# ------------------------------------------------------------
+
+jcmsplugin.blog.warning.ws-has-a-blog:             Vo vašom pracovnom priestore už je blog ({0}).
+jcmsplugin.blog.warning.duplicate-same:            V aktuálnom pracovnom priestore už je blog s rovnakým názvom
+jcmsplugin.blog.warning.text:                      Napíšte text
+jcmsplugin.blog.warning.member-has-a-blog:         Člen „{0}“ už má blog v blogosfére: {1}.
+jcmsplugin.blog.warning.blogosphere-root-cat:      Hlavná kategória blogosféry pre blogy neexistuje. Aktualizujte ju vo vlastnostiach doplnku.
+jcmsplugin.blog.warning.blogosphere-forbidden-blog:Nemáte oprávnenie uverejniť príspevok na tomto blogu: „{0}“
+jcmsplugin.blog.warning.forbidden-blog:            Nemáte oprávnenie uverejniť príspevok na tomto kolaboratívnom blogu: „{0}“
+jcmsplugin.blog.warning.forbidden-blog-create:     Nemáte oprávnenie na vytvorenie blogu.
+
+# ------------------------------------------------------------
+#  BLOG ACL
+# ------------------------------------------------------------
+acl.resource.admin/work/blogospherecreation: Blog – Pridať blog do blogosféry
+
+
+# ------------------------------------------------------------
+#  PUBLISH MENU
+# ------------------------------------------------------------
+jcmsplugin.blog.publish-menu.add-cs:   Príspevok na blogu
+jcmsplugin.blog.publish-menu.add-mine: Pridať na môj blog
+
+
+# ------------------------------------------------------------
+#  CategoryBrowser
+# ------------------------------------------------------------
+category.category-browser.blog: Hľadať na blogu
+
+
+# ----------------------------------------------------------------------
+# Alert
+# ----------------------------------------------------------------------
+alert.name.jcmsplugin-blog:                               Blog
+
+alert.name.jcmsplugin-blog.new-blogpost:                  Nový príspevok na blogu
+alert.msg.jcmsplugin-blog.new-blogpost.title:             Nový príspevok na blogu: {data}
+alert.msg.jcmsplugin-blog.new-blogpost.short-description: {author} uverejnil/a nový príspevok na blogu {data} v {parent}. {data.url}
+alert.msg.jcmsplugin-blog.new-blogpost.description:       <p>{author} uverejnil/a nový príspevok na blogu {data} v {parent.link}.</p> 
+
+alert.name.jcmsplugin-blog.update-blogpost:               Aktualizácia príspevku na blogu
+alert.msg.jcmsplugin-blog.update-blogpost.title:          Príspevok na blogu bol aktualizovaný: {data}
+alert.msg.jcmsplugin-blog.update-blogpost.short-description: {author} aktualizoval/a príspevok na blogu {data} v {parent}. {data.url}
+alert.msg.jcmsplugin-blog.update-blogpost.description:       <p>{author} aktualizoval/a príspevok na blogu {data} v {parent.link}.</p> 
+
+alert.name.jcmsplugin-blog.blog-opening:                  Overenie žiadosti o otvorenie blogu
+alert.msg.jcmsplugin-blog.blog-opening.title:             Vaša žiadosť o otvorenie blogu bola overená
+alert.msg.jcmsplugin-blog.blog-opening.short-description: {author} overil/a vašu žiadosť o otvorenie blogu: {data}. {data.url}
+alert.msg.jcmsplugin-blog.blog-opening.description:       <p>{author} overil/a vašu žiadosť o otvorenie blogu: {data}:</p> 
+
+# ------------------------------------------------------------
+#  BLOG TOOLS
+# ------------------------------------------------------------
+
+jcmsplugin.blog.tools.title:  Načítajte príspevok na blogu (Store) do príspevku na blogu (Databáza) – 2. krok
+jcmsplugin.blog.tools.text1:  Dôležité informácie o blogu
+jcmsplugin.blog.tools.text2:  1. Importujte príspevok na blogu zo Store do príspevku na blogu v databáze
+jcmsplugin.blog.tools.text3:  2. Znova inicializujte všetky blogy s novými parametrami
+ui.adm.jcms5-loader.btn.load:        Načítať údaje
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From Blog-templates.xml
+types.Blog.templates.editFront.default.label: Šablóna úpravy Front-office
+types.Blog.templates.editFrontOld.default.label: Stará šablóna úpravy Front-office
+types.Blog.templates.query.default.label: Predvolená šablóna
+types.Blog.templates.box.default.label: Predvolená šablóna
+types.Blog.templates.edit.default.label: Šablóna úpravy Front-office
+types.Blog.templates.fullold.default.label: Stará šablóna
+types.Blog.templates.full.old.label: Stará šablóna
+types.Blog.templates.full.default.label: Predvolená šablóna JNews
+ui.editportlet.usage.fullold: Stará šablóna
+
+# From Blog.xml
+types.Blog.fields.bloggerGroup.label: Skupina blogera
+types.Blog.title.label: Názov
+types.Blog.fields.description.label: Popis blogu
+types.Blog.label: Blog
+
+# From BlogPost-templates.xml
+types.BlogPost.templates.editFront.default.label: Šablóna úpravy Front-office
+types.BlogPost.templates.editFrontOld.default.label: Stará šablóna úpravy Front-office
+types.BlogPost.templates.query.default.label: Predvolená šablóna
+types.BlogPost.templates.edit.default.label: Upraviť šablónu
+types.BlogPost.templates.full.default.label: Predvolená šablóna
+types.BlogPost.templates.fullold.default.label: Stará šablóna
+types.BlogPost.templates.full.default.label: Predvolená šablóna
+types.BlogPost.templates.appBody.default.label: Jednoduchá šablóna na zobrazenie hlavnej časti aplikácie
+
+# From BlogPost.xml
+types.BlogPost.fields.summary.description: Je to zhrnutie príspevku, ktoré bude zobrazené v zozname príspevkov a e-mailovej správe, ktorá bude odoslaná odberateľom.
+types.BlogPost.fields.blog.label: Blog
+types.BlogPost.fields.category.description: Môžete vybrať viac kategórií.
+types.BlogPost.fields.content.label: Text
+types.BlogPost.label: Príspevok na blog
+types.BlogPost.title.label: Názov
+types.BlogPost.fields.category.label: Kategória
+types.BlogPost.fields.summary.label: Súhrn
+types.BlogPost.fields.featuredImage.label: Obrázok
+types.BlogPost.fields.featuredImage.description: Tento obrázok musí mať veľké rozmery, ideálne formát 16/9 (napr. 960x540).
+types.BlogPost.fields.featuredImageAlt.label: Textová alternatíva k obrázku
+types.BlogPost.fields.featuredImageAlt.description: Tento text sa použije ako alternatívny atribút namiesto obrázka
+types.BlogPost.fields.thumbnailImage.label: Obrázok miniatúry
+types.BlogPost.fields.thumbnailImage.description: Obrázok miniatúry je vygenerovaný z obrázka. Môžete si ale vybrať inú miniatúru. Musí byť väčšia ako 300x150, ideálne formát 4/3 alebo 16/9.
+types.BlogPost.fields.thumbnailImageAlt.label: Textová alternatíva k obrázku miniatúry
+types.BlogPost.fields.thumbnailImageAlt.description: Tento text sa použije ako alternatívny atribút namiesto obrázka miniatúry
+types.BlogPost.fields.imageAltText.label: Textová alternatíva
+types.BlogPost.btn.show-options: Ďalšie možnosti...
+types.BlogPost.btn.hide-options: Menej možností...
+
+# From BlogRequest.xml
+types.BlogRequest.fields.description.label: Opis
+types.BlogRequest.title.label: Názov blogu
+types.BlogRequest.label: Žiadosť o otvorenie blogu
+
+# From PortletBlog-templates.xml
+types.PortletBlog.templates.box.default.label: Predvolená šablóna
+types.PortletBlog.templates.box.default.description: Predvolená šablóna tohto portletu
+types.PortletBlog.templates.box.itembox.label: Zoznam v štýle item-box
+types.PortletBlog.templates.box.itembox.description: Zoznam v štýle item-box
+types.PortletBlog.templates.edit.default.label: Predvolená šablóna
+types.PortletBlog.templates.edit.default.description: Predvolená šablóna tohto portletu
+types.PortletBlog.templates.full.default.label: Predvolená šablóna
+types.PortletBlog.templates.full.default.description: Predvolená šablóna tohto portletu
+types.PortletBlog.templates.query.default.label: Predvolená šablóna
+types.PortletBlog.templates.query.default.description: Predvolená šablóna tohto portletu
+
+# From PortletBlog.xml
+types.PortletBlog.label: Portlet Blog
+types.PortletBlog.fields.displayedList.labelList: Blogy a príspevky zo všetkých pracovných priestorov|Príspevky pracovného priestoru
+types.PortletBlog.fields.displayedList.label: Zobrazený zoznam
+types.PortletBlog.title.label: Názov
+types.PortletBlog.description: Zobrazuje zoznam blogových príspevkov a blogov
+
+# From wfblogrequest.xml
+workflows.wfblogrequest.label: Blog – Pracovný postup žiadosti o otvorenie blogu
+workflows.wfblogrequest.states.60.description: Žiadosť overená, blog bol vytvorený.
+workflows.wfblogrequest.states.50.description: Žiadosť o blog bola zamietnutá. Blog nebude vytvorený. Ďalšie podrobnosti nájdete v poznámkach k pracovnému postupu.
+workflows.wfblogrequest.states.-200.label: Predložené
+workflows.wfblogrequest.roles.blogValidator.description: Prijíma/Zamieta žiadosti o otvorenie blogu
+workflows.wfblogrequest.roles.blogValidator.name: Overovateľ
+workflows.wfblogrequest.states.60.label: Prijaté
+workflows.wfblogrequest.states.50.label: Zamietnuté
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.blog:     Blog
+jcmsplugin.smartphone.workspace-service.PortletBlog: Blog
+jcmsplugin.blog.smartphone.lbl.blogpost-list: Príspevky
+jcmsplugin.blog.smartphone.lbl.blog: Blogy
+jcmsplugin.blog.smartphone.lbl.blog.my-blogs: Moje blogy
+jcmsplugin.blog.smartphone.lbl.blog.other-blogs: Ostatné blogy
+
+# ----------------------------------------------------------------------
+# BlogPost Form
+# ----------------------------------------------------------------------
+jcmsplugin.blog.filter-author: Filtrovať podľa autora
+jcmsplugin.blog.filter-pstatus: Filtrovať podľa stavu
+jcmsplugin.blog.filter-startDate: Dátum začatia
+jcmsplugin.blog.filter-endDate: Dátum ukončenia
+jcmsplugin.blog.sort-by-vote: Počet hlasov

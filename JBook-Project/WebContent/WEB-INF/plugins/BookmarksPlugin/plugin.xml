@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plugin PUBLIC "-//JALIOS//DTD JCMS-PLUGIN 1.6//EN" "https://community.jalios.com/dtd/jcms-plugin-1.6.dtd">
+
+
+<plugin name="BookmarksPlugin" 
+        version="6.3.4" 
+        author="Jalios SA" 
+        license="Jalios" 
+        initialize="true" 
+        jcms="10\.0\.[1-9].*|10\.[1-9].*"  
+        url="http://support.jalios.com/plugin/bookmarks"
+        jsync="true">
+        
+  <label xml:lang="en">Bookmarks Plugin</label>
+  <label xml:lang="fr">Module Favoris</label>
+  <description xml:lang="en">This plugin provides the Bookmark Portlet that can be used by the authenticated user to manage the list of bookmarks.</description>
+  <description xml:lang="fr">Ce module fournit la portlet Favoris qui permet aux utilisateurs authentifié de gérer leur favoris.</description>
+  
+  <types>
+	  <type name="PortletBookmarks">
+	    <file path="doPortletBookmarksFullDisplay.jsp" />
+      	<file path="doPortletBookmarksFullDisplay.png" />
+	  </type>
+	  
+    <type name="PortletWorkspaceBookmarks">
+      <file path="doPortletWorkspaceBookmarksFullDisplay.jsp" />
+      <file path="doPortletWorkspaceBookmarksFullDisplay.png" />
+    </type>
+  </types>
+
+
+  <java-classes>
+    <java package="com.jalios.jcmsplugin.bookmarks" />
+    <java package="com.jalios.jcmsplugin.bookmarks.analytics" />
+  </java-classes>
+  
+  <plugincomponents>
+    <datacontroller class="com.jalios.jcmsplugin.bookmarks.BookmarkDataController" types="Publication" />
+    <dblistener     class="com.jalios.jcmsplugin.bookmarks.BookmarkListener" types="com.jalios.jcmsplugin.bookmarks.BookmarkItem" />
+    <queryfilter   class="com.jalios.jcmsplugin.bookmarks.BookmarksQueryFilter" />
+  </plugincomponents>
+
+  <hibernate>
+     <mapping resource="com/jalios/jcmsplugin/bookmarks/Bookmark.hbm.xml" /> 
+     <mapping resource="com/jalios/jcmsplugin/bookmarks/BookmarkFolder.hbm.xml" />    
+     <mapping resource="com/jalios/jcmsplugin/bookmarks/analytics/BookmarksReportMetric.hbm.xml" />
+  </hibernate>
+  
+  <private-files>
+    <directory path="properties" />
+  </private-files>
+  <public-files>
+    <directory path="js" />
+    <directory path="images" />
+    <directory path="css" />
+    <directory path="docs" />
+    <directory path="jsp" />
+    <directory path="smartphone" />
+    <file path="jsp/doBookmarkQueryAction.jsp" 					 include="QUERY_ACTION" />  
+    <file path="jsp/bookmarkResources.jsp"               include="EMPTY_HEADER_START"/>
+    <file path="jsp/doBookmarkDisplayHeader.jsp" 				 include="PUBLICATION_ACTIONS_MAIN_ITEM_BOTTOM" />
+    <file path="jsp/topbarSearchBookmarks.jsp" 					 include="TOPBAR_SEARCH_RESULTS_PUBLICATION_TOP" />
+    <file path="jsp/projects/doBookmarkProjectsMenu.jsp" include="SIDEBAR_JTASK_PROJECTS" />
+  </public-files>
+</plugin>
+

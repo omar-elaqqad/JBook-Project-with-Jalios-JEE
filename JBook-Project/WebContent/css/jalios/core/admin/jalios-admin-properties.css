@@ -1,0 +1,10 @@
+.avoidance-links .widget-name-labels .nav-pills,
+.avoidance-links .widget-name-targets .add-field {
+  display: none;
+}
+.avoidance-links .widget-name-targets,
+.avoidance-links OL.tab-content,
+.avoidance-links .tab-content LI {
+  margin-bottom: 0;
+}
+/*# sourceMappingURL=jalios-admin-properties.css.map */

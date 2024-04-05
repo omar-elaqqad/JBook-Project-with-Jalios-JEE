@@ -1,0 +1,4 @@
+jcmsplugin.categoryrights.types: タイプ
+jcmsplugin.categoryrights.types.help: 管理するコンテンツタイプ（スペースまたはコンマ区切り）
+jcmsplugin.categoryrights.cat-ids: カテゴリ (ids)
+jcmsplugin.categoryrights.cat-ids.help: 管理するカテゴリルートの識別子（スペースまたはコンマ区切り）

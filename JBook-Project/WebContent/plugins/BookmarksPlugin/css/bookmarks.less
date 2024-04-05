@@ -1,0 +1,148 @@
+// Include variables and mixins
+@import "../../../css/jalios/core/init-mixins.less";
+
+
+// -------------------------------------------------------------------
+// PLUGINS LESS VARIABLES
+// -------------------------------------------------------------------
+@bookmark-separator: @btn-primary-bg;
+@bookmark-menu-hover-color: #FFFFFF;
+@bookmark-table-separator-background-color: #f5f5f5;
+@bookmark-action-disable-color : #888888;
+ 
+
+// Hook for JCMS
+@import "../../../css/plugin.less"; 
+
+.bookmarks-full-display {
+  max-width: @app-body-content-max-width;
+  margin: auto
+}
+
+.app.app-bookmark{
+  .app-body{
+    background: white;
+  }
+}
+
+.app-bookmark {
+  .app-header {
+    background-color: @jalios-color-green-light;
+  }
+}
+
+
+.bookmark-actions{
+ display:none;
+}
+
+.bookmark-item{
+  max-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bookmark-item-action{
+ &.bookmark-action-disabled{
+   color: @bookmark-action-disable-color; 
+ }
+}
+
+.bookmarks-items-checkbox{
+  margin : 0 0;
+  padding : 0 10px;
+}
+
+.bookmark-draggable-item:hover{
+  .bookmark-actions{
+    display:block;
+  }
+}
+
+.table-bookmarks .bookmark-draggable-item:hover TD{
+  background-color: @bookmark-table-separator-background-color;
+}
+.bookmark-sortable-item-touch-device{
+  display:block;
+}
+
+.table-bookmarks THEAD TR TH{
+  border-bottom:none;
+}
+
+.table-bookmarks {
+  &.table-bookmarks-noEdit TD{
+    padding: 0;
+  }
+  
+  /* Bookmark items */
+  .bookmark-draggable-item TD {
+    border:none;
+  }
+  
+  .bookmark-search-result-item TD{
+    border: none;
+  }
+
+  /* Bookmark separator */
+  .bookmark-separator TD {
+    border:0px;
+    height: 2px;
+    padding: 0;
+    /*background-color: @bookmark-table-separator-background-color;*/
+    
+    .bookmark-separator-line {
+      padding: 0;
+      margin: 0;
+      height: 1px;
+      background-color: #DDD;
+      vertical-align: middle;
+      margin: 2px 0;
+    }
+  }
+  
+  .bookmark-droppable-target,
+  .bookmark-droppable-target:hover {
+    A {
+      color: @bookmark-menu-hover-color;
+      text-decoration: none;
+    }
+    
+    &.bookmark-draggable-item TD {
+      background-color:@bookmark-separator;
+    }
+    
+    &.bookmark-separator TD {
+      background-color:@bookmark-separator;
+      
+      .bookmark-separator-line {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+/* 
+@media (max-width: @screen-md-min) { 
+  .bookmark-list-view{    
+    .navbar-form{
+      display: none;
+    }
+  }
+  .dropdown-toggle{
+    display:block;
+  }
+}
+
+@media (min-width: @screen-md-min) {
+  .bookmark-list-view{    
+    .navbar-form{
+      display: block;
+    }
+  }
+  .dropdown-toggle{
+    display:none;
+  }
+}
+ */

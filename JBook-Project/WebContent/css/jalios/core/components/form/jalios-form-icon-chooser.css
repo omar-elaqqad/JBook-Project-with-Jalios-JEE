@@ -1,0 +1,84 @@
+.icon-chooser-actions {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: end;
+}
+.icon-chooser-actions .icon-chooser-search {
+  white-space: nowrap;
+  display: flex;
+  width: 300px;
+  padding-right: 80px;
+}
+.icon-chooser-actions .icon-chooser-search > input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.icon-chooser-actions input {
+  width: 200px;
+}
+.icon-chooser-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
+  position: relative;
+}
+.icon-chooser-wrapper .icon-chooser-option {
+  width: calc(50% - 16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #EEE;
+  border-radius: 4px;
+  padding: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 200ms ease-in, color 200ms ease-in;
+}
+@media (min-width: 768px) {
+  .icon-chooser-wrapper .icon-chooser-option {
+    width: calc(33% - 16px);
+  }
+}
+@media (min-width: 992px) {
+  .icon-chooser-wrapper .icon-chooser-option {
+    width: calc(25% - 16px);
+  }
+}
+.icon-chooser-wrapper .icon-chooser-option:hover {
+  background-color: #EFEFEF;
+}
+.icon-chooser-wrapper .icon-chooser-option.active {
+  background-color: #009EF5;
+  color: white;
+}
+.icon-chooser-wrapper .icon-chooser-option.active > .jalios-icon {
+  color: inherit;
+}
+.icon-chooser-wrapper .icon-chooser-option.active:hover {
+  background-color: #008edc;
+}
+.icon-chooser-wrapper .icon-chooser-option .icon-chooser-option-value {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  text-transform: capitalize;
+  text-align: center;
+}
+.icon-chooser-wrapper .icon-chooser-option input {
+  display: none;
+}
+.icon-chooser-wrapper .icon-chooser-option .jalios-icon {
+  margin-bottom: 16px;
+}
+.icon-chooser-wrapper .icon-chooser-option span.jalios-icon {
+  font-size: 30px;
+  color: #666666;
+}
+.icon-chooser-wrapper .icon-chooser-option img.jalios-icon {
+  height: 30px;
+  width: 30px;
+}
+/*# sourceMappingURL=jalios-form-icon-chooser.css.map */

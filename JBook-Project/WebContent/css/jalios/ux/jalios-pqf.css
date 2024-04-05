@@ -1,0 +1,16 @@
+.pqf-thumbnail {
+  height: 300px;
+  overflow-y: auto;
+}
+@media (max-width: 767px) {
+  .pqf-thumbnail {
+    height: auto;
+  }
+}
+.pqf-thumbnail A.thumbnail {
+  border: 0;
+}
+.pqf-thumbnail A.thumbnail IMG {
+  width: 100%;
+}
+/*# sourceMappingURL=jalios-pqf.css.map */

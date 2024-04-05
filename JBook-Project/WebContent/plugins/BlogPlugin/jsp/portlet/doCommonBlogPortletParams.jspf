@@ -1,0 +1,22 @@
+<%@ include file="/jcore/doInitPage.jspf" %>
+<%@ include file='/jcore/portal/doPortletParams.jspf'    %>
+<%@ page import="com.jalios.jcmsplugin.blog.*" %>
+<%     
+    BlogManager blogMgr = BlogManager.getInstance();
+    Blog blog = (Blog) request.getAttribute("jcmsplugin.blog.blog");
+    
+    if(blog == null && jcmsContext.isAjaxRequest()){
+        String blogId = (String) jcmsContext.getAjaxRequestAttribute("jcmsplugin.blog.id");
+        blog = (Blog) channel.getPublication(blogId);
+    }
+    
+    if(blog == null){
+        blog = (Blog) getPublicationParameter("blogId");
+    }
+    
+    if(blog== null){
+        return;
+    }
+    
+    jcmsContext.setAjaxRequestAttribute("jcmsplugin.blog.id",blog.getId());
+%>

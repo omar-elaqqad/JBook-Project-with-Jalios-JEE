@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<type name="BlogRequest" superclass="com.jalios.jcms.Form" formOneSubmit="false" formNotify="false" formAuthor="$id.BlogRequest.formAuthor" formRedirectMode="home" categoryTab="true" readRightTab="true" updateRightTab="true" templateTab="true" workflowTab="true" advancedTab="true" database="true" hbm="true" reviewable="false" debatable="false" unitFieldEdition="true" audienced="false" formhandler="com.jalios.jcmsplugin.blog.EditAbstractBlogRequestHandler">
+  <title ml="false" />
+  <fields>
+    <field name="description" editor="textarea" required="false" compactDisplay="false" type="String" searchable="false" rows="5" cols="80" ml="true" wiki="false" html="false" checkHtml="false" />
+  </fields>
+</type>
+

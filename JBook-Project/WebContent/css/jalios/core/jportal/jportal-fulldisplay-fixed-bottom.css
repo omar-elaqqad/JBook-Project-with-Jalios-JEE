@@ -1,0 +1,93 @@
+.jportal-fixed-bottom {
+  display: flex;
+  position: fixed;
+  bottom: 40px;
+  height: 50px;
+  right: 20px;
+  flex-direction: row;
+  z-index: 100;
+  align-items: center;
+}
+.jportal-fixed-bottom .fixed-bottom__link {
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  border-radius: 35px;
+  margin-left: 8px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+}
+.jportal-fixed-bottom .fixed-bottom__link .jalios-icon {
+  color: #fff;
+  margin: 0;
+  position: relative;
+  font-size: 19px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.jportal-fixed-bottom #jportal-return-to-top {
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+.jportal-fixed-bottom #jportal-return-to-top .jalios-icon {
+  margin: 0;
+  position: relative;
+  left: 16px;
+  top: 13px;
+  font-size: 19px;
+}
+.jportal-fixed-bottom #jportal-return-to-top:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+.jportal-fixed-bottom #jportal-return-to-top:hover .jalios-icon {
+  top: 10px;
+}
+.jportal-fixed-bottom #jportal-simple-edition {
+  background-color: #dd352e;
+  opacity: 0.3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: auto;
+  text-decoration: none;
+  border-radius: 20px;
+  padding: 10px 16px;
+  color: white;
+  box-shadow: 0 4px 14px #00000026;
+  border: 2px solid white;
+}
+.jportal-fixed-bottom #jportal-simple-edition .simple-edit-stop {
+  margin-right: 4px;
+}
+.jportal-fixed-bottom #jportal-simple-edition:hover {
+  background-color: #ba241e;
+  opacity: 1;
+}
+.jportal-wrapper #jportal-simple-edition {
+  display: none;
+}
+.jportal-wrapper.simple-editing .jportal-fixed-bottom {
+  display: flex;
+}
+.jportal-wrapper.simple-editing .jportal-fixed-bottom #jportal-simple-edition {
+  opacity: 1;
+  display: flex;
+}
+.jportal-wrapper.simple-editing .jportal-fixed-bottom .simple-edit-stop {
+  display: block;
+}
+.jportal-wrapper.simple-editing .jportal-fixed-bottom .simple-edit-start {
+  display: none;
+}
+.jportal-wrapper .jportal-fixed-bottom .simple-edit-stop {
+  display: none;
+}
+.jportal-wrapper .jportal-fixed-bottom .simple-edit-start {
+  display: block;
+}
+/*# sourceMappingURL=jportal-fulldisplay-fixed-bottom.css.map */

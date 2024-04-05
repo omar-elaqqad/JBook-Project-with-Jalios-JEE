@@ -1,0 +1,67 @@
+jcmsplugin.categoryrights.types: Types
+jcmsplugin.categoryrights.types.help: Content types to be controlled (separated by spaces or commas)
+jcmsplugin.categoryrights.cat-ids: Categories (ids)
+jcmsplugin.categoryrights.cat-ids.help: Identifiers of category roots to be controlled (separated by spaces or commas)
+
+jcmsplugin.categoryrights.propagate-rights.title: Propagate rights to publication
+jcmsplugin.categoryrights.propagate-rights.yes-inherited: Yes (inherited) 
+jcmsplugin.categoryrights.propagate-rights.description: Enable this option to propagate the rights of the category and sub-categories to the rights of the publications that are attached to them: the read rights of the categories are propagated as read rights on the publications, the use rights as creation and modification rights, and the management rights as creation, modification and deletion rights.
+jcmsplugin.categoryrights.propagate-rights.forbidden: You are not authorized to change the "Propagate rights to publication" option
+ 
+jcmsplugin.categoryrights.propagate-rights.disabled.msg: The rights you define apply only to the category itself. These rights do not apply to content placed in this category.<p>To apply these rights to category content, you must ask an administrator to enable this behavior on this category.
+
+jcmsplugin.categoryrights.publish-types.title: Publication types authorized for creation
+jcmsplugin.categoryrights.publish-types.description: Select the types of publication authorized for creation to user specified on category use rights. 
+jcmsplugin.categoryrights.publish-types.forbidden: You are not authorized to change the "Publication types" option 
+
+jcmsplugin.categoryrights.group-use-right.forbidden: The category '{0}' uses a specific right policy: use rights of this category cannot be granted on a group, they must be defined on the category or on its parents. 
+jcmsplugin.categoryrights.member-use-right.forbidden: The category '{0}' uses a specific right policy: use rights of this category cannot be granted on a member, they must be defined on the category or on its parents. 
+jcmsplugin.categoryrights.group-manage-right.forbidden: The category '{0}' uses a specific right policy: manage rights of this category cannot be granted on a group, they must be defined on the category or on its parents. 
+jcmsplugin.categoryrights.member-manage-right.forbidden: The category '{0}' uses a specific right policy: manage rights of this category cannot be granted on a member, they must be defined on the category or on its parents. 
+
+jcmsplugin.categoryrights.decategorization.forbidden: You are not authorized to perform this operation, as it modifies read rights.<br>The publication is in a controlled category tree, so you must keep at least one category in this tree.<p>If you wish to remove the publication from this category, ask your administrator to perform the operation.
+jcmsplugin.categoryrights.decategorization.warning: Following this modification, it is possible that the rights to the content have been modified.<p>We recommend that you check that content is only accessible to members who are authorized to access it.
+
+jcmsplugin.categoryrights.pub.impossible-mbr-read-rights-assignment: You cannot grant read rights to '{0}' on this publication, as those members are not authorized to read the publication's categories. 
+jcmsplugin.categoryrights.pub.impossible-grp-read-rights-assignment: You cannot grant read rights to group '{0}' on this publication, as those groups are not authorized to read the publication's categories. 
+
+jcmsplugin.categoryrights.pub.impossible-mbr-read-rights-assignment.explorer-move: The requested move cannot be performed because '{0}' would lose the right to read.
+jcmsplugin.categoryrights.pub.impossible-mbr-read-rights-assignment.explorer-move: The requested move cannot be performed because '{0}' would lose the right to read.
+
+jcmsplugin.categoryrights.impossible-mbr-read-rights-assignment: You cannot grant read rights to '{0}' on this category, as this member is not authorized to read the parent category.
+jcmsplugin.categoryrights.impossible-grp-read-rights-assignment: You cannot grant read rights to group '{0}' on this category, as this group is not authorized to read the parent category.
+jcmsplugin.categoryrights.impossible-mbr-use-rights-assignment: You cannot grant use rights to '{0}' on this category, as this member is not authorized to read the category or its parents.
+jcmsplugin.categoryrights.impossible-mbr-manage-rights-assignment: You cannot grant manage rights to '{0}' on this category, as this member is not authorized to read the category or its parents.
+
+jcmsplugin.categoryrights.impossible-mbr-read-rights-assignment.explorer: You cannot grant read rights to '{0}' on this folder, as this member is not authorized to read the parent folder.
+jcmsplugin.categoryrights.impossible-grp-read-rights-assignment.explorer: You cannot grant read rights to group '{0}' on this folder, as this group is not authorized to read the parent folder.
+jcmsplugin.categoryrights.impossible-mbr-use-rights-assignment.explorer: You cannot grant use rights to '{0}' on this folder, as this member is not authorized to read the folder or its parents.
+jcmsplugin.categoryrights.impossible-mbr-manage-rights-assignment.explorer: You cannot grant manage rights to '{0}' on this folder, as this member is not authorized to read the folder or its parents.
+
+jcmsplugin.categoryrights.impossible-mbr-read-rights-assignment.explorer-move: The requested move cannot be performed because '{0}', declared in read rights of moved folder, is not authorized to read the target folder.
+jcmsplugin.categoryrights.impossible-grp-read-rights-assignment.explorer-move: The requested move cannot be performed because '{0}', declared in read rights of moved folder, is not authorized to read the target folder.
+jcmsplugin.categoryrights.impossible-mbr-use-rights-assignment.explorer-move: The requested move cannot be performed because '{0}', declared in use rights of moved folder, is not authorized to read the target folder.
+jcmsplugin.categoryrights.impossible-mbr-manage-rights-assignment.explorer-move: The requested move cannot be performed because '{0}', declared in use rights of moved folder, is not authorized to read the target folder.
+
+jcmsplugin.categoryrights.restricted-workspace.impossible-mbr-read-rights-assignment: You cannot grant read rights to '{0}' on this category, as this member does not belong to workspace '{1}'.
+jcmsplugin.categoryrights.restricted-workspace.impossible-grp-read-rights-assignment: You cannot grant read rights to group '{0}' on this category, as this group does not belong to workspace '{1}'.
+jcmsplugin.categoryrights.restricted-workspace.impossible-mbr-use-rights-assignment: You cannot grant use rights to '{0}' on this category, as this member does not belong to workspace '{1}'.
+jcmsplugin.categoryrights.restricted-workspace.impossible-grp-use-rights-assignment: You cannot grant use rights to '{0}' on this category, as this group does not belong to workspace '{1}'.
+jcmsplugin.categoryrights.restricted-workspace.impossible-mbr-manage-rights-assignment: You cannot grant manage rights to '{0}' on this category, as this member does not belong to workspace '{1}'.
+jcmsplugin.categoryrights.restricted-workspace.impossible-grp-manage-rights-assignment: You cannot grant manage rights to '{0}' on this category, as this group does not belong to workspace '{1}'.
+
+jcmsplugin.categoryrights.restricted-workspace.impossible-mbr-read-rights-assignment.explorer: You cannot grant read rights to '{0}' on this folder, as this member does not belong to workspace '{1}'.
+jcmsplugin.categoryrights.restricted-workspace.impossible-grp-read-rights-assignment.explorer: You cannot grant read rights to group '{0}' on this folder, as this group does not belong to workspace '{1}'.
+jcmsplugin.categoryrights.restricted-workspace.impossible-mbr-use-rights-assignment.explorer: You cannot grant use rights to '{0}' on this folder, as this member does not belong to workspace '{1}'.
+jcmsplugin.categoryrights.restricted-workspace.impossible-grp-use-rights-assignment.explorer: You cannot grant use rights to '{0}' on this folder, as this group does not belong to workspace '{1}'.
+jcmsplugin.categoryrights.restricted-workspace.impossible-mbr-manage-rights-assignment.explorer: You cannot grant manage rights to '{0}' on this folder, as this member does not belong to workspace '{1}'.
+jcmsplugin.categoryrights.restricted-workspace.impossible-grp-manage-rights-assignment.explorer: You cannot grant manage rights to '{0}' on this folder, as this group does not belong to workspace '{1}'.
+
+# ------------------------------------------------------------
+# ACL
+# ------------------------------------------------------------
+
+acl.resource.plugins: Plugins
+acl.resource.plugins/categoryrights: Category Rights
+acl.resource.plugins/categoryrights/propagate-rights: Propagate rights 
+acl.resource.plugins/categoryrights/propagate-rights.h: Allow users to modify the "propagate rights" options on the categories they can manage.    

@@ -1,0 +1,83 @@
+jcmsplugin.bookmarks.adm.max.number:     1000
+jcmsplugin.bookmarks.cache-size: 1000
+
+icon.jcmsplugin-bookmarks-topbar:        glyph: icomoon-star-full
+icon.jcmsplugin-bookmarks-topbar-add:    glyph: icomoon-plus3
+icon.jcmsplugin-bookmarks-topbar-remove: glyph: icomoon-minus-circle
+icon.jcmsplugin-bookmarks-topbar-manage: glyph: icomoon-wrench2
+icon.jcmsplugin-bookmarks-edit:          sprite: ss_sprite ss_tag_blue_edit
+icon.jcmsplugin-bookmarks-delete:        plugins/BookmarksPlugin/images/icons/favorite-blocked.png
+icon.jcmsplugin-bookmarks-add:           glyph: jicons-star
+icon.jcmsplugin-bookmarks-folder:        icon:   folder
+icon.jcmsplugin-boomarks-up:             glyph:  icomoon-arrow-up6
+icon.jcmsplugin-bookmarks-star:          icon: favorite
+
+# SmartPhone
+icon.jcmsplugin-bookmarks-smartphone-add-bookmark: glyph: icomoon-start-empty
+icon.jcmsplugin-bookmarks-smartphone-remove-bookmark: glyph: icomoon-start-full
+
+channel.less.plugins/BookmarksPlugin/css/bookmarks.css:    plugins/BookmarksPlugin/css/bookmarks.less
+channel.less.plugins/BookmarksPlugin/css/bookmarks-sidebar.css: plugins/BookmarksPlugin/css/bookmarks-sidebar.less
+smartphone.channel.less.plugins/BookmarksPlugin/smartphone/css/smartphone-bookmarks.css:    plugins/BookmarksPlugin/smartphone/css/smartphone-bookmarks.less
+
+jcms.resource.include.bookmark-menu: plugins/BookmarksPlugin/jsp/jaliosmenu/doMenu.jsp
+jcms.resource.include.bookmark-submenu: plugins/BookmarksPlugin/jsp/jaliosmenu/doSubMenu.jsp
+jcms.resource.include.bookmark-menuitem: plugins/BookmarksPlugin/jsp/jaliosmenu/doMenuItem.jsp
+
+jcms.analytics.day-agent-list.BookmarksPluginAgent.classname: com.jalios.jcmsplugin.bookmarks.analytics.BookmarksAgent
+jcms.analytics.day-agent-list.BookmarksPluginAgent.display-jsp: plugins/BookmarksPlugin/jsp/analytics/doDisplayBookmarksPluginReport.jsp
+jcms.analytics.day-agent-list.BookmarksPluginAgent.order:800
+
+jcmsplugin.bookmarks.displayExternalUrl.boolean: true
+
+
+# ------------------------------------------------------------
+# Topbar
+# ------------------------------------------------------------
+#jcms.topbar-item.bookmarks:              plugins/BookmarksPlugin/jsp/bookmarkMenu.jsp
+#jcms.topbar-item.bookmarks.index:        5
+
+# ------------------------------------------------------------
+# Shortcut
+# ------------------------------------------------------------
+shortcut.jcmsplugin.bookmarks.icon: plugins/BookmarksPlugin/images/app-favoris.png
+shortcut.jcmsplugin.bookmarks.link: plugins/BookmarksPlugin/jsp/manageBookmarksFullDisplay.jsp
+
+# ------------------------------------------------------------
+# App
+# ------------------------------------------------------------
+icon.jcmsplugin-bookmark-app-image: 			 glyph: icon-socialbookmark-app-image
+# ------------------------------------------------------------
+# Sidebar
+# ------------------------------------------------------------
+jcms.sidebar-tab.bookmarks:                plugins/BookmarksPlugin/jsp/doSidebarTabBookmarks.jsp
+jcms.sidebar-tab.bookmarks.icon:           icon: jcmsplugin-bookmarks-topbar
+jcms.sidebar-tab.bookmarks.index:          30
+
+# ------------------------------------------------------------
+# SmartPhone
+# ------------------------------------------------------------
+
+icon.jcmsplugin-smartphone-bookmarks: plugins/BookmarksPlugin/images/app-favoris.png
+
+# Css file declaration
+jcmsplugin.smartphone.css.bookmarks: plugins/BookmarksPlugin/smartphone/css/smartphone-bookmarks.css
+
+# Js
+jcmsplugin.smartphone.js.bookmarks: plugins/BookmarksPlugin/smartphone/js/bookmarks.js
+
+
+# Services
+jcmsplugin.smartphone.service.bookmark:        plugins/BookmarksPlugin/smartphone/jsp/service/bookmark.jsp
+jcmsplugin.smartphone.service.bookmark.icon:   plugins/BookmarksPlugin/images/app-favoris.png
+jcmsplugin.smartphone.service.bookmark.order:  700
+jcmsplugin.smartphone.service.bookmark.desktopUrl:  plugins/BookmarksPlugin/jsp/manageBookmarksFullDisplay.jsp
+jcmsplugin.smartphone.service.bookmark.guest:  true
+jcmsplugin.smartphone.shortcut-mapping.$id.shortcut.jcmsplugin.bookmarks: plugins/BookmarksPlugin/smartphone/jsp/service/bookmark.jsp
+
+jcmsplugin.smartphone.action.pub-full-display.bookmark: plugins/BookmarksPlugin/smartphone/jsp/bookmarkMenu.jsp
+jcmsplugin.smartphone.action.pub-full-display.index: 70
+# ------------------------------------------------------------
+# JTask projects
+# ------------------------------------------------------------
+icon.jcmsplugin.bookmarks.app.project.favorites-projects: glyph: icomoon-star-full

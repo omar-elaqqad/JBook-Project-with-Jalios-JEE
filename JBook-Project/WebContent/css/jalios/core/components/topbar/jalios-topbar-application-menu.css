@@ -1,0 +1,158 @@
+.topbar-application-menu .topbar-ctxmenu-body {
+  max-height: 70vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.topbar-application-menu .topbar-ctxmenu-body .ps__rail-y {
+  z-index: 10;
+}
+.topbar-application-menu .topbar-ctxmenu-body .app-draggable-clone {
+  border: 1px solid #E8E8E8;
+  box-shadow: 1px 1px 4px 0 rgba(129, 129, 129, 0.39);
+}
+.topbar-application-menu .topbar-application-item-inner-global .topbar-application-item-wrapper {
+  display: none;
+  border-top: 1px solid #d3d3d3;
+}
+.topbar-application-menu .topbar-application-item-inner-global.is-expanded .topbar-application-item-wrapper {
+  display: block;
+}
+.topbar-application-menu .dropdown-menu {
+  max-width: 350px;
+}
+.topbar-application-menu .dropdown-menu.is-loading {
+  background-color: transparent;
+}
+.topbar-application-menu .dropdown-menu.is-loading .topbar-ctxmenu-body {
+  overflow: hidden;
+}
+.topbar-application-menu .topbar-ctxmenu-body {
+  position: relative;
+  min-height: 150px;
+  width: 348px;
+}
+.topbar-application-menu .topbar-ctxmenu-body .topbar-application-item-inner,
+.topbar-application-menu .topbar-ctxmenu-body .topbar-application-item-inner-global {
+  position: relative;
+}
+.topbar-application-menu .topbar-ctxmenu-body .topbar-application-item-inner .topbar-application-item-global,
+.topbar-application-menu .topbar-ctxmenu-body .topbar-application-item-inner-global .topbar-application-item-global,
+.topbar-application-menu .topbar-ctxmenu-body .topbar-application-item-inner .topbar-application-item-mbr,
+.topbar-application-menu .topbar-ctxmenu-body .topbar-application-item-inner-global .topbar-application-item-mbr {
+  position: relative;
+  z-index: 5;
+}
+.topbar-application-menu .topbar-ctxmenu-body .topbar-application-item-inner .topbar-application-item-global-clone,
+.topbar-application-menu .topbar-ctxmenu-body .topbar-application-item-inner-global .topbar-application-item-global-clone,
+.topbar-application-menu .topbar-ctxmenu-body .topbar-application-item-inner .topbar-application-item-mbr-clone,
+.topbar-application-menu .topbar-ctxmenu-body .topbar-application-item-inner-global .topbar-application-item-mbr-clone {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.topbar-application-menu .topbar-ctxmenu-body .topbar-application-item-inner .topbar-application-item-global-clone .topbar-application-item,
+.topbar-application-menu .topbar-ctxmenu-body .topbar-application-item-inner-global .topbar-application-item-global-clone .topbar-application-item,
+.topbar-application-menu .topbar-ctxmenu-body .topbar-application-item-inner .topbar-application-item-mbr-clone .topbar-application-item,
+.topbar-application-menu .topbar-ctxmenu-body .topbar-application-item-inner-global .topbar-application-item-mbr-clone .topbar-application-item {
+  float: none;
+  position: absolute;
+}
+.topbar-application-menu .topbar-ctxmenu-body .topbar-application-item-inner .topbar-application-item-global-clone a,
+.topbar-application-menu .topbar-ctxmenu-body .topbar-application-item-inner-global .topbar-application-item-global-clone a,
+.topbar-application-menu .topbar-ctxmenu-body .topbar-application-item-inner .topbar-application-item-mbr-clone a,
+.topbar-application-menu .topbar-ctxmenu-body .topbar-application-item-inner-global .topbar-application-item-mbr-clone a {
+  border: none;
+  background-color: inherit;
+}
+.topbar-application-menu .topbar-application-item-wrapper {
+  padding: 24px;
+  margin: 0;
+  overflow: hidden;
+}
+.topbar-application-menu .topbar-application-item-wrapper .ps__scrollbar-y-rail {
+  z-index: 6;
+}
+.topbar-application-menu .topbar-application-menu-other-items {
+  display: none;
+}
+.topbar-application-menu .topbar-application-menu-other-items.is-expanded {
+  display: block;
+  border-top: 1px solid #EAEAEA;
+}
+.topbar-application-menu .topbar-application-item-separator {
+  clear: both;
+  background-color: rgba(210, 210, 210, 0.66);
+  height: 1px;
+  width: 100%;
+}
+.topbar-application-menu .topbar-application-item {
+  background-color: white;
+  display: inline-block;
+  float: left;
+  text-align: center;
+  width: 100px;
+  margin-bottom: 16px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 16px;
+  cursor: pointer;
+  border: 1px solid white;
+  height: 83px !important;
+  padding-top: 10px;
+  -webkit-transition: border 200ms linear;
+  -o-transition: border 200ms linear;
+  transition: border 200ms linear;
+  position: relative;
+}
+.topbar-application-menu .topbar-application-item.is-clone {
+  position: absolute !important;
+}
+.topbar-application-menu .topbar-application-item:hover {
+  border: 1px solid #E8E8E8;
+  text-decoration: none;
+}
+.topbar-application-menu .topbar-application-item .icon-wrapper {
+  display: inline-block;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 8px;
+}
+.topbar-application-menu .topbar-application-item .icon-wrapper > IMG {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+}
+.topbar-application-menu .topbar-application-item .label-wrapper {
+  color: #333;
+  font-size: 12px;
+  display: block;
+}
+.topbar-application-menu .topbar-application-item .topbar-item-badge {
+  right: 16px;
+  top: 8px;
+  position: absolute;
+  z-index: 1;
+}
+.topbar-application-menu .topbar-application-item .topbar-item-badge.app-badge-level-info {
+  background-color: #009EF5;
+}
+.topbar-application-menu .topbar-application-item .topbar-item-badge.app-badge-level-warning {
+  background-color: #F89406;
+}
+.topbar-application-menu .topbar-application-item .topbar-item-badge.app-badge-level-danger {
+  background-color: #d9534f;
+}
+.topbar-application-menu .topbar-ctxmenu-footer-btn .show-less {
+  display: none;
+}
+.topbar-application-menu .topbar-ctxmenu-footer-btn.is-expanded .show-more {
+  display: none;
+}
+.topbar-application-menu .topbar-ctxmenu-footer-btn.is-expanded .show-less {
+  display: block;
+}
+.topbar .topbar-application-menu .topbar-item .topbar-item-badge {
+  right: 8px;
+}
+/*# sourceMappingURL=jalios-topbar-application-menu.css.map */

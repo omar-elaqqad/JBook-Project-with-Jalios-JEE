@@ -1,0 +1,148 @@
+# ----------------------------------------------------------------------
+# Folder
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.folder.lbl.new: Neuer Ordner
+jcmsplugin.bookmarks.folder.lbl.add: Einen Ordner hinzufügen
+jcmsplugin.bookmarks.folder.btn.lbl.add: Einen Ordner hinzufügen …
+jcmsplugin.bookmarks.folder.lbl.edit: Einen Ordner bearbeiten
+jcmsplugin.bookmarks.folder.action.delete.warn-msg: Warnhinweis: Der Inhalt des Ordners wird ebenfalls gelöscht
+jcmsplugin.bookmarks.folder.menu.action.delete.warn-msg: Warnhinweis: Der Inhalt der Ordner wird ebenfalls gelöscht
+jcmsplugin.bookmarks.folder.lbl.name:  Ordnername
+jcmsplugin.bookmarks.folder.lbl.name1: Name
+jcmsplugin.bookmarks.folder.lbl.name.parent:  Übergeordneter Ordner
+jcmsplugin.bookmarks.folder.lbl.name.parent1: Übergeordnetes Element
+jcmsplugin.bookmarks.folder.name.error: Bitte geben Sie einen Ordnernamen ein
+jcmsplugin.bookmarks.folder.name.error.duplicate: Es gibt bereits einen Ordner mit diesem Namen
+jcmsplugin.bookmarks.folder.contains-data: Löschen Sie bitte zuerst den Inhalt dieses Ordners
+jcmsplugin.bookmarks.folder.no-result: Es sind keine Lesezeichen vorhanden.
+jcmsplugin.bookmarks.folder.root: Bis zum Root
+jcmsplugin.bookmarks.folder.lbl.root: Root
+jcmsplugin.bookmarks.folder.upper: Bis zu {0}
+jcmsplugin.bookmarks.folder.lbl: Ordner
+jcmsplugin.bookmarks.folder.menu.action: Aktionen
+jcmsplugin.bookmarks.folder.action.move.empty: Die Auswahl kann nicht in einen beliebigen Ordner verschoben werden
+jcmsplugin.bookmarks.items.lbl.shift: Auswahl verschieben
+jcmsplugin.bookmarks.items.lbl.delete: Diese Auswahl löschen
+jcmsplugin.bookmarks.menu.search.placeholder: Lesezeichen suchen
+jcmsplugin.bookmarks.already-bookmarked: Diese Veröffentlichung ist bereits als Lesezeichen gespeichert.
+jcmsplugin.bookmarks.app.title: Lesezeichen
+
+#DISABLED
+jcmsplugin.bookmarks.plugin-disabled.message: Das Modul „Lesezeichen“ ist derzeit deaktiviert
+
+#SIDEBAR
+jcmsplugin.bookmarks.topbar.title: Meine Lesezeichen
+jcms.sidebar-tab.bookmarks: Lesezeichen
+jcms.sidebar-tab.bookmarks.icon: Lesezeichen
+jcmsplugin.bookmarks.topbar.search: Lesezeichen suchen …
+
+#PUBLICATION
+jcmsplugin.bookmarks.toastr.add: Zu Lesezeichen hinzugefügt
+jcmsplugin.bookmarks.toastr.remove: Aus Lesezeichen entfernt
+
+#MENU
+jcmsplugin.bookmarks.msg.no-result: Keine Lesezeichen gefunden
+
+jcmsplugin.bookmarks.lbl.bookmarks: Lesezeichen
+jcmsplugin.bookmarks.lbl.link: Externer Link
+jcmsplugin.bookmarks.lbl.pub:  Inhalt
+jcmsplugin.bookmarks.lbl.search: Suche
+
+jcmsplugin.bookmarks.lbl.url:    URL
+jcmsplugin.bookmarks.lbl.title:  Titel
+jcmsplugin.bookmarks.btn.add:    Hinzufügen
+jcmsplugin.bookmarks.btn.update: Speichern
+jcmsplugin.bookmarks.btn.remove: Dieses Lesezeichen entfernen
+
+jcmsplugin.bookmarks.lbl.add-bookmark: Lesezeichen hinzufügen
+jcmsplugin.bookmarks.lbl.remove-bookmark: Aus Lesezeichen entfernen
+
+jcmsplugin.bookmarks.lbl.action: Aktionen
+jcmsplugin.bookmarks.lbl.add:    Ein Lesezeichen hinzufügen …
+jcmsplugin.bookmarks.lbl.edit: 	 Lesezeichen bearbeiten
+jcmsplugin.bookmarks.msg.remove: Möchten Sie das Lesezeichen <em>{0}</em> wirklich löschen?
+
+jcmsplugin.bookmarks.adm.max:    Max. Lesezeichen je Benutzer
+jcmsplugin.bookmarks.msg.adm.max:Sie haben die maximale Anzahl an Lesezeichen erreicht!
+
+jcmsplugin.bookmarks.lbl.bookmark.error: Dieses Lesezeichen ist ungültig.
+jcmsplugin.bookmarks.lbl.url.error: URL ist ungültig.
+jcmsplugin.bookmarks.title.error: Bitte geben Sie einen Titel ein.
+
+jcmsplugin.bookmarks.lbl.manage-bookmark: Lesezeichen verwalten
+
+jcmsplugin.bookmarks.isExternalLink.title: Externer Link
+# ----------------------------------------------------------------------
+# Analytics
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.analytics.top-section: Am häufigsten hinzugefügte Lesezeichen
+jcmsplugin.bookmarks.analytics.top-section.help: Top-10-Lesezeichen der Benutzer
+jcmsplugin.bookmarks.analytics.top-bookmarks-section: Mitglieder mit den meisten Lesezeichen
+jcmsplugin.bookmarks.analytics.top-bookmarks-section.help: Top-10-Mitglieder mit den meisten Lesezeichen
+jcmsplugin.bookmarks.analytics.rank-number-column.label: #
+jcmsplugin.bookmarks.analytics.bookmark-column.label: Lesezeichen
+jcmsplugin.bookmarks.analytics.bookmark-add-column.label: Anzahl der hinzugefügten Zeiten
+jcmsplugin.bookmarks.analytics.report.average-bookmarks: Durchschnittliche Lesezeichen
+jcmsplugin.bookmarks.analytics.report.average-bookmarks.h: Durchschnitt pro Benutzer
+jcmsplugin.bookmarks.analytics.author-column.label: Benutzer
+jcmsplugin.bookmarks.analytics.bookmark-number-column.label: Lesezeichennummer
+jcmsplugin.bookmarks.analytics.indicator.average-bookmarks: Lesezeichen je Benutzer
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks: Am häufigsten als Lesezeichen gespeicherte Veröffentlichung
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks.h: Top 10 der als Lesezeichen gespeicherten Veröffentlichungen
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks.table.pub.title: Veröffentlichung
+ui.analytics.BookmarksAgent.name: Lesezeichen
+
+# ----------------------------------------------------------------------
+# Icones
+# ----------------------------------------------------------------------
+icon.jcmsplugin.bookmarks.bookmarkWhite: Lesezeichen
+icon.jcmsplugin.bookmarks.edit:          Lesezeichen bearbeiten
+icon.jcmsplugin.bookmarks.delete:        Lesezeichen löschen
+icon.jcmsplugin.bookmarks.add:           Lesezeichen hinzufügen
+icon.jcmsplugin.bookmarks.star:          Lesezeichen
+
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+jcmsplugin.bookmarks.displayExternalUrl: Externe Links in neuem Fenster öffnen
+
+# From PortletBookmarks-templates.xml
+types.PortletBookmarks.templates.query.default.label: Standardvorlage
+types.PortletBookmarks.templates.box.default.label: Standardvorlage
+
+# From PortletBookmarks.xml
+types.PortletBookmarks.title.label: Titel
+types.PortletBookmarks.fields.openLinksInNewWindow.label: Externe Links in neuem Fenster öffnen
+types.PortletBookmarks.fields.openLinksInNewWindow.onLabel: Ja
+types.PortletBookmarks.label: Lesezeichenportlet
+types.PortletBookmarks.description: Mit diesem Portlet können angemeldete Mitglieder ihre Lesezeichen verwalten.
+types.PortletBookmarks.fields.openLinksInNewWindow.offLabel: Nein
+
+# From PortletWorkspaceBookmarks.xml
+types.PortletWorkspaceBookmarks.label: Arbeitsbereichs-Lesezeichenportlet
+types.PortletWorkspaceBookmarks.title.label: Titel
+types.PortletWorkspaceBookmarks.description: Mit diesem Portlet kann der Administrator des Arbeitsbereichs die Lesezeichen des Arbeitsbereichs verwalten.
+
+jcmsplugin.bookmarks.edition-mode: In Bearbeitungsmodus wechseln
+jcmsplugin.bookmarks.remove-edition-mode: Bearbeitung beenden
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.bookmark:   Lesezeichen
+jcmsplugin.bookmarks.smartphone.lbl.bookmark.filter: In Lesezeichen suchen …
+jcmsplugin.bookmarks.smartphone.lbl.bookmark.no-result: Keine Lesezeichen
+jcmsplugin.bookmarks.smartphone.menu.bookmark.added.lbl: Lesezeichen hinzugefügt
+jcmsplugin.bookmarks.smartphone.menu.bookmark.removed.lbl: Lesezeichen entfernt
+
+# Shortcut
+data.$id.shortcut.jcmsplugin.bookmarks.title: Lesezeichen
+data.$id.shortcut.jcmsplugin.bookmarks.text: Greifen Sie auf Ihre Lesezeichen in Veröffentlichungen zu und verwalten Sie sie, suchen Sie nach Ergebnissen und externen Seiten.
+
+# ----------------------------------------------------------------------
+# JTasks project
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.app.project.sidebar.favorite-projects.label: Meine Favoriten

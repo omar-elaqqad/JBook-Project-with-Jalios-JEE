@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates version="5.0">
+  <template name="default" file="doBlogFullDisplay.jsp" usage="box" />
+  <template name="default" file="doBlogResultDisplay.jsp" usage="query" />
+  <template name="default" file="editBlog.jsp" usage="edit" />
+  <template name="default" file="doBlogEditDisplay.jsp" usage="editFront" />
+</templates>
+

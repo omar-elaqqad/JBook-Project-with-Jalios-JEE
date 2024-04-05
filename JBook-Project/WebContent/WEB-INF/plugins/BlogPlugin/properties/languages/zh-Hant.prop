@@ -1,0 +1,372 @@
+# ------------------------------------------------------------
+#  BLOG VIRTUAL ID
+# ------------------------------------------------------------
+jcmsplugin.blog.create-blogosphere: 創建部落格空間
+
+$id.Blog.model.help:   使用模型來複制服務
+$id.jcmsplugin.blog.blogosphere:                成員工作區部落格id
+$id.jcmsplugin.blog.blogosphere.category.root:  部落格空間根目錄id
+$id.jcmsplugin.blog.blogger.group-attendees:    部落格空間成員的團隊
+# ------------------------------------------------------------
+#  BLOG Terms and conditions Agreement
+# ------------------------------------------------------------
+jcmsplugin.blog.agreement.btn.agree:          我同意
+jcmsplugin.blog.agreement.btn.disagree:       我不同意
+# ------------------------------------------------------------
+#  BLOG LABELS
+# ------------------------------------------------------------
+jcmsplugin.blog.label.blog:             部落格
+jcmsplugin.blog.label.blogosphere:      部落格空間
+jcmsplugin.blog.label.blog-post-count:  {0} 部落格文章
+jcmsplugin.blog.label.category:         {0} 類別
+jcmsplugin.blog.label.create-ws-blog:   在該工作區創建一個部落格
+jcmsplugin.blog.label.no-workspace-blog:該工作區內沒有部落格。
+jcmsplugin.blog.label.pending-request:  您開通部落格的要求已經在處理之中。
+jcmsplugin.blog.label.rejected-request: 您開通部落格的要求已被拒絕。
+jcmsplugin.blog.label.blog-request:     開通部落格的要求
+jcmsplugin.blog.label.blog-create:      創建我的部落格
+jcmsplugin.blog.label.blog-ws-create:   創建工作空間部落格
+jcmsplugin.blog.label.add-blog-post:    發佈文章到我的部落格
+jcmsplugin.blog.label.already-has-blog: 您已經有一個部落格
+jcmsplugin.blog.label.add-blog-post-ws: 發布文章
+jcmsplugin.blog.label.delete-comment-confirm: 您確定要刪除 ：
+jcmsplugin.blog.label.access-full-blog: 訪問成員的部落格
+jcmsplugin.blog.label.access-my-blog:   訪問我的部落格
+jcmsplugin.blog.label.all-blog:         所有的部落格
+jcmsplugin.blog.label.access-blog:      訪問部落格：{0}
+jcmsplugin.blog.label.no-comments:      您的部落格還沒有評論。
+jcmsplugin.blog.label.no-posts:         您的部落格還沒有文章。
+jcmsplugin.blog.label.blog-attendees:   部落格空間成員
+jcmsplugin.blog.label.blog-validators:  部落格空間驗證者
+jcmsplugin.blog.label.bloggers:         部落格作者
+jcmsplugin.blog.label.unread:           未閱讀
+jcmsplugin.blog.label.draft:            草稿
+jcmsplugin.blog.label.my-blog:          我的部落格
+jcmsplugin.blog.label.new-comment:      {0} {0,choice,0#新評論|1#新評論|2#新評論}
+jcmsplugin.blog.label.portlet.type-subject: 在這裏輸入您的部落格文章標題。
+jcmsplugin.blog.label.continue:         繼續……
+jcmsplugin.blog.label.no-blog-under-ws: 該部落格還沒有創建
+jcmsplugin.blog.label.activate-blog:    激活部落格
+jcmsplugin.blog.label.my-actions:       我的行動
+jcmsplugin.blog.label.access-member-blog:   我的部落格
+jcmsplugin.blog.label.access-ws-blog:       訪問協同空間部落格
+jcmsplugin.blog.tab.last-blog-post:     部落格
+jcmsplugin.blog.label.the-blog-of:      {0}的部落格
+jcmsplugin.blog.tab.last-blog:          部落格
+jcmsplugin.blog.tab.my-blog-post:       我的部落格
+jcmsplugin.blog.tab.blog-choice:        部落格選擇：
+jcmsplugin.blog.tab.posted-by:          提交者
+jcmsplugin.blog.label.by:               由
+jcmsplugin.blog.submit:                 提交
+jcmsplugin.blog.edit.complete:          完整編輯
+jcmsplugin.blog.follow:                 訂閱部落格
+jcmsplugin.blog.follow-message:         您現已訂閱新文章
+jcmsplugin.blog.unfollow:               取消訂閱部落格
+jcmsplugin.blog.unfollow-message:       您不再訂閱新文章
+jcmsplugin.blog.app-sidebar.follow:     訂閱
+jcmsplugin.blog.manage-posts.title:     發佈管理
+jcmsplugin.blog.manage-posts.table-caption: 部落格文章列表
+jcmsplugin.blog.app-sidebar.follow.tooltip: 訂閱新文章
+jcmsplugin.blog.app-sidebar.unfollow:   取消訂閱
+jcmsplugin.blog.app-sidebar.unfollow.tooltip: 取消訂閱新文章
+jcmsplugin.blog.label.all-authors: 所有作者
+jcmsplugin.blog.msg.edit.delete-blog-no-post: 無法刪除帶文章的部落格。
+
+# ------------------------------------------------------------
+#  BLOG LISTS
+# ------------------------------------------------------------
+jcmsplugin.blog.label.empty:                該部落格還沒有文章。
+jcmsplugin.blog.label.empty-search:         您的搜索不會有任何結果。
+jcmsplugin.blog.label.empty-drafts:         您現在沒有草稿。
+jcmsplugin.blog.label.empty-cat:            沒有該類別的文章。
+# ------------------------------------------------------------
+#  BLOG POST
+# ------------------------------------------------------------
+
+jcmsplugin.blog.label.stats.visit-count:    閱讀
+jcmsplugin.blog.label.stats.unique-visit:   讀者
+
+jcmsplugin.blog.label.action.follow:        訂閱該部落格
+jcmsplugin.blog.label.action.unfollow:      取消訂閱該部落格
+
+jcmsplugin.blog.label.action.follow-blog:   訂閱該部落格
+jcmsplugin.blog.label.action.unfollow-blog: 取消訂閱該部落格
+jcmsplugin.blog.label.action.follow-blog-text:   您想要收到該部落格最新文章的郵件嗎？
+jcmsplugin.blog.label.action.unfollow-blog-text: 您想要收到該部落格最新文章的郵件嗎？
+
+
+jcmsplugin.blog.label.info.in:              在：
+jcmsplugin.blog.label.info.comments:        {0,choice,0#評論|1#評論|2#評論}
+
+jcmsplugin.blog.label.read-more:            閱讀更多
+jcmsplugin.blog.label.blog.desc.show-more:  顯示更多
+jcmsplugin.blog.blog-desc.btn.show-more.title: 顯示描述
+jcmsplugin.blog.blog-desc.btn.show-less.title: 隱藏描述
+
+jcmsplugin.blog.title.add-post:             添加一個新的部落格
+jcmsplugin.blog.title.save-as-draft:        草稿
+jcmsplugin.blog.label.action.publish:       發表
+# ------------------------------------------------------------
+#  BLOG SIDEBAR
+# ------------------------------------------------------------
+jcmsplugin.blog.title.admin:      管理
+jcmsplugin.blog.title.archive:    檔案
+jcmsplugin.blog.title.authors:    作者
+jcmsplugin.blog.title.categories: 分類
+jcmsplugin.blog.title.recent-post:最新文章
+jcmsplugin.blog.title.no-category:沒有類別
+jcmsplugin.blog.label.edit-blog:      編輯部落格
+jcmsplugin.blog.label.action.add-post:      發布文章
+jcmsplugin.blog.label.action.add-post-wf:   發布文章
+jcmsplugin.blog.label.action.see-draft:     查看草稿
+jcmsplugin.blog.label.action.add-category:  添加類別
+jcmsplugin.blog.label.action.add-sub-category:  添加子類別
+jcmsplugin.blog.label.action.add-sub-authors:  添加協同作者
+jcmsplugin.blog.label.action.search:  搜索
+jcmsplugin.blog.label.action.search-post.placeholer: 搜索帖子……
+jcmsplugin.blog.label.action.see-all-authors:  查看所有作者
+jcmsplugin.blog.label.post-in-cat:  {0,choice,1#{1}類別有{0}帖子|2#{1}類別有{0}帖子}
+jcmsplugin.blog.app.sidebar.all-posts-link: 所有文章
+# ------------------------------------------------------------
+#  BLOG MODAL
+# ------------------------------------------------------------
+jcmsplugin.blog.title.ws-blog:       工作區部落格
+
+jcmsplugin.blog.title.add-cat:       添加類別
+jcmsplugin.blog.title.add-sub-cat:   添加子類別到 {0}
+jcmsplugin.blog.label.add-cat:       輸入要添加的類別(已逗號分開)
+
+jcmsplugin.blog.title.blog-request:  開通部落格請求
+jcmsplugin.blog.title.edit-comment:  編輯評語
+
+jcmsplugin.blog.blog-root.label:     根
+jcmsplugin.blog.blog-root.description:     部落格類別根
+# ------------------------------------------------------------
+#  BLOG LAYOUT
+# ------------------------------------------------------------
+
+jcmsplugin.blog.label.add-blog:      創建我的部落格
+jcmsplugin.blog.label.edit-blog:     編輯部落格
+jcmsplugin.blog.label.add-post:      發布一個新部落格文章
+jcmsplugin.blog.label.edit-post:     編輯部落格文章
+jcmsplugin.blog.label.author:        發佈者 {0}
+jcmsplugin.blog.label.last-post:     最新文章
+jcmsplugin.blog.label.search:        搜索
+
+# ------------------------------------------------------------
+#  BLOG REQUEST
+# ------------------------------------------------------------
+
+jcmsplugin.blog.agreement.required:            接受該部落格的條款和條件
+$id.jcmsplugin.blog.agreement.terms.pub:       部落格的條款和條件 — 文章
+jcmsplugin.blog.agreement.terms.field:         部落格的條款和條件 —領域
+jcmsplugin.blog.agreement.btn.agree:           我接受
+jcmsplugin.blog.agreement.btn.disagree:        我拒絕
+jcmsplugin.blog.agreement.date:      部落格：條款和條件接受日期
+jcmsplugin.blog.agreement.title:               條款和條件
+jcmsplugin.blog.agreement.text:                沒有定義部落格的條款和條件請更新屬性 <code>{0}</code> 和 <code>{1}</code>。
+
+# ------------------------------------------------------------
+#  BLOG PORTLET
+# ------------------------------------------------------------
+
+$id.jcmsplugin.blog.portlet.categories:       部落格—類別
+$id.jcmsplugin.blog.portlet.recent-post:      部落格—最新文章
+$id.jcmsplugin.blog.portlet.archive:          部落格—檔案
+$id.jcmsplugin.blog.portlet.member-profile:   部落格—成員個人資料
+$id.jcmsplugin.blog.portlet.post-list:        部落格—文章列表
+$id.jcmsplugin.blog.portlet.post-full:        部落格—文章
+$id.jcmsplugin.blog.portlet.admin:            部落格—管理員
+$id.jcmsplugin.blog.portlet.add-post:         部落格—添加新文章
+$id.jcmsplugin.blog.portlet.authors:          部落格—作者列表
+$id.jcmsplugin.blog.portlet.handle-posts:     部落格—文章管理
+# ------------------------------------------------------------
+#  BLOG ADMIN
+# ------------------------------------------------------------
+jcmsplugin.blog.admin.author:                 作者
+jcmsplugin.blog.admin.modify:                 修改
+jcmsplugin.blog.admin.add-authors:            管理作者
+jcmsplugin.blog.admin.add-authors-description: 選擇可以給<b>{0}</b>添加文章的成員。
+jcmsplugin.blog.admin.delete:                 刪除
+jcmsplugin.blog.admin.handle-posts:           管理文章
+jcmsplugin.blog.admin.handle.unique-visitor:  閱讀
+jcmsplugin.blog.admin.handle.total-visitor:   讀者
+jcmsplugin.blog.admin.handle.comment-count:   評語
+jcmsplugin.blog.admin.handle.vote-count:      投票
+jcmsplugin.blog.admin.handle.post-date:       修改
+jcmsplugin.blog.admin.handle.sort-by:         文章排序按
+jcmsplugin.blog.admin.handle.or:              或
+jcmsplugin.blog.label.title:                  標題
+jcmsplugin.blog.label.date:                   日期
+jcmsplugin.blog.admin.author-list:            作者列表
+jcmsplugin.blog.admin.see-my-post:            查看我的文章
+jcmsplugin.blog.admin.see-member-post:        查看文章
+jcmsplugin.blog.admin.see-all-post:           查看所有文章
+
+# ------------------------------------------------------------
+#  BLOG WARNING
+# ------------------------------------------------------------
+
+jcmsplugin.blog.warning.ws-has-a-blog:             您的工作區已經有一個（{0}）部落格。
+jcmsplugin.blog.warning.duplicate-same:            您的當前空間已有同名部落格
+jcmsplugin.blog.warning.text:                      請輸入正文
+jcmsplugin.blog.warning.member-has-a-blog:         成員"{0}" 在部落格空間已經有一個部落格：{1}。
+jcmsplugin.blog.warning.blogosphere-root-cat:      該部落格空間部落格的根目錄不存在。請更新插件屬性。
+jcmsplugin.blog.warning.blogosphere-forbidden-blog:您沒有在以下部落格發表文章的權限："{0}"。
+jcmsplugin.blog.warning.forbidden-blog:            您沒有在以下协同部落格發表文章的授權："{0}"。
+jcmsplugin.blog.warning.forbidden-blog-create:     您沒有創建一個部落格的授權。
+
+# ------------------------------------------------------------
+#  BLOG ACL
+# ------------------------------------------------------------
+acl.resource.admin/work/blogospherecreation: 部落格—在部落格空間添加一個部落格
+
+
+# ------------------------------------------------------------
+#  PUBLISH MENU
+# ------------------------------------------------------------
+jcmsplugin.blog.publish-menu.add-cs:   部落格
+jcmsplugin.blog.publish-menu.add-mine: 部落格的文章
+
+
+# ------------------------------------------------------------
+#  CategoryBrowser
+# ------------------------------------------------------------
+category.category-browser.blog: 在部落格搜索
+
+
+# ----------------------------------------------------------------------
+# Alert
+# ----------------------------------------------------------------------
+alert.name.jcmsplugin-blog:                               部落格
+
+alert.name.jcmsplugin-blog.new-blogpost:                  部落格新文章
+alert.msg.jcmsplugin-blog.new-blogpost.title:             部落格新文章：{data}
+alert.msg.jcmsplugin-blog.new-blogpost.short-description: {author}已在{parent}發表一篇新文章{data}。{data.url}
+alert.msg.jcmsplugin-blog.new-blogpost.description:       <p>{author}已在{parent.link}發表一篇新文章{data}。</p> 
+
+alert.name.jcmsplugin-blog.update-blogpost:               部落格文章更新
+alert.msg.jcmsplugin-blog.update-blogpost.title:          一篇部落格文章已被更新：{data}
+alert.msg.jcmsplugin-blog.update-blogpost.short-description: {author}已在{parent}更新一篇新文章{data}。{data.url}
+alert.msg.jcmsplugin-blog.update-blogpost.description:       <p>{author}已在{parent.link}更新一篇新文章{data}。</p> 
+
+alert.name.jcmsplugin-blog.blog-opening:                  開通布落格請求確認
+alert.msg.jcmsplugin-blog.blog-opening.title:             您開通部落格的請求已被接受
+alert.msg.jcmsplugin-blog.blog-opening.short-description: {author}已經接受您開通部落格的請求：{data}. {data.url}
+alert.msg.jcmsplugin-blog.blog-opening.description:       <p>{author}已經接受您開通部落格的請求：{data}:</p> 
+
+# ------------------------------------------------------------
+#  BLOG TOOLS
+# ------------------------------------------------------------
+
+jcmsplugin.blog.tools.title:  加載部落格文章（內存）至部落格文章（數據庫）— 第2步
+jcmsplugin.blog.tools.text1:  部落格導入信息
+jcmsplugin.blog.tools.text2:  1.由部落格文章內存導入到部落格文章數據庫
+jcmsplugin.blog.tools.text3:  2.使用新的設置，重新初始化所有的部落格
+ui.adm.jcms5-loader.btn.load:        加載數據
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From Blog-templates.xml
+types.Blog.templates.editFront.default.label: Front Office編輯模板
+types.Blog.templates.editFrontOld.default.label: 舊Front Office編輯模板
+types.Blog.templates.query.default.label: 默認模板
+types.Blog.templates.box.default.label: 默認模板
+types.Blog.templates.edit.default.label: Front Office編輯模板
+types.Blog.templates.fullold.default.label: 舊模板
+types.Blog.templates.full.old.label: 舊模板
+types.Blog.templates.full.default.label: 默認JNews模板
+ui.editportlet.usage.fullold: 舊模板
+
+# From Blog.xml
+types.Blog.fields.bloggerGroup.label: 部落格站主團隊
+types.Blog.title.label: 標題
+types.Blog.fields.description.label: 部落格描述
+types.Blog.label: 部落格
+
+# From BlogPost-templates.xml
+types.BlogPost.templates.editFront.default.label: Front Office編輯模板
+types.BlogPost.templates.editFrontOld.default.label: 舊Front Office編輯模板
+types.BlogPost.templates.query.default.label: 默認模板
+types.BlogPost.templates.edit.default.label: 編輯模板
+types.BlogPost.templates.full.default.label: 默認模板
+types.BlogPost.templates.fullold.default.label: 舊模板
+types.BlogPost.templates.full.default.label: 默認模板
+types.BlogPost.templates.appBody.default.label: 應用程式主體顯示亮模板
+
+# From BlogPost.xml
+types.BlogPost.fields.summary.description: 這是一篇文章的概要，它將在文章列表以及發送給訂閱用戶的郵件裏顯示。
+types.BlogPost.fields.blog.label: 部落格
+types.BlogPost.fields.category.description: 您可以選擇多個類別。
+types.BlogPost.fields.content.label: 正文
+types.BlogPost.label: 部落格文章
+types.BlogPost.title.label: 標題
+types.BlogPost.fields.category.label: 分類
+types.BlogPost.fields.summary.label: 概要
+types.BlogPost.fields.featuredImage.label: 圖片
+types.BlogPost.fields.featuredImage.description: 該圖標應為大呎寸，最好為16/9格式（例如：960x540）。
+types.BlogPost.fields.featuredImageAlt.label: 圖片文本選擇
+types.BlogPost.fields.featuredImageAlt.description: 該文本可被用於為圖片添加說明
+types.BlogPost.fields.thumbnailImage.label: 縮略圖
+types.BlogPost.fields.thumbnailImage.description: 根據圖片生成縮略圖。但您可以選擇另一個縮略圖。必須大於300x150，且最好為4/3或16/9格式。
+types.BlogPost.fields.thumbnailImageAlt.label: 縮略圖圖片文本選擇
+types.BlogPost.fields.thumbnailImageAlt.description: 該文本可被用於為縮略圖圖片添加說明
+types.BlogPost.fields.imageAltText.label: 文本選擇
+types.BlogPost.btn.show-options: 更多選項...
+types.BlogPost.btn.hide-options: 更少選項……
+
+# From BlogRequest.xml
+types.BlogRequest.fields.description.label: 描述
+types.BlogRequest.title.label: 部落格名稱
+types.BlogRequest.label: 開部落格請求
+
+# From PortletBlog-templates.xml
+types.PortletBlog.templates.box.default.label: 默認模板
+types.PortletBlog.templates.box.default.description: 該portlet使用默認模板
+types.PortletBlog.templates.box.itembox.label: 設計為item-box的列表
+types.PortletBlog.templates.box.itembox.description: 設計為item-box的列表
+types.PortletBlog.templates.edit.default.label: 默認模板
+types.PortletBlog.templates.edit.default.description: 該portlet使用默認模板
+types.PortletBlog.templates.full.default.label: 默認模板
+types.PortletBlog.templates.full.default.description: 該portlet使用默認模板
+types.PortletBlog.templates.query.default.label: 默認模板
+types.PortletBlog.templates.query.default.description: 該portlet使用默認模板
+
+# From PortletBlog.xml
+types.PortletBlog.label: 部落格Portlet
+types.PortletBlog.fields.displayedList.labelList: 所有工作區的部落格和部落格帖子|工作區文章
+types.PortletBlog.fields.displayedList.label: 顯示的列表
+types.PortletBlog.title.label: 標題
+types.PortletBlog.description: 顯示部落格文章和部落格列表
+
+# From wfblogrequest.xml
+workflows.wfblogrequest.label: 部落格—部落格開通請求工作流
+workflows.wfblogrequest.states.60.description: 請求得到批准，一個部落格已經創建。
+workflows.wfblogrequest.states.50.description: 該部落格開通請求已被拒絕。部落格將不會被創建。詳細情況請查看工作流注釋。
+workflows.wfblogrequest.states.-200.label: 已提交
+workflows.wfblogrequest.roles.blogValidator.description: 接受/拒絕部落格開通請求
+workflows.wfblogrequest.roles.blogValidator.name: 確認者
+workflows.wfblogrequest.states.60.label: 已接受
+workflows.wfblogrequest.states.50.label: 已被拒絕
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.blog:     部落格
+jcmsplugin.smartphone.workspace-service.PortletBlog: 部落格
+jcmsplugin.blog.smartphone.lbl.blogpost-list: 文章
+jcmsplugin.blog.smartphone.lbl.blog: 部落格
+jcmsplugin.blog.smartphone.lbl.blog.my-blogs: 我的部落格
+jcmsplugin.blog.smartphone.lbl.blog.other-blogs: 其他部落格
+
+# ----------------------------------------------------------------------
+# BlogPost Form
+# ----------------------------------------------------------------------
+jcmsplugin.blog.filter-author: 按作者篩選
+jcmsplugin.blog.filter-pstatus: 狀態過濾
+jcmsplugin.blog.filter-startDate: 開始日期
+jcmsplugin.blog.filter-endDate: 結束日期
+jcmsplugin.blog.sort-by-vote: 評選統計

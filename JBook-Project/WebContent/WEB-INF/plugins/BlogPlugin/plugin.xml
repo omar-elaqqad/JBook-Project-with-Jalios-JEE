@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plugin PUBLIC "-//JALIOS//DTD JCMS-PLUGIN 1.6//EN" "https://community.jalios.com/dtd/jcms-plugin-1.6.dtd">
+
+<plugin name="BlogPlugin"
+ version="9.4.2"
+ order="3"
+ author="Jalios SA"
+ license="Jalios"
+ url="https://community.jalios.com/plugin/blog"
+ jcms="10\.0\.[5-9].*|10\.[1-9].*"
+ jsync="true"
+ appserver="">
+
+  <label xml:lang="en">Blog Plugin</label>
+  <label xml:lang="fr">Module Blog</label>
+  <description xml:lang="en">This plugin manages blogs</description>
+  <description xml:lang="fr">Ce module permet la gestion de blogs.</description>
+
+  <dependencies>
+    <dependency name="DBCommentPlugin" />
+  </dependencies>
+
+  <types>
+    <type name="BlogPost">
+      <file path="doBlogPostEditDisplay.jsp" />
+      <file path="doBlogPostAppBodyFullDisplay.jsp" />
+      <file path="doEditBlogPost.jsp" />
+      <file path="editBlogPost.jsp" />
+    </type>
+    <templates type="BlogPost">
+      <template name="default" file="doBlogPostFullDisplay.jsp" usage="full">
+        <label xml:lang="en">Default template</label>
+        <label xml:lang="fr">Gabarit par défaut</label>
+      </template>
+      <template name="default" file="doBlogPostFullDisplay.jsp" usage="fullold" dir="type">
+	      <label xml:lang="en">Old template</label>
+	      <label xml:lang="fr">Ancien gabarit</label>
+      </template>
+
+      <template name="default" file="doBlogPostEditDisplay.jsp" usage="editFront" dir="type">
+	      <label xml:lang="en">Default edit template</label>
+	      <label xml:lang="fr">Gabarit d'édition front par défaut</label>
+      </template>
+      <template name="default" file="doBlogPostEditDisplayOld.jsp" usage="editFrontOld" dir="type">
+	      <label xml:lang="en">Old edit template</label>
+	      <label xml:lang="fr">Ancien gabarit d'édition</label>
+      </template>
+    </templates>
+
+    <type name="Blog">
+      <file path="doBlogFullDisplay.jpg" />
+      <file path="doBlogEditDisplay.jsp" />
+      <file path="doEditBlog.jsp" />
+      <file path="editBlog.jsp" />
+    </type>
+    <templates type="Blog">
+      <template name="old" file="doBlogFullDisplay.jsp" usage="full">
+	      <label xml:lang="en">Old template</label>
+	      <label xml:lang="fr">Ancien gabarit</label>
+      </template>
+      <template name="default" file="doBlogJNewsFullDisplay.jsp" usage="full">
+	      <label xml:lang="en">Default JNews template</label>
+	      <label xml:lang="fr">Gabarit JNews par défaut</label>
+      </template>
+      <template name="default" file="doBlogFullDisplay.jsp" usage="fullold" dir="type">
+	      <label xml:lang="en">Old template</label>
+	      <label xml:lang="fr">Ancien gabarit</label>
+      </template>
+      <template name="default" file="doBlogEditDisplay.jsp" usage="editFront" dir="type">
+          <label xml:lang="en">Default edit template</label>
+          <label xml:lang="fr">Gabarit d'édition front par défaut</label>
+      </template>
+      <template name="default" file="doBlogEditDisplayOld.jsp" usage="editFrontOld" dir="type">
+          <label xml:lang="en">Old edit template</label>
+          <label xml:lang="fr">Ancien gabarit d'édition</label>
+      </template>
+    </templates>
+
+    <type name="BlogRequest"/>
+    <type name="PortletBlog">
+      <file path="doPortletBlogFullDisplay.jsp"/>
+      <file path="doPortletBlogFullDisplay.png"/>
+      <file path="doPortletBlogApplicationFullDisplay.jsp"/>
+      <file path="doPortletBlogApplicationFullDisplay.png"/>
+      <file path="doPortletBlogFullDisplayItembox.jsp"/>
+      <file path="doPortletBlogFullDisplayItembox.png"/>
+    </type>
+    <templates type="PortletBlog">
+      <template name="default" file="doPortletBlogFullDisplay.jsp" usage="box" dir="type">
+	      <label xml:lang="en">Default template</label>
+	      <label xml:lang="fr">Gabarit par défaut</label>
+      </template>
+      <template name="itembox" file="doPortletBlogFullDisplayItembox.jsp" usage="box" dir="type">
+	      <label xml:lang="en">Itembox template</label>
+	      <label xml:lang="fr">Itembox template</label>
+      </template>
+    </templates>
+  </types>
+
+  <java-classes>
+    <java package="com.jalios.jcmsplugin.blog" />
+  </java-classes>
+
+  <plugincomponents>
+    <datacontroller  class="com.jalios.jcmsplugin.blog.BlogRequestController" types="generated.BlogRequest"/>
+    <datacontroller  class="com.jalios.jcmsplugin.blog.BlogDataController" types="Blog"/>
+    <datacontroller  class="com.jalios.jcmsplugin.blog.BlogPostDataController" types="BlogPost"/>
+    <policyfilter    class="com.jalios.jcmsplugin.blog.BlogTemplatePolicyFilter"/>
+    <channellistener class="com.jalios.jcmsplugin.blog.BlogChannelListener" />
+    <policyfilter    class="com.jalios.jcmsplugin.blog.BlogPortalPolicyFilter" />
+    <policyfilter    class="com.jalios.jcmsplugin.blog.BlogPostRightPolicyFilter" />
+    <policyfilter    class="com.jalios.jcmsplugin.blog.BlogRightPolicyFilter" />
+    <policyfilter    class="com.jalios.jcmsplugin.blog.BlogRequestMailPolicyFilter" />
+  </plugincomponents>
+
+  <private-files>
+    <directory path="properties" />
+  </private-files>
+  <workflows>
+    <workflow id="wfblogrequest" />
+  </workflows>
+  <public-files>
+    <directory path="css/" />
+    <directory path="docs/" />
+    <directory path="front/" />
+    <directory path="images/" />
+    <directory path="jsp/" />
+    <directory path="js/" />
+    <directory path="smartphone/" />
+    <directory path="types/" />
+
+    <file path="jsp/esn/doEsnMemberBlogTab.jsp" include="PLUGIN_ESN_PROFILE_TAB"/>
+    <file path="jsp/esn/doEsnMemberBlog.jsp" include="PLUGIN_ESN_PROFILE_MAIN"/>
+    <file path="jsp/doBlogSidebarMenu.jsp" include="SIDEBAR_MENU_BOTTOM" />
+    <file path="jsp/doBlogPostActions.jsp" include="PUBLICATION_ACTIONS_TOP" />
+    <file path="iphone/doHeader.jsp" include="IPHONE_HEADER_HEAD"/>
+  </public-files>
+</plugin>

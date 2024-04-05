@@ -1,0 +1,1 @@
+!function(b){var a=function(){b(".modal .forbidden-message .alert-warning BUTTON.close").on("click",function(){var c=b(this).closest(".modal");c.modal("hide")})};b(window).ready(function(){a()});b(document).on("jalios:refresh",function(c){if(c.refresh.type=="after"){a()}})}(window.jQuery);

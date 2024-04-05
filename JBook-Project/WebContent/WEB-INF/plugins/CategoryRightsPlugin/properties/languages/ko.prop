@@ -1,0 +1,4 @@
+jcmsplugin.categoryrights.types: 유형
+jcmsplugin.categoryrights.types.help: 제어할 (공백 또는 쉼표로 구분콘텐츠 형식) 콘텐츠
+jcmsplugin.categoryrights.cat-ids: 범주들 (ids)
+jcmsplugin.categoryrights.cat-ids.help: 제어할 (공백 또는 쉼표로 구분콘텐츠 형식) 범주 루트 식별자

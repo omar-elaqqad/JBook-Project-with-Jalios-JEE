@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<signature name="JBookPlugin" urid="c" type="plugin" date="1712244118864">
+  <sign file="WEB-INF/plugins/JBookPlugin/plugin.xml" signature="k5xtYP6JJabunhFwkKbijg==" />
+  <sign file="WEB-INF/plugins/JBookPlugin/properties/languages/en.prop" signature="1B2M2Y8AsgTpgAmY7PhCfg==" />
+  <sign file="WEB-INF/plugins/JBookPlugin/properties/languages/fr.prop" signature="1B2M2Y8AsgTpgAmY7PhCfg==" />
+  <sign file="WEB-INF/plugins/JBookPlugin/properties/plugin.prop" signature="NlR6ft84zDoEfd8x1tgpxQ==" />
+  <sign file="plugins/JBookPlugin/css/plugin.less" signature="F/0qW60ZXRqaDXfp4DVvPw==" />
+  <sign file="plugins/JBookPlugin/js/plugin.js" signature="PWtlEBhSrhTYGa4lqwm+1g==" />
+  <sign file="plugins/JBookPlugin/jsp/plugin.jsp" signature="HhHXCuU58jmkb/WkRU9Duw==" />
+</signature>
+

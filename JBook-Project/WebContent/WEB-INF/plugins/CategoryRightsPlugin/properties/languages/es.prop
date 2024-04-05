@@ -1,0 +1,4 @@
+jcmsplugin.categoryrights.types: Tipos
+jcmsplugin.categoryrights.types.help: Tipos de contenido que se van a controlar (separados por espacios o comas)
+jcmsplugin.categoryrights.cat-ids: Categorías (id.)
+jcmsplugin.categoryrights.cat-ids.help: Identificadores de raíces de categoría que se van a controlar (separados por espacios o comas)

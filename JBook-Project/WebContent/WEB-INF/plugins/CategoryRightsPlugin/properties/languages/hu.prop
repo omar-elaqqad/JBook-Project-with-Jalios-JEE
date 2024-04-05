@@ -1,0 +1,4 @@
+jcmsplugin.categoryrights.types: Típusok
+jcmsplugin.categoryrights.types.help: Ellenőrizendő tartalomtípusok (szóközökkel vagy vesszőkkel elválasztva)
+jcmsplugin.categoryrights.cat-ids: Kategóriák (azonosítók)
+jcmsplugin.categoryrights.cat-ids.help: Az ellenőrizendő kategóriagyökerek azonosítói (szóközökkel vagy vesszőkkel elválasztva)

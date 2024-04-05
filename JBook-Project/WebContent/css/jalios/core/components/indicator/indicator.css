@@ -1,0 +1,51 @@
+.PortletIndicator .indicator-link {
+  text-align: right;
+  color: inherit;
+  width: 90%;
+  margin-bottom: 16px;
+}
+.PortletIndicator .indicator-link A {
+  color: #666;
+}
+.indicator-donut {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.indicator-donut .indicator-chart {
+  max-width: 200px;
+  margin-bottom: 8px;
+  position: relative;
+}
+.indicator-donut .indicator-link {
+  text-align: right;
+  clear: both;
+  padding: 10px;
+  color: inherit;
+}
+.indicator-donut .indicator-number {
+  text-align: center;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  position: absolute;
+  padding: 0 10px;
+  width: 100%;
+  font-size: 40px;
+  font-weight: 500;
+}
+.indicator-donut .indicator-number A {
+  color: #333333;
+  text-decoration: none;
+}
+.indicator-donut .indicator-text {
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.indicator-donut .indicator-link {
+  width: 100%;
+}
+/*# sourceMappingURL=indicator.css.map */

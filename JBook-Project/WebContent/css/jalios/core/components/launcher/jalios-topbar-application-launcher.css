@@ -1,0 +1,107 @@
+BODY.browser-IE11 .topbar-application-launcher .topbar-menu,
+BODY.browser-Safari .topbar-application-launcher .topbar-menu {
+  width: 432px;
+  max-width: 432px;
+}
+BODY.browser-IE11 .topbar-application-launcher .application-launcher .tab-content,
+BODY.browser-Safari .topbar-application-launcher .application-launcher .tab-content {
+  overflow-y: auto;
+  max-height: 300px;
+}
+BODY.browser-IE11 .topbar-application-launcher .application-launcher.application-store,
+BODY.browser-Safari .topbar-application-launcher .application-launcher.application-store {
+  max-height: calc(80vh - 93px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+BODY.browser-IE11 .topbar-application-launcher .application-launcher.application-store .application-wrapper,
+BODY.browser-Safari .topbar-application-launcher .application-launcher.application-store .application-wrapper {
+  min-height: 69px;
+}
+BODY.browser-IE11 .topbar-application-launcher .application-launcher.application-store .app-store-description,
+BODY.browser-Safari .topbar-application-launcher .application-launcher.application-store .app-store-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 267px;
+}
+.topbar-application-launcher .ps__rail-x,
+.topbar-application-launcher .ps__rail-y {
+  opacity: 0.6;
+}
+.topbar-application-launcher .topbar-menu.dropdown-menu.is-loading {
+  background-color: transparent;
+}
+.topbar-application-launcher .topbar-menu.dropdown-menu.is-loading .topbar-ctxmenu-body {
+  overflow: hidden;
+}
+.topbar-application-launcher .topbar-menu.dropdown-menu .topbar-ctxmenu-header-item.app-store-link {
+  display: inline-flex;
+}
+.topbar-application-launcher .topbar-menu.dropdown-menu .topbar-ctxmenu-header-item.js-close-app-store {
+  display: inline-flex;
+}
+.topbar-application-launcher .applications-store-search-header {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px 4px 16px;
+}
+.topbar-application-launcher .applications-store-search-header .js-close-app-store .topbar-close-menu {
+  font-size: 14px !important;
+  color: #999;
+}
+.topbar-application-launcher .applications-store-search-header .app-search-input {
+  flex: 1;
+  height: 33px;
+  outline: transparent solid 0;
+  margin-right: 8px;
+}
+.topbar-application-launcher .dropdown-menu.topbar-menu {
+  width: 410px;
+  max-width: 410px;
+  max-height: calc(80vh - 40px);
+}
+.topbar-application-launcher .topbar-ctxmenu-body {
+  position: relative;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+}
+.topbar-application-launcher .app-store-item {
+  flex: 1;
+  margin-right: 10px;
+}
+.topbar-application-launcher .app-store-add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 24px;
+}
+.topbar-application-launcher .app-store-add .dropdown-menu {
+  right: 0;
+  left: inherit;
+}
+.topbar-application-launcher .app-store-no-result {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+}
+.topbar-application-launcher .application-store-redirect {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  overflow: hidden;
+  background-color: #e8e8e8;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #333;
+}
+.topbar-application-launcher .application-store-redirect:hover {
+  background-color: #cfcfcf;
+}
+/*# sourceMappingURL=jalios-topbar-application-launcher.css.map */

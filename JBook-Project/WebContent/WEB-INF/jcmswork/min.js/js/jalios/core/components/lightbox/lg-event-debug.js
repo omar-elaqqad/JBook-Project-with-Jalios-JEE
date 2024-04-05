@@ -1,0 +1,1 @@
+!function(a){a(document).ready(function(){a(".lightbox-img-gallery").on("lgInit",function(b){b.detail.instance.plugins.push(globalThis.lgJPlatformDebug)})})}(window.jQuery);

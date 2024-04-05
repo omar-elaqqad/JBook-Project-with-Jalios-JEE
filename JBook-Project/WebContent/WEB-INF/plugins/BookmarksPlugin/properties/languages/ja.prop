@@ -1,0 +1,148 @@
+# ----------------------------------------------------------------------
+# Folder
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.folder.lbl.new: 新規フォルダー
+jcmsplugin.bookmarks.folder.lbl.add: フォルダーを追加する
+jcmsplugin.bookmarks.folder.btn.lbl.add: フォルダーを追加する...
+jcmsplugin.bookmarks.folder.lbl.edit: フォルダーを編集する
+jcmsplugin.bookmarks.folder.action.delete.warn-msg: 警告！フォルダーのコンテンツも削除されます。
+jcmsplugin.bookmarks.folder.menu.action.delete.warn-msg: 警告！フォルダーのコンテンツも削除されます。
+jcmsplugin.bookmarks.folder.lbl.name:  フォルダー名
+jcmsplugin.bookmarks.folder.lbl.name1: 名前
+jcmsplugin.bookmarks.folder.lbl.name.parent:  親フォルダー
+jcmsplugin.bookmarks.folder.lbl.name.parent1: 親要素
+jcmsplugin.bookmarks.folder.name.error: フォルダー名を入力してください
+jcmsplugin.bookmarks.folder.name.error.duplicate: フォルダーには既にこの名前があります
+jcmsplugin.bookmarks.folder.contains-data: まずこのフォルダーのコンテンツを削除してください
+jcmsplugin.bookmarks.folder.no-result: ブックマークがありません。
+jcmsplugin.bookmarks.folder.root: ルートまで
+jcmsplugin.bookmarks.folder.lbl.root: ルート
+jcmsplugin.bookmarks.folder.upper: {0}まで
+jcmsplugin.bookmarks.folder.lbl: フォルダー
+jcmsplugin.bookmarks.folder.menu.action: アクション
+jcmsplugin.bookmarks.folder.action.move.empty: 選択したものはどのフォルダーにも移動できません
+jcmsplugin.bookmarks.items.lbl.shift: 選択をシフトする
+jcmsplugin.bookmarks.items.lbl.delete: 選択を削除する
+jcmsplugin.bookmarks.menu.search.placeholder: ブックマークを検索する
+jcmsplugin.bookmarks.already-bookmarked: このパブリケーションは既にブックマークされています。
+jcmsplugin.bookmarks.app.title: ブックマーク
+
+#DISABLED
+jcmsplugin.bookmarks.plugin-disabled.message: 「お気に入り」プラグインは現在無効になっています。
+
+#SIDEBAR
+jcmsplugin.bookmarks.topbar.title: マイブックマーク
+jcms.sidebar-tab.bookmarks: ブックマーク
+jcms.sidebar-tab.bookmarks.icon: ブックマーク
+jcmsplugin.bookmarks.topbar.search: ブックマークを検索...
+
+#PUBLICATION
+jcmsplugin.bookmarks.toastr.add: ブックマークに追加しました
+jcmsplugin.bookmarks.toastr.remove: ブックマークから削除されました
+
+#MENU
+jcmsplugin.bookmarks.msg.no-result: ブックマークが見つかりません
+
+jcmsplugin.bookmarks.lbl.bookmarks: ブックマーク
+jcmsplugin.bookmarks.lbl.link: 外部リンク
+jcmsplugin.bookmarks.lbl.pub:  コンテンツ
+jcmsplugin.bookmarks.lbl.search: 検索
+
+jcmsplugin.bookmarks.lbl.url:    URL
+jcmsplugin.bookmarks.lbl.title:  タイトル
+jcmsplugin.bookmarks.btn.add:    追加
+jcmsplugin.bookmarks.btn.update: 保存
+jcmsplugin.bookmarks.btn.remove: このブックマークを削除する
+
+jcmsplugin.bookmarks.lbl.add-bookmark: ブックマークを追加する
+jcmsplugin.bookmarks.lbl.remove-bookmark: ブックマークから削除する
+
+jcmsplugin.bookmarks.lbl.action: アクション
+jcmsplugin.bookmarks.lbl.add:    ブックマークを追加する...
+jcmsplugin.bookmarks.lbl.edit: 	 ブックマークを編集する
+jcmsplugin.bookmarks.msg.remove: 本当にブックマーク <em>{0}</em>を削除してもよろしいですか？
+
+jcmsplugin.bookmarks.adm.max:    ユーザーあたりのブックマーク数
+jcmsplugin.bookmarks.msg.adm.max:ブックマークが最大数に達しました!
+
+jcmsplugin.bookmarks.lbl.bookmark.error: このブックマークは無効です。
+jcmsplugin.bookmarks.lbl.url.error: URLが無効です。
+jcmsplugin.bookmarks.title.error: タイトルを入力してください。
+
+jcmsplugin.bookmarks.lbl.manage-bookmark: ブックマークの管理
+
+jcmsplugin.bookmarks.isExternalLink.title: 外部リンク
+# ----------------------------------------------------------------------
+# Analytics
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.analytics.top-section: 最も追加されたブックマーク
+jcmsplugin.bookmarks.analytics.top-section.help: ユーザートップ10ブックマーク
+jcmsplugin.bookmarks.analytics.top-bookmarks-section: 最もブックマークの多いメンバー
+jcmsplugin.bookmarks.analytics.top-bookmarks-section.help: 最もブックマークの多いトップ10メンバー
+jcmsplugin.bookmarks.analytics.rank-number-column.label: #
+jcmsplugin.bookmarks.analytics.bookmark-column.label: ブックマーク
+jcmsplugin.bookmarks.analytics.bookmark-add-column.label: 追加回数
+jcmsplugin.bookmarks.analytics.report.average-bookmarks: 平均ブックマーク数
+jcmsplugin.bookmarks.analytics.report.average-bookmarks.h: ユーザーごとの平均
+jcmsplugin.bookmarks.analytics.author-column.label: ユーザー
+jcmsplugin.bookmarks.analytics.bookmark-number-column.label: ブックマーク番号
+jcmsplugin.bookmarks.analytics.indicator.average-bookmarks: ユーザーごとのブックマーク
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks: 最もブックマークされたパブリケーション
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks.h: ブックマークされたトップ10パブリケーション
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks.table.pub.title: パブリケーション
+ui.analytics.BookmarksAgent.name: ブックマーク
+
+# ----------------------------------------------------------------------
+# Icones
+# ----------------------------------------------------------------------
+icon.jcmsplugin.bookmarks.bookmarkWhite: ブックマーク
+icon.jcmsplugin.bookmarks.edit:          ブックマークを編集する
+icon.jcmsplugin.bookmarks.delete:        ブックマークを削除する
+icon.jcmsplugin.bookmarks.add:           ブックマークを追加する
+icon.jcmsplugin.bookmarks.star:          ブックマーク
+
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+jcmsplugin.bookmarks.displayExternalUrl: 外部リンクを新しいウィンドウで開く
+
+# From PortletBookmarks-templates.xml
+types.PortletBookmarks.templates.query.default.label: デフォルトテンプレート
+types.PortletBookmarks.templates.box.default.label: デフォルトテンプレート
+
+# From PortletBookmarks.xml
+types.PortletBookmarks.title.label: タイトル
+types.PortletBookmarks.fields.openLinksInNewWindow.label: 外部リンクを新しいウィンドウで開く
+types.PortletBookmarks.fields.openLinksInNewWindow.onLabel: はい
+types.PortletBookmarks.label: ブックマークポートレット
+types.PortletBookmarks.description: このポートレットは、ログインメンバーが各自のブックマークを管理することを許可します。
+types.PortletBookmarks.fields.openLinksInNewWindow.offLabel: いいえ
+
+# From PortletWorkspaceBookmarks.xml
+types.PortletWorkspaceBookmarks.label: ワークスペースブックマークポートレット
+types.PortletWorkspaceBookmarks.title.label: タイトル
+types.PortletWorkspaceBookmarks.description: このポートレットは、ワークスペースのアドミニストレータがワークスペースのブックマークを管理することを許可します。
+
+jcmsplugin.bookmarks.edition-mode: 編集モードに切り替え
+jcmsplugin.bookmarks.remove-edition-mode: 編集を停止
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.bookmark:   ブックマーク
+jcmsplugin.bookmarks.smartphone.lbl.bookmark.filter: ブックマーク内を検索...
+jcmsplugin.bookmarks.smartphone.lbl.bookmark.no-result: ブックマークはありません
+jcmsplugin.bookmarks.smartphone.menu.bookmark.added.lbl: ブックマークを追加しました
+jcmsplugin.bookmarks.smartphone.menu.bookmark.removed.lbl: ブックマークを削除しました
+
+# Shortcut
+data.$id.shortcut.jcmsplugin.bookmarks.title: ブックマーク
+data.$id.shortcut.jcmsplugin.bookmarks.text: パブリケーション、検索結果、外部ページのあなたのブックマークにアクセスして管理します。
+
+# ----------------------------------------------------------------------
+# JTasks project
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.app.project.sidebar.favorite-projects.label: お気に入り

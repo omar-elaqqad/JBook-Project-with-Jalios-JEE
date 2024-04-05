@@ -1,0 +1,238 @@
+.card.card-indicator {
+  color: #777;
+}
+.card.card-indicator:hover {
+  box-shadow: 0px 0px 0px 0 #ffffff3d, 0 0 0 1px #EEE;
+}
+.card.card-indicator.is-right-aligned .indicator-content {
+  text-align: right;
+}
+.card.card-indicator.is-center-aligned .indicator-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.card.card-indicator.is-center-aligned .indicator-content {
+  text-align: center;
+}
+.card.card-indicator > .card-block {
+  display: flex;
+}
+.card.card-indicator > .card-block .indicator-icon {
+  margin-right: 10px;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  max-height: 160px;
+  width: auto;
+}
+.card.card-indicator > .card-block .indicator-icon.success {
+  color: #16d39a;
+}
+.card.card-indicator > .card-block .indicator-icon.warning {
+  color: #ffa87d;
+}
+.card.card-indicator > .card-block .indicator-icon.danger {
+  color: #ff7588;
+}
+.card.card-indicator > .card-block .indicator-icon.primary {
+  color: #00b5b8;
+}
+.card.card-indicator > .card-block .indicator-content {
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.card.card-indicator > .card-block .indicator-content .indicator-text {
+  font-size: 14px;
+}
+.card.card-indicator > .card-block .indicator-content .indicator-number {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+.card.card-indicator > .card-block .indicator-content .indicator-number A,
+.card.card-indicator > .card-block .indicator-content .indicator-number button {
+  color: #777;
+  text-decoration: none;
+  background-color: transparent;
+  border: 0 none;
+}
+.card.card-indicator.bg-danger,
+.card.card-indicator.bg-success,
+.card.card-indicator.bg-warning,
+.card.card-indicator.bg-primary {
+  color: white;
+}
+.card.card-indicator.bg-danger .indicator-icon,
+.card.card-indicator.bg-success .indicator-icon,
+.card.card-indicator.bg-warning .indicator-icon,
+.card.card-indicator.bg-primary .indicator-icon {
+  color: white;
+}
+.card.card-indicator.bg-primary {
+  background-color: #00b5b8;
+}
+.card.card-indicator.bg-warning {
+  background-color: #ffa87d;
+}
+.card.card-indicator.bg-danger {
+  background-color: #ff7588;
+}
+.card.card-indicator.bg-success {
+  background-color: #16d39a;
+}
+.card-indicator-group {
+  padding-top: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  background-color: white;
+  /* width: 100%; */
+  /* flex-grow: 1; */
+  flex: 2 1 auto;
+  border-radius: 8px;
+}
+.card-indicator-group > .card {
+  width: 100%;
+  background-color: transparent;
+  box-shadow: none;
+  border: 0 none;
+  border-right: 1px solid #efefef;
+  border-radius: 0;
+}
+.card-indicator-group > .card:hover {
+  box-shadow: none;
+}
+.card-indicator-group > .card:last-child {
+  border-right: 0 none;
+}
+.card-indicator-group.bg-danger {
+  background-color: #ff7588;
+}
+.card-indicator-group.bg-danger .indicator-icon {
+  color: white;
+}
+.card-indicator-group.bg-danger > .card {
+  color: white;
+  border-right: 1px solid white;
+}
+.card-indicator-group.bg-warning {
+  background-color: #ffa87d;
+}
+.card-indicator-group.bg-warning .indicator-icon {
+  color: white;
+}
+.card-indicator-group.bg-warning > .card {
+  color: white;
+  border-right: 1px solid white;
+}
+.card-indicator-group.bg-success {
+  background-color: #16d39a;
+}
+.card-indicator-group.bg-success .indicator-icon {
+  color: white;
+}
+.card-indicator-group.bg-success > .card {
+  color: white;
+  border-right: 1px solid white;
+}
+.card-indicator-group.bg-primary {
+  background-color: #00b5b8;
+}
+.card-indicator-group.bg-primary .indicator-icon {
+  color: white;
+}
+.card-indicator-group.bg-primary > .card {
+  color: white;
+  border-right: 1px solid white;
+}
+.card-indicator-group .card-indicator-vertical > .card-block {
+  padding: 0;
+}
+.card-indicator-group .card-indicator > .card-block {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.card.card-indicator-vertical {
+  align-items: center;
+}
+.card.card-indicator-vertical .card-block .indicator-content {
+  align-items: center;
+}
+.card.card-indicator-vertical .card-block .indicator-content .indicator-number {
+  font-size: 30px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.indicator-number.success {
+  color: #16d39a;
+}
+.indicator-number.danger {
+  color: #ff7588;
+}
+.indicator-number.primary {
+  color: #00b5b8;
+}
+.indicator-number.warning {
+  color: #ffa87d;
+}
+.card-indicator .progress,
+.card-indicator-vertical .progress {
+  margin-top: 8px;
+  height: 6px;
+  box-shadow: none;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+.card-indicator .progress.is-sticky,
+.card-indicator-vertical .progress.is-sticky {
+  border-radius: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+.card-indicator .progress .progress-bar,
+.card-indicator-vertical .progress .progress-bar {
+  box-shadow: none;
+}
+.card-indicator .progress .progress-bar-success,
+.card-indicator-vertical .progress .progress-bar-success {
+  background-color: #16d39a;
+}
+.card-indicator .progress .progress-bar-primary,
+.card-indicator-vertical .progress .progress-bar-primary {
+  background-color: #00b5b8;
+}
+.card-indicator .progress .progress-bar-warning,
+.card-indicator-vertical .progress .progress-bar-warning {
+  background-color: #ffa87d;
+}
+.card-indicator .progress .progress-bar-danger,
+.card-indicator-vertical .progress .progress-bar-danger {
+  background-color: #ff7588;
+}
+.card-indicator-vertical .progress {
+  width: 90%;
+}
+.card-indicator-vertical .progress.is-sticky {
+  width: 100%;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.card-indicator .progress.is-sticky {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.card-indicator-group .card-indicator .progress.is-sticky,
+.card-indicator-group .card-indicator .progress {
+  margin-top: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+  width: auto;
+}
+/*# sourceMappingURL=jalios-card-indicator.css.map */

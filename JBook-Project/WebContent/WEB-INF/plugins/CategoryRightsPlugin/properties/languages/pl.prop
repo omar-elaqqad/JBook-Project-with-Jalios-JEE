@@ -1,0 +1,4 @@
+jcmsplugin.categoryrights.types: Typy
+jcmsplugin.categoryrights.types.help: Typy treści do kontrolowania (oddzielone spacjami lub przecinkami)
+jcmsplugin.categoryrights.cat-ids: Kategorie (identyfikatory)
+jcmsplugin.categoryrights.cat-ids.help: Identyfikatory kategorii głównych do kontrolowania (oddzielone spacjami lub przecinkami)

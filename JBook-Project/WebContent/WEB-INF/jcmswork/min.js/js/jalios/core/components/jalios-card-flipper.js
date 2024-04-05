@@ -1,0 +1,1 @@
+!function(b){var a=function(){b(document).on("click",".card [data-jalios-action='card-flip']",function(d){d.stopPropagation();d.preventDefault();var c=b(this).closest(".card-flip-wrapper");if(c.exists()){c.toggleClass("hover")}})};b(document).ready(function(){a()})}(window.jQuery);

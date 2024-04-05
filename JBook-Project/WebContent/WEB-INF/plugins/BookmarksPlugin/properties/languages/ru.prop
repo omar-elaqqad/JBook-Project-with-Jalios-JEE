@@ -1,0 +1,148 @@
+# ----------------------------------------------------------------------
+# Folder
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.folder.lbl.new: Новая папка
+jcmsplugin.bookmarks.folder.lbl.add: Добавить папку
+jcmsplugin.bookmarks.folder.btn.lbl.add: Добавить папку...
+jcmsplugin.bookmarks.folder.lbl.edit: Редактировать папку
+jcmsplugin.bookmarks.folder.action.delete.warn-msg: Внимание! Контент папки также будет удален
+jcmsplugin.bookmarks.folder.menu.action.delete.warn-msg: Внимание! Контент папок также будет удален
+jcmsplugin.bookmarks.folder.lbl.name:  Имя папки
+jcmsplugin.bookmarks.folder.lbl.name1: Имя
+jcmsplugin.bookmarks.folder.lbl.name.parent:  Родительская папка
+jcmsplugin.bookmarks.folder.lbl.name.parent1: Родитель
+jcmsplugin.bookmarks.folder.name.error: Пожалуйста, введите имя папки
+jcmsplugin.bookmarks.folder.name.error.duplicate: Папка уже имеет это имя
+jcmsplugin.bookmarks.folder.contains-data: Пожалуйста, сначала удалите контент этой папки
+jcmsplugin.bookmarks.folder.no-result: Нет закладок.
+jcmsplugin.bookmarks.folder.root: До корневого каталога
+jcmsplugin.bookmarks.folder.lbl.root: Корневой каталог
+jcmsplugin.bookmarks.folder.upper: До {0}
+jcmsplugin.bookmarks.folder.lbl: Папка
+jcmsplugin.bookmarks.folder.menu.action: Действия
+jcmsplugin.bookmarks.folder.action.move.empty: Перемещение выбора в какую-либо папку невозможно
+jcmsplugin.bookmarks.items.lbl.shift: Переключить выбор
+jcmsplugin.bookmarks.items.lbl.delete: Удалить выбор
+jcmsplugin.bookmarks.menu.search.placeholder: Искать закладку
+jcmsplugin.bookmarks.already-bookmarked: Эта публикация уже добавлена в закладки.
+jcmsplugin.bookmarks.app.title: Закладки
+
+#DISABLED
+jcmsplugin.bookmarks.plugin-disabled.message: Модуль избранного сейчас отключен.
+
+#SIDEBAR
+jcmsplugin.bookmarks.topbar.title: Мои закладки
+jcms.sidebar-tab.bookmarks: Закладки
+jcms.sidebar-tab.bookmarks.icon: Закладки
+jcmsplugin.bookmarks.topbar.search: Искать закладку...
+
+#PUBLICATION
+jcmsplugin.bookmarks.toastr.add: Добавлено в закладки
+jcmsplugin.bookmarks.toastr.remove: Удалено из закладок
+
+#MENU
+jcmsplugin.bookmarks.msg.no-result: Закладка не обнаружена
+
+jcmsplugin.bookmarks.lbl.bookmarks: Закладки
+jcmsplugin.bookmarks.lbl.link: Внешняя ссылка
+jcmsplugin.bookmarks.lbl.pub:  Контент
+jcmsplugin.bookmarks.lbl.search: Искать
+
+jcmsplugin.bookmarks.lbl.url:    URL
+jcmsplugin.bookmarks.lbl.title:  Заголовок
+jcmsplugin.bookmarks.btn.add:    Добавить
+jcmsplugin.bookmarks.btn.update: Сохранить
+jcmsplugin.bookmarks.btn.remove: Удалить эту закладку
+
+jcmsplugin.bookmarks.lbl.add-bookmark: Добавить закладку
+jcmsplugin.bookmarks.lbl.remove-bookmark: Удалить из закладок
+
+jcmsplugin.bookmarks.lbl.action: Действия
+jcmsplugin.bookmarks.lbl.add:    Добавить закладку...
+jcmsplugin.bookmarks.lbl.edit: 	 Редактировать закладку
+jcmsplugin.bookmarks.msg.remove: Вы действительно хотите удалить закладку <em>{0}</em>?
+
+jcmsplugin.bookmarks.adm.max:    Максимум закладок на пользователя
+jcmsplugin.bookmarks.msg.adm.max:Вы достигли максимума закладок!
+
+jcmsplugin.bookmarks.lbl.bookmark.error: Эта закладка недействительна.
+jcmsplugin.bookmarks.lbl.url.error: Неверный адрес URL.
+jcmsplugin.bookmarks.title.error: Пожалуйста, введите заголовок.
+
+jcmsplugin.bookmarks.lbl.manage-bookmark: Управлять закладками
+
+jcmsplugin.bookmarks.isExternalLink.title: Внешняя ссылка
+# ----------------------------------------------------------------------
+# Analytics
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.analytics.top-section: Самые добавляемые закладки
+jcmsplugin.bookmarks.analytics.top-section.help: Десятка лучших закладок пользователей
+jcmsplugin.bookmarks.analytics.top-bookmarks-section: Участники с наибольшим количеством закладок
+jcmsplugin.bookmarks.analytics.top-bookmarks-section.help: Топ 10 участников с наибольшим количеством закладок
+jcmsplugin.bookmarks.analytics.rank-number-column.label: #
+jcmsplugin.bookmarks.analytics.bookmark-column.label: Закладки
+jcmsplugin.bookmarks.analytics.bookmark-add-column.label: Добавленное количество раз
+jcmsplugin.bookmarks.analytics.report.average-bookmarks: Среднее количество закладок
+jcmsplugin.bookmarks.analytics.report.average-bookmarks.h: Среднее количество на пользователя
+jcmsplugin.bookmarks.analytics.author-column.label: Пользователи
+jcmsplugin.bookmarks.analytics.bookmark-number-column.label: Номер закладки
+jcmsplugin.bookmarks.analytics.indicator.average-bookmarks: Количество закладок на пользователя
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks: Чаще всего добавляемая в закладки публикация
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks.h: Топ 10 добавляемых в закладки публикаций
+jcmsplugin.bookmarks.analytics.report.pub-bookmarks.table.pub.title: Публикация
+ui.analytics.BookmarksAgent.name: Закладки
+
+# ----------------------------------------------------------------------
+# Icones
+# ----------------------------------------------------------------------
+icon.jcmsplugin.bookmarks.bookmarkWhite: Закладки
+icon.jcmsplugin.bookmarks.edit:          Редактировать закладку
+icon.jcmsplugin.bookmarks.delete:        Удалить закладку
+icon.jcmsplugin.bookmarks.add:           Добавить закладку
+icon.jcmsplugin.bookmarks.star:          Закладки
+
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+jcmsplugin.bookmarks.displayExternalUrl: Открыть внешние ссылки в новом окне
+
+# From PortletBookmarks-templates.xml
+types.PortletBookmarks.templates.query.default.label: Шаблон по умолчанию
+types.PortletBookmarks.templates.box.default.label: Шаблон по умолчанию
+
+# From PortletBookmarks.xml
+types.PortletBookmarks.title.label: Заголовок
+types.PortletBookmarks.fields.openLinksInNewWindow.label: Открыть внешние ссылки в новом окне
+types.PortletBookmarks.fields.openLinksInNewWindow.onLabel: Да
+types.PortletBookmarks.label: Портлет закладок
+types.PortletBookmarks.description: Этот портлет позволяет участникам, вошедшим в систему, осуществлять управление своими закладками.
+types.PortletBookmarks.fields.openLinksInNewWindow.offLabel: Нет
+
+# From PortletWorkspaceBookmarks.xml
+types.PortletWorkspaceBookmarks.label: Портлет закладок рабочего пространства
+types.PortletWorkspaceBookmarks.title.label: Заголовок
+types.PortletWorkspaceBookmarks.description: Этот портлет позволяет администратору рабочего пространства управлять закладками рабочего пространства.
+
+jcmsplugin.bookmarks.edition-mode: Переключиться в режим редактирования
+jcmsplugin.bookmarks.remove-edition-mode: Остановить редактирование
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.bookmark:   Закладки
+jcmsplugin.bookmarks.smartphone.lbl.bookmark.filter: Искать в закладках...
+jcmsplugin.bookmarks.smartphone.lbl.bookmark.no-result: Нет закладок
+jcmsplugin.bookmarks.smartphone.menu.bookmark.added.lbl: Закладка добавлена
+jcmsplugin.bookmarks.smartphone.menu.bookmark.removed.lbl: Закладка удалена
+
+# Shortcut
+data.$id.shortcut.jcmsplugin.bookmarks.title: Закладки
+data.$id.shortcut.jcmsplugin.bookmarks.text: Войти и управлять своими закладками на публикациях, результатами поиска и внешними страницами.
+
+# ----------------------------------------------------------------------
+# JTasks project
+# ----------------------------------------------------------------------
+jcmsplugin.bookmarks.app.project.sidebar.favorite-projects.label: Мое избранное

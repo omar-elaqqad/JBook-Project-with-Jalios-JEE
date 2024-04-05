@@ -1,0 +1,67 @@
+.cs-portal .app {
+  margin-left: -30px;
+  margin-right: -30px;
+  margin-top: -30px;
+  width: initial;
+}
+.cs-portal .app .app-main {
+  background-color: white;
+}
+.cs-portal .app .app-header h1,
+.cs-portal .app .app-header .app-title {
+  display: none;
+}
+.cs-portal .app .app-body {
+  padding: 16px;
+  position: relative;
+}
+@media (min-width: 1200px) {
+  .cs-portal .app .app-body {
+    padding: 32px 16px 48px 32px;
+  }
+}
+.cs-portal .app .app-body .navbar {
+  border-radius: 0;
+  border: 0 none;
+  background-color: transparent;
+}
+.cs-portal .app .app-body .navbar.no-navbar-brand .navbar-nav:first-child {
+  margin-left: 0;
+}
+.cs-portal .app .app-header {
+  background-color: transparent;
+  padding: 0;
+  color: #333333;
+  min-height: 0;
+}
+.cs-portal .app .app-header.has-title H1 {
+  padding-bottom: 20px;
+  color: #333333;
+}
+.cs-portal .app .app-header .nav-tabs {
+  margin-top: 24px;
+  border-bottom: 1px solid #EEE;
+  margin-left: 32px;
+}
+.cs-portal .app .app-header .nav-tabs LI A {
+  color: #555;
+}
+.cs-portal .app .app-header .nav-tabs LI.active A {
+  color: #009EF5;
+}
+.cs-portal .app .app-header .nav-tabs LI.active A:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  background-color: #009EF5;
+}
+.cs-portal .app .app-sidebar {
+  padding-top: 40px;
+}
+.cs-portal .app .app-sidebar .app-sidebar-icon {
+  display: none;
+}
+/*# sourceMappingURL=jalios-app-collaborative-space.css.map */

@@ -1,0 +1,4 @@
+jcmsplugin.categoryrights.types: 類型
+jcmsplugin.categoryrights.types.help: 要控制的內容類型（由空格或逗號分開）
+jcmsplugin.categoryrights.cat-ids: 類別(ids)
+jcmsplugin.categoryrights.cat-ids.help: 要控制的內容類型識別碼（由空格或逗號分開）

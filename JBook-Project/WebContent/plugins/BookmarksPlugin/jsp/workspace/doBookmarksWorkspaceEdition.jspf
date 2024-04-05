@@ -1,0 +1,216 @@
+<div class="bookmark-list-view" data-jalios-bookmark-folder="<%=(Util.isEmpty(bookmarkSearchText))?currentFolderId:"search-bookmark"%>">
+    <% if(canEdit){ %>
+      <div class="navbar navbar-default">
+        <div class="container-fluid ">
+          <% if(!"box".equals(tplUsage)) {  %>
+            <div class="navbar-form navbar-left">
+              <%-- ADD BOOKMARK FOLDER --%>
+              <a class="btn btn-primary modal btn-addFolder"
+                href="plugins/BookmarksPlugin/jsp/bookmarkFolderModal.jsp?<%=BookmarkConstants.PARAMETER_CURRENT_FOLDER_ID%>=<%=currentFolderId%>&amp;<%= BookmarkConstants.PARAMETER_WORKSPACE_ID %>=<%= workspace.getId() %>"
+                onclick="return false;"> <%=glp("jcmsplugin.bookmarks.folder.btn.lbl.add")%>
+              </a>
+            </div>
+          <% } %>
+          <ul class="nav navbar-nav">
+            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <jalios:icon src="actions" />
+                <%= glp("jcmsplugin.bookmarks.lbl.action") %> <span class="jalios-icon caret caret"></span></a>
+  
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="?removeEdition=true" class="ajax-refresh">
+                  <%= glp("jcmsplugin.bookmarks.remove-edition-mode") %>
+                </a>  
+                </li>
+                <%-- ADD BOOKMARK FOLDER --%>
+                <% if("box".equals(tplUsage)) {  %>
+                <li><a class="modal addFolder" href="plugins/BookmarksPlugin/jsp/bookmarkFolderModal.jsp?<%=BookmarkConstants.PARAMETER_CURRENT_FOLDER_ID%>=<%=currentFolderId%>&amp;<%= BookmarkConstants.PARAMETER_WORKSPACE_ID %>=<%= workspace.getId() %>"
+                  onclick="return false;" ><%=glp("jcmsplugin.bookmarks.folder.btn.lbl.add")%>
+                </a></li>
+                <%} %>
+                <%-- ADD BOOKMARK --%>
+                <li><a class="modal addBookmark"
+                  href="plugins/BookmarksPlugin/jsp/bookmarkModal.jsp?<%=BookmarkConstants.PARAMETER_CURRENT_FOLDER_ID%>=<%=currentFolderId%>&&amp;<%= BookmarkConstants.PARAMETER_WORKSPACE_ID %>=<%= workspace.getId() %>"
+                  onclick="return false;"> <%= encodeForHTML(glp("jcmsplugin.bookmarks.lbl.add")) %>
+                </a></li>
+                <%-- MOVE SELECTED BOOKMARK ITEMS --%>
+                <li class="disabled shiftBookmark"><a
+                  class="bookmark-item-action bookmark-action-disabled"
+                  href="plugins/BookmarksPlugin/jsp/bookmarkItemsActionModal.jsp?<%=BookmarkConstants.PARAMETER_CURRENT_FOLDER_ID%>=<%=currentFolderId%>&amp;<%=BookmarkConstants.PARAMETER_BOOKMARK_ITEM_ACTION_MODAL%>=<%=BookmarkConstants.BOOKMARK_ITEM_ACTIONS.MOVE%>&amp;<%=BookmarkConstants.PARAMETER_BOOKMARK_QUERY %>=<%=encodeForURL(bookmarkSearchText) %>&amp;<%= BookmarkConstants.PARAMETER_WORKSPACE_ID %>=<%= workspace.getId() %>"
+                  onclick="return false;"> <%=glp("jcmsplugin.bookmarks.items.lbl.shift")%>
+                </a></li>
+                <%-- DELETE SELECTED BOOKMARK ITEMS --%>
+                <li class="disabled deleteBookmark"><a
+                  class="bookmark-item-action bookmark-action-disabled"
+                  href="plugins/BookmarksPlugin/jsp/bookmarkItemsActionModal.jsp?<%=BookmarkConstants.PARAMETER_CURRENT_FOLDER_ID%>=<%=currentFolderId%>&amp;<%=BookmarkConstants.PARAMETER_BOOKMARK_ITEM_ACTION_MODAL%>=<%=BookmarkConstants.BOOKMARK_ITEM_ACTIONS.DELETE%>&amp;<%= BookmarkConstants.PARAMETER_WORKSPACE_ID %>=<%= workspace.getId() %>"
+                  onclick="return false;"> <%=glp("jcmsplugin.bookmarks.items.lbl.delete")%>
+                </a></li>
+  
+              </ul>
+            </li>
+          </ul>
+  
+          <form name="bookmarkForm"
+            action="plugins/BookmarksPlugin/jsp/manageBookmarksListView.jsp"
+            class="navbar-form navbar-right">
+            
+            <input type='hidden' name='<%= BookmarkConstants.PARAMETER_WORKSPACE_ID %>' value='<%= workspace.getId() %>'/>
+            
+            <div class="form-group">
+              <jalios:field name='bookmarkSearchText' css="workspace-bookmark-search"
+                value="<%= bookmarkSearchText %>" resource="field-light">
+                <jalios:control settings='<%= bookmarkHandler.getSearchFieldSettings() %>' />
+                <span class="input-group-btn">
+                  <button class="btn btn-default ajax-refresh"
+                    name="opSearch" type="submit">
+                    <jalios:icon src="search" />
+                  </button>
+                  <% if(bookmarkHandler.hasBookmarkSearch()) { %>
+                    <a href="?bookmarkSearchText=" class="ajax-refresh btn btn-default add-on" title='<%= glp("ui.com.btn.reset") %>'><jalios:icon src="cross" alt="ui.com.btn.reset" /></a>
+                  <% } %>
+                </span>
+              </jalios:field>
+            </div>
+          </form>
+  
+        </div>
+      </div>
+    <%}%>
+
+    <% if(Util.notEmpty(breadcrumb)) { %>
+
+    <div class="bookmark-breadcrumb">
+      <%= breadcrumb %>
+    </div>
+    <% } %>
+
+    <table class="table table-bookmarks <%=canEdit?"":"table-bookmarks-noEdit" %> <%= (Util.notEmpty(bookmarkHandler.getBookmarkSearchText()))?"":"table-bookmarks-sortable" %>">
+      <thead>
+        <% if((canEdit)&&bookmarkItemList.size()!=0){  %>
+        <tr>
+          <th class="fit text-center"><label
+            class="bookmarks-items-checkbox"><input
+              type="checkbox" class="bookmarks-checkbox-all"
+              name="check-all" /></label></th>
+          <th><%=glp("jcmsplugin.bookmarks.lbl.bookmarks")%></th>
+          <th></th>
+          <th></th>
+        </tr>
+        <% } %>
+      </thead>
+      <div class="container-fluid" style="text-align: center;">
+        <% if (Util.getSize(bookmarkItemList) == 0) { %>
+        <%@ include file='/front/app/doAppNoResult.jspf' %>
+        <% } %>
+      </div>
+      <tbody class="sortable">
+        <% int itemIndex = 0; %>
+        <jalios:foreach collection="<%= bookmarkItemList %>" name="bookmarkItem" type="BookmarkItem">
+        
+        <%   
+            String bookmarkItemClass = "";
+            if(Util.isEmpty(bookmarkHandler.getBookmarkSearchText()) && (canEdit)){
+              bookmarkItemClass += "bookmark-draggable-item";
+              if(bookmarkItem instanceof BookmarkFolder){
+                bookmarkItemClass += " bookmark-droppable";
+              }
+            }else{
+              bookmarkItemClass = "bookmark-search-result-item";
+            }
+          %>
+        <% if(canEdit){ %>
+        <tr class="bookmark-droppable bookmark-separator"
+          data-jalios-item-index="<%=itemIndex%>">
+          <td colspan="4"><div class="bookmark-separator-line">&nbsp;</div></td>
+        </tr>
+        <%} %>
+        <% itemIndex++; %>
+        <tr class="<%=bookmarkItemClass%>"
+          data-jalios-bookmark-id="<%=bookmarkItem.getId()%>"
+          data-jalios-bookmark-folder_id="<%=currentFolderId%>">
+          <% if(canEdit){  %>
+          <td class="fit text-center">
+            <label class="bookmarks-items-checkbox">
+              <input type="checkbox" class="bookmarks-checkbox" name="itemIds" value="<%=bookmarkItem.getId()%>" /></label>
+          </td>
+          <% } %>
+          <%-- BOOKMARK FOLDER ITEM --%>
+          <% if(bookmarkItem instanceof BookmarkFolder){ %>
+            <td class="expand bookmark-folder">
+              <div>
+                <a onclick="return false;" class="ajax-refresh"
+                  href="types/WorkspaceBookmarks/manageBookmarksFullDisplay.jsp?<%=BookmarkConstants.PARAMETER_CURRENT_FOLDER_ID%>=<%=bookmarkItem.getId()%>">
+                  <jalios:icon src="<%=bookmarkItem.getDataIcon()%>" />
+                  <%=bookmarkItem.getName()%>
+                </a>
+              </div>
+            </td>
+            <% if(canEdit){  %>
+            <%--  EDIT BOOKMARK FOLDER --%>
+            <td class="fit text-center"><a
+              class="modal bookmark-actions"
+              href="plugins/BookmarksPlugin/jsp/bookmarkFolderEditModal.jsp?<%=BookmarkConstants.PARAMETER_DATA_ID%>=<%=bookmarkItem.getId()%>&amp;<%=BookmarkConstants.PARAMETER_CURRENT_FOLDER_ID%>=<%=currentFolderId %>&amp;<%=BookmarkConstants.PARAMETER_WORKSPACE_ID%>=<%=workspace.getId()%>"
+              onclick="return false;"> <jalios:icon src="edit-small" /></a>
+            </td>
+            <%--  DELETE BOOKMARK FOLDER --%>
+            <td class="fit text-center"><a
+              class="ajax-refresh confirm bookmark-actions"
+              data-jalios-ajax-refresh="nohistory noscroll"
+              data-jalios-text="<%= glp("jcmsplugin.bookmarks.folder.action.delete.warn-msg") %>"
+              href="plugins/BookmarksPlugin/jsp/manageBookmarksListView.jsp?opBookmarkFolderDelete=true&amp;<%=BookmarkConstants.PARAMETER_DATA_ID%>=<%=bookmarkItem.getId()%>&amp;<%=BookmarkConstants.PARAMETER_CURRENT_FOLDER_ID%>=<%=currentFolderId%>">
+                <jalios:icon src="remove-small" />
+            </a></td>
+            <% } %>
+          <% } %>
+          <% if(bookmarkItem instanceof Bookmark){
+              Bookmark bookmark = (Bookmark) bookmarkItem;
+              String bookmarkFolderId = Util.isEmpty(bookmarkItem.getParentFolderId())?"":bookmarkItem.getParentFolderId();
+              String editLink = BookmarkConstants.PARAMETER_DATA_ID+"="+bookmark.getId()+"&"+BookmarkConstants.PARAMETER_CURRENT_FOLDER_ID+"="+bookmarkFolderId+"&"+BookmarkConstants.PARAMETER_WORKSPACE_ID+"="+workspace.getId();
+              editLink += "&bookmarkSearchText="+encodeForURL(bookmarkSearchText);
+              
+              if(bookmark.isData()){
+                String publicationId = bookmark.getData().getId();
+                editLink += "&"+BookmarkConstants.PARAMETER_ONLY_DATA_ID_MODAL+"="+publicationId;
+              }%>
+            <td class="expand bookmark-item"> <%
+                if(bookmark.isFileDocument() || bookmark.isData()){%> 
+                  <jalios:link data='<%=bookmark.getData()%>'><jalios:dataicon data="<%=bookmark%>"
+                    css="jalios-icon-sm"></jalios:dataicon> <%= bookmark.getData().getDataName(userLang) %></jalios:link>
+                   <%
+                }else if(bookmark.isQuery()){
+              %> <a href="<%=encodeForHTMLAttribute(bookmark.getQueryUrl())%>"><jalios:dataicon data="<%=bookmark%>"
+                    css="jalios-icon-sm"></jalios:dataicon> <%=encodeForHTML(bookmark.getTitle())%></a>
+              <%
+                }else{
+                   boolean isExternalLink = bookmarkHandler.isExternalLinks(bookmark.getAnyUrl());
+                   boolean isInNewWindows = bookmarkHandler.getExternalLinksInNewWindow(null,isExternalLink);
+                   String title = bookmarkHandler.getLinkTitle(bookmark,isExternalLink);
+              %> <a <% if(isInNewWindows){ %>target="_blank"<% } %> <% if(isExternalLink){ %>rel="noopener noreferrer"<% } %> href='<%=encodeForHTMLAttribute(bookmark.getAnyUrl())%>' title="<%= title%>">
+              <jalios:dataicon data="<%=bookmark%>" css="jalios-icon-sm"></jalios:dataicon> <%=encodeForHTML(Util.getString(bookmark.getTitle(), bookmark.getAnyUrl()))%></a>
+              <%  } %>
+            </td>
+            <% if(canEdit){  %>
+            <td class="fit text-center">
+              <a class="modal bookmark-actions"
+              href="plugins/BookmarksPlugin/jsp/bookmarkEditModal.jsp?<%=editLink %>"
+              onclick="return false;"> <jalios:icon src="edit-small" /></a>
+            </td>
+            <td class="fit text-center">
+              <a class="ajax-refresh confirm bookmark-actions"
+              data-jalios-ajax-refresh="nohistory noscroll"
+              href="plugins/BookmarksPlugin/jsp/manageBookmarksListView.jsp?opBookmarkDelete=true&amp;<%=BookmarkConstants.PARAMETER_DATA_ID%>=<%=bookmark.getId()%>&amp;<%=BookmarkConstants.PARAMETER_CURRENT_FOLDER_ID%>=<%=currentFolderId%>&amp;<%= BookmarkConstants.PARAMETER_BOOKMARK_QUERY%>=<%=encodeForURL(bookmarkSearchText) %>">
+                <jalios:icon src="remove-small" />
+              </a>
+            </td>
+            <% } %>
+          <% } %>
+        </tr>
+        </jalios:foreach>
+        <% if(canEdit){ %>
+        <tr class="bookmark-droppable bookmark-separator"
+          data-jalios-item-index="<%=itemIndex%>">
+          <td colspan="4"><div class="bookmark-separator-line">&nbsp;</div></td>
+        </tr>
+        <%} %>
+      </tbody>
+    </table>
+  </div>

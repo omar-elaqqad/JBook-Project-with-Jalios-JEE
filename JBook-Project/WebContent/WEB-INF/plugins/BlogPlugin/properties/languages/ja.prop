@@ -1,0 +1,372 @@
+# ------------------------------------------------------------
+#  BLOG VIRTUAL ID
+# ------------------------------------------------------------
+jcmsplugin.blog.create-blogosphere: ブロゴスフィアを作成する
+
+$id.Blog.model.help:   サービスをコピーするモデルを使用する
+$id.jcmsplugin.blog.blogosphere:                メンバーのブログワークスペースID
+$id.jcmsplugin.blog.blogosphere.category.root:  ブロゴスフィアルートカテゴリID
+$id.jcmsplugin.blog.blogger.group-attendees:    ブロゴスフィアメンバーグループID
+# ------------------------------------------------------------
+#  BLOG Terms and conditions Agreement
+# ------------------------------------------------------------
+jcmsplugin.blog.agreement.btn.agree:          同意する
+jcmsplugin.blog.agreement.btn.disagree:       同意しない
+# ------------------------------------------------------------
+#  BLOG LABELS
+# ------------------------------------------------------------
+jcmsplugin.blog.label.blog:             ブログ
+jcmsplugin.blog.label.blogosphere:      ブロゴスフィア
+jcmsplugin.blog.label.blog-post-count:  {0} 記事を投稿する
+jcmsplugin.blog.label.category:         {0} カテゴリ
+jcmsplugin.blog.label.create-ws-blog:   このワークスペースにブログを作成する
+jcmsplugin.blog.label.no-workspace-blog:このワークスペースにはブログがありません。
+jcmsplugin.blog.label.pending-request:  あなたのブログ開設のリクエストは処理中です。
+jcmsplugin.blog.label.rejected-request: あなたのブログ開設のリクエストが却下されました。
+jcmsplugin.blog.label.blog-request:     ブログ開設をリクエストする
+jcmsplugin.blog.label.blog-create:      マイブログを作成する
+jcmsplugin.blog.label.blog-ws-create:   ワークスペースブログを作成する
+jcmsplugin.blog.label.add-blog-post:    マイブログに記事を投稿する
+jcmsplugin.blog.label.already-has-blog: あなたは既にブログを開設しています。
+jcmsplugin.blog.label.add-blog-post-ws: 記事をパブリッシュする
+jcmsplugin.blog.label.delete-comment-confirm: 本当に削除してもよろしいですか:
+jcmsplugin.blog.label.access-full-blog: メンバーのブログにアクセスする。
+jcmsplugin.blog.label.access-my-blog:   マイブログにアクセスする。
+jcmsplugin.blog.label.all-blog:         全てのブログ
+jcmsplugin.blog.label.access-blog:      ブログにアクセスする: {0}
+jcmsplugin.blog.label.no-comments:      あなたのブログにはまだコメントがありません。
+jcmsplugin.blog.label.no-posts:         あなたのブログにはまだ記事が投稿されていません。
+jcmsplugin.blog.label.blog-attendees:   ブロゴスフィアメンバー
+jcmsplugin.blog.label.blog-validators:  ブロゴスフィア検証者
+jcmsplugin.blog.label.bloggers:         ブロガー
+jcmsplugin.blog.label.unread:           未読
+jcmsplugin.blog.label.draft:            下書き
+jcmsplugin.blog.label.my-blog:          マイブログ
+jcmsplugin.blog.label.new-comment:      {0} {0,choice,0#新規コメント|1#件の新規コメント|2#件の新規コメント}
+jcmsplugin.blog.label.portlet.type-subject: こちらに新規記事のタイトルを入力します。
+jcmsplugin.blog.label.continue:         続ける...
+jcmsplugin.blog.label.no-blog-under-ws: ブログがまだ作成されていません
+jcmsplugin.blog.label.activate-blog:    ブログを有効化
+jcmsplugin.blog.label.my-actions:       マイアクション
+jcmsplugin.blog.label.access-member-blog:   マイブログ
+jcmsplugin.blog.label.access-ws-blog:       協調空間ブログにアクセスする
+jcmsplugin.blog.tab.last-blog-post:     記事
+jcmsplugin.blog.label.the-blog-of:      {0}のブログ
+jcmsplugin.blog.tab.last-blog:          ブログ
+jcmsplugin.blog.tab.my-blog-post:       マイブログポスト
+jcmsplugin.blog.tab.blog-choice:        ブログの選択:
+jcmsplugin.blog.tab.posted-by:          投稿者
+jcmsplugin.blog.label.by:               操作した人
+jcmsplugin.blog.submit:                 提出
+jcmsplugin.blog.edit.complete:          編集を終了する
+jcmsplugin.blog.follow:                 ブログを購読する
+jcmsplugin.blog.follow-message:         これで新しい投稿に購読登録されました
+jcmsplugin.blog.unfollow:               ブログの購読を停止する
+jcmsplugin.blog.unfollow-message:       あなたは、もう新しい投稿に購読登録されていません
+jcmsplugin.blog.app-sidebar.follow:     購読する
+jcmsplugin.blog.manage-posts.title:     投稿管理
+jcmsplugin.blog.manage-posts.table-caption: 記事のリスト
+jcmsplugin.blog.app-sidebar.follow.tooltip: 新しい投稿を購読する
+jcmsplugin.blog.app-sidebar.unfollow:   購読を停止する
+jcmsplugin.blog.app-sidebar.unfollow.tooltip: 新しい投稿の購読を解除する
+jcmsplugin.blog.label.all-authors: 全ての著者
+jcmsplugin.blog.msg.edit.delete-blog-no-post: 投稿のあるブログは削除できません。
+
+# ------------------------------------------------------------
+#  BLOG LISTS
+# ------------------------------------------------------------
+jcmsplugin.blog.label.empty:                このブログにはまだ記事が投稿されていません。
+jcmsplugin.blog.label.empty-search:         検索結果は０件でした。
+jcmsplugin.blog.label.empty-drafts:         現在、下書きがありません。
+jcmsplugin.blog.label.empty-cat:            このカテゴリには記事が投稿されていません。
+# ------------------------------------------------------------
+#  BLOG POST
+# ------------------------------------------------------------
+
+jcmsplugin.blog.label.stats.visit-count:    リーディング
+jcmsplugin.blog.label.stats.unique-visit:   読者
+
+jcmsplugin.blog.label.action.follow:        このブログを購読する
+jcmsplugin.blog.label.action.unfollow:      このブログの購読を停止する
+
+jcmsplugin.blog.label.action.follow-blog:   このブログを購読する
+jcmsplugin.blog.label.action.unfollow-blog: このブログの購読を停止する
+jcmsplugin.blog.label.action.follow-blog-text:   このブログの最新記事をメールで受信しますか？
+jcmsplugin.blog.label.action.unfollow-blog-text: このブログの最新記事のメール受信を停止しますか？
+
+
+jcmsplugin.blog.label.info.in:              対象：
+jcmsplugin.blog.label.info.comments:        {0,choice,0#コメント|1#件のコメント|2#件のコメント}
+
+jcmsplugin.blog.label.read-more:            もっと詳しく読む
+jcmsplugin.blog.label.blog.desc.show-more:  もっと見る
+jcmsplugin.blog.blog-desc.btn.show-more.title: 記述を表示する
+jcmsplugin.blog.blog-desc.btn.show-less.title: 説明を非表示にする
+
+jcmsplugin.blog.title.add-post:             新規記事を追加する
+jcmsplugin.blog.title.save-as-draft:        下書き
+jcmsplugin.blog.label.action.publish:       パブリッシュする
+# ------------------------------------------------------------
+#  BLOG SIDEBAR
+# ------------------------------------------------------------
+jcmsplugin.blog.title.admin:      アドミニストレーション
+jcmsplugin.blog.title.archive:    アーカイブ
+jcmsplugin.blog.title.authors:    著者
+jcmsplugin.blog.title.categories: カテゴリ
+jcmsplugin.blog.title.recent-post:最新記事
+jcmsplugin.blog.title.no-category:カテゴリなし
+jcmsplugin.blog.label.edit-blog:      ブログを編集する
+jcmsplugin.blog.label.action.add-post:      記事をパブリッシュする
+jcmsplugin.blog.label.action.add-post-wf:   記事をパブリッシュする
+jcmsplugin.blog.label.action.see-draft:     下書きを見る
+jcmsplugin.blog.label.action.add-category:  カテゴリを追加する
+jcmsplugin.blog.label.action.add-sub-category:  サブカテゴリを追加する
+jcmsplugin.blog.label.action.add-sub-authors:  共同著者を追加する
+jcmsplugin.blog.label.action.search:  検索
+jcmsplugin.blog.label.action.search-post.placeholer: 記事を検索...
+jcmsplugin.blog.label.action.see-all-authors:  全ての著者を表示する
+jcmsplugin.blog.label.post-in-cat:  {0,choice,1#{0} 件の記事がカテゴリにあります {1}|2#{0} 件の記事がカテゴリにあります {1}}
+jcmsplugin.blog.app.sidebar.all-posts-link: すべての投稿
+# ------------------------------------------------------------
+#  BLOG MODAL
+# ------------------------------------------------------------
+jcmsplugin.blog.title.ws-blog:       ワークスペースブログ
+
+jcmsplugin.blog.title.add-cat:       カテゴリを追加する
+jcmsplugin.blog.title.add-sub-cat:   サブカテゴリ{0}を追加する
+jcmsplugin.blog.label.add-cat:       追加するカテゴリ名を入力します（コンマ区切り）
+
+jcmsplugin.blog.title.blog-request:  ブログ開設リクエスト
+jcmsplugin.blog.title.edit-comment:  コメントを編集する
+
+jcmsplugin.blog.blog-root.label:     ルート
+jcmsplugin.blog.blog-root.description:     ブログカテゴリのルート
+# ------------------------------------------------------------
+#  BLOG LAYOUT
+# ------------------------------------------------------------
+
+jcmsplugin.blog.label.add-blog:      ブログを作成する
+jcmsplugin.blog.label.edit-blog:     ブログを編集する
+jcmsplugin.blog.label.add-post:      ブログ投稿をパブリッシュする
+jcmsplugin.blog.label.edit-post:     記事を編集する
+jcmsplugin.blog.label.author:        パブリッシュした人 {0}
+jcmsplugin.blog.label.last-post:     最新記事
+jcmsplugin.blog.label.search:        検索
+
+# ------------------------------------------------------------
+#  BLOG REQUEST
+# ------------------------------------------------------------
+
+jcmsplugin.blog.agreement.required:            ブログ利用条件に同意する
+$id.jcmsplugin.blog.agreement.terms.pub:       ブログ利用条件 - パブリケーション
+jcmsplugin.blog.agreement.terms.field:         ブログ利用条件 - フィールド
+jcmsplugin.blog.agreement.btn.agree:           同意する
+jcmsplugin.blog.agreement.btn.disagree:        同意しない
+jcmsplugin.blog.agreement.date:      ブログ: ブログ利用条件の同意日
+jcmsplugin.blog.agreement.title:               利用条件
+jcmsplugin.blog.agreement.text:                ブログ利用条件が定義されていません。プロパティ<code>{0}</code>と<code>{1}</code>を更新してください。
+
+# ------------------------------------------------------------
+#  BLOG PORTLET
+# ------------------------------------------------------------
+
+$id.jcmsplugin.blog.portlet.categories:       ブログ - カテゴリ
+$id.jcmsplugin.blog.portlet.recent-post:      ブログ - 最新記事
+$id.jcmsplugin.blog.portlet.archive:          ブログ - アーカイブ
+$id.jcmsplugin.blog.portlet.member-profile:   ブログ - メンバーのプロファイル
+$id.jcmsplugin.blog.portlet.post-list:        ブログ - 記事一覧
+$id.jcmsplugin.blog.portlet.post-full:        ブログ - 投稿
+$id.jcmsplugin.blog.portlet.admin:            ブログ - アドミニ
+$id.jcmsplugin.blog.portlet.add-post:         ブログ - 新規記事
+$id.jcmsplugin.blog.portlet.authors:          ブログ - 著者一覧
+$id.jcmsplugin.blog.portlet.handle-posts:     ブログ - 記事管理
+# ------------------------------------------------------------
+#  BLOG ADMIN
+# ------------------------------------------------------------
+jcmsplugin.blog.admin.author:                 著者
+jcmsplugin.blog.admin.modify:                 変更する
+jcmsplugin.blog.admin.add-authors:            著者の管理
+jcmsplugin.blog.admin.add-authors-description: <b>{0}</b>で投稿を追加できるメンバーを選択します。
+jcmsplugin.blog.admin.delete:                 削除する
+jcmsplugin.blog.admin.handle-posts:           記事の管理
+jcmsplugin.blog.admin.handle.unique-visitor:  リーディング
+jcmsplugin.blog.admin.handle.total-visitor:   読者
+jcmsplugin.blog.admin.handle.comment-count:   コメント
+jcmsplugin.blog.admin.handle.vote-count:      投票
+jcmsplugin.blog.admin.handle.post-date:       変更する
+jcmsplugin.blog.admin.handle.sort-by:         記事のソート条件
+jcmsplugin.blog.admin.handle.or:              または
+jcmsplugin.blog.label.title:                  タイトル
+jcmsplugin.blog.label.date:                   日付
+jcmsplugin.blog.admin.author-list:            著者一覧
+jcmsplugin.blog.admin.see-my-post:            自分が投稿した記事を表示する
+jcmsplugin.blog.admin.see-member-post:        投稿された記事を表示する
+jcmsplugin.blog.admin.see-all-post:           全ての記事を表示する
+
+# ------------------------------------------------------------
+#  BLOG WARNING
+# ------------------------------------------------------------
+
+jcmsplugin.blog.warning.ws-has-a-blog:             あなたのワークスペースには、既にブログ ({0})があります。
+jcmsplugin.blog.warning.duplicate-same:            現在のワークスペースには、同じ名前のブログが既に存在します
+jcmsplugin.blog.warning.text:                      テキストを入力してください
+jcmsplugin.blog.warning.member-has-a-blog:         メンバー"{0}"は、既にブロゴスフィアにブログを作成しています: {1}.
+jcmsplugin.blog.warning.blogosphere-root-cat:      このブログのブロゴスフィアルートカテゴリが存在しません。プラグインプロパティでこれを更新してください。
+jcmsplugin.blog.warning.blogosphere-forbidden-blog:あなたは、以下のブログでの記事のパブリッシュを許可されていません："{0}"
+jcmsplugin.blog.warning.forbidden-blog:            あなたは、以下の協調ブログでの記事のパブリッシュを許可されていません："{0}"
+jcmsplugin.blog.warning.forbidden-blog-create:     あなたは、ブログを作成する許可がありません。
+
+# ------------------------------------------------------------
+#  BLOG ACL
+# ------------------------------------------------------------
+acl.resource.admin/work/blogospherecreation: ブログ - ブロゴスフィアにブログを追加する
+
+
+# ------------------------------------------------------------
+#  PUBLISH MENU
+# ------------------------------------------------------------
+jcmsplugin.blog.publish-menu.add-cs:   記事
+jcmsplugin.blog.publish-menu.add-mine: ブログの記事
+
+
+# ------------------------------------------------------------
+#  CategoryBrowser
+# ------------------------------------------------------------
+category.category-browser.blog: ブログ内を検索
+
+
+# ----------------------------------------------------------------------
+# Alert
+# ----------------------------------------------------------------------
+alert.name.jcmsplugin-blog:                               ブログ
+
+alert.name.jcmsplugin-blog.new-blogpost:                  新規記事:
+alert.msg.jcmsplugin-blog.new-blogpost.title:             新規記事: {data}
+alert.msg.jcmsplugin-blog.new-blogpost.short-description: {author}が新規記事{data}を{parent}でパブリッシュしました。{data.url}
+alert.msg.jcmsplugin-blog.new-blogpost.description:       <p>{author}が新規記事 {data} を {parent.link}でパブリッシュしました。</p> 
+
+alert.name.jcmsplugin-blog.update-blogpost:               記事の更新
+alert.msg.jcmsplugin-blog.update-blogpost.title:          記事が更新されました: {data}
+alert.msg.jcmsplugin-blog.update-blogpost.short-description: {author}が記事{data}を{parent}で更新しました。{data.url}
+alert.msg.jcmsplugin-blog.update-blogpost.description:       <p>{author}が記事{data}を{parent.link}で更新しました。</p> 
+
+alert.name.jcmsplugin-blog.blog-opening:                  プログ開設リクエストの検証
+alert.msg.jcmsplugin-blog.blog-opening.title:             あなたのプログ開設リクエストが検証されました
+alert.msg.jcmsplugin-blog.blog-opening.short-description: {author}があなたのブログ開設リクエストを検証しました: {data}。{data.url}
+alert.msg.jcmsplugin-blog.blog-opening.description:       <p>{author}があなたのブログ開設リクエストを検証しました: {data}:</p> 
+
+# ------------------------------------------------------------
+#  BLOG TOOLS
+# ------------------------------------------------------------
+
+jcmsplugin.blog.tools.title:  BlogPost （Store）を BlogPost （データベース）にロードする - ステップ 2
+jcmsplugin.blog.tools.text1:  ブログのインポート情報
+jcmsplugin.blog.tools.text2:  1.StoreのBlogPostをデータベースのBlogPostにインポートする
+jcmsplugin.blog.tools.text3:  2.全てのブログを新規パラメータで再初期化する
+ui.adm.jcms5-loader.btn.load:        データをロード
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From Blog-templates.xml
+types.Blog.templates.editFront.default.label: フロントオフィス編集テンプレート
+types.Blog.templates.editFrontOld.default.label: 古いフロントオフィス編集テンプレート
+types.Blog.templates.query.default.label: デフォルトテンプレート
+types.Blog.templates.box.default.label: デフォルトテンプレート
+types.Blog.templates.edit.default.label: フロントオフィス編集テンプレート
+types.Blog.templates.fullold.default.label: 古いテンプレート
+types.Blog.templates.full.old.label: 古いテンプレート
+types.Blog.templates.full.default.label: デフォルトのJNewsテンプレート
+ui.editportlet.usage.fullold: 古いテンプレート
+
+# From Blog.xml
+types.Blog.fields.bloggerGroup.label: ブロガーグループ
+types.Blog.title.label: タイトル
+types.Blog.fields.description.label: ブログの記述
+types.Blog.label: ブログ
+
+# From BlogPost-templates.xml
+types.BlogPost.templates.editFront.default.label: フロントオフィス編集テンプレート
+types.BlogPost.templates.editFrontOld.default.label: 古いフロントオフィス編集テンプレート
+types.BlogPost.templates.query.default.label: デフォルトテンプレート
+types.BlogPost.templates.edit.default.label: 編集テンプレート
+types.BlogPost.templates.full.default.label: デフォルトテンプレート
+types.BlogPost.templates.fullold.default.label: 古いテンプレート
+types.BlogPost.templates.full.default.label: デフォルトテンプレート
+types.BlogPost.templates.appBody.default.label: アプリ本文表示用のライトテンプレート
+
+# From BlogPost.xml
+types.BlogPost.fields.summary.description: 記事一覧と購読者へのメールに表示される記事の概要
+types.BlogPost.fields.blog.label: ブログ
+types.BlogPost.fields.category.description: 複数のカテゴリを選択できます。
+types.BlogPost.fields.content.label: テキスト
+types.BlogPost.label: BlogPost
+types.BlogPost.title.label: タイトル
+types.BlogPost.fields.category.label: カテゴリ
+types.BlogPost.fields.summary.label: 概要
+types.BlogPost.fields.featuredImage.label: 画像
+types.BlogPost.fields.featuredImage.description: この画像を大きいサイズにしてください。できれば16/9フォーマット(例：960x540)でお願いします。
+types.BlogPost.fields.featuredImageAlt.label: 画像の代替テキスト
+types.BlogPost.fields.featuredImageAlt.description: このテキストは画像のalt属性として使用されます
+types.BlogPost.fields.thumbnailImage.label: サムネイル画像
+types.BlogPost.fields.thumbnailImage.description: サムネイル画像はこの画像から生成されます。自分で別のサムネイルを選ぶこともできます。サイズは300x150より大きくし、できれば4/3または16/9フォーマットにしてください。
+types.BlogPost.fields.thumbnailImageAlt.label: サムネイル画像の代替テキスト
+types.BlogPost.fields.thumbnailImageAlt.description: このテキストはサムネイル画像のalt属性として使用されます
+types.BlogPost.fields.imageAltText.label: 代替テキスト
+types.BlogPost.btn.show-options: 詳細オプション...
+types.BlogPost.btn.hide-options: オプション詳細を非表示...
+
+# From BlogRequest.xml
+types.BlogRequest.fields.description.label: 記述
+types.BlogRequest.title.label: ブログ名
+types.BlogRequest.label: ブログ開設リクエスト
+
+# From PortletBlog-templates.xml
+types.PortletBlog.templates.box.default.label: デフォルトテンプレート
+types.PortletBlog.templates.box.default.description: このポートレットのデフォルトのテンプレート
+types.PortletBlog.templates.box.itembox.label: item-boxとしてスタイルされたリスト
+types.PortletBlog.templates.box.itembox.description: item-boxとしてスタイルされたリスト
+types.PortletBlog.templates.edit.default.label: デフォルトテンプレート
+types.PortletBlog.templates.edit.default.description: このポートレットのデフォルトのテンプレート
+types.PortletBlog.templates.full.default.label: デフォルトテンプレート
+types.PortletBlog.templates.full.default.description: このポートレットのデフォルトのテンプレート
+types.PortletBlog.templates.query.default.label: デフォルトテンプレート
+types.PortletBlog.templates.query.default.description: このポートレットのデフォルトのテンプレート
+
+# From PortletBlog.xml
+types.PortletBlog.label: ブログポートレット
+types.PortletBlog.fields.displayedList.labelList: 全てのワークスペースのブログおよび記事|ワークスペースの記事
+types.PortletBlog.fields.displayedList.label: 表示一覧
+types.PortletBlog.title.label: タイトル
+types.PortletBlog.description: ブログ記事とブログの一覧を表示
+
+# From wfblogrequest.xml
+workflows.wfblogrequest.label: ブログ - ブログ開設リクエストのワークフロー
+workflows.wfblogrequest.states.60.description: リクエストが承認され、ブログが開設されました。
+workflows.wfblogrequest.states.50.description: このブログリクエストは却下されました。ブログが作成されません。詳細を見るには、ワークフローNotesを参照してください。
+workflows.wfblogrequest.states.-200.label: 提出済み
+workflows.wfblogrequest.roles.blogValidator.description: ブログ開設リクエストを承認する／却下する
+workflows.wfblogrequest.roles.blogValidator.name: 検証者
+workflows.wfblogrequest.states.60.label: 承認済み
+workflows.wfblogrequest.states.50.label: 却下済み
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.blog:     ブログ
+jcmsplugin.smartphone.workspace-service.PortletBlog: ブログ
+jcmsplugin.blog.smartphone.lbl.blogpost-list: 投稿
+jcmsplugin.blog.smartphone.lbl.blog: ブログ
+jcmsplugin.blog.smartphone.lbl.blog.my-blogs: マイブログ
+jcmsplugin.blog.smartphone.lbl.blog.other-blogs: 他のブログ
+
+# ----------------------------------------------------------------------
+# BlogPost Form
+# ----------------------------------------------------------------------
+jcmsplugin.blog.filter-author: 著者で絞り込む
+jcmsplugin.blog.filter-pstatus: ステータスで絞り込む
+jcmsplugin.blog.filter-startDate: 開始日
+jcmsplugin.blog.filter-endDate: 終了日
+jcmsplugin.blog.sort-by-vote: 投票数

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<type name="BlogPost" superclass="com.jalios.jcmsplugin.blog.AbstractBlogPost" reviewable="false" debatable="false" unitFieldEdition="false" audienced="false" categoryTab="true" readRightTab="true" updateRightTab="true" templateTab="false" workflowTab="true" advancedTab="true" interfaces="com.jalios.jcms.db.TrackedDBData" database="true" hbm="true" formhandler="com.jalios.jcmsplugin.blog.EditAbstractBlogPostHandler" revision="true" openRole="true">
+  <title ml="true" />
+  <fields>
+    <field name="content" editor="wysiwyg" required="true" type="String" searchable="true" wiki="false" rows="5" cols="80" compactDisplay="false" ml="true" descriptionType="tooltip" html="true" checkHtml="false" toolbars="basic,format" inline="true" />
+    <field name="summary" editor="textarea" required="false" type="String" searchable="true" wiki="true" rows="5" cols="80" compactDisplay="false" ml="true" descriptionType="tooltip" html="false" checkHtml="false" abstract="false" truncate="400" inline="true" />
+    <field name="blog" editor="link" required="true" compactDisplay="false" type="generated.Blog" parent="true" />
+    <field name="category" editor="category" required="false" compactDisplay="false" type="java.util.TreeSet" chooser="tree" exclusive="false" root="j_3" ml="false" descriptionType="text" searchable="false" html="false" checkHtml="true" displayRoot="false" />
+    <field name="featuredImage" editor="image" required="false" compactDisplay="false" type="String" searchable="false" size="80" maxlength="500" descriptionType="text" ml="false" imageMap="false" />
+    <field name="featuredImageAlt" editor="textfield" required="false" compactDisplay="false" type="String" searchable="false" size="80" ml="true" html="false" checkHtml="true" />
+    <field name="thumbnailImage" editor="image" required="false" compactDisplay="false" type="String" searchable="false" size="80" maxlength="500" descriptionType="text" ml="false" imageMap="false" />
+    <field name="thumbnailImageAlt" editor="textfield" required="false" compactDisplay="false" type="String" searchable="false" size="80" ml="true" html="false" checkHtml="true" />
+  </fields>
+</type>
+

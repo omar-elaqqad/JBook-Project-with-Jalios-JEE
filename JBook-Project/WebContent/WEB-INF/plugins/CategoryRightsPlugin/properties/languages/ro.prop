@@ -1,0 +1,4 @@
+jcmsplugin.categoryrights.types: Tipuri
+jcmsplugin.categoryrights.types.help: Tipuri de conţinut de controlat (separate prin spaţii sau virgule)
+jcmsplugin.categoryrights.cat-ids: Categorii (ID-uri)
+jcmsplugin.categoryrights.cat-ids.help: Identificatoarele rădăcinilor categoriilor de controlat (separate prin spaţii sau virgule)

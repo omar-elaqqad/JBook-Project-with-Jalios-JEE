@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<type name="Blog" superclass="com.jalios.jcmsplugin.blog.AbstractBlog" reviewable="false" debatable="false" unitFieldEdition="false" audienced="false" categoryTab="true" readRightTab="true" updateRightTab="true" templateTab="true" workflowTab="true" advancedTab="true" authgroups="||||||" hbm="true" formhandler="com.jalios.jcmsplugin.blog.EditAbstractBlogHandler" customformhandler="generated.EditBlogHandler">
+  <title ml="true" searchable="true"/>
+  <fields>
+    <field name="description" abstract="true" editor="textarea" required="false" compactDisplay="false" type="String" searchable="false" rows="5" cols="80" ml="false" wiki="true" html="false" checkHtml="false" descriptionType="tooltip" />
+    <field name="bloggerGroup" editor="group" required="false" compactDisplay="false" type="com.jalios.jcms.Group" chooser="popup" />
+  </fields>
+</type>
+

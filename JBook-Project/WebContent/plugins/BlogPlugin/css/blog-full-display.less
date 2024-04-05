@@ -1,0 +1,75 @@
+// Include variables and mixins
+@import "../../../css/jalios/core/init.less"; // Use init-mixins.less if more mixins are required 
+
+// Hook for JCMS
+@import "../../../css/plugin.less";
+
+.app-blog.blog-fulldisplay {
+  .app-pub-wrapper { // whole app selector
+    background-color: inherit;
+    &.is-post-list {
+      // Vertical alignment with publication action menu
+      padding-top: 0;
+    }
+  }
+  .publication-header {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .search-result-categories {
+    // replace default category list by our custom one
+    display: none;
+  }
+  
+  // Hide handle authors link when in Blog APP (same link in sidebar admin section)
+  .blog-admin.pub-handle .pub-handle-title .add-authors {
+    display: none;
+  }
+
+  .post-list {
+    .card-block .abstract {
+      font-size: 14px;
+    }
+  }
+}
+.app-blog {
+  &.blog-fulldisplay,
+  &.blogpost-fulldisplay {
+    .Blog, .BlogPost {
+      &.fulldisplay {
+        .previewWFState {
+          #JCMS > .br();
+        }
+      }
+    }
+  }
+}
+
+.no-ws-blog {
+  text-align: center;
+  padding: 32px;
+  max-width: 960px;
+  margin: auto;
+  border-radius: 8px;
+  background-color: #EEE;
+    
+  P {
+    color: #333;
+    font-family: @font-family-condensed;
+    font-size: @font-size-large;
+    line-height: floor((@font-size-large * @line-height-base));
+    margin-bottom: 30px;    
+  }
+
+  .app-no-result-icon {
+    font-size: 48px;
+    color: #CCC;
+    margin-bottom: 10px;
+    height: 200px;
+  }
+  .btn-default {
+    color: #fff;
+    background-color: @app-sidebar-bgcolor;
+  }
+}

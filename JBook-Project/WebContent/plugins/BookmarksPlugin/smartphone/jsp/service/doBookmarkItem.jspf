@@ -1,0 +1,28 @@
+<% 
+  if (itBookmarkItem instanceof Bookmark) { 
+    Bookmark bookmark = (Bookmark) itBookmarkItem;
+    blankTarget = false;
+    if (bookmark.isData()) { 
+      href = smartPhoneManager.getDataUrl(bookmark.getData());
+      title = ((Publication) bookmark.getData()).getTitle(userLang,true); 
+    } else if (bookmark.isQuery()) {
+      href = "";
+      title = bookmark.getTitle(); 
+    } else {
+      href =  bookmark.getAnyUrl();
+      blankTarget = true;
+      title = bookmark.getTitle(); 
+    }              
+  %>
+    <%-- TODO Handle bookmarked query redirection --%> 
+    <% if(!bookmark.isQuery()){ %>
+    <jalios:listItem icon="<%= bookmark.getDataIcon() %>" template="jmobile" text="<%= title %>" link="<%= href %>" /> 
+    <% } %>
+  <%  
+  } else {
+    BookmarkFolder bookmarkFolder = (BookmarkFolder) itBookmarkItem;
+    title = bookmarkFolder.getName(); 
+    String link = "plugins/BookmarksPlugin/smartphone/jsp/service/bookmark.jsp?bookmarkFolderId=" + bookmarkFolder.getId();
+  %>
+    <jalios:listItem icon="<%= bookmarkFolder.getDataIcon() %>" template="jmobile" text="<%= title %>" link="<%= link %>" /> 
+<% } %>

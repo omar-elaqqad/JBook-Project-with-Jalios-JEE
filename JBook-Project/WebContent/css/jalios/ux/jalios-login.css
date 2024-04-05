@@ -1,0 +1,179 @@
+/* ----------------------------------------------- */
+/*  LOGIN                                          */
+/* ----------------------------------------------- */
+/*
+ * Styles used in :
+ *  - login.jsp
+ *  - mailPassword.jsp
+ *  - privateLogin.jsp
+ *  - privateMailPassword.jsp
+ *  - failsafeMode.jsp
+ *  - PortletLogin
+ *
+ * .authentication is used as the absolute positionned FORM's wrapper (privateLogin, privateMailPassword, ...)
+ * .login-panel is used as common authentication / mail pages' selector
+ * .public-login is used as login.jsp page's FORM selector
+ */
+.box.login {
+  width: 400px;
+  margin: 0 auto;
+  -webkit-box-shadow: 2px 2px 8px #999;
+  box-shadow: 2px 2px 8px #999;
+}
+.authentication {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #bae3f9;
+  background-size: cover;
+  background-repeat-x: no-repeat;
+  background-repeat-y: no-repeat;
+  background-attachment: fixed;
+  background-position: center bottom;
+  position: relative;
+}
+.authentication .box.login {
+  margin-top: 180px;
+  -webkit-box-shadow: 4px 4px 12px #333;
+  box-shadow: 4px 4px 12px #333;
+}
+.authentication .box.login .mbox {
+  width: auto;
+  margin: 18px auto;
+  padding: 9px;
+}
+.authentication .login-panel {
+  background-color: rgba(253, 253, 253, 0.7);
+  width: 700px;
+  max-height: 90vh;
+  border-radius: 10px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 0 none;
+}
+@media (max-width: 700px) {
+  .authentication .login-panel {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+@media (min-height: 0px) {
+  .authentication {
+    align-items: baseline;
+  }
+  .authentication .login-panel {
+    margin-top: 20px;
+  }
+}
+@media (min-height: 500px) {
+  .authentication:not(.has-target-content) {
+    align-items: center;
+  }
+  .authentication:not(.has-target-content) .login-panel {
+    transform: translateY(-15%);
+  }
+}
+@media (min-height: 700px) {
+  .authentication:not(.has-target-content) .login-panel {
+    transform: translateY(-40%);
+  }
+}
+.failsafe-mode {
+  background-image: -webkit-radial-gradient(circle, #cde6f9, #6191bf);
+  background-image: radial-gradient(circle, #cde6f9, #6191bf);
+  background-repeat: no-repeat;
+  background: #6191bf;
+  background: -moz-radial-gradient(center, ellipse cover, #6191bf 0%, #cde6f9 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #6191bf), color-stop(100%, #cde6f9));
+  background: -webkit-radial-gradient(center, ellipse cover, #6191bf 0%, #cde6f9 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #6191bf 0%, #cde6f9 100%);
+  background: radial-gradient(center, ellipse cover, #6191bf 0%, #cde6f9 100%);
+}
+.login-panel .form-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 40px;
+  text-align: center;
+  margin-top: 0;
+  font-family: embedded-roboto-condensed, embedded-roboto, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+.login-panel h2.form-title {
+  margin-bottom: 20px;
+}
+.login-panel .form-actions {
+  text-align: right;
+}
+@media (min-width: 768px) {
+  .login-panel H1.form-title {
+    font-size: 30px;
+  }
+  .login-panel H2.form-title {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1200px) {
+  .login-panel H1.form-title {
+    font-size: 36px;
+  }
+  .login-panel H2.form-title {
+    font-size: 30px;
+  }
+}
+.login-panel .lang-chooser {
+  float: right;
+}
+.login-panel HR {
+  border-top: 1px solid #DDDBDA;
+  border-bottom: 1px solid #FFFFFF;
+}
+.login-panel .input-group {
+  width: 100%;
+}
+.login-panel .form-buttons .form-inline {
+  display: inline-block;
+}
+.login-panel .login-remember-me {
+  display: inline;
+  margin-right: 20px;
+}
+.login-panel .panel-footer,
+.login-panel .box-footer {
+  text-align: center;
+}
+.login-panel .panel-footer A,
+.login-panel .box-footer A {
+  color: #333333;
+}
+.public-login,
+.mail-password {
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .public-login,
+  .mail-password {
+    width: 100%;
+  }
+}
+@media (min-width: 480px) {
+  .public-login,
+  .mail-password {
+    max-width: 480px;
+  }
+}
+.PortalJspCollection .public-login,
+.PortalJspCollection .mail-password {
+  margin-top: 40px;
+}
+.PortletLogin FORM.login-form {
+  text-align: left;
+}
+.public-login .form-actions {
+  text-align: left;
+}
+.public-login .login-remember-me {
+  margin-right: 0;
+  margin-left: 20px;
+}
+/*# sourceMappingURL=jalios-login.css.map */

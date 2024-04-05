@@ -1,0 +1,1 @@
+!function(a){a("#displayWorkIframe").on("load",function(){let $that=a(this);a.jalios.DOM.resizeIframeToViewport($that);$that.removeClass("invisible");a(".display-work-iframe-msg").remove()})}(window.jQuery);

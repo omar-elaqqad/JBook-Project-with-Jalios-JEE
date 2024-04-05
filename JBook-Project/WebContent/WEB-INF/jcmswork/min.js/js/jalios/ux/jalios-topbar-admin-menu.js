@@ -1,0 +1,1 @@
+!function(b){var a=function(){var d=b(".topbar-admin-menu .child-menu");var c=b(".topbar-admin-menu .slide-wrapper");if(d.exists()&&c.exists()){d.each(function(f,e){b(e).appendTo(c)})}};b(document).ready(function(){a()})}(window.jQuery);
