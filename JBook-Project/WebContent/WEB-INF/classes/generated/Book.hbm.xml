@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "classpath://org/hibernate/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="generated.Book" table="G_BOOK">
+    <cache usage="read-write" />  
+    <id name="rowId" column="rowId">
+      <generator class="native"/>
+    </id>
+    <property name="cdate" not-null="true" index="IG_BOOK_CDATE" />
+    <property name="mdate" not-null="true" index="IG_BOOK_MDATE" />
+    <property name="authorId" length="32" index="IG_BOOK_AUTHORID" />
+    
+    <property name="pstatus" not-null="true" index="IG_BOOK_PSTATUS" />
+    <property name="workspaceId" not-null="true" length="32" index="IG_BOOK_WSID" />
+    
+    <property name="pdate"  index="IG_BOOK_PDATE" />
+    <property name="edate" />
+    <property name="adate" />
+    <property name="title" />
+    <property name="workflowId" index="IG_BOOK_WFID" />
+    <property name="udate" />
+    <property name="majorVersion" />
+    <property name="minorVersion" />
+    <property name="hasNoReadRights" index="IG_BOOK_HASNOREADRIGHTS" />
+    <property name="tracked" />
+    <property name="readerCount" index="IG_BOOK_READERCOUNT" />
+    <property name="voteCount" not-null="false" index="IG_BOOK_VOTECOUNT" />
+    <property name="voteScore" not-null="false" index="IG_BOOK_VOTESCORE" />
+    
+    <property name="mainInstanceId" not-null="false" length="32" index="IG_BOOK_MAINSTID" />    
+    <property name="mergeId" length="32" />    
+    <property name="mergeDate" />
+    <property name="hasAttachWS" index="IG_BOOK_HATHWS"  />
+    <property name="opAuthorId" length="32" index="IG_BOOK_OPAUTHORID"  />
+    <property name="readAck" />
+    <property name="restrictUpdateRights" />
+    
+    <property name="titleMLE" type="text" length="1048576" />
+    <property name="mainLanguage" />
+    <property name="description" type="text" length="65536" />
+    
+    
+    <property name="descriptionMLE" type="text" length="1048576" />
+    <property name="image" />
+    
+    
+    <property name="isbn" />
+    
+    
+    
+    <!--  COLLECTIONS FOR CATEGORIES -->
+    <set name="catIdSet" table="G_BOOK_CATSET" lazy="true">
+      <cache usage="read-write" />
+      <key>
+        <column name="ITEM_ID" index="IG_BOOK_CATSET_I"/>
+      </key>
+      <element type="string">
+        <column name="VALUE" length="64" index="IG_BOOK_CATSET"/>
+      </element>      
+    </set>
+    
+    <set name="allCatIdSet" table="G_BOOK_ALLCATSET"  lazy="true">
+      <cache usage="read-write" />
+      <key>
+        <column name="ITEM_ID" index="IG_BOOK_ALLCATSET_I"/>
+      </key>
+      <element type="string">
+        <column name="VALUE" length="64" index="IG_BOOK_ALLCATSET"/>
+      </element>      
+    </set>
+    
+    <!--  COLLECTIONS FOR READ-RIGHTS -->
+    <set name="authGrpIdSet" table="G_BOOK_AUTHGRPSET" lazy="true">
+      <cache usage="read-write" />
+      <key>
+        <column name="ITEM_ID" index="IG_BOOK_AUTHGRPSET_I"/>
+      </key>
+      <element type="string">
+        <column name="VALUE" length="64" index="IG_BOOK_AUTHGRPSET"/>
+      </element>      
+    </set>    
+    
+    <set name="authMbrIdSet" table="G_BOOK_AUTHMBRSET" lazy="true">
+      <cache usage="read-write" />
+      <key>
+        <column name="ITEM_ID" index="IG_BOOK_AUTHMBRSET_I"/>
+      </key>
+      <element type="string">
+        <column name="VALUE" length="64" index="IG_BOOK_AUTHMBRSET"/>
+      </element>      
+    </set>
+    
+    <!--  COLLECTIONS FOR UPDATE-RIGHTS -->
+    <set name="updateGrpIdSet" table="G_BOOK_UPDATEGRPSET" lazy="true">
+      <cache usage="read-write" />
+      <key>
+        <column name="ITEM_ID" index="IG_BOOK_UPDATEGRPSET_I"/>
+      </key>
+      <element type="string">
+        <column name="VALUE" length="64" index="IG_BOOK_UPDATEGRPSET"/>
+      </element>      
+    </set>    
+    
+    <set name="updateMbrIdSet" table="G_BOOK_UPDATEMBRSET" lazy="true">
+      <cache usage="read-write" />
+      <key>
+        <column name="ITEM_ID" index="IG_BOOK_UPDATEMBRSET_I"/>
+      </key>
+      <element type="string">
+        <column name="VALUE" length="64" index="IG_BOOK_UPDATEMBRSET"/>
+      </element>      
+    </set>
+    
+    <!--  COLLECTIONS FOR FRIENDLYURL -->
+    <set name="dbFriendlyURLSet" table="G_BOOK_FURLSET">
+      <cache usage="read-write" />
+      <key>
+        <column name="ITEM_ID" index="IG_BOOK_FURLSET_I"/>
+      </key>
+      <element type="string">
+        <column name="VALUE"/>
+      </element>      
+    </set>    
+    
+    <!--  COLLECTIONS FOR attachWSIdSet -->
+    <set name="attachWSIdSet" table="G_BOOK_AWSET">
+      <cache usage="read-write" />
+      <key>
+        <column name="ITEM_ID" index="IG_BOOK_AWSET_I"/>
+      </key>
+      <element type="string">
+        <column name="VALUE"/>
+      </element>      
+    </set>    
+  </class>
+</hibernate-mapping>
+<!-- **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY * DO NOT EDIT ANYTHING BELOW THIS LINE *** -->
+<!-- SYegcADEetCZMYDnBTaFaA== -->

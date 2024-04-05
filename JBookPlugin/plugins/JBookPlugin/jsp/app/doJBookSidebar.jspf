@@ -1,0 +1,18 @@
+<jalios:appSidebar css="no-focus" icon="jcmsplugin-jbook-app" iconTitleProp="jcmsplugin.jbook.app.title" >
+
+<%-- Search --%>
+<jalios:appSidebarSectionSearch ajaxRefresh="true" inputName="text" value="<%=appHandler.getText() %>"/>
+
+
+<%-- ADD New Book --%>
+
+<jalios:appSidebarSection name="actions">
+
+<%if (appHandler.showAddBook()) { %>
+
+<a href="<%= appHandler.getAddBookUrl()%> " class="btn btn-default app-sidebar-button modal"><jalios:icon src="add"/> <%= glp("jcmsplugin.jbook.app.catalog.btn.add-book")%></a>
+
+<%} %>
+</jalios:appSidebarSection>
+
+</jalios:appSidebar>

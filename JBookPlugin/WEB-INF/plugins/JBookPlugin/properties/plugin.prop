@@ -16,3 +16,15 @@
 
 # LESS
 #channel.less.plugins/${pluginName}Plugin/css/plugin.css:    plugins/${pluginName}Plugin/css/plugin.less
+
+# pour permettre JPlatform 10 de fournir un moyen simple de générer automatiquement un raccourci
+
+#Icon
+icon.jcmsplugin-jbook-app: glyph: icomoon-book3
+
+# Shortcut
+shortcut.jcmsplugin.jbook.icon: plugins/JBookPlugin/images/jbook48.png
+shortcut.jcmsplugin.jbook.link: plugins/JBookPlugin/jsp/app/jbook.jsp
+
+# LESS/CSS 
+channel.less.plugins/JBookPlugin/css/jbook.css: plugins/JBookPlugin/css/jbook.less

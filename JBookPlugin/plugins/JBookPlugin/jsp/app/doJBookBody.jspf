@@ -1,0 +1,35 @@
+<%
+QueryResultSet queryResultSet = appHandler.getResultSet();
+%>
+
+<jalios:pager name='pagerHandler' declare='true' action='init'
+                size='<%= queryResultSet.getResultSize() %>'
+                pageSize='12'
+                pageSizes='12,24,36,60'
+                sizeAccurate='<%= queryResultSet.isTotalAccurate()  %>'
+                sort='<%= appHandler.getSort() %>'
+                />
+
+<div class="catalog">
+
+  <%-- No results --%>
+  <% if (appHandler.showNoResults()) { %>
+  <jalios:appBodyNoResult />
+
+  <%-- Display Catalog --%>
+  <% } else { %>
+
+    <%-- Cards --%>
+    <jalios:cards>
+      <jalios:foreach collection="<%= appHandler.getSortedResultSet() %>" name="book" type="Book"
+                      skip="<%= pagerHandler.getStart()%>"
+                      max="<%= pagerHandler.getPageSize() %>">
+      <jalios:cardData data="<%= book %>" />
+      </jalios:foreach>
+
+    </jalios:cards>
+
+    <jalios:pager name="pagerHandler" />
+
+  <% } %>
+</div>

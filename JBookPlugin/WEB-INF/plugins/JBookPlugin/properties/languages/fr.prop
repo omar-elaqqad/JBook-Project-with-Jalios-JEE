@@ -1,0 +1,8 @@
+data.$id.shortcut.jcmsplugin.jbook.title: JBook
+data.$id.shortcut.jcmsplugin.jbook.text: Catalogue des livres empruntables.
+
+#
+jcmsplugin.jbook.app.catalog.title: Livres à emprunter
+
+#le button
+jcmsplugin.jbook.app.catalog.btn.add-book : Ajouter un livre

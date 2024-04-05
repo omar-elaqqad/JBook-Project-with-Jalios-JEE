@@ -104,3 +104,6 @@
 /PortletBookmarks_HANDLER.class
 /PortletWorkspaceBookmarks.class
 /PortletWorkspaceBookmarks_HANDLER.class
+/Book.class
+/BookRevision.class
+/EditBookHandler.class
