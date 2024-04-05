@@ -1,0 +1,27 @@
+
+<%-- Experts --%>
+<% if (cat != null && Util.isEmpty(memberSet)) { %>
+  <jalios:message msg='<%= glp("jcmsplugin.esn.expert-dir.msg.no-expert." + memberUsage, cat.getName(userLang)) %>' dismissable="false" title="" />
+<% } else { %>
+  <% if (cat != null) { %>
+    <p class="result-count">
+    <%= cat.getName(userLang) %> - <%= glp("jcmsplugin.esn.expert-dir.lbl.expert-count", memberSet.size()) %>
+    </p>
+  <% } %>
+  <div class="member-view">
+    <ul class="nav nav-pills br">
+      <li<%= "card".equals(view) ? " class='active'" : "" %>><a href='<%= ServletUtil.getUrlWithUpdatedParam(request, "view", "card") %>' class="ajax-refresh"><jalios:icon src="card-view" /> <%= glp("jcmsplugin.esn.lbl.connections.card") %></a></li>
+      <li<%= "list".equals(view) ? " class='active'" : "" %>><a href='<%= ServletUtil.getUrlWithUpdatedParam(request, "view", "list") %>' class="ajax-refresh"><jalios:icon src="list-view" /> <%= glp("jcmsplugin.esn.lbl.connections.list") %></a></li>
+      <% if (com.jalios.jcmsplugin.esn.ESNManager.getInstance().canAccessExpertDirectoryCSVExport(loggedMember)) { %>
+      <li><a href="<%= csvUrl %>"><jalios:icon src="csv" /> <%= glp("jcmsplugin.esn.lbl.connections.csv") %></a></li>
+      <% } %>
+      <jalios:include target="FRONT_MEMBER_TAB_MENU" targetContext="li"/>
+    </ul>
+    <% if ("card".equals(view)){ %>
+      <%@ include file="/plugins/ESNPlugin/jsp/common/doExpertCards.jspf" %>
+    <% } else if ("list".equals(view)) { %>
+      <% int memberPageSize = 10; %> 
+      <%@ include file="/front/doMemberList.jspf" %>
+    <% } %>
+  </div>
+<% } %>

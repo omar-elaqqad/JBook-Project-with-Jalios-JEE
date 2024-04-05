@@ -1,0 +1,130 @@
+jcmsplugin.dbpoll.btn.vote:            I vote
+jcmsplugin.dbpoll.btn.delete-vote:     Delete my vote
+jcmsplugin.dbpoll.btn.access-the-app:  Access the application
+jcmsplugin.dbpoll.lbl.vote:            Vote
+jcmsplugin.dbpoll.lbl.open:            Open this poll
+jcmsplugin.dbpoll.lbl.close:           Close this poll
+jcmsplugin.dbpoll.lbl.show-result:     Show results
+jcmsplugin.dbpoll.lbl.vote-cnt:        {0,choice,0#0 votes|1#1 vote|2#{0,number,integer} votes}
+jcmsplugin.dbpoll.lbl.dates:           Poll from {0} to {1}
+jcmsplugin.dbpoll.lbl.all-polls:       All the polls
+jcmsplugin.dbpoll.lbl.all-polls-ws:    All the polls in {0}
+jcmsplugin.dbpoll.lbl.view-all-polls:  View all the polls
+jcmsplugin.dbpoll.lbl.view-all-polls-ws:  View all the polls in the current workspace
+jcmsplugin.dbpoll.lbl.vote-title:      Vote for {0}
+jcmsplugin.dbpoll.lbl.create-poll:     Publish a new poll
+jcmsplugin.dbpoll.msg.option-change:   You cannot change the poll options since some users have already voted for the current options.
+jcmsplugin.dbpoll.msg.already-voted:   You have already voted for this poll.
+jcmsplugin.dbpoll.msg.no-vote:         You have not yet voted for this poll.
+jcmsplugin.dbpoll.msg.no-result:       This poll hasn't received any votes yet.
+jcmsplugin.dbpoll.msg.choose-option:   You have to choose an option to vote.
+jcmsplugin.dbpoll.msg.closed-poll:     This poll is closed, you cannot vote.
+jcmsplugin.dbpoll.msg.poll-loop:       You can not put a poll on its own description.
+
+jcmsplugin.dbpoll.modal.step1:         Poll options
+jcmsplugin.dbpoll.modal.step2:         Recommend the poll
+jcmsplugin.dbpoll.modal.btn.publish:   Publish
+jcmsplugin.dbpoll.modal.btn.publish.alt:  Publish the poll
+jcmsplugin.dbpoll.modal.btn.next.alt:  Publish the poll and recommend it...
+jcmsplugin.dbpoll.modal.success-info:  Your poll has been created and can be accessed here: {0}
+
+jcmsplugin.dbpoll.publish-menu.add-poll: Poll
+
+jcmsplugin.dbpoll.cs.options:  Please add at least two options for this poll
+jcmsplugin.dbpoll.cs.optionsml:  Please add at least two options for this poll (in {0})
+
+jcmsplugin.dbpoll.search.placeholder: Search a poll...
+
+jcmsplugin.dbpoll.app.sidebar-icon-title: Go to homepage of DBPoll
+
+jcmsplugin.dbpoll.app.no-result-welcome: Welcome to the Polls app
+
+jcmsplugin.dbpoll.app.catalog.title: Polls
+jcmsplugin.dbpoll.app.catalog.root: Home
+jcmsplugin.dbpoll.app.catalog.btn.add-poll: Add a poll
+jcmsplugin.dbpoll.app.catalog.polls-number: {0} {0,choice,0#|1#poll|2#polls}
+
+jcmsplugin.dbpoll.app.card.closed-poll: Completed poll
+
+jcmsplugin.dbpoll.app.filter.status.all: All polls
+jcmsplugin.dbpoll.app.filter.status.opened: Ongoing polls
+jcmsplugin.dbpoll.app.filter.status.closed: Completed polls
+jcmsplugin.dbpoll.app.filter.mbr:        Added by...
+jcmsplugin.dbpoll.app.filter.begin-date: Added after...
+jcmsplugin.dbpoll.app.filter.end-date:   Added before...
+jcmsplugin.dbpoll.app.filter.workspace:  Added in workspace...
+
+# ------------------------------------------------------------
+#  Unified insert
+# ------------------------------------------------------------
+unified-insert.items.poll: Poll
+unified-insert.items.poll.longtitle: A poll
+unified-insert.items.poll.subtitle:
+
+# ------------------------------------------------------------
+#  Smartphone
+# ------------------------------------------------------------
+jcmsplugin.smartphone.dbpoll: Polls
+jcmsplugin.smartphone.dbpoll.navbar.opened: Ongoing polls
+jcmsplugin.smartphone.dbpoll.navbar.closed: Completed polls
+
+# ------------------------------------------------------------
+#  Recommendation
+# ------------------------------------------------------------
+alert.name.recommendation.dbpoll-recommendation:                      Invitation to complete the poll
+alert.msg.recommendation.dbpoll-recommendation.title:                 Invitation to complete the poll: {data}
+alert.msg.recommendation.dbpoll-recommendation.short-description:     {author} has invited you to complete the poll {data}. {data.url}
+alert.msg.recommendation.dbpoll-recommendation.description:           <p>{author} has invited you to complete the poll {data}.</p>
+jcmsplugin.dbpoll.recommendation.Poll:                                Invite members to complete the poll: {0}
+
+# ------------------------------------------------------------
+#  ESN
+# ------------------------------------------------------------
+jcmsplugin.esn.activity.form-tab.poll: Poll
+
+# ------------------------------------------------------------
+#  Shortcuts
+# ------------------------------------------------------------
+data.$id.shortcut.jcmsplugin.dbpoll.title: Polls
+data.$id.shortcut.jcmsplugin.dbpoll.text: Polls handling application
+
+# ------------------------------------------------------------
+#  Plugin label and description
+# ------------------------------------------------------------
+plugin.DBPollPlugin.label: Poll Plugin
+plugin.DBPollPlugin.description: This plugin lets you create simple polls. Polls are displayed through the Portlet Poll. Votes are stored in the RDBMS.
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From Poll.xml
+types.Poll.title.description: Poll title
+types.Poll.fields.description.label: Description
+types.Poll.label: Poll
+types.Poll.fields.options.description: The options to vote on.
+types.Poll.fields.description.description: A short description of the poll (appears between the question and the options)
+types.Poll.description: A mini poll with a single question
+types.Poll.fields.options.label: Options
+types.Poll.title.label: Title
+types.Poll.fields.image.label: Image
+types.Poll.fields.image.description: An optional image for the description of this poll.
+types.Poll.fields.closed.label: Close the poll
+types.Poll.fields.closed.onLabel: Yes
+types.Poll.fields.closed.offLabel: No
+types.Poll.fields.closed.description: Should the poll be closed ?
+
+# From PortletPoll.xml
+types.PortletPoll.fields.refineWorkspace.labelList: Display the last poll from the Workspace|Display the last poll from all Workspaces
+types.PortletPoll.fields.poll.label: Poll
+types.PortletPoll.title.description: Title
+types.PortletPoll.description: This portlet displays a poll, then the current results once voting is complete.
+types.PortletPoll.fields.poll.description: The poll to be displayed (if none, displays the last published poll)
+types.PortletPoll.fields.refineWorkspace.description: Display the last poll from the current workspace or from all workspaces.
+types.PortletPoll.label: Poll Portlet
+types.PortletPoll.title.label: Title
+types.PortletPoll.fields.refineWorkspace.label: Refine
+types.PortletPoll.fields.hideWhenNoResults.label: Hide the portlet if no poll
+types.PortletPoll.fields.hideWhenNoResults.onLabel: Yes
+types.PortletPoll.fields.hideWhenNoResults.offLabel: No
+types.PortletPoll.fields.hideWhenNoResults.description: If there is no poll to display, then hide the portlet.

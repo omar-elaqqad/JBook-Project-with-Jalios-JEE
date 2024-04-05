@@ -1,0 +1,130 @@
+jcmsplugin.dbpoll.btn.vote:            Ich stimme ab
+jcmsplugin.dbpoll.btn.delete-vote:     Meine Stimme löschen
+jcmsplugin.dbpoll.lbl.vote:            Abstimmen
+jcmsplugin.dbpoll.lbl.open:            Diese Umfrage öffnen
+jcmsplugin.dbpoll.lbl.close:           Diese Umfrage schließen
+jcmsplugin.dbpoll.lbl.show-result:     Ergebnisse anzeigen
+jcmsplugin.dbpoll.lbl.vote-cnt:        {0,choice,0#0 Stimmen|1#1 Stimme|2#{0,number,integer} Stimmen}
+jcmsplugin.dbpoll.lbl.dates:           Umfrage vom {0} bis zum {1}
+jcmsplugin.dbpoll.lbl.all-polls:       Alle Umfragen
+jcmsplugin.dbpoll.lbl.all-polls-ws:    Alle Umfragen in {0}
+jcmsplugin.dbpoll.lbl.view-all-polls:  Alle Umfragen anzeigen
+jcmsplugin.dbpoll.lbl.view-all-polls-ws:  Alle Umfragen im aktuellen Arbeitsbereich anzeigen
+jcmsplugin.dbpoll.lbl.vote-title:      Stimmen Sie für {0}
+jcmsplugin.dbpoll.lbl.no-poll:         Keine Umfrage
+jcmsplugin.dbpoll.lbl.create-poll:     Neue Umfrage veröffentlichen
+jcmsplugin.dbpoll.msg.option-change:   Sie können die Umfrageoptionen nicht ändern, da einige Benutzer bereits für die aktuellen Optionen gestimmt haben.
+jcmsplugin.dbpoll.msg.already-voted:   Sie haben an dieser Umfrage bereits teilgenommen.
+jcmsplugin.dbpoll.msg.no-vote:         Sie haben noch nicht an dieser Umfrage teilgenommen.
+jcmsplugin.dbpoll.msg.no-result:       In dieser Umfrage wurde noch keine Stimme abgegeben.
+jcmsplugin.dbpoll.msg.choose-option:   Sie müssen eine Option wählen, um abzustimmen.
+jcmsplugin.dbpoll.msg.closed-poll:     Diese Umfrage ist geschlossen, Sie können nicht abstimmen.
+jcmsplugin.dbpoll.msg.poll-loop:       Sie können keine Umfrage in ihre eigene Beschreibung einfügen.
+
+jcmsplugin.dbpoll.modal.step1:         Umfrageoptionen
+jcmsplugin.dbpoll.modal.step2:         Umfrage empfehlen
+jcmsplugin.dbpoll.modal.btn.publish:   Veröffentlichen
+jcmsplugin.dbpoll.modal.btn.publish.alt:  Umfrage veröffentlichen
+jcmsplugin.dbpoll.modal.btn.next.alt:  Umfrage veröffentlichen und empfehlen …
+jcmsplugin.dbpoll.modal.success-info:  Ihre Umfrage wurde erstellt und kann hier abgerufen werden: {0}
+
+jcmsplugin.dbpoll.publish-menu.add-poll: Umfrage
+
+jcmsplugin.dbpoll.cs.options:  Bitte fügen Sie in dieser Umfrage mindestens zwei Optionen ein
+jcmsplugin.dbpoll.cs.optionsml:  Bitte fügen Sie in dieser Umfrage (in {0}) mindestens zwei Optionen ein
+
+jcmsplugin.dbpoll.search.placeholder: Eine Umfrage durchsuchen …
+
+jcmsplugin.dbpoll.app.sidebar-icon-title: Auf DBPoll-Startseite wechseln
+
+jcmsplugin.dbpoll.app.no-result-welcome: Willkommen bei der Abstimmungen-App
+
+jcmsplugin.dbpoll.app.catalog.title: Umfragen
+jcmsplugin.dbpoll.app.catalog.root: Startseite
+jcmsplugin.dbpoll.app.catalog.btn.add-poll: Eine Umfrage hinzufügen
+jcmsplugin.dbpoll.app.catalog.polls-number: {0} {0,choice,0#|1#Umfrage|2#Umfragen}
+
+jcmsplugin.dbpoll.app.card.closed-poll: Abgeschlossene Umfrage
+
+jcmsplugin.dbpoll.app.filter.status.all: Alle Umfragen
+jcmsplugin.dbpoll.app.filter.status.opened: Offene Umfragen
+jcmsplugin.dbpoll.app.filter.status.closed: Abgeschlossene Umfragen
+jcmsplugin.dbpoll.app.filter.mbr:        Hinzugefügt von …
+jcmsplugin.dbpoll.app.filter.begin-date: Hinzugefügt nach …
+jcmsplugin.dbpoll.app.filter.end-date:   Hinzugefügt vor …
+jcmsplugin.dbpoll.app.filter.workspace:  Im Arbeitsbereich hinzugefügt …
+
+# ------------------------------------------------------------
+#  Unified insert
+# ------------------------------------------------------------
+unified-insert.items.poll: Umfrage
+unified-insert.items.poll.longtitle: Eine Umfrage
+unified-insert.items.poll.subtitle:
+
+# ------------------------------------------------------------
+#  Smartphone
+# ------------------------------------------------------------
+jcmsplugin.smartphone.dbpoll: Umfragen
+jcmsplugin.smartphone.dbpoll.navbar.opened: Offene Umfragen
+jcmsplugin.smartphone.dbpoll.navbar.closed: Abgeschlossene Umfragen
+
+# ------------------------------------------------------------
+#  Recommendation
+# ------------------------------------------------------------
+alert.name.recommendation.dbpoll-recommendation:                      Einladung zur Teilnahme an der Umfrage
+alert.msg.recommendation.dbpoll-recommendation.title:                 Einladung zur Teilnahme an der Umfrage: {data}
+alert.msg.recommendation.dbpoll-recommendation.short-description:     {author} hat Sie zur Teilnahme an der Umfrage {data} eingeladen. {data.url}
+alert.msg.recommendation.dbpoll-recommendation.description:           <p>{author} hat Sie zur Teilnahme an der Umfrage {data} eingeladen.</p>
+jcmsplugin.dbpoll.recommendation.Poll:                                Mitglieder einladen, um Umfrage abzuschließen: {0}
+
+# ------------------------------------------------------------
+#  ESN
+# ------------------------------------------------------------
+jcmsplugin.esn.activity.form-tab.poll: Umfrage
+
+# ------------------------------------------------------------
+#  Shortcuts
+# ------------------------------------------------------------
+data.$id.shortcut.jcmsplugin.dbpoll.title: Umfragen
+data.$id.shortcut.jcmsplugin.dbpoll.text: Anwendung für die Umfragenverwaltung
+
+# ------------------------------------------------------------
+#  Plugin label and description
+# ------------------------------------------------------------
+plugin.DBPollPlugin.label: Umfragen-Plugin
+plugin.DBPollPlugin.description: Mit diesem Plug-in können Sie einfache Umfragen erstellen. Umfragen werden über das Umfragen-Portlet angezeigt. Stimmen werden im RDBMS gespeichert.
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From Poll.xml
+types.Poll.title.description: Umfragentitel
+types.Poll.fields.description.label: Beschreibung
+types.Poll.label: Umfrage
+types.Poll.fields.options.description: Die zur Abstimmungen stehenden Optionen.
+types.Poll.fields.description.description: Eine kurze Beschreibung der Umfrage (erscheint zwischen Frage und den Optionen)
+types.Poll.description: Eine Mini-Umfrage mit einer einzigen Frage
+types.Poll.fields.options.label: Optionen
+types.Poll.title.label: Titel
+types.Poll.fields.image.label: Bild
+types.Poll.fields.image.description: Ein optionales Bild für die Beschreibung dieser Umfrage.
+types.Poll.fields.closed.label: Die Umfrage schließen
+types.Poll.fields.closed.onLabel: Ja
+types.Poll.fields.closed.offLabel: Nein
+types.Poll.fields.closed.description: Sollte die Umfrage geschlossen werden?
+
+# From PortletPoll.xml
+types.PortletPoll.fields.refineWorkspace.labelList: Anzeige der letzten Umfrage aus dem Arbeitsbereich|Anzeige der letzten Umfrage aus allen Arbeitsbereichen
+types.PortletPoll.fields.poll.label: Umfrage
+types.PortletPoll.title.description: Titel
+types.PortletPoll.description: Dieses Portlet zeigt eine Umfrage an, dann die aktuellen Ergebnisse, sobald die Abstimmung abgeschlossen ist.
+types.PortletPoll.fields.poll.description: Die anzuzeigende Umfrage (falls keine vorhanden, wird die letzte veröffentlichte Umfrage angezeigt)
+types.PortletPoll.fields.refineWorkspace.description: Anzeige der letzten Abstimmung aus dem aktuellen Arbeitsbereich oder aus allen Arbeitsbereichen.
+types.PortletPoll.label: Umfragen-Portlet
+types.PortletPoll.title.label: Titel
+types.PortletPoll.fields.refineWorkspace.label: Einschränken
+types.PortletPoll.fields.hideWhenNoResults.label: Portlet verbergen, falls keine Umfrage
+types.PortletPoll.fields.hideWhenNoResults.onLabel: Ja
+types.PortletPoll.fields.hideWhenNoResults.offLabel: Nein
+types.PortletPoll.fields.hideWhenNoResults.description: Wenn es keine Umfrage zum Anzeigen gibt, wird das Portlet ausgeblendet.

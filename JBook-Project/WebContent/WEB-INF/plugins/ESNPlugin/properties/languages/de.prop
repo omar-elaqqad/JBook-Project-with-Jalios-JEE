@@ -1,0 +1,722 @@
+jcmsplugin.esn.categories:                    Zweig der Fähigkeitenkategorie
+jcmsplugin.esn.categories.help:               Definieren Sie eine Kategoriekennung oder eine mit Leerzeichen getrennte ID-Liste.
+$id.jcmsplugin.esn.profile.portal:            Portal zur Anzeige der Mitgliederprofile (Altes Profil)
+jcmsplugin.esn.microblogging.Workspace:       Standard-Arbeitsbereich für MicroBlogging
+
+jcmsplugin.esn.connection-request.enabled:    Bestätigung der Verbindung
+jcmsplugin.esn.connection-request.decline-alert.enabled: Eine Benachrichtigung bei abgelehnter Mitgliedsanmeldung senden.
+
+jcmsplugin.esn.follower-notification:         Über neue Follower benachrichtigen
+jcmsplugin.esn.graphviz.dot.exe:              Graphviz "dot" Pfad
+jcmsplugin.esn.graphviz.dot.exe.help:         Graphviz erzeugt einen Beziehungsgraphen auf Mitgliedsprofile. Pfad zum "dot". Als Beispiel für Windows ist es: „C:&#92;Programme&#92;Graphviz2.22&#92;bin&#92;dot.exe".
+
+jcmsplugin.esn.external-contacts:             Externe Kontakte
+
+jcmsplugin.esn.map-service:                   Kartendienst
+
+jcmsplugin.esn.contact-referrers.qs:          Suche nach Referrer-Veröffentlichungen
+
+jcmsplugin.esn.mbr-extended-search-limit:      Erweiterte Mitgliedersuche – Auslösergrenzwert
+jcmsplugin.esn.mbr-extended-search-limit.help: Die erweiterte Mitgliedersuche (mit ESN-Informationen) wird ausgelöst, wenn die Standard-Mitgliedersuche weniger Ergebnisse als den Grenzwert ergeben hat.
+
+jcmsplugin.esn.agreement.required:            Allgemeine Geschäftsbedingungen für ESN annehmen
+jcmsplugin.esn.agreement.terms.pub:           ESN – Allgemeine Geschäftsbedingungen – Veröffentlichung
+jcmsplugin.esn.agreement.terms.field:         ESN – Allgemeine Geschäftsbedingungen – Feld
+jcmsplugin.esn.agreement.btn.agree:           Ich akzeptiere
+jcmsplugin.esn.agreement.btn.disagree:        Ich lehne ab
+
+jcmsplugin.esn.group-expertise.assignment:    Gruppenzuweisung zu Fachgebieten
+
+ui.com.lbl.guest: Gast
+jcmsplugin.esn.panel-toggle-show: Öffnen
+jcmsplugin.esn.panel-toggle-hide: Schließen
+jcmsplugin.esn.profile.see-photo: Größeres Profilfoto anzeigen
+jcmsplugin.esn.profile.action.open-action-menu: Aktionsmenü öffnen
+jcmsplugin.esn.profile.action.create-event-with: Zu einem Ereignis einladen …
+jcmsplugin.esn.profile.action.change-photo: Foto ändern …
+jcmsplugin.esn.profile.action.change-photo.me: Mein Foto ändern …
+jcmsplugin.esn.profile.lbl.goto-calendar:     Kalender anzeigen
+jcmsplugin.esn.profile.lbl.disabled-account:  Deaktiviertes Konto
+jcmsplugin.esn.profile.lbl.disabled-guest-account: Deaktivierter Gast
+jcmsplugin.esn.profile.lbl.ws-role.admin:     {0} leitet:
+jcmsplugin.esn.profile.lbl.ws-role.worker:    {0} ist Mitglied:
+jcmsplugin.esn.profile.lbl.ws-role.reader:    {0} nimmt teil an:
+jcmsplugin.esn.profile.lbl.ws-role.me.admin:  Sie leiten:
+jcmsplugin.esn.profile.lbl.ws-role.me.worker: Sie tragen bei in:
+jcmsplugin.esn.profile.lbl.ws-role.me.reader: Sie nehmen teil an:
+jcmsplugin.esn.profile.tab.access:            Zugriff
+jcmsplugin.esn.profile.tab.activity:          Aktivität
+jcmsplugin.esn.profile.tab.calendar:        Kalender
+jcmsplugin.esn.profile.tab.communities:       Communitys
+jcmsplugin.esn.profile.tab.connections:       Verbindungen
+jcmsplugin.esn.profile.tab.contacts:          Verbindungen
+jcmsplugin.esn.profile.tab.cv:                CV
+jcmsplugin.esn.profile.tab.expertises:        Kompetenzen
+jcmsplugin.esn.profile.tab.info:              Info
+jcmsplugin.esn.profile.tab.invitations:       Einladungen
+jcmsplugin.esn.profile.tab.profil:            Profil
+jcmsplugin.esn.profile.tab.resume:            Zusammenfassung
+jcmsplugin.esn.profile-edit.tab.info:         Info
+jcmsplugin.esn.profile-edit.tab.expertises:   Kompetenzen
+jcmsplugin.esn.profile-edit.tab.account:      Zugriff
+jcmsplugin.esn.profile-edit.tab.alert:        Benachrichtigungen
+jcmsplugin.esn.profile-edit.tab.notification: Abonnement
+
+jcmsplugin.esn.lbl.status:                    Nachricht
+jcmsplugin.esn.lbl.status-info:               Nachricht aktualisiert {0}
+jcmsplugin.esn.lbl.last-connection:           Letzte Verbindung
+jcmsplugin.esn.lbl.online:                    Online
+jcmsplugin.esn.lbl.offline:                   Offline
+jcmsplugin.esn.lbl.interest:                  Interessensgebiete
+jcmsplugin.esn.lbl.introduction:              Präsentation
+jcmsplugin.esn.lbl.external-contact:          Externer Kontakt
+jcmsplugin.esn.lbl.activity:                  Aktivität
+jcmsplugin.esn.lbl.network-activity:          Meine Netzwerkaktivitäten
+jcmsplugin.esn.lbl.categories:                Kompetenzen
+jcmsplugin.esn.lbl.categories.add:            Fähigkeit hinzufügen
+jcmsplugin.esn.lbl.categories.placeholder.search: Eine Fähigkeit suchen …
+jcmsplugin.esn.lbl.calendar:                  Kalender
+jcmsplugin.esn.lbl.publications:              Letzte Veröffentlichungen
+jcmsplugin.esn.lbl.jobs:                      Berufliche Erfahrung
+jcmsplugin.esn.lbl.jobs.add:                  Position hinzufügen
+jcmsplugin.esn.lbl.jobs.add.error.date:       Startdatum muss vor Enddatum liegen.
+jcmsplugin.esn.lbl.educations:                Fort- und Weiterbildungen
+jcmsplugin.esn.lbl.educations.add:            Ausbildung hinzufügen
+jcmsplugin.esn.lbl.vcard:                     Importieren nach Outlook …
+jcmsplugin.esn.lbl.contact-referrers:         Referrer-Veröffentlichungen
+jcmsplugin.esn.lbl.comment-count:             {0,choice,1#Anzeigen des {0} Kommentars |2#Anzeige der {0} Kommentare}
+
+jcmsplugin.esn.lbl.info:                      Kontaktinfo
+jcmsplugin.esn.lbl.date-of-birth:             Geburtsdatum
+jcmsplugin.esn.lbl.date-of-arrival:           Ankunftsdatum
+jcmsplugin.esn.lbl.connections.suggestions:   Vorgeschlagene Kontakte
+jcmsplugin.esn.lbl.connections.suggestions.del: Diesen Vorschlag löschen
+jcmsplugin.esn.lbl.connections.suggestions.reset: Vorschläge zurücksetzen …
+jcmsplugin.esn.lbl.connections.requests:      Einladung zu Verbindungen
+jcmsplugin.esn.lbl.connections.requests.in:   Erhaltene Einladungen
+jcmsplugin.esn.lbl.connections.requests.out:  Versendete Einladungen
+jcmsplugin.esn.lbl.connections.requests.out2: Versendet
+jcmsplugin.esn.lbl.connections.requests.edit: Diese Einladung verarbeiten …
+jcmsplugin.esn.lbl.connections.requests.received: {0}, {1} hat Ihnen am {2} eine Einladung gesendet.
+jcmsplugin.esn.lbl.connections.requests.sent: {0}, Sie haben eine Einladung an {1} am {2} versendet.
+jcmsplugin.esn.lbl.connections.requests.missing: Diese Einladung existiert nicht mehr.
+jcmsplugin.esn.lbl.connections.connected:     {0} ist einer Ihrer Kontakte.
+jcmsplugin.esn.lbl.connections.recommendation:Ihren Kontakten {0} empfehlen …
+jcmsplugin.esn.lbl.connections.recommendation2:Ihrem Netzwerk empfehlen …
+jcmsplugin.esn.lbl.connections.connect-contact: {0} Mit anderen Kontakten verbinden …
+jcmsplugin.esn.lbl.connections.connect-contact2: Mit anderen Kontakten verbinden …
+jcmsplugin.esn.lbl.connections.no-link:       {0} ist aus Ihrem Verbindungsnetzwerk nicht erreichbar.
+jcmsplugin.esn.lbl.connections.add.member:    {0} Zu Ihren Kontakten hinzufügen …
+jcmsplugin.esn.lbl.connections.add.member2:   Zu Ihren Verbindungen hinzufügen …
+jcmsplugin.esn.lbl.connections.add.contact:   {0} Zu Ihren Kontakten hinzufügen
+jcmsplugin.esn.lbl.connections.add.contact2:  Zu Ihren Kontakten hinzufügen
+jcmsplugin.esn.lbl.connections:               Beziehungen
+jcmsplugin.esn.lbl.connections.common:        Ihre gemeinsamen Kontakte
+jcmsplugin.esn.lbl.connections.me:            Meine Kontakte
+jcmsplugin.esn.lbl.connections.other:         Seine/ihre anderen Kontakte
+jcmsplugin.esn.lbl.connections.all-contacts:  Alle Kontakte
+jcmsplugin.esn.lbl.connections.all:           Alle
+jcmsplugin.esn.lbl.connections.conn-type-filter.title: Nach Verbindungstyp filtern
+jcmsplugin.esn.lbl.connections.internal:      Mitglieder
+jcmsplugin.esn.lbl.connections.external:      Ansprechpartner
+jcmsplugin.esn.lbl.connections.show.me:       Alle meine Kontakte anzeigen
+jcmsplugin.esn.lbl.connections.show.other:    Alle Kontakte von {0} anzeigen
+
+jcmsplugin.esn.lbl.connections.views:         Ansichten:
+jcmsplugin.esn.lbl.connections.list:          Liste
+jcmsplugin.esn.lbl.connections.card:          Karten
+jcmsplugin.esn.lbl.connections.cloud:         Cloud
+jcmsplugin.esn.lbl.connections.csv:           CSV
+jcmsplugin.esn.lbl.connections.level:         Verbindungsebene
+jcmsplugin.esn.lbl.connections.map:           Karte
+jcmsplugin.esn.lbl.connections.map.tt.profile:Zu {0}s Profil gehen
+jcmsplugin.esn.lbl.connections.map.tt.map:    Karte auf {0} zentrieren
+
+jcmsplugin.esn.lbl.connections.new-contact:   Kontakt hinzufügen
+jcmsplugin.esn.lbl.disconnect:                Diese Verbindung entfernen …
+jcmsplugin.esn.lbl.disconnect.title:          Einen Kontakt entfernen
+jcmsplugin.esn.lbl.disconnect.contact:        {0} Aus Ihren Kontakten entfernen …
+jcmsplugin.esn.lbl.disconnect.contact2:       Aus Ihren Kontakten entfernen …
+jcmsplugin.esn.lbl.disconnect.confirm:        Möchten Sie <strong>{0}</strong> wirklich aus Ihren Kontakten entfernen?
+jcmsplugin.esn.lbl.disconnect.confirm-contact:Möchten Sie <strong>{0}</strong> wirklich aus den Kontakten von <strong>{1}</strong> entfernen?
+jcmsplugin.esn.lbl.disconnect.confirm-warn:   Warnung! Sie sind <strong>{0}</strong>s letzter Kontakt. Möchten Sie auch diesen Kontakt löschen?
+jcmsplugin.esn.lbl.disconnect.btn.disconnect: Aus meinen Kontakten entfernen
+jcmsplugin.esn.lbl.disconnect.btn.disconnect-other: Aus seinen/ihren Kontakten entfernen
+jcmsplugin.esn.lbl.disconnect.btn.delete:     Diesen Kontakt löschen
+
+jcmsplugin.esn.lbl.followings:                Follower
+jcmsplugin.esn.lbl.followers:                 Follower
+jcmsplugin.esn.lbl.follow:                    {0}s Aktivitäten folgen
+jcmsplugin.esn.lbl.follow2:                   Aktivitäten folgen
+jcmsplugin.esn.lbl.unfollow:                  {0}s Aktivitäten nicht weiter folgen
+jcmsplugin.esn.lbl.unfollow2:                 Aktivität nicht weiter folgen
+jcmsplugin.esn.lbl.contact-followers:         {0} folgt {1,choice,0#keinen Mitgliedern|1#einem Mitglied|2#{1} Mitgliedern} und {2,choice,0#kein Mitglied folgt |1#ein Mitglied folgt |2#{2} Mitglieder folgen} {0}
+
+jcmsplugin.esn.lbl.ws-role.admin:             Administrator
+jcmsplugin.esn.lbl.ws-role.worker:            Mitwirkender
+jcmsplugin.esn.lbl.ws-role.reader:            Leser
+
+jcmsplugin.esn.lbl.links.me:                  Mehr über mich …
+jcmsplugin.esn.lbl.links.other:               Weitere Informationen zu {0} …
+jcmsplugin.esn.lbl.links.intro:               Fügen Sie Links zu externen Websites hinzu, für die Sie Werbung machen möchten (Ihr Blog, Ihr Profil auf öffentlichen sozialen Netzwerken …)
+jcmsplugin.esn.lbl.links.intro.other:         Fügen Sie Links zu externen Websites hinzu, für die Werbung gemacht werden soll (einen Blog, ein Profil auf öffentlichen sozialen Netzwerken …)
+jcmsplugin.esn.lbl.links.add:                 Link hinzufügen
+
+jcmsplugin.esn.lbl.edit.me:                   Mein Profil bearbeiten
+jcmsplugin.esn.lbl.edit.other:                {0}s Profil bearbeiten
+jcmsplugin.esn.lbl.edit.other2:               Profil bearbeiten
+jcmsplugin.esn.lbl.editLabel:                 Bearbeiten
+jcmsplugin.esn.lbl.editProfile.progress:      Profil zu <strong>{0} %</strong> abgeschlossen.
+
+jcmsplugin.esn.edit-profile.title.me:         Ihr Profil
+jcmsplugin.esn.edit-profile.title.other:      {0}s Profil
+jcmsplugin.esn.edit-profile.presentation:     Präsentation
+jcmsplugin.esn.edit-profile.change-photo:     Mein Foto ändern
+
+jcmsplugin.esn.edit-expertises.title:         Fähigkeiten von {0} aktualisieren
+
+jcmsplugin.esn.add-contact.title:             Kontakt hinzufügen
+jcmsplugin.esn.add-contact.steps.0:           Prüfen
+jcmsplugin.esn.add-contact.steps.1:           Vorschläge
+jcmsplugin.esn.add-contact.steps.2:           Information
+jcmsplugin.esn.add-contact.steps.3:           Kompetenzen
+jcmsplugin.esn.add-contact.steps-intro.0:     Geben Sie den Namen und/oder die E-Mail-Adresse Ihres Kontakts ein, um zu überprüfen, ob diese Person bereits vorhanden ist.
+jcmsplugin.esn.add-contact.steps-intro.1.1:   Ein Mitglied wurde gefunden, das diesen Informationen entspricht. Stellen Sie sicher, dass es sich nicht um dieselbe Person handelt, bevor Sie eine neue Person erstellen.
+jcmsplugin.esn.add-contact.steps-intro.1.2:   Es wurden vorhandene Mitglieder gefunden, die diesen Informationen entsprechen. Stellen Sie sicher, dass der Kontakt, den Sie erstellen möchten, noch nicht existiert, bevor Sie eine neue Person erstellen.
+jcmsplugin.esn.add-contact.add-to-my-contacts:Zu meinen Kontakten hinzufügen
+jcmsplugin.esn.add-contact.view-contact:      Diesen Kontakt anzeigen
+jcmsplugin.esn.add-contact.lbl.check:         Prüfen …
+jcmsplugin.esn.add-contact.lbl.create:        Neuen Kontakt erstellen …
+jcmsplugin.esn.add-contact.lbl.wait:          Prüfung läuft …
+jcmsplugin.esn.add-contact.lbl.add:           Zu meinen Kontakten hinzufügen
+jcmsplugin.esn.add-contact.lbl.contact-added: Kontakt <b>{0}</b> wurde erstellt.
+jcmsplugin.esn.add-contact.btn.continue:      Speichern und einen weiteren Kontakt hinzufügen
+
+jcmsplugin.esn.mcr.request.title:             {0} Zu Ihrem Netzwerk hinzufügen
+jcmsplugin.esn.mcr.request.lbl.send:          Absenden
+jcmsplugin.esn.mcr.request.info.title1:       Warum sich verbinden?
+jcmsplugin.esn.mcr.request.info.content1:     Durch die Verbindung mit {0} können Sie sein/ihr <strong>vollständiges Profil</strong> einsehen und seinen/ihren <strong>Aktivitäten</strong> folgen. In ähnlicher Weise wird {0} Zugriff auf <strong>Ihr vollständiges Profil</strong> und <strong>Ihre Aktivitäten</strong> haben. Sobald die Verbindung hergestellt ist, ist eine <strong>Empfehlung</strong> von {0} gegenüber den anderen Mitgliedern Ihres Netzwerks möglich.
+jcmsplugin.esn.mcr.request.info.title2:       Wie wird eine Verbindung hergestellt?
+jcmsplugin.esn.mcr.request.info.content2:     Senden Sie einfach diese Einladung an {0}, um sich mit ihm zu verbinden. Sobald {0} Ihre Einladung annimmt, werden Sie verbunden sein.
+
+jcmsplugin.esn.mcr.request.msg: {0}, \n\nich würde Sie gerne meinen Kontakten hinzufügen.\n\n{1}\n
+
+jcmsplugin.esn.mcr.validate.title:            Einladung
+jcmsplugin.esn.mcr.validate.info:             <b>Was bedeutet diese Einladung? </b><p>{0} möchte sich gerne mit Ihnen verbinden. Durch Annehmen dieser Einladung erhalten Sie Zugriff auf {0}s <strong>vollständiges Profil</strong> und <strong>Aktivitäten</strong>. Dies ist eine gegenseitige Verbindung. Durch Annehmen erlauben Sie {0} den Zugriff auf <strong>Ihr vollständiges Profil</strong> und <strong>Ihre Aktivitäten</strong>.</p>
+jcmsplugin.esn.mcr.validate.common:           Ihre gemeinsamen Kontakte
+jcmsplugin.esn.mcr.validate.common-some:      Einige Ihrer gemeinsamen Kontakte
+jcmsplugin.esn.mcr.validate.lbl.accept:       Akzeptieren
+jcmsplugin.esn.mcr.validate.lbl.decline:      Ablehnen
+jcmsplugin.esn.mcr.validate.lbl.close:        Schließen
+jcmsplugin.esn.mcr.lbl.confirm-delete:        Möchten Sie die an <strong>{0}</strong> gesendete Einladung wirklich löschen?
+
+jcmsplugin.esn.connect-contact.title:          Kontakte verbinden
+jcmsplugin.esn.connect-contact.no-contact:     Alle Ihre Kontakte sind mit <span class="contact">{0}</span> verbunden.
+jcmsplugin.esn.connect-contact.info:           Wählen Sie die Kontakte aus, die Sie mit <span class="contact">{0}</span> verbinden möchten.
+jcmsplugin.esn.connect-contact.lbl.contacts:   Ihre Kontakte
+jcmsplugin.esn.connect-contact.lbl.connect:    Verbinden
+
+jcmsplugin.esn.activity.enabled:                 Aktivität - Tracking der Aktivitäten aktivieren
+
+jcmsplugin.esn.activity.none:                    Keine Aktivität
+jcmsplugin.esn.activity.profile.job:             {0} hat die Position <span class="message">{1}</span> hinzugefügt
+jcmsplugin.esn.activity.profile.education:       {0} hat die Ausbildung <span class="message">{1}</span> hinzugefügt
+jcmsplugin.esn.activity.profile.link:            {0} hat den Link {1} hinzugefügt
+jcmsplugin.esn.activity.profile.categories:      {0} hat Fachgebiete eingetragen
+jcmsplugin.esn.activity.profile.categories.add:  {0} hat die Fachgebiete aktualisiert: <span class="message">{1}</span>
+jcmsplugin.esn.activity.profile.categories.add-empty:  {0} hat die Fachgebiete aktualisiert
+jcmsplugin.esn.activity.profile.info:            {0} hat die Infos aktualisiert
+jcmsplugin.esn.activity.profile:                 {0} hat das Profil aktualisiert
+jcmsplugin.esn.activity.contact.profile:         {0} hat {1}s Profil aktualisiert
+jcmsplugin.esn.activity.contact.note:            {0} hat einen Hinweis zu {1} hinzugefügt
+jcmsplugin.esn.activity.connect-account:         {0} ist jetzt mit {1} verbunden
+jcmsplugin.esn.activity.connect:                 {0} hat {1} zu ihren/seinen Kontakten hinzugefügt
+jcmsplugin.esn.activity.ws:                      {0} hat sich für den Arbeitsbereich {1} angemeldet
+jcmsplugin.esn.activity.create:                  {0} hat {1} erstellt
+jcmsplugin.esn.activity.update:                  {0} hat {1} aktualisiert
+jcmsplugin.esn.activity.update-share-ws:         {0} hat {1} im Arbeitsbereich {2} geteilt 
+jcmsplugin.esn.activity.delete:                  {0} hat <span class="message">{1}</span> gelöscht
+jcmsplugin.esn.activity.create.Publication:      {0} hat {1} veröffentlicht
+jcmsplugin.esn.activity.create.Event:            {0} hat das Ereignis {1} veröffentlicht
+jcmsplugin.esn.activity.create.CalendarEvent:    {0} hat das Ereignis {1} veröffentlicht
+jcmsplugin.esn.activity.update.CalendarEvent:    {0} hat das Ereignis {1} aktualisiert
+jcmsplugin.esn.activity.update.Event:            {0} hat das Ereignis {1} aktualisiert
+jcmsplugin.esn.activity.create.Review:           {0} hat {1} rezensiert
+jcmsplugin.esn.activity.create.FileDocument:     {0} hat {1} hochgeladen
+jcmsplugin.esn.activity.create.DBComment:        {0} hat einen neuen Kommentar hinzugefügt
+jcmsplugin.esn.activity.description-full.create.DBComment:        {0} hat einen neuen Kommentar zu {1} hinzugefügt
+jcmsplugin.esn.activity.create.DBForumTopic:     {0} hat das Thema {1} gepostet
+jcmsplugin.esn.activity.create.DBPollVote:       {0} hat an der Umfrage {1} teilgenommen
+jcmsplugin.esn.activity.create.MicroBlogging:
+jcmsplugin.esn.activity.create.WebPage:          {0} hat {1} geteilt
+jcmsplugin.esn.activity.update-pstatus:          {0} hat den Status von {1} auf <span class="message">{2}</span> geändert.
+jcmsplugin.esn.activity.unzip:                   {0} hat Dateien aus einem ZIP-Archiv {1} hochgeladen
+jcmsplugin.esn.activity.lock:                    {0} hat Dokument {1} gesperrt
+jcmsplugin.esn.activity.unlock:                  {0} hat Dokument {1} freigegeben
+jcmsplugin.esn.activity.vote:                    {0} hat für {1} gestimmt
+jcmsplugin.esn.activity.filter:                  Gefilterte Aktivität
+jcmsplugin.esn.activity.see-activity:            Aktivität anzeigen
+jcmsplugin.esn.activity.hide-activity:           Aktivität verbergen
+jcmsplugin.esn.activity.delete-activity:         Diese Aktivität löschen
+jcmsplugin.esn.activity.delete-activity-ask:     Möchten Sie diese Aktivität wirklich löschen?
+jcmsplugin.esn.activity.delete-activity-ask-title:  Aktivität löschen
+jcmsplugin.esn.activity.edit-comment:            Kommentar bearbeiten
+jcmsplugin.esn.activity.options-menu-title:      Aktivitätsmenü öffnen      
+jcmsplugin.esn.activity.comment:                 Kommentieren
+jcmsplugin.esn.activity.show-comments:           Anzeigen/Verbergen {0,choice,1#des Kommentars |2# der Kommentare}
+jcmsplugin.esn.activity.show-previous-activity:   Vorherige Aktivitäten anzeigen
+jcmsplugin.esn.activity.hide-previous-activity:  Verbergen der Aktivitäten
+jcmsplugin.esn.activity.lbl.no-activity:         {0} hat noch keine Aktivität.
+jcmsplugin.esn.activity.nextpage:                Mehr anzeigen
+
+jcmsplugin.esn.activity-card.vote-action:        Gefällt mir
+jcmsplugin.esn.activity-card.menu-title:         Aktionsmenü öffnen
+jcmsplugin.esn.activity-card.menu-alt:           Aktionen
+jcmsplugin.esn.activity-card.event-attending:    {0} anwesend
+jcmsplugin.esn.activity-card.event-invited:      {0} Teilnehmer
+jcmsplugin.esn.activity-card.event.show-attendees: Teilnehmerdetails anzeigen
+jcmsplugin.esn.activity-card.comment-count-title:  Auf Kommentare zugreifen
+
+jcmsplugin.esn.activity.filter.microBlogging:    MicroBlogging
+jcmsplugin.esn.activity.filter.profile:          Aktualisierung des Profils
+jcmsplugin.esn.activity.filter.contact:          Externen Kontakt hinzufügen
+jcmsplugin.esn.activity.filter.connect:          Mitgliedsverbindungen
+jcmsplugin.esn.activity.filter.ws:               Einem Arbeitsbereich beitreten
+jcmsplugin.esn.activity.filter.create:           Daten hinzufügen
+jcmsplugin.esn.activity.filter.update:           Daten aktualisieren
+jcmsplugin.esn.activity.filter.delete:           Daten löschen
+jcmsplugin.esn.activity.filter.lock:             Dokumente sperren
+jcmsplugin.esn.activity.filter.upload:           Dokument hochladen
+jcmsplugin.esn.activity.filter.update-pstatus:   Workflow-Statusupdate
+jcmsplugin.esn.activity.filter.others:           Andere Aktivitäten
+jcmsplugin.esn.activity.filter.ws-include:       Einschränken auf …
+jcmsplugin.esn.activity.filter.ws-exclude:       Alle außer …
+
+jcmsplugin.esn.activity.filter.editor:               Aktivitätsfilter
+jcmsplugin.esn.activity.filter.editor.link:          Filter bearbeiten
+jcmsplugin.esn.activity.filter.editor.steps.0:       Aktivitätstyp
+jcmsplugin.esn.activity.filter.editor.steps.1:       Erweiterte Filterung
+jcmsplugin.esn.activity.filter.editor.steps-intro.0: Im Aktivitätsstream anzuzeigende Aktivitätstypen auswählen.
+jcmsplugin.esn.activity.filter.editor.steps-intro.1: Sie können weitere Kriterien auswählen, um den Aktivitätsstream zu filtern.
+
+jcmsplugin.esn.activity.share.remove-webpage: Andere Seite teilen
+jcmsplugin.esn.activity.share.webpage-next-image: Weiter zum nächsten Bild
+jcmsplugin.esn.activity.share.webpage-prev-image: Zum vorherigen Bild wechseln
+jcmsplugin.esn.activity.form-tab.document: Dokument
+jcmsplugin.esn.activity.form-tab.microblogging: Nachricht
+jcmsplugin.esn.activity.form-tab.webpage: Webseite
+
+icon.jcmsplugin-esn-activity-share-webpage-img-prev: Zurück
+icon.jcmsplugin-esn-activity-share-webpage-img-next: Weiter
+icon.jcmsplugin-esn-activity-share-webpage-remove: Löschen
+
+jcmsplugin.esn.lbl.communities:                  Communitys
+jcmsplugin.esn.lbl.common-communities:           Gemeinsame Communitys
+jcmsplugin.esn.lbl.communities.info:             Erstellte {0}. {1,choice,0#Keine Mitglieder|1#1 Mitglied|2#{1,number,integer} Mitglieder}. {2,choice,0#Kein Inhalt |1#1 Inhalt|2#{2,number,integer} Inhalte}.
+
+jcmsplugin.esn.status.title:            Ihre Nachricht aktualisieren
+jcmsplugin.esn.status.intro:            Geben Sie an, was Sie machen, wo Sie sind, Ihre Stimmung … ?
+jcmsplugin.esn.status.mail:             Sie können Ihr Profil per E-Mail aktualisieren, indem Sie eine Nachricht senden an
+jcmsplugin.esn.status.msg.singleton:    {0} hat bereits einen Status.
+
+jcmsplugin.esn.link.lbl.name:           Name der Website
+jcmsplugin.esn.link.lbl.url:            URL
+jcmsplugin.esn.link.lbl.description:    Beschreibung
+jcmsplugin.esn.link.msg.empty-title:    „Websitename“ muss angegeben werden.
+jcmsplugin.esn.link.msg.empty-url:      „URL" muss angegeben werden.
+jcmsplugin.esn.link.msg.bad-url:        Feld "URL" hat ein fehlerhaftes Format.
+
+jcmsplugin.esn.lbl.notes:     Notizen
+jcmsplugin.esn.lbl.notes.add: Notiz hinzufügen
+jcmsplugin.esn.lbl.notes.add-link: Notiz hinzufügen …
+
+jcmsplugin.esn.directory.lbl.view-profile:      Vollständiges Profil anzeigen
+jcmsplugin.esn.directory.lbl.expert-directory:  Expertenverzeichnis
+
+jcmsplugin.esn.directory.app.nav-competencies: Kompetenzen
+jcmsplugin.esn.directory.app.breadcrumb.root: Kompetenzen
+jcmsplugin.esn.directory.app.competence.expertise.filter.add: Nach dieser Fähigkeit filtern
+jcmsplugin.esn.directory.app.competence.expertise.filter.node.add: Nach dieser Fähigkeit filtern und Subfähigkeiten anzeigen
+jcmsplugin.esn.directory.app.competence.expertise.filter.remove: Diesen Fähigkeitenfilter entfernen
+jcmsplugin.esn.directory.app.competence.expertise.filters.add: Diese Fähigkeit zu den Filtern hinzufügen
+jcmsplugin.esn.directory.app.competence.expertise.filters.remove: Diese Fähigkeit aus den Filtern entfernen
+jcmsplugin.esn.directory.app.competence.expertise.is-in-filters: Diese Fähigkeit befindet sich in Ihren Filtern. Mit der entsprechenden Schaltfläche entfernen
+jcmsplugin.esn.directory.app.competence.expertise.node.is-in-filters: Diese Fähigkeit befindet sich in Ihren Filtern. Mit der entsprechenden Schaltfläche entfernen, um Subfähigkeiten anzuzeigen
+
+jcmsplugin.esn.directory.app.context-menu-label: Fachwissen Kontextmenü
+jcmsplugin.esn.directory.app.competence-action.add: Fachwissen hinzufügen …
+jcmsplugin.esn.directory.app.competence-action.add-sub: Fachwissen darunter hinzuzufügen …
+jcmsplugin.esn.directory.app.competence-action.add-prompt: Geben Sie die Namen des neuen Fachwissens ein (durch Kommata getrennt):
+jcmsplugin.esn.directory.app.competence-action.rename-prompt: Neuen Namen für Fachwissen eingeben
+jcmsplugin.esn.directory.app.competence-action.move-to: Verschieben nach …
+jcmsplugin.esn.directory.app.competence-action.modal.move-to.title: Verschieben nach
+jcmsplugin.esn.directory.app.competence-action.modal.move-to.op-action: Verschieben
+
+jcmsplugin.esn.expert-dir.title:                  Expertenverzeichnis
+jcmsplugin.esn.expert-dir.lbl.home:               Startseite
+jcmsplugin.esn.expert-dir.lbl.all:                Alle Experten
+jcmsplugin.esn.expert-dir.lbl.expert-count:       {0,choice,0#Keine Ergebnisse|1#{0} Ergebnis|2#{0} Ergebnisse}
+jcmsplugin.esn.expert-dir.lbl.related.connexe:    Ähnliche Fähigkeiten:
+jcmsplugin.esn.expert-dir.lbl.related.others:     Andere Fähigkeiten:
+jcmsplugin.esn.expert-dir.msg.home:               Willkommen im Expertenverzeichnis. Klicken Sie auf die linke Navigationsleiste, um die Experten für eine bestimmte Fähigkeit aufzulisten.
+jcmsplugin.esn.expert-dir.msg.no-expert.all:      Es gibt keine Ergebnisse für die Fähigkeit <i>{0}</i>.
+jcmsplugin.esn.expert-dir.msg.no-expert.account:  Es gibt keine Mitglieder in der Fähigkeit <i>{0}</i>.
+jcmsplugin.esn.expert-dir.msg.no-expert.contact:  Es gibt keine Kontakte für die Fähigkeit <i>{0}</i>.
+jcmsplugin.esn.expert-dir.lbl.expert-search:      Nach Fähigkeiten suchen
+jcmsplugin.esn.expert-dir.lbl.filter:             Filter
+jcmsplugin.esn.expert-dir.lbl.filter.info:        Klicken Sie auf die Symbole {0}, um nach einer Fähigkeit zu filtern.
+jcmsplugin.esn.expert-dir.lbl.filter.add:         Nach dieser Fähigkeit filtern
+jcmsplugin.esn.expert-dir.lbl.filter.remove:      Diesen Filter entfernen
+jcmsplugin.esn.expert-dir.lbl.edit-expertises:    Fähigkeiten verwalten
+
+jcmsplugin.esn.expertise.root-cat-forbidden:      Sie können diese Kategorie nicht löschen oder bearbeiten, da sie vom ESN-Plug-in verwendet wird, um Fähigkeiten zu speichern. Sie darf nur von einem Administrator oder autorisierten Mitglied bearbeitet oder gelöscht werden.
+jcmsplugin.esn.expertise.expertise-cat-forbidden: Diese Kategorie dient als Fähigkeit für das ESN-Plug-in. Sie wird bereits von einem anderen Mitglied verwendet. Sie darf nur von einem Administrator oder autorisierten Mitglied bearbeitet oder gelöscht werden.
+
+jcmsplugin.esn.ctxmenu.mbr.profile:  Profil anzeigen
+
+$id.jcmsplugin.esn.portlet.header:              ESN – Kopfzeile
+$id.jcmsplugin.esn.portlet.actions:             ESN – Aktionen
+$id.jcmsplugin.esn.portlet.connection-requests: ESN – Verbindungsanfragen
+$id.jcmsplugin.esn.portlet.suggestions:         ESN – Vorschläge
+$id.jcmsplugin.esn.portlet.common-connections:  ESN – Gemeinsame Kontakte
+$id.jcmsplugin.esn.portlet.connections:         ESN – Kontakte
+$id.jcmsplugin.esn.portlet.links:               ESN – Links
+$id.jcmsplugin.esn.portlet.activities:          ESN – Aktivitäten
+$id.jcmsplugin.esn.portlet.network-activities:  ESN – Netzwerkaktivitäten
+$id.jcmsplugin.esn.portlet.publications:        ESN – Veröffentlichungen
+$id.jcmsplugin.esn.portlet.calendar:            ESN – Kalender
+$id.jcmsplugin.esn.portlet.presentation:        ESN – Präsentation
+$id.jcmsplugin.esn.portlet.workspaces:          ESN – Arbeitsbereiche
+$id.jcmsplugin.esn.portlet.expertise:           ESN – Kompetenzen
+$id.jcmsplugin.esn.portlet.contact-notes:       ESN – Kontakte – Notizen
+$id.jcmsplugin.esn.portlet.contact-calendar:    ESN – Kontakte – Kalender
+$id.jcmsplugin.esn.portlet.contact-referrers:   ESN – Kontakte – Referrer
+$id.jcmsplugin.esn.portlet.contacts:            ESN – Kontakte
+$id.jcmsplugin.esn.portlet.jobs:                ESN – Positionen
+$id.jcmsplugin.esn.portlet.educations:          ESN – Ausbildung
+
+jcmsplugin.esn.portlet-mbr-status.no-mbr:       Keine Mitglieder
+
+jcmsplugin.esn.birthday.portlet.day:  {0,choice,0#Heute|1#Mogen|2#In {0} Tagen}
+jcmsplugin.esn.birthday.portlet.none: Kein Geburtstag
+jcmsplugin.esn.birthday-reminder.enabled: Geburtstagserinnerung aktivieren
+jcmsplugin.esn.birthday-happy: Alles Gute zum Geburtstag!
+
+jcmsplugin.esn.microblogging.share:               Teilen
+jcmsplugin.esn.microblogging.modify:            Aktualisieren
+jcmsplugin.esn.microblogging.label.microblogging: MicroBlogging
+jcmsplugin.esn.microblogging.menu.message:        Nachricht
+jcmsplugin.esn.microblogging.title.create-message:Nachricht veröffentlichen
+jcmsplugin.esn.microblogging.delete-confirm:      Möchten Sie Ihre letzte Nachricht löschen?
+jcmsplugin.esn.microblogging.microblogging-prompt:Was machen Sie?
+jcmsplugin.esn.microblogging.update-message:      Diese Nachricht bearbeiten
+jcmsplugin.esn.microblogging.delete-message:      Diese Nachricht löschen
+jcmsplugin.esn.microblogging.member-microblogging-title: {0}s Microblogging
+jcmsplugin.esn.microblogging.warn.existing-webpage-ws: Diese Webseite gibt es im aktuellen Arbeitsbereich bereits.
+jcmsplugin.esn.microblogging.warn.existing-webpage-ws-other: Diese Webseite wurde von {0} am {1} im Arbeitsbereich veröffentlicht: {2}.
+jcmsplugin.esn.microblogging.warn.existing-webpage-ws.btn: Zugriff auf Webseite
+jcmsplugin.esn.microblogging.warn.bad-url-format: Die angegebene URL ist ungültig.
+jcmsplugin.esn.microblogging.warn.missing-url: Bitte eine URL angeben.
+jcmsplugin.esn.microblogging.warn.missing-url-meta: Daten von der Website konnten nicht geladen werden. Sie müssen die Informationen manuell bereitstellen.
+
+jcmsplugin.esn.collaborativespace.private-home.connections: Ihre Kontakte in diesem Bereich
+
+jcmsplugin.esn.expert-directory.open-access: Zugang zum Expertenverzeichnis öffnen
+jcmsplugin.esn.expert-directory.open-access.help: Beim Expertenverzeichnis braucht der Benutzer für den Zugriff nicht angemeldet zu sein, wenn offener Zugriff aktiviert ist.
+jcmsplugin.esn.member-profile.open-access: Zugang zum Mitgliedsprofil öffnen
+jcmsplugin.esn.member-profile.open-access.help: Der Benutzer braucht für den Zugriff auf ein Mitgliederprofil nicht angemeldet zu sein, wenn offener Zugriff aktiviert ist.
+jcmsplugin.esn.member-profile.event-intro: {0} nimmt am Ereignis teil
+jcmsplugin.esn.member-profile.event-intro.me: Sie nehmen am Ereignis teil
+
+jcmsplugin.esn.contact-by-email.title: Per E-Mail kontaktieren …
+jcmsplugin.esn.contact-by-email.title2: Per E-Mail ({0}) kontaktieren …
+jcmsplugin.esn.contact-by-sms.title: Per SMS kontaktieren
+jcmsplugin.esn.contact-by-phone.title: Telefonisch kontaktieren
+jcmsplugin.esn.contact-by-other.title: Per {0} kontaktieren …
+jcmsplugin.esn.call-at-number.title: Auf {0} anrufen …
+jcmsplugin.esn.profile.contact.email: E-Mail
+jcmsplugin.esn.profile.full.contact.sms: SMS
+jcmsplugin.esn.profile.contact.webchat: WebChat
+
+# ExtraData
+extra.Category.jcmsplugin.esn.groups: ESN – Verknüpfte Gruppen
+
+# Publish Menu
+jcmsplugin.esn.publish-menu.contact:       Kontakt
+jcmsplugin.esn.publish-menu.microblogging: Nachricht
+
+# Alerts
+alert.name.jcmsplugin-esn:                      Soziales Netzwerk
+alert.name.jcmsplugin-esn.follower:             Neuer Follower
+alert.name.jcmsplugin-esn.connection:           Eine neue Verbindung hinzufügen
+alert.name.jcmsplugin-esn.connection-request:   Verbindungsanfrage
+alert.name.jcmsplugin-esn.connection-accepted:  Verbindung akzeptiert
+alert.name.jcmsplugin-esn.connection-declined:  Verbindung abgelehnt
+alert.name.jcmsplugin-esn.birthday-reminder:    Geburtstagserinnerung
+
+alert.msg.jcmsplugin-esn.follower.title:                        Neuer Follower
+alert.msg.jcmsplugin-esn.follower.short-description:            {author} verfolgt jetzt Ihre Aktivitäten.
+
+alert.msg.jcmsplugin-esn.connection.title:                      Neue Verbindung
+alert.msg.jcmsplugin-esn.connection.short-description:          {author} hat Sie zu ihren/seinen Kontakten hinzugefügt.
+
+alert.msg.jcmsplugin-esn.connection-request.title:              Einladung zur Verbindung
+alert.msg.jcmsplugin-esn.connection-request.short-description:  {author} hat Ihnen eine Einladung zur Verbindung zugesendet.
+alert.msg.jcmsplugin-esn.connection-request.description:        <p>{author} hat Ihnen eine Einladung zur Verbindung zugesendet.</p> {accept} {showProfile}
+jcmsplugin.esn.connection-request.mail:                         {0} hat Ihnen eine Einladung zur Verbindung zugesendet.
+
+alert.msg.jcmsplugin-esn.connection-accepted.title:             Einladung akzeptiert
+alert.msg.jcmsplugin-esn.connection-accepted.short-description: {author} hat Ihre Einladung angenommen. Sie sind jetzt verbunden.
+
+alert.msg.jcmsplugin-esn.connection-declined.title:             Einladung abgelehnt
+alert.msg.jcmsplugin-esn.connection-declined.short-description: {author} hat Ihre Einladung abgelehnt.
+
+alert.msg.jcmsplugin-esn.birthday-reminder.title:               Geburtstagserinnerung
+alert.msg.jcmsplugin-esn.birthday-reminder.short-description:   Nächste Geburtstage: {birthday-list}
+alert.msg.jcmsplugin-esn.birthday-reminder.description:         <p>In Kürze haben einige der Mitglieder Ihres Netzwerks Geburtstag:</p>{birthday-list}
+alert.msg.jcmsplugin-esn.birthday-reminder.txt.today:    Heute:
+alert.msg.jcmsplugin-esn.birthday-reminder.txt.tomorrow: Morgen:
+alert.msg.jcmsplugin-esn.birthday-reminder.txt.later:    In 7 Tagen ({0}):
+
+# ------------------------------------------------------------
+#  Recommendation
+# ------------------------------------------------------------
+alert.name.recommendation.esn-member-recommendation: Empfohlene Verbindung
+alert.msg.recommendation.esn-member-recommendation.title:      Empfehlung zu {data}
+alert.msg.recommendation.esn-member-recommendation.short-description: {author} empfiehlt Ihnen, {data} zu Ihren Kontakten hinzuzufügen. {recoContent}
+alert.msg.recommendation.esn-member-recommendation.description: <p>{author} empfiehlt Ihnen, {data} zu Ihren Kontakten hinzuzufügen.</p> <p>{recoContent}</p>
+alert.msg.recommendation.esn-member-recommendation.reply.short-description: {author} hat auf Ihre Empfehlung zu {data} geantwortet: {replyRecommendation} {data.url} {reply}
+alert.msg.recommendation.esn-member-recommendation.reply.description: <p>{author} hat auf Ihre Empfehlung zu {data} geantwortet: </p><hr/><p>{replyRecommendation}</p><hr/> {recoContent} {reply}
+jcmsplugin.esn.recommendation.Member: <b>{0}</b> An andere Mitgliedern empfehlen.
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From MemberCategories-templates.xml
+types.MemberCategories.templates.query.default.label: Standardvorlage
+types.MemberCategories.templates.query.default.description: Standardvorlage für diese Veröffentlichung
+types.MemberCategories.templates.full.default.label: Standardvorlage
+types.MemberCategories.templates.box.default.description: Standardvorlage für diese Veröffentlichung
+types.MemberCategories.templates.box.default.label: Standardvorlage
+types.MemberCategories.templates.edit.default.description: Standardvorlage für diese Veröffentlichung
+types.MemberCategories.templates.edit.default.label: Standardvorlage
+types.MemberCategories.templates.full.default.description: Standardvorlage für diese Veröffentlichung
+
+# From MemberCategories.xml
+types.MemberCategories.label: ESN – Kompetenzen
+types.MemberCategories.title.label: Titel
+
+# From MemberEducation-templates.xml
+types.MemberEducation.templates.query.default.description: Standardvorlage für diese Veröffentlichung
+types.MemberEducation.templates.full.default.description: Standardvorlage für diese Veröffentlichung
+types.MemberEducation.templates.full.default.label: Standardvorlage
+types.MemberEducation.templates.box.default.label: Standardvorlage
+types.MemberEducation.templates.query.default.label: Standardvorlage
+types.MemberEducation.templates.edit.default.label: Standardvorlage
+types.MemberEducation.templates.box.default.description: Standardvorlage für diese Veröffentlichung
+types.MemberEducation.templates.edit.default.description: Standardvorlage für diese Veröffentlichung
+
+# From MemberEducation.xml
+types.MemberEducation.fields.endDate.label: Enddatum
+types.MemberEducation.label: ESN – Ausbildung
+types.MemberEducation.title.label: Titel
+types.MemberEducation.fields.degree.label: Diplom
+types.MemberEducation.fields.startDate.label: Startdatum
+types.MemberEducation.fields.site.label: Website
+types.MemberEducation.fields.place.label: Standort
+types.MemberEducation.fields.trainingCenter.label: Bildungsinstitution
+types.MemberEducation.fields.description.label: Beschreibung
+
+# From MemberJob-templates.xml
+types.MemberJob.templates.box.default.description: Standardvorlage für diese Veröffentlichung
+types.MemberJob.templates.box.default.label: Standardvorlage
+types.MemberJob.templates.full.default.label: Standardvorlage
+types.MemberJob.templates.query.default.label: Standardvorlage
+types.MemberJob.templates.edit.default.description: Standardvorlage für diese Veröffentlichung
+types.MemberJob.templates.edit.default.label: Standardvorlage
+types.MemberJob.templates.full.default.description: Standardvorlage für diese Veröffentlichung
+types.MemberJob.templates.query.default.description: Standardvorlage für diese Veröffentlichung
+
+# From MemberJob.xml
+types.MemberJob.title.label: Stellenbezeichnung
+types.MemberJob.fields.startDate.label: Startdatum
+types.MemberJob.fields.place.label: Standort
+types.MemberJob.label: ESN – Job
+types.MemberJob.fields.description.label: Beschreibung
+types.MemberJob.fields.organization.label: Gesellschaft
+types.MemberJob.fields.endDate.label: Enddatum
+types.MemberJob.fields.site.label: Website
+
+# From MemberProfile-templates.xml
+types.MemberProfile.templates.edit.default.label: Standardvorlage
+types.MemberProfile.templates.box.default.label: Standardvorlage
+types.MemberProfile.templates.full.default.label: Standardvorlage
+types.MemberProfile.templates.full.default.description: Standardvorlage für diese Veröffentlichung
+types.MemberProfile.templates.fullold.default.label: Alte Standardvorlage (<6.2)
+types.MemberProfile.templates.query.default.label: Standardvorlage
+types.MemberProfile.templates.editFront.default.label: Frontoffice-Bearbeitungsvorlage.
+types.MemberProfile.templates.edit.default.description: Standardvorlage für diese Veröffentlichung
+types.MemberProfile.templates.box.default.description: Standardvorlage für diese Veröffentlichung
+types.MemberProfile.templates.query.default.description: Standardvorlage für diese Veröffentlichung
+
+# From MemberProfile.xml
+types.MemberProfile.label: ESN – Profil
+types.MemberProfile.fields.dateOfBirth.label: Geburtsdatum
+types.MemberProfile.title.label: Titel
+types.MemberProfile.fields.introduction.label: Einführung
+types.MemberProfile.fields.interest.label: Interessensgebiete
+types.MemberProfile.fields.dateOfArrival.label: Ankunftsdatum
+
+# From MicroBlogging.xml
+types.MicroBlogging.fields.text.label: Text
+types.MicroBlogging.label: MicroBlogging
+types.MicroBlogging.title.label: Titel
+
+# From PortletBirthday-templates.xml
+types.PortletBirthday.templates.box.default.label: Dashboardvorlage
+types.PortletBirthday.templates.full.default.label: Anwendungsvorlage
+
+# From PortletBirthday.xml
+types.PortletBirthday.fields.relationshipFilter.description: Nur die Mitglieder anzeigen, mit denen das angemeldete Mitglied verbunden ist?
+types.PortletBirthday.fields.relationshipFilter.onLabel: Ja
+types.PortletBirthday.fields.workspaceMembers.label: Mitglieder des Arbeitsbereichs
+types.PortletBirthday.fields.relationshipFilter.label: Auf Kontakte filtern
+types.PortletBirthday.fields.workspaceMembers.description: Nur Mitglieder des aktuellen Arbeitsbereichs anzeigen?
+types.PortletBirthday.fields.workspaceMembers.offLabel: Nein
+types.PortletBirthday.fields.workspaceMembers.onLabel: Ja
+types.PortletBirthday.label: Geburtstagsportlet
+types.PortletBirthday.fields.relationshipFilter.offLabel: Nein
+types.PortletBirthday.title.label: Titel
+types.PortletBirthday.description: Zeigt die anstehenden Geburtstage Ihrer Kontakte an
+
+# From PortletMemberActivity-templates.xml
+types.PortletMemberActivity.templates.box.default.label: Dashboardvorlage
+types.PortletMemberActivity.templates.full.default.label: Anwendungsvorlage
+types.PortletMemberActivity.templates.full.card.label: Anwendungskartenvorlage
+types.PortletMemberActivity.templates.box.card.label: Dashboardkartenvorlage
+types.PortletMemberActivity.templates.jmobile.default.label: Standardvorlage
+
+# From PortletMemberActivity.xml
+types.PortletMemberActivity.fields.activityMode.label: Angezeigte Aktivitäten
+types.PortletMemberActivity.fields.activityMode.labelList: Aktivität der gefolgten Mitglieder in allen Arbeitsbereichen | Aktivität der gefolgten Mitglieder in den Arbeitsbereichen, denen ich angehöre | Tätigkeit der Arbeitsbereiche | Tätigkeit des aktuellen Arbeitsbereichs
+types.PortletMemberActivity.fields.showComments.label: Kommentare anzeigen
+types.PortletMemberActivity.fields.showMedia.label: Medien anzeigen
+types.PortletMemberActivity.fields.filters.label: Filter
+types.PortletMemberActivity.fields.defaultPageSize.label: Anzahl der angezeigten Aktivitäten
+types.PortletMemberActivity.fields.showComments.onLabel: Ja
+types.PortletMemberActivity.fields.showMedia.onLabel: Ja
+types.PortletMemberActivity.fields.showComments.offLabel: Nein
+types.PortletMemberActivity.fields.showAbstract.onLabel: Ja
+types.PortletMemberActivity.fields.showMedia.offLabel: Nein
+types.PortletMemberActivity.fields.showAbstract.label: Abstract anzeigen
+types.PortletMemberActivity.fields.showAbstract.offLabel: Nein
+types.PortletMemberActivity.label: Mitgliedsaktivitätsportlet
+types.PortletMemberActivity.title.label: Titel
+types.PortletMemberActivity.fields.displayAllEvent.label:       Alle Kalenderereignisse anzeigen
+types.PortletMemberActivity.fields.displayAllEvent.onLabel:     Ja
+types.PortletMemberActivity.fields.displayAllEvent.offLabel:    Nein
+types.PortletMemberActivity.fields.displayAllEvent.description: Wenn „Ja“, werden alle Veranstaltungen an der Wand angezeigt (nach verfügbaren Rechten gefiltert), wenn „Nein“, werden nur Veranstaltungen mit freiwilliger Registrierung und Veranstaltungen, zu denen das Mitglied gehört, angezeigt.
+types.PortletMemberActivity.description: Zeigt Aktivitäten an
+
+# From PortletMemberProfile-templates.xml
+types.PortletMemberProfile.templates.full.default.label: Anwendungsvorlage
+types.PortletMemberProfile.templates.box.default.label: Dashboardvorlage
+
+# From PortletMemberProfile.xml
+types.PortletMemberProfile.fields.showSuggestions.offLabel: Nein
+types.PortletMemberProfile.fields.showConnectionRequests.onLabel: Ja
+types.PortletMemberProfile.label: Profilportlet
+types.PortletMemberProfile.fields.showConnectionRequests.offLabel: Nein
+types.PortletMemberProfile.fields.showSuggestions.onLabel: Ja
+types.PortletMemberProfile.fields.showConnectionRequests.label: Verbindungsanfragen anzeigen
+types.PortletMemberProfile.title.label: Titel
+types.PortletMemberProfile.fields.showSuggestions.label: Vorschläge anzeigen
+types.PortletMemberProfile.description: Zeigt das Mitgliedsprofil und seine Kontaktanfragen und -vorschläge an
+
+# From PortletMemberStatus-templates.xml
+types.PortletMemberStatus.templates.box.default.label: Dashboardvorlage
+types.PortletMemberStatus.templates.full.default.label: Anwendungsvorlage
+
+# From PortletMemberStatus.xml
+types.PortletMemberStatus.fields.workspaceMembers.description: Nur Aktivitäten der Mitglieder des aktuellen Arbeitsbereichs anzeigen?
+types.PortletMemberStatus.label: Mitgliedsstatusportlet
+types.PortletMemberStatus.fields.workspaceMembers.label: Mitglieder des Arbeitsbereichs
+types.PortletMemberStatus.fields.workspaceMembers.offLabel: Nein
+types.PortletMemberStatus.fields.workspaceMembers.onLabel: Ja
+types.PortletMemberStatus.title.label: Titel
+types.PortletMemberStatus.description: Zeigt Ihre Kontaktstatus oder den Status des Arbeitsbereichsmitglieds an
+
+# Analytics
+ui.analytics.ESNAgent.name:                         Sozial
+ui.analytics.ESNAgent.report.network:               Soziales Netzwerk
+ui.analytics.ESNAgent.report.network.h:             Dichte des sozialen Netzwerks.
+ui.analytics.ESNAgent.report.new-profile:           Neue Profile
+ui.analytics.ESNAgent.report.new-profile.h:         Neue Profile erstellt.
+ui.analytics.ESNAgent.report.account-profile-count: Kontoprofile
+ui.analytics.ESNAgent.report.contact-profile-count: Kontaktprofile
+ui.analytics.ESNAgent.report.connection-ratio:      Anmeldungsquote nach Mitglied
+ui.analytics.ESNAgent.report.follower-ratio:        Followerquote nach Mitglied
+ui.analytics.ESNAgent.report.following-ratio:       Following-Quote nach Mitglied
+ui.analytics.ESNAgent.report.activity-count:        Aktivität
+ui.analytics.ESNAgent.report.activity-count.h:      Aktivitätszähler
+ui.analytics.ESNAgent.report.activity-top:          Häufigste Aktivität 
+ui.analytics.ESNAgent.report.activity-top.h:        Übersicht der Aktivitäten
+ui.analytics.ESNAgent.report.network:               Beziehungen
+ui.analytics.ESNAgent.report.network.h:             Beziehungsquote im sozialen Netzwerk.
+ui.analytics.ESNAgent.report.new-profile:           Neue Profile
+ui.analytics.ESNAgent.report.new-profile.h:         Neue Profile erstellt.
+ui.analytics.ESNAgent.report.account-profile-count: Konto
+ui.analytics.ESNAgent.report.contact-profile-count: Kontakt
+ui.analytics.ESNAgent.report.profile-completeness:   Vollständigkeit des Profils
+ui.analytics.ESNAgent.report.profile-completeness.h: Vollständigkeit der Mitgliederprofile in Prozent.
+ui.analytics.ESNAgent.report.connection-ratio:      Durchschnittliche Beziehungen der Mitglieder
+ui.analytics.ESNAgent.report.follower-ratio:        Durchschnittliches Following der Mitglieder
+ui.analytics.ESNAgent.report.following-ratio:       Durchschnittliche Follower der Mitglieder
+ui.analytics.ESNAgent.report.microblogging-count:   MicroBlogging
+ui.analytics.ESNAgent.report.microblogging-count.h: Anzahl der gesendeten MicroBlogging-Nachrichten.
+
+ # From plugin.xml
+types.PortletMemberActivity.templates.jcmsplugin.virtualdesktop.editInline.default.label: Im virtuellen Desktop verwendete Vorlage, wenn ein Mitgliedsaktivitäts-Dienst bearbeitet wird.
+types.AbstractPortletSkinable.templates.box.esnSkin.label: ESN-Skin
+types.AbstractPortletSkinable.templates.box.esnSkin.description: Eine (CSS) abgerundete Skin
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.activity: Aktivität
+jcmsplugin.smartphone.workspace-service.PortletMemberActivity: Aktivitäten
+jcmsplugin.esn.smartphone.lbl.presentation: Präsentation
+jcmsplugin.esn.smartphone.lbl.expertises: Kompetenzen
+jcmsplugin.esn.smartphone.lbl.member.activity: Aktivität
+jcmsplugin.esn.smartphone.lbl.activity.microblogging.text.placeholder: Geben Sie hier Ihre Nachricht ein …
+jcmsplugin.esn.smartphone.lbl.activity.microblogging.add-message: Nachricht hinzufügen
+
+jcmsplugin.smartphone.shareurl.label.esn: MicroBlogging
+
+# Microblogging icon label
+jcmsplugin.esn.smartphone.microblogging.camera : Kamera
+jcmsplugin.esn.smartphone.microblogging.galery : Fotogalerie
+
+# ----------------------------------------------------------------------
+# OpenApi
+# ----------------------------------------------------------------------
+acl.resource.admin/work/canManageExpertiseCategory: ESN – Rechte zur Verwaltung von Fähigkeitskategorien
+acl.resource.plugins: Plug-ins
+acl.resource.plugins/esn: ESN
+acl.resource.plugins/esn/openapi: Offene API
+acl.resource.plugins/esn/openapi/anyActivity: Aktivitäten erstellen
+acl.resource.plugins/esn/openapi/anyActivity.h: Die Erstellung von Aktivitäten aktivieren (jedes Mitglied kann Verfasser der Aktivität sein)
+acl.resource.plugins/esn/openapi/activity: Persönliche Aktivität aktivieren
+acl.resource.plugins/esn/openapi/activity.h: Die Erstellung einer persönlichen Aktivität des Mitglieds aktivieren (das angemeldete Mitglied ist Verfasser der Aktivität)
+doc.rest.rsrc-meth.ActivityResource: GET<br/>POST<br/>DELETE
+doc.rest.rsrc-desc./plugins/esn/activities: POST-Methode: Aktivitätenliste mit folgenden Parametern: <br/> <ul><li>Mitglied: Mitglied, das zur Überprüfung der Leserechte verwendet wird (zwangsweise angemeldetes Mitglied, wenn das angemeldete Mitglied keine ACL „Aktivität erstellen“ besitzt)</li><li>Modus: eine Instanz des MemberActivityModus: <ul><li>FOLLOWED_MEMBERS</li><li>FOLLOWED_MEMBERS_WS</li><li>WORKSPACE_ACTIVITIES</li><li>MEMBER_WORKSPACE_ACTIVITIES</li><li>MEMBER_ACTIVITIES</li></ul></li><li>Arbeitsbereich: der für die Suche</li><li>MemberActivity verwendete Arbeitsbereich: Mitglied Verfasser der Aktivitäten</li><li>startActivityDate: Startdatum der Suche</li><li>Seitengröße: standardmäßig 10</li><ul>
+doc.rest.rsrc-desc./plugins/esn/activities/followedMembers/{memberId}: GET-Methode: Aktivitätenliste der Mitglieder, denen das angegebene Mitglied folgt.<br/>Das für Leserechte verwendete Mitglied ist nur dann das angegebene Mitglied, wenn das angemeldete Mitglied eine ACL „Aktivitäten erstellen“ besitzt, andernfalls ist es das angemeldete Mitglied. <br/>Die Anpassung dieses Endpunkts erfolgt über den Aktivitäten-Endpunkt.
+doc.rest.rsrc-desc./plugins/esn/activities/followedMembersWs/{memberId}:GET-Methode: Aktivitätenliste der Mitglieder, denen das angegebene Mitglied folgt, jedoch nur in den Arbeitsbereichen des Mitglieds.<br/>Das für Leserechte verwendete Mitglied ist nur dann das angegebene Mitglied, wenn das angemeldete Mitglied eine ACL „Aktivitäten erstellen“ besitzt, andernfalls ist es das angemeldete Mitglied. <br/>Die Anpassung dieses Endpunkts erfolgt über den Aktivitäten-Endpunkt.
+doc.rest.rsrc-desc./plugins/esn/activities/member/{memberId}: GET-Methode: Aktivitätenliste des angegebenen Mitglieds.<br/>Das für Leserechte verwendete Mitglied ist nur dann das angegebene Mitglied, wenn das angemeldete Mitglied eine ACL „Aktivitäten erstellen“ besitzt, andernfalls ist es das angemeldete Mitglied. <br/>Die Anpassung dieses Endpunkts erfolgt über den Aktivitäten-Endpunkt.
+doc.rest.rsrc-desc./plugins/esn/activities/memberWorspaces/{memberId}: GET-Methode: Aktivitätenliste der Arbeitsbereiche des angegebenen Mitglieds.<br/>Das für Leserechte verwendete Mitglied ist nur dann das angegebene Mitglied, wenn das angemeldete Mitglied eine ACL „Aktivitäten erstellen“ besitzt, andernfalls ist es das angemeldete Mitglied. <br/>Die Anpassung dieses Endpunkts erfolgt über den Aktivitäten-Endpunkt.
+doc.rest.rsrc-desc./plugins/esn/activities/workspace/{workspaceId}: GET-Methode: Aktivitätenliste des angegebenen Arbeitsbereichs.<br/>Das für Leserechte verwendete Mitglied ist nur dann das angegebene Mitglied, wenn das angemeldete Mitglied eine ACL „Aktivitäten erstellen“ besitzt, andererseits ist es das angemeldete Mitglied. <br/>Die Anpassung dieses Endpunkts erfolgt über den Aktivitäten-Endpunkt.
+doc.rest.rsrc-desc./plugins/esn/activity/{id}: GET-Methode: MemberActivity über id<br/> POST-Methode erhalten: Aktivität aktualisieren (mit denselben Feldern wie bei Erstellung<br/> DELETE-Methode: eine Aktivität löschen
+doc.rest.rsrc-desc./plugins/esn/activity: POST-Methode: Eine Aktivität erstellen. <br/> Parameter:<ul><li>Eigenschaft: OBLIGATORISCH – die für diese Mitglieds</li><li>aktivität verwendete Eigenschaft: OBLIGATORISCH – Mitgliedsaktivität (zwangsweise angemeldetes Mitglied wenn angemeldetes Mitglied keine ACL „Aktivität erstellen“ besitzt)</li><li>Daten: bezogen auf Aktivitätsdaten</li><li>Nachricht: weitere Nachricht </li><li>Arbeitsbereich: Aktivitäten-Arbeitsbereich (falls leer wird der Arbeitsbereich verwendet, wenn die Daten angegeben werden.)</li><ul>
+

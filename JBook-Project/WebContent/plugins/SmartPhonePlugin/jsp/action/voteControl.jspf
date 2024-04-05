@@ -1,0 +1,32 @@
+<%  
+  VoteManager voteMgr = VoteManager.getInstance();
+  
+  if (!pub.canBeReadBy(loggedMember)) {
+    return; // TODO no return in JSPF
+  }
+  
+  boolean canVote = voteMgr.canVote(pub,loggedMember);
+  Vote existingVote = voteMgr.getVote(pub,loggedMember);
+  boolean vote = getBooleanParameter("vote",false);
+  boolean cancelVote = getBooleanParameter("cancelVote",false);
+  boolean positiveVote = getBooleanParameter("positiveVote",true);
+  boolean hasVoted = existingVote != null;
+  
+  if (cancelVote && existingVote != null && (existingVote.isPositive() == positiveVote || !existingVote.isPositive() == !positiveVote)) {
+    //Cancel if it is the same vote
+    hasVoted = false;
+    pub = VoteManager.getInstance().cancelVote(pub,loggedMember);
+    existingVote = null;  
+  } else if (vote) {
+    Object[] voteResult = VoteManager.getInstance().performVote(pub,loggedMember,positiveVote);
+    if (Util.isEmpty(voteResult)) {
+      return; // TODO no return in JSPF
+    }
+    hasVoted = true;
+    pub = (Publication) voteResult[0];
+    existingVote = (Vote) voteResult[1];
+    HibernateUtil.commitTransaction();
+    HibernateUtil.beginTransaction();
+  } 
+  String params = hasVoted ? "{\"cancelVote\":\"true\",\"pubId\":\""+ pub.getId() +"\"}" : "{\"vote\":\"true\",\"pubId\":\""+ pub.getId() +"\"}";
+%>

@@ -1,0 +1,99 @@
+.activity-event-body {
+  color: #555;
+  position: relative;
+  .jcmsplugin-calendar-location{
+    float: left;
+    margin-right: 5px;
+  }
+  .activity-event-metas {
+    margin-bottom: 20px;
+  }
+  .activity-event-item {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+
+.activity-event-date-link:hover {
+  text-decoration: none;
+}
+.activity-event-attendees {
+  margin-bottom: 20px;
+  .jalios-icon {
+    color: #666;
+  }
+  .activity-event-attendees-attending {
+    color: #666;
+    &:after {
+      content: "/";
+      padding-left: 5px;
+    }
+  }
+
+  .activity-event-attendees-all {
+    color: #666;
+  }
+
+  TR TD:first-child {
+    padding-right: 5px;
+  }
+
+  .attendee-div {
+    float: left;
+    margin-right: 5px;
+  }
+}
+
+.activity-event-participate {
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
+.activity-event-date {
+  height: 80px;
+  width: 70px;
+  text-align: center;
+
+  &.activity-event-date-old .activity-event-date-header{
+    background-color: #999;
+  }
+
+  .activity-event-date-header {
+    background: #d9383c;
+    border-radius: 4px 4px 0 0;
+    color: #f9f9f9;
+    font-size: 12px;
+    line-height: 28px;
+    position: relative;
+    text-transform: lowercase;
+  }
+
+  .activity-event-date-day-name {
+    font-size: 10px;
+    line-height: 4px;
+  }
+
+  .activity-event-date-body {
+    background: #f9f9f9;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 2px #CCC;
+    color: #15181f;
+    font-size: 24px;
+    height: 45px;
+    line-height: 33px;
+  }
+}
+
+
+// ------------------------------------------------------------------- 
+//  Element queries                                             
+// ------------------------------------------------------------------- 
+
+.activity-event-body[max-width~="900px"] .activity-event-participate {
+	position: static;
+}

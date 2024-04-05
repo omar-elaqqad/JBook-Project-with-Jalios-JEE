@@ -1,0 +1,1 @@
+!function(a){a(document).ready(function(b){b(document).on("click",".btn-access-comment-tab",function(c){b(".explorer-tab-comments > A")[0].click()})})}(window.jQuery);

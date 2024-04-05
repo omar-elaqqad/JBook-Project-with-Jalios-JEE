@@ -1,0 +1,79 @@
+<%@ include file='/jcore/doInitPage.jspf' %><%--
+--%><%@ page import="com.jalios.util.EnumUtils" %><%--
+--%><%@ page import="com.jalios.jcms.HttpUtil" %><%--
+--%><%@ page import="com.jalios.jcmsplugin.smartphone.*" %><%-- 
+--%><%@ page import="com.jalios.jcmsplugin.smartphone.service.*" %><%-- 
+--%><%@ taglib uri="/jcmsplugin/SmartPhonePlugin/tld/smartphone.tld" prefix="smartphone" %><%-- 
+--%><%@ include file="/plugins/SmartPhonePlugin/jsp/common/doInitSmartPhoneWorkspace.jspf" %><%-- 
+--%><jsp:useBean id='pageDisplayHandler' scope='page' class='com.jalios.jcmsplugin.smartphone.handler.SmartPhonePageDisplayHandler'><%
+ %><jsp:setProperty name='pageDisplayHandler' property='request' value='<%= request %>' /><%
+ %><jsp:setProperty name='pageDisplayHandler' property='response' value='<%= response %>' /><%
+ %><jsp:setProperty name='pageDisplayHandler' property='*' /><%
+%></jsp:useBean><%
+
+pageDisplayHandler.validate();
+workspace = pageDisplayHandler.resolveWorkspace();
+
+SmartPhoneManager smartPhoneManager = SmartPhoneManager.getInstance();
+String csrfToken = pageDisplayHandler.getCSRFToken();
+%><%--
+--%><%@ include file='/plugins/SmartPhonePlugin/jsp/common/checkRights.jspf' %><%-- 
+--%><% if (!pageDisplayHandler.isAjaxRequest()) { %><%
+%><!doctype html>
+<html <%= JcmsUtil.getLangAttributes(userLang) %>>
+<head>
+  <title><%= channel.getName() %></title>
+  <base href="<%= ServletUtil.getBaseUrl(request) %>" />
+  
+  <jalios:include target="SMARTPHONE_HEAD_START" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, maximum-scale=1.0, user-scalable=0">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <% if (pageDisplayHandler.getBrowser().isAndroid()) { %>
+    <meta name="mobile-web-app-capable" content="yes">
+  <% } %>
+  <jalios:include target="SMARTPHONE_HEADER_TOP" />
+  <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+  <meta http-equiv="cleartype" content="on">  
+
+  <%@ include file='/plugins/SmartPhonePlugin/jsp/common/faviconMeta.jspf' %><%
+%><%@ include file='/plugins/SmartPhonePlugin/jsp/common/headerCustomization.jspf' %>
+<%
+  if (pageDisplayHandler.isCSSPackerEnabled()) { 
+    %><link rel="stylesheet" href="css/csspacker.jsp?<%= smartPhoneManager.getPackerQuery(pageDisplayHandler.getCSSMap(),"css") %>" />
+<% } else { 
+    for (String mapKey : pageDisplayHandler.getCSSMap().keySet()) {
+      %><link rel="stylesheet" href="<%= pageDisplayHandler.getCSSMap().get(mapKey) %>" />
+<%
+    }
+  }
+%>
+<% if (Util.notEmpty(request.getAttribute("customHeaderStyleContent"))) { %>
+  <style><%= request.getAttribute("customHeaderStyleContent") %></style>
+<% } %> 
+<%
+  if (pageDisplayHandler.isJSPackerEnabled()) { %>
+  <script src="js/jspacker.jsp?<%= smartPhoneManager.getPackerQuery(pageDisplayHandler.getJSMap(),"js") %>"></script>
+  <% } else { 
+    for (String mapKey : pageDisplayHandler.getJSMap().keySet()) {
+%><script src="<%= pageDisplayHandler.getJSMap().get(mapKey) %>"></script>
+<%
+    }
+  } 
+  %>
+  <!-- Startup Images for iDevices -->
+  <script>(function(){var a;if(navigator.platform==="iPad"){a=window.orientation!==90||window.orientation===-90?"plugins/SmartPhonePlugin/images/startup/startup-tablet-landscape.png":"plugins/SmartPhonePlugin/images/startup/startup-tablet-portrait.png"}else{a=window.devicePixelRatio===2?"plugins/SmartPhonePlugin/images/startup/startup-retina.png":"plugins/SmartPhonePlugin/images/startup/startup.png"}document.write('<link rel="apple-touch-startup-image" href="'+a+'"/>')})()</script>
+  <!-- The script prevents links from opening in mobile safari. https://gist.github.com/1042026 -->
+  <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+  <%@ include file="/plugins/SmartPhonePlugin/jsp/common/jalios-settings-js.jspf" %>
+  <jalios:include target="SMARTPHONE_HEAD_END" />
+</head>
+<body <%= pageDisplayHandler.getBodyAttributesAsString() %> ontouchstart="">
+  <jalios:include target="SMARTPHONE_BODY_START" />
+<div id="mobile-content-wrapper">
+  <div id="mobile-content-wrapper-inner">
+  <jalios:include target="SMARTPHONE_BODY_TOP" />
+  <jalios:include jsp="<%= smartPhoneManager.getTopbarJsp() %>" />
+  <%@ include file="/plugins/SmartPhonePlugin/jsp/common/pull-to-refresh.jspf" %>
+<% } %>

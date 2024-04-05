@@ -1,0 +1,13 @@
+<%
+if (!isLogged && !ServletUtil.getJsp(request).equals("login.jsp") ) {
+  sendRedirect("plugins/SmartPhonePlugin/jsp/core/login.jsp?redirect=" + ServletUtil.encodeURL(ServletUtil.getUrl(request, false)));
+  return;
+}
+if (Util.notEmpty(getPublicationParameter("id"))) {
+  Publication pubRights = getPublicationParameter("id");
+  if (!pubRights.canBeReadBy(loggedMember)) {
+    sendRedirect("plugins/SmartPhonePlugin/jsp/core/forbidden.jsp");
+    return;
+  }
+}
+%>

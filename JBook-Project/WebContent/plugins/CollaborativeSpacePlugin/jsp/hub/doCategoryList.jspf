@@ -1,0 +1,29 @@
+<%
+if (Util.notEmpty(categories)) {
+  int maxDefaultCategoriesCount = 2;
+  boolean showCategoryToggler = categories.length > maxDefaultCategoriesCount;
+  String options_params_categoryList = "";
+  
+  if(Util.notEmpty(searchedCids)){
+    for(String catId: searchedCids){
+      options_params_categoryList =  options_params_categoryList + "&cids=" + encodeForURL(catId);
+    }
+  }
+  %>
+  <div class="meta-cats">
+    <jalios:foreach array="<%= categories %>" name="cat" type="Category" counter="itCatCounter"><%
+      String categoryLink = CSHubHandler.APP_JSP + "?cids=" + cat.getId() + options_params_categoryList;
+      %><span class="meta-cat<%= itCatCounter > maxDefaultCategoriesCount ? " hide meta-category-toggler" : "" %>" 
+        data-jalios-action="ajax-refresh" 
+        data-jalios-ajax-refresh-url="<%= encodeForHTMLAttribute(categoryLink) %>"
+        data-jalios-ajax-refresh="isform"><%= cat.getName(userLang) %></span><%
+    %></jalios:foreach> 
+    <% if (showCategoryToggler) { %>
+    <span class="meta-cat broker meta-category-toggler js-meta-category-toggler" 
+      title="<%= encodeForHTMLAttribute(glp("ui.com.lbl.metadata.show-all-cat")) %>"
+      data-jalios-action="toggle:hide" 
+      data-jalios-target='[data-jalios-data-id="<%= itCS.getId() %>"] .meta-category-toggler' 
+      onclick="return false;">&hellip;</span>
+    <% } %>
+  </div>
+<% } %>

@@ -1,0 +1,37 @@
+<%@ include file="/front/app/doAppCommon.jspf" %><%
+%><%@ page import="com.jalios.jcms.taglib.card.CardBlockMode" %><%
+%><%@ page import="com.jalios.jcmsplugin.dbpoll.*" %><%
+%><jsp:useBean id="appHandler" scope="page" class="com.jalios.jcmsplugin.dbpoll.DBPollAppHandler"><%
+  %><jsp:setProperty name="appHandler" property="request"       value="<%= request %>"/><%
+  %><jsp:setProperty name="appHandler" property="response"      value="<%= response %>"/><%
+  %><jsp:setProperty name="appHandler" property="refineWorkspace"  value="<%= String.valueOf(refineWorkspace) %>"/><%
+  %><jsp:setProperty name="appHandler" property="*" /><%
+%></jsp:useBean><%
+
+appHandler.validate();
+
+if (!appHandler.canAccessApp()) {
+  sendForbidden(request, response);
+  return;
+}
+
+String appUrl = appHandler.getAppUrl();
+
+jcmsContext.setPageTitle(appHandler.getPageTitle());
+jcmsContext.addCSSHeader("plugins/DBPollPlugin/css/poll.css");
+%>
+<%@ include file='/jcore/doHeader.jspf' %>
+
+<jalios:app name="dbpoll">
+
+  <%-- SIDEBAR --%>
+  <%@ include file='/plugins/DBPollPlugin/jsp/app/doDBPollSidebar.jspf' %>
+
+  <%-- MAIN --%>
+  <jalios:appMain headerTitle="<%= appHandler.getAppTitle() %>">
+  <%@ include file='/plugins/DBPollPlugin/jsp/app/doDBPollBody.jspf' %>
+  </jalios:appMain>
+
+</jalios:app>
+
+<%@ include file="/jcore/doAjaxFooter.jspf" %>  

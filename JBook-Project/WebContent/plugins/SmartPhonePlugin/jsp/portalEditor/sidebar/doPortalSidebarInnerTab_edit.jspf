@@ -1,0 +1,31 @@
+<jsp:useBean id='formHandler' scope='page' class="generated.EditSmartPhonePortalHandler">
+  <jsp:setProperty name='formHandler' property='request' value='<%= request %>'/>
+  <jsp:setProperty name='formHandler' property='response' value='<%= response %>'/>
+  <jsp:setProperty name='formHandler' property='*' />
+  <jsp:setProperty name='formHandler' property='id' value="<%= portal.getId() %>" />
+  <jsp:setProperty name='formHandler' property='noRedirect' value='<%= true %>' />
+</jsp:useBean>
+<%
+request.setAttribute("field-vertical", true);
+
+if(hasParameter("portalEdition")){
+  formHandler.validate();
+}
+%>
+
+<div class="sidebar-tab-title"><%= glp("jcmsplugin.smartphone.portal.lbl.portal-parameters") %></div>
+<form>
+  <div class="portal-sidebar-group">
+    <%-- PageTitle ------------------------------------------------------------ --%>
+    <jalios:field name="pageTitle" formHandler="<%= formHandler %>">
+      <jalios:control />
+    </jalios:field>
+  </div>
+  
+  <div class="buttons">
+    <input type="hidden" name="id" value="<%= portal.getId() %>" />
+    <input type="hidden" name="smartphonePortalId" value="<%= portal.getId() %>" />
+    <input type="hidden" name="portalEdition" value="true" />
+    <button class="btn btn-primary" name="opUpdate" value="true" data-jalios-action="ajax-refresh"><%= glp("ui.com.btn.save") %></button>
+  </div>
+</form>

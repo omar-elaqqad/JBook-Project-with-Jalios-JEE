@@ -1,0 +1,20 @@
+<div class="connection-card">
+  <table class="layout">
+    <tr>
+      <td class="connection-photo" aria-hidden="true">
+        <jalios:memberphoto link="false" member="<%= itMember %>" size="<%= PhotoSize.TINY %>" />
+      </td>
+      <td style="width:100%;">
+        <div class="content-details">
+          <b><jalios:link data="<%= itMember %>" /></b>
+          <b class="function-company">
+            <%= itMember.getJobTitle() %>
+            <% if (Util.notEmpty(itMember.getJobTitle()) && Util.notEmpty(itMember.getOrganization())) { %>-<% } %>
+            <%= itMember.getOrganizationAndDepartment() %>
+          </b>
+          <ul class="coordonnees-infos"><%@ include file="/plugins/ESNPlugin/jsp/common/doEmailAndPhone.jspf" %></ul>
+        </div>          
+      </td>
+    </tr>
+  </table>
+</div>

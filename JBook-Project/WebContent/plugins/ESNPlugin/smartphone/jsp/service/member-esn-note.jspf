@@ -1,0 +1,3 @@
+<%
+  List<MemberNote> noteList = ESNManager.getInstance().getAllMemberNoteList(member);
+%>

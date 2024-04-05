@@ -1,0 +1,851 @@
+# ------------------------------------------------------------
+#  ACL
+# ------------------------------------------------------------
+acl.resource.admin/work/createCS: Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet - L\u00e9trehoz\u00e1s
+acl.resource.plugins: B\u0151v\u00edtm\u00e9nyek
+acl.resource.plugins/collaborativespace: Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet
+acl.resource.plugins/collaborativespace/manageCSGuest: Vend\u00e9gek kezel\u00e9se
+acl.resource.plugins/collaborativespace/manageCSGuest.h: Felhatalmazza az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet adminisztr\u00e1tor\u00e1t vend\u00e9g-fi\u00f3kok l\u00e9trehoz\u00e1s\u00e1ra a ter\u00fcleten.
+acl.resource.admin-ws/plugins: B\u0151v\u00edtm\u00e9nyek
+acl.resource.admin-ws/plugins/collaborativespace: Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet
+acl.resource.admin-ws/plugins/collaborativespace/manageCSServices: Alkalmaz\u00e1sok
+acl.resource.admin-ws/plugins/collaborativespace/manageCSServices.h: Az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet alkalmaz\u00e1sainak Front Office kezel\u00e9se.
+acl.resource.admin-ws/plugins/collaborativespace/manageCSSettings: Be\u00e1ll\u00edt\u00e1sok
+acl.resource.admin-ws/plugins/collaborativespace/manageCSSettings.h: Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet be\u00e1ll\u00edt\u00e1sainak kezel\u00e9se (n\u00e9v, le\u00edr\u00e1s, elrendez\u00e9s, "N\u00e9zd meg \u00e9s \u00e9rezd").
+
+# ------------------------------------------------------------
+#  Common
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.lbl.filter:                 Sz\u0171r\u0151
+jcmsplugin.collaborativespace.lbl.administrator:          Vezet\u0151
+jcmsplugin.collaborativespace.lbl.administrators:         Vezet\u0151k
+jcmsplugin.collaborativespace.lbl.administrators.h:       A k\u00f6z\u00f6ss\u00e9g adminisztr\u00e1torai
+# A member that belongs to the space
+jcmsplugin.collaborativespace.lbl.profile.member-count:   {0,choice,0#Nincs r\u00e9sztvev\u0151|1#{0} r\u00e9sztvev\u0151|2#{0} r\u00e9sztvev\u0151}
+# A member that is administrator of the space
+jcmsplugin.collaborativespace.lbl.profile.leader-count:   {0,choice,0#Nincsenek vezet\u0151k|1#{0} vezet\u0151|2#{0} vezet\u0151}
+# A member that is a Guest of the space
+jcmsplugin.collaborativespace.lbl.profile.guest:          Vend\u00e9g
+jcmsplugin.collaborativespace.lbl.profile.guest-count:    {0,choice,0#Nincsenek vend\u00e9gek|1#{0} vend\u00e9g|2#{0} vend\u00e9g}
+jcmsplugin.collaborativespace.lbl.signup:                 Feliratkoz\u00e1s
+jcmsplugin.collaborativespace.lbl.signup-action:          Regisztr\u00e1lok...
+jcmsplugin.collaborativespace.lbl.unsignup:               Leiratkoz\u00e1s
+jcmsplugin.collaborativespace.lbl.unsignup-action:        Kil\u00e9pek...
+jcmsplugin.collaborativespace.lbl.card.signup:            Feliratkoz\u00e1s
+
+jcmsplugin.collaborativespace.cssignup.title: Regisztr\u00e1ci\u00f3s k\u00e9relem a k\u00f6vetkez\u0151t\u0151l: \u201e{0}\u201d
+jcmsplugin.collaborativespace.cssignup-notfound.msg-title: A feliratkoz\u00e1si ig\u00e9ny nem tal\u00e1lhat\u00f3
+jcmsplugin.collaborativespace.cssignup-notfound.msg-content: A megadott feliratkoz\u00e1si k\u00e9r\u00e9s nem tal\u00e1lhat\u00f3.<br/>Ez akkor fordulhat el\u0151, ha m\u00e1r feldolgozt\u00e1k, vagy ha a tagot manu\u00e1lisan m\u00e1r regisztr\u00e1lt\u00e1k a ter\u00fcleten.
+
+jcmsplugin.collaborativespace.data-controller.msg.incompatible-access-signup: A hozz\u00e1f\u00e9r\u00e9si m\u00f3d nem kompatibilis a regisztr\u00e1ci\u00f3s politik\u00e1val.
+jcmsplugin.collaborativespace.data-controller.msg.invalid-ability: Ez a portlet nem rendelkezik "{0}" k\u00e9pess\u00e9ggel.
+jcmsplugin.collaborativespace.data-controller.msg.service-not-in-public-model: A portleteknek, amelyek m\u00e1sol\u00e1si m\u00f3dja Referencia, \u00e9s Alkalmaz\u00e1s vagy Kezel\u0151pult k\u00e9pess\u00e9ggel rendelkeznek, egy nyilv\u00e1nos egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet-modellhez kell tartozniuk.
+jcmsplugin.collaborativespace.data-controller.msg.no-portlet-selection: A/az "{0}" mez\u0151nek a k\u00f6vetkez\u0151t kell tartalmaznia: "{1}".
+jcmsplugin.collaborativespace.data-controller.msg.invalid-guest-wsadmin: A vend\u00e9g nem lehet munkater\u00fclet adminisztr\u00e1tora.
+jcmsplugin.collaborativespace.data-controller.msg.invalid-guest-wsadmin-detail: A(z) \u201e{0}\u201d ({1}) vend\u00e9g nem lehet munkater\u00fclet-adminisztr\u00e1tor.
+jcmsplugin.collaborativespace.data-controller.msg.sub-status: A friss\u00edt\u00e9s nem siker\u00fclt a kapcsol\u00f3d\u00f3 adatok eset\u00e9n: {0}
+jcmsplugin.collaborativespace.data-controller.msg.invalid-cat: Nem lehets\u00e9ges a/az \u201e{0}\u201d portlet kategoriz\u00e1l\u00e1sa a k\u00f6vetkez\u0151 alatt: \u201e<strong>{1}</strong>\u201d.
+jcmsplugin.collaborativespace.data-controller.msg.missing-root-cat: Az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletek portletj\u00e9nek gy\u00f6k\u00e9rkateg\u00f3ri\u00e1val kell rendelkeznie.
+jcmsplugin.collaborativespace.data-controller.msg.wrong-model-typology: A v\u00e1lasztott modell nem felel meg a tipol\u00f3gi\u00e1nak
+jcmsplugin.collaborativespace.data-controller.msg.missing-model: Ki kell v\u00e1lasztani egy modellt
+jcmsplugin.collaborativespace.data-controller.msg.workspace-not-model: A modellk\u00e9nt kiv\u00e1lasztott munkater\u00fclet nem modell
+jcmsplugin.collaborativespace.space-wizard.msg.model-not-found: A megadott modell nem tal\u00e1lhat\u00f3.
+jcmsplugin.collaborativespace.space-wizard.msg.failed: Nem lehet l\u00e9trehozni egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletet: {0}
+
+# FO action labels
+jcmsplugin.collaborativespace.create.lbl.create:                  T\u00e9r l\u00e9trehoz\u00e1sa...
+jcmsplugin.collaborativespace.create.lbl.create-sub:              Alt\u00e9r l\u00e9trehoz\u00e1sa...
+jcmsplugin.collaborativespace.create.lbl.request-create:          T\u00e9r l\u00e9trehoz\u00e1sa ir\u00e1nti k\u00e9relem...
+jcmsplugin.collaborativespace.create.lbl.request-create-sub:      Alt\u00e9r l\u00e9trehoz\u00e1sa ir\u00e1nti k\u00e9relem...
+# Admin BO action labels (keep "collaborative" word)
+jcmsplugin.collaborativespace.create.lbl.create-cs:               Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet l\u00e9trehoz\u00e1sa...
+
+# Create space modal labels
+jcmsplugin.collaborativespace.create.title:                       Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet l\u00e9trehoz\u00e1sa
+jcmsplugin.collaborativespace.create.title-request:               Egy\u00fcttm\u0171k\u00f6d\u00e9si t\u00e9r l\u00e9trehoz\u00e1sa ir\u00e1nti k\u00e9relem
+jcmsplugin.collaborativespace.create-sub.title:                   Alt\u00e9r l\u00e9trehoz\u00e1sa
+jcmsplugin.collaborativespace.create-sub.title-request:           Alt\u00e9r l\u00e9trehoz\u00e1sa ir\u00e1nti k\u00e9relem
+jcmsplugin.collaborativespace.create.steps.0:                     Modell
+jcmsplugin.collaborativespace.create.steps.1:                     Inform\u00e1ci\u00f3
+jcmsplugin.collaborativespace.create-sub.steps.1.intro:           Egy ter\u00fclet l\u00e9trehoz\u00e1sa ebben: <strong>{0}</strong>
+jcmsplugin.collaborativespace.create-sub.steps.1.intro-request:   T\u00e9r l\u00e9trehoz\u00e1sa ir\u00e1nti k\u00e9relem a k\u00f6vetkez\u0151ben: <strong>{0}</strong>.
+jcmsplugin.collaborativespace.create.steps.2:                     R\u00e9sztvev\u0151k
+
+jcmsplugin.collaborativespace.create.info.name:                         Ter\u00fclet neve
+jcmsplugin.collaborativespace.create.info.typology:                     Munkater\u00fclet t\u00edpusa
+jcmsplugin.collaborativespace.create.info.description:                  Le\u00edr\u00e1s
+jcmsplugin.collaborativespace.create.info.introduction:                 Bevezet\u00e9s
+jcmsplugin.collaborativespace.create.info.access:                       Hozz\u00e1f\u00e9r\u00e9s
+jcmsplugin.collaborativespace.create.info.access.public:                Nyilv\u00e1nos
+jcmsplugin.collaborativespace.create.info.access.private:               Mag\u00e1n
+jcmsplugin.collaborativespace.create.info.access.secret:                Titkos
+jcmsplugin.collaborativespace.create.info.signup:                       Feliratkoz\u00e1s
+jcmsplugin.collaborativespace.create.info.signup.admin:                 A vezet\u0151k \u00e1ltal kezelt feliratkoz\u00e1sok
+jcmsplugin.collaborativespace.create.info.signup.request:               A vezet\u0151k \u00e1ltal \u00e9rv\u00e9nyes\u00edtett feliratkoz\u00e1si ig\u00e9nyl\u00e9sek
+jcmsplugin.collaborativespace.create.info.signup.free:                  Szabad feliratkoz\u00e1sok
+jcmsplugin.collaborativespace.create.info.language:                     F\u0151 nyelv
+jcmsplugin.collaborativespace.create.model.intro:                       V\u00e1lasszon ki egy modellt az adott egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet eset\u00e9n.
+jcmsplugin.collaborativespace.create.model.intro-typo:                  V\u00e1lasszon ki egy tipol\u00f3gi\u00e1t \u00e9s egy modellt az adott egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet eset\u00e9n.
+jcmsplugin.collaborativespace.create.model.intro-typo-nomodel:          V\u00e1lasszon ki egy tipol\u00f3gi\u00e1t az adott egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet eset\u00e9n.
+jcmsplugin.collaborativespace.create.model.intro-end:                   Ha a ter\u00fclet l\u00e9tre lett hozva, a ter\u00fclet vezet\u0151i \u00faj szolg\u00e1ltat\u00e1sokat adhatnak hozz\u00e1.
+jcmsplugin.collaborativespace.create.model.model:                       Modell alapj\u00e1n
+jcmsplugin.collaborativespace.create.model.sync-toggle:                 Szinkroniz\u00e1l\u00e1s a modellel
+jcmsplugin.collaborativespace.create.attendees.intro:                   V\u00e1lassza ki a vezet\u0151ket \u00e9s a r\u00e9sztvev\u0151ket az adott egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet eset\u00e9n.<br />A ter\u00fclet l\u00e9trehoz\u00e1s\u00e1t k\u00f6vet\u0151en, a ter\u00fclet vezet\u0151i megh\u00edv\u00e1sokat k\u00fcldhetnek, tagokat adhatnak hozz\u00e1 \u00e9s t\u00e1vol\u00edthatnak el.
+jcmsplugin.collaborativespace.create.attendees.intro-no-leader:         V\u00e1lassza ki a r\u00e9sztvev\u0151ket az adott egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet eset\u00e9n.<br />A ter\u00fclet l\u00e9trehoz\u00e1s\u00e1t k\u00f6vet\u0151en, a ter\u00fclet vezet\u0151i megh\u00edv\u00e1sokat k\u00fcldhetnek, tagokat adhatnak hozz\u00e1 \u00e9s t\u00e1vol\u00edthatnak el.
+jcmsplugin.collaborativespace.create.attendees.admins:                  Vezet\u0151
+jcmsplugin.collaborativespace.create.attendees.admins.custom:           {0,choice,0#Nincsenek vezet\u0151k|1# Vezet\u0151|2#Vezet\u0151}
+jcmsplugin.collaborativespace.create.attendees.groups:                  Csoportok
+jcmsplugin.collaborativespace.create.attendees.members:                 Tagok
+jcmsplugin.collaborativespace.create.attendees.notification:            \u00c9rtes\u00edt\u00e9s
+jcmsplugin.collaborativespace.create.attendees.notification.invitation: Megh\u00edv\u00f3 k\u00fcld\u00e9se a r\u00e9sztvev\u0151knek
+jcmsplugin.collaborativespace.create.attendees.notification.mail:       R\u00e9sztvev\u0151k hozz\u00e1ad\u00e1sa \u00e9s \u00e9rtes\u00edt\u00e9se
+jcmsplugin.collaborativespace.create.attendees.notification.no:         R\u00e9sztvev\u0151k hozz\u00e1ad\u00e1sa \u00e9rtes\u00edt\u00e9s n\u00e9lk\u00fcl
+jcmsplugin.collaborativespace.create.too-many-cs:                       Nem hozhat l\u00e9tre \u00faj egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletet. Az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletek maxim\u00e1lis sz\u00e1ma ({0}) el lett \u00e9rve.
+jcmsplugin.collaborativespace.create.finish:                            <p>Az \u00faj egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletre vonatkoz\u00f3 k\u00e9r\u00e9se r\u00f6gz\u00edt\u00e9sre ker\u00fclt.</p><p>Az \u00e9rv\u00e9nyes\u00edt\u00e9s\u00e9t k\u00f6vet\u0151en a ter\u00fclet l\u00e9tre lesz hozva \u00e9s a vezet\u0151k \u00e9rtes\u00edt\u00e9st kapnak.</p>
+jcmsplugin.collaborativespace.access-policy.public.desc:                B\u00e1rki megtekinthet egy nyilv\u00e1nos ter\u00fcletet, \u00e9s olvashatja annak tartalm\u00e1t.
+jcmsplugin.collaborativespace.access-policy.private.desc:               B\u00e1rki tudhat egy priv\u00e1t t\u00e9rr\u0151l, de csak a r\u00e9sztvev\u0151k tudj\u00e1k olvasni annak tartalm\u00e1t.
+jcmsplugin.collaborativespace.access-policy.secret.desc:                Csak a titkos t\u00e9r r\u00e9sztvev\u0151i tudhatnak arr\u00f3l \u00e9s olvashatj\u00e1k annak tartalm\u00e1t.
+
+jcmsplugin.collaborativespace.header.home:                              Kezd\u0151 weboldal
+jcmsplugin.collaborativespace.header.introduction:                      Bevezet\u00e9s
+jcmsplugin.collaborativespace.header.backoffice:                        Back-Office
+jcmsplugin.collaborativespace.header.help:                              S\u00fag\u00f3
+jcmsplugin.collaborativespace.header.admin-menu:                        Adminisztr\u00e1ci\u00f3
+jcmsplugin.collaborativespace.header.admin-menu.home:                   Kezd\u0151lap
+jcmsplugin.collaborativespace.header.admin-menu.members:                Tagok
+jcmsplugin.collaborativespace.header.admin-menu.services:               Alkalmaz\u00e1sok
+jcmsplugin.collaborativespace.header.admin-menu.settings:               Be\u00e1ll\u00edt\u00e1sok
+jcmsplugin.collaborativespace.header.admin-menu.typo-models:            Modell \u00e9s tipol\u00f3gi\u00e1k
+
+jcmsplugin.collaborativespace.metas.toggle.show:                        T\u00f6bb
+jcmsplugin.collaborativespace.metas.toggle.hide:                        Kevesebb
+jcmsplugin.collaborativespace.metas.show-all-typos:                     Az \u00f6sszes tipol\u00f3gia megjelen\u00edt\u00e9se
+jcmsplugin.collaborativespace.metas.introduction:                       Bevezet\u00e9s
+jcmsplugin.collaborativespace.metas.manage-members.link:                Tagok kezel\u00e9se
+jcmsplugin.collaborativespace.metas.member-list.others:                 \u00c9s {0,choice,1# 1 m\u00e1sik|2# {0} m\u00e1sik}...
+jcmsplugin.collaborativespace.metas.actions-menu-title:                 Az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet m\u0171veletei men\u00fcj\u00e9nek megnyit\u00e1sa
+
+jcmsplugin.collaborativespace.private-home.title:                  A ter\u00fclethez val\u00f3 hozz\u00e1f\u00e9r\u00e9s korl\u00e1tozott
+jcmsplugin.collaborativespace.private-home.signup:                 A ter\u00fclet el\u00e9r\u00e9s\u00e9hez fel kell iratkoznia.
+jcmsplugin.collaborativespace.private-home.already-signup:         K\u00e9rte a feliratkoz\u00e1s\u00e1t erre a ter\u00fcletre. \u00c9rtes\u00edt\u00e9st fog kapni, amint a k\u00e9r\u00e9se feldolgoz\u00e1sra ker\u00fclt.
+jcmsplugin.collaborativespace.private-home.no-signup:              A ter\u00fcletre t\u00f6rt\u00e9n\u0151 feliratkoz\u00e1s megh\u00edv\u00e1s alapj\u00e1n t\u00f6rt\u00e9nik.
+
+jcmsplugin.collaborativespace.settings.lbl.info:                    \u00c1ltal\u00e1nos inform\u00e1ci\u00f3k
+jcmsplugin.collaborativespace.settings.lbl.info.presentation:       Bemutat\u00e1s
+jcmsplugin.collaborativespace.settings.lbl.info.access:             Hozz\u00e1f\u00e9r\u00e9s \u00e9s feliratkoz\u00e1s
+jcmsplugin.collaborativespace.settings.lbl.layout:                  Elrendez\u00e9s
+jcmsplugin.collaborativespace.settings.lbl.model:                   Modell
+jcmsplugin.collaborativespace.settings.lbl.look:                    Fejl\u00e9c
+jcmsplugin.collaborativespace.settings.lbl.look.theme:              T\u00e9ma
+jcmsplugin.collaborativespace.settings.lbl.look.condensed:          S\u0171r\u00edtett m\u00f3d
+jcmsplugin.collaborativespace.settings.lbl.look.condensed.h:        A s\u0171r\u00edtett m\u00f3d cs\u00f6kkenti a fejl\u00e9c magass\u00e1g\u00e1t, \u00e9s csak h\u00e1tt\u00e9rsz\u00ednt haszn\u00e1l
+jcmsplugin.collaborativespace.settings.lbl.look.color-tab:          Sz\u00ednek
+jcmsplugin.collaborativespace.settings.lbl.look.header-tab:         H\u00e1tt\u00e9rk\u00e9p
+jcmsplugin.collaborativespace.settings.lbl.look.color:              H\u00e1tt\u00e9r sz\u00edne
+jcmsplugin.collaborativespace.settings.lbl.look.headers:            Fejl\u00e9c
+jcmsplugin.collaborativespace.settings.lbl.look.no-header:          Nincs fejl\u00e9c
+jcmsplugin.collaborativespace.settings.lbl.look.header-background:  H\u00e1tt\u00e9r
+jcmsplugin.collaborativespace.settings.lbl.look.header-custom:      H\u00e1tt\u00e9rk\u00e9p
+jcmsplugin.collaborativespace.settings.lbl.look.header-custom.h:    Kiv\u00e1laszthat egy egy\u00e9ni k\u00e9pet a fejl\u00e9chez, vagy v\u00e1laszthat egyet az el\u0151re meghat\u00e1rozott list\u00e1b\u00f3l.
+jcmsplugin.collaborativespace.settings.lbl.look.header-no-image:    Nincs h\u00e1tt\u00e9rk\u00e9p
+jcmsplugin.collaborativespace.settings.lbl.look.header-position:    K\u00e9ppoz\u00edcion\u00e1l\u00e1s
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat:      K\u00e9pism\u00e9tl\u00e9s
+jcmsplugin.collaborativespace.settings.lbl.look.header-no-repeat:   Nincs
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat-x:    V\u00edzszintes
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat-y:    F\u00fcgg\u0151leges
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat-both: Mindkett\u0151
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror:      T\u00fck\u00f6r
+jcmsplugin.collaborativespace.settings.lbl.look.header-no-mirror:   Nincs
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror-x:    V\u00edzszintes
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror-y:    F\u00fcgg\u0151leges
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror-both: Mindkett\u0151
+jcmsplugin.collaborativespace.settings.lbl.look.header-color:       C\u00edm sz\u00edne
+jcmsplugin.collaborativespace.settings.lbl.look.header-tabs-color:  A lapok sz\u00f6vegsz\u00edne
+jcmsplugin.collaborativespace.settings.lbl.look.header-tabs-bgcolor: A lapok h\u00e1tt\u00e9rsz\u00edne
+jcmsplugin.collaborativespace.settings.lbl.look.header-tabs-opacity: A lapok \u00e1tl\u00e1tszatlans\u00e1ga
+jcmsplugin.collaborativespace.settings.lbl.layout:                  Elrendez\u00e9s
+jcmsplugin.collaborativespace.settings.lbl.layout.main:             Oldal elrendez\u00e9se
+jcmsplugin.collaborativespace.settings.lbl.layout.dashboard:        Kezd\u0151lap
+jcmsplugin.collaborativespace.settings.lbl.layout.dashboard.column: Oszlopok
+jcmsplugin.collaborativespace.settings.lbl.jmobile:                 JMobile
+jcmsplugin.collaborativespace.settings.lbl.jmobile-delete-portlet:  A portlet elt\u00e1vol\u00edt\u00e1sa a port\u00e1lr\u00f3l
+jcmsplugin.collaborativespace.settings.lbl.jmobile-drag-portlet:    Hosszan nyomja meg a portlet \u00e1th\u00faz\u00e1s\u00e1hoz
+jcmsplugin.collaborativespace.settings.alt.test:                    Teszt
+jcmsplugin.collaborativespace.settings.alt.jmobile-template:        JMobile sablon
+jcmsplugin.collaborativespace.settings.lbl.add-portlet:             Portlet hozz\u00e1ad\u00e1sa
+
+jcmsplugin.collaborativespace.services.lbl.title:                   Alkalmaz\u00e1sok hozz\u00e1ad\u00e1sa
+jcmsplugin.collaborativespace.services.lbl.all-services:            \u00d6sszes alkalmaz\u00e1s
+jcmsplugin.collaborativespace.services.lbl.installed-services:      Telep\u00edtett alkalmaz\u00e1sok
+jcmsplugin.collaborativespace.services.lbl.installed-service.title: Telep\u00edtve
+jcmsplugin.collaborativespace.services.lbl.not-installed-services:  Egy\u00e9b alkalmaz\u00e1sok
+jcmsplugin.collaborativespace.services.lbl.status:                  \u00c1llapot
+jcmsplugin.collaborativespace.services.lbl.type:                    T\u00edpus
+jcmsplugin.collaborativespace.services.lbl.type.application:        Alkalmaz\u00e1s
+jcmsplugin.collaborativespace.services.lbl.type.dashboard:          Kezel\u0151pult
+jcmsplugin.collaborativespace.services.lbl.name:                    Alkalmaz\u00e1s neve
+jcmsplugin.collaborativespace.services.lbl.description:             Le\u00edr\u00e1s
+jcmsplugin.collaborativespace.services.lbl.add:                     Hozz\u00e1ad\u00e1s
+jcmsplugin.collaborativespace.services.lbl.edit:                    M\u00f3dos\u00edt\u00e1s
+jcmsplugin.collaborativespace.services.lbl.preview-action:          El\u0151n\u00e9zet
+jcmsplugin.collaborativespace.services.lbl.preview:                 El\u0151n\u00e9zet
+jcmsplugin.collaborativespace.services.btn.add-service:             Ezen alkalmaz\u00e1s hozz\u00e1ad\u00e1sa
+jcmsplugin.collaborativespace.services.btn.customize-service:       Az alkalmaz\u00e1s testreszab\u00e1sa...
+jcmsplugin.collaborativespace.services.btn.remove-service:          Az alkalmaz\u00e1s elt\u00e1vol\u00edt\u00e1sa
+jcmsplugin.collaborativespace.services.btn.add:                     Hozz\u00e1ad\u00e1s
+jcmsplugin.collaborativespace.services.btn.remove:                  Elt\u00e1vol\u00edt\u00e1s
+jcmsplugin.collaborativespace.services.lbl.add-title:               Alkalmaz\u00e1s hozz\u00e1ad\u00e1sa
+jcmsplugin.collaborativespace.services.lbl.add-modal-title:         Egy alkalmaz\u00e1s hozz\u00e1ad\u00e1sa...
+jcmsplugin.collaborativespace.services.lbl.add-new-title:           \u00daj alkalmaz\u00e1s hozz\u00e1ad\u00e1sa
+jcmsplugin.collaborativespace.services.smartphone-ability.label:    Megjelen\u00edt\u00e9s a JMobile-ben
+
+jcmsplugin.collaborativespace.settings.lbl.model-instances:         A modell p\u00e9ld\u00e1nyai
+jcmsplugin.collaborativespace.settings.lbl.model-instances-count:   {0,choice,0# Nincs p\u00e9ld\u00e1ny|1# 1 p\u00e9ld\u00e1ny|2# {0} p\u00e9ld\u00e1ny}
+
+jcmsplugin.collaborativespace.settings.model-instances.csp.title:   Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet
+jcmsplugin.collaborativespace.settings.model-instances.sync.title:  Szinkroniz\u00e1l\u00e1si m\u00f3dok
+
+jcmsplugin.collaborativespace.members.btn.enroll-members:               Tagok beiratkoz\u00e1sa...
+jcmsplugin.collaborativespace.members.lbl.enroll-members:               Tagok beiratkoz\u00e1sa
+jcmsplugin.collaborativespace.members.enroll-modal.intro:               V\u00e1lassza ki a tagokat \u00e9s/vagy a csoportokat a c\u00e9lcsoporthoz t\u00f6rt\u00e9n\u0151 hozz\u00e1ad\u00e1s \u00e9rdek\u00e9ben.
+jcmsplugin.collaborativespace.members.enroll-modal.target-group:        C\u00e9lcsoport
+jcmsplugin.collaborativespace.members.enroll-modal.groups.description:  Ezen csoportok tagjai hozz\u00e1 lesznek adva a c\u00e9lcsoporthoz.
+jcmsplugin.collaborativespace.members.btn.add-group:                    Csoport hozz\u00e1ad\u00e1sa...
+jcmsplugin.collaborativespace.members.lbl.add-group:                    Csoport hozz\u00e1ad\u00e1sa
+jcmsplugin.collaborativespace.members.btn.edit-group:                   Csoport szerkeszt\u00e9se...
+
+jcmsplugin.collaborativespace.members.validate-signup-modal.groups:     C\u00e9lcsoportok
+jcmsplugin.collaborativespace.members.validate-signup-modal.groups.h:   A csoportok, amelyekhez a tag hozz\u00e1 lesz adva.
+
+jcmsplugin.collaborativespace.invitations.lbl.invitations:     Megh\u00edv\u00e1sok
+jcmsplugin.collaborativespace.invitations.lbl.all-status:      Minden megh\u00edv\u00e1s
+jcmsplugin.collaborativespace.invitations.lbl.guest:           Vend\u00e9g
+jcmsplugin.collaborativespace.invitations.lbl.target-group:    C\u00e9lcsoport
+jcmsplugin.collaborativespace.invitations.btn.send-invitation: Megh\u00edv\u00e1sok k\u00fcld\u00e9se...
+
+jcmsplugin.collaborativespace.invitations.status.0: Elk\u00fcld\u00f6tt
+jcmsplugin.collaborativespace.invitations.status.1: Elfogadva
+jcmsplugin.collaborativespace.invitations.status.2: Visszautas\u00edtva
+
+jcmsplugin.collaborativespace.invitations.status.long.0: Elk\u00fcld\u00f6tt megh\u00edv\u00e1s
+jcmsplugin.collaborativespace.invitations.status.long.1: Megh\u00edv\u00e1s elfogadva
+jcmsplugin.collaborativespace.invitations.status.long.2: Megh\u00edv\u00e1s visszautas\u00edtva
+
+jcmsplugin.collaborativespace.invitations.send.title:            Megh\u00edv\u00e1sok k\u00fcld\u00e9se
+jcmsplugin.collaborativespace.invitations.send.info:             V\u00e1lassza ki a tagokat vagy a csoportokat, akiknek megh\u00edv\u00f3t szeretne k\u00fcldeni az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclethez t\u00f6rt\u00e9n\u0151 csatlakoz\u00e1sra vonatkoz\u00f3an
+jcmsplugin.collaborativespace.invitations.send.lbl.message:      \u00dczenet
+jcmsplugin.collaborativespace.invitations.send.btn.send:         K\u00fcld\u00e9s
+
+jcmsplugin.collaborativespace.invitations.title: Megh\u00edv\u00e1s erre: {0}
+
+jcmsplugin.collaborativespace.invitations.process-modal.title:    Megh\u00edv\u00f3
+jcmsplugin.collaborativespace.invitations.process-modal.info:     {0} megh\u00edvta \u00d6nt, hogy legyen a tagja a/az {1} egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletnek.<br />Elfogadhatja, elutas\u00edthatja ezt a megh\u00edv\u00e1st, vagy eld\u00f6ntheti k\u00e9s\u0151bb.
+jcmsplugin.collaborativespace.invitations.process-modal.btn.accept:     Elfogad\u00e1s
+jcmsplugin.collaborativespace.invitations.process-modal.btn.decline:    Elutas\u00edt\u00e1s...
+
+jcmsplugin.collaborativespace.signup.info.free:           Azonnal feliratkozhat erre az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletre
+jcmsplugin.collaborativespace.signup.info.request:        Az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletre t\u00f6rt\u00e9n\u0151 feliratkoz\u00e1shoz, k\u00e9rj\u00fck, k\u00fcldj\u00f6n egy ig\u00e9nyl\u00e9st. Az ig\u00e9nyl\u00e9se j\u00f3v\u00e1hagy\u00e1sakor \u00d6n \u00e9rtes\u00edt\u00e9st fog kapni.
+jcmsplugin.collaborativespace.signup.btn.signup:          Szeretn\u00e9k feliratkozni
+jcmsplugin.collaborativespace.signup.info.already-signup: {0}, \u00d6n m\u00e1r ig\u00e9nyelte ezt a feliratkoz\u00e1st.
+jcmsplugin.collaborativespace.signup.error.workspace-no-group: A feliratkoz\u00e1si k\u00e9relmekhez sz\u00fcks\u00e9ges, hogy azok munkater\u00fclete rendelkezzen egy alap\u00e9rtelmezett csoporttal.
+
+jcmsplugin.collaborativespace.signup.lbl.signups:         Feliratkoz\u00e1si k\u00e9r\u00e9sek
+jcmsplugin.collaborativespace.signup.lbl.signup:          Feliratkoz\u00e1si k\u00e9r\u00e9s
+jcmsplugin.collaborativespace.signup.lbl.submit-mbr:      Ig\u00e9nyl\u0151
+jcmsplugin.collaborativespace.signup.lbl.process:         Az ig\u00e9nyl\u00e9s feldolgoz\u00e1sa
+jcmsplugin.collaborativespace.signup.btn.accept:          Elfogad\u00e1s
+jcmsplugin.collaborativespace.signup.btn.reject:          Elutas\u00edt\u00e1s
+jcmsplugin.collaborativespace.unsignup.confirm:           Biztos benne, hogy le szeretne iratkozni?
+
+jcmsplugin.collaborativespace.welcome.title:   \u00dcdv\u00f6z\u00f6lj\u00fck!
+jcmsplugin.collaborativespace.welcome.content: <p>Gratul\u00e1lunk! Az \u00f6n egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclete elk\u00e9sz\u00fclt \u00e9s m\u0171k\u00f6dik.</p><p>N\u00e9h\u00e1ny tipp arra, hogy mit tehet</p><ul><li class='cs-welcome-tip-look-and-feel'><a href="{0}">M\u00f3dos\u00edtsa a "N\u00e9zd meg \u00e9s \u00e9rezd" opci\u00f3kat</a></li><li class='cs-welcome-tip-add-members'><a href="{1}">Adjon hozz\u00e1 tagokat</a></li><li class='cs-welcome-tip-send-invitations'><a href="{2}">K\u00fcldj\u00f6n megh\u00edv\u00f3kat</a></li><li class='cs-welcome-tip-services'><a href="{3}">Adjon hozz\u00e1 alkalmaz\u00e1sokat</a></li></ul>
+
+jcmsplugin.collaborativespace.lbl.cs:    Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet
+jcmsplugin.collaborativespace.lbl.model: Modell
+
+jcmsplugin.collaborativespace.lbl.follow.action:        K\u00f6vet\u00e9s
+jcmsplugin.collaborativespace.lbl.unfollow.action:      K\u00f6vet\u00e9s le\u00e1ll\u00edt\u00e1sa
+jcmsplugin.collaborativespace.lbl.follow.title:         Egy ter\u00fclet k\u00f6vet\u00e9se
+jcmsplugin.collaborativespace.lbl.follow.description:   \u00c9rtes\u00edt\u00e9st fog kapni a ter\u00fclet legfrissebb h\u00edreir\u0151l
+jcmsplugin.collaborativespace.lbl.unfollow.title:       Egy t\u00e9r k\u00f6vet\u00e9s\u00e9nek le\u00e1ll\u00edt\u00e1sa
+jcmsplugin.collaborativespace.lbl.unfollow.description: A tov\u00e1bbiakban nem fog \u00e9rtes\u00edt\u00e9st kapni a ter\u00fclet legfrissebb h\u00edreir\u0151l.
+
+jcmsplugin.collaborativespace.lbl.synchronization-on-model: Ez a port\u00e1l szinkroniz\u00e1lva van a modellj\u00e9vel, a megjelen\u00edt\u00e9s nem m\u00f3dos\u00edthat\u00f3.
+
+jcmsplugin.collaborativespace.msg.cannot-update-sync-data: A(z) "{0}" nem m\u00f3dos\u00edthat\u00f3, mert ezek az adatok szinkroniz\u00e1lva vannak a modellj\u00e9vel.
+
+jcmsplugin.collaborativespace.header.search-button: Ind\u00edtsa el a keres\u00e9st a(z) {0} munkater\u00fcleten
+
+# ------------------------------------------------------------
+#  ADMIN LIST
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.admin-list.remove-member: Elt\u00e1vol\u00edt\u00e1s a vezet\u0151k list\u00e1j\u00e1r\u00f3l
+jcmsplugin.collaborativespace.admin-list.add-member-btn: Vezet\u0151 hozz\u00e1ad\u00e1sa...
+
+# ------------------------------------------------------------
+#  SUGGESTIONS
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.suggestion.none: Nincsenek javaslatok.
+jcmsplugin.collaborativespace.suggestion.reset: A javaslatok vissza\u00e1ll\u00edt\u00e1sa...
+jcmsplugin.collaborativespace.suggestion.reject: K\u00f6sz\u00f6n\u00f6m, nem!
+
+# ------------------------------------------------------------
+#  APP
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.app.home.title: \u00c1tl\u00e9p\u00e9s a k\u00f6z\u00f6ss\u00e9gek honlapj\u00e1ra
+
+# ------------------------------------------------------------
+#  PUBLISH MENU
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.publish-menu.create: Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet
+
+# ------------------------------------------------------------
+#  CollaborativeSpace Recommendation (+alert)
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.space-recommendation.title: Egy t\u00e9rhez t\u00f6rt\u00e9n\u0151 csatlakoz\u00e1s aj\u00e1nl\u00e1sa?
+jcmsplugin.collaborativespace.space-recommendation.intro: A/az <strong>{0}</strong> t\u00e9rhez t\u00f6rt\u00e9n\u0151 csatlakoz\u00e1s aj\u00e1nl\u00e1sa a tagoknak.
+jcmsplugin.collaborativespace.space-recommendation.no-recipient: K\u00e9rj\u00fck, v\u00e1lasszon legal\u00e1bb egy tagot vagy csoportot.
+jcmsplugin.collaborativespace.space-recommendation.field.msg: Az \u00d6n \u00fczenete
+
+# ------------------------------------------------------------
+#  EDITABLE PROPERTIES
+# ------------------------------------------------------------
+$id.jcmsplugin.collaborativespace.typology-root: Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet tipol\u00f3gi\u00e1j\u00e1nak gy\u00f6kere
+$id.CSRequest.formAuthor: CS szerz\u0151 k\u00e9relem
+$id.CSRequest.workspace:  CS munkater\u00fclet k\u00e9relem
+$id.jcmsplugin.collaborativespace.typology-portal: CS port\u00e1l tipol\u00f3gia alapj\u00e1n
+$id.jcmsplugin.collaborativespace.cs-creation-group: CS l\u00e9trehoz\u00f3 csoport
+$id.jcmsplugin.collaborativespace.cs-creation-group.help: Egy csoportazonos\u00edt\u00f3, amely jogosults\u00e1got ad a k\u00f6zvetlen CS l\u00e9trehoz\u00e1sra, munkafolyamat-\u00e9rv\u00e9nyes\u00edt\u00e9s n\u00e9lk\u00fcl. Ez egy alternat\u00edva az ACL tagnak t\u00f6rt\u00e9n\u0151 megad\u00e1sa \u00e9rdek\u00e9ben.
+jcmsplugin.collaborativespace.guestaccounts.enabled: Aktiv\u00e1lja a Vend\u00e9g fi\u00f3kokat?
+$id.jcmsplugin.collaborativespace.guestaccounts.group: Vend\u00e9g fi\u00f3k csoport
+$id.jcmsplugin.collaborativespace.guestaccounts.group.help: Egy csoportazonos\u00edt\u00f3, amely tartalmazza a szervezet \u00f6sszes Vend\u00e9g fi\u00f3kj\u00e1t
+$id.GuestRequest.workspace: Vend\u00e9g fi\u00f3k k\u00e9r\u00e9s\u00e9nek h\u00e1zigazda munkater\u00fclete
+$id.GuestRequest.workspace.help: Egy munkater\u00fclet-azonos\u00edt\u00f3 azon munkater\u00fclet eset\u00e9n, amelyben a Vend\u00e9g fi\u00f3k k\u00e9r\u00e9sek el lesznek mentve (alap\u00e9rtelmez\u00e9s szerint az alap\u00e9rtelmezett munkater\u00fclet).
+$id.jcmsplugin.collaborativespace.guestaccounts.homepage-ws: Vend\u00e9g \u00fcdv\u00f6zl\u0151 munkater\u00fclet
+$id.jcmsplugin.collaborativespace.guestaccounts.homepage-ws.help: Minden vend\u00e9g sz\u00e1m\u00e1ra hozz\u00e1f\u00e9rhet\u0151 munkater\u00fclet, amely seg\u00edthet nekik a platform haszn\u00e1lat\u00e1ban
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE ABILITIES
+# ------------------------------------------------------------
+portlet.ability.jcmsplugin.collaborativespace:                Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletek
+portlet.ability.jcmsplugin.collaborativespace.dashboard:      Kezel\u0151pult
+portlet.ability.jcmsplugin.collaborativespace.application:    Alkalmaz\u00e1s
+
+ui.editportlet.usage.skin.collaborativeSpace: Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet megjelen\u00e9se
+ui.editportlet.usage.skin.collaborativeSpaceNoSkin: Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet megjelen\u00e9se (nincs)
+
+# ------------------------------------------------------------
+#  PORTLET MY COLLABORATIVE SPACES
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.portlet.mycs.lbl.mine:   Saj\u00e1t ter\u00fcletek
+jcmsplugin.collaborativespace.portlet.mycs.lbl.other:  Egy\u00e9b terek:
+jcmsplugin.collaborativespace.portlet.mycs.lbl.none:   Nincsenek terek
+jcmsplugin.collaborativespace.portlet.mycs.lbl.filter: Sz\u0171r\u00e9s a k\u00f6vetkez\u0151k szerint...
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE I18N
+# ------------------------------------------------------------
+
+jcmsplugin.collaborativespace.label.edit:         Szerkeszt\u00e9s
+jcmsplugin.collaborativespace.label.objectives:   C\u00e9lkit\u0171z\u00e9sek
+jcmsplugin.collaborativespace.label.support:      T\u00e1mogat\u00e1s:
+jcmsplugin.collaborativespace.label.breadcrumb:   \u00datk\u00f6vet\u00e9si nyomvonal:
+jcmsplugin.collaborativespace.request-date:       K\u00e9relem d\u00e1tuma: {0}
+
+jcmsplugin.collaborativespace.editform.create:    Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet l\u00e9trehoz\u00e1sa
+jcmsplugin.collaborativespace.editform.update:    Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet friss\u00edt\u00e9se
+
+jcmsplugin.collaborativespace.csrequest.model:    Gener\u00e1lt modell
+
+jcmsplugin.collaborativespace.handler.msg.cs-max: Munkater\u00fcletenk\u00e9nt csak 1 egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet megengedett.
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.title: Bej\u00f6v\u0151 e-mail aktiv\u00e1l\u00e1s
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.content: A bej\u00f6v\u0151 e-mail jelenleg akt\u00edv ezen a ter\u00fcleten.
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.footer: A be\u00e1ll\u00edt\u00e1sok szerkeszt\u00e9se a bej\u00f6v\u0151 e-mail el\u0151tagj\u00e1nak testreszab\u00e1sa \u00e9rdek\u00e9ben: <strong>{0}</strong>.
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.edit-button: Be\u00e1ll\u00edt\u00e1sok szerkeszt\u00e9se
+
+jcmsplugin.collaborativespace.dashboard.new:      Nincs megjelen\u00edtend\u0151 tartalom.<br/><img src='images/jalios/icons/add.gif' class='icon' alt=''/>&nbsp;\u00daj tartalom l\u00e9trehoz\u00e1sa.
+jcmsplugin.collaborativespace.dashboard.warn.invalid-portal-container: Ez a PortletSelection sablon csak a CollaborativeSpace port\u00e1lban m\u0171k\u00f6dik.
+
+jcmsplugin.collaborativespace.introduction.edit: A bevezet\u00e9s szerkeszt\u00e9se
+jcmsplugin.collaborativespace.introduction.empty.default-message: A ter\u00fclet bevezet\u00e9se m\u00e9g nincs meg\u00edrva.
+jcmsplugin.collaborativespace.introduction.infos.access.header: Hozz\u00e1f\u00e9r\u00e9s
+jcmsplugin.collaborativespace.introduction.infos.access.membership.true: (\u00d6n regisztr\u00e1lt)
+jcmsplugin.collaborativespace.introduction.infos.access.membership.false: (\u00d6n nem regisztr\u00e1lt)
+jcmsplugin.collaborativespace.introduction.infos.guests.header: Vend\u00e9gek
+jcmsplugin.collaborativespace.introduction.infos.guests.info: {0,choice,0#Nincs vend\u00e9g|1#1 vend\u00e9g van|2#{0} vend\u00e9g van}.
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail: Postal\u00e1da
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail.h: Az erre a c\u00edmre k\u00fcld\u00f6tt e-mailek ezen a ter\u00fcleten lesznek elmentve az \u00d6n neve alatt
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail.your-address: Az \u00d6n szem\u00e9lyes c\u00edme a ter\u00fcleten t\u00f6rt\u00e9n\u0151 hozz\u00e1sz\u00f3l\u00e1s \u00e9rdek\u00e9ben:
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail.warning: Figyelmeztet\u00e9s! Ez a c\u00edm szem\u00e9lyes. Ne adja azt tov\u00e1bb.
+
+jcmsplugin.collaborativespace.typology-portal.presentation.edit: A bemutat\u00f3 szerkeszt\u00e9se
+jcmsplugin.collaborativespace.typology-portal.presentation.empty.default-message: A bemutat\u00f3 a kateg\u00f3ria eset\u00e9n m\u00e9g nem lett kit\u00f6ltve.
+jcmsplugin.collaborativespace.typology-portal.spaces-list.title: Ter\u00fclet lista
+jcmsplugin.collaborativespace.typology-portal.pqfe.lbl.cs-result: {0,choice,0#Nincs t\u00e9r|1#Egy t\u00e9r|2#{0,number,integer} t\u00e9r}.
+jcmsplugin.collaborativespace.typology-portal.pqfe.lbl.placeholder.search: Keres\u00e9s a k\u00f6vetkez\u0151ben: {0}...
+jcmsplugin.collaborativespace.typology-portal.lbl.csList.header: {0,choice,0# Nincs t\u00e9r|1#1 t\u00e9r|2#{0,number,integer} t\u00e9r}
+jcmsplugin.collaborativespace.typology-portal.lbl.cs-typology.info: {0} l\u00e9trehozva. {1,choice,0#Nincs r\u00e9sztvev\u0151|1#1 r\u00e9sztvev\u0151|2#{1,number,integer} r\u00e9sztvev\u0151}.{2} \u00e1ltal vezetve
+jcmsplugin.collaborativespace.typology-portal.lbl.cs-typology.info-parent: A k\u00f6vetkez\u0151 alatt:
+jcmsplugin.collaborativespace.typology-portal.lbl.cs-typology.admins-list: {0,choice,0# nincs vezet\u0151|1# {2}|2# {1} \u00e9s {2}}
+
+
+# Query dates
+jcmsplugin.collaborativespace.query.today:     Ma
+jcmsplugin.collaborativespace.query.tomorrow:  Holnap
+jcmsplugin.collaborativespace.query.yesterday: Tegnap
+jcmsplugin.collaborativespace.query.before:    Kor\u00e1bban
+jcmsplugin.collaborativespace.query.after:     K\u00e9s\u0151bb
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE CONTROL
+# ------------------------------------------------------------
+
+jcmsplugin.collaborativespace.msg.edit.cslicense:     A jelenlegi JCMS licenc nem teszi lehet\u0151v\u00e9 t\u00f6bb egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet l\u00e9trehoz\u00e1s\u00e1t.
+jcmsplugin.collaborativespace.msg.edit.workspace.typology-used: A tipol\u00f3gia <i>({0})</i> nem haszn\u00e1lhat\u00f3 a munkater\u00fcleten, csak az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet portleten.
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE DATA
+# ------------------------------------------------------------
+
+data.$id.jcmsplugin.collaborativespace.data.cat:                        Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletek
+data.$id.jcmsplugin.collaborativespace.data.group.writer:               Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet - \u00cdr\u00f3k
+data.$id.jcmsplugin.collaborativespace.data.group.reader:               Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet - R\u00e9sztvev\u0151k
+data.$id.jcmsplugin.collaborativespace.data.internal.dashboard:         Kezel\u0151pult
+data.$id.jcmsplugin.collaborativespace.data.internal.icons:             Ikonok
+data.$id.jcmsplugin.collaborativespace.data.internal.search:            Keres\u00e9s
+data.$id.jcmsplugin.collaborativespace.data.service.latest-contents:    Legfrissebb tartalom
+data.$id.jcmsplugin.collaborativespace.data.service.latest-contents.d:  A legfrissebb tartalmak list\u00e1z\u00e1sa ezen az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcleten
+data.$id.jcmsplugin.collaborativespace.data.service.latest-documents:   Legfrissebb dokumentumok
+data.$id.jcmsplugin.collaborativespace.data.service.latest-documents.d: A legfrissebb dokumentumok list\u00e1z\u00e1sa ezen az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcleten
+data.$id.jcmsplugin.collaborativespace.data.service.workflow:           Munkafolyamat
+data.$id.jcmsplugin.collaborativespace.data.service.workflow.d:         Feldolgoz\u00e1sra v\u00e1r\u00f3 k\u00f6zz\u00e9t\u00e9telek list\u00e1z\u00e1sa
+data.$id.jcmsplugin.collaborativespace.data.service.glossary:           Sz\u00f3szedetek
+data.$id.jcmsplugin.collaborativespace.data.service.glossary.d:         Megjelen\u00edti a sz\u00f3szedeteket ezen az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcleten.
+data.$id.jcmsplugin.collaborativespace.data.service.faq:                GYIK
+data.$id.jcmsplugin.collaborativespace.data.service.faq.d:              Megjelen\u00edti a GYIK-ot az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet eset\u00e9n.
+data.$id.jcmsplugin.collaborativespace.data.service.introduction:       Bevezet\u00e9s
+data.$id.jcmsplugin.collaborativespace.data.service.introduction.d:     Megjelen\u00edti a bevezet\u00e9st az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet eset\u00e9n.
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-full:      Napt\u00e1r
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-full.d:    Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet tagesem\u00e9ny-kezel\u0151 alkalmaz\u00e1s
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-small:     Kis napt\u00e1r
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-small.d:   Megjelen\u00edti a napt\u00e1rat az aktu\u00e1lis h\u00f3nap eset\u00e9n
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-diary:     Napl\u00f3
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-diary.d:   Megjelen\u00edti a napl\u00f3t az aktu\u00e1lis h\u00f3nap eset\u00e9n.
+data.$id.jcmsplugin.collaborativespace.data.service.event-schedule:     Esem\u00e9ny \u00fctemez\u00e9s
+data.$id.jcmsplugin.collaborativespace.data.service.event-schedule.d:   Az esem\u00e9nyek \u00fctemez\u00e9seinek list\u00e1z\u00e1sa a ter\u00fclet eset\u00e9n
+data.$id.jcmsplugin.collaborativespace.data.service.subspaces:          Alter\u00fcletek
+data.$id.jcmsplugin.collaborativespace.data.service.subspaces.d:        A ter\u00fclet alter\u00fcleteinek list\u00e1ja
+data.$id.jcmsplugin.collaborativespace.data.model.ws:                   Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet modell
+data.$id.jcmsplugin.collaborativespace.data.model.portal:               Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet modell
+data.$id.jcmsplugin.collaborativespace.data.model.portal.desc:          Modell egy \u00faj egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet l\u00e9trehoz\u00e1sa \u00e9rdek\u00e9ben.
+data.$id.jcmsplugin.collaborativespace.data.model.cat:                  $NAME$ Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet
+data.$id.jcmsplugin.collaborativespace.data.model.group.writer:         $NAME$ - \u00cdr\u00f3k
+data.$id.jcmsplugin.collaborativespace.data.model.group.reader:         $NAME$ - R\u00e9sztvev\u0151k
+data.$id.jcmsplugin.collaborativespace.data.model.group.follower:       $NAME$ - K\u00f6vet\u0151k
+
+# ------------------------------------------------------------
+#  Guest Accounts Feature
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.guestaccounts.guest.label: Vend\u00e9g
+jcmsplugin.collaborativespace.guestaccounts.guestGroup.label: Vend\u00e9gek
+jcmsplugin.collaborativespace.guestaccounts.guestManagerGroup.label: Vend\u00e9g-kezel\u0151k
+jcmsplugin.collaborativespace.guestaccounts.guestManagerACL.label: Vend\u00e9g-kezel\u0151k
+jcmsplugin.collaborativespace.guestaccounts.account-creation.label: Vend\u00e9g fi\u00f3k megnyit\u00e1sa...
+jcmsplugin.collaborativespace.guestaccounts.contact-transformation.member-profile-target.label: Konvert\u00e1l\u00e1s vend\u00e9g fi\u00f3kk\u00e1...
+jcmsplugin.collaborativespace.guestaccounts.workspaces-and-groups.workspace.label.title: Kattintson ide, hogy megjelen\u00edtse/elrejtse a csoportlist\u00e1t a munkater\u00fclet eset\u00e9n
+jcmsplugin.collaborativespace.guestaccounts.no-guest-group-defined: A vend\u00e9g fi\u00f3k aktiv\u00e1l\u00e1s\u00e1hoz defini\u00e1lni kell egy \u00e9rv\u00e9nyes Vend\u00e9g fi\u00f3k csoportot.<br />K\u00e9rj\u00fck, ellen\u0151rizze a <strong>{0}</strong> tulajdons\u00e1got ($id.jcmsplugin.collaborativespace.guestaccounts.group).
+jcmsplugin.collaborativespace.guestaccounts.member-controller.error.account-already-in-workspaces: <p>A <strong>vend\u00e9g</strong> fi\u00f3k nem tartozhat <strong>nem</strong>-egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet csoporthoz.</p><ul><li><strong>T\u00e1vol\u00edtsa el</strong> a nem-egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet csoportot, hogy vend\u00e9g fi\u00f3kk\u00e1 ({0}) tegye azt</li><li>vagy, <strong>t\u00e1vol\u00edtsa el</strong> azt a vend\u00e9g fi\u00f3kok csoportj\u00e1b\u00f3l, hogy el\u00e9rhet\u0151v\u00e9 tegye a nem-egy\u00fcttm\u0171k\u00f6d\u00e9si munkater\u00fcletek eset\u00e9n</li></ul>
+jcmsplugin.collaborativespace.guestaccounts.member-controller.error.no-valid-email: A vend\u00e9g fi\u00f3knak \u00e9rv\u00e9nyes e-mail c\u00edmmel kell rendelkeznie.
+jcmsplugin.collaborativespace.guestaccounts.member-controller.error.contact-creation-forbidden: A vend\u00e9g fi\u00f3k nem hozhat l\u00e9tre kapcsolatot.
+jcmsplugin.collaborativespace.guestaccounts.member-controller.warning.guest-group-removal: A fi\u00f3k elt\u00e1vol\u00edt\u00e1sa a vend\u00e9g fi\u00f3kok csoportj\u00e1b\u00f3l t\u00f6bb hozz\u00e1f\u00e9r\u00e9st biztos\u00edtana ehhez a fi\u00f3khoz.<br />A folytat\u00e1shoz k\u00e9rj\u00fck, k\u00e9nyszer\u00edtse a fi\u00f3k elt\u00e1vol\u00edt\u00e1s\u00e1t a vend\u00e9g csoportb\u00f3l.
+jcmsplugin.collaborativespace.guestaccounts.member-controller.guest-group-removal.lbl: Elt\u00e1vol\u00edt\u00e1s a Vend\u00e9gek k\u00f6z\u00fcl
+jcmsplugin.collaborativespace.guestaccounts.member-controller.guest-group-removal.lbl.h: K\u00e9nyszer\u00edti a fi\u00f3k elt\u00e1vol\u00edt\u00e1s\u00e1t a vend\u00e9g fi\u00f3kok csoportj\u00e1b\u00f3l?
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.feature-not-enabled: A k\u00e9r\u00e9se nem dolgozhat\u00f3 fel. K\u00e9rj\u00fck, ellen\u0151rizze a vend\u00e9g szolg\u00e1ltat\u00e1s be\u00e1ll\u00edt\u00e1s\u00e1t.
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-submitter: A bek\u00fcld\u0151t k\u00f6telez\u0151 megadni.
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-group: K\u00e9rj\u00fck, v\u00e1lasszon legal\u00e1bb egy egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletcsoportot.
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-name: A vend\u00e9gnek n\u00e9vvel kell rendelkeznie.
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-organization: A vend\u00e9gnek szervezettel kell rendelkeznie.
+jcmsplugin.collaborativespace.guestaccounts.request-modal.use-with-worflow.title: Vend\u00e9g fi\u00f3k l\u00e9trehoz\u00e1sa ir\u00e1nti k\u00e9relem
+jcmsplugin.collaborativespace.guestaccounts.request-modal.use-with-no-worflow.title: Vend\u00e9g fi\u00f3k l\u00e9trehoz\u00e1s
+jcmsplugin.collaborativespace.guestaccounts.creation-request-controller.create.finish: <p>A vend\u00e9g fi\u00f3k l\u00e9trehoz\u00e1sa ir\u00e1nti k\u00e9relme sikeresen be lett ny\u00fajtva.</p><p>Ha a k\u00e9r\u00e9s \u00e9rv\u00e9nyes\u00edt\u00e9se megt\u00f6rt\u00e9nt, a vend\u00e9g fi\u00f3k l\u00e9tre lesz hozva \u00e9s \u00d6n \u00e9rtes\u00edt\u00e9st kap.</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-controller.account-creation-success.mail.email-notsent: Az e-mailt nem siker\u00fclt elk\u00fcldeni: {0}. K\u00e9rem, pr\u00f3b\u00e1lja \u00fajra, vagy vegye fel a kapcsolatot egy vezet\u0151vel.
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.0: Ellen\u0151rz\u00e9s
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1: Javaslatok
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.2: Inform\u00e1ci\u00f3
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.3: Ter\u00fcletek
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.0.intro: <p class='info'>Adja meg a vend\u00e9g fi\u00f3k nev\u00e9t \u00e9s/vagy e-mail c\u00edm\u00e9t, annak ellen\u0151rz\u00e9se \u00e9rdek\u00e9ben, hogy l\u00e9tezik-e m\u00e1r ez a szem\u00e9ly:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.intro.1: <p class='info'>Egy l\u00e9tez\u0151 fi\u00f3k tal\u00e1lhat\u00f3 ezekkel az adatokkal. A l\u00e9trehoz\u00e1s el\u0151tt ellen\u0151rizze, hogy az \u00d6n \u00e1ltal tervezett vend\u00e9g fi\u00f3k nem l\u00e9tezik-e.</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.intro.2: <p class='info'>Megl\u00e9v\u0151 fi\u00f3kok tal\u00e1lhat\u00f3k. Miel\u0151tt \u00fajat hoz l\u00e9tre, ellen\u0151rizze, hogy nem ugyanaz a szem\u00e9ly.<br />Kattintson egy k\u00e1rty\u00e1ra a tag \u00faj ablakban val\u00f3 megjelen\u00edt\u00e9s\u00e9hez, mutasson egy k\u00e1rty\u00e1ra, \u00e9s kattintson a gombra a taggal t\u00f6rt\u00e9n\u0151 folytat\u00e1shoz.</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.see-profile.btn: Profil megtekint\u00e9se
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.see-profile.btn.title: A fi\u00f3k teljes profilj\u00e1nak megjelen\u00edt\u00e9se egy \u00faj ablakban, miel\u0151tt kiv\u00e1lasztana egy m\u0171veletet
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.select-account.title: V\u00e1lassza ki ezt a megl\u00e9v\u0151 fi\u00f3kot, hogy regisztr\u00e1lhassa a terekre
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.select-account.btn: Kiv\u00e1laszt\u00e1s
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.transform-contact-to-guest.btn-label: Konvert\u00e1l\u00e1s vend\u00e9gg\u00e9
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.transform-contact-to-guest.btn.title: Jel\u00f6lje ki ezt a n\u00e9vjegyet, hogy vend\u00e9gg\u00e9 alak\u00edtsa, \u00edgy felveheti a terekre
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.2.intro: <p class='info'>K\u00e9rj\u00fck, t\u00f6ltse ki a vend\u00e9g fi\u00f3kkal kapcsolatos adatokat a l\u00e9trehoz\u00e1shoz:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.2.intro.convert-contact: <p class='info'>K\u00e9rj\u00fck, t\u00f6ltse ki a kapcsolatra <strong>{0}</strong> vonatkoz\u00f3 adatokat a vend\u00e9gg\u00e9 t\u00f6rt\u00e9n\u0151 \u00e1talak\u00edt\u00e1shoz:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.3.intro: <p class='info'>A k\u00f6vetkez\u0151 egy\u00fcttm\u0171k\u00f6d\u00e9si t\u00e9ren, k\u00e9rj\u00fck, ellen\u0151rizze a csoportokat, amelyekhez a fi\u00f3k hozz\u00e1 lesz adva.</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.3.intro.convert-contact: <p class='info'>A k\u00f6vetkez\u0151 egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcleteken, k\u00e9rj\u00fck, ellen\u0151rizze a csoportokat, amelyekhez a kapcsolat <strong>{0}</strong> hozz\u00e1 lesz adva:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.use-with-worflow.validate: Ig\u00e9nyl\u00e9s elk\u00fcld\u00e9se
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.use-with-no-worflow.validate: Fi\u00f3k l\u00e9trehoz\u00e1sa
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.use-with-worflow.validate: Ig\u00e9nyl\u00e9s elk\u00fcld\u00e9se
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.use-with-no-worflow.validate: Konvert\u00e1l\u00e1s
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.contact-reminder: <strong>{0}</strong> konvert\u00e1l\u00e1sa vend\u00e9g fi\u00f3kk\u00e1.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.groups-intro: <p class='info'>A k\u00f6vetkez\u0151 egy\u00fcttm\u0171k\u00f6d\u00e9si t\u00e9ren, k\u00e9rj\u00fck, ellen\u0151rizze a csoportokat, amelyekhez a vend\u00e9g fi\u00f3k hozz\u00e1 lesz adva.</p>
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.error.no-email: A kapcsolatnak \u00e9rv\u00e9nyes e-mail c\u00edmmel kell rendelkeznie, hogy elv\u00e9gezhet\u0151 legyen a konvert\u00e1l\u00e1s vend\u00e9g fi\u00f3kk\u00e1.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.error.email-already-used: A kapcsolat nem konvert\u00e1lhat\u00f3 vend\u00e9g fi\u00f3kk\u00e1. Egy l\u00e9tez\u0151 fi\u00f3k m\u00e1r haszn\u00e1lja a/az <strong>{0}</strong> e-mailt.<br />K\u00e9rj\u00fck haszn\u00e1ljon egy m\u00e1sik e-mailt, vagy konvert\u00e1lja a megl\u00e9v\u0151 fi\u00f3kot vend\u00e9g fi\u00f3kk\u00e1.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.error.not-a-contact: A konvert\u00e1land\u00f3 tagnak kapcsolatnak kell lennie.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.create.finish: <p>A kapcsolat vend\u00e9g fi\u00f3kk\u00e1 t\u00f6rt\u00e9n\u0151 konvert\u00e1l\u00e1s\u00e1nak k\u00e9r\u00e9se sikeresen be lett ny\u00fajtva.</p><p>Ha az \u00e9rv\u00e9nyes\u00edt\u00e9se megt\u00f6rt\u00e9nt, a vend\u00e9g fi\u00f3k l\u00e9tre lesz hozva \u00e9s \u00d6n \u00e9rtes\u00edt\u00e9st kap.</p>
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.account-transformation-success: A/az <a href='{0}' target='_blank' title='New window'>{1}</a> kapcsolat vend\u00e9g fi\u00f3kk\u00e1 konvert\u00e1l\u00e1sa sikeresen megt\u00f6rt\u00e9nt.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.account-creation-success.mail.email-notsent: Az e-mailt nem siker\u00fclt elk\u00fcldeni: {0}. K\u00e9rem, pr\u00f3b\u00e1lja \u00fajra, vagy vegye fel a kapcsolatot egy vezet\u0151vel.
+jcmsplugin.collaborativespace.guestaccounts.guest-request.notification.warn.no-request: Nem siker\u00fclt elk\u00fcldeni a jelsz\u00f3m\u00f3dos\u00edt\u00f3 e-mailt. A vend\u00e9g fi\u00f3k ({0}) nem volt \u00e9rtes\u00edthet\u0151.
+jcmsplugin.collaborativespace.guestaccounts.guest-request.notification.warn.mail-disabled: Az e-mailek le vannak tiltva. A vend\u00e9g fi\u00f3k nem volt \u00e9rtes\u00edthet\u0151.
+jcmsplugin.collaborativespace.guestaccounts.guest-request.notification.warn.unknown-error: Valami nem stimmel. A vend\u00e9g fi\u00f3k nem volt \u00e9rtes\u00edthet\u0151.
+jcmsplugin.collaborativespace.guestaccounts.process-request.btn.accept:  Elfogad\u00e1s
+jcmsplugin.collaborativespace.guestaccounts.process-request.btn.reject:  Elutas\u00edt\u00e1s
+
+
+jcmsplugin.collaborativespace.syncMode.tabs: Alkalmaz\u00e1sok
+jcmsplugin.collaborativespace.syncMode.dashboard: Kezd\u0151lap
+jcmsplugin.collaborativespace.syncMode.data: Strukt\u00fara adatok (t\u00edpusok, WF, csoportok, ...)
+jcmsplugin.collaborativespace.syncMode.categories: Kateg\u00f3ri\u00e1k
+jcmsplugin.collaborativespace.syncMode.activate-help.message: A szinkroniz\u00e1l\u00e1s, ha aktiv\u00e1lva van, a modell n\u00e9h\u00e1ny param\u00e9ter\u00e9t alkalmazza ezen a munkater\u00fcleten
+
+#jcmsplugin.collaborativespace.modelSyncMode.dashboard: Applications
+#jcmsplugin.collaborativespace.modelSyncMode.dashboard: Home 
+#jcmsplugin.collaborativespace.modelSyncMode.dashboard: Data
+
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal: Az oldal szerkeszt\u00e9se (Speci\u00e1lis szerkeszt\u00e9s)...
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-simple: Az oldal szerkeszt\u00e9se...
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-simple-stop: Szerkeszt\u00e9s le\u00e1ll\u00edt\u00e1sa
+jcmsplugin.collaborativespace.actions-menu.recommend-collaborative-space: Megoszt\u00e1s...
+jcmsplugin.collaborativespace.modelSyncMode.locked.message: Az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet szinkroniz\u00e1lva van a modellel: <b>{0}</b>
+
+# ------------------------------------------------------------
+# Alerts
+# ------------------------------------------------------------
+alert.name.jcmsplugin-collaborativespace:                         Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletek
+alert.name.jcmsplugin-collaborativespace.cs-creation:             Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet l\u00e9trehoz\u00e1sa
+alert.name.jcmsplugin-collaborativespace.cs-creation-rejected-submitter: Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet l\u00e9trehoz\u00e1sa elutas\u00edtva
+alert.name.jcmsplugin-collaborativespace.invitation:              Megh\u00edv\u00e1s egy t\u00e9rhez t\u00f6rt\u00e9n\u0151 csatlakoz\u00e1sra
+alert.name.jcmsplugin-collaborativespace.enrollment:              Feliratkoz\u00e1s egy ter\u00fcletre
+alert.name.jcmsplugin-collaborativespace.join:                    Feliratkoz\u00e1s egy ter\u00fcletre
+alert.name.jcmsplugin-collaborativespace.recommendation:          Egy ter\u00fclet aj\u00e1nl\u00e1sa
+alert.name.jcmsplugin-collaborativespace.signup-request:          Feliratkoz\u00e1si k\u00e9relem
+alert.name.jcmsplugin-collaborativespace.signup-accepted:         Feliratkoz\u00e1s elfogadva
+alert.name.jcmsplugin-collaborativespace.signup-rejected:         Feliratkoz\u00e1s elutas\u00edtva
+alert.name.jcmsplugin-collaborativespace.unsignup:                Leiratkoz\u00e1s
+alert.name.jcmsplugin-collaborativespace.guest-creation:          Vend\u00e9g fi\u00f3k aktiv\u00e1l\u00e1s
+alert.name.jcmsplugin-collaborativespace.silent-guest-creation:   Vend\u00e9g fi\u00f3k aktiv\u00e1l\u00e1s
+alert.name.jcmsplugin-collaborativespace.contact-to-guest:        A kapcsolat vend\u00e9g fi\u00f3kk\u00e1 alak\u00edt\u00e1sa
+alert.name.jcmsplugin-collaborativespace.silent-contact-to-guest: A kapcsolat vend\u00e9g fi\u00f3kk\u00e1 alak\u00edt\u00e1sa
+
+alert.msg.jcmsplugin-collaborativespace.cs-creation.title:                          {data} egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet l\u00e9trehoz\u00e1sa
+alert.msg.jcmsplugin-collaborativespace.cs-creation.short-description:              A/az {data} egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet l\u00e9trehoz\u00e1sa megt\u00f6rt\u00e9nt.
+alert.msg.jcmsplugin-collaborativespace.cs-creation.description:                    <p>A/az {data} egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet l\u00e9trehoz\u00e1sa megt\u00f6rt\u00e9nt.</p><p>\u00d6n a vezet\u0151je ennek a ter\u00fcletnek.</p>
+
+alert.msg.jcmsplugin-collaborativespace.cs-creation-rejected-submitter.title:             Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet l\u00e9trehoz\u00e1sa elutas\u00edtva
+alert.msg.jcmsplugin-collaborativespace.cs-creation-rejected-submitter.short-description: Az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet l\u00e9trehoz\u00e1si k\u00e9relem ("{cs-title}") el lett utas\u00edtva. \u00c9rv\u00e9nyes\u00edt\u0151 megjegyz\u00e9se: {validator-comment}
+
+alert.msg.jcmsplugin-collaborativespace.invitation.title:                           {data} csatlakoz\u00e1si megh\u00edv\u00e1s
+alert.msg.jcmsplugin-collaborativespace.invitation.short-description:               {author} megh\u00edvta \u00d6nt, hogy legyen tagja a/az {data} egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletnek.
+alert.msg.jcmsplugin-collaborativespace.invitation.description:                     <p>{author} megh\u00edvta \u00d6nt, hogy legyen tagja a/az {data} egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletnek.</p><p><a href="{accept-url}">A megh\u00edv\u00e1s elfogad\u00e1sa</a></p><p><a href="{decline-url}">A megh\u00edv\u00e1s elutas\u00edt\u00e1sa</a></p><br /><p><b>Ter\u00fclet le\u00edr\u00e1sa:</b><p>{cs-description}</p>
+
+alert.msg.jcmsplugin-collaborativespace.enrollment.title:                           Feliratkoz\u00e1s erre: {data}
+alert.msg.jcmsplugin-collaborativespace.enrollment.short-description:               \u00d6n tagja a/az {data}egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletnek.
+
+alert.msg.jcmsplugin-collaborativespace.join.title:                                 Feliratkoz\u00e1s erre: {data}
+alert.msg.jcmsplugin-collaborativespace.join.short-description:                     {author} csatlakozott a/az {data} egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclethez.
+alert.msg.jcmsplugin-collaborativespace.join.description:                           <p><a href="{author-url}">{author}</a> csatlakozott a/az {data} egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclethez.</p>
+
+alert.msg.jcmsplugin-collaborativespace.recommendation.title:                       Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet aj\u00e1nl\u00e1sa {data}
+alert.msg.jcmsplugin-collaborativespace.recommendation.short-description:           {author} aj\u00e1nlja \u00d6nnek a csatlakoz\u00e1st a/az {data} egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclethez.
+alert.msg.jcmsplugin-collaborativespace.recommendation.description:                 <p>{author} aj\u00e1nlja \u00d6nnek a csatlakoz\u00e1st a/az {data} egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclethez.</p>
+
+alert.msg.jcmsplugin-collaborativespace.signup-request.title:                       Feliratkoz\u00e1s elk\u00fcld\u00e9se a k\u00f6vetkez\u0151re: {data}
+alert.msg.jcmsplugin-collaborativespace.signup-request.short-description:           {author} elk\u00fcld\u00f6tt egy feliratkoz\u00e1si k\u00e9relmet a/az {data} egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletre vonatkoz\u00f3an.
+alert.msg.jcmsplugin-collaborativespace.signup-request.description:                 <p>{author} elk\u00fcld\u00f6tt egy <a href="{signup-url}">feliratkoz\u00e1si k\u00e9relmet</a> a/az {data} egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletre vonatkoz\u00f3an.</p>
+
+alert.msg.jcmsplugin-collaborativespace.signup-accepted.title:                      Feliratkoz\u00e1s elk\u00fcld\u00e9se a k\u00f6vetkez\u0151re: {data}
+alert.msg.jcmsplugin-collaborativespace.signup-accepted.short-description:          A/az {data} egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletre t\u00f6rt\u00e9n\u0151 feliratkoz\u00e1s\u00e1nak elk\u00fcld\u00e9s\u00e9t {author} j\u00f3v\u00e1hagyta.
+alert.msg.jcmsplugin-collaborativespace.signup-accepted.description:                <p>Gratul\u00e1lunk! A/az {data} egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletre t\u00f6rt\u00e9n\u0151 feliratkoz\u00e1s\u00e1nak elk\u00fcld\u00e9s\u00e9t {author} j\u00f3v\u00e1hagyta. Mostant\u00f3l \u00d6n tagja ennek a ter\u00fcletnek.</p>
+
+alert.msg.jcmsplugin-collaborativespace.signup-rejected.title:                      Feliratkoz\u00e1s elk\u00fcld\u00e9se a k\u00f6vetkez\u0151re: {data}
+alert.msg.jcmsplugin-collaborativespace.signup-rejected.short-description:          A/az {data} egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletre t\u00f6rt\u00e9n\u0151 feliratkoz\u00e1s\u00e1nak el lett utas\u00edtva. \u00c9rv\u00e9nyes\u00edt\u0151 megjegyz\u00e9se: {validator-comment}
+
+alert.msg.jcmsplugin-collaborativespace.unsignup.title:                             Leiratkoz\u00e1s innen: {data}
+alert.msg.jcmsplugin-collaborativespace.unsignup.short-description:                 {author} leiratkozott a/az {data} egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletr\u0151l.
+
+alert.msg.jcmsplugin-collaborativespace.guest-creation.title:                       Vend\u00e9g fi\u00f3k aktiv\u00e1l\u00e1s
+alert.msg.jcmsplugin-collaborativespace.guest-creation.short-description:           A/az {data} ({organization}) vend\u00e9g fi\u00f3k sikeresen l\u00e9tre lett hozva \u00e9s e-mailben \u00e9rtes\u00edt\u00e9st kapott.
+
+alert.msg.jcmsplugin-collaborativespace.contact-to-guest.title:                     Vend\u00e9g fi\u00f3k aktiv\u00e1l\u00e1s
+alert.msg.jcmsplugin-collaborativespace.contact-to-guest.short-description:         A/az {data} kapcsolat ({organization}) \u00e1t lett konvert\u00e1lva vend\u00e9g fi\u00f3kk\u00e1 \u00e9s e-mailben \u00e9rtes\u00edt\u00e9st kapott.
+
+alert.msg.jcmsplugin-collaborativespace.silent-guest-creation.title:                Vend\u00e9g fi\u00f3k aktiv\u00e1l\u00e1s
+alert.msg.jcmsplugin-collaborativespace.silent-guest-creation.short-description:    A/az {data} vend\u00e9g fi\u00f3k ({organization}) sikeresen l\u00e9tre lett hozva.
+
+alert.msg.jcmsplugin-collaborativespace.silent-contact-to-guest.title:              Vend\u00e9g fi\u00f3k aktiv\u00e1l\u00e1s
+alert.msg.jcmsplugin-collaborativespace.silent-contact-to-guest.short-description:  A/az {data} kapcsolat ({organization}) vend\u00e9g fi\u00f3kk\u00e1 lett konvert\u00e1lva.
+
+wf-alert.ANY.CSRequest.wfcsrequest.-201.form-submission.alertWorkers.ANY.title: {reminder} Egy\u00fcttm\u0171k\u00f6d\u00e9si t\u00e9r l\u00e9trehoz\u00e1si k\u00e9relem el lett k\u00fcldve
+wf-alert.ANY.CSRequest.wfcsrequest.-201.form-submission.alertWorkers.ANY.short-description: Egy egy\u00fcttm\u0171k\u00f6d\u00e9si t\u00e9r l\u00e9trehoz\u00e1si k\u00e9relem el lett k\u00fcldve: {data.url}
+wf-alert.ANY.CSRequest.wfcsrequest.-201.form-submission.alertWorkers.ANY.description: <p>Egy egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet l\u00e9trehoz\u00e1si k\u00e9relem {data} el lett k\u00fcldve.</p><p>\u00d6n fel lett k\u00e9rve az \u00e9rv\u00e9nyes\u00edt\u00e9s\u00e9re.</p>
+
+wf-alert.ANY.CSSignupRequest.wfcssignup.-201.form-submission.alertWorkers.ANY.title: {reminder} Egy\u00fcttm\u0171k\u00f6d\u00e9si t\u00e9r regisztr\u00e1ci\u00f3s k\u00e9relem el lett k\u00fcldve
+wf-alert.ANY.CSSignupRequest.wfcssignup.-201.form-submission.alertWorkers.ANY.short-description: Egy egy\u00fcttm\u0171k\u00f6d\u00e9si t\u00e9r regisztr\u00e1ci\u00f3s k\u00e9relem el lett k\u00fcldve: {data.url}
+wf-alert.ANY.CSSignupRequest.wfcssignup.-201.form-submission.alertWorkers.ANY.description: <p>Egy egy\u00fcttm\u0171k\u00f6d\u00e9si t\u00e9r regisztr\u00e1ci\u00f3s k\u00e9relem el lett k\u00fcldve: {data}.</p><p>\u00d6n felk\u00e9r\u00e9st kapott az \u00e9rv\u00e9nyes\u00edt\u00e9s\u00e9re.</p>
+
+# ----------------------------------------------------------------------
+# SHORTCUT
+# ----------------------------------------------------------------------
+
+data.$id.shortcut.jcmsplugin.collaborativespace-hub.title: Ter\u00fcletek
+data.$id.shortcut.jcmsplugin.collaborativespace-hub.text: \u00c9rje el az \u00f6sszes ter\u00fclet\u00e9t, kezelje kedvenc ter\u00fcleteit, \u00e9s ismerje meg a ter\u00fcletre vonatkoz\u00f3 javaslatokat.
+
+# ----------------------------------------------------------------------
+# CategoryBrowser
+# ----------------------------------------------------------------------
+category.category-browser.collaborativespace-search: Keres\u00e9s ebben a t\u00e9rben
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From CollaborativeSpace-templates.xml
+types.CollaborativeSpace.templates.box.default.label: Alap\u00e9rtelmezett sablon
+
+# From CollaborativeSpace.xml
+types.CollaborativeSpace.fields.header.label: Fejl\u00e9c
+types.CollaborativeSpace.fields.headerSettings.label: Fejl\u00e9c testreszab\u00e1sa
+types.CollaborativeSpace.fields.introduction.label: Bevezet\u00e9s
+types.CollaborativeSpace.tabs.layout.label: Elrendez\u00e9s
+types.CollaborativeSpace.fields.accessPolicy.label: Hozz\u00e1f\u00e9r\u00e9s
+types.CollaborativeSpace.title.label: C\u00edm
+types.CollaborativeSpace.fields.exactCategory.label: Pontos kateg\u00f3ria
+types.CollaborativeSpace.fields.signupPolicy.labelList: Szabad feliratkoz\u00e1s| Feliratkoz\u00e1si k\u00e9r\u00e9s|Vezet\u0151k \u00e1ltal kezelt feliratkoz\u00e1s
+types.CollaborativeSpace.fields.layout.label: Elrendez\u00e9s
+types.CollaborativeSpace.label: Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet
+types.CollaborativeSpace.description: Az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet portletje meghat\u00e1rozza, hogy mely alkalmaz\u00e1sokat kell megjelen\u00edteni.
+types.CollaborativeSpace.fields.layout.labelList: Nincs oldals\u00e1v|Bal oldals\u00e1v|Jobb oldals\u00e1v
+types.CollaborativeSpace.fields.signupPolicy.label: Feliratkoz\u00e1si felt\u00e9telek
+types.CollaborativeSpace.fields.dashboardColumnCount.label: Ir\u00e1ny\u00edt\u00f3pult-oszlopok
+types.CollaborativeSpace.fields.accessPolicy.labelList: Nyilv\u00e1nos|Priv\u00e1t|Titkos
+types.CollaborativeSpace.fields.exactCategory.onLabel: Igen
+types.CollaborativeSpace.fields.exactCategory.offLabel: Nem
+types.CollaborativeSpace.fields.description.label: Le\u00edr\u00e1s
+types.CollaborativeSpace.tabs.access.label: Hozz\u00e1f\u00e9r\u00e9s
+types.CollaborativeSpace.fields.theme.label: T\u00e9ma
+types.CollaborativeSpace.fields.followersGroup.label: K\u00f6vet\u0151 csoport
+types.CollaborativeSpace.fields.followersGroup.description: A csoport tagjai \u00e9rtes\u00edt\u00e9st fognak kapni az \u00faj tartalmakr\u00f3l a ter\u00fcleten
+types.CollaborativeSpace.fields.jportal.label: JPortal
+types.CollaborativeSpace.fields.syncMode.label: Szinkroniz\u00e1lt elemek
+types.CollaborativeSpace.fields.syncMode.labelList: Kezd\u0151lap|Alkalmaz\u00e1sok|Strukt\u00fara adatok (t\u00edpusok, WF, csoportok, ...)|Kateg\u00f3ri\u00e1k
+types.CollaborativeSpace.fields.model.label: Munkater\u00fclet-modell
+types.CollaborativeSpace.fields.applications.label: Alkalmaz\u00e1sok
+types.CollaborativeSpace.fields.mobileShowIntro.label: Bevezet\u00e9s megjelen\u00edt\u00e9se
+types.CollaborativeSpace.fields.mobileShowApplications.label: Alkalmaz\u00e1sok megjelen\u00edt\u00e9se
+types.CollaborativeSpace.fields.mobilePortlets.label: Portletek
+types.CollaborativeSpace.fields.modelSyncMode.label: Szinkroniz\u00e1l\u00e1s sz\u00fcks\u00e9ges 
+types.CollaborativeSpace.fields.modelSyncMode.labelList: Kezd\u0151lap|Alkalmaz\u00e1sok|Strukt\u00fara adatok (t\u00edpusok, WF, csoportok, ...)|Kateg\u00f3ri\u00e1k
+
+# From CSRequest-templates.xml
+types.CSRequest.templates.query.default.label: Alap\u00e9rtelmezett sablon
+types.CSRequest.templates.full.default.description: Alap\u00e9rtelmezett sablon
+types.CSRequest.templates.full.default.label: Alap\u00e9rtelmezett sablon
+types.CSRequest.templates.query.default.description: Alap\u00e9rtelmezett sablon
+
+# From CSRequest.xml
+types.CSRequest.fields.description.label: Le\u00edr\u00e1s
+types.CSRequest.title.label: C\u00edm
+types.CSRequest.fields.notificationPolicy.label: \u00c9rtes\u00edt\u00e9si politika
+types.CSRequest.fields.groups.label: Csoportok
+types.CSRequest.fields.accessPolicy.labelList: Nyilv\u00e1nos|Priv\u00e1t|Titkos
+types.CSRequest.fields.signupPolicy.labelList: Szabad feliratkoz\u00e1s| Feliratkoz\u00e1si k\u00e9r\u00e9s|Vezet\u0151k \u00e1ltal kezelt feliratkoz\u00e1s
+types.CSRequest.fields.notificationPolicy.labelList: Megh\u00edv\u00e1s k\u00fcld\u00e9se a r\u00e9sztvev\u0151knek|R\u00e9sztvev\u0151k hozz\u00e1ad\u00e1sa \u00e9s \u00e9rtes\u00edt\u00e9se|R\u00e9sztvev\u0151k hozz\u00e1ad\u00e1sa \u00e9rtes\u00edt\u00e9s n\u00e9lk\u00fcl
+types.CSRequest.fields.signupPolicy.label: Feliratkoz\u00e1si felt\u00e9telek
+types.CSRequest.label: Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet - L\u00e9trehoz\u00e1si k\u00e9r\u00e9s
+types.CSRequest.fields.admins.label: Vezet\u0151k
+types.CSRequest.fields.language.label: Nyelv
+types.CSRequest.fields.members.label: Tagok
+types.CSRequest.fields.name.label: Ter\u00fclet neve
+types.CSRequest.fields.accessPolicy.label: Hozz\u00e1f\u00e9r\u00e9s
+types.CSRequest.fields.model.label: Modell
+types.CSRequest.fields.parent.label: Sz\u00fcl\u0151 ter\u00fclet
+types.CSRequest.fields.syncMode.label: Szinkroniz\u00e1lt elemek
+types.CSRequest.fields.syncMode.labelList: Kezd\u0151lap|Alkalmaz\u00e1sok|Strukt\u00fara adatok (t\u00edpusok, WF, csoportok, ...)|Kateg\u00f3ri\u00e1k
+
+# From CSSignupRequest-templates.xml
+types.CSSignupRequest.templates.full.default.label: Alap\u00e9rtelmezett sablon
+types.CSSignupRequest.templates.full.default.description: Alap\u00e9rtelmezett sablon
+types.CSSignupRequest.templates.query.default.label: Alap\u00e9rtelmezett sablon
+types.CSSignupRequest.templates.query.default.description: Alap\u00e9rtelmezett sablon
+
+# From CSSignupRequest.xml
+types.CSSignupRequest.title.label: C\u00edm
+types.CSSignupRequest.label: Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet - Feliratkoz\u00e1si k\u00e9r\u00e9s
+types.CSSignupRequest.fields.name.label: N\u00e9v
+
+# From GuestCrea.xml
+types.GuestCrea.title.label: C\u00edm
+types.GuestCrea.label: Vend\u00e9g fi\u00f3k - L\u00e9trehoz\u00e1si k\u00e9r\u00e9s
+types.GuestCrea.description: Ez az \u0171rlap lehet\u0151v\u00e9 teszi \u00d6nnek egy vend\u00e9g fi\u00f3k l\u00e9trehoz\u00e1s\u00e1nak k\u00e9r\u00e9s\u00e9t, amely kiz\u00e1r\u00f3lag az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletekhez rendelkezik hozz\u00e1f\u00e9r\u00e9ssel.
+types.GuestCrea.fields.name.label: N\u00e9v
+types.GuestCrea.fields.email.label: E-mail
+types.GuestCrea.fields.organization.label: Szervezet
+types.GuestCrea.fields.firstname.label: Ut\u00f3n\u00e9v
+types.GuestCrea.fields.language.label: Nyelv
+types.GuestCrea.fields.country.label: Orsz\u00e1g
+
+# From GuestConv.xml
+types.GuestConv.title.label: C\u00edm
+types.GuestConv.label: Vend\u00e9g fi\u00f3k - Kapcsolat konvert\u00e1l\u00e1s\u00e1nak k\u00e9r\u00e9se
+types.GuestConv.fields.contact.description: A vend\u00e9g fi\u00f3kk\u00e1 alak\u00edtand\u00f3 megl\u00e9v\u0151 tag (kapcsolat t\u00edpus).
+types.GuestConv.description: Ez az \u0171rlap lehet\u0151v\u00e9 teszi \u00d6nnek egy megl\u00e9v\u0151 kapcsolat vend\u00e9g fi\u00f3kk\u00e1 konvert\u00e1l\u00e1s\u00e1nak k\u00e9r\u00e9s\u00e9t, amely kiz\u00e1r\u00f3lag az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletekhez rendelkezik hozz\u00e1f\u00e9r\u00e9ssel.
+types.GuestConv.fields.contact.label: A kapcsolat
+
+# From GuestRequest.xml
+types.GuestRequest.fields.submit-mbr.label: Ig\u00e9nyl\u0151
+types.GuestRequest.fields.groups.label: C\u00e9lcsoportok
+types.GuestRequest.fields.groups.description: Az \u00f6sszes egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletcsoport, amelyekhez a vend\u00e9g fi\u00f3k hozz\u00e1 lesz adva.
+types.GuestRequest.title.label: C\u00edm
+types.GuestRequest.label: [Abstract] Vend\u00e9g fi\u00f3k - L\u00e9trehoz\u00e1si k\u00e9r\u00e9s
+
+# From PortletMyCollaborativeSpaces-templates.xml
+types.PortletMyCollaborativeSpaces.templates.box.default.label: Saj\u00e1t ter\u00fcletek sablonja
+types.PortletMyCollaborativeSpaces.templates.full.default.label: Saj\u00e1t ter\u00fcletek sablonja
+types.PortletMyCollaborativeSpaces.templates.box.itemBox.label: Item Box saj\u00e1t ter\u00fcletek sablon
+types.PortletMyCollaborativeSpaces.templates.box.hierarchy.label: Hierarchikus ter\u00fcletek sablonja
+types.PortletMyCollaborativeSpaces.templates.box.hierarchyItemBox.label: Item Box hierarchikus ter\u00fcletek sablon
+types.PortletMyCollaborativeSpaces.templates.query.default.label: K\u00e9rd\u00e9s sablon
+
+# From PortletMyCollaborativeSpaces.xml
+types.PortletMyCollaborativeSpaces.label: Saj\u00e1t egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletek portletje
+types.PortletMyCollaborativeSpaces.description: Az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcleteim portletje megjelen\u00edti az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletek list\u00e1j\u00e1t.
+types.PortletMyCollaborativeSpaces.title.label: C\u00edm
+types.PortletMyCollaborativeSpaces.fields.depth.label: Szintek
+types.PortletMyCollaborativeSpaces.fields.depth.description: A megjelen\u00edtend\u0151 alter\u00fcletszintek sz\u00e1ma
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.label: Tipol\u00f3gia sz\u0171r\u0151
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.description: Ter\u00fcleti tipol\u00f3gia szerinti sz\u0171r\u0151 megjelen\u00edt\u00e9se?
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.onLabel: Igen
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.offLabel: Nem
+
+# From PortletCollaborativeSpaceSuggestion.xml
+types.PortletCollaborativeSpaceSuggestion.label: Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet javaslati portlet
+types.PortletCollaborativeSpaceSuggestion.description: Az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet javaslati portlet megjelen\u00edti az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet javaslatait a bejelentkezett tag sz\u00e1m\u00e1ra.
+types.PortletCollaborativeSpaceSuggestion.title.label: C\u00edm
+types.PortletCollaborativeSpaceSuggestion.fields.threshold.label: K\u00fcsz\u00f6b
+types.PortletCollaborativeSpaceSuggestion.fields.typology.label: Tipol\u00f3gi\u00e1k
+types.PortletCollaborativeSpaceSuggestion.fields.hideWhenNoResults.label: Elrejt\u00e9s, ha nincs javaslat
+types.PortletCollaborativeSpaceSuggestion.fields.maxItems.label: Javaslatok sz\u00e1ma 
+
+# From PortletCollaborativeSpaceSuggestion-templates.xml
+types.PortletCollaborativeSpaceSuggestion.templates.full.default.label: Javaslatok sablon
+types.PortletCollaborativeSpaceSuggestion.templates.box.default.label: Javaslatok sablon
+types.PortletCollaborativeSpaceSuggestion.templates.box.itemBox.label: Item Box Javaslatok sablon
+
+# From plugin.xml
+types.PortletQueryForeach.templates.box.jcmsplugin.collaborativespace.dashboard.label: Ir\u00e1ny\u00edt\u00f3pult-kijelz\u0151 (CSP)
+types.PortletQueryForeachDetail.templates.box.jcmsplugin.collaborativespace.dashboard.label: Ir\u00e1ny\u00edt\u00f3pult-kijelz\u0151 (CSP)
+types.PortletSearch.templates.box.jcmsplugin.collaborativespace.search-header.label: Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet - Fejl\u00e9c
+types.PortletSelection.templates.box.jcmsplugin.collaborativespace.dashboard.label: Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet - Kezel\u0151pult
+types.AbstractPortletSkinable.templates.collaborativeSpace.noskin.label: Vil\u00e1gos (c\u00edm n\u00e9lk\u00fcl)
+types.AbstractPortletSkinable.templates.collaborativeSpace.default.label: Panel lekerek\u00edtett sarkokkal
+types.AbstractPortletSkinable.templates.collaborativeSpace.borderless.label: Vil\u00e1gos, al\u00e1h\u00fazott c\u00edmmel
+
+# From wfcsrequest.xml
+workflows.wfcsrequest.states.60.label: Elfogadva
+workflows.wfcsrequest.states.50.label: Visszautas\u00edtva
+workflows.wfcsrequest.states.-201.label: Elk\u00fcldve
+workflows.wfcsrequest.label: Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet - L\u00e9trehoz\u00e1si k\u00e9r\u00e9s munkafolyamata
+workflows.wfcsrequest.roles.validator.name: \u00c9rv\u00e9nyes\u00edt\u0151
+workflows.wfcsrequest.states.60.description: K\u00e9r\u00e9s enged\u00e9lyezve, az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet l\u00e9tre lett hozva.
+workflows.wfcsrequest.states.50.description: Ez az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet l\u00e9trehoz\u00e1si k\u00e9relem el lett utas\u00edtva. Az ig\u00e9nyelt egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet nem lesz l\u00e9trehozva. Az elutas\u00edt\u00e1ssal kapcsolatos tov\u00e1bbi r\u00e9szletek\u00e9rt l\u00e1sd a munkafolyamat-megjegyz\u00e9seket.
+workflows.wfcsrequest.roles.validator.description: Az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet k\u00e9r\u00e9s\u00e9nek elfogad\u00e1sa/elutas\u00edt\u00e1sa
+
+# From wfcssignup.xml
+workflows.wfcssignup.roles.validator1.description: Elfogadja/Elutas\u00edtja az egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet feliratkoz\u00e1si k\u00e9r\u00e9seit
+workflows.wfcssignup.label: Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fclet - Feliratkoz\u00e1si munkafolyamat
+workflows.wfcssignup.roles.validator1.name: \u00c9rv\u00e9nyes\u00edt\u0151
+workflows.wfcssignup.states.60.label: Elfogadva
+workflows.wfcssignup.states.50.label: Elutas\u00edtva
+workflows.wfcssignup.states.-201.label: Elk\u00fcldve
+
+# From wfguestaccountrequest.xml
+workflows.wfguestaccountrequest.states.60.description: K\u00e9r\u00e9s enged\u00e9lyezve, a vend\u00e9g fi\u00f3k l\u00e9tre lett hozva.
+workflows.wfguestaccountrequest.states.50.description: Ez a vend\u00e9g fi\u00f3k k\u00e9relem el lett utas\u00edtva. A vend\u00e9g fi\u00f3k nem j\u00f6tt l\u00e9tre. Az elutas\u00edt\u00e1ssal kapcsolatos tov\u00e1bbi r\u00e9szletek\u00e9rt l\u00e1sd a munkafolyamat-megjegyz\u00e9seket.
+workflows.wfguestaccountrequest.states.60.label: Elfogadva
+workflows.wfguestaccountrequest.states.50.label: Elutas\u00edtva
+workflows.wfguestaccountrequest.label: Vend\u00e9g fi\u00f3k - Megnyit\u00e1si k\u00e9r\u00e9s munkafolyamata
+workflows.wfguestaccountrequest.roles.guestvalidator.description: Elfogadja/elutas\u00edtja a vend\u00e9g fi\u00f3k megnyit\u00e1s\u00e1nak k\u00e9r\u00e9seit
+workflows.wfguestaccountrequest.roles.guestvalidator.name: \u00c9rv\u00e9nyes\u00edt\u0151
+workflows.wfguestaccountrequest.states.-200.label: Elk\u00fcldve
+
+# Analytics
+ui.analytics.CSAgent.name:                    Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletek
+ui.analytics.CSAgent.report.typology:         Tipol\u00f3gia
+ui.analytics.CSAgent.report.typology.h:       Tipol\u00f3gia lebont\u00e1sa.
+ui.analytics.CSAgent.report.access-policy:    Hozz\u00e1f\u00e9r\u00e9si politika
+ui.analytics.CSAgent.report.access-policy.h:  Hozz\u00e1f\u00e9r\u00e9si politika lebont\u00e1sa
+ui.analytics.CSAgent.report.members:          Top tag
+ui.analytics.CSAgent.report.members.h:        Tagok sz\u00e1ma egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletenk\u00e9nt.
+ui.analytics.CSAgent.report.activity:         Top hozz\u00e1sz\u00f3l\u00e1s
+ui.analytics.CSAgent.report.activity.h:       Hozz\u00e1sz\u00f3l\u00e1sok sz\u00e1ma egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletenk\u00e9nt.
+ui.analytics.CSAgent.report.activity.count:   Hozz\u00e1sz\u00f3l\u00e1sok sz\u00e1ma
+
+# DBComment
+jcmsplugin.collaborativespace.lbl.signup-to-comment: A k\u00f6zz\u00e9t\u00e9telhez t\u00f6rt\u00e9n\u0151 hozz\u00e1sz\u00f3l\u00e1shoz, k\u00e9rj\u00fck, jelentkezzen be erre a ter\u00fcletre.
+
+# SocialConversation
+jcmsplugin.collaborativespace.lbl.signup-to-react: A besz\u00e9lget\u00e9shez t\u00f6rt\u00e9n\u0151 csatlakoz\u00e1shoz, k\u00e9rj\u00fck, iratkozzon fel erre a ter\u00fcletre.
+
+# Collaborative Space hub
+jcmsplugin.collaborativespace.hub: Terek csom\u00f3pontja
+jcmsplugin.collaborativespace.hub.type-cs: Egy\u00fcttm\u0171k\u00f6d\u00e9si ter\u00fcletek
+jcmsplugin.collaborativespace.hub.type-ws: Port\u00e1lok
+jcmsplugin.collaborativespace.hub.mode-all: Minden t\u00e9r
+jcmsplugin.collaborativespace.hub.mode-member: Saj\u00e1t ter\u00fcletek
+jcmsplugin.collaborativespace.hub.mode-favorite: Kedvenceim
+jcmsplugin.collaborativespace.hub.mode-suggestions: Javaslatok
+jcmsplugin.collaborativespace.hub.mode-csrequest: L\u00e9trehoz\u00e1si k\u00e9r\u00e9sek
+jcmsplugin.collaborativespace.hub.mode-member.intro: <p>Adjon hozz\u00e1 vagy t\u00e1vol\u00edtson el egy ter\u00fcletet a kedvencei k\u00f6z\u00fcl, a ter\u00fclet jobb fels\u0151 sark\u00e1ban tal\u00e1lhat\u00f3 csillagra kattintva.</p>
+jcmsplugin.collaborativespace.hub.mode-member.intro-has-favorites: <p>Tal\u00e1lja meg \u00e9s kezelje az \u00f6sszes kedvenc elemet a \u201eKedvencek\u201d pont alatt.</p>
+jcmsplugin.collaborativespace.hub.search-text.placeholder: Ter\u00fcletek keres\u00e9se...
+jcmsplugin.collaborativespace.hub.sidebar-section.accessPolicy: Hozz\u00e1f\u00e9r\u00e9s
+jcmsplugin.collaborativespace.hub.sidebar-section.typology: Tipol\u00f3gia
+jcmsplugin.collaborativespace.hub.sidebar-section.type: T\u00edpus
+
+#JPortal
+jcmcplugin.collaborativespace.jportal.edit.label: A port\u00e1l m\u00f3dos\u00edt\u00e1sa
+jcmcplugin.collaborativespace.jportal.edit-more.label: A port\u00e1l m\u00f3dos\u00edt\u00e1sa...
+jcmsplugin.collaborativespace.jportal.edit-modal.title: Szinkroniz\u00e1lt port\u00e1l m\u00f3dos\u00edt\u00e1sa modellel
+jcmsplugin.collaborativespace.jportal.edit-modal.message: Figyelem, ez a port\u00e1l egy modellel van szinkroniz\u00e1lva.
+jcmsplugin.collaborativespace.jportal.edit-modal.edit-model.label: M\u00f3dos\u00edtsa a modellt
+jcmsplugin.collaborativespace.jportal.edit-modal.desynchronize-model.label: A port\u00e1l deszinkroniz\u00e1l\u00e1sa \u00e9s m\u00f3dos\u00edt\u00e1sa
+
+jcmsplugin.collaborativespace.edit-app-modal.title: Alkalmaz\u00e1s friss\u00edt\u00e9se
+jcmsplugin.collaborativespace.edit-app-modal.template.label: Sablon
+jcmsplugin.collaborativespace.edit-app-modal.title.label: C\u00edm
+
+#Tabs
+jcmsplugin.collaboratif.tabs.menu.remove: Elt\u00e1vol\u00edt\u00e1s...
+jcmsplugin.collaboratif.tabs.menu.remove.confirm: Val\u00f3ban szeretn\u00e9 elt\u00e1vol\u00edtani ezt az alkalmaz\u00e1st?
+jcmsplugin.collaboratif.tabs.menu.update.title: Friss\u00edt\u00e9s...
+jcmsplugin.collaboratif.tabs.rename.title.label: C\u00edm
+
+#Parameters
+jcmsplugin.collaborativespace.parameters.model.link: Modell el\u00e9r\u00e9se
+
+# Migration
+jcmsplugin.collaborativespace.migration.model: Modell
+jcmsplugin.collaborativespace.migration.without-model: Modell n\u00e9lk\u00fcl
+jcmsplugin.collaborativespace.migration.no-typologies: Tipol\u00f3gia n\u00e9lk\u00fcl
+jcmsplugin.collaborativespace.migration.migrate-all: Az \u00f6sszes munkater\u00fclet migr\u00e1l\u00e1sa modell n\u00e9lk\u00fcl
+jcmsplugin.collaborativespace.migration.migrate-selected: A kiv\u00e1lasztott munkater\u00fcletek migr\u00e1l\u00e1sa
+jcmsplugin.collaborativespace.migration.no-model-no-workspace: (Ennek a tipol\u00f3gi\u00e1nak nincs modellje vagy munkater\u00fclete)
+jcmsplugin.collaborativespace.migration.modal-title: Munkater\u00fclet migr\u00e1l\u00e1sa
+jcmsplugin.collaborativespace.migration.modal-button: Migr\u00e1l\u00e1s
+jcmsplugin.collaborativespace.migration.target-typology: C\u00e9l tipol\u00f3gia
+jcmsplugin.collaborativespace.migration.workspace-list: A migr\u00e1land\u00f3 munkater\u00fcletek list\u00e1ja
+
+portlet.header.menu-items.Portlet.edit-skin-cs: Friss\u00edt\u00e9s...

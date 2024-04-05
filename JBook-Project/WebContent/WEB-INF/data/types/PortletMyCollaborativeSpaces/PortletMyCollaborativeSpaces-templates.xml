@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates version="5.0">
+  <template name="default" file="doPortletMyCollaborativeSpacesFullDisplay.jsp" usage="box" />
+  <template name="itemBox" file="doPortletMyCollaborativeSpacesItemBox.jsp" usage="box" />
+  <template name="hierarchy" file="doPortletMyCollaborativeSpacesHierarchicalFullDisplay.jsp" usage="box" />
+  <template name="hierarchyItemBox" file="doPortletMyCollaborativeSpacesHierarchicalFullDisplayItembox.jsp" usage="box" />
+  <template name="default" file="doPortletMyCollaborativeSpacesResultDisplay.jsp" usage="query" />
+</templates>
+

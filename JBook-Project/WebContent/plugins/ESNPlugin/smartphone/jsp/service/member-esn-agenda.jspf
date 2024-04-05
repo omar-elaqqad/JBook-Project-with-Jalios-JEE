@@ -1,0 +1,13 @@
+<% 
+  Member calendarMember = member;  
+  request.setAttribute("jcms.jcmsplugin.smartphone.calendar.member", calendarMember);
+%>
+<div class="member-profile-container member-profile-agenda">
+  <ul data-role="listview">
+  	<%if(PluginManager.getInstance().isPluginActive("JCalendarPlugin")){
+    	%><jalios:include jsp='plugins/JCalendarPlugin/smartphone/jsp/service/jcalendarMore.jsp' /><%
+  	}else{
+    	%><jalios:include jsp="plugins/CalendarPlugin/smartphone/jsp/service/calendarMore.jsp"/><%
+  	}%>
+  </ul>
+</div>

@@ -1,0 +1,92 @@
+@keyframes chooserIcon {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    color: white;
+  }
+}
+
+@keyframes chooserCheck {
+  0% {
+    width: 25px;
+    height: 25px;
+    border-width: 3px;
+  }
+  10% {
+    width: 25px;
+    height: 25px;
+    opacity: 0.1;
+    background: rgba(0,0,0,0.2);
+    border-width: 10px;
+  }
+  12% {
+    width: 25px;
+    height: 25px;
+    opacity: 0.4;
+    background: rgba(0,0,0,0.1);
+    border-width: 0;
+  }
+  50% {
+    width: 30px;
+    height: 30px;
+    background: #00d478;
+    border: 0;
+    opacity: 0.6;
+  }
+  100% {
+    width: 30px;
+    height: 30px;
+    background: #00d478;
+    border: 1px solid white;
+    opacity: 1;
+  }
+}
+
+.app-directory.directory-nav-competencies {
+  
+  .expertise-filters .esn-competencies-item {
+    .js-activate-card {
+      transition: opacity 200ms ease-in;
+      display: block;
+    }
+    
+    .checkbox-check {
+      display: none;
+    }
+  
+    .checkbox-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 1px solid #cccccc;
+      background: white;
+      vertical-align: middle;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      transition: border .3s ease;
+  
+      .jalios-icon {
+        opacity: 1;
+        font-size: 14px;
+        transition: opacity .3s .1s ease;
+      }
+  
+      &:hover {
+        border: 3px solid rgba(0,0,0,0.2);
+      }
+    }
+    &, &.is-active {
+      .checkbox-icon {
+        .jalios-icon {
+          color: #bbbbbb;
+        }
+      }
+    }
+  }
+}

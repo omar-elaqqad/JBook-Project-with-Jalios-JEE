@@ -1,0 +1,114 @@
+jcmsplugin.dbcomment.edit.lbl.add-comment:    Hozzászólás írása
+jcmsplugin.dbcomment.edit.lbl.add-comment-verb:  Hozzászólás
+jcmsplugin.dbcomment.edit.lbl.create-comment: Hozzászólás küldése
+jcmsplugin.dbcomment.edit.lbl.cancel:         Mégse
+jcmsplugin.dbcomment.edit.lbl.link-top:       Vissza az oldal tetejére
+jcmsplugin.dbcomment.edit.lbl.comment-on:     Hozzászólás a következőn: {0}
+jcmsplugin.dbcomment.edit.lbl.title:          Hozzászólások
+jcmsplugin.dbcomment.edit.lbl.view-comment:   Hozzászólások megtekintése
+jcmsplugin.dbcomment.edit.lbl.disable-comment:  Hozzászólás letiltása
+jcmsplugin.dbcomment.edit.lbl.enable-comment:   Hozzászólás engedélyezése
+jcmsplugin.dbcomment.edit.lbl.view-all-comments: {0,choice,0#Nincs hozzászólás|1#A hozzászólás megtekintése|2#A/az {0} hozzászólás megtekintése}
+jcmsplugin.dbcomment.edit.lbl.collapse-comments: Hozzászólások összecsukása
+jcmsplugin.dbcomment.edit.lbl.warn.edit-moderation.disabled:        A jelenlegi moderálási típus nem teszi lehetővé magának a hozzászólásnak a módosítását, csak az egyéb mezőkét. Azonban frissítheti a hozzászólási munkafolyamat állapotát.
+jcmsplugin.dbcomment.edit.follow:        Feliratkozás a közzétételre
+
+jcmsplugin.dbcomment.lbl.comment:             Hozzászólás
+jcmsplugin.dbcomment.lbl.comments:            Hozzászólások
+jcmsplugin.dbcomment.lbl.comment-count:       {0,choice,0#Nincs hozzászólás|1#{0} hozzászólás|2#{0} hozzászólás}
+jcmsplugin.dbcomment.lbl.comment-count-text:  {0,choice,0#hozzászólás|1#hozzászólás|2#hozzászólás}
+jcmsplugin.dbcomment.lbl.new:                 Olvasatlan
+jcmsplugin.dbcomment.lbl.see-previous-comments: {0,choice,1#Az előző hozzászólás megtekintése.|2#Az előző {0} hozzászólás megtekintése.}
+jcmsplugin.dbcomment.lbl.major-update-date:   Utolsó jelentős frissítés {0}
+jcmsplugin.dbcomment.lbl.private:             Magán
+jcmsplugin.dbcomment.lbl.private-description: Ezt a hozzászólást a/az "{0}" csoport tagjai olvashatják.
+jcmsplugin.dbcomment.lbl.private-edit-tooltip: A privát hozzászólás engedélyezése esetén ezt a hozzászólást csak a/az "{0}" Csoport felhasználói fogják elérni.
+jcmsplugin.dbcomment.lbl.non-visible-created-comment: A hozzászólása létre lett hozva és jelenleg érvényesítés alatt áll.
+jcmsplugin.dbcomment.lbl.closed-comment:     A hozzászólások le vannak zárva ezen a közzétételen.
+
+jcmsplugin.dbcomment.commentTop-section:A legtöbb hozzászólással rendelkező tartalmak.
+jcmsplugin.dbcomment.commentTop-section.help: Top 10 legtöbb hozzászólással rendelkező tartalom
+jcmsplugin.dbcomment.commentTop.name:Cím
+jcmsplugin.dbcomment.commentTop.number: Hozzászólások
+
+# ----------------------------------------------------------------------
+# Alert
+# ----------------------------------------------------------------------
+alert.name.jcmsplugin-dbcomment:                              Hozzászólások
+alert.name.jcmsplugin-dbcomment.new-comment:                  Új hozzászólás
+alert.msg.jcmsplugin-dbcomment.new-comment.title:             Új hozzászólás itt: "{parent}"
+alert.msg.jcmsplugin-dbcomment.new-comment.short-description: {author} közzétett egy új hozzászólást itt: "{parent}".{parent.link}
+alert.msg.jcmsplugin-dbcomment.new-comment.description:       <p>{author} közzétett egy újat: {data}.</p>
+alert.name.jcmsplugin-dbcomment.new-mention:                  Új említés
+alert.msg.jcmsplugin-dbcomment.new-mention.title:             Ön meg lett említve egy új hozzászólásban itt: {parent}
+alert.msg.jcmsplugin-dbcomment.new-mention.short-description:  {author} megemlítette Önt egy új hozzászólásban itt: "{parent}".{parent.link}
+alert.msg.jcmsplugin-dbcomment.new-mention.description:        <p>{author} megemlítette Önt egy új hozzászólásban itt: "{parent.data}".</p> 
+alert.new-comment-mention.title:     Ön meg lett említve egy új hozzászólásban itt: {parent}
+alert.new-comment-mention.short-description: {author} megemlítette Önt egy új hozzászólásban itt: "{parent}".{parent.link}
+alert.new-comment-mention.description:       <p>{author} megemlítette Önt egy új hozzászólásban itt: "{parent.data}".</p> 
+
+# ----------------------------------------------------------------------
+# Editable properties
+# ----------------------------------------------------------------------
+jcmsplugin.dbcomment.anonymous:               Névtelen hozzászólások
+jcmsplugin.dbcomment.anonymous.notify:        Névtelen felhasználók értesítése
+jcmsplugin.dbcomment.compatible-types:        Hozzászólással ellátható típusok
+jcmsplugin.dbcomment.edit-moderation.enabled:  Szigorú moderálás mód
+jcmsplugin.dbcomment.edit-moderation.enabled.boolean: hamis
+jcmsplugin.dbcomment.edit-moderation.enabled.help: Az igen választása esetén azok a felhasználók, akik jogosultak voltak a hozzászólások frissítésére, frissíthetik az összes mezőt, a hozzászólás tartalma kivételével. Csak a hozzászólás szerzője számára lesz engedélyezett a szöveg módosítása.
+
+jcmsplugin.dbcomment.edit-commentable.enabled: Lehetővé teszi a hozzászólások letiltását az egyes közzétételeken
+jcmsplugin.dbcomment.edit-commentable.enabled.boolean:hamis
+jcmsplugin.dbcomment.edit-commentable.enabled.boolean.help: Az igen választása esetén azok a felhasználók, akik jogosultak voltak a hozzászólások frissítésére, frissíthetik az összes mezőt, a hozzászólás tartalma kivételével.
+
+jcmsplugin.dbcomment.commentable-default-value: Hozzászólások engedélyezése vagy letiltása: alapértelmezett érték
+jcmsplugin.dbcomment.commentable-default-value.boolean.help: Ha a "Hozzászólások letiltása a közzétételen" engedélyezve van, határozza meg, hogy a közzététel alapértelmezés szerint hozzászólható vagy sem
+
+jcmsplugin.dbcomment.commentable.title : Hozzászólások
+jcmsplugin.dbcomment.commentable.description : Hozzászólások bekapcsolása
+jcmsplugin.dbcomment.commentable.desactivate-comment: Hozzászólások kikapcsolása itt: {0}
+jcmsplugin.dbcomment.commentable.activate-comment: Hozzászólások bekapcsolása itt: {0}
+jcmsplugin.dbcomment.commentable.forbidden-comment: A hozzászólások ki vannak kapcsolva a célzott tartalmon.
+
+jcmsplugin.dbcomment.private-comment.group: Privát hozzászólás - Csoport
+jcmsplugin.dbcomment.private-comment.group.help: A csoport, amely a privát hozzászólásokat közzéteheti és olvashatja
+jcmsplugin.dbcomment.private-comment.enabled: Privát hozzászólás - A privát hozzászólások engedélyezése
+jcmsplugin.dbcomment.private-comment.default-value: Privát hozzászólás - A privát hozzászólások alapértelmezett értéke
+jcmsplugin.dbcomment.private-comment.default-value.help: Az igen kiválasztásával új hozzászólás létrehozása esetén a privát hozzászólás kiválasztása "igen"-re lesz állítva
+
+jcmsplugin.dbcomment.reverse-order: Fordított rendezési sorrend
+jcmsplugin.dbcomment.reverse-order.help: Az „igen” kiválasztásával a régi hozzászólások láthatók először
+jcmsplugin.dbcomment.change-sort: Rendezés - Kiválasztott mező
+jcmsplugin.dbcomment.change-sort.help: A hozzászólások rendezése a kiválasztott mezővel
+
+jcmsplugin.dbcomment.smart.comment-display.enabled: Az okos hozzászólások kijelzőjének bekapcsolása
+jcmsplugin.dbcomment.smart.comment-display.enabled.boolean: hamis
+jcmsplugin.dbcomment.smart.comment-display.enabled.help: Ez a rendszer elrejti a régi hozzászólásokat a közzétételen
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From DBComment-templates.xml
+types.DBComment.templates.query.default.label: Alapértelmezett sablon
+types.DBComment.templates.full.default.label: Alapértelmezett sablon
+
+# From DBComment.xml
+types.DBComment.fields.email.description: A cím nem lesz közzétéve
+types.DBComment.fields.email.label: E-mail
+types.DBComment.title.label: Cím
+types.DBComment.fields.referer.label: Hivatkozó
+types.DBComment.fields.ipAddress.label: IP cím
+types.DBComment.fields.name.label: Név
+types.DBComment.fields.targetContent.label: Célzott tartalom
+types.DBComment.fields.userAgent.label: Felhasználói ügynök
+types.DBComment.label: Hozzászólás
+types.DBComment.fields.webSite.label: Weboldal
+types.DBComment.fields.description.label: Hozzászólás
+types.DBComment.fields.privateComment.label: Privát hozzászólás
+
+# SmartPhone
+jcmsplugin.dbcomment.smartphone.lbl.dbcomment.add-comment.placeholder: Hozzászólás hozzáadása...
+
+# Explorer sidebar integration
+jcmsplugin.explorer-sidebar.see-comments: Hozzászólások elérése
+jcmsplugin.explorer.app.sidebar-tab.comments: Hozzászólások

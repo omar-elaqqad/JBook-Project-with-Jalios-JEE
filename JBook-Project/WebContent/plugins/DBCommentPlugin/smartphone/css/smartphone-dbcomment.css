@@ -1,0 +1,89 @@
+.comment-list .card {
+  padding: 0 16px 16px 16px;
+  border-bottom: 1px solid #eee;
+}
+.comment-list .card .comment-meta-count {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+.comment-list .card .comment-meta-count:before {
+  content: "#";
+}
+.comment-list .card .actions-wrapper {
+  padding-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  border-top: 0 none;
+  padding-top: 0;
+}
+.comment-list .card .actions-wrapper .action-item {
+  padding-top: 0;
+}
+.comment-list .card .message-content {
+  background-color: transparent;
+  border: 0 none;
+  margin-bottom: 16px;
+  position: relative;
+  background: #edf8fe;
+  border: 1px solid #daedf9;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.comment-list .card .message-content .tail {
+  position: absolute;
+  top: -20px;
+  left: 8px;
+  width: 0;
+  height: 0;
+  border-color: transparent transparent #daedf9 transparent;
+  border-width: 10px;
+  border-style: solid;
+}
+.comment-list .card .message-content .tail-border {
+  position: absolute;
+  top: -18px;
+  left: 8px;
+  width: 0;
+  height: 0;
+  border-color: transparent transparent #edf8fe transparent;
+  border-width: 10px;
+  border-style: solid;
+}
+.comment-list .card .pub-social-footer:empty {
+  display: none;
+}
+.comment-list .card .text-info {
+  color: #666;
+}
+.comment-list .comment-list-header {
+  padding: 0 8px 8px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+.comment-list .comment {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.comment-list .comment .comment-header {
+  overflow: auto;
+}
+.comment-list .comment-meta-author {
+  font-weight: bold;
+}
+.comment-list .add-comment {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.pub-comments {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 16px;
+}
+.pub-comments:first-child {
+  margin-left: 0;
+}
+/*# sourceMappingURL=smartphone-dbcomment.css.map */

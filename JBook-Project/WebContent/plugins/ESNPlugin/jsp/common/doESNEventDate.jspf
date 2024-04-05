@@ -1,0 +1,77 @@
+<%@page import="com.jalios.jcmsplugin.calendar.external.ExternalCalendarEvent"%><%
+%><%@page import="com.jalios.jcmsplugin.calendar.CalendarUtil"%><%
+{
+Date esnEventDate_startDate = event.getStartDate();
+Date esnEventDate_endDate = event.getEndDate();
+boolean esnEventDate_isPeriodicalEvent = CalendarUtil.isPeriodicEvent(event);
+
+DateFormat esnEventDate_dayFormat = new SimpleDateFormat(glp("jcmsplugin.calendar.day-format"),userLocale);
+DateFormat esnEventDate_hourFormat = new SimpleDateFormat(glp("jcmsplugin.calendar.time-format"),userLocale);
+boolean esnEventDate_isExternalEvent = event instanceof ExternalCalendarEvent || !(event instanceof CalendarEvent);
+
+boolean esnEventDate_displayEventDate = (!DateUtil.isSameDay(esnEventDate_startDate, esnEventDate_endDate) && obj.getDayEventFlag()) ||  !obj.getDayEventFlag();
+boolean esnEventDate_displayHoursOnly = !obj.getDayEventFlag();
+if (esnEventDate_displayEventDate) {
+%><jalios:buffer name="esnEventDateBuffer">
+  <%-- DATES --%>
+  <% if (obj.getDayEventFlag()) { %>
+    <li class="dates">
+      <jalios:icon src="jcmsplugin-calendar-date" />
+      <% if (!DateUtil.isSameDay(esnEventDate_startDate, esnEventDate_endDate)) { %>
+        <%= glp("jcmsplugin.calendar.day-event-block", esnEventDate_dayFormat.format(esnEventDate_startDate)) %>
+        <jalios:icon src="jcmsplugin-calendar-date-separator" />
+        <%= glp("jcmsplugin.calendar.day-event-block", esnEventDate_dayFormat.format(esnEventDate_endDate)) %>
+      <% } else { %>
+        <%= glp("jcmsplugin.calendar.day-event-same-day-block", esnEventDate_dayFormat.format(esnEventDate_startDate)) %>
+      <% } %>
+    </li>
+  <% } else { %>
+    <li class="dates">
+      <ul class="event-date-times list-inline">
+      <% if (!DateUtil.isSameDay(esnEventDate_startDate, esnEventDate_endDate)) { %>
+        <jalios:icon src="jcmsplugin-calendar-date" /> 
+        <%= glp("jcmsplugin.calendar.date-block", esnEventDate_dayFormat.format(esnEventDate_startDate),esnEventDate_hourFormat.format(esnEventDate_startDate)) %>
+        <jalios:icon src="jcmsplugin-calendar-date-separator" />
+        <%= glp("jcmsplugin.calendar.date-block", esnEventDate_dayFormat.format(esnEventDate_endDate),esnEventDate_hourFormat.format(esnEventDate_endDate)) %>
+      <% } else { %>
+        <% if (!esnEventDate_displayHoursOnly) { %>
+        <li>
+          <jalios:icon src="jcmsplugin-calendar-date" />
+          <%= glp("jcmsplugin.calendar.date-same-day-block", esnEventDate_dayFormat.format(esnEventDate_startDate)) %>
+        </li>
+        <% } %>
+        <li>
+          <jalios:icon src="jcmsplugin-calendar-hours" /> <%= esnEventDate_hourFormat.format(esnEventDate_startDate) %> <jalios:icon src="jcmsplugin-calendar-date-separator" /> <%= esnEventDate_hourFormat.format(esnEventDate_endDate) %>
+        </li>
+      <% } %>
+      </ul>
+    </li>
+  <% } %>
+  
+  <%-- PERIODICITY --%>
+  <% if (!esnEventDate_isExternalEvent && Util.notEmpty(obj.getPeriodicity()) && esnEventDate_isPeriodicalEvent) { %>
+    <li class="periodicity">
+    <% if(obj instanceof CalendarEvent) { %>
+      <%
+      String periodicityLabel = CalendarEvent.getPeriodicityLabel(obj.getPeriodicity(), userLang);
+      Date periodicEndDate = obj.getPeriodicityEndDate();
+      %><jalios:icon src="jcmsplugin-calendar-periodic-event-icon" /> <%
+      if (Util.notEmpty(periodicEndDate)) {
+        String endDateString = esnEventDate_dayFormat.format(periodicEndDate);
+        %><%= glp("jcmsplugin.calendar.periodicity-with-end", periodicityLabel, endDateString) %><%
+      } else {
+        %><%= glp("jcmsplugin.calendar.periodicity", periodicityLabel) %><%
+      }
+    } else {
+      %>Invalid class for object : <%= obj.getClass().getName() %>
+    <% } %>
+    </li>
+  <% } %>
+  </jalios:buffer>
+  <% if (Util.notEmpty(esnEventDateBuffer.toString().trim())) { %>
+    <ul class="event-dates list-inline">
+      <%= esnEventDateBuffer.toString().trim() %>
+    </ul>
+  <% } %>
+<% } %><%-- esnEventDate_displayEventDate --%>
+<% } // End private scope %>

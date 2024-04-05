@@ -1,0 +1,17 @@
+<%@page import="com.jalios.jcmsplugin.esn.profile.ui.IUIContactChannel"%><%
+%><%@page import="com.jalios.jcmsplugin.esn.profile.ProfileDisplayHandler"%><%
+%><%@ page contentType="text/html; charset=UTF-8" %><%
+%><%@ include file='/jcore/doInitPage.jspf' %><%
+
+IUIContactChannel ui = (IUIContactChannel) request.getAttribute(ProfileDisplayHandler.CONTACT_CHANNEL_REQUEST_ATTR);
+if (ui == null) {
+  return;
+}
+Member contactChannelMember = ui.getMember();
+if (contactChannelMember == null) {
+  return;
+}
+MemberProfile contactChannelMemberProfile = ui.getMemberProfile();
+String contactChannelLabel = ui.getLabel(userLang);
+String contactChannelImage = ui.getImage();
+%>

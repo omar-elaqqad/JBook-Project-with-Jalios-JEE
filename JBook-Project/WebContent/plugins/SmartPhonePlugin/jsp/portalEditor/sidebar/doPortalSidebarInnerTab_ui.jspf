@@ -1,0 +1,51 @@
+<%@page import="com.jalios.jcmsplugin.smartphone.portal.SmartPhonePortalManager"%>
+<%
+request.setAttribute("field-vertical", true);
+%>
+<div class="portal-parameters">
+  <div class="sidebar-tab-title"><%= glp("jportal.edition.sidebar.edit-style.title") %></div>
+  
+  <div class="portal-sidebar-group sidebar-collapsed-group is-accordion portal-sidebar-group-separated"><%-- TODO CSS --%>
+     <a class="sidebar-subtitle sidebar-collapsed-groupcollapsed" data-toggle="collapse" href="#background" aria-expanded="false" aria-controls="background"><jalios:icon src="caret" />
+       <%= glp("jportal.edition.sidebar.background.label") %><%-- TODO GLP --%>
+     </a>
+     <div class="collapse sidebar-collapsed-group" id="background">  
+      <jalios:field resource="field-vertical" name="backgroundColor" label="jportal.edition.sidebar.background-color.label"><%-- TODO CSS --%>
+        <jalios:control settings='<%= new ColorSettings().css("portal-css") %>' />
+      </jalios:field> 
+    </div>
+  </div>
+  
+  <% if(SmartPhonePortalManager.getInstance().canUpdateSmartphonePortalJavascriptAndCss(loggedMember)){ %>
+    <div class="portal-sidebar-group is-accordion portal-sidebar-group-separated">
+      <a class="sidebar-subtitle collapsed sidebar-collapsed-group" data-toggle="collapse" href="#customcss" aria-expanded="false" aria-controls="background"><jalios:icon src="caret" />
+        <%= glp("jportal.edition.sidebar.css.label") %>
+      </a>
+      <div class="collapse sidebar-collapsed-group" id="customcss">  
+      <jalios:field resource="field-vertical" name="customCss" label="jportal.edition.sidebar.custom-css.label">
+        <% String cssId = "id='css-editor'"; %>
+        <jalios:control settings='<%= new TextAreaSettings().css("portal-custom-css ").rows(5) %>' />
+      </jalios:field>
+      <textarea name="customCss" class="ace-custom-css hide"></textarea>     
+      </div>
+    </div>
+  
+  
+    <div class="portal-sidebar-group is-accordion portal-sidebar-group-separated">
+      <a class="sidebar-subtitle collapsed sidebar-collapsed-group" data-toggle="collapse" href="#customjs" 
+         aria-expanded="false" aria-controls="background"><jalios:icon src="caret" />
+        <%= glp("jportal.edition.sidebar.js.label") %>
+      </a>
+      <div class="collapse sidebar-collapsed-group" id="customjs">  
+        <jalios:field resource="field-vertical" name="customJS" label="jportal.edition.sidebar.custom-js.label">
+          <% String cssId = "id='js-editor'"; %>
+          <jalios:control settings='<%= new TextAreaSettings().css("portal-custom-js ").rows(5) %>' />
+        </jalios:field>
+        <textarea name="customJS" class="ace-custom-js hide"></textarea>     
+      </div>
+    </div>
+  <% }else{ %>
+    <input type="hidden" name="customJS" />
+    <input type="hidden" name="customCss" />
+  <% } %>
+</div>

@@ -1,0 +1,29 @@
+<%@page import="com.jalios.jcms.authentication.handlers.AuthKeyAuthenticationHandler"%>
+<%@page import="org.apache.commons.io.FileUtils"%>
+<%
+String urlWithAuthKey = null;
+if (member.hasPhoto()) {
+  String url = channel.getUrl() + member.getPhoto();
+  long duration = channel.getLongProperty("channel.public-link.duration", JcmsConstants.MILLIS_IN_ONE_WEEK);  
+  urlWithAuthKey = AuthKeyAuthenticationHandler.getInstance().getUrlWithAddedAuthKeyParam(url, loggedMember, duration, false); 
+}
+%>
+<script>
+let contactInformation = {};
+contactInformation.givenName = "<%= member.getFirstName() %>";
+contactInformation.familyName = "<%= member.getName() %>";
+contactInformation.homePhoneNumbers = "<%= ( member.getPhoneNumber() != null) ? member.getPhoneNumber().toInternationalString() : Util.getString(member.getPhone(), "") %>";
+contactInformation.mobilePhoneNumbers = "<%= ( member.getMobilePhoneNumber() != null) ?  member.getMobilePhoneNumber().toInternationalString() : Util.getString(member.getMobile(), "") %>";
+contactInformation.organizationName = "<%= Util.getString(member.getOrganization(), "") %>";
+contactInformation.organizationDepartment = "<%= Util.getString(member.getDepartment(), "") %>";
+contactInformation.organizationTitle = "<%= Util.getString(member.getJobTitle(), "") %>";
+contactInformation.photo= "<%= Util.getString(urlWithAuthKey, "") %>";
+contactInformation.addressType = "work";
+contactInformation.streetAddress = "<%= encodeForJavaScript(Util.getString(member.getStreet(), "")) %>";
+contactInformation.addressLocality= "<%= Util.getString(member.getLocality(), "") %>";
+contactInformation.addressRegion = "<%= Util.getString(member.getRegion(), "") %>";
+contactInformation.addressPostalCode = "<%= Util.getString(member.getPostalCode(), "") %>";
+contactInformation.addressCountry = "<%= JcmsUtil.glp(member.getLanguage(), "country." + Util.getString(member.getCountry(), "")) %>";
+contactInformation.email = "<%= Util.getString(member.getEmail(), "") %>";
+$.jalios.smartPhone.MobileApp.contactInformation = contactInformation;
+</script>

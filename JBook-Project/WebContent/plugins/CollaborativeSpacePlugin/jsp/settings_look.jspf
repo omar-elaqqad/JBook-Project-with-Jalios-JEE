@@ -1,0 +1,284 @@
+<%@page import="com.jalios.jcms.taglib.FieldTag"%>
+<%@page import="com.jalios.jcms.uicomponent.DataAttribute"%>
+<%@page import="com.jalios.jcms.taglib.settings.impl.BooleanSettings"%>
+<%@page import="com.jalios.jcmsplugin.collaborativespace.EditSettingsHandler"%>
+<%@page import="com.jalios.jcms.taglib.settings.impl.ColorSettings"%>
+<%@page import="com.jalios.jcms.ui.Color"%>
+<%@page import="com.jalios.jcms.Channel"%>
+<% 
+String currTheme = formHandler.getAvailableTheme();
+
+// Before CSP-7.0
+Map<String, Object> themeMap = csMgr.getLookThemeMap();
+
+// Since CSP-7.0
+Color[] colors = Color.values();
+
+jcmsContext.addCSSHeader("plugins/CollaborativeSpacePlugin/css/lib/bootstrapSlider/bootstrap-slider.css");
+jcmsContext.addJavaScript("plugins/CollaborativeSpacePlugin/js/lib/bootstrapSlider/bootstrap-slider.js");
+jcmsContext.addCSSHeader("plugins/CollaborativeSpacePlugin/css/cs-layout-condensed.css");
+
+String defaultOpacity = "20"; // the same opacity that applied by the LESS THEMES
+String tabsOpacity = Util.getString(formHandler.getAvailableHeaderTabsOpacity(), defaultOpacity);
+String currHeader = formHandler.getAvailableHeader();
+String customHeader = (currHeader != null && currHeader.startsWith("upload/docs/")) ? currHeader : null;
+
+String[] posX = new String[]{"left", "center", "right"};
+String[] posY = new String[]{"top", "center", "bottom"};
+String currentPosX = formHandler.getAvailableHeaderPosX();
+String currentPosY = formHandler.getAvailableHeaderPosY();
+String currentMirror = formHandler.getAvailableHeaderMirror();
+String currentRepeat = formHandler.getAvailableHeaderRepeat();
+
+boolean isCondensed = formHandler.getAvailableHeaderCondensed();
+String headerBgColor = formHandler.getAvailableHeaderBgColor();
+%>
+
+<%-- Condensed mode --%>
+<jalios:field name='<%= EditSettingsHandler.PARAM_HEADER_CONDENSED %>' 
+    css='condensed-chooser'
+    label='jcmsplugin.collaborativespace.settings.lbl.look.condensed' 
+    description='jcmsplugin.collaborativespace.settings.lbl.look.condensed.h' 
+    resource="field-vertical"
+    value='<%= isCondensed %>'>
+  <jalios:buffer name="fieldId"> </jalios:buffer>
+  <jalios:control settings='<%= new BooleanSettings().radio() %>' />
+</jalios:field>
+
+<ul class="nav nav-tabs nav-tabs-underlined settings-header-nav-tabs is-left-aligned" role="tablist">
+  <li role="presentation" class="active"><a data-target="#tabColor" aria-controls="tabColor" data-toggle="tab" role="tab" ><%= glp("jcmsplugin.collaborativespace.settings.lbl.look.color-tab") %></a></li>
+  <li role="presentation"><a data-target="#tabHeader" aria-controls="tabHeader" data-toggle="tab" role="tab"><%= glp("jcmsplugin.collaborativespace.settings.lbl.look.header-tab") %></a></li>
+</ul>
+<div class="settings-header-tab-content">
+  <div role="tabpanel" class="tab-pane fade in active" id="tabColor">
+    <%-- bgColor chooser --%>
+    <jalios:field name='<%= EditSettingsHandler.PARAM_HEADER_BG_COLOR %>' 
+        css='bgcolor-chooser cs-color-chooser'
+        label='jcmsplugin.collaborativespace.settings.lbl.look.color' 
+        resource="field-vertical"
+        value='<%= headerBgColor %>'>
+      <jalios:control settings='<%= new ColorSettings() %>' />
+    </jalios:field>
+    
+    <%-- Predefined color chooser --%>
+    <jalios:field name="" 
+        css='color-chooser existing-color-chooser' 
+        resource="field-vertical">
+      <ul class="theme-color-list list-unstyled">
+        <%-- Since CSP-7.0  --%>
+        <jalios:foreach array="<%= colors %>" name="itColor" type="com.jalios.jcms.ui.Color">
+          <%
+          String internalName = itColor.getCssName(); // Eg: "lime"
+          String name = "cs-theme-" + internalName;     // Eg: "cs-theme-lime"
+          if (!name.endsWith("-light")) {
+            // Do not propose "light" themes
+            String value = itColor.getValue();
+            jcmsContext.addCSSHeader("plugins/CollaborativeSpacePlugin/css/theme/" + internalName + ".css");
+            boolean isActive = internalName.equals(currTheme);
+            boolean newLine = itCounter % 12 == 0;
+            %>
+            <li class="<%= name %>">
+              <label class="checkbox-inline" title="<%= encodeForHTMLAttribute(internalName) %>">
+                <input type="radio" class="hide" name="theme" value="<%= internalName %>" <%= isActive ? "checked='checked'":"" %> onchange="jQuery.JCMS.jcmsplugin.cs.SettingsUtils.updateTheme('<%= name %>')"/>
+                <span class="color-sample" style="background-color: <%= value %>;">&nbsp;</span>
+              </label>
+            </li>
+          <% } %>
+        </jalios:foreach>
+      </ul>
+      <% if (Util.notEmpty(csMgr.getColorList())) { %>
+        <br class="clear" />
+        <ul class="theme-color-list legacy-theme-color-list list-unstyled">
+          <%-- Before CSP-7.0  --%>
+          <jalios:foreach collection="<%= csMgr.getColorList() %>" name="itColor" type="String">
+          <% 
+          JProperties prop = (JProperties) themeMap.get(itColor);
+          if (prop != null) {
+            String name = prop.get("name"); // Eg: "cs-theme-red"
+            String color = prop.get("color");
+            String file = prop.get("file");
+            jcmsContext.addCSSHeader("plugins/CollaborativeSpacePlugin/css/theme/" + file);
+            String internalName = name.startsWith("cs-theme-") ? name.substring(9) : name;
+            boolean isActive = name.equals("cs-theme-" + currTheme);
+            
+            if (color != null) { %>
+              <li class="<%= name %>">
+              <label class="checkbox-inline" title="<%= encodeForHTMLAttribute(internalName) %>">
+                <input type="radio" class="hide" name="theme" value="<%= itColor %>" <%= isActive ? "checked='checked'":"" %> onchange="jQuery.JCMS.jcmsplugin.cs.SettingsUtils.updateTheme('<%= name %>')" />
+                <span class="color-sample" style="background-color: <%= color %>;">&nbsp;</span>
+              </label>
+            </li>
+            <% } %>
+          <% } %>
+          </jalios:foreach>
+        </ul>
+      <% } %>
+    </jalios:field>
+    
+    <jalios:field name="<%= EditSettingsHandler.PARAM_HEADER_TITLE_COLOR %>" 
+      label='jcmsplugin.collaborativespace.settings.lbl.look.header-color' 
+      css='cs-color-chooser header-title-color-chooser' 
+      resource="field-vertical"
+      value='<%= formHandler.getAvailableHeaderTitleColor() %>'>
+      <jalios:control settings='<%= new ColorSettings() %>' />
+    </jalios:field>
+    
+    <jalios:field 
+      name="<%= EditSettingsHandler.PARAM_HEADER_TABS_COLOR %>" 
+      label='jcmsplugin.collaborativespace.settings.lbl.look.header-tabs-color' 
+      css='tabs-color-chooser cs-color-chooser'
+      resource="field-vertical"
+      value='<%= formHandler.getAvailableHeaderTabsColor() %>'>
+      <jalios:control settings='<%= new ColorSettings() %>' />
+    </jalios:field>
+    <jalios:field name="<%= EditSettingsHandler.PARAM_HEADER_TABS_BG_COLOR %>" 
+      label='jcmsplugin.collaborativespace.settings.lbl.look.header-tabs-bgcolor' 
+      css='tabs-bgcolor-chooser cs-color-chooser'
+      resource="field-vertical"
+      value='<%= formHandler.getAvailableHeaderTabsBgColor() %>'>
+      <jalios:control settings='<%= new ColorSettings() %>' />
+    </jalios:field>
+    <jalios:field 
+      label='jcmsplugin.collaborativespace.settings.lbl.look.header-tabs-opacity' 
+      css='tabs-opacity-chooser'
+      resource="field-vertical">
+      <div class="tabs-opacity-slider">
+        <b>0%</b>
+        &nbsp;
+        <input name="<%= EditSettingsHandler.PARAM_HEADER_TABS_OPACITY %>"
+           type="text" 
+           class="csp-tabs-opacity-slider" 
+           value="<%= tabsOpacity %>" 
+           data-slider-min="0" 
+           data-slider-max="100" 
+           data-slider-step="10" 
+           data-slider-value="<%= tabsOpacity %>" 
+           data-slider-tooltip="always"
+           data-slider-labelledby="<%= encodeForHTMLAttribute(glp("jcmsplugin.collaborativespace.settings.lbl.look.header-tabs-opacity")) %>" />
+        &nbsp;
+       <b>100%</b>
+      </div>
+    </jalios:field>
+    <br class="clear" />
+  </div>
+  <div role="tabpanel" class="tab-pane fade" id="tabHeader">
+    <div class="header-image-options">
+      <%-- Header background image --%>
+      <div class="header-background-image-chooser">
+        <%
+        BasicSettings headerSettings = ((BasicSettings)channel.getTypeFieldEntry(CollaborativeSpace.class, "header", true).getControlSettings()); 
+        if (headerSettings instanceof AbstractTextChooserSettings) {
+          // CSP-738 - Settings: use current workspace when displaying header images media chooser
+          ((AbstractTextChooserSettings) headerSettings).workspace(workspace);
+        }
+        %>
+        <jalios:field name="<%= EditSettingsHandler.PARAM_HEADER %>" 
+            value="<%= currHeader %>" 
+            css='header-background-image-chooser custom-image-chooser'
+            label="jcmsplugin.collaborativespace.settings.lbl.look.header-custom"
+            description="jcmsplugin.collaborativespace.settings.lbl.look.header-custom.h" 
+            resource="field-vertical">
+          <jalios:control settings='<%= headerSettings %>' />
+        </jalios:field>
+    </div>
+
+      <jalios:scrollbar css="header-list-scroll" dataAttribute='<%= new DataAttribute().addData("data-suppress-scroll-x", true) %>'>
+        <%-- Header native background image --%>
+        <jalios:field name="header" label='' css='header-background-image-chooser header-existing-background-image-chooser background-image-chooser' resource="field-vertical">
+          <ul class="header-list list-unstyled">
+            <jalios:foreach collection="<%= csMgr.getLookHeaderList() %>" name="itHeader" type="File">
+              <% String headerPath = channel.getRelativePath(itHeader); %>
+              <li>
+                <jalios:thumbnail path="<%= headerPath %>" 
+                  htmlAttributes='<%= "data-jalios-csp-settings-header-url=" + headerPath %>' height="30"></jalios:thumbnail>
+              </li>
+            </jalios:foreach>
+          </ul>
+        </jalios:field>
+      </jalios:scrollbar>
+
+      <jalios:field name='csp-header-position' resource="field-vertical">
+        <jalios:buffer name="WIDGET_PREPEND">
+          <div class="widget-content-radio-text">
+            <%= glp("jcmsplugin.collaborativespace.settings.lbl.look.header-position") %>
+          </div>
+        </jalios:buffer>
+        <%
+        for (String itPosY : posY) {
+          for (String itPosX : posX) {
+            boolean isActive = itPosX.equals(currentPosX) && itPosY.equals(currentPosY);
+            if (Util.isEmpty(currentPosX) && Util.isEmpty(currentPosY)) {
+              isActive = itPosX.equals("left") && itPosY.equals("top");
+            }
+            %>
+            <div 
+              data-jalios-csp-header-position-x="<%= itPosX %>" 
+              data-jalios-csp-header-position-y="<%= itPosY %>"
+              class="csp-header-position csp-posx-<%= itPosX %>-posy-<%= itPosY %><%= isActive ? " active":"" %>">
+            </div>
+          <% } %>
+          <br />
+        <% } %>
+        <input type="hidden" name="<%= EditSettingsHandler.PARAM_HEADER_POS_X %>" value="<%= Util.notEmpty(currentPosX) ? currentPosX : "" %>" />
+        <input type="hidden" name="<%= EditSettingsHandler.PARAM_HEADER_POS_Y %>" value="<%= Util.notEmpty(currentPosY) ? currentPosY : "" %>" />
+      </jalios:field>
+  
+      <jalios:field name='csp-header-repeat' resource="field-vertical" css="field-checkbox-vertical">
+        <jalios:buffer name="WIDGET_PREPEND">
+          <div class="widget-content-radio-text">
+            <%= glp("jcmsplugin.collaborativespace.settings.lbl.look.header-repeat") %>
+          </div>
+        </jalios:buffer>
+        <label class="checkbox-inline">
+          <input type="radio" name="<%= EditSettingsHandler.PARAM_HEADER_REPEAT %>" value="no-repeat" 
+            <%= Util.isEmpty(currentRepeat) || "no-repeat".equals(currentRepeat) ? "checked='checked'":"" %>/>
+          <%= glp("jcmsplugin.collaborativespace.settings.lbl.look.header-no-repeat") %>
+        </label>
+        <label class="checkbox-inline">
+          <input type="radio" name="<%= EditSettingsHandler.PARAM_HEADER_REPEAT %>" value="repeat-x" 
+            <%= "repeat-x".equals(currentRepeat) ? "checked='checked'":"" %>/>
+          <%= glp("jcmsplugin.collaborativespace.settings.lbl.look.header-repeat-x") %>
+        </label>
+        <label class="checkbox-inline">
+          <input type="radio" name="<%= EditSettingsHandler.PARAM_HEADER_REPEAT %>" value="repeat-y" 
+            <%= "repeat-y".equals(currentRepeat) ? "checked='checked'":"" %>/>
+          <%= glp("jcmsplugin.collaborativespace.settings.lbl.look.header-repeat-y") %>
+        </label>
+        <label class="checkbox-inline">
+          <input type="radio" name="<%= EditSettingsHandler.PARAM_HEADER_REPEAT %>" value="repeat" 
+            <%= "repeat".equals(currentRepeat) ? "checked='checked'":"" %>/>
+          <%= glp("jcmsplugin.collaborativespace.settings.lbl.look.header-repeat-both") %>
+        </label>
+      </jalios:field>
+  
+      <jalios:field name='csp-header-miror' resource="field-vertical" css="field-checkbox-vertical">
+        <jalios:buffer name="WIDGET_PREPEND">
+          <div class="widget-content-radio-text">
+            <%= glp("jcmsplugin.collaborativespace.settings.lbl.look.header-mirror") %>
+          </div>
+        </jalios:buffer>
+        <label class="checkbox-inline">
+          <input type="radio" name="<%= EditSettingsHandler.PARAM_HEADER_MIRROR %>" value="no-mirror" 
+            <%= Util.isEmpty(currentMirror) || "no-mirror".equals(currentMirror) ? "checked='checked'":"" %>/>
+          <%= glp("jcmsplugin.collaborativespace.settings.lbl.look.header-no-mirror") %>
+        </label>
+        <label class="checkbox-inline">
+          <input type="radio" name="<%= EditSettingsHandler.PARAM_HEADER_MIRROR %>" value="mirror-x" 
+            <%= "mirror-x".equals(currentMirror) ? "checked='checked'":"" %>/>
+          <%= glp("jcmsplugin.collaborativespace.settings.lbl.look.header-mirror-x") %>
+        </label>
+        <label class="checkbox-inline">
+          <input type="radio" name="<%= EditSettingsHandler.PARAM_HEADER_MIRROR %>" value="mirror-y" 
+            <%= "mirror-y".equals(currentMirror) ? "checked='checked'":"" %>/>
+          <%= glp("jcmsplugin.collaborativespace.settings.lbl.look.header-mirror-y") %>
+        </label>
+        <label class="checkbox-inline">
+          <input type="radio" name="<%= EditSettingsHandler.PARAM_HEADER_MIRROR %>" value="mirror" 
+            <%= "mirror".equals(currentMirror) ? "checked='checked'":"" %>/>
+          <%= glp("jcmsplugin.collaborativespace.settings.lbl.look.header-mirror-both") %>
+        </label>
+      </jalios:field>
+      <br class="clear" />
+    </div>
+  </div>
+</div><%-- EOF.settings-header-tab-content --%>

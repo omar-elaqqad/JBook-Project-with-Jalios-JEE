@@ -1,0 +1,64 @@
+<%!
+void printFilterCat(Category cat, Set<Category> selectedCatSet, int level, Member loggedMember, String userLang, javax.servlet.jsp.JspWriter out) throws java.io.IOException {
+  if (!cat.canBeReadBy(loggedMember)) {
+    return;
+  }
+  boolean isSelectedCat = selectedCatSet.contains(cat);
+
+  out.print("<li class='typology-menu-item js-type-menu-item");
+  if (isSelectedCat) {
+    out.print(" active'>");
+    out.print(JcmsUtil.getHtmlIcon("app-list-check", "", "", "app-list-right-icon", "", userLang)); 
+  } else {
+    out.print("'>");
+  }
+  
+  // Label > A > Input
+  out.print("<label");
+  out.print(" class='");
+  if (cat.isNode()) {
+    out.print(" app-sidebar-menu-node");
+  }
+
+  boolean isAncestor = false;
+  if (selectedCatSet != null) {
+    for(Category selectedCat: selectedCatSet) {
+      if (selectedCat.hasAncestor(cat)) {
+        isAncestor = true;
+        break;
+      }
+    }
+  }
+
+  if (cat.isNode() && (isAncestor || isSelectedCat)) {
+    out.print(" expanded");
+  } else {
+    out.print(" collapsed");
+  }
+  out.print("'>");
+  out.print(cat.getName(userLang));
+  
+  // Input (Ajax refresh is processed by hubApp.js)
+  out.print("<input name='cids' class='hide type-filter-input' value='" + cat.getId() + "' type='checkbox'");
+  if (isSelectedCat) {
+    out.print(" checked='checked'");
+  }
+  out.print(" />");
+  out.print("</label>");
+  
+  if (isSelectedCat || isAncestor) {
+    Set<Category> childrenSet = cat.getChildrenSet();
+    if (Util.notEmpty(childrenSet)) {
+      Comparator<Category> comparator = cat.isCustomOrder() ? Category.getOrderComparator(userLang) : Category.getNameComparator(userLang);
+      Set<Category> categorySet = new TreeSet(comparator);
+      categorySet.addAll(childrenSet);
+      out.println("<ul class='app-sidebar-menu typology-menu'>");      
+      for (Category child : categorySet) {
+        printFilterCat(child, selectedCatSet, level + 1, loggedMember, userLang, out);
+      }
+      out.println("</ul>");      
+    }
+  }
+  out.println("</li>");
+}
+%>

@@ -1,0 +1,70 @@
+// Include "generated file" message for CSS output
+/* ------------------------------------------------------------------------- */
+/*  This file has been automatically generated from cs-layout-condensed.less */
+/* ------------------------------------------------------------------------- */
+
+// Include variables and mixins
+@import "../../../css/jalios/core/init.less";
+
+// PLUGIN LESS VARIABLES
+@import "cs-variables.less";
+
+// Hook for JCMS
+@import "../../../css/plugin.less";
+
+
+// CSP condensed header
+// --------------------
+
+.cs-is-condensed {
+  .parent-link-wrapper {
+    display: inline-block;
+    @media (min-width: (@cs-header-title-min)) {
+      margin-right: 10px;
+    }
+  }
+  .cs-search-form {
+    @media (max-width: (@cs-header-title-min - 1)) {
+      display: none;
+    }
+  }
+  #cs-header-tabs UL.nav-tabs {
+    background-color: transparent;
+  }
+  .subspace #cs-header-title, #cs-header-title {
+    padding-top: 5px;
+  }
+  #cs-header-title {
+    .parent-cs-link {
+      font-size: 32px;
+      line-height: 32px;
+      font-weight: 300;
+      &:not(.condensed-link) {
+        display: none;
+      }
+    }
+    H1 {
+      display: inline;
+    }
+    A {
+      text-shadow: none;
+      &.cs-link {
+        font-size: 32px;
+        line-height: initial;
+        max-width: 90%;
+      }
+    }
+    .condensed-link {
+      display: block;
+      line-height: initial;
+    }
+  }
+  #cs-header-middle {
+    height: @cs-header-middle-height-condensed;
+    padding-top: 15px;
+  }
+  #cs-header-tabs UL.nav-tabs > LI > A {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}

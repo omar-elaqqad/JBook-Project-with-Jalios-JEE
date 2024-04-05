@@ -1,0 +1,27 @@
+.guest-account-creation .widget-name-language {
+  display: none;
+}
+.guest-account-creation .widget-name-country {
+  display: none;
+}
+.guest-account-creation .propositions.member-list .card-inline-layout .card-flip-wrapper.card-flip-wrapper-member-small .card-member-small {
+  height: 135px;
+}
+.guest-account-creation .card-member-guest-proposition .member-email {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.guest-account-creation .card-member-guest-proposition .card-flipper,
+.guest-account-creation .card-member-guest-proposition .btn-guest-mbr-proposition {
+  display: none;
+}
+.guest-account-creation .card-member-guest-proposition .btn-guest-mbr-proposition {
+  bottom: 8px;
+  right: 8px;
+  position: absolute;
+}
+.guest-account-creation .card-member-guest-proposition:hover .btn-guest-mbr-proposition {
+  display: block;
+}
+/*# sourceMappingURL=cs-create-guest.css.map */

@@ -1,0 +1,37 @@
+.loading{
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  padding: @ajax-waiting-size;
+  vertical-align: middle;
+  text-align: center;
+  background-color: transparent;
+  border: 5px solid transparent;
+  border-top-color: @ajax-waiting-color;
+  border-bottom-color: @ajax-waiting-color;
+  border-radius: 50%;
+}
+
+.outer{
+  animation: spin 1s infinite;
+}
+
+.inner{
+  animation: spin 1s infinite;
+}
+
+@keyframes spin{
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+/* styling */
+#wrap {
+	box-sizing: border-box;
+	display: table-cell;
+	vertical-align: middle;
+}

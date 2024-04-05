@@ -1,0 +1,9 @@
+<li class="readable <%= itPub.hasBeenReadBy(loggedMember) ? "read" : "" %>"><a data-role="none" href="<%= smartPhoneManager.getDataUrl(itPub) %>">
+  <h2><jalios:dataicon data="<%= itPub %>" /> <%= itPub.getTitle(userLang, true) %></h2>
+  <% if (Util.notEmpty(itPub.getAbstract())) { %>
+    <p class="abstract">
+      <%= itPub.getAbstract() %>
+    </p>
+  <% } %>
+  <div class="txt-info"><%= itPub.getAuthor() %> &middot; <jalios:date format="timeDateOrTime" date="<%= itPub.getPdate() %>"/></div></a>
+</li>

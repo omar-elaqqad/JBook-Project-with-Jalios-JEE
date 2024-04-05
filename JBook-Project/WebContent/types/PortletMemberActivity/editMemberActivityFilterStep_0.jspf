@@ -1,0 +1,15 @@
+<% if (step == 0) { %>
+<div class="alert alert-info"><%= glp("jcmsplugin.esn.activity.filter.editor.steps-intro.0") %></div>
+  <%
+  Set<MemberActivityFilter> selectedFilterSet = formHandler.getAvailableFilterActivitySet();
+  for (MemberActivityFilter filter: MemberActivityFilter.values()) { %>
+  <% 
+	  String fieldStep0Name = glp(filter.getLangProp()) + " " + filter.getHtmlIcon(); 
+		String filterName = "activity_" + filter.getName();
+	  boolean isSelected = selectedFilterSet.contains(filter);
+  %>
+  <jalios:field name="<%= filterName %>" label="<%= fieldStep0Name %>" value="<%= !isSelected %>">
+  	<jalios:control type="<%= ControlType.BOOLEAN %>" />
+  </jalios:field>
+  <% } %>
+<% } %>

@@ -1,0 +1,206 @@
+<%--
+  @Summary: CollaborativeSpace meta datas
+  @Category: Portal
+  @Author: Jalios SA 
+  @Customizable: True
+  @Requestable: False 
+--%>
+<%@page import="com.jalios.jcmsplugin.collaborativespace.portal.CSDisplayHandler"%>
+<%
+
+// Make the member pagers keep opened view open
+Map<String, String> pagerParameterMap = new HashMap<String, String>();
+pagerParameterMap.put("showMetas", "true");
+
+boolean leaderLimitExceeded = csHandler.getLeaderCount() > CSDisplayHandler.MAX_LEADERS_COUNT;
+boolean memberLimitExceeded = csHandler.getMemberCount() > CSDisplayHandler.MAX_MEMBERS_COUNT;
+boolean guestLimitExceeded = csHandler.getGuestCount() > CSDisplayHandler.MAX_GUESTS_COUNT;
+%>
+
+<jalios:buffer name="leftColumnBuffer">
+  <%-- Private space and visitor --%>
+  <% if (!csHandler.isFullAccess()) { %>
+    <div class="col-xs-12 column">
+      <%@ include file="/plugins/CollaborativeSpacePlugin/jsp/privateHome.jspf" %>
+    </div>
+  <% } %>
+
+  <%-- Presentation --%>
+  <% if (csHandler.showIntro()) { %>
+    <div class="col-xs-12 column">
+      <div class="meta-wrapper cs-introduction">
+        <h2 class="meta-label">
+          <%= glp("jcmsplugin.collaborativespace.metas.introduction") %>
+        </h2>
+        <div class="meta-body">
+          <% request.setAttribute("collaborative-space", cs); %>
+          <%@ include file='/plugins/CollaborativeSpacePlugin/jsp/doIntroContent.jspf' %>
+          <% request.removeAttribute("collaborative-space"); %>
+          <% if (csHandler.canUpdateCS()) { %>
+            <p>
+              <jalios:link data='<%= portalCategory %>' params='<%= "jsp=plugins/CollaborativeSpacePlugin/jsp/settings.jsp" %>' css='btn btn-default'>
+                <%= glp("jcmsplugin.collaborativespace.introduction.edit") %>
+              </jalios:link>
+            </p>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  <% } %>
+
+  <%-- Incoming Mail --%>
+  <% if (csHandler.showIncomingEmail()) { %>
+    <%
+    String wsMail = workspace.getIncomingAddress(loggedMember, false);
+    %>
+    <div class="col-xs-12 column">
+      <div class="meta-wrapper cs-incoming-mail">
+        <h2 class="meta-label">
+          <%= glp("jcmsplugin.collaborativespace.introduction.infos.incoming-mail") %>
+        </h2>
+        <div class="meta-body">
+          <p class="help-block">
+            <%= glp("jcmsplugin.collaborativespace.introduction.infos.incoming-mail.your-address") %>&nbsp;<jalios:icon src='jcmsplugin-collaborativespace-incoming-mail' />&nbsp;<a href='mailto:<%= encodeForURL(wsMail) %>'><%= encodeForHTML(wsMail) %></a>
+          </p>
+          <p class="help-block">
+            <%= glp("jcmsplugin.collaborativespace.introduction.infos.incoming-mail.h") %>&nbsp;<strong>(<%= loggedMember.getFullName() %>)</strong>
+          </p>
+          <p class="help-block">
+            <%= glp("jcmsplugin.collaborativespace.introduction.infos.incoming-mail.warning") %>
+          </p>
+        </div>
+      </div>
+    </div>
+  <% } %>
+</jalios:buffer>
+
+<jalios:buffer name="rightColumnBuffer">
+  <%-- leaders --%>
+  <% if (csHandler.showOpenedMetasLeaders()) { %>
+    <div class="col-xs-12 column">
+      <div class="meta-wrapper cs-leaders">
+        <h2 class="meta-label">
+          <%= glp("jcmsplugin.collaborativespace.lbl.profile.leader-count", csHandler.getLeaderCount()) %>
+        </h2>
+        <div class="meta-body">
+          <div class="cs-member-list" role="list">
+            <div class="row clearfix">
+              <div class="col-xs-12 column">
+                <jalios:foreach collection='<%= csHandler.getLeaderSet() %>' type='Member' name='itMember' max='<%= CSDisplayHandler.MAX_LEADERS_COUNT %>'>
+                  <div title='<%= encodeForHTMLAttribute(itMember.getFullName()) %>' class='cs-wrapper-photo' role="listitem">
+                    <jalios:memberphoto member="<%= itMember %>" size="<%= CSDisplayHandler.META_MEMBERS_PHOTO_SIZE %>" />
+                  </div>
+                </jalios:foreach>
+              </div>
+            </div>
+            <% if (leaderLimitExceeded) { %>
+              <p>
+                <%= glp("jcmsplugin.collaborativespace.metas.member-list.others", (csHandler.getLeaderCount() - CSDisplayHandler.MAX_LEADERS_COUNT)) %>
+              </p>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% } %>
+
+  <%-- Target: Members connections --%>
+  <% if (!csHandler.isFullAccess()) { %>
+    <div class="col-xs-12 column">
+      <jalios:include target="PLUGIN_CSP_PRIVATE_CONNECTIONS"/>
+    </div>
+  <% } %>
+
+  <%-- members --%>
+  <% if (csHandler.showOpenedMetasMembers()) { %>
+    <div class="col-xs-12 column">
+      <div class="meta-wrapper cs-members">
+        <h2 class="meta-label">
+          <%= glp("jcmsplugin.collaborativespace.lbl.profile.member-count", csHandler.getMemberCount()) %>
+        </h2>
+        <div class="meta-body">
+          <div class="cs-member-list" role="list">
+            <div class="row clearfix">
+              <div class="col-xs-12 column">
+                <jalios:foreach collection='<%= csHandler.getMemberSet() %>' type='Member' name='itMember' max='<%= CSDisplayHandler.MAX_MEMBERS_COUNT %>'>
+                  <div title='<%= encodeForHTMLAttribute(itMember.getFullName()) %>' class='cs-wrapper-photo' role="listitem">
+                    <jalios:memberphoto member="<%= itMember %>" size="<%= CSDisplayHandler.META_MEMBERS_PHOTO_SIZE %>" />
+                  </div>
+                </jalios:foreach>
+              </div>
+            </div>
+            <% if (memberLimitExceeded) { %>
+              <p>
+                <%= glp("jcmsplugin.collaborativespace.metas.member-list.others", (csHandler.getMemberCount() - CSDisplayHandler.MAX_MEMBERS_COUNT)) %>
+              </p>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% } %>
+
+  <%-- guests --%>
+  <% if (csHandler.showOpenedMetasGuests()) { %>
+    <div class="col-xs-12 column">
+      <div class="meta-wrapper cs-guests">
+        <h2 class="meta-label">
+          <%= glp("jcmsplugin.collaborativespace.lbl.profile.guest-count", csHandler.getGuestCount()) %>
+        </h2>
+        <div class="meta-body">
+          <div class="cs-member-list" role="list">
+            <div class="row clearfix">
+              <div class="col-xs-12 column">
+                <jalios:foreach collection='<%= csHandler.getGuestSet() %>' type='Member' name='itMember' max='<%= CSDisplayHandler.MAX_GUESTS_COUNT %>'>
+                  <div title='<%= encodeForHTMLAttribute(itMember.getFullName()) %>' class='cs-wrapper-photo' role="listitem">
+                    <jalios:memberphoto member="<%= itMember %>" size="<%= CSDisplayHandler.META_MEMBERS_PHOTO_SIZE %>" />
+                  </div>
+                </jalios:foreach>
+              </div>
+            </div>
+            <% if (guestLimitExceeded) { %>
+              <p>
+                <%= glp("jcmsplugin.collaborativespace.metas.member-list.others", (csHandler.getGuestCount() - CSDisplayHandler.MAX_GUESTS_COUNT)) %>
+              </p>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% } %>
+
+  <%-- Manage link --%>
+  <% if (csHandler.canManageCSMembers()) { %>
+    <% String membersUrl = portalCategory.getDisplayUrl(userLocale) + "?jsp=plugins/CollaborativeSpacePlugin/jsp/members.jsp&amp;memberView=members"; %>
+    <div class="col-xs-12 column">
+      <div class="manage-member-link br">
+        <a href="<%= membersUrl %>" class="btn btn-default"><%= glp("jcmsplugin.collaborativespace.metas.manage-members.link") %></a>
+      </div>
+    </div>
+  <% } %>
+</jalios:buffer>
+
+
+<%
+request.setAttribute("collaborative-space-metas-left-column", leftColumnBuffer.toString());
+request.setAttribute("collaborative-space-metas-right-column", rightColumnBuffer.toString());
+%>
+<jalios:include target="PLUGIN_CSP_METAS_OPEN_START" />
+<%
+String leftColumn = Util.getString(request.getAttribute("collaborative-space-metas-left-column-custom"), leftColumnBuffer.toString());
+String rightColumn = Util.getString(request.getAttribute("collaborative-space-metas-right-column-custom"), rightColumnBuffer.toString());
+%>
+
+<div class="row clearfix">
+  <%-- left column --%>
+  <div class="col-md-6 column">
+    <div class="row clearfix"><%= leftColumn %></div>
+  </div>
+  
+  <%-- right column --%>
+  <div class="col-md-6 column">
+    <div class="row clearfix"><%= rightColumn %></div>
+  </div>
+</div>
+
+<jalios:include target="PLUGIN_CSP_METAS_OPEN_END" />

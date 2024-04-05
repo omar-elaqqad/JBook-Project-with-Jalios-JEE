@@ -1,0 +1,13 @@
+<%--
+  @Summary : Displays a service.
+  @Category: CollaborativeSpace
+  @Author: Sylvain Devaux <sylvain.devaux@jalios.com>
+--%><%
+if (service != null && service.canBeReadBy(loggedMember)) {
+  displayPortlet = service;
+  String templateBak = jcmsContext.getTemplateUsage();
+  // No need to use setTemplateUsage as CSPortalPolicyFilter forces the skin
+  %><%@ include file="/jcore/portal/doIncludePortlet.jspf" %><%
+  jcmsContext.setTemplateUsage(templateBak);
+}
+%>

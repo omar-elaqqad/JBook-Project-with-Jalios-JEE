@@ -1,0 +1,107 @@
+BODY.guest-account #topbar .nav.pull-right LI.search {
+  display: none;
+}
+BODY.guest-account .contact-creation-link {
+  display: none;
+}
+BODY.guest-account.admin-delegation A.contact-creation-link,
+BODY.guest-account.admin-delegation .contact-creation-link,
+BODY.guest-account.admin-delegation UL.ctxMenu.topbar-menu LI.contact-creation-link {
+  display: block;
+}
+BODY.guest-account.admin-delegation A.contact-creation-link,
+BODY.guest-account.admin-delegation .contact-creation-link,
+BODY.guest-account.admin-delegation UL.ctxMenu.topbar-menu LI.contact-creation-link,
+BODY.guest-account.admin-delegation A.contact-creation-link > A,
+BODY.guest-account.admin-delegation .contact-creation-link > A,
+BODY.guest-account.admin-delegation UL.ctxMenu.topbar-menu LI.contact-creation-link > A {
+  color: red !important;
+  text-decoration: line-through;
+}
+BODY.guest-account.admin-delegation UL.ctxMenu.topbar-menu LI.contact-creation-link {
+  text-decoration: inherit;
+}
+.cs-members .label.guest-account {
+  background-color: #005db4;
+}
+.esn .contact-card {
+  border: 1px solid #DDDDDD;
+  width: 420px;
+  margin: 0 auto 18px auto;
+}
+.esn .contact-card .header {
+  height: 4px;
+  background-color: #EEEEFF;
+  font-size: 1px;
+}
+.esn .contact-card .footer {
+  height: 8px;
+  background-color: #EEEEFF;
+  font-size: 1px;
+}
+.esn .contact-card .inner {
+  padding: 6px;
+}
+.esn .contact-card DIV.photo {
+  float: right;
+  width: 50px;
+}
+.esn .contact-card .name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  margin-top: 14px;
+}
+.esn .contact-card .jobTitle {
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 12px;
+  color: #999999;
+}
+.esn .contact-card .organization {
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.esn .contact-card .address {
+  text-align: center;
+  margin-top: 6px;
+  color: #999999;
+}
+.esn .contact-card .address P {
+  margin: 0;
+  padding: 0;
+}
+.esn .contact-card .contact-info {
+  margin-top: 20px;
+}
+.esn .contact-card .contact-info .left {
+  float: left;
+}
+.esn .contact-card .contact-info .right {
+  float: right;
+}
+.cs-metas-wrapper .cs-metas-inline-div .wrapper-photo .photo-anchor .guest-icon {
+  display: none;
+}
+.fullDisplay.GuestRequest .guest-request-member .card {
+  max-width: 400px;
+}
+.guest-account-creation {
+  min-width: 640px;
+}
+.guest-account-creation #expertise {
+  max-height: 400px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#check-contact-message {
+  text-align: center;
+  font-weight: bold;
+}
+#check-contact-message IMG {
+  margin: 10px 0;
+}
+/*# sourceMappingURL=cs-guest.css.map */

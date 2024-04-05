@@ -1,3 +1,11 @@
 <restart time="1712244138472"/>
 <measure time="1712244198474" memFree="380719440" memTotal="706740224" memMax="4242538496" data="48" dbdata="6" ugc="0" content="6" doc="0" mbr="1" request="3" logged="0" guest="3" robot="0" threads="79" activeThreads="79" daemonThreads="70" interruptedThreads="0"/>
 <restart time="1712244312919"/>
+<restart time="1712308081120"/>
+<measure time="1712308141123" memFree="301264088" memTotal="553648128" memMax="4242538496" data="54" dbdata="14" ugc="0" content="7" doc="0" mbr="1" request="17" logged="1" guest="1" robot="0" threads="99" activeThreads="99" daemonThreads="71" interruptedThreads="0"/>
+<restart time="1712308255706"/>
+<restart time="1712308330949"/>
+<restart time="1712308419882"/>
+<measure time="1712308479885" memFree="223793064" memTotal="1046478848" memMax="4242538496" data="91" dbdata="17" ugc="0" content="9" doc="0" mbr="1" request="9" logged="0" guest="0" robot="0" threads="118" activeThreads="118" daemonThreads="69" interruptedThreads="0"/>
+<restart time="1712308544782"/>
+<restart time="1712308616286"/>

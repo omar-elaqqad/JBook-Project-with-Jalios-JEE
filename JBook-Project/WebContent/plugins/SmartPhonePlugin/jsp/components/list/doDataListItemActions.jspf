@@ -1,0 +1,8 @@
+<%@page import="com.jalios.jcms.taglib.list.ListItemTag"%><%
+String actions = getIncludeString(ListItemTag.BUFFER_LIST_ITEM_ACTIONS, "");
+if (Util.notEmpty(actions)) {
+  %><jalios:buffer name='LIST_ITEM_ACTIONS'><%
+    %><%= actions %><%
+  %></jalios:buffer><%
+}
+%>

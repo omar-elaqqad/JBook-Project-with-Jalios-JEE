@@ -1,0 +1,69 @@
+<div class="connection-card">
+	<jalios:memberphoto member="<%= itMember %>" size="<%= PhotoSize.TINY %>" />
+  <div class="content-details">
+    <b><jalios:link data="<%= itMember %>" /></b>
+    <% if (Util.notEmpty(itMember.getJobTitle()) || Util.notEmpty(itMember.getOrganization())) { %>
+    <br/>
+    <b class="function-company">
+      <%= itMember.getJobTitle() %>
+      <% if (Util.notEmpty(itMember.getJobTitle()) && Util.notEmpty(itMember.getOrganization())) { %>-<% } %>
+      <%= itMember.getOrganizationAndDepartment() %>
+    </b>
+    <% } %>
+    
+    <%
+    if (cat != null) {
+      siblingCatSet.remove(cat);
+    }
+    
+    MemberCategories mcat = esnMgr.getMemberCategories(itMember);
+    Set<Category> connexeCatSet = new HashSet<Category>();
+    Set<Category> otherCatSet = null;
+    if (mcat != null && Util.notEmpty(mcat.getCategories())) {
+        for(Category itCat: mcat.getCategories()) {
+          if (siblingCatSet.contains(itCat) || itCat.hasAncestor(cat)) {
+            connexeCatSet.add(itCat);
+          }
+        }
+        otherCatSet = Util.subSet(mcat.getCategorySet(), connexeCatSet);
+        if (cat != null) {
+          otherCatSet.remove(cat);
+        }
+    }
+    %>
+    
+    <table class="peer related">
+      <% if (Util.notEmpty(connexeCatSet)) { %>
+      <tr class="connexe">
+        <td class="fit"><%= glp("jcmsplugin.esn.expert-dir.lbl.related.connexe") %></td>
+        <td>
+          <jalios:foreach collection="<%= connexeCatSet %>" name="itCat" type="Category"  max="10" counter="connexeCounter">
+          <% if (connexeCounter != 1) { %>&middot;<% } %>
+          <a class="ajax-refresh" href="<%= urlPrefix + itCat.getId() %>"><%= itCat.getName(userLang) %></a>
+          </jalios:foreach>
+          <% if (connexeCatSet.size() > 3) { %>&middot; ...<% } %>
+        </td>
+      </tr>
+      <% } %>
+      <% if (Util.notEmpty(otherCatSet)) { %>
+	      <%  
+	        Set<Category> cleanOtherCatSet = JcmsUtil.select(otherCatSet, new Category.AuthorizedSelector(loggedMember), new Category.NameComparator(userLang));
+	      %>
+	      <% if(Util.notEmpty(cleanOtherCatSet)){ %>
+	      <tr class="others">    
+	        <td class="fit"><%= glp("jcmsplugin.esn.expert-dir.lbl.related.others") %></td>
+	        <td>    
+	        <% int otherCatCount = 0; %>    
+	        
+	        <jalios:foreach collection="<%= cleanOtherCatSet %>" name="itCat" type="Category" max="10" counter="otherCatCounter">
+	        <% if (otherCatCounter != 1) { %>&middot;<% } %>
+	        <a class="ajax-refresh" href="<%= urlPrefix + itCat.getId() %>"><%= itCat.getName(userLang) %></a>
+	        </jalios:foreach>
+	        <% if (cleanOtherCatSet.size() > 3) { %>&middot; ...<% } %>
+	        </td>
+	      </tr>
+	      <% } %>
+    <% } %>
+    </table>
+  </div>          
+</div>

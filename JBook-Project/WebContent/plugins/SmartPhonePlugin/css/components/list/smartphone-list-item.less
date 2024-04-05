@@ -1,0 +1,635 @@
+// Include variables and mixins
+@import "../../smartphone-init.less";
+@import "../../smartphone-mixins.less";
+
+/* ------------------------------------------ */
+/*  Item box                                  */
+/* ------------------------------------------ */
+
+.itemlist-wrapper.ui-listview {
+  margin: 0em;
+}
+
+
+HTML .itemlist-wrapper,
+HTML .ui-listview {
+
+  .itemlist-item-body {
+    overflow: hidden;
+  }
+
+  .itemlist-item,
+  .itemlist-item-detailed {
+    border-top: 1px solid rgba(171, 171, 171, 0.24);
+    &:last-child {
+      border-bottom: 0 none;
+    }
+    
+    &.is-top-aligned-icon .itemlist-item-icon{
+      align-self: flex-start;
+      margin-top: 3px;    
+    }
+    
+    &.unwrap-text {
+      .itemlist-item-text {
+        white-space: normal;
+      }
+    }
+    
+    display: flex;
+    width: 100%;
+    
+    &:first-child {
+      border-top: 0 none;
+    }
+    
+    .wrapper-photo {
+      flex-shrink: 0;
+    }
+    
+    .itemlist-item-link {
+      background-color: white;
+      display: flex;
+      width: 100%;
+      &.ui-btn {
+        border: 0 none;
+        background-color: white;
+      }
+    }
+
+    .wrapper-photo {
+      margin-right: 10px;
+      &.icon-photo {
+        margin-right: 4px;
+      }
+      &.icon-photo > IMG {
+        width: 18px;
+        height: 18px;
+      }
+      
+      > IMG{
+        width: 48px;
+        height: 48px;
+      }
+    }
+
+  }
+  .itemlist-item,
+  .itemlist-item-detailed {
+    transition: background-color 200ms ease-in, color 200ms ease-in;
+    color: @itemlist-text-color;
+
+    &.hide-icon .itemlist-item-icon {
+      display: none;
+    }
+
+    &.is-closed-item,
+    &.is-read-item,
+    &.is-past-item {
+      color: #999;
+    }
+
+  }
+
+  .label {
+    border: 1px solid transparent;
+  }
+
+  .itemlist-item-link {
+    text-decoration: none;
+  }
+
+  .itemlist-item {
+    position: relative;
+
+    &.has-action {
+      .itemlist-item-right {
+        display: block;
+      }
+    }
+
+    .itemlist-item-date {
+      color: #aaa;
+    }
+    .itemlist-item-link {
+      display: flex;
+      align-items: center;
+      line-height: 30px;
+      padding: @itemlist-padding;
+      color: inherit;
+    }
+  }
+
+  .list-item-action-link {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+    color: #333;
+    font-weight: 400;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 200ms ease-in;
+    border-radius: 50%;
+    &:active {
+      background-color: #EEEEEEAA;
+    }
+  }
+
+  .list-item-action-dropdown {
+    display: none;
+  }
+
+  .dropdown-list-actions + .itemlist-item-link {
+    color: black;
+    .itemlist-item-body {
+      padding-right: @sp-default-spacing-double;
+    }
+  }
+
+  .itemlist-item-actions {
+    z-index: -1;
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    float: right;
+    display: flex;
+    align-items: center;
+    line-height: 30px;
+    display: none;
+    padding: @sp-default-spacing @sp-default-spacing-double @sp-default-spacing @sp-default-spacing;
+    .jalios-icon {
+      color: @itemlist-active-text-color;
+    }
+    .btn-default .jalios-icon {
+      color: @btn-default-color;
+    }
+
+    > A:not(.btn) {
+      color: @itemlist-active-text-color;
+      text-decoration: none;
+    }
+  }
+
+  .itemlist-item-icon {
+    padding: 0px 7px;
+    border-radius: 0;
+    background-color: white;
+    margin-right: @sp-default-spacing;
+    
+    .jalios-icon {
+      color: @itemlist-text-color;
+      
+      &.jcmsplugin-smartphone-folder-back{
+      	color: #555;
+      }
+    }
+  }
+
+  .itemlist-item-icon IMG {
+    width: @sp-default-spacing-double;
+    height: @sp-default-spacing-double;
+    max-width: @sp-default-spacing-double;
+  }
+
+  .itemlist-item-text {
+    .text-overflow();
+    font-weight: 400;
+  }
+
+  .itemlist-item-right {
+    white-space: nowrap;
+    align-self: flex-end;
+    margin-left: auto;
+    padding-left: @sp-default-spacing-double;
+  }
+}
+
+/* ------------------------------------------ */
+/*  Item box subgroup                         */
+/* ------------------------------------------ */
+
+.itemlist-subgroup {
+  position: relative;
+  margin-bottom: @sp-default-spacing;
+  padding-bottom: @sp-default-spacing;
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .itemlist-item A.itemlist-item-link {
+    padding-left: 24px;
+  }
+  .itemlist-subgroup-title {
+    padding-left: 15px;
+    padding-top: @sp-default-spacing;
+    margin-bottom: @sp-default-spacing;
+  }
+  &:not(:last-child):after {
+    content: "";
+    border-bottom: 1px solid #eee;
+    height: 1px;
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    margin-top: @sp-default-spacing;
+  }
+}
+
+/* ------------------------------------------ */
+/*  Item box detailed                         */
+/* ------------------------------------------ */
+
+.itemlist-item-detailed {
+  position: relative;
+  &.has-action {
+    padding-right: 68px;
+  }
+
+  .itemlist-item-actions {
+    position: absolute;
+    float: none;
+    z-index: 1;
+    right: @sp-default-spacing-double;
+    top: 0;
+    padding-right: 0;
+  }
+
+  .itemlist-item-body {
+    overflow: hidden;
+  }
+
+  .itemlist-item-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    line-height: 20px;
+    padding: @sp-default-spacing-double @sp-default-spacing-half @sp-default-spacing-double @sp-default-spacing;
+    color: inherit;
+  }
+  .itemlist-item-text {
+    margin-bottom: @sp-default-spacing-half;
+    color: #333;
+    font-weight: 400;
+  }
+  .itemlist-item-icon {
+    padding: 7px 7px;
+    font-size: 16px;
+    display: flex;
+    flex-shrink: 0;
+    flex-grow: 0;
+    .jalios-icon {
+      color: #666;
+    }
+  }
+  .itemlist-item-meta {
+    color: #999;
+    font-weight: 400;
+    font-size: 14px;
+    .text-overflow();
+  }
+}
+
+.itemlist-item-image {
+  border: 1px solid #EEE;
+  border-radius: 8px;
+  > IMG {
+    border-radius: 8px;
+  }
+  &.itemlist-item-image-large {
+    flex: 0 0 120px;
+    IMG {
+      max-width: 120px;
+      max-height: 120px;
+    }
+  }
+    justify-content: center;
+    align-items: center;
+  flex: 0 0 48px;
+  margin-right: 12px;
+  display: flex;
+  position: relative;
+
+  IMG {
+    object-fit: cover;
+    max-width: 48px;
+    max-height: 48px;
+  }
+}
+
+.itemlist-item-abstract {
+  margin-bottom: @sp-default-spacing-half;
+  line-height: 20px;
+  color: #333;
+  font-weight: 400;
+  list-style: none;
+  white-space: normal;
+  font-size: 14px;
+}
+
+.itemlist-item-detailed.large-abstract {
+
+  .itemlist-item-text {
+    margin-bottom: @sp-default-spacing;
+  }
+
+  &:first-child {
+    border-top: 0 none;
+  }
+  .itemlist-item-link {
+    align-items: initial;
+  }
+  .itemlist-item-text {
+    .text-overflow();
+    font-weight: 400;
+  }
+
+  .itemlist-item-abstract {
+    margin-bottom: @sp-default-spacing-half;
+    line-height: 20px;
+    color: #333;
+    font-weight: 400;
+    list-style: none;
+    white-space: normal;
+    font-size: 14px;
+  }
+
+  .itemlist-item-body {
+    overflow: hidden;
+  }
+
+  a.itemlist-item-actions {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* ------------------------------------------ */
+/*  Specific code to reset panel padding      */
+/* ------------------------------------------ */
+
+.panel-body {
+  .itemlist-wrapper {
+    padding-top: 12px;
+  }
+  .tab-content .itemlist-wrapper {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .itemlist-wrapper {
+    margin: -@panel-body-padding -@panel-body-padding 0 -@panel-body-padding;
+
+    + .item-box-footer {
+      margin-top: @sp-default-spacing-double;
+    }
+
+    .nav-tabs-underlined {
+      margin: 0 @sp-default-spacing-double;
+      padding: 0;
+    }
+  }
+}
+
+/* ------------------------------------------ */
+/*  Member                                    */
+/* ------------------------------------------ */
+
+.itemlist-item.itemlist-item-Member .itemlist-item-icon {
+  border-radius: initial;
+  padding: 0;
+  display: flex;
+  IMG {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.itemlist-item-detailed.itemlist-item-Member .itemlist-item-icon {
+  border-radius: initial;
+  padding: 0;
+  display: flex;
+  IMG {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.itemlist-wrapper.is-first-in-lead .itemlist-item-detailed:first-child {
+  padding-right: 0;
+
+  .itemlist-item-actions {
+    display: none;
+  }
+
+  .itemlist-item-link {
+    flex-direction: column;
+    padding: @sp-default-spacing-double;
+  }
+
+  .itemlist-item-image {
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-right: 0;
+    IMG {
+      max-width: 100%;
+      max-height: 220px;
+    }
+  }
+
+  .itemlist-item-body {
+    margin-top: @sp-default-spacing;
+  }
+}
+
+.itemlist-wrapper.itemlist-wrapper-warning .itemlist-item-detailed {
+  background-color: #009ef5;
+
+  .itemlist-item-text,
+  .itemlist-item-abstract,
+  .itemlist-item-meta {
+    color: white;
+  }
+}
+
+.itemlist-wrapper.itemlist-wrapper-info .itemlist-item-detailed {
+  background-color: #f0ad4e;
+
+  .itemlist-item-text,
+  .itemlist-item-abstract,
+  .itemlist-item-meta {
+    color: white;
+  }
+}
+
+.btn.itemlist-action {
+  margin: 20px auto 20px;
+  width: 60%;
+  .text-overflow();
+  display: block;
+}
+
+.itemlist-wrapper .itemlist-item-detailed.itemlist-item-detailed-image {
+
+  .itemlist-item-text {
+    margin-bottom: @sp-default-spacing;
+    font-weight: 400;
+  }
+  .itemlist-item-link {
+    padding: @sp-default-spacing-double @sp-default-spacing-half @sp-default-spacing-double @sp-default-spacing;
+    align-items: initial;
+  }
+  .itemlist-item-image {
+    margin-right: 12px;
+  }
+
+  .itemlist-item-actions {
+    top: 0;
+    transform: initial;
+  }
+
+}
+
+
+
+.panel-body .itemlist-wrapper {
+  .itemlist-item-detailed {
+    &:last-child {
+      margin-bottom: -6px;
+    }
+  }
+
+  .itemlist-item-detailed.itemlist-item-detailed-image {
+    &:first-child {
+      margin-top: -4px;
+    }
+    &:last-child {
+      margin-bottom: -7px;
+    }
+  }
+  .itemlist-item-detailed.itemlist-item-detailed-image-abstract {
+    &:first-child {
+      margin-top: -8px;
+    }
+    &:last-child {
+      margin-bottom: -10px;
+    }
+  }
+
+  &.is-first-in-lead .itemlist-item-detailed:first-child {
+    margin-top: -12px;
+  }
+}
+
+.itemlist-wrapper .itemlist-item-detailed.itemlist-item-detailed-image-abstract {
+  .itemlist-item-link {
+    padding: 12px @sp-default-spacing-half 12px @sp-default-spacing-double;
+  }
+}
+
+HTML .ui-listview > LI > A {
+  padding: @sp-default-spacing 45px @sp-default-spacing @sp-default-spacing;
+}
+
+HTML .ui-listview .itemlist-item-detailed-image .itemlist-item-icon {
+  width: 48px;
+  height: 48px;
+  background-color: #F3F3F3;
+  border: 1px solid #F3F3F3;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 48px;
+  margin-right: 12px;
+}
+
+HTML .ui-listview .itemlist-item-detailed-image .itemlist-item-filedocument-thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 48px;
+  margin-right: 12px;
+  > IMG {
+    max-width: 40px;
+    max-height: 40px;
+  }
+}
+
+
+ul.list-divider-light .ui-li-divider {
+  background-color: white;
+  margin-bottom: 4px;
+  margin-top: 24px;
+  border-top: 0;
+  &:first-child {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+
+.ui-listview .ui-btn-showmore {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.ui-li-divider {
+  display: flex;
+  align-items: center;
+  &.ui-li-has-thumb > IMG:first-child {
+    position: static;
+  }
+}
+
+.itemlist-item,
+.itemlist-item-detailed {
+  &.has-divider-left-icon {
+    padding-left: 24px;
+  }
+}
+
+.ui-li-divider.has-left-icon {
+  padding-left: 8px;
+  &.ui-li-has-thumb > IMG:first-child {
+    margin-right: 8px;
+  }
+}
+
+HTML .ui-page-theme-b .ui-listview,
+HTML .ui-page-theme-a .ui-listview {
+  .ui-listview-showmore {
+    padding: 0 16px;
+  }
+  .ui-listview-showmore > A.ui-btn {
+    background-color: white;
+    border: 1px solid #999;
+    color: #333;
+    padding-right: 8px;
+    margin-top: 20px;
+    &:active,
+    &:hover {
+      background-color: rgba(153, 153, 153, 0.2);
+    }
+    
+  }
+}
+
+li.ui-li-static .itemlist-item-detailed {
+  margin: -.7em -1em;
+}
+
+HTML .ui-listview.sticky {
+  margin-top: 0;
+}

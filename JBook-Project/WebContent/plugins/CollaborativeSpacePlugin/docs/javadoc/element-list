@@ -1,0 +1,15 @@
+com.jalios.jcmsplugin.collaborativespace
+com.jalios.jcmsplugin.collaborativespace.actionsmenu
+com.jalios.jcmsplugin.collaborativespace.actionsmenu.impl
+com.jalios.jcmsplugin.collaborativespace.analytics
+com.jalios.jcmsplugin.collaborativespace.builder
+com.jalios.jcmsplugin.collaborativespace.guest
+com.jalios.jcmsplugin.collaborativespace.guest.controller
+com.jalios.jcmsplugin.collaborativespace.guest.filter
+com.jalios.jcmsplugin.collaborativespace.guest.handler
+com.jalios.jcmsplugin.collaborativespace.guest.selector
+com.jalios.jcmsplugin.collaborativespace.jmobile
+com.jalios.jcmsplugin.collaborativespace.migration
+com.jalios.jcmsplugin.collaborativespace.portal
+com.jalios.jcmsplugin.collaborativespace.portal.override
+com.jalios.jcmsplugin.collaborativespace.ui.model

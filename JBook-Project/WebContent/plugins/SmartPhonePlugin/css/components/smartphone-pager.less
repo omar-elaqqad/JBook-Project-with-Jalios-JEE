@@ -1,0 +1,30 @@
+.pager-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  .btn {
+    max-width: 50px;
+    margin: 0 10px;
+    &.is-disabled {
+      visibility: hidden;
+      pointer-events: none;
+    }
+  }
+  .pager-info {
+    white-space: nowrap;
+  }
+}
+
+html .ui-page-theme-a .ui-btn .pager-wrapper .btn {
+  margin-top: 0;
+  &.btn-seemore {
+    margin: 0 16px;
+  }
+}
+html .ui-page-theme-a .pager-seemore-wrapper {
+  margin: 8px 16px;
+  .btn-seemore {
+    margin: 0;
+  }
+}

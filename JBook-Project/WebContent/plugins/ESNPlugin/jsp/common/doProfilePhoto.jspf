@@ -1,0 +1,79 @@
+<%@page import="java.text.MessageFormat"%><%
+%><%@page import="com.jalios.util.Util"%><%
+%><%@page import="com.jalios.jcmsplugin.esn.ESNManager"%><% 
+
+// Fix JCMS-4040 : invalid display of member photo if image file is missing from filesystem
+String memberPhotoRelativePath = "images/jalios/layout/silhouette.jpg";
+if (Util.notEmpty(member.getPhoto()) && (new File(channel.getRealPath(member.getPhoto()))).exists()) {
+  memberPhotoRelativePath = member.getPhoto();
+}
+jcmsContext.addJavaScript("js/jalios/core/jalios-lightbox.js");
+jcmsContext.addJavaScript("js/lib/simple-lightbox/simple-lightbox.js");
+jcmsContext.addCSSHeader("css/lib/simple-lightbox/simplelightbox.css");
+
+String title = "";
+boolean hasStatus = false;
+int mbrStatus = -1;
+// Css
+StringBuilder classes = new StringBuilder();
+classes.append("wrapper-photo br media-object large-photo");
+if (member.isContact()) {
+  classes.append(" contact");
+} else {
+  classes.append(" account");
+  // Status
+  if (member.isPersisted()) {
+    hasStatus = true;
+    mbrStatus = member.getStatus();
+    classes.append(" mbr-status mbr-status-" + mbrStatus);
+  }
+}
+if (!member.isPersisted()) {
+  title = encodeForHTMLAttribute(member.getName() + " (" + member.getEmail() + ")");
+  classes.append(" not-persisted");
+}
+
+String mbrStatusIconSrc = "mbr-status-" + mbrStatus;
+String mbrStatusIconTitle = "ui.com.alt.mbr.status." + mbrStatus;
+String changeProfilePhotoCustom = (String) request.getAttribute("esn-profile-photo-change");
+String changeProfilePhotoLabel = glp("ui.member-editor.change-photo");
+String changeProfilePhotoTitle = "ui.com.alt.mbr.status." + mbrStatus;
+String photoHtmlAttributes = "itemprop=\"image\"";
+String changePhotoUrl = loggedMember != null ? MessageFormat.format("front/memberPhoto/editPhoto.jsp?modalRedirect={0}&amp;mbrId={1}", 
+      encodeForURL(loggedMember.getDisplayUrl(userLocale)), member.getId()) : "";
+
+{
+boolean canUpdateProfilePhoto = ESNManager.getInstance().canUpdatePhoto(loggedMember, member, workspace);
+%>
+<div class="profile-header-photo text-center">
+  <div class="<%= classes %>"<%= Util.notEmpty(title) ? " title=\"" + title + "\"" : "" %>>
+    <a href="<%= memberPhotoRelativePath %>" class="lightbox-img">
+      <jalios:thumbnail path='<%= memberPhotoRelativePath %>'
+                        width='<%= PhotoSize.LARGE.getWidth() %>'
+                        height='<%= PhotoSize.LARGE.getHeight() %>'
+                        alt='<%= member.getFullName() %>' 
+                        css='photo' 
+                        htmlAttributes="<%= photoHtmlAttributes %>"
+                        />
+    </a>                 
+    <div class='photo-anchor'>
+      <% if (member.isContact()) { %>
+        <jalios:icon src="contact32" css="external-large photo-icon-bottom-right" title='ui.com.lbl.contact' />
+      <% } else { // Don't display status icon for PhotoSize.ICON, PhotoSize.TINY %>
+        <jalios:include target="MBR_PHOTO_ANCHOR" targetContext="inline" />
+        <% if (hasStatus) { %>
+          <jalios:icon src='<%= mbrStatusIconSrc %>' css="photo-icon-bottom-right mbr-status" title='<%= mbrStatusIconTitle %>' />
+        <% } %>
+      <% } %>
+    </div>
+  </div>     
+
+  <% if (canUpdateProfilePhoto) { %>
+    <div class="change-photo">
+      <a class="modal" href="<%= changePhotoUrl %>" title='<%= encodeForHTMLAttribute(changeProfilePhotoLabel) %>'>
+        <span class="change-photo-label"><%= changeProfilePhotoLabel %></span>
+      </a>
+    </div>
+  <% } %>
+</div>
+<% } %>

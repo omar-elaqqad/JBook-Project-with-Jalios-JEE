@@ -1,0 +1,52 @@
+@import "../../../../css/jalios/core/init-mixins";
+
+.portal-title {
+  font-size: @font-size-large;
+}
+
+.portal-breadcrumb {
+  color: #666;
+}
+
+.mobile-app-default-department {
+  max-width: 800px;
+  padding: 20px;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  margin-bottom: 15px;
+
+  .form-group {
+    margin-bottom: 0;
+  }
+}
+
+.mobile-app-departments {
+  max-width: 800px;
+  padding: 20px;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+
+  .departments-actions {
+    padding-right: 15px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.mobile-app-department {
+  display: flex;
+  flex-direction: column;
+}
+
+.portal-breadcrumb-item {
+  padding-right: 5px;
+
+  &:not(:last-child):after {
+    content: ">";
+  }
+
+  &:after {
+    content: "";
+    padding-left: 5px;
+  }
+}

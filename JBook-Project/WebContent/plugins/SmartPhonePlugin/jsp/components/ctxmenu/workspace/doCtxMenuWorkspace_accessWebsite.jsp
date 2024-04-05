@@ -1,0 +1,4 @@
+<%@page import="com.jalios.jcmsplugin.smartphone.SmartPhonePortalPolicyFilter"%>
+<%@page import="com.jalios.jcmsplugin.smartphone.SmartPhoneManager"%>
+<%@ include file='/plugins/SmartPhonePlugin/jsp/common/doInitSmartPhonePage.jspf' %>
+<li class="action-access-website"><a <%= SmartPhoneManager.getInstance().isMobileApp(request) ? "target=\"_blank\"" : "" %> data-ajax="false" href="<%= workspace.getDisplayUrl(userLocale) %>?<%= SmartPhonePortalPolicyFilter.FORCE_NO_SMARTPHONE_REQUEST_PARAM %>"><jalios:icon src="smartphone-access-website" /> <%= glp("jcmsplugin.smartphone.lbl.index-default.desktop-link") %></a></li>  

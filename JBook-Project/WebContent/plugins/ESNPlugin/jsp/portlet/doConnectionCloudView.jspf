@@ -1,0 +1,15 @@
+<div id="connection-cloud">
+<% 
+int level = getIntParameter("connectionLevel", 1);
+Map<Member,Integer> map = esnMgr.getConnectionCloud(member, showAll || showAccount, showAll || showContact, level); 
+%>
+<div class="cloud">
+<jalios:foreach collection="<%= map.entrySet() %>" type="Map.Entry<Member,Integer>" name="itEntry">
+<% 
+Member itMember = itEntry.getKey();
+int size = itEntry.getValue();
+%>
+<jalios:link data="<%= itMember %>" css='<%= "size" + size + " " + (itMember.isContact() ? "contact" : "account") %>' />
+</jalios:foreach>
+</div>
+</div>

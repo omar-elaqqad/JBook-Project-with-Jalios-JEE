@@ -1,0 +1,101 @@
+<%--
+  @Summary: PortletMyCollaborativeSpaces MySpace list
+  @Category: Custom
+  @Author: Sylvain Devaux <sylvain.devaux@jalios.com> 
+  @Since: csp-4.3, csp-5.0 
+--%><%@page import="com.jalios.jcms.workspace.Workspace"%><%
+%><%@page import="generated.CollaborativeSpace"%><%
+%><%@page import="java.util.*"%><%
+%><%@page import="com.jalios.util.Util"%><%
+%><%@page import="com.jalios.jcmsplugin.collaborativespace.CSManager"%><%
+%><%@ page contentType="text/html; charset=UTF-8" %><%
+
+Collection<CollaborativeSpace> mySpaces = csMgr.getMemberCollaborativeSpaces(loggedMember, typoCat);
+Collection<CollaborativeSpace> otherSpaces = csMgr.getMemberOtherCollaborativeSpaces(loggedMember, typoCat);
+
+String tabParam = portlet.getId() + "_portletmycollaborativespaces_tab";
+String tab = getAlphaNumParameter(tabParam, "mine");
+
+int mineSetSize = Util.getSize(mySpaces); 
+int otherSetSize = Util.getSize(otherSpaces);
+
+if (mineSetSize == 0) {
+  tab = "other";
+}
+if (otherSetSize == 0) {
+  tab = "mine";
+}
+
+Comparator<Workspace> comparator = Workspace.getNameComparator(userLang);
+Set<Workspace> wsSet = new TreeSet<Workspace>(comparator);
+
+if ("mine".equals(tab) && mineSetSize > 0) {
+  wsSet.addAll(csMgr.getWorkspaceSet(Util.getHashSet(mySpaces.toArray(new CollaborativeSpace[]{}))));
+} else if (otherSetSize > 0) {
+  wsSet.addAll(csMgr.getWorkspaceSet(Util.getHashSet(otherSpaces.toArray(new CollaborativeSpace[]{}))));
+}
+%>
+
+<div class="myCollaborativeSpaces">
+  <%-- TYPOLOGY --%>
+  <%
+  // Keep current TAB selected (CSP-369)
+  String tabKeeper = "<input type='hidden' name='" + tabParam +"' value='" + tab + "' />";
+  request.setAttribute("cs-typology-filter-form", tabKeeper);
+  %>
+  <%@ include file='/types/PortletMyCollaborativeSpaces/doTypologyFilter.jspf' %>
+  <% request.removeAttribute("cs-typology-filter-form"); %>
+  
+  <%-- TABS --%>
+  <% if (mineSetSize > 0 || otherSetSize > 0) { %>
+    <ul class="nav nav-tabs br">
+      <% if (mineSetSize > 0) { %>
+        <li class='<%= "mine".equals(tab) ? "active" : "" %>'><%
+          %><a class="ajax-refresh" onclick="return false;" 
+                  href="<%=url%>?<%= portlet.getId() %>_portletmycollaborativespaces_tab=mine<%=typoCat == null ? "" : "&amp;"+csTypoParam+"=" + typoCat.getId()%>"><%=glp("jcmsplugin.collaborativespace.portlet.mycs.lbl.mine")%></a><%
+        %></li>
+      <% } %>
+      <% if (otherSetSize > 0) { %>
+        <li class='<%= "other".equals(tab) ? "active" : "" %>'><%
+          %><a class="ajax-refresh" onclick="return false;" 
+                  href="<%=url%>?<%= portlet.getId() %>_portletmycollaborativespaces_tab=other<%=typoCat == null ? "" : "&amp;"+csTypoParam+"=" + typoCat.getId()%>"><%=glp("jcmsplugin.collaborativespace.portlet.mycs.lbl.other")%></a><%
+        %></li>
+      <% } %>
+    </ul>
+  <% } %>
+  <jalios:pager name='pagerHandler' 
+                declare='true' 
+                action='init' 
+                pageSize='10' 
+                size='<%= Util.getSize(wsSet) %>'
+                paramPrefix='<%= PortalManager.PORTAL_ACTION+"_"+ JcmsUtil.getId(portlet) +"_" %>' 
+                />
+
+  <div>
+    <% if (Util.isEmpty(wsSet)) { %>
+      <div class="no-cs"><%= glp("jcmsplugin.collaborativespace.portlet.mycs.lbl.none") %></div>
+    <% } else { %>
+      <ul class="item-box">
+        <jalios:foreach collection="<%= wsSet %>" 
+                        name="ws" 
+                        type="Workspace"
+                        max='<%= pagerHandler.getPageSize() %>'
+                        skip='<%= pagerHandler.getStart() %>'>
+        <%
+        CollaborativeSpace cs = csMgr.getCollaborativeSpace(ws);
+        boolean isPublic = CSHelper.isPublic(cs);
+        boolean isPrivate = CSHelper.isPrivate(cs);
+        boolean isSecret = CSHelper.isSecret(cs);
+        String csInnerClass = " " + (isPublic ? "access-public" : (isPrivate ? "access-private" : (isSecret ? "access-secret" : "")));
+        %>
+        <li class="<%= csInnerClass %>">
+          <jalios:icon src="<%= CSHelper.getIcon(cs) %>" />
+          <jalios:link data="<%= cs %>" />
+        </li>
+        </jalios:foreach>
+      </ul>
+      <jalios:pager name='pagerHandler' template='pqf'/>
+    <% } %>
+    <%@ include file='/types/PortletMyCollaborativeSpaces/doPortletFooter.jspf' %>
+  </div>
+</div>

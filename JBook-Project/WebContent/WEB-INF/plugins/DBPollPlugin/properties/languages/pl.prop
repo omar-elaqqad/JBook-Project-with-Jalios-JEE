@@ -1,0 +1,127 @@
+jcmsplugin.dbpoll.btn.vote:            Głosuję
+jcmsplugin.dbpoll.lbl.vote:            Głosuj
+jcmsplugin.dbpoll.lbl.open:            Otwórz ankietę
+jcmsplugin.dbpoll.lbl.close:           Zamknij ankietę
+jcmsplugin.dbpoll.lbl.show-result:     Pokaż wyniki
+jcmsplugin.dbpoll.lbl.vote-cnt:        {0,choice,0#0 głosów |1# 1 głos|2#{0,number,integer} głosy|5#{0} głosów}
+jcmsplugin.dbpoll.lbl.dates:           Ankieta od {0} do {1}
+jcmsplugin.dbpoll.lbl.all-polls:       Dodaj ankiety
+jcmsplugin.dbpoll.lbl.all-polls-ws:    Dodaj ankiety w {0}
+jcmsplugin.dbpoll.lbl.view-all-polls:  Pokaż wszystkie ankiety
+jcmsplugin.dbpoll.lbl.view-all-polls-ws:  Pokaż wszystkie ankiety w bieżącym obszarze roboczym
+jcmsplugin.dbpoll.lbl.vote-title:      Głosuj na {0}
+jcmsplugin.dbpoll.lbl.create-poll:     Publikuj nową ankietę
+jcmsplugin.dbpoll.msg.option-change:   Nie możesz zmienić opcji ankiety, ponieważ niektórzy użytkownicy już głosowali na bieżące opcje.
+jcmsplugin.dbpoll.msg.already-voted:   Już głosowałeś/aś w tej ankiecie.
+jcmsplugin.dbpoll.msg.no-result:       W tej ankiecie nie oddano jeszcze żadnego głosu.
+jcmsplugin.dbpoll.msg.choose-option:   Aby zagłosować, musisz wybrać opcję.
+jcmsplugin.dbpoll.msg.closed-poll:     Ta ankieta jest zamknięta, nie możesz głosować.
+jcmsplugin.dbpoll.msg.poll-loop:       Nie można umieścić ankiety na jej własnym opisie.
+
+jcmsplugin.dbpoll.modal.step1:         Opcje ankiety
+jcmsplugin.dbpoll.modal.step2:         Poleć ankietę
+jcmsplugin.dbpoll.modal.btn.publish:   Publikuj
+jcmsplugin.dbpoll.modal.btn.publish.alt:  Publikuj ankietę
+jcmsplugin.dbpoll.modal.btn.next.alt:  Opublikuj ankietę i poleć ją...
+jcmsplugin.dbpoll.modal.success-info:  Twoja ankieta została utworzona i można do niej wejść tutaj: {0}
+
+jcmsplugin.dbpoll.publish-menu.add-poll: Ankieta
+
+jcmsplugin.dbpoll.cs.options:  Dodaj co najmniej dwie opcje do tej ankiety
+jcmsplugin.dbpoll.cs.optionsml:  Dodaj co najmniej dwie opcje do tej ankiety (w {0})
+
+jcmsplugin.dbpoll.search.placeholder: Wyszukaj ankietę...
+
+jcmsplugin.dbpoll.app.title: Ankiety
+
+jcmsplugin.dbpoll.app.no-result-welcome: Witamy w aplikacji Ankiety
+
+jcmsplugin.dbpoll.app.catalog.title: Ankiety
+jcmsplugin.dbpoll.app.catalog.root: Strona główna
+jcmsplugin.dbpoll.app.catalog.btn.add-poll: Dodaj ankietę
+jcmsplugin.dbpoll.app.catalog.polls-number: {0} {0,choice,0#|1#ankieta|2#ankiety}
+
+jcmsplugin.dbpoll.app.card.closed-poll: Skończona ankieta
+
+jcmsplugin.dbpoll.app.filter.status.all: Wszystkie ankiety
+jcmsplugin.dbpoll.app.filter.status.opened: Bieżące ankiety
+jcmsplugin.dbpoll.app.filter.status.closed: Zakończone ankiety
+jcmsplugin.dbpoll.app.filter.mbr:        Dodane przez...
+jcmsplugin.dbpoll.app.filter.begin-date: Dodano po...
+jcmsplugin.dbpoll.app.filter.end-date:   Dodano przed...
+jcmsplugin.dbpoll.app.filter.workspace:  Dodano w przestrzeni roboczej...
+
+# ------------------------------------------------------------
+#  Unified insert
+# ------------------------------------------------------------
+unified-insert.items.poll: Ankieta
+unified-insert.items.poll.longtitle: Ankieta
+unified-insert.items.poll.subtitle:
+
+# ------------------------------------------------------------
+#  Smartphone
+# ------------------------------------------------------------
+jcmsplugin.smartphone.dbpoll: Ankiety
+jcmsplugin.smartphone.dbpoll.navbar.opened: Otwarte ankiety
+jcmsplugin.smartphone.dbpoll.navbar.closed: Zakończone ankiety
+
+# ------------------------------------------------------------
+#  Recommendation
+# ------------------------------------------------------------
+alert.name.recommendation.dbpoll-recommendation:                      Zaproszenie do wypełnienia ankiety
+alert.msg.recommendation.dbpoll-recommendation.title:                 Zaproszenie do wypełnienia ankiety: {data}
+alert.msg.recommendation.dbpoll-recommendation.short-description:     {author} zaprosił/a Cię do wypełnienia ankiety {data}. {data.url}
+alert.msg.recommendation.dbpoll-recommendation.description:           <p>{author} zaprosił/a Cię do wypełnienia ankiety {data}.</p>
+jcmsplugin.dbpoll.recommendation.Poll:                                Zaproś członków do wypełnienia ankiety: {0}
+
+# ------------------------------------------------------------
+#  ESN
+# ------------------------------------------------------------
+jcmsplugin.esn.activity.form-tab.poll: Ankieta
+
+# ------------------------------------------------------------
+#  Shortcuts
+# ------------------------------------------------------------
+data.$id.shortcut.jcmsplugin.dbpoll.title: Ankiety
+data.$id.shortcut.jcmsplugin.dbpoll.text: Aplikacja do obsługi ankiet
+
+# ------------------------------------------------------------
+#  Plugin label and description
+# ------------------------------------------------------------
+plugin.DBPollPlugin.label: Wtyczka ankiety
+plugin.DBPollPlugin.description: Ten dodatek umożliwia tworzenie prostych ankiet. Ankiety są wyświetlane za pomocą portletu ankiet. Głosy są przechowywane w RDBMS.
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From Poll.xml
+types.Poll.title.description: Tytuł ankiety
+types.Poll.fields.description.label: Opis
+types.Poll.label: Ankieta
+types.Poll.fields.options.description: Opcje do głosowania.
+types.Poll.fields.description.description: Krótki opis ankiety (pojawia się między pytaniem a opcjami)
+types.Poll.description: Mini ankieta z pojedynczym pytaniem
+types.Poll.fields.options.label: Opcje
+types.Poll.title.label: Tytuł
+types.Poll.fields.image.label: Obraz
+types.Poll.fields.image.description: Opcjonalny obraz do opisu tej ankiety.
+types.Poll.fields.closed.label: Zamknij ankietę
+types.Poll.fields.closed.onLabel: Tak
+types.Poll.fields.closed.offLabel: Nie
+types.Poll.fields.closed.description: Czy należy zamknąć ankietę?
+
+# From PortletPoll.xml
+types.PortletPoll.fields.refineWorkspace.labelList: Wyświetl ostatnią ankietę z obszaru roboczego|Wyświetl ostatnią ankietę z wszystkich obszarów roboczych
+types.PortletPoll.fields.poll.label: Ankieta
+types.PortletPoll.title.description: Tytuł
+types.PortletPoll.description: Ten portlet wyświetla ankietę, a po zakończeniu głosowania aktualne wyniki.
+types.PortletPoll.fields.poll.description: Ankieta do wyświetlenia (jeżeli pole jest puste wyświetlana jest ostatnia opublikowana ankieta)
+types.PortletPoll.fields.refineWorkspace.description: Wyświetl ostatnią ankietę z bieżącego obszaru roboczego lub z wszystkich obszarów roboczych.
+types.PortletPoll.label: Portlet ankiety
+types.PortletPoll.title.label: Tytuł
+types.PortletPoll.fields.refineWorkspace.label: Zawęź
+types.PortletPoll.fields.hideWhenNoResults.label: Ukryj portlet, jeżeli nie ma żadnej ankiety
+types.PortletPoll.fields.hideWhenNoResults.onLabel: Tak
+types.PortletPoll.fields.hideWhenNoResults.offLabel: Nie
+types.PortletPoll.fields.hideWhenNoResults.description: Jeżeli nie ma ankiety do wyświetlenia, ukryj portlet.

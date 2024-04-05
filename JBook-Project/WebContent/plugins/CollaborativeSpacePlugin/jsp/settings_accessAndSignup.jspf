@@ -1,0 +1,15 @@
+<%
+String[] accessValues = (String[])formHandler.getEnumValues("accessPolicy");
+request.setAttribute("collaborative-space-access-policies", accessValues);
+request.setAttribute("collaborative-space-edit-handler", formHandler);
+%>
+<jsp:include page="/plugins/CollaborativeSpacePlugin/jsp/doAccessPolicyField.jsp" />
+<%
+request.removeAttribute("collaborative-space-access-policies");
+request.removeAttribute("collaborative-space-edit-handler");
+%>
+
+<jalios:field name="signupPolicy" formHandler='<%= formHandler %>' >
+  <jalios:buffer name="fieldId"> </jalios:buffer><%-- Prevent w3c error on orphan for attribute --%>
+  <jalios:control/>
+</jalios:field>

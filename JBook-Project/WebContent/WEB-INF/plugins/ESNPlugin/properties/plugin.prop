@@ -1,0 +1,557 @@
+# ------------------------------------------------------------
+#  Member/Profile JSP mapping
+# ------------------------------------------------------------
+jcms.resource.member-display:            plugins/ESNPlugin/jsp/doMemberFullDisplay.jsp
+jcms.resource.member-profile:            plugins/ESNPlugin/jsp/doMemberFullDisplay.jsp
+jcms.resource.member-profile-editor:     plugins/ESNPlugin/jsp/form/editMemberProfile.jsp
+jcms.resource.member-profile-editor.old: plugins/ESNPlugin/jsp/form/editProfile.jsp
+
+jcmsplugin.esn.mbr-extended-search-limit: 100
+
+jcmsplugin.esn.mbr-index.MemberEducation: true
+jcmsplugin.esn.mbr-index.MemberJob: true
+jcmsplugin.esn.mbr-index.MemberLink: false
+jcmsplugin.esn.mbr-index.MemberNote: false
+jcmsplugin.esn.mbr-index.MemberCategories: true
+
+jcmsplugin.esn.graphviz.dot.options:   -Kneato -Tcmapx -Tpng:gd
+jcmsplugin.esn.graphviz.dot.keep-file: false
+
+jcmsplugin.esn.closeness.coefficient.workspace:  4
+jcmsplugin.esn.closeness.coefficient.category:   3 
+jcmsplugin.esn.closeness.coefficient.follower:   2 
+jcmsplugin.esn.closeness.coefficient.contact:    2 
+jcmsplugin.esn.closeness.coefficient.member:     1 
+jcmsplugin.esn.closeness.coefficient.event:      4 
+
+jcmsplugin.esn.follower-notification.boolean: true
+jcmsplugin.esn.external-contacts.boolean: true
+
+jcmsplugin.esn.contact-referrers.qs:
+
+# ------------------------------------------------------------
+#  Editable properties
+# ------------------------------------------------------------
+$id.jcmsplugin.esn.profile.portal:
+jcmsplugin.esn.graphviz.dot.exe:       
+jcmsplugin.esn.categories:
+jcmsplugin.esn.map-service: http://maps.google.fr?q=
+jcmsplugin.esn.group-expertise.assignment.boolean: false
+
+# Agreement
+jcmsplugin.esn.agreement.required.boolean: false
+jcmsplugin.esn.agreement.terms.pub.default: 
+jcmsplugin.esn.agreement.terms.pub.jsp: plugins/ESNPlugin/jsp/admin/doEditPluginAgreementPubProperties.jsp
+jcmsplugin.esn.agreement.terms.field:
+
+# Expert directory
+jcmsplugin.esn.expert-directory.open-access.boolean: true
+# (deprecated) Before Directory-8.1: expertise filters were included below expertise nav link
+jcms.resource.include.directory.app.sidebar-section.competencies:   plugins/ESNPlugin/jsp/directoryApp/doDirectoryApp_sidebarExpertise.jsp
+# Since Directory-8.1: nav links grouped in Views sections. Filters groupes in a filters section.
+jcms.resource.include.directory.app.sidebar.views.expertise: plugins/ESNPlugin/jsp/directoryApp/doDirectoryApp_sidebarViewExpertise.jsp
+jcms.resource.include.directory.app.competencies-form:              plugins/ESNPlugin/jsp/directoryApp/doDirectoryApp_bodyExpertise.jsp
+jcms.resource.include.carddata.esn-directory-competencies.Category: plugins/ESNPlugin/jsp/directoryApp/card/doDirectoryAppCategoryCard.jsp
+
+# Member Profile (disabled by default since ESN-674)
+jcmsplugin.esn.member-profile.open-access.boolean: false
+
+jcmsplugin.esn.microblogging.Workspace.default:
+jcmsplugin.esn.microblogging.Workspace.jsp: plugins/ESNPlugin/jsp/admin/doEditPluginMicroBloggingWorkspaceProperties.jsp
+
+# Birthday
+jcmsplugin.esn.birthday-reminder.enabled.boolean: true
+jcmsplugin.esn.birthday-reminder.maximum-age: 80
+jcmsplugin.esn.birthday-reminder.minimum-age: 17
+
+jcmsplugin.esn.connection-request.enabled.boolean: true
+jcmsplugin.esn.connection-request.decline-alert.enabled.boolean: false
+
+# Uncomment the following category to add the "ESN - Associated groups" field in the category editor
+#extra.Category.jcmsplugin.esn.groups: 
+
+# ------------------------------------------------------------
+#  Activity / MemberActivity
+# ------------------------------------------------------------
+# Minimum time to log a same activty as the last one (in minutes)
+jcmsplugin.esn.activity.min-time: 720
+
+# Non tracked activities : 
+#  - Do not track delete, lock and unlock activities by default
+jcmsplugin.esn.activity.nontracked: jcmsplugin.esn.activity.delete jcmsplugin.esn.activity.lock jcmsplugin.esn.activity.unlock
+jcmsplugin.esn.activity.enabled.boolean: true
+
+#  MemberActivity purge
+jcmsplugin.esn.activity.purge-retention: 90
+jcmsplugin.esn.activity.purge-schedule: 00 5 * * * *
+jcmsplugin.esn.activity.purge.enabled: true
+
+# Custom retention for a specific type of activity :
+#   - Example : setting 20 days retention for connect activities : 
+#      - jcmsplugin.esn.activity.other-purge-retention.jcmsplugin.esn.activity.connect: 20
+
+# Activity jsp mapping
+jcmsplugin.esn.activity.body.jsp-mapping.jcmsplugin.esn.activity.connect: plugins/ESNPlugin/jsp/activity/doActivityBodyNewContact.jsp
+jcmsplugin.esn.activity.body.jsp-data-mapping.CalendarEvent: plugins/ESNPlugin/jsp/activity/doActivityBodyCalendarEvent.jsp
+
+# Activity webpage media
+# Only webpage that matches following url will be displayed with a custom abstract
+jcmsplugin.esn.activity.embedded-media:  media.template.default.URL.vimeo media.template.default.URL.youtube media.template.default.URL.dailymotion
+
+# ------------------------------------------------------------
+#  Alert
+# ------------------------------------------------------------
+alert.channel.mail.content.jsp.jcmsplugin-esn.connection-request: /plugins/ESNPlugin/jsp/alert/mailConnectionRequest.jsp
+
+# ------------------------------------------------------------
+#  ACL
+# ------------------------------------------------------------
+acl.resource.admin/work/canManageExpertiseCategory:
+acl.resource.plugins/esn:
+acl.resource.plugins/esn/openapi:
+acl.resource.plugins/esn/openapi/anyActivity:
+acl.resource.plugins/esn/openapi/activity:
+
+# ------------------------------------------------------------
+#  Analytics
+# ------------------------------------------------------------
+jcms.analytics.day-agent-list.esn.agent.classname:    com.jalios.jcmsplugin.esn.analytics.ESNAgent  
+jcms.analytics.day-agent-list.esn.agent.display-jsp:  plugins/ESNPlugin/jsp/analytics/esnReport.jsp  
+jcms.analytics.day-agent-list.esn.agent.order:        350
+
+# ------------------------------------------------------------
+#  Cards
+# ------------------------------------------------------------
+jcms.resource.include.carddata.esn-mbr-connection.Member:                plugins/ESNPlugin/types/MemberProfile/cards/doCardMemberConnection.jsp
+jcms.resource.include.carddata.esn-mbr-connection-suggestion.Member:     plugins/ESNPlugin/types/MemberProfile/cards/doCardMemberConnectionSuggestion.jsp
+jcms.resource.include.carddata.esn-mcr-received.MemberConnectionRequest: plugins/ESNPlugin/types/MemberProfile/cards/doCardMemberConnectionRequestReceived.jsp
+jcms.resource.include.carddata.esn-mcr-sent.Member:                      plugins/ESNPlugin/types/MemberProfile/cards/doCardMemberConnectionRequestSent.jsp
+jcms.resource.include.carddata.esn-ws.Workspace:                         plugins/ESNPlugin/front/card/data/workspace/doCardWorkspace.jsp
+
+# ------------------------------------------------------------
+#  TT Card - Member
+# ------------------------------------------------------------
+# Override core Member ttCard contact channels template
+jcms.resource.include.tt-card.Member-contact-channels: plugins/ESNPlugin/front/tooltip/ttMember_contactChannels.jsp
+
+# ------------------------------------------------------------
+#  MemberPhoto
+# ------------------------------------------------------------
+# MemberPhoto
+jcms.resource.include.memberphoto-member-profile: plugins/ESNPlugin/front/memberphoto/doMemberProfilePhoto.jsp
+
+# ------------------------------------------------------------
+#  PORTLET
+# ------------------------------------------------------------
+jcmsplugin.esn.jsp.$id.jcmsplugin.esn.portlet.header:              plugins/ESNPlugin/jsp/portlet/doProfileHeader.jsp
+jcmsplugin.esn.jsp.$id.jcmsplugin.esn.portlet.actions:             plugins/ESNPlugin/jsp/portlet/doActions.jsp
+jcmsplugin.esn.jsp.$id.jcmsplugin.esn.portlet.connection-requests: plugins/ESNPlugin/jsp/portlet/doConnectionRequests.jsp
+jcmsplugin.esn.jsp.$id.jcmsplugin.esn.portlet.suggestions:         plugins/ESNPlugin/jsp/portlet/doSuggestions.jsp
+jcmsplugin.esn.jsp.$id.jcmsplugin.esn.portlet.common-connections:  plugins/ESNPlugin/jsp/portlet/doCommonConnections.jsp
+jcmsplugin.esn.jsp.$id.jcmsplugin.esn.portlet.connections:         plugins/ESNPlugin/jsp/portlet/doConnections.jsp
+jcmsplugin.esn.jsp.$id.jcmsplugin.esn.portlet.links:               plugins/ESNPlugin/jsp/portlet/doLinks.jsp
+jcmsplugin.esn.jsp.$id.jcmsplugin.esn.portlet.network-activities:  plugins/ESNPlugin/jsp/portlet/doNetworkActivities.jsp
+jcmsplugin.esn.jsp.$id.jcmsplugin.esn.portlet.activities:          plugins/ESNPlugin/jsp/portlet/doActivities.jsp
+jcmsplugin.esn.jsp.$id.jcmsplugin.esn.portlet.publications:        plugins/ESNPlugin/jsp/portlet/doPublications.jsp
+jcmsplugin.esn.jsp.$id.jcmsplugin.esn.portlet.presentation:        plugins/ESNPlugin/jsp/portlet/doPresentation.jsp
+jcmsplugin.esn.jsp.$id.jcmsplugin.esn.portlet.workspaces:          plugins/ESNPlugin/jsp/portlet/doWorkspaces.jsp
+jcmsplugin.esn.jsp.$id.jcmsplugin.esn.portlet.expertise:           plugins/ESNPlugin/jsp/portlet/doExpertise.jsp
+jcmsplugin.esn.jsp.$id.jcmsplugin.esn.portlet.contacts:            plugins/ESNPlugin/jsp/portlet/doContacts.jsp
+jcmsplugin.esn.jsp.$id.jcmsplugin.esn.portlet.contact-notes:       plugins/ESNPlugin/jsp/portlet/doContactNotes.jsp
+jcmsplugin.esn.jsp.$id.jcmsplugin.esn.portlet.jobs:                plugins/ESNPlugin/jsp/portlet/doJobs.jsp
+jcmsplugin.esn.jsp.$id.jcmsplugin.esn.portlet.educations:          plugins/ESNPlugin/jsp/portlet/doEducations.jsp
+jcmsplugin.esn.jsp.$id.jcmsplugin.esn.portlet.contact-calendar:    plugins/ESNPlugin/jsp/portlet/doContactCalendar.jsp
+jcmsplugin.esn.jsp.$id.jcmsplugin.esn.portlet.contact-referrers:   plugins/ESNPlugin/jsp/portlet/doContactReferrers.jsp
+
+# ------------------------------------------------------------
+#  Publish Menu
+# ------------------------------------------------------------
+publish-menu.item.content.5.jcmsplugin.esn: plugins/ESNPlugin/jsp/microblogging/doMicrobloggingPublishMenu.jsp
+publish-menu.item.other.12.jcmsplugin.esn: plugins/ESNPlugin/jsp/common/doContactPublishMenu.jsp
+
+# ------------------------------------------------------------
+#  Recommendation
+# ------------------------------------------------------------
+recommendation.alert-name.Member: esn-member-recommendation
+recommendation.alert-name.DBMember: esn-member-recommendation
+recommendation.modal-text.Member: jcmsplugin.esn.recommendation.Member
+recommendation.modal-text.DBMember: jcmsplugin.esn.recommendation.Member
+
+# ------------------------------------------------------------
+# Member Profile
+# ------------------------------------------------------------
+# Member Profile - old/new template switch
+jcmsplugin.esn.profile.full.old-template.boolean: false
+
+# Member Profile - Templates
+jcms.resource.include.esn.profile.edit.panel-heading:      plugins/ESNPlugin/front/accordion/doEditProfileAccordionPanelHeading.jsp
+jcms.resource.include.esn.profile.full.actions:            plugins/ESNPlugin/types/MemberProfile/actions/doActions.jsp
+jcms.resource.include.esn.profile.full.activity:           plugins/ESNPlugin/types/MemberProfile/doActivity.jsp
+jcms.resource.include.esn.profile.full.body:               plugins/ESNPlugin/types/MemberProfile/doMemberProfileFullDisplayBody.jsp
+jcms.resource.include.esn.profile.full.common-connections: plugins/ESNPlugin/types/MemberProfile/doCommonConnections.jsp
+jcms.resource.include.esn.profile.full.conn-suggestion:    plugins/ESNPlugin/types/MemberProfile/doConnectionSuggestions.jsp
+jcms.resource.include.esn.profile.full.contact-channels:   plugins/ESNPlugin/types/MemberProfile/contactChannels/doContactChannels.jsp
+jcms.resource.include.esn.profile.full.contact-note:       plugins/ESNPlugin/types/MemberProfile/doContactNote.jsp
+jcms.resource.include.esn.profile.full.contact-notes:      plugins/ESNPlugin/types/MemberProfile/doContactNotes.jsp
+jcms.resource.include.esn.profile.full.contact-referrers:  plugins/ESNPlugin/types/MemberProfile/doContactReferrers.jsp
+jcms.resource.include.esn.profile.full.contacts:           plugins/ESNPlugin/types/MemberProfile/doContacts.jsp
+jcms.resource.include.esn.profile.full.educations:         plugins/ESNPlugin/types/MemberProfile/doEducations.jsp
+jcms.resource.include.esn.profile.full.event-card:         plugins/ESNPlugin/types/MemberProfile/cards/doCalendarEventCard.jsp
+jcms.resource.include.esn.profile.full.expertise:          plugins/ESNPlugin/types/MemberProfile/doExpertise.jsp
+jcms.resource.include.esn.profile.full.header:             plugins/ESNPlugin/types/MemberProfile/doMemberProfileFullDisplayHeader.jsp
+jcms.resource.include.esn.profile.full.header.event:       plugins/ESNPlugin/types/MemberProfile/doMemberProfileFullDisplayHeaderEvent.jsp
+jcms.resource.include.esn.profile.full.jobs:               plugins/ESNPlugin/types/MemberProfile/doJobs.jsp
+jcms.resource.include.esn.profile.full.last-pubs:          plugins/ESNPlugin/types/MemberProfile/doPublications.jsp
+jcms.resource.include.esn.profile.full.links:              plugins/ESNPlugin/types/MemberProfile/doLinks.jsp
+jcms.resource.include.esn.profile.full.mcr-received:       plugins/ESNPlugin/types/MemberProfile/doMcrReceived.jsp
+jcms.resource.include.esn.profile.full.mcr-sent:           plugins/ESNPlugin/types/MemberProfile/doMcrSent.jsp
+jcms.resource.include.esn.profile.full.other-connections:  plugins/ESNPlugin/types/MemberProfile/doOtherConnections.jsp
+jcms.resource.include.esn.profile.full.photo:              plugins/ESNPlugin/types/MemberProfile/doProfilePhoto.jsp
+jcms.resource.include.esn.profile.full.presentation:       plugins/ESNPlugin/types/MemberProfile/doPresentation.jsp
+jcms.resource.include.esn.profile.full.workspaces:         plugins/ESNPlugin/types/MemberProfile/doWorkspaces.jsp
+plugin-mgr.ignore-prop.esn-profile-full: jcms.resource.include.esn.profile.full
+
+# Member Profile - Mobile Templates
+jcms.resource.include.esn.profile.full-mobile.topbar-menu:       plugins/ESNPlugin/smartphone/jsp/type/doMemberTopbarMenu.jsp
+jcms.resource.include.esn.profile.full-mobile.header:            plugins/ESNPlugin/smartphone/jsp/type/doMemberMobileHeader.jsp
+jcms.resource.include.esn.profile.full-mobile.header.event:      plugins/ESNPlugin/types/MemberProfile/doMemberProfileFullDisplayHeaderEvent.jsp
+jcms.resource.include.esn.profile.full-mobile.header.photo:      plugins/ESNPlugin/smartphone/jsp/type/doMemberMobilePhoto.jsp
+jcms.resource.include.esn.profile.full-mobile.contact-channels:  plugins/ESNPlugin/smartphone/jsp/type/contactChannels/doContactChannels.jsp
+
+# Member Profile - ACTIONS
+jcmsplugin.esn.profile.full.action-sections: top, middle, bottom
+jcmsplugin.esn.profile.full.action.add-note.jsp:                 plugins/ESNPlugin/types/MemberProfile/actions/doActionAddNote.jsp
+jcmsplugin.esn.profile.full.action.add-note.index:               30
+jcmsplugin.esn.profile.full.action.add-note.section:             top
+jcmsplugin.esn.profile.full.action.change-photo.jsp:             plugins/ESNPlugin/types/MemberProfile/actions/doActionChangePhoto.jsp
+jcmsplugin.esn.profile.full.action.change-photo.index:           60
+jcmsplugin.esn.profile.full.action.change-photo.section:         top
+jcmsplugin.esn.profile.full.action.connect-contact.jsp:          plugins/ESNPlugin/types/MemberProfile/actions/doActionConnectContact.jsp
+jcmsplugin.esn.profile.full.action.connect-contact.index:        10
+jcmsplugin.esn.profile.full.action.connect-contact.section:      top
+jcmsplugin.esn.profile.full.action.connect-other.jsp:            plugins/ESNPlugin/types/MemberProfile/actions/doActionConnectOther.jsp
+jcmsplugin.esn.profile.full.action.connect-other.index:          100
+jcmsplugin.esn.profile.full.action.connect-other.section:        middle
+jcmsplugin.esn.profile.full.action.conn-request.jsp:             plugins/ESNPlugin/types/MemberProfile/actions/doActionConnectionRequest.jsp
+jcmsplugin.esn.profile.full.action.conn-request.index:           80
+jcmsplugin.esn.profile.full.action.conn-request.section:         middle
+jcmsplugin.esn.profile.full.action.create-event-with.jsp:        plugins/ESNPlugin/types/MemberProfile/actions/doActionCreateEventWith.jsp
+jcmsplugin.esn.profile.full.action.create-event-with.index:      20
+jcmsplugin.esn.profile.full.action.create-event-with.section:    top
+jcmsplugin.esn.profile.full.action.disconnect.jsp:               plugins/ESNPlugin/types/MemberProfile/actions/doActionDisconnect.jsp
+jcmsplugin.esn.profile.full.action.disconnect.index:             120
+jcmsplugin.esn.profile.full.action.disconnect.section:           middle
+jcmsplugin.esn.profile.full.action.edit.jsp:                     plugins/ESNPlugin/types/MemberProfile/actions/doActionEdit.jsp
+jcmsplugin.esn.profile.full.action.edit.index:                   40
+jcmsplugin.esn.profile.full.action.edit.section:                 bottom
+jcmsplugin.esn.profile.full.action.edit-full.jsp:                plugins/ESNPlugin/types/MemberProfile/actions/doActionEditFull.jsp
+jcmsplugin.esn.profile.full.action.edit-full.index:              60
+jcmsplugin.esn.profile.full.action.edit-full.section:            bottom
+jcmsplugin.esn.profile.full.action.export-vcard.jsp:             plugins/ESNPlugin/types/MemberProfile/actions/doActionExportVCard.jsp
+jcmsplugin.esn.profile.full.action.export-vcard.index:           140
+jcmsplugin.esn.profile.full.action.export-vcard.section:         middle
+jcmsplugin.esn.profile.full.action.recommend.jsp:                plugins/ESNPlugin/types/MemberProfile/actions/doActionRecommend.jsp
+jcmsplugin.esn.profile.full.action.recommend.index:              40
+jcmsplugin.esn.profile.full.action.recommend.section:            middle
+jcmsplugin.esn.profile.full.action.val-conn-request.jsp:         plugins/ESNPlugin/types/MemberProfile/actions/doActionValidateConnectionRequest.jsp
+jcmsplugin.esn.profile.full.action.val-conn-request.index:       20
+jcmsplugin.esn.profile.full.action.val-conn-request.section:     middle
+# action for my profile
+jcmsplugin.esn.profile.full.action.change-photo.index.me:        30
+jcmsplugin.esn.profile.full.action.change-photo.section.me:      top
+jcmsplugin.esn.profile.full.action.create-event-with.index.me:   40
+jcmsplugin.esn.profile.full.action.create-event-with.section.me: bottom
+jcmsplugin.esn.profile.full.action.edit.index.me:                20
+jcmsplugin.esn.profile.full.action.edit.section.me:              top
+jcmsplugin.esn.profile.full.action.edit-full.index.me:           40
+jcmsplugin.esn.profile.full.action.edit-full.section.me:         top
+
+# Member Profile - TABS
+plugin-mgr.ignore-prop.esn-profile-full-tabs:        jcmsplugin.esn.profile.tab
+jcmsplugin.esn.profile.tab.activity.index:           40
+jcmsplugin.esn.profile.tab.activity.jsp:             plugins/ESNPlugin/types/MemberProfile/tabs/doTabActivity.jsp
+jcmsplugin.esn.profile.tab.activity.jsp-validate:    plugins/ESNPlugin/types/MemberProfile/tabs/doTabActivityValidate.jsp
+# Legacy declaration of calendar Tab (only if CalendarPlugin < 5.1 and JCalendar not installed)
+jcmsplugin.esn.profile.tab.calendar.index:           60
+jcmsplugin.esn.profile.tab.calendar.jsp:             plugins/ESNPlugin/types/MemberProfile/tabs/doTabCalendar.jsp
+jcmsplugin.esn.profile.tab.calendar.jsp-validate:    plugins/ESNPlugin/types/MemberProfile/tabs/doTabCalendarValidate.jsp
+jcmsplugin.esn.profile.tab.communities.index:        140
+jcmsplugin.esn.profile.tab.communities.jsp:          plugins/ESNPlugin/types/MemberProfile/tabs/doTabCommunities.jsp
+jcmsplugin.esn.profile.tab.communities.jsp-validate: plugins/ESNPlugin/types/MemberProfile/tabs/doTabCommunitiesValidate.jsp
+jcmsplugin.esn.profile.tab.connections.index:        160
+jcmsplugin.esn.profile.tab.connections.jsp:          plugins/ESNPlugin/types/MemberProfile/tabs/doTabConnections.jsp
+jcmsplugin.esn.profile.tab.connections.jsp-validate: plugins/ESNPlugin/types/MemberProfile/tabs/doTabConnectionsValidate.jsp
+jcmsplugin.esn.profile.tab.cv.index:                 100
+jcmsplugin.esn.profile.tab.cv.jsp:                   plugins/ESNPlugin/types/MemberProfile/tabs/doTabCV.jsp
+jcmsplugin.esn.profile.tab.cv.jsp-validate:          plugins/ESNPlugin/types/MemberProfile/tabs/doTabCVValidate.jsp
+jcmsplugin.esn.profile.tab.expertises.index:         80
+jcmsplugin.esn.profile.tab.expertises.jsp:           plugins/ESNPlugin/types/MemberProfile/tabs/doTabExpertises.jsp
+jcmsplugin.esn.profile.tab.expertises.jsp-validate:  plugins/ESNPlugin/types/MemberProfile/tabs/doTabExpertisesValidate.jsp
+jcmsplugin.esn.profile.tab.info.index:               20
+jcmsplugin.esn.profile.tab.info.jsp:                 plugins/ESNPlugin/types/MemberProfile/tabs/doTabInformations.jsp
+jcmsplugin.esn.profile.tab.info.jsp-validate:        plugins/ESNPlugin/types/MemberProfile/tabs/doTabInformationsValidate.jsp
+
+# Member Profile - Edition TABS
+plugin-mgr.ignore-prop.esn-profile-edit-tabs:        jcmsplugin.esn.profile-edit.tab
+jcmsplugin.esn.profile-edit.tab.account.index:       60
+jcmsplugin.esn.profile-edit.tab.account.jsp:         plugins/ESNPlugin/types/MemberProfile/tabs/doTabEditAccount.jsp
+jcmsplugin.esn.profile-edit.tab.account.jsp-validate:plugins/ESNPlugin/types/MemberProfile/tabs/doTabEditAccountValidate.jsp
+jcmsplugin.esn.profile-edit.tab.alert.index:         80
+jcmsplugin.esn.profile-edit.tab.alert.jsp:           plugins/ESNPlugin/types/MemberProfile/tabs/doTabEditAlert.jsp
+jcmsplugin.esn.profile-edit.tab.alert.jsp-validate:plugins/ESNPlugin/types/MemberProfile/tabs/doTabEditAlertValidate.jsp
+jcmsplugin.esn.profile-edit.tab.expertises.index:    40
+jcmsplugin.esn.profile-edit.tab.expertises.jsp:      plugins/ESNPlugin/types/MemberProfile/tabs/doTabEditExpertises.jsp
+jcmsplugin.esn.profile-edit.tab.info.index:          20
+jcmsplugin.esn.profile-edit.tab.info.jsp:            plugins/ESNPlugin/types/MemberProfile/tabs/doTabEditInfo.jsp
+jcmsplugin.esn.profile-edit.tab.notification.index:  100
+jcmsplugin.esn.profile-edit.tab.notification.jsp:    plugins/ESNPlugin/types/MemberProfile/tabs/doTabEditNotification.jsp
+jcmsplugin.esn.profile-edit.tab.notification.jsp-validate:plugins/ESNPlugin/types/MemberProfile/tabs/doTabEditNotificationValidate.jsp
+
+# Member Profile - Contact channels
+jcmsplugin.esn.profile.full.contact.email.index: 10
+jcmsplugin.esn.profile.full.contact.email.image: plugins/ESNPlugin/images/contact_mail.png
+jcmsplugin.esn.profile.full.contact.email.jsp: plugins/ESNPlugin/types/MemberProfile/contactChannels/doContactMail.jsp
+jcmsplugin.esn.profile.full.contact.phone.index: 20
+jcmsplugin.esn.profile.full.contact.phone.image: plugins/ESNPlugin/images/contact_phone.png
+jcmsplugin.esn.profile.full.contact.phone.jsp: plugins/ESNPlugin/types/MemberProfile/contactChannels/doContactPhone.jsp
+# SMS channel only on mobile
+jcmsplugin.esn.profile.full.contact.sms.index: 22
+jcmsplugin.esn.profile.full.contact.sms.image: plugins/ESNPlugin/images/contact_sms.png
+plugin-mgr.ignore-prop.esn-profile-full-contact: jcmsplugin.esn.profile.full.contact
+
+# Member Profile - Mobile Contact channels
+# Allow disable a contact channel on mobile:
+#syntax:  jcmsplugin.esn.profile.full.contact.[key].mobile.enabled: false
+#example: jcmsplugin.esn.profile.full.contact.phone.mobile.enabled: false
+jcmsplugin.esn.profile.full.contact.phone.jsp.mobile: plugins/ESNPlugin/smartphone/jsp/type/contactChannels/doContactPhone.jsp
+jcmsplugin.esn.profile.full.contact.webchat.mobile.enabled: false
+jcmsplugin.esn.profile.full.contact.skypeforbusiness.mobile.enabled: false
+jcmsplugin.esn.profile.full.contact.sms.jsp.mobile: plugins/ESNPlugin/smartphone/jsp/type/contactChannels/doContactPhoneSms.jsp
+
+# Member Profile - Contact channels > MemberLink
+jcmsplugin.esn.profile.member-link-contact.twitter.name: Twitter
+jcmsplugin.esn.profile.member-link-contact.twitter.domain: twitter.com
+jcmsplugin.esn.profile.member-link-contact.twitter.image: plugins/ESNPlugin/images/contact_twitter.png
+jcmsplugin.esn.profile.member-link-contact.linkedin.name: LinkedIn
+jcmsplugin.esn.profile.member-link-contact.linkedin.domain: linkedin.com
+jcmsplugin.esn.profile.member-link-contact.linkedin.image: plugins/ESNPlugin/images/contact_linkedin.png
+jcmsplugin.esn.profile.member-link-contact.viadeo.name: Viadeo
+jcmsplugin.esn.profile.member-link-contact.viadeo.domain: viadeo.com
+jcmsplugin.esn.profile.member-link-contact.viadeo.image: plugins/ESNPlugin/images/contact_viadeo.png
+jcmsplugin.esn.profile.member-link-contact.xing.name: Xing
+jcmsplugin.esn.profile.member-link-contact.xing.domain: xing.com
+jcmsplugin.esn.profile.member-link-contact.xing.image: plugins/ESNPlugin/images/contact_xing.png
+
+# Allow to hide member status on Member Profile
+jcmsplugin.esn.profile.status.enabled.boolean: true
+
+# Member Profile - Contact channels > MemberLink template
+jcms.resource.include.esn.profile.full.contact-channel.memberLink: plugins/ESNPlugin/types/MemberProfile/contactChannels/doContactMemberLink.jsp
+
+# ------------------------------------------------------------
+# Directory APP
+# ------------------------------------------------------------
+
+jcmsplugin.directory.app.member-menu.item.edit-expertises: plugins/ESNPlugin/jsp/directoryApp/contextmenu/doDirectoryContextMenu_editExpertises.jsp
+jcmsplugin.directory.app.member-menu.item.edit-expertises.index: 50
+jcmsplugin.directory.app.member-menu.item.edit-profile: plugins/ESNPlugin/jsp/directoryApp/contextmenu/doDirectoryContextMenu_editProfile.jsp
+jcmsplugin.directory.app.member-menu.item.edit-profile.index: 60
+jcmsplugin.directory.app.member-menu.item.edit-profile.divider-before: true
+
+# ------------------------------------------------------------
+# Add MemberLink
+# ------------------------------------------------------------
+jcmsplugin.esn.member-link.domain-label.facebook: facebook.com
+jcmsplugin.esn.member-link.domain-label.facebook.label: Facebook
+jcmsplugin.esn.member-link.domain-label.linkedin: linkedin.com
+jcmsplugin.esn.member-link.domain-label.linkedin.label: LinkedIn
+jcmsplugin.esn.member-link.domain-label.twitter: twitter.com
+jcmsplugin.esn.member-link.domain-label.twitter.label: Twitter
+jcmsplugin.esn.member-link.domain-label.viadeo: viadeo.com
+jcmsplugin.esn.member-link.domain-label.viadeo.label: Viadeo
+
+# ------------------------------------------------------------
+# Vote
+# ------------------------------------------------------------
+vote.template.activity-card: plugins/ESNPlugin/jsp/common/activity/doActivityCardRowVote.jsp
+
+# ------------------------------------------------------------
+#  Less
+# ------------------------------------------------------------
+channel.less.plugins/ESNPlugin/css/activity.css:                                plugins/ESNPlugin/css/activity.less
+channel.less.plugins/ESNPlugin/css/activity/activity-cards.css:                 plugins/ESNPlugin/css/activity/activity-cards.less
+channel.less.plugins/ESNPlugin/css/activity/portlet-member-activity-cards.css:  plugins/ESNPlugin/css/activity/portlet-member-activity-cards.less
+channel.less.plugins/ESNPlugin/css/card-member.css:                             plugins/ESNPlugin/css/card-member.less
+channel.less.plugins/ESNPlugin/css/directoryApp/esn-directory-app-expertise.css: plugins/ESNPlugin/css/directoryApp/esn-directory-app-expertise.less
+channel.less.plugins/ESNPlugin/css/edit-expertises-modal.css:                   plugins/ESNPlugin/css/edit-expertises-modal.less
+channel.less.plugins/ESNPlugin/css/esn.css:                                     plugins/ESNPlugin/css/esn.less
+channel.less.plugins/ESNPlugin/css/esn-comment.css:                             plugins/ESNPlugin/css/esn-comment.less
+channel.less.plugins/ESNPlugin/css/expert-directory.css:                        plugins/ESNPlugin/css/expert-directory.less
+channel.less.plugins/ESNPlugin/css/member-profile.css:                          plugins/ESNPlugin/css/member-profile.less
+channel.less.plugins/ESNPlugin/css/member-profile-note.css:                     plugins/ESNPlugin/css/member-profile-note.less
+channel.less.plugins/ESNPlugin/css/member-profile-tabs.css:                     plugins/ESNPlugin/css/member-profile-tabs.less
+channel.less.plugins/ESNPlugin/css/member-profile-editor.css:                   plugins/ESNPlugin/css/member-profile-editor.less
+channel.less.plugins/ESNPlugin/css/member-profile-activity.css:                 plugins/ESNPlugin/css/member-profile-activity.less
+channel.less.plugins/ESNPlugin/css/microblogging.css:                           plugins/ESNPlugin/css/microblogging.less
+channel.less.plugins/ESNPlugin/css/validate-connection-request.css:             plugins/ESNPlugin/css/validate-connection-request.less
+
+# ------------------------------------------------------------
+#  Icons
+# ------------------------------------------------------------
+icon.alert.jcmsplugin-esn:                            plugins/ESNPlugin/images/icons/esn48.png
+icon.jcmsplugin-esn-activity-calendar-attendees:      glyph: icomoon-users
+icon.jcmsplugin-esn-activity-filter-connect:          plugins/ESNPlugin/images/connection.gif
+icon.jcmsplugin-esn-activity-filter-contact:          icon: contact
+icon.jcmsplugin-esn-activity-filter-create:           icon: publication
+icon.jcmsplugin-esn-activity-filter-delete:           icon: delete
+icon.jcmsplugin-esn-activity-filter-lock:             icon: lock-strong
+icon.jcmsplugin-esn-activity-filter-microBlogging:    plugins/ESNPlugin/images/icons/microblogging.png
+icon.jcmsplugin-esn-activity-filter-others:           icon: unknown-file
+icon.jcmsplugin-esn-activity-filter-profile:          glyph: icomoon-profile
+icon.jcmsplugin-esn-activity-filter-update:           icon: publication
+icon.jcmsplugin-esn-activity-filter-update-pstatus:   icon: wf
+icon.jcmsplugin-esn-activity-filter-upload:           icon: upload
+icon.jcmsplugin-esn-activity-filter-ws:               icon: workspace
+icon.jcmsplugin-esn-activity-hide:                    plugins/ESNPlugin/images/options_less.png
+icon.jcmsplugin-esn-activity-menu:                    icon: caret
+icon.jcmsplugin-esn-activity-share-webpage-img-next:  icon: chevron-right
+icon.jcmsplugin-esn-activity-share-webpage-img-prev:  icon: chevron-left
+icon.jcmsplugin-esn-activity-share-webpage-remove:    icon: remove
+icon.jcmsplugin-esn-activity-show:                    plugins/ESNPlugin/images/options_plus.png
+icon.jcmsplugin-esn-add-member-connection:            glyph: icomoon-user-plus2
+icon.jcmsplugin-esn-card-activity-menu:               glyph: glyphicons-option-vertical
+icon.jcmsplugin-esn-card-comment:                     plugins/ESNPlugin/images/icons/comment-outline.png
+icon.jcmsplugin-esn-card-recommend:                   icon: recommendation
+icon.jcmsplugin-esn-card-vote:                        icon: thumb-up
+icon.jcmsplugin-esn-cloud-view:                       plugins/ESNPlugin/images/cloudView.gif
+icon.jcmsplugin-esn-commmunity:                       icon: collaborative-space
+icon.jcmsplugin-esn-connection:                       glyph: icomoon-profile
+icon.jcmsplugin-esn-contact:                          plugins/ESNPlugin/images/contact.gif
+icon.jcmsplugin-esn-data-list-item-delete:            glyph: icomoon-bin
+icon.jcmsplugin-esn-date:                             icon: calendar
+icon.jcmsplugin-esn-education:                        plugins/ESNPlugin/images/education.gif
+icon.jcmsplugin-esn-email:                            glyph: icomoon-envelop2
+icon.jcmsplugin-esn-expert-directory-cat-unstuck:     glyph: glyphicons-pushpin
+icon.jcmsplugin-esn-expert-directory:                 icon: contact
+icon.jcmsplugin-esn-filter32:                         plugins/ESNPlugin/images/filter32.gif
+icon.jcmsplugin-esn-filter:                           icon: filter
+icon.jcmsplugin-esn-job:                              plugins/ESNPlugin/images/job.gif
+icon.jcmsplugin-esn-member-card-close:                glyph: icomoon-cross2
+icon.jcmsplugin-esn-note32:                           plugins/ESNPlugin/images/note32.gif
+icon.jcmsplugin-esn-note:                             sprite: ss_sprite ss_note
+icon.jcmsplugin-esn-profile-add:                      glyph: icomoon-plus3
+icon.jcmsplugin-esn-profile-account:                  sprite: ss_sprite ss_key
+icon.jcmsplugin-esn-profile-address:                  glyph: icomoon-location
+icon.jcmsplugin-esn-profile-edit:                     glyph: glyphicons-edit
+icon.jcmsplugin-esn-profile-change-photo:             glyph: icomoon-camera
+icon.jcmsplugin-esn-profile-event:                    glyph: icomoon-calendar2
+icon.jcmsplugin-esn-profile-phone:                    glyph: icomoon-mobile2
+icon.jcmsplugin-esn-profile-info:                     sprite: ss_sprite ss_information
+icon.jcmsplugin-esn-profile-notification:             icon: notification
+icon.jcmsplugin-esn-profile-presentation:             sprite: ss_sprite ss_emoticon_smile
+icon.jcmsplugin-esn-profile-timezone:                 glyph: icomoon-sphere
+icon.jcmsplugin-esn-sidebar-birthday-icon:            sprite: ss_sprite ss_cake
+icon.jcmsplugin-esn-status32:                         plugins/ESNPlugin/images/status32.gif
+icon.jcmsplugin-esn-status:                           icon: jcmsplugin-esn-activity-filter-microBlogging
+icon.jcmsplugin-esn-tip:                              glyph: icomoon-lamp8
+icon.jcmsplugin-esn-directory-competencies-folder:    glyph: icomoon-folder2
+icon.jcmsplugin-esn-directory-competence-item:        glyph: icomoon-star-empty3
+icon.jcmsplugin-esn-directory-competence-pin:         glyph: icomoon-checkmark3
+icon.jcmsplugin-esn-directory-competence-unpin:       glyph: icomoon-checkmark3
+icon.jcmsplugin-esn-directory-edit-expertises:        glyph: icomoon-star-empty3
+icon.jcmsplugin-directory-app-competencies: glyph: icomoon-star-empty3
+
+icon.jcmsplugin-esn-competence-add: glyph: icomoon-plus3
+icon.jcmsplugin-esn-competence-rename: icon: textfield-rename
+icon.jcmsplugin-esn-competence-delete: icon: trash-empty
+icon.jcmsplugin-esn-competence-move-to: glyph: icomoon-arrow-right8
+
+# ------------------------------------------------------------
+#  Activity Icons
+# ------------------------------------------------------------
+jcmsplugin.esn.activity.connect-account.icon:         plugins/ESNPlugin/images/connection.gif
+jcmsplugin.esn.activity.connect.icon:                 plugins/ESNPlugin/images/connection.gif
+jcmsplugin.esn.activity.contact.note.icon:            svg-inline: images/jalios/icons/like.svg
+jcmsplugin.esn.activity.contact.profile.icon:         icon: contact
+jcmsplugin.esn.activity.create.CalendarEvent.icon:    images/jalios/icons/calendar.png
+jcmsplugin.esn.activity.create.DBComment.icon:        images/jalios/icons/comment-color.png
+jcmsplugin.esn.activity.create.DBForumTopic.icon:     images/jalios/icons/forum.gif
+jcmsplugin.esn.activity.create.DBPollVote.icon:       glyph: icomoon-stats-bars2
+jcmsplugin.esn.activity.create.FileDocument.icon:     icon: document
+jcmsplugin.esn.activity.create.icon:                  icon: publication
+jcmsplugin.esn.activity.create.MicroBlogging.icon:    plugins/ESNPlugin/images/icons/microblogging.png
+jcmsplugin.esn.activity.create.Publication.icon:      icon: publication
+jcmsplugin.esn.activity.create.Review.icon:           images/jalios/icons/review.gif
+jcmsplugin.esn.activity.delete.icon:                  icon: delete
+jcmsplugin.esn.activity.lock.icon:                    icon: lock
+jcmsplugin.esn.activity.profile.categories.add.icon:  plugins/ESNPlugin/images/expertise.gif
+jcmsplugin.esn.activity.profile.categories.icon:      plugins/ESNPlugin/images/expertise.gif
+jcmsplugin.esn.activity.profile.education.icon:       plugins/ESNPlugin/images/profile.gif
+jcmsplugin.esn.activity.profile.icon:                 glyph: icomoon-profile
+jcmsplugin.esn.activity.profile.job.icon:             glyph: icomoon-profile
+jcmsplugin.esn.activity.profile.link.icon:            glyph: icomoon-profile
+jcmsplugin.esn.activity.profile.status.icon:          plugins/ESNPlugin/images/icons/microblogging.png
+jcmsplugin.esn.activity.unlock.icon:                  icon: unlock
+jcmsplugin.esn.activity.unzip.icon:                   images/jalios/icons/media/zip16.png
+jcmsplugin.esn.activity.update.CalendarEvent.icon:    images/jalios/icons/calendar.png
+jcmsplugin.esn.activity.update.icon:                  icon: publication
+jcmsplugin.esn.activity.update.MicroBlogging.icon:    plugins/ESNPlugin/images/icons/microblogging.png
+jcmsplugin.esn.activity.update-pstatus.icon:          icon: wf
+jcmsplugin.esn.activity.ws.icon:                      images/jalios/icons/collaborativeSpace.png
+
+# ------------------------------------------------------------
+#  Data icon
+# ------------------------------------------------------------
+types.MemberProfile.icon: glyph: icomoon-profile
+types.MicroBlogging.icon: plugins/ESNPlugin/images/icons/microblogging.png
+types.MicroBlogging.thumb: plugins/ESNPlugin/images/icons/data/MicroBlogging64.png
+
+# ------------------------------------------------------------
+#  JPortal
+# ------------------------------------------------------------
+jportal.portlet-type.PortletBirthday: socialNetwork 
+jportal.portlet-type.PortletBirthday.icon: plugins/ESNPlugin/images/jportal/PortletBirthday_grey.png 
+jportal.portlet-type.PortletMemberActivity: socialNetwork
+jportal.portlet-type.PortletMemberActivity.icon: plugins/ESNPlugin/images/jportal/PortletMemberActivity_grey.png
+jportal.portlet-type.PortletMemberStatus: socialNetwork 
+jportal.portlet-type.PortletMemberStatus.icon: plugins/ESNPlugin/images/jportal/PortletMemberStatus_grey.png 
+
+# ------------------------------------------------------------
+# SmartPhone
+# ------------------------------------------------------------
+
+# Css file declaration
+jcmsplugin.smartphone.css.esn: plugins/ESNPlugin/smartphone/css/smartphone-esn.css
+# Less file declaration
+smartphone.channel.less.plugins/ESNPlugin/smartphone/css/smartphone-esn.css: plugins/ESNPlugin/smartphone/css/smartphone-esn.less
+
+# Pub full display mapping
+jcmsplugin.smartphone.link-prefix.MicroBlogging: plugins/ESNPlugin/smartphone/jsp/type/microblogging.jsp?id=
+jcmsplugin.smartphone.link-prefix.MemberProfile: plugins/ESNPlugin/smartphone/jsp/type/memberProfile.jsp?id=
+jcmsplugin.esn.smartphone.Member.full-display: plugins/ESNPlugin/smartphone/jsp/type/doMemberMobileDisplay.jsp
+
+#  Workspace services
+jcmsplugin.smartphone.workspace-application.PortletMemberActivity: plugins/ESNPlugin/smartphone/jsp/service/workspace/activity/activityWorkspace.jsp
+jcmsplugin.smartphone.workspace-application.PortletMemberActivity.icon: plugins/SmartPhonePlugin/images/application-activity.png
+
+jcmsplugin.smartphone.service.activity: plugins/ESNPlugin/smartphone/jsp/service/activity/activity.jsp
+jcmsplugin.smartphone.service.activity.icon: plugins/SmartPhonePlugin/images/application-activity.png
+jcmsplugin.smartphone.service.activity.order: 100
+
+# Sharing
+jcmsplugin.smartphone.shareurl.esn: plugins/ESNPlugin/smartphone/jsp/service/activity/doMicroBloggingMobileShare.jsp?url=%SHARED_URL%
+jcmsplugin.smartphone.icon.shareurl.esn: plugins/ESNPlugin/images/microblog/app-microblog.png
+jcmsplugin.smartphone.pattern.shareurl.esn:(.*url=content.*media.*)|(?i:.*url=file.*.(jpg|gif|jpeg|heic|png|mov|mp4))
+
+# SmartPhone activity Publication actions
+jcmplugin.smartphone.activity.action-item.Publication.like: plugins/SmartPhonePlugin/jsp/components/pub/actions/doPubActionItem_like.jsp
+jcmplugin.smartphone.activity.action-item.Publication.like.index: 100
+jcmplugin.smartphone.activity.action-item.Publication.recommend: plugins/SmartPhonePlugin/jsp/components/pub/actions/doPubActionItem_recommend.jsp
+jcmplugin.smartphone.activity.action-item.Publication.recommend.index: 200
+
+jcmsplugin.smartphone.service-mapping.activity: jcmsplugin.smartphone.service.activity
+jcmsplugin.smartphone.service-mapping.activity.icon: plugins/SmartPhonePlugin/images/application-activity.png
+
+icon.activity-app: plugins/SmartPhonePlugin/images/application-activity.png
+icon.microBlogging-camera: plugins/ESNPlugin/images/camera.png
+icon.microBlogging-galery: plugins/ESNPlugin/images/galery.png 

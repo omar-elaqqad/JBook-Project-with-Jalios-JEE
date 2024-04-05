@@ -1,0 +1,31 @@
+<%@ page import="com.jalios.jcmsplugin.collaborativespace.*" %>
+<%
+CSManager csMgr = CSManager.getInstance();
+CollaborativeSpace cs = csMgr.getCollaborativeSpace(workspace);
+if (cs != null && cs.getMobileShowIntro()) {
+    String cpIntroduction = Util.getString(cs.getIntroduction(userLang), "").trim();
+    String cpDescription = Util.getString(cs.getDescription(userLang), "").trim();
+    %>
+    <% if (Util.notEmpty(cpIntroduction)) { %>
+      <div class="portlet-skinable-wrapper-default">
+	    <div class="portlet-title">
+	      <%= glp("jcmsplugin.collaborativespace.header.introduction") %>
+	    </div>
+	    <div class="workspace-introduction">
+          <%= cpIntroduction %>
+        </div>
+	  </div>
+    <div class="content-divider-contrasted"></div>
+    <% } else if (Util.notEmpty(cpDescription)) { %>
+    <div class="portlet-skinable-wrapper-default">
+	    <div class="portlet-title">
+	      <%= glp("jcmsplugin.collaborativespace.header.introduction") %>
+	    </div>
+	    <div class="workspace-introduction">
+          <%= cpDescription %>
+        </div>
+	  </div>
+    <div class="content-divider-contrasted"></div>
+    <% } %>
+  <% }
+%>

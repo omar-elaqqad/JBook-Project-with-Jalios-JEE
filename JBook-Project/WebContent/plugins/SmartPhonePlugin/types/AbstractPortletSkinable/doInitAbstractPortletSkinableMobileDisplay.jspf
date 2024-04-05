@@ -1,0 +1,11 @@
+<%@page import="com.jalios.jcmsplugin.smartphone.portal.SmartPhonePortalManager"%><%
+%><%@ include file="/jcore/doInitPage.jspf" %><%
+AbstractPortletSkinable portlet = (AbstractPortletSkinable) request.getAttribute(SmartPhonePortalManager.PORTLET_REQUEST_ATTRIBUTE_NAME);
+String templatePath = SmartPhonePortalManager.getInstance().getPortletTemplateFilePath(portlet);
+%><%
+%><jalios:buffer name="portletInclude"><jalios:include jsp="<%= templatePath %>" /></jalios:buffer><%
+if (!Util.toBoolean(request.getAttribute("ShowPortalElement"), true)) {
+  request.removeAttribute("ShowPortalElement");
+  return;
+}
+%>

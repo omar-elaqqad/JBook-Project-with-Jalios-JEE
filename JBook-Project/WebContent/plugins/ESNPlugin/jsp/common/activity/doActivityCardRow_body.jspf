@@ -1,0 +1,14 @@
+<% String activityBodyJsp = maMgr.getActivityBodyJspPath(itActivityEntry); %>
+<div class="activity-body"><%
+  if (isMicroBlogging) {
+  %><div class="info microblogging activity-body-item">
+    <jalios:wiki><%= ((MicroBlogging)activityData).getText() %></jalios:wiki>
+  </div><%
+  }
+  if (Util.notEmpty(activityBodyJsp)) {
+    %><jalios:include jsp="<%= activityBodyJsp %>"/><%
+  } else {
+    %><%@ include file="/plugins/ESNPlugin/jsp/common/doActivityAbstract.jspf" %><%
+    %><%@ include file="/plugins/ESNPlugin/jsp/common/doActivityMedia.jspf" %><%
+  }
+%></div><%-- EOF .activity-body --%>

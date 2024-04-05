@@ -1,0 +1,20 @@
+.table-cs-migration .header-typology {
+  display: flex;
+  justify-content: space-between;
+}
+.table-cs-migration TD {
+  cursor: pointer;
+}
+.table-cs-migration .typology {
+  border: 1px solid #DDD;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background-color: white;
+}
+.table-cs-migration .no-model {
+  background-color: #d9534f;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: white;
+}
+/*# sourceMappingURL=cs-migration.css.map */

@@ -1,0 +1,26 @@
+<%--
+  @Summary: PortletMyCollaborativeSpaces typology filter
+  @Category: Custom
+  @Author: Sylvain Devaux <sylvain.devaux@jalios.com> 
+  @Since: csp-4.3, csp-5.0 
+--%><%@ page contentType="text/html; charset=UTF-8" %><%
+
+PortletMyCollaborativeSpaces portlet_typology = (PortletMyCollaborativeSpaces) portlet;
+
+if (portlet_typology.getTypologyFilter()) {
+  final Category typologyRoot = csMgr.getTypologyRoot();
+  if (typologyRoot != null && Util.notEmpty(typologyRoot.getChildrenSet())) { %>
+    <%-- TYPOLOGY --%>
+    <form action="<%= typoFormAction %>" class="ajax-refresh">
+      <div class="field">
+        <select name="<%= csTypoParam %>" class="form-control br" data-jalios-action="ajax-refresh">
+          <option class="placeholder"><%= encodeForHTML(glp("jcmsplugin.collaborativespace.portlet.mycs.lbl.filter")) %></option>
+          <% csMgr.printTypologyOptions(out, userLang, loggedMember, typoCat, false); %>
+        </select>
+      </div>
+
+      <%-- Allows to print additional hidden input for example. --%>
+      <%= Util.getString(request.getAttribute("cs-typology-filter-form"), "") %>
+    </form>
+  <% } %>
+<% } %>

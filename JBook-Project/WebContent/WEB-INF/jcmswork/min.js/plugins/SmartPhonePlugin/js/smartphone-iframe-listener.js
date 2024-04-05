@@ -1,0 +1,1 @@
+!(function(b){var a=function(){if(b.jalios.smartPhone.isMobileApp()){window.addEventListener("jmobile-redirect-to-top-frame",function(c){let url=c.detail.redirect;b.jalios.smartPhone.openExternalLinks(url)})}};b(document).ready(a)})(window.jQuery);

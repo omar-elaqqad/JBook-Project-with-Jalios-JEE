@@ -1,0 +1,720 @@
+jcmsplugin.esn.categories:                    Vetva kategórií kvalifikácie
+jcmsplugin.esn.categories.help:               Definujte identifikátor kategórie, prípadne zoznam identifikátorov oddelených medzerou.
+$id.jcmsplugin.esn.profile.portal:            Zobraziť portál profilu člena (starý profil)
+jcmsplugin.esn.microblogging.Workspace:       Predvolený pracovný priestor pre mikroblog
+
+jcmsplugin.esn.connection-request.enabled:    Schválenie pripojenia
+jcmsplugin.esn.connection-request.decline-alert.enabled: Odoslať upozornenie na odmietnuté pripojenie člena.
+
+jcmsplugin.esn.follower-notification:         Upozorniť nových odberateľov
+jcmsplugin.esn.graphviz.dot.exe:              Umiestnenie Graphviz „dot“
+jcmsplugin.esn.graphviz.dot.exe.help:         Graphviz vygeneruje graf vzťahu v profile člena. Umiestnenie „dot“. Napríklad pre Windows to je: „C:&#92;Program Files&#92;Graphviz2.22&#92;bin&#92;dot.exe“.
+
+jcmsplugin.esn.external-contacts:             Externé kontakty
+
+jcmsplugin.esn.map-service:                   Mapová služba
+
+jcmsplugin.esn.contact-referrers.qs:          Vyhľadávanie publikácie predkladateľa
+
+jcmsplugin.esn.mbr-extended-search-limit:      Rozšírené vyhľadávanie člena – Limit spúšťania
+jcmsplugin.esn.mbr-extended-search-limit.help: Rozšírené vyhľadávanie člena (s informáciami ESN) sa spúšťa len vtedy, ak štandardné vyhľadávanie člena prinesie menej výsledkov než je limit.
+
+jcmsplugin.esn.agreement.required:            Prijať Zmluvné podmienky ESN
+jcmsplugin.esn.agreement.terms.pub:           Zmluvné podmienky ESN – Publikácia
+jcmsplugin.esn.agreement.terms.field:         Zmluvné podmienky ESN – Pole
+jcmsplugin.esn.agreement.btn.agree:           Súhlasím
+jcmsplugin.esn.agreement.btn.disagree:        Nesúhlasím
+
+jcmsplugin.esn.group-expertise.assignment:    Priradenie skupiny ku kvalifikácii
+
+ui.com.lbl.guest: Hosť
+jcmsplugin.esn.panel-toggle-show: Otvorené
+jcmsplugin.esn.panel-toggle-hide: Zavrieť
+jcmsplugin.esn.profile.see-photo: Zobraziť väčšiu fotku profilu
+jcmsplugin.esn.profile.action.open-action-menu: Otvoriť ponuku úkonov
+jcmsplugin.esn.profile.action.create-event-with: Pozvať na udalosť...
+jcmsplugin.esn.profile.action.change-photo: Zmeniť fotografiu...
+jcmsplugin.esn.profile.action.change-photo.me: Zmeniť moju fotografiu...
+jcmsplugin.esn.profile.lbl.goto-calendar:     Zobraziť kalendár
+jcmsplugin.esn.profile.lbl.disabled-account:  Zakázané konto
+jcmsplugin.esn.profile.lbl.disabled-guest-account: Zablokovaný hosť
+jcmsplugin.esn.profile.lbl.ws-role.admin:     {0} vedie:
+jcmsplugin.esn.profile.lbl.ws-role.worker:    {0} prispieva do:
+jcmsplugin.esn.profile.lbl.ws-role.reader:    {0} sa zúčastňuje na:
+jcmsplugin.esn.profile.lbl.ws-role.me.admin:  Vediete:
+jcmsplugin.esn.profile.lbl.ws-role.me.worker: Prispievate do:
+jcmsplugin.esn.profile.lbl.ws-role.me.reader: Zúčastňujete sa na:
+jcmsplugin.esn.profile.tab.access:            Prístup
+jcmsplugin.esn.profile.tab.activity:          Činnosť
+jcmsplugin.esn.profile.tab.calendar:        Kalendár
+jcmsplugin.esn.profile.tab.communities:       Komunity
+jcmsplugin.esn.profile.tab.connections:       Spojenia
+jcmsplugin.esn.profile.tab.contacts:          Spojenia
+jcmsplugin.esn.profile.tab.cv:                Životopis
+jcmsplugin.esn.profile.tab.expertises:        Kvalifikácia
+jcmsplugin.esn.profile.tab.info:              Informácie
+jcmsplugin.esn.profile.tab.invitations:       Pozvánky
+jcmsplugin.esn.profile.tab.profil:            Profil
+jcmsplugin.esn.profile.tab.resume:            Pokračovať
+jcmsplugin.esn.profile-edit.tab.info:         Informácie
+jcmsplugin.esn.profile-edit.tab.expertises:   Kvalifikácia
+jcmsplugin.esn.profile-edit.tab.account:      Prístup
+jcmsplugin.esn.profile-edit.tab.alert:        Upozornenia
+jcmsplugin.esn.profile-edit.tab.notification: Odber
+
+jcmsplugin.esn.lbl.status:                    Správa
+jcmsplugin.esn.lbl.status-info:               Správa aktualizovaná {0}
+jcmsplugin.esn.lbl.last-connection:           Posledné pripojenie
+jcmsplugin.esn.lbl.online:                    Online
+jcmsplugin.esn.lbl.offline:                   Off-line
+jcmsplugin.esn.lbl.interest:                  Záujmy
+jcmsplugin.esn.lbl.introduction:              Prezentácia
+jcmsplugin.esn.lbl.external-contact:          Externý kontakt
+jcmsplugin.esn.lbl.activity:                  Činnosť
+jcmsplugin.esn.lbl.network-activity:          Moja sieťová činnosť
+jcmsplugin.esn.lbl.categories:                Kvalifikácia
+jcmsplugin.esn.lbl.categories.add:            Pridať kvalifikáciu
+jcmsplugin.esn.lbl.categories.placeholder.search: Hľadať kvalifikáciu...
+jcmsplugin.esn.lbl.calendar:                  Kalendár
+jcmsplugin.esn.lbl.publications:              Posledné publikácie
+jcmsplugin.esn.lbl.jobs:                      Odborné skúsenosti
+jcmsplugin.esn.lbl.jobs.add:                  Pridať funkciu
+jcmsplugin.esn.lbl.jobs.add.error.date:       Dátum začiatku musí byť pred dátumom ukončenia.
+jcmsplugin.esn.lbl.educations:                Vzdelanie
+jcmsplugin.esn.lbl.educations.add:            Pridať vzdelanie
+jcmsplugin.esn.lbl.vcard:                     Importovať do Outlooku...
+jcmsplugin.esn.lbl.contact-referrers:         Publikácie predkladateľa
+jcmsplugin.esn.lbl.comment-count:             {0,choice,1#Zobraziť {0} komentár |2#Zobraziť komentáre ({0})}
+
+jcmsplugin.esn.lbl.info:                      Informácie o kontakte
+jcmsplugin.esn.lbl.date-of-birth:             Narodeniny
+jcmsplugin.esn.lbl.date-of-arrival:           Dátum príchodu
+jcmsplugin.esn.lbl.connections.suggestions:   Navrhované spojenia
+jcmsplugin.esn.lbl.connections.suggestions.del: Odstrániť tento návrh
+jcmsplugin.esn.lbl.connections.suggestions.reset: Vynulovať návrhy...
+jcmsplugin.esn.lbl.connections.requests:      Pozvánka pre spojenia
+jcmsplugin.esn.lbl.connections.requests.in:   Prijaté pozvánky
+jcmsplugin.esn.lbl.connections.requests.out:  Odoslané pozvánky
+jcmsplugin.esn.lbl.connections.requests.out2: Odoslané
+jcmsplugin.esn.lbl.connections.requests.edit: Spracovať túto pozvánku...
+jcmsplugin.esn.lbl.connections.requests.received: {0}, {1} vám posiela pozvánku na {2}.
+jcmsplugin.esn.lbl.connections.requests.sent: {0}, poslali ste pozvánku pre {1} na {2}.
+jcmsplugin.esn.lbl.connections.requests.missing: Táto pozvánka už neexistuje.
+jcmsplugin.esn.lbl.connections.connected:     {0} je medzi vašimi spojeniami.
+jcmsplugin.esn.lbl.connections.recommendation:Odporučiť {0} do vašich spojení...
+jcmsplugin.esn.lbl.connections.recommendation2:Odporučiť  do vašich spojení...
+jcmsplugin.esn.lbl.connections.connect-contact: Pripojiť {0} k ostatným kontaktom...
+jcmsplugin.esn.lbl.connections.connect-contact2: Pripojiť k ostatným kontaktom...
+jcmsplugin.esn.lbl.connections.no-link:       {0} nie je v dosahu vašej siete spojení.
+jcmsplugin.esn.lbl.connections.add.member:    Pridať {0} do vašich spojení...
+jcmsplugin.esn.lbl.connections.add.member2:   Pridať do vašich spojení...
+jcmsplugin.esn.lbl.connections.add.contact:   Pridať {0} do vašich kontaktov
+jcmsplugin.esn.lbl.connections.add.contact2:  Pridať do vašich kontaktov
+jcmsplugin.esn.lbl.connections:               Vzťahy
+jcmsplugin.esn.lbl.connections.common:        Vaše najčastejšie spojenia
+jcmsplugin.esn.lbl.connections.me:            Moje spojenia
+jcmsplugin.esn.lbl.connections.other:         Jeho/jej ďalšie spojenia
+jcmsplugin.esn.lbl.connections.all-contacts:  Všetky spojenia
+jcmsplugin.esn.lbl.connections.all:           Všetko
+jcmsplugin.esn.lbl.connections.internal:      Členovia
+jcmsplugin.esn.lbl.connections.external:      Kontakty
+jcmsplugin.esn.lbl.connections.show.me:       Zobraziť všetky moje spojenia
+jcmsplugin.esn.lbl.connections.show.other:    Zobraziť všetky spojenia {0}
+
+jcmsplugin.esn.lbl.connections.views:         Zobrazenia:
+jcmsplugin.esn.lbl.connections.list:          Zoznam
+jcmsplugin.esn.lbl.connections.card:          Karty
+jcmsplugin.esn.lbl.connections.cloud:         Cloud
+jcmsplugin.esn.lbl.connections.csv:           CSV
+jcmsplugin.esn.lbl.connections.level:         Úroveň spojenia
+jcmsplugin.esn.lbl.connections.map:           Mapa
+jcmsplugin.esn.lbl.connections.map.tt.profile:Prejsť na profil {0}
+jcmsplugin.esn.lbl.connections.map.tt.map:    Vycentrovať mapu na {0}
+
+jcmsplugin.esn.lbl.connections.new-contact:   Pridať kontakt
+jcmsplugin.esn.lbl.disconnect:                Odstrániť toto spojenie...
+jcmsplugin.esn.lbl.disconnect.title:          Odstrániť kontakt
+jcmsplugin.esn.lbl.disconnect.contact:        Odstrániť {0} z vašich kontaktov...
+jcmsplugin.esn.lbl.disconnect.contact2:       Odstrániť z vašich kontaktov...
+jcmsplugin.esn.lbl.disconnect.confirm:        Naozaj chcete odstrániť <strong>{0}</strong> z vašich kontaktov?
+jcmsplugin.esn.lbl.disconnect.confirm-contact:Naozaj chcete odstrániť <strong>{0}</strong> z kontaktov <strong>{1}</strong>?
+jcmsplugin.esn.lbl.disconnect.confirm-warn:   Pozor! Ste posledný kontakt pre <strong>{0}</strong>. Naozaj chcete odstrániť tento kontakt?
+jcmsplugin.esn.lbl.disconnect.btn.disconnect: Odstrániť z mojich kontaktov
+jcmsplugin.esn.lbl.disconnect.btn.disconnect-other: Odstrániť z jeho/jej kontaktov
+jcmsplugin.esn.lbl.disconnect.btn.delete:     Odstrániť tento kontakt
+
+jcmsplugin.esn.lbl.followings:                Sledované položky
+jcmsplugin.esn.lbl.followers:                 Odberatelia
+jcmsplugin.esn.lbl.follow:                    Sledovať činnosť kontaktu {0}
+jcmsplugin.esn.lbl.follow2:                   Sledovať činnosť
+jcmsplugin.esn.lbl.unfollow:                  Prestať sledovať činnosť kontaktu {0}
+jcmsplugin.esn.lbl.unfollow2                  Stop following activity
+jcmsplugin.esn.lbl.contact-followers:         {0} sleduje {1,choice,0#nula členov|1#jedného člena|2#{1} členov} a {2,choice,0#žiadni členovia|1#jeden člen|2#{2} členovia} sledujú {0}
+
+jcmsplugin.esn.lbl.ws-role.admin:             Správca
+jcmsplugin.esn.lbl.ws-role.worker:            Prispievateľ
+jcmsplugin.esn.lbl.ws-role.reader:            Čitateľ
+
+jcmsplugin.esn.lbl.links.me:                  Viac o mne...
+jcmsplugin.esn.lbl.links.other:               Viac o kontakte {0}...
+jcmsplugin.esn.lbl.links.intro:               Pridajte prepojenia na externé stránky, ktoré chcete predstaviť (váš blog, váš profil vo verejných spoločenských sieťach...)
+jcmsplugin.esn.lbl.links.intro.other:         Pridajte prepojenia na externé stránky, ktoré chcete predstaviť (blog, profil vo verejných spoločenských sieťach...)
+jcmsplugin.esn.lbl.links.add:                 Pridať prepojenie
+
+jcmsplugin.esn.lbl.edit.me:                   Upraviť môj profil
+jcmsplugin.esn.lbl.edit.other:                Upraviť profil kontaktu {0}
+jcmsplugin.esn.lbl.edit.other2:               Upraviť profil
+jcmsplugin.esn.lbl.editLabel:                 Upraviť
+jcmsplugin.esn.lbl.editProfile.progress:      Profil na <strong>{0} %</strong> vyplnený.
+
+jcmsplugin.esn.edit-profile.title.me:         Váš profil
+jcmsplugin.esn.edit-profile.title.other:      Profil kontaktu {0}
+jcmsplugin.esn.edit-profile.presentation:     Prezentácia
+jcmsplugin.esn.edit-profile.change-photo:     Zmeniť moju fotografiu
+
+jcmsplugin.esn.edit-expertises.title:         Aktualizovať kvalifikáciu zamestnanca {0}
+
+jcmsplugin.esn.add-contact.title:             Pridať kontakt
+jcmsplugin.esn.add-contact.steps.0:           Kontrola
+jcmsplugin.esn.add-contact.steps.1:           Návrhy
+jcmsplugin.esn.add-contact.steps.2:           Informácie
+jcmsplugin.esn.add-contact.steps.3:           Kvalifikácia
+jcmsplugin.esn.add-contact.steps-intro.0:     Zadajte meno alebo e-mailovú adresu svojho kontaktu na kontrolu, či táto osoba už existuje.
+jcmsplugin.esn.add-contact.steps-intro.1.1:   Našiel sa člen zodpovedajúci týmto údajom. Pred vytvorením nového kontaktu sa uistite, či nejde o rovnakú osobu.
+jcmsplugin.esn.add-contact.steps-intro.1.2:   Našli sa členovia zodpovedajúci týmto údajom. Pred vytvorením nového kontaktu sa uistite, či kontakt, ktorý chcete vytvoriť, už neexistuje.
+jcmsplugin.esn.add-contact.add-to-my-contacts:Pridať do mojich kontaktov
+jcmsplugin.esn.add-contact.view-contact:      Zobraziť tento kontakt
+jcmsplugin.esn.add-contact.lbl.check:         Skontrolovať...
+jcmsplugin.esn.add-contact.lbl.create:        Vytvoriť nový kontakt...
+jcmsplugin.esn.add-contact.lbl.wait:          Kontroluje sa...
+jcmsplugin.esn.add-contact.lbl.add:           Pridať do mojich kontaktov
+jcmsplugin.esn.add-contact.lbl.contact-added: Kontakt <b>{0}</b> bol vytvorený.
+jcmsplugin.esn.add-contact.btn.continue:      Uložiť a pridať ďalší kontakt
+
+jcmsplugin.esn.mcr.request.title:             Pridať kontakt {0} do vašej siete
+jcmsplugin.esn.mcr.request.lbl.send:          Odoslať
+jcmsplugin.esn.mcr.request.info.title1:       Prečo sa oplatí nadväzovať spojenia?
+jcmsplugin.esn.mcr.request.info.content1:     Spojenie s kontaktom {0} vám umožní prezerať jeho/jej <strong>úplný profil</strong> a sledovať jeho/jej <strong>činnosť</strong>. Podobne aj {0} bude mať prístup k <strong>vášmu úplnému profilu</strong> a <strong>vašim činnostiam</strong>. Po spojení budete môcť <strong>odporučiť</strong> kontakt {0} ďalším členom vašej siete.
+jcmsplugin.esn.mcr.request.info.title2:       Ako pripojiť?
+jcmsplugin.esn.mcr.request.info.content2:     Stačí poslať kontaktu {0} pozvánku na spojenie s vami. Po prijatí vaše pozvánky kontaktom {0} budete hneď spojení.
+
+jcmsplugin.esn.mcr.request.msg: {0},\n\nChcem si vás pridať do mojich kontaktov.\n\n{1}\n
+
+jcmsplugin.esn.mcr.validate.title:            Pozvánka
+jcmsplugin.esn.mcr.validate.info:             <b>Čo je táto pozvánka?</b><p>{0} sa chce s vami spojiť. Prijatím tejto pozvánky budete mať prístup k <strong>úplnému profilu</strong> kontaktu {0} a <strong>činnostiam</strong>. Toto je vzájomné spojenie. Prijatím umožníte, aby mal kontakt {0} prístup k <strong>vášmu úplnému profilu</strong> a <strong>vašim činnostiam</strong>.</p>
+jcmsplugin.esn.mcr.validate.common:           Vaše najčastejšie spojenia
+jcmsplugin.esn.mcr.validate.common-some:      Niektoré z vašich najčastejších spojení
+jcmsplugin.esn.mcr.validate.lbl.accept:       Prijať
+jcmsplugin.esn.mcr.validate.lbl.decline:      Odmietnuť
+jcmsplugin.esn.mcr.validate.lbl.close:        Zavrieť
+jcmsplugin.esn.mcr.lbl.confirm-delete:        Naozaj chcete odstrániť pozvánku odoslanú kontaktu <strong>{0}</strong>?
+
+jcmsplugin.esn.connect-contact.title:          Spojiť kontakty
+jcmsplugin.esn.connect-contact.no-contact:     Všetky vaše kontakty sú spojené s kontaktom <span class="contact">{0}</span>.
+jcmsplugin.esn.connect-contact.info:           Vyberte kontakty, ktoré chcete spojiť s kontaktom <span class="contact">{0}</span>.
+jcmsplugin.esn.connect-contact.lbl.contacts:   Vaše kontakty
+jcmsplugin.esn.connect-contact.lbl.connect:    Spojiť
+
+jcmsplugin.esn.activity.enabled:                 Činnosť – Povoliť sledovanie činnosti
+
+jcmsplugin.esn.activity.none:                    Žiadna činnosť
+jcmsplugin.esn.activity.profile.job:             {0} pridal/a funkciu <span class="message">{1}</span>
+jcmsplugin.esn.activity.profile.education:       {0} pridal/a školenie <span class="message">{1}</span>
+jcmsplugin.esn.activity.profile.link:            {0} pridal/a prepojenie {1}
+jcmsplugin.esn.activity.profile.categories:      {0} vyplnil/a svoju kvalifikáciu
+jcmsplugin.esn.activity.profile.categories.add:  {0} aktualizovala/a svoju kvalifikáciu: <span class="message">{1}</span>
+jcmsplugin.esn.activity.profile.categories.add-empty:  {0} aktualizoval/a svoju kvalifikáciu
+jcmsplugin.esn.activity.profile.info:            {0} aktualizoval/a svoje údaje
+jcmsplugin.esn.activity.profile:                 {0} aktualizoval/a svoj profil
+jcmsplugin.esn.activity.contact.profile:         {0} aktualizoval/a profil {1}
+jcmsplugin.esn.activity.contact.note:            {0} pridal/a poznámku k {1}
+jcmsplugin.esn.activity.connect-account:         {0} je teraz pripojený/-á k {1}
+jcmsplugin.esn.activity.connect:                 {0} pridal/a {1} medzi svoje spojenia
+jcmsplugin.esn.activity.ws:                      {0} sa zaregistroval/a do pracovného priestoru {1}
+jcmsplugin.esn.activity.create:                  {0} vytvoril/a {1}
+jcmsplugin.esn.activity.update:                  {0} aktualizoval/a {1}
+jcmsplugin.esn.activity.delete:                  {0} odstránil/a <span class="message">{1}</span>
+jcmsplugin.esn.activity.create.Publication:      {0} uverejnil/a {1}
+jcmsplugin.esn.activity.create.Event:            {0} uverejnil/-a udalosť {1}
+jcmsplugin.esn.activity.create.CalendarEvent:    {0} uverejnil/-a udalosť {1}
+jcmsplugin.esn.activity.update.CalendarEvent:    {0} aktualizoval/-a udalosť {1}
+jcmsplugin.esn.activity.update.Event:            {0} aktualizoval/-a udalosť {1}
+jcmsplugin.esn.activity.create.Review:           {0} recenzoval/a {1}
+jcmsplugin.esn.activity.create.FileDocument:     {0} odovzdal/a {1}
+jcmsplugin.esn.activity.create.DBComment:        {0} pridal/a nový komentár
+jcmsplugin.esn.activity.description-full.create.DBComment:        {0} pridal/-a nový komentár k {1}
+jcmsplugin.esn.activity.create.DBForumTopic:     {0} pridal/a tému {1}
+jcmsplugin.esn.activity.create.DBPollVote:       {0} odpovedal/a v ankete {1}
+jcmsplugin.esn.activity.create.MicroBlogging:
+jcmsplugin.esn.activity.create.WebPage:          {0} zdieľal/a {1}
+jcmsplugin.esn.activity.update-pstatus:          {0} zmenil/a stav {1} na <span class="message">{2}</span>.
+jcmsplugin.esn.activity.unzip:                   {0} odovzdal/a súbory z archívu ZIP {1}
+jcmsplugin.esn.activity.lock:                    {0} zablokoval/a dokument {1}
+jcmsplugin.esn.activity.unlock:                  {0} uvoľnil/a dokument {1}
+jcmsplugin.esn.activity.vote:                    {0} hlasoval/a za {1}
+jcmsplugin.esn.activity.filter:                  Filtrovaná činnosť
+jcmsplugin.esn.activity.see-activity:            Zobraziť činnosť
+jcmsplugin.esn.activity.hide-activity:           Skryť činnosť
+jcmsplugin.esn.activity.delete-activity:         Odstrániť túto činnosť
+jcmsplugin.esn.activity.delete-activity-ask:     Naozaj chcete odstrániť túto činnosť?
+jcmsplugin.esn.activity.delete-activity-ask-title:  Odstrániť činnosť
+jcmsplugin.esn.activity.edit-comment:            Upraviť komentár
+jcmsplugin.esn.activity.options-menu-title:      Otvoriť ponuku aktivity      
+jcmsplugin.esn.activity.comment:                 Komentár
+jcmsplugin.esn.activity.show-comments:           Zobraziť skryť{0,choice,1# komentár|2# komentáre}
+jcmsplugin.esn.activity.show-previous-activity:   Zobraziť predchádzajúce činnosti
+jcmsplugin.esn.activity.hide-previous-activity:  Skryť činnosti
+jcmsplugin.esn.activity.lbl.no-activity:         {0} ešte nemá žiadnu činnosť.
+jcmsplugin.esn.activity.nextpage:                Zobraziť ďalšie
+
+jcmsplugin.esn.activity-card.vote-action:        Páči sa mi to
+jcmsplugin.esn.activity-card.menu-title:         Otvoriť ponuku úkonov
+jcmsplugin.esn.activity-card.menu-alt:           Úkony
+jcmsplugin.esn.activity-card.event-attending:    Počet prítomných: {0}
+jcmsplugin.esn.activity-card.event-invited:      Počet pozvaných: {0}
+jcmsplugin.esn.activity-card.event.show-attendees: Zobraziť údaje o pozvanom
+jcmsplugin.esn.activity-card.comment-count-title:  Prístup ku komentárom
+
+jcmsplugin.esn.activity.filter.microBlogging:    Mikroblogovanie
+jcmsplugin.esn.activity.filter.profile:          Aktualizovať profil
+jcmsplugin.esn.activity.filter.contact:          Pridať externý kontakt
+jcmsplugin.esn.activity.filter.connect:          Spojenia členov
+jcmsplugin.esn.activity.filter.ws:               Pridať sa do pracovného priestoru
+jcmsplugin.esn.activity.filter.create:           Pridať údaje
+jcmsplugin.esn.activity.filter.update:           Dátum aktualizácie
+jcmsplugin.esn.activity.filter.delete:           Odstrániť údaje
+jcmsplugin.esn.activity.filter.lock:             Uzamknúť dokumenty
+jcmsplugin.esn.activity.filter.upload:           Odovzdať dokumenty
+jcmsplugin.esn.activity.filter.update-pstatus:   Aktualizovať stav pracovného postupu
+jcmsplugin.esn.activity.filter.others:           Ďalšie činnosti
+jcmsplugin.esn.activity.filter.ws-include:       Obmedziť na...
+jcmsplugin.esn.activity.filter.ws-exclude:       Všetko okrem...
+
+jcmsplugin.esn.activity.filter.editor:               Filter činností
+jcmsplugin.esn.activity.filter.editor.link:          Upraviť filtre
+jcmsplugin.esn.activity.filter.editor.steps.0:       Typ činnosti
+jcmsplugin.esn.activity.filter.editor.steps.1:       Rozšírené filtrovanie
+jcmsplugin.esn.activity.filter.editor.steps-intro.0: Vyberte typy činnosti, ktoré zobraziť v toku činnosti.
+jcmsplugin.esn.activity.filter.editor.steps-intro.1: Môžete vybrať kritériá filtrovania toku činnosti.
+
+jcmsplugin.esn.activity.share.remove-webpage: Zdieľať ďalšiu stránku
+jcmsplugin.esn.activity.share.webpage-next-image: Prepnúť na ďalší obrázok
+jcmsplugin.esn.activity.share.webpage-prev-image: Prepnúť na predchádzajúci obrázok
+jcmsplugin.esn.activity.form-tab.document: Dokument
+jcmsplugin.esn.activity.form-tab.microblogging: Správa
+jcmsplugin.esn.activity.form-tab.webpage: Webová stránka
+
+icon.jcmsplugin-esn-activity-share-webpage-img-prev: Predch.
+icon.jcmsplugin-esn-activity-share-webpage-img-next: Nasled.
+icon.jcmsplugin-esn-activity-share-webpage-remove: Odstrániť
+
+jcmsplugin.esn.lbl.communities:                  Komunity
+jcmsplugin.esn.lbl.common-communities:           Najčastejšie komunity
+jcmsplugin.esn.lbl.communities.info:             Vytvorené {0}. {1,choice,0#Žiadni členovia|1#1 člen|2#Členovia ({1,number,integer})} {2,choice,0#Žiadny obsah|1#1 obsah|2#Obsahy ({2,number,integer})}.
+
+jcmsplugin.esn.status.title:            Aktualizujte svoju správu
+jcmsplugin.esn.status.intro:            Označte, čo robíte, kde ste, svoju náladu... ?
+jcmsplugin.esn.status.mail:             Profil môžete aktualizovať e-mailom odoslaním správy na
+jcmsplugin.esn.status.msg.singleton:    {0} už má stav.
+
+jcmsplugin.esn.link.lbl.name:           Názov stránky
+jcmsplugin.esn.link.lbl.url:            URL
+jcmsplugin.esn.link.lbl.description:    Opis
+jcmsplugin.esn.link.msg.empty-title:    „Názov stránky“ je povinný.
+jcmsplugin.esn.link.msg.empty-url:      „URL adresa“ je povinná.
+jcmsplugin.esn.link.msg.bad-url:        Pole "URL" je v nesprávnom formáte.
+
+jcmsplugin.esn.lbl.notes:     Poznámky
+jcmsplugin.esn.lbl.notes.add: Pridať poznámku
+jcmsplugin.esn.lbl.notes.add-link: Pridať poznámku...
+
+jcmsplugin.esn.directory.lbl.view-profile:      Zobraziť úplný profil
+jcmsplugin.esn.directory.lbl.expert-directory:  Adresár odborníkov
+
+jcmsplugin.esn.directory.app.nav-competencies: Kvalifikácia
+jcmsplugin.esn.directory.app.breadcrumb.root: Kvalifikácia
+jcmsplugin.esn.directory.app.competence.expertise.filter.add: Filtrovať túto kvalifikáciu
+jcmsplugin.esn.directory.app.competence.expertise.filter.node.add: Filtrovať túto kvalifikáciu a zobraziť podkategórie kvalifikácie
+jcmsplugin.esn.directory.app.competence.expertise.filter.remove: Odstrániť tento filter kvalifikácie
+jcmsplugin.esn.directory.app.competence.expertise.filters.add: Pridať kvalifikáciu do možností filtrov
+jcmsplugin.esn.directory.app.competence.expertise.filters.remove: Odstrániť túto kvalifikáciu z možností filtrov
+jcmsplugin.esn.directory.app.competence.expertise.is-in-filters: Táto kvalifikácia je v možnostiach filtrov. Odstráňte ju pomocou príslušného tlačidla
+jcmsplugin.esn.directory.app.competence.expertise.node.is-in-filters: Táto kvalifikácia je v možnostiach filtrov. Ak chcete zobraziť podkategórie kvalifikácie, odstráňte ju pomocou príslušného tlačidla
+
+jcmsplugin.esn.directory.app.context-menu-label: Kontextová ponuka kvalifikácií
+jcmsplugin.esn.directory.app.competence-action.add: Pridať kvalifikáciu...
+jcmsplugin.esn.directory.app.competence-action.add-sub: Pridať podkategórie kvalifikácie...
+jcmsplugin.esn.directory.app.competence-action.add-prompt: Zadajte názvy nových kvalifikácií (oddelené čiarkami):
+jcmsplugin.esn.directory.app.competence-action.rename-prompt: Zadajte nový názov kvalifikácie
+jcmsplugin.esn.directory.app.competence-action.move-to: Presunúť do...
+jcmsplugin.esn.directory.app.competence-action.modal.move-to.title: Presunúť do
+jcmsplugin.esn.directory.app.competence-action.modal.move-to.op-action: Presunúť
+
+jcmsplugin.esn.expert-dir.title:                  Adresár odborníkov
+jcmsplugin.esn.expert-dir.lbl.home:               Domov
+jcmsplugin.esn.expert-dir.lbl.all:                Všetci odborníci
+jcmsplugin.esn.expert-dir.lbl.expert-count:       {0,choice,0#Žiadne výsledky|1#{0} výsledok|2#Výsledky ({0})}
+jcmsplugin.esn.expert-dir.lbl.related.connexe:    Zatvoriť kvalifikácie:
+jcmsplugin.esn.expert-dir.lbl.related.others:     Iné kvalifikácie:
+jcmsplugin.esn.expert-dir.msg.home:               Vitajte v adresári odborníkov. Kliknutím na navigačný panel naľavo zobrazíte zoznam odborníkov s danou kvalifikáciou.
+jcmsplugin.esn.expert-dir.msg.no-expert.all:      Žiadne výsledky pre kvalifikáciu <i>{0}</i>.
+jcmsplugin.esn.expert-dir.msg.no-expert.account:  Žiadni členovia s kvalifikáciou <i>{0}</i>.
+jcmsplugin.esn.expert-dir.msg.no-expert.contact:  Žiadne kontakty pre kvalifikáciu <i>{0}</i>.
+jcmsplugin.esn.expert-dir.lbl.expert-search:      Hľadať podľa kvalifikácie
+jcmsplugin.esn.expert-dir.lbl.filter:             Filtre
+jcmsplugin.esn.expert-dir.lbl.filter.info:        Ak chcete filtrovať kvalifikácie, kliknite na ikony {0}.
+jcmsplugin.esn.expert-dir.lbl.filter.add:         Filtrovať túto kvalifikáciu
+jcmsplugin.esn.expert-dir.lbl.filter.remove:      Odstrániť tento filter
+jcmsplugin.esn.expert-dir.lbl.edit-expertises:    Spravovať kvalifikáciu
+
+jcmsplugin.esn.expertise.root-cat-forbidden:      Nemôžete vymazať ani upraviť túto kategóriu, pretože ju používa doplnok ESN na ukladanie kvalifikácie. Len správca alebo poverený člen to môže upraviť alebo odstrániť.
+jcmsplugin.esn.expertise.expertise-cat-forbidden: Túto kategória používa doplnok ESN ako kvalifikáciu. Už sa používa iným členom. Len správca alebo poverený člen to môže upraviť.
+
+jcmsplugin.esn.ctxmenu.mbr.profile:  Zobraziť profil
+
+$id.jcmsplugin.esn.portlet.header:              ESN – Hlavička
+$id.jcmsplugin.esn.portlet.actions:             ESN – Úkony
+$id.jcmsplugin.esn.portlet.connection-requests: ESN – Žiadosti o spojenie
+$id.jcmsplugin.esn.portlet.suggestions:         ESN – Návrhy
+$id.jcmsplugin.esn.portlet.common-connections:  ESN – Najčastejšie spojenia
+$id.jcmsplugin.esn.portlet.connections:         ESN – Spojenia
+$id.jcmsplugin.esn.portlet.links:               ESN – Prepojenia
+$id.jcmsplugin.esn.portlet.activities:          ESN – Činnosti
+$id.jcmsplugin.esn.portlet.network-activities:  ESN – Sieťové činnosti
+$id.jcmsplugin.esn.portlet.publications:        ESN – Publikácie
+$id.jcmsplugin.esn.portlet.calendar:            ESN – Kalendár
+$id.jcmsplugin.esn.portlet.presentation:        ESN – Prezentácia
+$id.jcmsplugin.esn.portlet.workspaces:          ESN – Pracovné priestory
+$id.jcmsplugin.esn.portlet.expertise:           ESN – Kvalifikácie
+$id.jcmsplugin.esn.portlet.contact-notes:       ESN – Kontakty – Poznámky
+$id.jcmsplugin.esn.portlet.contact-calendar:    ESN – Kontakty – Kalendár
+$id.jcmsplugin.esn.portlet.contact-referrers:   ESN – Kontakty – Predkladateľ
+$id.jcmsplugin.esn.portlet.contacts:            ESN – Kontakty
+$id.jcmsplugin.esn.portlet.jobs:                ESN – Funkcie
+$id.jcmsplugin.esn.portlet.educations:          ESN – Vzdelanie
+
+jcmsplugin.esn.portlet-mbr-status.no-mbr:       Žiadni členovia
+
+jcmsplugin.esn.birthday.portlet.day:  {0,choice,0#Dnes|1#Zajtra|2#O {0} dní}
+jcmsplugin.esn.birthday.portlet.none: Žiadne narodeniny
+jcmsplugin.esn.birthday-reminder.enabled: Aktivovať pripomenutie narodenín
+jcmsplugin.esn.birthday-happy: Všetko najlepšie!
+
+jcmsplugin.esn.microblogging.share:               Zdieľať
+jcmsplugin.esn.microblogging.modify:            Aktualizovať
+jcmsplugin.esn.microblogging.label.microblogging: Mikroblogovanie
+jcmsplugin.esn.microblogging.menu.message:        Správa
+jcmsplugin.esn.microblogging.title.create-message:Uverejniť správu
+jcmsplugin.esn.microblogging.delete-confirm:      Chcete odstrániť poslednú správu?
+jcmsplugin.esn.microblogging.microblogging-prompt:Čo robíte?
+jcmsplugin.esn.microblogging.update-message:      Upraviť túto správu
+jcmsplugin.esn.microblogging.delete-message:      Odstrániť túto správu
+jcmsplugin.esn.microblogging.member-microblogging-title: Mikroblog kontaktu {0}
+jcmsplugin.esn.microblogging.warn.existing-webpage-ws: Táto stránka už existuje v aktuálnom pracovnom priestore:
+jcmsplugin.esn.microblogging.warn.existing-webpage-ws-other: Túto webovú stránku publikoval/-a {0} {1} v pracovnom priestore : {2}.
+jcmsplugin.esn.microblogging.warn.existing-webpage-ws.btn: Prístup k webovej stránke
+jcmsplugin.esn.microblogging.warn.bad-url-format: Uvedená URL adresa nie je platná.
+jcmsplugin.esn.microblogging.warn.missing-url: Uveďte URL adresu.
+jcmsplugin.esn.microblogging.warn.missing-url-meta: Údaje z webovej stránky sa nepodarilo načítať, informácie budete musieť zadať ručne.
+
+jcmsplugin.esn.collaborativespace.private-home.connections: Vaše spojenia v tomto priestore
+
+jcmsplugin.esn.expert-directory.open-access: Otvorený prístup k adresáru odborníkov
+jcmsplugin.esn.expert-directory.open-access.help: Keď je povolený otvorený prístup, adresár odborníkov nevyžaduje, aby bol používateľ prihlásený.
+jcmsplugin.esn.member-profile.open-access: Otvorený prístup k profilu člena
+jcmsplugin.esn.member-profile.open-access.help: Keď je povolený otvorený prístup, profil člena nevyžaduje, aby bol používateľ prihlásený.
+jcmsplugin.esn.member-profile.event-intro: {0} sa zúčastňuje na udalosti
+jcmsplugin.esn.member-profile.event-intro.me: Zúčastňujete sa na udalosti
+
+jcmsplugin.esn.contact-by-email.title: Kontaktovať e-mailom...
+jcmsplugin.esn.contact-by-email.title2: Kontaktovať e-mailom ({0})…
+jcmsplugin.esn.contact-by-sms.title: Kontaktovať prostredníctvom SMS…
+jcmsplugin.esn.contact-by-phone.title: Kontaktovať telefonicky…
+jcmsplugin.esn.contact-by-other.title: Kontaktovať prostredníctvom {0}…
+jcmsplugin.esn.call-at-number.title: Zavolať na číslo {0}…
+jcmsplugin.esn.profile.contact.email: Pošta
+jcmsplugin.esn.profile.full.contact.sms: SMS
+jcmsplugin.esn.profile.contact.webchat: WebChat
+
+# ExtraData
+extra.Category.jcmsplugin.esn.groups: ESN – Pridružené skupiny
+
+# Publish Menu
+jcmsplugin.esn.publish-menu.contact:       Kontakt
+jcmsplugin.esn.publish-menu.microblogging: Správa
+
+# Alerts
+alert.name.jcmsplugin-esn : Sociálna sieť
+alert.name.jcmsplugin-esn.follower:             Nový odberateľ
+alert.name.jcmsplugin-esn.connection:           Pridať nové spojenie
+alert.name.jcmsplugin-esn.connection-request:   Žiadosť o spojenie
+alert.name.jcmsplugin-esn.connection-accepted:  Spojenie prijaté
+alert.name.jcmsplugin-esn.connection-declined:  Spojenie zamietnuté
+alert.name.jcmsplugin-esn.birthday-reminder:    Pripomenutie narodenín
+
+alert.msg.jcmsplugin-esn.follower.title:                        Nový odberateľ
+alert.msg.jcmsplugin-esn.follower.short-description:            {author} teraz sleduje vašu činnosť.
+
+alert.msg.jcmsplugin-esn.connection.title:                      Nové spojenie
+alert.msg.jcmsplugin-esn.connection.short-description:          {author} vás pridal/a medzi svoje spojenia.
+
+alert.msg.jcmsplugin-esn.connection-request.title:              Pozvánka na spojenie
+alert.msg.jcmsplugin-esn.connection-request.short-description:  {author} vám posiela pozvánku na spojenie.
+alert.msg.jcmsplugin-esn.connection-request.description:        <p>{author} vám posiela pozvánku na spojenie.</p> {accept} {showProfile}
+jcmsplugin.esn.connection-request.mail:                         {0} vám posiela pozvánku na spojenie.
+
+alert.msg.jcmsplugin-esn.connection-accepted.title:             Pozvánka prijatá
+alert.msg.jcmsplugin-esn.connection-accepted.short-description: {author} prijíma vašu pozvánku. Teraz je počítač pripojený.
+
+alert.msg.jcmsplugin-esn.connection-declined.title:             Pozvánka odmietnutá
+alert.msg.jcmsplugin-esn.connection-declined.short-description: {author} odmieta vašu pozvánku.
+
+alert.msg.jcmsplugin-esn.birthday-reminder.title:               Pripomenutie narodenín
+alert.msg.jcmsplugin-esn.birthday-reminder.short-description:   Nasledujúce narodeniny: {birthday-list}
+alert.msg.jcmsplugin-esn.birthday-reminder.description:         <p>Čoskoro budú mať narodeniny niektorí členovia vašej siete:</p>{birthday-list}
+alert.msg.jcmsplugin-esn.birthday-reminder.txt.today:    Dnes:
+alert.msg.jcmsplugin-esn.birthday-reminder.txt.tomorrow: Zajtra:
+alert.msg.jcmsplugin-esn.birthday-reminder.txt.later:    Do 7 dní ({0}):
+
+# ------------------------------------------------------------
+#  Recommendation
+# ------------------------------------------------------------
+alert.name.recommendation.esn-member-recommendation: Odporúčanie spojení
+alert.msg.recommendation.esn-member-recommendation.title:      Odporúčanie pre {data}
+alert.msg.recommendation.esn-member-recommendation.short-description: {author} vám odporúča pridať kontakt {data} medzi vaše spojenia. {recoContent}
+alert.msg.recommendation.esn-member-recommendation.description: <p>{author} vám odporúča pridať kontakt {data} medzi vaše spojenia.<p> </p>{recoContent}</p>
+alert.msg.recommendation.esn-member-recommendation.reply.short-description: {author} odpovedal/a na vaše odporúčanie na kontakt {data}: {replyRecommendation} {data.url} {reply}
+alert.msg.recommendation.esn-member-recommendation.reply.description: <p>{author} odpovedal/a na vaše odporúčanie na kontakt {data}:</p><hr/><p>{replyRecommendation}</p><hr/> {recoContent} {reply}
+jcmsplugin.esn.recommendation.Member: Odporučte kontakt <b>{0}</b> ďalším členom.
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From MemberCategories-templates.xml
+types.MemberCategories.templates.query.default.label: Predvolená šablóna
+types.MemberCategories.templates.query.default.description: Predvolená šablóna tejto publikácie
+types.MemberCategories.templates.full.default.label: Predvolená šablóna
+types.MemberCategories.templates.box.default.description: Predvolená šablóna tejto publikácie
+types.MemberCategories.templates.box.default.label: Predvolená šablóna
+types.MemberCategories.templates.edit.default.description: Predvolená šablóna tejto publikácie
+types.MemberCategories.templates.edit.default.label: Predvolená šablóna
+types.MemberCategories.templates.full.default.description: Predvolená šablóna tejto publikácie
+
+# From MemberCategories.xml
+types.MemberCategories.label: ESN – Kvalifikácie
+types.MemberCategories.title.label: Názov
+
+# From MemberEducation-templates.xml
+types.MemberEducation.templates.query.default.description: Predvolená šablóna tejto publikácie
+types.MemberEducation.templates.full.default.description: Predvolená šablóna tejto publikácie
+types.MemberEducation.templates.full.default.label: Predvolená šablóna
+types.MemberEducation.templates.box.default.label: Predvolená šablóna
+types.MemberEducation.templates.query.default.label: Predvolená šablóna
+types.MemberEducation.templates.edit.default.label: Predvolená šablóna
+types.MemberEducation.templates.box.default.description: Predvolená šablóna tejto publikácie
+types.MemberEducation.templates.edit.default.description: Predvolená šablóna tejto publikácie
+
+# From MemberEducation.xml
+types.MemberEducation.fields.endDate.label: Dátum ukončenia
+types.MemberEducation.label: ESN – Vzdelanie
+types.MemberEducation.title.label: Názov
+types.MemberEducation.fields.degree.label: Diplom
+types.MemberEducation.fields.startDate.label: Dátum začatia
+types.MemberEducation.fields.site.label: Stránka
+types.MemberEducation.fields.place.label: Miesto
+types.MemberEducation.fields.trainingCenter.label: Školiaca organizácia
+types.MemberEducation.fields.description.label: Opis
+
+# From MemberJob-templates.xml
+types.MemberJob.templates.box.default.description: Predvolená šablóna tejto publikácie
+types.MemberJob.templates.box.default.label: Predvolená šablóna
+types.MemberJob.templates.full.default.label: Predvolená šablóna
+types.MemberJob.templates.query.default.label: Predvolená šablóna
+types.MemberJob.templates.edit.default.description: Predvolená šablóna tejto publikácie
+types.MemberJob.templates.edit.default.label: Predvolená šablóna
+types.MemberJob.templates.full.default.description: Predvolená šablóna tejto publikácie
+types.MemberJob.templates.query.default.description: Predvolená šablóna tejto publikácie
+
+# From MemberJob.xml
+types.MemberJob.title.label: Funkcia
+types.MemberJob.fields.startDate.label: Dátum začatia
+types.MemberJob.fields.place.label: Miesto
+types.MemberJob.label: ESN – Práca
+types.MemberJob.fields.description.label: Opis
+types.MemberJob.fields.organization.label: Organizácia
+types.MemberJob.fields.endDate.label: Dátum ukončenia
+types.MemberJob.fields.site.label: Webová stránka
+
+# From MemberProfile-templates.xml
+types.MemberProfile.templates.edit.default.label: Predvolená šablóna
+types.MemberProfile.templates.box.default.label: Predvolená šablóna
+types.MemberProfile.templates.full.default.label: Predvolená šablóna
+types.MemberProfile.templates.full.default.description: Predvolená šablóna tejto publikácie
+types.MemberProfile.templates.fullold.default.label: Stará predvolená šablóna (<6.2)
+types.MemberProfile.templates.query.default.label: Predvolená šablóna
+types.MemberProfile.templates.editFront.default.label: Šablóna úpravy Front-office.
+types.MemberProfile.templates.edit.default.description: Predvolená šablóna tejto publikácie
+types.MemberProfile.templates.box.default.description: Predvolená šablóna tejto publikácie
+types.MemberProfile.templates.query.default.description: Predvolená šablóna tejto publikácie
+
+# From MemberProfile.xml
+types.MemberProfile.label: ESN – Profil
+types.MemberProfile.fields.dateOfBirth.label: Dátum narodenia
+types.MemberProfile.title.label: Názov
+types.MemberProfile.fields.introduction.label: Úvod
+types.MemberProfile.fields.interest.label: Záujmy
+types.MemberProfile.fields.dateOfArrival.label: Dátum príchodu
+
+# From MicroBlogging.xml
+types.MicroBlogging.fields.text.label: Text
+types.MicroBlogging.label: Mikroblogovanie
+types.MicroBlogging.title.label: Názov
+
+# From PortletBirthday-templates.xml
+types.PortletBirthday.templates.box.default.label: Šablóna ovládacieho panela
+types.PortletBirthday.templates.full.default.label: Šablóna aplikácie
+
+# From PortletBirthday.xml
+types.PortletBirthday.fields.relationshipFilter.description: Zobraziť len členov, s ktorými je prihlásený člen spojený?
+types.PortletBirthday.fields.relationshipFilter.onLabel: Áno
+types.PortletBirthday.fields.workspaceMembers.label: Členovia pracovného priestoru
+types.PortletBirthday.fields.relationshipFilter.label: Filtrovať spojenia
+types.PortletBirthday.fields.workspaceMembers.description: Zobraziť len členov aktuálneho pracovného priestoru?
+types.PortletBirthday.fields.workspaceMembers.offLabel: Nie
+types.PortletBirthday.fields.workspaceMembers.onLabel: Áno
+types.PortletBirthday.label: Portlet Narodeniny
+types.PortletBirthday.fields.relationshipFilter.offLabel: Nie
+types.PortletBirthday.title.label: Názov
+types.PortletBirthday.description: Zobrazuje nadchádzajúce narodeniny vašich spojení
+
+# From PortletMemberActivity-templates.xml
+types.PortletMemberActivity.templates.box.default.label: Šablóna ovládacieho panela
+types.PortletMemberActivity.templates.full.default.label: Šablóna aplikácie
+types.PortletMemberActivity.templates.full.card.label: Šablóna kariet aplikácie
+types.PortletMemberActivity.templates.box.card.label: Šablóna kariet ovládacieho panela
+types.PortletMemberActivity.templates.jmobile.default.label: Predvolená šablóna
+
+# From PortletMemberActivity.xml
+types.PortletMemberActivity.fields.activityMode.label: Zobrazené činnosti
+types.PortletMemberActivity.fields.activityMode.labelList: Sleduje činnosť členov vo všetkých pracovných priestoroch | Sleduje činnosť členov v pracovných priestoroch, do ktorých patrím | Činnosť v pracovných priestoroch | Aktuálna činnosť v pracovných priestoroch
+types.PortletMemberActivity.fields.showComments.label: Zobraziť komentáre
+types.PortletMemberActivity.fields.showMedia.label: Zobraziť médiá
+types.PortletMemberActivity.fields.filters.label: Filtre
+types.PortletMemberActivity.fields.defaultPageSize.label: Počet zobrazených činností
+types.PortletMemberActivity.fields.showComments.onLabel: Áno
+types.PortletMemberActivity.fields.showMedia.onLabel: Áno
+types.PortletMemberActivity.fields.showComments.offLabel: Nie
+types.PortletMemberActivity.fields.showAbstract.onLabel: Áno
+types.PortletMemberActivity.fields.showMedia.offLabel: Nie
+types.PortletMemberActivity.fields.showAbstract.label: Zobraziť abstrakt
+types.PortletMemberActivity.fields.showAbstract.offLabel: Nie
+types.PortletMemberActivity.label: Portlet pre aktivitu členov
+types.PortletMemberActivity.title.label: Názov
+types.PortletMemberActivity.fields.displayAllEvent.label:       Zobraziť všetky udalosti v kalendári
+types.PortletMemberActivity.fields.displayAllEvent.onLabel:     Áno
+types.PortletMemberActivity.fields.displayAllEvent.offLabel:    Nie
+types.PortletMemberActivity.fields.displayAllEvent.description: Pokiaľ zvolíte možnosť Áno, zobrazia sa na stene všetky udalosti (filtrované podľa dostupných práv). Ak zvolíte možnosť Nie, zobrazia sa len udalosti s bezplatnou registráciou a udalosť, do ktorej člen patrí.
+types.PortletMemberActivity.description: Zobrazuje činnosti
+
+# From PortletMemberProfile-templates.xml
+types.PortletMemberProfile.templates.full.default.label: Šablóna aplikácie
+types.PortletMemberProfile.templates.box.default.label: Šablóna ovládacieho panela
+
+# From PortletMemberProfile.xml
+types.PortletMemberProfile.fields.showSuggestions.offLabel: Nie
+types.PortletMemberProfile.fields.showConnectionRequests.onLabel: Áno
+types.PortletMemberProfile.label: Portlet Profil
+types.PortletMemberProfile.fields.showConnectionRequests.offLabel: Nie
+types.PortletMemberProfile.fields.showSuggestions.onLabel: Áno
+types.PortletMemberProfile.fields.showConnectionRequests.label: Zobraziť žiadosti o spojenie
+types.PortletMemberProfile.title.label: Názov
+types.PortletMemberProfile.fields.showSuggestions.label: Zobraziť návrhy
+types.PortletMemberProfile.description: Zobrazuje profil člena a jeho žiadosti a návrhy spojení
+
+# From PortletMemberStatus-templates.xml
+types.PortletMemberStatus.templates.box.default.label: Šablóna ovládacieho panela
+types.PortletMemberStatus.templates.full.default.label: Šablóna aplikácie
+
+# From PortletMemberStatus.xml
+types.PortletMemberStatus.fields.workspaceMembers.description: Zobraziť len činnosť členov aktuálneho pracovného priestoru?
+types.PortletMemberStatus.label: Portlet pre stav členov
+types.PortletMemberStatus.fields.workspaceMembers.label: Členovia pracovného priestoru
+types.PortletMemberStatus.fields.workspaceMembers.offLabel: Nie
+types.PortletMemberStatus.fields.workspaceMembers.onLabel: Áno
+types.PortletMemberStatus.title.label: Názov
+types.PortletMemberStatus.description: Zobrazuje stavy vašich spojení alebo stav člena pracovného priestoru
+
+# Analytics
+ui.analytics.ESNAgent.name:                         Spoločnosť
+ui.analytics.ESNAgent.report.network:               Sociálna sieť
+ui.analytics.ESNAgent.report.network.h:             Hustota sociálnej siete.
+ui.analytics.ESNAgent.report.new-profile:           Nové profily
+ui.analytics.ESNAgent.report.new-profile.h:         Nové vytvorené profily.
+ui.analytics.ESNAgent.report.account-profile-count: Profily kont
+ui.analytics.ESNAgent.report.contact-profile-count: Profily kontaktov
+ui.analytics.ESNAgent.report.connection-ratio:      Pomer spojení na jedného člena
+ui.analytics.ESNAgent.report.follower-ratio:        Pomer odberateľov na jedného člena
+ui.analytics.ESNAgent.report.following-ratio:       Pomer odoberaných na jedného člena
+ui.analytics.ESNAgent.report.activity-count:        Činnosť
+ui.analytics.ESNAgent.report.activity-count.h:      Počet činností
+ui.analytics.ESNAgent.report.activity-top:          Top činnosť 
+ui.analytics.ESNAgent.report.activity-top.h:        Prerušenie činnosti
+ui.analytics.ESNAgent.report.network:               Vzťahy
+ui.analytics.ESNAgent.report.network.h:             Hodnotenie vzťahu v spoločenskej sieti.
+ui.analytics.ESNAgent.report.new-profile:           Nové profily
+ui.analytics.ESNAgent.report.new-profile.h:         Nové vytvorené profily.
+ui.analytics.ESNAgent.report.account-profile-count: Konto
+ui.analytics.ESNAgent.report.contact-profile-count: Kontakt
+ui.analytics.ESNAgent.report.profile-completeness:   Vyplnenosť profilu
+ui.analytics.ESNAgent.report.profile-completeness.h: Percento vyplnenosti profilov členov.
+ui.analytics.ESNAgent.report.connection-ratio:      Priemer vzťahov na člena
+ui.analytics.ESNAgent.report.follower-ratio:        Priemer odoberaných na člena
+ui.analytics.ESNAgent.report.following-ratio:       Priemer odberateľov na člena
+ui.analytics.ESNAgent.report.microblogging-count:   Mikroblogovanie
+ui.analytics.ESNAgent.report.microblogging-count.h: Počet pridaných správ na mikroblogu.
+
+ # From plugin.xml
+types.PortletMemberActivity.templates.jcmsplugin.virtualdesktop.editInline.default.label: Šablóna používaná na virtuálnej pracovnej ploche pri úprave služby Činnosť člena.
+types.AbstractPortletSkinable.templates.box.esnSkin.label: Vzhľad ESN
+types.AbstractPortletSkinable.templates.box.esnSkin.description: Oblý vzhľad A (CSS)
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.activity: Činnosť
+jcmsplugin.smartphone.workspace-service.PortletMemberActivity: Činnosti
+jcmsplugin.esn.smartphone.lbl.presentation: Prezentácia
+jcmsplugin.esn.smartphone.lbl.expertises: Kvalifikácia
+jcmsplugin.esn.smartphone.lbl.member.activity: Činnosť
+jcmsplugin.esn.smartphone.lbl.activity.microblogging.text.placeholder: Tu napíšte svoju správu...
+jcmsplugin.esn.smartphone.lbl.activity.microblogging.add-message: Pridať správu
+
+jcmsplugin.smartphone.shareurl.label.esn: Mikroblogovanie
+
+# Microblogging icon label
+jcmsplugin.esn.smartphone.microblogging.camera : Fotoaparát
+jcmsplugin.esn.smartphone.microblogging.galery : Galéria fotografií
+
+# ----------------------------------------------------------------------
+# OpenApi
+# ----------------------------------------------------------------------
+acl.resource.admin/work/canManageExpertiseCategory: ESN – Právo na riadenie kategórií kvalifikácií
+acl.resource.plugins: Doplnky
+acl.resource.plugins/esn: ESN
+acl.resource.plugins/esn/openapi: Open API
+acl.resource.plugins/esn/openapi/anyActivity: Vytvoriť akékoľvek činnosti
+acl.resource.plugins/esn/openapi/anyActivity.h: Povoliť vytváranie akejkoľvek činnosti (autor činnosti smie byť ktorýkoľvek člen)
+acl.resource.plugins/esn/openapi/activity: Vytvoriť osobnú činnosť
+acl.resource.plugins/esn/openapi/activity.h: Povoliť vytváranie osobných aktivít členov (autorom aktivity bude prihlásený člen)
+doc.rest.rsrc-meth.ActivityResource: GET<br/>POST<br/>DELETE
+doc.rest.rsrc-desc./plugins/esn/activities: Spôsob POST: Zoznam aktivít s týmito parametrami: <br/> <ul><li>člen: Používateľ využívaný na kontrolu práv na čítanie (vynútene prihlásený používateľ, ak nemá ACL „Vytvárať akékoľvek činnosti“)</li><li>režim: relácia MemberActivityMode: <ul><li>FOLLOWED_MEMBERS</li><li>FOLLOWED_MEMBERS_WS</li><li>WORKSPACE_ACTIVITIES</li><li>MEMBER_WORKSPACE_ACTIVITIES</li><li>MEMBER_ACTIVITIES</li></ul></li><li>pracovný priestor: pracovný priestor využívaný na vyhľadávanie</li><li>activityMember: člen, ktorý je autorom aktivít</li><li>startActivityDate: počiatočný dátum vyhľadávania</li><li>pageSize: predvolene 10</li><ul>
+doc.rest.rsrc-desc./plugins/esn/activities/followedMembers/{memberId}: Spôsob GET: Zoznam členov pre aktivitu nasledovaný daným členom.<br/>Člen využívaný na práva na čítanie je daný člen iba vtedy, ak má prihlásený člen ACL „Vytvárať akékoľvek aktivity,“ inak je ním prihlásený člen.<br/>Prispôsobovanie tohto koncového bodu treba vykonávať cez koncový bod aktivít.
+doc.rest.rsrc-desc./plugins/esn/activities/followedMembersWs/{memberId}:Spôsob GET: Zoznam členov pre aktivitu nasledovaný daným členom, ale len v pracovných priestoroch členov.<br/>Člen využívaný na práva na čítanie je daný člen iba vtedy, ak má prihlásený člen ACL „Vytvárať akékoľvek aktivity,“ inak je ním prihlásený člen.<br/>Prispôsobovanie tohto koncového bodu treba vykonávať cez koncový bod aktivít.
+doc.rest.rsrc-desc./plugins/esn/activities/member/{memberId}: Spôsob GET: Zoznam aktivít daného člena.<br/>Člen využívaný na práva na čítanie je poskytujúci člen iba vtedy, ak má prihlásený člen ACL „Vytvárať akékoľvek aktivity,“ inak je ním prihlásený člen.<br/>Prispôsobovanie tohto koncového bodu treba vykonávať cez koncový bod aktivít.
+doc.rest.rsrc-desc./plugins/esn/activities/memberWorspaces/{memberId}: Spôsob GET: Zoznam aktivít pracovných priestorov daného člena.<br/>Člen využívaný na práva na čítanie je poskytujúci člen iba vtedy, ak má prihlásený člen ACL „Vytvárať akékoľvek aktivity,“ inak je ním prihlásený člen.<br/>Prispôsobovanie tohto koncového bodu treba vykonávať cez koncový bod aktivít.
+doc.rest.rsrc-desc./plugins/esn/activities/workspace/{workspaceId}: Spôsob GET: Zoznam aktivít daného pracovného priestoru.<br/>Člen využívaný na práva na čítanie je poskytujúci člen iba vtedy, ak má prihlásený člen ACL „Vytvárať akékoľvek aktivity,“ inak je ním prihlásený člen.<br/>Prispôsobovanie tohto koncového bodu treba vykonávať cez koncový bod aktivít.
+doc.rest.rsrc-desc./plugins/esn/activity/{id}: Spôsob GET: získanie MemberActivity podľa id<br/> Spôsob POST: aktualizácia aktivity (s rovnakými poliami ako pre vytváranie)<br/> Spôsob DELETE: vymazanie aktivity
+doc.rest.rsrc-desc./plugins/esn/activity: Spôsob POST: Vytvorenie aktivity. <br/> parametre: <ul><li>vlastnosť: POVINNÉ – vlastnosť použitá pre túto činnosť</li><li>člen: POVINNÉ – člen aktivity (vynútene prihlásený používateľ, ak nemá ACL „Vytvárať akékoľvek aktivity“)</li><li>data: súvisiace s údajmi aktivity</li><li>message: ďalšia správa </li><li>workspace: pracovný priestor aktivity (ak je prázdne a ak sú poskytnuté údaje, použijú sa údaje pracovného priestoru)</li><ul>
+

@@ -1,0 +1,851 @@
+# ------------------------------------------------------------
+#  ACL
+# ------------------------------------------------------------
+acl.resource.admin/work/createCS: Przestrze\u0144 wsp\u00f3\u0142pracy - tworzenie
+acl.resource.plugins: Wtyczki
+acl.resource.plugins/collaborativespace: Przestrze\u0144 wsp\u00f3\u0142pracy
+acl.resource.plugins/collaborativespace/manageCSGuest: Zarz\u0105dzanie go\u015b\u0107mi
+acl.resource.plugins/collaborativespace/manageCSGuest.h: Zezwolenie dla administratora przestrzeni wsp\u00f3\u0142pracy na tworzenie w tej przestrzeni kont go\u015bci.
+acl.resource.admin-ws/plugins: Wtyczki
+acl.resource.admin-ws/plugins/collaborativespace: Przestrze\u0144 wsp\u00f3\u0142pracy
+acl.resource.admin-ws/plugins/collaborativespace/manageCSServices: Aplikacje
+acl.resource.admin-ws/plugins/collaborativespace/manageCSServices.h: Zarz\u0105dzanie przestrzeni\u0105 og\u00f3lnodost\u0119pn\u0105 aplikacji przestrzeni wsp\u00f3\u0142pracy.
+acl.resource.admin-ws/plugins/collaborativespace/manageCSSettings: Ustawienia
+acl.resource.admin-ws/plugins/collaborativespace/manageCSSettings.h: Zarz\u0105dzanie ustawieniami przestrzeni wsp\u00f3\u0142pracy (nazwa, opis, uk\u0142ad, wygl\u0105d i odczucia).
+
+# ------------------------------------------------------------
+#  Common
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.lbl.filter:                 Filtruj
+jcmsplugin.collaborativespace.lbl.administrator:          Lider
+jcmsplugin.collaborativespace.lbl.administrators:         Liderzy
+jcmsplugin.collaborativespace.lbl.administrators.h:       Administratorzy spo\u0142eczno\u015bci
+# A member that belongs to the space
+jcmsplugin.collaborativespace.lbl.profile.member-count:   {0,choice,0#Brak uczestnik\u00f3w|1#{0} uczestnika|2#{0} uczestnik\u00f3w}
+# A member that is administrator of the space
+jcmsplugin.collaborativespace.lbl.profile.leader-count:   {0,choice,0#Brak lider\u00f3w|1#{0} lidera|2#{0} lider\u00f3w}
+# A member that is a Guest of the space
+jcmsplugin.collaborativespace.lbl.profile.guest:          Go\u015b\u0107
+jcmsplugin.collaborativespace.lbl.profile.guest-count:    {0,choice,0#Brak go\u015bci|1#{0} go\u015b\u0107|2#{0} go\u015bci}
+jcmsplugin.collaborativespace.lbl.signup:                 Rejestracja
+jcmsplugin.collaborativespace.lbl.signup-action:          Rejestruj\u0119 si\u0119...
+jcmsplugin.collaborativespace.lbl.unsignup:               Wyrejestruj si\u0119
+jcmsplugin.collaborativespace.lbl.unsignup-action:        Opuszczam...
+jcmsplugin.collaborativespace.lbl.card.signup:            Rejestracja
+
+jcmsplugin.collaborativespace.cssignup.title: Pro\u015bba o rejestracj\u0119 przez \u201e{0}\u201d
+jcmsplugin.collaborativespace.cssignup-notfound.msg-title: Nie znaleziono wniosku o rejestracj\u0119
+jcmsplugin.collaborativespace.cssignup-notfound.msg-content: Nie znaleziono podanego wniosku o rejestracj\u0119.<br/>Mo\u017ce to wyst\u0105pi\u0107, kiedy zosta\u0142 on ju\u017c przetworzony, lub kiedy w danej przestrzeni cz\u0142onka zapisano r\u0119cznie.
+
+jcmsplugin.collaborativespace.data-controller.msg.incompatible-access-signup: Tryb dost\u0119pu nie jest kompatybilny z polityk\u0105 rejestracji.
+jcmsplugin.collaborativespace.data-controller.msg.invalid-ability: Ten portlet nie ma funkcjonalno\u015bci \u201e{0}\u201d.
+jcmsplugin.collaborativespace.data-controller.msg.service-not-in-public-model: Portlety, dla kt\u00f3rych kopia jest wykonywana wg odniesienia i z funkcjonalno\u015bci Aplikacja lub Tablica wska\u017anik\u00f3w, musz\u0105 nale\u017ce\u0107 do modelu publicznej przestrzeni wsp\u00f3\u0142pracy.
+jcmsplugin.collaborativespace.data-controller.msg.no-portlet-selection: Pole \u201e{0}\u201d musi zawiera\u0107 \u201e{1}\u201d.
+jcmsplugin.collaborativespace.data-controller.msg.invalid-guest-wsadmin: Administrator obszaru roboczego nie mo\u017ce by\u0107 go\u015bciem.
+jcmsplugin.collaborativespace.data-controller.msg.invalid-guest-wsadmin-detail: Go\u015b\u0107 \u201e{0}\u201d ({1}) nie mo\u017ce by\u0107 administratorem przestrzeni roboczej.
+jcmsplugin.collaborativespace.data-controller.msg.sub-status: Nie uda\u0142a si\u0119 aktualizacja na powi\u0105zanych danych: {0}
+jcmsplugin.collaborativespace.data-controller.msg.invalid-cat: Nie mo\u017cna sklasyfikowa\u0107 portletu "{0}" pod "<strong>{1}</strong>".
+jcmsplugin.collaborativespace.data-controller.msg.missing-root-cat: Portlet przestrzeni wsp\u00f3\u0142pracy musi mie\u0107 kategori\u0119 g\u0142\u00f3wn\u0105.
+jcmsplugin.collaborativespace.data-controller.msg.wrong-model-typology: Wybrany model nie odpowiada typologii
+jcmsplugin.collaborativespace.data-controller.msg.missing-model: Konieczne jest wybranie modelu
+jcmsplugin.collaborativespace.data-controller.msg.workspace-not-model: Obszar roboczy wybrany jako model nie jest modelem
+jcmsplugin.collaborativespace.space-wizard.msg.model-not-found: Nie znaleziono podanego modelu.
+jcmsplugin.collaborativespace.space-wizard.msg.failed: Nie mo\u017cna by\u0142o utworzy\u0107 przestrzeni wsp\u00f3\u0142pracy: {0}
+
+# FO action labels
+jcmsplugin.collaborativespace.create.lbl.create:                  Utw\u00f3rz przestrze\u0144 ...
+jcmsplugin.collaborativespace.create.lbl.create-sub:              Utw\u00f3rz podprzestrze\u0144...
+jcmsplugin.collaborativespace.create.lbl.request-create:          Pro\u015bba o utworzenie przestrzeni...
+jcmsplugin.collaborativespace.create.lbl.request-create-sub:      Pro\u015bba o utworzenie podprzestrzeni...
+# Admin BO action labels (keep "collaborative" word)
+jcmsplugin.collaborativespace.create.lbl.create-cs:               Utw\u00f3rz przestrze\u0144 wsp\u00f3\u0142pracy...
+
+# Create space modal labels
+jcmsplugin.collaborativespace.create.title:                       Utw\u00f3rz przestrze\u0144 wsp\u00f3\u0142pracy
+jcmsplugin.collaborativespace.create.title-request:               Pro\u015bba o utworzenie przestrzeni wsp\u00f3\u0142pracy
+jcmsplugin.collaborativespace.create-sub.title:                   Utw\u00f3rz podprzestrze\u0144
+jcmsplugin.collaborativespace.create-sub.title-request:           Pro\u015bba o utworzenie podprzestrzeni
+jcmsplugin.collaborativespace.create.steps.0:                     Model
+jcmsplugin.collaborativespace.create.steps.1:                     Informacje
+jcmsplugin.collaborativespace.create-sub.steps.1.intro:           Utw\u00f3rz przestrze\u0144 w <strong>{0}</strong>
+jcmsplugin.collaborativespace.create-sub.steps.1.intro-request:   Pro\u015bba o utworzenie przestrzeni w <strong>{0}</strong>
+jcmsplugin.collaborativespace.create.steps.2:                     Uczestnicy
+
+jcmsplugin.collaborativespace.create.info.name:                         Nazwa przestrzeni
+jcmsplugin.collaborativespace.create.info.typology:                     Typ obszaru roboczego
+jcmsplugin.collaborativespace.create.info.description:                  Opis
+jcmsplugin.collaborativespace.create.info.introduction:                 Wprowadzenie
+jcmsplugin.collaborativespace.create.info.access:                       Dost\u0119p
+jcmsplugin.collaborativespace.create.info.access.public:                Publiczna
+jcmsplugin.collaborativespace.create.info.access.private:               Prywatna
+jcmsplugin.collaborativespace.create.info.access.secret:                Tajna
+jcmsplugin.collaborativespace.create.info.signup:                       Rejestracja
+jcmsplugin.collaborativespace.create.info.signup.admin:                 Rejestracje zarz\u0105dzane przez lider\u00f3w
+jcmsplugin.collaborativespace.create.info.signup.request:               Pro\u015bby o rejestracje zatwierdzone przez lider\u00f3w
+jcmsplugin.collaborativespace.create.info.signup.free:                  Bezp\u0142atne rejestracje
+jcmsplugin.collaborativespace.create.info.language:                     J\u0119zyk g\u0142\u00f3wny
+jcmsplugin.collaborativespace.create.model.intro:                       Zaznacz model tej przestrzeni wsp\u00f3\u0142pracy.
+jcmsplugin.collaborativespace.create.model.intro-typo:                  Zaznacz typologi\u0119 i model tej przestrzeni wsp\u00f3\u0142pracy.
+jcmsplugin.collaborativespace.create.model.intro-typo-nomodel:          Wybierz typologi\u0119 tej przestrzeni wsp\u00f3\u0142pracy.
+jcmsplugin.collaborativespace.create.model.intro-end:                   Po utworzeniu przestrzeni liderzy mog\u0105 dodawa\u0107 nowe us\u0142ugi.
+jcmsplugin.collaborativespace.create.model.model:                       Na podstawie modelu
+jcmsplugin.collaborativespace.create.model.sync-toggle:                 Synchronizacja z modelem
+jcmsplugin.collaborativespace.create.attendees.intro:                   Wybierz lider\u00f3w i uczestnik\u00f3w tej przestrzeni wsp\u00f3\u0142pracy.<br />Po utworzeniu przestrzeni liderzy przestrzeni mog\u0105 wysy\u0142a\u0107 zaproszenia, dodawa\u0107 i usuwa\u0107 cz\u0142onk\u00f3w.
+jcmsplugin.collaborativespace.create.attendees.intro-no-leader:         Wybierz uczestnik\u00f3w tej przestrzeni wsp\u00f3\u0142pracy.<br />Po utworzeniu przestrzeni liderzy przestrzeni mog\u0105 wysy\u0142a\u0107 zaproszenia, dodawa\u0107 i usuwa\u0107 cz\u0142onk\u00f3w.
+jcmsplugin.collaborativespace.create.attendees.admins:                  Lider
+jcmsplugin.collaborativespace.create.attendees.admins.custom:           {0,choice,0#Brak lider\u00f3w|1#lidera|2#lider\u00f3w}
+jcmsplugin.collaborativespace.create.attendees.groups:                  Grupy
+jcmsplugin.collaborativespace.create.attendees.members:                 Cz\u0142onkowie
+jcmsplugin.collaborativespace.create.attendees.notification:            Powiadomienie
+jcmsplugin.collaborativespace.create.attendees.notification.invitation: Wy\u015blij zaproszenie uczestnikom
+jcmsplugin.collaborativespace.create.attendees.notification.mail:       Dodaj i powiadom uczestnik\u00f3w
+jcmsplugin.collaborativespace.create.attendees.notification.no:         Dodaj uczestnik\u00f3w bez powiadomienia
+jcmsplugin.collaborativespace.create.too-many-cs:                       Nie mo\u017cesz utworzy\u0107 nowej przestrzeni wsp\u00f3\u0142pracy. Osi\u0105gni\u0119to maksymaln\u0105 graniczn\u0105 liczb\u0119 ({0}) przestrzeni wsp\u00f3\u0142pracy.
+jcmsplugin.collaborativespace.create.finish:                            <p>Twoj\u0105 pro\u015bba o now\u0105 przestrze\u0144 wsp\u00f3\u0142pracy zarejestrowano.</p><p>Po jej zatwierdzeniu zostanie utworzona przestrze\u0144 oraz zostan\u0105 powiadomieni liderzy.</p>
+jcmsplugin.collaborativespace.access-policy.public.desc:                Ka\u017cdy mo\u017ce zobaczy\u0107 przestrze\u0144 publiczn\u0105 i przeczyta\u0107 jej zawarto\u015b\u0107.
+jcmsplugin.collaborativespace.access-policy.private.desc:               Ka\u017cdy mo\u017ce zapozna\u0107 si\u0119 z przestrzeni\u0105 prywatn\u0105, ale tylko uczestnicy mog\u0105 przeczyta\u0107 jej zawarto\u015b\u0107.
+jcmsplugin.collaborativespace.access-policy.secret.desc:                Tylko uczestnicy tajnej przestrzeni mog\u0105 zapozna\u0107 si\u0119 z ni\u0105 i przeczyta\u0107 jej zawarto\u015b\u0107.
+
+jcmsplugin.collaborativespace.header.home:                              Strona g\u0142\u00f3wna
+jcmsplugin.collaborativespace.header.introduction:                      Wprowadzenie
+jcmsplugin.collaborativespace.header.backoffice:                        Back-Office
+jcmsplugin.collaborativespace.header.help:                              Pomoc
+jcmsplugin.collaborativespace.header.admin-menu:                        Administracja
+jcmsplugin.collaborativespace.header.admin-menu.home:                   Strona g\u0142\u00f3wna
+jcmsplugin.collaborativespace.header.admin-menu.members:                Cz\u0142onkowie
+jcmsplugin.collaborativespace.header.admin-menu.services:               Aplikacje
+jcmsplugin.collaborativespace.header.admin-menu.settings:               Ustawienia
+jcmsplugin.collaborativespace.header.admin-menu.typo-models:            Model i typologie
+
+jcmsplugin.collaborativespace.metas.toggle.show:                        Wi\u0119cej
+jcmsplugin.collaborativespace.metas.toggle.hide:                        Mniej
+jcmsplugin.collaborativespace.metas.show-all-typos:                     Poka\u017c wszystkie typologie
+jcmsplugin.collaborativespace.metas.introduction:                       Wprowadzenie
+jcmsplugin.collaborativespace.metas.manage-members.link:                Zarz\u0105dzaj cz\u0142onkami
+jcmsplugin.collaborativespace.metas.member-list.others:                 Oraz {0,choice,1# 1 inny|2# {0} innych}...
+jcmsplugin.collaborativespace.metas.actions-menu-title:                 Otw\u00f3rz menu dzia\u0142a\u0144 przestrzeni wsp\u00f3\u0142pracy
+
+jcmsplugin.collaborativespace.private-home.title:                  Dost\u0119p do tej przestrzeni jest ograniczony
+jcmsplugin.collaborativespace.private-home.signup:                 Aby uzyska\u0107 dost\u0119p do tej przestrzeni, musisz si\u0119 zarejestrowa\u0107.
+jcmsplugin.collaborativespace.private-home.already-signup:         Poprosi\u0142e\u015b/a\u015b o rejestracj\u0119 w tej przestrzeni. Zostaniesz powiadomiony/a natychmiast po przetworzeniu Twojej pro\u015bby.
+jcmsplugin.collaborativespace.private-home.no-signup:              Rejestracja do tej przestrzeni odbywa si\u0119 za zaproszeniami.
+
+jcmsplugin.collaborativespace.settings.lbl.info:                    Informacje og\u00f3lne
+jcmsplugin.collaborativespace.settings.lbl.info.presentation:       Prezentacja
+jcmsplugin.collaborativespace.settings.lbl.info.access:             Dost\u0119p i rejestracja
+jcmsplugin.collaborativespace.settings.lbl.layout:                  Uk\u0142ad
+jcmsplugin.collaborativespace.settings.lbl.model:                   Model
+jcmsplugin.collaborativespace.settings.lbl.look:                    Nag\u0142\u00f3wek
+jcmsplugin.collaborativespace.settings.lbl.look.theme:              Motyw
+jcmsplugin.collaborativespace.settings.lbl.look.condensed:          Tryb skondensowany
+jcmsplugin.collaborativespace.settings.lbl.look.condensed.h:        Tryb skondensowany zmniejsza wysoko\u015b\u0107 nag\u0142\u00f3wka i wykorzystuje tylko kolor t\u0142a
+jcmsplugin.collaborativespace.settings.lbl.look.color-tab:          Kolory
+jcmsplugin.collaborativespace.settings.lbl.look.header-tab:         Obraz t\u0142a
+jcmsplugin.collaborativespace.settings.lbl.look.color:              Kolor t\u0142a
+jcmsplugin.collaborativespace.settings.lbl.look.headers:            Nag\u0142\u00f3wek
+jcmsplugin.collaborativespace.settings.lbl.look.no-header:          Brak nag\u0142\u00f3wka
+jcmsplugin.collaborativespace.settings.lbl.look.header-background:  T\u0142o
+jcmsplugin.collaborativespace.settings.lbl.look.header-custom:      Obraz t\u0142a
+jcmsplugin.collaborativespace.settings.lbl.look.header-custom.h:    Mo\u017cna wybra\u0107 w\u0142asny obraz dla nag\u0142\u00f3wka lub wybra\u0107 jeden z wst\u0119pnie zdefiniowanej listy.
+jcmsplugin.collaborativespace.settings.lbl.look.header-no-image:    Brak obrazu t\u0142a
+jcmsplugin.collaborativespace.settings.lbl.look.header-position:    Umieszczenie obrazu
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat:      Powtarzanie obrazu
+jcmsplugin.collaborativespace.settings.lbl.look.header-no-repeat:   Brak
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat-x:    Poziome
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat-y:    Pionowe
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat-both: Oba
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror:      Lustrzane
+jcmsplugin.collaborativespace.settings.lbl.look.header-no-mirror:   Brak
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror-x:    Poziome
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror-y:    Pionowe
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror-both: Oba
+jcmsplugin.collaborativespace.settings.lbl.look.header-color:       Kolor tytu\u0142u
+jcmsplugin.collaborativespace.settings.lbl.look.header-tabs-color:  Kolor tekstu zak\u0142adek
+jcmsplugin.collaborativespace.settings.lbl.look.header-tabs-bgcolor: Kolor t\u0142a zak\u0142adek
+jcmsplugin.collaborativespace.settings.lbl.look.header-tabs-opacity: Nieprzejrzysto\u015b\u0107 zak\u0142adek
+jcmsplugin.collaborativespace.settings.lbl.layout:                  Uk\u0142ad
+jcmsplugin.collaborativespace.settings.lbl.layout.main:             Uk\u0142ad strony
+jcmsplugin.collaborativespace.settings.lbl.layout.dashboard:        Strona g\u0142\u00f3wna
+jcmsplugin.collaborativespace.settings.lbl.layout.dashboard.column: Kolumny
+jcmsplugin.collaborativespace.settings.lbl.jmobile:                 JMobile
+jcmsplugin.collaborativespace.settings.lbl.jmobile-delete-portlet:  Usu\u0144 portlet z portalu
+jcmsplugin.collaborativespace.settings.lbl.jmobile-drag-portlet:    Kliknij na d\u0142u\u017cej, aby przeci\u0105gn\u0105\u0107 portlet
+jcmsplugin.collaborativespace.settings.alt.test:                    Test
+jcmsplugin.collaborativespace.settings.alt.jmobile-template:        Szablon JMobile
+jcmsplugin.collaborativespace.settings.lbl.add-portlet:             Dodaj portlet
+
+jcmsplugin.collaborativespace.services.lbl.title:                   Dodaj aplikacje
+jcmsplugin.collaborativespace.services.lbl.all-services:            Wszystkie aplikacje
+jcmsplugin.collaborativespace.services.lbl.installed-services:      Zainstalowane aplikacje
+jcmsplugin.collaborativespace.services.lbl.installed-service.title: Zainstalowane
+jcmsplugin.collaborativespace.services.lbl.not-installed-services:  Inne aplikacje
+jcmsplugin.collaborativespace.services.lbl.status:                  Stan
+jcmsplugin.collaborativespace.services.lbl.type:                    Typ
+jcmsplugin.collaborativespace.services.lbl.type.application:        Aplikacja
+jcmsplugin.collaborativespace.services.lbl.type.dashboard:          Pulpit nawigacyjny
+jcmsplugin.collaborativespace.services.lbl.name:                    Nazwa aplikacji
+jcmsplugin.collaborativespace.services.lbl.description:             Opis
+jcmsplugin.collaborativespace.services.lbl.add:                     Dodaj
+jcmsplugin.collaborativespace.services.lbl.edit:                    Zmie\u0144
+jcmsplugin.collaborativespace.services.lbl.preview-action:          Podgl\u0105d
+jcmsplugin.collaborativespace.services.lbl.preview:                 Podgl\u0105d
+jcmsplugin.collaborativespace.services.btn.add-service:             Dodaj t\u0119 aplikacj\u0119
+jcmsplugin.collaborativespace.services.btn.customize-service:       Dostosuj t\u0119 aplikacj\u0119...
+jcmsplugin.collaborativespace.services.btn.remove-service:          Usu\u0144 t\u0119 aplikacj\u0119
+jcmsplugin.collaborativespace.services.btn.add:                     Dodaj
+jcmsplugin.collaborativespace.services.btn.remove:                  Usu\u0144
+jcmsplugin.collaborativespace.services.lbl.add-title:               Dodaj aplikacj\u0119
+jcmsplugin.collaborativespace.services.lbl.add-modal-title:         Dodaj aplikacj\u0119...
+jcmsplugin.collaborativespace.services.lbl.add-new-title:           Dodaj now\u0105 aplikacj\u0119
+jcmsplugin.collaborativespace.services.smartphone-ability.label:    Wy\u015bwietl w JMobile
+
+jcmsplugin.collaborativespace.settings.lbl.model-instances:         Instancje modelu
+jcmsplugin.collaborativespace.settings.lbl.model-instances-count:   {0,choice,0# Brak instancji|1# 1 instancja|2# {0} instancje}
+
+jcmsplugin.collaborativespace.settings.model-instances.csp.title:   Przestrze\u0144 wsp\u00f3\u0142pracy
+jcmsplugin.collaborativespace.settings.model-instances.sync.title:  Tryby synchronizacji
+
+jcmsplugin.collaborativespace.members.btn.enroll-members:               Zapisz cz\u0142onk\u00f3w...
+jcmsplugin.collaborativespace.members.lbl.enroll-members:               Zapisz cz\u0142onk\u00f3w
+jcmsplugin.collaborativespace.members.enroll-modal.intro:               Wybierz cz\u0142onk\u00f3w i/lub grupy do dodania do grupy docelowej.
+jcmsplugin.collaborativespace.members.enroll-modal.target-group:        Grupa docelowa
+jcmsplugin.collaborativespace.members.enroll-modal.groups.description:  Cz\u0142onkowie tej grupy zostan\u0105 dodani do grupy docelowej.
+jcmsplugin.collaborativespace.members.btn.add-group:                    Dodaj grup\u0119...
+jcmsplugin.collaborativespace.members.lbl.add-group:                    Dodaj grup\u0119
+jcmsplugin.collaborativespace.members.btn.edit-group:                   Edytuj grup\u0119...
+
+jcmsplugin.collaborativespace.members.validate-signup-modal.groups:     Grupy docelowe
+jcmsplugin.collaborativespace.members.validate-signup-modal.groups.h:   Grupy, do kt\u00f3rych cz\u0142onek zostanie dodany.
+
+jcmsplugin.collaborativespace.invitations.lbl.invitations:     Zaproszenia
+jcmsplugin.collaborativespace.invitations.lbl.all-status:      Wszystkie zaproszenia
+jcmsplugin.collaborativespace.invitations.lbl.guest:           Go\u015b\u0107
+jcmsplugin.collaborativespace.invitations.lbl.target-group:    Grupa docelowa
+jcmsplugin.collaborativespace.invitations.btn.send-invitation: Wy\u015blij zaproszenia...
+
+jcmsplugin.collaborativespace.invitations.status.0: Wys\u0142ane
+jcmsplugin.collaborativespace.invitations.status.1: Zaakceptowane
+jcmsplugin.collaborativespace.invitations.status.2: Odrzucone
+
+jcmsplugin.collaborativespace.invitations.status.long.0: Zaproszenie wys\u0142ane
+jcmsplugin.collaborativespace.invitations.status.long.1: Zaproszenie przyj\u0119te
+jcmsplugin.collaborativespace.invitations.status.long.2: Zaproszenie odrzucone
+
+jcmsplugin.collaborativespace.invitations.send.title:            Wy\u015blij zaproszenia
+jcmsplugin.collaborativespace.invitations.send.info:             Wybierz cz\u0142onk\u00f3w lub grupy, kt\u00f3rym chcesz wys\u0142a\u0107 zaproszenie do do\u0142\u0105czenia do tej przestrzeni wsp\u00f3\u0142pracy
+jcmsplugin.collaborativespace.invitations.send.lbl.message:      Wiadomo\u015b\u0107
+jcmsplugin.collaborativespace.invitations.send.btn.send:         Wy\u015blij
+
+jcmsplugin.collaborativespace.invitations.title: Zaproszenie dla {0}
+
+jcmsplugin.collaborativespace.invitations.process-modal.title:    Zaproszenie
+jcmsplugin.collaborativespace.invitations.process-modal.info:     {0} zaprosi\u0142/a Ci\u0119 do cz\u0142onkostwa w przestrzeni wsp\u00f3\u0142pracy {1}.<br />Mo\u017cesz przyj\u0105\u0107 to zaproszenie, odrzuci\u0107 je lub zdecydowa\u0107 p\u00f3\u017aniej.
+jcmsplugin.collaborativespace.invitations.process-modal.btn.accept:     Zaakceptuj
+jcmsplugin.collaborativespace.invitations.process-modal.btn.decline:    Odrzu\u0107...
+
+jcmsplugin.collaborativespace.signup.info.free:           Mo\u017cesz si\u0119 zarejestrowa\u0107 natychmiast w tej przestrzeni wsp\u00f3\u0142pracy.
+jcmsplugin.collaborativespace.signup.info.request:        Aby zarejestrowa\u0107 si\u0119 w tej przestrzeni wsp\u00f3\u0142pracy, wy\u015blij pro\u015bb\u0119. Powiadomienie zostanie wys\u0142ane natychmiast po zatwierdzeniu Twojej pro\u015bby.
+jcmsplugin.collaborativespace.signup.btn.signup:          Zarejestruj mnie
+jcmsplugin.collaborativespace.signup.info.already-signup: {0}, ju\u017c poprosi\u0142e\u015b/a\u015b o t\u0119 rejestracj\u0119.
+jcmsplugin.collaborativespace.signup.error.workspace-no-group: Pro\u015bby o rejestracj\u0119 wymagaj\u0105 od obszar\u00f3w roboczych posiadania grupy domy\u015blnej.
+
+jcmsplugin.collaborativespace.signup.lbl.signups:         Pro\u015bby o rejestracj\u0119
+jcmsplugin.collaborativespace.signup.lbl.signup:          Pro\u015bba o rejestracj\u0119
+jcmsplugin.collaborativespace.signup.lbl.submit-mbr:      Wnioskodawca
+jcmsplugin.collaborativespace.signup.lbl.process:         Przetw\u00f3rz ten wniosek
+jcmsplugin.collaborativespace.signup.btn.accept:          Zaakceptuj
+jcmsplugin.collaborativespace.signup.btn.reject:          Odrzu\u0107
+jcmsplugin.collaborativespace.unsignup.confirm:           Czy na pewno chcesz si\u0119 wyrejestrowa\u0107?
+
+jcmsplugin.collaborativespace.welcome.title:   Witamy!
+jcmsplugin.collaborativespace.welcome.content: <p>Gratulacje! Twoja przestrze\u0144 wsp\u00f3\u0142pracy jest gotowa i dzia\u0142a.</p><p>Kilka wskaz\u00f3wek, co mo\u017cesz robi\u0107</p><ul><li class='cs-welcome-tip-look-and-feel'><a href="{0}">Zmienia\u0107 wygl\u0105d i nastr\u00f3j</a></li><li class='cs-welcome-tip-add-members'><a href="{1}">Dodaj cz\u0142onk\u00f3w</a></li><li class='cs-welcome-tip-send-invitations'><a href="{2}">Wysy\u0142aj zaproszenia</a></li><li class='cs-welcome-tip-services'><a href="{3}">Dodaj aplikacje</a></li></ul>
+
+jcmsplugin.collaborativespace.lbl.cs:    Przestrze\u0144 wsp\u00f3\u0142pracy
+jcmsplugin.collaborativespace.lbl.model: Model
+
+jcmsplugin.collaborativespace.lbl.follow.action:        Obserwuj
+jcmsplugin.collaborativespace.lbl.unfollow.action:      Zako\u0144cz obserwowanie
+jcmsplugin.collaborativespace.lbl.follow.title:         Obserwuj przestrze\u0144
+jcmsplugin.collaborativespace.lbl.follow.description:   B\u0119dziesz otrzymywa\u0107 najnowsze wiadomo\u015bci o tej przestrzeni
+jcmsplugin.collaborativespace.lbl.unfollow.title:       Zako\u0144cz obserwowanie przestrzeni
+jcmsplugin.collaborativespace.lbl.unfollow.description: Nie b\u0119dziesz ju\u017c otrzymywa\u0107 najnowszych wiadomo\u015bci o tej przestrzeni.
+
+jcmsplugin.collaborativespace.lbl.synchronization-on-model: Ten portal jest zsynchronizowany na swoim modelu, nie mo\u017cna zmieni\u0107 wy\u015bwietlania.
+
+jcmsplugin.collaborativespace.msg.cannot-update-sync-data: Nie mo\u017cna modyfikowa\u0107 \u201e{0}\u201d, poniewa\u017c te dane s\u0105 zsynchronizowane z jego modelem.
+
+jcmsplugin.collaborativespace.header.search-button: Rozpocznij wyszukiwanie w obszarze roboczym {0}
+
+# ------------------------------------------------------------
+#  ADMIN LIST
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.admin-list.remove-member: Usun\u0105\u0107 z listy lider\u00f3w
+jcmsplugin.collaborativespace.admin-list.add-member-btn: Doda\u0107 lidera...
+
+# ------------------------------------------------------------
+#  SUGGESTIONS
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.suggestion.none: Brak sugestii.
+jcmsplugin.collaborativespace.suggestion.reset: Resetuj propozycje...
+jcmsplugin.collaborativespace.suggestion.reject: Nie, dzi\u0119kuj\u0119!
+
+# ------------------------------------------------------------
+#  APP
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.app.home.title: Id\u017a do strony g\u0142\u00f3wnej spo\u0142eczno\u015bci
+
+# ------------------------------------------------------------
+#  PUBLISH MENU
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.publish-menu.create: Przestrze\u0144 wsp\u00f3\u0142pracy
+
+# ------------------------------------------------------------
+#  CollaborativeSpace Recommendation (+alert)
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.space-recommendation.title: Polecenie dotycz\u0105ce do\u0142\u0105czenia do przestrzeni
+jcmsplugin.collaborativespace.space-recommendation.intro: Pole\u0107 cz\u0142onk\u00f3w do do\u0142\u0105czenia do przestrzeni <strong>{0}</strong>.
+jcmsplugin.collaborativespace.space-recommendation.no-recipient: Wybierz co najmniej jednego cz\u0142onka lub jedn\u0105 grup\u0119.
+jcmsplugin.collaborativespace.space-recommendation.field.msg: Twoja wiadomo\u015b\u0107
+
+# ------------------------------------------------------------
+#  EDITABLE PROPERTIES
+# ------------------------------------------------------------
+$id.jcmsplugin.collaborativespace.typology-root: Typologia g\u0142\u00f3wna przestrzeni wsp\u00f3\u0142pracy
+$id.CSRequest.formAuthor: Autora \u017c\u0105dania dotycz\u0105cego przestrzeni wsp\u00f3\u0142pracy (CS)
+$id.CSRequest.workspace:  \u017b\u0105dania obszaru roboczego dla przestrzeni wsp\u00f3\u0142pracy (CS)
+$id.jcmsplugin.collaborativespace.typology-portal: Portal przestrzeni wsp\u00f3\u0142pracy (CS) wg typologii
+$id.jcmsplugin.collaborativespace.cs-creation-group: Tworzenie przestrzeni wsp\u00f3\u0142pracy (CS) grupy
+$id.jcmsplugin.collaborativespace.cs-creation-group.help: Identyfikator grupy, kt\u00f3ry daje prawo do bezpo\u015bredniego tworzenia przestrzeni wsp\u00f3\u0142pracy (CS), bez zatwierdzania przep\u0142ywu pracy <i>(workflow).</i> Jest to alternatywa na nadanie ACL cz\u0142onkowi.
+jcmsplugin.collaborativespace.guestaccounts.enabled: Aktywowa\u0107 konta go\u015bci?
+$id.jcmsplugin.collaborativespace.guestaccounts.group: Grupa kont go\u015bci
+$id.jcmsplugin.collaborativespace.guestaccounts.group.help: Identyfikator grupy, kt\u00f3ry zawiera wszystkie konta go\u015bci organizacji
+$id.GuestRequest.workspace: Obszar roboczy zawieraj\u0105cy pro\u015bby o konta go\u015bci
+$id.GuestRequest.workspace.help: Identyfikator obszaru roboczego dla obszaru roboczego, w kt\u00f3rym b\u0119d\u0105 zapisywane konta go\u015bci (domy\u015blnie, domy\u015blny obszar roboczy).
+$id.jcmsplugin.collaborativespace.guestaccounts.homepage-ws: Obszar przywitania go\u015bci
+$id.jcmsplugin.collaborativespace.guestaccounts.homepage-ws.help: Obszar roboczy dost\u0119pny dla wszystkich go\u015bci, z kt\u00f3rego mog\u0105 skorzysta\u0107 w celu rozpocz\u0119cia pracy z platform\u0105.
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE ABILITIES
+# ------------------------------------------------------------
+portlet.ability.jcmsplugin.collaborativespace:                Przestrzenie wsp\u00f3\u0142pracy
+portlet.ability.jcmsplugin.collaborativespace.dashboard:      Pulpit nawigacyjny
+portlet.ability.jcmsplugin.collaborativespace.application:    Aplikacja
+
+ui.editportlet.usage.skin.collaborativeSpace: Sk\u00f3rka przestrzeni wsp\u00f3\u0142pracy
+ui.editportlet.usage.skin.collaborativeSpaceNoSkin: Sk\u00f3rka przestrzeni wsp\u00f3\u0142pracy (brak)
+
+# ------------------------------------------------------------
+#  PORTLET MY COLLABORATIVE SPACES
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.portlet.mycs.lbl.mine:   Moje obszary
+jcmsplugin.collaborativespace.portlet.mycs.lbl.other:  Inne obszary
+jcmsplugin.collaborativespace.portlet.mycs.lbl.none:   Brak obszar\u00f3w
+jcmsplugin.collaborativespace.portlet.mycs.lbl.filter: Filtruj wg...
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE I18N
+# ------------------------------------------------------------
+
+jcmsplugin.collaborativespace.label.edit:         Edytuj
+jcmsplugin.collaborativespace.label.objectives:   Cele
+jcmsplugin.collaborativespace.label.support:      Wsparcie:
+jcmsplugin.collaborativespace.label.breadcrumb:   \u015alad paska adresu:
+jcmsplugin.collaborativespace.request-date:       Data \u017c\u0105dania: {0}
+
+jcmsplugin.collaborativespace.editform.create:    Utw\u00f3rz przestrze\u0144 wsp\u00f3\u0142pracy
+jcmsplugin.collaborativespace.editform.update:    Aktualizuj przestrze\u0144 wsp\u00f3\u0142pracy
+
+jcmsplugin.collaborativespace.csrequest.model:    Wygenerowany model
+
+jcmsplugin.collaborativespace.handler.msg.cs-max: Dozwolona jest tylko 1 przestrze\u0144 wsp\u00f3\u0142pracy na obszar roboczy.
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.title: Aktywacja e-maili przychodz\u0105cych
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.content: E-maile przychodz\u0105ce s\u0105 teraz aktywne w tej przestrzeni.
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.footer: Edytuj ustawienia w celu dostosowania przedrostka e-maili przychodz\u0105cych: <strong>{0}</strong>.
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.edit-button: Edytuj ustawienia
+
+jcmsplugin.collaborativespace.dashboard.new:      Brak tre\u015bci do wy\u015bwietlenia.<br/><img src='images/jalios/icons/add.gif' class='icon' alt=''/>&nbsp;Utw\u00f3rz now\u0105 tre\u015b\u0107.
+jcmsplugin.collaborativespace.dashboard.warn.invalid-portal-container: Szablon wyboru portletu dzia\u0142a wy\u0142\u0105cznie w portalu przestrzeni wsp\u00f3\u0142pracy.
+
+jcmsplugin.collaborativespace.introduction.edit: Edytuj wprowadzenie
+jcmsplugin.collaborativespace.introduction.empty.default-message: Wprowadzenie do tej przestrzeni nie zosta\u0142o jeszcze napisane.
+jcmsplugin.collaborativespace.introduction.infos.access.header: Dost\u0119p
+jcmsplugin.collaborativespace.introduction.infos.access.membership.true: (jeste\u015b zarejestrowany/a)
+jcmsplugin.collaborativespace.introduction.infos.access.membership.false: (nie jeste\u015b zarejestrowany/a)
+jcmsplugin.collaborativespace.introduction.infos.guests.header: Go\u015bcie
+jcmsplugin.collaborativespace.introduction.infos.guests.info: {0,choice,0# nie ma go\u015bci|1# jest 1 go\u015b\u0107|2# jest {0} go\u015bci}.
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail: Skrzynka pocztowa
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail.h: E-maile wysy\u0142ane na ten adres b\u0119d\u0105 zapisywane w tej przestrzeni w Twoim nazwisku.
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail.your-address: Tw\u00f3j adres osobisty do wsp\u00f3\u0142udzia\u0142u w tej przestrzeni:
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail.warning: Ostrze\u017cenie! Ten adres jest osobisty Nie podawaj go.
+
+jcmsplugin.collaborativespace.typology-portal.presentation.edit: Edytuj prezentacj\u0119
+jcmsplugin.collaborativespace.typology-portal.presentation.empty.default-message: Prezentacji dla tej kategorii jeszcze nie wype\u0142niono.
+jcmsplugin.collaborativespace.typology-portal.spaces-list.title: Lista przestrzeni
+jcmsplugin.collaborativespace.typology-portal.pqfe.lbl.cs-result: {0,choice,0#Brak przestrzeni|1#Jedna przestrze\u0144|2#{0,number,integer} przestrzenie|5#{0} przestrzeni}.
+jcmsplugin.collaborativespace.typology-portal.pqfe.lbl.placeholder.search: Szukaj w {0}
+jcmsplugin.collaborativespace.typology-portal.lbl.csList.header: {0,choice,0# Brak przestrzeni|1#1 przestrze\u0144|2#{0,number,integer} przestrzenie|5#{0} przestrzeni}.
+jcmsplugin.collaborativespace.typology-portal.lbl.cs-typology.info: Utworzono {0}. {1,choice,0#Brak uczestnik\u00f3w|1#1 uczestnik|2#{1,number,integer} uczestnik\u00f3w}. Prowadzona przez {2}
+jcmsplugin.collaborativespace.typology-portal.lbl.cs-typology.info-parent: Pod
+jcmsplugin.collaborativespace.typology-portal.lbl.cs-typology.admins-list: {0,choice,0# brak lider\u00f3w|1# {2}|2# {1} i {2}}
+
+
+# Query dates
+jcmsplugin.collaborativespace.query.today:     Dzisiaj
+jcmsplugin.collaborativespace.query.tomorrow:  Jutro
+jcmsplugin.collaborativespace.query.yesterday: Wczoraj
+jcmsplugin.collaborativespace.query.before:    Poprzednio
+jcmsplugin.collaborativespace.query.after:     Ostatnie
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE CONTROL
+# ------------------------------------------------------------
+
+jcmsplugin.collaborativespace.msg.edit.cslicense:     Aktualna licencja JCMS nie pozwala na tworzenie wi\u0119kszej liczby przestrzeni wsp\u00f3\u0142pracy.
+jcmsplugin.collaborativespace.msg.edit.workspace.typology-used: Typologii <i>({0})</i> nie nale\u017cy u\u017cywa\u0107 w obszarze roboczym, ale w portlecie przestrzeni wsp\u00f3\u0142pracy.
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE DATA
+# ------------------------------------------------------------
+
+data.$id.jcmsplugin.collaborativespace.data.cat:                        Przestrzenie wsp\u00f3\u0142pracy
+data.$id.jcmsplugin.collaborativespace.data.group.writer:               Przestrze\u0144 wsp\u00f3\u0142pracy - pisz\u0105cy
+data.$id.jcmsplugin.collaborativespace.data.group.reader:               Przestrze\u0144 wsp\u00f3\u0142pracy - uczestnicy
+data.$id.jcmsplugin.collaborativespace.data.internal.dashboard:         Pulpit nawigacyjny
+data.$id.jcmsplugin.collaborativespace.data.internal.icons:             Ikony
+data.$id.jcmsplugin.collaborativespace.data.internal.search:            Szukaj
+data.$id.jcmsplugin.collaborativespace.data.service.latest-contents:    Najnowsze tre\u015bci
+data.$id.jcmsplugin.collaborativespace.data.service.latest-contents.d:  Wy\u015bwietl najnowsz\u0105 tre\u015b\u0107 w tej przestrzeni wsp\u00f3\u0142pracy
+data.$id.jcmsplugin.collaborativespace.data.service.latest-documents:   Najnowsze dokumenty
+data.$id.jcmsplugin.collaborativespace.data.service.latest-documents.d: Wy\u015bwietl najnowsze dokumenty w tej przestrzeni wsp\u00f3\u0142pracy
+data.$id.jcmsplugin.collaborativespace.data.service.workflow:           Przep\u0142yw pracy
+data.$id.jcmsplugin.collaborativespace.data.service.workflow.d:         Wy\u015bwietl publikacje do przetworzenia
+data.$id.jcmsplugin.collaborativespace.data.service.glossary:           Glosariusze
+data.$id.jcmsplugin.collaborativespace.data.service.glossary.d:         Wy\u015bwietlanie glosariuszy w tej przestrzeni wsp\u00f3\u0142pracy.
+data.$id.jcmsplugin.collaborativespace.data.service.faq:                Cz\u0119sto zadawane pytania i odpowiedzi
+data.$id.jcmsplugin.collaborativespace.data.service.faq.d:              Wy\u015bwietlanie cz\u0119sto zadawanych pyta\u0144 w tej przestrzeni wsp\u00f3\u0142pracy.
+data.$id.jcmsplugin.collaborativespace.data.service.introduction:       Wprowadzenie
+data.$id.jcmsplugin.collaborativespace.data.service.introduction.d:     Wy\u015bwietlanie wprowadzenia w tej przestrzeni wsp\u00f3\u0142pracy
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-full:      Kalendarz
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-full.d:    Aplikacja do zarz\u0105dzania wydarzeniami cz\u0142onk\u00f3w przestrzeni wsp\u00f3\u0142pracy
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-small:     Ma\u0142y kalendarz
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-small.d:   Wy\u015bwietlanie kalendarza bie\u017c\u0105cego miesi\u0105ca
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-diary:     Dziennik
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-diary.d:   Wy\u015bwietlanie dziennika bie\u017c\u0105cego miesi\u0105ca.
+data.$id.jcmsplugin.collaborativespace.data.service.event-schedule:     Harmonogram wydarze\u0144
+data.$id.jcmsplugin.collaborativespace.data.service.event-schedule.d:   Lista harmonogram\u00f3w wydarze\u0144 dla tej przestrzeni
+data.$id.jcmsplugin.collaborativespace.data.service.subspaces:          Podrz\u0119dne obszary robocze
+data.$id.jcmsplugin.collaborativespace.data.service.subspaces.d:        Lista podrz\u0119dnych obszar\u00f3w roboczych w tej przestrzeni
+data.$id.jcmsplugin.collaborativespace.data.model.ws:                   Model przestrzeni wsp\u00f3\u0142pracy
+data.$id.jcmsplugin.collaborativespace.data.model.portal:               Model przestrzeni wsp\u00f3\u0142pracy
+data.$id.jcmsplugin.collaborativespace.data.model.portal.desc:          Model do tworzenia nowej przestrzeni wsp\u00f3\u0142pracy
+data.$id.jcmsplugin.collaborativespace.data.model.cat:                  $NAME$ Przestrze\u0144 wsp\u00f3\u0142pracy
+data.$id.jcmsplugin.collaborativespace.data.model.group.writer:         $NAME$ - pisarze
+data.$id.jcmsplugin.collaborativespace.data.model.group.reader:         $NAME$ - uczestnicy
+data.$id.jcmsplugin.collaborativespace.data.model.group.follower:       $NAME$ - obserwatorzy
+
+# ------------------------------------------------------------
+#  Guest Accounts Feature
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.guestaccounts.guest.label: Go\u015b\u0107
+jcmsplugin.collaborativespace.guestaccounts.guestGroup.label: Go\u015bcie
+jcmsplugin.collaborativespace.guestaccounts.guestManagerGroup.label: Mened\u017cerzy go\u015bcie
+jcmsplugin.collaborativespace.guestaccounts.guestManagerACL.label: Mened\u017cerzy go\u015bcie
+jcmsplugin.collaborativespace.guestaccounts.account-creation.label: Utw\u00f3rz konto go\u015bcia...
+jcmsplugin.collaborativespace.guestaccounts.contact-transformation.member-profile-target.label: Skonwertuj na konto go\u015bcia...
+jcmsplugin.collaborativespace.guestaccounts.workspaces-and-groups.workspace.label.title: Aby wy\u015bwietli\u0107/ukry\u0107 list\u0119 grup tego obszaru roboczego, kliknij tutaj
+jcmsplugin.collaborativespace.guestaccounts.no-guest-group-defined: Aktywacja funkcji konta go\u015bcia wymaga okre\u015blenia prawid\u0142owej grupy kont go\u015bci.<br />Sprawd\u017a w\u0142a\u015bciwo\u015b\u0107 <strong>{0}</strong> ($id.jcmsplugin.collaborativespace.guestaccounts.group).
+jcmsplugin.collaborativespace.guestaccounts.member-controller.error.account-already-in-workspaces: <p>Konto <strong>go\u015bcia</strong> musi nale\u017ce\u0107 do przestrzeni <strong>nieb\u0119d\u0105cej</strong> grup\u0105 przestrzeni wsp\u00f3\u0142pracy.</p><ul><li><strong>Usu\u0144</strong> grup\u0119 przestrzeni nieb\u0119d\u0105cych przestrzeniami wsp\u00f3\u0142pracy, aby zmieni\u0107 je w konto go\u015bcia {{0}}</li><li>lub <strong>usu\u0144</strong> j\u0105 z grupy kont go\u015bci, aby umo\u017cliwi\u0107 dost\u0119p do przestrzeni nieb\u0119d\u0105cych przestrzeniami wsp\u00f3\u0142pracy.</li></ul>
+jcmsplugin.collaborativespace.guestaccounts.member-controller.error.no-valid-email: Konto go\u015bcia musi mie\u0107 prawid\u0142owy adres e-mail.
+jcmsplugin.collaborativespace.guestaccounts.member-controller.error.contact-creation-forbidden: Konto go\u015bcia nie mo\u017ce tworzy\u0107 kontakt\u00f3w.
+jcmsplugin.collaborativespace.guestaccounts.member-controller.warning.guest-group-removal: Usuni\u0119cie tego konta z grupy kont go\u015bci da wi\u0119kszy dost\u0119p do tego konta.<br />Aby kontynuowa\u0107, wymu\u015b usuni\u0119cie tego konta z grupy go\u015bci.
+jcmsplugin.collaborativespace.guestaccounts.member-controller.guest-group-removal.lbl: Usu\u0144 z go\u015bci
+jcmsplugin.collaborativespace.guestaccounts.member-controller.guest-group-removal.lbl.h: Wymusi\u0107 usuni\u0119cie tego konta z grupy kont go\u015bci?
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.feature-not-enabled: Nie mo\u017cna przetworzy\u0107 Twojej pro\u015bby. Sprawd\u017a ustawienia funkcji go\u015bci.
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-submitter: Wnioskodawca jest obowi\u0105zkowy.
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-group: Wybierz co najmniej jedn\u0105 grup\u0119 przestrzeni wsp\u00f3\u0142pracy.
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-name: Go\u015b\u0107 musi mie\u0107 nazw\u0119.
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-organization: Go\u015b\u0107 musi mie\u0107 organizacj\u0119.
+jcmsplugin.collaborativespace.guestaccounts.request-modal.use-with-worflow.title: Pro\u015bba o utworzenie konta go\u015bcia
+jcmsplugin.collaborativespace.guestaccounts.request-modal.use-with-no-worflow.title: Tworzenie konta go\u015bcia
+jcmsplugin.collaborativespace.guestaccounts.creation-request-controller.create.finish: <p>Twoja pro\u015bba o utworzenie konta go\u015bcia zosta\u0142a przes\u0142ana z powodzeniem.</p><p>Natychmiast po zatwierdzeniu pro\u015bby konto go\u015bcia zostanie utworzone i zostaniesz powiadomiony/a.</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-controller.account-creation-success.mail.email-notsent: Nie mo\u017cna wys\u0142a\u0107 e-maila: {0}. Spr\u00f3buj ponownie lub skontaktuj si\u0119 z liderem.
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.0: Sprawd\u017a
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1: Propozycje
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.2: Informacje
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.3: Przestrzenie
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.0.intro: <p class='info'>Aby sprawdzi\u0107, czy ta osoba ju\u017c istnieje, wprowad\u017a nazw\u0119 i/lub adres e-mail konta go\u015bcia:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.intro.1: <p class='info'>Dla tych informacji znaleziono istniej\u0105ce konto. Przed utworzeniem sprawd\u017a, czy konto go\u015bcia, kt\u00f3re rozwa\u017casz, ju\u017c nie istnieje.</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.intro.2: <p class='info'>Znaleziono istniej\u0105ce konta. Sprawd\u017a, czy nie s\u0105 to te same osoby, zanim stworzysz now\u0105.<br />Kliknij kart\u0119, aby wy\u015bwietli\u0107 cz\u0142onka w nowym oknie, najed\u017a na kart\u0119 i kliknij przycisk, aby kontynuowa\u0107 prac\u0119 z tym cz\u0142onkiem.</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.see-profile.btn: Poka\u017c profil
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.see-profile.btn.title: Wy\u015bwietl pe\u0142en profil konta w nowym oknie, przed wybraniem dzia\u0142ania
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.select-account.title: Wybierz to istniej\u0105ce konto, tak aby umo\u017cliwi\u0107 zapisanie go do przestrzeni
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.select-account.btn: Zaznacz
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.transform-contact-to-guest.btn-label: Skonwertuj na go\u015bcia
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.transform-contact-to-guest.btn.title: Wybierz ten kontakt, aby przekszta\u0142ci\u0107 go w go\u015bcia, umo\u017cliwiaj\u0105c zapisanie go do przestrzeni
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.2.intro: <p class='info'>Wype\u0142nij informacje dla tworzonego konta go\u015bcia:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.2.intro.convert-contact: <p class='info'>Wype\u0142nij informacje dla kontaktu <strong>{0}</strong> w celu zmiany go na go\u015bcia:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.3.intro: <p class='info'>W nast\u0119puj\u0105cych przestrzeniach wsp\u00f3\u0142pracy, zaznacz grupy, do kt\u00f3rych zostanie dodane konto go\u015bcia:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.3.intro.convert-contact: <p class='info'>W nast\u0119puj\u0105cych przestrzeniach wsp\u00f3\u0142pracy, zaznacz grupy, do kt\u00f3rych nale\u017cy doda\u0107 kontakt <strong>{0}</strong> :</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.use-with-worflow.validate: Wy\u015blij pro\u015bb\u0119
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.use-with-no-worflow.validate: Utw\u00f3rz konto
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.use-with-worflow.validate: Wy\u015blij pro\u015bb\u0119
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.use-with-no-worflow.validate: Konwertuj
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.contact-reminder: Konwersja <strong>{0}</strong> na konto go\u015bcia.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.groups-intro: <p class='info'>W nast\u0119puj\u0105cych przestrzeniach wsp\u00f3\u0142pracy, zaznacz grupy, do kt\u00f3rych zostanie dodane konto go\u015bcia:</p>
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.error.no-email: Aby mo\u017cna by\u0142o skonwertowa\u0107 kontakt na konto go\u015bcia, musi on posiada\u0107 prawid\u0142owy adres e-mail.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.error.email-already-used: Nie mo\u017cna skonwertowa\u0107 kontaktu na konto go\u015bcia. Istniej\u0105ce konto ju\u017c u\u017cywa adresu e-mail <strong>{0}</strong>.<br />U\u017cyj innego adresu e-mail lub skonwertuj istniej\u0105ce konto na konto go\u015bcia.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.error.not-a-contact: Cz\u0142onek do konwersji musi by\u0107 kontaktem.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.create.finish: <p>Twoj\u0105 pro\u015bb\u0119 o konwersj\u0119 kontaktu na konto go\u015bcia przes\u0142ano z powodzeniem.</p><p>Natychmiast po jej zatwierdzeniu zostanie utworzone konto go\u015bcia i zostaniesz powiadomiony/a.</p>
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.account-transformation-success: Kontakt <a href='{0}' target='_blank' title='New window'>{1}</a> z powodzeniem skonwertowano na konto go\u015bcia.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.account-creation-success.mail.email-notsent: Nie mo\u017cna wys\u0142a\u0107 e-maila: {0}. Spr\u00f3buj ponownie lub skontaktuj si\u0119 z liderem.
+jcmsplugin.collaborativespace.guestaccounts.guest-request.notification.warn.no-request: Nie mo\u017cna wys\u0142a\u0107 e-maila zmiany has\u0142a. Nie mo\u017cna wys\u0142a\u0107 powiadomienia dla konta go\u015bcia ({0}).
+jcmsplugin.collaborativespace.guestaccounts.guest-request.notification.warn.mail-disabled: E-maile s\u0105 wy\u0142\u0105czone. Nie mo\u017cna wys\u0142a\u0107 powiadomienia dla konta go\u015bcia.
+jcmsplugin.collaborativespace.guestaccounts.guest-request.notification.warn.unknown-error: Ojej, co\u015b posz\u0142o nie tak. Nie mo\u017cna wys\u0142a\u0107 powiadomienia dla konta go\u015bcia.
+jcmsplugin.collaborativespace.guestaccounts.process-request.btn.accept:  Zaakceptuj
+jcmsplugin.collaborativespace.guestaccounts.process-request.btn.reject:  Odrzu\u0107
+
+
+jcmsplugin.collaborativespace.syncMode.tabs: Aplikacje
+jcmsplugin.collaborativespace.syncMode.dashboard: Strona g\u0142\u00f3wna
+jcmsplugin.collaborativespace.syncMode.data: Struktura danych (typy, przep\u0142yw pracy, grupy, ...)
+jcmsplugin.collaborativespace.syncMode.categories: Kategorie
+jcmsplugin.collaborativespace.syncMode.activate-help.message: Synchronizacja, je\u015bli jest aktywna, stosuje niekt\u00f3re parametry modelu na tym obszarze roboczym
+
+#jcmsplugin.collaborativespace.modelSyncMode.dashboard: Applications
+#jcmsplugin.collaborativespace.modelSyncMode.dashboard: Home 
+#jcmsplugin.collaborativespace.modelSyncMode.dashboard: Data
+
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal: Edycja strony (edycja zaawansowana)...
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-simple: Edytuj stron\u0119...
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-simple-stop: Zatrzymaj edycj\u0119
+jcmsplugin.collaborativespace.actions-menu.recommend-collaborative-space: Udost\u0119pnij...
+jcmsplugin.collaborativespace.modelSyncMode.locked.message: Przestrze\u0144 wsp\u00f3\u0142pracy jest zsynchronizowana z modelem: <b>{0}</b>
+
+# ------------------------------------------------------------
+# Alerts
+# ------------------------------------------------------------
+alert.name.jcmsplugin-collaborativespace:                         Przestrzenie wsp\u00f3\u0142pracy
+alert.name.jcmsplugin-collaborativespace.cs-creation:             Tworzenie przestrzeni wsp\u00f3\u0142pracy
+alert.name.jcmsplugin-collaborativespace.cs-creation-rejected-submitter: Odmowa utworzenia przestrzeni wsp\u00f3\u0142pracy
+alert.name.jcmsplugin-collaborativespace.invitation:              Zaproszenie do do\u0142\u0105czenia do przestrzeni
+alert.name.jcmsplugin-collaborativespace.enrollment:              Zarejestruj si\u0119 w przestrzeni
+alert.name.jcmsplugin-collaborativespace.join:                    Zarejestruj si\u0119 w przestrzeni
+alert.name.jcmsplugin-collaborativespace.recommendation:          Polecenie dla przestrzeni
+alert.name.jcmsplugin-collaborativespace.signup-request:          Pro\u015bba o rejestracj\u0119
+alert.name.jcmsplugin-collaborativespace.signup-accepted:         Rejestracja przyj\u0119ta
+alert.name.jcmsplugin-collaborativespace.signup-rejected:         Odmowa rejestracji
+alert.name.jcmsplugin-collaborativespace.unsignup:                Anulowanie subskrypcji
+alert.name.jcmsplugin-collaborativespace.guest-creation:          Aktywacja konta go\u015bcia
+alert.name.jcmsplugin-collaborativespace.silent-guest-creation:   Aktywacja konta go\u015bcia
+alert.name.jcmsplugin-collaborativespace.contact-to-guest:        Konwersja kontaktu na konto go\u015bcia
+alert.name.jcmsplugin-collaborativespace.silent-contact-to-guest: Konwersja kontaktu na konto go\u015bcia
+
+alert.msg.jcmsplugin-collaborativespace.cs-creation.title:                          Tworzenie przestrzeni wsp\u00f3\u0142pracy {data}
+alert.msg.jcmsplugin-collaborativespace.cs-creation.short-description:              Przestrze\u0144 wsp\u00f3\u0142pracy {data} zosta\u0142a utworzona.
+alert.msg.jcmsplugin-collaborativespace.cs-creation.description:                    <p>Przestrze\u0144 wsp\u00f3\u0142pracy {data} zosta\u0142a utworzona.</p><p>Jeste\u015b liderem tej przestrzeni.</p>
+
+alert.msg.jcmsplugin-collaborativespace.cs-creation-rejected-submitter.title:             Odmowa tworzenia przestrzeni wsp\u00f3\u0142pracy
+alert.msg.jcmsplugin-collaborativespace.cs-creation-rejected-submitter.short-description: Odmowa wniosku o utworzenie przestrzeni wsp\u00f3\u0142pracy (\u201e{cs-title}\u201d). Komentarz walidatora:  {validator-comment}
+
+alert.msg.jcmsplugin-collaborativespace.invitation.title:                           Zaproszenie do do\u0142\u0105czenia {data}
+alert.msg.jcmsplugin-collaborativespace.invitation.short-description:               {author} zaprosi\u0142/a Ci\u0119 do zostania cz\u0142onkiem przestrzeni wsp\u00f3\u0142pracy {data}.
+alert.msg.jcmsplugin-collaborativespace.invitation.description:                     <p>{author} zaprosi\u0142/a Ci\u0119 do zostania cz\u0142onkiem przestrzeni wsp\u00f3\u0142pracy {data}.</p><p><a href="{accept-url}">Przyjmij to zaproszenie</a></p><p><a href="{decline-url}">Odrzu\u0107 to zaproszenie</a></p><br /><p><b>Opis przestrzeni:</b></p><p>{cs-description}</p>
+
+alert.msg.jcmsplugin-collaborativespace.enrollment.title:                           Zarejestruj si\u0119 {data}
+alert.msg.jcmsplugin-collaborativespace.enrollment.short-description:               Jeste\u015b cz\u0142onkiem przestrzeni wsp\u00f3\u0142pracy {data}.
+
+alert.msg.jcmsplugin-collaborativespace.join.title:                                 Zarejestruj si\u0119 {data}
+alert.msg.jcmsplugin-collaborativespace.join.short-description:                     {author} do\u0142\u0105czy\u0142/a do przestrzeni wsp\u00f3\u0142pracy {data}.
+alert.msg.jcmsplugin-collaborativespace.join.description:                           <p><a href="{author-url}">{author}</a> do\u0142\u0105czy\u0142/a do przestrzeni wsp\u00f3\u0142pracy {data}.</p>
+
+alert.msg.jcmsplugin-collaborativespace.recommendation.title:                       Zalecenia dotycz\u0105ce przestrzeni wsp\u00f3\u0142pracy {data}
+alert.msg.jcmsplugin-collaborativespace.recommendation.short-description:           {author} poleca ci\u0119 do do\u0142\u0105czenia do przestrzeni wsp\u00f3\u0142pracy {data}.
+alert.msg.jcmsplugin-collaborativespace.recommendation.description:                 <p>{author} poleca ci\u0119 do do\u0142\u0105czenia do przestrzeni wsp\u00f3\u0142pracy {data}.</p>
+
+alert.msg.jcmsplugin-collaborativespace.signup-request.title:                       Pro\u015bba o rejestracj\u0119 w {data}
+alert.msg.jcmsplugin-collaborativespace.signup-request.short-description:           {author} wys\u0142a\u0142/a pro\u015bb\u0119 o rejestracj\u0119 w przestrzeni wsp\u00f3\u0142pracy {data}.
+alert.msg.jcmsplugin-collaborativespace.signup-request.description:                 <p>{author} wys\u0142a\u0142/a <a href="{signup-url}">pro\u015bb\u0119 o rejestracj\u0119</a> w przestrzeni wsp\u00f3\u0142pracy {data}.</p>
+
+alert.msg.jcmsplugin-collaborativespace.signup-accepted.title:                      Pro\u015bba o rejestracj\u0119 w {data}
+alert.msg.jcmsplugin-collaborativespace.signup-accepted.short-description:          Twoja pro\u015bba o rejestracj\u0119 w przestrzeni wsp\u00f3\u0142pracy {data} zosta\u0142a zatwierdzona przez {author}.
+alert.msg.jcmsplugin-collaborativespace.signup-accepted.description:                <p>Gratulacje! Twoja pro\u015bba o rejestracj\u0119 w przestrzeni wsp\u00f3\u0142pracy {data} zosta\u0142a zatwierdzona przez {author}. Od tego momentu jeste\u015b cz\u0142onkiem tej przestrzeni.</p>
+
+alert.msg.jcmsplugin-collaborativespace.signup-rejected.title:                      Pro\u015bba o rejestracj\u0119 w {data}
+alert.msg.jcmsplugin-collaborativespace.signup-rejected.short-description:          Twoja pro\u015bba o rejestracj\u0119 w przestrzeni wsp\u00f3\u0142pracy {data} zosta\u0142a odrzucona. Komentarz walidatora:  {validator-comment}
+
+alert.msg.jcmsplugin-collaborativespace.unsignup.title:                             Anuluj subskrypcj\u0119 na {data}
+alert.msg.jcmsplugin-collaborativespace.unsignup.short-description:                 {author} wyrejestrowa\u0142/a si\u0119 z przestrzeni wsp\u00f3\u0142pracy {data}.
+
+alert.msg.jcmsplugin-collaborativespace.guest-creation.title:                       Aktywacja konta go\u015bcia
+alert.msg.jcmsplugin-collaborativespace.guest-creation.short-description:           Konto go\u015bcia {data} ({organization}) zosta\u0142o utworzone z powodzeniem , a powiadomienie wys\u0142ane e-mailem.
+
+alert.msg.jcmsplugin-collaborativespace.contact-to-guest.title:                     Aktywacja konta go\u015bcia
+alert.msg.jcmsplugin-collaborativespace.contact-to-guest.short-description:         Kontakt {data} ({organization}) skonwertowano na konto go\u015bcia, a powiadomienie wys\u0142ano e-mailem.
+
+alert.msg.jcmsplugin-collaborativespace.silent-guest-creation.title:                Aktywacja konta go\u015bcia
+alert.msg.jcmsplugin-collaborativespace.silent-guest-creation.short-description:    Konto go\u015bcia {data} ({organization}) zosta\u0142o z powodzeniem utworzone.
+
+alert.msg.jcmsplugin-collaborativespace.silent-contact-to-guest.title:              Aktywacja konta go\u015bcia
+alert.msg.jcmsplugin-collaborativespace.silent-contact-to-guest.short-description:  Kontakt {data} ({organization}) zosta\u0142 skonwertowany na konto go\u015bcia.
+
+wf-alert.ANY.CSRequest.wfcsrequest.-201.form-submission.alertWorkers.ANY.title: {reminder} Przes\u0142ano wniosek o utworzenie przestrzeni wsp\u00f3\u0142pracy.
+wf-alert.ANY.CSRequest.wfcsrequest.-201.form-submission.alertWorkers.ANY.short-description: Przes\u0142ano wniosek o utworzenie przestrzeni wsp\u00f3\u0142pracy: {data.url}
+wf-alert.ANY.CSRequest.wfcsrequest.-201.form-submission.alertWorkers.ANY.description: <p>Przes\u0142ano wniosek o utworzenie przestrzeni wsp\u00f3\u0142pracy {data}.</p><p>Jeste\u015b proszony/a o jego zatwierdzenie.</p>
+
+wf-alert.ANY.CSSignupRequest.wfcssignup.-201.form-submission.alertWorkers.ANY.title: {reminder} Przes\u0142ano wniosek o rejestracj\u0119 przestrzeni wsp\u00f3\u0142pracy
+wf-alert.ANY.CSSignupRequest.wfcssignup.-201.form-submission.alertWorkers.ANY.short-description: Przes\u0142ano wniosek o rejestracj\u0119 przestrzeni wsp\u00f3\u0142pracy: {data.url}
+wf-alert.ANY.CSSignupRequest.wfcssignup.-201.form-submission.alertWorkers.ANY.description: <p>Przes\u0142ano wniosek o rejestracj\u0119 przestrzeni wsp\u00f3\u0142pracy: {data}.</p><p>Jeste\u015b zaproszony/a do potwierdzenia go.</p>
+
+# ----------------------------------------------------------------------
+# SHORTCUT
+# ----------------------------------------------------------------------
+
+data.$id.shortcut.jcmsplugin.collaborativespace-hub.title: Przestrzenie
+data.$id.shortcut.jcmsplugin.collaborativespace-hub.text: Uzyskaj dost\u0119p do wszystkich swoich przestrzeni, zarz\u0105dzaj swoimi ulubionymi przestrzeniami i odkryj sugestie dotycz\u0105ce przestrzeni.
+
+# ----------------------------------------------------------------------
+# CategoryBrowser
+# ----------------------------------------------------------------------
+category.category-browser.collaborativespace-search: Szukaj w tej przestrzeni
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From CollaborativeSpace-templates.xml
+types.CollaborativeSpace.templates.box.default.label: Szablon domy\u015blny
+
+# From CollaborativeSpace.xml
+types.CollaborativeSpace.fields.header.label: Nag\u0142\u00f3wek
+types.CollaborativeSpace.fields.headerSettings.label: Dostosowanie nag\u0142\u00f3wka
+types.CollaborativeSpace.fields.introduction.label: Wprowadzenie
+types.CollaborativeSpace.tabs.layout.label: Uk\u0142ad
+types.CollaborativeSpace.fields.accessPolicy.label: Dost\u0119p
+types.CollaborativeSpace.title.label: Tytu\u0142
+types.CollaborativeSpace.fields.exactCategory.label: Dok\u0142adna kategoria
+types.CollaborativeSpace.fields.signupPolicy.labelList: Bezp\u0142atna rejestracja|Pro\u015bba o rejestracj\u0119|Rejestracja zarz\u0105dzana przez lider\u00f3w
+types.CollaborativeSpace.fields.layout.label: Uk\u0142ad
+types.CollaborativeSpace.label: Przestrze\u0144 wsp\u00f3\u0142pracy
+types.CollaborativeSpace.description: Portlet przestrzeni wsp\u00f3\u0142pracy okre\u015bla jakie aplikacje maj\u0105 by\u0107 wy\u015bwietlone.
+types.CollaborativeSpace.fields.layout.labelList: Brak paska bocznego|Lewy pasek boczny|Prawy pasek boczny
+types.CollaborativeSpace.fields.signupPolicy.label: Polityka rejestracji
+types.CollaborativeSpace.fields.dashboardColumnCount.label: Kolumny tablicy wska\u017anik\u00f3w
+types.CollaborativeSpace.fields.accessPolicy.labelList: Publiczna|Prywatna|Tajna
+types.CollaborativeSpace.fields.exactCategory.onLabel: Tak
+types.CollaborativeSpace.fields.exactCategory.offLabel: Nie
+types.CollaborativeSpace.fields.description.label: Opis
+types.CollaborativeSpace.tabs.access.label: Dost\u0119p
+types.CollaborativeSpace.fields.theme.label: Motyw
+types.CollaborativeSpace.fields.followersGroup.label: Grupa obserwator\u00f3w
+types.CollaborativeSpace.fields.followersGroup.description: Cz\u0142onkowie tej grupy b\u0119d\u0105 powiadamiani o nowych tre\u015bciach w przestrzeni.
+types.CollaborativeSpace.fields.jportal.label: JPortal
+types.CollaborativeSpace.fields.syncMode.label: Pozycje zsynchronizowane
+types.CollaborativeSpace.fields.syncMode.labelList: Strona g\u0142\u00f3wna|Aplikacje|Struktura danych (typy, WF, grupy, ...)|Kategorie
+types.CollaborativeSpace.fields.model.label: Model obszaru roboczego
+types.CollaborativeSpace.fields.applications.label: Aplikacje
+types.CollaborativeSpace.fields.mobileShowIntro.label: Wprowadzenie do pokazu
+types.CollaborativeSpace.fields.mobileShowApplications.label: Aplikacje wy\u015bwietlacza
+types.CollaborativeSpace.fields.mobilePortlets.label: Portlety
+types.CollaborativeSpace.fields.modelSyncMode.label: Wymagana synchronizacja
+types.CollaborativeSpace.fields.modelSyncMode.labelList: Strona g\u0142\u00f3wna|Aplikacje|Struktura danych (typy, WF, grupy, ...)|Kategorie
+
+# From CSRequest-templates.xml
+types.CSRequest.templates.query.default.label: Szablon domy\u015blny
+types.CSRequest.templates.full.default.description: Szablon domy\u015blny
+types.CSRequest.templates.full.default.label: Szablon domy\u015blny
+types.CSRequest.templates.query.default.description: Szablon domy\u015blny
+
+# From CSRequest.xml
+types.CSRequest.fields.description.label: Opis
+types.CSRequest.title.label: Tytu\u0142
+types.CSRequest.fields.notificationPolicy.label: Polityka dotycz\u0105ca powiadamiania
+types.CSRequest.fields.groups.label: Grupy
+types.CSRequest.fields.accessPolicy.labelList: Publiczna|Prywatna|Tajna
+types.CSRequest.fields.signupPolicy.labelList: Bezp\u0142atna rejestracja|Pro\u015bba o rejestracj\u0119|Rejestracja zarz\u0105dzana przez lider\u00f3w
+types.CSRequest.fields.notificationPolicy.labelList: Wy\u015blij zaproszenie do uczestnik\u00f3w|Dodaj i powiadom uczestnik\u00f3w|Dodaj uczestnik\u00f3w bez powiadomienia
+types.CSRequest.fields.signupPolicy.label: Polityka rejestracji
+types.CSRequest.label: Przestrze\u0144 wsp\u00f3\u0142pracy - \u017b\u0105danie utworzenia
+types.CSRequest.fields.admins.label: Liderzy
+types.CSRequest.fields.language.label: J\u0119zyk
+types.CSRequest.fields.members.label: Cz\u0142onkowie
+types.CSRequest.fields.name.label: Nazwa przestrzeni
+types.CSRequest.fields.accessPolicy.label: Dost\u0119p
+types.CSRequest.fields.model.label: Model
+types.CSRequest.fields.parent.label: Przestrze\u0144 nadrz\u0119dna
+types.CSRequest.fields.syncMode.label: Pozycje zsynchronizowane
+types.CSRequest.fields.syncMode.labelList: Strona g\u0142\u00f3wna|Aplikacje|Struktura danych (typy, WF, grupy, ...)|Kategorie
+
+# From CSSignupRequest-templates.xml
+types.CSSignupRequest.templates.full.default.label: Szablon domy\u015blny
+types.CSSignupRequest.templates.full.default.description: Szablon domy\u015blny
+types.CSSignupRequest.templates.query.default.label: Szablon domy\u015blny
+types.CSSignupRequest.templates.query.default.description: Szablon domy\u015blny
+
+# From CSSignupRequest.xml
+types.CSSignupRequest.title.label: Tytu\u0142
+types.CSSignupRequest.label: Przestrze\u0144 wsp\u00f3\u0142pracy - pro\u015bba o rejestracj\u0119
+types.CSSignupRequest.fields.name.label: Nazwisko
+
+# From GuestCrea.xml
+types.GuestCrea.title.label: Tytu\u0142
+types.GuestCrea.label: Konto go\u015bcia - pro\u015bba o utworzenie
+types.GuestCrea.description: Ten formularz umo\u017cliwia z\u0142o\u017cenie pro\u015bby o utworzenie konta go\u015bcia, kt\u00f3re b\u0119dzie mia\u0142o dost\u0119p tylko do przestrzeni wsp\u00f3\u0142pracy.
+types.GuestCrea.fields.name.label: Nazwisko
+types.GuestCrea.fields.email.label: E-mail
+types.GuestCrea.fields.organization.label: Organizacja
+types.GuestCrea.fields.firstname.label: Imi\u0119
+types.GuestCrea.fields.language.label: J\u0119zyk
+types.GuestCrea.fields.country.label: Kraj
+
+# From GuestConv.xml
+types.GuestConv.title.label: Tytu\u0142
+types.GuestConv.label: Konto go\u015bcia - pro\u015bba o konwersj\u0119 kontaktu
+types.GuestConv.fields.contact.description: Istniej\u0105cy cz\u0142onek (typu kontakt) do konwersji na konto go\u015bcia.
+types.GuestConv.description: Ten formularz umo\u017cliwia z\u0142o\u017cenie pro\u015bby o konwersj\u0119 istniej\u0105cego kontaktu na konto go\u015bcia, kt\u00f3re b\u0119dzie mia\u0142o dost\u0119p tylko do przestrzeni wsp\u00f3\u0142pracy.
+types.GuestConv.fields.contact.label: Kontakt
+
+# From GuestRequest.xml
+types.GuestRequest.fields.submit-mbr.label: Wnioskodawca
+types.GuestRequest.fields.groups.label: Grupy docelowe
+types.GuestRequest.fields.groups.description: Wszystkie grupy obszar\u00f3w wsp\u00f3\u0142pracy, do kt\u00f3rych konto go\u015bcia zostanie dodane.
+types.GuestRequest.title.label: Tytu\u0142
+types.GuestRequest.label: [Streszczenie] Konto go\u015bcia - pro\u015bba o otwarcie
+
+# From PortletMyCollaborativeSpaces-templates.xml
+types.PortletMyCollaborativeSpaces.templates.box.default.label: M\u00f3j szablon przestrzeni
+types.PortletMyCollaborativeSpaces.templates.full.default.label: M\u00f3j szablon przestrzeni
+types.PortletMyCollaborativeSpaces.templates.box.itemBox.label: Item box moich przestrzeni hierarchicznych
+types.PortletMyCollaborativeSpaces.templates.box.hierarchy.label: Szablon przestrzeni hierarchicznych
+types.PortletMyCollaborativeSpaces.templates.box.hierarchyItemBox.label: Item box szablonu przestrzeni hierarchicznych
+types.PortletMyCollaborativeSpaces.templates.query.default.label: Szablon kwerendy
+
+# From PortletMyCollaborativeSpaces.xml
+types.PortletMyCollaborativeSpaces.label: Portlet moich przestrzeni wsp\u00f3\u0142pracy
+types.PortletMyCollaborativeSpaces.description: Portlet moich przestrzeni wsp\u00f3\u0142pracy wy\u015bwietla list\u0119 przestrzeni wsp\u00f3\u0142pracy.
+types.PortletMyCollaborativeSpaces.title.label: Tytu\u0142
+types.PortletMyCollaborativeSpaces.fields.depth.label: Poziomy
+types.PortletMyCollaborativeSpaces.fields.depth.description: Liczba poziom\u00f3w przestrzeni podrz\u0119dnych do wy\u015bwietlenia.
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.label: Filtr typologii
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.description: Filtr wy\u015bwietlania wed\u0142ug typologii przestrzeni?
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.onLabel: Tak
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.offLabel: Nie
+
+# From PortletCollaborativeSpaceSuggestion.xml
+types.PortletCollaborativeSpaceSuggestion.label: Portlet sugestii dotycz\u0105cych przestrzeni wsp\u00f3\u0142pracy
+types.PortletCollaborativeSpaceSuggestion.description: Portlet sugestii dotycz\u0105cych przestrzeni wsp\u00f3\u0142pracy wy\u015bwietla sugestie dotycz\u0105ce przestrzeni roboczej dla zalogowanego cz\u0142onka.
+types.PortletCollaborativeSpaceSuggestion.title.label: Tytu\u0142
+types.PortletCollaborativeSpaceSuggestion.fields.threshold.label: Warto\u015b\u0107 progowa
+types.PortletCollaborativeSpaceSuggestion.fields.typology.label: Typologie
+types.PortletCollaborativeSpaceSuggestion.fields.hideWhenNoResults.label: Ukryj, je\u017celi brak sugestii
+types.PortletCollaborativeSpaceSuggestion.fields.maxItems.label: Liczba propozycji 
+
+# From PortletCollaborativeSpaceSuggestion-templates.xml
+types.PortletCollaborativeSpaceSuggestion.templates.full.default.label: Szablon propozycji
+types.PortletCollaborativeSpaceSuggestion.templates.box.default.label: Szablon propozycji
+types.PortletCollaborativeSpaceSuggestion.templates.box.itemBox.label: Item Box szablonu sugestii
+
+# From plugin.xml
+types.PortletQueryForeach.templates.box.jcmsplugin.collaborativespace.dashboard.label: Szablon tablicy wska\u017anik\u00f3w (CSP)
+types.PortletQueryForeachDetail.templates.box.jcmsplugin.collaborativespace.dashboard.label: Szablon tablicy wska\u017anik\u00f3w (CSP)
+types.PortletSearch.templates.box.jcmsplugin.collaborativespace.search-header.label: Przestrze\u0144 wsp\u00f3\u0142pracy - Nag\u0142\u00f3wek
+types.PortletSelection.templates.box.jcmsplugin.collaborativespace.dashboard.label: Przestrze\u0144 wsp\u00f3\u0142pracy - Dashboard (tablica wska\u017anik\u00f3w)
+types.AbstractPortletSkinable.templates.collaborativeSpace.noskin.label: \u015awiat\u0142o (bez tytu\u0142u)
+types.AbstractPortletSkinable.templates.collaborativeSpace.default.label: Panel z kwadratowymi rogami
+types.AbstractPortletSkinable.templates.collaborativeSpace.borderless.label: \u015awiat\u0142o podkre\u015blonym tytu\u0142em
+
+# From wfcsrequest.xml
+workflows.wfcsrequest.states.60.label: Zaakceptowane
+workflows.wfcsrequest.states.50.label: Odrzucone
+workflows.wfcsrequest.states.-201.label: Przes\u0142ano
+workflows.wfcsrequest.label: Przestrze\u0144 wsp\u00f3\u0142pracy - Przep\u0142yw pracy \u017c\u0105dania utworzenia
+workflows.wfcsrequest.roles.validator.name: Zatwierdzaj\u0105cy
+workflows.wfcsrequest.states.60.description: Pro\u015bba zatwierdzona, utworzono przestrze\u0144 wsp\u00f3\u0142pracy.
+workflows.wfcsrequest.states.50.description: T\u0119 pro\u015bb\u0119 o utworzenie przestrzeni wsp\u00f3\u0142pracy odrzucono. \u017b\u0105dana przestrze\u0144 wsp\u00f3\u0142pracy nie zostanie utworzona. Wi\u0119cej szczeg\u00f3\u0142\u00f3w na temat tego odrzucenia, patrz uwagi dotycz\u0105ce przep\u0142ywu pracy.
+workflows.wfcsrequest.roles.validator.description: Zatwierdzanie/odrzucanie pr\u00f3\u015bb o rejestracj\u0119 do przestrzeni wsp\u00f3\u0142pracy
+
+# From wfcssignup.xml
+workflows.wfcssignup.roles.validator1.description: Zatwierdzanie/odrzucanie pr\u00f3\u015bb o rejestracj\u0119 do przestrzeni wsp\u00f3\u0142pracy
+workflows.wfcssignup.label: Przestrze\u0144 wsp\u00f3\u0142pracy - przep\u0142yw pracy rejestracji
+workflows.wfcssignup.roles.validator1.name: Zatwierdzaj\u0105cy
+workflows.wfcssignup.states.60.label: Zaakceptowane
+workflows.wfcssignup.states.50.label: Odrzucono
+workflows.wfcssignup.states.-201.label: Przes\u0142ano
+
+# From wfguestaccountrequest.xml
+workflows.wfguestaccountrequest.states.60.description: Pro\u015bba zatwierdzona, konto go\u015bcia zosta\u0142o utworzone.
+workflows.wfguestaccountrequest.states.50.description: Ta pro\u015bba o utworzenie konta go\u015bcia zosta\u0142a odrzucona. Konto go\u015bcia nie zosta\u0142o utworzone. Wi\u0119cej szczeg\u00f3\u0142\u00f3w na temat tego odrzucenia, patrz uwagi dotycz\u0105ce przep\u0142ywu pracy.
+workflows.wfguestaccountrequest.states.60.label: Zaakceptowane
+workflows.wfguestaccountrequest.states.50.label: Odrzucono
+workflows.wfguestaccountrequest.label: Konto go\u015bcia - przep\u0142yw pracy pro\u015bby o otwarcie
+workflows.wfguestaccountrequest.roles.guestvalidator.description: Zatwierdzanie/odrzucanie pr\u00f3\u015bb o otwarcie konta go\u015bcia
+workflows.wfguestaccountrequest.roles.guestvalidator.name: Zatwierdzaj\u0105cy
+workflows.wfguestaccountrequest.states.-200.label: Przes\u0142ano
+
+# Analytics
+ui.analytics.CSAgent.name:                    Przestrzenie wsp\u00f3\u0142pracy
+ui.analytics.CSAgent.report.typology:         Typologia
+ui.analytics.CSAgent.report.typology.h:       Zestawienie typologii.
+ui.analytics.CSAgent.report.access-policy:    Polityka dost\u0119pu
+ui.analytics.CSAgent.report.access-policy.h:  Zestawienie polityk dost\u0119pu.
+ui.analytics.CSAgent.report.members:          Najwy\u017cej sklasyfikowany cz\u0142onek
+ui.analytics.CSAgent.report.members.h:        Liczba cz\u0142onk\u00f3w w przestrzeni wsp\u00f3\u0142pracy.
+ui.analytics.CSAgent.report.activity:         Najwy\u017cszy wk\u0142ad
+ui.analytics.CSAgent.report.activity.h:       Liczba wk\u0142ad\u00f3w na przestrze\u0144 wsp\u00f3\u0142pracy.
+ui.analytics.CSAgent.report.activity.count:   Liczba wk\u0142ad\u00f3w
+
+# DBComment
+jcmsplugin.collaborativespace.lbl.signup-to-comment: Aby skomentowa\u0107 t\u0119 publikacj\u0119, prosz\u0119 zarejestrowa\u0107 si\u0119 do tej przestrzeni.
+
+# SocialConversation
+jcmsplugin.collaborativespace.lbl.signup-to-react: Aby do\u0142\u0105czy\u0107 do tej rozmowy, prosz\u0119 zarejestrowa\u0107 si\u0119 do tej przestrzeni.
+
+# Collaborative Space hub
+jcmsplugin.collaborativespace.hub: Hub przestrzeni
+jcmsplugin.collaborativespace.hub.type-cs: Przestrzenie wsp\u00f3\u0142pracy
+jcmsplugin.collaborativespace.hub.type-ws: Portale
+jcmsplugin.collaborativespace.hub.mode-all: Wszystkie obszary
+jcmsplugin.collaborativespace.hub.mode-member: Moje obszary
+jcmsplugin.collaborativespace.hub.mode-favorite: Ulubione
+jcmsplugin.collaborativespace.hub.mode-suggestions: Propozycje
+jcmsplugin.collaborativespace.hub.mode-csrequest: Wnioski o utworzenie
+jcmsplugin.collaborativespace.hub.mode-member.intro: <p>Dodaj lub usu\u0144 przestrze\u0144 do/z ulubionych klikaj\u0105c na gwiazd\u0119 w prawym g\u00f3rnym rogu przestrzeni.</p>
+jcmsplugin.collaborativespace.hub.mode-member.intro-has-favorites: <p>Znajd\u017a i zarz\u0105dzaj wszystkimi swoimi ulubionymi w \u201eMoje ulubione\u201d.</p>
+jcmsplugin.collaborativespace.hub.search-text.placeholder: Przeszukaj przestrzenie...
+jcmsplugin.collaborativespace.hub.sidebar-section.accessPolicy: Dost\u0119p
+jcmsplugin.collaborativespace.hub.sidebar-section.typology: Typologia
+jcmsplugin.collaborativespace.hub.sidebar-section.type: Typ
+
+#JPortal
+jcmcplugin.collaborativespace.jportal.edit.label: Modyfikuj portal
+jcmcplugin.collaborativespace.jportal.edit-more.label: Modyfikuj portal...
+jcmsplugin.collaborativespace.jportal.edit-modal.title: Modyfikuj portal zsynchronizowany z modelem
+jcmsplugin.collaborativespace.jportal.edit-modal.message: Uwaga ten portal jest zsynchronizowany z modelem.
+jcmsplugin.collaborativespace.jportal.edit-modal.edit-model.label: Modyfikuj model
+jcmsplugin.collaborativespace.jportal.edit-modal.desynchronize-model.label: Desynchronizuj i modyfikuj portal
+
+jcmsplugin.collaborativespace.edit-app-modal.title: Aktualizuj aplikacj\u0119
+jcmsplugin.collaborativespace.edit-app-modal.template.label: Szablon
+jcmsplugin.collaborativespace.edit-app-modal.title.label: Tytu\u0142
+
+#Tabs
+jcmsplugin.collaboratif.tabs.menu.remove: Usu\u0144...
+jcmsplugin.collaboratif.tabs.menu.remove.confirm: Czy na pewno chcesz usun\u0105\u0107 t\u0119 aplikacj\u0119?
+jcmsplugin.collaboratif.tabs.menu.update.title: Aktualizuj...
+jcmsplugin.collaboratif.tabs.rename.title.label: Tytu\u0142
+
+#Parameters
+jcmsplugin.collaborativespace.parameters.model.link: Model dost\u0119pu
+
+# Migration
+jcmsplugin.collaborativespace.migration.model: Model
+jcmsplugin.collaborativespace.migration.without-model: Bez modelu
+jcmsplugin.collaborativespace.migration.no-typologies: Bez typologii
+jcmsplugin.collaborativespace.migration.migrate-all: Migruj wszystkie obszary robocze bez modelu
+jcmsplugin.collaborativespace.migration.migrate-selected: Przenie\u015b zaznaczone obszary robocze
+jcmsplugin.collaborativespace.migration.no-model-no-workspace: (Ta typologia nie ma ani modelu, ani obszaru roboczego)
+jcmsplugin.collaborativespace.migration.modal-title: Migracja obszaru roboczego
+jcmsplugin.collaborativespace.migration.modal-button: Migruj
+jcmsplugin.collaborativespace.migration.target-typology: Typologia docelowa
+jcmsplugin.collaborativespace.migration.workspace-list: Lista obszar\u00f3w roboczych, kt\u00f3re zostan\u0105 zmigrowane
+
+portlet.header.menu-items.Portlet.edit-skin-cs: Aktualizuj...

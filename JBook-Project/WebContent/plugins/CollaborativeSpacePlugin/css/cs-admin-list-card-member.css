@@ -1,0 +1,61 @@
+.card-member-cs-admin-list .card-close.jalios-icon {
+  color: #AAA;
+}
+.card-member-cs-admin-list .card-member {
+  font-family: 'embedded-roboto';
+}
+.card-member-cs-admin-list .card-member .card-title {
+  margin-bottom: 10px;
+}
+.card-member-cs-admin-list .card-member .card-title,
+.card-member-cs-admin-list .card-member .card-title A {
+  color: #000;
+}
+.card-member-cs-admin-list .card-member .profile-info {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+.card-member-cs-admin-list .card.card-member .card-block.card-img {
+  text-align: center;
+  border-color: transparent;
+}
+.card-member-cs-admin-list .card.card-member .card-profile-infos {
+  text-align: center;
+}
+.card-member-cs-admin-list .card.card-member .wrapper-photo {
+  border-color: transparent;
+  width: 100%;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.card-member-cs-admin-list .card.card-member .wrapper-photo .photo {
+  width: 96px;
+}
+.card-member-cs-admin-list .card.card-member .wrapper-photo .photo-anchor {
+  display: none;
+}
+.card-inline-layout .card-flip-wrapper.card-member-cs-admin-list-wrapper {
+  height: 350px;
+  margin-bottom: 0;
+}
+.card-inline-layout .card-flip-wrapper.card-member-cs-admin-list-wrapper .card.card-member {
+  height: 320px;
+}
+.card-inline-layout .card-flip-wrapper.card-member-cs-admin-list-wrapper .card.card-member .card-block.card-img {
+  height: 144px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.card-inline-layout .card-flip-wrapper.card-member-cs-admin-list-wrapper .card.card-member .card-block.card-img .wrapper-photo {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+/*# sourceMappingURL=cs-admin-list-card-member.css.map */

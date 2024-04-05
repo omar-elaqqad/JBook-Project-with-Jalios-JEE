@@ -1,0 +1,57 @@
+// Include variables and mixins
+@import "../../../css/jalios/core/init-mixins.less";
+
+// -------------------------------------------------------------------
+// PLUGINS LESS VARIABLES
+// -------------------------------------------------------------------
+
+// Hook for JCMS
+@esn-card-meber-photo-width: 48px;
+@import "../../../css/plugin.less";
+
+// ------------------------------------------------------------------- 
+//  PLUGIN CSS DECLARATION
+// ------------------------------------------------------------------- 
+
+.card.card-member-esn {
+  overflow: hidden;
+
+  .card-title {
+    .text-overflow();
+  }
+
+  .wrapper-photo {
+    width: @esn-card-meber-photo-width;
+    margin: 0;
+  }
+  .card-block-item {
+    padding-left: @esn-card-meber-photo-width + 10px; // Align block text with photo
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  // Action label (BTN or FOOTER) -> ellipsis
+  .card-action-label { // NON !
+    & {
+      .text-overflow();
+    }
+  }
+  
+  &.card-action-footer {
+    .card-block.card-block-footer {
+      .text-overflow();
+      position: absolute;
+      bottom: 0;
+      width: 100%; // To ensure it takes full available width when too much width available
+    }
+    A.card-action-label {
+      color: @text-color;
+      max-height: 40px;
+    }
+  }
+
+  .member-organization-wrapper .card-meta {
+    .text-overflow();
+  }
+}

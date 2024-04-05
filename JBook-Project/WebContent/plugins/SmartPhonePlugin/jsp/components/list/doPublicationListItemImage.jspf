@@ -1,0 +1,11 @@
+<%@page import="com.jalios.jcmsplugin.smartphone.SmartPhoneManager"%>
+<%@page import="com.jalios.jcms.FileDocument"%>
+<%@page import="generated.WebPage"%>
+<%
+Publication pub = (Publication) data;
+boolean displayImage = SmartPhoneManager.getInstance().displayPublicationListItemImage(pub);
+%>
+<% if (displayImage) { %>
+  <%@ include file="/front/list/doDataListItemImage.jspf" %>
+<% } else { %>
+<% } %>

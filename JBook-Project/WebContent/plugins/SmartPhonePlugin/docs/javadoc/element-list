@@ -1,0 +1,16 @@
+com.jalios.jcmsplugin.smartphone
+com.jalios.jcmsplugin.smartphone.application
+com.jalios.jcmsplugin.smartphone.chooser
+com.jalios.jcmsplugin.smartphone.chooser.impl
+com.jalios.jcmsplugin.smartphone.deeplink
+com.jalios.jcmsplugin.smartphone.handler
+com.jalios.jcmsplugin.smartphone.ios
+com.jalios.jcmsplugin.smartphone.json
+com.jalios.jcmsplugin.smartphone.portal
+com.jalios.jcmsplugin.smartphone.portalEditor
+com.jalios.jcmsplugin.smartphone.pushNotification
+com.jalios.jcmsplugin.smartphone.rest
+com.jalios.jcmsplugin.smartphone.service
+com.jalios.jcmsplugin.smartphone.slick
+com.jalios.jcmsplugin.smartphone.taglib
+com.jalios.jcmsplugin.smartphone.ui

@@ -1,0 +1,169 @@
+// SmartPhone init
+@import "../smartphone-init.less";
+
+@card-responsive-layout-gutter-double: @card-responsive-layout-gutter*2;
+
+.card-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  margin-left: -@card-responsive-layout-gutter;
+  margin-right: -@card-responsive-layout-gutter;
+
+  // Stack latest item on left
+  &:after {
+    content: "";
+    flex: auto;
+  }  
+  
+  .card-block {
+    padding-left: 0;
+    padding-right: 0;
+  }  
+  
+  > .card {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(~"50%" - @card-responsive-layout-gutter-double);
+    margin-bottom: 16px;
+    margin-left: @card-responsive-layout-gutter;
+    margin-right: @card-responsive-layout-gutter;
+    //Flex to put footer at the bottom of the card
+    display: flex;
+    flex-direction: column;
+    .card-block {
+      flex: 1 1 auto; //Pushes siblings to the bottom
+    }
+    .card-img {
+      height: 150px;
+    }
+  }  
+  > A {
+    flex-basis: calc(~"50%" - @card-responsive-layout-gutter-double);
+
+    margin-bottom: 16px;
+    margin-left: @card-responsive-layout-gutter;
+    margin-right: @card-responsive-layout-gutter;
+
+    .card {
+      flex-grow: 0;
+      flex-shrink: 1;
+      //Flex to put footer at the bottom of the card
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      //Reset default behavior when in a link
+      margin-left: 0;
+      margin-right: 0;
+      flex-basis: initial;
+      margin-bottom: 0;
+
+      .card-block {
+        flex: 1 1 auto; //Pushes siblings to the bottom
+      }
+    }
+
+    &.is-same-image-height {
+      .card-img {
+        height: 150px;
+      }
+    }
+  }  
+  
+  &.card-count-3 { 
+    > A {
+      flex-basis: calc(~"33.33%" - @card-responsive-layout-gutter-double);  
+    }
+    > .card {
+      flex-basis: calc(~"33.33%" - @card-responsive-layout-gutter-double);  
+    }
+  }
+}
+
+.card {
+  &.is-img-sticky .card-img-wrapper {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+
+  // Use 16/9 by default
+  .card-img-wrapper figure{
+    padding-top: 56.25%;
+  }
+
+  &.is-image-16by9 .card-img-wrapper figure{
+    padding-top: 56.25%;
+  }
+  &.is-image-16by10 .card-img-wrapper figure{
+    padding-top: 62.5%;
+  }
+  &.is-image-4by3 .card-img-wrapper figure{
+    padding-top: 75%;
+  }   
+  &.is-image-squared .card-img-wrapper figure{
+    padding-top: 100%;
+  }   
+}
+
+.card-img-wrapper {
+  figure.is-16by9 {
+    padding-top: 56.25%;
+  }
+  
+  figure.is-16by10 {
+    padding-top: 62.5%;
+  }  
+  
+  figure.is-4by3 {
+    padding-top: 75%;
+  }    
+  figure.is-squared {
+    padding-top: 100%;
+  }  
+}
+.card-img-wrapper figure {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: block;
+  margin: 0;
+  IMG {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.card-layout > .card.is-borderless .card-block{
+  padding-left: 0;
+  padding-right: 0;  
+}
+
+.card.is-borderless {
+  .card-img-wrapper {
+    margin-bottom: 8px;
+  }
+
+  .card-title {
+    font-weight: 400;
+  }
+  
+  .card-img {
+    margin-bottom: 0;  
+  }
+  
+  .card-block {
+    padding: 0 8px 16px;
+  }
+  
+}
+
+.card .jalios-icon {
+  fill: #666;
+}

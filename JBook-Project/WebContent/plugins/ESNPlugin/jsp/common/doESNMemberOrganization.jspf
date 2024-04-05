@@ -1,0 +1,33 @@
+<%--
+  Display Member jobTitle, department and organization.
+--%><%
+%><%@page import="com.jalios.util.Util"%><%
+String customJobTitle = (String) request.getAttribute("esn-member-jobtitle");
+String customDepartment = (String) request.getAttribute("esn-member-department");
+String customOrganization = (String) request.getAttribute("esn-member-organization");
+
+String jobTitle = Util.getString(customJobTitle, member.getJobTitle());
+String department = Util.getString(customDepartment, member.getDepartment());
+String organization = Util.getString(customOrganization, member.getOrganization());
+%>
+<jalios:buffer name="profileCompanyBuffer"><%
+if (Util.notEmpty(jobTitle)) {
+  %><span itemprop="jobTitle" class="profil-fonction"><%= jobTitle %></span><%
+}
+if (Util.notEmpty(department) || Util.notEmpty(organization)) {
+  if (Util.notEmpty(jobTitle)) { %> - <% }
+  %><span class="profil-company"><%
+    if (Util.notEmpty(organization)) {
+      %><span itemprop="memberOf" class="profil-organization"><%= organization %></span><%
+    }
+    if (Util.notEmpty(department) && Util.notEmpty(organization)) { %> - <% }
+    if (Util.notEmpty(department)) {
+      %><span itemprop="department" class="profil-department"><%= department %></span><%
+    }
+    %></span><%
+} %></jalios:buffer><%
+if (Util.notEmpty(profileCompanyBuffer.toString())) {
+  %><p class="profil-function-company profile-function-company"><%
+    %><%= profileCompanyBuffer.toString() %><%
+  %></p><%
+} %>

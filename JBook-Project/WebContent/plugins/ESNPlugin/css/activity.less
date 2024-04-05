@@ -1,0 +1,357 @@
+// Include variables and mixins
+@import "../../../css/jalios/core/init-mixins.less";
+
+// -------------------------------------------------------------------
+// PLUGINS LESS VARIABLES
+// -------------------------------------------------------------------
+@import "esn-variables.less";
+
+// Hook for JCMS
+@import "../../../css/plugin.less";
+
+// ------------------------------------------------------------------- 
+//  PLUGIN CSS DECLARATION                                             
+// ------------------------------------------------------------------- 
+//                                                                     
+//  To Include this file in a JSP:                                     
+//  * jcmsContext.addCSSHeader("plugins/ESNPlugin/css/esn-activity.css");      
+//  * You MUST uncomment property in plugin.prop
+//                                                                     
+//  You can also use implements PortalPolicyFilter.setupHeaders()      
+// 
+
+@import "activity-microblogging-form.less";
+@import "activity-event.less";
+
+
+// ------------------------------------------------------------------- 
+//  PortletMemberActivity                                         
+// ------------------------------------------------------------------- 
+
+//Reset panel padding
+.panel-body .portlet-member-activity {
+  margin: -@panel-body-padding;
+}
+
+// ------------------------------------------------------------------- 
+//  Activity wrapper                                            
+// ------------------------------------------------------------------- 
+
+.portlet-member-activity .activity-container {
+  .activity {
+    border-top: 1px solid #EEEEEE;
+    padding: 15px 10px 15px 0;
+    border-left: 2px solid #FFFFFF;
+    .transition(border-left 200ms ease-in);
+    margin-left: 0;
+    position:relative;
+
+    &:hover {
+      border-left: 2px solid #a7c7f7;
+    }
+    
+    .info-part {
+      padding-right: 35px;
+      font-size: 13px;
+      margin-bottom: 10px;
+      color: #555;
+      A {
+        font-weight: bold;
+      }
+      .activity-date {
+        color: @esn-activity-meta-color;
+      }
+      
+      .wrapper-photo IMG{
+        vertical-align: baseline;
+      }
+      
+      .jalios-icon {
+        vertical-align: middle;
+      }
+    }
+    
+    .photo-part {
+      float: left;
+      margin: 0 10px 0 0;
+    }
+    
+    .activity-author {
+      color: @esn-activity-author-color;
+      font-weight: @esn-activity-font-weight;
+    }
+    
+    .ctxEditActivity A,
+    .delete-activity-btn,
+    .open-activity-menu-btn {
+      color: #AAA;
+      &.btn-rounded {
+        margin-right: 5px;
+        margin-top: 5px;
+      }
+    }
+    .ctxEditActivity .activity-dropdown-menu {
+      A,
+      BUTTON,
+      [role="button"] {
+        color: @gray;
+      }
+    }
+    .activity-actions {
+      padding-top: 9px;
+      font-size: 13px;
+      .transition(all ease-in 200ms);
+      A:not([href]),
+      BUTTON,
+      [role="button"] {
+        display: inline-block;
+        font-weight: @font-weight-regular;
+        color: #666;
+        font-size: 13px;
+        text-decoration: none;
+        /* Apply .btn, .btn-link (for Recommend core action) */
+        padding: 1px 5px;
+        vertical-align: middle;
+        touch-action: manipulation;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        user-select: none;
+        .box-shadow(none);
+        .transition(all ease-in 200ms);
+        line-height: 1.5;
+        &:hover {
+          background-color: #EEE;
+          text-decoration: none;
+        }
+        &.btn-link {
+          color: #666;
+        }
+      }
+    }
+    
+    .activity-meta {
+      color: @esn-activity-meta-color;
+    }
+    
+    .activity-vote {
+      color: @esn-activity-meta-color;
+    }
+  }
+  
+  .activity-abstract {
+    border-left: 3px solid #dbebf8;
+    border-radius: 3px 3px 3px 3px;
+    margin-top: 7px;
+    padding-left: 5px;
+    color: @esn-activity-body-color;
+    
+    .activity-abstract-thumbnail {
+      float: left;
+      margin-right: 10px;
+    }
+  }
+  
+  .activity-member-photo {
+    position: absolute;
+    left: 12px;
+  }
+  
+  .activity-main {
+    margin-left: 70px;
+  }
+  
+  .activity-day-separator + .activity {
+    border-top: 0 none;
+  }
+  
+  .activity-day-separator {
+    margin: 0;
+    font-size: @font-size-base;
+    background-color: #F5F5F5;
+    border-bottom: 1px solid #E5E5E5;
+    border-top: 1px solid #E5E5E5;
+    color: #999999;
+    font-weight: bold;
+    padding: 3px 0 3px 5px;
+    text-align: left;
+  }
+  
+  .ctxEditActivity{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  
+  .activity-nextpage-form-wrapper {
+    margin-top: @baseline;
+  }
+  
+  .activity-nextpage-form {
+    text-align: center;
+  }
+  
+  .activity-nextpage-button {
+    width: 50%;
+    display: inline-block;
+    margin-bottom: 10px;
+    .text-overflow();
+    max-width: 100%;
+  }
+  
+  //Comment count on an activity
+  .activity-comment-count {
+    &:hover{
+      background-color: #ECEFF5;
+      border-bottom: 1px solid #E5EAF1;
+      text-decoration: none;
+      cursor:pointer;
+    }
+    
+    .jalios-icon {
+      vertical-align: middle;
+    }
+    
+    .badge-comment-count  {
+      border-radius: 4px 4px 4px 4px;
+      display: inline-block;
+      font-size: 100%;
+      padding: 2px 5px 1px 5px;
+      white-space: nowrap;
+    }
+  }
+  
+}      
+
+// ------------------------------------------------------------------- 
+//  Nested Activity                                            
+// ------------------------------------------------------------------- 
+     
+.portlet-member-activity .activity .nested-activity .activity-content {
+  border-top: 1px solid #EAEAEA;
+  padding-top: 10px;
+}
+
+// ------------------------------------------------------------------- 
+//  Activity MicroBlogging                                            
+// ------------------------------------------------------------------- 
+
+.portlet-member-activity .activity .microblogging {
+  color: @esn-activity-body-color;
+  
+  IMG:not(.emoji) {
+    max-width: 100%;
+    max-height: @esn-activity-img-max-height; 
+    height: auto;
+    width: auto;
+  }
+  
+  UL{
+    list-style: disc outside none;
+  }
+}
+
+// ------------------------------------------------------------------- 
+//  Activity comments                                            
+// ------------------------------------------------------------------- 
+
+.portlet-member-activity .activity-comments-container {
+  
+  margin-top: 5px;
+  
+  .activity-add-comment {
+    background-color: #F7F7F7;
+    padding: 10px;
+    border-top: 1px solid #E5E9F9;
+  }
+  
+  .comment {
+    background-color: #F7F7F7;
+    border-top: 1px solid #E5E9F9;
+    color: #777777;
+    margin-top: 1px;
+    padding: 4px;
+    position: relative;
+    
+    IMG {
+      max-width: 100%;
+      max-height: @esn-activity-img-max-height; 
+      height: auto;
+    }
+    
+    .comment-info {
+      margin-bottom: @baseline /2;
+    }
+    
+    .counter {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 1px 3px 1px 4px;
+      background-color: white;
+      color: #AAAAAA;
+      display: block;
+      float: right;
+      border-radius: 0 3px 0 6px; 
+      border-bottom: 1px solid #F7F7F7;
+      border-left: 1px solid #F7F7F7;
+      z-index: 100;
+    }
+    .wiki PRE {
+      white-space: pre-wrap;
+    }
+    
+  }
+  
+  A.add-comment {
+    border: 1px solid #DDD;
+    color: #AAA;
+    background-color: #FFF;
+    padding: 1px 60px 1px 4px;
+    text-decoration: none;
+    font-weight: normal;
+    font-style: italic;
+    white-space: nowrap;
+    display: block;
+  } 
+}
+
+.activity-comments-container {
+  .edit-comment-btn.btn-link {
+    color: @text-color;
+    border-radius: 5px;
+    padding: 3px 6px;
+    .transition(all ease-in 200ms);
+  }
+}
+ 
+// ------------------------------------------------------------------- 
+//  Specific rules for activity body                                             
+// ------------------------------------------------------------------- 
+
+.portlet-member-activity .activity-container .card-member {
+  max-width: 350px;
+}
+
+// ------------------------------------------------------------------- 
+//  Media queries                                             
+// ------------------------------------------------------------------- 
+@media (max-width: @screen-xs) {
+  .portlet-member-activity .activity-container .activity-nextpage-button {
+    width: 100%;
+  }
+  
+  .portlet-member-activity .activity .activity-abstract .activity-abstract-thumbnail {
+    float: none;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+}
+
+// ------------------------------------------------------------------- 
+//  Element queries                                             
+// ------------------------------------------------------------------- 
+
+.portlet-member-activity .activity-nextpage-form-wrapper[max-width~="380px"] .activity-nextpage-button {
+  width: 80%;
+}

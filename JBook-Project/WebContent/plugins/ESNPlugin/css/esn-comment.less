@@ -1,0 +1,95 @@
+// Include variables and mixins
+@import "../../../css/jalios/core/init-mixins.less";
+
+// -------------------------------------------------------------------
+// PLUGINS LESS VARIABLES
+// -------------------------------------------------------------------
+@esn-comment-pane-border-radius: @border-radius-small;
+@esn-comment-pane-border-color: #E3E3E3;
+@esn-comment-pane-border-radius: @border-radius-small;
+@esn-comment-pane-bg: @well-bg;
+
+@import "../../../plugins/ESNPlugin/css/esn-variables.less";
+
+
+// Hook for JCMS
+@import "../../../css/plugin.less";
+
+// ------------------------------------------------------------------- 
+//  PLUGIN CSS DECLARATION                                             
+// ------------------------------------------------------------------- 
+
+.esn-comment-pane {
+  @half-baseline: @baseline / 2;
+  padding: 0 0 @half-baseline @half-baseline;
+  position: relative;
+  margin-top: 0;
+
+  // Vertical line following the comment height
+  &.esn-comment-photo-line:before {
+    content: "";
+    border-left: 1px dashed #DFDFDF;
+    position: absolute;
+    left: 33px;
+    top: 0;
+    bottom: 0;
+  }
+
+  .esn-comment-pane-metas {
+    display: flex;
+    margin-bottom: 10px;
+    .esn-comment-pane-date {
+      justify-content: flex-end;
+    }
+  }
+
+  .esn-comment-pane-metas-right {
+    flex-grow: 1;
+    text-align: right;
+  }
+  .esn-comment-pane-date {
+    display: inline;
+  }
+  .esn-comment-pane-member-photo {
+    // Make photo align with vertical ligne
+    margin-left: 3px;
+    float: left;
+  }
+  
+  .esn-comment-pane-content {
+    flex-grow: 1;
+    position:relative;
+    margin-bottom:0;
+    margin-left: 60px;
+    margin-top: 0;
+    word-wrap: break-word;
+    min-height: 20px;
+    padding: 9px;
+    background-color: @esn-comment-pane-bg;
+    border: 1px solid @esn-comment-pane-border-color;
+    border-radius: @esn-comment-pane-border-radius;
+
+    // The comment tail border
+    &:before {
+      content: "";
+      position: absolute;
+      left: -17px;
+      top: 13px;
+      border-right: 8px solid @esn-comment-pane-border-color;
+      border-top: 8px solid transparent;
+      border-left: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+    }
+    // The comment tail background
+    &:after {
+      content: "";
+      position: absolute;
+      left: -16px;
+      top: 13px;
+      border-right: 8px solid @esn-comment-pane-bg;
+      border-top: 8px solid transparent;
+      border-left: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+    }
+  }
+}

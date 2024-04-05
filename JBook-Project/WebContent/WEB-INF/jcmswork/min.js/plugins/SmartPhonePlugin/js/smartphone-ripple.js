@@ -1,0 +1,1 @@
+!(function(b){var c=function(){b(".js-ripple.has-ripple .ripple.ripple-animate").remove();b.ripple(".js-ripple",{debug:false,on:"mousedown",opacity:0.4,color:"auto",multi:false,duration:0.7,rate:function(d){return d},easing:"linear"})};var a=function(){c();b(document).on("pagecontainerbeforeshow",function(){c()})};b(document).ready(a)})(window.jQuery);

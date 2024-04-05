@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plugin PUBLIC "-//JALIOS//DTD JCMS-PLUGIN 1.6//EN" "https://community.jalios.com/dtd/jcms-plugin-1.6.dtd">
+
+<plugin name="DBPollPlugin" 
+        version="6.1.2" 
+        author="Jalios SA" 
+        license="Jalios" 
+        initialize="true" 
+        order="0" 
+        jcms="10\.0\.[5-9].*|10\.[1-9].*" 
+        url="https://community.jalios.com/plugin/dbpoll" 
+        jsync="true" 
+        appserver="">
+
+  <label xml:lang="en">Poll Plugin</label>
+  <label xml:lang="fr">Module Sondage</label>
+  <description xml:lang="en">This plugin allows you to manage simple polls within an application. Polls can also be displayed through the Portlet Poll. Votes are stored in the RDBMS.</description>
+  <description xml:lang="fr">Ce module permet de gérer des sondages au sein d'une application. Il est aussi possible d'afficher les sondages dans une portlet Sondage. Les votes sont enregistrés dans le SGBDR.</description>
+
+  <types>
+    <type name="Poll">
+      <file path="doPollFullDisplay.jsp" />
+      <file path="doEditPoll.jsp" />
+      <file path="doEditPollModal.jsp" />
+    </type>
+    <type name="PortletPoll">
+      <file path="doPortletPollFullDisplay.jsp" />
+      <file path="doPortletPollFullDisplay.png" />
+      <file path="doPortletPollBoxDisplay.jsp" />
+      <file path="doPortletPollBoxDisplay.png" />
+    </type>
+    <templates type="PortletPoll">
+      <template name="default" file="doPortletPollFullDisplay.jsp" dir="type" usage="full">
+        <label xml:lang="en">Custom Template</label>
+        <label xml:lang="fr">Gabarit Spécifique</label>
+      </template>
+      <template name="default" file="doPortletPollBoxDisplay.jsp" dir="type" usage="box">
+        <label xml:lang="en">Custom Template</label>
+        <label xml:lang="fr">Gabarit Spécifique</label>
+      </template>
+    </templates>
+  </types>
+
+  <java-classes>
+    <java package="com.jalios.jcmsplugin.dbpoll" />  
+  </java-classes>
+                                               
+  <plugincomponents>
+    <datacontroller class="com.jalios.jcmsplugin.dbpoll.PollController" types="generated.Poll" />
+    <datacontroller class="com.jalios.jcmsplugin.dbpoll.PollVoteController" types="com.jalios.jcmsplugin.dbpoll.PollVote" />
+  </plugincomponents>
+
+  <hibernate>
+    <mapping resource="com/jalios/jcmsplugin/dbpoll/PollVote.hbm.xml"/>
+  </hibernate>
+  
+  <private-files>
+    <directory path="properties" />
+  </private-files>
+  
+  <public-files>
+    <directory path="css" />
+    <directory path="docs" />
+    <directory path="images" />
+    <directory path="jsp" />
+    <directory path="smartphone" />
+  </public-files>
+</plugin>
+

@@ -1,0 +1,83 @@
+<%@page import="com.jalios.jcmsplugin.collaborativespace.portal.CSSyncUtils"%>
+<%@page import="com.jalios.jcmsplugin.collaborativespace.CSManager"%>
+<%@page import="generated.CollaborativeSpace"%>
+<%@page import="com.jalios.jcmsplugin.collaborativespace.portal.CollaborativeSpaceSyncMode"%>
+<%@page import="com.jalios.util.Util"%>
+<%@page import="com.jalios.jcms.workspace.Workspace"%>
+<%@page import="java.util.Set"%>
+<div class="row">
+  <div class="col-xs-12 col-lg-7">
+
+     <%  Set<Workspace> instances = formHandler.getModelInstances(); %> 
+        <jalios:pager name='pagerHandler' 
+                declare='true' 
+                action='init'
+                size='<%= instances.size() %>'
+                pageSize='12'
+                pageSizes='12,24,48'
+                sizeAccurate='true'
+                />
+                
+        <div class="navbar navbar-default navbar-table-header">
+          <div class="container-fluid">
+           <span class="navbar-brand"><%= glp("jcmsplugin.collaborativespace.settings.lbl.model-instances-count", instances.size()) %></span>
+
+			      <div class="navbar-form navbar-right">
+			        <div class="input-group">
+			          <input type="text" name="filterCSPName" class="form-control no-focus" 
+		                   value='<%= formHandler.getFilterCSPName() == null ?"":formHandler.getFilterCSPName() %>'
+		                   placeholder='<%= glp("ui.com.placeholder.search") %>' />
+		
+		            <span class="input-group-btn">
+			            <button type="submit"
+			                    class="btn btn-default ajax-refresh"
+			                    title='<%= glp("ui.com.btn.reset") %>'>
+			                <jalios:icon src="app-search" />
+			           </button>
+			           <% if(Util.notEmpty(formHandler.getFilterCSPName())){ %>
+			            <button
+			                type="button"
+			                class="btn btn-default ajax-refresh"
+			                name="resetCSPNameFilter"
+			                value="true"
+			                title='<%= glp("ui.com.btn.reset") %>'
+			            ><jalios:icon src="jcmsplugin-collaborativespace-cross" /></button>
+			 
+			          <% } %>
+		            </span>
+			        </div>
+			      </div>
+			    </div>
+		    </div>
+		  	
+		  	<% if(Util.isEmpty(instances)){ %>
+		  	  <div class="instances__no-result">
+			  	   <%@ include file='/front/app/doAppNoResult.jspf' %>
+			  	 </div>
+		  	<%}else{ %>
+	        <table class="table-data model-syncs">
+	          <tr>
+	            <th class="numeric fit">#</th>
+	            <th><%= glp("jcmsplugin.collaborativespace.settings.model-instances.csp.title") %></th>
+	            <th><%= glp("jcmsplugin.collaborativespace.settings.model-instances.sync.title") %></th>
+	          </tr>
+		        <jalios:foreach collection="<%= instances %>" counter="counter"  name="instance" type="Workspace" skip="<%= pagerHandler.getStart() %>" max="<%= pagerHandler.getPageSize() %>">
+				       <% CollaborativeSpace csp = CSManager.getInstance().getCollaborativeSpace(instance);%>
+				       <tr>
+				         <td class="numeric fit"><%= counter %></td>
+					       <td><jalios:dataicon data="<%= csp %>" /> <jalios:link data="<%= csp %>"><%= csp.getTitle() %></jalios:link></td>
+					       <td>
+					         <% for(CollaborativeSpaceSyncMode syncMode: CollaborativeSpaceSyncMode.values()){ %>
+					           <% if(CSSyncUtils.isCSSyncModeSynchronized(csp, syncMode)){ %>
+					              <span class="sync-mode"><%= glp("jcmsplugin.collaborativespace.syncMode."+syncMode.getMode()) %></span>
+					             <%} %>
+					           <% } %>
+					       </td>
+					     </tr>
+				     </jalios:foreach>
+	       </table>
+         <jalios:pager name="pagerHandler" />
+     <% } %>
+
+  </div>
+</div>

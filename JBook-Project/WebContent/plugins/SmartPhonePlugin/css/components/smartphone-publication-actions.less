@@ -1,0 +1,141 @@
+.actions-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 0;
+  padding-bottom: @sp-default-spacing-double;
+  border-top: 1px solid @sp-border-color;
+  margin-left: @sp-default-spacing-double;
+  margin-right: @sp-default-spacing-double;
+  padding-top: @sp-default-spacing;
+  &.has-no-border {
+    border-top: 0 none;
+  }
+
+  .action-item:first-child:nth-last-child(2) {
+    margin-left: 40px;
+    ~ .action-item {
+      margin-right: 40px;
+    }
+  }
+
+  .action-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: @sp-default-spacing;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    transition: background-color 200ms ease-in;
+
+    .thumb-up {
+      .icon-border {
+        fill: #666;
+      }
+      .icon-bg {
+        fill: white;
+      }
+    }
+
+    &.is-active {
+      &.action-item-vote {
+        .action-item-icon-wrapper {
+          background-color: #f4f4f4;
+          .icon-bg {
+            fill: @jalios-color-green-light;
+          }
+
+          .icon-border {
+            fill: darken(@jalios-color-green-light, 10%);
+          }
+        }
+        .action-item-text {
+          color: #666;
+        }
+      }
+
+      .action-item-icon-wrapper {
+        background-color: @sp-color-active;
+        .action-item-icon {
+          color: white;
+          fill: white;
+        }
+        .icon-border {
+          fill: white;
+        }
+        .icon-bg {
+          fill: white;
+        }
+      }
+      .action-item-text {
+        color: @sp-color-active;
+      }
+    }
+  }
+
+  .action-item-icon-wrapper {
+    padding: 10px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4px;
+    font-size: 18px;
+    color: #666;
+    background-color: #f4f4f4;
+    .action-item-icon {
+      width: 18px;
+      height: 18px;
+      fill: #666;
+    }
+    .jalios-icon-svg {
+      width: 18px;
+      height: 18px;
+      fill: #666;
+    }
+    img {
+      filter: grayscale(1);
+    }
+  }
+  .action-item-text {
+    color: #666;
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
+
+.action-item-vote.animated.is-active {
+  .jalios-icon,
+  .action-item-icon {
+    animation: voteAnimation 400ms linear;
+    transform-origin: bottom left;
+  }
+}
+
+@keyframes voteAnimation {
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(-20deg) scale(1.2);
+  }
+
+  100% {
+    transform: rotate(0) scale(1);
+  }
+}
+
+
+
+
+
+
+.pub-social-footer .pub-votes .wrapper-photo img {
+  height: 30px;
+  width: 30px;
+  min-width: 30px;
+}

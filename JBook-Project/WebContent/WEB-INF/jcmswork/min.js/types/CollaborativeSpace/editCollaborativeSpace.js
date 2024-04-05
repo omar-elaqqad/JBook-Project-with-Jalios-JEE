@@ -1,0 +1,1 @@
+!function(a){var b=function(){var d=jQuery(".CollaborativeSpace [name='accessPolicy']");var c=jQuery(".CollaborativeSpace [name='signupPolicy']");a.JCMS.jcmsplugin.cs.AccessSignupUtils.initAccessSignupCompatibility(d,c);JcmsLogger.info("CollaborativeSpace Plugin","Init editCollaborativeSpace")};a(document).ready(function(c){b()})}(window.jQuery);

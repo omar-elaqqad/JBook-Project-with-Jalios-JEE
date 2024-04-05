@@ -1,0 +1,88 @@
+<%
+String allFilterLabel = glp("jcmsplugin.esn.expert-dir.lbl.all");
+String accountFilterLabel = glp("jcmsplugin.esn.lbl.connections.internal");
+String contactFilterLabel = glp("jcmsplugin.esn.lbl.connections.external");
+
+String allFilterUrl = ServletUtil.getUrlWithUpdatedParam(request, "memberUsage", "all");
+String accountFilterUrl = ServletUtil.getUrlWithUpdatedParam(request, "memberUsage", "account");
+String contactFilterUrl = ServletUtil.getUrlWithUpdatedParam(request, "memberUsage", "contact");
+String dropdownLabel = allFilterLabel;
+if (isUsageAccount) {
+  dropdownLabel = accountFilterLabel;
+} else if (isUsageContact) {
+  dropdownLabel = contactFilterLabel;
+}
+%>
+<div class="navbar navbar-default navbar-table-header esn-directory-navbar" role="navigation">
+
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#esn-expert-directory-navbar-collapse">
+      <jalios:icon src="nav-burger"/>
+    </button>
+  </div>
+  
+  <div class="collapse navbar-collapse" id="esn-expert-directory-navbar-collapse">
+    <ul class="nav navbar-nav member-filter">
+      <li class="dropdown">
+        <%-- Member filters --%>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><jalios:icon src="filter" /> <%= dropdownLabel %> <jalios:icon src="caret" /></a>
+        <ul class="dropdown-menu" role="menu">
+          <li<%= isUsageAll ? " class='active'" : "" %>><a href='<%= allFilterUrl %>' class='ajax-refresh'><%= allFilterLabel %></a></li>
+          <li<%= isUsageAccount ? " class='active'" : "" %>><a href='<%= accountFilterUrl %>' class='ajax-refresh'><%= accountFilterLabel %></a></li>
+          <li<%= isUsageContact ? " class='active'" : "" %>><a href='<%= contactFilterUrl %>' class='ajax-refresh'><%= contactFilterLabel %></a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="esn-filters">
+      <% if (Util.isEmpty(selectedList)) { %>
+        <p class='navbar-text'>
+          <jalios:buffer name='iconBuffer'><jalios:icon src='jcmsplugin-esn-expert-directory-cat-unstuck' /></jalios:buffer>
+          <%= glp("jcmsplugin.esn.expert-dir.lbl.filter.info", iconBuffer.toString()) %>
+        </p>
+      <% } else { %>
+        <% String removeUrl = urlPrefix + JcmsUtil.getId(cat); %>
+        <p class='navbar-text esn-filter'>
+          <jalios:icon src="filter" />
+          <%= glp("jcmsplugin.esn.expert-dir.lbl.filter") %>
+        </p>
+        <jalios:foreach collection="<%= selectedList %>" name="itCat" type="Category">
+          <p class='navbar-text esn-filter'>
+            <a title="<%= encodeForHTMLAttribute(glp("jcmsplugin.esn.expert-dir.lbl.filter.remove")) %>" href="<%= removeUrl.replaceAll("smcats=" + itCat.getId() + "&", "")  %>">
+              <span class="label label-small label-info">
+                <jalios:icon src='jcmsplugin-esn-expert-directory-cat-unstuck' />
+                <%= itCat.getName(userLang) %>
+              </span>
+            </a>
+          </p>
+        </jalios:foreach>
+      <% } %>
+    </div>
+  </div>
+
+  <div class="container-fluid esn-breadcrumb">
+    <p class="navbar-text">
+      <span>
+        <a class="ajax-refresh" href="<%= urlPrefix %>home"><%= glp("jcmsplugin.esn.expert-dir.lbl.home") %></a>
+        <% if (ancestorList != null) { %>
+          <jalios:foreach collection="<%= ancestorList %>" type="Category" name="ancestor">
+            &gt;
+            <a class="ajax-refresh" href="<%= urlPrefix + ancestor.getId() %>"><%= ancestor.getName(userLang) %></a>
+          </jalios:foreach>
+          &gt;
+          <% if (!selectedList.contains(navCat)) { %>
+            <a title="<%= glp("jcmsplugin.esn.expert-dir.lbl.filter.add") %>" href="<%= urlPrefix + navCat.getId() + "&smcats=" + navCat.getId() %>">
+              <span class="label label-small label-info">
+                <jalios:icon src='jcmsplugin-esn-expert-directory-cat-unstuck' />
+                <%= navCat.getName(userLang) %>
+              </span>
+            </a>
+          <% } else {%> 
+            <span class="label label-small label-info">
+              <%= navCat.getName(userLang) %>
+            </span>
+          <% } %>
+        <% } %>
+      </span>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<%-- <% if (!workspace.isCollaborativeSpace()) { %> --%>
+<%--   <jalios:field resource="field-vertical" label='<%= glp("ui.com.lbl.workspace") %>' name="workspace" css="document-workspace" value="<%= workspace %>"> --%>
+<%--     <jalios:control type="<%= ControlType.WORKSPACE %>" /> --%>
+<!--   </jalios:field> -->
+<%-- <% } %> --%>
+
+<!-- <jalios:field name="microBloggingFiles" label="Fichier" resource="field-vertical">   -->
+<%--   <jalios:control settings="<%= new FileSettings() %>" /> --%>
+<!-- </jalios:field> -->
+
+<!-- <div class="activity-microblogging-document-advanced hide"> -->
+<%--   <%-- TABS --%> --%>
+<!--   <ul class="nav nav-tabs"> -->
+<%--     <li class="tab active"><a href="#pcontent" onclick="return false;"><%= glp("ui.com.lbl.metadata") %></a></li> --%>
+<%--     <li class="tab"><a href="#pcat" onclick="return false;"><%= glp("ui.work.form.lbl.categories") %></a></li> --%>
+<%--     <li class="tab"><a href="#prights" onclick="return false;"><%= glp("ui.work.form.lbl.read-rights") %></a></li> --%>
+<%--     <li class="tab"><a href="#pworkflow" onclick="return false;"><%= glp("ui.work.form.lbl.wf") %></a></li>      --%>
+<%--     <li class="tab"><a href="#padvanced" onclick="return false;"><%= glp("ui.work.form.tab.adv") %></a></li> --%>
+<!--   </ul> -->
+<!--   <div class="tab-content"> -->
+<!--     <div class="tab-pane active" id="pcontent"> -->
+<%--       <jalios:field  name="title" label="ui.com.lbl.title" description="ui.work.doc.txt.title" ml='<%= channel.isMultilingual() %>' value='<%= formHandler.getAllAvailableTitleML() %>' css="focus"> --%>
+<%--         <jalios:control type="<%= ControlType.TEXTFIELD %>" /> --%>
+<!--       </jalios:field> -->
+<!--     </div> -->
+<!--   </div>   -->
+<!-- </div> -->
+
+<!-- <div class="buttons text-right"> -->
+<!--   <button type="button" class="plupload-submit btn btn-default">Plus d'options</button> -->
+<!--   <button type="submit" name="opUpload" data-jalios-target-position="closest" data-jalios-target=".PortletMemberActivity" data-jalios-action="ajax-refresh" value="true" class="plupload-submit btn btn-primary">Upload</button> -->
+<!-- </div> -->

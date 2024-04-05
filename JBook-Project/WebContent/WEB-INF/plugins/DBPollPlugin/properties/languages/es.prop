@@ -1,0 +1,127 @@
+jcmsplugin.dbpoll.btn.vote:            Voto
+jcmsplugin.dbpoll.lbl.vote:            Votar
+jcmsplugin.dbpoll.lbl.open:            Abrir este sondeo
+jcmsplugin.dbpoll.lbl.close:           Cerrar este sondeo
+jcmsplugin.dbpoll.lbl.show-result:     Mostrar los resultados
+jcmsplugin.dbpoll.lbl.vote-cnt:        {0,choice,0#0 votos|1#1 voto|2#{0,number,integer} votos}
+jcmsplugin.dbpoll.lbl.dates:           Sondeo de {0} a {1}
+jcmsplugin.dbpoll.lbl.all-polls:       Todos los sondeos
+jcmsplugin.dbpoll.lbl.all-polls-ws:    Todos los sondeos en {0}
+jcmsplugin.dbpoll.lbl.view-all-polls:  Ver todos los sondeos
+jcmsplugin.dbpoll.lbl.view-all-polls-ws:  Ver todos los sondeos en el área de trabajo actual
+jcmsplugin.dbpoll.lbl.vote-title:      Votar por {0}
+jcmsplugin.dbpoll.lbl.create-poll:     Publicar un nuevo sondeo
+jcmsplugin.dbpoll.msg.option-change:   Vd. no puede cambiar las opciones de sondeo ya que algunos usuarios ya han votado por las actuales opciones.
+jcmsplugin.dbpoll.msg.already-voted:   Vd. ya ha votado en este sondeo.
+jcmsplugin.dbpoll.msg.no-result:       Este sondeo todavía no ha recibido ningún voto.
+jcmsplugin.dbpoll.msg.choose-option:   Tiene que elegir una opción para votar.
+jcmsplugin.dbpoll.msg.closed-poll:     Este sondeo está cerrado, no se puede votar.
+jcmsplugin.dbpoll.msg.poll-loop:       No puede poner un sondeo en su propia descripción.
+
+jcmsplugin.dbpoll.modal.step1:         Opciones de sondeo
+jcmsplugin.dbpoll.modal.step2:         Recomendar el sondeo
+jcmsplugin.dbpoll.modal.btn.publish:   Publicar
+jcmsplugin.dbpoll.modal.btn.publish.alt:  Publicar el sondeo
+jcmsplugin.dbpoll.modal.btn.next.alt:  Publicar el sondeo y recomendarlo...
+jcmsplugin.dbpoll.modal.success-info:  Su sondeo ha sido creado y es accesible desde aquí: {0}
+
+jcmsplugin.dbpoll.publish-menu.add-poll: Sondeo
+
+jcmsplugin.dbpoll.cs.options:  Agregue al menos dos opciones para este sondeo
+jcmsplugin.dbpoll.cs.optionsml:  Agregue al menos dos opciones para este sondeo (en {0})
+
+jcmsplugin.dbpoll.search.placeholder: Buscar un sondeo...
+
+jcmsplugin.dbpoll.app.title: Sondeos
+
+jcmsplugin.dbpoll.app.no-result-welcome: Bienvenido a la aplicación Sondeos
+
+jcmsplugin.dbpoll.app.catalog.title: Sondeos
+jcmsplugin.dbpoll.app.catalog.root: Inicio
+jcmsplugin.dbpoll.app.catalog.btn.add-poll: Agregar un sondeo
+jcmsplugin.dbpoll.app.catalog.polls-number: {0} {0,choice,0#|1#sondeo|2#sondeos}
+
+jcmsplugin.dbpoll.app.card.closed-poll: Sondeo completado
+
+jcmsplugin.dbpoll.app.filter.status.all: Todos los sondeos
+jcmsplugin.dbpoll.app.filter.status.opened: Sondeos en curso
+jcmsplugin.dbpoll.app.filter.status.closed: Sondeos completados
+jcmsplugin.dbpoll.app.filter.mbr:        Agregado por...
+jcmsplugin.dbpoll.app.filter.begin-date: Añadido después de...
+jcmsplugin.dbpoll.app.filter.end-date:   Añadido antes de...
+jcmsplugin.dbpoll.app.filter.workspace:  Agregado en el espacio de trabajo...
+
+# ------------------------------------------------------------
+#  Unified insert
+# ------------------------------------------------------------
+unified-insert.items.poll: Sondeo
+unified-insert.items.poll.longtitle: Un sondeo
+unified-insert.items.poll.subtitle:
+
+# ------------------------------------------------------------
+#  Smartphone
+# ------------------------------------------------------------
+jcmsplugin.smartphone.dbpoll: Sondeos
+jcmsplugin.smartphone.dbpoll.navbar.opened: Sondeos en curso
+jcmsplugin.smartphone.dbpoll.navbar.closed: Sondeos completados
+
+# ------------------------------------------------------------
+#  Recommendation
+# ------------------------------------------------------------
+alert.name.recommendation.dbpoll-recommendation:                      Invitación a completar el sondeo
+alert.msg.recommendation.dbpoll-recommendation.title:                 Invitación a completar el sondeo: {data}
+alert.msg.recommendation.dbpoll-recommendation.short-description:     {author} le ha invitado a completar el sondeo {data}. {data.url}
+alert.msg.recommendation.dbpoll-recommendation.description:           <p>{author} le ha invitado a completar el sondeo {data}.</p>
+jcmsplugin.dbpoll.recommendation.Poll:                                Invite a miembros a completar el sondeo: {0}
+
+# ------------------------------------------------------------
+#  ESN
+# ------------------------------------------------------------
+jcmsplugin.esn.activity.form-tab.poll: Sondeo
+
+# ------------------------------------------------------------
+#  Shortcuts
+# ------------------------------------------------------------
+data.$id.shortcut.jcmsplugin.dbpoll.title: Sondeos
+data.$id.shortcut.jcmsplugin.dbpoll.text: Aplicación de gestión de sondeos
+
+# ------------------------------------------------------------
+#  Plugin label and description
+# ------------------------------------------------------------
+plugin.DBPollPlugin.label: Plugin del sondeo
+plugin.DBPollPlugin.description: Este portlet le permite crear sondeos sencillos. Los sondeos se muestran a través del Portlet de sondeos. Los votos se almacenan en el RDBMS.
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From Poll.xml
+types.Poll.title.description: Título del sondeo
+types.Poll.fields.description.label: Descripción
+types.Poll.label: Sondeo
+types.Poll.fields.options.description: Las opciones a las que votar.
+types.Poll.fields.description.description: Una breve descripción del sondeo (aparece entre la pregunta y las opciones)
+types.Poll.description: Un minisondeo con una única pregunta
+types.Poll.fields.options.label: Opciones
+types.Poll.title.label: Título
+types.Poll.fields.image.label: Imagen
+types.Poll.fields.image.description: Una imagen opcional para la descripción de este sondeo.
+types.Poll.fields.closed.label: Cerrar el sondeo
+types.Poll.fields.closed.onLabel: Sí
+types.Poll.fields.closed.offLabel: No
+types.Poll.fields.closed.description: ¿Debería cerrarse el sondeo?
+
+# From PortletPoll.xml
+types.PortletPoll.fields.refineWorkspace.labelList: Muestra el último sondeo del Área de trabajo|Muestra el último sondeo de todas las Áreas de trabajo
+types.PortletPoll.fields.poll.label: Sondeo
+types.PortletPoll.title.description: Título
+types.PortletPoll.description: Este portlet muestra un sondeo y, a continuación, los resultados actuales una vez completada la votación.
+types.PortletPoll.fields.poll.description: El sondeo a mostrar (si no hay ninguno, se muestra el último sondeo publicado)
+types.PortletPoll.fields.refineWorkspace.description: Muestra el último sondeo del área de trabajo actual o de todas las áreas de trabajo.
+types.PortletPoll.label: Portlet del sondeo
+types.PortletPoll.title.label: Título
+types.PortletPoll.fields.refineWorkspace.label: Restringir
+types.PortletPoll.fields.hideWhenNoResults.label: Ocultar el portlet si no hay ningún sondeo
+types.PortletPoll.fields.hideWhenNoResults.onLabel: Sí
+types.PortletPoll.fields.hideWhenNoResults.offLabel: No
+types.PortletPoll.fields.hideWhenNoResults.description: Si no hay ningún sondeo para mostrar, ocultar el portlet.

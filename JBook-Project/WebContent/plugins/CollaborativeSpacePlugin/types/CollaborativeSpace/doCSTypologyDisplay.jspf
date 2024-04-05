@@ -1,0 +1,118 @@
+<%@page import="com.jalios.util.ServletUtil"%><%
+%><%@page import="com.jalios.jcms.Category"%><%
+%><%@page import="com.jalios.jcmsplugin.collaborativespace.CSManager"%><%
+%><%@page import="generated.CollaborativeSpace"%><%
+%><%@page import="com.jalios.util.Util"%><%
+%><%@ page contentType="text/html; charset=UTF-8" %><% 
+
+CollaborativeSpace cs = (CollaborativeSpace) request.getAttribute(PortalManager.PORTAL_PUBLICATION);
+if (cs == null) {
+  return;
+}
+
+String introduction = cs.getIntroduction(userLang);
+String csDescription = cs.getDescription(userLang);
+boolean isPublic = CSHelper.isPublic(cs);
+boolean isPrivate = CSHelper.isPrivate(cs);
+boolean isSecret = CSHelper.isSecret(cs);
+boolean doParticipate = isLogged && loggedMember.belongsToWorkspace(cs.getWorkspace());
+String accessIcon = CSHelper.getIcon(cs);
+String accessLabel = glp("jcmsplugin.collaborativespace.create.info.access");
+String csAccessLabel = "jcmsplugin.collaborativespace.create.info.access.";
+if (isPublic) {
+  csAccessLabel = glp(csAccessLabel + "public");
+} 
+else if (isPrivate) {
+  csAccessLabel = glp(csAccessLabel + "private");
+}
+else if (isSecret) {
+  csAccessLabel = glp(csAccessLabel + "secret");
+} 
+else {
+  csAccessLabel = "???";
+}
+
+String accessTitle = encodeForHTMLAttribute(accessLabel + " : " + csAccessLabel);
+
+String signupMode = cs.getSignupPolicy(userLang);
+
+String csInnerClass = cs.getWorkspace().isModel() ? " cs-result-model" : "";
+csInnerClass += " signup-" + signupMode;
+csInnerClass += (isPublic ? " access-public" : (isPrivate ? " access-private" : (isSecret ? " access-secret" : "")));
+csInnerClass += (doParticipate ? " participate-on" : " participate-off");
+
+Integer csCounter = (Integer) request.getAttribute("itPublicationAbsCounter");
+%>
+
+
+<div class='resultDisplay CollaborativeSpace<%= " " + csInnerClass.trim() %>'>
+
+  <%
+  // -------------------------------------------------
+  //  Heading
+  // -------------------------------------------------
+  %>
+  <div class="heading">
+    <h3>
+      <% if (csCounter != null) { %>
+        <span class="counter cs-counter"><%= csCounter %>.</span>
+      <% } %>
+      <jalios:link data='<%= cs %>' />
+    </h3>
+  </div>
+  
+  <jalios:buffer name='descBuffer'>
+    <div class="description">
+      <% if (Util.notEmpty(introduction)) { %>
+        <jalios:truncate length="400" suffix="..." ><%= Util.html2Ascii(introduction) %></jalios:truncate>
+      <% } else if (Util.notEmpty(csDescription)) { %>
+        <jalios:wiki truncateLength="400" truncateSuffix="..."><%= cs.getDescription(userLang) %></jalios:wiki>
+      <% } %>
+
+    </div>
+  </jalios:buffer>
+    
+  <jalios:buffer name='metaBuffer'>
+    <%
+    // -------------------------------------------------
+    //  META DATAS
+    // -------------------------------------------------
+    %>
+    <div class='meta-datas'>
+      <%
+      // -------------------------------------------------
+      //  ADMIN LIST
+      // -------------------------------------------------
+      %>
+      <jalios:buffer name='adminListBuffer'>
+        <div class='admins'>
+          <%
+          Workspace workspaceBackup = workspace;
+          workspace = cs.getWorkspace();
+          %>
+          <%@ include file='doAnimatorsListTypologyContext.jspf' %>
+          <%
+          workspace = workspaceBackup;
+          %>
+        </div>
+      </jalios:buffer>
+      
+      <% {
+        CollaborativeSpace csBadge = cs;
+        %><%@ include file="/plugins/CollaborativeSpacePlugin/jsp/doCSBadge.jspf" %><%
+      } %>
+
+      <%= glp("jcmsplugin.collaborativespace.typology-portal.lbl.cs-typology.info", JcmsUtil.getFriendlyDate(cs.getWorkspace().getCdate(), DateFormat.SHORT, false, userLocale), cs.getWorkspace().getMemberCount(true), adminListBuffer.toString()) %>
+    </div>  
+  </jalios:buffer>
+    
+  <%
+  // -------------------------------------------------
+  //  CONTENT WRAPPER
+  // -------------------------------------------------
+  %>
+  <div class="content">
+    <%= metaBuffer %>
+    <% if (Util.notEmpty(csDescription) || Util.notEmpty(introduction)) { %><%= descBuffer %><% } %>
+  </div>
+</div>

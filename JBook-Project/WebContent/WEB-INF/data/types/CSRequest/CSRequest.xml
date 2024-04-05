@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<type name="CSRequest" superclass="com.jalios.jcms.Form" formOneSubmit="false" formNotify="false" formAuthor="$id.CSRequest.formAuthor" formRedirectMode="home" categoryTab="false" readRightTab="false" updateRightTab="true" templateTab="false" workflowTab="true" advancedTab="true" authgroups="||||||" hbm="true">
+  <title ml="false" />
+  <fields>
+  
+    <field name="name" editor="textfield" required="true" type="String" searchable="true" size="80" compactDisplay="false" ml="true" descriptionType="text" html="false" checkHtml="true" />
+    <field name="description" editor="textarea" required="true" compactDisplay="false" type="String" searchable="false" rows="2" cols="80" ml="true" wiki="true" html="false" checkHtml="false" descriptionType="text" />
+    <field name="accessPolicy" editor="enumerate" required="true" compactDisplay="false" type="String" chooser="checkbox" valueList="public|private|secret" ml="false" descriptionType="text" searchable="false" html="false" checkHtml="true" />
+    <field name="signupPolicy" editor="enumerate" required="true" compactDisplay="false" type="String" chooser="checkbox" valueList="free|request|admin" ml="false" descriptionType="text" searchable="false" html="false" checkHtml="true" />
+    <field name="model" editor="textfield" required="false" compactDisplay="false" type="String" searchable="true" size="80" ml="false" descriptionType="tooltip" abstract="true" truncate="400" html="false" checkHtml="true" />
+    <field name="language" editor="textfield" required="false" compactDisplay="false" type="String" searchable="false" size="80" ml="false" html="false" checkHtml="false" />
+    <field name="admins" editor="member" required="false" compactDisplay="false" type="com.jalios.jcms.Member[]" chooser="popup" />
+    <field name="groups" editor="group" required="false" compactDisplay="false" type="com.jalios.jcms.Group[]" chooser="popup" />
+    <field name="members" editor="member" required="false" compactDisplay="false" type="com.jalios.jcms.Member[]" chooser="popup" />
+    <field name="notificationPolicy" editor="enumerate" required="true" compactDisplay="false" type="String" chooser="checkbox" valueList="invitation|mail|no" ml="false" descriptionType="text" searchable="false" html="false" checkHtml="true" />
+    <field name="parent" editor="textfield" required="false" compactDisplay="false" type="String" searchable="false" size="80" ml="false" html="false" checkHtml="false" />
+  	<field name="syncMode" descriptionType="text" editor="enumerate"  required="false" compactDisplay="false" type="String[]" chooser="checkbox" valueList="dashboard|tabs|data|categories" />
+   </fields>
+</type>

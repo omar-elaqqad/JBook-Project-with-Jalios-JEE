@@ -1,0 +1,91 @@
+// Include "generated file" message for CSS output
+/* ------------------------------------------------------------------------- */
+/*  This file has been automatically generated from cs-hub-app-sidebar.less  */
+/* ------------------------------------------------------------------------- */
+
+.app-cs-hub {
+
+  // Render arrows (carets)
+  .app-sidebar-menu-arrow-collapsed() {
+    width: 0;
+    height: 0;
+    border-top:0;
+    border-bottom: 4px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+  }
+  
+  .app-sidebar-menu-arrow-expanded() {
+    width: 0;
+    height: 0;
+    border-top: 4px solid;
+    border-bottom:0;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+  }
+
+  // Add this class when a LI has children in the sidebar menus
+  LI LABEL.app-sidebar-menu-node:after {
+    display: inline-block;
+  
+    margin-left: 5px;
+    vertical-align: middle;
+    content: "";
+    color: @app-sidebar-color;
+    
+    position: initial;
+    .app-sidebar-menu-arrow-expanded;
+  }
+  
+  LI LABEL.app-sidebar-menu-node.expanded:after {
+    .app-sidebar-menu-arrow-expanded;
+  }
+  
+  LI LABEL.app-sidebar-menu-node.collapsed:after {
+    .app-sidebar-menu-arrow-collapsed;
+  }
+  
+  LI.active LABEL.app-sidebar-menu-node {
+    padding-right: 37px;
+  }
+  
+  LI.active LABEL.app-sidebar-menu-node:after {
+    color: @app-sidebar-color-active;
+  }
+  
+  .app-sidebar-treecat LABEL {
+    position: initial; // For the "active" checkmark to be positionned at the very right + visible
+  }
+
+  // Handle 4 sub levels
+  &.app .app-sidebar-menu-formitems > LI>UL>LI {
+    > UL > LI {
+      > LABEL {
+        padding-left: @app-baseline*3;
+      }
+      > UL > LI {
+        > LABEL {
+          padding-left: @app-baseline*4;
+        }
+        > UL > LI {
+          > LABEL {
+            padding-left: @app-baseline*5;
+          }
+        }
+      }
+    }
+  }
+  
+  // Override bg color for Access policy filter
+  &.app .app-sidebar UL.app-sidebar-menu > LI.active {
+    &[data-jalios-cs-hub-access-policy=public] {
+      background-color: @cs-access-public;
+    }
+    &[data-jalios-cs-hub-access-policy=private] {
+      background-color: @cs-access-private;
+    }
+    &[data-jalios-cs-hub-access-policy=secret] {
+      background-color: @cs-access-secret;
+    }
+  }
+}

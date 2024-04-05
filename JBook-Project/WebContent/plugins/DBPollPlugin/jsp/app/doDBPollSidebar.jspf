@@ -1,0 +1,49 @@
+<jalios:appSidebar css="no-focus" icon="jcmsplugin-dbpoll-app" appUrl="<%= appUrl %>" formAction="<%= appUrl %>" iconTitleProp="jcmsplugin.dbpoll.app.sidebar-icon-title">
+
+  <%-- VIEWS / POLLS STATUS FILTER --%>
+  <jalios:appSidebarSection title="ui.app.sidebar-section.views" name="views">
+    <jalios:field resource="field-app">
+      <jalios:control settings='<%= appHandler.getPollsStatusSettings() %>' />
+    </jalios:field>
+  </jalios:appSidebarSection>
+
+  <%-- FILTERS --%>
+  <jalios:appSidebarSection title="ui.com.txt.filters" name="filters">
+  
+		<%-- SEARCH --%>
+		<jalios:appSidebarSectionSearch css="poll-search" ajaxRefresh="true" inputName="text" value="<%= appHandler.getText() %>" placeholder="jcmsplugin.dbpoll.search.placeholder" />
+    
+		<%-- MEMBER/AUTHOR FILTER --%>
+		<jalios:field name="mids" resource="field-light" css="app-sidebar-field">
+		  <jalios:control settings='<%= appHandler.getMemberSettings() %>' />
+		</jalios:field>
+		
+		<%-- BEGIN DATE FILTER --%>
+		<jalios:field name="beginDateStr" resource="field-light" css="app-sidebar-field">
+		  <jalios:control settings='<%= appHandler.getBeginDateSettings() %>' />
+		</jalios:field>
+		
+		<%-- END DATE FILTER --%>
+		<jalios:field name="endDateStr" resource="field-light" css="app-sidebar-field">
+		  <jalios:control settings='<%= appHandler.getEndDateSettings() %>' />
+		</jalios:field>
+		
+		<% if (!appHandler.getRefineWorkspaceOption()) { %>
+			<%-- WORKSPACE FILTER --%>
+			<jalios:field name="workspaceFilter" resource="field-light" css="app-sidebar-field">
+			  <jalios:control type="<%= ControlType.WORKSPACE %>"  settings='<%= appHandler.getWorkspaceSettings() %>' />
+			</jalios:field>
+		<% } %>
+	
+	</jalios:appSidebarSection>
+	
+  <%-- ADD POLL --%>
+  <jalios:appSidebarSection name="actions">
+    <% if (appHandler.showAddPoll()) { %>
+	    <button class="btn btn-default app-sidebar-button btn-add-poll" type="button" data-jalios-action="modal" data-jalios-modal-url="<%= appHandler.getAddPollUrl() %>">
+	      <jalios:icon src="add" /> <%= glp("jcmsplugin.dbpoll.app.catalog.btn.add-poll") %>
+	    </button>
+    <% } %>
+  </jalios:appSidebarSection>
+  
+</jalios:appSidebar>

@@ -1,0 +1,11 @@
+<% 
+int level = getIntParameter("connectionLevel", 1); 
+
+Member mainMember = getDataParameter("connectionMapMid", Member.class);
+if (mainMember == null) {
+  mainMember = member;
+}
+%>
+<div class="graph">
+<%= esnMgr.generateConnectionMap(mainMember, showAll || showAccount, showAll || showContact, level, userLang) %>
+</div>

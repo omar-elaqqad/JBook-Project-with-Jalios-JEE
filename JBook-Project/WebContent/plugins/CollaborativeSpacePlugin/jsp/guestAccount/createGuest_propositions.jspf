@@ -1,0 +1,53 @@
+<%--
+  @Summary: Guest Account Creation
+  @since: csp-4.1
+  @author Sylvain Devaux <sylvain.devaux@jalios.com>
+--%><%@page import="com.jalios.jcms.taglib.card.*"%><%
+%><%@page import="com.jalios.jcms.uicomponent.DataAttribute"%><%
+%><%@page import="com.jalios.jcmsplugin.collaborativespace.guest.handler.GuestCreaHandler"%><%
+%><%@page import="com.jalios.jcmsplugin.collaborativespace.guest.*"%><%
+%><%@ page contentType="text/html; charset=UTF-8" %><%
+
+if (step == GuestCreaHandler.STEP_1) {
+Set<Member> contactSet = formHandler.getContactSet();
+jcmsContext.addCSSHeader("css/jalios/core/jalios-member-card.css");
+LinkOptions linkOptions = new LinkOptions();
+linkOptions.add("target", "_blank");
+%>
+<jalios:message level='<%= MessageLevel.INFO %>' msg='<%= glp(stepPrefixProp + "1.intro.2") %>' title='' />
+
+<div class="propositions member-list">
+  <jalios:pager name='guestCreatePagerHandler' declare='true' action='init' paramPrefix='guestCreatePropositions' pageSize='6' size='<%= contactSet.size() %>'/>
+  <jalios:cards mode="<%= CardsDisplayMode.INLINE %>" css='card-cs-guest-layout noTooltipCard'>
+    <jalios:foreach collection="<%= contactSet %>" type="Member" name="itMember" max="<%= guestCreatePagerHandler.getPageSize() %>" skip="<%= guestCreatePagerHandler.getStart() %>">
+      <%
+      boolean memberCanBeRead = itMember.canBeReadBy(loggedMember);
+      boolean showContactConvertBtn = memberCanBeRead && itMember.isContact() && canSubmitContactConversion;
+      boolean showSelectBtn = memberCanBeRead && !showContactConvertBtn;
+      %>
+      <jalios:cardData data='<%= itMember %>' linkOptions='<%= linkOptions %>' template="cs-guest-proposition" />
+      <%
+      // Custom
+      String propositionBtnCss = "btn btn-sm btn-default btn-guest-mbr-proposition";
+      %>
+      <% if (showContactConvertBtn) { %>
+        <%
+        String btnTitle = glp("jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.transform-contact-to-guest.btn.title");        
+        String btnLabel = glp("jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.transform-contact-to-guest.btn-label");        
+        %>
+        <a href="#" class="<%= propositionBtnCss %> convert-contact-to-guest-btn" title='<%= encodeForHTMLAttribute(btnTitle) %>' data-jalios-data-id='<%= itMember.getId() %>' data-jalios-action="clickable">
+          <%= btnLabel %>
+        </a>
+      <% } %>
+      <% if (showSelectBtn) { %>
+        <% String btnLabel = glp("jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.select-account.btn"); %>
+        <span class="<%= propositionBtnCss %> btn-select-mbr " data-jalios-data-id='<%= itMember.getId() %>' data-jalios-action="clickable">
+          <%= btnLabel %>
+        </span>
+      <% } %>
+    </jalios:foreach>
+    <jalios:pager name='guestCreatePagerHandler' />
+  </jalios:cards>
+  <input type="hidden" name="<%= GuestCreaHandler.PROPOSED_MEMBER_ID_PARAM %>" value="" />
+</div>
+<% } %>

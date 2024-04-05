@@ -1,0 +1,720 @@
+jcmsplugin.esn.categories:                    技能类别分支
+jcmsplugin.esn.categories.help:               定义类别标识符，或一组由空格分隔的标识符列表。
+$id.jcmsplugin.esn.profile.portal:            成员个人资料显示Portal（原有资料）
+jcmsplugin.esn.microblogging.Workspace:       微博默认工作区
+
+jcmsplugin.esn.connection-request.enabled:    连接确认
+jcmsplugin.esn.connection-request.decline-alert.enabled: 成员连接被拒时发送通知。
+
+jcmsplugin.esn.follower-notification:         通知新关注者
+jcmsplugin.esn.graphviz.dot.exe:              Graphviz "dot"路径
+jcmsplugin.esn.graphviz.dot.exe.help:         Graphviz为成员资料生成关系图。“dot”路径。例如：windows环境下为："C:&#92;Program Files&#92;Graphviz2.22&#92;bin&#92;dot.exe".
+
+jcmsplugin.esn.external-contacts:             外部联系人
+
+jcmsplugin.esn.map-service:                   地图服务
+
+jcmsplugin.esn.contact-referrers.qs:          引用发布搜索
+
+jcmsplugin.esn.mbr-extended-search-limit:      成员扩展搜索 - 触发限值
+jcmsplugin.esn.mbr-extended-search-limit.help: 成员扩展搜索（带ESN信息）只在成员常规搜索返回比限值少的结果时启用。
+
+jcmsplugin.esn.agreement.required:            接受ESN使用条款
+jcmsplugin.esn.agreement.terms.pub:           ESN使用条款 - 发布
+jcmsplugin.esn.agreement.terms.field:         ESN使用条款 - 字段
+jcmsplugin.esn.agreement.btn.agree:           我接收
+jcmsplugin.esn.agreement.btn.disagree:        我拒绝
+
+jcmsplugin.esn.group-expertise.assignment:    技能组分配
+
+ui.com.lbl.guest: 来宾
+jcmsplugin.esn.panel-toggle-show: 开启
+jcmsplugin.esn.panel-toggle-hide: 关闭
+jcmsplugin.esn.profile.see-photo: 查看大尺寸资料照片
+jcmsplugin.esn.profile.action.open-action-menu: 打开操作菜单
+jcmsplugin.esn.profile.action.create-event-with: 邀请参加事件...
+jcmsplugin.esn.profile.action.change-photo: 更改图片...
+jcmsplugin.esn.profile.action.change-photo.me: 更改我的图片...
+jcmsplugin.esn.profile.lbl.goto-calendar:     显示日历
+jcmsplugin.esn.profile.lbl.disabled-account:  禁用的账户
+jcmsplugin.esn.profile.lbl.disabled-guest-account: 禁用的来宾
+jcmsplugin.esn.profile.lbl.ws-role.admin:     {0}主持：
+jcmsplugin.esn.profile.lbl.ws-role.worker:    {0}贡献：
+jcmsplugin.esn.profile.lbl.ws-role.reader:    {0}参与：
+jcmsplugin.esn.profile.lbl.ws-role.me.admin:  您主持：
+jcmsplugin.esn.profile.lbl.ws-role.me.worker: 您发布：
+jcmsplugin.esn.profile.lbl.ws-role.me.reader: 您参与：
+jcmsplugin.esn.profile.tab.access:            访问
+jcmsplugin.esn.profile.tab.activity:          活动
+jcmsplugin.esn.profile.tab.calendar:        日历
+jcmsplugin.esn.profile.tab.communities:       社区
+jcmsplugin.esn.profile.tab.connections:       连接
+jcmsplugin.esn.profile.tab.contacts:          连接
+jcmsplugin.esn.profile.tab.cv:                个人简历
+jcmsplugin.esn.profile.tab.expertises:        技能
+jcmsplugin.esn.profile.tab.info:              信息
+jcmsplugin.esn.profile.tab.invitations:       邀请
+jcmsplugin.esn.profile.tab.profil:            个人资料
+jcmsplugin.esn.profile.tab.resume:            继续
+jcmsplugin.esn.profile-edit.tab.info:         信息
+jcmsplugin.esn.profile-edit.tab.expertises:   技能
+jcmsplugin.esn.profile-edit.tab.account:      访问
+jcmsplugin.esn.profile-edit.tab.alert:        通知
+jcmsplugin.esn.profile-edit.tab.notification: 订阅
+
+jcmsplugin.esn.lbl.status:                    信息
+jcmsplugin.esn.lbl.status-info:               {0}已更新的消息
+jcmsplugin.esn.lbl.last-connection:           上次登录
+jcmsplugin.esn.lbl.online:                    在线
+jcmsplugin.esn.lbl.offline:                   离线
+jcmsplugin.esn.lbl.interest:                  兴趣领域
+jcmsplugin.esn.lbl.introduction:              自我介绍
+jcmsplugin.esn.lbl.external-contact:          外部联系人
+jcmsplugin.esn.lbl.activity:                  活动
+jcmsplugin.esn.lbl.network-activity:          我的网络活动
+jcmsplugin.esn.lbl.categories:                技能
+jcmsplugin.esn.lbl.categories.add:            添加技能
+jcmsplugin.esn.lbl.categories.placeholder.search: 搜索技能
+jcmsplugin.esn.lbl.calendar:                  日历
+jcmsplugin.esn.lbl.publications:              最新发布
+jcmsplugin.esn.lbl.jobs:                      职业经验
+jcmsplugin.esn.lbl.jobs.add:                  添加岗位
+jcmsplugin.esn.lbl.jobs.add.error.date:       开始日期必须早于结束日期。
+jcmsplugin.esn.lbl.educations:                教育
+jcmsplugin.esn.lbl.educations.add:            添加教育
+jcmsplugin.esn.lbl.vcard:                     导入至Outlook...
+jcmsplugin.esn.lbl.contact-referrers:         引用发布
+jcmsplugin.esn.lbl.comment-count:             {0,choice,1#查看{0}评论|2#查看 {0} 评论}
+
+jcmsplugin.esn.lbl.info:                      联系信息
+jcmsplugin.esn.lbl.date-of-birth:             生日
+jcmsplugin.esn.lbl.date-of-arrival:           到达日期
+jcmsplugin.esn.lbl.connections.suggestions:   推荐的联系人
+jcmsplugin.esn.lbl.connections.suggestions.del: 删除这一提议
+jcmsplugin.esn.lbl.connections.suggestions.reset: 重置提议...
+jcmsplugin.esn.lbl.connections.requests:      邀请连接
+jcmsplugin.esn.lbl.connections.requests.in:   已收到的邀请
+jcmsplugin.esn.lbl.connections.requests.out:  发送邀请
+jcmsplugin.esn.lbl.connections.requests.out2: 发送
+jcmsplugin.esn.lbl.connections.requests.edit: 处理该邀请……
+jcmsplugin.esn.lbl.connections.requests.received: {0}，{1} 在 {2}向您发送了邀请。
+jcmsplugin.esn.lbl.connections.requests.sent: {0}，您在 {2}向 {1} 发送了邀请。
+jcmsplugin.esn.lbl.connections.requests.missing: 该邀请已不存在。
+jcmsplugin.esn.lbl.connections.connected:     {0} 是您的联系人之一。
+jcmsplugin.esn.lbl.connections.recommendation:向您的联系人推荐 {0} ...
+jcmsplugin.esn.lbl.connections.recommendation2:向您的联系人推荐...
+jcmsplugin.esn.lbl.connections.connect-contact: 将 {0} 连接至其他联系人...
+jcmsplugin.esn.lbl.connections.connect-contact2: 连接至其他联系人...
+jcmsplugin.esn.lbl.connections.no-link:       无法从您的连接网络中联系{0}。
+jcmsplugin.esn.lbl.connections.add.member:    将 {0} 添加至您的联系人...
+jcmsplugin.esn.lbl.connections.add.member2:   添加至您的联系人...
+jcmsplugin.esn.lbl.connections.add.contact:   将 {0} 添加至您的联络人
+jcmsplugin.esn.lbl.connections.add.contact2:  添加至您的联络人
+jcmsplugin.esn.lbl.connections:               关系
+jcmsplugin.esn.lbl.connections.common:        你们的共同联系人
+jcmsplugin.esn.lbl.connections.me:            我的联系人
+jcmsplugin.esn.lbl.connections.other:         他/她的其他联系人
+jcmsplugin.esn.lbl.connections.all-contacts:  所有联系人
+jcmsplugin.esn.lbl.connections.all:           所有
+jcmsplugin.esn.lbl.connections.internal:      成员
+jcmsplugin.esn.lbl.connections.external:      联系人
+jcmsplugin.esn.lbl.connections.show.me:       显示我的所有联系人
+jcmsplugin.esn.lbl.connections.show.other:    显示{0} 的所有联系人
+
+jcmsplugin.esn.lbl.connections.views:         视图：
+jcmsplugin.esn.lbl.connections.list:          列表
+jcmsplugin.esn.lbl.connections.card:          卡
+jcmsplugin.esn.lbl.connections.cloud:         云
+jcmsplugin.esn.lbl.connections.csv:           CSV
+jcmsplugin.esn.lbl.connections.level:         连接等级
+jcmsplugin.esn.lbl.connections.map:           地图
+jcmsplugin.esn.lbl.connections.map.tt.profile:转向 {0}的个人资料
+jcmsplugin.esn.lbl.connections.map.tt.map:    将地图居中于 {0}
+
+jcmsplugin.esn.lbl.connections.new-contact:   添加一个联系人
+jcmsplugin.esn.lbl.disconnect:                移除这一联系人...
+jcmsplugin.esn.lbl.disconnect.title:          移除一个联系人
+jcmsplugin.esn.lbl.disconnect.contact:        将 {0} 从您的联系人中移除...
+jcmsplugin.esn.lbl.disconnect.contact2:       从您的联系人中移除...
+jcmsplugin.esn.lbl.disconnect.confirm:        您真的希望将 <strong>{0}</strong> 从您的联系人中移除？
+jcmsplugin.esn.lbl.disconnect.confirm-contact:您真的希望将 <strong>{0}</strong> 从 <strong>{1}</strong>的联系人中移除？
+jcmsplugin.esn.lbl.disconnect.confirm-warn:   警告！您是 <strong>{0}</strong>的最后一名联系人。您仍然希望删除该联系人？
+jcmsplugin.esn.lbl.disconnect.btn.disconnect: 从我的联系人中移除
+jcmsplugin.esn.lbl.disconnect.btn.disconnect-other: 从他/她的联系人中移除
+jcmsplugin.esn.lbl.disconnect.btn.delete:     删除该联系人
+
+jcmsplugin.esn.lbl.followings:                正在关注
+jcmsplugin.esn.lbl.followers:                 关注者
+jcmsplugin.esn.lbl.follow:                    关注 {0}的活动
+jcmsplugin.esn.lbl.follow2:                   关注活动
+jcmsplugin.esn.lbl.unfollow:                  停止关注 {0}的活动
+jcmsplugin.esn.lbl.unfollow2                  Stop following activity
+jcmsplugin.esn.lbl.contact-followers:         {0} 关注了 {1,choice,0#零个成员|1#一名成员|2#{1} 名成员}， {2,choice,0#零个成员|1#一名成员|2#{2} 名成员} 关注了 {0}
+
+jcmsplugin.esn.lbl.ws-role.admin:             管理员
+jcmsplugin.esn.lbl.ws-role.worker:            参与者
+jcmsplugin.esn.lbl.ws-role.reader:            读者
+
+jcmsplugin.esn.lbl.links.me:                  更多关于我的信息...
+jcmsplugin.esn.lbl.links.other:               更多关于 {0}的信息...
+jcmsplugin.esn.lbl.links.intro:               添加您想推荐的外部站点链接（您的博客、个人资料或公共社交网页……）
+jcmsplugin.esn.lbl.links.intro.other:         添加想推荐的外部站点链接（博客、个人资料或公共社交网页……）
+jcmsplugin.esn.lbl.links.add:                 添加一个链接
+
+jcmsplugin.esn.lbl.edit.me:                   编辑我的个人资料
+jcmsplugin.esn.lbl.edit.other:                编辑{0} 的个人资料
+jcmsplugin.esn.lbl.edit.other2:               编辑个人资料
+jcmsplugin.esn.lbl.editLabel:                 编辑
+jcmsplugin.esn.lbl.editProfile.progress:      资料 <strong>{0}%</strong> 完整。
+
+jcmsplugin.esn.edit-profile.title.me:         您的个人资料
+jcmsplugin.esn.edit-profile.title.other:      {0}的个人资料
+jcmsplugin.esn.edit-profile.presentation:     自我介绍
+jcmsplugin.esn.edit-profile.change-photo:     更改我的图片
+
+jcmsplugin.esn.edit-expertises.title:         更新{0}的技能
+
+jcmsplugin.esn.add-contact.title:             添加一个联系人
+jcmsplugin.esn.add-contact.steps.0:           检查
+jcmsplugin.esn.add-contact.steps.1:           建议
+jcmsplugin.esn.add-contact.steps.2:           信息
+jcmsplugin.esn.add-contact.steps.3:           技能
+jcmsplugin.esn.add-contact.steps-intro.0:     输入您联系人的名称和/或电子邮箱，以查看此人是否已存在。
+jcmsplugin.esn.add-contact.steps-intro.1.1:   已找到一名符合该条件的成员。请在创建新联系人前确认不是同一个人。
+jcmsplugin.esn.add-contact.steps-intro.1.2:   已找到符合该条件的已有成员。请在创建新的联系人之前确认其是否已经存在。
+jcmsplugin.esn.add-contact.add-to-my-contacts:添加至我的联系人
+jcmsplugin.esn.add-contact.view-contact:      查看该联系人
+jcmsplugin.esn.add-contact.lbl.check:         检查…
+jcmsplugin.esn.add-contact.lbl.create:        创建新联系人...
+jcmsplugin.esn.add-contact.lbl.wait:          正在检查...
+jcmsplugin.esn.add-contact.lbl.add:           添加至我的联系人
+jcmsplugin.esn.add-contact.lbl.contact-added: 已创建联系人<b>{0}</b>。
+jcmsplugin.esn.add-contact.btn.continue:      保存并添加其他联系人
+
+jcmsplugin.esn.mcr.request.title:             将 {0} 添加至您的网络
+jcmsplugin.esn.mcr.request.lbl.send:          发送
+jcmsplugin.esn.mcr.request.info.title1:       为什么连接？
+jcmsplugin.esn.mcr.request.info.content1:     与 {0} 建立连接后，您可以查看他/她的 <strong>完整个人资料</strong> 并关注他/她的 <strong>所有动态</strong>。{0} 同样也能访问您的 <strong>完整个人资料</strong> 并关注您的 <strong>所有动态</strong>。一旦建立连接，您将 {0}  <strong>推荐</strong> 给您网络内的其他成员。
+jcmsplugin.esn.mcr.request.info.title2:       怎样连接？
+jcmsplugin.esn.mcr.request.info.content2:     只需向 {0} 发送与您建立连接的邀请即可。一旦 {0} 接受您的邀请，你们将可以建立连接。
+
+jcmsplugin.esn.mcr.request.msg: {0}，\n\n我希望将您添加至我的联系人。\n\n{1}\n
+
+jcmsplugin.esn.mcr.validate.title:            邀请
+jcmsplugin.esn.mcr.validate.info:             <b>这个邀请是什么？</b><p>{0} 希望与您建立连接。接受这一邀请后，您将可以访问 {0}的 <strong>完整个人资料</strong> 和 <strong>所有动态</strong>。这是一个双向连接。接受邀请后，您也将允许 {0} 访问您的 <strong>完整个人资料</strong>和 <strong>所有动态</strong>。</p>
+jcmsplugin.esn.mcr.validate.common:           你们的共同联系人
+jcmsplugin.esn.mcr.validate.common-some:      你们的部分共同联系人
+jcmsplugin.esn.mcr.validate.lbl.accept:       接受
+jcmsplugin.esn.mcr.validate.lbl.decline:      拒绝
+jcmsplugin.esn.mcr.validate.lbl.close:        关闭
+jcmsplugin.esn.mcr.lbl.confirm-delete:        您真的希望删除发送给 <strong>{0}</strong>的邀请吗？
+
+jcmsplugin.esn.connect-contact.title:          连接联系人
+jcmsplugin.esn.connect-contact.no-contact:     您的所有联系人都连接至 <span class="contact">{0}</span>。
+jcmsplugin.esn.connect-contact.info:           选择您希望连接至 <span class="contact">{0}</span>的联系人。
+jcmsplugin.esn.connect-contact.lbl.contacts:   您的联系人
+jcmsplugin.esn.connect-contact.lbl.connect:    已连接
+
+jcmsplugin.esn.activity.enabled:                 活动 - 启用活动跟踪
+
+jcmsplugin.esn.activity.none:                    无活动
+jcmsplugin.esn.activity.profile.job:             {0} 添加了岗位 <span class="message">{1}</span>
+jcmsplugin.esn.activity.profile.education:       {0} 添加了培训 <span class="message">{1}</span>
+jcmsplugin.esn.activity.profile.link:            {0} 添加了链接 {1}
+jcmsplugin.esn.activity.profile.categories:      {0} 添加了技能
+jcmsplugin.esn.activity.profile.categories.add:  {0} 更新了技能：<span class="message">{1}</span>
+jcmsplugin.esn.activity.profile.categories.add-empty:  {0} 更新了技能
+jcmsplugin.esn.activity.profile.info:            {0} 更新了他的信息
+jcmsplugin.esn.activity.profile:                 {0} 更新了他的个人资料
+jcmsplugin.esn.activity.contact.profile:         {0} 更新了 {1}的个人资料
+jcmsplugin.esn.activity.contact.note:            {0} 为 {1}添加了新注释
+jcmsplugin.esn.activity.connect-account:         {0} 已将 {1}添加为他/她的联系人
+jcmsplugin.esn.activity.connect:                 {0} 已将 {1} 添加为他/她的联系人
+jcmsplugin.esn.activity.ws:                      {0}已在工作区 {1}注册
+jcmsplugin.esn.activity.create:                  {0} 创建了 {1}
+jcmsplugin.esn.activity.update:                  {0} 更新了 {1}
+jcmsplugin.esn.activity.delete:                  {0} 删除了 <span class="message">{1}</span>
+jcmsplugin.esn.activity.create.Publication:      {0} 发布了 {1}
+jcmsplugin.esn.activity.create.Event:            {0} 发布了事件 {1}
+jcmsplugin.esn.activity.create.CalendarEvent:    {0} 发布了事件 {1}
+jcmsplugin.esn.activity.update.CalendarEvent:    {0} 更新了事件 {1}
+jcmsplugin.esn.activity.update.Event:            {0} 更新了事件 {1}
+jcmsplugin.esn.activity.create.Review:           {0} 审阅了 {1}
+jcmsplugin.esn.activity.create.FileDocument:     {0} 上载了 {1}
+jcmsplugin.esn.activity.create.DBComment:        {0} 添加了新评论
+jcmsplugin.esn.activity.description-full.create.DBComment:        {0} 给{1}添加了新评论
+jcmsplugin.esn.activity.create.DBForumTopic:     {0} 添加了新主题 {1}
+jcmsplugin.esn.activity.create.DBPollVote:       {0} 参加了测试 {1}
+jcmsplugin.esn.activity.create.MicroBlogging:
+jcmsplugin.esn.activity.create.WebPage:          {0} 分享了 {1}
+jcmsplugin.esn.activity.update-pstatus:          {0} 将 {1} 的状态转为 <span class="message">{2}</span>。
+jcmsplugin.esn.activity.unzip:                   {0} 从zip存档 {1}中上载了文件
+jcmsplugin.esn.activity.lock:                    {0} 锁定了文档 {1}
+jcmsplugin.esn.activity.unlock:                  {0} 发布了文档 {1}
+jcmsplugin.esn.activity.vote:                    {0} 已为{1} 投票
+jcmsplugin.esn.activity.filter:                  筛选的活动
+jcmsplugin.esn.activity.see-activity:            查看活动
+jcmsplugin.esn.activity.hide-activity:           隐藏活动
+jcmsplugin.esn.activity.delete-activity:         删除该活动
+jcmsplugin.esn.activity.delete-activity-ask:     您真的希望删除该活动？
+jcmsplugin.esn.activity.delete-activity-ask-title:  删除活动
+jcmsplugin.esn.activity.edit-comment:            编辑评论
+jcmsplugin.esn.activity.options-menu-title:      打开活动菜单      
+jcmsplugin.esn.activity.comment:                 评论
+jcmsplugin.esn.activity.show-comments:           显示/隐藏{0,choice,1# 评论|2# 评论}
+jcmsplugin.esn.activity.show-previous-activity:   查看之前的活动
+jcmsplugin.esn.activity.hide-previous-activity:  隐藏活动
+jcmsplugin.esn.activity.lbl.no-activity:         {0}尚无任何动态。
+jcmsplugin.esn.activity.nextpage:                查看更多
+
+jcmsplugin.esn.activity-card.vote-action:        我喜欢
+jcmsplugin.esn.activity-card.menu-title:         打开操作菜单
+jcmsplugin.esn.activity-card.menu-alt:           操作
+jcmsplugin.esn.activity-card.event-attending:    {0}当前
+jcmsplugin.esn.activity-card.event-invited:      {0}与会者
+jcmsplugin.esn.activity-card.event.show-attendees: 查看与会者详情
+jcmsplugin.esn.activity-card.comment-count-title:  访问评论
+
+jcmsplugin.esn.activity.filter.microBlogging:    微博
+jcmsplugin.esn.activity.filter.profile:          个人资料更新
+jcmsplugin.esn.activity.filter.contact:          添加一个外部联系人
+jcmsplugin.esn.activity.filter.connect:          成员连接
+jcmsplugin.esn.activity.filter.ws:               加入一个工作区
+jcmsplugin.esn.activity.filter.create:           添加日期
+jcmsplugin.esn.activity.filter.update:           更新日期
+jcmsplugin.esn.activity.filter.delete:           删除日期
+jcmsplugin.esn.activity.filter.lock:             锁定文档
+jcmsplugin.esn.activity.filter.upload:           上载文档
+jcmsplugin.esn.activity.filter.update-pstatus:   工作流状态更新
+jcmsplugin.esn.activity.filter.others:           其他活动
+jcmsplugin.esn.activity.filter.ws-include:       受限于...
+jcmsplugin.esn.activity.filter.ws-exclude:       除了...
+
+jcmsplugin.esn.activity.filter.editor:               活动筛选
+jcmsplugin.esn.activity.filter.editor.link:          编辑筛选
+jcmsplugin.esn.activity.filter.editor.steps.0:       活动类型
+jcmsplugin.esn.activity.filter.editor.steps.1:       高级筛选
+jcmsplugin.esn.activity.filter.editor.steps-intro.0: 选择在活动流中显示的活动类型。
+jcmsplugin.esn.activity.filter.editor.steps-intro.1: 您可以选择其他标准来筛选活动流。
+
+jcmsplugin.esn.activity.share.remove-webpage: 分享其他页面
+jcmsplugin.esn.activity.share.webpage-next-image: 切换至下一个图像
+jcmsplugin.esn.activity.share.webpage-prev-image: 切换至前一个图像
+jcmsplugin.esn.activity.form-tab.document: 文档
+jcmsplugin.esn.activity.form-tab.microblogging: 信息
+jcmsplugin.esn.activity.form-tab.webpage: 网页
+
+icon.jcmsplugin-esn-activity-share-webpage-img-prev: 上一个
+icon.jcmsplugin-esn-activity-share-webpage-img-next: 下一个
+icon.jcmsplugin-esn-activity-share-webpage-remove: 删除
+
+jcmsplugin.esn.lbl.communities:                  社区
+jcmsplugin.esn.lbl.common-communities:           共同社区
+jcmsplugin.esn.lbl.communities.info:             已创建{0}。{1,choice,0#无成员|1# 1个成员|2#{1,number,integer} 个成员}。{2,choice,0#无内容|1#1个内容|2#{2,number,integer}个内容}。
+
+jcmsplugin.esn.status.title:            更新您的消息
+jcmsplugin.esn.status.intro:            谈谈您正在做的事、您所在的地方、您的心情……？
+jcmsplugin.esn.status.mail:             您可以通过电子邮件来更新您的个人资料，可发送给
+jcmsplugin.esn.status.msg.singleton:    {0} 已有一个状态。
+
+jcmsplugin.esn.link.lbl.name:           站点名称
+jcmsplugin.esn.link.lbl.url:            URL
+jcmsplugin.esn.link.lbl.description:    指南说明
+jcmsplugin.esn.link.msg.empty-title:    '网站名称'为必填项。
+jcmsplugin.esn.link.msg.empty-url:      'URL'为必填项。
+jcmsplugin.esn.link.msg.bad-url:        'URL'字段的格式不正确。
+
+jcmsplugin.esn.lbl.notes:     笔记
+jcmsplugin.esn.lbl.notes.add: 添加注释
+jcmsplugin.esn.lbl.notes.add-link: 添加笔记……
+
+jcmsplugin.esn.directory.lbl.view-profile:      显示完整个人资料
+jcmsplugin.esn.directory.lbl.expert-directory:  专家名录
+
+jcmsplugin.esn.directory.app.nav-competencies: 技能
+jcmsplugin.esn.directory.app.breadcrumb.root: 技能
+jcmsplugin.esn.directory.app.competence.expertise.filter.add: 技能筛选
+jcmsplugin.esn.directory.app.competence.expertise.filter.node.add: 对该技能进行筛选并查看子技能
+jcmsplugin.esn.directory.app.competence.expertise.filter.remove: 移除这一技能筛选
+jcmsplugin.esn.directory.app.competence.expertise.filters.add: 将该技能添加至筛选
+jcmsplugin.esn.directory.app.competence.expertise.filters.remove: 从筛选中移除该技能
+jcmsplugin.esn.directory.app.competence.expertise.is-in-filters: 该技能在您的筛选中。使用相关按钮将其移除
+jcmsplugin.esn.directory.app.competence.expertise.node.is-in-filters: 该技能在您的筛选中。使用相关按钮将其移除以查看子技能
+
+jcmsplugin.esn.directory.app.context-menu-label: 技能背景菜单
+jcmsplugin.esn.directory.app.competence-action.add: 添加技能……
+jcmsplugin.esn.directory.app.competence-action.add-sub: 添加子技能……
+jcmsplugin.esn.directory.app.competence-action.add-prompt: 输入新技能名称（逗号分隔）：
+jcmsplugin.esn.directory.app.competence-action.rename-prompt: 输入技能新名称
+jcmsplugin.esn.directory.app.competence-action.move-to: 移动至...
+jcmsplugin.esn.directory.app.competence-action.modal.move-to.title: 移动至
+jcmsplugin.esn.directory.app.competence-action.modal.move-to.op-action: 移动
+
+jcmsplugin.esn.expert-dir.title:                  专家名录
+jcmsplugin.esn.expert-dir.lbl.home:               主页
+jcmsplugin.esn.expert-dir.lbl.all:                所有专家
+jcmsplugin.esn.expert-dir.lbl.expert-count:       {0,choice,0#无结果|1#{0}个结果|2#{0}个结果}
+jcmsplugin.esn.expert-dir.lbl.related.connexe:    关闭技能：
+jcmsplugin.esn.expert-dir.lbl.related.others:     其他技能：
+jcmsplugin.esn.expert-dir.msg.home:               欢迎来到专家名录。点击左侧的导航栏以显示指定技能的专家列表。
+jcmsplugin.esn.expert-dir.msg.no-expert.all:      无 <i>{0}</i>技能的结果。
+jcmsplugin.esn.expert-dir.msg.no-expert.account:  无 <i>{0}</i>技能的成员。
+jcmsplugin.esn.expert-dir.msg.no-expert.contact:  无 <i>{0}</i>技能的联系人。
+jcmsplugin.esn.expert-dir.lbl.expert-search:      按技能搜索
+jcmsplugin.esn.expert-dir.lbl.filter:             筛选
+jcmsplugin.esn.expert-dir.lbl.filter.info:        点击图标 {0} 以筛选一个技能。
+jcmsplugin.esn.expert-dir.lbl.filter.add:         技能筛选
+jcmsplugin.esn.expert-dir.lbl.filter.remove:      移除这一筛选
+jcmsplugin.esn.expert-dir.lbl.edit-expertises:    管理技能
+
+jcmsplugin.esn.expertise.root-cat-forbidden:      您无法删除或编辑该类别，因为它正被ESN插件使用以便储存技能。只有管理员或授权成员才能对其进行编辑或删除。
+jcmsplugin.esn.expertise.expertise-cat-forbidden: ESN插件将该类别用作一项技能。另一个成员已使用。只有管理员或授权成员才能对其进行编辑。
+
+jcmsplugin.esn.ctxmenu.mbr.profile:  显示个人资料
+
+$id.jcmsplugin.esn.portlet.header:              ESN - 标头
+$id.jcmsplugin.esn.portlet.actions:             ESN - 操作
+$id.jcmsplugin.esn.portlet.connection-requests: ESN - 联系人邀请
+$id.jcmsplugin.esn.portlet.suggestions:         ESN - 建议
+$id.jcmsplugin.esn.portlet.common-connections:  ESN - 共同联系人
+$id.jcmsplugin.esn.portlet.connections:         ESN - 联系人
+$id.jcmsplugin.esn.portlet.links:               ESN - 链接
+$id.jcmsplugin.esn.portlet.activities:          ESN - 活动
+$id.jcmsplugin.esn.portlet.network-activities:  ESN - 网络活动
+$id.jcmsplugin.esn.portlet.publications:        ESN - 公布
+$id.jcmsplugin.esn.portlet.calendar:            ESN - 日历
+$id.jcmsplugin.esn.portlet.presentation:        ESN - 介绍
+$id.jcmsplugin.esn.portlet.workspaces:          ESN - 工作区
+$id.jcmsplugin.esn.portlet.expertise:           ESN - 技能
+$id.jcmsplugin.esn.portlet.contact-notes:       ESN - 联系人 - 注释
+$id.jcmsplugin.esn.portlet.contact-calendar:    ESN - 联系人 - 日历
+$id.jcmsplugin.esn.portlet.contact-referrers:   ESN - 联系人 - 引用
+$id.jcmsplugin.esn.portlet.contacts:            ESN - 联系人
+$id.jcmsplugin.esn.portlet.jobs:                ESN - 职位
+$id.jcmsplugin.esn.portlet.educations:          ESN - 教育
+
+jcmsplugin.esn.portlet-mbr-status.no-mbr:       无成员
+
+jcmsplugin.esn.birthday.portlet.day:  {0,choice,0#今天|1#明天|2#在{0}天后}
+jcmsplugin.esn.birthday.portlet.none: 无生日
+jcmsplugin.esn.birthday-reminder.enabled: 激活生日提醒
+jcmsplugin.esn.birthday-happy: 生日快乐！
+
+jcmsplugin.esn.microblogging.share:               分享
+jcmsplugin.esn.microblogging.modify:            更新
+jcmsplugin.esn.microblogging.label.microblogging: 微博
+jcmsplugin.esn.microblogging.menu.message:        信息
+jcmsplugin.esn.microblogging.title.create-message:发布消息
+jcmsplugin.esn.microblogging.delete-confirm:      您确定要删除最新消息吗？
+jcmsplugin.esn.microblogging.microblogging-prompt:您在做什么？
+jcmsplugin.esn.microblogging.update-message:      编辑该消息
+jcmsplugin.esn.microblogging.delete-message:      删除该消息
+jcmsplugin.esn.microblogging.member-microblogging-title: {0}的微博
+jcmsplugin.esn.microblogging.warn.existing-webpage-ws: 该网页已存在于当前工作空间。
+jcmsplugin.esn.microblogging.warn.existing-webpage-ws-other: 该网页已由{0}在{1}发布于工作空间：{2}。
+jcmsplugin.esn.microblogging.warn.existing-webpage-ws.btn: 访问网页
+jcmsplugin.esn.microblogging.warn.bad-url-format: 提供的URL无效。
+jcmsplugin.esn.microblogging.warn.missing-url: 请输入一个URL。
+jcmsplugin.esn.microblogging.warn.missing-url-meta: 无法加载网站数据，您必须手动提供信息。
+
+jcmsplugin.esn.collaborativespace.private-home.connections: 您在这一空间内的联系人
+
+jcmsplugin.esn.expert-directory.open-access: 开放阅览访问专家名录
+jcmsplugin.esn.expert-directory.open-access.help: 激活开放阅览时，用户无需登录便可访问专家名录。
+jcmsplugin.esn.member-profile.open-access: 开放阅览成员资料
+jcmsplugin.esn.member-profile.open-access.help: 激活开放阅览时，用户无需登录便可访问成员资料。
+jcmsplugin.esn.member-profile.event-intro: {0}参加了活动
+jcmsplugin.esn.member-profile.event-intro.me: 您参加了活动
+
+jcmsplugin.esn.contact-by-email.title: 通过邮箱联系...
+jcmsplugin.esn.contact-by-email.title2: 通过邮箱（{0}）联系...
+jcmsplugin.esn.contact-by-sms.title: 用短信联系……
+jcmsplugin.esn.contact-by-phone.title: 用电话联系……
+jcmsplugin.esn.contact-by-other.title: 通过{0}联系……
+jcmsplugin.esn.call-at-number.title: 呼叫{0}……
+jcmsplugin.esn.profile.contact.email: 邮箱
+jcmsplugin.esn.profile.full.contact.sms: 短信
+jcmsplugin.esn.profile.contact.webchat: WebChat
+
+# ExtraData
+extra.Category.jcmsplugin.esn.groups: ESN - 关联组
+
+# Publish Menu
+jcmsplugin.esn.publish-menu.contact:       联系人
+jcmsplugin.esn.publish-menu.microblogging: 信息
+
+# Alerts
+alert.name.jcmsplugin-esn : 社交网络
+alert.name.jcmsplugin-esn.follower:             新关注者
+alert.name.jcmsplugin-esn.connection:           添加一个新联系人
+alert.name.jcmsplugin-esn.connection-request:   连接请求
+alert.name.jcmsplugin-esn.connection-accepted:  已接受的连接
+alert.name.jcmsplugin-esn.connection-declined:  已拒绝的连接
+alert.name.jcmsplugin-esn.birthday-reminder:    生日提醒
+
+alert.msg.jcmsplugin-esn.follower.title:                        新关注者
+alert.msg.jcmsplugin-esn.follower.short-description:            {author} 关注了您的动态
+
+alert.msg.jcmsplugin-esn.connection.title:                      新连接
+alert.msg.jcmsplugin-esn.connection.short-description:          {author} 已将您添加为他/她的联系人。
+
+alert.msg.jcmsplugin-esn.connection-request.title:              连接邀请
+alert.msg.jcmsplugin-esn.connection-request.short-description:  {author} 向您发送了一个连接邀请。
+alert.msg.jcmsplugin-esn.connection-request.description:        <p>{author} 向您发送了一个连接邀请。</p> {accept} {showProfile}
+jcmsplugin.esn.connection-request.mail:                         {0}向您发送了一个连接邀请。
+
+alert.msg.jcmsplugin-esn.connection-accepted.title:             已接受的邀请
+alert.msg.jcmsplugin-esn.connection-accepted.short-description: {author} 接受了您的邀请你们已成为联系人。
+
+alert.msg.jcmsplugin-esn.connection-declined.title:             已拒绝的邀请
+alert.msg.jcmsplugin-esn.connection-declined.short-description: {author} 拒绝了您的邀请。
+
+alert.msg.jcmsplugin-esn.birthday-reminder.title:               生日提醒
+alert.msg.jcmsplugin-esn.birthday-reminder.short-description:   下一个生日： {birthday-list}
+alert.msg.jcmsplugin-esn.birthday-reminder.description:         <p>您网络中的某些成员很快就要过生日了：</p>{birthday-list}
+alert.msg.jcmsplugin-esn.birthday-reminder.txt.today:    今天：
+alert.msg.jcmsplugin-esn.birthday-reminder.txt.tomorrow: 明天：
+alert.msg.jcmsplugin-esn.birthday-reminder.txt.later:    7天后（{0}）：
+
+# ------------------------------------------------------------
+#  Recommendation
+# ------------------------------------------------------------
+alert.name.recommendation.esn-member-recommendation: 联系人推荐
+alert.msg.recommendation.esn-member-recommendation.title:      推荐于 {data}
+alert.msg.recommendation.esn-member-recommendation.short-description: {author} 建议您将{data}添加为联系人。 {recoContent}
+alert.msg.recommendation.esn-member-recommendation.description: <p>{author} 建议您将{data}添加为联系人。</p> <p>{recoContent}</p>
+alert.msg.recommendation.esn-member-recommendation.reply.short-description: {author} 已回应您对{data}的推荐： {replyRecommendation} {data.url} {reply}
+alert.msg.recommendation.esn-member-recommendation.reply.description: <p>{author} 已回应您对{data}的推荐：</p><hr/><p>{replyRecommendation}</p><hr/> {recoContent} {reply}
+jcmsplugin.esn.recommendation.Member: 向其他成员推荐 <b>{0}</b>。
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From MemberCategories-templates.xml
+types.MemberCategories.templates.query.default.label: 默认模板
+types.MemberCategories.templates.query.default.description: 本次发布的默认模板
+types.MemberCategories.templates.full.default.label: 默认模板
+types.MemberCategories.templates.box.default.description: 本次发布的默认模板
+types.MemberCategories.templates.box.default.label: 默认模板
+types.MemberCategories.templates.edit.default.description: 本次发布的默认模板
+types.MemberCategories.templates.edit.default.label: 默认模板
+types.MemberCategories.templates.full.default.description: 本次发布的默认模板
+
+# From MemberCategories.xml
+types.MemberCategories.label: ESN - 技能
+types.MemberCategories.title.label: 指南标题
+
+# From MemberEducation-templates.xml
+types.MemberEducation.templates.query.default.description: 本次发布的默认模板
+types.MemberEducation.templates.full.default.description: 本次发布的默认模板
+types.MemberEducation.templates.full.default.label: 默认模板
+types.MemberEducation.templates.box.default.label: 默认模板
+types.MemberEducation.templates.query.default.label: 默认模板
+types.MemberEducation.templates.edit.default.label: 默认模板
+types.MemberEducation.templates.box.default.description: 本次发布的默认模板
+types.MemberEducation.templates.edit.default.description: 本次发布的默认模板
+
+# From MemberEducation.xml
+types.MemberEducation.fields.endDate.label: 结束日期
+types.MemberEducation.label: ESN - 教育
+types.MemberEducation.title.label: 指南标题
+types.MemberEducation.fields.degree.label: 文凭
+types.MemberEducation.fields.startDate.label: 开始日期
+types.MemberEducation.fields.site.label: 站点
+types.MemberEducation.fields.place.label: 地点
+types.MemberEducation.fields.trainingCenter.label: 培训机构
+types.MemberEducation.fields.description.label: 指南说明
+
+# From MemberJob-templates.xml
+types.MemberJob.templates.box.default.description: 本次发布的默认模板
+types.MemberJob.templates.box.default.label: 默认模板
+types.MemberJob.templates.full.default.label: 默认模板
+types.MemberJob.templates.query.default.label: 默认模板
+types.MemberJob.templates.edit.default.description: 本次发布的默认模板
+types.MemberJob.templates.edit.default.label: 默认模板
+types.MemberJob.templates.full.default.description: 本次发布的默认模板
+types.MemberJob.templates.query.default.description: 本次发布的默认模板
+
+# From MemberJob.xml
+types.MemberJob.title.label: 工作职位
+types.MemberJob.fields.startDate.label: 开始日期
+types.MemberJob.fields.place.label: 地点
+types.MemberJob.label: ESN - 工作
+types.MemberJob.fields.description.label: 指南说明
+types.MemberJob.fields.organization.label: 组织
+types.MemberJob.fields.endDate.label: 结束日期
+types.MemberJob.fields.site.label: 网址
+
+# From MemberProfile-templates.xml
+types.MemberProfile.templates.edit.default.label: 默认模板
+types.MemberProfile.templates.box.default.label: 默认模板
+types.MemberProfile.templates.full.default.label: 默认模板
+types.MemberProfile.templates.full.default.description: 本次发布的默认模板
+types.MemberProfile.templates.fullold.default.label: 旧默认模板（<6.2）
+types.MemberProfile.templates.query.default.label: 默认模板
+types.MemberProfile.templates.editFront.default.label: Front-office编辑模板。
+types.MemberProfile.templates.edit.default.description: 本次发布的默认模板
+types.MemberProfile.templates.box.default.description: 本次发布的默认模板
+types.MemberProfile.templates.query.default.description: 本次发布的默认模板
+
+# From MemberProfile.xml
+types.MemberProfile.label: ESN - 个人资料
+types.MemberProfile.fields.dateOfBirth.label: 出生日期
+types.MemberProfile.title.label: 指南标题
+types.MemberProfile.fields.introduction.label: 介绍
+types.MemberProfile.fields.interest.label: 兴趣领域
+types.MemberProfile.fields.dateOfArrival.label: 到达日期
+
+# From MicroBlogging.xml
+types.MicroBlogging.fields.text.label: 文本
+types.MicroBlogging.label: 微博
+types.MicroBlogging.title.label: 指南标题
+
+# From PortletBirthday-templates.xml
+types.PortletBirthday.templates.box.default.label: 仪表板模板
+types.PortletBirthday.templates.full.default.label: 应用程序模板
+
+# From PortletBirthday.xml
+types.PortletBirthday.fields.relationshipFilter.description: 只显示连接至登录成员的成员？
+types.PortletBirthday.fields.relationshipFilter.onLabel: 是
+types.PortletBirthday.fields.workspaceMembers.label: 工作区成员
+types.PortletBirthday.fields.relationshipFilter.label: 联系人筛选
+types.PortletBirthday.fields.workspaceMembers.description: 只显示当前工作区成员？
+types.PortletBirthday.fields.workspaceMembers.offLabel: 否
+types.PortletBirthday.fields.workspaceMembers.onLabel: 是
+types.PortletBirthday.label: 生日Portlet
+types.PortletBirthday.fields.relationshipFilter.offLabel: 否
+types.PortletBirthday.title.label: 指南标题
+types.PortletBirthday.description: 显示即将过生日的联系人
+
+# From PortletMemberActivity-templates.xml
+types.PortletMemberActivity.templates.box.default.label: 仪表板模板
+types.PortletMemberActivity.templates.full.default.label: 应用程序模板
+types.PortletMemberActivity.templates.full.card.label: 应用程序卡片模板
+types.PortletMemberActivity.templates.box.card.label: 仪表板卡片模板
+types.PortletMemberActivity.templates.jmobile.default.label: 默认模板
+
+# From PortletMemberActivity.xml
+types.PortletMemberActivity.fields.activityMode.label: 已显示的活动
+types.PortletMemberActivity.fields.activityMode.labelList: 所有工作区内已关注成员的动态 | 我所属工作区内已关注成员的动态 | 工作区动态 | 当前工作区动态
+types.PortletMemberActivity.fields.showComments.label: 显示评论
+types.PortletMemberActivity.fields.showMedia.label: 显示媒体
+types.PortletMemberActivity.fields.filters.label: 筛选
+types.PortletMemberActivity.fields.defaultPageSize.label: 显示的活动数量
+types.PortletMemberActivity.fields.showComments.onLabel: 是
+types.PortletMemberActivity.fields.showMedia.onLabel: 是
+types.PortletMemberActivity.fields.showComments.offLabel: 否
+types.PortletMemberActivity.fields.showAbstract.onLabel: 是
+types.PortletMemberActivity.fields.showMedia.offLabel: 否
+types.PortletMemberActivity.fields.showAbstract.label: 显示摘要
+types.PortletMemberActivity.fields.showAbstract.offLabel: 否
+types.PortletMemberActivity.label: 成员活动Portlet
+types.PortletMemberActivity.title.label: 指南标题
+types.PortletMemberActivity.fields.displayAllEvent.label:       显示所有日历事件
+types.PortletMemberActivity.fields.displayAllEvent.onLabel:     是
+types.PortletMemberActivity.fields.displayAllEvent.offLabel:    否
+types.PortletMemberActivity.fields.displayAllEvent.description: 若选择“是”，所有事件都将在墙上显示（根据可用权限筛选），若选择“否”，仅会显示免费注册活动和成员所属活动。
+types.PortletMemberActivity.description: 显示活动
+
+# From PortletMemberProfile-templates.xml
+types.PortletMemberProfile.templates.full.default.label: 应用程序模板
+types.PortletMemberProfile.templates.box.default.label: 仪表板模板
+
+# From PortletMemberProfile.xml
+types.PortletMemberProfile.fields.showSuggestions.offLabel: 否
+types.PortletMemberProfile.fields.showConnectionRequests.onLabel: 是
+types.PortletMemberProfile.label: 个人资料Portlet
+types.PortletMemberProfile.fields.showConnectionRequests.offLabel: 否
+types.PortletMemberProfile.fields.showSuggestions.onLabel: 是
+types.PortletMemberProfile.fields.showConnectionRequests.label: 显示连接请求
+types.PortletMemberProfile.title.label: 指南标题
+types.PortletMemberProfile.fields.showSuggestions.label: 显示建议
+types.PortletMemberProfile.description: 显示成员资料及其联系人请求和建议
+
+# From PortletMemberStatus-templates.xml
+types.PortletMemberStatus.templates.box.default.label: 仪表板模板
+types.PortletMemberStatus.templates.full.default.label: 应用程序模板
+
+# From PortletMemberStatus.xml
+types.PortletMemberStatus.fields.workspaceMembers.description: 只显示当前工作区成员的活动？
+types.PortletMemberStatus.label: 成员的状态Portlet
+types.PortletMemberStatus.fields.workspaceMembers.label: 工作区成员
+types.PortletMemberStatus.fields.workspaceMembers.offLabel: 否
+types.PortletMemberStatus.fields.workspaceMembers.onLabel: 是
+types.PortletMemberStatus.title.label: 指南标题
+types.PortletMemberStatus.description: 显示您的联系人状态或工作区成员状态
+
+# Analytics
+ui.analytics.ESNAgent.name:                         社交
+ui.analytics.ESNAgent.report.network:               社交网络
+ui.analytics.ESNAgent.report.network.h:             社交网络密度。
+ui.analytics.ESNAgent.report.new-profile:           新个人资料
+ui.analytics.ESNAgent.report.new-profile.h:         已创建的新个人资料。
+ui.analytics.ESNAgent.report.account-profile-count: 账户资料
+ui.analytics.ESNAgent.report.contact-profile-count: 联系人资料
+ui.analytics.ESNAgent.report.connection-ratio:      每名成员的联系人比率
+ui.analytics.ESNAgent.report.follower-ratio:        每名成员的关注者比率
+ui.analytics.ESNAgent.report.following-ratio:       每名成员的关注比率
+ui.analytics.ESNAgent.report.activity-count:        活动
+ui.analytics.ESNAgent.report.activity-count.h:      活动统计
+ui.analytics.ESNAgent.report.activity-top:          活动排行榜 
+ui.analytics.ESNAgent.report.activity-top.h:        活动细目
+ui.analytics.ESNAgent.report.network:               关系
+ui.analytics.ESNAgent.report.network.h:             社交网络中的关系比率。
+ui.analytics.ESNAgent.report.new-profile:           新个人资料
+ui.analytics.ESNAgent.report.new-profile.h:         已创建的新个人资料。
+ui.analytics.ESNAgent.report.account-profile-count: 账户
+ui.analytics.ESNAgent.report.contact-profile-count: 联系人
+ui.analytics.ESNAgent.report.profile-completeness:   个人资料完整性
+ui.analytics.ESNAgent.report.profile-completeness.h: 成员个人资料的完整性百分比。
+ui.analytics.ESNAgent.report.connection-ratio:      成员关系平均值
+ui.analytics.ESNAgent.report.follower-ratio:        成员关注平均值
+ui.analytics.ESNAgent.report.following-ratio:       成员关注者平均值
+ui.analytics.ESNAgent.report.microblogging-count:   微博
+ui.analytics.ESNAgent.report.microblogging-count.h: 发布的微博数量。
+
+ # From plugin.xml
+types.PortletMemberActivity.templates.jcmsplugin.virtualdesktop.editInline.default.label: 虚拟桌面在成员动态服务时使用的模版。
+types.AbstractPortletSkinable.templates.box.esnSkin.label: ESN皮肤
+types.AbstractPortletSkinable.templates.box.esnSkin.description: A (CSS) 圆形皮肤
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.activity: 活动
+jcmsplugin.smartphone.workspace-service.PortletMemberActivity: 活动
+jcmsplugin.esn.smartphone.lbl.presentation: 自我介绍
+jcmsplugin.esn.smartphone.lbl.expertises: 技能
+jcmsplugin.esn.smartphone.lbl.member.activity: 活动
+jcmsplugin.esn.smartphone.lbl.activity.microblogging.text.placeholder: 输入您的消息...
+jcmsplugin.esn.smartphone.lbl.activity.microblogging.add-message: 添加消息
+
+jcmsplugin.smartphone.shareurl.label.esn: 微博
+
+# Microblogging icon label
+jcmsplugin.esn.smartphone.microblogging.camera : 照相机
+jcmsplugin.esn.smartphone.microblogging.galery : 图片库
+
+# ----------------------------------------------------------------------
+# OpenApi
+# ----------------------------------------------------------------------
+acl.resource.admin/work/canManageExpertiseCategory: ESN - 技能类别管理权限
+acl.resource.plugins: 插件
+acl.resource.plugins/esn: ESN
+acl.resource.plugins/esn/openapi: Open API
+acl.resource.plugins/esn/openapi/anyActivity: 创建任何活动
+acl.resource.plugins/esn/openapi/anyActivity.h: 启用任何活动创建（任何成员都能成为活动发起人）
+acl.resource.plugins/esn/openapi/activity: 创建个人活动
+acl.resource.plugins/esn/openapi/activity.h: 启用成员个人活动创建（登录的成员都能成为活动发起人）
+doc.rest.rsrc-meth.ActivityResource: GET<br/>POST<br/>DELETE
+doc.rest.rsrc-desc./plugins/esn/activities: POST方法：配备以下参数的活动列表：<br/> <ul><li>成员：用来查看阅读权限的成员（如果登录成员没有“创建任何活动”ACL，强制登录成员）</li><li>模式：MemberActivityMode示例：<ul><li>FOLLOWED_MEMBERS</li><li>FOLLOWED_MEMBERS_WS</li><li>WORKSPACE_ACTIVITIES</li><li>MEMBER_WORKSPACE_ACTIVITIES</li><li>MEMBER_ACTIVITIES</li></ul></li><li>工作空间：用于搜索的工作空间</li><li>activityMember：活动成员发起人</li><li>startActivityDate：搜索开始日期</li><li>pageSize：默认10</li><ul>
+doc.rest.rsrc-desc./plugins/esn/activities/followedMembers/{memberId}: GET方法：由给定成员关注的成员活动列表。<br/>拥有阅读权限的成员指代能够“创建任何活动”ACL的限定登录成员，否则仅为登录成员。<br/>可通过活动终端自定义该终端。
+doc.rest.rsrc-desc./plugins/esn/activities/followedMembersWs/{memberId}:GET方法：由给定成员关注，但仅限在成员工作区内的成员活动列表。<br/>拥有阅读权限的成员指代能够“创建任何活动”ACL的限定登录成员，否则仅为登录成员。<br/>可通过活动终端自定义该终端。
+doc.rest.rsrc-desc./plugins/esn/activities/member/{memberId}: GET方法：给定成员的活动列表。<br/>拥有阅读权限的成员指代能够“创建任何活动”ACL的限定登录成员，否则仅为登录成员。<br/>可通过活动终端自定义该终端。
+doc.rest.rsrc-desc./plugins/esn/activities/memberWorspaces/{memberId}: GET方法：给定成员工作空间的活动列表。<br/>拥有阅读权限的成员指代能够“创建任何活动”ACL的限定登录成员，否则仅为登录成员。<br/>可通过活动终端自定义该终端。
+doc.rest.rsrc-desc./plugins/esn/activities/workspace/{workspaceId}: GET方法：给定工作空间的活动列表。<br/>拥有阅读权限的成员指代能够“创建任何活动”ACL的限定登录成员，否则仅为登录成员。<br/>可通过活动终端自定义该终端。
+doc.rest.rsrc-desc./plugins/esn/activity/{id}: GET方法：通过id获取MemberActivity<br/>POST方法：更新活动（适用与创建时相同的字段）<br/>DELETE方法：删除活动
+doc.rest.rsrc-desc./plugins/esn/activity: POST方法：创建一个活动<br/>设置：<ul><li>属性：强制 - 该活动使用的属性</li><li>成员：强制 - 活动成员（如果登录成员没有“创建任何活动”ACL，强制登录成员）</li><li>数据：与活动数据相关</li><li>信息：额外信息</li><li>工作空间：活动工作空间（若为空，若提供了数据，将使用数据工作空间。）</li><ul>
+

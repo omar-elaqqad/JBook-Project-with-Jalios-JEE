@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<type name="MemberCategories" superclass="com.jalios.jcmsplugin.esn.AbstractMemberInfo" categoryTab="true" readRightTab="false" updateRightTab="false" templateTab="false" workflowTab="false" advancedTab="false" hbm="true" reviewable="false" debatable="false" unitFieldEdition="false" audienced="false" formhandler="com.jalios.jcmsplugin.esn.EditAbstractMemberCategoriesHandler">
+  <title ml="false" searchable="false" />
+  <fields />
+</type>
+

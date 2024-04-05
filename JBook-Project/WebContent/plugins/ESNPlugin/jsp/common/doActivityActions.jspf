@@ -1,0 +1,102 @@
+<%@page import="com.jalios.jcmsplugin.esn.ui.*"%><%
+  Publication itActivityEntryPublication = itActivityEntry.getPublication();
+  boolean isCommentable = activityData != null && activityData instanceof Publication && dbCommentMgr.isCommentable((Publication)activityData);
+  int dbCommentCount = activityData instanceof Publication ? DBCommentManager.getInstance().getDBCommentCount((Publication)activityData, loggedMember) : 0;
+  boolean displayCommentToggler = dbCommentCount > 0 && activityShowComments && isCommentable;
+
+  boolean isToday = DateUtil.isToday(activityDate); 
+  boolean isYesterday = DateUtil.isYesterday(activityDate);
+  boolean addCommentAction = channel.isDataWriteEnabled() && isLogged && activityShowComments && isCommentable && loggedMember.canPublish(DBComment.class,workspace);
+  boolean showVoteAction = itActivityEntryPublication != null && itActivityEntryPublication.isVotable() && VoteManager.getInstance().canVote(itActivityEntryPublication, loggedMember);
+%>
+<div class="activity-actions noTooltipCard">
+
+<jalios:include target="ESN_ACTIVITY_COMMENT_HEADER_LEFT" />
+
+  <%-- Comment Action --%>
+  <% if (addCommentAction) {
+    String addCommentLabel = glp("jcmsplugin.esn.activity.comment");
+    String addCommentTitle = glp("jcmsplugin.esn.activity.add-comment.show-form");
+    String addCommentAriaLabel = "";
+    if (itActivityEntryPublication != null) {
+      addCommentAriaLabel = glp("jcmsplugin.esn.activity.add-comment.show-form.aria-label", itActivityEntryPublication.getTitle(userLang), dbCommentCount);
+    }
+    Link commentsLink = new Link()
+        .ariaLabel(addCommentAriaLabel)
+        .css("btn btn-xs btn-link add-comment btn-add-comment")
+        .jaliosAction("activity-show-comments")
+        .text(addCommentLabel)
+        .title(addCommentTitle);
+    %><%= commentsLink.html() %><%
+  }
+
+  %><%-- Recommendation Action --%><%
+  %><jalios:recommendation  data="<%= itActivityEntryPublication %>"><%
+    %><%= glp("ui.recommendation") %><%
+  %></jalios:recommendation><%
+
+  %><%-- Vote Action --%><%
+  if (showVoteAction) {
+    %> <jalios:vote templateProperty="vote.template.icon-score" pub="<%= itActivityEntryPublication %>" /><%
+  }
+
+  %><jalios:include target="ESN_ACTIVITY_COMMENT_HEADER_RIGHT" /><%
+
+  if (showVoteAction) {
+    %> &middot; <%
+  }
+
+  %><%-- Comment Toggler --%><%
+  if (displayCommentToggler) {
+    %><a data-jalios-action="toggle:activity-show-comments" class="activity-comment-count"<%
+        %> title="<%= encodeForHTMLAttribute(glp("jcmsplugin.esn.activity.show-comments",dbCommentCount)) %>"><%
+      %><jalios:icon src="comment" /><%
+      %> <span class="badge badge-comment-count"><%
+        %><%= dbCommentCount %><%
+      %></span><%
+    %></a><%
+  }
+
+  if (displayCommentToggler) {
+    %>&middot; <%
+  }
+  
+  %><%-- Activity date --%><%
+  if (activityData != null) {
+    Date activityOrDataDate = !isNestedActivity ? itActivity.getCdate() : activityData.getCdate();
+    %><jalios:buffer name="activityOrDataDateBuffer"><%
+      %><jalios:date format="timeDateOrTime" date="<%= activityOrDataDate %>" /><%
+    %></jalios:buffer><%
+    String linkWithDateAriaLabel = "aria-label=\""
+        + encodeForHTMLAttribute(glp("jcmsplugin.esn.activity-card.activity-data-link-with-date.for-aria-label",
+            activityOrDataDateBuffer.toString(),
+            activityData.getDataName(userLang))) + "\"";
+    String linkHtmlAttributes = linkWithDateAriaLabel;
+    %><jalios:link data="<%= activityData %>" css="activity-meta activity-meta-date noTooltipCard" htmlAttributes='<%= linkHtmlAttributes %>'><%
+      %><%= activityOrDataDateBuffer.toString() %><%
+    %></jalios:link><%
+  } else {
+    %><jalios:date format="timeDateOrTime" date="<%= itActivity.getCdate() %>" /><%
+  }
+  
+  %><%-- Activity Publication type --%><%
+  if (itActivityEntryPublication != null) {
+    %> &middot; <%
+    %><span class="activity-meta"><%
+      %><%= itActivityEntryPublication.getTypeLabel(userLang) %><%
+    %></span><%
+  }
+
+  %><%-- Activity Workspace --%><%
+  if (itActivity.getWorkspace() != null) {
+    String activityWSLinkAriaLabel = "aria-label='" + encodeForHTMLAttribute(glp("jcmsplugin.esn.activity-card.activity-ws-link.for-aria-label", itActivity.getWorkspace().getTitle(userLang))) + "'";
+    %> &middot; <%
+    %><jalios:link css="activity-meta activity-meta-workspace" data="<%= itActivity.getWorkspace() %>" htmlAttributes="<%= activityWSLinkAriaLabel %>"><%
+      %><%= itActivity.getWorkspace().getTitle(userLang) %><%
+    %></jalios:link><%
+  }
+
+  %><%-- Activity Vote User list --%><%
+  %><jalios:vote css="activity-vote-list" pub="<%= itActivityEntryPublication %>" usage="<%= VoteConstants.VOTE_TAG_USAGE_VOTELIST %>" /><%
+%></div><%
+%> 

@@ -1,0 +1,321 @@
+# Language properties
+
+jcmsplugin.smartphone.lbl.no-result: 无结果
+jcmsplugin.smartphone.lbl.guest: 来宾
+jcmsplugin.smartphone.lbl.index-default.choose-action: 选择操作
+jcmsplugin.smartphone.lbl.index-default.desktop-link: 访问桌面站点
+jcmsplugin.smartphone.lbl.workspace-index.filter-ws: 筛选工作区
+jcmsplugin.smartphone.lbl.workspace-index.recent: 最近访问
+jcmsplugin.smartphone.lbl.workspace-index.other: 其他工作区
+jcmsplugin.smartphone.lbl.workspace-index.signup: 您无法访问该工作区。
+jcmsplugin.smartphone.lbl.vote.like: 我喜欢
+jcmsplugin.smartphone.lbl.vote.unlike: 取消喜欢
+jcmsplugin.smartphone.lbl.access-website: 访问网站
+jcmsplugin.smartphone.lbl.see-on-website: 浏览网站
+jcmsplugin.smartphone.lbl.header.website-title: JPlatform - 智能电话
+jcmsplugin.smartphone.lbl.alert.all-alert-read: 您已阅读所有提醒。
+jcmsplugin.smartphone.lbl.alert.alert-empty: 您没有提醒。
+jcmsplugin.smartphone.lbl.alert.unread: 未读
+jcmsplugin.smartphone.lbl.alert.read: 已读
+jcmsplugin.smartphone.lbl.alert.access-publication: 显示发布
+jcmsplugin.smartphone.lbl.alert.mark-read: 标为已读
+jcmsplugin.smartphone.lbl.forbidden: 您没有访问该内容的权限。
+jcmsplugin.smartphone.lbl.alert.null-pub: 元素不存在
+jcmsplugin.smartphone.lbl.yes: 是
+jcmsplugin.smartphone.lbl.no: 否
+jcmsplugin.smartphone.lbl.member.contact: 联系人
+jcmsplugin.smartphone.lbl.member.address: 地址
+jcmsplugin.smartphone.lbl.member.information: 信息
+jcmsplugin.smartphone.lbl.member.agenda: 日历
+jcmsplugin.smartphone.lbl.recommendation.no-recommendation: 您未收到任何推荐。
+jcmsplugin.smartphone.lbl.recommendation.see-publication: 显示发布
+jcmsplugin.smartphone.lbl.admin.members: 成员
+jcmsplugin.smartphone.lbl.admin.see-logs: 访问日志
+jcmsplugin.smartphone.lbl.admin.memory: 记忆
+jcmsplugin.smartphone.lbl.member.add-to-address-book: 添加地址簿
+jcmsplugin.smartphone.lbl.mention.noemail: 该用户没有电子邮箱地址，因此无法描述
+jcmsplugin.smartphone.lbl.jquerymobile.error: 发生错误。
+jcmsplugin.smartphone.lbl.invalid-home-page: 未设置主页
+jcmsplugin.smartphone.lbl.access-all-spaces: 访问所有空间
+jcmsplugin.smartphone.lbl.jmobile.about-jmobile: 关于JMobile
+
+jcmsplugin.smartphone.action.showmore: 显示更多...
+jcmsplugin.smartphone.action.filter: 筛选……
+jcmsplugin.smartphone.action.see-publication: 显示发布
+jcmsplugin.smartphone.lbl.new: 新
+
+jcmsplugin.smartphone.recommendation.placeholder.members: 选择成员
+jcmsplugin.smartphone.recommendation.placeholder.groups: 选择组
+
+jcmsplugin.smartphone.jmobile.version.numero: 版本{0}版权所有 © Jalios 2022
+jcmsplugin.smartphone.jmobile.version.droits: 版权所有
+jcmsplugin.smartphone.jmobile.notification: 通知
+jcmsplugin.smartphone.jmobile.notification.appareil.registred: 注册的设备
+jcmsplugin.smartphone.jmobile.notification.appareil.not-registred: 未注册的设备
+jcmsplugin.smartphone.jmobile.notification.permission : 授权
+jcmsplugin.smartphone.jmobile.notification.type-alerte.inactive: 无激活的提醒类型
+jcmsplugin.smartphone.jmobile.notification.type-alerte.active: 激活的提醒类型
+
+jcmsplugin.smartphone.lbl.download-mobile-app: 下载手机应用程序
+
+# Portal
+
+## History
+portal.edition.history.save-by.label: 保存者{0}
+portal.edition.history.published-by.label: 由 {0}发布
+portal.edition.history.breadcrumb.label: 门户历史
+portal.edition.history.back-edition.label: 返回编辑
+portal.edition.history.back-to-version.label: 返回这一版本
+portal.edition.history.back-to-version.confirm: 返回这一版本？
+portal.edition.history.show-more: 显示更多
+portal.edition.history.portlet-chooser: Portlet选择器
+portal.edition.history.create-portlet: 创建新portlet
+portal.edition.history.existing-portlets: 已有portlet
+portal.structure.custom-title.label: 版本名称
+portal.structure.rename-title.label: 重命名版本
+portal.edition.sidebar.portal-edit.tab-edit.title: 门户参数
+portal.edition.sidebar.portal-edit.tab-ui.title: 门户类型
+portal.edition.sidebar.portal-edit.template.title: Portlet模板
+portal.edition.sidebar.portal-edit.portal-advanced.title: 高级编辑
+
+
+jcmsplugin.smartphone.service.search.no-result: 无结果
+jcmsplugin.smartphone.service.search.members.no-result: 未找到成员
+jcmsplugin.smartphone.service.search.publications.no-result: 未找到发布项
+jcmsplugin.smartphone.service.search.tabs.all.label: 所有
+jcmsplugin.smartphone.service.search.tabs.members.label: 成员
+jcmsplugin.smartphone.service.search.tabs.publications.label: 发布
+
+
+jcmsplugin.smartphone.portal.default-portal.title: 移动门户
+jcmsplugin.smartphone.portal.default-wysiwyg.title: 欢迎访问移动门户
+jcmsplugin.smartphone.portal.default-wysiwyg.content: 这是您移动门户的默认页面
+jcmsplugin.smartphone.portal.edition.edit-portal: 门户编辑
+jcmsplugin.smartphone.portal.lbl.assembly-zone: 装配区域
+jcmsplugin.smartphone.portal.lbl.final-output: 最终产出
+jcmsplugin.smartphone.portal.lbl.portal-parameters: 门户参数
+jcmsplugin.smartphone.portal.lbl.duplicate: 副本
+jcmsplugin.smartphone.portal.lbl.publish: 发布
+jcmsplugin.smartphone.portal.lbl.duplicate.modal.title: 复制门户
+jcmsplugin.smartphone.portal.lbl.filter-workspace: 对工作区筛选……
+jcmsplugin.smartphone.portal.topbar-title.lbl: 顶栏
+jcmsplugin.smartphone.portal.administration.title: 管理
+jcmsplugin.smartphone.portal.administration.mobile-portals: 移动门户
+jcmsplugin.smartphone.portal.administration.default-portals: 默认门户
+jcmsplugin.smartphone.portal.administration.default-portal: 默认门户
+jcmsplugin.smartphone.portal.administration.settings: 设置
+jcmsplugin.smartphone.portal.creation-modal.title: 创建移动门户
+jcmsplugin.smartphone.portal.administration.topbar-color: 顶栏背景色
+jcmsplugin.smartphone.portal.administration.portal-edition: 门户编辑 - {0}
+jcmsplugin.smartphone.portal.administration.topbar-font-color: 顶栏字体颜色
+jcmsplugin.smartphone.portal.administration.topbar-logo: 徽标
+jcmsplugin.smartphone.portal.administration-table.title: 指南标题
+jcmsplugin.smartphone.portal.administration-table.mdate: 上次更新
+jcmsplugin.smartphone.portal.administration.create-portal: 创建门户
+jcmsplugin.smartphone.portal.administration.return-to-home: 防护应用程序主页门户编辑器
+jcmsplugin.smartphone.portal.administration.msg.settings-updated: 已保存设置。
+
+# MyDay
+jcmsplugin.smartphone.my-day.today.label: 今天
+jcmsplugin.smartphone.my-day.calendar.service-link.title: 显示我的日程表
+jcmsplugin.smartphone.my-day.jtask.service-link.title: 显示我的任务
+
+data.$id.jcmsplugin.smartphone.category.nav-root.name: 移动浏览
+data.$id.jcmsplugin.smartphone.category.nav-root-home.name: 主页
+
+# Properties
+jcmsplugin.smartphone.home.news: 新闻
+jcmsplugin.smartphone.workspace.news: 工作区新闻
+jcmsplugin.smartphone.default.page.size: 页面默认大小
+jcmsplugin.smartphone.lbl.topbar-title: 智能手机的站点标题
+jcmsplugin.smartphone.image.resize.max-width: 图片调整大小的最大宽度
+jcmsplugin.smartphone.map-service: 地图服务
+jcmsplugin.smartphone.search.searchable-types: 搜索服务 - 搜索结果内包含的类别
+jcmsplugin.smartphone.search.portletId: 搜索服务 - Portlet
+jcmsplugin.smartphone.search.portletId.help: 用来定义搜索服务默认操作的搜索Portlet
+jcmsplugin.smartphone.search.not-searchable-types: 搜索服务 - 搜索结果中所排除的类别
+jcmsplugin.smartphone.drawer.background-image: 服务背景图片
+
+jcmsplugin.smartphone.mobileapp.android.play-store : Android Play Store
+jcmsplugin.smartphone.mobileapp.ios.app-store : iOS App Store
+
+# Services
+jcmsplugin.smartphone.service.recenthistory:   最近历史记录
+jcmsplugin.smartphone.service.admin:    管理员
+jcmsplugin.smartphone.service.search: 搜索
+jcmsplugin.smartphone.service.workflow: 工作流
+jcmsplugin.smartphone.service.news: 新闻
+jcmsplugin.smartphone.service.workspace: 工作区
+
+# Member menu
+jcmsplugin.smartphone.member-menu.application-menu: 应用程序
+jcmsplugin.smartphone.member-menu.my-day: 我的一天
+jcmsplugin.smartphone.member-menu.navigate: 导航
+
+# Workspace Services
+jcmsplugin.smartphone.workspace-service.search: 搜索
+jcmsplugin.smartphone.workspace-service.news: 新闻
+
+portlet.ability.jcmsplugin-smartphone:                智能手机
+portlet.ability.jcmsplugin-smartphone.application:    服务
+
+# Labels
+jcmsplugin.smartphone.fulldisplay.webpage.view-site: 访问网站
+
+jcmsplugin.smartphone.share.empty: 没有用来分享URL{0}的可用服务
+
+# Feedback Mobile App
+jcmsplugin.smartphone.mobileapp.feedback.lbl: 发送报告
+jcmsplugin.smartphone.mobileapp.feedback.email: 收件人邮箱
+jcmsplugin.smartphone.mobileapp.feedback.email.help: 该邮箱地址将收到来自移动应用程序的用户反馈。若没有设置邮箱，邮件发送将被禁用，且无法通过移动应用程序使用。
+jcmsplugin.smartphone.mobileapp.feedback.settings: 设置
+
+jcmsplugin.smartphone.mobileapp.feedback.subject: {0}从移动应用程序发送了报告
+jcmsplugin.smartphone.mobileapp.feedback.hello: 您好，
+jcmsplugin.smartphone.mobileapp.feedback.description: {0}从移动应用程序给您发送了报告。
+jcmsplugin.smartphone.mobileapp.feedback.user-info: 用户信息：
+jcmsplugin.smartphone.mobileapp.feedback.user-info.login: 用戶名：{0}
+jcmsplugin.smartphone.mobileapp.feedback.user-info.siteurl: 站点URL：{0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info: 设备信息：
+jcmsplugin.smartphone.mobileapp.feedback.device-info.platform: 平台：{0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info.version: 平台版本：{0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info.model: 设备型号：{0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info.uuid: 设备ID：{0}
+jcmsplugin.smartphone.mobileapp.shareurl.message: 您希望做什么？
+
+# AlertChannel
+jcmsplugin.smartphone.alert.channel.label: JMobile
+jcmsplugin.smartphone.alert.channel.description: 通过JMobile协议发送提醒
+
+# ExtraDBData
+extradb.Member.jcmsplugin.smartphone.token: JMobile令牌
+extra.Shortcut.jcmsplugin.smartphone.mobile-url: JMobile - 快捷键URL
+extra.Shortcut.jcmsplugin.smartphone.mobile-available: JMobile - 在应用程序启动器内显示？
+
+# Editable Properties
+jcmplugin.smartphone.jpush.fcm.project-id: FCM - 项目ID
+jcmplugin.smartphone.notification.encrypt : 加密通知
+jcmsplugin.smartphone.ios.download-code.url-prefix: iOS - 下载代码 - URL前缀
+jcmsplugin.smartphone.ios.download-code.threshold: iOS - 下载代码 - 提醒阈值
+$id.jcmsplugin.smartphone.ios.downloadcode.manager-group: iOS - 下载代码 - 管理组
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.ios.teamId: Apple - 团队Id
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.appId: JMobile App Id
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.android.fingerprints: 认证指纹（sha256）
+jcmplugin.smartphone.space.show-introduction: 显示空间介绍
+
+$id.jcmsplugin.smartphone.portal.default-portal: 默认门户
+# Templates
+types.PortletQueryForeach.templates.jmobile.default.label: 默认模板
+types.PortletQueryForeach.templates.jmobile.dataimage.label: 带图片模板的列表
+
+types.PortletQueryForeachCards.templates.jmobile.withBorderGrid.label: 带网格边框的模板卡片
+types.PortletQueryForeachCards.templates.jmobile.withoutBorderGrid.label: 无网格边框的模板卡片
+types.PortletQueryForeachCards.templates.jmobile.withBorder.label: 带网格边框的模板卡片
+types.PortletQueryForeachCards.templates.jmobile.light.label: 无蜕变的模板卡片
+types.PortletQueryForeachCards.templates.jmobile.default.label: 默认卡片模板
+types.PortletQueryForeachCards.templates.jmobile.withLead.label: 带边框和导入模板的卡片
+types.PortletQueryForeachCards.templates.jmobile.withSliding.label: 无边框模板的滑动卡
+types.PortletQueryForeachCards.templates.jmobile.withSlidingBorder.label: 带边框模板的滑动卡
+types.PortletQueryForeachCards.templates.jmobile.horizontalwithSliding.label: 无边框模板的水平滑动卡
+types.PortletQueryForeachCards.templates.jmobile.carousel.label: 旋转卡片模板
+
+types.PortletQueryForeachDetail.templates.jmobile.default.label: 默认模板
+types.PortletQueryForeachDetail.templates.jmobile.dataimage.label: 带图片模板的列表
+
+types.PortletCarousel.templates.jmobile.default.label: 默认模板
+
+types.PortletWYSIWYG.templates.jmobile.default.label:  默认模板
+
+types.AbstractPortletSkinable.templates.jmobile.default.label: 默认模板
+
+types.AbstractPortletSkinable.templates.jmobile.light.label: 无标题模板
+
+types.PortletImage.templates.jmobile.default.label: 默认模板
+
+types.PortletJsp.templates.jmobile.default.label: 默认模板
+
+types.PortletRSS.templates.jmobile.default.label: 默认模板
+
+
+# From SmartPhonePortal.xml
+types.SmartPhonePortal.label: JMobile门户
+types.SmartPhonePortal.description: 只有最少选项的基本Portlet
+types.SmartPhonePortal.fields.image.label: 图片
+types.SmartPhonePortal.fields.pageTitle.description: 在页面标题部位显示的标题
+types.SmartPhonePortal.fields.description.label: 指南说明
+types.SmartPhonePortal.fields.pageTitle.label: 页标题
+types.SmartPhonePortal.fields.css.label: CSS
+types.SmartPhonePortal.fields.structure.label: 结构
+types.SmartPhonePortal.title.label: 指南标题
+types.SmartPhonePortal.fields.displayScrollToTop.label: 显示顶栏链接下拉栏
+types.SmartPhonePortal.fields.keywords.label: 关键字（SEO）
+types.SmartPhonePortal.fields.keywords.description: 这些关键字（由逗号分隔）将在门户主页使用。
+types.SmartPhonePortal.fields.portlets.label: Portlets
+types.SmartPhonePortal.fields.portlets.description: Portlet列表
+
+# REST
+doc.rest.rsrc-meth.FeedbackResource: POST
+doc.rest.rsrc-desc./smartphone/feedback: 向JMobile模块属性内输入的电子邮箱地址发送运动应用程序用户反馈。
+
+doc.rest.rsrc-meth.AddJWTokenResource: GET
+doc.rest.rsrc-desc./smartphone/auth/addjwtoken: 返回JWT登录成员的房间信息。
+doc.rest.rsrc-desc./smartphone/auth/addjwtoken/{memberId}: 返回带<code>memberId</code> ID的JWToken。
+
+doc.rest.rsrc-meth.RegisterJMobileTokenResource: GET
+doc.rest.rsrc-desc./smartphone/registerToken/{deviceId}/{deviceOs}/{deviceModel}: 保存成员移动电话信息。
+
+doc.rest.rsrc-meth.DeleteDeviceInfoResource: GET
+doc.rest.rsrc-desc./smartphone/deleteToken/{deviceId}/{deviceOs}/{deviceModel}: 从成员移动电话中删除信息。
+
+doc.rest.rsrc-meth.GetNotificationDiagnosticResource: GET
+doc.rest.rsrc-desc./smartphone/notificationDiagnostic/{deviceId}/{deviceOs}/{deviceModel}: 返回JPlatform上激活的提醒类型数量。
+
+doc.rest.rsrc-meth.JMobileInfoResource: GET
+doc.rest.rsrc-desc./smartphone/info: 返回JMobile插件信息。
+
+doc.rest.rsrc-meth.IOSDownloadResource: GET
+doc.rest.rsrc-desc./smartphone/ios/download: 为iOS应用程序返回下载URL
+
+data.$id.shortcut.jcmsplugin.smartphone-portals.title: JMobile门户
+data.$id.shortcut.jcmsplugin.smartphone-portals.text: 管理您的JMobile门户和浏览器
+
+jcmplugin.smartphone.bottom-nav-item.home: 主页
+jcmplugin.smartphone.bottom-nav-item.alerts: 提醒
+jcmplugin.smartphone.bottom-nav-item.search: 搜索
+jcmplugin.smartphone.bottom-nav-item.application-menu: 应用程序
+
+ui.editportlet.usage.jmobile: JMobile
+ui.editportlet.usage.skin.jmobile: JMobile
+
+# ------------------------------------------------------------
+# IOS Download Code
+# ------------------------------------------------------------
+jcmsplugin.smartphone.ios.admin-menu: 为iOS移动应用程序管理下载代码
+jcmsplugin.smartphone.ios.add-codes.title: 添加下载代码
+jcmsplugin.smartphone.ios.add-codes.lbl.codes: 代码
+jcmsplugin.smartphone.ios.add-codes.lbl.codes.h: 输入代码，以通过空格分隔或新行添加
+jcmsplugin.smartphone.ios.add-codes.btn.delete-all: 删除所有未使用的代码。
+jcmsplugin.smartphone.ios.add-codes.msg.code-count:  <p>{0,choice,0#没有使用的代码|1#一个代码被使用|2#{0}被使用}。</p><p>{1,choice,0#没有未使用的代码|1#仅有一个未使用的代码。|2#还有{1}个未使用的代码}。
+jcmsplugin.smartphone.ios.add-codes.msg.codes-added:  {0,choice,0#没有添加的代码|1#一个代码被添加|2#{0}被添加}。
+jcmsplugin.smartphone.ios.add-codes.msg.code-deleted: {0,choice,0#没有被删除的代码|1#一个未使用的代码被删除|2#{0}未使用的代码被删除}。
+jcmsplugin.smartphone.ios.download.msg.oodc: <p>很抱歉 :-(</p><p>您目前无法下载移动应用程序。</p><p>没有下载代码。</p><p>请稍后重试。</p> 
+jcmsplugin.smartphone.ios.download.msg.ldnr: <p>很抱歉 :-(</p><p>您目前无法下载移动应用程序。</p><p>下载代码发送服务器没有回应。</p><p>请稍后重试。</p>
+
+data.$id.jcmsplugin.smartphone.ios.downloadcode.manager-group.name: iOS应用程序下载代码管理器
+
+# ------------------------------------------------------------
+# ALERT
+# ------------------------------------------------------------
+alert.name.jcmsplugin-smartphone:                                              JMobile
+alert.name.jcmsplugin-smartphone.ios-downloadcode-shortage:                    下载代码不足
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.title:               下载代码不足
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.short-description:   {remainingCount}
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.description:         <p>{remainingCount}</p><p>想要添加新的下载代码，请访问<a href="admin/admin.jsp">管理员区</a>的“操作”板块。</p>
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.remaining-count:     {0,choice,0#所有下载代码都被使用|1#只剩一个下载代码|2#只剩{0}个下载代码}。
+
+# ------------------------------------------------------------
+# ACL
+# ------------------------------------------------------------
+acl.resource.plugins/jmobile: JMobile
+acl.resource.plugins/jmobile/can-administrate-mobile-portals: 移动门户管理
+acl.resource.admin/operation/can-manage-ios-downloadcode: ioS下载代码管理

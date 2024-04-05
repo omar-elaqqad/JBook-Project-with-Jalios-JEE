@@ -1,0 +1,80 @@
+<%-- TAB - CONTACT DETAILS ---------------------------------------------- --%>
+<%
+if (channel.getBooleanProperty("js.member.edit.auto-convert-address", false)) {
+  jcmsContext.addJavaScript(channel.getProperty("google-js.maps"));
+  jcmsContext.addJavaScript("js/jalios/ux/jalios-member-edit.js");
+}
+%>
+
+<div class="tab-page form-horizontal">
+	<h2 class="tab"><jalios:icon src="jcmsplugin-esn-profile-address" /> <%= glp("jcmsplugin.esn.lbl.info") %></h2>
+  <% 
+    boolean isMailDisabled = (isLdapAccount && Util.notEmpty(channel.getProperty("ldap.mapping.mail"))) ||
+                             (JcmsUtil.isSameId(loggedMember, memberFH.getMember()) && !channel.getBooleanProperty("member.rights.allow-mail-change", true));
+    boolean isPhoneDisabled = isLdapAccount && Util.notEmpty(channel.getProperty("ldap.mapping.phone")); 
+    boolean isMobileDisabled = isLdapAccount && Util.notEmpty(channel.getProperty("ldap.mapping.mobile"));
+    boolean isStreetDisabled = isLdapAccount && Util.notEmpty(channel.getProperty("ldap.mapping.street"));
+    boolean isPostalCodeDisabled = isLdapAccount && Util.notEmpty(channel.getProperty("ldap.mapping.postalCode"));
+    boolean isPoBoxDisabled = isLdapAccount && Util.notEmpty(channel.getProperty("ldap.mapping.postOfficeBox"));
+    boolean isLocalityDisabled = isLdapAccount && Util.notEmpty(channel.getProperty("ldap.mapping.locality"));
+    boolean isRegionDisabled = isLdapAccount && Util.notEmpty(channel.getProperty("ldap.mapping.region"));
+    boolean isCountryDisabled = isLdapAccount && Util.notEmpty(channel.getProperty("ldap.mapping.country"));
+    boolean isAddressDisabled = isLdapAccount && Util.notEmpty(channel.getProperty("ldap.mapping.address"));
+  %>  
+ <jalios:field label="ui.com.lbl.email" name='email' value='<%= memberFH.getAvailableEmail() %>' 
+               disabled='<%= isMailDisabled %>'>
+	  <jalios:control type="<%= ControlType.EMAIL %>" />
+	</jalios:field>
+	
+	<jalios:field label="ui.adm.mbr-edit.lbl.mail-vis" name='emailVisible' value='<%= memberFH.getAvailableEmailVisible() %>' >
+		<jalios:control type="<%= ControlType.BOOLEAN %>" />
+	</jalios:field>    
+	    
+	<jalios:field label="ui.adm.mbr-edit.lbl.phone" name='phone' value='<%= memberFH.getAvailablePhone() %>'  
+               disabled='<%= isPhoneDisabled %>'>
+	  <jalios:control type="<%= ControlType.TEXTFIELD %>" />
+	</jalios:field>    
+	
+	<jalios:field label="ui.adm.mbr-edit.lbl.mobile" name='mobile' value='<%= memberFH.getAvailableMobile() %>'  
+               disabled='<%= isMobileDisabled %>'>
+	  <jalios:control type="<%= ControlType.TEXTFIELD %>"  />
+	</jalios:field>
+	
+	<jalios:field label="ui.adm.mbr-edit.lbl.street" name='street' value='<%= memberFH.getAvailableStreet() %>'  
+               disabled='<%= isStreetDisabled %>'>
+	  <jalios:control type="<%= ControlType.TEXTAREA %>"  />
+	</jalios:field>    
+	<jalios:field label="ui.adm.mbr-edit.lbl.postalCode" name='postalCode' value='<%= memberFH.getAvailablePostalCode() %>'  
+               disabled='<%= isPostalCodeDisabled %>'>
+	  <jalios:control type="<%= ControlType.TEXTFIELD %>"  />
+	</jalios:field>
+	<jalios:field label="ui.adm.mbr-edit.lbl.poBox" name='poBox' value='<%= memberFH.getAvailablePoBox() %>' 
+               disabled='<%= isPoBoxDisabled %>'>
+	  <jalios:control type="<%= ControlType.TEXTFIELD %>"  />
+	</jalios:field>
+	<jalios:field label="ui.adm.mbr-edit.lbl.locality" name='locality' value='<%= memberFH.getAvailableLocality() %>'  
+               disabled='<%= isLocalityDisabled %>'>
+	  <jalios:control type="<%= ControlType.TEXTFIELD %>"  />
+	</jalios:field>
+	<jalios:field label="ui.adm.mbr-edit.lbl.region" name='region' value='<%= memberFH.getAvailableRegion() %>'  
+               disabled='<%= isRegionDisabled %>'>
+	  <jalios:control type="<%= ControlType.TEXTFIELD %>"  />
+	</jalios:field>
+	<jalios:field label="ui.com.lbl.country" name="country"  value='<%= memberFH.getAvailableCountry() %>' 
+               disabled='<%= isCountryDisabled %>'>
+	  <jalios:control type="<%= ControlType.COUNTRY %>" />
+	</jalios:field>
+	
+	<% if (channel.getBooleanProperty("member.edit.show-address", true)) { %> 
+	<jalios:field label="ui.adm.mbr-edit.lbl.addr" name='address' value='<%= memberFH.getAvailableAddress() %>'  
+               disabled='<%= isAddressDisabled %>'>
+	  <jalios:control type="<%= ControlType.TEXTAREA %>" />
+	</jalios:field>
+	<% } %>   
+          
+	<% request.setAttribute("extraDataSet", formHandler.getExtraDataSet("address")); %>
+	<jalios:include jsp="/jcore/doEditExtraData.jsp" />
+	<% request.removeAttribute("extraDataSet"); %>
+	
+	<jalios:include target="PLUGIN_ESN_EDIT_PROFILE_ADDRESS" />             
+</div>     

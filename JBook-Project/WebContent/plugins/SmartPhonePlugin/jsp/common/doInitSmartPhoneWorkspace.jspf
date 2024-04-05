@@ -1,0 +1,28 @@
+<%
+Workspace spWs = (Workspace) request.getAttribute("jcms.plugin.smartphone.workspace");
+boolean isWorkspaceFiltered = Util.toBoolean(request.getAttribute("jcms.plugin.smartphone.is-workspace-filtered"), false);
+
+if (hasParameter("workspaceId")) {
+  spWs = getWorkspaceParameter("workspaceId");
+} else if (Util.notEmpty(request.getAttribute("jcms.plugin.smartphone.fulldisplay.pub"))) {
+  spWs = ((Publication) request.getAttribute("jcms.plugin.smartphone.fulldisplay.pub")).getWorkspace();
+}
+
+if (hasParameter("isWorkspaceFiltered")) {
+  isWorkspaceFiltered = getBooleanParameter("isWorkspaceFiltered", false);
+}
+
+if (hasParameter("mobilePortal")) {
+  workspace = getPublicationParameter("mobilePortal").getWorkspace();
+}
+
+if (spWs != null) {
+  workspace = spWs;
+}
+
+Workspace.setRequestWorkspace(request , workspace);
+jcmsContext.forceUpdate();
+
+request.setAttribute("jcms.plugin.smartphone.workspace", workspace);
+request.setAttribute("jcms.plugin.smartphone.workspace.is-workspace-filtered", isWorkspaceFiltered);
+ %>

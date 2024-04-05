@@ -1,0 +1,18 @@
+<%
+  if (isContact && ESNManager.getInstance().isConnected(loggedMember, member)) {
+    List<MemberNote> noteList = ESNManager.getInstance().getAllMemberNoteList(member);
+    if (Util.notEmpty(noteList)) {
+%>  
+<div data-role="collapsible" data-collapsed="false" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+  <h3>Notes</h3>    
+  <ul data-role="listview" class="complete">
+    <jalios:foreach collection="<%= noteList %>" name="itNote" type="MemberNote">
+      <li>
+        <jalios:wiki attributeMap="<%= smartPhoneManager.getWikiAttributeMap() %>"><%= itNote.getText() %></jalios:wiki>
+        <p class="ui-li-aside"><%= JcmsUtil.getFriendlyDate(itNote.getMdate(), DateFormat.SHORT, true, userLocale, true) %></p>
+      </li>
+    </jalios:foreach>    
+  </ul>
+  </div>
+<% } 
+} /*EOF isContact*/ %>

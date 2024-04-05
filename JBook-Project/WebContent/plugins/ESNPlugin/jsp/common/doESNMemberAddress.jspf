@@ -1,0 +1,54 @@
+<%--
+  Display the address of the given addressMember. 
+  Uses the new jcms9 splitted address if any new field is found.
+  
+  How to use:
+  ESNManager must be declared as "esnMgr"
+  <% 
+    ESNManager esnMgr = ESNManager.getInstance();
+    Member addressMember = itMember; 
+  %>
+  <%@ include file="/plugins/ESNPlugin/jsp/doESNMemberAddress.jspf" %>
+ 
+--%><% 
+if (addressMember != null && addressMember.hasAnyAddress()) {
+
+  String addressWrapperBegin = "";
+  String addressWrapperEnd = "";
+  String wrapperAttributes = "class=\"esn-address-wrapper address-wrapper\" itemprop=\"address\" itemscope itemtype=\"http://schema.org/PostalAddress\"";
+
+  if (esnMgr.isMapServiceEnabled()) {
+    addressWrapperBegin = "<a target=\"_blank\" rel=\"noreferrer noopener external\" href=\""+ esnMgr.getMemberMapUrl(member, userLang) +"\" " + wrapperAttributes + ">";
+    addressWrapperEnd = "</a>";
+  } else {
+    addressWrapperBegin = "<div " + wrapperAttributes + ">";
+    addressWrapperEnd = "</div>";  
+  }
+%>
+  <%= addressWrapperBegin %>
+      <jalios:icon src="jcmsplugin-esn-profile-address" />
+    <% if (addressMember.hasStructuredAddress()) { %>
+      <% if (Util.notEmpty(addressMember.getStreet())) { %>
+        <span itemprop="streetAddress" class="address-item address-street"><%= addressMember.getStreet() %></span>
+      <% } %>
+
+      <% if (Util.notEmpty(addressMember.getPoBox())) { %>
+        <span itemprop="postOfficeBoxNumber" class="address-item address-post-office-box"><%= addressMember.getPoBox() %></span>
+      <% } %>
+      <% if (Util.notEmpty(addressMember.getPostalCode())) { %>
+        <span itemprop="postalCode" class="address-item address-postal-code"><%= addressMember.getPostalCode() %></span>
+      <% } %>
+      <% if (Util.notEmpty(addressMember.getLocality())) { %>
+        <span itemprop="addressLocality" class="address-item address-locality"><%= addressMember.getLocality() %></span>
+      <% } %>   
+      <% if (Util.notEmpty(addressMember.getRegion())) { %>
+        <span itemprop="addressRegion" class="address-item address-region"><%= addressMember.getRegion() %></span>
+      <% } %>        
+      <% if (Util.notEmpty(addressMember.getCountry())) { %>
+        <span itemprop="addressCountry" class="address-item address-country"><%= glp("country." + addressMember.getCountry()) %></span>
+      <% } %>                
+    <% } else { %>
+      <%= addressMember.getAddress() %>
+    <% } %>
+  <%= addressWrapperEnd %>
+<% } %>

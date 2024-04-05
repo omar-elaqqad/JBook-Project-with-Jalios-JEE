@@ -1,0 +1,48 @@
+// Include variables and mixins
+@import "../../../../css/jalios/core/init-mixins.less"; // Use init-mixins.less if more mixins are required
+
+// -------------------------------------------------------------------
+// PLUGINS LESS VARIABLES
+// -------------------------------------------------------------------
+@import "../../../../plugins/ESNPlugin/css/esn-variables.less";
+@import "../../../../plugins/ESNPlugin/css/directoryApp/esn-directory-app-expertise-variables.less";
+
+// Hook for JCMS
+@import "../../../../css/plugin.less";
+
+// -------------------------------------------------------------------
+//  PLUGIN CSS DECLARATION
+// -------------------------------------------------------------------
+
+@import "esn-directory-app-expertise-breadcrumb.less";
+@import "esn-directory-app-expertise-cards.less";
+@import "esn-directory-app-expertise-category-filters.less";
+@import "esn-directory-app-expertise-chooser.less";
+@import "esn-directory-app-expertise-contextmenu.less";
+@import "esn-directory-app-expertise-list.less";
+@import "esn-directory-app-expertise-results.less";
+
+.expertise-search input.search-query { 
+	min-width: 300px;
+}
+
+// Drag & Drop
+.competence-helper {
+  background-color: white;
+  border: 1px solid #aaa;
+  height: 40px;
+  width: 200px;
+  color: #333;
+  padding: 10px;
+  z-index: 2;
+  .text-overflow();
+  cursor: drag;
+  IMG {
+    width: 18px;
+    height: 18px;
+  }
+  &:hover,
+  &:active {
+    cursor: drag;
+  }
+}

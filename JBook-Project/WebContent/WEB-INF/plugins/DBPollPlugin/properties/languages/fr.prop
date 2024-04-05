@@ -1,0 +1,130 @@
+jcmsplugin.dbpoll.btn.vote:            Je vote
+jcmsplugin.dbpoll.btn.delete-vote:     Supprimer mon vote
+jcmsplugin.dbpoll.btn.access-the-app:  Accéder à l'application
+jcmsplugin.dbpoll.lbl.vote:            Voter
+jcmsplugin.dbpoll.lbl.open:            Ouvrir ce sondage
+jcmsplugin.dbpoll.lbl.close:           Fermer ce sondage
+jcmsplugin.dbpoll.lbl.show-result:     Voir les résultats
+jcmsplugin.dbpoll.lbl.vote-cnt:        {0,choice,0#0 vote|1#1 vote|2#{0,number,integer} votes}
+jcmsplugin.dbpoll.lbl.dates:           Sondage du {0} au {1}
+jcmsplugin.dbpoll.lbl.all-polls:       Tous les sondages
+jcmsplugin.dbpoll.lbl.all-polls-ws:    Tous les sondages de {0}
+jcmsplugin.dbpoll.lbl.view-all-polls:  Voir tous les sondages
+jcmsplugin.dbpoll.lbl.view-all-polls-ws:  Voir tous les sondages de l'espace courant
+jcmsplugin.dbpoll.lbl.vote-title:      Vote pour {0}
+jcmsplugin.dbpoll.lbl.create-poll:     Publier un sondage
+jcmsplugin.dbpoll.msg.option-change:   Vous ne pouvez pas changer les options du sondage car des utilisateurs ont déjà voté avec les options actuelles.
+jcmsplugin.dbpoll.msg.already-voted:   Vous avez déjà voté pour ce sondage.
+jcmsplugin.dbpoll.msg.no-vote:         Vous n'avez pas encore voté pour ce sondage.
+jcmsplugin.dbpoll.msg.no-result:       Ce sondage n'a pas encore reçu de votes.
+jcmsplugin.dbpoll.msg.choose-option:   Vous devez choisir une option pour voter.
+jcmsplugin.dbpoll.msg.closed-poll:     Ce sondage est fermé, vous ne pouvez pas voter.
+jcmsplugin.dbpoll.msg.poll-loop:       Vous ne pouvez pas insérer un sondage dans sa propre description.
+
+jcmsplugin.dbpoll.modal.step1:         Options du sondage
+jcmsplugin.dbpoll.modal.step2:         Recommander le sondage
+jcmsplugin.dbpoll.modal.btn.publish:   Publier
+jcmsplugin.dbpoll.modal.btn.publish.alt:  Publier le sondage
+jcmsplugin.dbpoll.modal.btn.next.alt:  Publier le sondage et le recommander...
+jcmsplugin.dbpoll.modal.success-info:  Le sondage a été créé et est accessible ici : {0}
+
+jcmsplugin.dbpoll.publish-menu.add-poll: Un sondage
+
+jcmsplugin.dbpoll.cs.options:  Veuillez saisir au moins deux options pour le sondage
+jcmsplugin.dbpoll.cs.optionsml:  Veuillez saisir au moins deux options pour le sondage (en {0})
+
+jcmsplugin.dbpoll.search.placeholder: Rechercher un sondage...
+
+jcmsplugin.dbpoll.app.sidebar-icon-title: Aller sur la page d'accueil de DBPoll
+
+jcmsplugin.dbpoll.app.no-result-welcome: Bienvenue dans l'application Sondages
+
+jcmsplugin.dbpoll.app.catalog.title: Sondages
+jcmsplugin.dbpoll.app.catalog.root: Accueil
+jcmsplugin.dbpoll.app.catalog.btn.add-poll: Ajouter un sondage
+jcmsplugin.dbpoll.app.catalog.polls-number: {0} {0,choice,0#|1#sondage|2#sondages}
+
+jcmsplugin.dbpoll.app.card.closed-poll: Sondage terminé
+
+jcmsplugin.dbpoll.app.filter.status.all: Tous les sondages
+jcmsplugin.dbpoll.app.filter.status.opened: Sondages en cours
+jcmsplugin.dbpoll.app.filter.status.closed: Sondages terminés
+jcmsplugin.dbpoll.app.filter.mbr:        Ajouté par...
+jcmsplugin.dbpoll.app.filter.begin-date: Ajouté après...
+jcmsplugin.dbpoll.app.filter.end-date:   Ajouté avant...
+jcmsplugin.dbpoll.app.filter.workspace:  Ajouté dans l'espace...
+
+# ------------------------------------------------------------
+#  Unified insert
+# ------------------------------------------------------------
+unified-insert.items.poll: Sondage
+unified-insert.items.poll.longtitle: Un sondage
+unified-insert.items.poll.subtitle:
+
+# ------------------------------------------------------------
+#  Smartphone
+# ------------------------------------------------------------
+jcmsplugin.smartphone.dbpoll: Sondages
+jcmsplugin.smartphone.dbpoll.navbar.opened: Sondages en cours
+jcmsplugin.smartphone.dbpoll.navbar.closed: Sondages terminés
+
+# ------------------------------------------------------------
+#  Recommendation
+# ------------------------------------------------------------
+alert.name.recommendation.dbpoll-recommendation: Invitation à répondre à un sondage
+alert.msg.recommendation.dbpoll-recommendation.title:  Invitation à répondre au sondage : {data}
+alert.msg.recommendation.dbpoll-recommendation.short-description: {author} vous invite à répondre au sondage {data}. {data.url}
+alert.msg.recommendation.dbpoll-recommendation.description: <p>{author} vous invite à répondre au sondage {data}.</p>
+jcmsplugin.dbpoll.recommendation.Poll: Inviter des membres à répondre au sondage : {0}
+
+# ------------------------------------------------------------
+#  ESN
+# ------------------------------------------------------------
+jcmsplugin.esn.activity.form-tab.poll: Sondage
+
+# ------------------------------------------------------------
+#  Shortcuts
+# ------------------------------------------------------------
+data.$id.shortcut.jcmsplugin.dbpoll.title: Sondages
+data.$id.shortcut.jcmsplugin.dbpoll.text: Application de gestion des sondages
+
+# ------------------------------------------------------------
+#  Plugin label and description
+# ------------------------------------------------------------
+plugin.DBPollPlugin.label: Module Sondage
+plugin.DBPollPlugin.description: Ce module permet de diffuser des sondages simples. Les sondages sont affichés par la Portlet Sondage. Les votes sont enregistrés dans le SGBDR.
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From Poll.xml
+types.Poll.title.description: Titre du sondage
+types.Poll.fields.description.label: Description
+types.Poll.label: Sondage
+types.Poll.fields.options.description: Liste des options de réponse.
+types.Poll.fields.description.description: Texte introductif du sondage (apparaît entre la question et les options)
+types.Poll.description: Un mini-sondage à une seule question. Pour des sondages plus élaborés, utiliser les formulaires.
+types.Poll.fields.options.label: Options
+types.Poll.title.label: Titre
+types.Poll.fields.image.label: Image
+types.Poll.fields.image.description: Une image optionnelle qui accompagne la description de ce sondage.
+types.Poll.fields.closed.label: Fermer le sondage
+types.Poll.fields.closed.onLabel: Oui
+types.Poll.fields.closed.offLabel: Non
+types.Poll.fields.closed.description: Le sondage doit-il être fermé ?
+
+# From PortletPoll.xml
+types.PortletPoll.fields.refineWorkspace.labelList: Afficher le dernier sondage de l'espace de travail courant|Afficher le dernier sondage de tous les espaces
+types.PortletPoll.fields.poll.label: Sondage
+types.PortletPoll.title.description: Titre
+types.PortletPoll.description: Cette portlet affiche un formulaire de sondage et, une fois le vote effectué, présente les résultats
+types.PortletPoll.fields.poll.description: Le sondage à afficher (sinon affiche le dernier sondage publié)
+types.PortletPoll.fields.refineWorkspace.description: Afficher le dernier sondage de l'espace courant ou de tous les espaces de travail.
+types.PortletPoll.label: Portlet Sondage
+types.PortletPoll.title.label: Titre
+types.PortletPoll.fields.refineWorkspace.label: Affinement
+types.PortletPoll.fields.hideWhenNoResults.label: Masquer la portlet si aucun sondage
+types.PortletPoll.fields.hideWhenNoResults.onLabel: Oui
+types.PortletPoll.fields.hideWhenNoResults.offLabel: Non
+types.PortletPoll.fields.hideWhenNoResults.description: La portlet doit-elle être masquée s'il n'y a pas de sondage à afficher ?

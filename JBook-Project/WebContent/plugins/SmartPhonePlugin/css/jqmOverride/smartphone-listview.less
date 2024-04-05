@@ -1,0 +1,121 @@
+// -------------------------------------------------------------------
+//  JQM - LISTVIEW OVERRIDE
+// -------------------------------------------------------------------
+
+.ui-listview > LI.list-item H2 {
+  margin: 0;
+}
+
+HTML .ui-page-theme-b .ui-listview,
+HTML .ui-page-theme-a .ui-listview {
+
+  .hide-icon .itemlist-item-icon{
+    display: none;
+  }
+
+  > LI .ui-btn {
+    color: #666;
+    border-top: 1px solid rgba(171, 171, 171, 0.24);
+    border-bottom: transparent;
+  }
+  > LI .txt-info {
+    font-size: 12px;
+    font-weight: normal;
+    color: #888;
+
+    text-overflow: initial;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+
+	&.ui-listview-dataicon {
+	  > .ui-li-has-thumb > .ui-btn,
+	  > .ui-li-has-icon > .ui-btn {
+			min-height: 1.25em;
+			padding-left: 2.5em;
+	  }
+	}
+
+	// New Structure for listview
+	&.ui-listview-full > LI H2 {
+		white-space: normal;
+		text-overflow: initial;
+	}
+	&.ui-listview-full-abstract > LI P {
+		text-overflow: initial;
+		word-wrap: break-word;
+		white-space: normal;
+	}
+
+  //Color change
+
+ /*
+  > LI.list-item-read A.ui-btn,
+  > LI.list-item-read A.ui-btn:visited {
+    background-color: #EEE;
+    border-color: #CCC;
+  }
+
+  > LI.list-item-unread A.ui-btn,
+  > LI.list-item-unread A.ui-btn:visited {
+    background-color: #FFF;
+  }
+
+  > LI.list-item-read A.ui-btn.ui-btn-active,
+  > LI.list-item-read A.ui-btn.ui-btn-active:visited {
+    background-color: #CCC;
+    text-shadow: none;
+    color: #444;
+  }
+
+  &.ui-listview-unvisited > LI A.ui-btn,
+  &.ui-listview-unvisited > LI A.ui-btn:visited {
+  	background-color: #FFF;
+  }
+  */
+	> LI.ui-li A.link {
+		padding:5px;
+	}
+
+  > .list-item-read .badge-new {
+    display: none;
+  }
+
+	//JCMS Components
+
+  .photo {
+    height: auto;
+  }
+
+  .ui-listview-showmore {
+	  background-color: transparent;
+		padding: 5px 10px;
+    color: white;
+    margin-bottom: 20px;
+		A.ui-link {
+			background-color: #428BCA;
+			border-color: #357EBD;
+			border-radius: 5px;
+			text-align: center;
+	    color: white;
+		}
+    A.ui-link:hover {
+      background-color: #3071A9;
+      border-color: #285E8E;
+    }
+  }
+}
+.ui-btn-showmore.ui-btn.ui-btn-b {
+  background-color: #428BCA;
+  border-color: #357EBD;
+}
+.ui-btn-showmore.ui-btn.ui-btn-b:hover,
+.ui-btn-showmore.ui-btn.ui-btn-b:active {
+  background-color: #3071A9;
+  border-color: #285E8E;
+}
+
+.ui-listview-filters {
+  margin: -1em -1em 1em -1em;
+  padding: 10px;
+}

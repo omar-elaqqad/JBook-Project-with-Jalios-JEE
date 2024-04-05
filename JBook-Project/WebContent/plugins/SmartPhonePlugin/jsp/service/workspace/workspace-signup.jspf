@@ -1,0 +1,17 @@
+<%@ page contentType="text/html; charset=UTF-8" %><%
+%><%@ page import="com.jalios.jcmsplugin.collaborativespace.*" %><%
+%><%@ page import="com.jalios.jcms.*" %><%
+%><%@ page import="com.jalios.util.*" %>
+
+<%
+if (Util.isEmpty(workspace)) {
+  return;  
+}
+%>
+
+<div id="workspace-signup" data-role="page">
+  <div data-role="content">
+    <jalios:message level="<%= MessageLevel.INFO %>" dismissable="false" msg="jcmsplugin.smartphone.lbl.workspace-index.signup"/>
+
+  </div>
+</div>

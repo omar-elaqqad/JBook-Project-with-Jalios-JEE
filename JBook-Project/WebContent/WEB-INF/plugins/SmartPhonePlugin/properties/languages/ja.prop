@@ -1,0 +1,321 @@
+# Language properties
+
+jcmsplugin.smartphone.lbl.no-result: 結果がありません
+jcmsplugin.smartphone.lbl.guest: ゲスト
+jcmsplugin.smartphone.lbl.index-default.choose-action: アクションを選択する
+jcmsplugin.smartphone.lbl.index-default.desktop-link: デスクトップサイトに進む
+jcmsplugin.smartphone.lbl.workspace-index.filter-ws: ワークスペースをフィルターする
+jcmsplugin.smartphone.lbl.workspace-index.recent: 最近ビジットした場所
+jcmsplugin.smartphone.lbl.workspace-index.other: 他のワークスペース
+jcmsplugin.smartphone.lbl.workspace-index.signup: あなたにはこのワークスペースへのアクセス権がありません。
+jcmsplugin.smartphone.lbl.vote.like: いいね！
+jcmsplugin.smartphone.lbl.vote.unlike: いいね！の取り消し
+jcmsplugin.smartphone.lbl.access-website: ウェブサイトにアクセスする
+jcmsplugin.smartphone.lbl.see-on-website: ウェブサイトで見る
+jcmsplugin.smartphone.lbl.header.website-title: JPlatform - スマートフォン
+jcmsplugin.smartphone.lbl.alert.all-alert-read: あなたへのアラートを全て読みました。
+jcmsplugin.smartphone.lbl.alert.alert-empty: あなたへのアラートはありません。
+jcmsplugin.smartphone.lbl.alert.unread: 未読
+jcmsplugin.smartphone.lbl.alert.read: 既読
+jcmsplugin.smartphone.lbl.alert.access-publication: パブリケーションを表示
+jcmsplugin.smartphone.lbl.alert.mark-read: 既読にする
+jcmsplugin.smartphone.lbl.forbidden: あなたにはこのコンテンツへのアクセス権がありません。
+jcmsplugin.smartphone.lbl.alert.null-pub: 要素が存在しません
+jcmsplugin.smartphone.lbl.yes: はい
+jcmsplugin.smartphone.lbl.no: いいえ
+jcmsplugin.smartphone.lbl.member.contact: コンタクト
+jcmsplugin.smartphone.lbl.member.address: 住所
+jcmsplugin.smartphone.lbl.member.information: 情報
+jcmsplugin.smartphone.lbl.member.agenda: アジェンダ
+jcmsplugin.smartphone.lbl.recommendation.no-recommendation: あなたに寄せられた推薦はありません。
+jcmsplugin.smartphone.lbl.recommendation.see-publication: パブリケーションを表示
+jcmsplugin.smartphone.lbl.admin.members: メンバー
+jcmsplugin.smartphone.lbl.admin.see-logs: ログにアクセスする
+jcmsplugin.smartphone.lbl.admin.memory: メモリ
+jcmsplugin.smartphone.lbl.member.add-to-address-book: アドレス帳に追加する
+jcmsplugin.smartphone.lbl.mention.noemail: このユーザーにはメールアドレスがないため言及できません
+jcmsplugin.smartphone.lbl.jquerymobile.error: エラーが発生しました:
+jcmsplugin.smartphone.lbl.invalid-home-page: ホームページはまだセットアップされていません。
+jcmsplugin.smartphone.lbl.access-all-spaces: 全ての空間にアクセス
+jcmsplugin.smartphone.lbl.jmobile.about-jmobile: JMobileについて
+
+jcmsplugin.smartphone.action.showmore: もっと詳しく...
+jcmsplugin.smartphone.action.filter: フィルター...
+jcmsplugin.smartphone.action.see-publication: パブリケーションを表示
+jcmsplugin.smartphone.lbl.new: 新規
+
+jcmsplugin.smartphone.recommendation.placeholder.members: メンバーを選択する
+jcmsplugin.smartphone.recommendation.placeholder.groups: グループを選択する
+
+jcmsplugin.smartphone.jmobile.version.numero: バージョン {0} Copyright © Jalios 2022
+jcmsplugin.smartphone.jmobile.version.droits: All rights reserved
+jcmsplugin.smartphone.jmobile.notification: 通知
+jcmsplugin.smartphone.jmobile.notification.appareil.registred: 登録済みのデバイス
+jcmsplugin.smartphone.jmobile.notification.appareil.not-registred: 未登録のデバイス
+jcmsplugin.smartphone.jmobile.notification.permission : 許可
+jcmsplugin.smartphone.jmobile.notification.type-alerte.inactive: どのアラートタイプも有効化されていません
+jcmsplugin.smartphone.jmobile.notification.type-alerte.active: 有効化されたアラートタイプ
+
+jcmsplugin.smartphone.lbl.download-mobile-app: モバイルアプリケーションをダウンロード
+
+# Portal
+
+## History
+portal.edition.history.save-by.label: {0}によって保存されました
+portal.edition.history.published-by.label: パブリッシュした人 {0}
+portal.edition.history.breadcrumb.label: ポータル履歴
+portal.edition.history.back-edition.label: 編集に戻る
+portal.edition.history.back-to-version.label: このバージョンに戻す
+portal.edition.history.back-to-version.confirm: このバージョンに戻しますか？
+portal.edition.history.show-more: もっと見る
+portal.edition.history.portlet-chooser: ポートレット選択
+portal.edition.history.create-portlet: 新しいポートレットを作成する
+portal.edition.history.existing-portlets: 既存のポートレット
+portal.structure.custom-title.label: バージョンの名前
+portal.structure.rename-title.label: バージョンの名前の変更
+portal.edition.sidebar.portal-edit.tab-edit.title: ポータルのパラメータ
+portal.edition.sidebar.portal-edit.tab-ui.title: ポータルスタイル
+portal.edition.sidebar.portal-edit.template.title: ポートレットのテンプレート
+portal.edition.sidebar.portal-edit.portal-advanced.title: 高度な編集
+
+
+jcmsplugin.smartphone.service.search.no-result: 結果がありません
+jcmsplugin.smartphone.service.search.members.no-result: メンバーがいません
+jcmsplugin.smartphone.service.search.publications.no-result: パブリケーションが見つかりません
+jcmsplugin.smartphone.service.search.tabs.all.label: 全て
+jcmsplugin.smartphone.service.search.tabs.members.label: メンバー
+jcmsplugin.smartphone.service.search.tabs.publications.label: パブリケーション
+
+
+jcmsplugin.smartphone.portal.default-portal.title: モバイルポータル
+jcmsplugin.smartphone.portal.default-wysiwyg.title: モバイルポータルへようこそ
+jcmsplugin.smartphone.portal.default-wysiwyg.content: これはあなたのモバイルポータルのデフォルトページです
+jcmsplugin.smartphone.portal.edition.edit-portal: ポータルエディション
+jcmsplugin.smartphone.portal.lbl.assembly-zone: アッセンブリゾーン
+jcmsplugin.smartphone.portal.lbl.final-output: 最終アウトプット
+jcmsplugin.smartphone.portal.lbl.portal-parameters: ポータルのパラメータ
+jcmsplugin.smartphone.portal.lbl.duplicate: 複製する
+jcmsplugin.smartphone.portal.lbl.publish: パブリッシュする
+jcmsplugin.smartphone.portal.lbl.duplicate.modal.title: ポータルを複製
+jcmsplugin.smartphone.portal.lbl.filter-workspace: ワークスペースでフィルター...
+jcmsplugin.smartphone.portal.topbar-title.lbl: トップバー
+jcmsplugin.smartphone.portal.administration.title: アドミニストレーション
+jcmsplugin.smartphone.portal.administration.mobile-portals: モバイルポータル
+jcmsplugin.smartphone.portal.administration.default-portals: デフォルトのポータル
+jcmsplugin.smartphone.portal.administration.default-portal: デフォルトポータル
+jcmsplugin.smartphone.portal.administration.settings: 設定
+jcmsplugin.smartphone.portal.creation-modal.title: モバイルポータルを作成する
+jcmsplugin.smartphone.portal.administration.topbar-color: トップバーの背景色
+jcmsplugin.smartphone.portal.administration.portal-edition: ポータルエディション - {0}
+jcmsplugin.smartphone.portal.administration.topbar-font-color: トップバーの正面色
+jcmsplugin.smartphone.portal.administration.topbar-logo: ロゴ
+jcmsplugin.smartphone.portal.administration-table.title: タイトル
+jcmsplugin.smartphone.portal.administration-table.mdate: 最後の更新
+jcmsplugin.smartphone.portal.administration.create-portal: ポータルを作成する
+jcmsplugin.smartphone.portal.administration.return-to-home: アプリのホームポータルエディタに戻る
+jcmsplugin.smartphone.portal.administration.msg.settings-updated: 設定が保存されました。
+
+# MyDay
+jcmsplugin.smartphone.my-day.today.label: 今日
+jcmsplugin.smartphone.my-day.calendar.service-link.title: マイアジェンダを表示する
+jcmsplugin.smartphone.my-day.jtask.service-link.title: マイタスクを表示
+
+data.$id.jcmsplugin.smartphone.category.nav-root.name: モバイルナビゲーション
+data.$id.jcmsplugin.smartphone.category.nav-root-home.name: ホーム
+
+# Properties
+jcmsplugin.smartphone.home.news: ニュース
+jcmsplugin.smartphone.workspace.news: ワークスペースのニュース
+jcmsplugin.smartphone.default.page.size: ページのデフォルトサイズ
+jcmsplugin.smartphone.lbl.topbar-title: スマートホン用のサイトタイトル
+jcmsplugin.smartphone.image.resize.max-width: サイズ変更された画像の最大幅
+jcmsplugin.smartphone.map-service: マップサービス
+jcmsplugin.smartphone.search.searchable-types: 検索サービス - 検索結果に含まれるタイプ
+jcmsplugin.smartphone.search.portletId: 検索サービス - ポートレット
+jcmsplugin.smartphone.search.portletId.help: 検索サービスのデフォルトの挙動を定義するために使用される検索ポートレット
+jcmsplugin.smartphone.search.not-searchable-types: 検索サービス - 検索結果から除外されるタイプ
+jcmsplugin.smartphone.drawer.background-image: サービスドロワー バックグラウンド画像
+
+jcmsplugin.smartphone.mobileapp.android.play-store : Android Play Store
+jcmsplugin.smartphone.mobileapp.ios.app-store : iOS App Store
+
+# Services
+jcmsplugin.smartphone.service.recenthistory:   最近の履歴
+jcmsplugin.smartphone.service.admin:    アドミニ
+jcmsplugin.smartphone.service.search: 検索
+jcmsplugin.smartphone.service.workflow: ワークフロー
+jcmsplugin.smartphone.service.news: ニュース
+jcmsplugin.smartphone.service.workspace: ワークスペース
+
+# Member menu
+jcmsplugin.smartphone.member-menu.application-menu: アプリケーション
+jcmsplugin.smartphone.member-menu.my-day: マイデイ
+jcmsplugin.smartphone.member-menu.navigate: ナビゲート
+
+# Workspace Services
+jcmsplugin.smartphone.workspace-service.search: 検索
+jcmsplugin.smartphone.workspace-service.news: ニュース
+
+portlet.ability.jcmsplugin-smartphone:                スマートホン
+portlet.ability.jcmsplugin-smartphone.application:    サービス
+
+# Labels
+jcmsplugin.smartphone.fulldisplay.webpage.view-site: ウェブサイトをビジットする
+
+jcmsplugin.smartphone.share.empty: URL「{0}」のシェアに利用できるサービスはありません。
+
+# Feedback Mobile App
+jcmsplugin.smartphone.mobileapp.feedback.lbl: レポートを送信する
+jcmsplugin.smartphone.mobileapp.feedback.email: 受信者のメール
+jcmsplugin.smartphone.mobileapp.feedback.email.help: このメールアドレスはモバイルアプリケーションからのユーザーフィードバックを受信します。メールアドレスが未設定の場合、送信は無効であり、モバイルアプリケーションからは利用できません。
+jcmsplugin.smartphone.mobileapp.feedback.settings: 設定
+
+jcmsplugin.smartphone.mobileapp.feedback.subject: {0}さんがモバイルアプリケーションからレポートを送信しました。
+jcmsplugin.smartphone.mobileapp.feedback.hello: こんにちは。
+jcmsplugin.smartphone.mobileapp.feedback.description: {0}さんがあなたに、モバイルアプリケーションを利用することについてレポートを送信しました。
+jcmsplugin.smartphone.mobileapp.feedback.user-info: ユーザー情報:
+jcmsplugin.smartphone.mobileapp.feedback.user-info.login: ログイン: {0}
+jcmsplugin.smartphone.mobileapp.feedback.user-info.siteurl: サイト URL: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info: デバイス情報:
+jcmsplugin.smartphone.mobileapp.feedback.device-info.platform: プラットフォーム: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info.version: プラットフォームバージョン: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info.model: デバイスモデル: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info.uuid: デバイス ID: {0}
+jcmsplugin.smartphone.mobileapp.shareurl.message: 何がしたいですか？
+
+# AlertChannel
+jcmsplugin.smartphone.alert.channel.label: JMobile
+jcmsplugin.smartphone.alert.channel.description: JMobileプロトコルを介してアラートを送信する
+
+# ExtraDBData
+extradb.Member.jcmsplugin.smartphone.token: JMobileトークン
+extra.Shortcut.jcmsplugin.smartphone.mobile-url: JMobile - ショートカットURL
+extra.Shortcut.jcmsplugin.smartphone.mobile-available: JMobile - アプリケーションLauncherを表示しますか?
+
+# Editable Properties
+jcmplugin.smartphone.jpush.fcm.project-id: FCM - プロジェクトID
+jcmplugin.smartphone.notification.encrypt : 通知を暗号化
+jcmsplugin.smartphone.ios.download-code.url-prefix: iOS - ダウンロードコード - URLプレフィックス
+jcmsplugin.smartphone.ios.download-code.threshold: iOS - ダウンロードコード - アラート閾値
+$id.jcmsplugin.smartphone.ios.downloadcode.manager-group: iOS - ダウンロードコード - マネージャグループ
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.ios.teamId: Apple - Team ID
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.appId: JMobile アプリID
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.android.fingerprints: 証明書のフィンガープリント(sha256)
+jcmplugin.smartphone.space.show-introduction: 空間の紹介を表示する
+
+$id.jcmsplugin.smartphone.portal.default-portal: デフォルトポータル
+# Templates
+types.PortletQueryForeach.templates.jmobile.default.label: デフォルトテンプレート
+types.PortletQueryForeach.templates.jmobile.dataimage.label: 画像テンプレート使用のリスト
+
+types.PortletQueryForeachCards.templates.jmobile.withBorderGrid.label: グリッド罫線使用のテンプレートカード
+types.PortletQueryForeachCards.templates.jmobile.withoutBorderGrid.label: グリッド罫線不使用のテンプレートカード
+types.PortletQueryForeachCards.templates.jmobile.withBorder.label: グリッド罫線使用のテンプレートカード
+types.PortletQueryForeachCards.templates.jmobile.light.label: メタ不使用のテンプレートカード
+types.PortletQueryForeachCards.templates.jmobile.default.label: デフォルトのカードテンプレート
+types.PortletQueryForeachCards.templates.jmobile.withLead.label: 罫線およびリードテンプレート使用のカード
+types.PortletQueryForeachCards.templates.jmobile.withSliding.label: 罫線テンプレート不使用のスライディングカード
+types.PortletQueryForeachCards.templates.jmobile.withSlidingBorder.label: 罫線テンプレート使用のスライディングカード
+types.PortletQueryForeachCards.templates.jmobile.horizontalwithSliding.label: 罫線テンプレート不使用の水平スライディングカード
+types.PortletQueryForeachCards.templates.jmobile.carousel.label: カルーセル カード テンプレート
+
+types.PortletQueryForeachDetail.templates.jmobile.default.label: デフォルトテンプレート
+types.PortletQueryForeachDetail.templates.jmobile.dataimage.label: 画像テンプレート使用のリスト
+
+types.PortletCarousel.templates.jmobile.default.label: デフォルトテンプレート
+
+types.PortletWYSIWYG.templates.jmobile.default.label:  デフォルトテンプレート
+
+types.AbstractPortletSkinable.templates.jmobile.default.label: デフォルトテンプレート
+
+types.AbstractPortletSkinable.templates.jmobile.light.label: タイトルテンプレート不使用
+
+types.PortletImage.templates.jmobile.default.label: デフォルトテンプレート
+
+types.PortletJsp.templates.jmobile.default.label: デフォルトテンプレート
+
+types.PortletRSS.templates.jmobile.default.label: デフォルトテンプレート
+
+
+# From SmartPhonePortal.xml
+types.SmartPhonePortal.label: JMobileポータル
+types.SmartPhonePortal.description: 最小オプションのベーシックポータル
+types.SmartPhonePortal.fields.image.label: 画像
+types.SmartPhonePortal.fields.pageTitle.description: ページのタイトルに表示されるタイトル
+types.SmartPhonePortal.fields.description.label: 記述
+types.SmartPhonePortal.fields.pageTitle.label: ページタイトル
+types.SmartPhonePortal.fields.css.label: CSS
+types.SmartPhonePortal.fields.structure.label: ストラクチャ
+types.SmartPhonePortal.title.label: タイトル
+types.SmartPhonePortal.fields.displayScrollToTop.label: トップリンクへのスクロールを表示
+types.SmartPhonePortal.fields.keywords.label: キーワード（SEO）
+types.SmartPhonePortal.fields.keywords.description: これらのキーワード（コンマ区切り）はポータルのホームページで使用されます。
+types.SmartPhonePortal.fields.portlets.label: ポートレット
+types.SmartPhonePortal.fields.portlets.description: ポートレット一覧
+
+# REST
+doc.rest.rsrc-meth.FeedbackResource: POST
+doc.rest.rsrc-desc./smartphone/feedback: モバイルアプリケーションから、JMobile モジュールプロパティ内で入力されたメールアドレスにユーザーフィードバックを送信します。
+
+doc.rest.rsrc-meth.AddJWTokenResource: GET
+doc.rest.rsrc-desc./smartphone/auth/addjwtoken: ログイン済みメンバーのJWTトークンを返します。
+doc.rest.rsrc-desc./smartphone/auth/addjwtoken/{memberId}: メンバーのJWTokenを<code>memberId</code>IDとともに返します。
+
+doc.rest.rsrc-meth.RegisterJMobileTokenResource: GET
+doc.rest.rsrc-desc./smartphone/registerToken/{deviceId}/{deviceOs}/{deviceModel}: メンバーの携帯電話の情報を保存します。
+
+doc.rest.rsrc-meth.DeleteDeviceInfoResource: GET
+doc.rest.rsrc-desc./smartphone/deleteToken/{deviceId}/{deviceOs}/{deviceModel}: メンバーの携帯電話からの情報を削除します。
+
+doc.rest.rsrc-meth.GetNotificationDiagnosticResource: GET
+doc.rest.rsrc-desc./smartphone/notificationDiagnostic/{deviceId}/{deviceOs}/{deviceModel}: JPlatform上で有効化されたアラートタイプの数を返します。
+
+doc.rest.rsrc-meth.JMobileInfoResource: GET
+doc.rest.rsrc-desc./smartphone/info: JMobileプラグイン情報を返します。
+
+doc.rest.rsrc-meth.IOSDownloadResource: GET
+doc.rest.rsrc-desc./smartphone/ios/download: iOSのダウンロードURLを返します。
+
+data.$id.shortcut.jcmsplugin.smartphone-portals.title: JMobileポータル
+data.$id.shortcut.jcmsplugin.smartphone-portals.text: JMobileポータルとナビゲーションを管理
+
+jcmplugin.smartphone.bottom-nav-item.home: ホーム
+jcmplugin.smartphone.bottom-nav-item.alerts: アラート
+jcmplugin.smartphone.bottom-nav-item.search: 検索
+jcmplugin.smartphone.bottom-nav-item.application-menu: アプリ
+
+ui.editportlet.usage.jmobile: JMobile
+ui.editportlet.usage.skin.jmobile: JMobile
+
+# ------------------------------------------------------------
+# IOS Download Code
+# ------------------------------------------------------------
+jcmsplugin.smartphone.ios.admin-menu: iOSモバイルアプリケーションのダウンロードコードを管理
+jcmsplugin.smartphone.ios.add-codes.title: ダウンロードコードを追加
+jcmsplugin.smartphone.ios.add-codes.lbl.codes: コード
+jcmsplugin.smartphone.ios.add-codes.lbl.codes.h: スペースまたは新しい行で区切られた追加するコードを入力します。
+jcmsplugin.smartphone.ios.add-codes.btn.delete-all: 全ての未使用コードを削除...
+jcmsplugin.smartphone.ios.add-codes.msg.code-count:  <p>{0,choice,0#コードは使用されませんでした|1#コードが一つ使用されました|2#{0}が使用されました}。</p><p>{1,choice,0#未使用のコードはもうありません|1#一づだけ未使用のコードが残っています。|2#{1}件の未使用コードがあります。
+jcmsplugin.smartphone.ios.add-codes.msg.codes-added:  {0,choice,0#コードが追加されませんはした|1#コードが一つ追加されました|2#{0}が追加されました}。
+jcmsplugin.smartphone.ios.add-codes.msg.code-deleted: {0,choice,0#コードは削除されませんでした|1#未使用コードが一つ削除されました|2#{0}件の未使用コードが削除されました}。
+jcmsplugin.smartphone.ios.download.msg.oodc: <p>申し訳ありません :-(</p><p>現在、モバイルアプリをダウンロードしていただけません。</p><p>ダウンロードコードがもうありません。</p><p>後ほど再試行してください。</p> 
+jcmsplugin.smartphone.ios.download.msg.ldnr: <p>申し訳ありません :-(</p><p>現在、モバイルアプリをダウンロードしていただけません。</p><p>ダウンロードコード配布サービスが応答していません。</p><p>後ほど再試行してください。</p>
+
+data.$id.jcmsplugin.smartphone.ios.downloadcode.manager-group.name: iOSアプリ ダウンロードコードマネージャ
+
+# ------------------------------------------------------------
+# ALERT
+# ------------------------------------------------------------
+alert.name.jcmsplugin-smartphone:                                              JMobile
+alert.name.jcmsplugin-smartphone.ios-downloadcode-shortage:                    ダウンロードコード不足
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.title:               ダウンロードコード不足
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.short-description:   {remainingCount}
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.description:         <p>{remainingCount}</p><p>新しいダウンロードコードを追加するには、<a href="admin/admin.jsp">管理者エリア</a>の「操作」セクションに移動してください。</p>
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.remaining-count:     {0,choice,0#ダウンロードコードは全て使用されました|1#ダウンロードコードは一つだけあります|2#ダウンロードコードは{0}件しかありません}。
+
+# ------------------------------------------------------------
+# ACL
+# ------------------------------------------------------------
+acl.resource.plugins/jmobile: JMobile
+acl.resource.plugins/jmobile/can-administrate-mobile-portals: モバイル ポータル アドミニストレーション
+acl.resource.admin/operation/can-manage-ios-downloadcode: iOS ダウンロードコード管理

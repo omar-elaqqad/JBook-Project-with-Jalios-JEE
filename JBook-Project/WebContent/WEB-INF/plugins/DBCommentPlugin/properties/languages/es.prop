@@ -1,0 +1,114 @@
+jcmsplugin.dbcomment.edit.lbl.add-comment:    Agregar un comentario
+jcmsplugin.dbcomment.edit.lbl.add-comment-verb:  Comentario
+jcmsplugin.dbcomment.edit.lbl.create-comment: Publicar un comentario
+jcmsplugin.dbcomment.edit.lbl.cancel:         Cancelar
+jcmsplugin.dbcomment.edit.lbl.link-top:       Volver al inicio de la página
+jcmsplugin.dbcomment.edit.lbl.comment-on:     Comentar sobre {0}
+jcmsplugin.dbcomment.edit.lbl.title:          Comentarios
+jcmsplugin.dbcomment.edit.lbl.view-comment:   Ver comentarios
+jcmsplugin.dbcomment.edit.lbl.disable-comment:  Deshabilitar comentario
+jcmsplugin.dbcomment.edit.lbl.enable-comment:   Habilitar comentario
+jcmsplugin.dbcomment.edit.lbl.view-all-comments: {0,choice,0#Ningún comentario|1#Ver el comentario|2#Ver los {0} comentarios}
+jcmsplugin.dbcomment.edit.lbl.collapse-comments: Contraer comentarios
+jcmsplugin.dbcomment.edit.lbl.warn.edit-moderation.disabled:        El tipo de moderación actual no le permite modificar el contenido del comentario sino únicamente los otros campos. Sin embargo, puede actualizar el estado del flujo de trabajo del comentario.
+jcmsplugin.dbcomment.edit.follow:        Suscribirse a la publicación
+
+jcmsplugin.dbcomment.lbl.comment:             Comentario
+jcmsplugin.dbcomment.lbl.comments:            Comentarios
+jcmsplugin.dbcomment.lbl.comment-count:       {0,choice,0#Ningún comentario|1#{0} comentario|2#{0} comentarios}
+jcmsplugin.dbcomment.lbl.comment-count-text:  {0,choice,0#comentarios|1#comentario|2#comentarios}
+jcmsplugin.dbcomment.lbl.new:                 No leído
+jcmsplugin.dbcomment.lbl.see-previous-comments: {0,choice,1#Ver el comentario anterior.|2#Ver los {0} comentarios anteriores.}
+jcmsplugin.dbcomment.lbl.major-update-date:   Última actualización principal {0}
+jcmsplugin.dbcomment.lbl.private:             Privado
+jcmsplugin.dbcomment.lbl.private-description: Este comentario puede ser leído por los miembros del grupo "{0}".
+jcmsplugin.dbcomment.lbl.private-edit-tooltip: Al habilitar este comentario como privado, solo será accesible a los miembros del Grupo "{0}".
+jcmsplugin.dbcomment.lbl.non-visible-created-comment: Su comentario ha sido creado y se está validando en estos momentos.
+jcmsplugin.dbcomment.lbl.closed-comment:     Los comentarios están cerrados en esta publicación.
+
+jcmsplugin.dbcomment.commentTop-section:Los contenidos más comentados
+jcmsplugin.dbcomment.commentTop-section.help: Los 10 contenidos principales comentados
+jcmsplugin.dbcomment.commentTop.name:Título
+jcmsplugin.dbcomment.commentTop.number: Comentarios
+
+# ----------------------------------------------------------------------
+# Alert
+# ----------------------------------------------------------------------
+alert.name.jcmsplugin-dbcomment:                              Comentarios
+alert.name.jcmsplugin-dbcomment.new-comment:                  Nuevo comentario
+alert.msg.jcmsplugin-dbcomment.new-comment.title:             Nuevo comentario sobre "{parent}"
+alert.msg.jcmsplugin-dbcomment.new-comment.short-description: {author} ha publicado un nuevo comentario sobre "{parent}". {parent.link}
+alert.msg.jcmsplugin-dbcomment.new-comment.description:       <p>{author} ha publicado un nuevo {data}.</p>
+alert.name.jcmsplugin-dbcomment.new-mention:                  Nueva mención
+alert.msg.jcmsplugin-dbcomment.new-mention.title:             Se le ha mencionado en un nuevo comentario sobre {parent}
+alert.msg.jcmsplugin-dbcomment.new-mention.short-description:  {author} le ha mencionado en un nuevo comentario sobre "{parent}". {parent.link}
+alert.msg.jcmsplugin-dbcomment.new-mention.description:        <p>{author} le ha mencionado en un nuevo comentario sobre "{parent.data}".</p> 
+alert.new-comment-mention.title:     Se le ha mencionado en un nuevo comentario sobre {parent}
+alert.new-comment-mention.short-description: {author} le ha mencionado en un nuevo comentario sobre "{parent}". {parent.link}
+alert.new-comment-mention.description:       <p>{author} le ha mencionado en un nuevo comentario sobre "{parent.data}".</p> 
+
+# ----------------------------------------------------------------------
+# Editable properties
+# ----------------------------------------------------------------------
+jcmsplugin.dbcomment.anonymous:               Comentarios anónimos
+jcmsplugin.dbcomment.anonymous.notify:        Notificar a usuarios anónimos
+jcmsplugin.dbcomment.compatible-types:        Tipos comentables
+jcmsplugin.dbcomment.edit-moderation.enabled:  Modo de moderación estricto
+jcmsplugin.dbcomment.edit-moderation.enabled.boolean: falso
+jcmsplugin.dbcomment.edit-moderation.enabled.help: Al elegir sí, los usuarios que tengan el derecho de modificación de comentarios podrán actualizar todos los campos excepto el contenido del comentario. El autor del comentario será el único autorizado a modificar el texto.
+
+jcmsplugin.dbcomment.edit-commentable.enabled: Permitir la deshabilitación de los comentarios sobre cada publicación
+jcmsplugin.dbcomment.edit-commentable.enabled.boolean:falso
+jcmsplugin.dbcomment.edit-commentable.enabled.boolean.help: Al elegir sí, los usuarios que tengan el derecho de modificación de comentarios podrán actualizar todos los campos excepto el contenido del comentario.
+
+jcmsplugin.dbcomment.commentable-default-value: Habilitar o deshabilitar comentarios: valor predeterminado
+jcmsplugin.dbcomment.commentable-default-value.boolean.help: Si "deshabilitar comentarios sobre una Publicación" está habilitado, definir si la publicación por defecto es comentable o no
+
+jcmsplugin.dbcomment.commentable.title : Comentarios
+jcmsplugin.dbcomment.commentable.description : Activar comentarios
+jcmsplugin.dbcomment.commentable.desactivate-comment: Desactivar comentarios sobre {0}
+jcmsplugin.dbcomment.commentable.activate-comment: Activar comentarios sobre {0}
+jcmsplugin.dbcomment.commentable.forbidden-comment: Los comentarios están desactivados sobre el Contenido de Destino.
+
+jcmsplugin.dbcomment.private-comment.group: Comentario privado - Grupo
+jcmsplugin.dbcomment.private-comment.group.help: El grupo que podrá publicar y leer comentarios privados
+jcmsplugin.dbcomment.private-comment.enabled: Comentario privado - Habilitar comentarios privados
+jcmsplugin.dbcomment.private-comment.default-value: Comentario privado - Valor predeterminado para los comentarios privados
+jcmsplugin.dbcomment.private-comment.default-value.help: Al elegir sí, la elección de comentario privado se establecerá en "sí" cuando se cree un nuevo comentario
+
+jcmsplugin.dbcomment.reverse-order: Orden de clasificación inverso
+jcmsplugin.dbcomment.reverse-order.help: Al elegir "sí", los comentarios antiguos son visibles en primer lugar.
+jcmsplugin.dbcomment.change-sort: Ordenar - Campo seleccionado
+jcmsplugin.dbcomment.change-sort.help: Ordenar los comentarios con el campo seleccionado
+
+jcmsplugin.dbcomment.smart.comment-display.enabled: Activar pantalla de comentarios inteligentes
+jcmsplugin.dbcomment.smart.comment-display.enabled.boolean: falso
+jcmsplugin.dbcomment.smart.comment-display.enabled.help: Este sistema oculta los antiguos comentarios sobre la publicación
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From DBComment-templates.xml
+types.DBComment.templates.query.default.label: Plantilla predeterminada
+types.DBComment.templates.full.default.label: Plantilla predeterminada
+
+# From DBComment.xml
+types.DBComment.fields.email.description: La dirección no se publicará
+types.DBComment.fields.email.label: Correo electrónico
+types.DBComment.title.label: Título
+types.DBComment.fields.referer.label: Referente
+types.DBComment.fields.ipAddress.label: Dirección IP
+types.DBComment.fields.name.label: Nombre
+types.DBComment.fields.targetContent.label: Contenido de destino
+types.DBComment.fields.userAgent.label: Agente de usuario
+types.DBComment.label: Comentario
+types.DBComment.fields.webSite.label: Sitio Web
+types.DBComment.fields.description.label: Comentario
+types.DBComment.fields.privateComment.label: Comentario privado
+
+# SmartPhone
+jcmsplugin.dbcomment.smartphone.lbl.dbcomment.add-comment.placeholder: Agregar un comentario...
+
+# Explorer sidebar integration
+jcmsplugin.explorer-sidebar.see-comments: Acceder a los comentarios
+jcmsplugin.explorer.app.sidebar-tab.comments: Comentarios

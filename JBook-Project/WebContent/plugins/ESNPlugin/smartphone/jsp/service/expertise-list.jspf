@@ -1,0 +1,17 @@
+<%
+Map<Category, Set<Category>> catMap = ESNManager.getInstance().getMemberCategoryMap(member, loggedMember, userLang); 
+boolean hasCategories = Util.notEmpty(catMap);
+%>
+<% if (hasCategories) { %>
+<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+  <h3><%= glp("jcmsplugin.esn.smartphone.lbl.expertises") %></h3>
+  <ul data-role="listview" data-inset="false">
+  <jalios:foreach collection="<%= catMap.entrySet() %>" name="entry" type="Map.Entry<Category, Set<Category>>">
+    <li data-theme="a" data-role="list-divider" role="heading"><%= entry.getKey().getName(userLang) %></li>
+    <jalios:foreach collection="<%= entry.getValue() %>" type="Category" name="cat" counter="itCounter2">
+      <li><%= cat.getName(userLang) %></li>
+    </jalios:foreach>
+  </jalios:foreach>
+  </ul>
+</div>
+<% } %>

@@ -1,0 +1,2 @@
+<%@page import="com.jalios.jcms.taglib.list.ListItemTag"%>
+<%@ include file="/front/list/doDataListItemDetailedMeta.jspf" %>

@@ -1,0 +1,70 @@
+<% { %>
+  <%-- Card --%>
+  <div class="contact-card">
+    <div class="header"></div>
+    <div class="inner">
+      <% if (contact.hasPhoto() && Util.toBoolean(request.getAttribute("jcmsplugin.esn.contact-card.photo"), false)) { %>
+      <div class="photo">
+				<jalios:memberphoto member="<%= contact %>" size="<%= PhotoSize.TINY %>" />
+      </div>   
+      <% } %>
+      <div class="name"><jalios:link data="<%= contact %>" /></div>
+      
+      <% if (Util.notEmpty(contact.getJobTitle())) { %>
+      <div class="jobTitle"><%= contact.getJobTitle() %></div>
+      <% } %>
+      
+      <% if (Util.notEmpty(contact.getOrganization())) { %>
+      <div class="organization"><%= contact.getOrganization() %></div>
+      <% } %>
+      
+       
+      <% if (Util.notEmpty(contact.getAddress())) { %>
+      <div class="address">
+        <jalios:wiki><%= contact.getAddress() %></jalios:wiki>
+      </div>
+      <% } %>    
+    
+      <table class="contact-info" style="width:100%;">
+        <tr valign="bottom">
+          <td valign="left">
+            <%-- PHONE ------------------------------------------------------- --%> 
+            <% if (Util.notEmpty(contact.getPhone())) { %>
+            <div class="phone">
+                <jalios:icon src="telephone" />
+                <jalios:phone number="<%= contact.getPhone() %>" region="<%= contact.getCountry() %>" />
+            </div>
+            <% } %>
+            
+            <%-- MOBILE ------------------------------------------------------- --%> 
+            <% if (Util.notEmpty(contact.getMobile())) { %>
+            <div class="mobile">
+                <jalios:icon src="phone" />
+                <jalios:phone number="<%= contact.getPhone() %>" region="<%= contact.getCountry() %>" />
+            </div>
+            <% } %>          
+          </td>
+          
+        
+          <td class="txt-right">
+            <%
+            boolean contactCardShowMail = Util.notEmpty(contact.getEmail()) && (contact.isEmailVisible() || isAdmin);
+            %>
+            <%-- E-MAIL ---------------------------------------------------------------- --%> 
+            <% if (contactCardShowMail) { %>
+            <div class="email" title="<%= glp("ui.com.lbl.email") %>">
+              <jalios:icon src="email" />
+              <% if (isLogged) { %>
+              <a href='mailto:<%= encodeForHTMLAttribute(contact.getEmail()) %>'><%= contact.getEmail() %></a>
+              <% } else { %>
+              <%= contact.getEmail() %> 
+              <% } %>
+            </div>
+            <% } %>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="footer"></div>
+  </div>
+<% } %>

@@ -1,0 +1,16 @@
+<%--
+  @Summary: CollaborativeSpace meta datas - Typology label
+  @Category: Portal
+  @Author: Jalios SA 
+  @Customizable: True
+  @Requestable: False 
+
+ How to use:
+ <% Category typoCat = currentCategory; %>
+ <%@ include file="/plugins/CollaborativeSpacePlugin/jsp/template/doTypologyBadge.jspf" %>
+--%><%
+%><% if (typoCat != null) { %>
+  <span class="typology-entry" title='<%= encodeForHTMLAttribute(glp("jcmsplugin.collaborativespace.create.info.typology")) %>'>
+    <span class='label typology-label'><%= typoCat.getName(userLang) %></span>
+  </span>
+<% } %>

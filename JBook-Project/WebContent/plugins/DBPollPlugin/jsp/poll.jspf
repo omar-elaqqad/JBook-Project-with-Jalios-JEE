@@ -1,0 +1,7 @@
+<div class="poll br">
+<%  if (showResults || poll.isClosed()) { %>
+  <jsp:include page="/plugins/DBPollPlugin/jsp/doPollResult.jsp"></jsp:include>
+<% } else { %>
+  <jsp:include page="/plugins/DBPollPlugin/jsp/doPollForm.jsp"></jsp:include>
+<% } %> 
+</div>

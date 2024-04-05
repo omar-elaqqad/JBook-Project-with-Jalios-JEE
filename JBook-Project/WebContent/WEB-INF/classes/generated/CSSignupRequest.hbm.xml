@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "classpath://org/hibernate/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="generated.CSSignupRequest" table="G_CSSIGNUPREQUEST">
+    <cache usage="read-write" />  
+    <id name="rowId" column="rowId">
+      <generator class="native"/>
+    </id>
+    <property name="cdate" not-null="true" index="IG_CSSIGNUPREQUEST_CDATE" />
+    <property name="mdate" not-null="true" index="IG_CSSIGNUPREQUEST_MDATE" />
+    <property name="authorId" length="32" index="IG_CSSIGNUPREQUEST_AUTHORID" />
+    
+    <property name="pstatus" not-null="true" index="IG_CSSIGNUPREQUEST_PSTATUS" />
+    <property name="workspaceId" not-null="true" length="32" index="IG_CSSIGNUPREQUEST_WSID" />
+    
+    <property name="pdate"  index="IG_CSSIGNUPREQUEST_PDATE" />
+    <property name="edate" />
+    <property name="adate" />
+    <property name="title" />
+    <property name="workflowId" index="IG_CSSIGNUPREQUEST_WFID" />
+    <property name="hasNoReadRights" index="IG_CSSIGNUPREQUEST_HASNOREADRI" />
+    <property name="opAuthorId" length="32" index="IG_CSSIGNUPREQUEST_OPAUTHORID"  />
+    <property name="readAck" />
+    
+    <property name="submitMemberId" index="IG_CSSIGNUPREQUEST_SUBMID" />
+    <property name="submitRemoteAddr" />
+    <property name="name" />
+    
+    
+    
+    <!--  COLLECTIONS FOR READ-RIGHTS -->
+    <set name="authGrpIdSet" table="G_CSSIGNUPREQUEST_AUTHGRPSET" lazy="true">
+      <cache usage="read-write" />
+      <key>
+        <column name="ITEM_ID" index="IG_CSSIGNUPREQUEST_AUTHGRPSET_"/>
+      </key>
+      <element type="string">
+        <column name="VALUE" length="64" index="IG_CSSIGNUPREQUEST_AUTHGRPSET"/>
+      </element>      
+    </set>    
+    
+    <set name="authMbrIdSet" table="G_CSSIGNUPREQUEST_AUTHMBRSET" lazy="true">
+      <cache usage="read-write" />
+      <key>
+        <column name="ITEM_ID" index="IG_CSSIGNUPREQUEST_AUTHMBRSET_"/>
+      </key>
+      <element type="string">
+        <column name="VALUE" length="64" index="IG_CSSIGNUPREQUEST_AUTHMBRSET"/>
+      </element>      
+    </set>
+  </class>
+</hibernate-mapping>
+<!-- **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY * DO NOT EDIT ANYTHING BELOW THIS LINE *** -->
+<!-- kEQvJ36QXLejWlTBJ2+V9A== -->

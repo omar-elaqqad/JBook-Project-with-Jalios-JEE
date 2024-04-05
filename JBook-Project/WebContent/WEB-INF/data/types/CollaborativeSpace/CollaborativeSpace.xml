@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<type name="CollaborativeSpace" formhandler="generated.EditAbstractCollectionHandler" superclass="com.jalios.jcmsplugin.collaborativespace.portal.AbstractCollaborativeSpace" reviewable="false" debatable="false" unitFieldEdition="false" audienced="false" categoryTab="true" readRightTab="true" updateRightTab="true" templateTab="true" workflowTab="true" advancedTab="true" authgroups="|||||" interfaces="com.jalios.jcms.portlet.PortalInterface">
+  <title ml="true" />
+  <fields>
+    <field name="description" editor="textarea" required="false" abstract="true" compactDisplay="false" type="String" searchable="true" rows="2" cols="80" ml="true" wiki="true" html="false" checkHtml="false" descriptionType="tooltip" />
+    <field name="introduction" editor="wysiwyg" required="false" compactDisplay="false" type="String" searchable="true" rows="2" cols="100" ml="true" toolbars="basic,format" wysiwygConfigurationId="light" checkHtml="true" inline="true" descriptionType="text" html="false" />
+    <field name="accessPolicy" editor="enumerate" required="true" compactDisplay="false" tab="access" type="String" chooser="checkbox" valueList="public|private|secret" ml="false" descriptionType="text" searchable="false" html="false" checkHtml="true" />
+    <field name="signupPolicy" editor="enumerate" required="true" compactDisplay="false" type="String" chooser="checkbox" valueList="free|request|admin" ml="false" descriptionType="text" searchable="false" html="false" checkHtml="true" tab="access" />
+    <field name="layout" hidden="true" editor="enumerate" required="false" compactDisplay="false" type="String" chooser="listbox" valueList="sidebar-none|sidebar-left|sidebar-right" ml="false" descriptionType="text" searchable="false" html="false" checkHtml="true" tab="layout" />
+    <field name="dashboardColumnCount" hidden="true" editor="int" required="false" compactDisplay="false" type="int" default="2" ml="false" searchable="false" minValue="1" maxValue="10" tab="layout" />
+    <field name="theme" hidden="true" editor="textfield" required="false" compactDisplay="false" type="String" searchable="false" size="80" ml="false" html="false" tab="layout" />
+    <field name="header" hidden="true" editor="image" required="false" compactDisplay="false" type="String" searchable="false" size="80" maxlength="500" ml="false" descriptionType="text" html="false" checkHtml="true" fileChooser="false" imageMap="false" resize="false" resizeWidth="100" resizeHeight="75" tab="layout" />
+    <field name="headerSettings" hidden="true" editor="text" required="false" compactDisplay="false" type="String" searchable="false" size="80" maxlength="500" ml="false" descriptionType="text" html="false" checkHtml="false" fileChooser="false" imageMap="false" resize="false" resizeWidth="100" resizeHeight="75" tab="layout" />
+    <field name="exactCategory" hidden="true" editor="boolean" required="false" compactDisplay="false" type="boolean" default="off" ml="false" descriptionType="tooltip" searchable="false" html="false" tab="layout" />
+    <field name="followersGroup" editor="group" required="false" compactDisplay="false" type="com.jalios.jcms.Group" chooser="popup" tab="access"/>
+    <field name="jportal" hidden="true" editor="link" required="false" compactDisplay="false" type="com.jalios.jcms.jportal.AbstractJPortal" tab="portal"/>
+    <field name="syncMode" descriptionType="text" editor="enumerate" required="false" compactDisplay="false" type="String[]" chooser="checkbox" valueList="dashboard|tabs|data" default="" tab="portal"/>
+    <field name="modelSyncMode" descriptionType="text" editor="enumerate" required="false" compactDisplay="false" type="String[]" chooser="checkbox" valueList="dashboard|tabs|data" default="" tab="portal"/>
+    <field name="model" editor="link" required="false" compactDisplay="false" type="com.jalios.jcms.workspace.Workspace" ml="false" hidden="true" searchable="false" tab="portal"/>
+    <field name="applications" hidden="true" editor="link[]" required="false" compactDisplay="false" type="com.jalios.jcms.portlet.PortalElement[]" ml="false" searchable="false" tab="portal"/>
+    <field name="mobilePortlets" hidden="true" editor="link[]" required="false" compactDisplay="false" type="com.jalios.jcms.portlet.PortalElement[]" ml="false" searchable="false" tab="portal"/>
+    <field name="mobileShowIntro" hidden="false" editor="boolean" required="false" compactDisplay="false" type="boolean" default="on" ml="false" descriptionType="tooltip" searchable="false" html="false" tab="layout" />
+    <field name="mobileShowApplications" hidden="false" editor="boolean" required="false" compactDisplay="false" type="boolean" default="on" ml="false" descriptionType="tooltip" searchable="false" html="false" tab="layout" />
+    <field type="super" />
+  </fields>
+  <tabs>
+    <tab id="access" />
+    <tab id="layout" />
+    <tab id="portal" />
+  </tabs>
+</type>

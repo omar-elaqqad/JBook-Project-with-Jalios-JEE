@@ -1,0 +1,4 @@
+<%@page import="com.jalios.jcmsplugin.smartphone.SmartPhoneManager"%>
+<%@page import="com.jalios.jcmsplugin.smartphone.SmartPhonePortalPolicyFilter"%>
+<%@ include file='/plugins/SmartPhonePlugin/jsp/components/ctxmenu/pubfulldisplay/doInitCtxMenuFullDisplay.jspf' %>
+<li class="action-access-website"><a data-ajax="false" href="<%= pub.getDisplayUrl(userLocale) %>?<%= SmartPhonePortalPolicyFilter.FORCE_NO_SMARTPHONE_SESSION_ATTR %>" <%= SmartPhoneManager.getInstance().isMobileApp(request) ? "target=\"_blank\"" : "" %>><jalios:icon src="smartphone-access-website" /> <%= glp("jcmsplugin.smartphone.lbl.access-website") %></a></li>

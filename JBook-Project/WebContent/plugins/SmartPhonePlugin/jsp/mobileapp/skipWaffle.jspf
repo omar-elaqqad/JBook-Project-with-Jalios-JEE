@@ -1,0 +1,13 @@
+<% 
+// Invoke this JSP to disable Waffle Windows authentication
+{
+  // Session attribute ensure waffle is disabled for current session 
+  request.getSession().setAttribute("com.jalios.jcmsplugin.waffle.USE_WINDOWS_AUTHENTICATION_FOR_SESSION", false);
+  
+  // Cookie ensure waffle is disabled, even on another session, for example created after a sucessful login
+  Cookie skipWaffleCookie = new Cookie("jcmsSkipWaffle", "true");
+  String webappContextPath = ServletUtil.getContextPath(request);
+  skipWaffleCookie.setPath(webappContextPath.endsWith("/") ? webappContextPath : webappContextPath + "/");
+  HttpUtil.addCookie(response, skipWaffleCookie);
+}
+%>

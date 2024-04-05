@@ -1,0 +1,67 @@
+jcmsplugin.dbcomment.anonymous.reassign: true
+
+# ------------------------------------------------------------
+#  Editable properties
+# ------------------------------------------------------------
+jcmsplugin.dbcomment.compatible-types: SmallNews WebPage Article BlogPost
+jcmsplugin.dbcomment.anonymous.boolean: true
+jcmsplugin.dbcomment.anonymous.notify.boolean:  true
+jcmsplugin.dbcomment.edit-moderation.enabled.boolean: false
+jcmsplugin.dbcomment.edit-commentable.enabled.boolean: false
+jcmsplugin.dbcomment.commentable-default-value.boolean: true
+jcmsplugin.dbcomment.smart.comment-display.enabled.boolean: true
+jcmsplugin.dbcomment.private-comment.group.jsp: plugins/DBCommentPlugin/jsp/pluginProperties/editPrivateCommentGroupProperty.jsp
+jcmsplugin.dbcomment.private-comment.enabled.boolean: false
+jcmsplugin.dbcomment.private-comment.default-value.boolean: true
+jcmsplugin.dbcomment.reverse-order.boolean: true
+jcmsplugin.dbcomment.change-sort: cdate
+
+# ------------------------------------------------------------
+#  Extra data
+# ------------------------------------------------------------
+extradb.Publication.jcmsplugin.dbcomment.commentable.boolean : true
+extra.Publication.jcmsplugin.dbcomment.commentable.boolean : true
+
+# ------------------------------------------------------------
+#  Less
+# ------------------------------------------------------------
+channel.less.plugins/DBCommentPlugin/css/dbcomment.css:    plugins/DBCommentPlugin/css/dbcomment.less
+channel.less.plugins/DBCommentPlugin/css/dbcomment-explorer-sidebar.css:    plugins/DBCommentPlugin/css/dbcomment-explorer-sidebar.less
+smartphone.channel.less.plugins/DBCommentPlugin/smartphone/css/smartphone-dbcomment.css:    plugins/DBCommentPlugin/smartphone/css/smartphone-dbcomment.less
+
+# ------------------------------------------------------------
+#  Icons
+# ------------------------------------------------------------
+types.DBComment.icon:                       icon: comment
+icon.jcmsplugin-dbcomment-comments:         icon: comment
+icon.jcmsplugin-dbcomment-disable-comment:  icon: comment-stop
+icon.jcmsplugin-dbcomment-enable-comment:   plugins/DBCommentPlugin/images/icons/comment-outline.png
+icon.jcmsplugin-dbcomment-smartphone-comment: plugins/DBCommentPlugin/images/comment-outline.png
+
+jcms.analytics.day-agent-list.DBCommentAgent.classname: com.jalios.jcmsplugin.dbcomment.AnalyticsAgent
+
+# ------------------------------------------------------------
+#  SmartPhone
+# ------------------------------------------------------------
+
+# Publication actions
+jcmplugin.smartphone.publication.action-item.Publication.comment: plugins/DBCommentPlugin/smartphone/jsp/components/pub/actions/doPubActionItem_comment.jsp
+jcmplugin.smartphone.publication.action-item.Publication.comment.index: 300
+
+# Css file declaration
+jcmsplugin.smartphone.css.dbcomment: plugins/DBCommentPlugin/smartphone/css/smartphone-dbcomment.css
+
+# Pub full display mapping
+jcmsplugin.smartphone.link-prefix.DBComment:           plugins/DBCommentPlugin/smartphone/jsp/dbcomment-fulldisplay.jsp?id=
+
+# JS
+jcmsplugin.smartphone.js.dbcomment: plugins/DBCommentPlugin/smartphone/js/smartphone-dbcomment.js
+
+# ------------------------------------------------------------
+#  Explorer APP
+# ------------------------------------------------------------
+jcmsplugin.explorer.app.sidebar-tab.comments:  plugins/DBCommentPlugin/jsp/explorer/doExplorerAppSidebarTab_comments.jsp
+jcmsplugin.explorer.app.sidebar-tab.comments.icon:  glyph: icomoon-bubble8
+jcmsplugin.explorer.app.sidebar-tab.comments.index:  30
+jcmsplugin.explorer.app.sidebar-tab.comments.tab:  plugins/DBCommentPlugin/jsp/explorer/doExplorerAppSidebarTab_commentsTab.jsp
+jcmsplugin.dbcomment.explorer-sidebar.show-access-comment-button: true

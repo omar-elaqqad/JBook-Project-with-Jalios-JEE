@@ -1,0 +1,12 @@
+FORM.add-post .widget-name-featuredImage,
+FORM.edit-post .widget-name-featuredImage,
+FORM[name="editForm"] .row.BlogPost .widget-name-featuredImage,
+FORM.add-post .widget-name-thumbnailImage,
+FORM.edit-post .widget-name-thumbnailImage,
+FORM[name="editForm"] .row.BlogPost .widget-name-thumbnailImage {
+  margin-bottom: 5px;
+}
+.jcms-blog .blog-form .buttons {
+  margin-bottom: 20px;
+}
+/*# sourceMappingURL=blogpost-edition.css.map */

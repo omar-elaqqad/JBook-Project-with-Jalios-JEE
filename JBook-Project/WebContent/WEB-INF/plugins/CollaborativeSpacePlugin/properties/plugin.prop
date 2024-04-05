@@ -1,0 +1,421 @@
+
+# ------------------------------------------------------------
+# EXCLUDE JS
+# ------------------------------------------------------------
+channel.packer.minify-exclusion-regex.cs-migration: plugins/CollaborativeSpacePlugin/js/cs-migration.js
+
+# ------------------------------------------------------------
+#  EDITABLE PROPERTIES
+# ------------------------------------------------------------
+$id.CSRequest.formAuthor.default: j_2
+$id.CSRequest.formAuthor.jsp: plugins/CollaborativeSpacePlugin/jsp/pluginProperties/doEditPluginCSRequestAuthor.jsp
+$id.CSRequest.workspace.default: j_4
+$id.CSRequest.workspace.jsp: plugins/CollaborativeSpacePlugin/jsp/pluginProperties/doEditPluginCSRequestWorkspace.jsp
+$id.GuestRequest.workspace.jsp: plugins/CollaborativeSpacePlugin/jsp/pluginProperties/doEditPluginGuestRequestWorkspace.jsp
+$id.jcmsplugin.collaborativespace.typology-root.jsp: plugins/CollaborativeSpacePlugin/jsp/pluginProperties/doEditPluginTypologyRoot.jsp
+$id.jcmsplugin.collaborativespace.typology-portal.jsp: plugins/CollaborativeSpacePlugin/jsp/pluginProperties/doEditPluginTypologyPortal.jsp
+$id.jcmsplugin.collaborativespace.cs-creation-group.jsp: plugins/CollaborativeSpacePlugin/jsp/pluginProperties/doEditPluginCSCreationGroup.jsp
+$id.jcmsplugin.collaborativespace.guestaccounts.group.jsp: plugins/CollaborativeSpacePlugin/jsp/pluginProperties/doEditPluginGuestAccountsGroup.jsp
+$id.jcmsplugin.collaborativespace.guestaccounts.homepage-ws.jsp: plugins/CollaborativeSpacePlugin/jsp/pluginProperties/doEditPluginGuestLandingPageWorkspace.jsp
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE INTEGRITY
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.data-controller.categories-validation.enabled: true
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE ABILITIES
+# ------------------------------------------------------------
+
+portlet.ability.jcmsplugin.collaborativespace.dashboard:      Portlet
+portlet.ability.jcmsplugin.collaborativespace.application:    Portlet
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE POLICIES
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.access-policies: public, private, secret
+jcmsplugin.collaborativespace.signup-policies: free, request, admin
+
+# ------------------------------------------------------------
+#  PUBLISH MENU
+# ------------------------------------------------------------
+publish-menu.item.other.50.jcmsplugin.collaborative-space.create: plugins/CollaborativeSpacePlugin/jsp/doCollaborativeSpacePublishMenu.jsp
+
+# ------------------------------------------------------------
+#  Recommendation
+# ------------------------------------------------------------
+recommendation.modal-text.CollaborativeSpace: jcmsplugin.collaborativespace.recommendation.CollaborativeSpace
+
+# ------------------------------------------------------------
+#  ACL
+# ------------------------------------------------------------
+acl.resource.admin/work/createCS:
+acl.resource.plugins:
+acl.resource.plugins/collaborativespace:
+acl.resource.plugins/collaborativespace/manageCSGuest:
+acl.resource.admin-ws/plugins:
+acl.resource.admin-ws/plugins/collaborativespace:
+acl.resource.admin-ws/plugins/collaborativespace/manageCSServices:
+acl.resource.admin-ws/plugins/collaborativespace/manageCSSettings:
+
+# ------------------------------------------------------------
+#  Alert
+# ------------------------------------------------------------
+icon.alert.jcmsplugin-collaborativespace: plugins/CollaborativeSpacePlugin/images/app/collaborativespace64.png
+
+# ------------------------------------------------------------
+#  Analytics
+# ------------------------------------------------------------
+jcms.analytics.day-agent-list.collaborativespace.agent.classname:    com.jalios.jcmsplugin.collaborativespace.analytics.CSAgent
+jcms.analytics.day-agent-list.collaborativespace.agent.display-jsp:  plugins/CollaborativeSpacePlugin/jsp/analytics/csReport.jsp
+jcms.analytics.day-agent-list.collaborativespace.agent.order:        330
+
+# ------------------------------------------------------------
+#  HUB
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.hub.type-filter.ws.enabled: true
+
+# ------------------------------------------------------------
+#  THEME (Before CSP-7.0)
+# ------------------------------------------------------------
+
+# Uncomment to still provide the CSP legacy header bg colors
+# Colors have been commented since CSP-641
+#jcmsplugin.collaborativespace.look.colors: cs-red cs-orange cs-green cs-blue cs-purple cs-white cs-grey
+jcmsplugin.collaborativespace.look.colors:
+jcmsplugin.collaborativespace.look.theme.cs-red.name:     cs-theme-cs-red
+jcmsplugin.collaborativespace.look.theme.cs-red.color:    #FF1F1F
+jcmsplugin.collaborativespace.look.theme.cs-red.file:     cs-red.css
+jcmsplugin.collaborativespace.look.theme.cs-orange.name:  cs-theme-cs-orange
+jcmsplugin.collaborativespace.look.theme.cs-orange.color: #FFB366
+jcmsplugin.collaborativespace.look.theme.cs-orange.file:  cs-orange.css
+jcmsplugin.collaborativespace.look.theme.cs-green.name:   cs-theme-cs-green
+jcmsplugin.collaborativespace.look.theme.cs-green.color:  #B6D971
+jcmsplugin.collaborativespace.look.theme.cs-green.file:   cs-green.css
+jcmsplugin.collaborativespace.look.theme.cs-blue.name:    cs-theme-cs-blue
+jcmsplugin.collaborativespace.look.theme.cs-blue.color:   #1F57FF
+jcmsplugin.collaborativespace.look.theme.cs-blue.file:    cs-blue.css
+jcmsplugin.collaborativespace.look.theme.cs-purple.name:  cs-theme-cs-purple
+jcmsplugin.collaborativespace.look.theme.cs-purple.color: #AD71D9
+jcmsplugin.collaborativespace.look.theme.cs-purple.file:  cs-purple.css
+jcmsplugin.collaborativespace.look.theme.cs-white.name:   cs-theme-cs-white
+jcmsplugin.collaborativespace.look.theme.cs-white.color:  #FFF
+jcmsplugin.collaborativespace.look.theme.cs-white.file:   cs-white.css
+jcmsplugin.collaborativespace.look.theme.cs-grey.name:    cs-theme-cs-grey
+jcmsplugin.collaborativespace.look.theme.cs-grey.color:   #AAA
+jcmsplugin.collaborativespace.look.theme.cs-grey.file:    cs-grey.css
+
+# ------------------------------------------------------------
+#  TYPOLOGY
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.typology-portal.pager.page-sizes: 5, 20, 50
+jcmsplugin.collaborativespace.typology-portal.pager.page-size: 5
+
+
+# ------------------------------------------------------------
+#  SHORTCUT
+# ------------------------------------------------------------
+shortcut.jcmsplugin.collaborativespace-hub.icon: plugins/CollaborativeSpacePlugin/images/app/cs-hub48.png
+shortcut.jcmsplugin.collaborativespace-hub.link: plugins/CollaborativeSpacePlugin/jsp/hub/hubApp.jsp
+
+# ------------------------------------------------------------
+#  GUEST ACCOUNTS
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.guestaccounts.submited.wf-state: -200
+jcmsplugin.collaborativespace.guestaccounts.accepted.wf-state: 60
+jcmsplugin.collaborativespace.guestaccounts.enabled.boolean: false
+jcmsplugin.collaborativespace.guestaccounts.create.notification-enabled: true
+$id.jcmsplugin.collaborativespace.guestaccounts.manager-group:
+$id.Guest.managerAcl:
+# MemberLoginBuilder to use to build a guest login (CSP-387). If property is empty, "GuestLoginBuilder" will be used by default. Override to change implementation.
+jcmsplugin.collaborativespace.guestaccounts.login-builder.clazz:
+# Example of custom login builder: (Custom builder must implement MemberLoginBuilder interface)
+#jcmsplugin.collaborativespace.guestaccounts.login-builder.clazz: com.jalios.jcmsplugin.acme.guest.CustomGuestLoginBuilder
+jcmsplugin.collaborativespace.guestaccounts.homepage-ws.guest-visible-by-guest: false
+
+# ------------------------------------------------------------
+#  CS Metas UI
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.metas.pager.page-sizes: 100, 500
+jcmsplugin.collaborativespace.metas.pager.default-page-size: 100
+
+# ------------------------------------------------------------
+#  CS Cards
+# ------------------------------------------------------------
+# Common card for CollaborativeSpace type:
+jcms.resource.include.carddata.default.CollaborativeSpace: plugins/CollaborativeSpacePlugin/front/card/data/doCardCollaborativeSpace.jsp
+jcms.resource.include.carddata.cs-hub.CollaborativeSpace: plugins/CollaborativeSpacePlugin/front/card/data/doCardHubCollaborativeSpace.jsp
+jcms.resource.include.carddata.cs-hub.Publication: plugins/CollaborativeSpacePlugin/front/card/data/doCardHubPublication.jsp
+jcms.resource.include.carddata.cs-admin-list.Member: plugins/CollaborativeSpacePlugin/front/card/data/doMemberCardAdminList.jsp
+jcms.resource.include.carddata.cs-guest-proposition.Member: plugins/CollaborativeSpacePlugin/front/card/data/doCardMemberCreateGuestProposition.jsp
+
+jcmsplugin.collaborativespace.cs-card-image: plugins/CollaborativeSpacePlugin/images/card/cs-preview.jpg
+# Specific card used in CS services management page:
+jcms.resource.include.carddata.cs-service.PortalElement: plugins/CollaborativeSpacePlugin/front/card/data/doCardPortalElementService.jsp
+jcmsplugin.collaborativespace.service-card-image: plugins/CollaborativeSpacePlugin/images/card/service-preview.png
+
+# ESN Member Profile - ACTIONS
+jcmsplugin.esn.profile.full.action.convert-contact-guest.jsp:   plugins/CollaborativeSpacePlugin/jsp/guestAccount/contactTransform/doESNProfileActionTransformContact.jsp
+jcmsplugin.esn.profile.full.action.convert-contact-guest.index: 80
+jcmsplugin.esn.profile.full.action.convert-contact-guest.section: top
+
+# Signup: the modal to open when being on a CSSignupRequest full display, or a CS signup list administration page
+jcmsplugin.collaborativespace.signup.validate-modal: plugins/CollaborativeSpacePlugin/types/CSSignupRequest/validateCSSignupRequestModal.jsp
+# Signup: the landing page to use when clicking on the link in a SIGNUP_REQUEST_ALERT
+jcmsplugin.collaborativespace.signup.alert.landing-url: plugins/CollaborativeSpacePlugin/types/CSSignupRequest/handleCSSignupRequest.jsp
+
+# ------------------------------------------------------------
+#  Core
+# ------------------------------------------------------------
+jcms.resource.query-workspace: plugins/CollaborativeSpacePlugin/jsp/hub/hubApp.jsp?mode=all&text=
+
+# ------------------------------------------------------------
+#  LESS framework
+# ------------------------------------------------------------
+channel.less.plugins/CollaborativeSpacePlugin/css/collaborativeSpace.css:                       plugins/CollaborativeSpacePlugin/css/collaborativeSpace.less
+channel.less.plugins/CollaborativeSpacePlugin/css/cs-access-policies.css:                       plugins/CollaborativeSpacePlugin/css/cs-access-policies.less
+channel.less.plugins/CollaborativeSpacePlugin/css/cs-admin-list-card-member.css:                plugins/CollaborativeSpacePlugin/css/cs-admin-list-card-member.less
+channel.less.plugins/CollaborativeSpacePlugin/css/cs-card.css:                                  plugins/CollaborativeSpacePlugin/css/cs-card.less
+channel.less.plugins/CollaborativeSpacePlugin/css/cs-header-search.css:                         plugins/CollaborativeSpacePlugin/css/cs-header-search.less
+channel.less.plugins/CollaborativeSpacePlugin/css/cs-portlet-suggestions.css:                   plugins/CollaborativeSpacePlugin/css/cs-portlet-suggestions.less
+channel.less.plugins/CollaborativeSpacePlugin/css/cs-workspace-group-list.css:                  plugins/CollaborativeSpacePlugin/css/cs-workspace-group-list.less
+channel.less.plugins/CollaborativeSpacePlugin/css/cs-guest.css:                                 plugins/CollaborativeSpacePlugin/css/cs-guest.less
+channel.less.plugins/CollaborativeSpacePlugin/css/cs-members.css:                               plugins/CollaborativeSpacePlugin/css/cs-members.less
+channel.less.plugins/CollaborativeSpacePlugin/css/cs-metas.css:                                 plugins/CollaborativeSpacePlugin/css/cs-metas.less
+channel.less.plugins/CollaborativeSpacePlugin/css/cs-my-spaces.css:                             plugins/CollaborativeSpacePlugin/css/cs-my-spaces.less
+channel.less.plugins/CollaborativeSpacePlugin/css/cs-hub.css:                                   plugins/CollaborativeSpacePlugin/css/cs-hub.less
+channel.less.plugins/CollaborativeSpacePlugin/css/cs-layout-condensed.css:                      plugins/CollaborativeSpacePlugin/css/cs-layout-condensed.less
+channel.less.plugins/CollaborativeSpacePlugin/css/cs-create-guest.css:                          plugins/CollaborativeSpacePlugin/css/cs-create-guest.less
+channel.less.plugins/CollaborativeSpacePlugin/css/cs-create-space.css:                          plugins/CollaborativeSpacePlugin/css/cs-create-space.less
+channel.less.plugins/CollaborativeSpacePlugin/css/cs-services.css:                              plugins/CollaborativeSpacePlugin/css/cs-services.less
+channel.less.plugins/CollaborativeSpacePlugin/css/cs-settings.css:                              plugins/CollaborativeSpacePlugin/css/cs-settings.less
+channel.less.plugins/CollaborativeSpacePlugin/css/cs-typology.css:                              plugins/CollaborativeSpacePlugin/css/cs-typology.less
+channel.less.plugins/CollaborativeSpacePlugin/css/cs-request.css:                               plugins/CollaborativeSpacePlugin/css/cs-request.less
+channel.less.plugins/CollaborativeSpacePlugin/css/cs-signup.css:                                plugins/CollaborativeSpacePlugin/css/cs-signup.less
+channel.less.plugins/CollaborativeSpacePlugin/css/cs-validate-cssignuprequest-modal.css:        plugins/CollaborativeSpacePlugin/css/cs-validate-cssignuprequest-modal.less
+channel.less.plugins/CollaborativeSpacePlugin/css/cs-welcome-modal.css:                         plugins/CollaborativeSpacePlugin/css/cs-welcome-modal.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/light-theme.css:                        plugins/CollaborativeSpacePlugin/css/theme/light-theme.less
+channel.less.plugins/CollaborativeSpacePlugin/css/model-selection.css:                          plugins/CollaborativeSpacePlugin/css/model-selection.less 
+# CS color themes > custom (before csp-7.0)
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/cs-blue.css:                            plugins/CollaborativeSpacePlugin/css/theme/cs-blue.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/cs-green.css:                           plugins/CollaborativeSpacePlugin/css/theme/cs-green.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/cs-grey.css:                            plugins/CollaborativeSpacePlugin/css/theme/cs-grey.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/cs-orange.css:                          plugins/CollaborativeSpacePlugin/css/theme/cs-orange.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/cs-purple.css:                          plugins/CollaborativeSpacePlugin/css/theme/cs-purple.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/cs-red.css:                             plugins/CollaborativeSpacePlugin/css/theme/cs-red.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/cs-white.css:                           plugins/CollaborativeSpacePlugin/css/theme/cs-white.less
+# CS color themes > Jalios core (csp-7.0)
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/orange.css: plugins/CollaborativeSpacePlugin/css/theme/orange.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/orange-deep.css: plugins/CollaborativeSpacePlugin/css/theme/orange-deep.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/orange-dark.css: plugins/CollaborativeSpacePlugin/css/theme/orange-dark.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/yellow.css: plugins/CollaborativeSpacePlugin/css/theme/yellow.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/yellow-deep.css: plugins/CollaborativeSpacePlugin/css/theme/yellow-deep.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/yellow-dark.css: plugins/CollaborativeSpacePlugin/css/theme/yellow-dark.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/lime.css: plugins/CollaborativeSpacePlugin/css/theme/lime.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/lime-deep.css: plugins/CollaborativeSpacePlugin/css/theme/lime-deep.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/lime-dark.css: plugins/CollaborativeSpacePlugin/css/theme/lime-dark.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/green.css: plugins/CollaborativeSpacePlugin/css/theme/green.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/green-deep.css: plugins/CollaborativeSpacePlugin/css/theme/green-deep.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/green-dark.css: plugins/CollaborativeSpacePlugin/css/theme/green-dark.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/turquoise.css: plugins/CollaborativeSpacePlugin/css/theme/turquoise.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/turquoise-deep.css: plugins/CollaborativeSpacePlugin/css/theme/turquoise-deep.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/turquoise-dark.css: plugins/CollaborativeSpacePlugin/css/theme/turquoise-dark.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/cyan.css: plugins/CollaborativeSpacePlugin/css/theme/cyan.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/cyan-deep.css: plugins/CollaborativeSpacePlugin/css/theme/cyan-deep.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/cyan-dark.css: plugins/CollaborativeSpacePlugin/css/theme/cyan-dark.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/blue.css: plugins/CollaborativeSpacePlugin/css/theme/blue.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/blue-deep.css: plugins/CollaborativeSpacePlugin/css/theme/blue-deep.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/blue-dark.css: plugins/CollaborativeSpacePlugin/css/theme/blue-dark.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/purple.css: plugins/CollaborativeSpacePlugin/css/theme/purple.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/purple-deep.css: plugins/CollaborativeSpacePlugin/css/theme/purple-deep.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/purple-dark.css: plugins/CollaborativeSpacePlugin/css/theme/purple-dark.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/pink.css: plugins/CollaborativeSpacePlugin/css/theme/pink.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/pink-deep.css: plugins/CollaborativeSpacePlugin/css/theme/pink-deep.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/pink-dark.css: plugins/CollaborativeSpacePlugin/css/theme/pink-dark.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/red.css: plugins/CollaborativeSpacePlugin/css/theme/red.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/red-deep.css: plugins/CollaborativeSpacePlugin/css/theme/red-deep.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/red-dark.css: plugins/CollaborativeSpacePlugin/css/theme/red-dark.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/beige.css: plugins/CollaborativeSpacePlugin/css/theme/beige.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/beige-deep.css: plugins/CollaborativeSpacePlugin/css/theme/beige-deep.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/beige-dark.css: plugins/CollaborativeSpacePlugin/css/theme/beige-dark.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/grey-neutral.css: plugins/CollaborativeSpacePlugin/css/theme/grey-neutral.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/grey-neutral-deep.css: plugins/CollaborativeSpacePlugin/css/theme/grey-neutral-deep.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/grey-neutral-dark.css: plugins/CollaborativeSpacePlugin/css/theme/grey-neutral-dark.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/greyblue.css: plugins/CollaborativeSpacePlugin/css/theme/greyblue.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/greyblue-deep.css: plugins/CollaborativeSpacePlugin/css/theme/greyblue-deep.less
+channel.less.plugins/CollaborativeSpacePlugin/css/theme/greyblue-dark.css: plugins/CollaborativeSpacePlugin/css/theme/greyblue-dark.less
+# ------------------------------------------------------------
+#  Icons
+# ------------------------------------------------------------
+types.GuestRequest.icon:                                          icon: jcmsplugin-collaborativespace-guest
+types.GuestCrea.icon:                                             icon: jcmsplugin-collaborativespace-guest
+types.GuestConv.icon:                                             icon: jcmsplugin-collaborativespace-guest
+
+icon.jcmsplugin-collaborativespace-hub:                           plugins/CollaborativeSpacePlugin/images/app/cs-hub.png
+icon.jcmsplugin-collaborativespace-hub-app-sidebar:               plugins/CollaborativeSpacePlugin/images/app/collaborativespace64.png
+icon.jcmsplugin-collaborativespace-hub-no-result:                 plugins/CollaborativeSpacePlugin/images/app/cs-hub-app-noresult.png
+icon.jcmsplugin-collaborativespace-card-space-add-favorite:       glyph: icomoon-star-empty
+icon.jcmsplugin-collaborativespace-card-space-remove-favorite:    icon: favorite
+icon.jcmsplugin-collaborativespace-card-space-remove-suggestion:  glyph: icomoon-cross2
+icon.jcmsplugin-collaborativespace-admin-workspace:               icon: admin
+icon.jcmsplugin-collaborativespace-signup:                        glyph: icomoon-enter
+icon.jcmsplugin-collaborativespace-help:                          icon: help
+icon.jcmsplugin-collaborativespace-settings:                      icon: properties
+icon.jcmsplugin-collaborativespace-services:                      glyph: icomoon-grid6
+icon.jcmsplugin-collaborativespace-add-services:                  glyph: icomoon-plus3
+icon.jcmsplugin-collaborativespace-service-card-installed:        glyph: icomoon-checkmark3
+icon.jcmsplugin-collaborativespace-members:                       icon: member
+icon.jcmsplugin-collaborativespace-analytics:                     icon: analytics
+icon.jcmsplugin-collaborativespace-incoming-mail:                 sprite: ss_sprite ss_email
+icon.jcmsplugin-collaborativespace-incoming-mail-settings-update: plugins/CollaborativeSpacePlugin/images/checkmark.gif
+icon.jcmsplugin-collaborativespace-cs-sub-list-leaf:              plugins/CollaborativeSpacePlugin/images/leaf.png
+icon.jcmsplugin-collaborativespace-invitation32:                  plugins/CollaborativeSpacePlugin/images/invitation32.png
+icon.jcmsplugin-collaborativespace-guest:                         images/jalios/icons/guest.png
+icon.jcmsplugin-collaborativespace-guest32:                       icon: jcmsplugin-collaborativespace-guest
+icon.jcmsplugin-collaborativespace-guest-convert:                 icon: jcmsplugin-collaborativespace-guest
+icon.jcmsplugin-collaborativespace-guest-photo-icon:              icon: jcmsplugin-collaborativespace-guest
+icon.jcmsplugin-collaborativespace-metas-signup-request32:        plugins/CollaborativeSpacePlugin/images/mail.png
+icon.jcmsplugin-collaborativespace-tab-read-rights:               icon: key-white
+icon.jcmsplugin-collaborativespace-follow:                        icon: notification
+icon.jcmsplugin-collaborativespace-unfollow:                      icon: notification
+icon.jcmsplugin-collaborativespace-typology:                      glyph: glyphicons-tag
+icon.jcmsplugin-collaborativespace-typologies:                    glyph: glyphicons-tags
+icon.jcmsplugin-collaborativespace-create:                        glyph: glyphicons-plus
+icon.jcmsplugin-collaborativespace-access-private:                glyph: glyphicons-lock
+icon.jcmsplugin-collaborativespace-more:                          glyph: icomoon-menu
+icon.jcmsplugin-collaborativespace-menu:                          icon: more-v
+icon.jcmsplugin-collaborativespace-settings-mobile-portlet-remove: glyph: icomoon-cross2
+icon.jcmsplugin-collaborativespace-settings-mobile-portlet-drag:   glyph: icomoon-menu7
+icon.jcmsplugin-collaborativespace-app-dropdown-update:            icon: edit
+icon.jcmsplugin-collaborativespace-app-dropdown-remove:            glyph: icomoon-cross2
+icon.jcmsplugin-collaborativespace-cross:                          glyph: glyphicons-remove
+
+# ------------------------------------------------------------
+#  CollaborativeSpace authorized jsp paths
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.authorized-jsp-path.members: plugins/CollaborativeSpacePlugin/jsp/members.jsp
+jcmsplugin.collaborativespace.authorized-jsp-path.services: plugins/CollaborativeSpacePlugin/jsp/services.jsp
+jcmsplugin.collaborativespace.authorized-jsp-path.analytics: plugins/CollaborativeSpacePlugin/jsp/analytics.jsp
+jcmsplugin.collaborativespace.authorized-jsp-path.settings: plugins/CollaborativeSpacePlugin/jsp/settings.js
+
+# ------------------------------------------------------------
+#  Migration
+# ------------------------------------------------------------
+channel.less.plugins/CollaborativeSpacePlugin/css/migration/cs-migration.css: plugins/CollaborativeSpacePlugin/css/migration/cs-migration.less
+jcmsplugin.collaborativespace.migrate.auto-migrate: true
+jcmsplugin.collaborativespace.migrate.default-sync-mode:
+
+# ------------------------------------------------------------
+#  JPortal
+# ------------------------------------------------------------
+jportal.portlet-type.PortletCollaborativeSpaceSuggestion.icon: types/PortletCollaborativeSpaceSuggestion/PortletCollaborativeSpaceSuggestion_grey.png
+jportal.portlet-type.PortletMyCollaborativeSpaces.icon: types/PortletMyCollaborativeSpaces/PortletMyCollaborativeSpaces_grey.png
+jcmsplugin.collaborativespace.portlets.additional-workspaces: 
+jcmsplugin.collaborativespace.jportal: true
+
+# ------------------------------------------------------------
+# CategoryBrowser
+# ------------------------------------------------------------
+category.category-browser.collaborativespace-search.class: com.jalios.jcmsplugin.collaborativespace.CSSearchCategoryBrowser
+category.category-browser.collaborativespace-search.order: 1000
+
+channel.packer.minify-exclusion-regex.csp-lib: plugins/CollaborativeSpacePlugin/js/lib/.*
+channel.packer.minify-exclusion-regex.applications-sortable: plugins/CollaborativeSpacePlugin/js/applications-sortable.js
+
+# ------------------------------------------------------------
+# Active tab (Applications) mapping
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.active-tab.PortletBlog: Blog BlogPost
+jcmsplugin.collaborativespace.active-tab.PortletConversationSpace: SocialIdea SocialQuestion SocialTopic SocialSuggestionBox SocialFAQ SocialForum ConversationSpaceCommunity
+jcmsplugin.collaborativespace.active-tab.PortletLiveForm: LiveForm
+jcmsplugin.collaborativespace.active-tab.PortletJMag: WebPage DBWebPage
+jcmsplugin.collaborativespace.active-tab.PortletTasksProjects: TaskProject
+jcmsplugin.collaborativespace.active-tab.PortletWiki: WikiPage DBWikiPage
+
+# ------------------------------------------------------------
+# Collaborative space action menu
+# ------------------------------------------------------------
+
+#jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-simple-stop: com.jalios.jcmsplugin.collaborativespace.actionsmenu.impl.CSActionMenuItemEditJPortalSimple
+#jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-simple-stop.index: 3
+#jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-simple-stop.icon: glyph: icomoon-stop2
+
+
+icon.jcmsplugin-collaborativespace-favorite-add: plugins/CollaborativeSpacePlugin/images/favorite-blocked.png
+icon.jcmsplugin-collaborativespace-favorite-remove: glyph: jicons-star
+
+jcmsplugin.collaborativespace.actions-menu.follow-collaborative-space: com.jalios.jcmsplugin.collaborativespace.actionsmenu.impl.CSActionMenuItemFollow
+jcmsplugin.collaborativespace.actions-menu.follow-collaborative-space.index: 0
+
+jcmsplugin.collaborativespace.actions-menu.favorite-collaborative-space: com.jalios.jcmsplugin.collaborativespace.actionsmenu.impl.CSActionMenuItemFavorite
+jcmsplugin.collaborativespace.actions-menu.favorite-collaborative-space.index: 1
+
+jcmsplugin.collaborativespace.actions-menu.recommend-collaborative-space: com.jalios.jcmsplugin.collaborativespace.actionsmenu.impl.CSActionMenuItemRecommend
+jcmsplugin.collaborativespace.actions-menu.recommend-collaborative-space.index: 2
+jcmsplugin.collaborativespace.actions-menu.recommend-collaborative-space.icon: glyph: jicons-share
+plugin-mgr.ignore-prop.collaborativespace-action-menu-recommend: jcmsplugin.collaborativespace.actions-menu.recommend-collaborative-space
+
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-help: com.jalios.jcmsplugin.collaborativespace.actionsmenu.impl.CSActionMenuItemHelp
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-help.index: 3
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-help.icon: icon: help
+
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-members: com.jalios.jcmsplugin.collaborativespace.actionsmenu.impl.CSActionMenuItemMembers
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-members.index: 4
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-members.icon: icon: member
+
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-applications: com.jalios.jcmsplugin.collaborativespace.actionsmenu.impl.CSActionMenuItemApplications
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-applications.index: 5
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-applications.icon: glyph: icomoon-grid6
+
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-usages: com.jalios.jcmsplugin.collaborativespace.actionsmenu.impl.CSActionMenuItemUsages
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-usages.index: 6
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-usages.icon:  icon: analytics 
+
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-simple: com.jalios.jcmsplugin.collaborativespace.actionsmenu.impl.CSActionMenuItemEditJPortalSimple
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-simple.index: 7
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-simple.icon: glyph: icomoon-move
+plugin-mgr.ignore-prop.collaborativespace-action-menu-simple-edit: jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-simple
+
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-params: com.jalios.jcmsplugin.collaborativespace.actionsmenu.impl.CSActionMenuItemParams
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-params.index: 8
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-params.icon: icon: properties
+
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-administration: com.jalios.jcmsplugin.collaborativespace.actionsmenu.impl.CSActionMenuItemAdministration
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-administration.index: 9
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-administration.icon: icon: admin
+# ------------------------------------------------------------
+# Collaborative portlet action menu
+# ------------------------------------------------------------
+portlet.header.menu-items.Portlet.edit-skin-cs: com.jalios.jcmsplugin.collaborativespace.portal.PortalElementEdit
+portlet.header.menu-items.Portlet.edit-skin-cs.icon: icon: edit
+portlet.header.menu-items.Portlet.edit-skin-cs.index: 100
+portlet.header.menu-items.Portlet.edit-skin-cs.has-divider-after: true
+
+plugin-mgr.ignore-prop.collaborativespace-action-menu-skin: portlet.header.menu-items.Portlet.edit-skin-cs
+
+
+# ------------------------------------------------------------
+# Portlet overrides
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.override-cache.enabled: true
+jcmsplugin.collaborativespace.overridable-portlet.PortletCarousel: autoplaycarousel slidesToShow dots numberOfLinesInTheTitle
+jcmsplugin.collaborativespace.overridable-portlet.PortletImage: image alt link imgWidth imgHeight
+jcmsplugin.collaborativespace.overridable-portlet.PortletIndicator:    value
+jcmsplugin.collaborativespace.overridable-portlet.PortletQueryForeach:    orderBy maxResults pageSizes 
+jcmsplugin.collaborativespace.overridable-portlet.PortletQueryForeachDetail:    orderBy maxResults pageSizes 
+jcmsplugin.collaborativespace.overridable-portlet.PortletQueryForeachCards:    orderBy maxResults pageSizes  cardsPerLine
+jcmsplugin.collaborativespace.overridable-portlet.PortletRSS:    source maxItems
+jcmsplugin.collaborativespace.overridable-portlet.PortletWorkflow:    pageSizes orderBy
+jcmsplugin.collaborativespace.overridable-portlet.PortletWYSIWYG:    wysiwyg
+jcmsplugin.collaborativespace.overridable-portlet.PortletPublication:    pub template showDisplayHeader showDisplayFooter
+
+jportal.sidebar.ui-customizable-template.collaborativeSpace.borderless: true
+jportal.sidebar.ui-customizable-template.collaborativeSpace.default: true
+jportal.sidebar.ui-customizable-template.collaborativeSpace.noSkin: true
+jportal.sidebar.ui-customizable-template.collaborativeSpace.lightSkin: true
+
+# To disable some skin features in jportal editor 
+portlet.skin-fields.template.collaborativeSpace.default: HEADER HEADER_TITLE HEADER_PRIMARY_COLOR HEADER_SECONDARY_COLOR HEADER_ICON HEADER_SUB_TEXT HEADER_BUTTON FOOTER_BUTTON
+portlet.skin-fields.template.collaborativeSpace.lightSkin: HEADER HEADER_TITLE HEADER_PRIMARY_COLOR HEADER_ICON HEADER_SUB_TEXT HEADER_BUTTON FOOTER_BUTTON
+portlet.skin-fields.template.collaborativeSpace.borderless: HEADER HEADER_TITLE HEADER_PRIMARY_COLOR HEADER_SECONDARY_COLOR HEADER_ICON HEADER_SUB_TEXT HEADER_BUTTON FOOTER_BUTTON
+portlet.skin-fields.template.collaborativeSpace.noSkin: HEADER_SUB_TEXT FOOTER_BUTTON

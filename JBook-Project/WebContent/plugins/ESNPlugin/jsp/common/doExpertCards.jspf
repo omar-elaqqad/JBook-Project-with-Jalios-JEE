@@ -1,0 +1,20 @@
+<%@page import="com.jalios.jcms.taglib.card.CardsDisplayMode"%>
+<jalios:pager name='exportDirectoryPagerHandler' 
+              declare='true' 
+              action='init' 
+              pageSize='12' 
+              size='<%= memberSet.size() %>'/>      
+<% Set<Category> siblingCatSet = cat != null ? new HashSet<Category>(cat.getParent().getChildrenSet()) : new HashSet<Category>();  %>
+<jalios:cards mode="<%= CardsDisplayMode.INLINE %>">
+<jalios:foreach collection="<%= memberSet %>" 
+                type="Member" 
+                name="itMember"
+                max="<%= exportDirectoryPagerHandler.getPageSize() %>"
+                skip="<%= exportDirectoryPagerHandler.getStart() %>">
+  <jalios:cardData data="<%= itMember %>" link="<%= itMember.getDisplayUrl(userLocale) %>" template="small" />
+</jalios:foreach>
+</jalios:cards>
+<%
+request.removeAttribute("card-member-css");
+%>
+<jalios:pager name='exportDirectoryPagerHandler' />  

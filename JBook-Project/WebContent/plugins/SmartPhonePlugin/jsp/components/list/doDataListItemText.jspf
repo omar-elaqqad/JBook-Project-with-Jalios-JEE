@@ -1,0 +1,15 @@
+<%@page import="com.jalios.jcms.taglib.list.ListItemTag"%><%
+String textPrepend = getIncludeString("LIST_ITEM_TEXT_PREPEND", "");
+if (Util.notEmpty(textPrepend)) {
+  %><jalios:buffer name='LIST_ITEM_TEXT_PREPEND'><%
+    %><%= textPrepend %><%
+  %></jalios:buffer><%
+}
+
+String textAppend = getIncludeString("LIST_ITEM_TEXT_APPEND", "");
+if (Util.notEmpty(textAppend)) {
+  %><jalios:buffer name='LIST_ITEM_TEXT_APPEND'><%
+    %><%= textAppend %><%
+  %></jalios:buffer><%
+}
+%>

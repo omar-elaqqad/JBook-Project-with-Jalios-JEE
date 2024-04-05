@@ -1,0 +1,71 @@
+<%@page import="com.jalios.util.Util" %><%
+%><%@page import="com.jalios.jcms.JcmsUtil" %><%
+%><%@page import="com.jalios.jcms.TypeFieldEntry" %><%
+%><%@page import="com.jalios.jcms.wiki.WikiRenderer" %><%
+%><%@page import="com.jalios.jcms.wysiwyg.JHTMLUtils" %><%
+%><%@page import="com.jalios.jcms.WeakLinkManager"%><%
+
+%><% if (hasAbstract || hasMedia) { %><%
+
+  String mediaCss = isMediaDisplayCover ? " thumbnail-cover" : "";
+
+  if (hasAbstract) {
+    
+    String resultAbstract = activityPub.getAbstract(userLang);
+    TypeFieldEntry tfe = channel.getTypeAbstractFieldEntry(activityPub.getClass());
+    
+    int truncateLength = tfe != null ? tfe.getAbstractLength() : 400;
+    boolean isWysiwyg = tfe != null && tfe.isWysiwyg();
+    String truncateSuffix = "...";
+    
+    // Prevent image to be displayed twice by searching for weak link in the abstract text
+    boolean displayAbstractImage = true; 
+    
+    if (JHTMLUtils.isJHTML(tfe, resultAbstract)) {
+      displayAbstractImage = Util.isEmpty(WeakLinkManager.getInstance().extractPubSetFromWysiwyg(resultAbstract));
+    } else {
+      displayAbstractImage = Util.isEmpty(WikiRenderer.extractPubSetFromWiki(resultAbstract));
+    }
+    %>
+    <div class="activity-abstract">
+      <% if (displayAbstractImage) { %>
+        <div class="activity-abstract-image">
+        <% if (hasMedia) { %>
+            <jalios:thumbnail css='<%= "thumbnail center-block" + mediaCss %>' 
+                  data='<%= activityPub %>' 
+                  width='<%= dataImageThWidth %>' 
+                  height='<%= dataImageThHeight %>' />
+        <% } else if (Util.notEmpty(activityPub.getDataImage())) { %>
+            <jalios:thumbnail css='<%= "center-block" + mediaCss %>' 
+                  data='<%= activityPub %>' 
+                  width='<%= dataImageThWidth %>' 
+                  height='<%= dataImageThHeight %>' />
+        <% } %>
+        </div>
+      <% } %>
+      <div class="activity-abstract-body">
+        <% if (Util.notEmpty(activityPub.getAbstract())) { %>
+          <div class="abstract" <%= JcmsUtil.getFieldLangAttributes(activityPub, "abstract", userLang) %>>
+            <% if (tfe != null && isWysiwyg) { %>
+              <jalios:truncate length="<%= truncateLength %>" 
+                    advancedHtml="true" 
+                    suffix="<%= truncateSuffix %>"><jalios:wysiwyg><%= resultAbstract %></jalios:wysiwyg></jalios:truncate>
+            <% } else { %>
+              <jalios:wiki attributeMap="<%= smartPhoneManager.getWikiAttributeMap() %>" 
+                    css="activity-abstract-text" 
+                    truncateLength="<%= truncateLength %>" 
+                    truncateSuffix="<%= truncateSuffix %>"><%= activityPub.getAbstract() %></jalios:wiki>
+            <% } %>
+          </div>
+        <% } %>  
+      </div>
+    </div>
+  <% } else if (hasMedia) { %>
+    <div class="activity-abstract">
+      <jalios:thumbnail css='<%= "thumbnail center-block" + mediaCss %>' 
+            data='<%= activityPub %>' 
+            width='<%= dataImageThWidth %>' 
+            height='<%= dataImageThHeight %>' />
+    </div>
+  <% } %>
+<% } %>

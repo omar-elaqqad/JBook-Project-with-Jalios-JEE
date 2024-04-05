@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<type name="PortletPoll" reviewable="false" debatable="false" categoryRequired="false" categoryTab="false" superclass="generated.AbstractPortletSkinable" readRightTab="true" updateRightTab="true" templateTab="true" workflowTab="true" advancedTab="true" unitFieldEdition="false" audienced="false" version="4.0">
+  <title ml="true" searchable="true" />
+  <fields>
+    <field name="hideWhenNoResults" editor="boolean" required="false" compactDisplay="false" type="boolean" default="off" ml="false" searchable="false" descriptionType="tooltip" />
+    <field name="poll" editor="link" required="false" compactDisplay="false" type="generated.Poll" parent="false" ml="false" descriptionType="tooltip" searchable="false" />
+    <field name="refineWorkspace" editor="enumerate" required="true" compactDisplay="false" type="String" chooser="listbox" valueList="true|false" ml="false" descriptionType="text" searchable="false" html="false" checkHtml="true" />
+    <field type="super" />
+  </fields>
+</type>
+

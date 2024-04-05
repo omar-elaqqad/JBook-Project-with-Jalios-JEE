@@ -1,0 +1,15 @@
+<%@page import="com.jalios.jcms.Category"%>
+<%@page import="com.jalios.util.Util"%>
+<%@page import="com.jalios.jcms.JcmsUtil"%><%
+
+Set<Category> categorySet = Util.getHashSet(categories);
+categorySet = JcmsUtil.select(categorySet, Category.getAuthorizedSelector(loggedMember), null);
+%>
+<% if (Util.notEmpty(categorySet)) { %>
+  <jalios:icon src="category" title="ui.com.lbl.categories" />
+  <% for (Category cat : categorySet) { %>
+    <% if (cat.canBeReadBy(loggedMember)) { %>
+      <span class="meta-category" <%= Util.notEmpty(cat.getColor()) ? "style='background-color:"+ cat.getColor() +"'" : "" %>><%= cat.getName(userLang) %></span>
+    <% } %>
+  <% } %>
+<% } %>

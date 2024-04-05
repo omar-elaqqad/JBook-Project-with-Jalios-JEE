@@ -1,0 +1,120 @@
+.PortletMyCollaborativeSpaces .no-cs {
+  margin-bottom: 20px;
+}
+.subCollaborativeSpaces OPTION.placeholder {
+  color: #CCC;
+}
+.subCollaborativeSpaces UL.item-box LI.sub-workspace.level-1 SPAN.spacer {
+  margin-left: 0px;
+}
+.subCollaborativeSpaces UL.item-box LI.sub-workspace.level-1 SPAN.spacer {
+  display: none;
+}
+.subCollaborativeSpaces UL.item-box LI.sub-workspace.level-2 SPAN.spacer {
+  margin-left: 10px;
+}
+.subCollaborativeSpaces UL.item-box LI.sub-workspace.level-3 SPAN.spacer {
+  margin-left: 20px;
+}
+.subCollaborativeSpaces UL.item-box LI.sub-workspace.level-4 SPAN.spacer {
+  margin-left: 30px;
+}
+.subCollaborativeSpaces UL.item-box LI.sub-workspace.level-5 SPAN.spacer {
+  margin-left: 40px;
+}
+.subCollaborativeSpaces UL.item-box LI.sub-workspace.level-6 SPAN.spacer {
+  margin-left: 50px;
+}
+.subCollaborativeSpaces UL.item-box LI.sub-workspace.level-7 SPAN.spacer {
+  margin-left: 60px;
+}
+.subCollaborativeSpaces UL.item-box LI.sub-workspace.level-8 SPAN.spacer {
+  margin-left: 70px;
+}
+.subCollaborativeSpaces UL.item-box LI.sub-workspace.level-9 SPAN.spacer {
+  margin-left: 80px;
+}
+.subCollaborativeSpaces UL.item-box LI.sub-workspace.level-10 SPAN.spacer {
+  margin-left: 90px;
+}
+.subCollaborativeSpaces .itemlist-wrapper .itemlist-item-CollaborativeSpace.level-1 {
+  padding-left: 0px;
+}
+.subCollaborativeSpaces .itemlist-wrapper .itemlist-item-CollaborativeSpace.level-2 {
+  padding-left: 15px;
+}
+.subCollaborativeSpaces .itemlist-wrapper .itemlist-item-CollaborativeSpace.level-3 {
+  padding-left: 30px;
+}
+.subCollaborativeSpaces .itemlist-wrapper .itemlist-item-CollaborativeSpace.level-4 {
+  padding-left: 45px;
+}
+.subCollaborativeSpaces .itemlist-wrapper .itemlist-item-CollaborativeSpace.level-5 {
+  padding-left: 60px;
+}
+.subCollaborativeSpaces .itemlist-wrapper .itemlist-item-CollaborativeSpace.level-6 {
+  padding-left: 75px;
+}
+.subCollaborativeSpaces .itemlist-wrapper .itemlist-item-CollaborativeSpace.level-7 {
+  padding-left: 90px;
+}
+.subCollaborativeSpaces .itemlist-wrapper .itemlist-item-CollaborativeSpace.level-8 {
+  padding-left: 105px;
+}
+.subCollaborativeSpaces .itemlist-wrapper .itemlist-item-CollaborativeSpace.level-9 {
+  padding-left: 120px;
+}
+.subCollaborativeSpaces .itemlist-wrapper .itemlist-item-CollaborativeSpace.level-10 {
+  padding-left: 135px;
+}
+.subCollaborativeSpaces .itemlist-wrapper .itemlist-item-CollaborativeSpace .cs-node-toggle-childs {
+  background: transparent;
+  border: 0 none;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  border-radius: 4px;
+  margin-left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 3px;
+  transition: background-color 200ms ease-in;
+  padding: 4px 8px;
+  position: absolute;
+}
+.subCollaborativeSpaces .itemlist-wrapper .itemlist-item-CollaborativeSpace .cs-node-toggle-childs:hover {
+  background-color: rgba(167, 153, 153, 0.34);
+  background-color: white;
+}
+.subCollaborativeSpaces .itemlist-wrapper .itemlist-item-CollaborativeSpace .cs-node-toggle-childs:hover,
+.subCollaborativeSpaces .itemlist-wrapper .itemlist-item-CollaborativeSpace .cs-node-toggle-childs:hover .ctx-caret:after {
+  color: #333333;
+}
+.subCollaborativeSpaces .itemlist-wrapper .itemlist-item-CollaborativeSpace .cs-node-toggle-childs.ctx-caret:after {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: middle;
+  border-left: 4px solid;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  content: '';
+}
+.subCollaborativeSpaces .itemlist-wrapper .itemlist-item-CollaborativeSpace.is-opened .cs-node-toggle-childs {
+  padding: 4px 10px;
+}
+.subCollaborativeSpaces .itemlist-wrapper .itemlist-item-CollaborativeSpace.is-opened .cs-node-toggle-childs.ctx-caret:after {
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  margin-bottom: 0;
+  margin-top: 4px;
+  margin-left: 0;
+}
+.subCollaborativeSpaces .itemlist-wrapper .itemlist-item-CollaborativeSpace .itemlist-item-date {
+  display: none;
+}
+/*# sourceMappingURL=cs-my-spaces.css.map */

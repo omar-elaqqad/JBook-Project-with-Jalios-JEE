@@ -1,0 +1,55 @@
+/* ***** */
+/* Login */
+/* ***** */
+
+#login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/jmobile-login-bg.jpg");
+  background-size: cover;
+  
+  .ui-content {
+    padding: 0;
+    width: 100%;
+    flex-direction: column;
+    max-height: 100vh;
+    overflow-y: auto;
+    padding: 16px;
+    margin: 0;
+  }
+  .persistent-input {
+    margin-bottom: 40px;
+  }
+}
+
+#login .login-form-wrapper {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px 16px 16px 16px;
+  border: 1px solid #DDD;
+  border-radius: 8px;
+  background-color: white;
+  
+  .ui-controlgroup {
+    margin: 0;
+    margin-bottom: 8px;
+  }
+}
+
+#login .login-title {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.login-form-header, .login-form-footer {
+  width: 100%;
+  max-width: 400px;
+  line-height: 0;
+}
+
+form[name=loginWithWindowsForm] {
+  display:none;
+}

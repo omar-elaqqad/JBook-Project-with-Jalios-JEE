@@ -1,0 +1,9 @@
+<%@page import="com.jalios.jcmsplugin.smartphone.SmartPhoneConstants"%>
+<%@page import="com.jalios.jcmsplugin.smartphone.SmartPhoneManager"%>
+<% 
+  if (Util.notEmpty(request.getAttribute("jcms.plugin.smartphone.fulldisplay.pub"))) {
+    Publication statPub = (Publication) request.getAttribute("jcms.plugin.smartphone.fulldisplay.pub");
+    request.setAttribute("title", statPub.getTitle(userLang));
+  }
+  request.setAttribute("zone",SmartPhoneConstants.ANALYTICS_ZONE);
+%><%@ include file='/admin/analytics/doAddEventData.jspf' %>

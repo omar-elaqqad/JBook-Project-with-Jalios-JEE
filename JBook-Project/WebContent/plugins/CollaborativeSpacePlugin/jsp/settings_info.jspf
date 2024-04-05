@@ -1,0 +1,21 @@
+<%@page import="com.jalios.jcmsplugin.collaborativespace.CSConstants"%>
+<%
+request.setAttribute(requiredFieldsAttr, Boolean.TRUE);
+%>
+  <%-- PRESENTATION --%>
+  <jalios:field name='title' label='jcmsplugin.collaborativespace.create.info.name' formHandler="<%= formHandler %>">
+    <jalios:control settings='<%= new TextFieldSettings().showLanguageChooser() %>' />
+  </jalios:field>
+  
+  <jalios:field name='description' formHandler="<%= formHandler %>">
+    <jalios:control/>
+  </jalios:field>
+  
+  <jalios:field name='introduction' formHandler="<%= formHandler %>">
+    <jalios:control/>
+  </jalios:field>
+  
+  <%-- PortletImage (Front Office edition of AbstractPortletSkinable's portletImage (DataImage) field) --%>
+  <jalios:field name="portletImage" label="ui.editportlet.image" description="ui.editportlet.image.h" ml="<%= channel.isMultilingual() %>" value="<%= formHandler.getAllAvailablePortletImageML() %>">
+    <jalios:control settings='<%= formHandler.getPortletImageSettings() %>' />
+  </jalios:field>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<type name="CSSignupRequest" superclass="com.jalios.jcms.Form" formOneSubmit="false" formNotify="false" formAuthor="j_2" formRedirectMode="home" categoryTab="true" readRightTab="true" updateRightTab="true" templateTab="true" workflowTab="true" advancedTab="true" database="true" hbm="true" reviewable="false" debatable="false" unitFieldEdition="true" audienced="false">
+  <title ml="false" />
+  <fields>
+    <field name="name" editor="textfield" required="true" type="String" searchable="true" size="80" compactDisplay="true" />
+  </fields>
+</type>
+

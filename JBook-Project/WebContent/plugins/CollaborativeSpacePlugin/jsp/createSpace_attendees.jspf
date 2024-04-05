@@ -1,0 +1,46 @@
+<% if (step == CreateSpaceHandler.ATTENDEE_STEP) { %>
+  <%
+  EnumerateSettings notificationPolicySettings = new EnumerateSettings();
+  {
+    notificationPolicySettings.radio();
+    List<String> enumValues = Util.getArrayList("invitation", "mail", "no");
+    String notifPolicyPropPrefix = "jcmsplugin.collaborativespace.create.attendees.notification.";
+    List<String> enumLabels = Util.getArrayList(
+        notifPolicyPropPrefix + enumValues.get(0), 
+        notifPolicyPropPrefix + enumValues.get(1), 
+        notifPolicyPropPrefix + enumValues.get(2));
+    
+    if (CSConstants.ACCESS_SECRET.equals(formHandler.getAvailableAccessPolicy())) {
+      // When access is secret, invitation is not possible
+      enumValues.remove(0);
+      enumLabels.remove(0);
+    }
+    notificationPolicySettings.enumValues(enumValues);
+    notificationPolicySettings.enumLabels(enumLabels);
+    notificationPolicySettings.required();
+  }
+  %>
+  <div class="alert alert-info">
+    <%= glp("jcmsplugin.collaborativespace.create.attendees.intro") %>
+  </div>
+
+  <jalios:field name="admins" formHandler="<%= formHandler %>" keyword="true">
+    <jalios:control settings="<%= new MemberSettings().filter(MemberSettings.MemberFilter.ACCOUNT) %>" />
+  </jalios:field>
+
+  <jalios:field name="members" formHandler="<%= formHandler %>" keyword="true">
+    <jalios:control settings="<%= new MemberSettings().filter(MemberSettings.MemberFilter.ACCOUNT) %>" />
+  </jalios:field> 
+
+  <jalios:field name="groups" formHandler="<%= formHandler %>" keyword="true">
+    <jalios:control/>
+  </jalios:field>
+
+  <%
+  // Customized notificationPolicy rules
+  %>
+  <jalios:field name="notificationPolicy" label='jcmsplugin.collaborativespace.create.attendees.notification'
+   value='<%= formHandler.getAvailableNotificationPolicy() %>' required="true">
+    <jalios:control settings='<%= notificationPolicySettings %>' />
+  </jalios:field>
+<% } %>

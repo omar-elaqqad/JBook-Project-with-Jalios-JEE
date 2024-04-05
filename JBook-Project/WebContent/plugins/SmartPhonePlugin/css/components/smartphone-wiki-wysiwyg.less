@@ -1,0 +1,194 @@
+/**
+ * Provide Wysiwyg styles (which also apply to wiki)
+ */
+.wiki,
+.wysiwyg,
+.mce-content-body {
+  /*
+    Text overlap issues :
+    * Handle long text and long links
+    * Handle all browsers
+  */
+
+  // Adds a hyphen where the word breaks, if supported (No Blink)
+  .hyphens(auto);
+
+  // These are technically the same, but use both
+  overflow-wrap: break-word;
+
+  // Instead use this non-standard one:
+  word-break: break-word;
+
+  /* Handle large images */
+  IMG:not(.emoji) {
+    // Backport from img-responsive mixins from bootstrap 3.3.0
+    display: inline-block;
+    max-width: 100%; // Part 1: Set a maximum relative to the parent
+    &:not(.is-height-set){
+      height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+      /*max-height: 1000px; //Force max height to avoid long images displayed*/
+    }
+  }
+
+  NAV.toc {
+    display: table;
+    width: auto;
+    border: 1px solid #EEEEEE;
+    border-collapse: separate;
+
+    H1,H2 {
+      margin: 0px;
+      padding: 5px 10px;
+      border: 1px solid #eeeeee;
+      background-color: #EEEEEE;
+      font-size: 15px;
+    }
+
+    UL {
+      margin: 5px 15px;
+      padding: 0px;
+      list-style-image:none;
+      list-style-type:none;
+      text-align:left;
+    }
+  }
+
+  H1, H2, H3, H4, H5, H6 {
+    padding: 2px 0 1px 0;
+  }
+
+  H1 {
+    margin: 20px 0;
+    font-size: 24px;
+    border-bottom: 1px dotted #AAA;
+  }
+
+  H2 {
+    margin: 16px 0px;
+    font-size: 22px;
+    border-bottom: 1px dotted #E1E1E1;
+  }
+
+  H3 {
+    margin: 14px 0px 5px 0;
+    font-size: 18px;
+    border-bottom: 1px dashed #EAEAEA;
+  }
+
+  H4, H5, H6 {
+    margin: 12px 0px 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  PRE {
+    display: block;
+    overflow: auto;
+    padding: @baseline/4;
+    background-color: #FEFBF3;
+    border: 1px solid #CCCCCC;
+    clear: both;
+  }
+
+  .wysiwyg-table-wrapper {
+    overflow-x: auto;
+  }
+
+  TABLE {
+    width: auto;
+    TH { background-color: #EEEEEE; font-size: @font-size-base+1; }
+    TH, TD { padding: @baseline/4 @baseline/2; border: 1px solid @grayLighter; }
+  }
+
+  BLOCKQUOTE,
+  BLOCKQUOTE P {
+    font-style:  italic;
+    font-size:   @font-size-base;
+    line-height: @line-height-base;
+  }
+  BLOCKQUOTE P { margin-bottom: @baseline/2;  }
+  BLOCKQUOTE *:last-child { margin-bottom: 0; }
+
+  .jcms-message {
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+  }
+
+  /* Mention */
+  .mention {
+    background-color: @wiki-mention-bg-color;
+    border: @wiki-mention-border;
+    padding: @wiki-mention-padding;
+    text-decoration: none;
+    border-radius: @wiki-mention-border-radius;
+    white-space: nowrap;
+    font-weight: 400;
+  }
+  .mention:hover {
+    background-color: @wiki-mention-hover-bg-color;
+  }
+
+  /* Galleries (wikiGallery.jsp and wysiwygGallery.jsp) */
+  .wiki-gallery,
+  .wysiwyg-gallery {
+    max-width: 800px;
+    margin: 0 auto;
+    .wiki-gallery-img {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.wysiwyg-inline-edit-display {
+  position: relative;
+
+  &.allow-empty-edition {
+    min-height: (2 * @padding-base-vertical) + @line-height-computed;
+  }
+
+  .wysiwyg-inline-buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    z-index: 4; /* Use value >1 because jalios-wiki.less uses 1 for the wiki div, see DEVJCMS-1879, and >3 because mejs uses 3 for controls, see DEVJCMS-3032  */
+  }
+
+  &:hover .wysiwyg-inline-buttons {
+    display: block;
+  }
+
+  H1, H2, H3, H4, H5, H6 {
+    position: relative;
+  }
+
+  .wysiwyg-inline-action {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: @font-size-base;
+    color: @gray-light;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 200ms ease-in;
+  }
+
+  &:hover .wysiwyg-inline-action {
+    opacity: 1;
+  }
+}
+
+.wysiwyg-inline-edit-form {
+
+  .wysiwyg-inline-buttons {
+    padding: @padding-base-vertical @padding-base-vertical @padding-base-horizontal 0;
+  }
+}
+
+
+.ui-page-theme-a {
+  .wysiwyg {
+    font-weight: 400;
+  }
+}

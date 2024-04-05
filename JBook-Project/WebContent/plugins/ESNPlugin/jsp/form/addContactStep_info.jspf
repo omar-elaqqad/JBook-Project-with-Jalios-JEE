@@ -1,0 +1,83 @@
+<% if (step == 2) { %>
+  <jalios:include target="PLUGIN_ESN_ADD_CONTACT_INFOS_START" />
+
+  <%-- SALUTATION ------------------------------------------------------- --%> 
+  <% 
+   // NOTE:OD: Cut'n Paste from editMember.jsp 
+    String[] salutValues = Util.split(channel.getProperty("ui.member.salutations", ""), " ");
+    if (Util.notEmpty(salutValues)) {
+      String[] salutLabels = new String[salutValues.length];
+      int i = 0;
+      for (String salut : salutValues){
+        salutLabels[i++] = glp("ui.com.lbl.salut." + salut);
+      }
+  %>
+  <jalios:field label="ui.adm.mbr-edit.lbl.salut" name='salutation' value='<%= formHandler.getAvailableSalutation() %>' >
+      <jalios:control settings='<%= new EnumerateSettings().select().enumValues(salutValues).enumLabels(salutLabels) %>' />
+  </jalios:field>
+  <% } %>
+
+  <jalios:field label="ui.adm.mbr-edit.lbl.f-name" name='firstName' value='<%= formHandler.getAvailableFirstName() %>' >
+    <jalios:control type="<%= ControlType.TEXTFIELD %>" />
+  </jalios:field>
+
+  <jalios:field label="ui.adm.mbr-edit.lbl.name" name='name' value='<%= formHandler.getAvailableName() %>' required='<%= true %>'>
+    <jalios:control type="<%= ControlType.TEXTFIELD %>" />
+  </jalios:field>
+    
+    <jalios:field label="ui.adm.mbr-edit.lbl.organization" name='organization' value='<%= formHandler.getAvailableOrganization() %>' >
+      <jalios:control type="<%= ControlType.TEXTFIELD %>" />
+    </jalios:field>
+    
+    <jalios:field label="ui.adm.mbr-edit.lbl.department" name='department' value='<%= formHandler.getAvailableDepartment() %>' >
+      <jalios:control type="<%= ControlType.TEXTFIELD %>" />
+    </jalios:field>
+    
+  <%-- JobTitle --%>
+  <jalios:field label="ui.adm.mbr-edit.lbl.job" name='jobTitle' value='<%= formHandler.getAvailableJobTitle() %>' >
+    <jalios:control type="<%= ControlType.TEXTFIELD %>" />
+  </jalios:field>
+
+  <%-- Email --%>
+    <jalios:field label="ui.com.lbl.email" name='email' value='<%= formHandler.getAvailableEmail() %>' >
+      <jalios:control type="<%= ControlType.EMAIL %>" />
+    </jalios:field>
+  
+  <%-- Phone --%>
+    <jalios:field label="ui.adm.mbr-edit.lbl.phone" name='phone' value='<%= formHandler.getAvailablePhone() %>' >
+      <jalios:control type="<%= ControlType.TEXTFIELD %>" />
+    </jalios:field>    
+    
+    <jalios:field label="ui.adm.mbr-edit.lbl.mobile" name='mobile' value='<%= formHandler.getAvailableMobile() %>' >
+      <jalios:control type="<%= ControlType.TEXTFIELD %>" />
+    </jalios:field>
+    
+  <%-- Address --%>
+
+    <jalios:field label="ui.adm.mbr-edit.lbl.street" name='street' value='<%= formHandler.getAvailableStreet() %>' >
+      <jalios:control type="<%= ControlType.TEXTAREA %>" />
+    </jalios:field>    
+    <jalios:field label="ui.adm.mbr-edit.lbl.postalCode" name='postalCode' value='<%= formHandler.getAvailablePostalCode() %>' >
+      <jalios:control type="<%= ControlType.TEXTFIELD %>" />
+    </jalios:field>
+    <jalios:field label="ui.adm.mbr-edit.lbl.poBox" name='poBox' value='<%= formHandler.getAvailablePoBox() %>' >
+      <jalios:control type="<%= ControlType.TEXTFIELD %>" />
+    </jalios:field>
+    <jalios:field label="ui.adm.mbr-edit.lbl.locality" name='locality' value='<%= formHandler.getAvailableLocality() %>' >
+      <jalios:control type="<%= ControlType.TEXTFIELD %>" />
+    </jalios:field>
+    <jalios:field label="ui.adm.mbr-edit.lbl.region" name='region' value='<%= formHandler.getAvailableRegion() %>' >
+      <jalios:control type="<%= ControlType.TEXTFIELD %>" />
+    </jalios:field>
+    <jalios:field label="ui.com.lbl.country" name="country"  value='<%= formHandler.getAvailableCountry() %>'>
+      <jalios:control type="<%= ControlType.COUNTRY %>" />
+    </jalios:field>
+  
+   <%-- Add to my contacts --%>
+  <jalios:field label="jcmsplugin.esn.add-contact.lbl.add" name='addToMyContacts' value='true' >
+    <jalios:control type="<%= ControlType.BOOLEAN %>" />
+  </jalios:field>   
+  
+  <input type="hidden" name="usage" value="1" />
+  <jalios:include target="PLUGIN_ESN_ADD_CONTACT_INFOS_END" />
+<% } %>

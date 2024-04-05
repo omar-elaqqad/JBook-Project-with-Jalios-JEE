@@ -1,0 +1,39 @@
+<%@page import="com.jalios.jcmsplugin.smartphone.SmartPhoneControlType"%><%
+%><%@page import="com.jalios.jcmsplugin.smartphone.SmartPhoneManager"%>
+<%@ page import="com.jalios.jcms.PhotoSize" %>
+<%@ page import="com.jalios.jcms.taglib.settings.impl.TextAreaSettings" %>
+<%
+%>
+<div class="microblogging-form jalios-toggle" >
+    <form method="POST" action="plugins/ESNPlugin/smartphone/jsp/service/activity/doMicroBloggingForm.jsp">
+      <div class="microblogging-text">
+        <jalios:memberphoto member="<%= loggedMember %>" resource="memberphoto-phone" size="<%= PhotoSize.TINY %>"/>
+        <span class="toggle microblogging-prompt-message toggle-microblogging-form" data-jalios-target=".toggle-microblogging-form" data-jalios-toggle="hide"><%= glp("jcmsplugin.esn.microblogging.microblogging-prompt") %></span>
+        <jalios:control settings='<%= new TextAreaSettings().css("hide toggle-microblogging-form").name("text").placeholder("jcmsplugin.esn.microblogging.microblogging-prompt") %>' resource="<%= SmartPhoneControlType.WIKIAREA.getResource() %>" />
+
+      </div>
+      <% if(!SmartPhoneManager.getInstance().isMobileApp(request)) { %>
+      <div class="toggle-microblogging-form hide">
+        <input data-enhance="false" name="documents" type="file" accept="image/jpeg,image/gif,image/png" id="uploadFile" class="upload-with-image-resize microblogging-file-input" data-jalios-imageuploader-max-width="<%= smartPhoneManager.getImageMaxWidth() %>" data-jalios-imageuploader-max-height="<%= smartPhoneManager.getImageMaxHeight() %>" data-resize-quality-high="<%= getBooleanParameter("resize-quality-high", false) %>" />
+      </div>
+      <% } else { %>
+      <div class="actions-wrapper has-no-border upload-image-action-container upload-image-action-icon hide toggle-microblogging-form">
+        <a class="action-item microBlogging-galery">
+          <span class="action-item-icon-wrapper"><jalios:icon src="microBlogging-galery" css="action-item-icon"/></span>
+          <span class="action-item-text"><%= glp("jcmsplugin.esn.smartphone.microblogging.galery") %></span>
+        </a>
+        <a class="action-item microBlogging-camera">
+          <span class="action-item-icon-wrapper"><jalios:icon src="microBlogging-camera" css="action-item-icon"/></span>
+          <span class="action-item-text"><%= glp("jcmsplugin.esn.smartphone.microblogging.camera") %></span>
+        </a>
+      </div>
+      <% } %>
+
+      <button type="button" name="opCreate" class="hide toggle-microblogging-form ajax-refresh btn-primary ui-btn ui-shadow ui-corner-all" value="true"><%= glp("ui.com.btn.publish") %></button>
+      <input type="hidden" name="opMicroBlog" value="true">
+      <% if (workspace != null) {%>
+      <input type="hidden" name="workspaceId" value="<%= microBloggingWorkspace.getId() %>">
+      <% } %>
+      <input type="hidden" name="title" value="<%= encodeForHTMLAttribute(mbTitle) %>">
+    </form>
+  </div>

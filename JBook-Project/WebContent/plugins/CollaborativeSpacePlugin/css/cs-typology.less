@@ -1,0 +1,61 @@
+// Include "generated file" message for CSS output
+/* ------------------------------------------------------------------------- */
+/*  This file has been automatically generated from collaborativeSpace.less  */
+/* ------------------------------------------------------------------------- */
+
+// Include variables and mixins
+@import "../../../css/jalios/core/init-mixins.less"; // Use init-mixins.less if more mixins are required
+
+// Hook for JCMS
+@import "../../../css/plugin.less";
+
+// ------------------------------------------------------------------- 
+//  PLUGIN CSS DECLARATION                                             
+// ------------------------------------------------------------------- 
+
+.typology-form {
+  .presentation {
+    .clearfix();
+    #JCMS > .br();
+    IMG.thumbnail {
+      float: left;
+      margin-right: @padding-base-horizontal;
+      margin-bottom: @padding-base-vertical;
+    }
+  }
+  .typology-name {
+    font-size: @font-size-h2;
+    margin-bottom: 18px;
+    border-bottom: 1px solid @gray-lighter;
+  }
+  .CollaborativeSpace.resultDisplay {
+    .meta-datas {
+      color: @gray-light;
+      font-size: 0.9em;
+      margin-bottom: @padding-base-vertical;
+    }
+  }
+  .cs-item {
+    #JCMS > .br();
+    padding-bottom: @padding-base-vertical;
+    border-bottom: 1px solid @gray-lighter;
+    &.last { border-bottom: none; }
+  } // .cs-item
+
+  .spaces-list > UL.items { 
+    padding-left: 0; 
+    margin-left: 0; 
+    list-style-type: none;
+    LI .content { padding-left: 15px; }
+    .wiki IMG { max-width: 500px; }
+  } // UL.items
+  
+  .content {
+    .hl { font-weight: bold; }
+    .meta-datas .admins {
+      &, .cs-animators { display: inline; }
+    } 
+  } // .content
+
+  .no-result-label { margin-top: 10px; display: block; }
+} // .typology-form

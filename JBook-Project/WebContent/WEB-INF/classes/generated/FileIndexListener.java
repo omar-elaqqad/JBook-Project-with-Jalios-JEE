@@ -81,6 +81,18 @@ public class FileIndexListener extends AbstractFileIndexListener {
       add(obj.getPicture(), obj);
     }
     
+    if (storable instanceof CollaborativeSpace) {
+      CollaborativeSpace obj = (CollaborativeSpace)storable;
+      String[] array = null;
+      
+      // file/image/media
+      add(obj.getHeader(), obj);
+      // file/image/media
+      add(obj.getPortletImage(), obj);
+      // file/image/media
+      add(obj.getBackImage(), obj);
+    }
+    
     if (storable instanceof Interview) {
       Interview obj = (Interview)storable;
       String[] array = null;
@@ -97,8 +109,26 @@ public class FileIndexListener extends AbstractFileIndexListener {
       add(obj.getPortletImage(), obj);
     }
     
+    if (storable instanceof Poll) {
+      Poll obj = (Poll)storable;
+      String[] array = null;
+      
+      // file/image/media
+      add(obj.getImage(), obj);
+    }
+    
     if (storable instanceof PortalJspCollection) {
       PortalJspCollection obj = (PortalJspCollection)storable;
+      String[] array = null;
+      
+      // file/image/media
+      add(obj.getPortletImage(), obj);
+      // file/image/media
+      add(obj.getBackImage(), obj);
+    }
+    
+    if (storable instanceof PortletBirthday) {
+      PortletBirthday obj = (PortletBirthday)storable;
       String[] array = null;
       
       // file/image/media
@@ -129,6 +159,16 @@ public class FileIndexListener extends AbstractFileIndexListener {
     
     if (storable instanceof PortletCarousel) {
       PortletCarousel obj = (PortletCarousel)storable;
+      String[] array = null;
+      
+      // file/image/media
+      add(obj.getPortletImage(), obj);
+      // file/image/media
+      add(obj.getBackImage(), obj);
+    }
+    
+    if (storable instanceof PortletCollaborativeSpaceSuggestion) {
+      PortletCollaborativeSpaceSuggestion obj = (PortletCollaborativeSpaceSuggestion)storable;
       String[] array = null;
       
       // file/image/media
@@ -248,12 +288,52 @@ public class FileIndexListener extends AbstractFileIndexListener {
       add(obj.getBackImage(), obj);
     }
     
+    if (storable instanceof PortletMemberActivity) {
+      PortletMemberActivity obj = (PortletMemberActivity)storable;
+      String[] array = null;
+      
+      // file/image/media
+      add(obj.getPortletImage(), obj);
+      // file/image/media
+      add(obj.getBackImage(), obj);
+    }
+    
+    if (storable instanceof PortletMemberProfile) {
+      PortletMemberProfile obj = (PortletMemberProfile)storable;
+      String[] array = null;
+      
+      // file/image/media
+      add(obj.getPortletImage(), obj);
+      // file/image/media
+      add(obj.getBackImage(), obj);
+    }
+    
+    if (storable instanceof PortletMemberStatus) {
+      PortletMemberStatus obj = (PortletMemberStatus)storable;
+      String[] array = null;
+      
+      // file/image/media
+      add(obj.getPortletImage(), obj);
+      // file/image/media
+      add(obj.getBackImage(), obj);
+    }
+    
     if (storable instanceof PortletMenu) {
       PortletMenu obj = (PortletMenu)storable;
       String[] array = null;
       
       // file/image/media
       add(obj.getItemSeparaor(), obj);
+      // file/image/media
+      add(obj.getPortletImage(), obj);
+      // file/image/media
+      add(obj.getBackImage(), obj);
+    }
+    
+    if (storable instanceof PortletMyCollaborativeSpaces) {
+      PortletMyCollaborativeSpaces obj = (PortletMyCollaborativeSpaces)storable;
+      String[] array = null;
+      
       // file/image/media
       add(obj.getPortletImage(), obj);
       // file/image/media
@@ -282,6 +362,16 @@ public class FileIndexListener extends AbstractFileIndexListener {
     
     if (storable instanceof PortletNotification) {
       PortletNotification obj = (PortletNotification)storable;
+      String[] array = null;
+      
+      // file/image/media
+      add(obj.getPortletImage(), obj);
+      // file/image/media
+      add(obj.getBackImage(), obj);
+    }
+    
+    if (storable instanceof PortletPoll) {
+      PortletPoll obj = (PortletPoll)storable;
       String[] array = null;
       
       // file/image/media
@@ -568,6 +658,28 @@ public class FileIndexListener extends AbstractFileIndexListener {
       }
     }
     
+    if (storable instanceof CollaborativeSpace) {
+      CollaborativeSpace obj = (CollaborativeSpace)storable;
+      CollaborativeSpace oldObj = (CollaborativeSpace)oldStorable;
+      String[] array = null;
+      
+      // file/image/media
+      if (!Util.isSameContent(obj.getHeader(), oldObj.getHeader())) {
+	remove(obj, oldObj.getHeader());
+	add(obj.getHeader(), obj);
+      }
+      // file/image/media
+      if (!Util.isSameContent(obj.getPortletImage(), oldObj.getPortletImage())) {
+	remove(obj, oldObj.getPortletImage());
+	add(obj.getPortletImage(), obj);
+      }
+      // file/image/media
+      if (!Util.isSameContent(obj.getBackImage(), oldObj.getBackImage())) {
+	remove(obj, oldObj.getBackImage());
+	add(obj.getBackImage(), obj);
+      }
+    }
+    
     if (storable instanceof Interview) {
       Interview obj = (Interview)storable;
       Interview oldObj = (Interview)oldStorable;
@@ -592,9 +704,38 @@ public class FileIndexListener extends AbstractFileIndexListener {
       }
     }
     
+    if (storable instanceof Poll) {
+      Poll obj = (Poll)storable;
+      Poll oldObj = (Poll)oldStorable;
+      String[] array = null;
+      
+      // file/image/media
+      if (!Util.isSameContent(obj.getImage(), oldObj.getImage())) {
+	remove(obj, oldObj.getImage());
+	add(obj.getImage(), obj);
+      }
+    }
+    
     if (storable instanceof PortalJspCollection) {
       PortalJspCollection obj = (PortalJspCollection)storable;
       PortalJspCollection oldObj = (PortalJspCollection)oldStorable;
+      String[] array = null;
+      
+      // file/image/media
+      if (!Util.isSameContent(obj.getPortletImage(), oldObj.getPortletImage())) {
+	remove(obj, oldObj.getPortletImage());
+	add(obj.getPortletImage(), obj);
+      }
+      // file/image/media
+      if (!Util.isSameContent(obj.getBackImage(), oldObj.getBackImage())) {
+	remove(obj, oldObj.getBackImage());
+	add(obj.getBackImage(), obj);
+      }
+    }
+    
+    if (storable instanceof PortletBirthday) {
+      PortletBirthday obj = (PortletBirthday)storable;
+      PortletBirthday oldObj = (PortletBirthday)oldStorable;
       String[] array = null;
       
       // file/image/media
@@ -646,6 +787,23 @@ public class FileIndexListener extends AbstractFileIndexListener {
     if (storable instanceof PortletCarousel) {
       PortletCarousel obj = (PortletCarousel)storable;
       PortletCarousel oldObj = (PortletCarousel)oldStorable;
+      String[] array = null;
+      
+      // file/image/media
+      if (!Util.isSameContent(obj.getPortletImage(), oldObj.getPortletImage())) {
+	remove(obj, oldObj.getPortletImage());
+	add(obj.getPortletImage(), obj);
+      }
+      // file/image/media
+      if (!Util.isSameContent(obj.getBackImage(), oldObj.getBackImage())) {
+	remove(obj, oldObj.getBackImage());
+	add(obj.getBackImage(), obj);
+      }
+    }
+    
+    if (storable instanceof PortletCollaborativeSpaceSuggestion) {
+      PortletCollaborativeSpaceSuggestion obj = (PortletCollaborativeSpaceSuggestion)storable;
+      PortletCollaborativeSpaceSuggestion oldObj = (PortletCollaborativeSpaceSuggestion)oldStorable;
       String[] array = null;
       
       // file/image/media
@@ -853,6 +1011,57 @@ public class FileIndexListener extends AbstractFileIndexListener {
       }
     }
     
+    if (storable instanceof PortletMemberActivity) {
+      PortletMemberActivity obj = (PortletMemberActivity)storable;
+      PortletMemberActivity oldObj = (PortletMemberActivity)oldStorable;
+      String[] array = null;
+      
+      // file/image/media
+      if (!Util.isSameContent(obj.getPortletImage(), oldObj.getPortletImage())) {
+	remove(obj, oldObj.getPortletImage());
+	add(obj.getPortletImage(), obj);
+      }
+      // file/image/media
+      if (!Util.isSameContent(obj.getBackImage(), oldObj.getBackImage())) {
+	remove(obj, oldObj.getBackImage());
+	add(obj.getBackImage(), obj);
+      }
+    }
+    
+    if (storable instanceof PortletMemberProfile) {
+      PortletMemberProfile obj = (PortletMemberProfile)storable;
+      PortletMemberProfile oldObj = (PortletMemberProfile)oldStorable;
+      String[] array = null;
+      
+      // file/image/media
+      if (!Util.isSameContent(obj.getPortletImage(), oldObj.getPortletImage())) {
+	remove(obj, oldObj.getPortletImage());
+	add(obj.getPortletImage(), obj);
+      }
+      // file/image/media
+      if (!Util.isSameContent(obj.getBackImage(), oldObj.getBackImage())) {
+	remove(obj, oldObj.getBackImage());
+	add(obj.getBackImage(), obj);
+      }
+    }
+    
+    if (storable instanceof PortletMemberStatus) {
+      PortletMemberStatus obj = (PortletMemberStatus)storable;
+      PortletMemberStatus oldObj = (PortletMemberStatus)oldStorable;
+      String[] array = null;
+      
+      // file/image/media
+      if (!Util.isSameContent(obj.getPortletImage(), oldObj.getPortletImage())) {
+	remove(obj, oldObj.getPortletImage());
+	add(obj.getPortletImage(), obj);
+      }
+      // file/image/media
+      if (!Util.isSameContent(obj.getBackImage(), oldObj.getBackImage())) {
+	remove(obj, oldObj.getBackImage());
+	add(obj.getBackImage(), obj);
+      }
+    }
+    
     if (storable instanceof PortletMenu) {
       PortletMenu obj = (PortletMenu)storable;
       PortletMenu oldObj = (PortletMenu)oldStorable;
@@ -863,6 +1072,23 @@ public class FileIndexListener extends AbstractFileIndexListener {
 	remove(obj, oldObj.getItemSeparaor());
 	add(obj.getItemSeparaor(), obj);
       }
+      // file/image/media
+      if (!Util.isSameContent(obj.getPortletImage(), oldObj.getPortletImage())) {
+	remove(obj, oldObj.getPortletImage());
+	add(obj.getPortletImage(), obj);
+      }
+      // file/image/media
+      if (!Util.isSameContent(obj.getBackImage(), oldObj.getBackImage())) {
+	remove(obj, oldObj.getBackImage());
+	add(obj.getBackImage(), obj);
+      }
+    }
+    
+    if (storable instanceof PortletMyCollaborativeSpaces) {
+      PortletMyCollaborativeSpaces obj = (PortletMyCollaborativeSpaces)storable;
+      PortletMyCollaborativeSpaces oldObj = (PortletMyCollaborativeSpaces)oldStorable;
+      String[] array = null;
+      
       // file/image/media
       if (!Util.isSameContent(obj.getPortletImage(), oldObj.getPortletImage())) {
 	remove(obj, oldObj.getPortletImage());
@@ -912,6 +1138,23 @@ public class FileIndexListener extends AbstractFileIndexListener {
     if (storable instanceof PortletNotification) {
       PortletNotification obj = (PortletNotification)storable;
       PortletNotification oldObj = (PortletNotification)oldStorable;
+      String[] array = null;
+      
+      // file/image/media
+      if (!Util.isSameContent(obj.getPortletImage(), oldObj.getPortletImage())) {
+	remove(obj, oldObj.getPortletImage());
+	add(obj.getPortletImage(), obj);
+      }
+      // file/image/media
+      if (!Util.isSameContent(obj.getBackImage(), oldObj.getBackImage())) {
+	remove(obj, oldObj.getBackImage());
+	add(obj.getBackImage(), obj);
+      }
+    }
+    
+    if (storable instanceof PortletPoll) {
+      PortletPoll obj = (PortletPoll)storable;
+      PortletPoll oldObj = (PortletPoll)oldStorable;
       String[] array = null;
       
       // file/image/media
@@ -1283,6 +1526,18 @@ public class FileIndexListener extends AbstractFileIndexListener {
       remove(obj, obj.getPicture());
     }    
     
+    if (storable instanceof CollaborativeSpace) {
+      CollaborativeSpace obj = (CollaborativeSpace)storable;
+      String[] array = null;
+    
+      // file/image/media
+      remove(obj, obj.getHeader());
+      // file/image/media
+      remove(obj, obj.getPortletImage());
+      // file/image/media
+      remove(obj, obj.getBackImage());
+    }    
+    
     if (storable instanceof Interview) {
       Interview obj = (Interview)storable;
       String[] array = null;
@@ -1299,8 +1554,26 @@ public class FileIndexListener extends AbstractFileIndexListener {
       remove(obj, obj.getPortletImage());
     }    
     
+    if (storable instanceof Poll) {
+      Poll obj = (Poll)storable;
+      String[] array = null;
+    
+      // file/image/media
+      remove(obj, obj.getImage());
+    }    
+    
     if (storable instanceof PortalJspCollection) {
       PortalJspCollection obj = (PortalJspCollection)storable;
+      String[] array = null;
+    
+      // file/image/media
+      remove(obj, obj.getPortletImage());
+      // file/image/media
+      remove(obj, obj.getBackImage());
+    }    
+    
+    if (storable instanceof PortletBirthday) {
+      PortletBirthday obj = (PortletBirthday)storable;
       String[] array = null;
     
       // file/image/media
@@ -1331,6 +1604,16 @@ public class FileIndexListener extends AbstractFileIndexListener {
     
     if (storable instanceof PortletCarousel) {
       PortletCarousel obj = (PortletCarousel)storable;
+      String[] array = null;
+    
+      // file/image/media
+      remove(obj, obj.getPortletImage());
+      // file/image/media
+      remove(obj, obj.getBackImage());
+    }    
+    
+    if (storable instanceof PortletCollaborativeSpaceSuggestion) {
+      PortletCollaborativeSpaceSuggestion obj = (PortletCollaborativeSpaceSuggestion)storable;
       String[] array = null;
     
       // file/image/media
@@ -1450,12 +1733,52 @@ public class FileIndexListener extends AbstractFileIndexListener {
       remove(obj, obj.getBackImage());
     }    
     
+    if (storable instanceof PortletMemberActivity) {
+      PortletMemberActivity obj = (PortletMemberActivity)storable;
+      String[] array = null;
+    
+      // file/image/media
+      remove(obj, obj.getPortletImage());
+      // file/image/media
+      remove(obj, obj.getBackImage());
+    }    
+    
+    if (storable instanceof PortletMemberProfile) {
+      PortletMemberProfile obj = (PortletMemberProfile)storable;
+      String[] array = null;
+    
+      // file/image/media
+      remove(obj, obj.getPortletImage());
+      // file/image/media
+      remove(obj, obj.getBackImage());
+    }    
+    
+    if (storable instanceof PortletMemberStatus) {
+      PortletMemberStatus obj = (PortletMemberStatus)storable;
+      String[] array = null;
+    
+      // file/image/media
+      remove(obj, obj.getPortletImage());
+      // file/image/media
+      remove(obj, obj.getBackImage());
+    }    
+    
     if (storable instanceof PortletMenu) {
       PortletMenu obj = (PortletMenu)storable;
       String[] array = null;
     
       // file/image/media
       remove(obj, obj.getItemSeparaor());
+      // file/image/media
+      remove(obj, obj.getPortletImage());
+      // file/image/media
+      remove(obj, obj.getBackImage());
+    }    
+    
+    if (storable instanceof PortletMyCollaborativeSpaces) {
+      PortletMyCollaborativeSpaces obj = (PortletMyCollaborativeSpaces)storable;
+      String[] array = null;
+    
       // file/image/media
       remove(obj, obj.getPortletImage());
       // file/image/media
@@ -1484,6 +1807,16 @@ public class FileIndexListener extends AbstractFileIndexListener {
     
     if (storable instanceof PortletNotification) {
       PortletNotification obj = (PortletNotification)storable;
+      String[] array = null;
+    
+      // file/image/media
+      remove(obj, obj.getPortletImage());
+      // file/image/media
+      remove(obj, obj.getBackImage());
+    }    
+    
+    if (storable instanceof PortletPoll) {
+      PortletPoll obj = (PortletPoll)storable;
       String[] array = null;
     
       // file/image/media
@@ -1668,4 +2001,4 @@ public class FileIndexListener extends AbstractFileIndexListener {
   
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
-// OSAPAY52RiQ0WG4HPbLtSQ==
+// AW45xMGVcGemiRlzIUYFaA==

@@ -1,0 +1,15 @@
+<%@page import="com.jalios.jcms.taglib.settings.impl.BooleanSettings"%>
+<% if (step == 1) { %>
+  <%  
+    String fieldStep1Name = glp("ui.com.lbl.workspace") + JcmsUtil.getHtmlIcon("work"); 
+    boolean isSelected = formHandler.getAvailableExcludeWS();
+  %>
+  <div class="alert alert-info"><%= glp("jcmsplugin.esn.activity.filter.editor.steps-intro.1") %></div>
+    <jalios:field name="excludeWS" label="<%= fieldStep1Name %>" value="<%= isSelected %>">
+      <jalios:control settings='<%= new BooleanSettings().enumValues("false","true").enumLabels("jcmsplugin.esn.activity.filter.ws-include", "jcmsplugin.esn.activity.filter.ws-exclude") %>' />
+  </jalios:field>
+      
+  <jalios:field name="filterWS" value="<%= formHandler.getAvailableFilterWSSet() %>">
+  	<jalios:control type="<%= ControlType.WORKSPACE	%>"/>
+  </jalios:field>
+<% } %>

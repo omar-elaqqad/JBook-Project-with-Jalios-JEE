@@ -1,0 +1,8 @@
+<%@page import="com.jalios.jcms.taglib.card.*"%><%
+%><%@ include file="/plugins/SmartPhonePlugin/jsp/common/doInitSmartPhonePage.jspf" %><%
+
+String link = getIncludeString("link", null);
+LinkOptions linkOptions = (LinkOptions)getIncludeObject("linkOptions", null);
+String css = "card " + getIncludeString("css", "");
+String cardsMode = (String) request.getAttribute("cardsMode");
+%>

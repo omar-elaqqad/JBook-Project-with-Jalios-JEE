@@ -1,0 +1,7 @@
+<%-- TAB - NOTIFICATION ---------------------------------------------- --%>
+<% if (isAccount && !isDBAccount && channel.isNotificationEnabled()) { %>
+<div class="tab-page">    
+  <h2 class="tab"><jalios:icon src="jcmsplugin-esn-profile-notification" /> <%= glp("ui.fo.notification.notification") %></h2>     
+  <%@ include file='/jcore/notification/doMemberNotificationList.jspf' %>
+</div>    
+<% } %>

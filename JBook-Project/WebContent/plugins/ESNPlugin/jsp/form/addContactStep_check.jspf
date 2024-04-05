@@ -1,0 +1,16 @@
+<% if (step == 0) { %>
+  <jalios:include target="PLUGIN_ESN_ADD_CONTACT_CHECK_START" />
+<p class="info"><%= glp("jcmsplugin.esn.add-contact.steps-intro.0") %></p>
+
+<div id="check-contact-message" style="display: none;">
+  <div><%= glp("jcmsplugin.esn.add-contact.lbl.wait") %></div>
+  <div><jalios:icon src="wait" /></div>
+</div>
+<jalios:field name="name" label="ui.adm.mbr-edit.lbl.name" value="<%= formHandler.getAvailableName() %>">
+  <jalios:control type="<%= ControlType.TEXTFIELD %>" />
+</jalios:field>
+<jalios:field name="email" label="ui.com.lbl.email" value="<%= formHandler.getAvailableEmail() %>">
+  <jalios:control type="<%= ControlType.EMAIL %>"  />
+</jalios:field>
+<jalios:include target="PLUGIN_ESN_ADD_CONTACT_CHECK_END" />
+<% } %> 

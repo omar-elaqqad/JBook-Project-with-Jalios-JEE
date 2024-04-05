@@ -1,0 +1,245 @@
+// Include variables and mixins
+@import "../../../css/jalios/core/init-mixins.less"; // Use init-mixins.less if more mixins are required
+
+// -------------------------------------------------------------------
+// PLUGINS LESS VARIABLES
+// -------------------------------------------------------------------
+
+@dbcomment-comment-border-radius: @border-radius-small;
+@dbcomment-comment-border-color: @well-border;
+@dbcomment-comment-border: 1px solid @dbcomment-comment-border-color;
+@dbcomment-comment-bg: #f7f9fa;;
+
+@dbcomment-comment-private-bg: @well-bg;
+@dbcomment-comment-private-counter-color: @state-danger-text;
+@dbcomment-comment-private-label-bg: @label-danger-bg;
+
+// Hook for JCMS
+@import "../../../css/plugin.less";
+
+// -------------------------------------------------------------------
+//  PLUGIN CSS DECLARATION
+// -------------------------------------------------------------------
+//
+//  To Include this file in a JSP:
+//  * jcmsContext.addCSSHeader("plugins/DBCommentPlugin/css/dbcomment.css");
+//  * You MUST uncomment property in plugin.prop
+//
+//  You can also use implements PortalPolicyFilter.setupHeaders()
+//
+
+/* The global db comment wrapper containing all comments */
+.dbcomment-wrapper {
+
+	.dbcommentCount {
+	  font-weight: bold;
+	  margin: 25px 0 20px;
+	  padding: 5px 5px;
+		border-top: 1px dotted #CCCCCC;
+	}
+
+	.non-visible-comment {
+    margin-left: 60px;
+	}
+}
+
+/* Comment pane, containing the comment author photo and the comment content */
+.comment-pane {
+  @half-baseline: @baseline / 2;
+
+  padding: 0 0 @half-baseline @half-baseline;
+  position: relative;
+  margin-top:0;
+
+  //Vertical line following the comment height
+	&:before {
+    content: "";
+
+	  border-left: 0;
+    position: absolute;
+
+    left: 33px;
+    top: 0;
+    bottom: 0;
+	}
+
+  //Counter that lists the comment index
+  .counter {
+    padding: 1px 3px 1px 4px;
+	  text-align:center;
+	  text-decoration: none;
+	  font-weight:bold;
+	  .border-radius(0 0 0 4px);
+    font-size: 12px;
+    border-bottom: 1px solid #e3e3e3;
+    border-left: 1px solid #e3e3e3;
+    background-color: white;
+    A {
+	    color: #AAAAAA;
+    }
+	}
+
+  .badge-new {
+	  font-size: @fontSizeSmall;
+  }
+}
+
+.comment-pane .comment-separator {
+  position: relative;
+  margin-bottom: 0;
+  margin-left: 60px;
+  padding: 9px;
+  box-shadow: none;
+  background-color: #fff;
+  border-color: #e3e3e3;
+}
+
+/* The comment wrapper containing text */
+.comment-pane .dbcomment {
+
+  position:relative;
+  margin-bottom:0;
+  margin-left: 60px;
+  margin-top: 0;
+  word-wrap: break-word;
+
+  min-height: 20px;
+  padding: 9px;
+  border: @dbcomment-comment-border;
+  border-radius: @dbcomment-comment-border-radius;
+  background-color: @dbcomment-comment-bg;
+  border-color: #eee;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+  blockquote {
+    border-color: #ddd;
+    border-color: rgba(0,0,0,.15);
+  }
+
+  //The comment tail border
+  &:before {
+    content: "";
+    position: absolute;
+    left: -17px;
+    top: 13px;
+    border-right: 8px solid @dbcomment-comment-bg;
+    border-top: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+  }
+
+  // The comment tail background
+  &:after {
+    content: "";
+    position: absolute;
+    left: -16px;
+    top: 13px;
+    border-right: 8px solid @dbcomment-comment-bg;
+    border-top: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+  }
+
+  // The comment header containing meta informations
+  .comment-header {
+    margin-bottom: @baseline / 2;
+    margin-right: @baseline;
+    display: flex;
+    justify-content: space-between;
+
+
+    .comment-link {
+      color:#555555;
+    }
+    
+    .comment-right-info-container {
+	    display: flex;
+	    align-items: flex-start;
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+		}
+
+    .comment-info {
+      font-size: @fontSizeSmall;
+      margin-top: 9px;
+    	margin-right: 9px;
+    }
+
+    .comment-author A {
+      font-weight: bold;
+    }
+
+    .comment-vote {
+      font-size: @fontSizeSmall;
+    }
+    
+    A .jalios-icon {
+      color: @jalios-color-icon;
+    }
+  }
+
+  // Modifiers for private comment
+  &.comment-private {
+    background-color: @dbcomment-comment-private-bg;
+
+    .counter A {
+      color: @dbcomment-comment-private-counter-color;
+    }
+
+    &:after {
+      border-right-color: @dbcomment-comment-private-bg;
+    }
+
+    .label-comment-private {
+      background-color: @dbcomment-comment-private-label-bg;
+      vertical-align: middle;
+    }
+  }
+}
+
+/* The Form to add a new comment */
+.comment-form {
+  &.no-comment .comment-add-panel {
+	  margin-left: 0;
+  }
+
+  //Vertical line
+  &:before {
+    border: 0;
+    bottom: 10px;
+  }
+
+	.comment-btn-add {
+	  @quarterLineHeight: @baseLineHeight / 4;
+    border: 1px solid @inputBorder;
+    .border-radius(@borderRadiusSmall);
+    color: @gray;
+    display: block;
+    padding: @quarterLineHeight ;
+    cursor: text;
+    text-decoration: none;
+    background-color: white;
+    width: 100%;
+    text-align: left;
+    &:hover {
+      color: @gray;
+      text-decoration:none;
+    }
+	}
+
+	margin-bottom:0;
+	.comment-textarea{
+		width: 100%;
+	}
+}
+
+//Hide wiki inline edition if user cannot update the description
+.comment-pane .dbcomment .wiki-edit:hover .wiki-action.wiki-edit-section {
+  display: none;
+}
+
+.comment-pane.inline-update .dbcomment .wiki-edit:hover .wiki-action.wiki-edit-section {
+  display: block;
+}

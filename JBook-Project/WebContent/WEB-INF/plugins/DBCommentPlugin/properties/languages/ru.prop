@@ -1,0 +1,114 @@
+jcmsplugin.dbcomment.edit.lbl.add-comment:    Добавить комментарий
+jcmsplugin.dbcomment.edit.lbl.add-comment-verb:  Комментарий
+jcmsplugin.dbcomment.edit.lbl.create-comment: Опубликовать комментарий
+jcmsplugin.dbcomment.edit.lbl.cancel:         Отменить
+jcmsplugin.dbcomment.edit.lbl.link-top:       Наверх
+jcmsplugin.dbcomment.edit.lbl.comment-on:     Комментарий на {0}
+jcmsplugin.dbcomment.edit.lbl.title:          Комментарии
+jcmsplugin.dbcomment.edit.lbl.view-comment:   Просмотреть комментарии
+jcmsplugin.dbcomment.edit.lbl.disable-comment:  Выключить комментарий
+jcmsplugin.dbcomment.edit.lbl.enable-comment:   Включить комментарий
+jcmsplugin.dbcomment.edit.lbl.view-all-comments: {0,choice,0#Нет комментариев|1#Просмотреть комментарий|2#Просмотреть {0} комментария}
+jcmsplugin.dbcomment.edit.lbl.collapse-comments: Свернуть комментарии
+jcmsplugin.dbcomment.edit.lbl.warn.edit-moderation.disabled:        Текущий тип модерирования позволяет вам модифицировать не сам комментарий, а только другие поля. Тем не менее, вы можете обновить статус рабочего потока комментария.
+jcmsplugin.dbcomment.edit.follow:        Подписаться на публикацию
+
+jcmsplugin.dbcomment.lbl.comment:             Комментарий
+jcmsplugin.dbcomment.lbl.comments:            Комментарии
+jcmsplugin.dbcomment.lbl.comment-count:       {0,choice,0#Нет комментариев|1#{0} комментарий|2#{0} комментария}
+jcmsplugin.dbcomment.lbl.comment-count-text:  {0,choice,0#комментариев|1#комментарий|2#комментария}
+jcmsplugin.dbcomment.lbl.new:                 Не читать
+jcmsplugin.dbcomment.lbl.see-previous-comments: {0,choice,1#Смотреть предыдущий комментарий.|2#Смотреть {0} предыдущих комментария.}
+jcmsplugin.dbcomment.lbl.major-update-date:   Последняя главная модификация {0}
+jcmsplugin.dbcomment.lbl.private:             Личный
+jcmsplugin.dbcomment.lbl.private-description: Этот комментарий может быть прочитан членами группы "{0}".
+jcmsplugin.dbcomment.lbl.private-edit-tooltip: Включение личного комментария сделает этот комментарий доступным только для пользователей группы "{0}".
+jcmsplugin.dbcomment.lbl.non-visible-created-comment: Ваш комментарий был создан и сейчас проходит проверку.
+jcmsplugin.dbcomment.lbl.closed-comment:     Комментарии к этой публикации закрыты.
+
+jcmsplugin.dbcomment.commentTop-section:Чаще всего комментируемый контент
+jcmsplugin.dbcomment.commentTop-section.help: Топ 10 комментируемого контента
+jcmsplugin.dbcomment.commentTop.name:Заголовок
+jcmsplugin.dbcomment.commentTop.number: Комментарии
+
+# ----------------------------------------------------------------------
+# Alert
+# ----------------------------------------------------------------------
+alert.name.jcmsplugin-dbcomment:                              Комментарии
+alert.name.jcmsplugin-dbcomment.new-comment:                  Новый комментарий
+alert.msg.jcmsplugin-dbcomment.new-comment.title:             Новый комментарий к "{parent}"
+alert.msg.jcmsplugin-dbcomment.new-comment.short-description: {author} опубликовал новый комментарий к "{parent}". {parent.link}
+alert.msg.jcmsplugin-dbcomment.new-comment.description:       <p>{author} опубликовал новый {data}.</p>
+alert.name.jcmsplugin-dbcomment.new-mention:                  Новое упоминание
+alert.msg.jcmsplugin-dbcomment.new-mention.title:             Вы были упомянуты в новом комментарии к {parent}
+alert.msg.jcmsplugin-dbcomment.new-mention.short-description:  {author} упомянул вас в новом комментарии к "{parent}".{parent.link}
+alert.msg.jcmsplugin-dbcomment.new-mention.description:        <p>{author} упомянул вас в новом комментарии к "{parent.data}".</p> 
+alert.new-comment-mention.title:     Вы были упомянуты в новом комментарии к {parent}
+alert.new-comment-mention.short-description: {author} упомянул вас в новом комментарии к "{parent}".{parent.link}
+alert.new-comment-mention.description:       <p>{author} упомянул вас в новом комментарии к "{parent.data}".</p> 
+
+# ----------------------------------------------------------------------
+# Editable properties
+# ----------------------------------------------------------------------
+jcmsplugin.dbcomment.anonymous:               Анонимные комментарии
+jcmsplugin.dbcomment.anonymous.notify:        Уведомить анонимных пользователей
+jcmsplugin.dbcomment.compatible-types:        Комментируемые типы
+jcmsplugin.dbcomment.edit-moderation.enabled:  Режим строгого модерирования
+jcmsplugin.dbcomment.edit-moderation.enabled.boolean: ложь
+jcmsplugin.dbcomment.edit-moderation.enabled.help: Выбирая да, пользователи, которые имеют право обновлять комментарии, смогут обновлять все поля кроме содержания комментария. Только автор комментария будет иметь разрешение для изменения текст.
+
+jcmsplugin.dbcomment.edit-commentable.enabled: Позволить отключать комментарии к каждой публикации
+jcmsplugin.dbcomment.edit-commentable.enabled.boolean:ложь
+jcmsplugin.dbcomment.edit-commentable.enabled.boolean.help: Выбирая да, пользователи, которые имеют право обновлять комментарии, смогут обновлять все поля кроме содержания комментария.
+
+jcmsplugin.dbcomment.commentable-default-value: Включать или отключать комментарии: значение по умолчанию
+jcmsplugin.dbcomment.commentable-default-value.boolean.help: Если выбрать параметр "отключить комментарии к публикации", необходимо определить, будет ли публикация комментироваться по умолчанию или нет
+
+jcmsplugin.dbcomment.commentable.title : Комментарии
+jcmsplugin.dbcomment.commentable.description : Активировать комментарии
+jcmsplugin.dbcomment.commentable.desactivate-comment: Деактивировать комментарии к {0}
+jcmsplugin.dbcomment.commentable.activate-comment: Активировать комментарии к {0}
+jcmsplugin.dbcomment.commentable.forbidden-comment: Комментарии к целевому контенту деактивированы.
+
+jcmsplugin.dbcomment.private-comment.group: Личный комментарий - Группа
+jcmsplugin.dbcomment.private-comment.group.help: Группа, которая сможет публиковать и читать личные комментарии
+jcmsplugin.dbcomment.private-comment.enabled: Личный комментарий - Включить личные комментарии
+jcmsplugin.dbcomment.private-comment.default-value: Личный комментарий - Значение по умолчанию для личных комментариев
+jcmsplugin.dbcomment.private-comment.default-value.help: Выбирая да, выбор личного комментария будет установлен на "да" при создании нового комментария
+
+jcmsplugin.dbcomment.reverse-order: Обратный порядок сортировки
+jcmsplugin.dbcomment.reverse-order.help: При выборе «да» сначала будут видны старые комментарии
+jcmsplugin.dbcomment.change-sort: Сортировка - Выбранное поле
+jcmsplugin.dbcomment.change-sort.help: Сортировать комментарии по выбранному полю
+
+jcmsplugin.dbcomment.smart.comment-display.enabled: Активировать умный дисплей комментария
+jcmsplugin.dbcomment.smart.comment-display.enabled.boolean: ложь
+jcmsplugin.dbcomment.smart.comment-display.enabled.help: Эта система скрывает старые комментарии к публикации
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From DBComment-templates.xml
+types.DBComment.templates.query.default.label: Шаблон по умолчанию
+types.DBComment.templates.full.default.label: Шаблон по умолчанию
+
+# From DBComment.xml
+types.DBComment.fields.email.description: Адрес не будет опубликован
+types.DBComment.fields.email.label: Электронный адрес
+types.DBComment.title.label: Заголовок
+types.DBComment.fields.referer.label: Реферер
+types.DBComment.fields.ipAddress.label: IP-адрес
+types.DBComment.fields.name.label: Имя
+types.DBComment.fields.targetContent.label: Целевой контент
+types.DBComment.fields.userAgent.label: Пользовательский агент
+types.DBComment.label: Комментарий
+types.DBComment.fields.webSite.label: Веб-сайт
+types.DBComment.fields.description.label: Комментарий
+types.DBComment.fields.privateComment.label: Личный комментарий
+
+# SmartPhone
+jcmsplugin.dbcomment.smartphone.lbl.dbcomment.add-comment.placeholder: Добавить комментарий...
+
+# Explorer sidebar integration
+jcmsplugin.explorer-sidebar.see-comments: Войти в комментарии
+jcmsplugin.explorer.app.sidebar-tab.comments: Комментарии

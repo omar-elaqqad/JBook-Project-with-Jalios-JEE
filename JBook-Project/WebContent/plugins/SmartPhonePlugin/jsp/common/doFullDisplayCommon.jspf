@@ -1,0 +1,8 @@
+<%@ page import="com.jalios.jcms.vote.*" %><%-- 
+--%><% 
+request.setAttribute("jcms.plugin.smartphone.fulldisplay.pub", pub);
+
+//Vote
+int voteCount = com.jalios.jcms.vote.VoteManager.getInstance().getVoteCount(pub);
+boolean canVote = com.jalios.jcms.vote.VoteManager.getInstance().canVote(pub, loggedMember);  
+%>

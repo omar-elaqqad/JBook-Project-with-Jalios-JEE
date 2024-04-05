@@ -1,0 +1,9 @@
+<% if (Util.notEmpty(newsPqf)) { %>
+<% 
+  request.setAttribute("jcms.plugin.smartphone.newsPqf",newsPqf);
+  request.setAttribute("jcms.plugin.smartphone.newsPqf.workspace",workspace);
+%>
+<div data-role="content" class="smartphone-news-wrapper">
+  <jalios:include jsp="plugins/SmartPhonePlugin/jsp/action/showNews.jsp"/>
+</div>   
+<% } %>

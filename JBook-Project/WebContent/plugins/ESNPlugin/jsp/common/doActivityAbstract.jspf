@@ -1,0 +1,35 @@
+<%@page import="java.text.MessageFormat"%><%
+if (itActivityEntry.showAbstract(userLang) && activityShowAbstract) {
+  Publication pub = itActivityEntry.getPublication();
+  boolean isTodayPub = DateUtil.isSameDay(pub.getPdate(), new Date());
+  String dataImage = pub.getDataImage();
+  
+  boolean displayDataImage = Util.notEmpty(dataImage) && !displayDedicatedMedia;
+  // Do not display dataImage if doc is a Media, and the activity body will also show the media preview
+  // (prevent duplicate dataImage/preview)
+  boolean showDocBodyPreview = activityShowMedia && pub instanceof FileDocument && ((FileDocument)pub).isMedia() && (itActivity.getProperty().startsWith("jcmsplugin.esn.activity.create.") || itActivityEntry.isTodayActivity());
+  displayDataImage &= !showDocBodyPreview;
+  String accessActivityAbstractDataLinkAriaLabel = "";
+  if (itActivityEntry.getPublication() != null) {
+    accessActivityAbstractDataLinkAriaLabel = MessageFormat.format("aria-label=''{0}''",
+        encodeForHTMLAttribute(
+            glp("jcmsplugin.esn.activity-card.activity-data-link.for-aria-label", itActivityEntry.getPublication().getDataName(userLang))));
+  }
+%>
+<div class="media activity-body-item activity-abstract activity-toggler<%= !isTodayPub && (isActionActivity && !hasTodayComments) ? " hide" : ""%>">
+  <% if (displayDataImage) { %>
+    <div class="activity-abstract-thumbnail">
+      <jalios:link data="<%= pub %>" css="img-thumbnail" htmlAttributes='<%= accessActivityAbstractDataLinkAriaLabel %>'>
+        <jalios:thumbnail path='<%= dataImage %>' width='120' height='90' alt=''><%
+          %><jalios:icon src="image" alt='' /><%
+        %></jalios:thumbnail>
+      </jalios:link>
+    </div>
+  <% } %>
+  <div class="media-body">
+    <jalios:include target="ACTIVITY_ABSTRACT_BEFORE" />
+    <%@ include file="/front/publication/doPublicationAbstract.jspf" %>
+    <jalios:include target="ACTIVITY_ABSTRACT_AFTER" />
+  </div>
+</div>
+<% } %>

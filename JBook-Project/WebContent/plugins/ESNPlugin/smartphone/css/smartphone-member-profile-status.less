@@ -1,0 +1,33 @@
+.member-profile {
+
+  .profile-status {
+    .mbr-status {
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      color: transparent;
+      border-radius: 50%;
+      border: 1px solid #FFFFFF;
+      line-height: 0.8;
+    }
+    .mbr-status-0 { background-color: @jalios-member-status-0; }
+    .mbr-status-1 { background-color: @jalios-member-status-1; }
+    .mbr-status-2 { background-color: @jalios-member-status-2; }
+    .mbr-status-3 { background-color: @jalios-member-status-3; }
+  }
+  
+  // default, mobile, wrap on new line
+  // more width, reset
+  .profile-status {
+    float: left;
+    @media (min-width: @screen-md-min) {
+      float: none;
+    }
+    .mbr-status {
+      @media (min-width: @screen-md-min) {
+        margin-left: 8px;
+        margin-right: 3px;
+      }
+    }
+  }
+} // .member-profile

@@ -1,0 +1,10 @@
+<ul data-role="listview" data-filter-placeholder="<%= glp("jcmsplugin.smartphone.action.filter") %>">
+  <jalios:foreach collection="<%= pubSet %>" name="itPub" type="Publication" max="10">
+  <li>
+    <a class="link" href="plugins/SmartPhonePlugin/jsp/service/workflow/workflowUpdate.jsp?id=<%= itPub.getId() %>">
+      <h2><jalios:dataicon data="<%= itPub %>" /> <%= itPub.getTitle(userLang) %></h2>
+      <div class="txt-info"><%= itPub.getWFStateLabelHtml(userLang) %> &middot; <%= itPub.getAuthor() %> &middot; <jalios:date format="timeDateOrTime" date="<%= itPub.getPdate() != null ? itPub.getPdate() : itPub.getCdate() %>"/></div>
+    </a>
+  </li>          
+  </jalios:foreach>
+</ul>

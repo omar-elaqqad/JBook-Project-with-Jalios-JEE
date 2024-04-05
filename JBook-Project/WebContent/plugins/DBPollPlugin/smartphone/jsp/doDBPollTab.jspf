@@ -1,0 +1,18 @@
+<%
+String searchText = appHandler.getText();
+String inputClass = "dbpoll-" + appHandler.getSelectedTab().toLowerCase() + "-search-filter-input";
+String autocompleteUrl = "plugins/DBPollPlugin/smartphone/jsp/doDBPollCatalog.jsp?status=" + appHandler.getSelectedTabRelatedStatus();
+%>
+
+<%-- Search Input --%>
+<form class="ui-filterable search-form">
+  <div class="colored-banner input-in-header smartphone-autocomplete-filter-input-wrapper">
+    <input name="text" value="<%= Util.notEmpty(searchText) ? searchText : ""  %>" class="<%= inputClass %> no-focus search-topbar-desktop-input append-text autocomplete-reset-input" data-type="search" placeholder="<%= glp("jcmsplugin.dbpoll.search.placeholder") %>">
+  </div>
+</form>
+
+<div data-role="content">
+  <ul data-jalios-autocomplete="<%= autocompleteUrl %>" class="autocomplete ajax-autocomplete ui-listview-enhanced padded-content" data-role="listview" data-inset="false" data-filter="true" data-autodividers="true" data-input=".<%= inputClass %>">    
+    <jalios:appBodyInclude jsp="<%= autocompleteUrl %>"/>
+  </ul>
+</div>

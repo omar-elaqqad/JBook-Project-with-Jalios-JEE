@@ -1,0 +1,51 @@
+// Include "generated file" message for CSS output
+/* ----------------------------------------------------------------------------- */
+/*  This file has been automatically generated from cs-workspace-group-list.less */
+/* ----------------------------------------------------------------------------- */
+@import "../../../css/jalios/core/init-mixins.less";
+
+.workspace-group-list {
+  .wrapper {
+    // ToggleManager
+    .ws-close { display: block; }
+    .ws-open { display: none; }
+    &.group-show .ws-close { display: none; }
+    &.group-show .ws-open { display: block; }
+  }
+  UL {
+  
+    &.workspaces-container {
+    
+      margin: 10px 0;
+      
+      .workspace {
+        margin-bottom: 5px;
+        
+        IMG.toggle-icon {
+          margin: 0 5px;
+        }
+        .workspace-label {
+          margin-left: 5px;
+        }
+        .group-name {
+          font-weight: normal;
+          margin-left: 5px;
+          &.default-group {
+            font-style: italic;
+          }
+        }
+        UL.group-list {
+          margin-left: 35px;  
+          .group-icon {
+            margin-left: 5px;
+          }
+        }
+        INPUT.group-checker {
+          margin-top: 0;
+          margin-left: 5px;
+        }
+
+      } // .workspace
+    }
+  }
+}

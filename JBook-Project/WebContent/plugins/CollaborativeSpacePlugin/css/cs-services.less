@@ -1,0 +1,109 @@
+// Include "generated file" message for CSS output
+/* ------------------------------------------------------------------------- */
+/*  This file has been automatically generated from cs-services.less         */
+/* ------------------------------------------------------------------------- */
+
+// Include variables and mixins
+@import '../../../css/jalios/core/init-mixins.less'; // Use init-mixins.less if more mixins are required
+
+// -------------------------------------------------------------------
+// PLUGINS LESS VARIABLES
+// -------------------------------------------------------------------
+@cs-service-application-bg-color: @brand-info;
+@cs-service-dashboard-bg-color: @brand-success;
+
+// Hook for JCMS
+@import '../../../css/plugin.less';
+
+// -------------------------------------------------------------------
+//  PLUGIN CSS DECLARATION
+// -------------------------------------------------------------------
+
+//CARD
+.app .cs-services .card-inline-layout:not(.is-centered) .card-flip-wrapper {
+  margin-bottom: 0;
+}
+.cs-services {
+  .navbar-form .btn.btn-default > .jalios-icon {
+    margin-right: 4px;
+  }
+
+  .navbar-form.navbar-left {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .card-block-footer {
+    form {
+      height: 100%;
+    }
+
+    .actions {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .edit-application {
+      position: absolute;
+      right: 4px;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .card-cs-service {
+    &.card {
+      height: 284px;
+    }
+
+    .label.service-application {
+      .label-variant(@cs-service-application-bg-color);
+    }
+    .label.service-dashboard {
+      .label-variant(@cs-service-dashboard-bg-color);
+    }
+
+    .cs-service-installed-icon {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 50px 50px 0 0;
+      border-color: #4cd963 transparent transparent transparent;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .jalios-icon.jcmsplugin-collaborativespace-service-card-installed {
+      position: absolute;
+      top: -43px;
+      left: 6px;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+  .service-actions {
+    text-align: center;
+  }
+
+  .services-menu {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.servicePreviewShield {
+  position: absolute;
+  background: url('../../../s.gif');
+  width: 100%;
+  height: 100%;
+  z-index: 42;
+  margin: 0 -15px;
+}

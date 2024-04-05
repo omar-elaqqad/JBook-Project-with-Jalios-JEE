@@ -1,0 +1,20 @@
+.label {
+  font-size: @font-size-small;
+  background-color: #777777;
+  text-shadow: none;
+  font-weight: normal;
+  line-height: normal;
+  border-radius: 3px;
+  padding: 1px 6px;
+  font-size: 12px;
+  
+  &.label-danger {
+    .label-variant(@label-danger-bg);
+  }
+  &.label-mbr-contact {
+    .label-variant(@label-default-bg);
+  }
+  &.label-mbr-guest {
+    .label-variant(@label-danger-bg);
+  }
+}

@@ -1,0 +1,22 @@
+<%@page import="com.jalios.util.Util"%>
+<%@ page import="com.jalios.jcmsplugin.collaborativespace.*" %><%
+
+String csAccessLevel = "";
+CollaborativeSpace cs = CSManager.getInstance().getCollaborativeSpace(workspace);
+
+if (Util.notEmpty(cs)) {
+  
+  if (CSHelper.isPublic(cs)) {
+    csAccessLevel = "public";
+  }
+  else if (CSHelper.isSecret(cs)) {
+    csAccessLevel = "secret";
+  } else if (CSHelper.isPrivate(cs)) {
+    csAccessLevel = "private";  
+  }
+
+  request.setAttribute("smartphone.plugin.cs.workspace.access.level", csAccessLevel);
+  
+}
+
+%>

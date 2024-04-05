@@ -1,0 +1,127 @@
+jcmsplugin.dbpoll.btn.vote:            Votez
+jcmsplugin.dbpoll.lbl.vote:            Votează
+jcmsplugin.dbpoll.lbl.open:            Deschide acest sondaj
+jcmsplugin.dbpoll.lbl.close:           Închide acest sondaj
+jcmsplugin.dbpoll.lbl.show-result:     Arată rezultatele
+jcmsplugin.dbpoll.lbl.vote-cnt:        {0,choice,0#0 voturi|1#1 vot|2#{0,number,integer} voturi}
+jcmsplugin.dbpoll.lbl.dates:           Sondaj de la {0} până la {1}
+jcmsplugin.dbpoll.lbl.all-polls:       Toate sondajele
+jcmsplugin.dbpoll.lbl.all-polls-ws:    Toate sondajele în {0}
+jcmsplugin.dbpoll.lbl.view-all-polls:  Vezi toate sondajele
+jcmsplugin.dbpoll.lbl.view-all-polls-ws:  Vezi toate sondajele din spaţiul de lucru curent
+jcmsplugin.dbpoll.lbl.vote-title:      Votează pentru {0}
+jcmsplugin.dbpoll.lbl.create-poll:     Publică un sondaj nou
+jcmsplugin.dbpoll.msg.option-change:   Nu poţi modifica opţiunile sondajului, deoarece anumiţi utilizatori au votat deja pentru opţiunile curente.
+jcmsplugin.dbpoll.msg.already-voted:   Ai votat deja în acest sondaj.
+jcmsplugin.dbpoll.msg.no-result:       Acest sondaj nu a primit încă niciun vot.
+jcmsplugin.dbpoll.msg.choose-option:   Trebuie să alegi o opțiune pentru a vota.
+jcmsplugin.dbpoll.msg.closed-poll:     Acest sondaj s-a încheiat, nu poți vota.
+jcmsplugin.dbpoll.msg.poll-loop:       Nu poți pune un sondaj în propria descriere.
+
+jcmsplugin.dbpoll.modal.step1:         Opţiuni sondaj
+jcmsplugin.dbpoll.modal.step2:         Recomandă sondajul
+jcmsplugin.dbpoll.modal.btn.publish:   Publică
+jcmsplugin.dbpoll.modal.btn.publish.alt:  Publică sondajul
+jcmsplugin.dbpoll.modal.btn.next.alt:  Publică sondajul şi recomandă-l...
+jcmsplugin.dbpoll.modal.success-info:  Sondajul tău a fost creat şi poate fi accesat aici: {0}
+
+jcmsplugin.dbpoll.publish-menu.add-poll: Sondaj
+
+jcmsplugin.dbpoll.cs.options:  Adaugă cel puţin două opţiuni pentru acest sondaj
+jcmsplugin.dbpoll.cs.optionsml:  Adaugă cel puțin două opțiuni pentru acest sondaj (la {0})
+
+jcmsplugin.dbpoll.search.placeholder: Caută un sondaj...
+
+jcmsplugin.dbpoll.app.title: Sondaje
+
+jcmsplugin.dbpoll.app.no-result-welcome: Bun-venit la aplicația Polls
+
+jcmsplugin.dbpoll.app.catalog.title: Sondaje
+jcmsplugin.dbpoll.app.catalog.root: Acasă
+jcmsplugin.dbpoll.app.catalog.btn.add-poll: Adaugă un sondaj
+jcmsplugin.dbpoll.app.catalog.polls-number: {0} {0,choice,0#|1#sondaj|2#sondaje}
+
+jcmsplugin.dbpoll.app.card.closed-poll: Sondaj completat
+
+jcmsplugin.dbpoll.app.filter.status.all: Toate sondajele
+jcmsplugin.dbpoll.app.filter.status.opened: Sondaje în curs
+jcmsplugin.dbpoll.app.filter.status.closed: Sondaje completate
+jcmsplugin.dbpoll.app.filter.mbr:        Adăugată de...
+jcmsplugin.dbpoll.app.filter.begin-date: Adăugat după...
+jcmsplugin.dbpoll.app.filter.end-date:   Adăugat înainte...
+jcmsplugin.dbpoll.app.filter.workspace:  Adăugat în spațiu de lucru...
+
+# ------------------------------------------------------------
+#  Unified insert
+# ------------------------------------------------------------
+unified-insert.items.poll: Sondaj
+unified-insert.items.poll.longtitle: Un sondaj
+unified-insert.items.poll.subtitle:
+
+# ------------------------------------------------------------
+#  Smartphone
+# ------------------------------------------------------------
+jcmsplugin.smartphone.dbpoll: Sondaje
+jcmsplugin.smartphone.dbpoll.navbar.opened: Sondaje în curs
+jcmsplugin.smartphone.dbpoll.navbar.closed: Sondaje completate
+
+# ------------------------------------------------------------
+#  Recommendation
+# ------------------------------------------------------------
+alert.name.recommendation.dbpoll-recommendation:                      Invitaţie pentru a răspunde la sondaj
+alert.msg.recommendation.dbpoll-recommendation.title:                 Invitație pentru a răspunde la sondaj: {data}
+alert.msg.recommendation.dbpoll-recommendation.short-description:     {author} te-a invitat să răspunzi la sondajul {data}.{data.url}
+alert.msg.recommendation.dbpoll-recommendation.description:           <p>{author} te-a invitat să răspunzi la sondajul {data}.</p>
+jcmsplugin.dbpoll.recommendation.Poll:                                Invită membri să răspundă la sondaj: {0}
+
+# ------------------------------------------------------------
+#  ESN
+# ------------------------------------------------------------
+jcmsplugin.esn.activity.form-tab.poll: Sondaj
+
+# ------------------------------------------------------------
+#  Shortcuts
+# ------------------------------------------------------------
+data.$id.shortcut.jcmsplugin.dbpoll.title: Sondaje
+data.$id.shortcut.jcmsplugin.dbpoll.text: Aplicație gestionare sondaje
+
+# ------------------------------------------------------------
+#  Plugin label and description
+# ------------------------------------------------------------
+plugin.DBPollPlugin.label: Plugin sondaj
+plugin.DBPollPlugin.description: Acest plugin îți permite să creezi sondaje rapide. Sondajele sunt afișate prin portletul Sondaje. Voturile sunt stocate în RDBMS.
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From Poll.xml
+types.Poll.title.description: Titlu sondaj
+types.Poll.fields.description.label: Descriere
+types.Poll.label: Sondaj
+types.Poll.fields.options.description: Opţiunile de vot.
+types.Poll.fields.description.description: O scurtă descriere a sondajului (apare între întrebare şi opţiuni)
+types.Poll.description: Un mini-sondaj cu întrebare unică
+types.Poll.fields.options.label: Opțiuni
+types.Poll.title.label: Titlu
+types.Poll.fields.image.label: Imagine
+types.Poll.fields.image.description: O imagine opţională pentru descrierea acestui sondaj.
+types.Poll.fields.closed.label: Închide sondajul
+types.Poll.fields.closed.onLabel: Da
+types.Poll.fields.closed.offLabel: Nu
+types.Poll.fields.closed.description: Trebuie închis sondajul?
+
+# From PortletPoll.xml
+types.PortletPoll.fields.refineWorkspace.labelList: Afişează ultimul sondaj din spaţiul de lucru|Afişează ultimul sondaj din toate spaţiile de lucru
+types.PortletPoll.fields.poll.label: Sondaj
+types.PortletPoll.title.description: Titlu
+types.PortletPoll.description: Acest portlet afişează un sondaj, apoi rezultatele curente după ce votarea se încheie.
+types.PortletPoll.fields.poll.description: Sondajul care trebuie afişat (dacă nu este marcat, afişează ultimul sondaj publicat)
+types.PortletPoll.fields.refineWorkspace.description: Afişează ultimul sondaj din spaţiul de lucru curent sau din toate spaţiile de lucru.
+types.PortletPoll.label: Portlet sondaj
+types.PortletPoll.title.label: Titlu
+types.PortletPoll.fields.refineWorkspace.label: Definește mai precis
+types.PortletPoll.fields.hideWhenNoResults.label: Ascunde portletul dacă nu există sondaje
+types.PortletPoll.fields.hideWhenNoResults.onLabel: Da
+types.PortletPoll.fields.hideWhenNoResults.offLabel: Nu
+types.PortletPoll.fields.hideWhenNoResults.description: Dacă nu există sondaje de afișat, ascunde portletul.

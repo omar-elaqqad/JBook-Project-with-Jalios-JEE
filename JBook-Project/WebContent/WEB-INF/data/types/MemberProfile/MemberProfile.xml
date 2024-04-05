@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<type name="MemberProfile" superclass="com.jalios.jcmsplugin.esn.AbstractMemberInfo" categoryTab="false" readRightTab="false" updateRightTab="false" templateTab="false" workflowTab="true" advancedTab="true" database="true" hbm="true">
+  <title ml="false" searchable="false" />
+  <fields>
+    <field name="introduction" editor="textarea" required="false" type="String" searchable="true" wiki="true" rows="5" cols="80" compactDisplay="false" ml="false" descriptionType="tooltip" abstract="true" truncate="400" html="false" checkHtml="true" />
+    <field name="interest" editor="textfield" required="false" compactDisplay="false" type="List&lt;String&gt;" searchable="true" rows="5" cols="80" ml="false" wiki="true" html="false" checkHtml="true" descriptionType="tooltip" />
+    <field name="dateOfBirth" editor="date" required="false" compactDisplay="false" type="java.util.Date" future="true" past="true" dateOnly="true" dateFormat="short" ml="false" descriptionType="tooltip" searchable="false" html="false" checkHtml="true" />
+    <field name="dateOfArrival" editor="date" required="false" compactDisplay="false" type="java.util.Date" future="true" past="true" dateOnly="true" dateFormat="short" ml="false" descriptionType="tooltip" searchable="false" html="false" checkHtml="true" />
+  </fields>
+</type>
+

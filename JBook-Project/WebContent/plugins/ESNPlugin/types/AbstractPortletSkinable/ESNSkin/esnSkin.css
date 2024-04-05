@@ -1,0 +1,131 @@
+
+.esnSkin { 
+	font-family: Arial,Helvetica,sans-serif;
+	background-color: #FFF;
+	border-radius: 8px;
+  -moz-border-radius: 8px;	
+}
+
+/* HEADER */
+
+.esnSkin .skinHeader { 
+	padding: 6px; 
+	overflow:hidden; 
+	border-bottom: 1px solid #dce8f2;
+	background:#fff url(images/bg-portlet-header.gif) repeat-x 0 -17px;
+	
+	border: 1px solid #dce8f2;
+	border-radius:                  8px 8px 0 0;
+	-moz-border-radius:             8px 8px 0 0;
+  -webkit-border-top-left-radius: 8px;
+  -webkit-border-top-right-radius: 8px;
+	height: 17px;
+}
+
+    
+.esnSkin .skinHeader .skinTitle {
+  float:          left;
+  margin:         0;  
+  padding-right:  4px;  
+  font-family:    Arial,Helvetica,sans-serif;
+  font-size:      14px;
+  font-weight:    bold;
+  letter-spacing: -0.01em;
+  color:          #777;
+}
+
+.esnSkin .skinHeader .menu {
+  overflow:hidden; 
+  float:right; 
+  margin-top:1px;
+}
+
+.esnSkin .skinHeader .menu .count { 
+	display:block; 
+	padding:0px 6px;
+	text-align:center;
+	text-decoration: none;
+	
+  color:#fff; 
+  border-bottom:none; 
+  font-size:12px; 
+  font-weight:bold;
+	
+	background-color: #BBB;
+	
+	border: 1px solid #BBB;
+  border-radius:         8px;
+	-moz-border-radius:    8px;
+  -webkit-border-radius: 8px;   
+     
+}
+
+
+.esnSkin .skinHeader .menu A.count  { 
+  color:#fff; 
+  background-color: #0088FF;
+  border: 1px solid #0088FF;
+}
+
+.esnSkin .skinHeader .menu .count.warn, 
+.esnSkin .skinHeader .menu A.count.warn { 
+  color:#fff; 
+  background-color: #EE0000;
+  border: 1px solid #EE0000;
+}
+
+
+/* CONTENT */
+.esnSkin .skinContent {
+	padding: 2px 4px;
+  border: 1px solid #dce8f2;
+}
+
+.esnSkin .skinContent .result{
+	padding: 4px 6px; 
+	overflow:hidden;
+	background-color:#fff; 
+	border-bottom:1px solid #EEE;
+}
+
+.esnSkin .skinContent .result .wrapper-photo{
+	float:left; 
+	min-width:30px; 
+	margin-right:1.0em; 
+}      
+.esnSkin .skinContent .details{ 
+	min-width:100px; 
+	overflow:hidden;
+}   
+.esnSkin .skinContent .details h4{
+	margin-bottom:0.375em;
+}
+.esnSkin .skinContent .details p {
+	font-size:8px; line-height:1.2; /* 12×0.916em = 11px */
+}
+
+
+/* FOOTER */
+.esnSkin .skinContent.noFooter {
+  border: 1px solid #dce8f2;
+  border-top: 1px solid #F7F7F7;
+  
+  -moz-border-radius: 0 0 8px 8px;
+  -webkit-border-radius: 0 0 8px 8px;	
+}
+
+.esnSkin .skinFooter{
+	margin: 0;
+	padding:0 6px 2px 2px;
+	text-align:right;
+	font-size: 9pt;
+	background-color: #F7F7F7;
+	
+  border: 1px solid #dce8f2;
+  border-top: 0px;
+  border-radius:                     0 0 8px 8px;
+  -moz-border-radius:                0 0 8px 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+}
+

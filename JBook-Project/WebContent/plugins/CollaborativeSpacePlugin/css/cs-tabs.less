@@ -1,0 +1,84 @@
+// Header navigation Tabs for a Collaborative Space Portal
+
+
+#cs-header-tabs {
+
+  UL.nav-tabs {
+    background: rgba(0,0,0, 0.2);
+    margin-bottom: 0; // Cancel JCMS margin bottom
+    padding: 0 10px 0 20px;  // Add left and right space
+    position: relative;
+    
+    @media (max-width: (@cs-header-title-min - 1)) {
+      // In extra small screen, keep aligned title, search input (BS gutter are reduced from 15 to 10px)
+      padding-left: 0;
+    }    
+    border-bottom: 0 none;
+    
+    & > LI {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+      transition: color 200ms ease-in, background-color 200ms ease-in;
+      color: white;
+      &:after {
+        opacity: 0;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: 4px;
+        width: 100%;
+        left: 0;
+        background-color: white;
+        transition: opacity 200ms ease-in;
+      }
+      
+      .btn-application-menu,
+      .btn-application-menu .jalios-icon{
+        color: inherit;
+      }
+      
+      & > A {
+        color: inherit;
+        font-size: 16px;
+        line-height: 22px;
+        border-bottom: 5px solid transparent;
+        border: 0 none;
+        background-color: transparent;
+        padding: 14px 15px;
+        cursor: pointer;
+        transition: color 200ms ease-in;
+        margin-right: 0;
+      }
+      &.active {
+        padding-right: 4px;
+      }
+      
+      &.active,
+      &.active-child,
+      &:hover {
+        opacity: 1;
+        background-color: rgba(25, 25, 25, 0.25);
+        border-radius: 0;
+        border: 0 none;
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+    
+    // Hide items on droptable
+    UL.dropdown-menu {
+      .tab-menu, 
+      .add-application-tab {
+        display: none;
+      }
+    }
+  }
+  
+  
+  // Actions
+  .ui-item-edit-collaborative-space-portal-simple-stop{
+    display:none;
+  }
+}

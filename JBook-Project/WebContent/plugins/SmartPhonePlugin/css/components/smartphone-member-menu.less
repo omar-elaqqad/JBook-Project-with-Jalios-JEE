@@ -1,0 +1,156 @@
+.member-menu-wrapper {
+  transition: transform 350ms ease-in;
+  transform: translateX(-100vw);
+
+  &.is-closing.is-displayed {
+    transform: translateX(-100vw);
+
+    .topbar-my-day-overlay {
+      opacity: 0;
+    }
+  }
+
+  &.is-displayed {
+    z-index: 910;
+    transform: translateX(0);
+  }
+
+  .member-menu-main {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .topbar-my-day-overlay {
+    //transition: opacity 100ms ease-in;
+    opacity: 0.3;
+    height: @topbar-height;
+    flex: 1;
+    background-color: #000;
+  }
+
+  display: flex;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  flex-direction: column;
+
+  .member-menu-wrapper-top {
+    height: @topbar-height;
+    background-color: #00000045;
+
+    &.close-menu {
+      background-color: white;
+      height: @topbar-height;
+      display: block;
+      width: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.hamburger.is-active {
+        &:hover {
+          opacity: 1;
+        }
+
+        .hamburger-inner {
+          &::before {
+            top: -4px;
+            left: 4px;
+          }
+
+          &::after {
+            top: 4px;
+            left: 4px;
+          }
+        }
+      }
+
+      .hamburger-box {
+        .hamburger-inner {
+          height: 2px;
+          width: 100%;
+
+          &::after {
+            width: 100%;
+            bottom: -7px;
+            height: 2px;
+          }
+
+          &::before {
+            width: 100%;
+            top: -7px;
+            height: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  .member-menu-wrapper-tabs {
+    margin-left: 0;
+    height: calc(~"100%"- @topbar-height);
+    margin-top: -1px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+
+    .nav-tabs {
+      margin-bottom: 0;
+    }
+  }
+
+  .member-menu-tabs-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+
+    .ui-btn {
+      flex-shrink: 0;
+    }
+
+    > .tab-content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      .tab-pane.active {
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
+        padding-top: 16px;
+        padding-bottom: 32px;
+      }
+    }
+  }
+}
+
+.member-menu-tabs-wrapper > .nav-tabs > li > a {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+
+  .jalios-icon {
+    font-size: 36px;
+    color: #333;
+    width: 40px;
+    height: 40px;
+    fill: #d2d2d2;
+  }
+
+  .wrapper-photo {
+    margin-bottom: 8px;
+  }
+}
+
+.member-menu-tabs-wrapper > .nav-tabs > li.active > a {
+  .jalios-icon {
+    fill: @jalios-color-blue;
+  }
+}

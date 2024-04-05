@@ -1,0 +1,29 @@
+<%@page import="generated.CollaborativeSpace"%>
+<%@page import="com.jalios.jcms.taglib.settings.impl.BooleanSettings"%>
+<%@page import="java.util.Arrays"%><%
+%><%@page import="com.jalios.util.Util"%><%
+if (step == CreateSpaceHandler.MODEL_STEP) {%>
+	<%
+  Set<Category> typoSet = csMgr.getTypologies(loggedMember);
+	String[] modelValues = formHandler.getModelValues();
+  boolean typologyExists = Util.notEmpty(typoSet);
+  boolean hasMultipleModels = typologyExists && Util.getSize(modelValues) >= 2;
+
+	if (formHandler.isParentMode()) {
+    String parentWsId = formHandler.getAvailableParent();
+    Workspace parentWs = channel.getWorkspace(parentWsId);
+    %><p><%
+      %><%= glp("jcmsplugin.collaborativespace.create-sub.steps.1.intro" + (formHandler.canCreateCS() ? "" : "-request"), parentWs.getTitle(userLang)) %><%
+      CollaborativeSpace csBadge = csMgr.getCollaborativeSpace(parentWs);
+      %> <%@ include file="/plugins/CollaborativeSpacePlugin/jsp/doCSBadge.jspf" %><%
+    %></p><%
+  }
+	%>
+  <% request.setAttribute("display-mode", "field-horizontal"); %>
+  <% request.setAttribute("field-horizontal", true); %>
+  <% request.setAttribute("is-creation", true); %>
+  <jalios:include jsp="plugins/CollaborativeSpacePlugin/jsp/doCSModelSelection.jsp" />
+  <% request.removeAttribute("is-creation"); %>
+  
+  
+<%}%>

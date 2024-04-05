@@ -1,0 +1,168 @@
+.member-profile {
+
+  margin: 0 auto;
+  
+  .member-profile-inner {
+    margin: 0 auto;
+    max-width: 1180px;
+    width: 100%;
+  }
+  
+  .profile-header-left {
+    padding-top: 10px;
+    padding-left: 10px;
+    color: #FFFFFF;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    .text-overflow();
+  }
+  .profile-header-top {
+    position: relative;
+    height: @esn-smartphone-profile-header-top-height;
+    background-color: @esn-smartphone-profile-header-top-bg;
+    margin-bottom: 30px;
+  } // .profile-header-top
+
+  // -- Header
+  &.is-account .profile-header-top {
+    background-color: @esn-profile-account-bg;
+  }
+  &.is-contact .profile-header-top {
+    background-color: @esn-profile-contact-bg;
+  }
+  &.is-guest .profile-header-top {
+    background-color: @esn-profile-guest-bg;
+  }
+  // ESN-666: .is-disabled AFTER .is-guest rule so that it overrides it
+  &.is-disabled .profile-header-top {
+    background-color: @esn-profile-disabled-bg;
+  }
+  .profile-header {
+    color: @text-color;
+    background-color: @esn-smartphone-profile-header-bg;
+  } // .profile-header
+
+  .profile-header-title P {
+    margin-bottom: 0;
+  }
+
+  .profile-header-item {
+    padding-bottom: 10px;
+  }
+
+  .profile-header-left-info {
+    max-width: 100%;
+  }
+
+  .profile-member-type + .profile-status {
+    @media (min-width: @screen-md-min) {
+      margin-left: 20px;
+    }
+  }
+
+  // -- Body
+  .profile-body {
+    position: relative;
+  }
+  .profile-body-inner {
+    position: relative;
+    background-color: @esn-smartphone-profile-bg;
+    padding-bottom: @baseline;
+  }
+  
+  .section-title,
+  .section-subtitle {
+    padding-bottom: 10px;
+  }
+  .section-title {
+    font-size: @font-size-h4;
+    border-bottom: 1px solid #CCC;
+    margin-bottom: @baseline;
+    .esn-action {
+      float: right;
+      font-size: @font-size-base;
+    }
+  }
+  .section-subtitle {
+    font-size: @font-size-h5;
+    margin-bottom: @padding-base-vertical;
+  }
+
+  .no-suggestion {
+    text-align: center;
+  }
+
+  // -------------------------------------------------------------------
+  //  Element queries
+  // -------------------------------------------------------------------
+
+  .profile-header-details {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .profile-name {
+    margin: 0px 0px 10px 0px;
+    text-align: center;
+    color: #000000; 
+  }
+  .profile-function-company {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .profile-coordonnees-item {
+    text-align: center;
+    .jalios-icon.telephone.halflings-earphone {
+      // align this particular icon to look aligned with others
+      vertical-align: middle;
+    }
+    .jalios-icon.jcmsplugin-esn-profile-address.icomoon-location {
+      // align this particular icon for a:hover underline is not dis-continuous to due default middle vertical align
+      // and because THIS icon is inside <A>, thus is underlined too
+      vertical-align: baseline;
+    }
+    .address {
+      margin: 0;
+    }
+  }
+  .profile-coordonnees { /* UL */
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+    > LI {
+      display: inline-block;
+      & + LI {
+        margin-left: 10px;
+      }
+    }
+    padding: 0px 10px 5px;
+    &, A, .jalios-icon {
+      color: @text-color;
+    }
+    .ui-link {
+      font-weight: normal;
+    }
+  }
+
+  .profile-card-deck {
+    .card-inline-layout {
+      .card,
+      .card-flip-wrapper {
+        margin-bottom: @baseline;
+      }
+      .card-member-connection .photo-anchor {
+        display: none;
+      }
+    }
+  }
+
+  // -- Body
+  .profile-card-deck {
+    .pagination-wrapper {
+      UL.pagination.pqf {
+       margin-top: 0px;
+      }
+    }
+  }
+} // .member-profile

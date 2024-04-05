@@ -1,0 +1,112 @@
+<%@page import="com.jalios.jcmsplugin.collaborativespace.CSHubHandler"%><%
+%><%@ page contentType="text/html; charset=UTF-8"%><%
+
+{
+  boolean typeCollapsed = true;
+  boolean typologiesCollapsed = true;
+  CSHubHandler.Type csHubType = formHandler.getAvailableCsHubType();
+  
+  boolean showWSTypeFilter = formHandler.showWSTypeFilter();
+  boolean showTypologyFilter = formHandler.showTypologyFilter();
+  
+  // Is there a Type filter (!= ALL)
+  if (csHubType != null && csHubType != CSHubHandler.Type.ALL) {
+    typeCollapsed = false;
+  }
+  if (showTypologyFilter) {
+    // Is there a Typology selected?
+    if (typeCollapsed && formHandler.getFirstActiveTypology() != null) {
+      typeCollapsed = false;
+    }
+    if (typologiesCollapsed && formHandler.getFirstActiveTypology() != null) {
+      typologiesCollapsed = false;
+    }
+    if (csHubType != null && csHubType == CSHubHandler.Type.CS) {
+      typologiesCollapsed = false;
+    }
+  }
+  
+  boolean isCsHubType = csHubType != null && csHubType == CSHubHandler.Type.CS;
+  boolean isFilterExclusive = true;
+  String sidebarFilterId = "sidebarFilter_" + "type";
+  String sidebarTypologiesFilterId = "sidebarFilter_" + "typologies";
+
+  // Show type section:
+  // - either if WS filter is still enalbed
+  // - else, only if typologies sub section has to be shown
+  boolean showTypesFilter = formHandler.showTypesFilter();
+
+  // Show CollaborativeSpace toggle sub section, only if WS are shown
+  boolean showCsHubType = showWSTypeFilter;
+%>
+
+<%-- showWSTypeFilter: <%= showWSTypeFilter %><br/> --%>
+<%-- showTypesFilter: <%= showTypesFilter %><br/> --%>
+<%-- showCsHubType: <%= showCsHubType %><br/> --%>
+<%-- showTypologyFilter: <%= showTypologyFilter %><br/> --%>
+
+<% if (showTypesFilter) { %>
+  <% if (showWSTypeFilter) { %>
+  <jalios:appSidebarSection name="types" css="cs-hub-sidebar-type" title="jcmsplugin.collaborativespace.hub.sidebar-section.type" collapsable="true" collapsed="<%= typeCollapsed %>">
+    <ul class="app-sidebar-menu app-sidebar-menu-formitems app-sidebar-treecat cs-hub-type-root-filter<%= isFilterExclusive ? " filter-exclusive" : "" %>" 
+      id="<%= sidebarFilterId %>">
+      <li class="js-type-menu-item root-type-collaborative-spaces <%= isCsHubType ?" active":""%><%= typeCollapsed ? " dropup":""%>">
+        <% if (isCsHubType) { %>
+          <%= JcmsUtil.getHtmlIcon("app-list-check", "", "", "app-list-right-icon", "", userLang) %>
+        <% } %>
+        <label>
+          <%= glp("jcmsplugin.collaborativespace.hub.type-cs") %>
+          <% if (showTypologyFilter) { %>
+            <jalios:icon src="caret"/>
+          <% } %>
+          <input name="<%= CSHubHandler.PARAM_TYPE %>" 
+                  class="type-filter-input hide" 
+                  type="checkbox"
+                  value="<%= CSHubHandler.Type.CS.getValue() %>"
+                  <%= isCsHubType ?" checked='checked'":""%> />
+        </label>
+      
+      <% if (showTypologyFilter) { %>
+        <%@ include file="/plugins/CollaborativeSpacePlugin/jsp/hub/doTypologyFunc.jspf" %>
+        <ul class="app-sidebar-menu app-sidebar-menu-formitems typology-root-filter typology-menu <%= typologiesCollapsed ? "collapse" : "collapse in" %>"
+          id="<%= sidebarTypologiesFilterId %>">
+          <jalios:foreach collection="<%= formHandler.getTypologiesSet() %>" name="itCat" type="Category">
+          <% printFilterCat(itCat, selectedCatSet, 0, loggedMember, userLang, out); %>
+          </jalios:foreach>
+        </ul>
+      <% } %>
+      </li>
+      
+      <% if (showWSTypeFilter) { %>
+        <%
+        boolean isWsHubType = csHubType != null && csHubType == CSHubHandler.Type.WS;
+        %>
+        <li class="js-type-menu-item root-type-workspaces <%= isWsHubType ?" active":""%>">
+          <% if (isWsHubType) { %>
+            <%= JcmsUtil.getHtmlIcon("app-list-check", "", "", "app-list-right-icon", "", userLang) %>
+          <% } %>
+          <label>
+            <%= glp("jcmsplugin.collaborativespace.hub.type-ws") %>
+            <input name="<%= CSHubHandler.PARAM_TYPE %>" 
+                    class="type-filter-input hide" 
+                    type="checkbox"
+                    value="<%= CSHubHandler.Type.WS.getValue() %>"
+                    <%= isWsHubType ?" checked='checked'":""%> />
+          </label>
+        </li>
+      <% } %>
+    </ul>
+  </jalios:appSidebarSection>
+  <% } else if (showTypologyFilter) { %>
+    <jalios:appSidebarSection name="types" css="cs-hub-sidebar-type" title="jcmsplugin.collaborativespace.hub.sidebar-section.type" collapsable="true" collapsed="<%= typologiesCollapsed %>">
+      <ul id="<%= sidebarFilterId %>" class="app-sidebar-menu app-sidebar-menu-formitems app-sidebar-treecat typology-root-filter<%= isFilterExclusive ? " filter-exclusive" : "" %>">
+        <jalios:foreach collection="<%= formHandler.getTypologiesSet() %>" name="itCat" type="Category">
+        <% printFilterCat(itCat, selectedCatSet, 0, loggedMember, userLang, out); %>
+        </jalios:foreach>
+      </ul>
+    </jalios:appSidebarSection>
+  <% } %>
+<% } %>
+<%
+}
+%>

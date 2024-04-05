@@ -1,0 +1,21 @@
+<%@page import="com.jalios.util.ServletUtil"%>
+<% String uniqueId = ServletUtil.generateUniqueDOMId(request, "topbarPublicationMenu"); %>
+<div class="topbar-actions topbar-item topbar-right" data-role="none">
+  <% if (Util.notEmpty(request.getAttribute("topbarLeftItems"))) { %>
+    <%= request.getAttribute("topbarLeftItems") %>
+  <% } %>  
+  <div class="topbar-item open-panel">
+    <a href="#<%= uniqueId %>" data-rel="popup" data-transition="slideup">
+      <jalios:icon src="smartphone-topbar-action-menu" />
+    </a>
+  </div>
+  <% if (Util.notEmpty(request.getAttribute("topbarRightItems"))) { %>
+    <%= request.getAttribute("topbarRightItems") %>
+  <% } %>   
+</div>
+<div data-role="popup" id="<%= uniqueId %>" data-theme="a" class="topbar-menu-dropdown">
+  <ul data-role="listview" data-inset="true" style="min-width:210px;">
+    <li><a data-ajax="false" href="<%= pub.getDisplayUrl(userLocale) %>?<%= SmartPhonePortalPolicyFilter.FORCE_NO_SMARTPHONE_SESSION_ATTR %>" <%= SmartPhoneManager.getInstance().isMobileApp(request) ? "target=\"_blank\"" : "" %>><jalios:icon src="smartphone-access-website" /> <%= glp("jcmsplugin.smartphone.lbl.see-on-website") %></a></li>  
+    <jalios:include target="SMARTPHONE_TOPBAR_PUBLICATION_ACTIONS" targetContext="LI" />
+  </ul>
+</div>

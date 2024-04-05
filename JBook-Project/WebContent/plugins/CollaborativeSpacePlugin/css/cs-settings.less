@@ -1,0 +1,222 @@
+// Include "generated file" message for CSS output
+/* ------------------------------------------------------------------------- */
+/*  This file has been automatically generated from cs-settings.less         */
+/* ------------------------------------------------------------------------- */
+
+// Include variables and mixins
+@import '../../../css/jalios/core/init.less'; // Use init-mixins.less if more mixins are required
+
+// -------------------------------------------------------------------
+// PLUGINS LESS VARIABLES
+// -------------------------------------------------------------------
+
+// Hook for JCMS
+@import '../../../css/plugin.less';
+
+// -------------------------------------------------------------------
+//  PLUGIN CSS DECLARATION
+// -------------------------------------------------------------------
+.cs-settings {
+  .model-syncs .sync-mode {
+    white-space: nowrap;
+    padding: 2px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    color: #666;
+    background-color: #efefef;
+    position: relative;
+  }
+  .instances__no-result {
+    display: flex;
+    justify-content: center;
+    margin-top: 6px;
+  }
+}
+
+.cs-portal.cs-is-condensed {
+  .header-image-options,
+  .tabs-opacity-chooser,
+  .tabs-bgcolor-chooser,
+  .settings-header-nav-tabs {
+    display: none;
+  }
+  .tabs-opacity-chooser + .clear {
+    display: none;
+  }
+}
+.cs-portal:not(.cs-is-condensed) {
+  .settings-header-tab-content .tab-pane.fade:not(.in) {
+    display: none;
+  }
+  .widget-name-headerTabsColor,
+  .widget-name-headerTabsBgColor,
+  .tabs-opacity-chooser {
+    width: 250px;
+    float: left;
+    margin-right: 30px;
+  }
+  .tabs-opacity-chooser {
+    width: 300px;
+  }
+}
+
+.cs-portal .cs-settings {
+  .csp-header-position {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: @jalios-color-grey-neutral;
+    margin: 5px;
+    cursor: pointer;
+    opacity: 0.6;
+    &:hover {
+      opacity: 1;
+    }
+    &.active {
+      opacity: 1;
+      background: @jalios-color-green;
+    }
+  }
+  .existing-color-chooser {
+    max-width: 850px;
+    .input-group {
+      margin-left: -20px;
+    }
+  }
+  .widget-content-radio-text {
+    padding-top: 7px;
+    font-weight: bold;
+  }
+  .widget-name-csp-header-position,
+  .widget-name-csp-header-repeat,
+  .widget-name-csp-header-miror {
+    width: 200px;
+    float: left;
+  }
+  .widget-name-customColor {
+    .widget-content .input-group {
+      padding-top: 7px;
+    }
+  }
+  .custom-image-chooser {
+    .widget-content {
+      .input-group {
+        padding-top: 7px;
+      }
+    }
+  }
+  UL.theme-color-list {
+    LI {
+      white-space: nowrap;
+    }
+    .color-sample {
+      display: block;
+      width: 30px;
+      height: 30px;
+      position: relative;
+      border-radius: 50%;
+    }
+    // Specific for white theme
+    LI.cs-theme-cs-white .color-sample {
+      border: 1px solid #ccc;
+    }
+    INPUT + .color-sample:before {
+      content: '';
+      opacity: 0;
+      display: block;
+      transform: scale(1);
+      transition: all 200ms ease-in;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      height: 30px;
+      width: 30px;
+      margin-left: -15px;
+      margin-top: -15px;
+      border: 1px solid #777;
+      border-radius: 50%;
+    }
+    INPUT:checked + .color-sample:before {
+      opacity: 1;
+      transform: scale(1.3);
+    }
+  }
+
+  UL.header-list {
+    LI LABEL {
+      display: inline;
+    }
+    LI IMG:hover {
+      cursor: pointer;
+    }
+  }
+  UL.theme-color-list,
+  UL.header-list {
+    LI {
+      white-space: nowrap;
+      float: left;
+    }
+  }
+  .header-list-scroll {
+    overflow-y: auto;
+    max-height: 300px;
+    position: relative;
+    &.ps > .ps__rail-y {
+      opacity: 0.6;
+    }
+  }
+  .header-background-image-chooser {
+    INPUT[type='RADIO'] {
+      display: none;
+    }
+    &:not(.widget-name-header) {
+      max-width: 800px;
+    }
+    LABEL.checkbox-inline {
+      padding-left: 0;
+    }
+    .widget-content .input-group {
+      padding-top: 7px;
+    }
+  }
+
+  UL.header-list {
+    LI {
+      height: 50px;
+      width: 300px;
+      IMG {
+        width: 250px;
+        height: 30px;
+        object-fit: cover;
+      }
+      &.no-header {
+        width: 100%;
+      }
+    }
+  }
+  .cs-settings-nav {
+    &.is-left-aligned {
+      margin-left: 0px; // Make tabs aligned with next DIV
+    }
+  }
+  .field-checkbox-vertical {
+    LABEL.checkbox-inline {
+      padding-left: 0;
+      margin-left: 0;
+      display: block;
+    }
+  }
+  .form-horizontal .control-label {
+    // Prevents alignment issue when switching condensed mode radio, when screen larger than 992px (from jalios-form-widget.less)
+    //text-align: left;
+  }
+}
+
+.widget {
+  &.color-chooser,
+  &.background-image-chooser {
+    .widget-content {
+      max-width: none;
+    } // Cancel Bootstrap's width limitation for this particular image chooser
+  }
+}

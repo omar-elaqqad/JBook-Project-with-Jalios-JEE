@@ -1,0 +1,59 @@
+<%@page import="com.jalios.util.ServletUtil"%>
+<%@page import="com.jalios.jcmsplugin.dbcomment.DBCommentManager"%>
+<%  
+  boolean canBeVoted = voteMgr.canVote(itComment,loggedMember);
+  boolean canBeRecommended = recoMgr.canBeRecommendedBy(itComment,loggedMember);
+  Group privateCommentGroup = dbcommentMgr.getPrivateCommentGroup();
+  int commentNumber = Util.toInt(request.getAttribute("jcmsplugin.dbcomment.commentNumber"),0);
+%>
+<a id="<%= itComment.getId() %>" class="anchor"></a>
+<div class="target comment-pane<%= itComment.isAuthorComment() ? " author" : "" %>" data-jalios-dataid="<%= itComment.getId() %>">
+  <% if (!isAnonymousComment) { %>
+    <jalios:memberphoto css="comment-photo pull-left" alt="<%= itComment.getAuthor().getFullName() %>" size="<%= PhotoSize.TINY %>" member="<%= itComment.getAuthor() %>" link="<%= isAnonymousComment ? false : true %>"/>
+  <% } else { %>
+    <div class="wrapper-photo tiny-photo">
+      <jalios:thumbnail path='images/jalios/layout/silhouette.jpg'
+                  width='<%= PhotoSize.TINY.getWidth() %>'
+                  height='<%= PhotoSize.TINY.getHeight() %>'
+                  alt='<%= itComment.getName() %>' css='photo tiny-photo' />  
+     </div>
+  <% } %>
+  <div class="dbcomment<%= itComment.getPrivateComment() ? " comment-private" : " comment-public" %>">
+    <div class="comment-header">
+      <div>
+      <div class="comment-author">
+        <jalios:include target="DBCOMMENT_HEADER_LEFT" />
+        <% if (isAnonymousComment) { %>
+          <% if (Util.notEmpty(itComment.getWebSite())) { %>
+            <a href='<%= itComment.getWebSite() %>' target='_blank'><%= itComment.getName() %></a>
+          <% } else { %>
+            <%= itComment.getName() %>
+          <% } %>
+        <% } else { %>
+          <jalios:link data="<%= itComment.getAuthor() %>" />
+        <% } %>
+        <% if (itComment.isNew(loggedMember)) {%>&middot; <span class="badge badge-new" ><%= glp("jcmsplugin.dbcomment.lbl.new")%></span><% } %>
+        <% if (canBeVoted) { %>&middot; <jalios:vote pub="<%= itComment %>"/>  <% } %> 
+        <% if (Util.toBoolean(request.getAttribute("jcms.recommendation.enabled"),true) && isLogged) { %>&middot; <jalios:recommendation title='<%= glp("jcmsplugin.dbcomment.lbl.share-comment", itComment.getTargetContent().getTitle(userLang, true)) %>' data="<%= itComment %>"><jalios:icon src="recommendation"  alt='<%= glp("jcmsplugin.dbcomment.lbl.share-comment", itComment.getTargetContent().getTitle(userLang,true)) %>' /></jalios:recommendation><% } %>
+        <jalios:include target="DBCOMMENT_HEADER_RIGHT" />
+        <%= wfLabel %>
+     </div><%-- EOF .comment-author --%>
+     <jalios:vote pub="<%= itComment %>" usage="<%= VoteConstants.VOTE_TAG_USAGE_VOTELIST %>"  />
+     </div>
+     <div class="comment-right-info-container">
+     <div class='comment-info'>
+        <% if (itComment.getPrivateComment()) { %>
+          <span title="<%= privateCommentGroup == null ? "" : encodeForHTMLAttribute(glp("jcmsplugin.dbcomment.lbl.private-description", privateCommentGroup.getName(userLang))) %>" class="label label-comment-private"><%= glp("jcmsplugin.dbcomment.lbl.private") %></span>
+        <% } %>
+        <jalios:link css="noTooltipCard comment-link" data="<%= itComment %>"><%= JcmsUtil.getFriendlyDate(itComment.getCdate() , DateFormat.SHORT, true, userLocale) %></jalios:link>
+        <% if (isLogged && loggedMember.canWorkOn(itComment)) {%><jalios:edit redirect="<%= pub.getDisplayUrl(userLocale) %>" pub='<%= itComment %>' popup='true'/><% } %>
+      </div>
+      <% if (commentNumber > 0) { %>
+      	<div class="counter"><jalios:link css="counter-link" data="<%= itComment %>">#<%= commentNumber %></jalios:link></div>
+    	<% } %>
+     </div>
+    	
+     </div>
+     <div class='comment-text internal-comment-block'><jalios:wiki data="<%= itComment %>" field="description"><%= itComment.getDescription() %></jalios:wiki></div>
+    </div><%-- EOF .comment --%>
+</div><%-- EOF .comment-pane --%>

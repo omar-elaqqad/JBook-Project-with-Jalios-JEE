@@ -1,0 +1,81 @@
+.member-profile {
+
+  .profile-contact-channels {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-top: 1px solid #DDD;
+    padding-top: 20px; 
+    padding-bottom: 20px;
+    
+    .profile-contact-channel {
+      &, A {
+        color: @text-color;
+        font-weight: normal;
+        text-align: center;
+        .transition(background-color 200ms ease-in);
+        &:hover {
+          background-color: @esn-smartphone-profile-bg;
+          border-radius: 5px;
+          text-decoration: none;
+        }
+        
+      }
+      IMG {
+        height: 48px;
+        width: 48px;
+      }
+    }
+    .invalid-tel {
+      display: none;
+    }
+  
+    // Apply on itself,
+    // Or on a wrapper (case: skype)
+    // or on a SPAN, (case phoneTag + invalid number) 
+    A.profile-contact-channel,
+    SPAN.profile-contact-channel,
+    .profile-contact-channel-wrapper {
+      justify-content: center;
+      display: flex;
+      padding: 10px 20px;
+      flex-direction: column;
+      margin: auto 5px;
+    }
+    
+    .profile-contact-channel-wrapper {
+      .profile-contact-channel-label {
+        position: relative; // For caret positionning
+      }
+      padding: 0;
+      A.profile-contact-channel {
+        margin: 0px;
+      }
+    }
+  
+    .profile-contact-channel {
+      position: relative;
+      display: inline-block;
+      > IMG {
+        margin: 0 auto;
+      }
+      &.profile-contact-telephone {
+        .jalios-icon:before {
+          display: none; // hide default PhoneTag icon
+        }
+      }
+    }
+  
+    .profile-contact-channel-image[src='s.gif'] {
+      width: @esn-smartphone-profile-social-img-width;
+      height: @esn-smartphone-profile-social-img-height;
+    }
+    
+    .profile-contact-channel .caret {
+      position: absolute;
+      right: -2px;
+      bottom: 10px;
+    }
+  }
+} // .member-profile

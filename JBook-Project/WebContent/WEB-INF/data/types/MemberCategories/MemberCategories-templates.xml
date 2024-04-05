@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates version="5.0">
+  <template name="default" usage="box" file="doMemberCategoriesFullDisplay.jsp" />
+  <template name="default" usage="edit" file="editMemberCategories.jsp" />
+  <template name="default" usage="full" file="doMemberCategoriesFullDisplay.jsp" />
+  <template name="default" usage="query" file="doMemberCategoriesResultDisplay.jsp" />
+</templates>
+

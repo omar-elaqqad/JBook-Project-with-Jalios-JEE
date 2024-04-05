@@ -1,0 +1,32 @@
+<%
+//First loading or empty filter
+boolean restrictToMyWorkspaces = false;
+if (Util.isEmpty(getUntrustedStringParameter("q",""))) {
+  //only show the member's workspaces
+  restrictToMyWorkspaces = true;
+} 
+%>
+
+ <% if (Util.notEmpty(recentWorkspaceSortedSet)) { %>
+   <li data-role="list-divider"><%= glp("jcmsplugin.smartphone.lbl.workspace-index.recent") %></li>
+   <jalios:foreach collection="<%= recentWorkspaceSortedSet %>" type="Workspace" name="itWorkspace">
+   
+   <% if (!restrictToMyWorkspaces || itWorkspace.isMember(loggedMember)) { %>
+     <jalios:dataListItem data="<%= itWorkspace %>" link="<%= SmartPhoneManager.getInstance().getDataUrl(itWorkspace) %>" template="jmobile" />
+   <% } %>
+     
+   </jalios:foreach>
+ <% } %>
+        
+        
+ <% if ( Util.notEmpty(otherWorkspaceSortedSet)) { %>
+  <% if (Util.notEmpty(recentWorkspaceSortedSet)) { %>
+    <li data-role="list-divider"><%= glp("jcmsplugin.smartphone.lbl.workspace-index.other") %></li>
+  <% } %>
+  <jalios:foreach collection="<%= otherWorkspaceSortedSet %>" type="Workspace" name="itWorkspace">
+    <jalios:dataListItem data="<%= itWorkspace %>"  link="<%= SmartPhoneManager.getInstance().getDataUrl(itWorkspace) %>"  template="jmobile" />     
+  </jalios:foreach>
+ <% } %>
+ 
+ 
+         

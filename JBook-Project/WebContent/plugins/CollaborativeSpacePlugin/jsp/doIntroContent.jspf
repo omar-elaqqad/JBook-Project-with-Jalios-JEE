@@ -1,0 +1,23 @@
+<%--
+  @Summary: Prints a CollaborativeSpace introduction (either from Wiki or from WYSIWYG field)
+  @since: csp-4.5, csp-5.3
+  @author Sylvain Devaux <sylvain.devaux@jalios.com>
+--%><%@page import="com.jalios.util.Util"%><%
+%><%@ page contentType="text/html; charset=UTF-8" %><%
+{
+  CollaborativeSpace introCSpace = (CollaborativeSpace) request.getAttribute("collaborative-space");
+  if (introCSpace != null) {
+    String wysiwygIntro = Util.getString(introCSpace.getIntroduction(userLang), "").trim();
+    String wikiIntro = Util.getString(introCSpace.getDescription(userLang), "").trim();
+    String emptyMessage = Util.getString(request.getAttribute("collaborative-space-empty-introduction-message"), glp("jcmsplugin.collaborativespace.introduction.empty.default-message"));
+    %>
+    <% if (Util.notEmpty(wysiwygIntro)) { %>
+      <% /* WYSIWYG introduction */ %><jalios:wysiwyg><%= wysiwygIntro %></jalios:wysiwyg>
+    <% } else if (Util.notEmpty(wikiIntro)) { %>
+      <% /* WIKI introduction */ %><jalios:wiki><%= wikiIntro %></jalios:wiki>
+    <% } else { %>
+      <jalios:message msg="<%= emptyMessage %>" title="" dismissable="false" />
+    <% } %>
+  <% }
+}
+%>

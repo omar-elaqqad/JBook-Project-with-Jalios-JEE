@@ -1,0 +1,219 @@
+<%--
+  @Summary: CollaborativeSpace meta datas
+  @Category: Portal
+  @Author: Jalios SA 
+  @Customizable: True
+  @Requestable: False 
+--%><%@page import="com.jalios.jcmsplugin.collaborativespace.actionsmenu.CSActionMenuItem"%><%
+%><%@page import="com.jalios.jcmsplugin.collaborativespace.portal.CSDisplayHandler"%><%
+%><%@page import="com.jalios.jcmsplugin.collaborativespace.portal.CSJPortalUtils"%><%
+%><%@page import="com.jalios.jcms.jportal.JPortalUtils"%><%
+%><%@page import="com.jalios.jcmsplugin.collaborativespace.guest.handler.AbstractGuestHandler"%><%
+%><%@page import="com.jalios.jcmsplugin.collaborativespace.guest.GuestAccountsConstants"%><%
+%><%@page import="com.jalios.jcms.plugin.PluginManager"%><%
+String toggleAttribute = "data-jalios-cs-action=\"toggleMetas\"";
+int maxMemberCount = 10;
+int maxGuestCount = 3;
+int maxTypoCount = 3;
+%>
+<jalios:include target="PLUGIN_CSP_METAS_CLOSE_START" />
+
+
+<div class="metas-collapsed-left">
+
+<% if (csHandler.showClosedBadge()) { %>
+  <div class="meta-wrapper cs-state navbar-text cs-metas-visible-opened">
+    <span class="label cs-closed"><%= glp("ui.wrkspc-edit.closed-workspace") %></span>
+  </div>
+<% } %>
+
+<% if (csHandler.showTypologies()) { %>
+  <div class="meta-wrapper cs-typologies navbar-text cs-metas-visible-opened hidden-xs" role="list">
+    <jalios:foreach collection='<%= csHandler.getTypoSet() %>' name='typoCat' type='Category' counter="itCatCounter">
+      <span class="typology-entry<%= itCatCounter > maxTypoCount ? " hide typology-entry-toggler" : "" %>" title='<%= encodeForHTMLAttribute(glp("jcmsplugin.collaborativespace.create.info.typology")) %>' role="listitem">
+        <span class='label typology-label'><%= typoCat.getName(userLang) %></span>
+      </span>
+    </jalios:foreach>
+    <%
+    if (csHandler.showTypologiesToggler()) { 
+      %><a title="<%= encodeForHTMLAttribute(glp("jcmsplugin.collaborativespace.metas.show-all-typos")) %>" class="typology-entry-toggler"<%
+          %> data-jalios-action="toggle:hide" data-jalios-target=".typology-entry-toggler" role="button" tabindex="0"><%
+        %>&hellip;<%
+      %></a><%
+    }
+    %>
+  </div>
+<% } %>
+
+<% if (csHandler.showAccessPolicy()) { %>
+  <div class="meta-wrapper cs-access-policy navbar-text cs-metas-visible-opened">
+    <span title='<%= encodeForHTMLAttribute(glp("types.CollaborativeSpace.fields.accessPolicy.label")) %>'>
+      <% CollaborativeSpace csBadge = cs; %>
+      <%@ include file="/plugins/CollaborativeSpacePlugin/jsp/doCSBadge.jspf" %>
+    </span>
+  </div>
+<% } %>
+
+<% if (csHandler.showModelBadge()) { %>
+  <div class="meta-wrapper cs-workspace-model navbar-text cs-metas-visible-opened">
+    <span class="label cs-model"><%= glp("jcmsplugin.collaborativespace.lbl.model") %></span>
+  </div>
+<% } %>
+
+<% if (csHandler.showLanguage()) { %>
+  <div class="meta-wrapper cs-language navbar-text">
+    <jalios:lang lang='<%= workspace.getLanguage() %>' title='<%= encodeForHTMLAttribute(glp("ui.com.lbl.language") + ": " + glp("lang." + workspace.getLanguage())) %>' />
+  </div>
+<% } %>
+
+<% if (csHandler.showCreationDate()) { %>
+  <div class="meta-wrapper cs-cdate navbar-text cs-metas-hidden-collapsed cs-metas-visible-opened">
+    <span title='<%= encodeForHTMLAttribute(glp("ui.com.lbl.cdate-long")) %>'>
+      <%= glp("ui.com.lbl.cdate") %>
+      <%= JcmsUtil.getFriendlyDate(workspace.getCdate(), DateFormat.SHORT, false, userLocale) %>
+    </span>
+  </div>
+<% } %>
+
+<% if (csHandler.showSignupPolicy()) { %>
+  <div class="meta-wrapper cs-signup-policy navbar-text cs-metas-hidden-collapsed cs-metas-visible-opened">
+    <span title='<%= encodeForHTMLAttribute(glp("types.CollaborativeSpace.fields.signupPolicy.label")) %>'>
+      <%= glp("jcmsplugin.collaborativespace.create.info.signup." + cs.getSignupPolicy()) %>
+    </span>
+  </div>
+<% } %>
+
+<%-- All members --%>
+<% if (csHandler.showMembers()) { %>
+  <%
+  Set<Member> collapsedMemberSet = csHandler.getCollapsedMemberSet();
+  %>
+  <div class="meta-wrapper cs-members cs-metas-hidden-opened">
+    <p class='navbar-text meta-label pull-left'>
+      <%= glp("jcmsplugin.collaborativespace.lbl.profile.member-count", csHandler.getAllMemberCount()) %>
+    </p>
+    <div class="cs-member-list" role="list">
+      <jalios:foreach collection='<%= collapsedMemberSet %>' type='Member' max='<%= maxMemberCount %>' name='itMember'>
+        <div title='<%= encodeForHTMLAttribute(itMember.getFullName()) %>' class='cs-wrapper-photo' role="listitem">
+          <jalios:memberphoto member="<%= itMember %>" size="<%= CSDisplayHandler.META_MEMBERS_PHOTO_SIZE %>" />
+        </div>
+      </jalios:foreach>
+    </div>
+    <% if (csHandler.showAddMember()) { %>
+      <jalios:buttonModal css="cs-enroll-member-link btn btn-default" url="plugins/CollaborativeSpacePlugin/jsp/enrollMembers.jsp" title="jcmsplugin.collaborativespace.members.lbl.enroll-members">
+        <jalios:icon src="add" css="cs-enroll-member-link-icon" alt="jcmsplugin.collaborativespace.members.lbl.enroll-members" />
+      </jalios:buttonModal>
+    <% } %>
+    <% if (collapsedMemberSet.size() > maxMemberCount) { %>
+      <a <%= toggleAttribute %> role="button" tabindex="0" title="<%= encodeForHTMLAttribute(glp("jcmsplugin.collaborativespace.metas.toggle.show")) %>"<%
+          %> aria-label="<%= encodeForHTMLAttribute(glp("jcmsplugin.collaborativespace.metas.toggle.show.for-aria")) %>"><%
+        %><%= memberListSuffix %><%
+      %></a>
+    <% } %>
+  </div>
+<% } %>
+
+<%-- Guest --%>
+<% if (csHandler.showGuests()) { %>
+  <div class="meta-wrapper cs-members cs-guests cs-metas-hidden-opened">
+    <p class='navbar-text meta-label pull-left'>
+      <%= glp("jcmsplugin.collaborativespace.lbl.profile.guest-count", csHandler.getGuestCount()) %>
+    </p>
+    <div class="cs-member-list guest-list" role="list">
+      <jalios:foreach collection='<%= csHandler.getGuestSet() %>' type='Member' max='<%= maxGuestCount %>' name='itMember'>
+        <div title='<%= encodeForHTMLAttribute(itMember.getFullName()) %>' class='cs-wrapper-photo' role="listitem">
+          <jalios:memberphoto member="<%= itMember %>" size="<%= CSDisplayHandler.META_MEMBERS_PHOTO_SIZE %>" />
+        </div>
+      </jalios:foreach>
+    </div>
+    <% if (csHandler.showAddGuest()) { %>
+      <%
+      String customUrlDoEdit = "plugins/CollaborativeSpacePlugin/jsp/guestAccount/createGuestModal.jsp?"+AbstractGuestHandler.SRC_WORKSPACE_ID_PARAM+"=" + workspace.getId();
+      String linkLabel = glp(GuestAccountsConstants.PROPERTY_PREFIX + ".account-creation.label");
+      %><jalios:buttonModal css="cs-enroll-member-link btn btn-default" url="<%= customUrlDoEdit %>" title="<%= linkLabel %>">
+          <jalios:icon src="add" css="cs-enroll-member-link-icon" alt="<%= linkLabel %>" />
+        </jalios:buttonModal>
+    <% } %>
+    <% if (csHandler.getGuestCount() > maxGuestCount) { %>
+      <a <%= toggleAttribute %> role="button" tabindex="0" title="<%= encodeForHTMLAttribute(glp("jcmsplugin.collaborativespace.metas.toggle.show")) %>"<%
+          %> aria-label="<%= encodeForHTMLAttribute(glp("jcmsplugin.collaborativespace.metas.toggle.show.for-aria")) %>"><%
+        %><%= memberListSuffix %><%
+      %></a>
+    <% } %>
+  </div>
+<% } %>
+
+<%-- Signup requests --%>
+<%
+
+%>
+<% if (csHandler.showSignupList()) { %>
+  <% List<CSSignupRequest> signupList = csHandler.getSignupList(); %>
+  <% if (Util.notEmpty(signupList)) { %>
+    <div class="meta-wrapper cs-signup-requests">
+      <jalios:link data='<%= portalCategory %>' params='<%= "jsp=plugins/CollaborativeSpacePlugin/jsp/members.jsp&amp;memberView=signups" %>' title='<%= glp("jcmsplugin.collaborativespace.signup.lbl.signups") %>'>
+        <jalios:icon src="jcmsplugin-collaborativespace-metas-signup-request32" css="cs-signup-requests-icon" alt='<%= encodeForHTMLAttribute(glp("jcmsplugin.collaborativespace.signup.lbl.signups")) %>' />
+        <span class='badge cs-signup-requests-count'><%= Util.getSize(signupList) > 99 ? "99+" : signupList.size() %></span>
+      </jalios:link>
+    </div>
+  <% } %>
+<% } %>
+
+<%-- Join / Leave action --%>
+<% if (csHandler.isFullAccess()) { %>
+  <%-- private space and non worker case manager by privateHome.jspf --%>
+  <% if (csHandler.showSignup()) { %>
+    <div class="meta-wrapper cs-signup cs-metas-visible-opened">
+      <jalios:buttonModal url="plugins/CollaborativeSpacePlugin/jsp/signup.jsp" css="btn btn-default navbar-btn" label="jcmsplugin.collaborativespace.lbl.signup-action" />
+    </div>
+  <% } %>
+  <% if (csHandler.showUnsignup()) { %>
+    <div class="meta-wrapper cs-unsignup cs-metas-visible-opened">
+      <a class="btn btn-default navbar-btn modal confirm" role="button" href="plugins/CollaborativeSpacePlugin/jsp/unsignup.jsp?ws=<%= workspace.getId() %>" data-jalios-text='<%= encodeForHTMLAttribute(glp("jcmsplugin.collaborativespace.unsignup.confirm")) %>' onclick="return false;">
+        <%= glp("jcmsplugin.collaborativespace.lbl.unsignup-action") %>
+      </a>
+    </div>
+  <% } %>
+<% } %>
+
+</div>
+
+<% if (csHandler.isFullAccess()) { %>
+  <div class="actions navbar-form navbar-right">
+    <jalios:include target="PLUGIN_CSP_METAS_ACTIONS_START" />
+    
+    <%-- Horizon link --%>
+    <%@ include file="doHorizonMetas.jspf" %>
+
+    <% if (csHandler.showFollowLink()) { %>
+      <a class="cs-follow-link cs-metas-hidden-collapsed cs-metas-visible-opened btn btn-default" data-jalios-action="modal" role="button" tabindex="0" data-jalios-modal-url="plugins/CollaborativeSpacePlugin/jsp/follow.jsp">
+        <%= glp("jcmsplugin.collaborativespace.lbl.follow.action") %>
+      </a>
+    <% } %>
+    <% if (csHandler.showUnfollowLink()) { %>
+      <a class="cs-unfollow-link cs-metas-hidden-collapsed cs-metas-visible-opened btn btn-default modal confirm" role="button" href="plugins/CollaborativeSpacePlugin/jsp/unfollow.jsp?ws=<%= workspace.getId() %>" data-jalios-text='<%= encodeForHTMLAttribute(glp("jcmsplugin.collaborativespace.lbl.unfollow.description")) %>' onclick="return false;">
+        <%= glp("jcmsplugin.collaborativespace.lbl.unfollow.action") %>
+      </a>
+    <% } %>
+
+    <% if (csHandler.showRecommendationLink()) { %>
+      <a class="cs-recommendation-link cs-metas-hidden-collapsed cs-metas-visible-opened btn btn-default" data-jalios-action="modal" tabindex="0" role="button" data-jalios-modal-url="plugins/CollaborativeSpacePlugin/types/CollaborativeSpace/recommendation/recommendationModal.jsp?csId=<%= cs.getId() %>">
+        <%= glp("ui.recommendation") %>
+      </a>
+    <% } %>
+
+    <%-- Toggle LINK --%>
+    <a class="toggle-link btn btn-default" <%= toggleAttribute %> role="button" tabindex="0" title="<%= encodeForHTMLAttribute(glp("jcmsplugin.collaborativespace.metas.toggle.show.for-aria")) %>">
+      <span class='cs-show-metas-label cs-metas-visible-collapsed' data-jalios-button-title="<%= encodeForHTMLAttribute(glp("jcmsplugin.collaborativespace.metas.toggle.show.for-aria")) %>">
+        <span class='toggle-label'><%= glp("jcmsplugin.collaborativespace.metas.toggle.show") %></span> <span class='caret'></span>
+      </span>
+      <span class='cs-hide-metas-label cs-metas-visible-opened cs-metas-hidden-collapsed dropup' data-jalios-button-title="<%= encodeForHTMLAttribute(glp("jcmsplugin.collaborativespace.metas.toggle.hide.for-aria")) %>">
+        <span class='toggle-label'><%= glp("jcmsplugin.collaborativespace.metas.toggle.hide") %></span> <span class='caret'></span>
+      </span>
+    </a>
+    
+        
+    <jalios:include target="PLUGIN_CSP_METAS_ACTIONS_END" />
+  </div>
+<% } %>
+<jalios:include target="PLUGIN_CSP_METAS_CLOSE_END" />

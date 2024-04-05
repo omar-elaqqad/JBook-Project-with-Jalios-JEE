@@ -1,0 +1,32 @@
+<%--
+  @Summary: Guest Account Creation
+  @since: csp-4.1
+  @author Sylvain Devaux <sylvain.devaux@jalios.com>
+--%><%
+%><%@ page contentType="text/html; charset=UTF-8" %><%
+%><%@page import="com.jalios.jcmsplugin.collaborativespace.guest.*"%><%
+
+if (step == GuestCreaHandler.STEP_3) { 
+
+  // Case: existing contact conversion
+  if (formHandler.isContactConversion()) {
+    %><jalios:message level='<%= MessageLevel.INFO %>' 
+                msg='<%= glp(stepPrefixProp + "3.intro.convert-contact", formHandler.getAvailableProposedMember().getDisplayLink(userLocale)) %>' 
+                title='' 
+                dismissable='false' /><%
+
+  // Case: guest creation
+  } else {
+    %><jalios:message level='<%= MessageLevel.INFO %>' 
+                msg='<%= glp(stepPrefixProp + "3.intro") %>' 
+                title='' 
+                dismissable='false' /><%
+  }
+
+  Set<Workspace> wsSet = formHandler.getSignupWorkspaceSet(loggedMember);
+
+  request.setAttribute("step-input-name-attribute", GuestCreaHandler.COLLAB_GROUPS_ID_PARAM);
+  List<String> selectedDatasIdList = Util.getArrayList(formHandler.getCollabGroupId());
+  out.print(getWorkspaces(request, wsSet, userLang, selectedDatasIdList, false, null, null, loggedMember));
+}
+%>

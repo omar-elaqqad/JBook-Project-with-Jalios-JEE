@@ -1,0 +1,321 @@
+# Language properties
+
+jcmsplugin.smartphone.lbl.no-result: Keine Ergebnisse
+jcmsplugin.smartphone.lbl.guest: Gast
+jcmsplugin.smartphone.lbl.index-default.choose-action: Aktion auswählen
+jcmsplugin.smartphone.lbl.index-default.desktop-link: Zu Desktopsite wechseln
+jcmsplugin.smartphone.lbl.workspace-index.filter-ws: Arbeitsbereiche filtern
+jcmsplugin.smartphone.lbl.workspace-index.recent: Zuletzt besucht
+jcmsplugin.smartphone.lbl.workspace-index.other: Andere Arbeitsbereiche
+jcmsplugin.smartphone.lbl.workspace-index.signup: Sie haben keinen Zugriff auf diesen Arbeitsbereich.
+jcmsplugin.smartphone.lbl.vote.like: Gefällt mir
+jcmsplugin.smartphone.lbl.vote.unlike: Gefällt mir nicht
+jcmsplugin.smartphone.lbl.access-website: Auf Website zugreifen
+jcmsplugin.smartphone.lbl.see-on-website: Auf Website ansehen
+jcmsplugin.smartphone.lbl.header.website-title: JPlatform – Smartphone
+jcmsplugin.smartphone.lbl.alert.all-alert-read: Sie haben alle Ihre Warnhinweise gelesen.
+jcmsplugin.smartphone.lbl.alert.alert-empty: Sie haben keinen Warnhinweis.
+jcmsplugin.smartphone.lbl.alert.unread: Ungelesen
+jcmsplugin.smartphone.lbl.alert.read: Gelesen
+jcmsplugin.smartphone.lbl.alert.access-publication: Die Veröffentlichung anzeigen
+jcmsplugin.smartphone.lbl.alert.mark-read: Als gelesen markieren
+jcmsplugin.smartphone.lbl.forbidden: Sie haben keine Berechtigung, auf diesen Inhalt zuzugreifen.
+jcmsplugin.smartphone.lbl.alert.null-pub: Das Element existiert nicht
+jcmsplugin.smartphone.lbl.yes: Ja
+jcmsplugin.smartphone.lbl.no: Nein
+jcmsplugin.smartphone.lbl.member.contact: Kontakt
+jcmsplugin.smartphone.lbl.member.address: Adresse
+jcmsplugin.smartphone.lbl.member.information: Information
+jcmsplugin.smartphone.lbl.member.agenda: Termine
+jcmsplugin.smartphone.lbl.recommendation.no-recommendation: Sie haben keine Empfehlung erhalten.
+jcmsplugin.smartphone.lbl.recommendation.see-publication: Die Veröffentlichung anzeigen
+jcmsplugin.smartphone.lbl.admin.members: Mitglied
+jcmsplugin.smartphone.lbl.admin.see-logs: Auf Protokolle zugreifen
+jcmsplugin.smartphone.lbl.admin.memory: Speicher
+jcmsplugin.smartphone.lbl.member.add-to-address-book: Zu Adressbuch hinzufügen
+jcmsplugin.smartphone.lbl.mention.noemail: Dieser Benutzer hat keine E-Mail-Adresse und darf nicht genannt werden
+jcmsplugin.smartphone.lbl.jquerymobile.error: Ein Fehler ist aufgetreten.
+jcmsplugin.smartphone.lbl.invalid-home-page: Die Startseite ist nicht eingerichtet.
+jcmsplugin.smartphone.lbl.access-all-spaces: Zugriff auf alle Bereiche
+jcmsplugin.smartphone.lbl.jmobile.about-jmobile: Über JMobile
+
+jcmsplugin.smartphone.action.showmore: Mehr anzeigen …
+jcmsplugin.smartphone.action.filter: Filter …
+jcmsplugin.smartphone.action.see-publication: Die Veröffentlichung anzeigen
+jcmsplugin.smartphone.lbl.new: Neu
+
+jcmsplugin.smartphone.recommendation.placeholder.members: Mitglieder auswählen
+jcmsplugin.smartphone.recommendation.placeholder.groups: Gruppen auswählen
+
+jcmsplugin.smartphone.jmobile.version.numero: Version {0} Copyright © Jalios 2022
+jcmsplugin.smartphone.jmobile.version.droits: Alle Rechte vorbehalten
+jcmsplugin.smartphone.jmobile.notification: Benachrichtigungen
+jcmsplugin.smartphone.jmobile.notification.appareil.registred: Registriertes Gerät
+jcmsplugin.smartphone.jmobile.notification.appareil.not-registred: Nicht registriertes Gerät
+jcmsplugin.smartphone.jmobile.notification.permission : Berechtigung
+jcmsplugin.smartphone.jmobile.notification.type-alerte.inactive: Kein Warnhinweistyp aktiviert
+jcmsplugin.smartphone.jmobile.notification.type-alerte.active: Warnhinweistyp aktiviert
+
+jcmsplugin.smartphone.lbl.download-mobile-app: Die mobile Anwendung herunterladen
+
+# Portal
+
+## History
+portal.edition.history.save-by.label: Gespeichert von {0}
+portal.edition.history.published-by.label: Veröffentlicht von {0}
+portal.edition.history.breadcrumb.label: Portalverlauf
+portal.edition.history.back-edition.label: Zurück zum Bearbeitungsmodus
+portal.edition.history.back-to-version.label: Zurück zu dieser Version
+portal.edition.history.back-to-version.confirm: Zurück zu dieser Version wechseln?
+portal.edition.history.show-more: Mehr anzeigen
+portal.edition.history.portlet-chooser: Portletauswahl
+portal.edition.history.create-portlet: Eine neues Portlet erstellen
+portal.edition.history.existing-portlets: Bestehende Portlets
+portal.structure.custom-title.label: Versionsname
+portal.structure.rename-title.label: Version umbenennen
+portal.edition.sidebar.portal-edit.tab-edit.title: Portalparameter
+portal.edition.sidebar.portal-edit.tab-ui.title: Portalstil
+portal.edition.sidebar.portal-edit.template.title: Portlet-Vorlagen
+portal.edition.sidebar.portal-edit.portal-advanced.title: Erweiterte Bearbeitung
+
+
+jcmsplugin.smartphone.service.search.no-result: Keine Ergebnisse
+jcmsplugin.smartphone.service.search.members.no-result: Kein Mitglied gefunden
+jcmsplugin.smartphone.service.search.publications.no-result: Keine Veröffentlichung gefunden
+jcmsplugin.smartphone.service.search.tabs.all.label: Alle
+jcmsplugin.smartphone.service.search.tabs.members.label: Mitglieder
+jcmsplugin.smartphone.service.search.tabs.publications.label: Veröffentlichungen
+
+
+jcmsplugin.smartphone.portal.default-portal.title: Mobilgeräteportal
+jcmsplugin.smartphone.portal.default-wysiwyg.title: Willkommen am Mobilgeräteportal
+jcmsplugin.smartphone.portal.default-wysiwyg.content: Dies ist die Standardseite Ihres Mobilgeräteportals
+jcmsplugin.smartphone.portal.edition.edit-portal: Portalbearbeitung
+jcmsplugin.smartphone.portal.lbl.assembly-zone: Zusammenstellungsbereich
+jcmsplugin.smartphone.portal.lbl.final-output: Endgültiges Ergebnis
+jcmsplugin.smartphone.portal.lbl.portal-parameters: Portalparameter
+jcmsplugin.smartphone.portal.lbl.duplicate: Duplizieren
+jcmsplugin.smartphone.portal.lbl.publish: Veröffentlichen
+jcmsplugin.smartphone.portal.lbl.duplicate.modal.title: Portal duplizieren
+jcmsplugin.smartphone.portal.lbl.filter-workspace: Nach einem Arbeitsbereich filtern …
+jcmsplugin.smartphone.portal.topbar-title.lbl: Obere Leiste
+jcmsplugin.smartphone.portal.administration.title: Verwaltung
+jcmsplugin.smartphone.portal.administration.mobile-portals: Mobilgeräteportale
+jcmsplugin.smartphone.portal.administration.default-portals: Standardportale
+jcmsplugin.smartphone.portal.administration.default-portal: Standardportal
+jcmsplugin.smartphone.portal.administration.settings: Einstellungen
+jcmsplugin.smartphone.portal.creation-modal.title: Ein Mobilgeräteportal erstellen
+jcmsplugin.smartphone.portal.administration.topbar-color: Hintergrundfarbe der oberen Leiste
+jcmsplugin.smartphone.portal.administration.portal-edition: Portal Bearbeitung – {0}
+jcmsplugin.smartphone.portal.administration.topbar-font-color: Schriftfarbe der oberen Leiste
+jcmsplugin.smartphone.portal.administration.topbar-logo: Logo
+jcmsplugin.smartphone.portal.administration-table.title: Titel
+jcmsplugin.smartphone.portal.administration-table.mdate: Letzte Aktualisierung
+jcmsplugin.smartphone.portal.administration.create-portal: Portal erstellen
+jcmsplugin.smartphone.portal.administration.return-to-home: Zurück zum App-Startportaleditor
+jcmsplugin.smartphone.portal.administration.msg.settings-updated: Die Einstellungen wurden gespeichert.
+
+# MyDay
+jcmsplugin.smartphone.my-day.today.label: Heute
+jcmsplugin.smartphone.my-day.calendar.service-link.title: Meine Termine anzeigen
+jcmsplugin.smartphone.my-day.jtask.service-link.title: Meine Aufgaben anzeigen
+
+data.$id.jcmsplugin.smartphone.category.nav-root.name: Mobilgerätenavigation
+data.$id.jcmsplugin.smartphone.category.nav-root-home.name: Startseite
+
+# Properties
+jcmsplugin.smartphone.home.news: Nachrichten
+jcmsplugin.smartphone.workspace.news: Nachrichten des Arbeitsbereichs
+jcmsplugin.smartphone.default.page.size: Standardgröße der Seite
+jcmsplugin.smartphone.lbl.topbar-title: Website-Titel für Smartphone
+jcmsplugin.smartphone.image.resize.max-width: Max. Breite der größenveränderten Bilder
+jcmsplugin.smartphone.map-service: Kartendienst
+jcmsplugin.smartphone.search.searchable-types: Suchdienst – In den Suchergebnissen enthaltene Typen
+jcmsplugin.smartphone.search.portletId: Suchdienst – Portlet
+jcmsplugin.smartphone.search.portletId.help: Portlet suchen, das verwendet wird, um Standardverhalten des Suchdiensts zu definieren
+jcmsplugin.smartphone.search.not-searchable-types: Suchdienst – Von den Suchergebnissen ausgeschlossene Typen
+jcmsplugin.smartphone.drawer.background-image: Service-Schublade Hintergrundbild
+
+jcmsplugin.smartphone.mobileapp.android.play-store : Android Play Store
+jcmsplugin.smartphone.mobileapp.ios.app-store : iOS App Store
+
+# Services
+jcmsplugin.smartphone.service.recenthistory:   Jüngster Verlauf
+jcmsplugin.smartphone.service.admin:    Admin
+jcmsplugin.smartphone.service.search: Suche
+jcmsplugin.smartphone.service.workflow: Workflow
+jcmsplugin.smartphone.service.news: Nachrichten
+jcmsplugin.smartphone.service.workspace: Arbeitsbereich
+
+# Member menu
+jcmsplugin.smartphone.member-menu.application-menu: Anwendungen
+jcmsplugin.smartphone.member-menu.my-day: Mein Tag
+jcmsplugin.smartphone.member-menu.navigate: Navigieren
+
+# Workspace Services
+jcmsplugin.smartphone.workspace-service.search: Suche
+jcmsplugin.smartphone.workspace-service.news: Nachrichten
+
+portlet.ability.jcmsplugin-smartphone:                Smartphone
+portlet.ability.jcmsplugin-smartphone.application:    Service
+
+# Labels
+jcmsplugin.smartphone.fulldisplay.webpage.view-site: Website besuchen
+
+jcmsplugin.smartphone.share.empty: Kein Service zum Teilen der URL {0}verfügbar.
+
+# Feedback Mobile App
+jcmsplugin.smartphone.mobileapp.feedback.lbl: Bericht versenden
+jcmsplugin.smartphone.mobileapp.feedback.email: E-Mail-Adresse des Empfängers
+jcmsplugin.smartphone.mobileapp.feedback.email.help: Diese E-Mail-Adresse erhält Nutzerfeedback von der mobilen Anwendung. Ist keine E-Mail-Adresse eingestellt, wird Senden deaktiviert und ist über die mobile Anwendung nicht verfügbar.
+jcmsplugin.smartphone.mobileapp.feedback.settings: Einstellungen
+
+jcmsplugin.smartphone.mobileapp.feedback.subject: {0} sendete einen Bericht über die mobile Anwendung
+jcmsplugin.smartphone.mobileapp.feedback.hello: Hallo,
+jcmsplugin.smartphone.mobileapp.feedback.description: {0} sendete Ihnen einen Bericht über seine Nutzung der mobilen Anwendung.
+jcmsplugin.smartphone.mobileapp.feedback.user-info: Nutzerinformation:
+jcmsplugin.smartphone.mobileapp.feedback.user-info.login: Anmeldedaten: {0}
+jcmsplugin.smartphone.mobileapp.feedback.user-info.siteurl: URL der Website: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info: Geräteangaben:
+jcmsplugin.smartphone.mobileapp.feedback.device-info.platform: Plattform: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info.version: Plattform-Version {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info.model: Gerätemodell: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info.uuid: Geräte-ID: {0}
+jcmsplugin.smartphone.mobileapp.shareurl.message: Was möchten Sie tun?
+
+# AlertChannel
+jcmsplugin.smartphone.alert.channel.label: JMobile
+jcmsplugin.smartphone.alert.channel.description: Warnhinweise über das JMobile-Protokoll senden
+
+# ExtraDBData
+extradb.Member.jcmsplugin.smartphone.token: JMobile Token
+extra.Shortcut.jcmsplugin.smartphone.mobile-url: JMobile – Schnelltasten-URL
+extra.Shortcut.jcmsplugin.smartphone.mobile-available: JMobile – Im Anwendungsstartprogramm anzeigen?
+
+# Editable Properties
+jcmplugin.smartphone.jpush.fcm.project-id: FCM – Projekt-ID
+jcmplugin.smartphone.notification.encrypt : Benachrichtigungen verschlüsseln
+jcmsplugin.smartphone.ios.download-code.url-prefix: iOS – Downloadcode – Prefix-URL
+jcmsplugin.smartphone.ios.download-code.threshold: iOS – Downloadcode – Warngrenzwert
+$id.jcmsplugin.smartphone.ios.downloadcode.manager-group: iOS – Downloadcode – Managergruppe
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.ios.teamId: Apple – Team-ID
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.appId: JMobile App-ID
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.android.fingerprints: Zertifikats-Fingerabdrücke (sha256)
+jcmplugin.smartphone.space.show-introduction: Die Einführung von Bereichen anzeigen
+
+$id.jcmsplugin.smartphone.portal.default-portal: Standardportal
+# Templates
+types.PortletQueryForeach.templates.jmobile.default.label: Standardvorlage
+types.PortletQueryForeach.templates.jmobile.dataimage.label: Vorlage Liste mit Bild
+
+types.PortletQueryForeachCards.templates.jmobile.withBorderGrid.label: Vorlage Karten mit Rand als Raster
+types.PortletQueryForeachCards.templates.jmobile.withoutBorderGrid.label: Vorlage Karten ohne Rand als Raster
+types.PortletQueryForeachCards.templates.jmobile.withBorder.label: Vorlage Karten mit Rand als Raster
+types.PortletQueryForeachCards.templates.jmobile.light.label: Vorlage Karten ohne Metadaten
+types.PortletQueryForeachCards.templates.jmobile.default.label: Vorlage Standardkarte
+types.PortletQueryForeachCards.templates.jmobile.withLead.label: Vorlage Karten mit Rand und mit Hauptkarte
+types.PortletQueryForeachCards.templates.jmobile.withSliding.label: Vorlage Diakarte ohne Rand
+types.PortletQueryForeachCards.templates.jmobile.withSlidingBorder.label: Vorlage Diakarte mit Rand
+types.PortletQueryForeachCards.templates.jmobile.horizontalwithSliding.label: Vorlage Diakarte horizontal ohne Rand
+types.PortletQueryForeachCards.templates.jmobile.carousel.label: Vorlage Karussellkarte
+
+types.PortletQueryForeachDetail.templates.jmobile.default.label: Standardvorlage
+types.PortletQueryForeachDetail.templates.jmobile.dataimage.label: Vorlage Liste mit Bild
+
+types.PortletCarousel.templates.jmobile.default.label: Standardvorlage
+
+types.PortletWYSIWYG.templates.jmobile.default.label:  Standardvorlage
+
+types.AbstractPortletSkinable.templates.jmobile.default.label: Standardvorlage
+
+types.AbstractPortletSkinable.templates.jmobile.light.label: Vorlage Ohne Titel
+
+types.PortletImage.templates.jmobile.default.label: Standardvorlage
+
+types.PortletJsp.templates.jmobile.default.label: Standardvorlage
+
+types.PortletRSS.templates.jmobile.default.label: Standardvorlage
+
+
+# From SmartPhonePortal.xml
+types.SmartPhonePortal.label: JMobile-Portal
+types.SmartPhonePortal.description: Basisportal mit minimalen Optionen
+types.SmartPhonePortal.fields.image.label: Bild
+types.SmartPhonePortal.fields.pageTitle.description: In der Titelzeile der Seite angezeigter Titel
+types.SmartPhonePortal.fields.description.label: Beschreibung
+types.SmartPhonePortal.fields.pageTitle.label: Seitentitel
+types.SmartPhonePortal.fields.css.label: CSS
+types.SmartPhonePortal.fields.structure.label: Struktur
+types.SmartPhonePortal.title.label: Titel
+types.SmartPhonePortal.fields.displayScrollToTop.label: Scrolllink zum Seitenanfang anzeigen
+types.SmartPhonePortal.fields.keywords.label: Stichwörter (SEO)
+types.SmartPhonePortal.fields.keywords.description: Diese Schlüsselwörter (kommagetrennt) werden auf der Homepage des Portals verwendet.
+types.SmartPhonePortal.fields.portlets.label: Portlets
+types.SmartPhonePortal.fields.portlets.description: Portletliste
+
+# REST
+doc.rest.rsrc-meth.FeedbackResource: POST
+doc.rest.rsrc-desc./smartphone/feedback: Sendet Benutzerfeedback von der mobilen Anwendung an die in den JMobile-Moduleigenschaften eingegebene E‑Mail-Adresse.
+
+doc.rest.rsrc-meth.AddJWTokenResource: GET
+doc.rest.rsrc-desc./smartphone/auth/addjwtoken: Gibt das JWT-Token des angemeldeten Mitglieds zurück.
+doc.rest.rsrc-desc./smartphone/auth/addjwtoken/{memberId}: Gibt das JWToken eines Mitglieds mit der <code>memberId</code>-ID zurück.
+
+doc.rest.rsrc-meth.RegisterJMobileTokenResource: GET
+doc.rest.rsrc-desc./smartphone/registerToken/{deviceId}/{deviceOs}/{deviceModel}: Speichert die Informationen für das Mobiltelefon eines Mitglieds.
+
+doc.rest.rsrc-meth.DeleteDeviceInfoResource: GET
+doc.rest.rsrc-desc./smartphone/deleteToken/{deviceId}/{deviceOs}/{deviceModel}: Löscht Informationen von einem Mobiltelefon eines Mitglieds.
+
+doc.rest.rsrc-meth.GetNotificationDiagnosticResource: GET
+doc.rest.rsrc-desc./smartphone/notificationDiagnostic/{deviceId}/{deviceOs}/{deviceModel}: Gibt die Anzal der auf JPlatform aktivierten Warnhinweistypen zurück.
+
+doc.rest.rsrc-meth.JMobileInfoResource: GET
+doc.rest.rsrc-desc./smartphone/info: Gibt JMobile-Plug-in-Informationen zurück.
+
+doc.rest.rsrc-meth.IOSDownloadResource: GET
+doc.rest.rsrc-desc./smartphone/ios/download: Gibt eine Download-URL für die iOS-App zurück.
+
+data.$id.shortcut.jcmsplugin.smartphone-portals.title: JMobile-Portale
+data.$id.shortcut.jcmsplugin.smartphone-portals.text: Ihre JMobile-Portale und Navigation verwalten
+
+jcmplugin.smartphone.bottom-nav-item.home: Startseite
+jcmplugin.smartphone.bottom-nav-item.alerts: Hinweise
+jcmplugin.smartphone.bottom-nav-item.search: Suche
+jcmplugin.smartphone.bottom-nav-item.application-menu: Apps
+
+ui.editportlet.usage.jmobile: JMobile
+ui.editportlet.usage.skin.jmobile: JMobile
+
+# ------------------------------------------------------------
+# IOS Download Code
+# ------------------------------------------------------------
+jcmsplugin.smartphone.ios.admin-menu: Downloadcode für die mobile iOS-Anwendung verwalten
+jcmsplugin.smartphone.ios.add-codes.title: Downloadcodes hinzufügen
+jcmsplugin.smartphone.ios.add-codes.lbl.codes: Codes
+jcmsplugin.smartphone.ios.add-codes.lbl.codes.h: Geben Sie die hinzuzufügenden Codes durch Leerzeichen oder Zeilenumbruch getrennt ein.
+jcmsplugin.smartphone.ios.add-codes.btn.delete-all: Alle nicht verwendeten Codes löschen …
+jcmsplugin.smartphone.ios.add-codes.msg.code-count:  <p>{0,choice,0#Es wurde kein Code verwendet|1#Es wurde ein Code verwendet|2#Es wurden {0} Codes verwendet}.</p><p>{1,choice,0#Es gibt keinen weiteren ungenutzten Code|1#Es ist nur ein ungenutzter Code übrig.|2#Es gibt {1} ungenutzte Codes}.
+jcmsplugin.smartphone.ios.add-codes.msg.codes-added:  {0,choice,0#Es wurde kein Code hinzugefügt|1#Es wurde ein Code hinzugefügt|2#Es wurden {0} Codes hinzugefügt}.
+jcmsplugin.smartphone.ios.add-codes.msg.code-deleted: {0,choice,0#Es wurde kein Code gelöscht|1#Es wurde ein ungenutzter Code gelöscht|2#Es wurden {0} ungenutzte Codes gelöscht}.
+jcmsplugin.smartphone.ios.download.msg.oodc: <p>Es tut uns leid. :-(</p><p>Sie können die mobile App derzeit nicht herunterladen.</p><p>Es gibt keinen weiteren Downloadcode.</p><p>Versuchen Sie es später erneut.</p> 
+jcmsplugin.smartphone.ios.download.msg.ldnr: <p>Es tut uns leid. :-(</p><p>Sie können die mobile App derzeit nicht herunterladen.</p><p>Der Downloadcode-Verteilungsdienst reagiert nicht.</p><p>Versuchen Sie es später erneut.</p>
+
+data.$id.jcmsplugin.smartphone.ios.downloadcode.manager-group.name: iOS-App-Downloadcodemanager
+
+# ------------------------------------------------------------
+# ALERT
+# ------------------------------------------------------------
+alert.name.jcmsplugin-smartphone:                                              JMobile
+alert.name.jcmsplugin-smartphone.ios-downloadcode-shortage:                    Downloadcodemangel
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.title:               Downloadcodemangel
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.short-description:   {remainingCount}
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.description:         <p>{remainingCount}</p><p>Um neue Downloadcodes hinzuzufügen, wechseln Sie in den Bereich „Betrieb“ im <a href="admin/admin.jsp">Adminbereich</a>.</p>
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.remaining-count:     {0,choice,0#Es wurden alle Downloadcodes verwendet.|1#Es ist nur noch ein Downloadcode übrig|2#Es gibt nur noch {0} Downloadcodes}.
+
+# ------------------------------------------------------------
+# ACL
+# ------------------------------------------------------------
+acl.resource.plugins/jmobile: JMobile
+acl.resource.plugins/jmobile/can-administrate-mobile-portals: Mobilgeräteportal-Verwaltung
+acl.resource.admin/operation/can-manage-ios-downloadcode: iOS-Downloadcodeverwaltung

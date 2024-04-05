@@ -1,0 +1,31 @@
+<%@ page import="com.jalios.jcmsplugin.esn.*" %>
+<% 
+  MicroBloggingManager bloggingManager = MicroBloggingManager.getInstance(); 
+  String mbTitle = JcmsUtil.unescapeHtml(loggedMember.getFriendlyName()) +" - "+ new Date();
+%>
+<% if (bloggingManager.canMicroBlog(loggedMember,workspace)){ %>
+<jsp:useBean id='microBlogHandler' scope='page' class='generated.EditMicroBloggingHandler'>
+  <jsp:setProperty name='microBlogHandler' property='request' value='<%= request %>'/>
+  <jsp:setProperty name='microBlogHandler' property='response' value='<%= response %>'/>
+  <jsp:setProperty name='microBlogHandler' property='noRedirect' value='<%= true%>' />
+  <jsp:setProperty name='microBlogHandler' property='*' />
+  <jsp:setProperty name='microBlogHandler' property='ws' value='<%= bloggingManager.getMicroBloggingWorkspace(workspace).getId() %>'/>  
+</jsp:useBean>
+<% 
+  if(hasParameter("opCreate") && microBlogHandler.validate()){
+    HibernateUtil.commitTransaction();
+    HibernateUtil.beginTransaction();    
+  }
+%>
+<div class="microblogging-form jalios-toggle" >
+  <form class="microblogging-text" method="POST">
+    <fieldset data-role="collapsible" data-theme="f" data-iconpos="right" data-content-theme="c">
+    <legend><%= glp("jcmsplugin.esn.smartphone.lbl.activity.microblogging.add-message") %></legend>
+    <textarea cols="40" rows="20" name="text" id="textarea" placeholder="<%= glp("jcmsplugin.esn.smartphone.lbl.activity.microblogging.text.placeholder") %>"></textarea>
+    <input id="inputCamera" name="camera" type="file"  />
+    <input type="submit" name="opCreate" value="<%= glp("ui.com.btn.save") %>" data-theme="f">
+    <input type="hidden" name="opMicroBlog" value="true">
+    <% if (workspace != null) {%>
+      <input type="hidden" name="workspaceId" value="<%= workspace.getId() %>">
+    <% } %>
+    <input type="hidden" name="title" value="<%= encodeForHTMLAttribute(mbTitle)  %>" /></fieldset></form></div><% } %>

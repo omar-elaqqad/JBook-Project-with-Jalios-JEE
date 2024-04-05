@@ -1,0 +1,7 @@
+<%@ include file="/jcore/field/control/doInitControl.jspf" %><%!
+
+//Method not available in jcms 9.1, available in 9.2
+String smartPhoneResolveFieldValue (Object value) {
+  String resolvedValue = resolveValue(value);
+  return Util.notEmpty(resolvedValue) ? resolvedValue : getIncludeString("fieldValue", resolvedValue);
+} %>

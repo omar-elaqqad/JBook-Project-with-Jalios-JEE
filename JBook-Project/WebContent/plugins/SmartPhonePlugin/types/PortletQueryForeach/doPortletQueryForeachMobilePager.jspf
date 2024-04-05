@@ -1,0 +1,7 @@
+<%
+SmartPhoneManager smartphoneManager = SmartPhoneManager.getInstance();
+
+Map<String, Object> parametersMap = new HashMap<>();
+parametersMap.put("refreshedPortlet", box.getId());
+%>
+<smartphone:pager pagerMode="<%= SmartPhonePagerTag.getPortletPublicationListPagerMode(box) %>" parametersPrefix="portletPager_" parametersMap="<%= parametersMap %>" totalSize="<%= formHandler.getPageResult().getTotalSize() %>" pageSize="<%= formHandler.getPortletPageSize() %>" start="<%= formHandler.getStart() %>"  />

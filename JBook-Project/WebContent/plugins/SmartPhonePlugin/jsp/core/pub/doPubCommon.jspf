@@ -1,0 +1,11 @@
+<%@page import="com.jalios.jcmsplugin.smartphone.SmartPhoneResourceHelper"%>
+<%@ page import="com.jalios.jcms.vote.*" %><%-- 
+--%><% 
+request.setAttribute("jcms.plugin.smartphone.fulldisplay.pub", pub);
+
+if (pub == null) {
+  setErrorMsgSession(glp("jcmsplugin.smartphone.lbl.alert.null-pub"), request);
+  sendRedirect("plugins/SmartPhonePlugin/jsp/index-default.jsp?displayIndexMessage=true");
+  return;
+}
+%>

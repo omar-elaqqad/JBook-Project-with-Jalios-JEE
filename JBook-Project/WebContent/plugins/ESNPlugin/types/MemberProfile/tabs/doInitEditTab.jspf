@@ -1,0 +1,22 @@
+<%@page import="com.jalios.jcmsplugin.esn.ui.UITabs"%>
+<%@page import="com.jalios.jcmsplugin.esn.ui.UITab"%><%
+%><%@page import="generated.EditMemberCategoriesHandler"%><%
+%><%@page import="com.jalios.jcms.handler.EditMemberHandler"%><%
+%><%@ page contentType="text/html; charset=UTF-8" %><%
+%><%@ include file='/plugins/ESNPlugin/types/MemberProfile/doInitMemberProfile.jspf' %><%
+
+UITab ui = (UITab) request.getAttribute(UITabs.TAB_REQUEST_ATTR);
+if (ui == null) {
+  logger.warn("doInitEditTab.jspf: no UITab retrieved in request. Exit");
+  return;
+}
+
+boolean isActive = ui.isActive(request);
+
+EditMemberProfileHandler profileFH = (EditMemberProfileHandler)request.getAttribute("profileFH");
+EditMemberHandler memberFH = (EditMemberHandler)request.getAttribute("formHandler");
+EditFullProfileHandler formHandler = (EditFullProfileHandler)request.getAttribute("editFullProfileHandler");
+EditMemberCategoriesHandler categoriesFH = (EditMemberCategoriesHandler)request.getAttribute("editProfileCategoriesFH");
+
+String esnEditProfileButtons = Util.getString(request.getAttribute("esn-edit-profile-buttons-DOM"), "");
+%>

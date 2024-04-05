@@ -1,0 +1,321 @@
+# Language properties
+
+jcmsplugin.smartphone.lbl.no-result: Nincsenek eredmények
+jcmsplugin.smartphone.lbl.guest: Vendég
+jcmsplugin.smartphone.lbl.index-default.choose-action: Művelet választása
+jcmsplugin.smartphone.lbl.index-default.desktop-link: A weboldal asztalának elérése
+jcmsplugin.smartphone.lbl.workspace-index.filter-ws: Munkaterületek szűrője
+jcmsplugin.smartphone.lbl.workspace-index.recent: Nemrég meglátogatott
+jcmsplugin.smartphone.lbl.workspace-index.other: Egyéb munkaterületek
+jcmsplugin.smartphone.lbl.workspace-index.signup: Nincs hozzáférése ehhez a munkaterülethez.
+jcmsplugin.smartphone.lbl.vote.like: Tetszik
+jcmsplugin.smartphone.lbl.vote.unlike: Mégsem tetszik
+jcmsplugin.smartphone.lbl.access-website: Weboldal elérése
+jcmsplugin.smartphone.lbl.see-on-website: Megtekintés a weboldalon
+jcmsplugin.smartphone.lbl.header.website-title: JPlatform - Okostelefon
+jcmsplugin.smartphone.lbl.alert.all-alert-read: Elolvasta az összes riasztását.
+jcmsplugin.smartphone.lbl.alert.alert-empty: Önnek nincs riasztása.
+jcmsplugin.smartphone.lbl.alert.unread: Olvasatlan
+jcmsplugin.smartphone.lbl.alert.read: Olvasott
+jcmsplugin.smartphone.lbl.alert.access-publication: A közzététel megjelenítése
+jcmsplugin.smartphone.lbl.alert.mark-read: Megjelölés olvasottként
+jcmsplugin.smartphone.lbl.forbidden: Nincs jogosultsága a tartalom elérésére.
+jcmsplugin.smartphone.lbl.alert.null-pub: Az elem nem létezik
+jcmsplugin.smartphone.lbl.yes: Igen
+jcmsplugin.smartphone.lbl.no: Nem
+jcmsplugin.smartphone.lbl.member.contact: Kapcsolat
+jcmsplugin.smartphone.lbl.member.address: Cím
+jcmsplugin.smartphone.lbl.member.information: Információ
+jcmsplugin.smartphone.lbl.member.agenda: Napirend
+jcmsplugin.smartphone.lbl.recommendation.no-recommendation: Nem kapott egy ajánlást sem.
+jcmsplugin.smartphone.lbl.recommendation.see-publication: A közzététel megjelenítése
+jcmsplugin.smartphone.lbl.admin.members: Tag
+jcmsplugin.smartphone.lbl.admin.see-logs: Naplók elérése
+jcmsplugin.smartphone.lbl.admin.memory: Memória
+jcmsplugin.smartphone.lbl.member.add-to-address-book: Felvétel a címjegyzékbe
+jcmsplugin.smartphone.lbl.mention.noemail: Ennek a felhasználónak nincs e-mail címe, és nem kell említeni
+jcmsplugin.smartphone.lbl.jquerymobile.error: Hiba történt.
+jcmsplugin.smartphone.lbl.invalid-home-page: A kezdőlap nincs beállítva.
+jcmsplugin.smartphone.lbl.access-all-spaces: Az összes terület elérése
+jcmsplugin.smartphone.lbl.jmobile.about-jmobile: A JMobile-ról
+
+jcmsplugin.smartphone.action.showmore: Részletek megjelenítése...
+jcmsplugin.smartphone.action.filter: Szűrő...
+jcmsplugin.smartphone.action.see-publication: A közzététel megjelenítése
+jcmsplugin.smartphone.lbl.new: Új
+
+jcmsplugin.smartphone.recommendation.placeholder.members: Tagok kiválasztása
+jcmsplugin.smartphone.recommendation.placeholder.groups: Csoportok kiválasztása
+
+jcmsplugin.smartphone.jmobile.version.numero: Változat: {0} Copyright © Jalios 2022
+jcmsplugin.smartphone.jmobile.version.droits: Minden jog fenntartva.
+jcmsplugin.smartphone.jmobile.notification: Értesítések
+jcmsplugin.smartphone.jmobile.notification.appareil.registred: Regisztrált eszköz
+jcmsplugin.smartphone.jmobile.notification.appareil.not-registred: Nem regisztrált eszköz
+jcmsplugin.smartphone.jmobile.notification.permission : Engedély
+jcmsplugin.smartphone.jmobile.notification.type-alerte.inactive: Nincs figyelmeztetés típus aktiválva
+jcmsplugin.smartphone.jmobile.notification.type-alerte.active: Figyelmeztetés típus aktiválva
+
+jcmsplugin.smartphone.lbl.download-mobile-app: Töltse le a mobilalkalmazást
+
+# Portal
+
+## History
+portal.edition.history.save-by.label: Mentette: {0}
+portal.edition.history.published-by.label: Közzétette: {0}
+portal.edition.history.breadcrumb.label: Portál előzmények
+portal.edition.history.back-edition.label: Visszalépés a szerkesztésre
+portal.edition.history.back-to-version.label: Visszalépés erre a verzióra
+portal.edition.history.back-to-version.confirm: Visszalépés erre a verzióra?
+portal.edition.history.show-more: Részletek megjelenítése
+portal.edition.history.portlet-chooser: Portletválasztó
+portal.edition.history.create-portlet: Új portlet készítése
+portal.edition.history.existing-portlets: Meglévő portletek
+portal.structure.custom-title.label: A verzió neve
+portal.structure.rename-title.label: Verzió átnevezése
+portal.edition.sidebar.portal-edit.tab-edit.title: Portál paraméterei
+portal.edition.sidebar.portal-edit.tab-ui.title: Portál stílus
+portal.edition.sidebar.portal-edit.template.title: Portlet-sablonok
+portal.edition.sidebar.portal-edit.portal-advanced.title: Speciális szerkesztés
+
+
+jcmsplugin.smartphone.service.search.no-result: Nincsenek eredmények
+jcmsplugin.smartphone.service.search.members.no-result: Nem található tag
+jcmsplugin.smartphone.service.search.publications.no-result: Nem található közzététel
+jcmsplugin.smartphone.service.search.tabs.all.label: Mind
+jcmsplugin.smartphone.service.search.tabs.members.label: Tagok
+jcmsplugin.smartphone.service.search.tabs.publications.label: Közzétételek
+
+
+jcmsplugin.smartphone.portal.default-portal.title: Mobil portál
+jcmsplugin.smartphone.portal.default-wysiwyg.title: Üdvözöljük a mobil portálon
+jcmsplugin.smartphone.portal.default-wysiwyg.content: Ez az Ön mobil portáljának alapértelmezett oldala
+jcmsplugin.smartphone.portal.edition.edit-portal: Portál szerkesztés
+jcmsplugin.smartphone.portal.lbl.assembly-zone: Összeszeállítási zóna
+jcmsplugin.smartphone.portal.lbl.final-output: Végső kimenet
+jcmsplugin.smartphone.portal.lbl.portal-parameters: Portál paraméterei
+jcmsplugin.smartphone.portal.lbl.duplicate: Másolás
+jcmsplugin.smartphone.portal.lbl.publish: Közzététel
+jcmsplugin.smartphone.portal.lbl.duplicate.modal.title: Portál duplikálása
+jcmsplugin.smartphone.portal.lbl.filter-workspace: Szűrés egy munkaterületre...
+jcmsplugin.smartphone.portal.topbar-title.lbl: Felső sáv
+jcmsplugin.smartphone.portal.administration.title: Adminisztráció
+jcmsplugin.smartphone.portal.administration.mobile-portals: Mobil portálok
+jcmsplugin.smartphone.portal.administration.default-portals: Alapértelmezett portálok
+jcmsplugin.smartphone.portal.administration.default-portal: Alapértelmezett portál
+jcmsplugin.smartphone.portal.administration.settings: Beállítások
+jcmsplugin.smartphone.portal.creation-modal.title: Mobil portál létrehozása
+jcmsplugin.smartphone.portal.administration.topbar-color: Felső sáv háttérszíne
+jcmsplugin.smartphone.portal.administration.portal-edition: Portál szerkesztés - {0}
+jcmsplugin.smartphone.portal.administration.topbar-font-color: Felső sáv betűszíne
+jcmsplugin.smartphone.portal.administration.topbar-logo: Embléma
+jcmsplugin.smartphone.portal.administration-table.title: Cím
+jcmsplugin.smartphone.portal.administration-table.mdate: Utolsó frissítés
+jcmsplugin.smartphone.portal.administration.create-portal: Portál létrehozása
+jcmsplugin.smartphone.portal.administration.return-to-home: Vissza az alkalmazás kezdőlap portál-szerkesztőjéhez
+jcmsplugin.smartphone.portal.administration.msg.settings-updated: A beállítások mentése megtörtént.
+
+# MyDay
+jcmsplugin.smartphone.my-day.today.label: Ma
+jcmsplugin.smartphone.my-day.calendar.service-link.title: Saját napirend megjelenítése
+jcmsplugin.smartphone.my-day.jtask.service-link.title: Saját feladatok megjelenítése
+
+data.$id.jcmsplugin.smartphone.category.nav-root.name: Mobil navigáció
+data.$id.jcmsplugin.smartphone.category.nav-root-home.name: Kezdőlap
+
+# Properties
+jcmsplugin.smartphone.home.news: Hírek
+jcmsplugin.smartphone.workspace.news: Munkaterület hírei
+jcmsplugin.smartphone.default.page.size: Oldal alapértelmezett mérete
+jcmsplugin.smartphone.lbl.topbar-title: Oldal címe okostelefon esetén
+jcmsplugin.smartphone.image.resize.max-width: Az átméretezett képek max. szélessége
+jcmsplugin.smartphone.map-service: Térkép szolgáltatás
+jcmsplugin.smartphone.search.searchable-types: Keresési szolgáltatás - A keresési eredményekben foglalt típusok
+jcmsplugin.smartphone.search.portletId: Keresési szolgáltatás - Portlet
+jcmsplugin.smartphone.search.portletId.help: A Keresési Portlet a Keresési szolgáltatás alapértelmezett viselkedésének meghatározására szolgál
+jcmsplugin.smartphone.search.not-searchable-types: Keresési szolgáltatás - A keresési eredményekből kizárt típusok
+jcmsplugin.smartphone.drawer.background-image: Szolgáltatási fiók háttérképe
+
+jcmsplugin.smartphone.mobileapp.android.play-store : Android Play Áruház
+jcmsplugin.smartphone.mobileapp.ios.app-store : iOS App Store
+
+# Services
+jcmsplugin.smartphone.service.recenthistory:   Legutóbbi előzmények
+jcmsplugin.smartphone.service.admin:    Admin
+jcmsplugin.smartphone.service.search: Keresés
+jcmsplugin.smartphone.service.workflow: Munkafolyamat
+jcmsplugin.smartphone.service.news: Hírek
+jcmsplugin.smartphone.service.workspace: Munkaterület
+
+# Member menu
+jcmsplugin.smartphone.member-menu.application-menu: Alkalmazások
+jcmsplugin.smartphone.member-menu.my-day: Saját nap
+jcmsplugin.smartphone.member-menu.navigate: Navigálás
+
+# Workspace Services
+jcmsplugin.smartphone.workspace-service.search: Keresés
+jcmsplugin.smartphone.workspace-service.news: Hírek
+
+portlet.ability.jcmsplugin-smartphone:                Okostelefon
+portlet.ability.jcmsplugin-smartphone.application:    Szolgáltatás
+
+# Labels
+jcmsplugin.smartphone.fulldisplay.webpage.view-site: Weboldal meglátogatása
+
+jcmsplugin.smartphone.share.empty: Nincs elérhető szolgáltatás a/az {0} URL megosztásához.
+
+# Feedback Mobile App
+jcmsplugin.smartphone.mobileapp.feedback.lbl: Jelentés küldése
+jcmsplugin.smartphone.mobileapp.feedback.email: Címzett e-mail címe
+jcmsplugin.smartphone.mobileapp.feedback.email.help: Ez az e-mail cím felhasználói visszajelzést kap a mobilalkalmazásból. Ha nincs megadva e-mail cím, a küldés le van tiltva, és nem érhető el a mobilalkalmazásban.
+jcmsplugin.smartphone.mobileapp.feedback.settings: Beállítások
+
+jcmsplugin.smartphone.mobileapp.feedback.subject: {0} jelentést küldött a mobilalkalmazásból
+jcmsplugin.smartphone.mobileapp.feedback.hello: Üdvözöljük,
+jcmsplugin.smartphone.mobileapp.feedback.description: {0} jelentést küldött Önnek a mobilalkalmazás használatáról.
+jcmsplugin.smartphone.mobileapp.feedback.user-info: Felhasználó információ:
+jcmsplugin.smartphone.mobileapp.feedback.user-info.login: Bejelentkezési név: {0}
+jcmsplugin.smartphone.mobileapp.feedback.user-info.siteurl: Weboldal URL-je: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info: Eszközinformáció:
+jcmsplugin.smartphone.mobileapp.feedback.device-info.platform: Platform: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info.version: Platform verzió: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info.model: Eszköz modell: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info.uuid: Berendezés azonosító: {0}
+jcmsplugin.smartphone.mobileapp.shareurl.message: Mit kíván tenni?
+
+# AlertChannel
+jcmsplugin.smartphone.alert.channel.label: JMobile
+jcmsplugin.smartphone.alert.channel.description: Figyelmeztetések küldése a JMobile protokollon keresztül
+
+# ExtraDBData
+extradb.Member.jcmsplugin.smartphone.token: JMobile Token
+extra.Shortcut.jcmsplugin.smartphone.mobile-url: JMobile - Parancsikon URL
+extra.Shortcut.jcmsplugin.smartphone.mobile-available: JMobile - Megjelenítés az alkalmazás indítóban?
+
+# Editable Properties
+jcmplugin.smartphone.jpush.fcm.project-id: FCM - Projekt azonosító
+jcmplugin.smartphone.notification.encrypt : Értesítések titkosítása
+jcmsplugin.smartphone.ios.download-code.url-prefix: iOS - Letöltési kód - URL-előtag
+jcmsplugin.smartphone.ios.download-code.threshold: iOS - Letöltési kód - Riasztási küszöb
+$id.jcmsplugin.smartphone.ios.downloadcode.manager-group: iOS - Letöltési kód - Menedzser csoport
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.ios.teamId: Apple - Csapatazonosító
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.appId: JMobile alkalmazás azonosító
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.android.fingerprints: tanúsítvány ujjlenyomatok (sha256)
+jcmplugin.smartphone.space.show-introduction: A terület bevezetésének megjelenítése
+
+$id.jcmsplugin.smartphone.portal.default-portal: Alapértelmezett portál
+# Templates
+types.PortletQueryForeach.templates.jmobile.default.label: Alapértelmezett sablon
+types.PortletQueryForeach.templates.jmobile.dataimage.label: Lista képsablonnal
+
+types.PortletQueryForeachCards.templates.jmobile.withBorderGrid.label: Sablonkártyák rácsos szegéllyel
+types.PortletQueryForeachCards.templates.jmobile.withoutBorderGrid.label: Sablonkártyák rácsos szegély nélkül
+types.PortletQueryForeachCards.templates.jmobile.withBorder.label: Sablonkártyák rácsos szegéllyel
+types.PortletQueryForeachCards.templates.jmobile.light.label: Sablonkártyák meta nélkül
+types.PortletQueryForeachCards.templates.jmobile.default.label: Alapértelmezett kártyasablon
+types.PortletQueryForeachCards.templates.jmobile.withLead.label: Kártyák szegéllyel és vezető sablonnal
+types.PortletQueryForeachCards.templates.jmobile.withSliding.label: Csúszó kártya szegély sablon nélkül
+types.PortletQueryForeachCards.templates.jmobile.withSlidingBorder.label: Csúszó kártya szegély sablonnal
+types.PortletQueryForeachCards.templates.jmobile.horizontalwithSliding.label: Vízszintes csúszó kártya szegély sablon nélkül
+types.PortletQueryForeachCards.templates.jmobile.carousel.label: Körhinta kártya sablon
+
+types.PortletQueryForeachDetail.templates.jmobile.default.label: Alapértelmezett sablon
+types.PortletQueryForeachDetail.templates.jmobile.dataimage.label: Lista képsablonnal
+
+types.PortletCarousel.templates.jmobile.default.label: Alapértelmezett sablon
+
+types.PortletWYSIWYG.templates.jmobile.default.label:  Alapértelmezett sablon
+
+types.AbstractPortletSkinable.templates.jmobile.default.label: Alapértelmezett sablon
+
+types.AbstractPortletSkinable.templates.jmobile.light.label: Cím sablon nélkül
+
+types.PortletImage.templates.jmobile.default.label: Alapértelmezett sablon
+
+types.PortletJsp.templates.jmobile.default.label: Alapértelmezett sablon
+
+types.PortletRSS.templates.jmobile.default.label: Alapértelmezett sablon
+
+
+# From SmartPhonePortal.xml
+types.SmartPhonePortal.label: JMobile portál
+types.SmartPhonePortal.description: A alapvető portál minimális opciókkal
+types.SmartPhonePortal.fields.image.label: Kép
+types.SmartPhonePortal.fields.pageTitle.description: Az oldal címében megjelenített cím
+types.SmartPhonePortal.fields.description.label: Leírás
+types.SmartPhonePortal.fields.pageTitle.label: Oldal címe
+types.SmartPhonePortal.fields.css.label: CSS
+types.SmartPhonePortal.fields.structure.label: Szerkezet
+types.SmartPhonePortal.title.label: Cím
+types.SmartPhonePortal.fields.displayScrollToTop.label: A oldal tetejére görgetés hivatkozásának megjelenítése
+types.SmartPhonePortal.fields.keywords.label: Kulcsszavak (SEO)
+types.SmartPhonePortal.fields.keywords.description: Ezek a kulcsszavak (vesszővel elválasztva) lesznek felhasználva a portál kezdőlapján.
+types.SmartPhonePortal.fields.portlets.label: Portletek
+types.SmartPhonePortal.fields.portlets.description: Portletek listája
+
+# REST
+doc.rest.rsrc-meth.FeedbackResource: POST
+doc.rest.rsrc-desc./smartphone/feedback: Felhasználói visszajelzést küld a mobil alkalmazásról a JMobile modul tulajdonságaiban megadott e-mail címre.
+
+doc.rest.rsrc-meth.AddJWTokenResource: GET
+doc.rest.rsrc-desc./smartphone/auth/addjwtoken: Visszaküldi a naplózott tag JWT tokenjét
+doc.rest.rsrc-desc./smartphone/auth/addjwtoken/{memberId}: Visszaküldi a tag JWToken értékét a <code>memberId</code> azonosítóval.
+
+doc.rest.rsrc-meth.RegisterJMobileTokenResource: GET
+doc.rest.rsrc-desc./smartphone/registerToken/{deviceId}/{deviceOs}/{deviceModel}: Menti az információkat a tag mobiltelefonja esetén.
+
+doc.rest.rsrc-meth.DeleteDeviceInfoResource: GET
+doc.rest.rsrc-desc./smartphone/deleteToken/{deviceId}/{deviceOs}/{deviceModel}: Törli az információkat a tag mobiltelefonjáról.
+
+doc.rest.rsrc-meth.GetNotificationDiagnosticResource: GET
+doc.rest.rsrc-desc./smartphone/notificationDiagnostic/{deviceId}/{deviceOs}/{deviceModel}: Visszaküldi a JPlatform-on aktivált riasztástípusok számát.
+
+doc.rest.rsrc-meth.JMobileInfoResource: GET
+doc.rest.rsrc-desc./smartphone/info: Visszaküldi a JMobile Plugin információját.
+
+doc.rest.rsrc-meth.IOSDownloadResource: GET
+doc.rest.rsrc-desc./smartphone/ios/download: Visszaadja az iOS alkalmazás letöltési URL-jét.
+
+data.$id.shortcut.jcmsplugin.smartphone-portals.title: JMobile portálok
+data.$id.shortcut.jcmsplugin.smartphone-portals.text: A JMobile portáljai és a navigáció kezelése
+
+jcmplugin.smartphone.bottom-nav-item.home: Kezdőlap
+jcmplugin.smartphone.bottom-nav-item.alerts: Riasztás
+jcmplugin.smartphone.bottom-nav-item.search: Keresés
+jcmplugin.smartphone.bottom-nav-item.application-menu: Alkalmazások
+
+ui.editportlet.usage.jmobile: JMobile
+ui.editportlet.usage.skin.jmobile: JMobile
+
+# ------------------------------------------------------------
+# IOS Download Code
+# ------------------------------------------------------------
+jcmsplugin.smartphone.ios.admin-menu: Az iOS mobilalkalmazás letöltési kódjának kezelése
+jcmsplugin.smartphone.ios.add-codes.title: Letöltési kódok hozzáadása
+jcmsplugin.smartphone.ios.add-codes.lbl.codes: Kódok
+jcmsplugin.smartphone.ios.add-codes.lbl.codes.h: Írja be a hozzáadandó kódokat szóközökkel vagy új sorral elválasztva.
+jcmsplugin.smartphone.ios.add-codes.btn.delete-all: Az összes fel nem használt kód törlése...
+jcmsplugin.smartphone.ios.add-codes.msg.code-count:  <p>{0,choice,0#Nincs felhasználva kód|1#Egy kód lett felhasználva|2#{0} lett felhasználva}.</p><p>{1,choice,0#Nincs több fel nem használt kód|1#Csak egy fel nem használt kód maradt.|2#{1} fel nem használt kód van}.
+jcmsplugin.smartphone.ios.add-codes.msg.codes-added:  {0,choice,0#Nem lett hozzáadva kód|1#Egy kód lett hozzáadva|2#{0} lett hozzáadva}.
+jcmsplugin.smartphone.ios.add-codes.msg.code-deleted: {0,choice,0#Nem lett törölve kód|1#Egy fel nem használt kód lett törölve|2#{0} fel nem használt kód lett törölve}.
+jcmsplugin.smartphone.ios.download.msg.oodc: <p>Sajnáljuk :-(</p><p>Jelenleg nem töltheti le a mobilalkalmazást.</p><p>Nincs több letöltési kód.</p><p>Próbálja újra később.</p> 
+jcmsplugin.smartphone.ios.download.msg.ldnr: <p>Sajnáljuk :-(</p><p>Jelenleg nem töltheti le a mobilalkalmazást.</p><p>A letöltési kód terjesztési szolgáltatás nem válaszol.</p><p>Próbálja újra később.</p>
+
+data.$id.jcmsplugin.smartphone.ios.downloadcode.manager-group.name: iOS alkalmazás letöltési kód kezelők
+
+# ------------------------------------------------------------
+# ALERT
+# ------------------------------------------------------------
+alert.name.jcmsplugin-smartphone:                                              JMobile
+alert.name.jcmsplugin-smartphone.ios-downloadcode-shortage:                    Letöltési kód hiány
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.title:               Letöltési kód hiány
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.short-description:   {remainingCount}
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.description:         <p>{remainingCount}</p><p>Új letöltési kódok hozzáadásához lépjen „Művelet” szakaszba az <a href="admin/admin.jsp">Adminisztrátori területen</a>.</p>
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.remaining-count:     {0,choice,0#Az összes letöltési kód fel lett használva|1#Csak egy letöltési kód maradt|2#Csak {0} letöltési kód van}.
+
+# ------------------------------------------------------------
+# ACL
+# ------------------------------------------------------------
+acl.resource.plugins/jmobile: JMobile
+acl.resource.plugins/jmobile/can-administrate-mobile-portals: Mobil portál adminisztráció
+acl.resource.admin/operation/can-manage-ios-downloadcode: iOS Letöltési kód kezelés

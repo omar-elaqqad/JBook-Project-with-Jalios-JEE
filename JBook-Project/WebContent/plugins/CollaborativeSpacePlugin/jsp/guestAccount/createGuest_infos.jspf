@@ -1,0 +1,37 @@
+<%--
+  @Summary: Guest Account Creation
+  @since: csp-4.1
+  @author Sylvain Devaux <sylvain.devaux@jalios.com>
+--%><%@page import="com.jalios.jcmsplugin.collaborativespace.guest.handler.GuestCreaHandler"%><%
+%><%@page import="com.jalios.jcmsplugin.collaborativespace.guest.*"%><%
+%><%@ page contentType="text/html; charset=UTF-8" %><%
+
+if (step == GuestCreaHandler.STEP_2) {
+  if (formHandler.getAvailableProposedMember() != null) {
+    if (formHandler.getAvailableProposedMember().isContact()) {
+      %><jalios:message level='<%= MessageLevel.INFO %>' 
+            msg='<%= glp(stepPrefixProp + "2.intro.convert-contact",  formHandler.getAvailableProposedMember().getDisplayLink(userLocale)) %>' 
+            title='' 
+            dismissable='false' /><%
+    }
+  } else {
+    %><jalios:message level='<%= MessageLevel.INFO %>' 
+            msg='<%= glp(stepPrefixProp + "2.intro") %>' 
+            title='' 
+            dismissable='false' /><%
+  }
+  %>
+
+  <%-- Fields are provided by generated edit JSP --%>
+  <jalios:include jsp="/types/GuestCrea/doEditGuestCrea.jsp" />
+  
+  <%-- Language ------------------------------------------------------------ --%>
+  <jalios:field name='<%= GuestCreaHandler.LANGUAGE_PARAM %>' value='<%= formHandler.getAvailableLanguage() %>' label='types.GuestCrea.fields.language.label' required='true'>
+    <jalios:control settings='<%= formHandler.getLanguageSettings() %>' />
+  </jalios:field>
+
+  <%-- Country ------------------------------------------------------------ --%>
+  <jalios:field name='<%= GuestCreaHandler.COUNTRY_PARAM %>' value='<%= formHandler.getAvailableCountry() %>' label='types.GuestCrea.fields.country.label' required='true'>
+    <jalios:control settings='<%= formHandler.getCountrySettings() %>' />
+  </jalios:field>
+<% } %>

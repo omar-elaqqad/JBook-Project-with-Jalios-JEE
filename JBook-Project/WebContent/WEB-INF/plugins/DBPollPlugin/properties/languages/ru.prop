@@ -1,0 +1,127 @@
+jcmsplugin.dbpoll.btn.vote:            Я голосую
+jcmsplugin.dbpoll.lbl.vote:            Голос
+jcmsplugin.dbpoll.lbl.open:            Открыть этот опрос
+jcmsplugin.dbpoll.lbl.close:           Закрыть этот опрос
+jcmsplugin.dbpoll.lbl.show-result:     Показать результаты
+jcmsplugin.dbpoll.lbl.vote-cnt:        {0,choice,0#0 голосов|1#1 голос|2#{0,number,integer} голоса}
+jcmsplugin.dbpoll.lbl.dates:           Опрос от {0} до {1}
+jcmsplugin.dbpoll.lbl.all-polls:       Все опросы
+jcmsplugin.dbpoll.lbl.all-polls-ws:    Все опросы в {0}
+jcmsplugin.dbpoll.lbl.view-all-polls:  Просмотреть все опросы
+jcmsplugin.dbpoll.lbl.view-all-polls-ws:  Просмотреть все опросы в текущем рабочем пространстве
+jcmsplugin.dbpoll.lbl.vote-title:      Голосовать за {0}
+jcmsplugin.dbpoll.lbl.create-poll:     Опубликовать новый опрос
+jcmsplugin.dbpoll.msg.option-change:   Вы не можете изменить опции опроса, так как некоторые пользователи уже проголосовали за текущие опции.
+jcmsplugin.dbpoll.msg.already-voted:   Вы уже проголосовали в этом опросе.
+jcmsplugin.dbpoll.msg.no-result:       Этот опрос не получил еще ни одного голоса.
+jcmsplugin.dbpoll.msg.choose-option:   Вы должны выбрать вариант для голосования.
+jcmsplugin.dbpoll.msg.closed-poll:     Этот опрос закрыт, вы не можете голосовать.
+jcmsplugin.dbpoll.msg.poll-loop:       Нельзя ставить опрос по собственному описанию.
+
+jcmsplugin.dbpoll.modal.step1:         Опции опроса
+jcmsplugin.dbpoll.modal.step2:         Рекомендовать опрос
+jcmsplugin.dbpoll.modal.btn.publish:   Опубликовать
+jcmsplugin.dbpoll.modal.btn.publish.alt:  Опубликовать опрос
+jcmsplugin.dbpoll.modal.btn.next.alt:  Опубликовать опрос и рекомендовать его...
+jcmsplugin.dbpoll.modal.success-info:  Ваш опрос был создан. В него можно зайти здесь: {0}
+
+jcmsplugin.dbpoll.publish-menu.add-poll: Опрос
+
+jcmsplugin.dbpoll.cs.options:  Пожалуйста, добавьте к этому опросу хотя бы две опции
+jcmsplugin.dbpoll.cs.optionsml:  Пожалуйста, добавьте к этому опросу хотя бы две опции (в {0})
+
+jcmsplugin.dbpoll.search.placeholder: Поиск опроса...
+
+jcmsplugin.dbpoll.app.title: Опросы
+
+jcmsplugin.dbpoll.app.no-result-welcome: Добро пожаловать в приложение для опросов
+
+jcmsplugin.dbpoll.app.catalog.title: Опросы
+jcmsplugin.dbpoll.app.catalog.root: Главная страница
+jcmsplugin.dbpoll.app.catalog.btn.add-poll: Добавить опрос
+jcmsplugin.dbpoll.app.catalog.polls-number: {0} {0,choice,0#|1#опрос|2#опроса}
+
+jcmsplugin.dbpoll.app.card.closed-poll: Выполненный опрос
+
+jcmsplugin.dbpoll.app.filter.status.all: Все опросы
+jcmsplugin.dbpoll.app.filter.status.opened: Открытые опросы
+jcmsplugin.dbpoll.app.filter.status.closed: Выполненные опросы
+jcmsplugin.dbpoll.app.filter.mbr:        Добавлено...
+jcmsplugin.dbpoll.app.filter.begin-date: Добавлено после...
+jcmsplugin.dbpoll.app.filter.end-date:   Добавлено до...
+jcmsplugin.dbpoll.app.filter.workspace:  Добавлено в рабочее пространство...
+
+# ------------------------------------------------------------
+#  Unified insert
+# ------------------------------------------------------------
+unified-insert.items.poll: Опрос
+unified-insert.items.poll.longtitle: Опрос
+unified-insert.items.poll.subtitle:
+
+# ------------------------------------------------------------
+#  Smartphone
+# ------------------------------------------------------------
+jcmsplugin.smartphone.dbpoll: Опросы
+jcmsplugin.smartphone.dbpoll.navbar.opened: Открытые опросы
+jcmsplugin.smartphone.dbpoll.navbar.closed: Выполненные опросы
+
+# ------------------------------------------------------------
+#  Recommendation
+# ------------------------------------------------------------
+alert.name.recommendation.dbpoll-recommendation:                      Приглашение пройти опрос
+alert.msg.recommendation.dbpoll-recommendation.title:                 Приглашение пройти опрос: {data}
+alert.msg.recommendation.dbpoll-recommendation.short-description:     {author} пригласил вас пройти опрос {data}. {data.url}
+alert.msg.recommendation.dbpoll-recommendation.description:           <p>{author} пригласил вас пройти опрос {data}.</p>
+jcmsplugin.dbpoll.recommendation.Poll:                                Пригласить участников пройти опрос: {0}
+
+# ------------------------------------------------------------
+#  ESN
+# ------------------------------------------------------------
+jcmsplugin.esn.activity.form-tab.poll: Опрос
+
+# ------------------------------------------------------------
+#  Shortcuts
+# ------------------------------------------------------------
+data.$id.shortcut.jcmsplugin.dbpoll.title: Опросы
+data.$id.shortcut.jcmsplugin.dbpoll.text: Приложение для обработки опросов
+
+# ------------------------------------------------------------
+#  Plugin label and description
+# ------------------------------------------------------------
+plugin.DBPollPlugin.label: Плагин опроса
+plugin.DBPollPlugin.description: Этот плагин позволяет создавать простые опросы. Опросы отображаются через портлет опросов. Голоса хранятся в RDBMS.
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From Poll.xml
+types.Poll.title.description: Заголовок опроса
+types.Poll.fields.description.label: Описание
+types.Poll.label: Опрос
+types.Poll.fields.options.description: Опции для голосования.
+types.Poll.fields.description.description: Краткое описание опроса (появляется между вопросом и опциями)
+types.Poll.description: Мини-опрос с одним вопросом
+types.Poll.fields.options.label: Опции
+types.Poll.title.label: Заголовок
+types.Poll.fields.image.label: Изображение
+types.Poll.fields.image.description: Дополнительное изображение для описания этого опроса.
+types.Poll.fields.closed.label: Закрыть опрос
+types.Poll.fields.closed.onLabel: Да
+types.Poll.fields.closed.offLabel: Нет
+types.Poll.fields.closed.description: Следует ли закрыть опрос?
+
+# From PortletPoll.xml
+types.PortletPoll.fields.refineWorkspace.labelList: Вывести на экран последний опрос из рабочего пространства|Вывести на экран последний опрос из всех рабочих пространств
+types.PortletPoll.fields.poll.label: Опрос
+types.PortletPoll.title.description: Заголовок
+types.PortletPoll.description: Этот портлет выводит на экран опрос и текущие результаты по завершению опроса.
+types.PortletPoll.fields.poll.description: Опрос, который следует вывести на экран (если нет, выводит на экран последний опубликованный опрос)
+types.PortletPoll.fields.refineWorkspace.description: Вывести на экран последний опрос из текущего рабочего пространства или из всех рабочих пространств.
+types.PortletPoll.label: Портлет опроса
+types.PortletPoll.title.label: Заголовок
+types.PortletPoll.fields.refineWorkspace.label: Уточнить
+types.PortletPoll.fields.hideWhenNoResults.label: Скрыть портлет, если нет опроса
+types.PortletPoll.fields.hideWhenNoResults.onLabel: Да
+types.PortletPoll.fields.hideWhenNoResults.offLabel: Нет
+types.PortletPoll.fields.hideWhenNoResults.description: Если нет опроса для отображения, скройте портлет.

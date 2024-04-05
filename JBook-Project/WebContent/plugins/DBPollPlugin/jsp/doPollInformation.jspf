@@ -1,0 +1,9 @@
+<hr>
+<div class="poll-info">
+  <jalios:memberphoto member="<%= poll.getAuthor() %>" size="<%= PhotoSize.ICON %>" link="false" />
+  <div>
+    <jalios:link data="<%= poll.getAuthor() %>" css="author-link" />
+     &middot; 
+    <jalios:date date="<%= poll.getCdate() %>" format="short" />
+  </div>
+</div>

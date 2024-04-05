@@ -1,0 +1,12 @@
+<%@page import="com.jalios.jcms.FileDocument"%>
+<%@page import="com.jalios.util.ServletUtil"%>
+
+<% String uniqueId = ServletUtil.generateUniqueDOMId(request, "topbarPublicationMenu"); %>
+<div class="topbar-actions topbar-item topbar-right" data-role="none">
+  <div class="topbar-item open-panel">
+    <a href="#<%= uniqueId %>" data-rel="popup" data-transition="slideup">
+      <jalios:icon src="smartphone-topbar-action-menu" />
+    </a>
+  </div>
+</div>
+<%@ include file='/plugins/SmartPhonePlugin/jsp/core/pub/doPubTopbarMenuPopup.jspf' %>

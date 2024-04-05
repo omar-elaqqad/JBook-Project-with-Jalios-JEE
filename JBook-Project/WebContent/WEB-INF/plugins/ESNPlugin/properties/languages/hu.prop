@@ -1,0 +1,720 @@
+jcmsplugin.esn.categories:                    Kompetencia kategória ágazat
+jcmsplugin.esn.categories.help:               Határozzon meg egy kategóriaazonosítót, vagy az azonosítók listáját, szóközzel elválasztva.
+$id.jcmsplugin.esn.profile.portal:            Tag profil megjelenítő portál (Régi profil)
+jcmsplugin.esn.microblogging.Workspace:       Alapértelmezett munkaterület a MicroBlogging esetén
+
+jcmsplugin.esn.connection-request.enabled:    Kapcsolat-jóváhagyás
+jcmsplugin.esn.connection-request.decline-alert.enabled: Értesítés küldése a tag elutasított csatlakozásáról.
+
+jcmsplugin.esn.follower-notification:         Új követők értesítése
+jcmsplugin.esn.graphviz.dot.exe:              Graphviz "dot" útvonal
+jcmsplugin.esn.graphviz.dot.exe.help:         A Graphviz generál egy kapcsolati grafikont a tag profilján. A "dot" elérési útvonala. Például windows esetén ez: "C:&#92;Program Files&#92;Graphviz2.22&#92;bin&#92;dot.exe".
+
+jcmsplugin.esn.external-contacts:             Külső kapcsolatok
+
+jcmsplugin.esn.map-service:                   Térkép szolgáltatás
+
+jcmsplugin.esn.contact-referrers.qs:          Hivatkozó közzététel keresés
+
+jcmsplugin.esn.mbr-extended-search-limit:      Tag bővített keresés - Kioldó határérték
+jcmsplugin.esn.mbr-extended-search-limit.help: A tag bővített keresés (ESN információkkal) csak akkor van elindítva, ha a standard tag keresés kevesebb eredményt ad, mint a határérték.
+
+jcmsplugin.esn.agreement.required:            Az ESN feltételek elfogadása
+jcmsplugin.esn.agreement.terms.pub:           ESN feltételek - Közzététel
+jcmsplugin.esn.agreement.terms.field:         ESN feltételek - Közzététel
+jcmsplugin.esn.agreement.btn.agree:           Elfogadom
+jcmsplugin.esn.agreement.btn.disagree:        Elutasítom
+
+jcmsplugin.esn.group-expertise.assignment:    Csoport hozzárendelése a kompetenciákhoz
+
+ui.com.lbl.guest: Vendég
+jcmsplugin.esn.panel-toggle-show: Megnyitás
+jcmsplugin.esn.panel-toggle-hide: Bezárás
+jcmsplugin.esn.profile.see-photo: Nagyobb profilfotó megtekintése
+jcmsplugin.esn.profile.action.open-action-menu: Tevékenységek menüjének megnyitása
+jcmsplugin.esn.profile.action.create-event-with: Meghívás egy eseményre...
+jcmsplugin.esn.profile.action.change-photo: Fénykép módosítása...
+jcmsplugin.esn.profile.action.change-photo.me: A fényképem módosítása...
+jcmsplugin.esn.profile.lbl.goto-calendar:     Naptár megjelenítése
+jcmsplugin.esn.profile.lbl.disabled-account:  Letiltott fiók
+jcmsplugin.esn.profile.lbl.disabled-guest-account: Letiltott vendég
+jcmsplugin.esn.profile.lbl.ws-role.admin:     {0} animálja a következőt:
+jcmsplugin.esn.profile.lbl.ws-role.worker:    {0} hozzájárul a következőhöz:
+jcmsplugin.esn.profile.lbl.ws-role.reader:    {0} részt vesz a következőben:
+jcmsplugin.esn.profile.lbl.ws-role.me.admin:  Ön animálja a következőt:
+jcmsplugin.esn.profile.lbl.ws-role.me.worker: Ön hozzájárul a következőhöz:
+jcmsplugin.esn.profile.lbl.ws-role.me.reader: Ön részt vesz a következőben:
+jcmsplugin.esn.profile.tab.access:            Hozzáférés
+jcmsplugin.esn.profile.tab.activity:          Tevékenység
+jcmsplugin.esn.profile.tab.calendar:        Naptár
+jcmsplugin.esn.profile.tab.communities:       Közösségek
+jcmsplugin.esn.profile.tab.connections:       Kapcsolatok
+jcmsplugin.esn.profile.tab.contacts:          Kapcsolatok
+jcmsplugin.esn.profile.tab.cv:                Önéletrajz
+jcmsplugin.esn.profile.tab.expertises:        Kompetenciák
+jcmsplugin.esn.profile.tab.info:              Információ
+jcmsplugin.esn.profile.tab.invitations:       Meghívások
+jcmsplugin.esn.profile.tab.profil:            Profil
+jcmsplugin.esn.profile.tab.resume:            Folytatás
+jcmsplugin.esn.profile-edit.tab.info:         Információ
+jcmsplugin.esn.profile-edit.tab.expertises:   Kompetenciák
+jcmsplugin.esn.profile-edit.tab.alert:        Értesítések
+jcmsplugin.esn.profile-edit.tab.notification: Feliratkozás
+jcmsplugin.esn.profile-edit.tab.notification: Értesítés
+
+jcmsplugin.esn.lbl.status:                    Üzenet
+jcmsplugin.esn.lbl.status-info:               Frissített üzenet {0}
+jcmsplugin.esn.lbl.last-connection:           Utolsó kapcsolat
+jcmsplugin.esn.lbl.online:                    Online
+jcmsplugin.esn.lbl.offline:                   Offline
+jcmsplugin.esn.lbl.interest:                  Érdeklődési területek
+jcmsplugin.esn.lbl.introduction:              Bemutatás
+jcmsplugin.esn.lbl.external-contact:          Külső kapcsolat
+jcmsplugin.esn.lbl.activity:                  Tevékenység
+jcmsplugin.esn.lbl.network-activity:          A hálózatom tevékenysége
+jcmsplugin.esn.lbl.categories:                Kompetenciák
+jcmsplugin.esn.lbl.categories.add:            Kompetencia hozzáadása
+jcmsplugin.esn.lbl.categories.placeholder.search: Kompetencia keresése...
+jcmsplugin.esn.lbl.calendar:                  Naptár
+jcmsplugin.esn.lbl.publications:              Utolsó közzétételek
+jcmsplugin.esn.lbl.jobs:                      Szakmai tapasztalat
+jcmsplugin.esn.lbl.jobs.add:                  Pozíció hozzáadása
+jcmsplugin.esn.lbl.jobs.add.error.date:       A kezdési dátumnak a befejezési dátumnál korábbinak kell lennie.
+jcmsplugin.esn.lbl.educations:                Oktatás
+jcmsplugin.esn.lbl.educations.add:            Oktatás hozzáadása
+jcmsplugin.esn.lbl.vcard:                     Importálás az Outlookba...
+jcmsplugin.esn.lbl.contact-referrers:         Hivatkozó közzétételek
+jcmsplugin.esn.lbl.comment-count:             {0,choice,1#{0} megjegyzés megjelenítése |2#{0} megjegyzés megjelenítése}
+
+jcmsplugin.esn.lbl.info:                      Elérhetőségek
+jcmsplugin.esn.lbl.date-of-birth:             Születésnap
+jcmsplugin.esn.lbl.date-of-arrival:           Érkezés dátuma
+jcmsplugin.esn.lbl.connections.suggestions:   Javasolt kapcsolatok
+jcmsplugin.esn.lbl.connections.suggestions.del: A javaslat törlése
+jcmsplugin.esn.lbl.connections.suggestions.reset: A javaslatok visszaállítása...
+jcmsplugin.esn.lbl.connections.requests:      Kapcsolatok meghívása
+jcmsplugin.esn.lbl.connections.requests.in:   Kapott meghívások
+jcmsplugin.esn.lbl.connections.requests.out:  Elküldött meghívások
+jcmsplugin.esn.lbl.connections.requests.out2: Elküldött
+jcmsplugin.esn.lbl.connections.requests.edit: A meghívás feldolgozása...
+jcmsplugin.esn.lbl.connections.requests.received: {0}, {1} meghívást küldött Önnek {2} dátummal.
+jcmsplugin.esn.lbl.connections.requests.sent: {0}, Ön meghívást küldött {1} részére {2} dátummal.
+jcmsplugin.esn.lbl.connections.requests.missing: Ez a meghívás már nem létezik.
+jcmsplugin.esn.lbl.connections.connected:     {0} egyike az Ön kapcsolatainak.
+jcmsplugin.esn.lbl.connections.recommendation:{0} ajánlása a kapcsolatainak...
+jcmsplugin.esn.lbl.connections.recommendation2:Ajánlás a kapcsolatainak...
+jcmsplugin.esn.lbl.connections.connect-contact: {0} összekapcsolása más kapcsolatokkal...
+jcmsplugin.esn.lbl.connections.connect-contact2: Összekapcsolás más kapcsolatokkal...
+jcmsplugin.esn.lbl.connections.no-link:       {0} nem elérhető az Ön kapcsolati hálózatából.
+jcmsplugin.esn.lbl.connections.add.member:    {0} hozzáadása a kapcsolataihoz...
+jcmsplugin.esn.lbl.connections.add.member2:   Hozzáadás a kapcsolataihoz...
+jcmsplugin.esn.lbl.connections.add.contact:   {0} hozzáadása a kapcsolataihoz
+jcmsplugin.esn.lbl.connections.add.contact2:  Hozzáadás a kapcsolataihoz
+jcmsplugin.esn.lbl.connections:               Kapcsolatok
+jcmsplugin.esn.lbl.connections.common:        A közös kapcsolatok
+jcmsplugin.esn.lbl.connections.me:            Saját kapcsolatok
+jcmsplugin.esn.lbl.connections.other:         Egyéb kapcsolatai
+jcmsplugin.esn.lbl.connections.all-contacts:  Minden kapcsolat
+jcmsplugin.esn.lbl.connections.all:           Mind
+jcmsplugin.esn.lbl.connections.internal:      Tagok
+jcmsplugin.esn.lbl.connections.external:      Kapcsolatok
+jcmsplugin.esn.lbl.connections.show.me:       Az összes saját kapcsolat megjelenítése
+jcmsplugin.esn.lbl.connections.show.other:    {0} összes kapcsolatának megjelenítése
+
+jcmsplugin.esn.lbl.connections.views:         Nézetek:
+jcmsplugin.esn.lbl.connections.list:          Lista
+jcmsplugin.esn.lbl.connections.card:          Kártyák
+jcmsplugin.esn.lbl.connections.cloud:         Felhő
+jcmsplugin.esn.lbl.connections.csv:           CSV
+jcmsplugin.esn.lbl.connections.level:         Kapcsolat szintje
+jcmsplugin.esn.lbl.connections.map:           Térkép
+jcmsplugin.esn.lbl.connections.map.tt.profile:{0} profiljának elérése
+jcmsplugin.esn.lbl.connections.map.tt.map:    A térkép központosítása ide: {0}
+
+jcmsplugin.esn.lbl.connections.new-contact:   Kapcsolat hozzáadása
+jcmsplugin.esn.lbl.disconnect:                A kapcsolat eltávolítása...
+jcmsplugin.esn.lbl.disconnect.title:          Kapcsolat eltávolítása
+jcmsplugin.esn.lbl.disconnect.contact:        {0} eltávolítása a kapcsolatai közül...
+jcmsplugin.esn.lbl.disconnect.contact2:       Eltávolítása a kapcsolatai közül...
+jcmsplugin.esn.lbl.disconnect.confirm:        Valóban szeretné eltávolítani <strong>{0}</strong>-t a kapcsolataiból?
+jcmsplugin.esn.lbl.disconnect.confirm-contact:Valóban szeretné eltávolítani <strong>{0}</strong>-t <strong>{1}</strong> kapcsolataiból?
+jcmsplugin.esn.lbl.disconnect.confirm-warn:   Figyelem! Ön <strong>{0}</strong> utolsó kapcsolata. Ezt a kapcsolatot is törölni kívánja?
+jcmsplugin.esn.lbl.disconnect.btn.disconnect: Eltávolítás a kapcsolataim közül...
+jcmsplugin.esn.lbl.disconnect.btn.disconnect-other: Eltávolítás a kapcsolatai közül
+jcmsplugin.esn.lbl.disconnect.btn.delete:     A kapcsolat törlése
+
+jcmsplugin.esn.lbl.followings:                Követések
+jcmsplugin.esn.lbl.followers:                 Követők
+jcmsplugin.esn.lbl.follow:                    {0} tevékenységének követése
+jcmsplugin.esn.lbl.follow2:                   Tevékenység követése
+jcmsplugin.esn.lbl.unfollow:                  {0} tevékenysége követésének leállítása
+jcmsplugin.esn.lbl.unfollow2                  Stop following activity
+jcmsplugin.esn.lbl.contact-followers:         {0} {1,choice,0#egy tagot sem|1#egy tagot|2#{1} tagot} követ és {2,choice,0#egy tag sem|1#egy tag|2#{2} tag} {0} követője
+
+jcmsplugin.esn.lbl.ws-role.admin:             Adminisztrátor
+jcmsplugin.esn.lbl.ws-role.worker:            Hozzájáruló
+jcmsplugin.esn.lbl.ws-role.reader:            Olvasó
+
+jcmsplugin.esn.lbl.links.me:                  További információ rólam...
+jcmsplugin.esn.lbl.links.other:               {0} további információi...
+jcmsplugin.esn.lbl.links.intro:               A népszerűsíteni kívánt külső weboldalakra mutató hivatkozások hozzáadása (az Ön blogja, a profilja a közösségi hálózatokon stb.)
+jcmsplugin.esn.lbl.links.intro.other:         A népszerűsíteni kívánt külső weboldalakra mutató hivatkozások hozzáadása (blog, a profil a közösségi hálózatokon stb.)
+jcmsplugin.esn.lbl.links.add:                 Hivatkozás hozzáadása
+
+jcmsplugin.esn.lbl.edit.me:                   A profilom szerkesztése
+jcmsplugin.esn.lbl.edit.other:                {0} profiljának szerkesztése
+jcmsplugin.esn.lbl.edit.other2:               Profil szerkesztése
+jcmsplugin.esn.lbl.editLabel:                 Szerkesztés
+jcmsplugin.esn.lbl.editProfile.progress:      A profil <strong>{0}%</strong>-ban elkészült.
+
+jcmsplugin.esn.edit-profile.title.me:         A profilja
+jcmsplugin.esn.edit-profile.title.other:      {0} profilja
+jcmsplugin.esn.edit-profile.presentation:     Bemutatás
+jcmsplugin.esn.edit-profile.change-photo:     A fényképem módosítása
+
+jcmsplugin.esn.edit-expertises.title:         {0} kompetenciáinak frissítése
+
+jcmsplugin.esn.add-contact.title:             Kapcsolat hozzáadása
+jcmsplugin.esn.add-contact.steps.0:           Ellenőrzés
+jcmsplugin.esn.add-contact.steps.1:           Javaslatok
+jcmsplugin.esn.add-contact.steps.2:           Információ
+jcmsplugin.esn.add-contact.steps.3:           Kompetenciák
+jcmsplugin.esn.add-contact.steps-intro.0:     Adja meg a kapcsolata nevét és/vagy e-mail címét, annak ellenőrzése érdekében, hogy a személy már létezik-e.
+jcmsplugin.esn.add-contact.steps-intro.1.1:   Egy olyan tag található, aki megfelel ennek az információnak. Győződjön meg arról, hogy ez nem ugyanaz a személy-e, mielőtt egy újat hoz létre.
+jcmsplugin.esn.add-contact.steps-intro.1.2:   Több olyan tag található, aki megfelel ennek az információnak. Győződjön meg arról, hogy a létrehozni kívánt kapcsolat nem létezik-e már, mielőtt egy újat hoz létre.
+jcmsplugin.esn.add-contact.add-to-my-contacts:Hozzáadás a saját kapcsolatokhoz
+jcmsplugin.esn.add-contact.view-contact:      A kapcsolat megtekintése
+jcmsplugin.esn.add-contact.lbl.check:         Ellenőrzés...
+jcmsplugin.esn.add-contact.lbl.create:        Új kapcsolat létrehozása...
+jcmsplugin.esn.add-contact.lbl.wait:          Ellenőrzés folyamatban...
+jcmsplugin.esn.add-contact.lbl.add:           Hozzáadás a saját kapcsolatokhoz
+jcmsplugin.esn.add-contact.lbl.contact-added: A/az <b>{0}</b> kapcsolat létrehozása megtörtént.
+jcmsplugin.esn.add-contact.btn.continue:      Mentés és egy másik kapcsolat hozzáadása
+
+jcmsplugin.esn.mcr.request.title:             {0} hozzáadása az Ön hálózatához
+jcmsplugin.esn.mcr.request.lbl.send:          Küldés
+jcmsplugin.esn.mcr.request.info.title1:       Miért érdemes kapcsolódni?
+jcmsplugin.esn.mcr.request.info.content1:     {0} kapcsolatai közé történő felvételével Önnek lehetősége lesz megtekinteni a <strong>teljes profilját</strong> és követni a <strong>tevékenységét</strong>. Hasonlóképpen, {0} hozzá fog férni az <strong>Ön teljes profiljához</strong> és az <strong>Ön tevékenységeihez</strong>. A kapcsolódást követően <strong>ajánlhatja</strong> {0}-t a hálózata többi tagjának.
+jcmsplugin.esn.mcr.request.info.title2:       Hogyan kell kapcsolódni?
+jcmsplugin.esn.mcr.request.info.content2:     Csak küldje el ezt a meghívót {0} részére, a kapcsolódáshoz. Amikor {0} elfogadja a meghívását, Önök kapcsolódnak.
+
+jcmsplugin.esn.mcr.request.msg: {0},\n\nszeretném felvenni Önt a kapcsolataim közé.\n\n{1}\n
+
+jcmsplugin.esn.mcr.validate.title:            Meghívó
+jcmsplugin.esn.mcr.validate.info:             <b>Mi ez a meghívó?</b><p>{0} szeretne kapcsolódni Önhöz. A meghívás elfogadásával Ön hozzáférhet {0} <strong>teljes profiljához</strong> és <strong>tevékenységeihez</strong>. Ez egy kölcsönös kapcsolat. Az elfogadással Ön engedélyezi {0} számára, hogy hozzáférjen <strong>az Ön teljes profiljához</strong> és <strong>tevékenységeihez</strong>.</p>
+jcmsplugin.esn.mcr.validate.common:           A közös kapcsolatok
+jcmsplugin.esn.mcr.validate.common-some:      Az Önök néhány közös kapcsolata
+jcmsplugin.esn.mcr.validate.lbl.accept:       Elfogadás
+jcmsplugin.esn.mcr.validate.lbl.decline:      Elutasítás
+jcmsplugin.esn.mcr.validate.lbl.close:        Bezárás
+jcmsplugin.esn.mcr.lbl.confirm-delete:        Valóban törölni szeretné a/az <strong>{0}</strong> részére küldött meghívást?
+
+jcmsplugin.esn.connect-contact.title:          Kapcsolatok összekapcsolása
+jcmsplugin.esn.connect-contact.no-contact:     Minden kapcsolata kapcsolódott a következő taghoz: <span class="contact">{0}</span>.
+jcmsplugin.esn.connect-contact.info:           Jelölje ki a kapcsolatokat, amelyeket csatolni akar a következő taghoz: <span class="contact">{0}</span>.
+jcmsplugin.esn.connect-contact.lbl.contacts:   A kapcsolatai
+jcmsplugin.esn.connect-contact.lbl.connect:    Csatlakozás
+
+jcmsplugin.esn.activity.enabled:                 Tevékenység - Engedélyezze a tevékenység követését
+
+jcmsplugin.esn.activity.none:                    Nincs tevékenység
+jcmsplugin.esn.activity.profile.job:             {0} hozzáadta a következő pozíciót: <span class="message">{1}</span>
+jcmsplugin.esn.activity.profile.education:       {0} hozzáadta a következő tréninget: <span class="message">{1}</span>
+jcmsplugin.esn.activity.profile.link:            {0} hozzáadta a következő hivatkozást: {1}
+jcmsplugin.esn.activity.profile.categories:      {0} kitöltötte a kompetenciáit
+jcmsplugin.esn.activity.profile.categories.add:  {0} frissítette a kompetenciáit: <span class="message">{1}</span>
+jcmsplugin.esn.activity.profile.categories.add-empty:  {0} frissítette a kompetenciáit
+jcmsplugin.esn.activity.profile.info:            {0} frissítette az információit
+jcmsplugin.esn.activity.profile:                 {0} frissítette a profilját
+jcmsplugin.esn.activity.contact.profile:         {0} frissítette {1} profilját
+jcmsplugin.esn.activity.contact.note:            {0} hozzáadott egy megjegyzést a következőhöz: {1}
+jcmsplugin.esn.activity.connect-account:         {0} kapcsolódott a következő taggal: {1}
+jcmsplugin.esn.activity.connect:                 {0} hozzáadta a kapcsolataihoz a következő tagot: {1}
+jcmsplugin.esn.activity.ws:                      {0} bejelentkezett a következő munkaterületre: {1}
+jcmsplugin.esn.activity.create:                  {0} létrehozta a következőt: {1}
+jcmsplugin.esn.activity.update:                  {0} frissítette ezt: {1}
+jcmsplugin.esn.activity.delete:                  {0} törölte ezt: <span class="message">{1}</span>
+jcmsplugin.esn.activity.create.Publication:      {0} közzétette ezt: {1}
+jcmsplugin.esn.activity.create.Event:            {0} közzétette a/az {1} eseményt
+jcmsplugin.esn.activity.create.CalendarEvent:    {0} közzétette a/az {1} eseményt
+jcmsplugin.esn.activity.update.CalendarEvent:    {0} frissítette a/az {1} eseményt
+jcmsplugin.esn.activity.update.Event:            {0} frissítette a/az {1} eseményt
+jcmsplugin.esn.activity.create.Review:           {0} értékelte ezt: {1}
+jcmsplugin.esn.activity.create.FileDocument:     {0} feltöltötte ezt: {1}
+jcmsplugin.esn.activity.create.DBComment:        {0} hozzáadott egy új megjegyzést
+jcmsplugin.esn.activity.description-full.create.DBComment:        {0} hozzáadott egy új megjegyzést ezen: {1}
+jcmsplugin.esn.activity.create.DBForumTopic:     {0} közzétette a következő témát: {1}
+jcmsplugin.esn.activity.create.DBPollVote:       {0} válaszolt a következő közvélemény-kutatásra: {1}
+jcmsplugin.esn.activity.create.MicroBlogging:
+jcmsplugin.esn.activity.create.WebPage:          {0} megosztotta ezt: {1}
+jcmsplugin.esn.activity.update-pstatus:          {0} megváltoztatta {1} státuszát erre: <span class="message">{2}</span>.
+jcmsplugin.esn.activity.unzip:                   {0} feltöltött fájlokat egy zip archívumból: {1}
+jcmsplugin.esn.activity.lock:                    {0} zárolta a/az {1} dokumentumot
+jcmsplugin.esn.activity.unlock:                  {0} feloldotta a/az {1} dokumentumot
+jcmsplugin.esn.activity.vote:                    {0} szavazott erre: {1}
+jcmsplugin.esn.activity.filter:                  Szűrt tevékenység
+jcmsplugin.esn.activity.see-activity:            A tevékenység megtekintése
+jcmsplugin.esn.activity.hide-activity:           A tevékenység elrejtése
+jcmsplugin.esn.activity.delete-activity:         A tevékenység törlése
+jcmsplugin.esn.activity.delete-activity-ask:     Valóban szeretné törölni ezt a tevékenységet?
+jcmsplugin.esn.activity.delete-activity-ask-title:  A tevékenység törlése
+jcmsplugin.esn.activity.edit-comment:            A hozzászólás szerkesztése
+jcmsplugin.esn.activity.options-menu-title:      Tevékenység menüjének megnyitása      
+jcmsplugin.esn.activity.comment:                 Hozzászólás
+jcmsplugin.esn.activity.show-comments:           {0,choice,1#A hozzászólás|2#A hozzászólások} megjelenítése/elrejtése
+jcmsplugin.esn.activity.show-previous-activity:   A korábbi tevékenységek megtekintése
+jcmsplugin.esn.activity.hide-previous-activity:  A tevékenységek elrejtése
+jcmsplugin.esn.activity.lbl.no-activity:         {0} még nem rendelkezik tevékenységgel.
+jcmsplugin.esn.activity.nextpage:                Bővebben
+
+jcmsplugin.esn.activity-card.vote-action:        Tetszik
+jcmsplugin.esn.activity-card.menu-title:         Tevékenységek menüjének megnyitása
+jcmsplugin.esn.activity-card.menu-alt:           Műveletek
+jcmsplugin.esn.activity-card.event-attending:    {0} jelenlegi
+jcmsplugin.esn.activity-card.event-invited:      {0} résztvevő
+jcmsplugin.esn.activity-card.event.show-attendees: Résztvevők adatainak megtekintése
+jcmsplugin.esn.activity-card.comment-count-title:  Hozzászólások elérése
+
+jcmsplugin.esn.activity.filter.microBlogging:    MicroBlogging
+jcmsplugin.esn.activity.filter.profile:          Profil frissítése
+jcmsplugin.esn.activity.filter.contact:          Külső kapcsolat hozzáadása
+jcmsplugin.esn.activity.filter.connect:          Tag kapcsolatok
+jcmsplugin.esn.activity.filter.ws:               Munkaterület csatolása
+jcmsplugin.esn.activity.filter.create:           Adatok hozzáadása
+jcmsplugin.esn.activity.filter.update:           Adatok frissítése
+jcmsplugin.esn.activity.filter.delete:           Adatok törlése
+jcmsplugin.esn.activity.filter.lock:             Dokumentumok lezárása
+jcmsplugin.esn.activity.filter.upload:           Dokumentumok feltöltése
+jcmsplugin.esn.activity.filter.update-pstatus:   Munkafolyamat állapotának frissítése
+jcmsplugin.esn.activity.filter.others:           Egyéb tevékenységek
+jcmsplugin.esn.activity.filter.ws-include:       Korlátozás...
+jcmsplugin.esn.activity.filter.ws-exclude:       Minden, kivéve...
+
+jcmsplugin.esn.activity.filter.editor:               Tevékenység szűrő
+jcmsplugin.esn.activity.filter.editor.link:          Szűrők szerkesztése...
+jcmsplugin.esn.activity.filter.editor.steps.0:       Tevékenység típusa
+jcmsplugin.esn.activity.filter.editor.steps.1:       Részletes szűrés
+jcmsplugin.esn.activity.filter.editor.steps-intro.0: A tevékenység-adatfolyamban megjelenítendő tevékenységtípusok kiválasztása.
+jcmsplugin.esn.activity.filter.editor.steps-intro.1: Kiválaszthat egy másik kritériumot a tevékenység-adatfolyam szűrése érdekében.
+
+jcmsplugin.esn.activity.share.remove-webpage: Másik oldal megosztása
+jcmsplugin.esn.activity.share.webpage-next-image: Átváltás a következő képre
+jcmsplugin.esn.activity.share.webpage-prev-image: Átváltás az előző képre
+jcmsplugin.esn.activity.form-tab.document: Dokumentum
+jcmsplugin.esn.activity.form-tab.microblogging: Üzenet
+jcmsplugin.esn.activity.form-tab.webpage: Weblap
+
+icon.jcmsplugin-esn-activity-share-webpage-img-prev: Előző
+icon.jcmsplugin-esn-activity-share-webpage-img-next: Következő
+icon.jcmsplugin-esn-activity-share-webpage-remove: Törlés
+
+jcmsplugin.esn.lbl.communities:                  Közösségek
+jcmsplugin.esn.lbl.common-communities:           Közös közösségek
+jcmsplugin.esn.lbl.communities.info:             {0} létrehozva. {1,choice,0#Nincsenek tagok|1#1 tag|2#{1,number,integer} tag}. {2,choice,0#Nincs tartalom|1#1 tartalom|2#{2,number,integer} tartalom}.
+
+jcmsplugin.esn.status.title:            Frissítse az üzenetét
+jcmsplugin.esn.status.intro:            Annak jelzése, hogy mit csinál, hol van, milyen a hangulata... ?
+jcmsplugin.esn.status.mail:             Frissítheti a profilját e-mailben, elküldve egy üzenetet ide:
+jcmsplugin.esn.status.msg.singleton:    {0} már rendelkezik egy státusszal.
+
+jcmsplugin.esn.link.lbl.name:           Weboldal neve
+jcmsplugin.esn.link.lbl.url:            URL
+jcmsplugin.esn.link.lbl.description:    Leírás
+jcmsplugin.esn.link.msg.empty-title:    A "weboldal neve" szükséges.
+jcmsplugin.esn.link.msg.empty-url:      Az "URL" szükséges.
+jcmsplugin.esn.link.msg.bad-url:        Az 'URL' mező formátuma nem megfelelő.
+
+jcmsplugin.esn.lbl.notes:     Megjegyzések
+jcmsplugin.esn.lbl.notes.add: Jegyzet hozzáadása
+jcmsplugin.esn.lbl.notes.add-link: Jegyzet hozzáadása...
+
+jcmsplugin.esn.directory.lbl.view-profile:      A teljes profil megtekintése
+jcmsplugin.esn.directory.lbl.expert-directory:  Szakértő könyvtár
+
+jcmsplugin.esn.directory.app.nav-competencies: Kompetenciák
+jcmsplugin.esn.directory.app.breadcrumb.root: Kompetenciák
+jcmsplugin.esn.directory.app.competence.expertise.filter.add: Szűrés erre a kompetenciára
+jcmsplugin.esn.directory.app.competence.expertise.filter.node.add: Szűrés erre a kompetenciára és az al-kompetenciák megtekintése
+jcmsplugin.esn.directory.app.competence.expertise.filter.remove: A kompetencia-szűrő eltávolítása
+jcmsplugin.esn.directory.app.competence.expertise.filters.add: A kompetencia hozzáadása a szűrőkhöz
+jcmsplugin.esn.directory.app.competence.expertise.filters.remove: A kompetencia eltávolítása a szűrőkből
+jcmsplugin.esn.directory.app.competence.expertise.is-in-filters: Ez a kompetencia megtalálható az Ön szűrőiben. Távolítsa el a hozzá tartozó gombbal
+jcmsplugin.esn.directory.app.competence.expertise.node.is-in-filters: Ez a kompetencia megtalálható az Ön szűrőiben. Távolítsa el a hozzá tartozó gombbal az al-kompetenciák megtekintéséhez
+
+jcmsplugin.esn.directory.app.context-menu-label: Kompetenciák kontextuális menüje
+jcmsplugin.esn.directory.app.competence-action.add: Kompetenciák hozzáadása...
+jcmsplugin.esn.directory.app.competence-action.add-sub: Alkompetenciák hozzáadása...
+jcmsplugin.esn.directory.app.competence-action.add-prompt: Adjon meg új kompetencia neveket (vesszővel elválasztva):
+jcmsplugin.esn.directory.app.competence-action.rename-prompt: Adja meg a kompetencia új nevét
+jcmsplugin.esn.directory.app.competence-action.move-to: Áthelyezés a következőbe...
+jcmsplugin.esn.directory.app.competence-action.modal.move-to.title: Áthelyezés a következőbe
+jcmsplugin.esn.directory.app.competence-action.modal.move-to.op-action: Mozgatás
+
+jcmsplugin.esn.expert-dir.title:                  Szakértő könyvtár
+jcmsplugin.esn.expert-dir.lbl.home:               Kezdőlap
+jcmsplugin.esn.expert-dir.lbl.all:                Minden szakértő
+jcmsplugin.esn.expert-dir.lbl.expert-count:       {0,choice,0#Nincs eredmény|1#{0} eredmény|2#{0} eredmény}
+jcmsplugin.esn.expert-dir.lbl.related.connexe:    Kompetenciák bezárása:
+jcmsplugin.esn.expert-dir.lbl.related.others:     Egyéb kompetenciák:
+jcmsplugin.esn.expert-dir.msg.home:               Üdvözöljük a szakértői könyvtárban. Kattintson a bal oldali navigációs sávra, hogy kilistázza a szakértőket egy adott kompetencia esetén.
+jcmsplugin.esn.expert-dir.msg.no-expert.all:      Nincsenek eredmények a/az <i>{0}</i> kompetencia esetén.
+jcmsplugin.esn.expert-dir.msg.no-expert.account:  Nincsenek tagok a/az <i>{0}</i> kompetenciában.
+jcmsplugin.esn.expert-dir.msg.no-expert.contact:  Nincsenek eredmények a/az <i>{0}</i> kompetencia esetén.
+jcmsplugin.esn.expert-dir.lbl.expert-search:      Keresés kompetenciák szerint
+jcmsplugin.esn.expert-dir.lbl.filter:             Szűrők
+jcmsplugin.esn.expert-dir.lbl.filter.info:        Kattintson az ikonokra {0}, a kompetencia szűrése érdekében.
+jcmsplugin.esn.expert-dir.lbl.filter.add:         Szűrés erre a kompetenciára
+jcmsplugin.esn.expert-dir.lbl.filter.remove:      A szűrő eltávolítása
+jcmsplugin.esn.expert-dir.lbl.edit-expertises:    A kompetenciák kezelése
+
+jcmsplugin.esn.expertise.root-cat-forbidden:      Nem törölheti vagy szerkesztheti ezt a kategóriát, mert azt az ESN bővítmény használja a kompetencia eltárolása érdekében. Csak egy rendszergazda vagy egy megfelelő jogosultsággal rendelkező tag szerkesztheti vagy törölheti azt.
+jcmsplugin.esn.expertise.expertise-cat-forbidden: Ezt a kategóriát az ESN bővítmény kompetenciaként használja. Ezt már egy másik tag használja. Csak egy rendszergazda vagy egy megfelelő jogosultsággal rendelkező tag szerkesztheti azt.
+
+jcmsplugin.esn.ctxmenu.mbr.profile:  Profil megtekintése
+
+$id.jcmsplugin.esn.portlet.header:              ESN - Fejléc
+$id.jcmsplugin.esn.portlet.actions:             ESN - Műveletek
+$id.jcmsplugin.esn.portlet.connection-requests: ESN - Kapcsolódási kérések
+$id.jcmsplugin.esn.portlet.suggestions:         ESN - Javaslatok
+$id.jcmsplugin.esn.portlet.common-connections:  ESN - Közös kapcsolatok
+$id.jcmsplugin.esn.portlet.connections:         ESN - Kapcsolatok
+$id.jcmsplugin.esn.portlet.links:               ESN - Hivatkozások
+$id.jcmsplugin.esn.portlet.activities:          ESN - Tevékenységek
+$id.jcmsplugin.esn.portlet.network-activities:  ESN - Hálózati tevékenységek
+$id.jcmsplugin.esn.portlet.publications:        ESN - Közzétételek
+$id.jcmsplugin.esn.portlet.calendar:            ESN - Naptár
+$id.jcmsplugin.esn.portlet.presentation:        ESN - Bemutatás
+$id.jcmsplugin.esn.portlet.workspaces:          ESN - Munkaterületek
+$id.jcmsplugin.esn.portlet.expertise:           ESN - Kompetenciák
+$id.jcmsplugin.esn.portlet.contact-notes:       ESN - Kapcsolatok - Jegyzetek
+$id.jcmsplugin.esn.portlet.contact-calendar:    ESN - Kapcsolatok - Naptár
+$id.jcmsplugin.esn.portlet.contact-referrers:   ESN - Kapcsolatok - Hivatkozók
+$id.jcmsplugin.esn.portlet.contacts:            ESN - Kapcsolatok
+$id.jcmsplugin.esn.portlet.jobs:                ESN - Pozíciók
+$id.jcmsplugin.esn.portlet.educations:          ESN - Oktatás
+
+jcmsplugin.esn.portlet-mbr-status.no-mbr:       Nincsenek tagok
+
+jcmsplugin.esn.birthday.portlet.day:  {0,choice,0#Ma|1#Holnap|2#{0} nap múlva}
+jcmsplugin.esn.birthday.portlet.none: Nincs születésnap
+jcmsplugin.esn.birthday-reminder.enabled: Születésnapi emlékeztető bekapcsolása
+jcmsplugin.esn.birthday-happy: Boldog születésnapot!
+
+jcmsplugin.esn.microblogging.share:               Megosztás
+jcmsplugin.esn.microblogging.modify:            Frissítés
+jcmsplugin.esn.microblogging.label.microblogging: MicroBlogging
+jcmsplugin.esn.microblogging.menu.message:        Üzenet
+jcmsplugin.esn.microblogging.title.create-message:Üzenet közzététele
+jcmsplugin.esn.microblogging.delete-confirm:      Szeretné törölni az utolsó üzenetét?
+jcmsplugin.esn.microblogging.microblogging-prompt:Mit csinálsz most?
+jcmsplugin.esn.microblogging.update-message:      Az üzenet szerkesztése
+jcmsplugin.esn.microblogging.delete-message:      Az üzenet törlése
+jcmsplugin.esn.microblogging.member-microblogging-title: {0} mikroblogja
+jcmsplugin.esn.microblogging.warn.existing-webpage-ws: Ez a weboldal már létezik az aktuális munkaterületen.
+jcmsplugin.esn.microblogging.warn.existing-webpage-ws-other: Ezt a weboldalt {0} közzétette {1} esetén, a munkaterületen: {2}.
+jcmsplugin.esn.microblogging.warn.existing-webpage-ws.btn: Weboldal hozzáférése
+jcmsplugin.esn.microblogging.warn.bad-url-format: A megadott URL nem érvényes.
+jcmsplugin.esn.microblogging.warn.missing-url: Kérjük, adjon meg egy url-t.
+jcmsplugin.esn.microblogging.warn.missing-url-meta: A weboldalról származó adatok nem tölthetők be, manuálisan kell megadnia az információkat.
+
+jcmsplugin.esn.collaborativespace.private-home.connections: A kapcsolatai ezen a területen
+
+jcmsplugin.esn.expert-directory.open-access: Nyílt hozzáférés a szakértői könyvtárhoz
+jcmsplugin.esn.expert-directory.open-access.help: A nyílt hozzáférés engedélyezése esetén a szakértői könyvtár nem igényli a felhasználó bejelentkezését a szakértői könyvtár eléréséhez.
+jcmsplugin.esn.member-profile.open-access: Nyílt hozzáférés a tag profiljához
+jcmsplugin.esn.member-profile.open-access.help: A nyílt hozzáférés engedélyezése esetén a felhasználónak nem kell bejelentkeznie egy tag profiljának eléréséhez.
+jcmsplugin.esn.member-profile.event-intro: {0} részt vesz egy rendezvényen
+jcmsplugin.esn.member-profile.event-intro.me: Ön részt vesz a következő rendezvényen
+
+jcmsplugin.esn.contact-by-email.title: Kapcsolat e-mailben.
+jcmsplugin.esn.contact-by-email.title2: Kapcsolat e-mailben ({0})...
+jcmsplugin.esn.contact-by-sms.title: Kapcsolat SMS-ben...
+jcmsplugin.esn.contact-by-phone.title: Kapcsolat telefonon...
+jcmsplugin.esn.contact-by-other.title: Kapcsolat a következőn: {0}...
+jcmsplugin.esn.call-at-number.title: Hívás ekkor: {0}...
+jcmsplugin.esn.profile.contact.email: E-mail
+jcmsplugin.esn.profile.full.contact.sms: SMS
+jcmsplugin.esn.profile.contact.webchat: WebChat
+
+# ExtraData
+extra.Category.jcmsplugin.esn.groups: ESN - Társított csoportok
+
+# Publish Menu
+jcmsplugin.esn.publish-menu.contact:       Kapcsolat
+jcmsplugin.esn.publish-menu.microblogging: Üzenet
+
+# Alerts
+alert.name.jcmsplugin-esn : Közösségi hálózat
+alert.name.jcmsplugin-esn.follower:             Új követő
+alert.name.jcmsplugin-esn.connection:           Új kapcsolat hozzáadása
+alert.name.jcmsplugin-esn.connection-request:   Kapcsolódási kérelem
+alert.name.jcmsplugin-esn.connection-accepted:  Kapcsolat elfogadva
+alert.name.jcmsplugin-esn.connection-declined:  Kapcsolat elutasítva
+alert.name.jcmsplugin-esn.birthday-reminder:    Születésnap emlékeztető
+
+alert.msg.jcmsplugin-esn.follower.title:                        Új követő
+alert.msg.jcmsplugin-esn.follower.short-description:            {author} mostantól követi az Ön tevékenységét.
+
+alert.msg.jcmsplugin-esn.connection.title:                      Új kapcsolat
+alert.msg.jcmsplugin-esn.connection.short-description:          {author} hozzáadta Önt a kapcsolataihoz.
+
+alert.msg.jcmsplugin-esn.connection-request.title:              Kapcsolati meghívás
+alert.msg.jcmsplugin-esn.connection-request.short-description:  {author} kapcsolati meghívást küldött Önnek.
+alert.msg.jcmsplugin-esn.connection-request.description:        <p>{author} kapcsolati meghívást küldött Önnek.</p> {accept} {showProfile}
+jcmsplugin.esn.connection-request.mail:                         {0} kapcsolati meghívást küldött Önnek.
+
+alert.msg.jcmsplugin-esn.connection-accepted.title:             Meghívás elfogadva
+alert.msg.jcmsplugin-esn.connection-accepted.short-description: {author} elfogadta az Ön meghívását. Önök kapcsolódtak.
+
+alert.msg.jcmsplugin-esn.connection-declined.title:             Meghívás visszautasítva
+alert.msg.jcmsplugin-esn.connection-declined.short-description: {author} elutasította az Ön meghívását.
+
+alert.msg.jcmsplugin-esn.birthday-reminder.title:               Születésnap emlékeztető
+alert.msg.jcmsplugin-esn.birthday-reminder.short-description:   Következő születésnapok: {birthday-list}
+alert.msg.jcmsplugin-esn.birthday-reminder.description:         <p>A hálózata néhány tagjának hamarosan születésnapja lesz:</p>{birthday-list}
+alert.msg.jcmsplugin-esn.birthday-reminder.txt.today:    Ma:
+alert.msg.jcmsplugin-esn.birthday-reminder.txt.tomorrow: Holnap:
+alert.msg.jcmsplugin-esn.birthday-reminder.txt.later:    7 napon belül ({0}):
+
+# ------------------------------------------------------------
+#  Recommendation
+# ------------------------------------------------------------
+alert.name.recommendation.esn-member-recommendation: Kapcsolódási ajánlás
+alert.msg.recommendation.esn-member-recommendation.title:      Ajánlás a következőn {data}
+alert.msg.recommendation.esn-member-recommendation.short-description: {author} ajánlja Önnek {data} hozzáadását a kapcsolataihoz. {recoContent}
+alert.msg.recommendation.esn-member-recommendation.description: <p>{author} ajánlja Önnek {data} hozzáadását a kapcsolataihoz.</p> <p>{recoContent}</p>
+alert.msg.recommendation.esn-member-recommendation.reply.short-description: {author} válaszolt az Ön ajánlására a következőn {data}: {replyRecommendation} {data.url} {reply}
+alert.msg.recommendation.esn-member-recommendation.reply.description: <p>{author} válaszolt az Ön ajánlására a következőn {data}:</p><hr/><p>{replyRecommendation}</p><hr/> {recoContent} {reply}
+jcmsplugin.esn.recommendation.Member: <b>{0}</b> ajánlása a többi tagnak.
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From MemberCategories-templates.xml
+types.MemberCategories.templates.query.default.label: Alapértelmezett sablon
+types.MemberCategories.templates.query.default.description: Az alapértelmezett sablon ezen közzététel esetén
+types.MemberCategories.templates.full.default.label: Alapértelmezett sablon
+types.MemberCategories.templates.box.default.description: Az alapértelmezett sablon ezen közzététel esetén
+types.MemberCategories.templates.box.default.label: Alapértelmezett sablon
+types.MemberCategories.templates.edit.default.description: Az alapértelmezett sablon ezen közzététel esetén
+types.MemberCategories.templates.edit.default.label: Alapértelmezett sablon
+types.MemberCategories.templates.full.default.description: Az alapértelmezett sablon ezen közzététel esetén
+
+# From MemberCategories.xml
+types.MemberCategories.label: ESN - Kompetenciák
+types.MemberCategories.title.label: Cím
+
+# From MemberEducation-templates.xml
+types.MemberEducation.templates.query.default.description: Az alapértelmezett sablon ezen közzététel esetén
+types.MemberEducation.templates.full.default.description: Az alapértelmezett sablon ezen közzététel esetén
+types.MemberEducation.templates.full.default.label: Alapértelmezett sablon
+types.MemberEducation.templates.box.default.label: Alapértelmezett sablon
+types.MemberEducation.templates.query.default.label: Alapértelmezett sablon
+types.MemberEducation.templates.edit.default.label: Alapértelmezett sablon
+types.MemberEducation.templates.box.default.description: Az alapértelmezett sablon ezen közzététel esetén
+types.MemberEducation.templates.edit.default.description: Az alapértelmezett sablon ezen közzététel esetén
+
+# From MemberEducation.xml
+types.MemberEducation.fields.endDate.label: Befejezési dátum
+types.MemberEducation.label: ESN - Oktatás
+types.MemberEducation.title.label: Cím
+types.MemberEducation.fields.degree.label: Diploma
+types.MemberEducation.fields.startDate.label: Kezdési dátum
+types.MemberEducation.fields.site.label: Weboldal
+types.MemberEducation.fields.place.label: Elhelyezkedés
+types.MemberEducation.fields.trainingCenter.label: Képzési szervezet
+types.MemberEducation.fields.description.label: Leírás
+
+# From MemberJob-templates.xml
+types.MemberJob.templates.box.default.description: Az alapértelmezett sablon ezen közzététel esetén
+types.MemberJob.templates.box.default.label: Alapértelmezett sablon
+types.MemberJob.templates.full.default.label: Alapértelmezett sablon
+types.MemberJob.templates.query.default.label: Alapértelmezett sablon
+types.MemberJob.templates.edit.default.description: Az alapértelmezett sablon ezen közzététel esetén
+types.MemberJob.templates.edit.default.label: Alapértelmezett sablon
+types.MemberJob.templates.full.default.description: Az alapértelmezett sablon ezen közzététel esetén
+types.MemberJob.templates.query.default.description: Az alapértelmezett sablon ezen közzététel esetén
+
+# From MemberJob.xml
+types.MemberJob.title.label: Munka megnevezése
+types.MemberJob.fields.startDate.label: Kezdési dátum
+types.MemberJob.fields.place.label: Elhelyezkedés
+types.MemberJob.label: ESN - Munka
+types.MemberJob.fields.description.label: Leírás
+types.MemberJob.fields.organization.label: Szervezet
+types.MemberJob.fields.endDate.label: Befejezési dátum
+types.MemberJob.fields.site.label: Weboldal
+
+# From MemberProfile-templates.xml
+types.MemberProfile.templates.edit.default.label: Alapértelmezett sablon
+types.MemberProfile.templates.box.default.label: Alapértelmezett sablon
+types.MemberProfile.templates.full.default.label: Alapértelmezett sablon
+types.MemberProfile.templates.full.default.description: Az alapértelmezett sablon ezen közzététel esetén
+types.MemberProfile.templates.fullold.default.label: Régi alapértelmezett sablon (<6.2)
+types.MemberProfile.templates.query.default.label: Alapértelmezett sablon
+types.MemberProfile.templates.editFront.default.label: Front-office szerkesztési sablon.
+types.MemberProfile.templates.edit.default.description: Az alapértelmezett sablon ezen közzététel esetén
+types.MemberProfile.templates.box.default.description: Az alapértelmezett sablon ezen közzététel esetén
+types.MemberProfile.templates.query.default.description: Az alapértelmezett sablon ezen közzététel esetén
+
+# From MemberProfile.xml
+types.MemberProfile.label: ESN - Profil
+types.MemberProfile.fields.dateOfBirth.label: Születési dátum
+types.MemberProfile.title.label: Cím
+types.MemberProfile.fields.introduction.label: Bevezetés
+types.MemberProfile.fields.interest.label: Érdeklődési területek
+types.MemberProfile.fields.dateOfArrival.label: Érkezés dátuma
+
+# From MicroBlogging.xml
+types.MicroBlogging.fields.text.label: Szöveg
+types.MicroBlogging.label: MicroBlogging
+types.MicroBlogging.title.label: Cím
+
+# From PortletBirthday-templates.xml
+types.PortletBirthday.templates.box.default.label: Kezelőpult sablon
+types.PortletBirthday.templates.full.default.label: Sablon alkalmazása
+
+# From PortletBirthday.xml
+types.PortletBirthday.fields.relationshipFilter.description: Csak azon tagok megjelenítése, akikkel a bejelentkezett tag kapcsolatban áll?
+types.PortletBirthday.fields.relationshipFilter.onLabel: Igen
+types.PortletBirthday.fields.workspaceMembers.label: Munkaterület tagok
+types.PortletBirthday.fields.relationshipFilter.label: Szűrés a kapcsolatokra
+types.PortletBirthday.fields.workspaceMembers.description: Csak az aktuális munkaterület tagjainak megjelenítése?
+types.PortletBirthday.fields.workspaceMembers.offLabel: Nem
+types.PortletBirthday.fields.workspaceMembers.onLabel: Igen
+types.PortletBirthday.label: Születésnap portlet
+types.PortletBirthday.fields.relationshipFilter.offLabel: Nem
+types.PortletBirthday.title.label: Cím
+types.PortletBirthday.description: Megjeleníti a kapcsolatai közelgő születésnapjait
+
+# From PortletMemberActivity-templates.xml
+types.PortletMemberActivity.templates.box.default.label: Kezelőpult sablon
+types.PortletMemberActivity.templates.full.default.label: Sablon alkalmazása
+types.PortletMemberActivity.templates.full.card.label: Alkalmazás-kártyák sablonja
+types.PortletMemberActivity.templates.box.card.label: Kezelőpult-kártyák sablonja
+types.PortletMemberActivity.templates.jmobile.default.label: Alapértelmezett sablon
+
+# From PortletMemberActivity.xml
+types.PortletMemberActivity.fields.activityMode.label: Megjelenített tevékenységek
+types.PortletMemberActivity.fields.activityMode.labelList: Követett tagtevékenység minden munkaterületen | Követett tagtevékenység azon a munkaterületen, amelyhez én tartozom | Munkaterületek tevékenysége | Jelenlegi munkaterület tevékenysége
+types.PortletMemberActivity.fields.showComments.label: Hozzászólások megjelenítése
+types.PortletMemberActivity.fields.showMedia.label: Média megjelenítése
+types.PortletMemberActivity.fields.filters.label: Szűrők
+types.PortletMemberActivity.fields.defaultPageSize.label: A megjelenített tevékenységek száma
+types.PortletMemberActivity.fields.showComments.onLabel: Igen
+types.PortletMemberActivity.fields.showMedia.onLabel: Igen
+types.PortletMemberActivity.fields.showComments.offLabel: Nem
+types.PortletMemberActivity.fields.showAbstract.onLabel: Igen
+types.PortletMemberActivity.fields.showMedia.offLabel: Nem
+types.PortletMemberActivity.fields.showAbstract.label: Kivonat megjelenítése
+types.PortletMemberActivity.fields.showAbstract.offLabel: Nem
+types.PortletMemberActivity.label: Tag tevékenység portlet
+types.PortletMemberActivity.title.label: Cím
+types.PortletMemberActivity.fields.displayAllEvent.label:       Az összes naptári esemény megjelenítése
+types.PortletMemberActivity.fields.displayAllEvent.onLabel:     Igen
+types.PortletMemberActivity.fields.displayAllEvent.offLabel:    Nem
+types.PortletMemberActivity.fields.displayAllEvent.description: Ha „Igen”, az összes esemény meg lesz jelenítve a falon (A rendelkezésre álló jogok alapján szűrve), ha „Nem”, csak a szabad regisztrációval rendelkező események és azok az események lesznek megjelenítve, amelyekhez a tag tartozik
+types.PortletMemberActivity.description: Megjeleníti a tevékenységeket
+
+# From PortletMemberProfile-templates.xml
+types.PortletMemberProfile.templates.full.default.label: Sablon alkalmazása
+types.PortletMemberProfile.templates.box.default.label: Kezelőpult sablon
+
+# From PortletMemberProfile.xml
+types.PortletMemberProfile.fields.showSuggestions.offLabel: Nem
+types.PortletMemberProfile.fields.showConnectionRequests.onLabel: Igen
+types.PortletMemberProfile.label: Profil portlet
+types.PortletMemberProfile.fields.showConnectionRequests.offLabel: Nem
+types.PortletMemberProfile.fields.showSuggestions.onLabel: Igen
+types.PortletMemberProfile.fields.showConnectionRequests.label: Csatlakozási kérések megjelenítése
+types.PortletMemberProfile.title.label: Cím
+types.PortletMemberProfile.fields.showSuggestions.label: Javaslatok megjelenítése
+types.PortletMemberProfile.description: Megjeleníti a tag profilját, valamint a kapcsolati kéréseit és javaslatait
+
+# From PortletMemberStatus-templates.xml
+types.PortletMemberStatus.templates.box.default.label: Kezelőpult sablon
+types.PortletMemberStatus.templates.full.default.label: Sablon alkalmazása
+
+# From PortletMemberStatus.xml
+types.PortletMemberStatus.fields.workspaceMembers.description: Csak az aktuális munkaterület tevékenységének megjelenítése?
+types.PortletMemberStatus.label: Tag státusz portlet
+types.PortletMemberStatus.fields.workspaceMembers.label: Munkaterület tagok
+types.PortletMemberStatus.fields.workspaceMembers.offLabel: Nem
+types.PortletMemberStatus.fields.workspaceMembers.onLabel: Igen
+types.PortletMemberStatus.title.label: Cím
+types.PortletMemberStatus.description: Megjeleníti a kapcsolatai állapotát vagy a munkaterület tagjának állapotát
+
+# Analytics
+ui.analytics.ESNAgent.name:                         Közösség
+ui.analytics.ESNAgent.report.network:               Közösségi hálózat
+ui.analytics.ESNAgent.report.network.h:             Közösségi hálózat sűrűsége.
+ui.analytics.ESNAgent.report.new-profile:           Új profilok
+ui.analytics.ESNAgent.report.new-profile.h:         Új profilok létrehozva.
+ui.analytics.ESNAgent.report.account-profile-count: Fiók-profilok
+ui.analytics.ESNAgent.report.contact-profile-count: Kapcsolat-profilok
+ui.analytics.ESNAgent.report.connection-ratio:      Kapcsolati arány tagonként
+ui.analytics.ESNAgent.report.follower-ratio:        Követői arány tagonként
+ui.analytics.ESNAgent.report.following-ratio:       Követési arány tagonként
+ui.analytics.ESNAgent.report.activity-count:        Tevékenység
+ui.analytics.ESNAgent.report.activity-count.h:      Tevékenység száma
+ui.analytics.ESNAgent.report.activity-top:          Top tevékenység 
+ui.analytics.ESNAgent.report.activity-top.h:        Tevékenységi bontás
+ui.analytics.ESNAgent.report.network:               Kapcsolatok
+ui.analytics.ESNAgent.report.network.h:             Kapcsolati arány a közösségi hálózatban.
+ui.analytics.ESNAgent.report.new-profile:           Új profilok
+ui.analytics.ESNAgent.report.new-profile.h:         Új profilok létrehozva.
+ui.analytics.ESNAgent.report.account-profile-count: Fiók
+ui.analytics.ESNAgent.report.contact-profile-count: Kapcsolat
+ui.analytics.ESNAgent.report.profile-completeness:   Profil teljessége
+ui.analytics.ESNAgent.report.profile-completeness.h: A tagprofilok teljességi százalékértéke.
+ui.analytics.ESNAgent.report.connection-ratio:      Tagok kapcsolati átlaga
+ui.analytics.ESNAgent.report.follower-ratio:        Tagok követési átlaga
+ui.analytics.ESNAgent.report.following-ratio:       Tagok követői átlaga
+ui.analytics.ESNAgent.report.microblogging-count:   MicroBlogging
+ui.analytics.ESNAgent.report.microblogging-count.h: Közzétett mikroblog-üzenetek száma.
+
+ # From plugin.xml
+types.PortletMemberActivity.templates.jcmsplugin.virtualdesktop.editInline.default.label: A virtuális asztalon használt sablon a Tagtevékenység-szolgáltatás szerkesztése során.
+types.AbstractPortletSkinable.templates.box.esnSkin.label: ESN Megjelenés
+types.AbstractPortletSkinable.templates.box.esnSkin.description: (CSS) lekerekített megjelenés
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.activity: Tevékenység
+jcmsplugin.smartphone.workspace-service.PortletMemberActivity: Tevékenységek
+jcmsplugin.esn.smartphone.lbl.presentation: Bemutatás
+jcmsplugin.esn.smartphone.lbl.expertises: Kompetenciák
+jcmsplugin.esn.smartphone.lbl.member.activity: Tevékenység
+jcmsplugin.esn.smartphone.lbl.activity.microblogging.text.placeholder: Írja ide az üzenetét...
+jcmsplugin.esn.smartphone.lbl.activity.microblogging.add-message: Üzenet hozzáadása
+
+jcmsplugin.smartphone.shareurl.label.esn: MicroBlogging
+
+# Microblogging icon label
+jcmsplugin.esn.smartphone.microblogging.camera : Kamera
+jcmsplugin.esn.smartphone.microblogging.galery : Fotógaléria
+
+# ----------------------------------------------------------------------
+# OpenApi
+# ----------------------------------------------------------------------
+acl.resource.admin/work/canManageExpertiseCategory: ESN - Jogosultság a kompetencia kategóriák kezelésére
+acl.resource.plugins: Bővítmények
+acl.resource.plugins/esn: ESN
+acl.resource.plugins/esn/openapi: Open API
+acl.resource.plugins/esn/openapi/anyActivity: Bármely tevékenység létrehozása
+acl.resource.plugins/esn/openapi/anyActivity.h: Bármely tevékenység létrehozásának engedélyezése (bármely tag lehet tevékenység szerzője)
+acl.resource.plugins/esn/openapi/activity: Személyes tevékenység létrehozása
+acl.resource.plugins/esn/openapi/activity.h: A tag személyes tevékenység létrehozásának engedélyezése (a bejelentkezett tag tevékenység szerzője lesz)
+doc.rest.rsrc-meth.ActivityResource: GET<br/>POST<br/>DELETE
+doc.rest.rsrc-desc./plugins/esn/activities: POST metódus: Tevékenységlista a következő paraméterekkel: <br/> <ul><li>tag: Az olvasási jogok ellenőrzésére használt tag (kényszerítve a bejelentkezett tag, ha a bejelentkezett tag nem rendelkezik „Bármely tevékenység létrehozása” ACL-lel)</li><li>mód: a Tag tevékenység mód egy példánya: <ul><li>FOLLOWED_MEMBERS</li><li>FOLLOWED_MEMBERS_WS</li><li>WORKSPACE_ACTIVITIES</li><li>MEMBER_WORKSPACE_ACTIVITIES</li><li>MEMBER_ACTIVITIES</li></ul></li><li>munkaterület: a kereséshez használt munkaterület</li><li>activityMember: A tevékenységek szerző tagja</li><li>startActivityDate: a keresés kezdeti dátuma</li><li>pageSize: alapértelmezett esetben 10</li><ul>
+doc.rest.rsrc-desc./plugins/esn/activities/followedMembers/{memberId}: GET metódus: A megadott tag által követett tagok tevékenységlistája<br/>Az olvasási jogokhoz használt tag csak abban az esetben a megadott tag, ha a bejelentkezett tag „Bármely tevékenység létrehozása” ACL-lel rendelkezik, ellenkező esetben ez a bejelentkezett tag.<br/>Ennek a végpontnak a testreszabása a tevékenységek végpontján keresztül történik.
+doc.rest.rsrc-desc./plugins/esn/activities/followedMembersWs/{memberId}:GET metódus: A megadott tag által követett tagok tevékenységlistája, de csak a tag munkaterületein.<br/>Az olvasási jogokhoz használt tag csak abban az esetben a megadott tag, ha a bejelentkezett tag „Bármely tevékenység létrehozása” ACL-lel rendelkezik, ellenkező esetben ez a bejelentkezett tag.<br/>Ennek a végpontnak a testreszabása a tevékenységek végpontján keresztül történik.
+doc.rest.rsrc-desc./plugins/esn/activities/member/{memberId}: GET metódus: A megadott tag tevékenységlistája.<br/>Az olvasási jogokhoz használt tag csak abban az esetben a megadott tag, ha a bejelentkezett tag „Bármely tevékenység létrehozása” ACL-lel rendelkezik, ellenkező esetben ez a bejelentkezett tag.<br/>Ennek a végpontnak a testreszabása a tevékenységek végpontján keresztül történik.
+doc.rest.rsrc-desc./plugins/esn/activities/memberWorspaces/{memberId}: GET metódus: A megadott tagok munkaterületeinek tevékenységlistája.<br/>Az olvasási jogokhoz használt tag csak abban az esetben a megadott tag, ha a bejelentkezett tag „Bármely tevékenység létrehozása” ACL-lel rendelkezik, ellenkező esetben ez a bejelentkezett tag.<br/>Ennek a végpontnak a testreszabása a tevékenységek végpontján keresztül történik.
+doc.rest.rsrc-desc./plugins/esn/activities/workspace/{workspaceId}: GET metódus: A megadott munkaterület tevékenységlistája.<br/>Az olvasási jogokhoz használt tag csak abban az esetben a megadott tag, ha a bejelentkezett tag „Bármely tevékenység létrehozása” ACL-lel rendelkezik, ellenkező esetben ez a bejelentkezett tag.<br/>Ennek a végpontnak a testreszabása a tevékenységek végpontján keresztül történik.
+doc.rest.rsrc-desc./plugins/esn/activity/{id}: GET metódus: Tagtevékenység lekérése azonosító alapján<br/> POST metódus: tevékenység frissítése (ugyanazokkal a mezőkkel, mint a létrehozás esetén<br/> DELETE metódus: tevékenység törlése
+doc.rest.rsrc-desc./plugins/esn/activity: POST metódus: Tevékenység létrehozása. <br/> paraméter:<ul><li>tulajdonság: KÖTELEZŐ - a tevékenységhez használt tulajdonság</li><li>tag: KÖTELEZŐ - tevékenység tag (kényszerítve a bejelentkezett tag, ha a bejelentkezett tag nem rendelkezik „Bármely tevékenység létrehozása” ACL-lel)</li><li>adatok: a tevékenység adataihoz kapcsolódóan</li><li>üzenet: kiegészítő üzenet </li><li>munkaterület: tevékenység munkaterület (ha üres, amennyiben az adatok meg vannak adva, az adatok munkaterülete lesz használva.)</li><ul>
+

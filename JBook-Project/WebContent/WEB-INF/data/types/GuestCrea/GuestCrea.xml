@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<type name="GuestCrea" superclass="generated.GuestRequest" formOneSubmit="false" formNotify="false" formAuthor="j_2" formRedirectMode="home" categoryTab="true" readRightTab="true" updateRightTab="true" templateTab="true" workflowTab="true" advancedTab="true" database="true" hbm="true" reviewable="false" debatable="false" unitFieldEdition="true" audienced="false" formhandler="com.jalios.jcmsplugin.collaborativespace.guest.handler.GuestCreationSuperHandler">
+  <title ml="false" />
+  <fields>
+    <field name="name" editor="textfield" required="true" type="String" searchable="true" size="40" compactDisplay="false" ml="false" descriptionType="text" html="false" checkHtml="true" />
+    <field name="firstname" editor="textfield" required="false" compactDisplay="false" type="String" searchable="false" size="40" ml="false" html="false" checkHtml="false" descriptionType="text" />
+    <field name="email" editor="email" required="true" compactDisplay="false" type="String" searchable="false" size="40" maxlength="500" pattern="([-0-9a-zA-Z_\.']+@[-0-9a-zA-Z_\.]+)?" ml="false" descriptionType="text" html="false" checkHtml="true" />
+    <field name="organization" editor="textfield" required="false" compactDisplay="false" type="String" searchable="false" size="40" ml="false" html="false" checkHtml="false" descriptionType="text" />
+    <field name="language" editor="textfield" required="true" compactDisplay="false" type="String" searchable="false" size="40" ml="false" html="false" checkHtml="false" descriptionType="text" />
+    <field name="country" editor="textfield" required="true" compactDisplay="false" type="String" searchable="false" size="40" ml="false" html="false" checkHtml="false" descriptionType="text" />
+    <field type="super" />
+  </fields>
+</type>
+

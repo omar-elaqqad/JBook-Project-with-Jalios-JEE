@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plugin PUBLIC "-//JALIOS//DTD JCMS-PLUGIN 1.7//EN" "http://support.jalios.com/dtd/jcms-plugin-1.7.dtd">
+<plugin name="ESNPlugin" 
+        version="6.7.5"
+        jcms="10\.0\.[5-9].*"
+        author="Jalios SA" license="Jalios" 
+        url="https://community.jalios.com/plugin/esn"
+        jsync="true" initialize="true" order="0">
+
+  <label xml:lang="en">ESN Plugin</label>
+  <label xml:lang="fr">Module ESN</label>
+  <description xml:lang="fr">Ce module apporte les fonctionnalités du Réseau Social d'Entreprise à votre site.</description>
+  <description xml:lang="en">This plugin provides Enterprise Social Network facilities to your site.</description>
+  <dependencies>
+    <dependency name="DBCommentPlugin" />
+  </dependencies>
+  <types>
+    <templates type="PortletMemberActivity">
+      <template name="default" file="editPortletMemberActivityService.jsp" dir="type" usage="jcmsplugin.virtualdesktop.editInline">
+        <label xml:lang="en">Template used in Virtual Desktop when editing a Member Activity service.</label>
+        <label xml:lang="fr">Gabarit utilisé dans le Bureau Virtuel pour l'édition d'un service Activity des Membres</label>
+      </template>
+    </templates>
+    <type name="MemberCategories">
+      <file path="doMemberCategoriesFullDisplay.jsp" />
+    </type>
+    <type name="MemberEducation">
+      <file path="doMemberEducationFullDisplay.jsp" />
+    </type>
+    <type name="MemberJob">
+      <file path="doMemberJobFullDisplay.jsp" />
+    </type>
+    <type name="MemberProfile">
+      <file path="doMemberProfileFullDisplay.jsp" />
+    </type>
+    <templates type="MemberProfile">
+      <template name="default" file="doMemberProfileFullDisplay.jsp" usage="full">
+        <label xml:lang="en">Default display</label>
+        <label xml:lang="fr">Gabarit par défaut</label>
+      </template>
+    </templates>
+    <type name="MicroBlogging">
+      <file path="doMicroBloggingFullDisplay.jsp" />
+      <file path="doEditMicroBlogging.jsp" />
+    </type>
+    <type name="PortletBirthday">
+      <file path="doPortletBirthdayFullDisplay.jsp" />
+      <file path="doPortletBirthdayFullDisplay.png" />
+    </type>
+    <type name="PortletMemberActivity">
+      <file path="doPortletMemberActivityFullDisplayInnerCards.jsp" />
+      <file path="doPortletMemberActivityFullDisplayCards.jsp" />
+      <file path="doPortletMemberActivityFullDisplayCards.png" />    
+      <file path="doPortletMemberActivityFullDisplayInner.jsp" />
+      <file path="doPortletMemberActivityFullDisplay.jsp" />
+      <file path="doPortletMemberActivityFullDisplay.png" />
+      <file path="doPortletMemberActivityMobileDisplay.jsp" />
+      <file path="doPortletMemberActivityMobileDisplay.png" />
+      <file path="doPortletMemberActivityMobileDisplayInner.jsp" />
+      <file path="editMemberActivityFilter.jsp" />
+      <file path="editMemberActivityFilterStep_0.jspf" />
+      <file path="editMemberActivityFilterStep_1.jspf" />
+      <file path="editPortletMemberActivityService.jsp" />
+    </type>
+    <type name="PortletMemberProfile">
+      <file path="doPortletMemberProfileFullDisplay.jsp" />
+      <file path="doPortletMemberProfileFullDisplay.png" />
+    </type>
+    <type name="PortletMemberStatus">
+      <file path="doPortletMemberStatusFullDisplay.jsp" />
+      <file path="doPortletMemberStatusFullDisplay.png" />
+    </type>
+  </types>
+  <java-classes>
+    <java package="com.jalios.jcmsplugin.esn" />
+  </java-classes>
+  <plugincomponents>
+    <alarmlistener class="com.jalios.jcmsplugin.esn.BirthdayReminder" schedule="00 9 * * * *" />
+    <storelistener class="com.jalios.jcmsplugin.esn.MemberCategoriesListener" types="generated.MemberCategories" beforeStoreLoad="true" repeat="true" />
+    <storelistener class="com.jalios.jcmsplugin.esn.MemberInfoListener" types="generated.MemberCategories" beforeStoreLoad="false" repeat="true" />
+    <storelistener class="com.jalios.jcmsplugin.esn.ESNCategoryListener" types="com.jalios.jcms.Category" beforeStoreLoad="false" repeat="true" />
+    <datacontroller class="com.jalios.jcmsplugin.esn.activity.MemberActivityController" types="com.jalios.jcms.Data" />
+    <datacontroller class="com.jalios.jcmsplugin.esn.MemberCategoriesController" types="com.jalios.jcms.Category generated.MemberCategories" />
+    <datacontroller class="com.jalios.jcmsplugin.esn.MemberController" types="com.jalios.jcms.Member" />
+    <datacontroller class="com.jalios.jcmsplugin.esn.MicroBloggingController" types="com.jalios.jcms.Publication" />
+    <datacontroller class="com.jalios.jcmsplugin.esn.ESNExpertiseController" types="com.jalios.jcms.Category" />
+    <datacontroller class="com.jalios.jcmsplugin.esn.MemberProfileController" types="generated.MemberProfile" />
+    <datacontroller class="com.jalios.jcmsplugin.esn.MemberInfoController" types="generated.MemberEducation generated.MemberJob" />
+    <channellistener class="com.jalios.jcmsplugin.esn.ESNChannelListener" />
+    <dblistener class="com.jalios.jcmsplugin.esn.activity.MemberActivityListener" types="com.jalios.jcmsplugin.esn.MemberActivity" />
+    <dblistener class="com.jalios.jcmsplugin.esn.activity.MemberActivityDataListener" types="com.jalios.jcms.Data" />
+    <dblistener class="com.jalios.jcmsplugin.esn.MemberDataListener" types="com.jalios.jcmsplugin.esn.MemberData" />
+    <dblistener class="com.jalios.jcmsplugin.esn.MemberStatusListener" types="generated.MicroBlogging" />
+    <dblistener class="com.jalios.jcmsplugin.esn.MemberInfoListener" types="com.jalios.jcmsplugin.esn.AbstractMemberInfo" />
+    <policyfilter class="com.jalios.jcmsplugin.esn.ESNPortalPolicyFilter" />
+    <policyfilter class="com.jalios.jcmsplugin.esn.ESNCtxMenuPolicyFilter" />
+    <policyfilter class="com.jalios.jcmsplugin.esn.ESNMemberQueryFilter" />
+    <policyfilter class="com.jalios.jcmsplugin.esn.ESNRightPolicyFilter" />
+    <policyfilter class="com.jalios.jcmsplugin.esn.ESNTemplatePolicyFilter" />
+    <policyfilter class="com.jalios.jcmsplugin.esn.MemberStatusMailPolicyFilter" />
+    <policyfilter class="com.jalios.jcmsplugin.esn.directory.ESNSearchEnginePolicyFilter" />
+  </plugincomponents>
+  <hibernate>
+    <mapping resource="com/jalios/jcmsplugin/esn/MemberActivity.hbm.xml" />
+    <mapping resource="com/jalios/jcmsplugin/esn/MemberConnectionRequest.hbm.xml" />
+    <mapping resource="com/jalios/jcmsplugin/esn/MemberData.hbm.xml" />
+    <mapping resource="com/jalios/jcmsplugin/esn/MemberLink.hbm.xml" />
+    <mapping resource="com/jalios/jcmsplugin/esn/MemberNote.hbm.xml" />
+    <mapping resource="com/jalios/jcmsplugin/esn/analytics/ESNReportMetric.hbm.xml" />
+  </hibernate>
+  <openapi>
+    <resource class="com.jalios.jcmsplugin.esn.openapi.ActivityResource" uriTemplate="/plugins/esn/activities" />
+    <resource class="com.jalios.jcmsplugin.esn.openapi.ActivityResource" uriTemplate="/plugins/esn/activities/followedMembers/{memberId}" />
+    <resource class="com.jalios.jcmsplugin.esn.openapi.ActivityResource" uriTemplate="/plugins/esn/activities/followedMembersWs/{memberId}" />
+    <resource class="com.jalios.jcmsplugin.esn.openapi.ActivityResource" uriTemplate="/plugins/esn/activities/member/{memberId}" />
+    <resource class="com.jalios.jcmsplugin.esn.openapi.ActivityResource" uriTemplate="/plugins/esn/activities/memberWorspaces/{memberId}" />
+    <resource class="com.jalios.jcmsplugin.esn.openapi.ActivityResource" uriTemplate="/plugins/esn/activities/workspace/{workspaceId}" />
+    <resource class="com.jalios.jcmsplugin.esn.openapi.ActivityResource" uriTemplate="/plugins/esn/activity/{id}" />
+    <resource class="com.jalios.jcmsplugin.esn.openapi.ActivityResource" uriTemplate="/plugins/esn/activity" />
+  </openapi>
+  <private-files>
+    <directory path="properties" />
+  </private-files>
+  <public-files>
+    <directory path="css/" />
+    <directory path="docs/" />
+    <directory path="front/" />
+    <directory path="images/" />
+    <directory path="js/" />
+    <directory path="jsp/" />
+    <directory path="smartphone/" />
+    <directory path="types/" />
+    <file path="types/AbstractPortletSkinable/ESNSkin/esnSkin.jpg" />
+    <file path="jsp/common/acContact.jsp" include="AC_MEMBER" />
+    <file path="jsp/csp/doPrivateHomeConnections.jsp" include="PLUGIN_CSP_PRIVATE_CONNECTIONS" />
+    <file path="jsp/profileHidePublicationActions.jsp" include="DISPLAY_HEADER" />
+    <file path="smartphone/jsp/memberProfile/smartphoneMemberProfileTop.jsp" include="SMARTPHONE_MEMBER_PROFILE_TOP" />
+    <file path="smartphone/jsp/memberProfile/smartphoneMemberProfileAfterHeaderinfo.jsp" include="SMARTPHONE_MEMBER_PROFILE_AFTER_HEADERINFO" />
+    <file path="smartphone/jsp/memberProfile/smartphoneMemberProfileAfterMemberheader.jsp" include="SMARTPHONE_MEMBER_PROFILE_AFTER_MEMBERHEADER" />
+    <file path="smartphone/jsp/memberProfile/smartphoneMemberProfileInformationMiddle.jsp" include="SMARTPHONE_MEMBER_PROFILE_INFORMATION_MIDDLE" />
+    <file path="smartphone/jsp/memberProfile/smartphoneMemberProfileAfterInfo.jsp" include="SMARTPHONE_MEMBER_PROFILE_AFTER_INFO" />
+    <file path="jsp/siteSidebar/doSidebarTabMyDay_birthday.jsp" include="SIDEBAR_CALENDAR_MYDAY_2" />
+    <file path="jsp/directoryApp/doDirectoryApp_queryExpertise.jsp" include="DIRECTORY_APP_QUERY" />
+    <file path="jsp/directoryApp/doDirectoryApp_memberProfileExpertises.jsp" include="DIRECTORY_PROFILE_LIGHTBOX_BODY" />
+    <file path="jsp/directoryApp/doDirectoryApp_navbarLeft.jsp" include="DIRECTORY_APP_NAVBAR_LEFT" />
+  </public-files>
+</plugin>
+

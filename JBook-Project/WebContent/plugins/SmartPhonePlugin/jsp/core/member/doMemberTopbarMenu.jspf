@@ -1,0 +1,22 @@
+<%@page import="com.jalios.jcmsplugin.smartphone.SmartPhoneManager"%><%
+%><%@page import="com.jalios.jcmsplugin.smartphone.SmartPhonePortalPolicyFilter"%><%
+%><%@page import="com.jalios.jcms.recommendation.RecommendationManager"%><%
+String uniqueId = ServletUtil.generateUniqueDOMId(request, "topbarPublicationMenu"); %>
+<div class="topbar-actions topbar-item topbar-right" data-role="none">
+  <div class="topbar-item open-panel">
+    <a href="#<%= uniqueId %>" data-rel="popup" data-transition="slideup">
+      <jalios:icon src="smartphone-topbar-action-menu" />
+    </a>
+  </div>
+</div>
+<div data-role="popup" id="<%= uniqueId %>" data-theme="a" class="topbar-menu-dropdown">
+  <ul data-role="listview" data-inset="true" style="min-width:210px;">
+    <jalios:include target="SMARTPHONE_TOPBAR_MEMBER_ACTIONS_TOP" targetContext="LI" />
+    <jalios:include target="SMARTPHONE_TOPBAR_MEMBER_ACTIONS_BOTTOM" targetContext="LI" />
+    <li><a data-ajax="false" href="<%= member.getDisplayUrl(userLocale) %>?<%= SmartPhonePortalPolicyFilter.FORCE_NO_SMARTPHONE_SESSION_ATTR %>" <%= SmartPhoneManager.getInstance().isMobileApp(request) ? "target=\"_blank\"" : "" %>><jalios:icon src="smartphone-access-website" /> <%= glp("jcmsplugin.smartphone.lbl.access-website") %></a></li>
+    <% if (RecommendationManager.getInstance().canBeRecommendedBy(member, loggedMember)) { %>
+    <li><a href="plugins/SmartPhonePlugin/jsp/action/recommendation.jsp?recommendedDataId=<%= member.getId() %>"><jalios:icon src="smartphone-recommend" /> <%= glp("ui.recommendation") %></a></li>
+    <% } %>    
+    <jalios:include target="SMARTPHONE_TOPBAR_MEMBER_ACTIONS_BOTTOM_2" targetContext="LI" />
+  </ul>
+</div>

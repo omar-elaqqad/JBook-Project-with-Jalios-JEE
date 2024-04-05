@@ -1,0 +1,65 @@
+// Include variables and mixins
+@import "../../../../css/jalios/core/init-mixins.less";
+// -------------------------------------------------------------------
+// PLUGINS LESS VARIABLES
+// -------------------------------------------------------------------
+@import "../../../../plugins/ESNPlugin/css/esn-variables.less";
+// Hook for JCMS
+@import "../../../../css/plugin.less";
+// -------------------------------------------------------------------
+//  PLUGIN CSS DECLARATION
+// -------------------------------------------------------------------
+@import "../../../../plugins/ESNPlugin/css/activity-microblogging-form.less";
+@import "../../../../plugins/ESNPlugin/css/activity-event.less";
+@import "../../../../plugins/ESNPlugin/css/activity/activity-cards-comments.less";
+
+// -------------------------------------------------------------------
+//  PortletMemberActivity
+// -------------------------------------------------------------------
+.panel-body .portlet-member-activity-cards {
+  margin: -@panel-body-padding; // Display in a Panel
+  margin: -25px -15px;
+  padding-top: 10px;
+  .activity-container {
+    padding: 0 10px 10px;
+  }
+  
+  .member-activity-cards {
+    background-color: @esn-activity-cards-wrapper-bg;
+  }
+}
+
+.portlet-member-activity-cards {
+
+  // -------------------------------------------------------------------
+  //  MicroBlogging form wrapper
+  // -------------------------------------------------------------------
+  .microblogging-form-wrapper {
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: @border-radius-base;
+    .nav-tabs {
+      margin: 0;
+    }
+    .microblogging-form {
+      padding: 20px;
+      background-color: white;
+      border-width: 0 1px 1px;
+      border-style: solid;
+      border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+      border-top: 0;
+    }
+
+    // -------------------------------------------------------------------
+    //  Element queries
+    // -------------------------------------------------------------------
+    &[min-width~="@{screen-sm-min}"] {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
+

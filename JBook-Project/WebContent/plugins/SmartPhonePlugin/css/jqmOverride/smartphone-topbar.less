@@ -1,0 +1,94 @@
+@topbar-height: 56px;
+
+.topbar.ui-header {
+	height: @topbar-height;
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+	background-color: @jalios-color-turquoise-deep;
+	box-shadow: 0 0 9px #A9A9A9;
+
+	.glyphicon {
+		font-size: 18px;
+    text-shadow: initial;
+	}
+
+	.ui-bar {
+		padding: 0;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.topbar-item {
+		display: inline-block;
+	}
+
+	.topbar-left,
+	.topbar-right {
+		display: flex;
+
+		.topbar-item {
+			position: relative;
+			padding: 5px 8px;
+			width: 40px;
+			height: @topbar-height;
+			color: white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			.jalios-icon {
+				text-shadow: initial;
+				font-weight: normal;
+        font-size: 18px;
+			}
+
+			A {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				width: 30px;
+				height: 25px;
+				display: block;
+				margin: auto;
+				text-align: center;
+				color: white;
+			}
+
+			&.alert-link A {
+				height: 20px;
+			}
+		}
+	}
+
+	.topbar-left {
+		height: @smartphone-topbar-height;
+	}
+
+	.topbar-right {
+		display: flex;
+	}
+
+	.topbar-title {
+		height: @topbar-height;
+		min-width: 150px;
+		position: relative;
+		display: inline-block;
+
+		H1 {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			margin: auto auto auto 10px;
+			line-height: @topbar-height;
+		}
+	}
+}
+
+/* For custom actions that developer can include in pages (will be copied to topcar), see calendar.jsp service */
+.topbar-actions {
+	display: none;
+}

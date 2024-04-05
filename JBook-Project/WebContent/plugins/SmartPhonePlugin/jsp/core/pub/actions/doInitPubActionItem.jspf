@@ -1,0 +1,8 @@
+<%@ page contentType="text/html; charset=UTF-8" %><%
+%><%@ include file="/plugins/SmartPhonePlugin/jsp/common/doInitSmartPhonePage.jspf" %><%
+Publication pub = (Publication) request.getAttribute("jcms.plugin.smartphone.pub");
+
+if (pub == null) {
+  return;
+}
+%>

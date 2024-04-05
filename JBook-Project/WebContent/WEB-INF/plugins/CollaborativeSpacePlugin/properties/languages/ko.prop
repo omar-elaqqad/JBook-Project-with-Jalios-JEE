@@ -1,0 +1,851 @@
+# ------------------------------------------------------------
+#  ACL
+# ------------------------------------------------------------
+acl.resource.admin/work/createCS: \ud611\ub825 \uacf5\uac04 - \ub9cc\ub4e4\uae30
+acl.resource.plugins: \ud50c\ub7ec\uadf8\uc778
+acl.resource.plugins/collaborativespace: \ud611\ub825 \uacf5\uac04
+acl.resource.plugins/collaborativespace/manageCSGuest: \uc190\ub2d8 \uad00\ub9ac
+acl.resource.plugins/collaborativespace/manageCSGuest.h: \ud611\ub825 \uacf5\uac04 \uad00\ub9ac\uc790\uac00 \uacf5\uac04\uc5d0\uc11c \uace0\uac1d \uacc4\uc815\uc744 \ub9cc\ub4e4 \uc218 \uc788\ub294 \uad8c\ud55c\uc744 \ubd80\uc5ec\ud569\ub2c8\ub2e4.
+acl.resource.admin-ws/plugins: \ud50c\ub7ec\uadf8\uc778
+acl.resource.admin-ws/plugins/collaborativespace: \ud611\ub825 \uacf5\uac04
+acl.resource.admin-ws/plugins/collaborativespace/manageCSServices: \uc560\ud50c\ub9ac\ucf00\uc774\uc158
+acl.resource.admin-ws/plugins/collaborativespace/manageCSServices.h: \ud611\ub825 \uacf5\uac04 \uc11c\ube44\uc2a4 \uad00\ub9ac Front Office \uc560\ud50c\ub9ac\ucf00\uc774\uc158.
+acl.resource.admin-ws/plugins/collaborativespace/manageCSSettings: \uc124\uc815
+acl.resource.admin-ws/plugins/collaborativespace/manageCSSettings.h: \ud611\ub825 \uacf5\uac04 \uc124\uc815 \uad00\ub9ac(\uc774\ub984, \uc124\uba85, \ub808\uc774\uc544\uc6c3, \ubaa8\uc591 \ubc0f \ub808\uc774\uc544\uc6c3, \ubaa8\uc591 \ubc0f \ub290\ub08c).
+
+# ------------------------------------------------------------
+#  Common
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.lbl.filter:                 \ud544\ud130
+jcmsplugin.collaborativespace.lbl.administrator:          \ub9ac\ub354
+jcmsplugin.collaborativespace.lbl.administrators:         \ub9ac\ub354
+jcmsplugin.collaborativespace.lbl.administrators.h:       \ucee4\ubba4\ub2c8\ud2f0 \uad00\ub9ac\uc790
+# A member that belongs to the space
+jcmsplugin.collaborativespace.lbl.profile.member-count:   {0,choice,0#\ucc38\uc11d\uc790 \uc5c6\uc74c|1#{0} \ucc38\uc11d\uc790|2#{0} \ucc38\uc11d\uc790}
+# A member that is administrator of the space
+jcmsplugin.collaborativespace.lbl.profile.leader-count:   {0,choice,0#\uc9c0\ub3c4\uc790 \uc5c6\uc74c|1#{0} \uc9c0\ub3c4\uc790|2#{0} \uc9c0\ub3c4\uc790}
+# A member that is a Guest of the space
+jcmsplugin.collaborativespace.lbl.profile.guest:          \uc190\ub2d8
+jcmsplugin.collaborativespace.lbl.profile.guest-count:    {0,choice,0#\uc190\ub2d8 \uc5c6\uc74c|1#{0} \uc190\ub2d8|2#{0} \uc190\ub2d8}
+jcmsplugin.collaborativespace.lbl.signup:                 \uac00\uc785
+jcmsplugin.collaborativespace.lbl.signup-action:          \uac00\uc785\ud569\ub2c8\ub2e4......
+jcmsplugin.collaborativespace.lbl.unsignup:               \ud0c8\ud1f4
+jcmsplugin.collaborativespace.lbl.unsignup-action:        \ud0c8\ud1f4\ud569\ub2c8\ub2e4......
+jcmsplugin.collaborativespace.lbl.card.signup:            \uac00\uc785
+
+jcmsplugin.collaborativespace.cssignup.title: ''{0}''\uc5d0 \uc758\ud55c \uac00\uc785 \uc694\uccad
+jcmsplugin.collaborativespace.cssignup-notfound.msg-title: \uac00\uc785 \uc694\uccad\uc744 \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4
+jcmsplugin.collaborativespace.cssignup-notfound.msg-content: \uc9c0\uc815\ud55c \uac00\uc785 \uc694\uccad\uc744 \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4.<br/>\uc774\ubbf8 \ucc98\ub9ac\ud588\uac70\ub098 \ub610\ub294 \ud68c\uc6d0\uc774 \uacf5\uac04\uc5d0 \uc218\ub3d9\uc73c\ub85c \ub4f1\ub85d\ud588\uc744 \uacbd\uc6b0 \uc774\ub7f0 \uc77c\uc774 \ubc1c\uc0dd\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.
+
+jcmsplugin.collaborativespace.data-controller.msg.incompatible-access-signup: \uc561\uc138\uc2a4 \ubaa8\ub4dc\ub294 \uac00\uc785 \uc815\ucc45\uacfc \uc591\ub9bd\ub418\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.data-controller.msg.invalid-ability: \uc774 \ud3ec\ud2c0\ub9bf\uc740 \uae30\ub2a5\uc744 \uc0ac\uc6a9\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4"{0}".
+jcmsplugin.collaborativespace.data-controller.msg.service-not-in-public-model: \ubcf5\uc0ac \ubaa8\ub4dc \ud3ec\ud2c0\ub9bf\uc740 \ucc38\uc870\ub85c \ud558\uace0 \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \ubc0f \ub300\uc2dc\ubcf4\ub4dc \uae30\ub2a5\uc740 \uacf5\uacf5 \ud611\ub825\uacf5\uac04 \ubaa8\ub378\uc5d0 \uc18d\ud574\uc57c \ud569\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.data-controller.msg.no-portlet-selection: "{0}" \ud544\ub4dc\ub294 \ubc18\ub4dc\uc2dc "{1}"\ub97c \ud3ec\ud568\ud574\uc57c\ud569\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.data-controller.msg.invalid-guest-wsadmin: \uc190\ub2d8\uc740 \uc791\uc5c5\uacf5\uac04 \uad00\ub9ac\uc790\uac00 \ub420 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.data-controller.msg.invalid-guest-wsadmin-detail: ''{0}'' ({1}) \uc190\ub2d8\uc740 \uc791\uc5c5\uacf5\uac04 \uad00\ub9ac\uc790\uac00 \ub420 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.data-controller.msg.sub-status: \uad00\ub828 \ub370\uc774\ud130\uc5d0 \ub300\ud574 \uc5c5\ub370\uc774\ud2b8 \uc2e4\ud328: {0}
+jcmsplugin.collaborativespace.data-controller.msg.invalid-cat: "{0}" \ud3ec\ud2c0\ub9bf\uc744 "<strong>{1}</strong>" \uc544\ub798\uc5d0 \ubc94\uc8fc \uc9c0\uc815\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.data-controller.msg.missing-root-cat: \ud611\ub825 \uacf5\uac04 \ud3ec\ud2c0\ub9bf\uc5d0 \ub8e8\ud2b8 \ubc94\uc8fc\uac00 \uc788\uc5b4\uc57c \ud569\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.data-controller.msg.wrong-model-typology: \uc120\ud0dd\ud55c \ubaa8\ub378\uc740 \ubd84\ub958 \uccb4\uacc4\uc640 \uc77c\uce58\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4
+jcmsplugin.collaborativespace.data-controller.msg.missing-model: \ubaa8\ub378\uc744 \uc120\ud0dd\ud574\uc57c \ud569\ub2c8\ub2e4
+jcmsplugin.collaborativespace.data-controller.msg.workspace-not-model: \ubaa8\ub378\ub85c \uc120\ud0dd\ud55c \uc791\uc5c5\uacf5\uac04\uc774 \ubaa8\ub378\uc774 \uc544\ub2d9\ub2c8\ub2e4
+jcmsplugin.collaborativespace.space-wizard.msg.model-not-found: \uc9c0\uc815\ud55c \ubaa8\ub378\uc744 \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.space-wizard.msg.failed: \ud611\ub825 \uacf5\uac04\uc744 \ub9cc\ub4e4 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4: {0}
+
+# FO action labels
+jcmsplugin.collaborativespace.create.lbl.create:                  \uacf5\uac04 \uc0dd\uc131\ud558\uae30...
+jcmsplugin.collaborativespace.create.lbl.create-sub:              \ud558\uc704 \uacf5\uac04 \uc0dd\uc131\ud558\uae30...
+jcmsplugin.collaborativespace.create.lbl.request-create:          \uacf5\uac04 \uc0dd\uc131 \uc694\uccad\ud558\uae30...
+jcmsplugin.collaborativespace.create.lbl.request-create-sub:      \ud558\uc704 \uacf5\uac04 \uc0dd\uc131 \uc694\uccad\ud558\uae30...
+# Admin BO action labels (keep "collaborative" word)
+jcmsplugin.collaborativespace.create.lbl.create-cs:               \ud611\ub825 \uacf5\uac04 \uc0dd\uc131\ud558\uae30...
+
+# Create space modal labels
+jcmsplugin.collaborativespace.create.title:                       \ud611\ub825 \uacf5\uac04 \uc0dd\uc131\ud558\uae30
+jcmsplugin.collaborativespace.create.title-request:               \ud611\ub825 \uacf5\uac04 \uc0dd\uc131 \uc694\uccad\ud558\uae30...
+jcmsplugin.collaborativespace.create-sub.title:                   \ud558\uc704 \uacf5\uac04 \uc0dd\uc131\ud558\uae30
+jcmsplugin.collaborativespace.create-sub.title-request:           \ud558\uc704 \uacf5\uac04 \uc0dd\uc131 \uc694\uccad\ud558\uae30
+jcmsplugin.collaborativespace.create.steps.0:                     \ubaa8\ub378
+jcmsplugin.collaborativespace.create.steps.1:                     \uc815\ubcf4
+jcmsplugin.collaborativespace.create-sub.steps.1.intro:           <strong>{0}</strong>\uc5d0 \uacf5\uac04 \uc0dd\uc131\ud558\uae30
+jcmsplugin.collaborativespace.create-sub.steps.1.intro-request:   <strong>{0}</strong>\uc5d0 \uacf5\uac04 \uc0dd\uc131\uc744 \uc694\uccad\ud569\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.create.steps.2:                     \ucc38\uc11d\uc790
+
+jcmsplugin.collaborativespace.create.info.name:                         \uacf5\uac04 \uc774\ub984
+jcmsplugin.collaborativespace.create.info.typology:                     \uc791\uc5c5\uacf5\uac04 \uc720\ud615
+jcmsplugin.collaborativespace.create.info.description:                  \uc124\uba85
+jcmsplugin.collaborativespace.create.info.introduction:                 \uc18c\uac1c
+jcmsplugin.collaborativespace.create.info.access:                       \uc561\uc138\uc2a4
+jcmsplugin.collaborativespace.create.info.access.public:                \uacf5\uac1c
+jcmsplugin.collaborativespace.create.info.access.private:               \ube44\uacf5\uac1c
+jcmsplugin.collaborativespace.create.info.access.secret:                \ube44\ubc00
+jcmsplugin.collaborativespace.create.info.signup:                       \uac00\uc785
+jcmsplugin.collaborativespace.create.info.signup.admin:                 \ub9ac\ub354\uac00 \uad00\ub9ac\ud558\ub294 \uac00\uc785
+jcmsplugin.collaborativespace.create.info.signup.request:               \ub9ac\ub354\uac00 \ud655\uc778\ud558\ub294 \uac00\uc785 \uc81c\ucd9c
+jcmsplugin.collaborativespace.create.info.signup.free:                  \ubb34\ub8cc \uac00\uc785
+jcmsplugin.collaborativespace.create.info.language:                     \uc8fc\uc694 \uc5b8\uc5b4
+jcmsplugin.collaborativespace.create.model.intro:                       \uc774 \ud611\ub825 \uacf5\uac04 \ubaa8\ub378 \uc120\ud0dd\ud558\uae30
+jcmsplugin.collaborativespace.create.model.intro-typo:                  \uc774 \ud611\ub825 \uacf5\uac04\uc744 \uc704\ud55c \ud1a0\ud3f4\ub85c\uc9c0\uc640 \ubaa8\ub378\uc744 \uc120\ud0dd\ud558\uc2ed\uc2dc\uc624.
+jcmsplugin.collaborativespace.create.model.intro-typo-nomodel:          \uc774 \ud611\ub825 \uacf5\uac04\uc758 \ud1a0\ud3f4\ub85c\uc9c0\ub97c \uc120\ud0dd\ud558\uc2ed\uc2dc\uc624.
+jcmsplugin.collaborativespace.create.model.intro-end:                   \uc77c\ub2e8 \uc774 \uacf5\uac04\uc774 \uc0dd\uc131\ub41c \ud6c4 \uacf5\uac04 \uc9c0\ub3c4\uc790\ub294 \uc0c8\ub85c\uc6b4 \uc11c\ube44\uc2a4\ub97c \ucd94\uac00\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.create.model.model:                       \uae30\ubc18 \ubaa8\ub378
+jcmsplugin.collaborativespace.create.model.sync-toggle:                 \ubaa8\ub378\uacfc \ub3d9\uae30\ud654
+jcmsplugin.collaborativespace.create.attendees.intro:                   \uc774 \ud611\ub825 \uacf5\uac04\uc5d0\uc11c \uc9c0\ub3c4\uc790\uc640 \ucc38\uc11d\uc790 \uc120\ud0dd\ud558\uae30.<br />\uc77c\ub2e8 \uacf5\uac04\uc774 \uc0dd\uc131\ub418\uba74, \uacf5\uac04 \uc9c0\ub3c4\uc790\ub294 \ucd08\ub300\uc7a5\uc744 \ubcf4\ub0bc \uc218 \uc788\uace0 \ud68c\uc6d0\uc744 \uc0ad\uc81c\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.create.attendees.intro-no-leader:         \uc774 \ud611\ub825 \uacf5\uac04\uc5d0\uc11c \ucc38\uc11d\uc790 \uc120\ud0dd\ud558\uae30.<br />\uc77c\ub2e8 \uacf5\uac04\uc774 \uc0dd\uc131\ub418\uba74, \uacf5\uac04 \uc9c0\ub3c4\uc790\ub294 \ucd08\ub300\uc7a5\uc744 \ubcf4\ub0bc \uc218 \uc788\uace0 \ud68c\uc6d0\uc744 \ucd94\uac00\ud558\uac70\ub098 \uc0ad\uc81c\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.create.attendees.admins:                  \ub9ac\ub354
+jcmsplugin.collaborativespace.create.attendees.admins.custom:           {0,choice,0#\uc9c0\ub3c4\uc790 \uc5c6\uc74c|1#\uc9c0\ub3c4\uc790|2#\uc9c0\ub3c4\uc790}
+jcmsplugin.collaborativespace.create.attendees.groups:                  \uadf8\ub8f9
+jcmsplugin.collaborativespace.create.attendees.members:                 \ud68c\uc6d0
+jcmsplugin.collaborativespace.create.attendees.notification:            \uc54c\ub9bc
+jcmsplugin.collaborativespace.create.attendees.notification.invitation: \ucc38\uc11d\uc790\uc5d0\uac8c \ucd08\ub300\uc7a5 \uc804\uc1a1
+jcmsplugin.collaborativespace.create.attendees.notification.mail:       \ucc38\uc11d\uc790 \ucd94\uac00 \ubc0f \uc54c\ub9bc
+jcmsplugin.collaborativespace.create.attendees.notification.no:         \uc54c\ub9bc \uc5c6\uc774 \ucc38\uc11d\uc790 \ucd94\uac00
+jcmsplugin.collaborativespace.create.too-many-cs:                       \uc0c8\ub85c\uc6b4 \ud611\ub825 \uacf5\uac04\uc744 \uc0dd\uc131\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. \ucd5c\ub300 \ud611\ub825\uacf5\uac04 \uc218 \uc81c\ud55c({0}) \uc5d0 \ub3c4\ub2ec\ud588\uc2b5\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.create.finish:                            <p>\uc0c8\ub85c\uc6b4 \ud611\ub825 \uacf5\uac04 \uc694\uccad\uc774 \uae30\ub85d\ub418\uc5c8\uc2b5\ub2c8\ub2e4.</p><p>\uc77c\ub2e8 \ud655\uc778\ub41c \ud6c4 \uacf5\uac04\uc774 \uc0dd\uc131\ub418\uace0 \uc9c0\ub3c4\uc790\uc5d0\uac8c \uc54c\ub824\uc9d1\ub2c8\ub2e4.</p>
+jcmsplugin.collaborativespace.access-policy.public.desc:                \ub204\uad6c\ub098 \uacf5\uacf5 \uacf5\uac04\uc744 \ud655\uc778\ud558\uace0 \ucf58\ud150\uce20\ub97c \uc77d\uc744 \uc218 \uc788\uc2b5\ub2c8\ub2e4
+jcmsplugin.collaborativespace.access-policy.private.desc:               \ub204\uad6c\ub098 \uc0ac\uc801\uc778 \uacf5\uac04\uc758 \uc9c0\uc2dd\uc744 \uc18c\uc9c0\ud560 \uc218 \uc788\uc9c0\ub9cc \ucc38\uc11d\uc790\ub9cc\uc774 \ucf58\ud150\uce20\ub97c \uc77d\uc744 \uc218 \uc788\uc2b5\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.access-policy.secret.desc:                \uc0ac\uc801\uc778 \uacf5\uac04\uc758 \ucc38\uc11d\uc790 \ub9cc\uc774 \uacf5\uac04\uc758 \uc9c0\uc2dd\uc744 \uc18c\uc9c0\ud558\uace0 \uadf8 \ucf58\ud150\uce20\ub97c \uc77d\uc744 \uc218 \uc788\uc2b5\ub2c8\ub2e4.
+
+jcmsplugin.collaborativespace.header.home:                              \ud648 \uc0ac\uc774\ud2b8
+jcmsplugin.collaborativespace.header.introduction:                      \uc18c\uac1c
+jcmsplugin.collaborativespace.header.backoffice:                        Back-Office
+jcmsplugin.collaborativespace.header.help:                              \ub3c4\uc6c0
+jcmsplugin.collaborativespace.header.admin-menu:                        \uad00\ub9ac
+jcmsplugin.collaborativespace.header.admin-menu.home:                   \ud648
+jcmsplugin.collaborativespace.header.admin-menu.members:                \ud68c\uc6d0
+jcmsplugin.collaborativespace.header.admin-menu.services:               \uc560\ud50c\ub9ac\ucf00\uc774\uc158
+jcmsplugin.collaborativespace.header.admin-menu.settings:               \uc124\uc815
+jcmsplugin.collaborativespace.header.admin-menu.typo-models:            \ubaa8\ub378 \ubc0f \ud1a0\ud3f4\ub85c\uc9c0
+
+jcmsplugin.collaborativespace.metas.toggle.show:                        \ub354
+jcmsplugin.collaborativespace.metas.toggle.hide:                        \ub35c
+jcmsplugin.collaborativespace.metas.show-all-typos:                     \ubaa8\ub4e0 \ud1a0\ud3f4\ub85c\uc9c0 \ud45c\uc2dc
+jcmsplugin.collaborativespace.metas.introduction:                       \uc18c\uac1c
+jcmsplugin.collaborativespace.metas.manage-members.link:                \ud68c\uc6d0 \uad00\ub9ac
+jcmsplugin.collaborativespace.metas.member-list.others:                 \uadf8\ub9ac\uace0 {0,choice,1# 1 \ub2e4\ub978|2# {0} \ub2e4\ub978}...
+jcmsplugin.collaborativespace.metas.actions-menu-title:                 \ud611\ub825 \uacf5\uac04 \uc561\uc158 \uc5f4\uae30 \uba54\ub274
+
+jcmsplugin.collaborativespace.private-home.title:                  \uc774 \uacf5\uac04\uc5d0 \ub300\ud55c \uc561\uc138\uc2a4\uac00 \uc81c\ud55c\ub429\ub2c8\ub2e4
+jcmsplugin.collaborativespace.private-home.signup:                 \uc774 \uacf5\uac04\uc5d0 \uc561\uc138\uc2a4\ud558\ub824\uba74 \uac00\uc785\ud574\uc57c \ud569\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.private-home.already-signup:         \uc774 \uacf5\uac04\uc5d0 \uac00\uc785\uc694\uccad\uc744 \ud558\uc600\uc2b5\ub2c8\ub2e4. \uadc0\ud558\uc758 \uc694\uccad\uc774 \ucc98\ub9ac\ub418\ub294 \ub300\ub85c \uc54c\ub9bc\uc744 \ubc1b\uc2b5\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.private-home.no-signup:              \uc774 \uacf5\uac04\uc5d0\uc758 \uac00\uc785\uc740 \ucd08\ub300\uc5d0 \uc758\ud574\uc11c \uc774\ub8e8\uc5b4\uc9d1\ub2c8\ub2e4.
+
+jcmsplugin.collaborativespace.settings.lbl.info:                    \uc77c\ubc18 \uc815\ubcf4
+jcmsplugin.collaborativespace.settings.lbl.info.presentation:       \ud504\ub808\uc820\ud14c\uc774\uc158
+jcmsplugin.collaborativespace.settings.lbl.info.access:             \uc561\uc138\uc2a4\uc640 \uac00\uc785
+jcmsplugin.collaborativespace.settings.lbl.layout:                  \ub808\uc774\uc544\uc6c3
+jcmsplugin.collaborativespace.settings.lbl.model:                   \ubaa8\ub378
+jcmsplugin.collaborativespace.settings.lbl.look:                    \uba38\ub9ac\uae00
+jcmsplugin.collaborativespace.settings.lbl.look.theme:              \ud14c\ub9c8
+jcmsplugin.collaborativespace.settings.lbl.look.condensed:          \uc555\ucd95 \ubaa8\ub4dc
+jcmsplugin.collaborativespace.settings.lbl.look.condensed.h:        \uc555\ucd95 \ubaa8\ub4dc\ub294 \uba38\ub9ac\uae00\uc758 \ub192\uc774\ub97c \uc904\uc774\uace0 \ubc30\uacbd\uc0c9\ub9cc \uc0ac\uc6a9\ud569\ub2c8\ub2e4
+jcmsplugin.collaborativespace.settings.lbl.look.color-tab:          \uc0c9\uc0c1
+jcmsplugin.collaborativespace.settings.lbl.look.header-tab:         \ubc30\uacbd \uc774\ubbf8\uc9c0
+jcmsplugin.collaborativespace.settings.lbl.look.color:              \ubc30\uacbd \uc0c9\uc0c1
+jcmsplugin.collaborativespace.settings.lbl.look.headers:            \uba38\ub9ac\uae00
+jcmsplugin.collaborativespace.settings.lbl.look.no-header:          \ud5e4\ub354 \uc5c6\uc74c
+jcmsplugin.collaborativespace.settings.lbl.look.header-background:  \ubc30\uacbd
+jcmsplugin.collaborativespace.settings.lbl.look.header-custom:      \ubc30\uacbd \uc774\ubbf8\uc9c0
+jcmsplugin.collaborativespace.settings.lbl.look.header-custom.h:    \uba38\ub9ac\uae00\uc5d0 \ub300\ud574 \uc0ac\uc6a9\uc790 \uc9c0\uc815 \uc774\ubbf8\uc9c0\ub97c \uc120\ud0dd\ud558\uac70\ub098 \ubbf8\ub9ac \uc815\uc758\ub41c \ubaa9\ub85d\uc5d0\uc11c \ud558\ub098 \uc120\ud0dd\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.settings.lbl.look.header-no-image:    \ubc30\uacbd \uc774\ubbf8\uc9c0 \uc5c6\uc74c
+jcmsplugin.collaborativespace.settings.lbl.look.header-position:    \uc774\ubbf8\uc9c0 \uc704\uce58 \uc9c0\uc815
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat:      \uc774\ubbf8\uc9c0 \ubc18\ubcf5
+jcmsplugin.collaborativespace.settings.lbl.look.header-no-repeat:   \uc5c6\uc74c
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat-x:    \uac00\ub85c
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat-y:    \uc138\ub85c
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat-both: \ubaa8\ub450
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror:      \uac70\uc6b8
+jcmsplugin.collaborativespace.settings.lbl.look.header-no-mirror:   \uc5c6\uc74c
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror-x:    \uac00\ub85c
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror-y:    \uc138\ub85c
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror-both: \ubaa8\ub450
+jcmsplugin.collaborativespace.settings.lbl.look.header-color:       \uc81c\ubaa9 \uc0c9
+jcmsplugin.collaborativespace.settings.lbl.look.header-tabs-color:  \ud0ed\uc758 \ud14d\uc2a4\ud2b8 \uc0c9
+jcmsplugin.collaborativespace.settings.lbl.look.header-tabs-bgcolor: \ud0ed\uc758 \ubc30\uacbd\uc0c9
+jcmsplugin.collaborativespace.settings.lbl.look.header-tabs-opacity: \ud0ed \ubd88\ud22c\uba85\ub3c4
+jcmsplugin.collaborativespace.settings.lbl.layout:                  \ub808\uc774\uc544\uc6c3
+jcmsplugin.collaborativespace.settings.lbl.layout.main:             \ud398\uc774\uc9c0 \ub808\uc774\uc544\uc6c3
+jcmsplugin.collaborativespace.settings.lbl.layout.dashboard:        \ud648
+jcmsplugin.collaborativespace.settings.lbl.layout.dashboard.column: \uc5f4
+jcmsplugin.collaborativespace.settings.lbl.jmobile:                 JMobile
+jcmsplugin.collaborativespace.settings.lbl.jmobile-delete-portlet:  \ud3ec\ud138\uc5d0\uc11c \ud3ec\ud2c0\ub9bf \uc81c\uac70
+jcmsplugin.collaborativespace.settings.lbl.jmobile-drag-portlet:    \uae38\uac8c \ud074\ub9ad\ud558\uc5ec \ud3ec\ud2c0\ub9bf\uc744 \ub04c\uc5b4 \ub123\uae30
+jcmsplugin.collaborativespace.settings.alt.test:                    \ud14c\uc2a4\ud2b8
+jcmsplugin.collaborativespace.settings.alt.jmobile-template:        JMobile \ud15c\ud50c\ub9bf
+jcmsplugin.collaborativespace.settings.lbl.add-portlet:             \ud3ec\ud2c0\ub9bf \ucd94\uac00
+
+jcmsplugin.collaborativespace.services.lbl.title:                   \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \ucd94\uac00
+jcmsplugin.collaborativespace.services.lbl.all-services:            \ubaa8\ub4e0 \uc560\ud50c\ub9ac\ucf00\uc774\uc158
+jcmsplugin.collaborativespace.services.lbl.installed-services:      \uc124\uce58\ub41c \uc560\ud50c\ub9ac\ucf00\uc774\uc158
+jcmsplugin.collaborativespace.services.lbl.installed-service.title: \uc124\uce58\ub428
+jcmsplugin.collaborativespace.services.lbl.not-installed-services:  \uae30\ud0c0 \uc560\ud50c\ub9ac\ucf00\uc774\uc158
+jcmsplugin.collaborativespace.services.lbl.status:                  \uc0c1\ud0dc
+jcmsplugin.collaborativespace.services.lbl.type:                    \uc720\ud615
+jcmsplugin.collaborativespace.services.lbl.type.application:        \uc560\ud50c\ub9ac\ucf00\uc774\uc158
+jcmsplugin.collaborativespace.services.lbl.type.dashboard:          \ub300\uc2dc\ubcf4\ub4dc
+jcmsplugin.collaborativespace.services.lbl.name:                    \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \uc774\ub984
+jcmsplugin.collaborativespace.services.lbl.description:             \uc124\uba85
+jcmsplugin.collaborativespace.services.lbl.add:                     \ucd94\uac00
+jcmsplugin.collaborativespace.services.lbl.edit:                    \ubcc0\uacbd
+jcmsplugin.collaborativespace.services.lbl.preview-action:          \ubbf8\ub9ac \ubcf4\uae30
+jcmsplugin.collaborativespace.services.lbl.preview:                 \ubbf8\ub9ac \ubcf4\uae30
+jcmsplugin.collaborativespace.services.btn.add-service:             \uc774 \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \ucd94\uac00
+jcmsplugin.collaborativespace.services.btn.customize-service:       \uc774 \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \uc0ac\uc6a9\uc790 \uc9c0\uc815...
+jcmsplugin.collaborativespace.services.btn.remove-service:          \uc774 \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \uc81c\uac70
+jcmsplugin.collaborativespace.services.btn.add:                     \ucd94\uac00
+jcmsplugin.collaborativespace.services.btn.remove:                  \uc81c\uac70
+jcmsplugin.collaborativespace.services.lbl.add-title:               \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \ucd94\uac00
+jcmsplugin.collaborativespace.services.lbl.add-modal-title:         \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \ucd94\uac00...
+jcmsplugin.collaborativespace.services.lbl.add-new-title:           \uc0c8 \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \ucd94\uac00
+jcmsplugin.collaborativespace.services.smartphone-ability.label:    JMobile\uc5d0 \ud45c\uc2dc
+
+jcmsplugin.collaborativespace.settings.lbl.model-instances:         \ubaa8\ub378 \uc778\uc2a4\ud134\uc2a4
+jcmsplugin.collaborativespace.settings.lbl.model-instances-count:   {0,choice,0# \uc778\uc2a4\ud134\uc2a4 \uc5c6\uc74c|1# 1 \uc778\uc2a4\ud134\uc2a4|2# {0} \uc778\uc2a4\ud134\uc2a4}
+
+jcmsplugin.collaborativespace.settings.model-instances.csp.title:   \ud611\ub825 \uacf5\uac04
+jcmsplugin.collaborativespace.settings.model-instances.sync.title:  \ub3d9\uae30\ud654 \ubaa8\ub4dc
+
+jcmsplugin.collaborativespace.members.btn.enroll-members:               \ud68c\uc6d0 \ub4f1\ub85d...
+jcmsplugin.collaborativespace.members.lbl.enroll-members:               \ud68c\uc6d0 \ub4f1\ub85d
+jcmsplugin.collaborativespace.members.enroll-modal.intro:               \ub300\uc0c1 \uadf8\ub8f9\uc5d0 \ucd94\uac00\ud560 \uc120\ud0dd \ud68c\uc6d0 \ubc0f/\ub610\ub294 \uadf8\ub8f9 \uc120\ud0dd
+jcmsplugin.collaborativespace.members.enroll-modal.target-group:        \ub300\uc0c1 \uadf8\ub8f9
+jcmsplugin.collaborativespace.members.enroll-modal.groups.description:  \uadf8 \uadf8\ub8f9 \ud68c\uc6d0\uc740 \ub300\uc0c1 \uadf8\ub8f9\uc5d0 \ucd94\uac00\ub429\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.members.btn.add-group:                    \uadf8\ub8f9 \ucd94\uac00\ud558\uae30...
+jcmsplugin.collaborativespace.members.lbl.add-group:                    \uadf8\ub8f9 \ucd94\uac00\ud558\uae30
+jcmsplugin.collaborativespace.members.btn.edit-group:                   \uadf8\ub8f9 \ud3b8\uc9d1\ud558\uae30...
+
+jcmsplugin.collaborativespace.members.validate-signup-modal.groups:     \ub300\uc0c1 \uadf8\ub8f9
+jcmsplugin.collaborativespace.members.validate-signup-modal.groups.h:   \ud68c\uc6d0\uc744 \ucd94\uac00\ud574 \ub123\uc744 \uadf8\ub8f9.
+
+jcmsplugin.collaborativespace.invitations.lbl.invitations:     \ucd08\ub300
+jcmsplugin.collaborativespace.invitations.lbl.all-status:      \ubaa8\ub4e0 \ucd08\ub300
+jcmsplugin.collaborativespace.invitations.lbl.guest:           \uc190\ub2d8
+jcmsplugin.collaborativespace.invitations.lbl.target-group:    \ub300\uc0c1 \uadf8\ub8f9
+jcmsplugin.collaborativespace.invitations.btn.send-invitation: \ucd08\ub300\uc7a5 \ubcf4\ub0b4\uae30...
+
+jcmsplugin.collaborativespace.invitations.status.0: \uc804\uc1a1
+jcmsplugin.collaborativespace.invitations.status.1: \ub3d9\uc758\ub428
+jcmsplugin.collaborativespace.invitations.status.2: \uac70\uc808
+
+jcmsplugin.collaborativespace.invitations.status.long.0: \ucd08\ub300\uc7a5 \uc804\uc1a1\ub428
+jcmsplugin.collaborativespace.invitations.status.long.1: \uc218\ub77d\ub41c \ucd08\ub300
+jcmsplugin.collaborativespace.invitations.status.long.2: \uac70\uc808\ub41c \ucd08\ub300
+
+jcmsplugin.collaborativespace.invitations.send.title:            \ucd08\ub300\uc7a5 \ubcf4\ub0b4\uae30
+jcmsplugin.collaborativespace.invitations.send.info:             \uc774 \ud611\ub825\uacf5\uac04\uc5d0 \ud569\ub958\ud560 \ucd08\ub300\uc7a5\uc744 \ubcf4\ub0b4\uace0\uc790 \ud558\ub294 \ud68c\uc6d0\uc774\ub098 \uadf8\ub8f9\uc744 \uc120\ud0dd\ud558\uc138\uc694
+jcmsplugin.collaborativespace.invitations.send.lbl.message:      \uba54\uc2dc\uc9c0
+jcmsplugin.collaborativespace.invitations.send.btn.send:         \uc804\uc1a1
+
+jcmsplugin.collaborativespace.invitations.title: {0} \ub97c \uc704\ud55c \ucd08\ub300
+
+jcmsplugin.collaborativespace.invitations.process-modal.title:    \ucd08\ub300
+jcmsplugin.collaborativespace.invitations.process-modal.info:     {0} \uac00 \uadc0\ud558\ub97c \ud611\ub825\uacf5\uac04 {1}\uc758 \ud68c\uc6d0\uc73c\ub85c \ucd08\ub300\ud558\uc600\uc2b5\ub2c8\ub2e4.<br /> \uc774 \ucd08\ub300\ub97c \uc218\ub77d\ud558\uac70\ub098 \uac70\uc808 \ub610\ub294 \uc774\ud6c4\uc5d0 \uacb0\uc815\ud558\uc154\ub3c4 \ub429\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.invitations.process-modal.btn.accept:     \ub3d9\uc758
+jcmsplugin.collaborativespace.invitations.process-modal.btn.decline:    \uac70\uc808...
+
+jcmsplugin.collaborativespace.signup.info.free:           \uc774 \ud611\ub825 \uacf5\uac04\uc5d0 \uc989\uc2dc \uac00\uc785\ud558\uc2e4 \uc218 \uc788\uc2b5\ub2c8\ub2e4
+jcmsplugin.collaborativespace.signup.info.request:        \uc774 \ud611\ub825\uacf5\uac04\uc5d0 \uac00\uc785\ud558\ub824\uba74 \uc989\uc2dc \uc694\uccad\uc744 \ubcf4\ub0b4\uc2ed\uc2dc\uc624. \uadc0\ud558\uc758 \uc694\uccad\uc774 \uc2b9\uc778\ub418\ub294 \ub300\ub85c \ud1b5\uc9c0\ub97c \ubc1b\uc73c\uc2e4 \uac83\uc785\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.signup.btn.signup:          \ub098\ub97c \uac00\uc785\ud574\uc8fc\uc2ed\uc2dc\uc624
+jcmsplugin.collaborativespace.signup.info.already-signup: {0}, \uadc0\ud558\ub294 \uac00\uc785 \uc2e0\uccad\uc744 \uc774\ubbf8 \ud558\uc168\uc2b5\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.signup.error.workspace-no-group: \uac00\uc785 \uc694\uccad\uc744 \ud558\ub824\uba74 \uae30\ubcf8 \uadf8\ub8f9\uc744 \uac16\uae30 \uc704\ud55c \uadf8\ub4e4\uc758 \uc791\uc5c5\uacf5\uac04\uc774 \ud544\uc694\ud569\ub2c8\ub2e4.
+
+jcmsplugin.collaborativespace.signup.lbl.signups:         \uac00\uc785 \uc694\uccad
+jcmsplugin.collaborativespace.signup.lbl.signup:          \uac00\uc785 \uc694\uccad
+jcmsplugin.collaborativespace.signup.lbl.submit-mbr:      \uc694\uccad\uc790
+jcmsplugin.collaborativespace.signup.lbl.process:         \uc774 \uc694\uccad \ucc98\ub9ac
+jcmsplugin.collaborativespace.signup.btn.accept:          \ub3d9\uc758
+jcmsplugin.collaborativespace.signup.btn.reject:          \uac70\uc808
+jcmsplugin.collaborativespace.unsignup.confirm:           \uc815\ub9d0 \ub85c\uadf8\uc544\uc6c3\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?
+
+jcmsplugin.collaborativespace.welcome.title:   \ud658\uc601\ud569\ub2c8\ub2e4!
+jcmsplugin.collaborativespace.welcome.content: <p>\ucd95\ud558\ud569\ub2c8\ub2e4! \uadc0\ud558\uc758 \ud611\ub825 \uacf5\uac04\uc774 \uc791\ub3d9\ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4. </p><p>\ud558\uc2e4 \uc218 \uc788\ub294 \uac83\uc5d0 \ub300\ud55c \uba87 \uac00\uc9c0 \ud301\uc774 \uc788\uc2b5\ub2c8\ub2e4 </p><ul><li class='cs-welcome-tip-look-and-feel'><a href="{0}">\ubaa8\uc591\uacfc \ub290\ub08c \ubcc0\uacbd </a></li><li class='cs-welcome-tip-add-members'><a href="{1}">\ud68c\uc6d0 \ucd94\uac00</a></li><li class='cs-welcome-tip-send-invitations'><a href="{2}">\ucd08\ub300\uc7a5 \ubcf4\ub0b4\uae30</a></li><li class='cs-welcome-tip-services'><a href="{3}">\uc560\ud50c\ub9ac\ucf00\uc774\uc158 \ucd94\uac00</a></li></ul>
+
+jcmsplugin.collaborativespace.lbl.cs:    \ud611\ub825 \uacf5\uac04
+jcmsplugin.collaborativespace.lbl.model: \ubaa8\ub378
+
+jcmsplugin.collaborativespace.lbl.follow.action:        \ud314\ub85c\uc6b0
+jcmsplugin.collaborativespace.lbl.unfollow.action:      \uc5b8\ud314\ub85c\uc6b0
+jcmsplugin.collaborativespace.lbl.follow.title:         \uacf5\uac04 \ud314\ub85c\uc6b0
+jcmsplugin.collaborativespace.lbl.follow.description:   \uadc0\ud558\ub294 \uc774 \uacf5\uac04\uc5d0 \ub300\ud55c \ucd5c\uadfc \ub274\uc2a4 \ud1b5\ubcf4\ub97c \ubc1b\uc73c\uc2ed\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.lbl.unfollow.title:       \uacf5\uac04 \uc5b8\ud314\ub85c\uc6b0
+jcmsplugin.collaborativespace.lbl.unfollow.description: \uadc0\ud558\ub294 \uc774 \uacf5\uac04\uc5d0 \ub300\ud55c \ucd5c\uadfc \ub274\uc2a4 \ud1b5\ubcf4\ub97c \ub354\uc774\uc0c1 \ubc1b\uc9c0 \uc54a\uc73c\uc2ed\ub2c8\ub2e4.
+
+jcmsplugin.collaborativespace.lbl.synchronization-on-model: \uc774 \ud3ec\ud138\uc740 \uc790\uccb4\uc758 \ubaa8\ub378\uacfc \ub3d9\uae30\ud654\ub429\ub2c8\ub2e4. \ud45c\uc2dc\ub97c \ubcc0\uacbd\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4.
+
+jcmsplugin.collaborativespace.msg.cannot-update-sync-data: \uc774 \ub370\uc774\ud130\ub294 \uc790\uccb4\uc758 \ubaa8\ub378\uacfc \ub3d9\uae30\ud654\ub418\uae30 \ub54c\ubb38\uc5d0 "{0}"\uc744(\ub97c) \ubcc0\uacbd\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4.
+
+jcmsplugin.collaborativespace.header.search-button: \uac80\uc0c9\uc744 {0} \uc791\uc5c5\uacf5\uac04\uc5d0\uc11c \uc2e4\ud589
+
+# ------------------------------------------------------------
+#  ADMIN LIST
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.admin-list.remove-member: \uc9c0\ub3c4\uc790 \ubaa9\ub85d\uc5d0\uc11c \uc81c\uac70
+jcmsplugin.collaborativespace.admin-list.add-member-btn: \uc9c0\ub3c4\uc790 \ucd94\uac00...
+
+# ------------------------------------------------------------
+#  SUGGESTIONS
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.suggestion.none: \uc544\ubb34\ub7f0 \uc81c\uc548\ub3c4 \uc5c6\uc2b5\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.suggestion.reset: \uc81c\uc548 \uc7ac\uc124\uc815...
+jcmsplugin.collaborativespace.suggestion.reject: \uc544\ub2c8\uc694, \uac10\uc0ac\ud569\ub2c8\ub2e4!
+
+# ------------------------------------------------------------
+#  APP
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.app.home.title: \ucee4\ubba4\ub2c8\ud2f0 \ud648\ud398\uc774\uc9c0\ub85c \uc774\ub3d9
+
+# ------------------------------------------------------------
+#  PUBLISH MENU
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.publish-menu.create: \ud611\ub825 \uacf5\uac04
+
+# ------------------------------------------------------------
+#  CollaborativeSpace Recommendation (+alert)
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.space-recommendation.title: \uacf5\uac04\uc5d0 \uac00\uc785 \uad8c\uc7a5
+jcmsplugin.collaborativespace.space-recommendation.intro: \ud68c\uc6d0\uc774 \uacf5\uac04\uc5d0 \uac00\uc785\ud560 \uac83\uc744 \uad8c\uc7a5 <strong>{0}</strong>.
+jcmsplugin.collaborativespace.space-recommendation.no-recipient: \uc801\uc5b4\ub3c4 \ud558\ub098\uc758 \uad6c\uc131\uc6d0 \ub610\ub294 \ud55c \uadf8\ub8f9\uc744 \uc120\ud0dd\ud558\uc2ed\uc2dc\uc624.
+jcmsplugin.collaborativespace.space-recommendation.field.msg: \uadc0\ud558\uc758 \uba54\uc2dc\uc9c0
+
+# ------------------------------------------------------------
+#  EDITABLE PROPERTIES
+# ------------------------------------------------------------
+$id.jcmsplugin.collaborativespace.typology-root: \ud611\ub825 \uacf5\uac04 \ud1a0\ud3f4\ub85c\uc9c0\uc758 \ub8e8\ud2b8
+$id.CSRequest.formAuthor: CS \uc694\uccad\uc778
+$id.CSRequest.workspace:  CS \uc791\uc5c5\uacf5\uac04 \uc694\uccad
+$id.jcmsplugin.collaborativespace.typology-portal: \ud1a0\ud3f4\ub85c\uc9c0\ubcc4 CS \ud3ec\ud138
+$id.jcmsplugin.collaborativespace.cs-creation-group: CS \uc0dd\uc131 \uadf8\ub8f9
+$id.jcmsplugin.collaborativespace.cs-creation-group.help: \uc6cc\ud06c\ud50c\ub85c\uc6b0\ub97c \ud655\uc778\ud558\uc9c0 \uc54a\uace0 \uc9c1\uc811 CS \ub97c \uc0dd\uc131\ud560 \uc218 \uc788\ub294 \uad8c\ud55c\uc744 \ubd80\uc5ec\ud558\ub294 \uadf8\ub8f9 \uc2dd\ubcc4\uc790\uc785\ub2c8\ub2e4. \ud68c\uc6d0\uc5d0\uac8c ACL\uc744 \uc81c\uacf5\ud558\ub294 \ub300\uc548\uc785\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.guestaccounts.enabled: \uc190\ub2d8 \uacc4\uc815\uc744 \ud65c\uc131\ud654\ud558\ub835\ub2c8\uae4c?
+$id.jcmsplugin.collaborativespace.guestaccounts.group: \uc190\ub2d8 \uacc4\uc815 \uadf8\ub8f9
+$id.jcmsplugin.collaborativespace.guestaccounts.group.help: \ubaa8\ub4e0 \uc870\uc9c1\uc758 \uc190\ub2d8 \uacc4\uc815\uc744 \ud3ec\ud568\ud558\ub294 \uc2dd\ubcc4\uc790 \uadf8\ub8f9
+$id.GuestRequest.workspace: \uc190\ub2d8 \uacc4\uc815\uc774 \ud638\uc2a4\ud305 \uc791\uc5c5\uacf5\uac04\uc744 \uc694\uccad
+$id.GuestRequest.workspace.help: \uc190\ub2d8 \uc694\uccad\uc774 \uc800\uc7a5\ub418\ub294 (\uae30\ubcf8\uc801\uc73c\ub85c \uae30\ubcf8 \uc791\uc5c5\uacf5\uac04) \uc791\uc5c5\uacf5\uac04\uc744 \uc704\ud55c \uc791\uc5c5\uacf5\uac04 \uc2dd\ubcc4\uc790.
+$id.jcmsplugin.collaborativespace.guestaccounts.homepage-ws: \uc190\ub2d8 \uc2dc\uc791 \uc791\uc5c5\uacf5\uac04
+$id.jcmsplugin.collaborativespace.guestaccounts.homepage-ws.help: \ubaa8\ub4e0 \uc190\ub2d8\uc774 \uc561\uc138\uc2a4\ud560 \uc218 \uc788\ub294 \uc791\uc5c5\uacf5\uac04\uc785\ub2c8\ub2e4. \ud50c\ub7ab\ud3fc \uc0ac\uc6a9\uc744 \uc2dc\uc791\ud560 \uc218 \uc788\ub3c4\ub85d \ub3c4\uc640\uc8fc\ub294\ub370 \uc0ac\uc6a9\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE ABILITIES
+# ------------------------------------------------------------
+portlet.ability.jcmsplugin.collaborativespace:                \ud611\ub825 \uacf5\uac04
+portlet.ability.jcmsplugin.collaborativespace.dashboard:      \ub300\uc2dc\ubcf4\ub4dc
+portlet.ability.jcmsplugin.collaborativespace.application:    \uc560\ud50c\ub9ac\ucf00\uc774\uc158
+
+ui.editportlet.usage.skin.collaborativeSpace: \ud611\ub825 \uacf5\uac04 \uc2a4\ud0a8
+ui.editportlet.usage.skin.collaborativeSpaceNoSkin: \ud611\ub825\uacf5\uac04 \uc2a4\ud0a8 (\uc5c6\uc74c)
+
+# ------------------------------------------------------------
+#  PORTLET MY COLLABORATIVE SPACES
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.portlet.mycs.lbl.mine:   \ub0b4 \uacf5\uac04
+jcmsplugin.collaborativespace.portlet.mycs.lbl.other:  \uae30\ud0c0 \uacf5\uac04
+jcmsplugin.collaborativespace.portlet.mycs.lbl.none:   \uacf5\uac04 \uc5c6\uc74c
+jcmsplugin.collaborativespace.portlet.mycs.lbl.filter: \ud544\ud130 \uae30\uc900...
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE I18N
+# ------------------------------------------------------------
+
+jcmsplugin.collaborativespace.label.edit:         \ud3b8\uc9d1
+jcmsplugin.collaborativespace.label.objectives:   \ubaa9\uc801
+jcmsplugin.collaborativespace.label.support:      \uc9c0\uc6d0:
+jcmsplugin.collaborativespace.label.breadcrumb:   \uc774\ub3d9 \uacbd\ub85c:
+jcmsplugin.collaborativespace.request-date:       \uc694\uccad \ub0a0\uc9dc: {0}
+
+jcmsplugin.collaborativespace.editform.create:    \ud611\ub825 \uacf5\uac04 \uc0dd\uc131\ud558\uae30
+jcmsplugin.collaborativespace.editform.update:    \ud611\ub825 \uacf5\uac04 \uc5c5\ub370\uc774\ud2b8\ud558\uae30
+
+jcmsplugin.collaborativespace.csrequest.model:    \uc0dd\uc131\ub41c \ubaa8\ub378
+
+jcmsplugin.collaborativespace.handler.msg.cs-max: \ud55c \uc791\uc5c5\uacf5\uac04 \ub2f9 1\uac1c\uc758 \ud611\ub825\uacf5\uac04 \ub9cc\uc774 \ud5c8\uc6a9\ub429\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.title: \uc218\uc2e0 \uc774\uba54\uc77c \ud65c\uc131\ud654
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.content: \uc218\uc2e0 \uc774\uba54\uc77c\uc774 \uc774\uc81c \uc774 \uacf5\uac04\uc5d0\uc11c \ud65c\uc131\ud654\ub429\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.footer: \uc218\uc2e0 \uc774\uba54\uc77c \uc811\ub450\uc5b4 \uc0ac\uc6a9\uc790 \uc815\uc758\ub97c \uc704\ud55c \uc124\uc815 \ud3b8\uc9d1\ud558\uae30: <strong>{0}</strong>.
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.edit-button: \uc124\uc815 \ud3b8\uc9d1
+
+jcmsplugin.collaborativespace.dashboard.new:      \ud45c\uc2dc\ud560 \ucf58\ud150\uce20\uac00 \uc5c6\uc2b5\ub2c8\ub2e4.<br/><img src='images/jalios/icons/add.gif' class='icon' alt=''/>&nbsp;\uc0c8\ub85c\uc6b4 \ucf58\ud150\uce20 \uc0dd\uc131\ud558\uae30.
+jcmsplugin.collaborativespace.dashboard.warn.invalid-portal-container: \uc774 PortletSelection \ud15c\ud50c\ub9bf\uc740 CollaborativeSpace \ud3ec\ud138\uc5d0\uc11c\ub9cc \uc791\ub3d9\ud569\ub2c8\ub2e4.
+
+jcmsplugin.collaborativespace.introduction.edit: \uc18c\uac1c \ud3b8\uc9d1
+jcmsplugin.collaborativespace.introduction.empty.default-message: \uc774 \uacf5\uac04\uc5d0 \ub300\ud55c \uc18c\uac1c\uac00 \uc544\uc9c1 \uc791\uc131\ub418\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.introduction.infos.access.header: \uc561\uc138\uc2a4
+jcmsplugin.collaborativespace.introduction.infos.access.membership.true: (\uadc0\ud558\ub294 \ub4f1\ub85d\ub418\uc5c8\uc2b5\ub2c8\ub2e4)
+jcmsplugin.collaborativespace.introduction.infos.access.membership.false: (\uadc0\ud558\ub294 \ub4f1\ub85d\ub418\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4)
+jcmsplugin.collaborativespace.introduction.infos.guests.header: \uc190\ub2d8
+jcmsplugin.collaborativespace.introduction.infos.guests.info: {0,choice,0# \uc190\ub2d8\uc774 \uc5c6\uc2b5\ub2c8\ub2e4|1#\ub294 1 \uc190\ub2d8|2# \uc774 {0} \uc190\ub2d8\uc785\ub2c8\ub2e4}.
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail: \uba54\uc77c\ud568
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail.h: \uc774 \uc8fc\uc18c\ub85c \ubcf4\ub0b8 \uc774\uba54\uc77c\uc740 \uc774 \uacf5\uac04\uc5d0 \uadc0\ud558\uc758 \uc774\ub984\uc73c\ub85c \uc800\uc7a5\ub429\ub2c8\ub2e4
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail.your-address: \uc774 \uacf5\uac04\uc5d0 \ub4e4\uc5b4\uac00\ub294 \uadc0\ud558\uc758 \uac1c\uc778 \uc8fc\uc18c:
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail.warning: \uacbd\uace0! \uc774 \uc8fc\uc18c\ub294 \ud37c\uc2a4\ub110 \uc815\ubcf4\uc785\ub2c8\ub2e4. \ud0c0\uc778\uc5d0\uac8c \uc54c\ub824 \uc8fc\uc9c0 \ub9c8\uc2ed\uc2dc\uc624.
+
+jcmsplugin.collaborativespace.typology-portal.presentation.edit: \ud504\ub808\uc820\ud14c\uc774\uc158 \ud3b8\uc9d1
+jcmsplugin.collaborativespace.typology-portal.presentation.empty.default-message: \uc774 \ubc94\uc8fc\uc758 \ud504\ub808\uc820\ud14c\uc774\uc158\uc774 \uc544\uc9c1 \ucc44\uc6cc\uc9c0\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.typology-portal.spaces-list.title: \uacf5\uac04 \ubaa9\ub85d
+jcmsplugin.collaborativespace.typology-portal.pqfe.lbl.cs-result: {0,choice,0#\uacf5\uac04 \uc5c6\uc74c|1#1 \uacf5\uac04|2#{0,number,integer} \uacf5\uac04}.
+jcmsplugin.collaborativespace.typology-portal.pqfe.lbl.placeholder.search: {0} \uc5d0\uc11c \uac80\uc0c9
+jcmsplugin.collaborativespace.typology-portal.lbl.csList.header: {0,choice,0# \uacf5\uac04 \uc5c6\uc74c|1#1 \uacf5\uac04|2#{0,number,integer} \uacf5\uac04}
+jcmsplugin.collaborativespace.typology-portal.lbl.cs-typology.info: \uc0dd\uc131\ub41c {0}. {1,choice,0#\ucc38\uc11d\uc790 \uc5c6\uc74c|1#1 \ucc38\uc11d\uc790|2#{1,number,integer} \ucc38\uc11d\uc790}. {2} \uac00 \uc774\ub044\ub294
+jcmsplugin.collaborativespace.typology-portal.lbl.cs-typology.info-parent: \ubbf8\ub9cc
+jcmsplugin.collaborativespace.typology-portal.lbl.cs-typology.admins-list: {0,choice,0# \uc9c0\ub3c4\uc790 \uc5c6\uc74c|1# {2}|2# {1} \ubc0f {2}}
+
+
+# Query dates
+jcmsplugin.collaborativespace.query.today:     \uc624\ub298
+jcmsplugin.collaborativespace.query.tomorrow:  \ub0b4\uc77c
+jcmsplugin.collaborativespace.query.yesterday: \uc5b4\uc81c
+jcmsplugin.collaborativespace.query.before:    \uc774\uc804
+jcmsplugin.collaborativespace.query.after:     \ub098\uc911\uc5d0
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE CONTROL
+# ------------------------------------------------------------
+
+jcmsplugin.collaborativespace.msg.edit.cslicense:     \ud604\uc7ac JCMS \ub77c\uc774\uc13c\uc2a4\ub85c \ub354 \uc774\uc0c1\uc758 \ud611\ub825 \uacf5\uac04\uc744 \ub9cc\ub4e4 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.msg.edit.workspace.typology-used: <i>({0})</i> \ud1a0\ud3f4\ub85c\uc9c0\ub294 \uc791\uc5c5\uacf5\uac04\uc5d0\uc11c \uc0ac\uc6a9\ud560 \uc218 \uc5c6\uace0 \ud611\ub825 \uacf5\uac04 \ud3ec\ud2c0\ub9bf\uc5d0\uc11c \uc0ac\uc6a9\ud574\uc57c \ud569\ub2c8\ub2e4.
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE DATA
+# ------------------------------------------------------------
+
+data.$id.jcmsplugin.collaborativespace.data.cat:                        \ud611\ub825 \uacf5\uac04
+data.$id.jcmsplugin.collaborativespace.data.group.writer:               \ud611\ub825 \uacf5\uac04 - \uc791\uc131\uc790
+data.$id.jcmsplugin.collaborativespace.data.group.reader:               \ud611\ub825 \uacf5\uac04 - \ucc38\uc11d\uc790
+data.$id.jcmsplugin.collaborativespace.data.internal.dashboard:         \ub300\uc2dc\ubcf4\ub4dc
+data.$id.jcmsplugin.collaborativespace.data.internal.icons:             \uc544\uc774\ucf58
+data.$id.jcmsplugin.collaborativespace.data.internal.search:            \uac80\uc0c9
+data.$id.jcmsplugin.collaborativespace.data.service.latest-contents:    \ucd5c\uc2e0 \ucee8\ud150\uce20
+data.$id.jcmsplugin.collaborativespace.data.service.latest-contents.d:  \ud611\ub825 \uacf5\uac04\uc758 \uac00\uc7a5 \ucd5c\uadfc \ucf58\ud150\uce20 \ubaa9\ub85d
+data.$id.jcmsplugin.collaborativespace.data.service.latest-documents:   \ucd5c\uc2e0 \ubb38\uc11c
+data.$id.jcmsplugin.collaborativespace.data.service.latest-documents.d: \uc774 \ud611\ub825 \uacf5\uac04\uc758 \uac00\uc7a5 \ucd5c\uadfc \ubb38\uc11c \ubaa9\ub85d
+data.$id.jcmsplugin.collaborativespace.data.service.workflow:           \uc6cc\ud06c\ud50c\ub85c\uc6b0
+data.$id.jcmsplugin.collaborativespace.data.service.workflow.d:         \uc218\ud589\ub420 \uac8c\uc2dc\ubb3c \ubaa9\ub85d
+data.$id.jcmsplugin.collaborativespace.data.service.glossary:           \uc6a9\uc5b4\uc9d1
+data.$id.jcmsplugin.collaborativespace.data.service.glossary.d:         \uc774 \ud611\ub825 \uacf5\uac04\uc5d0\uc11c \uc6a9\uc5b4\uc9d1 \ud45c\uc2dc\ud558\uae30
+data.$id.jcmsplugin.collaborativespace.data.service.faq:                \uc790\uc8fc \ubb3b\ub294 \uc9c8\ubb38(FAQ)
+data.$id.jcmsplugin.collaborativespace.data.service.faq.d:              \uc774 \ud611\ub825 \uacf5\uac04\uc744 \uc704\ud55c FAQ \ud45c\uc2dc\ud558\uae30.
+data.$id.jcmsplugin.collaborativespace.data.service.introduction:       \uc18c\uac1c
+data.$id.jcmsplugin.collaborativespace.data.service.introduction.d:     \uc774 \ud611\ub825 \uacf5\uac04\uc5d0 \ub300\ud55c \uc18c\uac1c \ud45c\uc2dc\ud558\uae30
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-full:      \uc77c\uc815\ud45c
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-full.d:    \ud611\ub825 \uacf5\uac04 \ud68c\uc6d0 \uc774\ubca4\ud2b8 \uad00\ub9ac \uc560\ud50c\ub9ac\ucf00\uc774\uc158
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-small:     \uc791\uc740 \uc77c\uc815\ud45c
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-small.d:   \ud604\uc7ac \ub2ec\uc744 \uc704\ud55c \uc77c\uc815\ud45c \ud45c\uc2dc\ud558\uae30
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-diary:     \ub2e4\uc774\uc5b4\ub9ac
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-diary.d:   \ud604\uc7ac \ub2ec\uc744 \uc704\ud55c \ub2e4\uc774\uc5b4\ub9ac \ud45c\uc2dc\ud558\uae30
+data.$id.jcmsplugin.collaborativespace.data.service.event-schedule:     \uc774\ubca4\ud2b8 \uc77c\uc815
+data.$id.jcmsplugin.collaborativespace.data.service.event-schedule.d:   \uc774 \uacf5\uac04\uc758 \uc774\ubca4\ud2b8 \uc77c\uc815 \ubaa9\ub85d
+data.$id.jcmsplugin.collaborativespace.data.service.subspaces:          \ud558\uc704 \uacf5\uac04
+data.$id.jcmsplugin.collaborativespace.data.service.subspaces.d:        \uc774 \uacf5\uac04\uc758 \ud558\uc704 \uacf5\uac04 \ubaa9\ub85d
+data.$id.jcmsplugin.collaborativespace.data.model.ws:                   \ud611\ub825 \uacf5\uac04 \ubaa8\ub378
+data.$id.jcmsplugin.collaborativespace.data.model.portal:               \ud611\ub825 \uacf5\uac04 \ubaa8\ub378
+data.$id.jcmsplugin.collaborativespace.data.model.portal.desc:          \uc0c8\ub85c\uc6b4 \ud611\ub825 \uacf5\uac04\uc744 \uc0dd\uc131\ud560 \ubaa8\ub378
+data.$id.jcmsplugin.collaborativespace.data.model.cat:                  $NAME$ \ud611\ub825 \uacf5\uac04
+data.$id.jcmsplugin.collaborativespace.data.model.group.writer:         $NAME$ - \uc791\uc131\uc790
+data.$id.jcmsplugin.collaborativespace.data.model.group.reader:         $NAME$ - \ucc38\uc11d\uc790
+data.$id.jcmsplugin.collaborativespace.data.model.group.follower:       $NAME$ - \ud314\ub85c\uc6cc
+
+# ------------------------------------------------------------
+#  Guest Accounts Feature
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.guestaccounts.guest.label: \uc190\ub2d8
+jcmsplugin.collaborativespace.guestaccounts.guestGroup.label: \uc190\ub2d8
+jcmsplugin.collaborativespace.guestaccounts.guestManagerGroup.label: \uc190\ub2d8 \uad00\ub9ac\uc790
+jcmsplugin.collaborativespace.guestaccounts.guestManagerACL.label: \uc190\ub2d8 \uad00\ub9ac\uc790
+jcmsplugin.collaborativespace.guestaccounts.account-creation.label: \uc190\ub2d8 \uac1c\uc815 \uc5f4\uae30...
+jcmsplugin.collaborativespace.guestaccounts.contact-transformation.member-profile-target.label: \uc190\ub2d8 \uacc4\uc815\uc73c\ub85c \uc804\ud658\ud558\uae30...
+jcmsplugin.collaborativespace.guestaccounts.workspaces-and-groups.workspace.label.title: \uc774 \uc791\uc5c5\uacf5\uac04 \uadf8\ub8f9 \ubaa9\ub85d\uc744 \ud45c\uc2dc/\uc228\uae30\ub824\uba74 \uc5ec\uae30\ub97c \ud074\ub9ad\ud558\uc138\uc694
+jcmsplugin.collaborativespace.guestaccounts.no-guest-group-defined: \uc190\ub2d8 \uacc4\uc815 \ud2b9\uc131\uc744 \ud65c\uc131\ud654\ud558\ub824\uba74 \ud65c\uc131\ud654\ub41c \uc190\ub2d8 \uacc4\uc815 \uadf8\ub8f9\uc774 \uc815\uc758\ub418\uc5b4 \uc788\uc5b4\uc57c \ud569\ub2c8\ub2e4.<br />\uc18d\uc131\uc744 \ud655\uc778\ud558\uc2ed\uc2dc\uc624 <strong>{0}</strong> ($id.jcmsplugin.collaborativespace.guestaccounts.group).
+jcmsplugin.collaborativespace.guestaccounts.member-controller.error.account-already-in-workspaces: <p><strong>\uc190\ub2d8</strong> \uacc4\uc815\uc740 <strong>\ube44</strong> \ud611\ub825 \uacf5\uac04 \uadf8\ub8f9\uc5d0 \uc18d\ud558\uc9c0 \ub9d0\uc544\uc57c \ud569\ub2c8\ub2e4.</p><ul><li>\ube44 \ud611\ub825\uacf5\uac04 \uadf8\ub8f9\uc744 <strong>\uc81c\uac70</strong>\ud558\uc5ec \uc190\ub2d8 \uacc4\uc815({0})\uc73c\ub85c \ub9cc\ub4ed\ub2c8\ub2e4</li><li>\ub610\ub294, \uc190\uc2e0 \uacc4\uc815 \uadf8\ub8f9\uc5d0\uc11c <strong>\uc81c\uac70</strong>\ud558\uc5ec \ube44 \ud611\ub825 \uc791\uc5c5\uacf5\uac04\uc5d0 \uc561\uc138\uc2a4\ud560 \uc218 \uc788\ub3c4\ub85d \ud569\ub2c8\ub2e4</li></ul>
+jcmsplugin.collaborativespace.guestaccounts.member-controller.error.no-valid-email: \uc190\ub2d8 \uacc4\uc815\uc744 \uc704\ud574 \uc720\ud6a8\ud55c \uc774\uba54\uc77c \uc8fc\uc18c\uac00 \ud544\uc694\ud569\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.guestaccounts.member-controller.error.contact-creation-forbidden: \uc190\ub2d8 \uacc4\uc815\uc740 \uc5f0\ub77d\ucc98\ub97c \uc0dd\uc131\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.guestaccounts.member-controller.warning.guest-group-removal: \uc774 \uacc4\uc815\uc744 \uc190\ub2d8 \uacc4\uc815 \uadf8\ub8f9\uc5d0\uc11c \uc81c\uac70\ud558\uba74 \uc774 \uacc4\uc815\uc5d0 \uc880 \ub354 \ub9ce\uc740 \uc561\uc138\uc2a4\ub97c \ubd80\uc5ec\ud560 \uac83\uc785\ub2c8\ub2e4.<br />\uacc4\uc18d\ud558\ub824\uba74 \uc190\ub2d8 \uadf8\ub8f9\uc5d0\uc11c \uc774 \uacc4\uc815\uc744 \uac15\uc81c\ub85c \uc81c\uac70\ud558\uc2ed\uc2dc\uc624.
+jcmsplugin.collaborativespace.guestaccounts.member-controller.guest-group-removal.lbl: \uc190\ub2d8\uc5d0\uc11c \uc81c\uac70
+jcmsplugin.collaborativespace.guestaccounts.member-controller.guest-group-removal.lbl.h: \uc190\ub2d8 \uacc4\uc815 \uadf8\ub8f9\uc5d0\uc11c \uc774 \uacc4\uc815\uc744 \uac15\uc81c\ub85c \uc81c\uac70\ud569\ub2c8\uae4c?
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.feature-not-enabled: \uadc0\ud558\uc758 \uc694\uccad\uc744 \ucc98\ub9ac\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. \uc190\ub2d8 \uc131\uaca9 \uc124\uc815\uc744 \ud655\uc778\ud558\uc2ed\uc2dc\uc624
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-submitter: \uc81c\ucd9c\uc790\ub294 \ud544\uc218\uc785\ub2c8\ub2e4
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-group: \ud558\ub098 \uc774\uc0c1\uc758 \ud611\ub825 \uacf5\uac04 \uadf8\ub8f9\uc744 \uc120\ud0dd\ud558\uc2ed\uc2dc\uc624
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-name: \uc190\ub2d8\uc740 \ubc18\ub4dc\uc2dc \uc774\ub984\uc774 \uc788\uc5b4\uc57c \ud569\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-organization: \uc190\ub2d8\uc740 \ubc18\ub4dc\uc2dc \uc870\uc9c1\uc774 \uc788\uc5b4\uc57c \ud569\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.guestaccounts.request-modal.use-with-worflow.title: \uc190\ub2d8 \uacc4\uc815 \uc0dd\uc131 \uc694\uccad
+jcmsplugin.collaborativespace.guestaccounts.request-modal.use-with-no-worflow.title: \uc190\ub2d8 \uacc4\uc815 \uc0dd\uc131
+jcmsplugin.collaborativespace.guestaccounts.creation-request-controller.create.finish: <p>\uadc0\ud558\uc758 \uc190\ub2d8 \uacc4\uc815 \uc0dd\uc131 \uc694\uccad\uc774 \uc131\uacf5\uc801\uc73c\ub85c \uc81c\ucd9c\ub418\uc5c8\uc2b5\ub2c8\ub2e4.</p><p>\uc77c\ub2e8 \uc694\uccad\uc774 \uac80\uc99d\ub418\uba74 \uc190\ub2d8 \uacc4\uc815\uc774 \uc0dd\uc131\ub418\uace0 \uadc0\ud558\uc5d0\uac8c \ud1b5\ubcf4\ub420 \uac83\uc785\ub2c8\ub2e4.</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-controller.account-creation-success.mail.email-notsent: \uc774\uba54\uc77c\uc744 \uc804\uc1a1\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4: {0}. \ub2e4\uc2dc \uc2dc\ub3c4\ud558\uac70\ub098 \uc9c0\ub3c4\uc790\uc5d0\uac8c \ubb38\uc758\ud558\uc2dc\uae30 \ubc14\ub78d\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.0: \ud655\uc778
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1: \uc81c\uc548
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.2: \uc815\ubcf4
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.3: \uacf5\uac04
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.0.intro: <p class='info'>\uc774 \uc0ac\ub78c\uc774 \uc774\ubbf8 \uc874\uc7ac\ud558\ub294\uc9c0 \ud655\uc778\ud558\uae30 \uc704\ud574 \ud655\uc778\ud560 \uc190\ub2d8 \uacc4\uc88c\uc758 \uc774\ub984 \ubc0f/\ub610\ub294 \uc774\uba54\uc77c\uc744 \uc785\ub825\ud558\uc2ed\uc2dc\uc624:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.intro.1: <p class='info'>\uc774 \uc815\ubcf4\uc5d0 \uc77c\uce58\ud558\ub294 \uae30\uc874 \uacc4\uc815\uc774 \ubc1c\uacac\ub418\uc5c8\uc2b5\ub2c8\ub2e4. \ub9cc\ub4e4\uae30 \uc804\uc5d0 \uadc0\ud558\uac00 \uace0\ub824\ud558\uace0 \uc788\ub294 \uace0\uac1d \uacc4\uc815\uc774 \uc874\uc7ac\ud558\uc9c0 \uc54a\ub294\uc9c0 \ud655\uc778\ud558\uc2ed\uc2dc\uc624.</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.intro.2: <p class='info'>\uae30\uc874 \uacc4\uc815\uc744 \ucc3e\uc558\uc2b5\ub2c8\ub2e4. \uc0c8\ub85c \ub9cc\ub4e4\uae30 \uc804\uc5d0 \ub3d9\uc77c\ud55c \uc0ac\ub78c\uc774 \uc544\ub2cc\uc9c0 \ud655\uc778\ud558\uc2ed\uc2dc\uc624.<br />\uc0c8 \ucc3d\uc5d0 \ud68c\uc6d0\uc744 \ud45c\uc2dc\ud558\ub824\uba74 \uce74\ub4dc\ub97c \ud074\ub9ad\ud558\uace0, \uce74\ub4dc\uc5d0 \ub9c8\uc6b0\uc2a4\ub97c \uc62c\ub9ac\uace0 \ubc84\ud2bc\uc744 \ud074\ub9ad\ud558\uc5ec \uc120\ud0dd\ud55c \ud68c\uc6d0\uc73c\ub85c \uacc4\uc18d \uc9c4\ud589\ud569\ub2c8\ub2e4.</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.see-profile.btn: \ud504\ub85c\ud544 \ud45c\uc2dc
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.see-profile.btn.title: \uba85\ub839\uc744 \uc120\ud0dd\ud558\uae30 \uc804\uc5d0 \uacc4\uc815\uc758 \uc804\uccb4 \ud504\ub85c\ud544\uc744 \uc0c8 \ucc3d\uc5d0\uc11c \ud45c\uc2dc\ud569\ub2c8\ub2e4
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.select-account.title: \uae30\uc874 \uacc4\uc815\uc744 \uc120\ud0dd\ud558\uc5ec \uadf8 \uc0ac\ub78c\uc744 \ub4f1\ub85d\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.select-account.btn: \uc120\ud0dd\ud558\uae30
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.transform-contact-to-guest.btn-label: \uc190\ub2d8\uc73c\ub85c \ubcc0\ud658
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.transform-contact-to-guest.btn.title: \uc774 \uc5f0\ub77d\ucc98\ub97c \uc120\ud0dd\ud558\uc5ec \uc190\ub2d8\uc73c\ub85c \ubcc0\ud658\ud558\uba74 \uacf5\uac04\uc5d0 \uadf8 \uc0ac\ub78c\uc744 \ub4f1\ub85d\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.2.intro: <p class='info'>\uc0dd\uc131\ud560 \uc190\ub2d8 \uacc4\uc815\uc758 \uc815\ubcf4\ub97c \ucc44\uc6b0\uc2ed\uc2dc\uc624:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.2.intro.convert-contact: <p class='info'>\uc190\ub2d8\uc73c\ub85c \ubcc0\ud658\ud558\ub824\uba74 <strong>{0}</strong> \uc5f0\ub77d\ucc98 \uc815\ubcf4\ub97c \uc791\uc131\ud558\uc2ed\uc2dc\uc624:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.3.intro: <p class='info'>\uc544\ub798 \ud611\ub825 \uacf5\uac04\uc5d0\uc11c \uacc4\uc815\uc744 \ucd94\uac00\ud560 \uadf8\ub8f9\uc5d0 \uccb4\ud06c\ud558\uc2ed\uc2dc\uc624:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.3.intro.convert-contact: <p class='info'>\uc544\ub798 \ud611\ub825 \uacf5\uac04\uc5d0\uc11c <strong>{0}</strong> \uc5f0\ub77d\ucc98\ub97c \ucd94\uac00\ud560 \uadf8\ub8f9\uc5d0 \uccb4\ud06c\ud558\uc2ed\uc2dc\uc624:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.use-with-worflow.validate: \uc694\uccad \ubcf4\ub0b4\uae30
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.use-with-no-worflow.validate: \uacc4\uc815 \uc0dd\uc131\ud558\uae30
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.use-with-worflow.validate: \uc694\uccad \ubcf4\ub0b4\uae30
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.use-with-no-worflow.validate: \uc804\ud658\ud558\uae30
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.contact-reminder: <strong>{0}</strong> \uc744 \uc190\ub2d8 \uacc4\uc815\uc73c\ub85c \uc804\ud658\ud558\uae30.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.groups-intro: <p class='info'>\uc544\ub798 \ud611\ub825 \uacf5\uac04\uc5d0\uc11c \uc190\ub2d8 \uacc4\uc815\uc744 \ucd94\uac00\ud560 \uadf8\ub8f9\uc5d0 \uccb4\ud06c\ud558\uc2ed\uc2dc\uc624:</p>
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.error.no-email: \uc190\ub2d8 \uacc4\uc815\uc73c\ub85c \uc804\ud658\ub418\ub824\uba74 \uc5f0\ub77d\ucc98\ub294 \uc720\ud6a8\ud55c \uc774\uba54\uc77c \uc8fc\uc18c\ub97c \uac00\uc9c0\uace0 \uc788\uc5b4\uc57c \ud569\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.error.email-already-used: \uc190\ub2d8 \uacc4\uc815\uc73c\ub85c.\uc804\ud658\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. \uae30\uc874\uc758 \uacc4\uc815\uc774 \uc774\ubbf8 \uc774 \uba54\uc77c<strong>{0}</strong>\uc744 \uc0ac\uc6a9\ud558\uace0 \uc788\uc2b5\ub2c8\ub2e4 <br />\ub2e4\ub978 \uc774\uba54\uc77c\uc744 \uc0ac\uc6a9\ud558\uc2dc\uac70\ub098 \uae30\uc874 \uacc4\uc815\uc744 \uc190\ub2d8\uacc4\uc815\uc73c\ub85c \uc804\ud658\ud558\uc2ed\uc2dc\uc624.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.error.not-a-contact: \uc804\ud658\ud560 \ud68c\uc6d0\uc740 \uc5f0\ub77d\ucc98\uc774\uc5b4\uc57c \ud569\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.create.finish: <p>\uadc0\ud558\uc758 \uc5f0\ub77d\ucc98\ub97c \uc190\ub2d8 \uacc4\uc815\uc73c\ub85c \uc804\ud658\ud558\ub824\ub294  \uc694\uccad\uc774 \uc131\uacf5\uc801\uc73c\ub85c \uc81c\ucd9c\ub418\uc5c8\uc2b5\ub2c8\ub2e4.</p><p>\uc77c\ub2e8 \uc694\uccad\uc774 \uac80\uc99d\ub418\uba74 \uc190\ub2d8 \uacc4\uc815\uc774 \uc0dd\uc131\ub418\uace0 \uadc0\ud558\uc5d0\uac8c \ud1b5\ubcf4\ub420 \uac83\uc785\ub2c8\ub2e4.</p>
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.account-transformation-success: \uc5f0\ub77d\ucc98 <a href='{0}' target='_blank' title='New window'>{1}</a> \uac00 \uc131\uacf5\uc801\uc73c\ub85c \uc190\ub2d8 \uacc4\uc815\uc73c\ub85c \uc804\ud658\ub418\uc5c8\uc2b5\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.account-creation-success.mail.email-notsent: \uc774\uba54\uc77c\uc744 \uc804\uc1a1\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4: {0}. \ub2e4\uc2dc \uc2dc\ub3c4\ud558\uac70\ub098 \uc9c0\ub3c4\uc790\uc5d0\uac8c \ubb38\uc758\ud558\uc2dc\uae30 \ubc14\ub78d\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.guestaccounts.guest-request.notification.warn.no-request: \uc554\ud638 \uc774\uba54\uc77c\uc744 \uc804\uc1a1\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4. \uc190\ub2d8 \uacc4\uc815({0})\uc5d0 \ud1b5\uc9c0\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.guestaccounts.guest-request.notification.warn.mail-disabled: \uba54\uc77c\uc774 \ube44\ud65c\uc131\ud654\ub418\uc5c8\uc2b5\ub2c8\ub2e4. \uc190\ub2d8 \uacc4\uc815\uc5d0 \ud1b5\uc9c0\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.guestaccounts.guest-request.notification.warn.unknown-error: \uc8c4\uc1a1\ud569\ub2c8\ub2e4. \ubb54\uac00\uac00 \uc798\ubabb\ub410\uc2b5\ub2c8\ub2e4. \uc190\ub2d8 \uacc4\uc815\uc5d0 \ud1b5\uc9c0\ud560 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.guestaccounts.process-request.btn.accept:  \ub3d9\uc758
+jcmsplugin.collaborativespace.guestaccounts.process-request.btn.reject:  \uac70\uc808
+
+
+jcmsplugin.collaborativespace.syncMode.tabs: \uc560\ud50c\ub9ac\ucf00\uc774\uc158
+jcmsplugin.collaborativespace.syncMode.dashboard: \ud648\ud398\uc774\uc9c0
+jcmsplugin.collaborativespace.syncMode.data: \ub370\uc774\ud130 \uad6c\uc870(\uc720\ud615, WF, \uadf8\ub8f9, ...)
+jcmsplugin.collaborativespace.syncMode.categories: \ubc94\uc8fc
+jcmsplugin.collaborativespace.syncMode.activate-help.message: \ud65c\uc131\ud654\ub418\uba74, \ub3d9\uae30\ud654\ub294 \uc774 \uc791\uc5c5\uacf5\uac04\uc758 \ubaa8\ub378\uc758 \uba87\uba87 \ud30c\ub77c\ubbf8\ud130\ub97c \uc801\uc6a9\ud569\ub2c8\ub2e4
+
+#jcmsplugin.collaborativespace.modelSyncMode.dashboard: Applications
+#jcmsplugin.collaborativespace.modelSyncMode.dashboard: Home 
+#jcmsplugin.collaborativespace.modelSyncMode.dashboard: Data
+
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal: \ud398\uc774\uc9c0 \ud3b8\uc9d1(\uace0\uae09 \ud3b8\uc9d1)...
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-simple: \ud398\uc774\uc9c0 \ud3b8\uc9d1...
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-simple-stop: \ud3b8\uc9d1 \uc911\uc9c0
+jcmsplugin.collaborativespace.actions-menu.recommend-collaborative-space: \uacf5\uc720...
+jcmsplugin.collaborativespace.modelSyncMode.locked.message: \ud611\ub825 \uacf5\uac04\uc774 \ub2e4\uc74c \ubaa8\ub378\uacfc \ub3d9\uae30\ud654\ub418\uc5c8\uc2b5\ub2c8\ub2e4: <b>{0}</b>
+
+# ------------------------------------------------------------
+# Alerts
+# ------------------------------------------------------------
+alert.name.jcmsplugin-collaborativespace:                         \ud611\ub825 \uacf5\uac04
+alert.name.jcmsplugin-collaborativespace.cs-creation:             \ud611\ub825\uacf5\uac04 \uc0dd\uc131
+alert.name.jcmsplugin-collaborativespace.cs-creation-rejected-submitter: \ud611\ub825 \uacf5\uac04 \uc0dd\uc131 \uac70\ubd80\ub428
+alert.name.jcmsplugin-collaborativespace.invitation:              \uacf5\uac04\uc5d0 \uac00\uc785 \ucd08\ub300
+alert.name.jcmsplugin-collaborativespace.enrollment:              \uacf5\uac04\uc5d0 \uac00\uc785
+alert.name.jcmsplugin-collaborativespace.join:                    \uacf5\uac04\uc5d0 \uac00\uc785
+alert.name.jcmsplugin-collaborativespace.recommendation:          \uacf5\uac04\uc5d0 \ucd94\ucc9c
+alert.name.jcmsplugin-collaborativespace.signup-request:          \uac00\uc785 \uc81c\ucd9c
+alert.name.jcmsplugin-collaborativespace.signup-accepted:         \ud5c8\uc6a9\ub41c \uac00\uc785
+alert.name.jcmsplugin-collaborativespace.signup-rejected:         \uac00\uc785 \uac70\ubd80\ub428
+alert.name.jcmsplugin-collaborativespace.unsignup:                \uad6c\ub3c5 \ud574\uc9c0
+alert.name.jcmsplugin-collaborativespace.guest-creation:          \uc190\ub2d8 \uacc4\uc815 \ud65c\uc131\ud654
+alert.name.jcmsplugin-collaborativespace.silent-guest-creation:   \uc190\ub2d8 \uacc4\uc815 \ud65c\uc131\ud654
+alert.name.jcmsplugin-collaborativespace.contact-to-guest:        \uc190\ub2d8 \uacc4\uc815 \uc804\ud658 \uc5f0\ub77d\ucc98
+alert.name.jcmsplugin-collaborativespace.silent-contact-to-guest: \uc190\ub2d8 \uacc4\uc815 \uc804\ud658 \uc5f0\ub77d\ucc98
+
+alert.msg.jcmsplugin-collaborativespace.cs-creation.title:                          {data} \ud611\ub825 \uacf5\uac04 \uc0dd\uc131
+alert.msg.jcmsplugin-collaborativespace.cs-creation.short-description:              \ud611\ub825 \uacf5\uac04 {data} \uc774 \uc0dd\uc131\ub418\uc5c8\uc2b5\ub2c8\ub2e4.
+alert.msg.jcmsplugin-collaborativespace.cs-creation.description:                    <p>\ud611\ub825 \uacf5\uac04 {data}\uc774 \uc0dd\uc131\ub418\uc5c8\uc2b5\ub2c8\ub2e4. </p><p>\uadc0\ud558\uac00 \uc774 \uacf5\uac04\uc758 \uc9c0\ub3c4\uc790\uc785\ub2c8\ub2e4.</p>
+
+alert.msg.jcmsplugin-collaborativespace.cs-creation-rejected-submitter.title:             \ud611\ub825 \uacf5\uac04 \uc0dd\uc131 \uac70\ubd80\ub428
+alert.msg.jcmsplugin-collaborativespace.cs-creation-rejected-submitter.short-description: \ud611\ub825 \uacf5\uac04 \uc0dd\uc131 \uc694\uccad\uc774("{cs-title}") \uac70\uc808\ub418\uc5c8\uc2b5\ub2c8\ub2e4. \ud655\uc778\uc790 \ucf54\uba58\ud2b8: {validator-comment}
+
+alert.msg.jcmsplugin-collaborativespace.invitation.title:                           {data} \uac00\uc785\uc5d0 \ucd08\ub300
+alert.msg.jcmsplugin-collaborativespace.invitation.short-description:               {author}\ub2d8\uc774 \ud611\ub825 \uacf5\uac04 {data}\uc758 \ud68c\uc6d0\uc73c\ub85c \uadc0\ud558\ub97c \ucd08\ub300\ud588\uc2b5\ub2c8\ub2e4.
+alert.msg.jcmsplugin-collaborativespace.invitation.description:                     <p>{author}\ub2d8\uc774 \ud611\ub825 \uacf5\uac04 {data}\uc758 \ud68c\uc6d0\uc73c\ub85c \uadc0\ud558\ub97c \ucd08\ub300\ud588\uc2b5\ub2c8\ub2e4. \uc774 </p><p><a href="{accept-url}">\uc774 \ucd08\ub300 \uc218\ub77d</a></p><p><a href="{decline-url}">\uc774 \ucd08\ub300 \uac70\uc808</a></p><br /><p><b>\uacf5\uac04 \uc124\uba85:</b></p><p>{cs-description}</p>
+
+alert.msg.jcmsplugin-collaborativespace.enrollment.title:                           {data}\uc5d0 \uac00\uc785
+alert.msg.jcmsplugin-collaborativespace.enrollment.short-description:               \uadc0\ud558\ub294 \ud611\ub825\uacf5\uac04 {data}\uc758 \ud68c\uc6d0\uc785\ub2c8\ub2e4.
+
+alert.msg.jcmsplugin-collaborativespace.join.title:                                 {data}\uc5d0 \uac00\uc785
+alert.msg.jcmsplugin-collaborativespace.join.short-description:                     {author}\ub2d8\uc774(\uac00) \ud611\ub825\uacf5\uac04 {data}\uc5d0 \uac00\uc785\ud588\uc2b5\ub2c8\ub2e4.
+alert.msg.jcmsplugin-collaborativespace.join.description:                           <p><a href="{author-url}">{author}</a>\ub2d8\uc774 \ud611\ub825\uacf5\uac04 {data}\uc5d0 \uac00\uc785\ud588\uc2b5\ub2c8\ub2e4.</p>
+
+alert.msg.jcmsplugin-collaborativespace.recommendation.title:                       \ud611\ub825 \uacf5\uac04 {data}\uc5d0 \ucd94\ucc9c
+alert.msg.jcmsplugin-collaborativespace.recommendation.short-description:           {author}\ub2d8\uc774 \uadc0\ud558\uc5d0\uac8c {data} \ud611\ub825 \uacf5\uac04\uc5d0 \uac00\uc785\ud560 \uac83\uc744 \uad8c\uc7a5\ud569\ub2c8\ub2e4.
+alert.msg.jcmsplugin-collaborativespace.recommendation.description:                 <p>{author}\ub2d8\uc774 \uadc0\ud558\uc5d0\uac8c {data} \ud611\ub825 \uacf5\uac04\uc5d0 \uac00\uc785\ud560 \uac83\uc744 \uad8c\uc7a5\ud569\ub2c8\ub2e4.</p>
+
+alert.msg.jcmsplugin-collaborativespace.signup-request.title:                       {data}\uc5d0 \uac00\uc785 \uc81c\ucd9c
+alert.msg.jcmsplugin-collaborativespace.signup-request.short-description:           {author}\ub2d8\uc774 \ud611\ub825\uacf5\uac04 {data}\uc5d0 \uac00\uc785 \uc2e0\uccad\uc11c\ub97c \ubcf4\ub0c8\uc2b5\ub2c8\ub2e4.
+alert.msg.jcmsplugin-collaborativespace.signup-request.description:                 <p>{author}\ub2d8\uc774 {data} \ud611\ub825\uacf5\uac04\uc744 \uc704\ud55c <a href="{signup-url}"> \uac00\uc785 \uc2e0\uccad\uc11c</a>\ub97c \ubcf4\ub0c8\uc2b5\ub2c8\ub2e4.</p>
+
+alert.msg.jcmsplugin-collaborativespace.signup-accepted.title:                      {data}\uc5d0 \uac00\uc785 \uc81c\ucd9c
+alert.msg.jcmsplugin-collaborativespace.signup-accepted.short-description:          \uadc0\ud558\uc758 \ud611\ub825\uacf5\uac04{data}\ub4f1\ub85d\uc694\uccad\uc744{author}\uac00 \uc778\uc99d\ud588\uc2b5\ub2c8\ub2e4.
+alert.msg.jcmsplugin-collaborativespace.signup-accepted.description:                <p>\ucd95\ud558\ud569\ub2c8\ub2e4! \uadc0\ud558\uc758 \ud611\ub825\uacf5\uac04{data}\ub4f1\ub85d\uc694\uccad\uc744{author}\uac00 \uc778\uc99d\ud588\uc2b5\ub2c8\ub2e4. \uc9c0\uae08\ubd80\ud130 \uadc0\ud558\ub294 \uc774 \uacf5\uac04\uc758 \ud68c\uc6d0\uc785\ub2c8\ub2e4.</p>
+
+alert.msg.jcmsplugin-collaborativespace.signup-rejected.title:                      {data}\uc5d0 \uac00\uc785 \uc81c\ucd9c
+alert.msg.jcmsplugin-collaborativespace.signup-rejected.short-description:          \uadc0\ud558\uc758 \ud611\ub825 \uacf5\uac04 {data} \ub4f1\ub85d \uc694\uccad\uc774 \uac70\ubd80\ub418\uc5c8\uc2b5\ub2c8\ub2e4. \ud655\uc778\uc790 \ucf54\uba58\ud2b8: {validator-comment}
+
+alert.msg.jcmsplugin-collaborativespace.unsignup.title:                             {data} \uc5d0\uc11c \ud0c8\ud1f4
+alert.msg.jcmsplugin-collaborativespace.unsignup.short-description:                 {author}\ub2d8\uc774 \ud611\ub825\uacf5\uac04 {data}\uc5d0\uc11c \ud0c8\ud1f4\ud588\uc2b5\ub2c8\ub2e4.
+
+alert.msg.jcmsplugin-collaborativespace.guest-creation.title:                       \uc190\ub2d8 \uacc4\uc815 \ud65c\uc131\ud654
+alert.msg.jcmsplugin-collaborativespace.guest-creation.short-description:           \uc190\ub2d8\uacc4\uc815 {data} ({organization})\uc774 \uc131\uacf5\uc801\uc73c\ub85c \uc0dd\uc131\ub418\uc5c8\uace0 \ud1b5\uc9c0\uac00 \uc774\uba54\uc77c\ub85c \uc804\uc1a1\ub418\uc5c8\uc2b5\ub2c8\ub2e4.
+
+alert.msg.jcmsplugin-collaborativespace.contact-to-guest.title:                     \uc190\ub2d8 \uacc4\uc815 \ud65c\uc131\ud654
+alert.msg.jcmsplugin-collaborativespace.contact-to-guest.short-description:         \uc5f0\ub77d\ucc98  {data} ({organization})\uac00 \uc190\ub2d8 \uacc4\uc815\uc73c\ub85c \uc804\ud658\ub418\uc5c8\uace0 \ud1b5\uc9c0\uac00 \uc774\uba54\uc77c\ub85c \uc804\uc1a1\ub418\uc5c8\uc2b5\ub2c8\ub2e4.
+
+alert.msg.jcmsplugin-collaborativespace.silent-guest-creation.title:                \uc190\ub2d8 \uacc4\uc815 \ud65c\uc131\ud654
+alert.msg.jcmsplugin-collaborativespace.silent-guest-creation.short-description:    \uc190\ub2d8 \uacc4\uc815 {data} ({organization})\uc774  \uc131\uacf5\uc801\uc73c\ub85c \uc0dd\uc131\ub418\uc5c8\uc2b5\ub2c8\ub2e4.
+
+alert.msg.jcmsplugin-collaborativespace.silent-contact-to-guest.title:              \uc190\ub2d8 \uacc4\uc815 \ud65c\uc131\ud654
+alert.msg.jcmsplugin-collaborativespace.silent-contact-to-guest.short-description:  \uc5f0\ub77d\ucc98 {data}({organization}) \uac00 \uc190\ub2d8 \uacc4\uc815\uc73c\ub85c \uc804\ud658\ub418\uc5c8\uc2b5\ub2c8\ub2e4.
+
+wf-alert.ANY.CSRequest.wfcsrequest.-201.form-submission.alertWorkers.ANY.title: {reminder} \ud611\ub825 \uacf5\uac04 \uc0dd\uc131 \uc694\uccad\uc774 \uc81c\ucd9c\ub418\uc5c8\uc2b5\ub2c8\ub2e4.
+wf-alert.ANY.CSRequest.wfcsrequest.-201.form-submission.alertWorkers.ANY.short-description: \ud611\ub825 \uacf5\uac04 \uc0dd\uc131 \uc694\uccad\uc774 \uc81c\ucd9c\ub418\uc5c8\uc2b5\ub2c8\ub2e4: {data.url}
+wf-alert.ANY.CSRequest.wfcsrequest.-201.form-submission.alertWorkers.ANY.description: <p>\ud611\ub825 \uacf5\uac04 \uc0dd\uc131 \uc694\uccad {data}\uc774(\uac00) \uc81c\ucd9c\ub418\uc5c8\uc2b5\ub2c8\ub2e4.</p><p>\uadc0\ud558\ub294 \uc774\uac83\uc744 \ud655\uc778\ud558\ub3c4\ub85d \ucd08\ub300 \ubc1b\uc558\uc2b5\ub2c8\ub2e4.</p>
+
+wf-alert.ANY.CSSignupRequest.wfcssignup.-201.form-submission.alertWorkers.ANY.title: {reminder} \ud611\ub825 \uacf5\uac04 \ub4f1\ub85d \uc694\uccad\uc774 \uc81c\ucd9c\ub418\uc5c8\uc2b5\ub2c8\ub2e4
+wf-alert.ANY.CSSignupRequest.wfcssignup.-201.form-submission.alertWorkers.ANY.short-description: \ud611\ub825 \uacf5\uac04 \ub4f1\ub85d \uc694\uccad\uc774 \uc81c\ucd9c\ub418\uc5c8\uc2b5\ub2c8\ub2e4: {data.url}
+wf-alert.ANY.CSSignupRequest.wfcssignup.-201.form-submission.alertWorkers.ANY.description: <p>\ud611\ub825 \uacf5\uac04 \ub4f1\ub85d \uc694\uccad\uc774 \uc81c\ucd9c\ub418\uc5c8\uc2b5\ub2c8\ub2e4: {data}.</p><p>\uadc0\ud558\ub294 \uc774\uac83\uc744 \ud655\uc778\ud558\ub3c4\ub85d \ucd08\ub300 \ubc1b\uc558\uc2b5\ub2c8\ub2e4.</p>
+
+# ----------------------------------------------------------------------
+# SHORTCUT
+# ----------------------------------------------------------------------
+
+data.$id.shortcut.jcmsplugin.collaborativespace-hub.title: \uacf5\uac04
+data.$id.shortcut.jcmsplugin.collaborativespace-hub.text: \uadc0\ud558\uc758 \ubaa8\ub4e0 \uacf5\uac04\uc5d0 \uc561\uc138\uc2a4\ud558\uace0 \uadc0\ud558\uc758 \uc990\uaca8\ucc3e\uae30 \uacf5\uac04\uc744 \uad00\ub9ac\ud558\uace0 \uacf5\uac04 \uc81c\uc548\uc744 \ubc1c\uacac\ud558\uc2ed\uc2dc\uc624.
+
+# ----------------------------------------------------------------------
+# CategoryBrowser
+# ----------------------------------------------------------------------
+category.category-browser.collaborativespace-search: \uc774 \uacf5\uac04\uc5d0\uc11c \uac80\uc0c9...
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From CollaborativeSpace-templates.xml
+types.CollaborativeSpace.templates.box.default.label: \uae30\ubcf8 \ud15c\ud50c\ub9bf
+
+# From CollaborativeSpace.xml
+types.CollaborativeSpace.fields.header.label: \uba38\ub9ac\uae00
+types.CollaborativeSpace.fields.headerSettings.label: \uba38\ub9ac\uae00 \uc0ac\uc6a9\uc790 \uc9c0\uc815
+types.CollaborativeSpace.fields.introduction.label: \uc18c\uac1c
+types.CollaborativeSpace.tabs.layout.label: \ub808\uc774\uc544\uc6c3
+types.CollaborativeSpace.fields.accessPolicy.label: \uc561\uc138\uc2a4
+types.CollaborativeSpace.title.label: \uc81c\ubaa9
+types.CollaborativeSpace.fields.exactCategory.label: \uc815\ud655\ud55c \uce74\ud14c\uace0\ub9ac
+types.CollaborativeSpace.fields.signupPolicy.labelList: \ubb34\ub8cc \uac00\uc785|\uac00\uc785 \uc694\uccad|\uad00\ub9ac\uc790\uac00 \uac00\uc785 \uad00\ub9ac
+types.CollaborativeSpace.fields.layout.label: \ub808\uc774\uc544\uc6c3
+types.CollaborativeSpace.label: \ud611\ub825 \uacf5\uac04
+types.CollaborativeSpace.description: \ud611\ub825 \uacf5\uac04 \ud3ec\ud2c0\ub9bf\uc5d0\uc11c \ud45c\uc2dc\ud560 \uc560\ud50c\ub9ac\ucf00\uc774\uc158\uc744 \uc9c0\uc815\ud569\ub2c8\ub2e4.
+types.CollaborativeSpace.fields.layout.labelList: \uc0ac\uc774\ub4dc\ubc14 \uc5c6\uc74c|\uc67c\ucabd \uc0ac\uc774\ub4dc\ubc14|\uc624\ub978\ucabd \uc0ac\uc774\ub4dc\ubc14
+types.CollaborativeSpace.fields.signupPolicy.label: \uac00\uc785 \uc815\ucc45
+types.CollaborativeSpace.fields.dashboardColumnCount.label: \ub300\uc2dc\ubcf4\ub4dc \uc5f4
+types.CollaborativeSpace.fields.accessPolicy.labelList: \uacf5\uac1c|\ube44\uacf5\uac1c|\ube44\ubc00
+types.CollaborativeSpace.fields.exactCategory.onLabel: \uc608
+types.CollaborativeSpace.fields.exactCategory.offLabel: \uc544\ub2c8\uc624
+types.CollaborativeSpace.fields.description.label: \uc124\uba85
+types.CollaborativeSpace.tabs.access.label: \uc561\uc138\uc2a4
+types.CollaborativeSpace.fields.theme.label: \ud14c\ub9c8
+types.CollaborativeSpace.fields.followersGroup.label: \ud314\ub85c\uc6cc \uadf8\ub8f9
+types.CollaborativeSpace.fields.followersGroup.description: \uc774 \uadf8\ub8f9 \ud68c\uc6d0\uc740 \uacf5\uac04\uc758 \uc0c8\ub85c\uc6b4 \ucf58\ud150\uce20\uc5d0 \ub300\ud574 \uacf5\uc9c0\ubc1b\uc2b5\ub2c8\ub2e4
+types.CollaborativeSpace.fields.jportal.label: JPortal
+types.CollaborativeSpace.fields.syncMode.label: \ub3d9\uae30\ud654\ub41c \ud56d\ubaa9
+types.CollaborativeSpace.fields.syncMode.labelList: \ud648\ud398\uc774\uc9c0|\uc560\ud50c\ub9ac\ucf00\uc774\uc158|\ub370\uc774\ud130 \uad6c\uc870(\uc720\ud615, WF, \uadf8\ub8f9, ...)|\ubc94\uc8fc
+types.CollaborativeSpace.fields.model.label: \uc791\uc5c5\uacf5\uac04 \ubaa8\ub378
+types.CollaborativeSpace.fields.applications.label: \uc560\ud50c\ub9ac\ucf00\uc774\uc158
+types.CollaborativeSpace.fields.mobileShowIntro.label: \uc18c\uac1c \ud45c\uc2dc
+types.CollaborativeSpace.fields.mobileShowApplications.label: \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \ud45c\uc2dc
+types.CollaborativeSpace.fields.mobilePortlets.label: \ud3ec\ud2c0\ub9bf
+types.CollaborativeSpace.fields.modelSyncMode.label: \ud544\uc218 \ub3d9\uae30\ud654
+types.CollaborativeSpace.fields.modelSyncMode.labelList: \ud648\ud398\uc774\uc9c0|\uc560\ud50c\ub9ac\ucf00\uc774\uc158|\ub370\uc774\ud130 \uad6c\uc870(\uc720\ud615, WF, \uadf8\ub8f9, ...)|\ubc94\uc8fc
+
+# From CSRequest-templates.xml
+types.CSRequest.templates.query.default.label: \uae30\ubcf8 \ud15c\ud50c\ub9bf
+types.CSRequest.templates.full.default.description: \uae30\ubcf8 \ud15c\ud50c\ub9bf
+types.CSRequest.templates.full.default.label: \uae30\ubcf8 \ud15c\ud50c\ub9bf
+types.CSRequest.templates.query.default.description: \uae30\ubcf8 \ud15c\ud50c\ub9bf
+
+# From CSRequest.xml
+types.CSRequest.fields.description.label: \uc124\uba85
+types.CSRequest.title.label: \uc81c\ubaa9
+types.CSRequest.fields.notificationPolicy.label: \uc54c\ub9bc \uc815\ucc45
+types.CSRequest.fields.groups.label: \uadf8\ub8f9
+types.CSRequest.fields.accessPolicy.labelList: \uacf5\uac1c|\ube44\uacf5\uac1c|\ube44\ubc00
+types.CSRequest.fields.signupPolicy.labelList: \ubb34\ub8cc \uac00\uc785|\uac00\uc785 \uc694\uccad|\uad00\ub9ac\uc790\uac00 \uac00\uc785 \uad00\ub9ac
+types.CSRequest.fields.notificationPolicy.labelList: \ucc38\uc11d\uc790\uc5d0\uac8c \ucd08\ub300\uc7a5 \ubcf4\ub0b4\uae30|\ucc38\uc11d\uc790 \ucd94\uac00\ud558\uace0 \uc54c\ub9ac\uae30|\uc54c\ub9ac\uc9c0 \uc54a\uace0 \ucc38\uc11d\uc790 \ucd94\uac00\ud558\uae30
+types.CSRequest.fields.signupPolicy.label: \uac00\uc785 \uc815\ucc45
+types.CSRequest.label: \ud611\ub825 \uacf5\uac04 - \uc0dd\uc131 \uc694\uccad
+types.CSRequest.fields.admins.label: \ub9ac\ub354
+types.CSRequest.fields.language.label: \uc5b8\uc5b4
+types.CSRequest.fields.members.label: \ud68c\uc6d0
+types.CSRequest.fields.name.label: \uacf5\uac04 \uc774\ub984
+types.CSRequest.fields.accessPolicy.label: \uc561\uc138\uc2a4
+types.CSRequest.fields.model.label: \ubaa8\ub378
+types.CSRequest.fields.parent.label: \uc0c1\uc704 \uacf5\uac04
+types.CSRequest.fields.syncMode.label: \ub3d9\uae30\ud654\ub41c \ud56d\ubaa9
+types.CSRequest.fields.syncMode.labelList: \ud648\ud398\uc774\uc9c0|\uc560\ud50c\ub9ac\ucf00\uc774\uc158|\ub370\uc774\ud130 \uad6c\uc870(\uc720\ud615, WF, \uadf8\ub8f9, ...)|\ubc94\uc8fc
+
+# From CSSignupRequest-templates.xml
+types.CSSignupRequest.templates.full.default.label: \uae30\ubcf8 \ud15c\ud50c\ub9bf
+types.CSSignupRequest.templates.full.default.description: \uae30\ubcf8 \ud15c\ud50c\ub9bf
+types.CSSignupRequest.templates.query.default.label: \uae30\ubcf8 \ud15c\ud50c\ub9bf
+types.CSSignupRequest.templates.query.default.description: \uae30\ubcf8 \ud15c\ud50c\ub9bf
+
+# From CSSignupRequest.xml
+types.CSSignupRequest.title.label: \uc81c\ubaa9
+types.CSSignupRequest.label: \ud611\ub825 \uacf5\uac04 -  \uac00\uc785 \uc694\uccad
+types.CSSignupRequest.fields.name.label: \uc774\ub984
+
+# From GuestCrea.xml
+types.GuestCrea.title.label: \uc81c\ubaa9
+types.GuestCrea.label: \uc190\ub2d8 \uacc4\uc815 -  \uc0dd\uc131 \uc694\uccad
+types.GuestCrea.description: \ub2e8\uc9c0 \ud611\ub825 \uacf5\uac04\uc5d0\ub9cc \uc561\uc138\uc2a4\uac00 \uc788\ub294 \uc190\ub2d8 \uacc4\uc815\uc758 \uc0dd\uc131 \uc694\uccad\uc744 \uc704\ud55c \uc591\uc2dd\uc785\ub2c8\ub2e4.
+types.GuestCrea.fields.name.label: \uc774\ub984
+types.GuestCrea.fields.email.label: \uc774\uba54\uc77c
+types.GuestCrea.fields.organization.label: \uc870\uc9c1
+types.GuestCrea.fields.firstname.label: \uc774\ub984
+types.GuestCrea.fields.language.label: \uc5b8\uc5b4
+types.GuestCrea.fields.country.label: \uad6d\uac00
+
+# From GuestConv.xml
+types.GuestConv.title.label: \uc81c\ubaa9
+types.GuestConv.label: \uc190\ub2d8 \uacc4\uc815 -  \uc5f0\ub77d\ucc98 \uc804\ud658 \uc694\uccad
+types.GuestConv.fields.contact.description: \uc190\ub2d8 \uacc4\uc815\uc73c\ub85c \uc804\ud658\ub420 \uae30\uc874 \ud68c\uc6d0 (\uc5f0\ub77d\ucc98 \uc720\ud615).
+types.GuestConv.description: \uc774 \uc591\uc2dd\uc740 \ud604\uc874\uc758 \uc5f0\ub77d\ucc98\uac00 \ub2e8\uc9c0 \ud611\ub825 \uacf5\uac04\uc5d0\ub9cc \uc561\uc138\uc2a4\uac00 \uc788\ub294 \uc190\ub2d8 \uacc4\uc815\uc73c\ub85c \uc804\ud658\ub418\ub294 \uc694\uccad\uc744 \uc704\ud55c \uac83\uc785\ub2c8\ub2e4.
+types.GuestConv.fields.contact.label: \uc5f0\ub77d\ucc98
+
+# From GuestRequest.xml
+types.GuestRequest.fields.submit-mbr.label: \uc694\uccad\uc790
+types.GuestRequest.fields.groups.label: \ub300\uc0c1 \uadf8\ub8f9
+types.GuestRequest.fields.groups.description: \uc190\ub2d8 \uacc4\uc815\uc774 \ucd94\uac00\ub420 \ubaa8\ub4e0 \ud611\ub825 \uacf5\uac04 \uadf8\ub8f9.
+types.GuestRequest.title.label: \uc81c\ubaa9
+types.GuestRequest.label: [Abstract] \uc190\ub2d8 \uacc4\uc815 - \uc5f4\ub9b0 \uc694\uccad
+
+# From PortletMyCollaborativeSpaces-templates.xml
+types.PortletMyCollaborativeSpaces.templates.box.default.label: \ub098\uc758 \uacf5\uac04 \ud15c\ud50c\ub9bf
+types.PortletMyCollaborativeSpaces.templates.full.default.label: \ub098\uc758 \uacf5\uac04 \ud15c\ud50c\ub9bf
+types.PortletMyCollaborativeSpaces.templates.box.itemBox.label: \uc544\uc774\ud15c \uc0c1\uc790 \ub0b4 \uacf5\uac04 \ud15c\ud50c\ub9bf
+types.PortletMyCollaborativeSpaces.templates.box.hierarchy.label: \uacc4\uce35\uc801 \uacf5\uac04 \ud15c\ud50c\ub9bf
+types.PortletMyCollaborativeSpaces.templates.box.hierarchyItemBox.label: \uc544\uc774\ud15c \uc0c1\uc790 \uacc4\uce35\uc801 \uacf5\uac04 \ud15c\ud50c\ub9bf
+types.PortletMyCollaborativeSpaces.templates.query.default.label: \ucffc\ub9ac \ud15c\ud50c\ub9bf
+
+# From PortletMyCollaborativeSpaces.xml
+types.PortletMyCollaborativeSpaces.label: \ub0b4 \ud611\ub825 \uacf5\uac04 \ud3ec\ud2c0\ub9bf
+types.PortletMyCollaborativeSpaces.description: \ub0b4 \ud611\ub825 \uacf5\uac04 \ud3ec\ud2c0\ub9bf\uc740 \ud611\ub825 \uacf5\uac04 \ubaa9\ub85d\uc744 \ud45c\uc2dc\ud569\ub2c8\ub2e4.
+types.PortletMyCollaborativeSpaces.title.label: \uc81c\ubaa9
+types.PortletMyCollaborativeSpaces.fields.depth.label: \ub808\ubca8
+types.PortletMyCollaborativeSpaces.fields.depth.description: \ud45c\uc2dc\ud560 \ud558\uc704 \uacf5\uac04 \ub808\uc774\ube14 \uc218
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.label: \ud1a0\ud3f4\ub85c\uc9c0 \ud544\ud130
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.description: \ud544\ud130\ub97c \uacf5\uac04 \ud1a0\ud3f4\ub85c\uc9c0\ubcc4\ub85c \ud45c\uc2dc\ud558\uaca0\uc2b5\ub2c8\uae4c?
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.onLabel: \uc608
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.offLabel: \uc544\ub2c8\uc624
+
+# From PortletCollaborativeSpaceSuggestion.xml
+types.PortletCollaborativeSpaceSuggestion.label: \ud611\ub825 \uacf5\uac04 \uc81c\uc548 \ud3ec\ud2c0\ub9bf
+types.PortletCollaborativeSpaceSuggestion.description: \ud611\ub825 \uacf5\uac04 \uc81c\uc548 \ud3ec\ud2c0\ub9bf\uc740 \ub85c\uadf8\uc778 \ud68c\uc6d0\uc5d0 \ub300\ud55c \ud611\ub825 \uacf5\uac04 \uc81c\uc548\uc744 \ud45c\uc2dc\ud569\ub2c8\ub2e4.
+types.PortletCollaborativeSpaceSuggestion.title.label: \uc81c\ubaa9
+types.PortletCollaborativeSpaceSuggestion.fields.threshold.label: \uc784\uacc4\uac12
+types.PortletCollaborativeSpaceSuggestion.fields.typology.label: \ud1a0\ud3f4\ub85c\uc9c0
+types.PortletCollaborativeSpaceSuggestion.fields.hideWhenNoResults.label: \uc544\ubb34\ub7f0 \uc81c\uc548 \uc5c6\uc744 \ub54c \uc228\uae30\uae30
+types.PortletCollaborativeSpaceSuggestion.fields.maxItems.label: \uc81c\uc548 \uac1c\uc218 
+
+# From PortletCollaborativeSpaceSuggestion-templates.xml
+types.PortletCollaborativeSpaceSuggestion.templates.full.default.label: \uc81c\uc548 \ud15c\ud50c\ub9bf
+types.PortletCollaborativeSpaceSuggestion.templates.box.default.label: \uc81c\uc548 \ud15c\ud50c\ub9bf
+types.PortletCollaborativeSpaceSuggestion.templates.box.itemBox.label: \uc544\uc774\ud15c \uc0c1\uc790 \uc81c\uc548 \ud15c\ud50c\ub9bf
+
+# From plugin.xml
+types.PortletQueryForeach.templates.box.jcmsplugin.collaborativespace.dashboard.label: \ub300\uc2dc\ubcf4\ub4dc \ud45c\uc2dc (CSP)
+types.PortletQueryForeachDetail.templates.box.jcmsplugin.collaborativespace.dashboard.label: \ub300\uc2dc\ubcf4\ub4dc \ud45c\uc2dc (CSP)
+types.PortletSearch.templates.box.jcmsplugin.collaborativespace.search-header.label: \ud611\ub825 \uacf5\uac04 - \ud5e4\ub354
+types.PortletSelection.templates.box.jcmsplugin.collaborativespace.dashboard.label: \ud611\ub825 \uacf5\uac04 - \ub300\uc2dc\ubcf4\ub4dc
+types.AbstractPortletSkinable.templates.collaborativeSpace.noskin.label: \ubc1d\uc74c (\uc81c\ubaa9 \uc5c6\uc74c)
+types.AbstractPortletSkinable.templates.collaborativeSpace.default.label: \ub465\uadfc \ubaa8\uc11c\ub9ac\uac00 \uc788\ub294 \ud328\ub110
+types.AbstractPortletSkinable.templates.collaborativeSpace.borderless.label: \uc81c\ubaa9\uc5d0 \ubc11\uc904\uc774 \uc788\ub294, \ubc1d\uc74c
+
+# From wfcsrequest.xml
+workflows.wfcsrequest.states.60.label: \ub3d9\uc758\ub428
+workflows.wfcsrequest.states.50.label: \uac70\uc808
+workflows.wfcsrequest.states.-201.label: \uc81c\ucd9c\ub428
+workflows.wfcsrequest.label: \ud611\ub825 \uacf5\uac04 - \uc0dd\uc131 \uc694\uccad \uc6cc\ud06c\ud50c\ub85c\uc6b0
+workflows.wfcsrequest.roles.validator.name: \ud655\uc778\uc790
+workflows.wfcsrequest.states.60.description: \uc2b9\uc778\ub41c \uc694\uccad, \ud611\ub825 \uacf5\uac04\uc774 \uc0dd\uc131\ub418\uc5c8\uc2b5\ub2c8\ub2e4.
+workflows.wfcsrequest.states.50.description: \uc774 \ud611\ub825\uacf5\uac04 \uc0dd\uc131 \uc694\uccad\uc774 \uac70\uc808\ub418\uc5c8\uc2b5\ub2c8\ub2e4. \uc694\uccad\ub41c \ud611\ub825 \uacf5\uac04\uc774 \uc0dd\uc131\ub418\uc9c0 \uc54a\uc744 \uac83\uc785\ub2c8\ub2e4. \uc774 \uac70\uc808\uc5d0 \ub300\ud55c \uc790\uc138\ud55c \ub0b4\uc6a9\uc740 \uc6cc\ud06c\ud50c\ub85c\uc6b0 \uc8fc\uc11d\uc744 \ucc38\uc870\ud558\uc2ed\uc2dc\uc624.
+workflows.wfcsrequest.roles.validator.description: \ud611\ub825 \uacf5\uac04 \uc694\uccad \uc218\ub77d/\uac70\uc808
+
+# From wfcssignup.xml
+workflows.wfcssignup.roles.validator1.description: \ud611\ub825 \uacf5\uac04 \ub4f1\ub85d \uc694\uccad \uc218\ub77d/\uac70\uc808
+workflows.wfcssignup.label: \ud611\ub825 \uacf5\uac04 -  \uc6cc\ud06c\ud50c\ub85c\uc6b0 \uac00\uc785
+workflows.wfcssignup.roles.validator1.name: \ud655\uc778\uc790
+workflows.wfcssignup.states.60.label: \ub3d9\uc758\ub428
+workflows.wfcssignup.states.50.label: \uac70\ubd80\ub428
+workflows.wfcssignup.states.-201.label: \uc81c\ucd9c\ub428
+
+# From wfguestaccountrequest.xml
+workflows.wfguestaccountrequest.states.60.description: \uc2b9\uc778\ub41c \uc694\uccad, \uc190\ub2d8 \uacc4\uc815\uc774 \uc0dd\uc131\ub418\uc5c8\uc2b5\ub2c8\ub2e4.
+workflows.wfguestaccountrequest.states.50.description: \uc774 \uc190\ub2d8 \uacc4\uc815 \uc694\uccad\uc774 \uac70\uc808\ub418\uc5c8\uc2b5\ub2c8\ub2e4. \uc190\ub2d8 \uacc4\uc815\uc774 \uc0dd\uc131\ub418\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4. \uc774 \uac70\uc808\uc5d0 \ub300\ud55c \uc790\uc138\ud55c \ub0b4\uc6a9\uc740 \uc6cc\ud06c\ud50c\ub85c\uc6b0 \uc8fc\uc11d\uc744 \ucc38\uc870\ud558\uc2ed\uc2dc\uc624.
+workflows.wfguestaccountrequest.states.60.label: \ub3d9\uc758\ub428
+workflows.wfguestaccountrequest.states.50.label: \uac70\ubd80\ub428
+workflows.wfguestaccountrequest.label: \uc190\ub2d8 \uacc4\uc815 - \uacf5\uac1c\ub41c \uc6cc\ud06c\ud50c\ub85c\uc6b0 \uc694\uccad
+workflows.wfguestaccountrequest.roles.guestvalidator.description: \uc190\ub2d8 \uacc4\uc815 \uac1c\ubc29 \uc694\uccad \uc218\ub77d/\uac70\uc808
+workflows.wfguestaccountrequest.roles.guestvalidator.name: \ud655\uc778\uc790
+workflows.wfguestaccountrequest.states.-200.label: \uc81c\ucd9c\ub428
+
+# Analytics
+ui.analytics.CSAgent.name:                    \ud611\ub825 \uacf5\uac04
+ui.analytics.CSAgent.report.typology:         \ud1a0\ud3f4\ub85c\uc9c0
+ui.analytics.CSAgent.report.typology.h:       \ud1a0\ud3f4\ub85c\uc9c0 \ubd95\uad34.
+ui.analytics.CSAgent.report.access-policy:    \uc561\uc138\uc2a4 \uc815\ucc45
+ui.analytics.CSAgent.report.access-policy.h:  \uc561\uc138\uc2a4 \uc815\ucc45 \uc640\ud574.
+ui.analytics.CSAgent.report.members:          \ucd5c\uace0 \ud68c\uc6d0
+ui.analytics.CSAgent.report.members.h:        \ud611\ub825 \uacf5\uac04 \ub2f9 \ud68c\uc6d0 \uc218.
+ui.analytics.CSAgent.report.activity:         \ucd5c\uc0c1\uc704 \uae30\uc5ec
+ui.analytics.CSAgent.report.activity.h:       \ud611\ub825 \uacf5\uac04 \ub2f9 \uae30\uc5ec \uc218.
+ui.analytics.CSAgent.report.activity.count:   \uae30\uc5ec \uc218
+
+# DBComment
+jcmsplugin.collaborativespace.lbl.signup-to-comment: \uc774 \ud3ec\uc2a4\ud2b8\uc5d0 \ub313\uae00\uc744 \ub2ec\uae30 \uc704\ud574\uc11c\ub294 \uc774 \uacf5\uac04\uc5d0 \uac00\uc785\ud574\uc8fc\uc2ed\uc2dc\uc624.
+
+# SocialConversation
+jcmsplugin.collaborativespace.lbl.signup-to-react: \uc774 \ub300\ud654\uc5d0 \ucc38\uc5ec\ud558\ub824\uba74 \uc774 \uacf5\uac04\uc5d0 \uac00\uc785\ud574\uc8fc\uc2ed\uc2dc\uc624.
+
+# Collaborative Space hub
+jcmsplugin.collaborativespace.hub: \uacf5\uac04 \ud5c8\ube0c
+jcmsplugin.collaborativespace.hub.type-cs: \ud611\ub825 \uacf5\uac04
+jcmsplugin.collaborativespace.hub.type-ws: \ud3ec\ud138
+jcmsplugin.collaborativespace.hub.mode-all: \ubaa8\ub4e0 \uacf5\uac04
+jcmsplugin.collaborativespace.hub.mode-member: \ub0b4 \uacf5\uac04
+jcmsplugin.collaborativespace.hub.mode-favorite: \ub0b4 \uc990\uaca8\ucc3e\uae30
+jcmsplugin.collaborativespace.hub.mode-suggestions: \uc81c\uc548
+jcmsplugin.collaborativespace.hub.mode-csrequest: \uc0dd\uc131 \uc694\uccad
+jcmsplugin.collaborativespace.hub.mode-member.intro: <p>\uacf5\uac04\uc758 \uc624\ub978\ucabd \uc0c1\ub2e8\uc5d0 \uc788\ub294 \ubcc4\uc744 \ud074\ub9ad\ud558\uc5ec \uc990\uaca8\ucc3e\uae30\uc5d0 \uacf5\uac04\uc744 \ucd94\uac00\ud558\uac70\ub098 \uc81c\uac70\ud558\uc2ed\uc2dc\uc624.</p>
+jcmsplugin.collaborativespace.hub.mode-member.intro-has-favorites: <p>"\ub0b4 \uc990\uaca8\ucc3e\uae30"\uc5d0 \uc0ac\uc6a9\uc790\uc758 \ubaa8\ub4e0 \uc990\uaca8\ucc3e\uae30\ub97c \uad00\ub9ac\ud558\uac70\ub098 \ucc3e\uc744 \uc218 \uc788\uc2b5\ub2c8\ub2e4.</p>
+jcmsplugin.collaborativespace.hub.search-text.placeholder: \uacf5\uac04 \uac80\uc0c9...
+jcmsplugin.collaborativespace.hub.sidebar-section.accessPolicy: \uc561\uc138\uc2a4
+jcmsplugin.collaborativespace.hub.sidebar-section.typology: \ud1a0\ud3f4\ub85c\uc9c0
+jcmsplugin.collaborativespace.hub.sidebar-section.type: \uc720\ud615
+
+#JPortal
+jcmcplugin.collaborativespace.jportal.edit.label: \ud3ec\ud138 \ubcc0\uacbd\ud558\uae30
+jcmcplugin.collaborativespace.jportal.edit-more.label: \ud3ec\ud138 \ubcc0\uacbd\ud558\uae30...
+jcmsplugin.collaborativespace.jportal.edit-modal.title: \ubaa8\ub378\uacfc \ub3d9\uae30\ud654\ub41c \ud3ec\ud138\uc744 \ubcc0\uacbd\ud569\ub2c8\ub2e4
+jcmsplugin.collaborativespace.jportal.edit-modal.message: \uc8fc\uc758: \uc774 \ud3ec\ud138\uc740 \ubaa8\ub378\uacfc \ub3d9\uae30\ud654\ub418\uc5c8\uc2b5\ub2c8\ub2e4.
+jcmsplugin.collaborativespace.jportal.edit-modal.edit-model.label: \ubaa8\ub378 \ubcc0\uacbd\ud558\uae30
+jcmsplugin.collaborativespace.jportal.edit-modal.desynchronize-model.label: \ub3d9\uae30\ud654 \ucde8\uc18c \ubc0f \ud3ec\ud138 \ubcc0\uacbd\ud558\uae30
+
+jcmsplugin.collaborativespace.edit-app-modal.title: \uc560\ud50c\ub9ac\ucf00\uc774\uc158 \uc5c5\ub370\uc774\ud2b8
+jcmsplugin.collaborativespace.edit-app-modal.template.label: \ud15c\ud50c\ub9bf
+jcmsplugin.collaborativespace.edit-app-modal.title.label: \uc81c\ubaa9
+
+#Tabs
+jcmsplugin.collaboratif.tabs.menu.remove: \uc81c\uac70...
+jcmsplugin.collaboratif.tabs.menu.remove.confirm: \uc774 \uc560\ud50c\ub9ac\ucf00\uc774\uc158\uc744 \uc0ad\uc81c\ud558\uaca0\uc2b5\ub2c8\uae4c?
+jcmsplugin.collaboratif.tabs.menu.update.title: \uc5c5\ub370\uc774\ud2b8
+jcmsplugin.collaboratif.tabs.rename.title.label: \uc81c\ubaa9
+
+#Parameters
+jcmsplugin.collaborativespace.parameters.model.link: \ubaa8\ub378 \uc561\uc138\uc2a4
+
+# Migration
+jcmsplugin.collaborativespace.migration.model: \ubaa8\ub378
+jcmsplugin.collaborativespace.migration.without-model: \ubaa8\ub378 \uc5c6\uc74c
+jcmsplugin.collaborativespace.migration.no-typologies: \ud1a0\ud3f4\ub85c\uc9c0 \uc5c6\uc74c
+jcmsplugin.collaborativespace.migration.migrate-all: \ubaa8\ub378 \uc5c6\uc774 \ubaa8\ub4e0 \uc791\uc5c5\uacf5\uac04 \uc774\ub3d9
+jcmsplugin.collaborativespace.migration.migrate-selected: \uc120\ud0dd\ub41c \uc791\uc5c5\uacf5\uac04 \uc774\ub3d9
+jcmsplugin.collaborativespace.migration.no-model-no-workspace: (\uc774 \ud1a0\ud3f4\ub85c\uc9c0\uc5d0\ub294 \ubaa8\ub378\uacfc \uc791\uc5c5\uacf5\uac04\uc774 \uc5c6\uc2b5\ub2c8\ub2e4)
+jcmsplugin.collaborativespace.migration.modal-title: \uc791\uc5c5\uacf5\uac04 \uc774\ub3d9
+jcmsplugin.collaborativespace.migration.modal-button: \uc774\ub3d9
+jcmsplugin.collaborativespace.migration.target-typology: \ub300\uc0c1 \ud1a0\ud3f4\ub85c\uc9c0
+jcmsplugin.collaborativespace.migration.workspace-list: \uc774\ub3d9\ud560 \uc791\uc5c5\uacf5\uac04 \ubaa9\ub85d
+
+portlet.header.menu-items.Portlet.edit-skin-cs: \uc5c5\ub370\uc774\ud2b8

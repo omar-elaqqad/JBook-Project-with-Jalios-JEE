@@ -1,0 +1,20 @@
+<%-- Activity date --%>
+<span>
+  <% if (activityData != null) { %>
+    <jalios:link data="<%= activityData %>" css="activity-meta activity-meta-date">
+      <% if (isToday || isYesterday) { %>
+        <%= JcmsUtil.getFriendlyDate(!isNestedActivity ? itActivity.getCdate() : activityData.getCdate(), DateFormat.SHORT, true, userLocale) %>
+      <% }else{%>
+        <jalios:date  format="short" date="<%= !isNestedActivity ? itActivity.getCdate() : activityData.getCdate() %>" />
+      <% } %>
+    </jalios:link>
+  <% } else { %>
+    <%= JcmsUtil.getFriendlyDate(itActivity.getCdate(), DateFormat.SHORT, true, userLocale) %>
+  <% } %>
+</span>
+
+<%-- Activity Workspace --%>
+<% if (itActivity.getWorkspace() != null) { %>
+  &middot;
+  <jalios:link css="activity-meta activity-meta-workspace" data="<%= itActivity.getWorkspace()%>"><%= itActivity.getWorkspace().getTitle(userLang) %></jalios:link>
+<% } %>

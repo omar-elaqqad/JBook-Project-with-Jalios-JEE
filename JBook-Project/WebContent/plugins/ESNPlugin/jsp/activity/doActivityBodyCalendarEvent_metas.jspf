@@ -1,0 +1,22 @@
+<%@ include file='/plugins/ESNPlugin/jsp/activity/doActivityBodyCalendarEvent_date.jspf' %><%
+
+Set<Data> meetingRoomResourceSet = new HashSet();
+if (event.getResources() != null) {
+  meetingRoomResourceSet.addAll(Arrays.asList(obj.getResources()));
+  meetingRoomResourceSet = (Set<Data>) JcmsUtil.applyDataSelector(meetingRoomResourceSet, new AndDataSelector(Publication.getAuthorizedSelector(loggedMember),new DataSelector(){
+    public boolean isSelected(Data data){ return data != null && data instanceof MeetingRoom; }
+  }) ); 
+}
+
+MeetingRoom meetingRoom = (MeetingRoom) Util.getFirst(meetingRoomResourceSet);
+%>
+<div class="activity-event-metas">
+  <% if (Util.notEmpty(event.getLocation())) { %>
+    <div class="activity-event-address activity-event-item"><jalios:icon src="jcmsplugin-calendar-location" /> <%= event.getLocation() %></div>
+  <% } else if (Util.notEmpty(meetingRoom)) { %>
+    <div class="activity-event-meetingroom activity-event-item"><jalios:icon src="jcmsplugin-calendar-location" /> <jalios:link data="<%= meetingRoom %>"/></div>
+  <% } %>
+  <% request.setAttribute("jcmsplugin.esn-activity.calendar-event", event); %>
+  <jalios:include jsp="/plugins/ESNPlugin/jsp/activity/doActivityBodyCalendarEvent_attendees.jsp" />
+  <% request.removeAttribute("jcmsplugin.esn-activity.calendar-event"); %>
+</div>

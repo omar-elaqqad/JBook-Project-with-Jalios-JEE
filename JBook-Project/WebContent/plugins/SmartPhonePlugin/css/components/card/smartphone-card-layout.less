@@ -1,0 +1,61 @@
+.card-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: @sp-default-spacing-double;
+
+  // Stack latest item on left
+  &:after {
+    content: "";
+    flex: auto;
+  }
+  > .card {
+    //Flex to put footer at the bottom of the card
+    display: flex;
+    flex-direction: column;
+    .card-block {
+      flex: 1 1 auto; //Pushes siblings to the bottom
+    }
+    .card-img {
+      height: 150px;
+    }
+  }
+  > A {
+    .card {
+      flex-grow: 0;
+      flex-shrink: 1;
+      //Flex to put footer at the bottom of the card
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      //Reset default behavior when in a link
+      margin-left: 0;
+      margin-right: 0;
+      flex-basis: initial;
+      margin-bottom: 0;
+
+      .card-block {
+        flex: 1 1 auto; //Pushes siblings to the bottom
+      }
+    }
+
+    &.is-same-image-height {
+      .card-img {
+        height: 150px;
+      }
+    }
+  }
+
+  &.card-count-3 {
+    > A {
+      flex-basis: calc(~"33.33%" - @card-responsive-layout-gutter-double);
+    }
+    > .card {
+      flex-basis: calc(~"33.33%" - @card-responsive-layout-gutter-double);
+    }
+  }
+}
+
+.card-layout > .card.is-borderless .card-block{
+  padding-left: 0;
+  padding-right: 0;
+}

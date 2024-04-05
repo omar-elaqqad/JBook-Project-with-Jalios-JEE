@@ -1,0 +1,96 @@
+<%@page import="com.jalios.jcms.uicomponent.Button.ButtonType"%><%
+%><%@page import="com.jalios.jcms.context.MessageLevel"%><%
+%><%@page import="com.jalios.jcms.JcmsUtil"%><%
+%><%@page import="com.jalios.jcms.Group"%><%
+%><%@page import="com.jalios.jcms.accesscontrol.AccessControlConstants"%><%
+%><%@page import="com.jalios.jcmsplugin.collaborativespace.guest.GuestAccountManager"%><%
+%><%@ page contentType="text/html; charset=UTF-8" %><%
+
+Collection<Member> collection = pageResult.getResultList();
+boolean hasEditMbrACL = isAdmin || checkAccess(AccessControlConstants.MBR_EDIT_RESOURCE) || checkAccess(AccessControlConstants.WSMBR_EDIT_RESOURCE);
+GuestAccountManager guestMgr = GuestAccountManager.getInstance();
+%>
+<jalios:pager name='memberPagerHandler' 
+              declare='true' 
+              sizeAccurate="<%= !tooManyResults %>"
+              action='init' 
+              pageSize='<%= allMemberQueryHandler.getPageSize() %>' 
+              size='<%= mbrTotalSize %>'/>
+
+<div class="cs-members">
+<% if (tooManyResults && pageResult.getResultList().size() == 0) { %>
+  <%-- When size not accurate (too many results), and current page is empty, display a message --%>
+  <br />
+  <jalios:message level="<%= MessageLevel.INFO %>" title="" dismissable="false">
+    <%= glp("ui.adm.allmbr-list.toomany") %>
+  </jalios:message>
+<% } else { %>
+  <table class="table-data">
+  <thead>
+    <tr>
+      <th<%= hasEditMbrACL && channel.isDataWriteEnabled() ? " colspan='2'" :"" %>></th>
+      <th colspan="2"><%= glp("ui.com.lbl.member") %></th>
+      <th style="width: 90%;"><%= glp("ui.com.lbl.groups") %></th>
+      <%-- Edit column --%>
+      <% if (channel.isDataWriteEnabled()) { %>
+        <th></th>
+      <% } %>
+    </tr>
+    </thead>
+    <tbody>
+
+    <jalios:foreach name="itMember" type="Member" collection="<%= collection %>"
+                    max="<%= memberPagerHandler.getPageSize() %>"
+                    skip="<%= memberPagerHandler.getStart() %>"> 
+                                      
+    <tr>
+      <% if (hasEditMbrACL && channel.isDataWriteEnabled()) { %>
+      <td class="nowrap">
+        <jalios:edit data='<%= itMember %>' redirect='<%= ServletUtil.getUrl(request) %>'/>
+      </td> 
+      <% } %>
+      <td class="numeric">
+        <%= memberPagerHandler.getStart() + itCounter.intValue() %>.
+      </td> 
+      <td class="member-part">
+		    <jalios:memberphoto member="<%= itMember %>" size="<%= PhotoSize.TINY %>"/>
+      </td>
+      <td class="nowrap">
+        <jalios:link data="<%= itMember %>" />
+        <% if (itMember.isAdmin(workspace)) { %>
+          <span class="label ws-admin"><%= glp("jcmsplugin.collaborativespace.lbl.administrator") %></span>
+        <% } %>
+        
+        <% if (itMember.isDisabled()) { %>
+         <% if (!itMember.isLdapAccount()) { %>
+          <jalios:tooltip icon='disable-account' property='<%= "ui.adm.mbr-list.disabled.hlp" %>'/>
+         <% } else {  %>
+          <jalios:tooltip icon='disable-account-ldap' property='<%= "ui.adm.mbr-list.disabled-ldap.hlp" %>'/>
+         <% } %>
+        <% } %>
+
+        <% if (guestMgr.isGuestAccount(itMember)) { %>
+          <span class="label guest-account"><%= glp("jcmsplugin.collaborativespace.guestaccounts.guest.label") %></span>
+        <% } %>
+      </td>
+      <td>
+        <%
+        Set mbrWSGroupSet = Util.interSet(itMember.getGroupSet(workspace), Util.getTreeSet(itMember.getGroups()));
+        Collection visibleGroupSet = JcmsUtil.applyDataSelector(mbrWSGroupSet, new Group.MemberSelector(loggedMember));
+        %>
+        <%= JcmsUtil.join(visibleGroupSet, ", ", userLang) %>
+      </td>
+      <%-- Edit column --%>
+      <% if (channel.isDataWriteEnabled()) { %>
+        <td>
+          <% String editMemberUrl = "plugins/CollaborativeSpacePlugin/jsp/editMember.jsp?id=" + itMember.getId() + "&amp;ws=" + workspace.getId();%>
+          <jalios:buttonModal buttonType="<%= ButtonType.A %>" label="ui.com.alt.edit" url="<%= editMemberUrl %>" />
+        </td>
+      <% } %>
+    </tr>
+    </jalios:foreach>
+    </tbody>
+  </table>
+<% } %>
+<jalios:pager name='memberPagerHandler' />
+</div>

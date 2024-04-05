@@ -1,0 +1,62 @@
+@import '../../css/poll.less';
+
+.dbpoll-content {
+  background-color: #eee;
+  .card .card-img-wrapper {
+    margin-top: 0px;
+  }
+  .app-no-results {
+    padding: 32px;
+    text-align: center;
+    p {
+      margin-top: 20px;
+    }
+  }
+  .showmore {
+    width: 90%;
+    max-height: max-content;
+    margin-left: auto;
+    margin-right: auto; 
+  }
+}
+
+.poll-content {
+  .body {
+    margin: 0 15px 0 15px;
+  }
+  .answer {
+    display: flex;
+    flex-direction: column;
+  }
+  .progress {
+    margin: 5px 0 0 0;
+    border-radius: 4px;
+    height: 7px;
+    background-color: #dddd
+  }
+  .progress-bar {
+    border-radius: 4px;
+    float: left;
+    height: 7px;
+    color: #fff;
+    text-align: center;
+    background-color: #5cb85c;
+  }
+  .percentage {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .title {
+    font-size: 28px;
+  }
+  .answers {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    margin-bottom: 20px;
+    label, .ui-radio {
+      margin: 0;
+      border: none;
+    }
+  }
+}

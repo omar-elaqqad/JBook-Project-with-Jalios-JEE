@@ -1,0 +1,12 @@
+<%--
+ How to use:
+     <% CollaborativeSpace csBadge = itCs; %>
+     <%@ include file="/plugins/CollaborativeSpacePlugin/jsp/doCSBadge.jspf" %>
+
+ If you don't have a CollaborativeSpace instance, see "plugins/CollaborativeSpacePlugin/jsp/template/doAccessBadge.jspf".
+--%><% 
+if (csBadge != null) {
+  final String accessPolicy = csBadge.getAccessPolicy();
+  %><%@ include file="/plugins/CollaborativeSpacePlugin/jsp/template/doAccessBadge.jspf" %><%
+}
+%>

@@ -1,0 +1,183 @@
+// -------------------------------------------------------------------
+// PLUGINS LESS VARIABLES
+// -------------------------------------------------------------------
+
+@service-activity-color: #8ACE6A;
+
+
+// ------------------------------------------------------------------- 
+//  PLUGIN CSS DECLARATION                                             
+// ------------------------------------------------------------------- 
+
+.smartphone-drawer-service(activity);
+.service-colored-header(activity);
+
+
+.activity-cards .card:first-child {
+  box-shadow: initial;
+}
+
+.card-activity {
+  border: 0 none;
+  .comment-date {
+    font-size: 13px;
+    color: #777;
+    .common-portal-padding();
+  }
+  
+  // Restore the white background from jalios-card.less (changed to grey from smartphone-card.less)
+  background-color: white;
+  
+  &:active,
+  &:focus {
+    background-color:#F8F8F8;
+  }
+  
+  .activity-header {
+    padding: 10px;
+  }
+  
+  .activity-header-comment {
+    border-bottom: 1px solid #EAEAEA;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .activity-comment-content {
+    .wiki {
+      margin-bottom: 10px;
+    }
+    .vote-action {
+      float: left;
+      &:after {
+        //Middot & space
+        content: '\b7\a0';
+      }
+    }
+  }
+  
+  .card-activity-header {
+    .activity-description {
+      padding: 20px 16px;
+    }
+    .activity-content {
+     .activity-comment .activity-comment-description {
+        padding: 10px 16px 0px 16px;
+      }
+      .message-content {
+        margin-right: 16px;
+        margin-left: 16px;
+        margin-bottom: 8px;
+      }
+    }
+    .activity-content {
+      .activity-description,
+      .activity-comment-description {
+        padding: 0px 16px;
+      }
+    } 
+  }
+  .activity-content {
+    .activity-meta {
+      padding: 0px 16px;
+    }
+  }
+  
+  .activity-content-title {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .activity-comment-description {
+    margin-bottom: 10px;
+  }
+  
+  .activity-meta-main {
+    font-weight: bold;
+  }
+  
+  .activity-abstract {
+    margin-bottom: @baseline / 2; 
+  }
+
+  .activity-body {
+    padding: 10px;
+    
+    .activity-abstract-image {
+      text-align: center;
+    }
+    
+    P:first-child {
+      margin-top:0;
+    }
+    .activity-description {
+      margin-bottom:10px;
+    }
+  }
+  
+  .activity-abstract-body {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .thumbnail-cover {
+    object-fit: cover;
+    width: 100%;
+    max-height: 300px;
+    padding: 0px;
+    border-color: transparent;
+    border-radius: 0px;
+    &.thumbnail {
+      border-width: 0px;
+    }
+  }
+
+  .activity-footer {
+    border-top:1px solid #CCC;
+    overflow:hidden;
+    box-sizing:border-box;
+    background-color: #f5f5f5;
+  }
+  
+  .activity-info {
+    margin-bottom:10px;
+  }
+  
+  .activity-meta {
+    font-size: 13px;
+    &.social-meta {
+      margin-bottom: @baseline / 2;
+    }
+  }
+  
+  .activity-meta-author{
+    color: @meta-text;
+    font-weight: bold;
+  }
+
+  .activity-date {
+    color: @meta-text;
+  }
+  .activity-workspace {
+    color: @text-color;
+  }
+}
+
+.activity-comment {
+  margin-bottom: 10px;
+}
+
+.portlet-member-activity {
+  background-color: @esn-smartphone-activity-bg;
+  padding-bottom: 1px;
+}
+
+.activity-container.ui-content {
+  padding: 0;
+}
+
+.portlet-member-activity .ui-btn-showmore {
+  max-width: calc(~"100%" - (32px));
+  margin-left: auto;
+  margin-right: auto;
+}

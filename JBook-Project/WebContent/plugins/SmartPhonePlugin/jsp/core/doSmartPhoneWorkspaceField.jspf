@@ -1,0 +1,8 @@
+<%@page import="com.jalios.jcmsplugin.smartphone.SmartPhoneConstants"%><%
+%><%@page import="com.jalios.util.Util"%><%
+%><%@page import="com.jalios.jcms.taglib.settings.impl.WorkspaceSettings"%><%
+
+%><jalios:field name="ws" label="ui.com.lbl.workspace" required="true" value="<%= formHandler.getAvailableWorkspace() %>" resource="<%= SmartPhoneConstants.FIELD_PROP %>">
+  <input type="hidden" class="workspaceChangeEvent" name="workspaceChangeEvent" value="" />
+  <jalios:control settings='<%=new WorkspaceSettings().css(Util.toBoolean(request.getAttribute("TRIGGER_WS_CHANGE_REFRESH"), false)?"triggerWsChangeRefresh":"") %>' resource="<%= SmartPhoneControlType.CHOOSER.getResource() %>" />
+</jalios:field>

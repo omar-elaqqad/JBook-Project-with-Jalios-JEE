@@ -1,0 +1,13 @@
+<%
+// Has a space been added or removed from member's favorites?
+Workspace addedFavoriteWS = formHandler.getAddedFavoriteWorkspace();
+Workspace removedFavoriteWS = formHandler.getRemovedFavoriteWorkspace();
+
+if (addedFavoriteWS != null) {
+  JcmsToastr toastr = new JcmsToastr(glp("ui.com.msg.favorite-ws-added", addedFavoriteWS.getTitle(userLang)));
+  jcmsContext.addToastrSession(toastr);
+} else if (removedFavoriteWS != null) {
+  JcmsToastr toastr = new JcmsToastr(glp("ui.com.msg.favorite-ws-removed", removedFavoriteWS.getTitle(userLang)));
+  jcmsContext.addToastrSession(toastr);
+}
+%>

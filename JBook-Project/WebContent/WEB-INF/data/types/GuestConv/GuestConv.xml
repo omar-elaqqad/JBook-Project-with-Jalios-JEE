@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<type name="GuestConv" superclass="generated.GuestRequest" formOneSubmit="false" formNotify="false" formAuthor="j_2" formRedirectMode="home" categoryTab="true" readRightTab="true" updateRightTab="true" templateTab="true" workflowTab="true" advancedTab="true" database="true" hbm="true" reviewable="false" debatable="false" unitFieldEdition="true" audienced="false" formhandler="com.jalios.jcmsplugin.collaborativespace.guest.handler.GuestConversionSuperHandler">
+  <title ml="false" />
+  <fields>
+    <field name="contact" editor="member" required="true" compactDisplay="false" type="com.jalios.jcms.Member" chooser="popup" ml="false" descriptionType="text" searchable="false" html="false" checkHtml="true" />
+    <field type="super" />
+  </fields>
+</type>
+

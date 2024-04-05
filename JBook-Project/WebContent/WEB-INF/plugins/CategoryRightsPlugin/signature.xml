@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<signature name="CategoryRightsPlugin" urid="c" type="plugin" date="1712308063084">
+  <sign file="WEB-INF/lib/CategoryRightsPlugin.jar" signature="M43gZtP7BzDSbQ++VHoGGQ==" />
+  <sign file="WEB-INF/plugins/CategoryRightsPlugin/build.prop" signature="FCYPL915jGkPkwrvC4X4xQ==" />
+  <sign file="WEB-INF/plugins/CategoryRightsPlugin/plugin.xml" signature="vyhqqCCcuutLjQB1RsaF+Q==" />
+  <sign file="WEB-INF/plugins/CategoryRightsPlugin/properties/languages/cs.prop" signature="0yhxpVjmSYMX6w6NE0qv9A==" />
+  <sign file="WEB-INF/plugins/CategoryRightsPlugin/properties/languages/de.prop" signature="bYKJy565ZIoPTefnnY0F7A==" />
+  <sign file="WEB-INF/plugins/CategoryRightsPlugin/properties/languages/en.prop" signature="gviM6eYtpRf89YsFNSQ30g==" />
+  <sign file="WEB-INF/plugins/CategoryRightsPlugin/properties/languages/es.prop" signature="50iZa5g9j40BY3WoIDoV6Q==" />
+  <sign file="WEB-INF/plugins/CategoryRightsPlugin/properties/languages/fr.prop" signature="faVRICUz+lPRIAckZZ8PuA==" />
+  <sign file="WEB-INF/plugins/CategoryRightsPlugin/properties/languages/hu.prop" signature="hUCaaKKapyOHkESPo8LO0g==" />
+  <sign file="WEB-INF/plugins/CategoryRightsPlugin/properties/languages/it.prop" signature="QCZDhEjaEe7b3sMFeoY8Gg==" />
+  <sign file="WEB-INF/plugins/CategoryRightsPlugin/properties/languages/ja.prop" signature="Xl9wOds+n40q9iKE9Pj2KA==" />
+  <sign file="WEB-INF/plugins/CategoryRightsPlugin/properties/languages/ko.prop" signature="i1VCD+dqHPdN8ioSC0udvA==" />
+  <sign file="WEB-INF/plugins/CategoryRightsPlugin/properties/languages/pl.prop" signature="1h+pZ24CjrjEmO0ORMvAxQ==" />
+  <sign file="WEB-INF/plugins/CategoryRightsPlugin/properties/languages/pt.prop" signature="1MYew+frzyQLBc/cf3UYeQ==" />
+  <sign file="WEB-INF/plugins/CategoryRightsPlugin/properties/languages/ro.prop" signature="ebPN1r0XbJudcW9mOL1JBg==" />
+  <sign file="WEB-INF/plugins/CategoryRightsPlugin/properties/languages/ru.prop" signature="olf+tGZSG/I5H1MJbsLlHA==" />
+  <sign file="WEB-INF/plugins/CategoryRightsPlugin/properties/languages/sk.prop" signature="9GiKdhPHFBhdBWG9hrptuQ==" />
+  <sign file="WEB-INF/plugins/CategoryRightsPlugin/properties/languages/zh-Hant.prop" signature="+NG87dbf44AdTO8Ovygjtw==" />
+  <sign file="WEB-INF/plugins/CategoryRightsPlugin/properties/languages/zh.prop" signature="YwtbhlPQ5T8UyXAEepMs7Q==" />
+  <sign file="WEB-INF/plugins/CategoryRightsPlugin/properties/plugin.prop" signature="5T+WWLKK9WIAAFqZSDGR0g==" />
+  <sign file="plugins/CategoryRightsPlugin/jsp/doEditCategoryRights.jsp" signature="MZEJoSp+GxF8m49QXzZQeQ==" />
+  <sign file="plugins/CategoryRightsPlugin/jsp/doEditCategoryUseRightsTypes.jsp" signature="KBv9zDXhQtPDBYmZc/vxXw==" />
+</signature>
+

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plugin PUBLIC "-//JALIOS//DTD JCMS-PLUGIN 1.6//EN" "https://community.jalios.com/dtd/jcms-plugin-1.6.dtd">
+<plugin name="SmartPhonePlugin"
+        version="4.6.2"
+        jcms="10\.0\.[5-9].*"
+        author="Jalios SA" license="Jalios"
+        url="http://community.jalios.com/plugin/smartphone"
+        jsync="false" initialize="true">
+
+  <label xml:lang="en">JMobile Plugin</label>
+  <label xml:lang="fr">Module JMobile</label>
+  <description xml:lang="en">This plugin facilitates SmartPhone access.</description>
+  <description xml:lang="fr">Ce module facilite l'accès depuis un SmartPhone.</description>
+
+  <java-classes>
+    <java package="com.jalios.jcmsplugin.smartphone" />
+  </java-classes>
+  
+  <private-files>
+    <directory path="properties" />
+    <directory path="tld" />
+  </private-files>
+  
+  <jars>
+    <jar path="auto-value-annotations-1.7.jar" />
+    <jar path="google-auth-library-credentials-0.20.0.jar" />
+    <jar path="google-auth-library-oauth2-http-0.20.0.jar" />
+    <jar path="google-http-client-1.34.0.jar" />
+    <jar path="google-http-client-jackson2-1.34.0.jar" />
+    <jar path="grpc-context-1.31.0.jar" />
+    <jar path="j2objc-annotations-1.3.jar" />
+    <jar path="jsr305-3.0.2.jar" />
+    <jar path="opencensus-api-0.24.0.jar" />
+    <jar path="opencensus-contrib-http-util-0.24.0.jar" />
+  </jars>
+  
+  <types>
+    <type name="SmartPhonePortal" />
+    <templates type="PortletCarousel">
+      <template name="default" file="doPortletCarouselMobileDisplay.jsp" usage="jmobile">
+        <label xml:lang="en">Default template</label>
+        <label xml:lang="fr">Gabarit par défaut</label>
+      </template>   
+    </templates>    
+    <templates type="PortletQueryForeach">
+      <template name="default" file="doPortletQueryForeachMobileDisplay.jsp" usage="jmobile">
+        <label xml:lang="en">Default template</label>
+        <label xml:lang="fr">Gabarit par défaut</label>
+      </template>
+      <template name="dataimage" file="doPortletQueryForeachMobileDisplayWithImage.jsp" usage="jmobile">
+        <label xml:lang="en">With image template</label>
+        <label xml:lang="fr">Gabarit avec image</label>
+      </template>
+    </templates>
+    <templates type="PortletQueryForeachDetail">
+      <template name="default" file="doPortletQueryForeachMobileDisplay.jsp" usage="jmobile">
+        <label xml:lang="en">Default template</label>
+        <label xml:lang="fr">Gabarit par défaut</label>
+      </template>
+      <template name="dataimage" file="doPortletQueryForeachMobileDisplayWithImage.jsp" usage="jmobile">
+        <label xml:lang="en">With image template</label>
+        <label xml:lang="fr">Gabarit avec image</label>
+      </template>
+    </templates>
+    
+    <templates type="PortletQueryForeachCards">
+      <template name="default" file="doPortletQueryForeachCardsMobileDisplay.jsp" usage="jmobile">
+        <label xml:lang="en">Default template</label>
+        <label xml:lang="fr">Gabarit par défaut</label>
+      </template>
+      <template name="light" file="doPortletQueryForeachCardsMobileDisplay_light.jsp" usage="jmobile">
+        <label xml:lang="en">Default template (Light card template)</label>
+        <label xml:lang="fr">Gabarit par défaut (Carte sans méta-données)</label>
+      </template>
+      <template name="withBorderGrid" file="doPortletQueryForeachCardsMobileDisplay_withBorder.jsp" usage="jmobile">
+        <label xml:lang="en">With border grid template</label>
+        <label xml:lang="fr">Gabarit avec bordure en grille</label>
+      </template>
+      <template name="withLead" file="doPortletQueryForeachCardsMobileDisplay_withLead.jsp" usage="jmobile">
+        <label xml:lang="en">With lead template</label>
+        <label xml:lang="fr">Gabarit avec lead</label>
+      </template>
+      <template name="withSliding" file="doPortletQueryForeachCardsMobileDisplay_withSliding.jsp" usage="jmobile">
+        <label xml:lang="en">With sliding template</label>
+        <label xml:lang="fr">Gabarit avec sliding</label>
+      </template>
+      <template name="withSlidingBorder" file="doPortletQueryForeachCardsMobileDisplay_withSlidingBorder.jsp" usage="jmobile">
+        <label xml:lang="en">With border and sliding template</label>
+        <label xml:lang="fr">Gabarit avec bordure et sliding</label>
+      </template>
+      <template name="horizontalwithSliding" file="doPortletQueryForeachCardsHorizontalMobileDisplay_withSliding.jsp" usage="jmobile">
+        <label xml:lang="en">Horizontal with sliding template </label>
+        <label xml:lang="fr">Gabarit avec sliding et cartes horizontales</label>
+      </template>
+      <template name="carousel" file="doPortletQueryForeachCardsCarouselMobileDisplay.jsp" usage="jmobile">
+        <label xml:lang="en">Cards carousel template</label>
+        <label xml:lang="fr">Gabarit avec carrousel de cartes</label>
+      </template>
+    </templates>
+  
+    <templates type="PortletWYSIWYG">
+      <template name="default" file="doPortletWYSIWYGMobileDisplay.jsp" usage="jmobile">
+        <label xml:lang="en">Default template</label>
+        <label xml:lang="fr">Gabarit par défaut</label>
+      </template>
+    </templates>
+    <templates type="AbstractPortletSkinable">
+      <template name="default" file="doAbstractPortletSkinableMobileDisplay.jsp" usage="jmobile">
+        <label xml:lang="en">Default template</label>
+        <label xml:lang="fr">Gabarit par défaut</label>
+      </template>
+      <template name="light" file="doAbstractPortletSkinableMobileDisplay_light.jsp" usage="jmobile">
+        <label xml:lang="en">Light template</label>
+        <label xml:lang="fr">Gabarit light</label>
+      </template>
+      
+    </templates>
+    <templates type="PortletImage">
+      <template name="default" file="doPortletImageMobileDisplay.jsp" usage="jmobile">
+        <label xml:lang="en">Default template</label>
+        <label xml:lang="fr">Gabarit par défaut</label>
+      </template>
+    </templates>
+    
+    <templates type="PortletJsp">
+      <template name="default" file="doPortletJspMobileDisplay.jsp" usage="jmobile">
+        <label xml:lang="en">Default template</label>
+        <label xml:lang="fr">Gabarit par défaut</label>
+      </template>
+    </templates>
+    
+    <templates type="PortletRSS">
+      <template name="default" file="doPortletRSSMobileDisplay.jsp" usage="jmobile">
+        <label xml:lang="en">Default template</label>
+        <label xml:lang="fr">Gabarit par défaut</label>
+      </template>
+    </templates>
+    
+  </types>
+  
+  <hibernate>
+    <mapping resource="com/jalios/jcmsplugin/smartphone/portal/SmartPhonePortalStructure.hbm.xml"/>
+    <mapping resource="com/jalios/jcmsplugin/smartphone/ios/IOSDownloadCode.hbm.xml"/>
+  </hibernate>
+  
+  <plugincomponents>
+    <datacontroller  class="com.jalios.jcmsplugin.smartphone.portal.SmartPhonePortalPortletDataController"         types="com.jalios.jcms.portlet.Portlet"/>
+    <policyfilter class="com.jalios.jcmsplugin.smartphone.SmartPhonePortalPolicyFilter" />
+    <policyfilter class="com.jalios.jcmsplugin.smartphone.SmartPhoneWikiPageWikiPolicyFilter" />
+    <policyfilter class="com.jalios.jcmsplugin.smartphone.SmartPhoneTemplateChannelPolicyFilter" />
+    <policyfilter class="com.jalios.jcmsplugin.smartphone.portal.SmartPhonePortalCtxMenuPolicyFilter" />
+    <policyfilter class="com.jalios.jcmsplugin.smartphone.portal.SmartPhonePortalApplicationRightPolicyFilter" />
+    <authenticationhandler class="com.jalios.jcmsplugin.smartphone.SmartPhoneLoginRedirectAuthenticationHandler" />
+    <channellistener class="com.jalios.jcmsplugin.smartphone.SmartPhoneLessDeclareChannelListener" />
+    <channellistener class="com.jalios.jcmsplugin.smartphone.portal.SmartPhonePortalChannelListener" />
+    <channellistener class="com.jalios.jcmsplugin.smartphone.application.SmartPhoneApplicationMappingChannelListener" />
+    <channellistener class="com.jalios.jcmsplugin.smartphone.ios.IOSDownloadCodeChannelListener" />
+    <channellistener class="com.jalios.jcmsplugin.smartphone.deeplink.JMobileDeeplinkChannelListener" />
+    <alertchannel class="com.jalios.jcmsplugin.smartphone.pushNotification.JPushAlertChannel" />
+  </plugincomponents>
+  
+  <openapi>
+    <resource class="com.jalios.jcmsplugin.smartphone.rest.FeedbackResource" uriTemplate="/smartphone/feedback" />
+    <resource class="com.jalios.jcmsplugin.smartphone.rest.AddJWTokenResource" uriTemplate="/smartphone/auth/addjwtoken/{memberId}" />
+    <resource class="com.jalios.jcmsplugin.smartphone.rest.AddJWTokenResource" uriTemplate="/smartphone/auth/addjwtoken" />
+    <resource class="com.jalios.jcmsplugin.smartphone.rest.RegisterJMobileTokenResource" uriTemplate="/smartphone/registerToken/{deviceId}/{deviceOs}/{deviceModel}" />
+    <resource class="com.jalios.jcmsplugin.smartphone.rest.DeleteDeviceInfoResource" uriTemplate="/smartphone/deleteToken/{deviceId}/{deviceOs}/{deviceModel}" />
+    <resource class="com.jalios.jcmsplugin.smartphone.rest.GetNotificationDiagnosticResource" uriTemplate="/smartphone/notificationDiagnostic/{deviceId}/{deviceOs}/{deviceModel}" />
+    <resource class="com.jalios.jcmsplugin.smartphone.rest.JMobileInfoResource" uriTemplate="/smartphone/info" />
+    <resource class="com.jalios.jcmsplugin.smartphone.ios.IOSDownloadResource" uriTemplate="/smartphone/ios/download" />
+  </openapi>
+  
+  <private-files>
+    <directory path="templates" />
+    <directory path="FirebaseCloudMessaging" />
+  </private-files>
+  
+  <public-files>
+    <directory path="js" />
+    <directory path="images" />
+    <directory path="fonts" />
+    <directory path="css" />
+    <directory path="docs" />
+    <directory path="jsp" />
+    <directory path="types" />
+    <file path="jsp/collaborativespace/index-workspace-filter.jsp" include="SMARTPHONE_INDEX_WORKSPACE_SET" />
+    <file path="jsp/recenthistory/addToRecentHistory.jsp" include="SMARTPHONE_PUB_FOOTER" />
+    <file path="jsp/ios/adminMenu.jsp"                include="ADMIN_OPERATION" />
+    <file path="jsp/mobileapp/iFrameContent.jsp"          include="HORIZON_MOBILE_HEAD_BOTTOM" />
+  </public-files>
+  
+</plugin>

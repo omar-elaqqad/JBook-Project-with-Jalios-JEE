@@ -1,0 +1,52 @@
+.blogpost-fulldisplay .app-pub-wrapper {
+  padding: 0;
+  background-color: white;
+}
+.blogpost-fulldisplay .app-sidebar {
+  display: none;
+}
+@media (max-width: 992px) {
+  .blogpost-fulldisplay .app-main {
+    flex-basis: 100%;
+  }
+  .blogpost-fulldisplay .fulldisplay H1.publication-title {
+    font-size: 28px;
+  }
+}
+@media (min-width: 992px) {
+  .blogpost-fulldisplay .app-sidebar {
+    display: block;
+  }
+  .blogpost-fulldisplay .editorial-fulldisplay {
+    padding: 0 40px 40px 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .blogpost-fulldisplay .editorial-fulldisplay {
+    max-width: 1112px;
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+}
+.blogpost-fulldisplay .editorial-fulldisplay {
+  margin: auto;
+  background-color: white;
+}
+.CollaborativeSpace .blogpost-fulldisplay .app-pub-wrapper {
+  background-color: transparent;
+}
+@media print {
+  .blogpost-fulldisplay .app-sidebar {
+    display: none;
+  }
+  .blogpost-fulldisplay.app .app-main {
+    flex-basis: 100%;
+  }
+  .blogpost-fulldisplay.app .app-main .app-body {
+    padding: 0;
+  }
+  .blogpost-fulldisplay.app .app-pub-wrapper.app-pub-wrapper-actions {
+    margin-right: 0;
+  }
+}
+/*# sourceMappingURL=blogpost-full-display.css.map */

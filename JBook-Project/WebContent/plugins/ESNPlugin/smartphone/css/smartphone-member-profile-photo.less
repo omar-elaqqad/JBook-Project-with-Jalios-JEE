@@ -1,0 +1,30 @@
+.member-profile {
+
+  .profile-header-photo-wrapper .wrapper-photo .photo {
+    max-height: @esn-smartphone-profile-photo-size;
+    max-width: @esn-smartphone-profile-photo-size;
+  }
+  
+  .wrapper-photo.large-photo IMG.photo {
+    min-width: @esn-smartphone-profile-photo-size;
+  }
+  
+  .profile-header-photo-wrapper {
+    top: @esn-smartphone-profile-photo-top;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  
+    .wrapper-photo {
+      border: 0 none;
+      box-shadow: none;
+      padding: 5px;
+      margin-bottom: 0;
+      overflow: hidden;
+    }
+    .profile-header-photo {
+      text-align: center;
+    } // .profile-header-photo
+  }
+} // .member-profile
+

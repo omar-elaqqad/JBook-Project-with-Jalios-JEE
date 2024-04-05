@@ -1,0 +1,170 @@
+/* The global db comment wrapper containing all comments */
+.dbcomment-wrapper .dbcommentCount {
+  font-weight: bold;
+  margin: 25px 0 20px;
+  padding: 5px 5px;
+  border-top: 1px dotted #CCCCCC;
+}
+.dbcomment-wrapper .non-visible-comment {
+  margin-left: 60px;
+}
+/* Comment pane, containing the comment author photo and the comment content */
+.comment-pane {
+  padding: 0 0 10px 10px;
+  position: relative;
+  margin-top: 0;
+}
+.comment-pane:before {
+  content: "";
+  border-left: 0;
+  position: absolute;
+  left: 33px;
+  top: 0;
+  bottom: 0;
+}
+.comment-pane .counter {
+  padding: 1px 3px 1px 4px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 0 0 0 4px;
+  font-size: 12px;
+  border-bottom: 1px solid #e3e3e3;
+  border-left: 1px solid #e3e3e3;
+  background-color: white;
+}
+.comment-pane .counter A {
+  color: #AAAAAA;
+}
+.comment-pane .badge-new {
+  font-size: 12px;
+}
+.comment-pane .comment-separator {
+  position: relative;
+  margin-bottom: 0;
+  margin-left: 60px;
+  padding: 9px;
+  box-shadow: none;
+  background-color: #fff;
+  border-color: #e3e3e3;
+}
+/* The comment wrapper containing text */
+.comment-pane .dbcomment {
+  position: relative;
+  margin-bottom: 0;
+  margin-left: 60px;
+  margin-top: 0;
+  word-wrap: break-word;
+  min-height: 20px;
+  padding: 9px;
+  border: 1px solid #e3e3e3;
+  border-radius: 3px;
+  background-color: #f7f9fa;
+  border-color: #eee;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.comment-pane .dbcomment blockquote {
+  border-color: #ddd;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+.comment-pane .dbcomment:before {
+  content: "";
+  position: absolute;
+  left: -17px;
+  top: 13px;
+  border-right: 8px solid #f7f9fa;
+  border-top: 8px solid transparent;
+  border-left: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+.comment-pane .dbcomment:after {
+  content: "";
+  position: absolute;
+  left: -16px;
+  top: 13px;
+  border-right: 8px solid #f7f9fa;
+  border-top: 8px solid transparent;
+  border-left: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+.comment-pane .dbcomment .comment-header {
+  margin-bottom: 10px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.comment-pane .dbcomment .comment-header .comment-link {
+  color: #555555;
+}
+.comment-pane .dbcomment .comment-header .comment-right-info-container {
+  display: flex;
+  align-items: flex-start;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.comment-pane .dbcomment .comment-header .comment-info {
+  font-size: 12px;
+  margin-top: 9px;
+  margin-right: 9px;
+}
+.comment-pane .dbcomment .comment-header .comment-author A {
+  font-weight: bold;
+}
+.comment-pane .dbcomment .comment-header .comment-vote {
+  font-size: 12px;
+}
+.comment-pane .dbcomment .comment-header A .jalios-icon {
+  color: #666666;
+}
+.comment-pane .dbcomment.comment-private {
+  background-color: #f5f5f5;
+}
+.comment-pane .dbcomment.comment-private .counter A {
+  color: #721c24;
+}
+.comment-pane .dbcomment.comment-private:after {
+  border-right-color: #f5f5f5;
+}
+.comment-pane .dbcomment.comment-private .label-comment-private {
+  background-color: #d9534f;
+  vertical-align: middle;
+}
+/* The Form to add a new comment */
+.comment-form {
+  margin-bottom: 0;
+}
+.comment-form.no-comment .comment-add-panel {
+  margin-left: 0;
+}
+.comment-form:before {
+  border: 0;
+  bottom: 10px;
+}
+.comment-form .comment-btn-add {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  color: #555555;
+  display: block;
+  padding: 5px;
+  cursor: text;
+  text-decoration: none;
+  background-color: white;
+  width: 100%;
+  text-align: left;
+}
+.comment-form .comment-btn-add:hover {
+  color: #555555;
+  text-decoration: none;
+}
+.comment-form .comment-textarea {
+  width: 100%;
+}
+.comment-pane .dbcomment .wiki-edit:hover .wiki-action.wiki-edit-section {
+  display: none;
+}
+.comment-pane.inline-update .dbcomment .wiki-edit:hover .wiki-action.wiki-edit-section {
+  display: block;
+}
+/*# sourceMappingURL=dbcomment.css.map */

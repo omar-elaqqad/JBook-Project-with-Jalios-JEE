@@ -1,0 +1,31 @@
+.model-selection .input-group {
+  display: flex;
+  flex-direction: column;
+}
+.model-selection .input-group label {
+  font-weight: 400;
+}
+.model-selection .input-group .model_wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  padding: 8px;
+  cursor: pointer;
+}
+.model-selection .input-group .model_wrapper a {
+  color: #333;
+}
+.model-selection .input-group .model_wrapper .model__infos {
+  display: flex;
+  flex-direction: column;
+  padding-left: 8px;
+}
+.model-selection .input-group .model_wrapper .model__access {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.model-selection .input-group .model_wrapper .model_title {
+  font-weight: 500;
+}
+/*# sourceMappingURL=model-selection.css.map */

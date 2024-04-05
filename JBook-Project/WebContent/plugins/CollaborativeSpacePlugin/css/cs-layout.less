@@ -1,0 +1,197 @@
+// CSP Layout
+// ----------------
+
+#cs-portal {
+  background-color: @cs-bg-color;
+}
+
+// DEBUG for responsive
+/* .topbar-ws-search { */
+/*   &:after { color: white; padding: 5px; border: 1px solid red; border-radius: 5px; } */
+/*   @media (min-width: @screen-xs-min) { &:after { content: "XS"; background-color: orange; } } */
+/*   @media (max-width: (@cs-header-title-min - 1)) { &:after { content: "CS-XXS"; background-color: red; } } */
+/*   @media (min-width: @screen-sm-min) { &:after { content: "SM"; background-color: yellow; color: black; } } */
+/*   @media (min-width: @screen-md-min) { &:after { content: "MD"; background-color: #B0B524; color: white; } } */
+/*   @media (min-width: @screen-lg-min) { &:after { content: "LG"; background-color: #59B600; } } */
+/* } */
+/* @media (max-width: @screen-sm-min) { .topbar .navbar-right { display: none; } } */
+
+// DEBUG for layout areas
+/* .cs-portal          { border: 10px solid yellow; } */
+/* #cs-header          { border: 5px solid Orange; } */
+/* #cs-header-middle   { border: 5px solid red; } */
+/* #cs-header-bottom   { border: 5px solid Maroon; } */
+/* #cs-header-tabs     { border: 5px solid LightSalmon; } */
+/* #cs-body            { border: 5px solid blue; } */
+/* #sidebar            { border: 5px solid Fuchsia; } */
+/* #cs-content-wrapper { border: 5px solid DeepPink; } */
+
+// Header
+// ----------------
+#cs-header {
+  background-color: @cs-header-bg-color;
+  background-image: none;
+  background-attachment: scroll;
+  background-position-x: left;
+  background-position-y: top;
+  background-repeat: repeat;
+  transition: background-color 200ms ease-in;
+  // HEADER with custom background image
+  &.cs-custom-header {
+    filter: none; /* IE compatibility for custom image header */
+  }
+}
+
+#cs-header-middle {
+  height: @cs-header-middle-height;
+  overflow: hidden;
+  padding-top: 5px;
+  transition: all 200ms ease-in;
+  @media (min-width: (@cs-header-title-min)) {
+    padding-top: 25px;
+  }
+  @media (max-width: (@cs-header-title-min - 1)) {
+    // In extra small screen, reduce BS container's 15px padding
+    &.container-fluid {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+  .PortalMode {
+    float: right;
+  }
+}
+
+#cs-header-title {
+  h1 {
+    margin: 0;
+  }
+  color: @cs-header-title-color;
+  padding-left: 30px;
+  @media (max-width: (@cs-header-title-min - 1)) {
+    // In extra small screen, keep aligned title, search input (BS gutter are reduced from 15 to 10px)
+    padding-left: 15px;
+  }
+
+  A {
+    color: @cs-header-title-color;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+    display: inline-block;
+    .text-overflow();
+    max-width: 100%;
+    transition: all 200ms ease-in;
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+  .parent-cs-link {
+    font-size: 16px;
+    line-height: floor((16px * @line-height-base));
+    text-transform: uppercase;
+  }
+  .condensed-link {
+    display: none;
+  }
+}
+
+.subspace #cs-header-title {
+  padding-top: 0;
+  .cs-link {
+    line-height: initial;
+    font-size: 40px;
+  }
+}
+
+// CS Header
+// ----------------
+#cs-header-title A.cs-link {
+  display: inline-block;
+  font-size: 40px;
+  line-height: 76px;
+  font-weight: 300;
+  font-family: @font-family-condensed;
+
+  @media (max-width: (@cs-header-title-min - 1)) {
+    font-size: 30px;
+    line-height: floor((30px * @line-height-base));
+  }
+}
+
+// XXS
+@media (max-width: (@cs-header-title-min - 1)) {
+  // Take full width when < @cs-header-title-min (equivalent to col-xs-12 but for a smaller breakpoint)
+  #cs-header-title {
+    width: 100%;
+  }
+}
+
+// CS body
+// ----------------
+#cs-body {
+  padding: 30px;
+
+  @media (min-width: @screen-sm-min) {
+    &.cs-sidebar-left #sidebar {
+      border-right: 1px dotted #cccccc;
+    }
+    &.cs-sidebar-right #sidebar {
+      border-left: 1px dotted #cccccc;
+    }
+  }
+  // Drag & Drop
+  .dashboard-column.dnd-container,
+  #sidebar.dnd-container {
+    min-height: 100px; // for drag and drop in empty columns
+  }
+  .panel .panel-title {
+    min-height: 30px;
+  }
+}
+
+.cs-body-dashboard .panel {
+  margin-bottom: 30px;
+}
+
+// Service skin
+// ----------------
+.panel-heading {
+  .service-actions {
+    margin-top: -8px;
+    margin-right: -10px;
+    BUTTON.dropdown-toggle {
+      padding: @padding-base-vertical @padding-base-horizontal;
+      background: none; // Cancel native browser background
+      &:active {
+        .box-shadow(none);
+      } // Cancel Bootstrap :active style
+    }
+  }
+}
+
+.application-edition-backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.4;
+  z-index: 10;
+}
+
+.dropdown-menu.applications-menu {
+  z-index: 11;
+}
+
+.cs-body {
+  .selection-body {
+    padding-right: 74px;
+  }
+  > article {
+    max-width: 1144px;
+    margin: 0 auto;
+    .selection-body .viewer {
+      margin-top: 40px;
+    }
+  }
+}

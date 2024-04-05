@@ -1,0 +1,253 @@
+// Include variables and mixins
+@import "../../../../css/jalios/core/init-mixins.less";
+// -------------------------------------------------------------------
+// PLUGINS LESS VARIABLES
+// -------------------------------------------------------------------
+@import "../../../../plugins/ESNPlugin/css/esn-variables.less";
+// Hook for JCMS
+@import "../../../../css/plugin.less";
+// -------------------------------------------------------------------
+//  PLUGIN CSS DECLARATION
+// -------------------------------------------------------------------
+@import "../../../../plugins/ESNPlugin/css/activity-event.less";
+@import "../../../../plugins/ESNPlugin/css/activity/activity-cards-comments.less";
+
+// -------------------------------------------------------------------
+//  ACTIVITY CARDS
+// -------------------------------------------------------------------
+  
+.member-activity-cards {
+  padding-top: 10px;
+
+  .activity-container {
+    padding-top: 0;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .activity-day-separator {
+    color: #333;
+    padding: 10px 10px 20px;
+    margin: 0;
+    font-size: @font-size-base;
+    font-weight: @font-weight-regular;
+  }
+  //Next page button
+  .activity-nextpage-form-wrapper {
+    margin-top: @baseline;
+  }
+
+  .activity-nextpage-form {
+    text-align: center;
+  }
+
+  .activity-nextpage-button {
+    width: 50%;
+    display: inline-block;
+    margin-bottom: 10px;
+    .text-overflow();
+    max-width: 100%;
+  }
+}
+
+// -------------------------------------------------------------------
+//  Cards
+// -------------------------------------------------------------------
+.member-activity-cards .activity {
+  background-color: @esn-activity-card-bg;
+  border: @esn-activity-card-border;
+  border-color: @esn-activity-card-border-color;
+  margin-bottom: @esn-activity-card-margin-bottom;
+  border-radius: @esn-activity-card-border-radius;
+  padding: @esn-activity-card-padding;
+  position: relative;
+
+  .ctxEditActivity A {
+    color: #AAA;
+    &.btn-rounded {
+      margin-right: 5px;
+      margin-top: 5px;
+    }
+  }
+  .ctxEditActivity .activity-dropdown-menu {
+    A,
+    BUTTON,
+    [role="button"] {
+      color: @gray;
+    }
+  }
+
+  &:first-child {
+    margin-top: 20px;
+  }
+
+  .activity-header {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-right: 20px;
+  }
+
+  .activity-nested-description {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    border-bottom: 1px solid #e9e9e9;
+  }
+
+  .activity-footer {
+    padding: 10px 0;
+  }
+
+  .activity-actions {
+    border-top: 1px solid #E8E8E8;
+    padding-top: 10px;
+  }
+
+  .activity-vote {
+    color: rgb(137, 143, 156);
+  }
+
+  .activity-author {
+    color: #333;
+    font-weight: bold;
+  }
+
+  .activity-social-metas {
+    .clearfix();
+    margin-bottom: 10px;
+
+    .activity-comment-count {
+      float: right;
+      color: rgb(137, 143, 156);
+      border-radius: 5px;
+      &.btn-show-comments.btn {
+        padding: 3px 6px;
+        .transition(all ease-in 200ms);
+        &:hover {
+          background-color: #EEE;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .activity-abstract {
+    .activity-abstract-thumbnail {
+      float: left;
+      margin-right: 10px;
+    }
+  }
+
+  .activity-description {
+    margin-bottom: 8px;
+  }
+
+  .activity-body {
+    color: #666;
+
+    .activity-body-item:first-child {
+      border-top: 1px solid #E8E8E8;
+      padding-top: 10px;
+    }
+  }
+
+  .activity-actions .activity-action-item {
+    margin-right: 5px;
+
+    &.vote-tag {
+      display: inline-block;
+    }
+
+    .jalios-icon {
+      margin-right: 8px;
+      font-size: 14px;
+    }
+
+    A:not([href]),
+    BUTTON,
+    [role="button"],
+    .activity-recommend {
+      display: inline-block;
+      font-weight: @font-weight-regular;
+      color: #666;
+      font-size: 13px;
+      text-decoration: none;
+      /* Apply .btn, .btn-link (for Recommend core action) */
+      padding: 1px 5px;
+      vertical-align: middle;
+      touch-action: manipulation;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      user-select: none;
+      .box-shadow(none);
+      .transition(all ease-in 200ms);
+      line-height: 1.5;
+      &.btn-link {
+        color: #666;
+      }
+    }
+    .btn-vote.has-voted[role="button"] {
+      color: @link-color;
+    }
+    A, BUTTON {
+      &:hover {
+        background-color: #EEE;
+        transition: background-color 200ms ease-in;
+      }
+    }
+  }
+
+  .activity-metas {
+    font-size: @font-size-small;
+    color: #666;
+
+    A {
+      color: #666;
+    }
+  }
+
+  .activity-social {
+    float: right;
+  }
+
+  .ctxEditActivity {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    .activity-menu-opener {
+      color: #999;
+      text-decoration: none;
+    }
+  }
+}
+
+// -------------------------------------------------------------------
+//  Specific rules for activity body
+// -------------------------------------------------------------------
+.member-activity-cards .activity-container .card-member {
+  max-width: 350px;
+}
+
+// -------------------------------------------------------------------
+//  Media queries
+// -------------------------------------------------------------------
+@media (max-width: @screen-xs) {
+  .member-activity .activity-container .activity-nextpage-button {
+    width: @esn-activity-cards-wrapper-next-page-btn-width-xs;
+  }
+}
+
+// -------------------------------------------------------------------
+//  Element queries
+// -------------------------------------------------------------------
+.member-activity-cards[min-width~="@{screen-sm-min}"] {
+  .activity-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.member-activity .activity-nextpage-form-wrapper[max-width~="@{esn-activity-cards-wrapper-next-page-btn-width-small-item-breakpoint-max-width}"] .activity-nextpage-button {
+  width: @esn-activity-cards-wrapper-next-page-btn-width-small-item;
+}

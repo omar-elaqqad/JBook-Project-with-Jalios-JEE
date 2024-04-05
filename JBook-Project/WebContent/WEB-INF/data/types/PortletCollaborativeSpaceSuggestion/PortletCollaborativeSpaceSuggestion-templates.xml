@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates version="5.0">
+  <template name="default" usage="box" file="doPortletCollaborativeSpaceSuggestionFullDisplay.jsp" />
+  <template name="itemBox" usage="box" file="doPortletCollaborativeSpaceSuggestionItemBox.jsp" />
+</templates>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<type name="MicroBlogging" superclass="com.jalios.jcmsplugin.esn.AbstractMicroBlogging" categoryTab="false" readRightTab="false" updateRightTab="false" templateTab="false" workflowTab="false" advancedTab="false" database="true" hbm="true" reviewable="false" debatable="false" unitFieldEdition="false" audienced="false" interfaces="com.jalios.jcms.db.TrackedDBData," formhandler="com.jalios.jcmsplugin.esn.EditAbstractMicroBloggingHandler">
+  <title ml="false" />
+  <fields>
+    <field name="text" editor="textarea" required="true" compactDisplay="false" type="String" searchable="true" rows="5" cols="80" ml="false" wiki="true" html="false" checkHtml="true" descriptionType="text" abstract="true" truncate="400" />
+  </fields>
+</type>

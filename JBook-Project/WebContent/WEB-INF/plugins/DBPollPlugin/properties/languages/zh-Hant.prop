@@ -1,0 +1,127 @@
+jcmsplugin.dbpoll.btn.vote:            我投票
+jcmsplugin.dbpoll.lbl.vote:            投票
+jcmsplugin.dbpoll.lbl.open:            打開該民調
+jcmsplugin.dbpoll.lbl.close:           關閉該民調
+jcmsplugin.dbpoll.lbl.show-result:     顯示結果
+jcmsplugin.dbpoll.lbl.vote-cnt:        {0,choice,0#0個投票|1#1個投票|2#{0,number,integer}個投票}
+jcmsplugin.dbpoll.lbl.dates:           從 {0} 到 {1} 民調
+jcmsplugin.dbpoll.lbl.all-polls:       所有民調
+jcmsplugin.dbpoll.lbl.all-polls-ws:    在 {0} 的所有民調
+jcmsplugin.dbpoll.lbl.view-all-polls:  查看所有民調
+jcmsplugin.dbpoll.lbl.view-all-polls-ws:  查看當前工作空間所有民調
+jcmsplugin.dbpoll.lbl.vote-title:      爲 {0} 投票
+jcmsplugin.dbpoll.lbl.create-poll:     發布一項新的民調
+jcmsplugin.dbpoll.msg.option-change:   您不能改变民调的選項因为有些用户已经就当前選項进行投票。
+jcmsplugin.dbpoll.msg.already-voted:   您已爲該民調投票了。
+jcmsplugin.dbpoll.msg.no-result:       該民調還沒有收到投票。
+jcmsplugin.dbpoll.msg.choose-option:   您必須選擇一個投票的選項。
+jcmsplugin.dbpoll.msg.closed-poll:     該民調已關閉，您無法投票。
+jcmsplugin.dbpoll.msg.poll-loop:       您不能對自己的描述進行民調。
+
+jcmsplugin.dbpoll.modal.step1:         民調選項
+jcmsplugin.dbpoll.modal.step2:         推薦民調
+jcmsplugin.dbpoll.modal.btn.publish:   發表
+jcmsplugin.dbpoll.modal.btn.publish.alt:  發布該民調
+jcmsplugin.dbpoll.modal.btn.next.alt:  發布並推薦該民調……
+jcmsplugin.dbpoll.modal.success-info:  您的民調已創建並可以在這裏訪問：{0}
+
+jcmsplugin.dbpoll.publish-menu.add-poll: 民調
+
+jcmsplugin.dbpoll.cs.options:  請至少爲此次民調添加兩個選項
+jcmsplugin.dbpoll.cs.optionsml:  請至少爲此次民調添加兩個選項（在{0}）
+
+jcmsplugin.dbpoll.search.placeholder: 搜索民調……
+
+jcmsplugin.dbpoll.app.title: 民調
+
+jcmsplugin.dbpoll.app.no-result-welcome: 歡迎使用Polls應用程序
+
+jcmsplugin.dbpoll.app.catalog.title: 民調
+jcmsplugin.dbpoll.app.catalog.root: 主頁
+jcmsplugin.dbpoll.app.catalog.btn.add-poll: 添加民調
+jcmsplugin.dbpoll.app.catalog.polls-number: {0} {0,choice,0#|1#民調|2#民調}
+
+jcmsplugin.dbpoll.app.card.closed-poll: 完成的民調
+
+jcmsplugin.dbpoll.app.filter.status.all: 所有民調
+jcmsplugin.dbpoll.app.filter.status.opened: 進行中的民調
+jcmsplugin.dbpoll.app.filter.status.closed: 完成的民調
+jcmsplugin.dbpoll.app.filter.mbr:        添加者……
+jcmsplugin.dbpoll.app.filter.begin-date: 之後添加……
+jcmsplugin.dbpoll.app.filter.end-date:   之前添加……
+jcmsplugin.dbpoll.app.filter.workspace:  已添加至工作空間……
+
+# ------------------------------------------------------------
+#  Unified insert
+# ------------------------------------------------------------
+unified-insert.items.poll: 民調
+unified-insert.items.poll.longtitle: 民調
+unified-insert.items.poll.subtitle:
+
+# ------------------------------------------------------------
+#  Smartphone
+# ------------------------------------------------------------
+jcmsplugin.smartphone.dbpoll: 民調
+jcmsplugin.smartphone.dbpoll.navbar.opened: 已打開民調
+jcmsplugin.smartphone.dbpoll.navbar.closed: 完成的民調
+
+# ------------------------------------------------------------
+#  Recommendation
+# ------------------------------------------------------------
+alert.name.recommendation.dbpoll-recommendation:                      邀請填寫民調
+alert.msg.recommendation.dbpoll-recommendation.title:                 邀請參與民調：{data}
+alert.msg.recommendation.dbpoll-recommendation.short-description:     {author}已邀請您填寫民調{data}。{data.url}
+alert.msg.recommendation.dbpoll-recommendation.description:           <p>{author}已邀請您填寫民調{data}。</p>
+jcmsplugin.dbpoll.recommendation.Poll:                                邀請成員填寫民調：{0}
+
+# ------------------------------------------------------------
+#  ESN
+# ------------------------------------------------------------
+jcmsplugin.esn.activity.form-tab.poll: 民調
+
+# ------------------------------------------------------------
+#  Shortcuts
+# ------------------------------------------------------------
+data.$id.shortcut.jcmsplugin.dbpoll.title: 民調
+data.$id.shortcut.jcmsplugin.dbpoll.text: 民調處理應用程序
+
+# ------------------------------------------------------------
+#  Plugin label and description
+# ------------------------------------------------------------
+plugin.DBPollPlugin.label: 民調插件
+plugin.DBPollPlugin.description: 該插件可讓您創建簡單的民調。民調將通過民調Portlet顯示。投票都被保存在RDBMS中。
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From Poll.xml
+types.Poll.title.description: 民調標題
+types.Poll.fields.description.label: 描述
+types.Poll.label: 民調
+types.Poll.fields.options.description: 投票選項。
+types.Poll.fields.description.description: 民調的簡短說明（顯示在問題和選項之間）
+types.Poll.description: 僅含一個問題的迷你民調
+types.Poll.fields.options.label: 選項
+types.Poll.title.label: 標題
+types.Poll.fields.image.label: 圖片
+types.Poll.fields.image.description: 該民調說明可選圖片。
+types.Poll.fields.closed.label: 關閉民調
+types.Poll.fields.closed.onLabel: 是
+types.Poll.fields.closed.offLabel: 否
+types.Poll.fields.closed.description: 要關閉民調嗎？
+
+# From PortletPoll.xml
+types.PortletPoll.fields.refineWorkspace.labelList: 顯示該工作空間的最新民調|顯示所有工作空間的最新民調
+types.PortletPoll.fields.poll.label: 民調
+types.PortletPoll.title.description: 標題
+types.PortletPoll.description: 該portlet顯示一個民調，然後投票結束時顯示當前結果。
+types.PortletPoll.fields.poll.description: 要顯示的民調（如果沒有，顯示最後發布的民調）
+types.PortletPoll.fields.refineWorkspace.description: 顯示當前空間或所以工作空間的最新民調。
+types.PortletPoll.label: 民調Portlet
+types.PortletPoll.title.label: 標題
+types.PortletPoll.fields.refineWorkspace.label: 細分
+types.PortletPoll.fields.hideWhenNoResults.label: 如果沒有民調，隱藏portlet
+types.PortletPoll.fields.hideWhenNoResults.onLabel: 是
+types.PortletPoll.fields.hideWhenNoResults.offLabel: 否
+types.PortletPoll.fields.hideWhenNoResults.description: 如果沒有民調可顯示，則隱藏portlet。

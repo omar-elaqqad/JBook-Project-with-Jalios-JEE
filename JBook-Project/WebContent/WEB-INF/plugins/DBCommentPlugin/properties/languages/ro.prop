@@ -1,0 +1,114 @@
+jcmsplugin.dbcomment.edit.lbl.add-comment:    Adaugă un comentariu
+jcmsplugin.dbcomment.edit.lbl.add-comment-verb:  Comentariu
+jcmsplugin.dbcomment.edit.lbl.create-comment: Publică comentariul
+jcmsplugin.dbcomment.edit.lbl.cancel:         Anulează
+jcmsplugin.dbcomment.edit.lbl.link-top:       Înapoi la partea de sus a paginii
+jcmsplugin.dbcomment.edit.lbl.comment-on:     Comentează la {0}
+jcmsplugin.dbcomment.edit.lbl.title:          Comentarii
+jcmsplugin.dbcomment.edit.lbl.view-comment:   Vezi comentarii
+jcmsplugin.dbcomment.edit.lbl.disable-comment:  Dezactivează comentariile
+jcmsplugin.dbcomment.edit.lbl.enable-comment:   Activează comentariile
+jcmsplugin.dbcomment.edit.lbl.view-all-comments: {0,choice,0#Niciun comentariu|1#Vezi comentariul|2#Vezi {0} comentariile}
+jcmsplugin.dbcomment.edit.lbl.collapse-comments: Restrânge comentariile
+jcmsplugin.dbcomment.edit.lbl.warn.edit-moderation.disabled:        Tipul de moderare curent nu-ți permite să modifici comentariul în sine, doar celelate câmpuri. Poți, totuși, actualiza starea fluxului de lucru al comentariului.
+jcmsplugin.dbcomment.edit.follow:        Abonează-te la publicație
+
+jcmsplugin.dbcomment.lbl.comment:             Comentariu
+jcmsplugin.dbcomment.lbl.comments:            Comentarii
+jcmsplugin.dbcomment.lbl.comment-count:       {0,choice,0#Niciun comentarii|1#{0} comentariu|2#{0} comentarii}
+jcmsplugin.dbcomment.lbl.comment-count-text:  {0,choice,0#comentariu|1#comentariu|2#comentarii}
+jcmsplugin.dbcomment.lbl.new:                 Necitite
+jcmsplugin.dbcomment.lbl.see-previous-comments: {0,choice,1#Vezi comentariul anterior.|2#Vezi {0} comentariile anterioare.}
+jcmsplugin.dbcomment.lbl.major-update-date:   Ultima actualizare majoră {0}
+jcmsplugin.dbcomment.lbl.private:             Privat
+jcmsplugin.dbcomment.lbl.private-description: Acest comentariu poate fi citit de membrii dingrupul „{0}”.
+jcmsplugin.dbcomment.lbl.private-edit-tooltip: Activarea comentariilor private va face acest comentariu accesibil utilizatorilor din Grupul „{0}”.
+jcmsplugin.dbcomment.lbl.non-visible-created-comment: Comentariul tău a fost creat și în prezent este în curs de validare.
+jcmsplugin.dbcomment.lbl.closed-comment:     Comentariile sunt închise la această publicație.
+
+jcmsplugin.dbcomment.commentTop-section:Cele mai comentate conținuturi
+jcmsplugin.dbcomment.commentTop-section.help: Cele mai comentate 10 conținuturi
+jcmsplugin.dbcomment.commentTop.name:Titlu
+jcmsplugin.dbcomment.commentTop.number: Comentarii
+
+# ----------------------------------------------------------------------
+# Alert
+# ----------------------------------------------------------------------
+alert.name.jcmsplugin-dbcomment:                              Comentarii
+alert.name.jcmsplugin-dbcomment.new-comment:                  Comentariu nou
+alert.msg.jcmsplugin-dbcomment.new-comment.title:             Comentariu nou la „{parent}”
+alert.msg.jcmsplugin-dbcomment.new-comment.short-description: {author} a publicat un comentariu nou la „{parent}”. {parent.link}
+alert.msg.jcmsplugin-dbcomment.new-comment.description:       <p>{author} a publicat un nou {data}.</p>
+alert.name.jcmsplugin-dbcomment.new-mention:                  Mențiune nouă
+alert.msg.jcmsplugin-dbcomment.new-mention.title:             Ai fost menționat într-un comentariu nou la {parent}
+alert.msg.jcmsplugin-dbcomment.new-mention.short-description:  {author} te-a menționat într-un comentariu nou la „{parent}”. {parent.link}
+alert.msg.jcmsplugin-dbcomment.new-mention.description:        <p>{author} te-a menționat într-un comentariu nou la „{parent.data}”.</p> 
+alert.new-comment-mention.title:     Ai fost menționat într-un comentariu nou la {parent}
+alert.new-comment-mention.short-description: {author} te-a menționat într-un comentariu nou la „{parent}”. {parent.link}
+alert.new-comment-mention.description:       <p>{author} te-a menționat într-un comentariu nou la „{parent.data}”.</p> 
+
+# ----------------------------------------------------------------------
+# Editable properties
+# ----------------------------------------------------------------------
+jcmsplugin.dbcomment.anonymous:               Comentarii anonime
+jcmsplugin.dbcomment.anonymous.notify:        Notifică utilizatorii anonimi
+jcmsplugin.dbcomment.compatible-types:        Tipuri de posibilități de comentare
+jcmsplugin.dbcomment.edit-moderation.enabled:  Mod de moderare strictă
+jcmsplugin.dbcomment.edit-moderation.enabled.boolean: fals
+jcmsplugin.dbcomment.edit-moderation.enabled.help: Alegând da, utilizatorii care au dreptul de a actualiza comentariile, vor putea actualiza toate câmpurile, cu excepția conținutului comentariului. Doar autorul comentariului va fi autorizat să modifice textul.
+
+jcmsplugin.dbcomment.edit-commentable.enabled: Permite dezactivarea comentariilor la fiecare publicație
+jcmsplugin.dbcomment.edit-commentable.enabled.boolean:fals
+jcmsplugin.dbcomment.edit-commentable.enabled.boolean.help: Alegând da, utilizatorii care au dreptul de a actualiza comentariile, vor putea actualiza toate câmpurile, cu excepția conținutului comentariului.
+
+jcmsplugin.dbcomment.commentable-default-value: Activează sau dezactivează comentariile: valoarea implicită
+jcmsplugin.dbcomment.commentable-default-value.boolean.help: Dacă este activat „dezactivează comentariile la publicaţie”, defineşte dacă publicaţia poate fi comentată implicit sau nu
+
+jcmsplugin.dbcomment.commentable.title : Comentarii
+jcmsplugin.dbcomment.commentable.description : Activează comentarii
+jcmsplugin.dbcomment.commentable.desactivate-comment: Dezactivează comentariile la {0}
+jcmsplugin.dbcomment.commentable.activate-comment: Activează comentariile la {0}
+jcmsplugin.dbcomment.commentable.forbidden-comment: Comentariile sunt dezactivate la Conținutul țintă.
+
+jcmsplugin.dbcomment.private-comment.group: Comentariu privat - Grup
+jcmsplugin.dbcomment.private-comment.group.help: Grupul care va putea publica și citi comentariile private
+jcmsplugin.dbcomment.private-comment.enabled: Comentariu privat - Activează comentariile private
+jcmsplugin.dbcomment.private-comment.default-value: Comentariu privat - Valoarea implicită pentru comentariile private
+jcmsplugin.dbcomment.private-comment.default-value.help: Alegând da, opțiunea comentariu privat va fi setată la „da” când se creează un comentariu nou
+
+jcmsplugin.dbcomment.reverse-order: Ordine sortare inversă
+jcmsplugin.dbcomment.reverse-order.help: Dacă alegi „da”, comentariile vechi vor fi primele vizibile
+jcmsplugin.dbcomment.change-sort: Sortare - Câmp selectat
+jcmsplugin.dbcomment.change-sort.help: Sortează comentariile cu câmpul selectat
+
+jcmsplugin.dbcomment.smart.comment-display.enabled: Activează afișajul comentariilor inteligente
+jcmsplugin.dbcomment.smart.comment-display.enabled.boolean: fals
+jcmsplugin.dbcomment.smart.comment-display.enabled.help: Acest sistem ascunde comentariile vechi la publicație
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From DBComment-templates.xml
+types.DBComment.templates.query.default.label: Șablon implicit
+types.DBComment.templates.full.default.label: Șablon implicit
+
+# From DBComment.xml
+types.DBComment.fields.email.description: Adresa nu va fi publicată
+types.DBComment.fields.email.label: E-mail
+types.DBComment.title.label: Titlu
+types.DBComment.fields.referer.label: Referință
+types.DBComment.fields.ipAddress.label: Adresă IP
+types.DBComment.fields.name.label: Nume
+types.DBComment.fields.targetContent.label: Conținut țintă
+types.DBComment.fields.userAgent.label: Agent utilizator
+types.DBComment.label: Comentariu
+types.DBComment.fields.webSite.label: Site web
+types.DBComment.fields.description.label: Comentariu
+types.DBComment.fields.privateComment.label: Comentariu privat
+
+# SmartPhone
+jcmsplugin.dbcomment.smartphone.lbl.dbcomment.add-comment.placeholder: Adaugă un comentariu...
+
+# Explorer sidebar integration
+jcmsplugin.explorer-sidebar.see-comments: Comentarii acces
+jcmsplugin.explorer.app.sidebar-tab.comments: Comentarii

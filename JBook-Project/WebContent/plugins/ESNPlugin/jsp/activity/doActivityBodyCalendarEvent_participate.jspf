@@ -1,0 +1,54 @@
+<%--
+  Copied from "plugins/CalendarPlugin/jsp/fulldisplay/doCalendarEventFullDisplayUpper.jspf"
+  
+  Only display buttons if event is public, or if member is invited, and if event has not already been accepted.
+--%>
+<% if(!isExternalEvent) {
+  Set<Member> attendeesSet = event.getAllAttendingMembersSet();
+  boolean isAttendee = loggedMember !=null ? (Util.notEmpty(attendeesSet) && attendeesSet.contains(loggedMember)) :false;
+  boolean isAcceptedOrDeclined = Util.notEmpty(acceptedSet) || Util.notEmpty(declinedSet);
+
+  if (loggedMember != null && isDataWriteEnabled && (!oldEvent || isPeriodicalEvent ) && (event.getFreeSignUp() || (isAttendee) || ((Data)event).getAuthor().equals(loggedMember) ||  isAcceptedOrDeclined)) {
+    boolean isParticipating = (loggedMember != null && Util.getSize(event.getAllAttendingMembersSet()) != 0) ? event.getAllAttendingMembersSet().contains(loggedMember): false;
+    boolean isInSet = false;
+    boolean isPending = false;
+    boolean isDeclined = false;
+    isAccepted = false;
+
+    if(Util.notEmpty(acceptedSet)) {
+      isAccepted = acceptedSet.contains(loggedMember);
+      isInSet |= isAccepted;
+    }
+    if(Util.notEmpty(pendingSet)) {
+      isPending =pendingSet.contains(loggedMember);
+      isInSet |= isPending;
+    }
+    if(Util.notEmpty(declinedSet)) {
+      isDeclined =declinedSet.contains(loggedMember);
+      isInSet |= isDeclined;
+    }
+    isParticipating = (!isDeclined) && isAccepted;
+
+    String participateUrl =  "types/CalendarEvent/doCalendarEventFullDisplay.jsp?eventId="+calId+"&amp;participate=true";
+    String notParticipateUrl =  "types/CalendarEvent/doCalendarEventFullDisplay.jsp?eventId="+calId+"&amp;notParticipate=true";
+    %>
+    <%if(((Data)event).getAuthor().equals(loggedMember)  || isInSet || event.getFreeSignUp() ){ %>
+      <%-- logged member have already answered the event --%>
+      <% isAction=true; %>
+      <div class="activity-event-participate activity-event-item">
+        <div class="btn-group">
+          <% if(isAccepted){ %>
+            <button class="ajax-refresh calendar-action accepted btn btn-sm btn-success"><%= glp("jcmsplugin.calendar.CalendarEvent.participate") %></button>
+          <%}else {%>
+             <a href="<%= participateUrl %>" class="ajax-refresh calendar-action accepted btn btn-sm btn-default"><%= glp("jcmsplugin.calendar.CalendarEvent.participate") %></a>
+          <%} %>
+          <% if(isDeclined){ %>
+             <button class="ajax-refresh calendar-action accepted btn btn-sm btn-danger"><%= glp("jcmsplugin.calendar.CalendarEvent.no-participate") %></button>
+          <% }else { %>
+             <a href="<%= notParticipateUrl %>" class="ajax-refresh calendar-action declined btn btn-sm btn-default"><%= glp("jcmsplugin.calendar.CalendarEvent.no-participate") %></a>
+          <% } %>                  
+        </div>
+      </div>
+    <% } %>
+  <% } %>
+<% } %>

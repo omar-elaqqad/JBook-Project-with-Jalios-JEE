@@ -1,0 +1,16 @@
+<%@page import="com.jalios.jcmsplugin.esn.directory.CompetenceQueryHandler"%><%
+CompetenceQueryHandler formHandler = (CompetenceQueryHandler) request.getAttribute(CompetenceQueryHandler.HANDLER_REQUEST_ATTR);
+if (formHandler == null) {
+  formHandler = (CompetenceQueryHandler) jcmsContext.getAjaxRequestAttribute(CompetenceQueryHandler.HANDLER_REQUEST_ATTR);
+}
+if (formHandler == null) {
+  // No handler retrieve
+  return;
+}
+PageResult<Member> results = formHandler.getResults();
+boolean isSearchPerformed = results != null;
+boolean hasResults = results != null && results.getTotalSize() > 0;
+%>
+<%-- ESN isSearchPerformed: <%= isSearchPerformed %><br /> --%>
+<%-- ESN hasResults: <%= hasResults %><br /> --%>
+<%-- ESN TotalSize: <%= results != null ? results.getTotalSize() : null %><br /> --%>

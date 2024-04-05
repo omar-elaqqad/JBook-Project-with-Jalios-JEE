@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plugin PUBLIC "-//JALIOS//DTD JCMS-PLUGIN 1.6//EN" "https://community.jalios.com/dtd/jcms-plugin-1.6.dtd">
+
+<plugin name="DBCommentPlugin" 
+        version="6.3.7" 
+        order="0" 
+        author="Jalios SA" 
+        license="Jalios"
+        initialize="true"   
+        jcms="10\..*" 
+        url="https://community.jalios.com/plugin/dbcomment"
+        jsync="true">
+        
+  <label xml:lang="en">DB Comment Plugin</label>
+  <label xml:lang="fr">Module Commentaire DB</label>
+  <description xml:lang="en">This plugin adds the ability to put comments on publications. The comments are stored in the RDBMS.</description>
+  <description xml:lang="fr">Ce module offre la possibilité de déposer des commentaires sur les publications. Les commentaires sont stockés dans le SGBDR.</description>
+
+  <!-- # TYPES -->
+  <types>
+	  <type name="DBComment">
+	    <file path="doDBCommentFullDisplay.jsp" />
+	    <file path="doDBCommentFooterDisplay.jsp" include="DISPLAY_FOOTER" />
+	    <file path="doDBCommentEditDisplay.jspf" />
+      <file path="doEditDBComment.jsp" />
+      <file path="doDBComment.jspf" />
+      <file path="doDBCommentSmall.jspf" />
+	  </type>
+  </types>
+
+  <!-- # JAVA (packaged in a jar) -->
+  <java-classes>
+    <java package="com.jalios.jcmsplugin.dbcomment" />  
+  </java-classes>
+  
+  <hibernate>   
+     <mapping resource="com/jalios/jcmsplugin/dbcomment/DBCommentReportMetric.hbm.xml"/>
+  </hibernate>
+
+
+  <!-- # COMPONENTS -->
+  <plugincomponents>
+    <policyfilter    class="com.jalios.jcmsplugin.dbcomment.DBCommentRightPolicyFilter" />
+    <datacontroller  class="com.jalios.jcmsplugin.dbcomment.DBCommentController" types="Publication" />
+    <datacontroller  class="com.jalios.jcmsplugin.dbcomment.DBCommentCommentableController" types="Content UserContent" />
+    <datacontroller  class="com.jalios.jcmsplugin.dbcomment.DBCommentModeratorController" types="generated.DBComment" />
+    <dblistener      class="com.jalios.jcmsplugin.dbcomment.DBCommentListener" types="generated.DBComment"/>
+  </plugincomponents>
+   
+  <!-- # PRIVATE/PUBLIC FILES -->
+  <private-files>
+    <directory path="properties" />
+  </private-files>
+
+  <public-files>
+    <directory path="docs/" />
+    <directory path="css/" />
+    <directory path="images/" />
+    <directory path="jsp/" />
+    <directory path="js/" />
+    <directory path="smartphone/" />
+    <directory path="iphone/" />    
+    <file path="jsp/doDisplayCommentsNumber.jsp"  include="PLUGIN_BLOG_POST_EXTRA_INFO" />
+    <file path="jsp/doDBCommentDisable.jsp" include="PUBLICATION_ACTIONS_OTHER_ITEM_BOTTOM" />
+    <file path="jsp/doEditCommentable.jsp" include="EDIT_PUB_MAINTAB"/>
+    <file path="jsp/doDBAnalyticsReport.jsp"          include="JCMS_ANALYTICS_WRITE_REPORT_CONTENT" />
+    <file path="smartphone/jsp/doDBCommentFooter.jsp" include="SMARTPHONE_PUB_FOOTER" />
+    <file path="jsp/explorer/doExplorerAppSidebarTab_informationsCommentButton.jsp" include="EXPLORER_SIDEBAR_INFORMATIONS_TAB_5" />
+  </public-files>
+
+</plugin>
+

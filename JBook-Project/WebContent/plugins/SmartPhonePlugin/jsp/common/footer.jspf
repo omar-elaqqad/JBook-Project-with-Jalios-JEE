@@ -1,0 +1,24 @@
+<%@page import="com.jalios.jcms.recenthistory.RecentHistoryManager"%><%
+Publication footerPub = (Publication) request.getAttribute("jcms.plugin.smartphone.fulldisplay.pub");
+if (footerPub != null) {
+  footerPub.trackReader(loggedMember);
+  RecentHistoryManager.getInstance().updateHistory(footerPub, loggedMember);
+}
+
+request.removeAttribute(SmartPhoneConstants.WYSIWYG_POLICYFILTER_REQUEST_ATTR);
+
+%>
+<jalios:include target="SMARTPHONE_BODY_BOTTOM" />
+<% if (!jcmsContext.isAjaxRequest()) { %>
+</div>
+</div>
+
+<jalios:include jsp="<%= smartPhoneManager.getBottomBarJsp() %>" />
+<%@ include file="/plugins/SmartPhonePlugin/jsp/common/root-element-photoswipe.jspf" %>
+<div class="smartphone-toastr">
+	<div class="toastr-message"></div>
+</div>
+</body>
+</html>
+<% } %>
+<%@ include file='/plugins/SmartPhonePlugin/jsp/common/doSmartPhoneStat.jspf' %>

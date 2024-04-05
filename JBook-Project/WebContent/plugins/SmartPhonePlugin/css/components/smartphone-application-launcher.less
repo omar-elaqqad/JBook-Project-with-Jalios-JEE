@@ -1,0 +1,70 @@
+.application-launcher .application-item {
+  span.jalios-icon {
+    font-size: 48px;
+    color: #333;
+  }
+}
+
+.application-launcher {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 16px;
+}
+
+.application-item {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 25%;
+  align-items: center;
+  padding: 8px;
+  text-align: center;
+  height: 120px;
+  width: 82px;
+
+  .application-item-name {
+    color: #666;
+    display: flex;
+    align-items: center;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  > img {
+    margin-bottom: 12px;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.application-launcher-tabs {
+  overflow-y: hidden;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
+
+  .nav-tabs.nav-tabs-underlined {
+    margin: 0;
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        font-weight: 400;
+      }
+    }
+  }
+}

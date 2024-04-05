@@ -1,0 +1,3 @@
+<%@page import="com.jalios.jcmsplugin.smartphone.SmartPhoneManager"%>
+<%@ include file='/plugins/SmartPhonePlugin/jsp/common/doInitSmartPhonePage.jspf' %>
+<li class="action-access-website"><a <%= SmartPhoneManager.getInstance().isMobileApp(request) ? "target=\"_blank\"" : "" %> data-ajax="false" href="<%= SmartPhoneManager.getInstance().getDesktopUrl(userLocale) %>"><jalios:icon src="smartphone-access-website" /> <%= glp("jcmsplugin.smartphone.lbl.index-default.desktop-link") %></a></li>

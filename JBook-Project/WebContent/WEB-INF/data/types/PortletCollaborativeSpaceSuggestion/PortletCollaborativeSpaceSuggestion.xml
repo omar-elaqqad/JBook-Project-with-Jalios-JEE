@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<type name="PortletCollaborativeSpaceSuggestion" superclass="generated.AbstractPortletSkinable" debatable="false" unitFieldEdition="true" audienced="false" categoryTab="true" readRightTab="true" updateRightTab="true" templateTab="true" workflowTab="true" advancedTab="true">
+  <title ml="true"/>
+  <fields>
+    <field name="typology" editor="category" required="false" compactDisplay="false" type="java.util.TreeSet" exclusive="false" root="$id.jcmsplugin.collaborativespace.typology-root" ml="false" descriptionType="text" searchable="false" html="false" checkHtml="true" chooser="tree" displayRoot="false" />
+    <field name="threshold" editor="int" required="false" compactDisplay="false" type="int" default="1"/>
+    <field name="maxItems" editor="int" required="false" compactDisplay="false" type="int" default="10" ml="false" descriptionType="tooltip" searchable="false" unitPos="after" minValue="1" html="false" />
+    <field name="hideWhenNoResults" editor="boolean" required="false" compactDisplay="false" type="boolean" default="off" />
+    <field type="super" />
+  </fields>
+</type>
+

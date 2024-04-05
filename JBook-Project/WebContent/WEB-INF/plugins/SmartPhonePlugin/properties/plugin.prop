@@ -1,0 +1,549 @@
+# ------------------------------------------------------------
+# Plugin editable properties
+# ------------------------------------------------------------
+jcmsplugin.smartphone.default.page.size: 30
+jcmsplugin.smartphone.image.resize.max-width: 1600
+# This property is only used when image is resized server-side, i.e. on iPhone with large images (it is not used when image is resized client-side)
+jcmsplugin.smartphone.image.resize.max-height: 1600
+jcmsplugin.smartphone.search.searchable-types: Content MicroBlogging SocialIdea SocialTopic SocialQuestion
+jcmsplugin.smartphone.search.portletId.jsp: plugins/SmartPhonePlugin/jsp/properties/doEditPluginSearchPortletProperties.jsp
+#Property used to define an authkey to download filedocument
+jcmsplugin.smartphone.download-link-authkey-duration: 86400000
+jcmsplugin.smartphone.map-service: http://maps.google.fr?q=
+jcmsplugin.smartphone.drawer.background-image:
+jcmsplugin.smartphone.explorer.rootId.jsp: plugins/SmartPhonePlugin/jsp/properties/doEditPluginExplorerRootProperties.jsp
+$id.jcmsplugin.smartphone.portal.default-portal:
+jcmsplugin.smartphone.ios.download-code.url-prefix: https://buy.itunes.apple.com/WebObjects/MZFinance.woa/wa/freeProductCodeWizard?code=
+jcmsplugin.smartphone.ios.download-code.threshold: 100 
+jcmsplugin.smartphone.ios.download-code.code-pattern: [A-Z0-9]{6,20}
+$id.jcmsplugin.smartphone.ios.downloadcode.manager-group.chooser-group: 
+
+# ------------------------------------------------------------
+# Plugin  properties
+# ------------------------------------------------------------
+jcmsplugin.smartphone.default.chooser.page.size: 10
+jcmsplugin.smartphone.default.pqf.page.size: 5
+
+# API Key for calendar events maps
+jcmsplugin.smartphone.geocoding.url: https://maps.googleapis.com/maps/api/geocode/json?address={0}
+jcmsplugin.smartphone.favicon.directory: plugins/SmartPhonePlugin/images/favicon
+$id.jcmsplugin.smartphone.portal.default-wysiwyg-portlet:
+
+# ------------------------------------------------------------
+# Redirect @see display.jsp
+# ------------------------------------------------------------
+small-device.home.IPhone:                plugins/SmartPhonePlugin/jsp/index.jsp
+small-device.home.Android:               plugins/SmartPhonePlugin/jsp/index.jsp
+small-device.home.Blackberry:            plugins/SmartPhonePlugin/jsp/index.jsp
+small-device.home.msie:                  plugins/SmartPhonePlugin/jsp/index.jsp
+
+# ------------------------------------------------------------
+#  Less
+# ------------------------------------------------------------
+channel.less.plugins/SmartPhonePlugin/css/smartphone.css:                               plugins/SmartPhonePlugin/css/smartphone.less
+channel.less.plugins/SmartPhonePlugin/css/components/smartphone-font.css:               plugins/SmartPhonePlugin/css/components/smartphone-font.less
+channel.less.plugins/SmartPhonePlugin/css/background/smartphone-with-background.css:    plugins/SmartPhonePlugin/css/background/smartphone-with-background.less
+channel.less.plugins/SmartPhonePlugin/css/components/card/smartphone-card.css:          plugins/SmartPhonePlugin/css/components/card/smartphone-card.less
+channel.less.plugins/SmartPhonePlugin/css/components/card/smartphone-card-sliding.css:  plugins/SmartPhonePlugin/css/components/card/smartphone-card-sliding.less
+channel.less.plugins/SmartPhonePlugin/css/components/list/smartphone-list-item.css:     plugins/SmartPhonePlugin/css/components/list/smartphone-list-item.less
+channel.less.plugins/SmartPhonePlugin/css/portalEditor/portal-editor.css:               plugins/SmartPhonePlugin/css/portalEditor/portal-editor.less
+channel.less.plugins/SmartPhonePlugin/css/portalEditor/portal-history.css:              plugins/SmartPhonePlugin/css/portalEditor/portal-history.less
+channel.less.plugins/SmartPhonePlugin/css/portalEditor/portal-loading-intro.css:        plugins/SmartPhonePlugin/css/portalEditor/portal-loading-intro.less
+channel.less.plugins/SmartPhonePlugin/css/portalApp/portal-app.css:                     plugins/SmartPhonePlugin/css/portalApp/portal-app.less
+channel.less.plugins/SmartPhonePlugin/css/smartphone-jalios-rss.css:                    plugins/SmartPhonePlugin/css/smartphone-jalios-rss.less
+channel.less.plugins/SmartPhonePlugin/css/hamburgers/hamburgers.css:                    plugins/SmartPhonePlugin/css/hamburgers/hamburgers.less
+channel.less.plugins/SmartPhonePlugin/css/ios/download.css:                             plugins/SmartPhonePlugin/css/ios/download.less
+
+# ------------------------------------------------------------
+#  Pub full display mapping
+# ------------------------------------------------------------
+jcmsplugin.smartphone.link-prefix.Publication:         plugins/SmartPhonePlugin/jsp/type/pub.jsp?id=
+jcmsplugin.smartphone.link-prefix.Article:             plugins/SmartPhonePlugin/jsp/type/article.jsp?id=
+jcmsplugin.smartphone.link-prefix.Member:              plugins/SmartPhonePlugin/jsp/core/member.jsp?id=
+jcmsplugin.smartphone.link-prefix.Workspace:           plugins/SmartPhonePlugin/jsp/workspace/workspace-index.jsp?workspaceId=
+jcmsplugin.smartphone.link-prefix.CollaborativeSpace:  plugins/SmartPhonePlugin/jsp/workspace/workspace-index.jsp?workspaceId=
+jcmsplugin.smartphone.link-prefix.SmartPhonePortal:    plugins/SmartPhonePlugin/jsp/index-portal.jsp?mobilePortal=
+jcmsplugin.smartphone.link-prefix.WebPage:             plugins/SmartPhonePlugin/jsp/type/webpage.jsp?id=
+jcmsplugin.smartphone.link-prefix.Glossary:            plugins/SmartPhonePlugin/jsp/type/glossary.jsp?id=
+jcmsplugin.smartphone.link-prefix.GlossaryEntry:       plugins/SmartPhonePlugin/jsp/type/glossary.jsp?id=
+jcmsplugin.smartphone.link-prefix.GlossaryEntry.parent: true
+jcmsplugin.smartphone.link-prefix.Faq:                 plugins/SmartPhonePlugin/jsp/type/faq.jsp?id=
+jcmsplugin.smartphone.link-prefix.FaqEntry:            plugins/SmartPhonePlugin/jsp/type/faq.jsp?id=
+jcmsplugin.smartphone.link-prefix.FaqEntry.parent:     true
+jcmsplugin.smartphone.link-prefix.DBFileDocument:      plugins/SmartPhonePlugin/jsp/type/fileDocument.jsp?id=
+jcmsplugin.smartphone.link-prefix.FileDocument:        plugins/SmartPhonePlugin/jsp/type/fileDocument.jsp?id=
+jcmsplugin.smartphone.link-prefix.Shortcut:			   plugins/SmartPhonePlugin/jsp/type/shortcut.jsp?id=
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE ABILITIES
+# ------------------------------------------------------------
+portlet.ability.jcmsplugin-smartphone.application:                 Portlet
+
+# ------------------------------------------------------------
+#  Javascript file declaration
+# ------------------------------------------------------------
+jcmsplugin.smartphone.js.001: plugins/SmartPhonePlugin/js/lib/jquery/jquery-2.1.3.js
+jcmsplugin.smartphone.js.005: plugins/SmartPhonePlugin/js/smartphone-util.js
+jcmsplugin.smartphone.js.010: plugins/SmartPhonePlugin/js/jalios.jquery.mobile-settings.js
+jcmsplugin.smartphone.js.015: plugins/SmartPhonePlugin/js/lib/jquerymobile/jquery.mobile-1.4.5.js
+#jcmsplugin.smartphone.js.016: plugins/SmartPhonePlugin/js/lib/nativedroid2/nativedroid2.js
+jcmsplugin.smartphone.js.017: plugins/SmartPhonePlugin/js/jquery.console.js
+jcmsplugin.smartphone.js.019: plugins/SmartPhonePlugin/js/lib/jqmDialog/jqmDialog.js
+jcmsplugin.smartphone.js.020: plugins/SmartPhonePlugin/js/fix/ios-orientationchange-fix.js
+jcmsplugin.smartphone.js.025: plugins/SmartPhonePlugin/js/smartphone-navmenu.js
+jcmsplugin.smartphone.js.026: plugins/SmartPhonePlugin/js/lib/photoswipe/photoswipe.js
+jcmsplugin.smartphone.js.027: plugins/SmartPhonePlugin/js/lib/photoswipe/photoswipe-ui-default.js
+jcmsplugin.smartphone.js.030: plugins/SmartPhonePlugin/js/smartphone.js
+jcmsplugin.smartphone.js.031: plugins/SmartPhonePlugin/js/smartphone-security.js
+jcmsplugin.smartphone.js.032: plugins/SmartPhonePlugin/js/smartphone-ajax.js
+jcmsplugin.smartphone.js.033: plugins/SmartPhonePlugin/js/smartphone-forms.js
+jcmsplugin.smartphone.js.034: plugins/SmartPhonePlugin/js/smartphone-alerts.js
+jcmsplugin.smartphone.js.040: plugins/SmartPhonePlugin/js/ImageUploader.js
+jcmsplugin.smartphone.js.050: plugins/SmartPhonePlugin/js/ExifRestorer.js
+jcmsplugin.smartphone.js.060: plugins/SmartPhonePlugin/js/lib/jqm-datebox/jqm-datebox-1.4.5.js
+jcmsplugin.smartphone.js.065: plugins/SmartPhonePlugin/js/smartphone-date-time-choosers.js
+jcmsplugin.smartphone.js.070: plugins/SmartPhonePlugin/js/smartphone-data-choosers.js
+jcmsplugin.smartphone.js.075: plugins/SmartPhonePlugin/js/smartphone-autocomplete-wiki.js
+jcmsplugin.smartphone.js.076: plugins/SmartPhonePlugin/js/smartphone-publication-autocomplete-wiki.js
+jcmsplugin.smartphone.js.080: plugins/SmartPhonePlugin/js/smartphone-workflow.js
+jcmsplugin.smartphone.js.100: plugins/SmartPhonePlugin/js/smartphone-mobileapp.js
+jcmsplugin.smartphone.js.110: plugins/SmartPhonePlugin/js/smartphone-publication-actions.js
+jcmsplugin.smartphone.js.120: plugins/SmartPhonePlugin/js/lib/slick/slick.js
+jcmsplugin.smartphone.js.121: plugins/SmartPhonePlugin/js/smartphone-card-sliding.js
+jcmsplugin.smartphone.js.122: plugins/SmartPhonePlugin/js/lib/rippler/ripple.js
+jcmsplugin.smartphone.js.123: plugins/SmartPhonePlugin/js/smartphone-ripple.js
+jcmsplugin.smartphone.js.124: plugins/SmartPhonePlugin/js/smartphone-jalios-rss.js
+jcmsplugin.smartphone.js.125: plugins/SmartPhonePlugin/js/smartphone-badge.js
+jcmsplugin.smartphone.js.200: plugins/SmartPhonePlugin/js/smartphone-topbar.js
+jcmsplugin.smartphone.js.220: plugins/SmartPhonePlugin/js/lib/bootstrap/tab.js
+jcmsplugin.smartphone.js.240: plugins/SmartPhonePlugin/js/smartphone-applications-menu.js
+jcmsplugin.smartphone.js.260: plugins/SmartPhonePlugin/js/lib/pulltorefresh/pulltorefresh.js
+jcmsplugin.smartphone.js.280: plugins/SmartPhonePlugin/js/smartphone-toastr.js
+jcmsplugin.smartphone.js.300: js/jalios/media/jalios-mediaelement.js
+jcmsplugin.smartphone.js.301: js/lib/mejs/mediaelement-and-player.js
+jcmsplugin.smartphone.js.302: plugins/SmartPhonePlugin/js/media/smartphone-media.js
+jcmsplugin.smartphone.js.1500: plugins/SmartPhonePlugin/js/smartphone-toc.js
+jcmsplugin.smartphone.js.2300: plugins/SmartPhonePlugin/js/smartphone-iframe-listener.js
+
+# ------------------------------------------------------------
+#  Css file declaration
+# ------------------------------------------------------------
+jcmsplugin.smartphone.css.001: plugins/SmartPhonePlugin/css/lib/jquerymobile/jquery.mobile-1.4.5.css
+#jcmsplugin.smartphone.css.002: plugins/SmartPhonePlugin/css/lib/nativedroid2/nativedroid2.css
+#jcmsplugin.smartphone.css.003: plugins/SmartPhonePlugin/css/lib/nativedroid2/flexboxgrid.min.css
+#jcmsplugin.smartphone.css.004: plugins/SmartPhonePlugin/css/lib/nativedroid2/nativedroid2.color.blue-grey.css
+jcmsplugin.smartphone.css.006: plugins/SmartPhonePlugin/css/components/smartphone-font.css
+jcmsplugin.smartphone.css.008: css/jalios/core/icons/jicons.css
+jcmsplugin.smartphone.css.010: plugins/SmartPhonePlugin/css/smartphone.css
+jcmsplugin.smartphone.css.020: css/fff-sprite.css
+jcmsplugin.smartphone.css.030: plugins/SmartPhonePlugin/css/lib/jqm-datebox/jqm-datebox-1.4.5.css
+jcmsplugin.smartphone.css.100: css/jalios/core/components/card/jalios-card.css
+jcmsplugin.smartphone.css.110: css/jalios/core/components/card/jalios-card-alert.css
+jcmsplugin.smartphone.css.120: css/jalios/core/components/card/jalios-card-member-small.css
+jcmsplugin.smartphone.css.130: css/jalios/core/components/card/jalios-card-layout-inline.css
+jcmsplugin.smartphone.css.140: css/jalios/core/components/card/jalios-card-layout-deck.css
+jcmsplugin.smartphone.css.150: css/jalios/core/components/card/jalios-card-layout-masonry.css
+jcmsplugin.smartphone.css.160: css/jalios/core/components/card/jalios-card-borderless.css
+jcmsplugin.smartphone.css.170: css/jalios/core/components/card/jalios-card-layout-deck-flip.css
+jcmsplugin.smartphone.css.180: css/jalios/core/components/card/jalios-card-indicator.css
+jcmsplugin.smartphone.css.200: css/jalios/core/components/tabs/jalios-tabs-underlined.css
+jcmsplugin.smartphone.css.500: plugins/SmartPhonePlugin/css/components/card/smartphone-card.css
+jcmsplugin.smartphone.css.600: plugins/SmartPhonePlugin/css/lib/slick/slick.css
+jcmsplugin.smartphone.css.601: plugins/SmartPhonePlugin/css/components/card/smartphone-card-sliding.css
+jcmsplugin.smartphone.css.602: plugins/SmartPhonePlugin/css/lib/rippler/ripple.css
+jcmsplugin.smartphone.css.610: plugins/SmartPhonePlugin/css/lib/pulltorefresh/pulltorefresh.css
+jcmsplugin.smartphone.css.650: plugins/SmartPhonePlugin/css/smartphone-jalios-rss.css
+jcmsplugin.smartphone.css.700: js/lib/mejs/mediaelementplayer.css
+jcmsplugin.smartphone.css.701: css/jalios/media/mejs.css
+jcmsplugin.smartphone.css.1000: plugins/SmartPhonePlugin/css/components/list/smartphone-list-item.css
+jcmsplugin.smartphone.css.1270: plugins/SmartPhonePlugin/css/lib/photoswipe/photoswipe.css
+jcmsplugin.smartphone.css.1310: plugins/SmartPhonePlugin/css/lib/photoswipe/default-skin/default-skin.css
+
+
+#packer exclusion
+# External lib with unsupported syntax
+channel.packer.minify-exclusion-regex.smartphone-nativedroid2-js: plugins/SmartPhonePlugin/js/lib/nativedroid2/.*
+channel.packer.minify-exclusion-regex.smartphone-nativedroid2-css: plugins/SmartPhonePlugin/css/lib/nativedroid2/.*
+# JS containing unsupported syntax (such as =>, ...)
+channel.packer.minify-exclusion-regex.smartphone-js-030: plugins/SmartPhonePlugin/js/smartphone.js
+channel.packer.minify-exclusion-regex.smartphone-js-032: plugins/SmartPhonePlugin/js/smartphone-ajax.js
+channel.packer.minify-exclusion-regex.smartphone-js-125: plugins/SmartPhonePlugin/js/smartphone-badge.js
+channel.packer.minify-exclusion-regex.smartphone-js-302: plugins/SmartPhonePlugin/js/media/smartphone-media.js
+
+jcms.resource.include.jmobile-pager:  plugins/SmartPhonePlugin/jsp/components/pager/pager.jsp
+
+# ------------------------------------------------------------
+#  Cards resources
+# ------------------------------------------------------------
+jcms.resource.include.card.jmobile: plugins/SmartPhonePlugin/jsp/components/card/doCardDefault.jsp
+#jcms.resource.include.card.jmobile.borderless: plugins/SmartPhonePlugin/jsp/components/card/doCardBorderLess.jsp
+jcms.resource.include.card.jmobile.horizontal: plugins/SmartPhonePlugin/jsp/components/card/doCardHorizontal.jsp
+jcms.resource.include.card.jmobile.lead: plugins/SmartPhonePlugin/jsp/components/card/doCardLead.jsp
+jcms.resource.include.carddata.jmobile-detailed.Publication: plugins/SmartPhonePlugin/jsp/components/card/doCardPublicationDetailed.jsp
+jcms.resource.include.carddata.jmobile.Publication: plugins/SmartPhonePlugin/jsp/components/card/doCardPublication.jsp
+jcms.resource.include.carddata.jmobile-light.Publication: plugins/SmartPhonePlugin/jsp/components/card/doCardPublicationLight.jsp
+jcms.resource.include.carddata.jmobile-lead.Publication: plugins/SmartPhonePlugin/jsp/components/card/doCardPublicationLead.jsp
+jcms.resource.include.carddata.jmobile-horizontal.Publication: plugins/SmartPhonePlugin/jsp/components/card/doCardPublicationHorizontal.jsp
+jcms.resource.include.carddata.jmobile-search-result.Member: plugins/SmartPhonePlugin/jsp/components/card/doCardMemberVertical.jsp
+
+
+# ------------------------------------------------------------
+#  List item resources
+# ------------------------------------------------------------
+jcms.resource.include.jmobile-list:  plugins/SmartPhonePlugin/jsp/components/list/doList.jsp
+jcms.resource.include.jmobile-data-list:  plugins/SmartPhonePlugin/jsp/components/list/doDataList.jsp
+jcms.resource.include.data-list-item.jmobile.Data: plugins/SmartPhonePlugin/jsp/components/list/doDataListItemData.jsp
+jcms.resource.include.data-list-item.jmobile.Member: plugins/SmartPhonePlugin/jsp/components/list/doDataListItemMember.jsp
+jcms.resource.include.data-list-item.jmobile-detailed.Member: plugins/SmartPhonePlugin/jsp/components/list/doDataListItemMemberDetailed.jsp
+jcms.resource.include.data-list-item.jmobile-detailed.Alert: plugins/SmartPhonePlugin/jsp/components/list/doAlertListItemDetailed.jsp
+jcms.resource.include.data-list-item.jmobile-detailed.Publication: plugins/SmartPhonePlugin/jsp/components/list/doPublicationListItemDetailed.jsp
+jcms.resource.include.data-list-item.jmobile.Publication:  plugins/SmartPhonePlugin/jsp/components/list/doPublicationListItem.jsp
+jcms.resource.include.data-list-item.jmobile-dataimage.Publication:  plugins/SmartPhonePlugin/jsp/components/list/doPublicationListItemWithImage.jsp
+jcms.resource.include.data-list-item.jmobile-dataimage-or-icon-detailed.Publication:  plugins/SmartPhonePlugin/jsp/components/list/doPublicationListItemDetailedWithImageOrIcon.jsp
+jcms.resource.include.data-list-item.jmobile-dataimage-detailed.Publication:  plugins/SmartPhonePlugin/jsp/components/list/doPublicationListItemDetailedWithImage.jsp
+jcms.resource.include.data-list-item.jmobile-dataabstract.Publication:  plugins/SmartPhonePlugin/jsp/components/list/doPublicationListItemWithAbstract.jsp
+jcms.resource.include.list-item.jmobile:     plugins/SmartPhonePlugin/jsp/components/list/doListItem.jsp
+jcms.resource.include.list-item.jmobile-detailed:     plugins/SmartPhonePlugin/jsp/components/list/doListItemDetailed.jsp
+
+# ------------------------------------------------------------
+#  Carousel
+# ------------------------------------------------------------
+jcms.resource.include.cardsdata.jmobile-carousel:   plugins/SmartPhonePlugin/jsp/components/carousel/doCarousel.jsp
+
+# ------------------------------------------------------------
+#  Smartphone JSP resources
+# ------------------------------------------------------------
+jcmsplugin.smartphone.resource.index: /plugins/SmartPhonePlugin/jsp/index-portal.jsp
+jcmsplugin.smartphone.resource.workspace-listview: /plugins/SmartPhonePlugin/jsp/index-workspace.jsp
+jcmsplugin.smartphone.resource.service-drawer:     /plugins/SmartPhonePlugin/jsp/index-service.jsp
+jcmsplugin.smartphone.topbar: plugins/SmartPhonePlugin/jsp/common/topbar.jsp
+jcmsplugin.smartphone.bottom-bar: plugins/SmartPhonePlugin/jsp/common/bottomBar.jsp
+
+# ------------------------------------------------------------
+#  Migration and shortcut mapping
+# ------------------------------------------------------------
+
+# 10 SP3 application/shortcut mapping:
+extra.Shortcut.jcmsplugin.smartphone.mobile-available.boolean: false
+extra.Shortcut.jcmsplugin.smartphone.mobile-url:
+
+jcmsplugin.smartphone.shortcut.migrate: true
+jcmsplugin.smartphone.shortcut-mapping.$id.shortcut.jcmsplugin.collaborativespace-hub: plugins/SmartPhonePlugin/jsp/service/workspace/workspace.jsp
+jcmsplugin.smartphone.shortcut-mapping.$id.shortcut.jcmsplugin.crm: plugins/JNPlugin/smartphone/jsp/service/crm.jsp
+
+jcmsplugin.smartphone.load-service-mapping: true
+jcmsplugin.smartphone.service-mapping.admin: jcmsplugin.smartphone.service.admin
+jcmsplugin.smartphone.service-mapping.admin.icon: icon: topbar-app-admin
+jcmsplugin.smartphone.service-mapping.workflow: jcmsplugin.smartphone.service.workflow
+jcmsplugin.smartphone.service-mapping.workflow.icon: plugins/SmartPhonePlugin/images/application-workflow.png
+jcmsplugin.smartphone.service-mapping.recent-history: jcmsplugin.smartphone.service.recenthistory
+jcmsplugin.smartphone.service-mapping.recent-history.icon: plugins/SmartPhonePlugin/images/application-recenthistory.png
+
+# ------------------------------------------------------------
+#  Services
+#    - jcmsplugin.smartphone.service.YourService       : the jsp link to access the service
+#    - jcmsplugin.smartphone.service.YourService.icon  : the icon of the service
+#    - jcmsplugin.smartphone.service.YourService.order : the order for service sorting
+#    - jcmsplugin.smartphone.service.YourService.guest : (Default value = false) if true : can be accessed by guests accounts @see collaborative space plugin
+# ------------------------------------------------------------
+
+jcmsplugin.smartphone.service.workspace:        com.jalios.jcmsplugin.smartphone.service.WorkspaceSmartPhoneService
+jcmsplugin.smartphone.service.workspace.icon:   plugins/CollaborativeSpacePlugin/images/app/cs-hub48.png
+jcmsplugin.smartphone.service.workspace.order:  200
+jcmsplugin.smartphone.service.workspace.guest:  true
+
+jcmsplugin.smartphone.service.recenthistory:        com.jalios.jcmsplugin.smartphone.service.RecentHistorySmartPhoneService
+jcmsplugin.smartphone.service.recenthistory.icon:   plugins/SmartPhonePlugin/images/application-recenthistory.png
+jcmsplugin.smartphone.service.recenthistory.order:  900
+jcmsplugin.smartphone.service.recenthistory.guest:  true
+
+jcmsplugin.smartphone.service.search:        plugins/SmartPhonePlugin/jsp/service/search/search.jsp
+jcmsplugin.smartphone.service.search.icon:   glyphicon glyphicon-search
+jcmsplugin.smartphone.service.search.order:  300
+jcmsplugin.smartphone.service.search.guest:  true
+
+jcmsplugin.smartphone.service.news.icon:   glyphicon glyphicon-list-alt
+jcmsplugin.smartphone.service.news.order:  850
+
+jcmsplugin.smartphone.service.workflow:        plugins/SmartPhonePlugin/jsp/service/workflow/workflow.jsp
+jcmsplugin.smartphone.service.workflow.icon:   plugins/SmartPhonePlugin/images/application-workflow.png
+jcmsplugin.smartphone.service.workflow.order:  1000
+
+jcmsplugin.smartphone.service.admin:        com.jalios.jcmsplugin.smartphone.service.AdminSmartPhoneService
+jcmsplugin.smartphone.service.admin.icon:   icon: topbar-app-admin
+jcmsplugin.smartphone.service.admin.order:  1300
+
+jcmsplugin.smartphone.service.explorer:        plugins/SmartPhonePlugin/jsp/service/explorer/explorer.jsp
+jcmsplugin.smartphone.service.explorer.icon:   plugins/SmartPhonePlugin/images/application-explorer.png
+jcmsplugin.smartphone.service.explorer.order:  800
+
+# ------------------------------------------------------------
+#  Editable properties blacklist (JCMS-3399)
+# ------------------------------------------------------------
+plugin-mgr.ignore-prop.smartphone-service: jcmsplugin.smartphone.service
+plugin-mgr.ignore-prop.smartphone-workspace-service: jcmsplugin.smartphone.workspace-service
+plugin-mgr.ignore-prop.smartphone-bottom-bar: jcmplugin.smartphone.bottom-nav-item
+plugin-mgr.ignore-prop.smartphone-member-menu: jcmsplugin.smartphone.member-menu
+
+# ------------------------------------------------------------
+#  FieldTag && ControlTag resources
+#    - Override for jcms controls & fields
+# ------------------------------------------------------------
+jcms.resource.include.smartphone.field: plugins/SmartPhonePlugin/jsp/core/form/doField.jsp
+jcms.resource.include.smartphone.control-textfield: plugins/SmartPhonePlugin/jsp/core/form/control/doText.jsp
+jcms.resource.include.smartphone.control-date: plugins/SmartPhonePlugin/jsp/core/form/control/doDate.jsp
+jcms.resource.include.smartphone.control-textarea: plugins/SmartPhonePlugin/jsp/core/form/control/doTextArea.jsp
+jcms.resource.include.smartphone.control-wysiwyg: plugins/SmartPhonePlugin/jsp/core/form/control/doWysiwyg.jsp
+jcms.resource.include.smartphone.control-wikiarea: plugins/SmartPhonePlugin/jsp/core/form/control/doWikiArea.jsp
+jcms.resource.include.smartphone.control-member: plugins/SmartPhonePlugin/jsp/core/form/control/doMember.jsp
+jcms.resource.include.smartphone.control-number: plugins/SmartPhonePlugin/jsp/core/form/control/doNumber.jsp
+jcms.resource.include.smartphone.control-enumerate: plugins/SmartPhonePlugin/jsp/core/form/control/enumerate.jsp
+jcms.resource.include.smartphone.control-chooser: plugins/SmartPhonePlugin/jsp/core/form/control/chooser.jsp
+jcms.resource.include.smartphone.control-flipswitch: plugins/SmartPhonePlugin/jsp/core/form/control/flipswitch.jsp
+
+# ------------------------------------------------------------
+# Media tag for smartphone
+# ------------------------------------------------------------
+media.template.smartphonedefault.image:                         /plugins/SmartPhonePlugin/jsp/media/mediaTemplateSmartphoneImage.jsp
+media.template.smartphonedefault.application:                   /plugins/SmartPhonePlugin/jsp/media/mediaTemplateSmartphoneThumbnail.jsp
+media.template.smartphonedefault.audio:                         /plugins/SmartPhonePlugin/jsp/media/mediaTemplateSmartphoneAudio.jsp
+
+# ------------------------------------------------------------
+# Login page is always accessible even when site is private
+# ------------------------------------------------------------
+channel.public-path.smartphone.index: plugins/SmartPhonePlugin/jsp/core/login.jsp
+
+# ------------------------------------------------------------
+# Launch-page is always accessible even when site is private (necessary for the JMobileApp to add the JWT token in the header of the browser)
+# ------------------------------------------------------------
+channel.public-path.jmobile-launch-page: plugins/SmartPhonePlugin/jsp/mobileapp/launch-page.jsp
+# ------------------------------------------------------------
+# JMobile Info Rest Service returns jmobile plugin metadata and is always accessible even when site is private
+# ------------------------------------------------------------
+channel.public-path.jmobile-rest-info: rest/smartphone/info
+
+# ------------------------------------------------------------
+# Other JSP resources declaration
+# ------------------------------------------------------------
+
+jcms.resource.include.smartphone.publication.action-item.like: plugins/SmartPhonePlugin/jsp/components/pub/actions/doPubActionItem_like.jsp
+jcms.resource.include.smartphone.publication.action-item.recommend: plugins/SmartPhonePlugin/jsp/components/pub/actions/doPubActionItem_recommend.jsp
+
+jcmplugin.smartphone.publication.action-item.Publication.like: plugins/SmartPhonePlugin/jsp/core/pub/actions/doPubActionItem_like.jsp
+jcmplugin.smartphone.publication.action-item.Publication.like.index: 100
+jcmplugin.smartphone.publication.action-item.Publication.recommend: plugins/SmartPhonePlugin/jsp/core/pub/actions/doPubActionItem_recommend.jsp
+jcmplugin.smartphone.publication.action-item.Publication.recommend.index: 200
+
+jcmplugin.smartphone.alert-publication.action-item.Publication.like: plugins/SmartPhonePlugin/jsp/core/pub/actions/doPubActionItem_like.jsp
+jcmplugin.smartphone.alert-publication.action-item.Publication.like.index: 100
+jcmplugin.smartphone.alert-publication.action-item.Publication.recommend: plugins/SmartPhonePlugin/jsp/core/pub/actions/doPubActionItem_recommend.jsp
+jcmplugin.smartphone.alert-publication.action-item.Publication.recommend.index: 200
+
+# Member menu
+#jcmplugin.smartphone.member-menu.application-menu: plugins/SmartPhonePlugin/jsp/components/memberMenu/doMemberMenuTab_applications.jsp
+#jcmplugin.smartphone.member-menu.application-menu.icon: glyph: icomoon-grid4
+#jcmplugin.smartphone.member-menu.application-menu.index: 100
+jcmsplugin.smartphone.member-menu.navigate: plugins/SmartPhonePlugin/jsp/components/memberMenu/doMemberMenuTab_navigate.jsp
+jcmsplugin.smartphone.member-menu.navigate.tab: plugins/SmartPhonePlugin/jsp/components/memberMenu/doMemberMenuTab_navigateTab.jsp
+jcmsplugin.smartphone.member-menu.navigate.icon: svg-inline: plugins/SmartPhonePlugin/images/member-menu-navigation.svg
+jcmsplugin.smartphone.member-menu.navigate.index: 150
+icon.jcmsplugin-smartphone-member-menu-my-day-left: glyph: icomoon-arrow-left4
+icon.jcmsplugin-smartphone-member-menu-my-day-right: glyph: icomoon-arrow-right4
+icon.jcmsplugin-smartphone-member-menu-my-day-calendar: glyph: icomoon-calendar2
+icon.jcmsplugin-smartphone-member-menu-my-day-task: glyph: icomoon-checkmark-circle
+icon.jcmsplugin-smartphone-alerts-no-result: glyph: icomoon-bubble-smiley
+icon.jcmsplugin-smartphone-alert-read: glyph: icomoon-checkmark3
+icon.jcmsplugin-smartphone-alert-unread: glyph: icomoon-eye-blocked3
+icon.jcmsplugin-smartphone-alert-unread: glyph: icomoon-eye-blocked3
+icon.jcmsplugin-smartphone-ios:  glyph: icomoon-appleinc
+
+icon.smartphone-topbar-logo: svg: plugins/SmartPhonePlugin/images/topbarlogo.svg
+icon.smartphone-portal-app-logo: plugins/SmartPhonePlugin/images/portalApp/smartphone-portal-app-logo.png
+icon.smartphone-portal-app-sidebar: plugins/SmartPhonePlugin/images/portalApp/smartphone-portal-app-sidebar.png
+
+icon.smartphone-topbar-back: glyph: icomoon-arrow-left8
+icon.smartphone-topbar-home: glyph: icomoon-home5
+icon.smartphone-topbar-search: glyph: icomoon-search2
+icon.smartphone-topbar-mbrmenu: glyph: icomoon-menu7
+icon.smartphone-topbar-alert: glyph: icomoon-bell2
+icon.smartphone-topbar-action-menu: glyph: icomoon-more2
+icon.smartphone-topbar-action-sort: glyph: icomoon-sort-amount-asc
+icon.smartphone-close-mbr-menu: glyph: icomoon-cross2
+icon.smartphone-like: icon: thumb-up
+icon.smartphone-recommend: icon: recommendation
+icon.smartphone-add: glyph: icomoon-plus3
+icon.smartphone-filter: glyph: icomoon-filter4
+icon.smartphone-logout: glyph: icomoon-exit
+icon.smartphone-access-website: glyph: icomoon-square-up-right
+icon.smartphone-member-vcard: glyph: icomoon-vcard
+icon.workflow-app: plugins/SmartPhonePlugin/images/application-workflow.png
+icon.recent-history-app: plugins/SmartPhonePlugin/images/application-recenthistory.png
+icon.admin-app: images/jalios/topbar/app/app-admin.png
+icon.smartphone-about-jmobile: glyph: icomoon-info
+
+icon.smartphone-shareurl-welcome: plugins/SmartPhonePlugin/images/favicon/jmobile_personnage_share_page.png
+
+# ------------------------------------------------------------
+# Icons
+# ------------------------------------------------------------
+icon.jcmsplugin.smartphone.chevron-right.icon: glyph: glyphicon glyphicon-chevron-right
+icon.jcmsplugin-smartphone-camera: glyph: glyphicon glyphicon-camera
+icon.jcmsplugin-smartphone-gallery: glyph: glyphicon glyphicon-picture
+icon.jcmsplugin-smartphone-browse: glyph: glyphicon glyphicon-option-horizontal
+icon.jcmsplugin.smartphone.actions.dropdown: glyph: icomoon-more2
+icon.jcmsplugin-smartphone-no-result: icon: no-result
+icon.jcmsplugin-smartphone-folder: glyph: icomoon-folder4
+icon.jcmsplugin-smartphone-folder-back: glyph: icomoon-arrow-left4
+
+types.SmartPhonePortal.icon:             glyph: icomoon-mobile
+
+
+#Portal editor
+icon.jcmsplugin-smartphone-portal-editor-tab-add: glyph: icomoon-plus3
+icon.jcmsplugin-smartphone-portal-editor-tab-portlet-edition: glyph: icomoon-pencil5
+icon.jcmsplugin-smartphone-portal-editor-tab-templates: glyph: icomoon-stack-empty
+icon.jcmsplugin-smartphone-portal-editor-tab-advanced: glyph: icomoon-equalizer
+icon.jcmsplugin-smartphone-portal-editor-tab-portal-edition: glyph: icomoon-pencil5
+icon.jcmsplugin-smartphone-portal-editor-tab-portal-ui: glyph: icomoon-palette
+icon.jcmsplugin-smartphone-portal-editor-tab-portlet-ui: glyph: icomoon-palette
+icon.portal-history-published: glyph: icomoon-home
+icon.jcmsplugin-smartphone-portal-edit: glyph: icomoon-mobile
+icon.jcmsplugin-smartphone-app-mobile-portals: plugins/SmartPhonePlugin/images/app-mobile-portals.png
+
+shortcut.jcmsplugin.smartphone-portals.icon: plugins/SmartPhonePlugin/images/portalApp/smartphone-portal-app-logo.png
+shortcut.jcmsplugin.smartphone-portals.link: plugins/SmartPhonePlugin/jsp/portalApp/mobilePortalApp.jsp
+
+jcmsplugin.smartphone.portal.default-portal.structure: {"portlets":[{"id":"$id.jcmsplugin.smartphone.portal.default-wysiwyg-portlet"}]}
+
+# Feedback Mobile App
+jcmsplugin.smartphone.mobileapp.feedback.email:
+
+jcmplugin.smartphone.jpush.service.class: com.jalios.jcmsplugin.smartphone.pushNotification.JPushServiceImpl
+jcmplugin.smartphone.jpush.notifications.jsp: plugins/SmartPhonePlugin/jsp/core/notifications.jsp
+
+# JMobile properties publicly exposed in smartphone/info Rest Service
+jcmsplugin.smartphone.mobileapp.info.ssoSupported: true
+jcmsplugin.smartphone.mobileapp.info.authEndPage: plugins/SmartPhonePlugin/jsp/mobileapp/authEnd.jsp
+jcmsplugin.smartphone.mobileapp.info.launchPage: plugins/SmartPhonePlugin/jsp/mobileapp/launch-page.jsp
+jcmsplugin.smartphone.mobileapp.info.errorPage: plugins/SmartPhonePlugin/jsp/mobileapp/error-page.jsp
+jcmsplugin.smartphone.mobileapp.info.indexPage: plugins/SmartPhonePlugin/jsp/index.jsp
+jcmsplugin.smartphone.mobileapp.info.loginPage: plugins/SmartPhonePlugin/jsp/core/loginDefault.jsp
+jcmsplugin.smartphone.mobileapp.info.sharePage: plugins/SmartPhonePlugin/jsp/mobileapp/share-url.jsp
+jcmsplugin.smartphone.mobileapp.info.totpPlugin: plugins/TOTPPlugin/
+jcmsplugin.smartphone.mobileapp.info.logoutAllowed: true
+
+# ExtraDBData
+extradb.Member.jcmsplugin.smartphone.token:
+
+# ------------------------------------------------------------
+#  EDITABLE PROPERTIES
+# ------------------------------------------------------------
+
+# server key default value used for clients who do not make the rebranding process
+jcmplugin.smartphone.jpush.fcm.project-id: jmobile-ba889
+
+jcmplugin.smartphone.bottom-nav-item.home: plugins/SmartPhonePlugin/jsp/index.jsp
+jcmplugin.smartphone.bottom-nav-item.home.index: 100
+jcmplugin.smartphone.bottom-nav-item.home.icon: glyph: icomoon-home
+jcmplugin.smartphone.bottom-nav-item.application-menu: plugins/SmartPhonePlugin/jsp/service/launcher/launcher.jsp
+jcmplugin.smartphone.bottom-nav-item.application-menu.icon: glyph: icomoon-grid4
+jcmplugin.smartphone.bottom-nav-item.application-menu.index: 200
+jcmplugin.smartphone.bottom-nav-item.alerts: plugins/SmartPhonePlugin/jsp/core/alert.jsp
+jcmplugin.smartphone.bottom-nav-item.alerts.index: 150
+jcmplugin.smartphone.bottom-nav-item.alerts.icon: glyph: icomoon-bell2
+jcmplugin.smartphone.bottom-nav-item.search: plugins/SmartPhonePlugin/jsp/service/search/search.jsp
+jcmplugin.smartphone.bottom-nav-item.search.index: 400
+jcmplugin.smartphone.bottom-nav-item.search.icon: glyph: icomoon-search2
+
+jcmsplugin.smartphone.settings.topbar-logo: plugins/SmartPhonePlugin/images/topbarlogo.svg
+jcmsplugin.smartphone.settings.topbar-color: #00adb8
+jcmsplugin.smartphone.settings.topbar-font-color: #ffffff
+
+jcmplugin.smartphone.notification.encrypt.boolean: true
+jcmplugin.smartphone.space.show-introduction.boolean: false
+
+# data for deeplink files .well-known/assetlinks.json and .well-known/apple-app-site-association
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.ios.teamId:
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.appId:
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.android.fingerprints:
+
+jcmsplugin.smartphone.mobileapp.android.play-store : https://play.google.com/store/apps/details?id=com.jalios.jmobile
+jcmsplugin.smartphone.mobileapp.ios.app-store : https://apps.apple.com/fr/app/jmobile/id1385433121
+
+jcmsplugin.smartphone.mobileapp.token-expiration.number: 525600
+
+# ------------------------------------------------------------
+#  Contextual menu actions
+# ------------------------------------------------------------
+jcmsplugin.smartphone.action.pub-full-display.recommend: plugins/SmartPhonePlugin/jsp/components/ctxmenu/pubfulldisplay/doCtxMenuFullDisplay_recommend.jsp
+jcmsplugin.smartphone.action.pub-full-display.recommend.index: 50
+jcmsplugin.smartphone.action.pub-full-display.access-website: plugins/SmartPhonePlugin/jsp/components/ctxmenu/pubfulldisplay/doCtxMenuFullDisplay_accessWebsite.jsp
+jcmsplugin.smartphone.action.pub-full-display.access-website.index: 100
+#jcmsplugin.smartphone.action.pub-full-display.public-link: plugins/SmartPhonePlugin/jsp/components/ctxmenu/pubfulldisplay/doCtxMenuFullDisplay_publicLink.jsp
+#jcmsplugin.smartphone.action.pub-full-display.public-link.index: 150
+jcmsplugin.smartphone.action.pub-full-display.delete: plugins/SmartPhonePlugin/jsp/components/ctxmenu/pubfulldisplay/doCtxMenuFullDisplay_delete.jsp
+jcmsplugin.smartphone.action.pub-full-display.delete.index: 1000
+
+jcmsplugin.smartphone.action.portal.access-website: plugins/SmartPhonePlugin/jsp/components/ctxmenu/portal/doCtxMenuPortal_accessWebsite.jsp
+jcmsplugin.smartphone.action.portal.access-website.index: 50
+jcmsplugin.smartphone.action.portal.about-jmobile: plugins/SmartPhonePlugin/jsp/components/ctxmenu/portal/doCtxMenu_aboutJMobile.jsp
+jcmsplugin.smartphone.action.portal.about-jmobile.index: 80
+jcmsplugin.smartphone.action.portal.logout: plugins/SmartPhonePlugin/jsp/components/ctxmenu/common/doCtxMenu_logout.jsp
+jcmsplugin.smartphone.action.portal.logout.index: 1000
+
+jcmsplugin.smartphone.action.workspace.access-website: plugins/SmartPhonePlugin/jsp/components/ctxmenu/workspace/doCtxMenuWorkspace_accessWebsite.jsp
+jcmsplugin.smartphone.action.workspace.access-website.index: 50
+jcmsplugin.smartphone.action.workspace.logout: plugins/SmartPhonePlugin/jsp/components/ctxmenu/common/doCtxMenu_logout.jsp
+jcmsplugin.smartphone.action.workspace.logout.index: 1000
+
+jcmsplugin.smartphone.action.service.access-website: plugins/SmartPhonePlugin/jsp/components/ctxmenu/service/doCtxMenuService_accessWebsite.jsp
+jcmsplugin.smartphone.action.service.access-website.index: 50
+
+# ------------------------------------------------------------
+# ALERT
+# ------------------------------------------------------------
+icon.alert.jcmsplugin-smartphone:  plugins/SmartPhonePlugin/images/portalApp/smartphone-portal-app-logo.png
+
+# ------------------------------------------------------------
+# ACL
+# ------------------------------------------------------------
+acl.resource.plugins:
+acl.resource.plugins/jmobile:
+acl.resource.plugins/jmobile/can-administrate-mobile-portals:
+acl.resource.admin/operation/can-manage-ios-downloadcode:
+
+# ------------------------------------------------------------
+#  Workspace services
+# ------------------------------------------------------------
+jcms.resource.include.smartphone.listItem.Data:          plugins/SmartPhonePlugin/jsp/components/listItem/listItemData.jsp
+jcms.resource.include.smartphone.listItem.Publication:   plugins/SmartPhonePlugin/jsp/components/listItem/listItemPublication.jsp
+jcms.resource.include.smartphone.listItem.Alert:         plugins/SmartPhonePlugin/jsp/components/listItem/listItemAlert.jsp
+jcms.resource.include.smartphone.listItem.history:       plugins/SmartPhonePlugin/jsp/components/listItem/history/listItemHistory.jsp
+jcms.resource.include.smartphone.listItem.Publication-with-image:  plugins/SmartPhonePlugin/jsp/components/listItem/listItemPublicationImage.jsp
+#jcms.resource.include.memberphoto-phone:                 plugins/SmartPhonePlugin/jsp/common/memberPhotoTemplate.jsp
+jcms.resource.include.smartphone.card.Publication:       plugins/SmartPhonePlugin/jsp/components/card/cardPublication.jsp
+jcms.resource.include.smartphone.listItem.chooser.Member:       plugins/SmartPhonePlugin/jsp/components/listItem/chooser/listItemChooserMember.jsp
+jcms.resource.include.smartphone.listItem.chooser.Publication:  plugins/SmartPhonePlugin/jsp/components/listItem/chooser/listItemChooserPublication.jsp
+jcms.resource.include.smartphone.listItem.chooser.Group:        plugins/SmartPhonePlugin/jsp/components/listItem/chooser/listItemChooserGroup.jsp
+jcms.resource.include.smartphone.listItem.chooser.Workspace:    plugins/SmartPhonePlugin/jsp/components/listItem/chooser/listItemChooserData.jsp
+jcms.resource.include.smartphone.listItem.chooser.Category:     plugins/SmartPhonePlugin/jsp/components/listItem/chooser/listItemChooserData.jsp
+jcms.resource.include.smartphone.portlet:                       plugins/SmartPhonePlugin/jsp/components/portlet/includePortlet.jsp
+
+jcms.resource.include.cards.jmobile:  plugins/SmartPhonePlugin/jsp/components/card/doCardLayout.jsp
+jcms.resource.include.cards.jmobile-sliding: plugins/SmartPhonePlugin/jsp/components/card/doCardSlidingLayout.jsp
+jcms.resource.include.cards.jmobile-carousel: plugins/SmartPhonePlugin/jsp/components/card/doCardCarouselLayout.jsp
+
+channel.public-path.smartphone.ios.download: plugins/SmartPhonePlugin/jsp/ios/download.jsp
+
+# ------------------------------------------------------------
+#  Member photo initials (Only works with 10 SP4 / JCMS-6025) 
+# ------------------------------------------------------------
+channel.less.plugins/SmartPhonePlugin/css/components/smartphone-member-photo-initials.css: plugins/SmartPhonePlugin/css/components/smartphone-member-photo-initials.less
+jcmsplugin.smartphone.css.012: plugins/SmartPhonePlugin/css/components/smartphone-member-photo-initials.css
+jcms.resource.include.memberphoto-phone: plugins/SmartPhonePlugin/jsp/common/memberPhotoTemplateInitials.jsp
+
+# ------------------------------------------------------------
+#  deeplink default JSON prop
+# ------------------------------------------------------------
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.ios.defaultJson: {"applinks":{"apps":[],"details":[{"appID":"{{TEAM_ID}}.{{APP_ID}}","paths":["*"]}]}}
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.android.defaultJson: [{"relation": ["delegate_permission/common.handle_all_urls"],"target" : { "namespace": "android_app", "package_name": "{{APP_ID}}","sha256_cert_fingerprints": ["{{FINGERPRINTS}}"]}}]

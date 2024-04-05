@@ -1,0 +1,48 @@
+<%@page import="com.jalios.jcms.taglib.settings.impl.LanguageSettings"%><%
+if (step == CreateSpaceHandler.INFO_STEP) { %>
+
+  <jalios:field name="name" formHandler="<%= formHandler %>" required="true">
+    <jalios:control/>
+  </jalios:field>
+
+  <jalios:field name="description" formHandler="<%= formHandler %>" required="true" css="no-focus">
+    <jalios:control/>
+  </jalios:field>
+
+  <%
+  String[] accessValues = (String[])formHandler.getEnumValues("accessPolicy");
+  if (accessValues.length > 1) {
+    request.setAttribute("collaborative-space-access-policies", accessValues);
+    request.setAttribute("collaborative-space-edit-handler", formHandler);
+    %>
+    <jsp:include page="/plugins/CollaborativeSpacePlugin/jsp/doAccessPolicyField.jsp" />
+    <%
+    request.removeAttribute("collaborative-space-access-policies");
+    request.removeAttribute("collaborative-space-edit-handler");
+    %>
+  <% } else { %>
+    <input type="hidden" name="accessPolicy" value="<%= accessValues[0] %>" />
+  <% } %>
+
+  <%
+  String[] signupValues = (String[])formHandler.getEnumValues("signupPolicy");
+  if (signupValues.length > 1) { %>
+    <jalios:field name="signupPolicy" formHandler="<%= formHandler %>" required="true">
+      <jalios:control/>
+    </jalios:field>
+  <% } else { %>
+    <input type="hidden" name="signupPolicy" value="<%= signupValues[0] %>" />
+  <% } %>
+
+  <% if (channel.isMultilingual()) { %>
+    <jalios:field name="language" formHandler="<%= formHandler %>" required="true" description="ui.wrkspc-edit.lbl.language.help">
+      <%
+      LanguageSettings langSettings = new LanguageSettings();
+      langSettings.select();
+      langSettings.enumValues(formHandler.getLanguageValues());
+      langSettings.enumLabels(formHandler.getLanguageLabels());
+      %>
+      <jalios:control settings='<%= langSettings %>' />
+    </jalios:field>
+  <% } %>
+<% } %>

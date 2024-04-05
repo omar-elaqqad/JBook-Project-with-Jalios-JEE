@@ -68,6 +68,38 @@ public class LinkIndexListener extends AbstractLinkIndexListener {
       // bloggerGroup
       add(obj, obj.getBloggerGroup(), "bloggerGroup");
     }
+    // CSRequest
+    if (storable instanceof CSRequest) {
+      CSRequest obj = (CSRequest)storable;
+      
+      // admins
+      add(obj, obj.getAdmins(false), "admins");
+      add(obj, obj.getAdminsDBID(), "admins");
+      // groups
+      add(obj, obj.getGroups(), "groups");
+      // members
+      add(obj, obj.getMembers(false), "members");
+      add(obj, obj.getMembersDBID(), "members");
+    }
+    // CollaborativeSpace
+    if (storable instanceof CollaborativeSpace) {
+      CollaborativeSpace obj = (CollaborativeSpace)storable;
+      
+      // followersGroup
+      add(obj, obj.getFollowersGroup(), "followersGroup");
+      // jportal
+      add(obj, obj.getJportal(), "jportal");
+      // model
+      add(obj, obj.getModel(), "model");
+      // applications
+      add(obj, obj.getApplications(), "applications");
+      // mobilePortlets
+      add(obj, obj.getMobilePortlets(), "mobilePortlets");
+      // children
+      add(obj, obj.getChildren(), "children");
+      // originalPortlet
+      add(obj, obj.getOriginalPortlet(), "originalPortlet");
+    }
     // FaqEntry
     if (storable instanceof FaqEntry) {
       FaqEntry obj = (FaqEntry)storable;
@@ -102,6 +134,13 @@ public class LinkIndexListener extends AbstractLinkIndexListener {
       // child
       add(obj, obj.getChild(), "child");
     }
+    // PortletBirthday
+    if (storable instanceof PortletBirthday) {
+      PortletBirthday obj = (PortletBirthday)storable;
+      
+      // originalPortlet
+      add(obj, obj.getOriginalPortlet(), "originalPortlet");
+    }
     // PortletBlog
     if (storable instanceof PortletBlog) {
       PortletBlog obj = (PortletBlog)storable;
@@ -126,6 +165,13 @@ public class LinkIndexListener extends AbstractLinkIndexListener {
       // publications
       add(obj, obj.getPublications(false), "publications");
       add(obj, obj.getPublicationsDBID(), "publications");
+      // originalPortlet
+      add(obj, obj.getOriginalPortlet(), "originalPortlet");
+    }
+    // PortletCollaborativeSpaceSuggestion
+    if (storable instanceof PortletCollaborativeSpaceSuggestion) {
+      PortletCollaborativeSpaceSuggestion obj = (PortletCollaborativeSpaceSuggestion)storable;
+      
       // originalPortlet
       add(obj, obj.getOriginalPortlet(), "originalPortlet");
     }
@@ -216,9 +262,37 @@ public class LinkIndexListener extends AbstractLinkIndexListener {
       // originalPortlet
       add(obj, obj.getOriginalPortlet(), "originalPortlet");
     }
+    // PortletMemberActivity
+    if (storable instanceof PortletMemberActivity) {
+      PortletMemberActivity obj = (PortletMemberActivity)storable;
+      
+      // originalPortlet
+      add(obj, obj.getOriginalPortlet(), "originalPortlet");
+    }
+    // PortletMemberProfile
+    if (storable instanceof PortletMemberProfile) {
+      PortletMemberProfile obj = (PortletMemberProfile)storable;
+      
+      // originalPortlet
+      add(obj, obj.getOriginalPortlet(), "originalPortlet");
+    }
+    // PortletMemberStatus
+    if (storable instanceof PortletMemberStatus) {
+      PortletMemberStatus obj = (PortletMemberStatus)storable;
+      
+      // originalPortlet
+      add(obj, obj.getOriginalPortlet(), "originalPortlet");
+    }
     // PortletMenu
     if (storable instanceof PortletMenu) {
       PortletMenu obj = (PortletMenu)storable;
+      
+      // originalPortlet
+      add(obj, obj.getOriginalPortlet(), "originalPortlet");
+    }
+    // PortletMyCollaborativeSpaces
+    if (storable instanceof PortletMyCollaborativeSpaces) {
+      PortletMyCollaborativeSpaces obj = (PortletMyCollaborativeSpaces)storable;
       
       // originalPortlet
       add(obj, obj.getOriginalPortlet(), "originalPortlet");
@@ -241,6 +315,15 @@ public class LinkIndexListener extends AbstractLinkIndexListener {
     if (storable instanceof PortletNotification) {
       PortletNotification obj = (PortletNotification)storable;
       
+      // originalPortlet
+      add(obj, obj.getOriginalPortlet(), "originalPortlet");
+    }
+    // PortletPoll
+    if (storable instanceof PortletPoll) {
+      PortletPoll obj = (PortletPoll)storable;
+      
+      // poll
+      add(obj, obj.getPoll(), "poll");
       // originalPortlet
       add(obj, obj.getOriginalPortlet(), "originalPortlet");
     }
@@ -403,6 +486,13 @@ public class LinkIndexListener extends AbstractLinkIndexListener {
       add(obj, obj.getPub(false), "pub");
       add(obj, obj.getPubDBID(), "pub");
     }
+    // SmartPhonePortal
+    if (storable instanceof SmartPhonePortal) {
+      SmartPhonePortal obj = (SmartPhonePortal)storable;
+      
+      // portlets
+      add(obj, obj.getPortlets(), "portlets");
+    }
   }
   
   public void handleCommitUpdate(Storable storable, Storable oldStorable, boolean firstTime) {
@@ -497,6 +587,76 @@ public class LinkIndexListener extends AbstractLinkIndexListener {
         add(obj, obj.getBloggerGroup(), "bloggerGroup");
       }
     }
+    // CSRequest    
+    if (storable instanceof CSRequest) {
+      CSRequest obj = (CSRequest)storable;
+      CSRequest oldObj = (CSRequest)oldStorable;
+      
+      // admins
+      if (obj.getAdmins(false) != oldObj.getAdmins(false)) {
+        remove(obj, oldObj.getAdmins(false), "admins");
+        add(obj, obj.getAdmins(false), "admins");
+      }
+      if (obj.getAdminsDBID() != oldObj.getAdminsDBID()) {
+        remove(obj, oldObj.getAdminsDBID(), "admins");
+        add(obj, obj.getAdminsDBID(), "admins");
+      }
+      // groups
+      if (obj.getGroups() != oldObj.getGroups()) {
+        remove(obj, oldObj.getGroups(), "groups");
+        add(obj, obj.getGroups(), "groups");
+      }
+      // members
+      if (obj.getMembers(false) != oldObj.getMembers(false)) {
+        remove(obj, oldObj.getMembers(false), "members");
+        add(obj, obj.getMembers(false), "members");
+      }
+      if (obj.getMembersDBID() != oldObj.getMembersDBID()) {
+        remove(obj, oldObj.getMembersDBID(), "members");
+        add(obj, obj.getMembersDBID(), "members");
+      }
+    }
+    // CollaborativeSpace    
+    if (storable instanceof CollaborativeSpace) {
+      CollaborativeSpace obj = (CollaborativeSpace)storable;
+      CollaborativeSpace oldObj = (CollaborativeSpace)oldStorable;
+      
+      // followersGroup
+      if (obj.getFollowersGroup() != oldObj.getFollowersGroup()) {
+        remove(obj, oldObj.getFollowersGroup(), "followersGroup");
+        add(obj, obj.getFollowersGroup(), "followersGroup");
+      }
+      // jportal
+      if (obj.getJportal() != oldObj.getJportal()) {
+        remove(obj, oldObj.getJportal(), "jportal");
+        add(obj, obj.getJportal(), "jportal");
+      }
+      // model
+      if (obj.getModel() != oldObj.getModel()) {
+        remove(obj, oldObj.getModel(), "model");
+        add(obj, obj.getModel(), "model");
+      }
+      // applications
+      if (obj.getApplications() != oldObj.getApplications()) {
+        remove(obj, oldObj.getApplications(), "applications");
+        add(obj, obj.getApplications(), "applications");
+      }
+      // mobilePortlets
+      if (obj.getMobilePortlets() != oldObj.getMobilePortlets()) {
+        remove(obj, oldObj.getMobilePortlets(), "mobilePortlets");
+        add(obj, obj.getMobilePortlets(), "mobilePortlets");
+      }
+      // children
+      if (obj.getChildren() != oldObj.getChildren()) {
+        remove(obj, oldObj.getChildren(), "children");
+        add(obj, obj.getChildren(), "children");
+      }
+      // originalPortlet
+      if (obj.getOriginalPortlet() != oldObj.getOriginalPortlet()) {
+        remove(obj, oldObj.getOriginalPortlet(), "originalPortlet");
+        add(obj, obj.getOriginalPortlet(), "originalPortlet");
+      }
+    }
     // FaqEntry    
     if (storable instanceof FaqEntry) {
       FaqEntry obj = (FaqEntry)storable;
@@ -556,6 +716,17 @@ public class LinkIndexListener extends AbstractLinkIndexListener {
         add(obj, obj.getChild(), "child");
       }
     }
+    // PortletBirthday    
+    if (storable instanceof PortletBirthday) {
+      PortletBirthday obj = (PortletBirthday)storable;
+      PortletBirthday oldObj = (PortletBirthday)oldStorable;
+      
+      // originalPortlet
+      if (obj.getOriginalPortlet() != oldObj.getOriginalPortlet()) {
+        remove(obj, oldObj.getOriginalPortlet(), "originalPortlet");
+        add(obj, obj.getOriginalPortlet(), "originalPortlet");
+      }
+    }
     // PortletBlog    
     if (storable instanceof PortletBlog) {
       PortletBlog obj = (PortletBlog)storable;
@@ -601,6 +772,17 @@ public class LinkIndexListener extends AbstractLinkIndexListener {
         remove(obj, oldObj.getPublicationsDBID(), "publications");
         add(obj, obj.getPublicationsDBID(), "publications");
       }
+      // originalPortlet
+      if (obj.getOriginalPortlet() != oldObj.getOriginalPortlet()) {
+        remove(obj, oldObj.getOriginalPortlet(), "originalPortlet");
+        add(obj, obj.getOriginalPortlet(), "originalPortlet");
+      }
+    }
+    // PortletCollaborativeSpaceSuggestion    
+    if (storable instanceof PortletCollaborativeSpaceSuggestion) {
+      PortletCollaborativeSpaceSuggestion obj = (PortletCollaborativeSpaceSuggestion)storable;
+      PortletCollaborativeSpaceSuggestion oldObj = (PortletCollaborativeSpaceSuggestion)oldStorable;
+      
       // originalPortlet
       if (obj.getOriginalPortlet() != oldObj.getOriginalPortlet()) {
         remove(obj, oldObj.getOriginalPortlet(), "originalPortlet");
@@ -764,10 +946,54 @@ public class LinkIndexListener extends AbstractLinkIndexListener {
         add(obj, obj.getOriginalPortlet(), "originalPortlet");
       }
     }
+    // PortletMemberActivity    
+    if (storable instanceof PortletMemberActivity) {
+      PortletMemberActivity obj = (PortletMemberActivity)storable;
+      PortletMemberActivity oldObj = (PortletMemberActivity)oldStorable;
+      
+      // originalPortlet
+      if (obj.getOriginalPortlet() != oldObj.getOriginalPortlet()) {
+        remove(obj, oldObj.getOriginalPortlet(), "originalPortlet");
+        add(obj, obj.getOriginalPortlet(), "originalPortlet");
+      }
+    }
+    // PortletMemberProfile    
+    if (storable instanceof PortletMemberProfile) {
+      PortletMemberProfile obj = (PortletMemberProfile)storable;
+      PortletMemberProfile oldObj = (PortletMemberProfile)oldStorable;
+      
+      // originalPortlet
+      if (obj.getOriginalPortlet() != oldObj.getOriginalPortlet()) {
+        remove(obj, oldObj.getOriginalPortlet(), "originalPortlet");
+        add(obj, obj.getOriginalPortlet(), "originalPortlet");
+      }
+    }
+    // PortletMemberStatus    
+    if (storable instanceof PortletMemberStatus) {
+      PortletMemberStatus obj = (PortletMemberStatus)storable;
+      PortletMemberStatus oldObj = (PortletMemberStatus)oldStorable;
+      
+      // originalPortlet
+      if (obj.getOriginalPortlet() != oldObj.getOriginalPortlet()) {
+        remove(obj, oldObj.getOriginalPortlet(), "originalPortlet");
+        add(obj, obj.getOriginalPortlet(), "originalPortlet");
+      }
+    }
     // PortletMenu    
     if (storable instanceof PortletMenu) {
       PortletMenu obj = (PortletMenu)storable;
       PortletMenu oldObj = (PortletMenu)oldStorable;
+      
+      // originalPortlet
+      if (obj.getOriginalPortlet() != oldObj.getOriginalPortlet()) {
+        remove(obj, oldObj.getOriginalPortlet(), "originalPortlet");
+        add(obj, obj.getOriginalPortlet(), "originalPortlet");
+      }
+    }
+    // PortletMyCollaborativeSpaces    
+    if (storable instanceof PortletMyCollaborativeSpaces) {
+      PortletMyCollaborativeSpaces obj = (PortletMyCollaborativeSpaces)storable;
+      PortletMyCollaborativeSpaces oldObj = (PortletMyCollaborativeSpaces)oldStorable;
       
       // originalPortlet
       if (obj.getOriginalPortlet() != oldObj.getOriginalPortlet()) {
@@ -802,6 +1028,22 @@ public class LinkIndexListener extends AbstractLinkIndexListener {
       PortletNotification obj = (PortletNotification)storable;
       PortletNotification oldObj = (PortletNotification)oldStorable;
       
+      // originalPortlet
+      if (obj.getOriginalPortlet() != oldObj.getOriginalPortlet()) {
+        remove(obj, oldObj.getOriginalPortlet(), "originalPortlet");
+        add(obj, obj.getOriginalPortlet(), "originalPortlet");
+      }
+    }
+    // PortletPoll    
+    if (storable instanceof PortletPoll) {
+      PortletPoll obj = (PortletPoll)storable;
+      PortletPoll oldObj = (PortletPoll)oldStorable;
+      
+      // poll
+      if (obj.getPoll() != oldObj.getPoll()) {
+        remove(obj, oldObj.getPoll(), "poll");
+        add(obj, obj.getPoll(), "poll");
+      }
       // originalPortlet
       if (obj.getOriginalPortlet() != oldObj.getOriginalPortlet()) {
         remove(obj, oldObj.getOriginalPortlet(), "originalPortlet");
@@ -1110,6 +1352,17 @@ public class LinkIndexListener extends AbstractLinkIndexListener {
         add(obj, obj.getPubDBID(), "pub");
       }
     }
+    // SmartPhonePortal    
+    if (storable instanceof SmartPhonePortal) {
+      SmartPhonePortal obj = (SmartPhonePortal)storable;
+      SmartPhonePortal oldObj = (SmartPhonePortal)oldStorable;
+      
+      // portlets
+      if (obj.getPortlets() != oldObj.getPortlets()) {
+        remove(obj, oldObj.getPortlets(), "portlets");
+        add(obj, obj.getPortlets(), "portlets");
+      }
+    }
   }
   
   public void handleDelete(Storable storable, boolean firstTime) {
@@ -1167,6 +1420,38 @@ public class LinkIndexListener extends AbstractLinkIndexListener {
       // bloggerGroup
       remove(obj, obj.getBloggerGroup(), "bloggerGroup");
     }    
+    // CSRequest   
+    if (storable instanceof CSRequest) {
+      CSRequest obj = (CSRequest)storable;
+    
+      // admins
+      remove(obj, obj.getAdmins(false), "admins");
+      remove(obj, obj.getAdminsDBID(), "admins");
+      // groups
+      remove(obj, obj.getGroups(), "groups");
+      // members
+      remove(obj, obj.getMembers(false), "members");
+      remove(obj, obj.getMembersDBID(), "members");
+    }    
+    // CollaborativeSpace   
+    if (storable instanceof CollaborativeSpace) {
+      CollaborativeSpace obj = (CollaborativeSpace)storable;
+    
+      // followersGroup
+      remove(obj, obj.getFollowersGroup(), "followersGroup");
+      // jportal
+      remove(obj, obj.getJportal(), "jportal");
+      // model
+      remove(obj, obj.getModel(), "model");
+      // applications
+      remove(obj, obj.getApplications(), "applications");
+      // mobilePortlets
+      remove(obj, obj.getMobilePortlets(), "mobilePortlets");
+      // children
+      remove(obj, obj.getChildren(), "children");
+      // originalPortlet
+      remove(obj, obj.getOriginalPortlet(), "originalPortlet");
+    }    
     // FaqEntry   
     if (storable instanceof FaqEntry) {
       FaqEntry obj = (FaqEntry)storable;
@@ -1201,6 +1486,13 @@ public class LinkIndexListener extends AbstractLinkIndexListener {
       // child
       remove(obj, obj.getChild(), "child");
     }    
+    // PortletBirthday   
+    if (storable instanceof PortletBirthday) {
+      PortletBirthday obj = (PortletBirthday)storable;
+    
+      // originalPortlet
+      remove(obj, obj.getOriginalPortlet(), "originalPortlet");
+    }    
     // PortletBlog   
     if (storable instanceof PortletBlog) {
       PortletBlog obj = (PortletBlog)storable;
@@ -1225,6 +1517,13 @@ public class LinkIndexListener extends AbstractLinkIndexListener {
       // publications
       remove(obj, obj.getPublications(false), "publications");
       remove(obj, obj.getPublicationsDBID(), "publications");
+      // originalPortlet
+      remove(obj, obj.getOriginalPortlet(), "originalPortlet");
+    }    
+    // PortletCollaborativeSpaceSuggestion   
+    if (storable instanceof PortletCollaborativeSpaceSuggestion) {
+      PortletCollaborativeSpaceSuggestion obj = (PortletCollaborativeSpaceSuggestion)storable;
+    
       // originalPortlet
       remove(obj, obj.getOriginalPortlet(), "originalPortlet");
     }    
@@ -1315,9 +1614,37 @@ public class LinkIndexListener extends AbstractLinkIndexListener {
       // originalPortlet
       remove(obj, obj.getOriginalPortlet(), "originalPortlet");
     }    
+    // PortletMemberActivity   
+    if (storable instanceof PortletMemberActivity) {
+      PortletMemberActivity obj = (PortletMemberActivity)storable;
+    
+      // originalPortlet
+      remove(obj, obj.getOriginalPortlet(), "originalPortlet");
+    }    
+    // PortletMemberProfile   
+    if (storable instanceof PortletMemberProfile) {
+      PortletMemberProfile obj = (PortletMemberProfile)storable;
+    
+      // originalPortlet
+      remove(obj, obj.getOriginalPortlet(), "originalPortlet");
+    }    
+    // PortletMemberStatus   
+    if (storable instanceof PortletMemberStatus) {
+      PortletMemberStatus obj = (PortletMemberStatus)storable;
+    
+      // originalPortlet
+      remove(obj, obj.getOriginalPortlet(), "originalPortlet");
+    }    
     // PortletMenu   
     if (storable instanceof PortletMenu) {
       PortletMenu obj = (PortletMenu)storable;
+    
+      // originalPortlet
+      remove(obj, obj.getOriginalPortlet(), "originalPortlet");
+    }    
+    // PortletMyCollaborativeSpaces   
+    if (storable instanceof PortletMyCollaborativeSpaces) {
+      PortletMyCollaborativeSpaces obj = (PortletMyCollaborativeSpaces)storable;
     
       // originalPortlet
       remove(obj, obj.getOriginalPortlet(), "originalPortlet");
@@ -1340,6 +1667,15 @@ public class LinkIndexListener extends AbstractLinkIndexListener {
     if (storable instanceof PortletNotification) {
       PortletNotification obj = (PortletNotification)storable;
     
+      // originalPortlet
+      remove(obj, obj.getOriginalPortlet(), "originalPortlet");
+    }    
+    // PortletPoll   
+    if (storable instanceof PortletPoll) {
+      PortletPoll obj = (PortletPoll)storable;
+    
+      // poll
+      remove(obj, obj.getPoll(), "poll");
       // originalPortlet
       remove(obj, obj.getOriginalPortlet(), "originalPortlet");
     }    
@@ -1502,8 +1838,15 @@ public class LinkIndexListener extends AbstractLinkIndexListener {
       remove(obj, obj.getPub(false), "pub");
       remove(obj, obj.getPubDBID(), "pub");
     }    
+    // SmartPhonePortal   
+    if (storable instanceof SmartPhonePortal) {
+      SmartPhonePortal obj = (SmartPhonePortal)storable;
+    
+      // portlets
+      remove(obj, obj.getPortlets(), "portlets");
+    }    
   }
   
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
-// FVcUoaUuVIbNPjRibQP08g==
+// FXPTV1XcoG1Ek7cB1bygcQ==

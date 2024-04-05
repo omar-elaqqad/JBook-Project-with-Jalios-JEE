@@ -1,0 +1,32 @@
+<%@ page contentType="text/html; charset=UTF-8" %><%
+%><%@ include file='/jcore/doInitPage.jspf' %><%
+%><%@ page import="com.jalios.jcmsplugin.esn.*" %><%
+%><%@ page import="com.jalios.jcms.calendar.*" %><%
+
+ESNManager esnMgr = ESNManager.getInstance();
+Member member              = (Member)request.getAttribute("jcmsplugin.esn.member");
+
+MemberProfile profile      = null;
+boolean isConnected        = false;
+boolean canEdit            = false;
+
+if (member == null && jcmsContext.isAjaxRequest()) {
+  String mid = (String)jcmsContext.getAjaxRequestAttribute("jcmsplugin.esn.member.id");
+  member = channel.getMember(mid);
+  isConnected  = esnMgr.isConnected(member, loggedMember);
+} else {
+  profile      = (MemberProfile)request.getAttribute("jcmsplugin.esn.profile");
+  isConnected  = Util.toBoolean(request.getAttribute("jcmsplugin.esn.member.isConnected"), false);
+}
+
+if (member == null) {
+  return;
+}
+boolean isMyProfile      = loggedMember == member;
+boolean isContact        = member.isContact();
+boolean isAccount        = member.isAccount();
+String friendlyName      = (String)jcmsContext.getAjaxRequestAttribute("jcmsplugin.esn.member.friendlyName");
+String editLabel         = (String)jcmsContext.getAjaxRequestAttribute("jcmsplugin.esn.member.editLabel");
+boolean dataWriteEnabled = channel.isDataWriteEnabled();
+canEdit                  = Util.toBoolean(jcmsContext.getAjaxRequestAttribute("jcmsplugin.esn.member.canEdit"), false) && dataWriteEnabled;
+%>

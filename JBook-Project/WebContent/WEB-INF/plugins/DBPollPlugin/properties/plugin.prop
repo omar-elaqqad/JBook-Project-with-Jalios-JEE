@@ -1,0 +1,78 @@
+# ------------------------------------------------------------
+#  Shortcuts
+# ------------------------------------------------------------
+shortcut.jcmsplugin.dbpoll.icon: plugins/DBPollPlugin/images/poll48.png
+shortcut.jcmsplugin.dbpoll.link: plugins/DBPollPlugin/jsp/app/dbpoll.jsp
+
+# ------------------------------------------------------------
+#  ESN
+# ------------------------------------------------------------
+
+jcmsplugin.esn.activity.create.Poll.icon:   sprite: ss_sprite ss_chart_bar icon
+jcmsplugin.esn.activity.body.jsp-data-mapping.Poll: plugins/DBPollPlugin/jsp/esn/doActivityBodyPoll.jsp
+jcmsplugin.esn.activity.form-tab.poll:  plugins/DBPollPlugin/jsp/esn/doActivityAddPollForm.jsp
+jcmsplugin.esn.activity.form-tab.poll.handler:  plugins/DBPollPlugin/jsp/esn/doActivityAddPollHandler.jsp
+jcmsplugin.esn.activity.create.DBPollVote.icon: glyph: icomoon-stats-bars2
+
+# ------------------------------------------------------------
+#  Recommendation
+# ------------------------------------------------------------
+
+recommendation.alert-name.Poll: dbpoll-recommendation
+recommendation.modal-text.Poll: jcmsplugin.dbpoll.recommendation.Poll
+
+# ------------------------------------------------------------
+#  LESS
+# ------------------------------------------------------------
+channel.less.plugins/DBPollPlugin/css/poll.css:    plugins/DBPollPlugin/css/poll.less
+smartphone.channel.less.plugins/DBPollPlugin/smartphone/css/poll.css: plugins/DBPollPlugin/smartphone/css/poll.less
+
+# ----------------------------------------------------------------------
+# Publish Menu
+# ----------------------------------------------------------------------
+publish-menu.item.other.40.jcmsplugin.poll: plugins/DBPollPlugin/jsp/doPollTopbarPublishMenu.jsp
+
+# ----------------------------------------------------------------------
+# Unified insert
+# ----------------------------------------------------------------------
+unified-insert.items.poll.jsp: plugins/DBPollPlugin/jsp/unifiedinsert/poll.jsp
+unified-insert.items.poll.icon: plugins/DBPollPlugin/images/poll16.svg
+unified-insert.items.poll.enabled: true
+
+# ----------------------------------------------------------------------
+# Poll Media/Data template
+# ----------------------------------------------------------------------
+media.data-template.default.Poll: /plugins/DBPollPlugin/jsp/mediaTemplatePoll.jsp
+
+# ------------------------------------------------------------
+#  Icons
+# ------------------------------------------------------------
+types.Poll.icon:            plugins/DBPollPlugin/images/poll16.png
+types.Poll.thumb:           plugins/DBPollPlugin/images/poll64.png
+icon.jcmsplugin-poll-stats: glyph: icomoon-stats-bars2
+icon.jcmsplugin-dbpoll-app: plugins/DBPollPlugin/images/poll64.png
+jportal.portlet-type.PortletPoll.icon: plugins/DBPollPlugin/images/PortletPoll_grey.png
+
+# ------------------------------------------------------------
+#  Others props
+# ------------------------------------------------------------
+jcmsplugin.dbpoll.default-poll-image: plugins/DBPollPlugin/images/default_poll.png
+
+# Poll expiration delay (in days)
+jcmsplugin.dbpoll.poll-expiration-delay: 30
+
+# ------------------------------------------------------------
+#  Smartphone
+# ------------------------------------------------------------
+jcmsplugin.smartphone.shortcut-mapping.$id.shortcut.jcmsplugin.dbpoll: plugins/DBPollPlugin/smartphone/jsp/dbpoll.jsp
+jcmsplugin.smartphone.dbpoll: plugins/DBPollPlugin/smartphone/jsp/dbpoll.jsp
+jcmsplugin.smartphone.dbpoll.icon: plugins/DBPollPlugin/images/poll48.png
+jcmsplugin.smartphone.dbpoll.desktopUrl:  plugins/DBPollPlugin/jsp/app/dbpoll.jsp
+jcmsplugin.smartphone.css.dbpoll: plugins/DBPollPlugin/smartphone/css/poll.css
+jcmsplugin.smartphone.link-prefix.Poll:  plugins/DBPollPlugin/smartphone/jsp/doPollFullDisplay.jsp?id=
+
+# ------------------------------------------------------------
+#  Properties to ignore (not editable)
+# ------------------------------------------------------------
+plugin-mgr.ignore-prop.jcmsplugin.esn.activity.form-tab.poll: jcmsplugin.esn.activity.form-tab.poll
+plugin-mgr.ignore-prop.jcmsplugin.smartphone.dbpoll: jcmsplugin.smartphone.dbpoll

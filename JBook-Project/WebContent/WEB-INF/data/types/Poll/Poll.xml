@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<type name="Poll" reviewable="false" debatable="false" superclass="com.jalios.jcmsplugin.dbpoll.AbstractPoll" categoryRequired="false" categoryTab="true" version="4.0">
+  <title ml="true" searchable="true" />
+  <fields>
+    <field name="description" editor="textarea" wiki="true" required="false" compactDisplay="false" type="String" searchable="true" rows="2" cols="80" ml="true" descriptionType="text" abstract="true" truncate="400" html="false" checkHtml="true" />
+    <field name="image" editor="image" required="false" compactDisplay="false" type="String" searchable="false" size="80" maxlength="500" ml="false" fileChooser="false" imageMap="false" descriptionType="text" dataimage="true" html="false" checkHtml="true" resize="false" resizeWidth="100" resizeHeight="75" />
+    <field name="options" editor="textfield" required="true" compactDisplay="false" type="String[]" searchable="true" size="80" ml="true" descriptionType="text" html="false" checkHtml="true" />
+  </fields>
+</type>
+

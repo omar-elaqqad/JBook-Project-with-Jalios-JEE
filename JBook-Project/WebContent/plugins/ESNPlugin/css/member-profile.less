@@ -1,0 +1,832 @@
+// Include variables and mixins
+@import "../../../css/jalios/core/init-mixins.less";
+
+// -------------------------------------------------------------------
+// PLUGINS LESS VARIABLES
+// -------------------------------------------------------------------
+@import "../../../plugins/ESNPlugin/css/esn-variables.less";
+// Hook for JCMS
+@import "../../../css/plugin.less";
+
+// ------------------------------------------------------------------- 
+//  PLUGIN CSS DECLARATION                                             
+// ------------------------------------------------------------------- 
+
+.member-profile {
+  background: @esn-profile-bg;
+  margin: 0 auto;
+  
+  .member-profile-inner {
+    margin: 0 auto;
+    max-width: 1180px;
+    width: 100%;
+  }
+  
+  // -- Header
+  &.is-account .profile-header-top {
+    background-color: @esn-profile-account-bg;
+  }
+  &.is-contact .profile-header-top {
+    background-color: @esn-profile-contact-bg;
+  }
+  &.is-guest .profile-header-top {
+    background-color: @esn-profile-guest-bg;
+  }
+  // ESN-666: .is-disabled AFTER .is-guest rule so that it overrides it
+  &.is-disabled .profile-header-top {
+    background-color: @esn-profile-disabled-bg;
+  }
+  .profile-header {
+    color: @text-color;
+    background-color: @esn-profile-header-bg;
+  } // .profile-header
+
+  .profile-header-left {
+    left: 0;
+  }
+  .profile-header-right {
+    right: 0;
+  }
+  .profile-header-left,
+  .profile-header-right {
+    color: #FFFFFF;
+    position: absolute;
+    top: 50%; 
+    transform: translatey(-50%);
+    z-index: 1;
+  }
+
+  .profile-header-title P {
+    margin-bottom: 0;
+  }
+  .profile-header-top {
+    font-weight: 300;
+    position: relative;
+    height: @esn-profile-header-top-height-xs;
+    background-color: @esn-profile-header-top-bg;
+    margin-bottom: 40px;
+    @media (min-width: @screen-xs-min) {
+      height: @esn-profile-header-top-height;
+    }
+  } // .profile-header-top
+
+  .profile-header-item {
+    padding-bottom: 20px;
+    &, H1, H2, H3, H4, H5, H6 {
+      font-weight: 300;
+    }
+  }
+
+  // -- Header Photo
+  .profile-header-photo-wrapper .wrapper-photo .photo {
+    max-height: @esn-profile-photo-size-xs;
+    max-width: @esn-profile-photo-size-xs;
+    @media (min-width: @screen-xs-min) {
+      max-height: @esn-profile-photo-size;
+      max-width: @esn-profile-photo-size;
+    }
+  }
+
+  .wrapper-photo.large-photo .photo {
+    min-width: @esn-profile-photo-size-xs;
+    @media (min-width: @screen-xs-min) {
+      min-width: @esn-profile-photo-size;
+    }
+  }
+
+  // "Change photo" only for 480px+ device
+  .profile-header-photo-wrapper .wrapper-photo .change-photo {
+    display: none;
+  }
+  &[min-width~="@{screen-xs-min}"] {
+    .profile-header-photo-wrapper .wrapper-photo .change-photo {
+      display: block;
+    }
+  }
+    
+  .profile-header-photo-wrapper {
+    top: @esn-profile-photo-top;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    border-radius: 50%;
+    .wrapper-photo {
+      border: 0 none;
+      box-shadow: none;
+      padding: 5px;
+      margin-bottom: 0;
+      overflow: hidden;
+      background-color: #FFFFFF;
+      &[role=button] {
+        cursor: zoom-in;
+      }
+      &:focus-visible {
+        background-color: @jalios-color-blue;
+        outline: 0 none;
+      }
+    }
+    .initials-photo {
+      user-select: none;
+    }
+    .profile-header-photo {
+      display: flex;
+      border-radius: 50%;
+      overflow: hidden;
+      &:focus-within {
+        .change-photo {
+          opacity: 1;
+        }
+      }
+    } // .profile-header-photo
+
+    .change-photo {
+      height: 60px;
+      position: absolute;
+      opacity: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: opacity 200ms ease-in, background-color 200ms ease-in;
+      background: rgba(0, 0, 0, 0.3);
+      text-align: center;
+      display: flex;
+      width: 100%;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+      A {
+        padding-top: 6px;
+        color: white;
+        width: 100%;
+        height: 100%;
+        font-size: 26px;
+        &, &:hover, &:focus {
+          text-decoration: none;
+        }
+      }
+    }    
+    &:hover {
+      .change-photo {
+        opacity: 1;
+      }
+    }
+  }
+
+  // Main action
+  // On small device, display the (repeated) main action as the first menu item, and the real one as it has not enough width to fit
+  // On larger device, display the real main action, and hide the repeated one.
+  .profile-actions {
+    .esn-profile-main-action {
+      // real one hidden by default (mobile first)
+      display: none;
+    }
+    // Display the repeated
+    .dropdown-menu .esn-profile-main-action {
+      display: block;
+    }
+  }
+  // But let the alone "view profile" main action when in edit mode.
+  &.edit-member-profile {
+    .profile-actions {
+      .esn-profile-main-action {
+        // Restore display of "view profile"
+        display: block;
+      }
+    }
+  }
+
+  &[min-width~="@{screen-xs-min}"] {
+    .profile-actions {
+      .esn-profile-main-action {
+        // real one displayed
+        display: block;
+      }
+      // Hide the repeated
+      .dropdown-menu .esn-profile-main-action {
+        display: none;
+      }
+    }
+    // Dropdown BTN follow the wrapper, or the main action directly
+    .esn-profile-main-action-wrapper, 
+    .esn-profile-main-action {
+       + .dropdown-toggle {
+        border-left-width: 0px; // Prevent double border
+      }
+    }
+  }
+
+  .profile-actions {
+    display: flex;
+    position: relative;
+
+    // Main action look (wrapped or, not wrapped (view profile)
+    .esn-profile-main-action-wrapper > A.esn-profile-main-action,
+    > .esn-profile-main-action.esn-profile-action {
+      background: transparent;
+      border-color: white;
+      border-radius: 0px;
+      color: white;
+      transition: background-color 200ms ease-in;
+    }
+
+    // Dropdown BTN follow the wrapper, or the main action directly
+    .esn-profile-main-action-wrapper, 
+    .esn-profile-main-action {
+      &:hover {
+        background-color: rgba(0, 0, 0, 10%);
+      }
+    }
+    > .esn-profile-action {
+      background: transparent;
+      border-color: white;
+      border-radius: 0px;
+      color: white;
+      transition: background-color 200ms ease-in;
+     }
+    .jcmsplugin-tasks-edit-data-task,
+    .jcmsplugin-tasks-add-data-task{
+      &.jalios-icon {
+        display: none;
+      }
+    }
+  }
+
+  .esn-profile-main-action {
+    .text-overflow();
+  }
+  .esn-profile-main-action:not(LI) {
+    // trigger ellipsis on action text on small screen
+    // +/- split header in 3, then allow 33% for right, thus, +/- 25% for menu action labels
+    max-width: 23vw;
+  }
+  &[min-width~="520px"] {
+    .esn-profile-main-action:not(LI) {
+      max-width: 25vw;
+    }
+  }
+  &[min-width~="@{screen-lg-min}"] {
+    .esn-profile-main-action:not(LI) {
+      // Then limit to 300px
+      max-width: 300px;
+    }
+  }
+  &[min-width~="@{screen-sm-min}"] {
+    .esn-profile-main-action:not(LI) {
+      max-width: 200px;
+    }
+  }
+  &[min-width~="@{screen-md-min}"] {
+    .esn-profile-main-action:not(LI) {
+      max-width: 300px;
+    }
+  }
+  .profile-status {
+    font-size: 14px;
+    .mbr-status {
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      color: transparent;
+      border-radius: 50%;
+      border: 1px solid #FFFFFF;
+      line-height: 0.8;
+    }
+    .mbr-status-0 { background-color: @jalios-member-status-0; }
+    .mbr-status-1 { background-color: @jalios-member-status-1; }
+    .mbr-status-2 { background-color: @jalios-member-status-2; }
+    .mbr-status-3 { background-color: @jalios-member-status-3; }
+  }
+  
+  // default, mobile, wrap on new line
+  // more width, reset
+  .profile-status {
+    float: left;
+    @media (min-width: @screen-md-min) {
+      float: none;
+    }
+    .mbr-status {
+      @media (min-width: @screen-md-min) {
+        margin-left: 8px;
+        margin-right: 3px;
+      }
+    }
+  }
+  
+  // Make the header left, only containing status, to have overflow on xs
+  // (prevent status sentence to overlap the photo)
+  .profile-header-left {
+    max-width: 25vw;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: @screen-xs-min) {
+      max-width: 30vw;
+      .text-overflow();
+    }
+    @media (min-width: @screen-md-min) {
+      // Reset flex
+      display: block;
+      max-width: 350px;
+      overflow: initial;
+    }
+    @media (min-width: @screen-lg-min) {
+      max-width: 450px;
+    }
+  }
+  
+  .profile-header-left-info {
+    max-width: 100%;
+    .text-overflow();
+    P.mbr-status-label {
+      display: inline-block;
+    }
+    @media (min-width: @screen-xs-min) {
+      max-width: none;
+    }
+  }
+  .profile-member-type {
+    font-size: 20px;
+  }
+  .profile-member-type + .profile-status {
+    @media (min-width: @screen-md-min) {
+      margin-left: 20px;
+    }
+  }
+  &.is-disabled .profile-member-type {
+    background: @jalios-color-grey-neutral-dark;
+    border-radius: 4px;
+    padding: 2px @padding-small-horizontal;
+  }
+  .profile-name {
+    margin: 0px 0px 10px 0px;
+    text-align: center;
+    color: #000000; 
+  }
+  &[min-width~="@{screen-xs-min}"] {  
+    // Let default (36px?) H1 font-size on very small screen
+    // Only increase when 480px+
+    .profile-name {
+      font-size: 40px;
+    }
+  }
+  .profile-function-company {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .profile-coordonnees-item {
+    font-weight: 400;
+    text-align: center;
+    .jalios-icon.telephone.halflings-earphone {
+      // align this particular icon to look aligned with others
+      vertical-align: middle;
+    }
+    .jalios-icon.jcmsplugin-esn-profile-address.icomoon-location {
+      // align this particular icon for a:hover underline is not dis-continuous to due default middle vertical align
+      // and because THIS icon is inside <A>, thus is underlined too
+      vertical-align: baseline;
+    }
+    .address {
+      margin: 0;
+    }
+    .esn-member-telephone.has-mobile {
+      // hide phone here if member has mobile too
+      display: none;
+    }
+  }
+  .profile-coordonnees { /* UL */
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+    > LI {
+      display: inline-block;
+      & + LI {
+        margin-left: 10px;
+      }
+    }
+      padding: 0px 10px 5px;
+    &, A, .jalios-icon {
+      color: @text-color;
+    }
+  }
+  .profile-event {
+    padding: @padding-large-vertical @padding-large-horizontal;
+    border: 1px solid #CCCCCC;
+    border-radius: 10px;
+    font-size: 18px;
+    
+    .event-link {
+      margin-left: @padding-large-vertical;
+    }
+    .profile-event-dates {
+      font-size: 14px;
+      display: inline;
+      margin-left: @padding-large-vertical;
+      UL.event-dates.list-inline {
+        display: inline;
+      }
+      UL.event-dates {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-right: -5px;
+        margin-left: 0px;
+      }
+      UL.event-date-times {
+        &:before {
+          content: "(";
+        }
+        &:after {
+          content: ")";
+        }
+      }
+    }
+  }
+  
+  // -- Contact channels
+  .profile-contact-channels {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-top: 1px solid #DDD;
+    padding-top: 20px; 
+    padding-bottom: 20px;
+    
+    .profile-contact-channel {
+      &, A {
+        color: @text-color;
+        text-align: center;
+        .transition(background-color 200ms ease-in);
+        &:hover {
+          background-color: @esn-profile-bg;
+          border-radius: 5px;
+          text-decoration: none;
+        }
+        
+      }
+      IMG {
+        height: 48px;
+        width: 48px;
+      }
+    }
+
+    // Apply on itself,
+    // Or on a wrapper (case: skype)
+    // or on a SPAN, (case phoneTag + invalid number) 
+    A.profile-contact-channel,
+    SPAN.profile-contact-channel,
+    .profile-contact-channel-wrapper {
+      justify-content: center;
+      display: flex;
+      padding: 10px 20px;
+      flex-direction: column;
+      margin: auto 5px;
+    }
+    
+    .profile-contact-channel-wrapper {
+      padding: 0;
+      A.profile-contact-channel {
+        margin: 0px;
+      }
+    }
+
+    .profile-contact-channel {
+      position: relative;
+      display: inline-block;
+      > IMG {
+        margin: 0 auto;
+      }
+      &.profile-contact-telephone {
+        .jalios-icon:before {
+          display: none; // hide default PhoneTag icon
+        }
+      }
+    }
+
+    .profile-contact-channel-image[src='s.gif'] {
+      width: @esn-profile-social-img-width;
+      height: @esn-profile-social-img-height;
+    }
+  }
+  
+  // -- Cards
+  .profile-card-deck {
+    .card-inline-layout {
+      .card,
+      .card-flip-wrapper {
+        margin-bottom: @baseline;
+      }
+      .card-member-connection .photo-anchor {
+        display: none;
+      }
+    }
+  }
+
+  // -- Tab Info
+  .profile-presentation {
+    .esn-comment-pane .esn-comment-pane-content {
+      background: @esn-profile-presentation-bg;
+      &:after {
+        border-right-color: @esn-profile-presentation-bg;
+      }
+    }
+    .profile-info-presentation-content.introduction {
+      .wysiwyg {
+        margin-bottom: 10px;
+      }
+      .other-info:last-child {
+        margin-bottom: @baseline;
+      }
+    }
+  }
+
+  // -- Tab Calendar
+  .member-profile-calendar {
+    .member-profile-calendar-event:not(:first-child) {
+      border-top: 1px solid #EAEAEA;
+      padding-top: 20px;
+    }
+    .section-title {
+      border-bottom-width: 0px;
+    }
+    .member-profile-calendar-event .media-body {
+      > A {
+        font-size: 20px;
+        margin-bottom: 5px;
+        display: inline-block;
+        margin-top: 0px;
+        padding-top: 0px;
+      }
+    }
+    .activity-event-attendees {
+      margin-top: 10px;
+    }
+  }
+
+  // -- Body
+  .profile-body {
+    position: relative;
+  }
+  .profile-body-inner {
+    position: relative;
+    background-color: @esn-profile-bg;
+    padding-bottom: @baseline;
+  }
+  
+  .profile-body-block {
+    padding: 30px 10px;
+  }
+  &[min-width~="@{screen-xs-min}"] {
+    .profile-body-block {
+      padding: 40px 20px;
+    }
+  }
+  .profile-body-block {
+    background-color: @esn-profile-body-block-bg;
+    margin: 0px 0px 20px 0px; 
+    &.has-no-results {
+      padding-bottom: 40px;
+    }
+    .other-info {
+      margin-bottom: 10px;
+     .label {
+        font-weight: normal;
+        font-size: 100%;
+        color: #999;
+        padding: 0px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .profile-body-inline-block {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .section-title,
+  .section-subtitle {
+    padding-bottom: 10px;
+  }
+  .section-title {
+    font-size: @font-size-h4;
+    border-bottom: 1px solid #CCC;
+    margin-bottom: @baseline;
+    .esn-action {
+      float: right;
+      font-size: @font-size-base;
+    }
+  }
+  .section-subtitle {
+    font-size: @font-size-h5;
+    margin-bottom: @padding-base-vertical;
+  }
+
+  .no-suggestion {
+    text-align: center;
+  }
+  
+  .profile-card-deck {
+    .pagination-wrapper {
+      UL.pagination.pqf {
+       margin-top: 0px;
+      }
+    }
+  }
+  
+  .ajax-loading .ajax-loading-display {
+    background-color: rgb(253, 253, 253);
+    align-items: start;
+    .loader {
+      margin-top: 120px;
+    }
+  }
+
+  // -------------------------------------------------------------------
+  //  Expertises
+  // -------------------------------------------------------------------
+  
+  .profile-expertises {
+    .profile-expertise-branch {
+      margin-bottom: @baseline;
+    }
+    .expertise-branch-label.section-subtitle {
+      padding-bottom: 5px;
+      margin-bottom: 0px;
+    }
+    .expertise-branch-label {
+      width: 120px;
+      color: @text-color;
+      font-size: 16px;
+      text-align: right;
+      vertical-align: top;
+      padding-right: @padding-base-horizontal;
+      white-space: nowrap;
+    }
+    .expertise-list {
+      vertical-align: top;
+      padding-bottom: 10px;
+      .meta-cat {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  
+  // For small screen, wrap table label
+  &#member-profile[max-width~="@{screen-sm-max}"] {
+   .logs .log-date {
+      white-space: normal;
+    }
+  }
+  &#member-profile .logs .log-date {
+    white-space: nowrap;
+  }
+
+  
+  // -------------------------------------------------------------------
+  //  Contacts
+  // -------------------------------------------------------------------
+  .connection-filter-form {
+    .connection-filter-connection-type {
+      &.input-group > .select2-container--bootstrap {
+        display: block; /*ESN-792*/
+      }
+      float: right;
+      position: relative;
+      bottom: 10px;
+    }
+  }
+  
+  .esn-component-body {
+    .panel-default {
+      border-color: #EEEEEE;
+      border-radius: 0px;
+      box-shadow: none;
+    }
+  }
+
+  // -------------------------------------------------------------------
+  //  Communities
+  // -------------------------------------------------------------------
+  .profile-communities {
+    .card-collaborativespace {
+      .card-block-footer {
+        flex-basis: 0;
+      }
+      .typologies {
+        height: 40px;
+        overflow: hidden;
+        IMG.jalios-icon.category {
+          display: none;
+        }
+      }
+    }
+    .card-responsive-layout .card .card-img {
+      height: 163px; // see jalios-card-layout-inline.less
+    }
+  }
+
+  // -------------------------------------------------------------------
+  //  Experiences
+  // -------------------------------------------------------------------
+  .esn-experience {
+    .esn-experience-header {
+      margin-bottom: 10px;
+    }
+    .esn-experience-title {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+  }
+
+  // -------------------------------------------------------------------
+  //  Element queries
+  // -------------------------------------------------------------------
+
+  // Default "widths"
+  .profile-header-left {
+    padding-left: 10px;
+  }
+  .profile-header-right {
+    padding-right: 10px;
+  }
+  .profile-header-details {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  &[min-width~="@{screen-xs-min}"] {
+    .profile-header-left {
+      padding-left: 20px;
+    }
+    .profile-header-right {
+      padding-right: 20px;
+    }
+    .profile-header-details {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  &[min-width~="@{screen-md-min}"] {
+    .profile-header-details {
+      padding-left: @esn-profile-block-padding-horizontal-md;
+      padding-right: @esn-profile-block-padding-horizontal-md;
+    }
+    .profile-header-left {
+      padding-left: @esn-profile-block-padding-horizontal-md;
+    }
+    .profile-header-right {
+      padding-right: @esn-profile-block-padding-horizontal-md;
+    }
+    .profile-body-block,
+    .profile-body-inline-block {
+      padding-left: @esn-profile-block-padding-horizontal-md;
+      padding-right: @esn-profile-block-padding-horizontal-md;
+    }
+  }
+  &[min-width~="@{screen-lg-min}"] {
+    .profile-header-details {
+      padding-left: @esn-profile-block-padding-horizontal-lg;
+      padding-right: @esn-profile-block-padding-horizontal-lg;
+    }
+    .profile-header-left {
+      padding-left: @esn-profile-block-padding-horizontal-lg;
+    }
+    .profile-header-right {
+      padding-right: @esn-profile-block-padding-horizontal-lg;
+    }
+    .profile-body-block,
+    .profile-body-inline-block {
+      padding-left: @esn-profile-block-padding-horizontal-lg;
+      padding-right: @esn-profile-block-padding-horizontal-lg;
+    }  
+  }
+  
+  &[max-width~="@{screen-lg-min}"] {
+    .member-profile-inner {
+      // Force minimum size for limited inner contents
+      width: 100%;
+    } 
+  }
+} // .member-profile
+
+// -------------------------------------------------------------------
+//  CollaborativeSpace
+// -------------------------------------------------------------------
+.cs-portal {
+  .member-profile {
+    padding-top: 30px;
+  }
+  &[max-width~="@{screen-lg-min}"] {
+    .member-profile {
+      padding-top: 0;
+    }
+    .member-profile-inner {
+      padding-bottom: 0;
+    }
+  }
+  #cs-footer {
+    display: none;
+  }
+}

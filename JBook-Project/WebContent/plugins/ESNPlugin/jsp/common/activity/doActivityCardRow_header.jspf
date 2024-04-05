@@ -1,0 +1,92 @@
+<%@page import="com.jalios.jcms.PhotoSize"%><%
+%><%@page import="generated.MicroBlogging"%><%
+
+%><div class="activity-header media"><%
+  String accessActivityDataLinkAriaLabel = "";
+  if (activityData != null) {
+    accessActivityDataLinkAriaLabel = "aria-label=\""
+        + encodeForHTMLAttribute(glp("jcmsplugin.esn.activity-card.activity-data-link.for-aria-label",
+            activityData.getDataName(userLang))) + "\"";
+  }
+  if (isNestedActivity) {
+    %><div class="activity-nested-description"><%
+      if (activityData != null) {
+        %><jalios:memberphoto link="false" member="<%= lastActivityAuthor %>" size="<%= PhotoSize.ICON %>" htmlAttributes='aria-hidden="true"' /><%
+        %><jalios:link data="<%= activityData %>" htmlAttributes="<%= accessActivityDataLinkAriaLabel %>"><%
+          %>&nbsp;<%= itActivity.getDataIconHtml(userLang) %><%
+        %></jalios:link><%
+      }
+      String activityAuthorHtmlAttributes = "aria-label='"
+          + encodeForHTMLAttribute(glp("jcmsplugin.esn.activity-card.activity-author-link.for-aria-label", itActivity.getAuthor()))
+          + "'";
+      %> <jalios:link data="<%= itActivity.getAuthor() %>" css="activity-author"
+          htmlAttributes='<%= activityAuthorHtmlAttributes %>' /><%
+      %> <%= itActivity.getDescription(userLocale) %><%
+      %><span class="activity-date"><%
+        %> &middot;<%
+        %> <%= JcmsUtil.getFriendlyDate(itActivity.getCdate(), DateFormat.SHORT, true, userLocale) %><%
+      %></span><%
+    %></div><%
+  }
+
+  %><div class="activity-member-photo pull-left" aria-hidden="true"><%
+    %><jalios:memberphoto link="false" member="<%= isNestedActivity ? activityData.getAuthor() : itActivity.getAuthor() %>" size="<%= PhotoSize.TINY %>" /><%
+  %></div><%
+  
+  %><div class="media-body"><%
+    %><div class="activity-description"><%
+      if (activityData != null) {
+        %> <jalios:link css="noTooltipCard" data="<%= activityData %>" htmlAttributes="<%= accessActivityDataLinkAriaLabel %>"><%
+          %><%= Util.getSize(previousActivityList) > 0 || isDBCommentActivity  ? activityData.getDataIconHtml(userLang) : itActivity.getHtmlIcon(userLang) %><%
+        %></jalios:link><%
+      }
+      String activityAuthorOrNestedHtmlAttributes = "aria-label='"
+          + encodeForHTMLAttribute(glp("jcmsplugin.esn.activity-card.activity-author-link.for-aria-label", isNestedActivity ? activityData.getAuthor() : itActivity.getAuthor()))
+          + "'";
+      %> <jalios:link data="<%= isNestedActivity ? activityData.getAuthor() : itActivity.getAuthor() %>" css="activity-author"
+          htmlAttributes='<%= activityAuthorOrNestedHtmlAttributes %>' /><%
+      if (!(activityData instanceof MicroBlogging)) {
+        if (isNestedActivity) {
+          String activityNestedDataLinkHtmlAttributes = "aria-label=\""
+              + encodeForHTMLAttribute(glp("jcmsplugin.esn.activity-card.activity-data-link.for-aria-label",
+                  itActivityEntry.getPublication())) + "\"";
+          %> &middot; <jalios:link css="noTooltipCard" data="<%= itActivityEntry.getPublication() %>"
+              htmlAttributes="<%= activityNestedDataLinkHtmlAttributes %>" /><%
+        } else {
+          %> <%= itActivity.getDescription(userLocale) %><%
+        }
+      }
+    %></div><%
+
+    %><div class="activity-metas"><%
+      %><%-- Activity date --%><%
+      if (activityData != null) {
+        String activityFriendlyDate = JcmsUtil.getFriendlyDate(activityDate, DateFormat.SHORT, true, userLocale);
+        Date activityOrDataDate = !isNestedActivity ? itActivity.getCdate() : activityData.getCdate();
+        %><jalios:buffer name="activityOrDataDateBuffer"><%
+          %><jalios:date format="timeDateOrTime" date="<%= activityOrDataDate %>" /><%
+        %></jalios:buffer><%
+        String linkWithDateAriaLabel = "aria-label=\""
+            + encodeForHTMLAttribute(glp("jcmsplugin.esn.activity-card.activity-data-link-with-date.for-aria-label",
+                activityOrDataDateBuffer.toString(),
+                activityData.getDataName(userLang))) + "\"";
+        String linkHtmlAttributes = linkWithDateAriaLabel;
+        %><jalios:link data="<%= activityData %>" css="activity-meta activity-meta-date noTooltipCard" htmlAttributes='<%= linkHtmlAttributes %>'><%
+          %><%= activityOrDataDateBuffer.toString() %><%
+        %></jalios:link><%
+      } else {
+        %><jalios:date format="timeDateOrTime" date="<%= itActivity.getCdate() %>" /><%
+      }
+
+      %><%-- Activity Workspace --%><%
+      if (itActivity.getWorkspace() != null) {
+        String activityWSLinkAriaLabel = "aria-label='" + encodeForHTMLAttribute(glp("jcmsplugin.esn.activity-card.activity-ws-link.for-aria-label", itActivity.getWorkspace().getTitle(userLang))) + "'";
+        %> &middot; <%
+        %><jalios:link css="activity-meta activity-meta-workspace" data="<%= itActivity.getWorkspace() %>" htmlAttributes="<%= activityWSLinkAriaLabel %>"><%
+          %><%= itActivity.getWorkspace().getTitle(userLang) %><%
+        %></jalios:link><%
+      }
+    %></div><%
+  %></div><%
+%></div><%
+%>

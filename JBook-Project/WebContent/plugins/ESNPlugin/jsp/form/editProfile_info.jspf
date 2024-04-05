@@ -1,0 +1,110 @@
+<%-- TAB - PERSONAL INFORMATION ---------------------------------------------- --%><%
+%><%@page import="com.jalios.jcmsplugin.esn.ui.Link"%><%
+%><div class="mbr-profile-edit-information form-horizontal tab-page">
+<h2 class="tab"><jalios:icon src="jcmsplugin-esn-profile-info" /> <%= glp("ui.adm.mbr-edit.fs.info") %></h2>
+  <%
+  boolean isFirstNameDisabled = isLdapAccount && Util.notEmpty(channel.getProperty("ldap.mapping.f-name"));
+  boolean isNameDisabled = isLdapAccount && Util.notEmpty(channel.getProperty("ldap.mapping.name"));
+  boolean isOrganizationDisabled = isLdapAccount && Util.notEmpty(channel.getProperty("ldap.mapping.organization"));
+  boolean isDepartmentDisabled = isLdapAccount && Util.notEmpty(channel.getProperty("ldap.mapping.department"));
+  boolean isJobDisabled = isLdapAccount && Util.notEmpty(channel.getProperty("ldap.mapping.job"));
+  boolean isSalutDisabled = isLdapAccount && Util.notEmpty(channel.getProperty("ldap.mapping.salut"));
+
+  String[] salutValues = Util.split(channel.getProperty("ui.member.salutations", ""), " ");
+  if (Util.notEmpty(salutValues)) {
+    String[] salutLabels = new String[salutValues.length];
+    int i = 0;
+    for (String salut : salutValues){
+      salutLabels[i++] = glp("ui.com.lbl.salut." + salut);
+    }
+    %>
+    <jalios:field label="ui.adm.mbr-edit.lbl.salut" name='salutation' value='<%= memberFH.getAvailableSalutation() %>' disabled="<%= isSalutDisabled %>">
+      <jalios:control settings='<%= new EnumerateSettings().select().enumValues(salutValues).enumLabels(salutLabels) %>' />
+    </jalios:field>
+  <% } %>
+  
+  <jalios:field label="ui.adm.mbr-edit.lbl.name" name='name' value='<%= memberFH.getAvailableName() %>' required='<%= true %>'
+                disabled='<%= isNameDisabled %>'>
+    <jalios:control type="<%= ControlType.TEXTFIELD %>" />
+  </jalios:field>
+  
+  <jalios:field label="ui.adm.mbr-edit.lbl.f-name" name='firstName' value='<%= memberFH.getAvailableFirstName() %>'
+                disabled='<%= isFirstNameDisabled %>'>
+    <jalios:control type="<%= ControlType.TEXTFIELD %>" />
+  </jalios:field>
+  
+  <jalios:field label="ui.adm.mbr-edit.lbl.organization" name='organization' value='<%= memberFH.getAvailableOrganization() %>'
+                disabled='<%= isOrganizationDisabled %>'>
+    <jalios:control type="<%= ControlType.TEXTFIELD %>" />
+  </jalios:field>
+  
+  <jalios:field label="ui.adm.mbr-edit.lbl.department" name='department' value='<%= memberFH.getAvailableDepartment() %>'
+                disabled='<%= isDepartmentDisabled %>'>
+    <jalios:control type="<%= ControlType.TEXTFIELD %>" />
+  </jalios:field>
+  
+  <jalios:field label="ui.adm.mbr-edit.lbl.job" name='jobTitle' value='<%= memberFH.getAvailableJobTitle() %>'
+                disabled='<%= isJobDisabled %>'>
+    <jalios:control type="<%= ControlType.TEXTFIELD %>" />
+  </jalios:field>
+
+  <%
+  // Manager
+  if (formHandler.showManager()) {
+    Member currentManager = formHandler.getManager();
+    String managerDescription = currentManager == null ? null : glp("ui.adm.mbr-edit.txt.declared-manager", currentManager.getDisplayLink(userLocale));
+    boolean canUpdateManager = formHandler.canUpdateManager();
+    boolean isManagerDisabled = !canUpdateManager;
+    %><jalios:field name='declaredManager' label='ui.com.lbl.manager' description="<%= managerDescription %>" value='<%= currentManager %>'
+                disabled='<%= isManagerDisabled %>'><%
+      %><jalios:control settings='<%= formHandler.getManagerSettings() %>' /><%
+    %></jalios:field><%
+  }
+
+  // Assistant
+  if (formHandler.showAssistant()) {
+    Member currentAssistant = formHandler.getAvailableAssistant();
+    String assistantDescription = currentAssistant == null ? null : glp("ui.adm.mbr-edit.txt.assistant", currentAssistant.getDisplayLink(userLocale));
+    %><jalios:field name='assistant' label='ui.com.lbl.assistant' description="<%= assistantDescription %>" value='<%= formHandler.getAvailableAssistant() %>'><%
+      %><jalios:control settings='<%= formHandler.getAssistantSettings() %>' /><%
+    %></jalios:field><%
+  }
+  %>
+
+  <% if (isAccount && channel.isMultilingual()) { %>
+      <jalios:field label="ui.com.lbl.language" name='language' value='<%= memberFH.getAvailableLanguage() %>'>
+        <jalios:control settings="<%= new LanguageSettings().select().enumValues(channel.getLanguageList()) %>" />
+      </jalios:field>
+  <% } %>
+  <% if (isAccount && channel.isTimeZoneEnabled()) { %>
+    <jalios:field label="ui.com.lbl.timezone" name='zoneId' value='<%= memberFH.getAvailableZoneId() %>' >
+      <jalios:control type="<%= ControlType.TIMEZONE %>" />
+    </jalios:field>
+  <% } %>
+  <% if (member.canUploadPhoto()) { %>
+    <jalios:field name="photo" label="ui.adm.mbr-edit.lbl.photo">
+      <div class="media">
+        <% if (member.hasPhoto()) { %>
+          <jalios:memberphoto css="pull-left" member="<%= member %>" size="<%= PhotoSize.SMALL %>" />
+        <% } %>
+        <div class="media-body"><%
+          out.print(new Link()
+              .css("modal btn btn-default")
+              .href("front/memberPhoto/editPhoto.jsp?mbrId=" + memberFH.getMember().getId())
+              .text(glp("ui.member-editor.change-photo"))
+              .html());
+          if (member.hasPhoto()) { %>
+            <jalios:control settings='<%= new EnumerateSettings().name("removePhoto")
+                                                .checkbox()
+                                                .enumLabels("ui.adm.mbr-edit.lbl.no-photo").enumValues("true") %>' />
+          <% } %>
+        </div>
+      </div>
+    </jalios:field>
+  <% } %>          
+
+  <% request.setAttribute("extraDataSet", formHandler.getExtraDataSet("info")); %>
+  <jalios:include jsp="/jcore/doEditExtraData.jsp" />
+  <% request.removeAttribute("extraDataSet"); %>
+  <jalios:include target="PLUGIN_ESN_EDIT_PROFILE_INFO" targetContext="tr" />
+</div>

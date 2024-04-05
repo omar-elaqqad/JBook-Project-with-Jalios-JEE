@@ -1,0 +1,108 @@
+// SmartPhone init
+@import "smartphone-init.less";
+
+// BOOTSTRAP-3.3.4 components
+@import "bootstrap/dropdowns.less";
+@import "bootstrap/media.less";
+@import "bootstrap/thumbnails.less";
+@import "bootstrap/grid.less";
+@import "bootstrap/glyphicons.less";
+@import "bootstrap/alerts.less";
+@import "bootstrap/wells.less";
+@import "bootstrap/breadcrumbs.less";
+@import "bootstrap/utilities.less";
+@import "bootstrap/labels.less";
+@import "bootstrap/badges.less";
+@import "bootstrap/responsive-embed.less";
+@import "bootstrap/navs.less";
+
+// Jcms desktop components
+@import "../../../css/jalios/core/jalios-workflow.less";
+@import "../../../css/jalios/core/jalios-badge.less";
+
+// Import reset
+@import "smartphone-reset.less";
+
+// Importa hamburgers
+@import "hamburgers/hamburgers.less";
+
+// Overrided JQM components
+@import "jqmOverride/smartphone-listview.less";
+@import "jqmOverride/smartphone-topbar.less";
+@import "jqmOverride/smartphone-navbar.less";
+@import "jqmOverride/smartphone-jqm-override.less";
+@import "jqmOverride/smartphone-tabs.less";
+
+// Custom components
+@import "components/smartphone-ajax-waiting.less";
+@import "components/smartphone-alert.less";
+@import "components/smartphone-anchor.less";
+@import "components/smartphone-animate.less";
+@import "components/smartphone-breadcrumb.less";
+@import "components/smartphone-buttons.less";
+@import "components/smartphone-controls.less";
+@import "components/smartphone-drawer.less";
+@import "components/smartphone-forms.less";
+@import "components/smartphone-icons.less";
+@import "components/smartphone-label.less";
+@import "components/smartphone-loader.less";
+@import "components/smartphone-login.less";
+@import "components/smartphone-member-photo.less";
+@import "components/smartphone-member-profile.less";
+@import "components/smartphone-message.less";
+@import "components/smartphone-misc.less";
+@import "components/smartphone-panel.less";
+@import "components/smartphone-publication-fulldisplay.less";
+@import "components/smartphone-service.less";
+@import "components/smartphone-uploader.less";
+@import "components/smartphone-wiki-wysiwyg.less";
+@import "components/smartphone-vote.less";
+@import "components/smartphone-recommendation.less";
+@import "components/smartphone-fulldisplay.less";
+@import "components/smartphone-workflow.less";
+@import "components/smartphone-mobileapp.less";
+@import "components/smartphone-icomoon.less";
+@import "components/smartphone-portal.less";
+@import "components/smartphone-bottom-nav.less";
+@import "components/smartphone-badge.less";
+@import "components/smartphone-application-launcher.less";
+@import "components/smartphone-member-menu.less";
+@import "components/smartphone-topbar.less";
+@import "components/smartphone-publication-actions.less";
+@import "components/smartphone-search.less";
+@import "components/smartphone-toastr.less";
+@import "components/smartphone-ctxmenu.less";
+@import "components/smartphone-dialog.less";
+
+.pager-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  .btn {
+    max-width: 50px;
+    margin: 0 10px;
+    &.is-disabled {
+      visibility: hidden;
+      pointer-events: none;
+    }
+  }
+  .pager-info {
+    white-space: nowrap;
+  }
+}
+
+html .ui-page-theme-a .ui-btn .pager-wrapper .btn {
+  margin-top: 0;
+  &.btn-seemore {
+    margin: 0 16px;
+  }
+}
+html .ui-page-theme-a .pager-seemore-wrapper {
+  margin: 8px 16px;
+  .btn-seemore {
+    margin: 0;
+  }
+}
+// Plugins
+@import "smartphone-plugins.less";

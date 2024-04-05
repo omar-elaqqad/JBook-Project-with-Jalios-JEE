@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "classpath://org/hibernate/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="generated.MemberJob" table="G_MEMBERJOB">
+    <cache usage="read-write" />  
+    <id name="rowId" column="rowId">
+      <generator class="native"/>
+    </id>
+    <property name="cdate" not-null="true" index="IG_MEMBERJOB_CDATE" />
+    <property name="mdate" not-null="true" index="IG_MEMBERJOB_MDATE" />
+    <property name="authorId" length="32" index="IG_MEMBERJOB_AUTHORID" />
+    
+    <property name="pstatus" not-null="true" index="IG_MEMBERJOB_PSTATUS" />
+    <property name="workspaceId" not-null="true" length="32" index="IG_MEMBERJOB_WSID" />
+    
+    <property name="pdate"  index="IG_MEMBERJOB_PDATE" />
+    <property name="edate" />
+    <property name="adate" />
+    <property name="title" />
+    <property name="workflowId" index="IG_MEMBERJOB_WFID" />
+    <property name="voteCount" not-null="false" index="IG_MEMBERJOB_VOTECOUNT" />
+    <property name="voteScore" not-null="false" index="IG_MEMBERJOB_VOTESCORE" />
+    <property name="opAuthorId" length="32" index="IG_MEMBERJOB_OPAUTHORID"  />
+    <property name="readAck" />
+    
+    <property name="organization" />
+    
+    
+    <property name="description" type="text" length="65536" />
+    
+    
+    <property name="place" />
+    
+    
+    <property name="site" />
+    
+    
+    <property name="startDate" />
+    
+    
+    <property name="endDate" />
+    
+    
+  </class>
+</hibernate-mapping>
+<!-- **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY * DO NOT EDIT ANYTHING BELOW THIS LINE *** -->
+<!-- BKUgzl77LRF/BLwrelo8qQ== -->

@@ -1,0 +1,19 @@
+<%@page import="com.jalios.jcmsplugin.smartphone.taglib.SmartPhonePagerTag"%><%
+%><%@page import="com.jalios.jcmsplugin.smartphone.taglib.SmartPhonePagerTag.PagerMode"%><%
+%><%@page import="com.jalios.jcmsplugin.smartphone.SmartPhoneManager"%><%
+%><%@page import="com.jalios.jcmsplugin.smartphone.PortletQueryForeachPageResult"%><%
+%><%@page import="com.jalios.util.Util"%><%
+%><jsp:useBean id='formHandler' scope='page' class='com.jalios.jcmsplugin.smartphone.PortletQueryForeachQueryHandler'><%
+  %><jsp:setProperty name="formHandler" property="pageContext" value="<%= pageContext %>"/><%
+  %><jsp:setProperty name='formHandler' property='*' /><%
+  %><jsp:setProperty name='formHandler' property='pqf' value="<%= box %>" /><%
+  %><jsp:setProperty name='formHandler' property='workspace' value="<%= workspace %>" /><%
+%></jsp:useBean><% 
+PortletQueryForeachPageResult pageResult = formHandler.getPageResult();
+if (pageResult == null || Util.isEmpty(pageResult.getResultList())) {
+  if (formHandler.getAvailablePqf().getHideWhenNoResults()) {
+    request.setAttribute("ShowPortalElement",Boolean.FALSE);
+  }
+  return;
+}
+%>

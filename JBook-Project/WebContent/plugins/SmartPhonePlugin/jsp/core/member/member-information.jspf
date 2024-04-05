@@ -1,0 +1,14 @@
+<%@page import="org.apache.commons.io.FileUtils"%>
+<%@page import="java.util.Base64"%>
+<%@page import="java.util.Base64.Encoder"%>
+
+<div class="member-profile-container member-profile-info">
+  <div data-role="collapsible-set" class="member-profile-accordion" data-inset="false">
+    <jalios:include target="SMARTPHONE_MEMBER_PROFILE_INFORMATION_TOP" targetContext="bloc" />
+    <%@ include file='/plugins/SmartPhonePlugin/jsp/core/member/member-contact.jspf' %>
+    <jalios:include target="SMARTPHONE_MEMBER_PROFILE_INFORMATION_MIDDLE" targetContext="bloc" />
+    <jalios:include target="SMARTPHONE_MEMBER_PROFILE_AFTER_INFO" targetContext="bloc" />
+    <a data-jalios-member-id="<%= member.getId() %>" class="js-export-contact" id="linkExportContact" data-ajax="false" data-role="button" data-theme="a" href="plugins/SmartPhonePlugin/jsp/smartPhoneVcard.jsp?mid=<%= member.getId() %>"><%= glp("jcmsplugin.smartphone.lbl.member.add-to-address-book") %></a> 
+    <jalios:include target="SMARTPHONE_MEMBER_PROFILE_BOTTOM" targetContext="bloc" />
+  </div>
+</div><%-- EOF .member-profile-container --%>

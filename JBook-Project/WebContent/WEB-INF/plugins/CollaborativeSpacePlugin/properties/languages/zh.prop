@@ -1,0 +1,851 @@
+# ------------------------------------------------------------
+#  ACL
+# ------------------------------------------------------------
+acl.resource.admin/work/createCS: \u534f\u4f5c\u7a7a\u95f4 - \u521b\u5efa
+acl.resource.plugins: \u63d2\u4ef6
+acl.resource.plugins/collaborativespace: \u534f\u4f5c\u7a7a\u95f4
+acl.resource.plugins/collaborativespace/manageCSGuest: \u6765\u5bbe\u7ba1\u7406
+acl.resource.plugins/collaborativespace/manageCSGuest.h: \u6388\u6743\u534f\u4f5c\u7a7a\u95f4\u7ba1\u7406\u5458\u5728\u7a7a\u95f4\u5185\u521b\u5efa\u6765\u5bbe\u8d26\u6237\u3002
+acl.resource.admin-ws/plugins: \u63d2\u4ef6
+acl.resource.admin-ws/plugins/collaborativespace: \u534f\u4f5c\u7a7a\u95f4
+acl.resource.admin-ws/plugins/collaborativespace/manageCSServices: \u5e94\u7528\u7a0b\u5e8f
+acl.resource.admin-ws/plugins/collaborativespace/manageCSServices.h: \u534f\u4f5c\u7a7a\u95f4\u5e94\u7528\u7a0b\u5e8f\u7684Front Office\u7ba1\u7406\u3002
+acl.resource.admin-ws/plugins/collaborativespace/manageCSSettings: \u8bbe\u7f6e
+acl.resource.admin-ws/plugins/collaborativespace/manageCSSettings.h: \u534f\u4f5c\u7a7a\u95f4\u8bbe\u7f6e\u7ba1\u7406\uff08\u540d\u79f0\u3001\u8bf4\u660e\u3001\u5e03\u5c40\u3001\u5916\u89c2&\u611f\u89c9\uff09\u3002
+
+# ------------------------------------------------------------
+#  Common
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.lbl.filter:                 \u7b5b\u9009
+jcmsplugin.collaborativespace.lbl.administrator:          \u5f15\u5bfc\u7b26
+jcmsplugin.collaborativespace.lbl.administrators:         \u4e3b\u6301\u4eba
+jcmsplugin.collaborativespace.lbl.administrators.h:       \u793e\u533a\u7ba1\u7406\u5458
+# A member that belongs to the space
+jcmsplugin.collaborativespace.lbl.profile.member-count:   {0,choice,0#\u65e0\u53c2\u4e0e\u8005|1#{0}\u4e00\u540d\u53c2\u4e0e\u8005|2#{0}\u540d\u53c2\u4e0e\u8005}
+# A member that is administrator of the space
+jcmsplugin.collaborativespace.lbl.profile.leader-count:   {0,choice,0#\u65e0\u4e3b\u6301\u4eba|1#{0} \u540d\u4e3b\u6301\u4eba|2#{0} \u540d\u4e3b\u6301\u4eba}
+# A member that is a Guest of the space
+jcmsplugin.collaborativespace.lbl.profile.guest:          \u6765\u5bbe
+jcmsplugin.collaborativespace.lbl.profile.guest-count:    {0,choice,0#\u65e0\u6765\u5bbe|1#{0} \u540d\u6765\u5bbe|2#{0} \u540d\u6765\u5bbe}
+jcmsplugin.collaborativespace.lbl.signup:                 \u6ce8\u518c
+jcmsplugin.collaborativespace.lbl.signup-action:          \u6211\u8981\u6ce8\u518c\u2026\u2026
+jcmsplugin.collaborativespace.lbl.unsignup:               \u53d6\u6d88\u8ba2\u9605
+jcmsplugin.collaborativespace.lbl.unsignup-action:        \u9000\u51fa\u6b64\u7a7a\u95f4...
+jcmsplugin.collaborativespace.lbl.card.signup:            \u6ce8\u518c
+
+jcmsplugin.collaborativespace.cssignup.title: \u6ce8\u518c\u8bf7\u6c42\u6765\u81ea''{0}''
+jcmsplugin.collaborativespace.cssignup-notfound.msg-title: \u672a\u627e\u5230\u6ce8\u518c\u8bf7\u6c42
+jcmsplugin.collaborativespace.cssignup-notfound.msg-content: \u672a\u627e\u5230\u7279\u5b9a\u7684\u6ce8\u518c\u8bf7\u6c42\u3002<br/>\u8fd9\u53ef\u80fd\u4f1a\u5728\u8be5\u8bf7\u6c42\u5df2\u88ab\u5904\u7406\uff0c\u6216\u6210\u5458\u88ab\u624b\u52a8\u767b\u8bb0\u81f3\u7a7a\u95f4\u65f6\u53d1\u751f\u3002
+
+jcmsplugin.collaborativespace.data-controller.msg.incompatible-access-signup: \u8bbf\u95ee\u6a21\u5f0f\u4e0d\u7b26\u5408\u6ce8\u518c\u89c4\u5b9a\u3002
+jcmsplugin.collaborativespace.data-controller.msg.invalid-ability: \u8be5portlet\u65e0\u6cd5\u62e5\u6709"{0}"\u529f\u80fd\u3002
+jcmsplugin.collaborativespace.data-controller.msg.service-not-in-public-model: \u590d\u5236\u6a21\u5f0f\u4e3a\u201c\u6309\u5f15\u7528\u201d\uff0c\u4e14\u5e26\u6709\u5e94\u7528\u7a0b\u5e8f\u548c\u4eea\u8868\u677f\u529f\u80fd\u7684portlet\u5fc5\u987b\u96b6\u5c5e\u4e8e\u4e00\u4e2a\u516c\u5171\u534f\u4f5c\u7a7a\u95f4\u6a21\u578b\u3002
+jcmsplugin.collaborativespace.data-controller.msg.no-portlet-selection: \u201c{0}\u201d\u5b57\u6bb5\u5fc5\u987b\u5305\u542b\u201c{1}\u201d\u3002
+jcmsplugin.collaborativespace.data-controller.msg.invalid-guest-wsadmin: \u6765\u5bbe\u4e0d\u80fd\u4e3a\u5de5\u4f5c\u533a\u7ba1\u7406\u5458
+jcmsplugin.collaborativespace.data-controller.msg.invalid-guest-wsadmin-detail: \u6765\u75c5''{0}''\uff08{1}\uff09\u65e0\u6cd5\u4e3a\u5de5\u4f5c\u533a\u7ba1\u7406\u5458\u3002
+jcmsplugin.collaborativespace.data-controller.msg.sub-status: \u76f8\u5173\u6570\u636e\u66f4\u65b0\u5931\u8d25\uff1a{0}
+jcmsplugin.collaborativespace.data-controller.msg.invalid-cat: \u201c\u65e0\u6cd5\u5c06\u95e8\u6237{0}\u201d\u5206\u7c7b\u81f3"<strong>{1}</strong>\u201d\u4e4b\u4e0b\u3002
+jcmsplugin.collaborativespace.data-controller.msg.missing-root-cat: \u534f\u4f5c\u7a7a\u95f4\u95e8\u6237\u5fc5\u987b\u4e3a\u6839\u7c7b\u522b\u3002
+jcmsplugin.collaborativespace.data-controller.msg.wrong-model-typology: \u9009\u5b9a\u7684\u6a21\u578b\u4e0d\u7b26\u5408\u7c7b\u578b
+jcmsplugin.collaborativespace.data-controller.msg.missing-model: \u9700\u9009\u5b9a\u4e00\u4e2a\u6a21\u578b
+jcmsplugin.collaborativespace.data-controller.msg.workspace-not-model: \u9009\u5b9a\u4f5c\u4e3a\u6a21\u578b\u7684\u5de5\u4f5c\u533a\u4e0d\u662f\u6a21\u578b
+jcmsplugin.collaborativespace.space-wizard.msg.model-not-found: \u672a\u627e\u5230\u7279\u5b9a\u6a21\u677f
+jcmsplugin.collaborativespace.space-wizard.msg.failed: \u65e0\u6cd5\u521b\u5efa\u534f\u4f5c\u7a7a\u95f4\uff1a{0}
+
+# FO action labels
+jcmsplugin.collaborativespace.create.lbl.create:                  \u521b\u5efa\u7a7a\u95f4\u2026\u2026
+jcmsplugin.collaborativespace.create.lbl.create-sub:              \u521b\u5efa\u4e00\u4e2a\u5b50\u7a7a\u95f4\u2026\u2026
+jcmsplugin.collaborativespace.create.lbl.request-create:          \u7a7a\u95f4\u521b\u5efa\u8bf7\u6c42\u2026\u2026
+jcmsplugin.collaborativespace.create.lbl.request-create-sub:      \u5b50\u7a7a\u95f4\u521b\u5efa\u8bf7\u6c42\u2026\u2026
+# Admin BO action labels (keep "collaborative" word)
+jcmsplugin.collaborativespace.create.lbl.create-cs:               \u521b\u5efa\u534f\u4f5c\u7a7a\u95f4\u2026\u2026
+
+# Create space modal labels
+jcmsplugin.collaborativespace.create.title:                       \u521b\u5efa\u534f\u4f5c\u7a7a\u95f4
+jcmsplugin.collaborativespace.create.title-request:               \u8bf7\u6c42\u521b\u5efa\u534f\u4f5c\u7a7a\u95f4
+jcmsplugin.collaborativespace.create-sub.title:                   \u521b\u5efa\u4e00\u4e2a\u5b50\u7a7a\u95f4
+jcmsplugin.collaborativespace.create-sub.title-request:           \u5b50\u7a7a\u95f4\u521b\u5efa\u8bf7\u6c42
+jcmsplugin.collaborativespace.create.steps.0:                     \u6a21\u578b
+jcmsplugin.collaborativespace.create.steps.1:                     \u4fe1\u606f
+jcmsplugin.collaborativespace.create-sub.steps.1.intro:           \u5728<strong>{0}</strong>\u5185\u521b\u5efa\u7a7a\u95f4
+jcmsplugin.collaborativespace.create-sub.steps.1.intro-request:   <strong>{0}</strong>\u5185\u7684\u7a7a\u95f4\u521b\u5efa\u8bf7\u6c42\u3002
+jcmsplugin.collaborativespace.create.steps.2:                     \u4e0e\u4f1a\u8005
+
+jcmsplugin.collaborativespace.create.info.name:                         \u7a7a\u95f4\u540d\u79f0
+jcmsplugin.collaborativespace.create.info.typology:                     \u5de5\u4f5c\u533a\u7c7b\u578b
+jcmsplugin.collaborativespace.create.info.description:                  \u6307\u5357\u8bf4\u660e
+jcmsplugin.collaborativespace.create.info.introduction:                 \u4ecb\u7ecd
+jcmsplugin.collaborativespace.create.info.access:                       \u8bbf\u95ee
+jcmsplugin.collaborativespace.create.info.access.public:                \u516c\u5f00
+jcmsplugin.collaborativespace.create.info.access.private:               \u975e\u516c\u5f00
+jcmsplugin.collaborativespace.create.info.access.secret:                \u79d8\u5bc6
+jcmsplugin.collaborativespace.create.info.signup:                       \u6ce8\u518c
+jcmsplugin.collaborativespace.create.info.signup.admin:                 \u7531\u4e3b\u6301\u4eba\u7ba1\u7406\u7684\u6ce8\u518c
+jcmsplugin.collaborativespace.create.info.signup.request:               \u7531\u4e3b\u6301\u4eba\u901a\u8fc7\u7684\u6ce8\u518c\u8bf7\u6c42
+jcmsplugin.collaborativespace.create.info.signup.free:                  \u81ea\u7531\u6ce8\u518c
+jcmsplugin.collaborativespace.create.info.language:                     \u4e3b\u8981\u8bed\u8a00
+jcmsplugin.collaborativespace.create.model.intro:                       \u4e3a\u8be5\u534f\u4f5c\u7a7a\u95f4\u9009\u62e9\u4e00\u4e2a\u6a21\u578b\u3002
+jcmsplugin.collaborativespace.create.model.intro-typo:                  \u4e3a\u8be5\u534f\u4f5c\u7a7a\u95f4\u9009\u62e9\u4e00\u4e2a\u7c7b\u578b\u548c\u6a21\u578b\u3002
+jcmsplugin.collaborativespace.create.model.intro-typo-nomodel:          \u4e3a\u8be5\u534f\u4f5c\u7a7a\u95f4\u9009\u62e9\u4e00\u4e2a\u7c7b\u578b\u3002
+jcmsplugin.collaborativespace.create.model.intro-end:                   \u4e00\u65e6\u521b\u5efa\u65b0\u7a7a\u95f4\uff0c\u7a7a\u95f4\u4e3b\u6301\u4eba\u4fbf\u53ef\u6dfb\u52a0\u65b0\u7684\u670d\u52a1\u9879\u3002
+jcmsplugin.collaborativespace.create.model.model:                       \u4ee5\u6a21\u578b\u4e3a\u57fa\u7840
+jcmsplugin.collaborativespace.create.model.sync-toggle:                 \u4e0e\u6a21\u578b\u540c\u6b65
+jcmsplugin.collaborativespace.create.attendees.intro:                   \u9009\u62e9\u8be5\u534f\u4f5c\u7a7a\u95f4\u7684\u4e3b\u6301\u4eba\u548c\u53c2\u4e0e\u8005\u3002<br />\u7a7a\u95f4\u521b\u5efa\u540e\uff0c\u7a7a\u95f4\u4e3b\u6301\u4eba\u4fbf\u53ef\u53d1\u9001\u9080\u8bf7\uff0c\u6dfb\u52a0\u6216\u79fb\u9664\u6210\u5458\u3002
+jcmsplugin.collaborativespace.create.attendees.intro-no-leader:         \u9009\u62e9\u8be5\u534f\u4f5c\u7a7a\u95f4\u7684\u53c2\u4e0e\u8005\u3002<br />\u7a7a\u95f4\u521b\u5efa\u540e\uff0c\u7a7a\u95f4\u4e3b\u6301\u4eba\u4fbf\u53ef\u53d1\u9001\u9080\u8bf7\uff0c\u6dfb\u52a0\u6216\u79fb\u9664\u6210\u5458\u3002
+jcmsplugin.collaborativespace.create.attendees.admins:                  \u5f15\u5bfc\u7b26
+jcmsplugin.collaborativespace.create.attendees.admins.custom:           {0,choice,0#\u65e0\u4e3b\u6301\u4eba|1#\u4e3b\u6301\u4eba|2#\u540d\u4e3b\u6301\u4eba}
+jcmsplugin.collaborativespace.create.attendees.groups:                  \u7ec4
+jcmsplugin.collaborativespace.create.attendees.members:                 \u6210\u5458
+jcmsplugin.collaborativespace.create.attendees.notification:            \u901a\u77e5
+jcmsplugin.collaborativespace.create.attendees.notification.invitation: \u4e3a\u53c2\u4e0e\u8005\u53d1\u9001\u9080\u8bf7
+jcmsplugin.collaborativespace.create.attendees.notification.mail:       \u6dfb\u52a0\u5e76\u901a\u77e5\u53c2\u4e0e\u8005
+jcmsplugin.collaborativespace.create.attendees.notification.no:         \u5728\u4e0d\u53d1\u9001\u901a\u77e5\u7684\u60c5\u51b5\u4e0b\u6dfb\u52a0\u53c2\u4e0e\u8005
+jcmsplugin.collaborativespace.create.too-many-cs:                       \u60a8\u65e0\u6cd5\u521b\u5efa\u65b0\u7684\u534f\u4f5c\u7a7a\u95f4\u3002\u5df2\u8fbe\u5230\u534f\u4f5c\u7a7a\u95f4\u6700\u5927\u6570\u91cf\u9650\u5236\uff08{0}\uff09\u3002
+jcmsplugin.collaborativespace.create.finish:                            <p>\u60a8\u7684\u534f\u4f5c\u7a7a\u95f4\u521b\u5efa\u8bf7\u6c42\u5df2\u88ab\u8bb0\u5f55\u3002</p><p>\u4e00\u65e6\u8bf7\u6c42\u751f\u6548\uff0c\u60a8\u53ef\u521b\u5efa\u7a7a\u95f4\u5e76\u5411\u4e3b\u6301\u4eba\u53d1\u9001\u901a\u77e5\u3002</p>
+jcmsplugin.collaborativespace.access-policy.public.desc:                \u6240\u6709\u4eba\u90fd\u53ef\u4ee5\u67e5\u770b\u516c\u5171\u7a7a\u95f4\u5e76\u9605\u8bfb\u5176\u5185\u5bb9\u3002
+jcmsplugin.collaborativespace.access-policy.private.desc:               \u6240\u6709\u4eba\u90fd\u53ef\u770b\u5230\u79c1\u4eba\u7a7a\u95f4\uff0c\u4f46\u4ec5\u6709\u53c2\u4e0e\u8005\u624d\u80fd\u9605\u8bfb\u5176\u5185\u5bb9\u3002
+jcmsplugin.collaborativespace.access-policy.secret.desc:                \u79d8\u5bc6\u7a7a\u95f4\u4ec5\u6709\u6210\u5458\u624d\u80fd\u770b\u5230\u6216\u9605\u8bfb\u5176\u5185\u5bb9\u3002
+
+jcmsplugin.collaborativespace.header.home:                              \u4e3b\u9875\u7f51\u7ad9
+jcmsplugin.collaborativespace.header.introduction:                      \u4ecb\u7ecd
+jcmsplugin.collaborativespace.header.backoffice:                        Back-Office
+jcmsplugin.collaborativespace.header.help:                              \u5e2e\u52a9
+jcmsplugin.collaborativespace.header.admin-menu:                        \u7ba1\u7406
+jcmsplugin.collaborativespace.header.admin-menu.home:                   \u4e3b\u9875
+jcmsplugin.collaborativespace.header.admin-menu.members:                \u6210\u5458
+jcmsplugin.collaborativespace.header.admin-menu.services:               \u5e94\u7528\u7a0b\u5e8f
+jcmsplugin.collaborativespace.header.admin-menu.settings:               \u8bbe\u7f6e
+jcmsplugin.collaborativespace.header.admin-menu.typo-models:            \u6a21\u578b\u548c\u7c7b\u578b
+
+jcmsplugin.collaborativespace.metas.toggle.show:                        \u66f4\u591a
+jcmsplugin.collaborativespace.metas.toggle.hide:                        \u66f4\u5c11
+jcmsplugin.collaborativespace.metas.show-all-typos:                     \u663e\u793a\u6240\u6709\u7c7b\u578b
+jcmsplugin.collaborativespace.metas.introduction:                       \u4ecb\u7ecd
+jcmsplugin.collaborativespace.metas.manage-members.link:                \u7ba1\u7406\u6210\u5458
+jcmsplugin.collaborativespace.metas.member-list.others:                 \u6dfb\u52a0{0,choice,1#1\u4e2a\u5176\u4ed6|2# {0}\u4e2a\u5176\u4ed6}\u2026
+jcmsplugin.collaborativespace.metas.actions-menu-title:                 \u6253\u5f00\u534f\u4f5c\u7a7a\u95f4\u64cd\u4f5c\u83dc\u5355
+
+jcmsplugin.collaborativespace.private-home.title:                  \u6b64\u7a7a\u95f4\u8bbf\u95ee\u53d7\u9650
+jcmsplugin.collaborativespace.private-home.signup:                 \u60a8\u5fc5\u987b\u6ce8\u518c\u624d\u80fd\u8bbf\u95ee\u8be5\u7a7a\u95f4\u3002
+jcmsplugin.collaborativespace.private-home.already-signup:         \u60a8\u5df2\u63d0\u4ea4\u8be5\u7a7a\u95f4\u7684\u6ce8\u518c\u8bf7\u6c42\u3002\u60a8\u5c06\u5728\u8bf7\u6c42\u751f\u6548\u540e\u6536\u5230\u901a\u77e5\u3002
+jcmsplugin.collaborativespace.private-home.no-signup:              \u5fc5\u987b\u901a\u8fc7\u9080\u8bf7\u7684\u65b9\u5f0f\u624d\u80fd\u6ce8\u518c\u8be5\u7a7a\u95f4\u3002
+
+jcmsplugin.collaborativespace.settings.lbl.info:                    \u5e38\u89c4\u4fe1\u606f
+jcmsplugin.collaborativespace.settings.lbl.info.presentation:       \u81ea\u6211\u4ecb\u7ecd
+jcmsplugin.collaborativespace.settings.lbl.info.access:             \u8bbf\u95ee\u4e0e\u6ce8\u518c
+jcmsplugin.collaborativespace.settings.lbl.layout:                  \u5e03\u5c40
+jcmsplugin.collaborativespace.settings.lbl.model:                   \u6a21\u578b
+jcmsplugin.collaborativespace.settings.lbl.look:                    \u6807\u5934
+jcmsplugin.collaborativespace.settings.lbl.look.theme:              \u4e3b\u9898
+jcmsplugin.collaborativespace.settings.lbl.look.condensed:          \u6d53\u7f29\u6a21\u5f0f
+jcmsplugin.collaborativespace.settings.lbl.look.condensed.h:        \u6d53\u7f29\u6a21\u5f0f\u53ef\u51cf\u5c11\u6807\u5934\u9ad8\u5ea6\uff0c\u5e76\u4ec5\u4f7f\u7528\u4e00\u79cd\u80cc\u666f\u8272\u3002
+jcmsplugin.collaborativespace.settings.lbl.look.color-tab:          \u989c\u8272
+jcmsplugin.collaborativespace.settings.lbl.look.header-tab:         \u80cc\u666f\u56fe\u7247
+jcmsplugin.collaborativespace.settings.lbl.look.color:              \u80cc\u666f\u8272
+jcmsplugin.collaborativespace.settings.lbl.look.headers:            \u6807\u5934
+jcmsplugin.collaborativespace.settings.lbl.look.no-header:          \u65e0\u6807\u5934
+jcmsplugin.collaborativespace.settings.lbl.look.header-background:  \u80cc\u666f
+jcmsplugin.collaborativespace.settings.lbl.look.header-custom:      \u80cc\u666f\u56fe\u7247
+jcmsplugin.collaborativespace.settings.lbl.look.header-custom.h:    \u60a8\u53ef\u4ee5\u4e3a\u6807\u5934\u9009\u62e9\u4e00\u4e2a\u81ea\u5b9a\u4e49\u56fe\u50cf\uff0c\u6216\u4ece\u9884\u9009\u7684\u5217\u8868\u4e2d\u9009\u62e9\u4e00\u4e2a\u3002
+jcmsplugin.collaborativespace.settings.lbl.look.header-no-image:    \u65e0\u80cc\u666f\u56fe\u7247
+jcmsplugin.collaborativespace.settings.lbl.look.header-position:    \u56fe\u50cf\u4f4d\u7f6e
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat:      \u56fe\u50cf\u91cd\u590d
+jcmsplugin.collaborativespace.settings.lbl.look.header-no-repeat:   \u65e0
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat-x:    \u6c34\u5e73
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat-y:    \u5782\u76f4
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat-both: \u90fd\u6709
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror:      \u955c\u50cf
+jcmsplugin.collaborativespace.settings.lbl.look.header-no-mirror:   \u65e0
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror-x:    \u6c34\u5e73
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror-y:    \u5782\u76f4
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror-both: \u90fd\u6709
+jcmsplugin.collaborativespace.settings.lbl.look.header-color:       \u6807\u9898\u989c\u8272
+jcmsplugin.collaborativespace.settings.lbl.look.header-tabs-color:  \u6807\u7b7e\u6587\u672c\u989c\u8272
+jcmsplugin.collaborativespace.settings.lbl.look.header-tabs-bgcolor: \u6807\u7b7e\u80cc\u666f\u989c\u8272
+jcmsplugin.collaborativespace.settings.lbl.look.header-tabs-opacity: \u6807\u7b7e\u900f\u660e\u5ea6
+jcmsplugin.collaborativespace.settings.lbl.layout:                  \u5e03\u5c40
+jcmsplugin.collaborativespace.settings.lbl.layout.main:             \u9875\u9762\u5e03\u5c40
+jcmsplugin.collaborativespace.settings.lbl.layout.dashboard:        \u4e3b\u9875
+jcmsplugin.collaborativespace.settings.lbl.layout.dashboard.column: \u5217
+jcmsplugin.collaborativespace.settings.lbl.jmobile:                 JMobile
+jcmsplugin.collaborativespace.settings.lbl.jmobile-delete-portlet:  \u4ece\u95e8\u6237\u79fb\u9664portlet
+jcmsplugin.collaborativespace.settings.lbl.jmobile-drag-portlet:    \u957f\u51fb\u4ee5\u62d6\u52a8portlet
+jcmsplugin.collaborativespace.settings.alt.test:                    \u6d4b\u8bd5
+jcmsplugin.collaborativespace.settings.alt.jmobile-template:        JMobile\u6a21\u677f
+jcmsplugin.collaborativespace.settings.lbl.add-portlet:             \u6dfb\u52a0\u4e00\u4e2aportlet
+
+jcmsplugin.collaborativespace.services.lbl.title:                   \u6dfb\u52a0\u5e94\u7528\u7a0b\u5e8f
+jcmsplugin.collaborativespace.services.lbl.all-services:            \u6240\u6709\u5e94\u7528\u7a0b\u5e8f
+jcmsplugin.collaborativespace.services.lbl.installed-services:      \u5df2\u5b89\u88c5\u7684\u5e94\u7528\u7a0b\u5e8f
+jcmsplugin.collaborativespace.services.lbl.installed-service.title: \u5df2\u5b89\u88c5
+jcmsplugin.collaborativespace.services.lbl.not-installed-services:  \u5176\u4ed6\u5e94\u7528\u7a0b\u5e8f
+jcmsplugin.collaborativespace.services.lbl.status:                  \u72b6\u6001
+jcmsplugin.collaborativespace.services.lbl.type:                    \u7c7b\u578b
+jcmsplugin.collaborativespace.services.lbl.type.application:        \u5e94\u7528\u7a0b\u5e8f
+jcmsplugin.collaborativespace.services.lbl.type.dashboard:          \u4eea\u8868\u677f
+jcmsplugin.collaborativespace.services.lbl.name:                    \u5e94\u7528\u7a0b\u5e8f\u540d\u79f0
+jcmsplugin.collaborativespace.services.lbl.description:             \u6307\u5357\u8bf4\u660e
+jcmsplugin.collaborativespace.services.lbl.add:                     \u6dfb\u52a0
+jcmsplugin.collaborativespace.services.lbl.edit:                    \u4fee\u6539
+jcmsplugin.collaborativespace.services.lbl.preview-action:          \u9884\u89c8
+jcmsplugin.collaborativespace.services.lbl.preview:                 \u9884\u89c8
+jcmsplugin.collaborativespace.services.btn.add-service:             \u6dfb\u52a0\u8be5\u5e94\u7528\u7a0b\u5e8f
+jcmsplugin.collaborativespace.services.btn.customize-service:       \u81ea\u5b9a\u4e49\u8be5\u5e94\u7528\u7a0b\u5e8f\u2026\u2026
+jcmsplugin.collaborativespace.services.btn.remove-service:          \u79fb\u9664\u8be5\u5e94\u7528\u7a0b\u5e8f
+jcmsplugin.collaborativespace.services.btn.add:                     \u6dfb\u52a0
+jcmsplugin.collaborativespace.services.btn.remove:                  \u79fb\u9664
+jcmsplugin.collaborativespace.services.lbl.add-title:               \u6dfb\u52a0\u5e94\u7528
+jcmsplugin.collaborativespace.services.lbl.add-modal-title:         \u6dfb\u52a0\u5e94\u7528\u7a0b\u5e8f\u2026\u2026
+jcmsplugin.collaborativespace.services.lbl.add-new-title:           \u6dfb\u52a0\u4e00\u4e2a\u65b0\u5e94\u7528\u7a0b\u5e8f
+jcmsplugin.collaborativespace.services.smartphone-ability.label:    \u5728JMobile\u4e2d\u663e\u793a
+
+jcmsplugin.collaborativespace.settings.lbl.model-instances:         \u6a21\u578b\u5b9e\u4f8b
+jcmsplugin.collaborativespace.settings.lbl.model-instances-count:   {0,choice,0# \u65e0\u5b9e\u4f8b|1#1\u4e2a\u5b9e\u4f8b|2#{0}\u4e2a\u5b9e\u4f8b}
+
+jcmsplugin.collaborativespace.settings.model-instances.csp.title:   \u534f\u4f5c\u7a7a\u95f4
+jcmsplugin.collaborativespace.settings.model-instances.sync.title:  \u540c\u6b65\u6a21\u5f0f
+
+jcmsplugin.collaborativespace.members.btn.enroll-members:               \u4e0b\u62c9\u6210\u5458\u2026\u2026
+jcmsplugin.collaborativespace.members.lbl.enroll-members:               \u4e0b\u62c9\u6210\u5458
+jcmsplugin.collaborativespace.members.enroll-modal.intro:               \u9009\u62e9\u9700\u8981\u6dfb\u52a0\u81f3\u76ee\u6807\u7ec4\u7684\u6210\u5458\u548c/\u6216\u7ec4\u3002
+jcmsplugin.collaborativespace.members.enroll-modal.target-group:        \u76ee\u6807\u7ec4
+jcmsplugin.collaborativespace.members.enroll-modal.groups.description:  \u8fd9\u4e9b\u7ec4\u7684\u6210\u5458\u5c06\u88ab\u6dfb\u52a0\u81f3\u76ee\u6807\u7ec4\u3002
+jcmsplugin.collaborativespace.members.btn.add-group:                    \u6dfb\u52a0\u4e00\u4e2a\u7ec4...
+jcmsplugin.collaborativespace.members.lbl.add-group:                    \u6dfb\u52a0\u4e00\u4e2a\u7ec4
+jcmsplugin.collaborativespace.members.btn.edit-group:                   \u7f16\u8f91\u4e00\u4e2a\u7ec4...
+
+jcmsplugin.collaborativespace.members.validate-signup-modal.groups:     \u76ee\u6807\u7ec4
+jcmsplugin.collaborativespace.members.validate-signup-modal.groups.h:   \u5c06\u6dfb\u52a0\u6210\u5458\u7684\u7ec4\u3002
+
+jcmsplugin.collaborativespace.invitations.lbl.invitations:     \u9080\u8bf7
+jcmsplugin.collaborativespace.invitations.lbl.all-status:      \u6240\u6709\u9080\u8bf7
+jcmsplugin.collaborativespace.invitations.lbl.guest:           \u6765\u5bbe
+jcmsplugin.collaborativespace.invitations.lbl.target-group:    \u76ee\u6807\u7ec4
+jcmsplugin.collaborativespace.invitations.btn.send-invitation: \u53d1\u9001\u9080\u8bf7...
+
+jcmsplugin.collaborativespace.invitations.status.0: \u53d1\u9001
+jcmsplugin.collaborativespace.invitations.status.1: \u5df2\u63a5\u53d7
+jcmsplugin.collaborativespace.invitations.status.2: \u5df2\u62d2\u7edd
+
+jcmsplugin.collaborativespace.invitations.status.long.0: \u5df2\u53d1\u9001\u7684\u9080\u8bf7
+jcmsplugin.collaborativespace.invitations.status.long.1: \u5df2\u63a5\u53d7\u7684\u9080\u8bf7
+jcmsplugin.collaborativespace.invitations.status.long.2: \u5df2\u62d2\u7edd\u7684\u9080\u8bf7
+
+jcmsplugin.collaborativespace.invitations.send.title:            \u53d1\u9001\u9080\u8bf7
+jcmsplugin.collaborativespace.invitations.send.info:             \u9009\u62e9\u60a8\u5e0c\u671b\u53d1\u9001\u52a0\u5165\u8be5\u534f\u4f5c\u7a7a\u95f4\u9080\u8bf7\u7684\u6210\u5458\u6216\u7ec4
+jcmsplugin.collaborativespace.invitations.send.lbl.message:      \u4fe1\u606f
+jcmsplugin.collaborativespace.invitations.send.btn.send:         \u53d1\u9001
+
+jcmsplugin.collaborativespace.invitations.title: {0}\u7684\u9080\u8bf7
+
+jcmsplugin.collaborativespace.invitations.process-modal.title:    \u9080\u8bf7
+jcmsplugin.collaborativespace.invitations.process-modal.info:     {0} \u9080\u8bf7\u60a8\u6210\u4e3a\u534f\u4f5c\u7a7a\u95f4 {1}\u7684\u6210\u5458\u3002<br />\u60a8\u53ef\u63a5\u53d7\u6216\u62d2\u7edd\u8be5\u8bf7\u6c42\uff0c\u4e5f\u53ef\u7a0d\u540e\u518d\u51b3\u5b9a\u3002
+jcmsplugin.collaborativespace.invitations.process-modal.btn.accept:     \u63a5\u53d7
+jcmsplugin.collaborativespace.invitations.process-modal.btn.decline:    \u62d2\u7edd\u2026\u2026
+
+jcmsplugin.collaborativespace.signup.info.free:           \u60a8\u53ef\u7acb\u5373\u6ce8\u518c\u8be5\u534f\u4f5c\u7a7a\u95f4
+jcmsplugin.collaborativespace.signup.info.request:        \u60f3\u8981\u6ce8\u518c\u8be5\u534f\u4f5c\u7a7a\u95f4\uff0c\u8bf7\u53d1\u9001\u8bf7\u6c42\u3002\u60a8\u5c06\u5728\u8bf7\u6c42\u751f\u6548\u540e\u6536\u5230\u901a\u77e5\u3002
+jcmsplugin.collaborativespace.signup.btn.signup:          \u8bf7\u6279\u51c6\u6211\u6ce8\u518c
+jcmsplugin.collaborativespace.signup.info.already-signup: {0}\uff0c\u60a8\u5df2\u53d1\u9001\u8fc7\u6ce8\u518c\u8bf7\u6c42\u3002
+jcmsplugin.collaborativespace.signup.error.workspace-no-group: \u6ce8\u518c\u8bf7\u6c42\u8981\u6c42\u4ed6\u4eec\u7684\u5de5\u4f5c\u533a\u5fc5\u987b\u6709\u4e00\u4e2a\u9ed8\u8ba4\u7ec4\u3002
+
+jcmsplugin.collaborativespace.signup.lbl.signups:         \u6ce8\u518c\u8bf7\u6c42
+jcmsplugin.collaborativespace.signup.lbl.signup:          \u6ce8\u518c\u8bf7\u6c42
+jcmsplugin.collaborativespace.signup.lbl.submit-mbr:      \u8bf7\u6c42
+jcmsplugin.collaborativespace.signup.lbl.process:         \u5904\u7406\u8be5\u8bf7\u6c42
+jcmsplugin.collaborativespace.signup.btn.accept:          \u63a5\u53d7
+jcmsplugin.collaborativespace.signup.btn.reject:          \u62d2\u7edd
+jcmsplugin.collaborativespace.unsignup.confirm:           \u60a8\u786e\u5b9a\u8981\u53d6\u6d88\u8ba2\u9605\uff1f
+
+jcmsplugin.collaborativespace.welcome.title:   \u6b22\u8fce\uff01
+jcmsplugin.collaborativespace.welcome.content: <p>\u606d\u559c\uff01\u60a8\u7684\u534f\u4f5c\u7a7a\u95f4\u5df2\u6210\u529f\u521b\u5efa\u3002</p><p>\u8fd9\u662f\u7ed9\u60a8\u7684\u51e0\u4e2a\u5c0f\u8d34\u58eb</p><ul><li class='cs-welcome-tip-look-and-feel'><a href="{0}">\u66f4\u6539\u5916\u89c2</a></li><li class='cs-welcome-tip-add-members'><a href="{1}">\u6dfb\u52a0\u6210\u5458</a></li><li class='cs-welcome-tip-send-invitations'><a href="{2}">\u53d1\u9001\u9080\u8bf7</a></li><li class='cs-welcome-tip-services'><a href="{3}">\u6dfb\u52a0\u5e94\u7528\u7a0b\u5e8f</a></li></ul>
+
+jcmsplugin.collaborativespace.lbl.cs:    \u534f\u4f5c\u7a7a\u95f4
+jcmsplugin.collaborativespace.lbl.model: \u6a21\u578b
+
+jcmsplugin.collaborativespace.lbl.follow.action:        \u5173\u6ce8
+jcmsplugin.collaborativespace.lbl.unfollow.action:      \u672a\u5173\u6ce8
+jcmsplugin.collaborativespace.lbl.follow.title:         \u5173\u6ce8\u4e00\u4e2a\u7a7a\u95f4
+jcmsplugin.collaborativespace.lbl.follow.description:   \u60a8\u5c06\u6536\u5230\u8be5\u7a7a\u95f4\u7684\u6700\u65b0\u6d88\u606f\u901a\u77e5
+jcmsplugin.collaborativespace.lbl.unfollow.title:       \u53d6\u6d88\u5173\u6ce8\u4e00\u4e2a\u7a7a\u95f4
+jcmsplugin.collaborativespace.lbl.unfollow.description: \u60a8\u5c06\u4e0d\u4f1a\u518d\u6536\u5230\u8be5\u7a7a\u95f4\u7684\u6700\u65b0\u6d88\u606f\u901a\u77e5\u3002
+
+jcmsplugin.collaborativespace.lbl.synchronization-on-model: \u8be5\u95e8\u6237\u4e0e\u5176\u6a21\u578b\u540c\u6b65\uff0c\u60a8\u65e0\u6cd5\u66f4\u6539\u663e\u793a\u3002
+
+jcmsplugin.collaborativespace.msg.cannot-update-sync-data: \u60a8\u65e0\u6cd5\u66f4\u6539\u201c{0}\u201d\uff0c\u56e0\u4e3a\u8be5\u6570\u636e\u5df2\u88ab\u540c\u6b65\u81f3\u5176\u6a21\u578b\u3002
+
+jcmsplugin.collaborativespace.header.search-button: \u5728\u5de5\u4f5c\u533a\u542f\u52a8\u641c\u7d22{0}
+
+# ------------------------------------------------------------
+#  ADMIN LIST
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.admin-list.remove-member: \u4ece\u7ba1\u7406\u4eba\u5217\u8868\u4e2d\u79fb\u9664
+jcmsplugin.collaborativespace.admin-list.add-member-btn: \u6dfb\u52a0\u7ba1\u7406\u4eba\u2026\u2026
+
+# ------------------------------------------------------------
+#  SUGGESTIONS
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.suggestion.none: \u65e0\u5efa\u8bae\u3002
+jcmsplugin.collaborativespace.suggestion.reset: \u91cd\u7f6e\u63d0\u8bae...
+jcmsplugin.collaborativespace.suggestion.reject: \u4e0d\u7528\u4e86\uff0c\u8c22\u8c22\uff01
+
+# ------------------------------------------------------------
+#  APP
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.app.home.title: \u8bbf\u95ee\u793e\u533a\u4e3b\u9875
+
+# ------------------------------------------------------------
+#  PUBLISH MENU
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.publish-menu.create: \u534f\u4f5c\u7a7a\u95f4
+
+# ------------------------------------------------------------
+#  CollaborativeSpace Recommendation (+alert)
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.space-recommendation.title: \u52a0\u5165\u7a7a\u95f4\u63a8\u8350
+jcmsplugin.collaborativespace.space-recommendation.intro: \u63a8\u8350\u6210\u5458\u52a0\u5165\u7a7a\u95f4<strong>{0}</strong>\u3002
+jcmsplugin.collaborativespace.space-recommendation.no-recipient: \u8bf7\u81f3\u5c11\u9009\u62e9\u4e00\u4f4d\u6210\u5458\u6216\u4e00\u4e2a\u7ec4\u3002
+jcmsplugin.collaborativespace.space-recommendation.field.msg: \u60a8\u7684\u4fe1\u606f
+
+# ------------------------------------------------------------
+#  EDITABLE PROPERTIES
+# ------------------------------------------------------------
+$id.jcmsplugin.collaborativespace.typology-root: \u534f\u4f5c\u7a7a\u95f4\u7c7b\u522b\u6839
+$id.CSRequest.formAuthor: CS\u8bf7\u6c42\u53d1\u8d77\u4eba
+$id.CSRequest.workspace:  CS\u8bf7\u6c42\u5de5\u4f5c\u533a
+$id.jcmsplugin.collaborativespace.typology-portal: CS\u95e8\u6237\u7c7b\u578b
+$id.jcmsplugin.collaborativespace.cs-creation-group: CS\u521b\u5efa\u7ec4
+$id.jcmsplugin.collaborativespace.cs-creation-group.help: \u4e00\u4e2a\u5728\u65e0\u5de5\u4f5c\u6d41\u9a8c\u8bc1\u7684\u60c5\u51b5\u4e0b\u53ef\u76f4\u63a5\u521b\u5efaCS\u7684\u7ec4\u6807\u8bc6\u7b26\u3002\u8fd9\u662f\u5c06ACL\u4ea4\u4e88\u6210\u5458\u7684\u66ff\u4ee3\u65b9\u6848\u3002
+jcmsplugin.collaborativespace.guestaccounts.enabled: \u6fc0\u6d3b\u6765\u5bbe\u8d26\u6237\uff1f
+$id.jcmsplugin.collaborativespace.guestaccounts.group: \u6765\u5bbe\u8d26\u6237\u7ec4
+$id.jcmsplugin.collaborativespace.guestaccounts.group.help: \u4e00\u4e2a\u5305\u542b\u6240\u6709\u7ec4\u7ec7\u4e2d\u6765\u5bbe\u8d26\u6237\u4fe1\u606f\u7684\u7ec4\u6807\u8bc6\u7b26
+$id.GuestRequest.workspace: \u6765\u5bbe\u8d26\u6237\u7684\u8bf7\u6c42\u6258\u7ba1\u5de5\u4f5c\u533a
+$id.GuestRequest.workspace.help: \u4e00\u4e2a\u7528\u6765\u4fdd\u5b58\u6765\u5bbe\u8d26\u6237\u8bf7\u6c42\u5de5\u4f5c\u533a\uff08\u9ed8\u8ba4\u60c5\u51b5\u4e0b\u4e3a\u9ed8\u8ba4\u5de5\u4f5c\u533a\uff09\u7684\u5de5\u4f5c\u533a\u6807\u8bc6\u7b26\u3002
+$id.jcmsplugin.collaborativespace.guestaccounts.homepage-ws: \u6765\u5bbe\u6b22\u8fce\u5de5\u4f5c\u7a7a\u95f4
+$id.jcmsplugin.collaborativespace.guestaccounts.homepage-ws.help: \u6240\u6709\u6765\u5bbe\u53ef\u8bbf\u95ee\u7684\u5de5\u4f5c\u7a7a\u95f4\uff0c\u53ef\u5e2e\u52a9\u4ed6\u4eec\u4f7f\u7528\u5e73\u53f0
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE ABILITIES
+# ------------------------------------------------------------
+portlet.ability.jcmsplugin.collaborativespace:                \u534f\u4f5c\u7a7a\u95f4
+portlet.ability.jcmsplugin.collaborativespace.dashboard:      \u4eea\u8868\u677f
+portlet.ability.jcmsplugin.collaborativespace.application:    \u5e94\u7528\u7a0b\u5e8f
+
+ui.editportlet.usage.skin.collaborativeSpace: \u534f\u4f5c\u7a7a\u95f4\u76ae\u80a4
+ui.editportlet.usage.skin.collaborativeSpaceNoSkin: \u534f\u4f5c\u7a7a\u95f4\u76ae\u80a4\uff08\u65e0\uff09
+
+# ------------------------------------------------------------
+#  PORTLET MY COLLABORATIVE SPACES
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.portlet.mycs.lbl.mine:   \u6211\u7684\u7a7a\u95f4
+jcmsplugin.collaborativespace.portlet.mycs.lbl.other:  \u5176\u4ed6\u7a7a\u95f4
+jcmsplugin.collaborativespace.portlet.mycs.lbl.none:   \u65e0\u7a7a\u95f4
+jcmsplugin.collaborativespace.portlet.mycs.lbl.filter: \u7b5b\u9009\u7c7b\u522b\u2026\u2026
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE I18N
+# ------------------------------------------------------------
+
+jcmsplugin.collaborativespace.label.edit:         \u7f16\u8f91
+jcmsplugin.collaborativespace.label.objectives:   \u76ee\u6807
+jcmsplugin.collaborativespace.label.support:      \u652f\u6301\uff1a
+jcmsplugin.collaborativespace.label.breadcrumb:   \u75d5\u8ff9\uff1a
+jcmsplugin.collaborativespace.request-date:       \u8bf7\u6c42\u65e5\u671f\uff1a{0}
+
+jcmsplugin.collaborativespace.editform.create:    \u521b\u5efa\u534f\u4f5c\u7a7a\u95f4
+jcmsplugin.collaborativespace.editform.update:    \u66f4\u65b0\u534f\u4f5c\u7a7a\u95f4
+
+jcmsplugin.collaborativespace.csrequest.model:    \u751f\u6210\u7684\u6a21\u578b
+
+jcmsplugin.collaborativespace.handler.msg.cs-max: \u6bcf\u4e2a\u5de5\u4f5c\u533a\u53ea\u80fd\u6709\u4e00\u4e2a\u534f\u4f5c\u7a7a\u95f4\u3002
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.title: \u4f20\u5165\u7535\u5b50\u90ae\u4ef6\u6fc0\u6d3b
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.content: \u8be5\u7a7a\u95f4\u7684\u4f20\u5165\u7535\u5b50\u90ae\u4ef6\u5df2\u6fc0\u6d3b\u3002
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.footer: \u7f16\u8f91\u8bbe\u7f6e\uff0c\u4ee5\u81ea\u5b9a\u4e49\u4f20\u5165\u7535\u5b50\u90ae\u4ef6\u7684\u524d\u7f00\uff1a<strong>{0}</strong>\u3002
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.edit-button: \u7f16\u8f91\u8bbe\u7f6e
+
+jcmsplugin.collaborativespace.dashboard.new:      \u65e0\u663e\u793a\u5185\u5bb9\u3002<br/><img src='images/jalios/icons/add.gif' class='icon' alt=''/>&nbsp;\u521b\u5efa\u65b0\u5185\u5bb9\u3002
+jcmsplugin.collaborativespace.dashboard.warn.invalid-portal-container: \u8be5PortletSelection\u7684\u6a21\u7248\u4ec5\u53ef\u5728\u534f\u4f5c\u7a7a\u95f4\u95e8\u6237\u5185\u8fd0\u4f5c\u3002
+
+jcmsplugin.collaborativespace.introduction.edit: \u7f16\u8f91\u7b80\u4ecb
+jcmsplugin.collaborativespace.introduction.empty.default-message: \u8be5\u7a7a\u95f4\u5c1a\u65e0\u7b80\u4ecb\u3002
+jcmsplugin.collaborativespace.introduction.infos.access.header: \u8bbf\u95ee
+jcmsplugin.collaborativespace.introduction.infos.access.membership.true: \uff08\u60a8\u5df2\u6ce8\u518c\uff09
+jcmsplugin.collaborativespace.introduction.infos.access.membership.false: \uff08\u60a8\u5c1a\u672a\u6ce8\u518c\uff09
+jcmsplugin.collaborativespace.introduction.infos.guests.header: \u6765\u5bbe
+jcmsplugin.collaborativespace.introduction.infos.guests.info: \u8fd9\u91cc{0,choice,0# \u6ca1\u6709\u8bbf\u5ba2|1# \u67091\u540d\u8bbf\u5ba2|2# \u6709 {0} \u540d\u8bbf\u5ba2}
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail: \u90ae\u7bb1
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail.h: \u53d1\u9001\u81f3\u8be5\u5730\u5740\u7684\u90ae\u4ef6\u5c06\u4ee5\u60a8\u7684\u540d\u79f0\u88ab\u4fdd\u5b58\u5728\u8fd9\u4e2a\u7a7a\u95f4\u5185
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail.your-address: \u60a8\u53c2\u4e0e\u8be5\u7a7a\u95f4\u7684\u4e2a\u4eba\u5730\u5740\uff1a
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail.warning: \u8b66\u544a\uff01\u8be5\u5730\u5740\u4e3a\u4e2a\u4eba\u5730\u5740\u3002\u8bf7\u52ff\u6cc4\u9732\u3002
+
+jcmsplugin.collaborativespace.typology-portal.presentation.edit: \u7f16\u8f91\u4ecb\u7ecd
+jcmsplugin.collaborativespace.typology-portal.presentation.empty.default-message: \u8be5\u7c7b\u578b\u7684\u7b80\u4ecb\u5c1a\u672a\u586b\u5199\u3002
+jcmsplugin.collaborativespace.typology-portal.spaces-list.title: \u7a7a\u95f4\u5217\u8868
+jcmsplugin.collaborativespace.typology-portal.pqfe.lbl.cs-result: {0,choice,0#\u65e0\u7a7a\u95f4|1#1\u4e2a\u7a7a\u95f4|2#{0,number,integer} \u4e2a\u7a7a\u95f4}
+jcmsplugin.collaborativespace.typology-portal.pqfe.lbl.placeholder.search: \u5728 {0}\u5185\u641c\u7d22
+jcmsplugin.collaborativespace.typology-portal.lbl.csList.header: {0,choice,0# \u65e0\u7a7a\u95f4|1#1\u4e2a\u7a7a\u95f4|2#{0,number,integer} \u4e2a\u7a7a\u95f4}
+jcmsplugin.collaborativespace.typology-portal.lbl.cs-typology.info: \u5df2\u521b\u5efa{0}\u3002{1,choice,0#\u65e0\u53c2\u4e0e\u8005|1#1\u540d\u53c2\u4e0e\u8005|2#{1,number,integer} \u540d\u53c2\u4e0e\u8005}\u3002\u4e3b\u6301\u4eba\u4e3a {2}
+jcmsplugin.collaborativespace.typology-portal.lbl.cs-typology.info-parent: \u4e0b\u65b9
+jcmsplugin.collaborativespace.typology-portal.lbl.cs-typology.admins-list: {0,choice,0# \u65e0\u4e3b\u6301\u4eba|1# {2}|2# {1} \u548c {2}}
+
+
+# Query dates
+jcmsplugin.collaborativespace.query.today:     \u4eca\u5929
+jcmsplugin.collaborativespace.query.tomorrow:  \u660e\u5929
+jcmsplugin.collaborativespace.query.yesterday: \u6628\u5929
+jcmsplugin.collaborativespace.query.before:    \u4e4b\u524d
+jcmsplugin.collaborativespace.query.after:     \u7a0d\u540e
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE CONTROL
+# ------------------------------------------------------------
+
+jcmsplugin.collaborativespace.msg.edit.cslicense:     \u65e0\u6cd5\u4f7f\u7528\u5f53\u524d\u7684JCMS\u8bb8\u53ef\u8bc1\u521b\u5efa\u66f4\u591a\u534f\u4f5c\u7a7a\u95f4\u3002
+jcmsplugin.collaborativespace.msg.edit.workspace.typology-used: \u7c7b\u578b <i>({0})</i> \u4e0d\u5e94\u5728\u5de5\u4f5c\u533a\u5185\u4f7f\u7528\uff0c\u5b83\u5e94\u5728\u534f\u4f5c\u7a7a\u95f4Portlet\u4e2d\u4f7f\u7528\u3002
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE DATA
+# ------------------------------------------------------------
+
+data.$id.jcmsplugin.collaborativespace.data.cat:                        \u534f\u4f5c\u7a7a\u95f4
+data.$id.jcmsplugin.collaborativespace.data.group.writer:               \u534f\u4f5c\u7a7a\u95f4 - \u4f5c\u8005
+data.$id.jcmsplugin.collaborativespace.data.group.reader:               \u534f\u4f5c\u7a7a\u95f4 - \u53c2\u4e0e\u8005
+data.$id.jcmsplugin.collaborativespace.data.internal.dashboard:         \u4eea\u8868\u677f
+data.$id.jcmsplugin.collaborativespace.data.internal.icons:             \u56fe\u6807
+data.$id.jcmsplugin.collaborativespace.data.internal.search:            \u641c\u7d22
+data.$id.jcmsplugin.collaborativespace.data.service.latest-contents:    \u6700\u65b0\u5185\u5bb9
+data.$id.jcmsplugin.collaborativespace.data.service.latest-contents.d:  \u5217\u51fa\u8be5\u534f\u4f5c\u7a7a\u95f4\u7684\u6700\u65b0\u5185\u5bb9
+data.$id.jcmsplugin.collaborativespace.data.service.latest-documents:   \u6700\u65b0\u6587\u4ef6
+data.$id.jcmsplugin.collaborativespace.data.service.latest-documents.d: \u5217\u51fa\u8be5\u534f\u4f5c\u7a7a\u95f4\u7684\u6700\u65b0\u6587\u6863
+data.$id.jcmsplugin.collaborativespace.data.service.workflow:           \u5de5\u4f5c\u6d41
+data.$id.jcmsplugin.collaborativespace.data.service.workflow.d:         \u5217\u51fa\u5f85\u6267\u884c\u7684\u53d1\u5e03\u9879
+data.$id.jcmsplugin.collaborativespace.data.service.glossary:           \u672f\u8bed\u8868
+data.$id.jcmsplugin.collaborativespace.data.service.glossary.d:         \u663e\u793a\u8be5\u534f\u4f5c\u7a7a\u95f4\u5185\u7684\u672f\u8bed\u8868\u3002
+data.$id.jcmsplugin.collaborativespace.data.service.faq:                \u5e38\u89c1\u95ee\u9898\u89e3\u7b54
+data.$id.jcmsplugin.collaborativespace.data.service.faq.d:              \u663e\u793a\u8be5\u534f\u4f5c\u7a7a\u95f4\u5185\u7684\u5e38\u89c1\u95ee\u9898\u89e3\u7b54\u3002
+data.$id.jcmsplugin.collaborativespace.data.service.introduction:       \u4ecb\u7ecd
+data.$id.jcmsplugin.collaborativespace.data.service.introduction.d:     \u663e\u793a\u8be5\u534f\u4f5c\u7a7a\u95f4\u4ecb\u7ecd
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-full:      \u65e5\u5386
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-full.d:    \u534f\u4f5c\u7a7a\u95f4\u6210\u5458\u4e8b\u4ef6\u7ba1\u7406\u5e94\u7528\u7a0b\u5e8f
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-small:     \u5c0f\u65e5\u5386
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-small.d:   \u663e\u793a\u5f53\u524d\u6708\u7684\u65e5\u5386
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-diary:     \u65e5\u8bb0
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-diary.d:   \u663e\u793a\u5f53\u524d\u6708\u7684\u65e5\u8bb0\u3002
+data.$id.jcmsplugin.collaborativespace.data.service.event-schedule:     \u4e8b\u4ef6\u5b89\u6392
+data.$id.jcmsplugin.collaborativespace.data.service.event-schedule.d:   \u663e\u793a\u8be5\u7a7a\u95f4\u7684\u4e8b\u4ef6\u5b89\u6392
+data.$id.jcmsplugin.collaborativespace.data.service.subspaces:          \u5b50\u7a7a\u95f4
+data.$id.jcmsplugin.collaborativespace.data.service.subspaces.d:        \u8be5\u7a7a\u95f4\u7684\u5b50\u7a7a\u95f4\u5217\u8868
+data.$id.jcmsplugin.collaborativespace.data.model.ws:                   \u534f\u4f5c\u7a7a\u95f4\u6a21\u578b
+data.$id.jcmsplugin.collaborativespace.data.model.portal:               \u534f\u4f5c\u7a7a\u95f4\u6a21\u578b
+data.$id.jcmsplugin.collaborativespace.data.model.portal.desc:          \u521b\u5efa\u65b0\u534f\u4f5c\u7a7a\u95f4\u7684\u6a21\u578b
+data.$id.jcmsplugin.collaborativespace.data.model.cat:                  $NAME$ \u534f\u4f5c\u7a7a\u95f4
+data.$id.jcmsplugin.collaborativespace.data.model.group.writer:         $NAME$ - \u4f5c\u8005
+data.$id.jcmsplugin.collaborativespace.data.model.group.reader:         $NAME$ - \u53c2\u4e0e\u8005
+data.$id.jcmsplugin.collaborativespace.data.model.group.follower:       $NAME$ - \u5173\u6ce8\u8005
+
+# ------------------------------------------------------------
+#  Guest Accounts Feature
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.guestaccounts.guest.label: \u6765\u5bbe
+jcmsplugin.collaborativespace.guestaccounts.guestGroup.label: \u6765\u5bbe
+jcmsplugin.collaborativespace.guestaccounts.guestManagerGroup.label: \u6765\u5bbe\u7ba1\u7406\u5458
+jcmsplugin.collaborativespace.guestaccounts.guestManagerACL.label: \u6765\u5bbe\u7ba1\u7406\u5458
+jcmsplugin.collaborativespace.guestaccounts.account-creation.label: \u5f00\u901a\u4e00\u4e2a\u6765\u5bbe\u8d26\u6237...
+jcmsplugin.collaborativespace.guestaccounts.contact-transformation.member-profile-target.label: \u8f6c\u6362\u81f3\u4e00\u4e2a\u6765\u5bbe\u8d26\u6237...
+jcmsplugin.collaborativespace.guestaccounts.workspaces-and-groups.workspace.label.title: \u70b9\u51fb\u6b64\u5904\uff0c\u663e\u793a/\u9690\u85cf\u8be5\u5de5\u4f5c\u533a\u7684\u7ec4\u5217\u8868
+jcmsplugin.collaborativespace.guestaccounts.no-guest-group-defined: \u60f3\u8981\u6fc0\u6d3b\u6765\u5bbe\u8d26\u6237\u5c5e\u6027\uff0c\u9700\u8981\u5b9a\u4e49\u4e00\u4e2a\u6709\u6548\u7684\u6765\u5bbe\u8d26\u6237\u7ec4\u3002<br />\u8bf7\u68c0\u67e5\u5c5e\u6027 <strong>{0}</strong> \uff08$id.jcmsplugin.collaborativespace.guestaccounts.group\uff09\u3002
+jcmsplugin.collaborativespace.guestaccounts.member-controller.error.account-already-in-workspaces: <p>\u4e00\u4e2a <strong>\u6765\u5bbe</strong> \u8d26\u6237\u4e0d\u80fd\u96b6\u5c5e\u4e8e\u4e00\u4e2a <strong>\u975e</strong> \u534f\u4f5c\u7a7a\u95f4\u7ec4\u3002</p><ul><li><strong>\u79fb\u9664</strong> \u975e\u534f\u4f5c\u7a7a\u95f4\u7ec4\uff0c\u4f7f\u5176\u6210\u4e3a\u6765\u5bbe\u8d26\u6237\uff08{0}\uff09</li><li>\u6216\u5c06\u5176\u4ece\u6765\u5bbe\u8d26\u6237\u7ec4\u4e2d <strong>\u79fb\u9664</strong> \uff0c\u4f7f\u5176\u53ef\u8bbf\u95ee\u975e\u534f\u4f5c\u7a7a\u95f4</li></ul>
+jcmsplugin.collaborativespace.guestaccounts.member-controller.error.no-valid-email: \u6765\u5bbe\u8d26\u6237\u5fc5\u987b\u6709\u6709\u6548\u7684\u7535\u5b50\u90ae\u7bb1\u5730\u5740\u3002
+jcmsplugin.collaborativespace.guestaccounts.member-controller.error.contact-creation-forbidden: \u6765\u5bbe\u8d26\u6237\u65e0\u6cd5\u521b\u5efa\u8054\u7cfb\u4eba\u3002
+jcmsplugin.collaborativespace.guestaccounts.member-controller.warning.guest-group-removal: \u5c06\u8be5\u8d26\u6237\u4ece\u6765\u5bbe\u8d26\u6237\u7ec4\u4e2d\u79fb\u9664\u5c06\u4f1a\u8d4b\u4e88\u5176\u66f4\u591a\u7684\u8bbf\u95ee\u6743\u9650\u3002<br />\u5c06\u8be5\u8d26\u6237\u4ece\u6765\u5bbe\u7ec4\u4e2d\u5f3a\u5236\u5220\u9664\u5e76\u7ee7\u7eed\u3002
+jcmsplugin.collaborativespace.guestaccounts.member-controller.guest-group-removal.lbl: \u4ece\u6765\u5bbe\u4e2d\u5220\u9664
+jcmsplugin.collaborativespace.guestaccounts.member-controller.guest-group-removal.lbl.h: \u5c06\u8be5\u8d26\u6237\u4ece\u6765\u5bbe\u8d26\u6237\u7ec4\u4e2d\u5f3a\u5236\u5220\u9664\uff1f
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.feature-not-enabled: \u65e0\u6cd5\u6267\u884c\u60a8\u7684\u8bf7\u6c42\u3002\u8bf7\u68c0\u67e5\u6765\u5bbe\u5c5e\u6027\u8bbe\u7f6e\u3002
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-submitter: \u63d0\u4ea4\u8005\u4e3a\u5fc5\u586b\u9879\u3002
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-group: \u8bf7\u81f3\u5c11\u9009\u62e9\u4e00\u4e2a\u534f\u4f5c\u7a7a\u95f4\u7ec4\u3002
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-name: \u6765\u5bbe\u5fc5\u987b\u6709\u4e00\u4e2a\u540d\u79f0\u3002
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-organization: \u6765\u5bbe\u5fc5\u987b\u6709\u4e00\u4e2a\u7ec4\u7ec7\u3002
+jcmsplugin.collaborativespace.guestaccounts.request-modal.use-with-worflow.title: \u8bf7\u6c42\u521b\u5efa\u6765\u5bbe\u8d26\u6237
+jcmsplugin.collaborativespace.guestaccounts.request-modal.use-with-no-worflow.title: \u6765\u5bbe\u8d26\u6237\u521b\u5efa
+jcmsplugin.collaborativespace.guestaccounts.creation-request-controller.create.finish: <p>\u60a8\u5df2\u6210\u529f\u63d0\u4ea4\u6765\u5bbe\u8d26\u6237\u521b\u5efa\u8bf7\u6c42\u3002</p><p>\u8bf7\u6c42\u901a\u8fc7\u540e\uff0c\u60a8\u5c06\u6536\u5230\u901a\u77e5\uff0c\u5e76\u53ef\u4ee5\u521b\u5efa\u6765\u5bbe\u8d26\u6237\u3002</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-controller.account-creation-success.mail.email-notsent: \u90ae\u4ef6\u65e0\u6cd5\u53d1\u9001\uff1a{0}\u3002\u8bf7\u91cd\u8bd5\uff0c\u6216\u8054\u7cfb\u4e3b\u6301\u4eba\u3002
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.0: \u68c0\u67e5
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1: \u5efa\u8bae
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.2: \u4fe1\u606f
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.3: \u7a7a\u95f4
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.0.intro: <p class='info'>\u8f93\u5165\u6765\u5bbe\u8d26\u6237\u7684\u540d\u79f0\u548c/\u6216\u7535\u5b50\u90ae\u7bb1\uff0c\u4ee5\u67e5\u770b\u6b64\u4eba\u662f\u5426\u5df2\u5b58\u5728\uff1a</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.intro.1: <p class='info'>\u5df2\u53d1\u73b0\u4e00\u4e2a\u73b0\u6709\u8d26\u6237\u3002\u8bf7\u5728\u521b\u5efa\u8d26\u6237\u524d\u68c0\u67e5\u8be5\u6765\u5bbe\u8d26\u6237\u662f\u5426\u5df2\u5b58\u5728\u3002</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.intro.2: <p class='info'>\u627e\u5230\u5df2\u6709\u8d26\u6237\u3002\u5728\u521b\u5efa\u65b0\u6210\u5458\u4e4b\u524d\u68c0\u67e5\u4ed6\u4eec\u4e0d\u662f\u540c\u4e00\u4e2a\u4eba\u3002<br />\u5355\u51fb\u5361\u7247\u4ee5\u5728\u65b0\u7a97\u53e3\u4e2d\u663e\u793a\u6210\u5458\uff0c\u5c06\u9f20\u6807\u60ac\u505c\u5728\u5361\u7247\u4e0a\u5e76\u5355\u51fb\u6309\u94ae\u7ee7\u7eed\u8be5\u6210\u5458\u3002</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.see-profile.btn: \u663e\u793a\u4e2a\u4eba\u8d44\u6599
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.see-profile.btn.title: \u5728\u9009\u62e9\u64cd\u4f5c\u4e4b\u524d\uff0c\u5728\u65b0\u7a97\u53e3\u663e\u793a\u8d26\u6237\u7684\u5b8c\u6574\u8d44\u6599
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.select-account.title: \u9009\u62e9\u8be5\u5df2\u6709\u8d26\u6237\uff0c\u4f7f\u60a8\u80fd\u5728\u7a7a\u95f4\u4e3a\u5176\u6ce8\u518c
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.select-account.btn: \u9009\u62e9
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.transform-contact-to-guest.btn-label: \u8f6c\u6362\u81f3\u6765\u5bbe
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.transform-contact-to-guest.btn.title: \u9009\u62e9\u8be5\u8054\u7cfb\u4eba\uff0c\u5c06\u5176\u8f6c\u6362\u4e3a\u6765\u5bbe\uff0c\u4f7f\u60a8\u80fd\u5728\u7a7a\u95f4\u4e3a\u5176\u6ce8\u518c
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.2.intro: <p class='info'>\u8bf7\u586b\u5199\u5f85\u521b\u5efa\u7684\u6765\u5bbe\u8d26\u6237\u4fe1\u606f\uff1a</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.2.intro.convert-contact: <p class='info'>\u8bf7\u586b\u5199\u5f85\u8f6c\u6362\u81f3\u6765\u5bbe\u7684\u8054\u7cfb\u4eba<strong>{0}</strong>\u4fe1\u606f\uff1a</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.3.intro: <p class='info'>\u5728\u4ee5\u4e0b\u534f\u4f5c\u7a7a\u95f4\uff0c\u68c0\u67e5\u5f85\u6dfb\u52a0\u8d26\u6237\u7684\u7ec4\uff1a</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.3.intro.convert-contact: <p class='info'>\u5728\u4ee5\u4e0b\u534f\u4f5c\u7a7a\u95f4\uff0c\u68c0\u67e5\u5f85\u6dfb\u52a0\u8054\u7cfb\u4eba<strong>{0}</strong> \u7684\u7ec4\uff1a</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.use-with-worflow.validate: \u53d1\u9001\u8bf7\u6c42
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.use-with-no-worflow.validate: \u521b\u5efa\u8d26\u6237
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.use-with-worflow.validate: \u53d1\u9001\u8bf7\u6c42
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.use-with-no-worflow.validate: \u8f6c\u6362
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.contact-reminder: \u5c06<strong>{0}</strong>\u8f6c\u6362\u6210\u4e00\u4e2a\u6765\u5bbe\u8d26\u6237\u3002
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.groups-intro: <p class='info'>\u5728\u4ee5\u4e0b\u534f\u4f5c\u7a7a\u95f4\uff0c\u68c0\u67e5\u5f85\u6dfb\u52a0\u6765\u5bbe\u8d26\u6237\u7684\u7ec4\uff1a</p>
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.error.no-email: \u8054\u7cfb\u4eba\u5fc5\u987b\u6709\u6709\u6548\u7684\u7535\u5b50\u90ae\u7bb1\u5730\u5740\u624d\u80fd\u88ab\u8f6c\u6362\u4e3a\u6765\u5bbe\u8d26\u6237\u3002
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.error.email-already-used: \u65e0\u6cd5\u5c06\u8054\u7cfb\u4eba\u8f6c\u6362\u4e3a\u6765\u5bbe\u8d26\u6237\u3002\u7535\u5b50\u90ae\u7bb1 <strong>{0}</strong>\u5df2\u88ab\u53e6\u5916\u4e00\u4e2a\u5df2\u6709\u8d26\u6237\u4f7f\u7528\u3002<br />\u8bf7\u4f7f\u7528\u53e6\u4e00\u4e2a\u90ae\u7bb1\u5730\u5740\uff0c\u6216\u5c06\u5df2\u6709\u8d26\u6237\u8f6c\u6362\u4e3a\u6765\u5bbe\u8d26\u6237\u3002
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.error.not-a-contact: \u8981\u8f6c\u6362\u7684\u6210\u5458\u5fc5\u987b\u4e3a\u4e00\u540d\u8054\u7cfb\u4eba\u3002
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.create.finish: <p>\u60a8\u5df2\u6210\u529f\u63d0\u4ea4\u5c06\u8054\u7cfb\u4eba\u8f6c\u6362\u4e3a\u6765\u5bbe\u8d26\u6237\u7684\u8bf7\u6c42\u3002</p><p>\u6765\u5bbe\u8d26\u6237\u4f1a\u5728\u8bf7\u6c42\u901a\u8fc7\u540e\u521b\u5efa\uff0c\u60a8\u5c4a\u65f6\u5c06\u6536\u5230\u901a\u77e5\u3002</p>
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.account-transformation-success: \u8054\u7cfb\u4eba <a href='{0}' target='_blank' title='New window'>{1}</a> \u5df2\u88ab\u6210\u529f\u8f6c\u6362\u4e3a\u6765\u5bbe\u8d26\u6237\u3002
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.account-creation-success.mail.email-notsent: \u90ae\u4ef6\u65e0\u6cd5\u53d1\u9001\uff1a{0}\u3002\u8bf7\u91cd\u8bd5\uff0c\u6216\u8054\u7cfb\u4e3b\u6301\u4eba\u3002
+jcmsplugin.collaborativespace.guestaccounts.guest-request.notification.warn.no-request: \u65e0\u6cd5\u53d1\u9001\u66f4\u6539\u5bc6\u7801\u90ae\u4ef6\u3002\u65e0\u6cd5\u901a\u77e5\u6765\u5bbe\u8d26\u6237\uff08{0}\uff09\u3002
+jcmsplugin.collaborativespace.guestaccounts.guest-request.notification.warn.mail-disabled: \u90ae\u4ef6\u5df2\u7981\u7528\u3002\u65e0\u6cd5\u901a\u77e5\u6765\u5bbe\u8d26\u6237\u3002
+jcmsplugin.collaborativespace.guestaccounts.guest-request.notification.warn.unknown-error: \u54ce\u5440\uff0c\u51fa\u9519\u4e86\u3002\u65e0\u6cd5\u901a\u77e5\u6765\u5bbe\u8d26\u6237\u3002
+jcmsplugin.collaborativespace.guestaccounts.process-request.btn.accept:  \u63a5\u53d7
+jcmsplugin.collaborativespace.guestaccounts.process-request.btn.reject:  \u62d2\u7edd
+
+
+jcmsplugin.collaborativespace.syncMode.tabs: \u5e94\u7528\u7a0b\u5e8f
+jcmsplugin.collaborativespace.syncMode.dashboard: \u4e3b\u9875
+jcmsplugin.collaborativespace.syncMode.data: \u6570\u636e\u7ed3\u6784\uff08\u7c7b\u578b\u3001WF\u3001\u7ec4\u2026\u2026\uff09
+jcmsplugin.collaborativespace.syncMode.categories: \u5206\u7c7b
+jcmsplugin.collaborativespace.syncMode.activate-help.message: \u82e5\u6fc0\u6d3b\u540c\u6b65\uff0c\u5c06\u5728\u8be5\u5de5\u4f5c\u533a\u5e94\u7528\u4e00\u4e9b\u53c2\u6570
+
+#jcmsplugin.collaborativespace.modelSyncMode.dashboard: Applications
+#jcmsplugin.collaborativespace.modelSyncMode.dashboard: Home 
+#jcmsplugin.collaborativespace.modelSyncMode.dashboard: Data
+
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal: \u7f16\u8f91\u9875\u9762\uff08\u9ad8\u7ea7\u7f16\u8f91\uff09\u2026\u2026
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-simple: \u7f16\u8f91\u9875\u9762\u2026\u2026
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-simple-stop: \u505c\u6b62\u7f16\u8f91
+jcmsplugin.collaborativespace.actions-menu.recommend-collaborative-space: \u5206\u4eab\u2026\u2026
+jcmsplugin.collaborativespace.modelSyncMode.locked.message: \u534f\u4f5c\u7a7a\u95f4\u5df2\u4e0e\u6a21\u578b<b>{0}</b>\u540c\u6b65
+
+# ------------------------------------------------------------
+# Alerts
+# ------------------------------------------------------------
+alert.name.jcmsplugin-collaborativespace:                         \u534f\u4f5c\u7a7a\u95f4
+alert.name.jcmsplugin-collaborativespace.cs-creation:             \u534f\u4f5c\u7a7a\u95f4\u521b\u5efa
+alert.name.jcmsplugin-collaborativespace.cs-creation-rejected-submitter: \u534f\u4f5c\u7a7a\u95f4\u521b\u5efa\u8bf7\u6c42\u88ab\u62d2
+alert.name.jcmsplugin-collaborativespace.invitation:              \u52a0\u5165\u7a7a\u95f4\u9080\u8bf7
+alert.name.jcmsplugin-collaborativespace.enrollment:              \u6ce8\u518c\u7a7a\u95f4
+alert.name.jcmsplugin-collaborativespace.join:                    \u6ce8\u518c\u7a7a\u95f4
+alert.name.jcmsplugin-collaborativespace.recommendation:          \u7a7a\u95f4\u63a8\u8350
+alert.name.jcmsplugin-collaborativespace.signup-request:          \u6ce8\u518c\u8bf7\u6c42
+alert.name.jcmsplugin-collaborativespace.signup-accepted:         \u5df2\u63a5\u6536\u6ce8\u518c
+alert.name.jcmsplugin-collaborativespace.signup-rejected:         \u5df2\u62d2\u7edd\u6ce8\u518c
+alert.name.jcmsplugin-collaborativespace.unsignup:                \u53d6\u6d88\u6ce8\u518c
+alert.name.jcmsplugin-collaborativespace.guest-creation:          \u6765\u5bbe\u8d26\u6237\u6fc0\u6d3b
+alert.name.jcmsplugin-collaborativespace.silent-guest-creation:   \u6765\u5bbe\u8d26\u6237\u6fc0\u6d3b
+alert.name.jcmsplugin-collaborativespace.contact-to-guest:        \u6765\u5bbe\u8d26\u6237\u8f6c\u6362\u8054\u7cfb\u4eba
+alert.name.jcmsplugin-collaborativespace.silent-contact-to-guest: \u6765\u5bbe\u8d26\u6237\u8f6c\u6362\u8054\u7cfb\u4eba
+
+alert.msg.jcmsplugin-collaborativespace.cs-creation.title:                          \u521b\u5efa\u534f\u4f5c\u7a7a\u95f4{data}
+alert.msg.jcmsplugin-collaborativespace.cs-creation.short-description:              \u534f\u4f5c\u7a7a\u95f4{data}\u5df2\u6210\u529f\u521b\u5efa\u3002
+alert.msg.jcmsplugin-collaborativespace.cs-creation.description:                    <p>\u534f\u4f5c\u7a7a\u95f4{data}\u5df2\u6210\u529f\u521b\u5efa\u3002</p><p>\u60a8\u662f\u8be5\u7a7a\u95f4\u7684\u4e3b\u6301\u4eba\u3002</p>
+
+alert.msg.jcmsplugin-collaborativespace.cs-creation-rejected-submitter.title:             \u521b\u5efa\u534f\u4f5c\u7a7a\u95f4\u88ab\u62d2
+alert.msg.jcmsplugin-collaborativespace.cs-creation-rejected-submitter.short-description: \u534f\u4f5c\u7a7a\u95f4\u521b\u5efa\u8bf7\u6c42\uff08\u201c{cs-title}\u201d\uff09\u5df2\u88ab\u62d2\u7edd\u3002\u9a8c\u8bc1\u8005\u8bc4\u8bba\uff1a{validator-comment}
+
+alert.msg.jcmsplugin-collaborativespace.invitation.title:                           \u52a0\u5165\u9080\u8bf7{data}
+alert.msg.jcmsplugin-collaborativespace.invitation.short-description:               {author}\u9080\u8bf7\u60a8\u6210\u4e3a\u534f\u4f5c\u7a7a\u95f4{data}\u7684\u6210\u5458
+alert.msg.jcmsplugin-collaborativespace.invitation.description:                     <p>{author}\u9080\u8bf7\u60a8\u6210\u4e3a\u534f\u4f5c\u7a7a\u95f4{data}\u7684\u6210\u5458\u3002</p><p><a href="{accept-url}">\u63a5\u53d7\u8be5\u9080\u8bf7\u3002</a></p><p><a href="{decline-url}">\u62d2\u7edd\u8be5\u9080\u8bf7</a></p><br /><p><b>\u7a7a\u95f4\u63cf\u8ff0\uff1a</b></p><p>{cs-description}</p>
+
+alert.msg.jcmsplugin-collaborativespace.enrollment.title:                           \u6ce8\u518c{data}
+alert.msg.jcmsplugin-collaborativespace.enrollment.short-description:               \u60a8\u662f\u534f\u4f5c\u7a7a\u95f4{data}\u7684\u6210\u5458\u3002
+
+alert.msg.jcmsplugin-collaborativespace.join.title:                                 \u6ce8\u518c{data}
+alert.msg.jcmsplugin-collaborativespace.join.short-description:                     {author}\u5df2\u52a0\u5165\u534f\u4f5c\u7a7a\u95f4{data}\u3002
+alert.msg.jcmsplugin-collaborativespace.join.description:                           <p><a href="{author-url}">{author}</a>\u5df2\u52a0\u5165\u534f\u4f5c\u7a7a\u95f4{data}\u3002</p>
+
+alert.msg.jcmsplugin-collaborativespace.recommendation.title:                       \u63a8\u8350\u534f\u4f5c\u7a7a\u95f4{data}
+alert.msg.jcmsplugin-collaborativespace.recommendation.short-description:           {author}\u63a8\u8350\u60a8\u52a0\u5165\u534f\u4f5c\u7a7a\u95f4{data}\u3002
+alert.msg.jcmsplugin-collaborativespace.recommendation.description:                 <p>{author}\u63a8\u8350\u60a8\u52a0\u5165\u534f\u4f5c\u7a7a\u95f4{data}\u3002</p>
+
+alert.msg.jcmsplugin-collaborativespace.signup-request.title:                       \u6ce8\u518c\u8bf7\u6c42{data}
+alert.msg.jcmsplugin-collaborativespace.signup-request.short-description:           {author}\u5df2\u53d1\u9001\u4e00\u4e2a\u52a0\u5165\u534f\u4f5c\u7a7a\u95f4{data}\u7684\u8bf7\u6c42\u3002
+alert.msg.jcmsplugin-collaborativespace.signup-request.description:                 <p>{author}\u5df2<a href="{signup-url}">\u53d1\u9001\u4e00\u4e2a</a>\u52a0\u5165\u534f\u4f5c\u7a7a\u95f4{data}\u7684\u8bf7\u6c42\u3002</p>
+
+alert.msg.jcmsplugin-collaborativespace.signup-accepted.title:                      \u6ce8\u518c\u8bf7\u6c42{data}
+alert.msg.jcmsplugin-collaborativespace.signup-accepted.short-description:          {author}\u5df2\u901a\u8fc7\u60a8\u5728\u534f\u4f5c\u7a7a\u95f4{data}\u7684\u6ce8\u518c\u8bf7\u6c42\u3002
+alert.msg.jcmsplugin-collaborativespace.signup-accepted.description:                <p>\u606d\u559c\uff01{author}\u5df2\u901a\u8fc7\u60a8\u5728\u534f\u4f5c\u7a7a\u95f4{data}\u7684\u6ce8\u518c\u8bf7\u6c42\u3002\u4ece\u73b0\u5728\u8d77\uff0c\u60a8\u662f\u8be5\u7a7a\u95f4\u7684\u6210\u5458\u3002</p>
+
+alert.msg.jcmsplugin-collaborativespace.signup-rejected.title:                      \u6ce8\u518c\u8bf7\u6c42{data}
+alert.msg.jcmsplugin-collaborativespace.signup-rejected.short-description:          \u60a8\u5728\u534f\u4f5c\u7a7a\u95f4{data}\u7684\u6ce8\u518c\u8bf7\u6c42\u5df2\u88ab\u62d2\u7edd\u3002\u9a8c\u8bc1\u8005\u8bc4\u8bba\uff1a{validator-comment}
+
+alert.msg.jcmsplugin-collaborativespace.unsignup.title:                             \u53d6\u6d88 {data}\u7684\u8ba2\u9605
+alert.msg.jcmsplugin-collaborativespace.unsignup.short-description:                 {author}\u5df2\u53d6\u6d88\u534f\u4f5c\u7a7a\u95f4\u7684\u8ba2\u9605{data}\u3002
+
+alert.msg.jcmsplugin-collaborativespace.guest-creation.title:                       \u6765\u5bbe\u8d26\u6237\u6fc0\u6d3b
+alert.msg.jcmsplugin-collaborativespace.guest-creation.short-description:           \u6765\u5bbe\u8d26\u6237{data}({organization})\u5df2\u6210\u529f\u521b\u5efa\uff0c\u90ae\u4ef6\u901a\u77e5\u5df2\u53d1\u9001\u3002
+
+alert.msg.jcmsplugin-collaborativespace.contact-to-guest.title:                     \u6765\u5bbe\u8d26\u6237\u6fc0\u6d3b
+alert.msg.jcmsplugin-collaborativespace.contact-to-guest.short-description:         \u8054\u7cfb\u4eba{data} ({organization})\u5df2\u88ab\u6210\u529f\u8f6c\u6362\u4e3a\u6765\u5bbe\u8d26\u6237\uff0c\u90ae\u4ef6\u901a\u77e5\u5df2\u53d1\u9001\u3002
+
+alert.msg.jcmsplugin-collaborativespace.silent-guest-creation.title:                \u6765\u5bbe\u8d26\u6237\u6fc0\u6d3b
+alert.msg.jcmsplugin-collaborativespace.silent-guest-creation.short-description:    \u5df2\u6210\u529f\u521b\u5efa\u6765\u5bbe\u8d26\u6237{data}\uff08{organization}\uff09\u3002
+
+alert.msg.jcmsplugin-collaborativespace.silent-contact-to-guest.title:              \u6765\u5bbe\u8d26\u6237\u6fc0\u6d3b
+alert.msg.jcmsplugin-collaborativespace.silent-contact-to-guest.short-description:  \u8054\u7cfb\u4eba {data}\uff08{organization}\uff09\u5df2\u88ab\u6210\u529f\u8f6c\u6362\u4e3a\u6765\u5bbe\u8d26\u6237\u3002
+
+wf-alert.ANY.CSRequest.wfcsrequest.-201.form-submission.alertWorkers.ANY.title: {reminder}\u534f\u4f5c\u7a7a\u95f4\u521b\u5efa\u8bf7\u6c42\u5df2\u88ab\u63d0\u4ea4\u3002
+wf-alert.ANY.CSRequest.wfcsrequest.-201.form-submission.alertWorkers.ANY.short-description: \u4e00\u4e2a\u534f\u4f5c\u7a7a\u95f4\u521b\u5efa\u8bf7\u6c42\u5df2\u88ab\u63d0\u4ea4\uff1a{data.url}
+wf-alert.ANY.CSRequest.wfcsrequest.-201.form-submission.alertWorkers.ANY.description: <p>\u4e00\u4e2a\u534f\u4f5c\u7a7a\u95f4{data}\u521b\u5efa\u8bf7\u6c42\u5df2\u88ab\u63d0\u4ea4\u3002</p><p>\u60a8\u53d7\u9080\u5bf9\u5176\u9a8c\u8bc1\u3002</p>
+
+wf-alert.ANY.CSSignupRequest.wfcssignup.-201.form-submission.alertWorkers.ANY.title: {reminder}\u534f\u4f5c\u4f5c\u7a7a\u95f4\u6ce8\u518c\u8bf7\u6c42\u5df2\u88ab\u63d0\u4ea4\u3002
+wf-alert.ANY.CSSignupRequest.wfcssignup.-201.form-submission.alertWorkers.ANY.short-description: \u4e00\u4e2a\u534f\u4f5c\u4f5c\u7a7a\u95f4\u6ce8\u518c\u8bf7\u6c42\u5df2\u88ab\u63d0\u4ea4\u3002{data.url}
+wf-alert.ANY.CSSignupRequest.wfcssignup.-201.form-submission.alertWorkers.ANY.description: <p>\u4e00\u4e2a\u534f\u4f5c\u4f5c\u7a7a\u95f4\u6ce8\u518c\u8bf7\u6c42\u5df2\u88ab\u63d0\u4ea4\u3002{data}\u3002</p><p>\u60a8\u53d7\u9080\u5bf9\u5176\u9a8c\u8bc1\u3002</p>
+
+# ----------------------------------------------------------------------
+# SHORTCUT
+# ----------------------------------------------------------------------
+
+data.$id.shortcut.jcmsplugin.collaborativespace-hub.title: \u7a7a\u95f4
+data.$id.shortcut.jcmsplugin.collaborativespace-hub.text: \u8bbf\u95ee\u60a8\u7684\u7a7a\u95f4\u3001\u7ba1\u7406\u60a8\u559c\u7231\u7684\u7a7a\u95f4\u5e76\u63a2\u7d22\u7a7a\u95f4\u63a8\u8350\u3002
+
+# ----------------------------------------------------------------------
+# CategoryBrowser
+# ----------------------------------------------------------------------
+category.category-browser.collaborativespace-search: \u5728\u8be5\u7a7a\u95f4\u641c\u7d22
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From CollaborativeSpace-templates.xml
+types.CollaborativeSpace.templates.box.default.label: \u9ed8\u8ba4\u6a21\u677f
+
+# From CollaborativeSpace.xml
+types.CollaborativeSpace.fields.header.label: \u6807\u5934
+types.CollaborativeSpace.fields.headerSettings.label: \u6807\u5934\u81ea\u5b9a\u4e49
+types.CollaborativeSpace.fields.introduction.label: \u4ecb\u7ecd
+types.CollaborativeSpace.tabs.layout.label: \u5e03\u5c40
+types.CollaborativeSpace.fields.accessPolicy.label: \u8bbf\u95ee
+types.CollaborativeSpace.title.label: \u6307\u5357\u6807\u9898
+types.CollaborativeSpace.fields.exactCategory.label: \u5b8c\u5168\u5339\u914d\u5206\u7c7b
+types.CollaborativeSpace.fields.signupPolicy.labelList: \u81ea\u7531\u6ce8\u518c|\u7533\u8bf7\u6ce8\u518c|\u7531\u4e3b\u6301\u4eba\u7ba1\u7406\u7684\u6ce8\u518c
+types.CollaborativeSpace.fields.layout.label: \u5e03\u5c40
+types.CollaborativeSpace.label: \u534f\u4f5c\u7a7a\u95f4
+types.CollaborativeSpace.description: \u534f\u4f5c\u7a7a\u95f4Portlet\u53ef\u5b9a\u4e49\u663e\u793a\u7684\u5e94\u7528\u7a0b\u5e8f
+types.CollaborativeSpace.fields.layout.labelList: \u65e0\u8fb9\u680f|\u5de6\u8fb9\u680f|\u53f3\u8fb9\u680f
+types.CollaborativeSpace.fields.signupPolicy.label: \u6ce8\u518c\u653f\u7b56
+types.CollaborativeSpace.fields.dashboardColumnCount.label: \u4eea\u8868\u677f\u5217
+types.CollaborativeSpace.fields.accessPolicy.labelList: \u516c\u5f00|\u975e\u516c\u5f00|\u79d8\u5bc6
+types.CollaborativeSpace.fields.exactCategory.onLabel: \u662f
+types.CollaborativeSpace.fields.exactCategory.offLabel: \u5426
+types.CollaborativeSpace.fields.description.label: \u6307\u5357\u8bf4\u660e
+types.CollaborativeSpace.tabs.access.label: \u8bbf\u95ee
+types.CollaborativeSpace.fields.theme.label: \u4e3b\u9898
+types.CollaborativeSpace.fields.followersGroup.label: \u5173\u6ce8\u7ec4
+types.CollaborativeSpace.fields.followersGroup.description: \u8be5\u7ec4\u6210\u5458\u5c06\u4f1a\u6536\u5230\u8be5\u7a7a\u95f4\u7684\u6700\u65b0\u5185\u5bb9\u901a\u77e5
+types.CollaborativeSpace.fields.jportal.label: JPortal
+types.CollaborativeSpace.fields.syncMode.label: \u540c\u6b65\u7684\u9879\u76ee
+types.CollaborativeSpace.fields.syncMode.labelList: \u4e3b\u9875|\u5e94\u7528\u7a0b\u5e8f|\u6570\u636e\u7ed3\u6784\uff08\u7c7b\u578b\u3001WF\u3001\u7ec4\u2026\u2026\uff09|\u7c7b\u522b
+types.CollaborativeSpace.fields.model.label: \u5de5\u4f5c\u533a\u6a21\u578b
+types.CollaborativeSpace.fields.applications.label: \u5e94\u7528\u7a0b\u5e8f
+types.CollaborativeSpace.fields.mobileShowIntro.label: \u663e\u793a\u4ecb\u7ecd
+types.CollaborativeSpace.fields.mobileShowApplications.label: \u663e\u793a\u5e94\u7528\u7a0b\u5e8f
+types.CollaborativeSpace.fields.mobilePortlets.label: Portlets
+types.CollaborativeSpace.fields.modelSyncMode.label: \u6240\u9700\u7684\u540c\u6b65
+types.CollaborativeSpace.fields.modelSyncMode.labelList: \u4e3b\u9875|\u5e94\u7528\u7a0b\u5e8f|\u6570\u636e\u7ed3\u6784\uff08\u7c7b\u578b\u3001WF\u3001\u7ec4\u2026\u2026\uff09|\u7c7b\u522b
+
+# From CSRequest-templates.xml
+types.CSRequest.templates.query.default.label: \u9ed8\u8ba4\u6a21\u677f
+types.CSRequest.templates.full.default.description: \u9ed8\u8ba4\u6a21\u677f
+types.CSRequest.templates.full.default.label: \u9ed8\u8ba4\u6a21\u677f
+types.CSRequest.templates.query.default.description: \u9ed8\u8ba4\u6a21\u677f
+
+# From CSRequest.xml
+types.CSRequest.fields.description.label: \u6307\u5357\u8bf4\u660e
+types.CSRequest.title.label: \u6307\u5357\u6807\u9898
+types.CSRequest.fields.notificationPolicy.label: \u901a\u77e5\u653f\u7b56
+types.CSRequest.fields.groups.label: \u7ec4
+types.CSRequest.fields.accessPolicy.labelList: \u516c\u5f00|\u975e\u516c\u5f00|\u79d8\u5bc6
+types.CSRequest.fields.signupPolicy.labelList: \u81ea\u7531\u6ce8\u518c|\u7533\u8bf7\u6ce8\u518c|\u7531\u4e3b\u6301\u4eba\u7ba1\u7406\u7684\u6ce8\u518c
+types.CSRequest.fields.notificationPolicy.labelList: \u5411\u53c2\u4e0e\u8005\u53d1\u9001\u8bf7\u6c42|\u6dfb\u52a0\u5e76\u901a\u77e5\u53c2\u4e0e\u8005|\u5728\u4e0d\u53d1\u9001\u901a\u77e5\u7684\u60c5\u51b5\u4e0b\u6dfb\u52a0\u53c2\u4e0e\u8005
+types.CSRequest.fields.signupPolicy.label: \u6ce8\u518c\u653f\u7b56
+types.CSRequest.label: \u534f\u4f5c\u7a7a\u95f4 - \u521b\u5efa\u8bf7\u6c42
+types.CSRequest.fields.admins.label: \u4e3b\u6301\u4eba
+types.CSRequest.fields.language.label: \u8bed\u8a00
+types.CSRequest.fields.members.label: \u6210\u5458
+types.CSRequest.fields.name.label: \u7a7a\u95f4\u540d\u79f0
+types.CSRequest.fields.accessPolicy.label: \u8bbf\u95ee
+types.CSRequest.fields.model.label: \u6a21\u578b
+types.CSRequest.fields.parent.label: \u7236\u7ea7\u7a7a\u95f4
+types.CSRequest.fields.syncMode.label: \u540c\u6b65\u7684\u9879\u76ee
+types.CSRequest.fields.syncMode.labelList: \u4e3b\u9875|\u5e94\u7528\u7a0b\u5e8f|\u6570\u636e\u7ed3\u6784\uff08\u7c7b\u578b\u3001WF\u3001\u7ec4\u2026\u2026\uff09|\u7c7b\u522b
+
+# From CSSignupRequest-templates.xml
+types.CSSignupRequest.templates.full.default.label: \u9ed8\u8ba4\u6a21\u677f
+types.CSSignupRequest.templates.full.default.description: \u9ed8\u8ba4\u6a21\u677f
+types.CSSignupRequest.templates.query.default.label: \u9ed8\u8ba4\u6a21\u677f
+types.CSSignupRequest.templates.query.default.description: \u9ed8\u8ba4\u6a21\u677f
+
+# From CSSignupRequest.xml
+types.CSSignupRequest.title.label: \u6307\u5357\u6807\u9898
+types.CSSignupRequest.label: \u534f\u4f5c\u7a7a\u95f4 - \u6ce8\u518c\u8bf7\u6c42
+types.CSSignupRequest.fields.name.label: \u540d\u79f0
+
+# From GuestCrea.xml
+types.GuestCrea.title.label: \u6307\u5357\u6807\u9898
+types.GuestCrea.label: \u6765\u5bbe\u8d26\u6237 - \u521b\u5efa\u8bf7\u6c42
+types.GuestCrea.description: \u60a8\u53ef\u4f7f\u7528\u8be5\u8868\u683c\u8bf7\u6c42\u521b\u5efa\u4e00\u4e2a\u4ec5\u53ef\u8bbf\u95ee\u534f\u4f5c\u7a7a\u95f4\u7684\u6765\u5bbe\u8d26\u6237\u3002
+types.GuestCrea.fields.name.label: \u540d\u79f0
+types.GuestCrea.fields.email.label: \u7535\u5b50\u90ae\u7bb1
+types.GuestCrea.fields.organization.label: \u7ec4\u7ec7
+types.GuestCrea.fields.firstname.label: \u540d
+types.GuestCrea.fields.language.label: \u8bed\u8a00
+types.GuestCrea.fields.country.label: \u56fd\u5bb6
+
+# From GuestConv.xml
+types.GuestConv.title.label: \u6307\u5357\u6807\u9898
+types.GuestConv.label: \u6765\u5bbe\u8d26\u6237 - \u8054\u7cfb\u4eba\u8f6c\u6362\u8bf7\u6c42
+types.GuestConv.fields.contact.description: \u9700\u8f6c\u6362\u4e3a\u6765\u5bbe\u8d26\u6237\u7684\u5df2\u6709\u6210\u5458\uff08\u8054\u7cfb\u4eba\u7c7b\u578b\uff09\u3002
+types.GuestConv.description: \u60a8\u53ef\u4f7f\u7528\u8be5\u8868\u683c\u8bf7\u6c42\u5c06\u4e00\u540d\u5df2\u6709\u8054\u7cfb\u4eba\u8f6c\u6362\u4e3a\u4e00\u4e2a\u4ec5\u53ef\u8bbf\u95ee\u534f\u4f5c\u533a\u7a7a\u95f4\u7684\u6765\u5bbe\u8d26\u6237\u3002
+types.GuestConv.fields.contact.label: \u8054\u7cfb\u4eba
+
+# From GuestRequest.xml
+types.GuestRequest.fields.submit-mbr.label: \u8bf7\u6c42
+types.GuestRequest.fields.groups.label: \u76ee\u6807\u7ec4
+types.GuestRequest.fields.groups.description: \u5c06\u6dfb\u52a0\u6765\u5bbe\u8d26\u6237\u7684\u6240\u6709\u534f\u4f5c\u7a7a\u95f4\u7ec4\u3002
+types.GuestRequest.title.label: \u6307\u5357\u6807\u9898
+types.GuestRequest.label: [\u6458\u8981] \u6765\u5bbe\u8d26\u6237 - \u5f00\u901a\u8bf7\u6c42
+
+# From PortletMyCollaborativeSpaces-templates.xml
+types.PortletMyCollaborativeSpaces.templates.box.default.label: \u6211\u7684\u7a7a\u95f4\u6a21\u677f
+types.PortletMyCollaborativeSpaces.templates.full.default.label: \u6211\u7684\u7a7a\u95f4\u6a21\u677f
+types.PortletMyCollaborativeSpaces.templates.box.itemBox.label: Item-box\u6211\u7684\u7a7a\u95f4\u6a21\u677f
+types.PortletMyCollaborativeSpaces.templates.box.hierarchy.label: \u5206\u7ea7\u7a7a\u95f4\u6a21\u677f
+types.PortletMyCollaborativeSpaces.templates.box.hierarchyItemBox.label: Item Box\u5206\u7ea7\u7a7a\u95f4\u6a21\u677f
+types.PortletMyCollaborativeSpaces.templates.query.default.label: \u67e5\u8be2\u6a21\u677f
+
+# From PortletMyCollaborativeSpaces.xml
+types.PortletMyCollaborativeSpaces.label: \u6211\u7684\u534f\u4f5c\u7a7a\u95f4portlet
+types.PortletMyCollaborativeSpaces.description: \u6211\u7684\u534f\u4f5c\u7a7a\u95f4Portlet\u53ef\u663e\u793a\u534f\u4f5c\u7a7a\u95f4\u5217\u8868\u3002
+types.PortletMyCollaborativeSpaces.title.label: \u6307\u5357\u6807\u9898
+types.PortletMyCollaborativeSpaces.fields.depth.label: \u7ea7\u522b
+types.PortletMyCollaborativeSpaces.fields.depth.description: \u5f85\u663e\u793a\u7684\u5b50\u7a7a\u95f4\u7ea7\u522b\u6570\u91cf\u3002
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.label: \u7c7b\u578b\u7b5b\u9009
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.description: \u663e\u793a\u7a7a\u95f4\u7c7b\u578b\u7b5b\u9009\uff1f
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.onLabel: \u662f
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.offLabel: \u5426
+
+# From PortletCollaborativeSpaceSuggestion.xml
+types.PortletCollaborativeSpaceSuggestion.label: \u534f\u4f5c\u7a7a\u95f4\u5efa\u8baePortlet
+types.PortletCollaborativeSpaceSuggestion.description: \u534f\u4f5c\u7a7a\u95f4\u5efa\u8baePortlet\u53ef\u4e3a\u767b\u5f55\u6210\u5458\u663e\u793a\u534f\u4f5c\u7a7a\u95f4\u5efa\u8bae\u3002
+types.PortletCollaborativeSpaceSuggestion.title.label: \u6307\u5357\u6807\u9898
+types.PortletCollaborativeSpaceSuggestion.fields.threshold.label: \u9608\u503c
+types.PortletCollaborativeSpaceSuggestion.fields.typology.label: \u7c7b\u578b
+types.PortletCollaborativeSpaceSuggestion.fields.hideWhenNoResults.label: \u65e0\u5efa\u8bae\u65f6\u9690\u85cf
+types.PortletCollaborativeSpaceSuggestion.fields.maxItems.label: \u5efa\u8bae\u6570\u91cf 
+
+# From PortletCollaborativeSpaceSuggestion-templates.xml
+types.PortletCollaborativeSpaceSuggestion.templates.full.default.label: \u5efa\u8bae\u6a21\u677f
+types.PortletCollaborativeSpaceSuggestion.templates.box.default.label: \u5efa\u8bae\u6a21\u677f
+types.PortletCollaborativeSpaceSuggestion.templates.box.itemBox.label: Item-box\u5efa\u8bae\u6a21\u677f
+
+# From plugin.xml
+types.PortletQueryForeach.templates.box.jcmsplugin.collaborativespace.dashboard.label: \u4eea\u8868\u677f\u663e\u793a\uff08CSP\uff09
+types.PortletQueryForeachDetail.templates.box.jcmsplugin.collaborativespace.dashboard.label: \u4eea\u8868\u677f\u663e\u793a\uff08CSP\uff09
+types.PortletSearch.templates.box.jcmsplugin.collaborativespace.search-header.label: \u534f\u4f5c\u7a7a\u95f4 - \u6807\u5934
+types.PortletSelection.templates.box.jcmsplugin.collaborativespace.dashboard.label: \u534f\u4f5c\u7a7a\u95f4 - \u9762\u677f
+types.AbstractPortletSkinable.templates.collaborativeSpace.noskin.label: \u4eae\uff08\u65e0\u6807\u9898\uff09
+types.AbstractPortletSkinable.templates.collaborativeSpace.default.label: \u5e26\u5706\u89d2\u7684\u9762\u677f
+types.AbstractPortletSkinable.templates.collaborativeSpace.borderless.label: \u4eae\uff0c\u5e26\u4e0b\u5212\u7ebf\u6807\u9898
+
+# From wfcsrequest.xml
+workflows.wfcsrequest.states.60.label: \u5df2\u63a5\u53d7
+workflows.wfcsrequest.states.50.label: \u5df2\u62d2\u7edd
+workflows.wfcsrequest.states.-201.label: \u5df2\u63d0\u4ea4
+workflows.wfcsrequest.label: \u534f\u4f5c\u7a7a\u95f4 - \u521b\u5efa\u8bf7\u6c42\u5de5\u4f5c\u6d41
+workflows.wfcsrequest.roles.validator.name: \u9a8c\u8bc1\u8005
+workflows.wfcsrequest.states.60.description: \u8bf7\u6c42\u5df2\u6279\u51c6\uff0c\u534f\u4f5c\u7a7a\u95f4\u5df2\u521b\u5efa\u3002
+workflows.wfcsrequest.states.50.description: \u8be5\u534f\u4f5c\u7a7a\u95f4\u521b\u5efa\u8bf7\u6c42\u5df2\u88ab\u62d2\u7edd\u3002\u8be5\u534f\u4f5c\u7a7a\u95f4\u5c06\u4e0d\u4f1a\u88ab\u5f00\u901a\u3002\u5728\u5de5\u4f5c\u6d41\u6ce8\u91ca\u4e2d\u67e5\u770b\u6709\u5173\u6b64\u6b21\u62d2\u7edd\u64cd\u4f5c\u7684\u66f4\u591a\u5185\u5bb9\u3002
+workflows.wfcsrequest.roles.validator.description: \u63a5\u53d7/\u62d2\u7edd\u534f\u4f5c\u7a7a\u95f4\u8bf7\u6c42
+
+# From wfcssignup.xml
+workflows.wfcssignup.roles.validator1.description: \u63a5\u53d7/\u62d2\u7edd\u534f\u4f5c\u7a7a\u95f4\u6ce8\u518c\u8bf7\u6c42
+workflows.wfcssignup.label: \u534f\u4f5c\u7a7a\u95f4 - \u6ce8\u518c\u5de5\u4f5c\u6d41
+workflows.wfcssignup.roles.validator1.name: \u9a8c\u8bc1\u8005
+workflows.wfcssignup.states.60.label: \u5df2\u63a5\u53d7
+workflows.wfcssignup.states.50.label: \u5df2\u62d2\u7edd
+workflows.wfcssignup.states.-201.label: \u5df2\u63d0\u4ea4
+
+# From wfguestaccountrequest.xml
+workflows.wfguestaccountrequest.states.60.description: \u8bf7\u6c42\u5df2\u6279\u51c6\uff0c\u6765\u5bbe\u8d26\u6237\u5df2\u521b\u5efa\u3002
+workflows.wfguestaccountrequest.states.50.description: \u8be5\u6765\u5bbe\u8d26\u6237\u8bf7\u6c42\u5df2\u88ab\u62d2\u7edd\u3002\u5c1a\u672a\u521b\u5efa\u6765\u5bbe\u8d26\u6237\u3002\u5728\u5de5\u4f5c\u6d41\u6ce8\u91ca\u4e2d\u67e5\u770b\u6709\u5173\u6b64\u6b21\u62d2\u7edd\u64cd\u4f5c\u7684\u66f4\u591a\u5185\u5bb9\u3002
+workflows.wfguestaccountrequest.states.60.label: \u5df2\u63a5\u53d7
+workflows.wfguestaccountrequest.states.50.label: \u5df2\u62d2\u7edd
+workflows.wfguestaccountrequest.label: \u6765\u5bbe\u8d26\u6237 - \u5f00\u901a\u8bf7\u6c42\u5de5\u4f5c\u6d41
+workflows.wfguestaccountrequest.roles.guestvalidator.description: \u63a5\u53d7/\u62d2\u7edd\u6765\u5bbe\u8d26\u6237\u5f00\u901a\u8bf7\u6c42
+workflows.wfguestaccountrequest.roles.guestvalidator.name: \u9a8c\u8bc1\u8005
+workflows.wfguestaccountrequest.states.-200.label: \u5df2\u63d0\u4ea4
+
+# Analytics
+ui.analytics.CSAgent.name:                    \u534f\u4f5c\u7a7a\u95f4
+ui.analytics.CSAgent.report.typology:         \u7c7b\u578b
+ui.analytics.CSAgent.report.typology.h:       \u7c7b\u578b\u7ec6\u76ee\u3002
+ui.analytics.CSAgent.report.access-policy:    \u8bbf\u95ee\u653f\u7b56
+ui.analytics.CSAgent.report.access-policy.h:  \u8bbf\u95ee\u653f\u7b56\u7ec6\u76ee\u3002
+ui.analytics.CSAgent.report.members:          \u6210\u5458\u6392\u884c\u699c
+ui.analytics.CSAgent.report.members.h:        \u6bcf\u4e2a\u534f\u4f5c\u7a7a\u95f4\u7684\u6210\u5458\u6570\u91cf\u3002
+ui.analytics.CSAgent.report.activity:         \u8d21\u732e\u6392\u884c\u699c
+ui.analytics.CSAgent.report.activity.h:       \u6bcf\u4e2a\u534f\u4f5c\u7a7a\u95f4\u7684\u8d21\u732e\u6570\u91cf\u3002
+ui.analytics.CSAgent.report.activity.count:   \u8d21\u732e\u6570\u91cf
+
+# DBComment
+jcmsplugin.collaborativespace.lbl.signup-to-comment: \u60f3\u8981\u8bc4\u8bba\u8be5\u53d1\u5e03\u5185\u5bb9\uff0c\u8bf7\u5148\u6ce8\u518c\u8be5\u7a7a\u95f4\u3002
+
+# SocialConversation
+jcmsplugin.collaborativespace.lbl.signup-to-react: \u60f3\u8981\u52a0\u5165\u672c\u6b21\u5bf9\u8bdd\uff0c\u8bf7\u5148\u6ce8\u518c\u8be5\u7a7a\u95f4\u3002
+
+# Collaborative Space hub
+jcmsplugin.collaborativespace.hub: \u7a7a\u95f4\u4e2d\u5fc3
+jcmsplugin.collaborativespace.hub.type-cs: \u534f\u4f5c\u7a7a\u95f4
+jcmsplugin.collaborativespace.hub.type-ws: \u95e8\u6237
+jcmsplugin.collaborativespace.hub.mode-all: \u6240\u6709\u7a7a\u95f4
+jcmsplugin.collaborativespace.hub.mode-member: \u6211\u7684\u7a7a\u95f4
+jcmsplugin.collaborativespace.hub.mode-favorite: \u6211\u7684\u6536\u85cf\u5939
+jcmsplugin.collaborativespace.hub.mode-suggestions: \u5efa\u8bae
+jcmsplugin.collaborativespace.hub.mode-csrequest: \u521b\u5efa\u8bf7\u6c42
+jcmsplugin.collaborativespace.hub.mode-member.intro: <p>\u70b9\u51fb\u7a7a\u95f4\u53f3\u4e0a\u65b9\u7684\u661f\u6807\uff0c\u5c06\u7a7a\u95f4\u6dfb\u52a0\u81f3\u60a8\u7684\u6536\u85cf\u5939\u6216\u5c06\u5176\u5220\u9664\u3002</p>
+jcmsplugin.collaborativespace.hub.mode-member.intro-has-favorites: <p>\u5728\u201c\u6211\u7684\u6536\u85cf\u5939\u201d\u5185\u627e\u5230\u548c\u7ba1\u7406\u60a8\u6240\u6709\u7684\u6536\u85cf\u3002</p>
+jcmsplugin.collaborativespace.hub.search-text.placeholder: \u641c\u7d22\u7a7a\u95f4\u2026\u2026
+jcmsplugin.collaborativespace.hub.sidebar-section.accessPolicy: \u8bbf\u95ee
+jcmsplugin.collaborativespace.hub.sidebar-section.typology: \u7c7b\u578b
+jcmsplugin.collaborativespace.hub.sidebar-section.type: \u7c7b\u578b
+
+#JPortal
+jcmcplugin.collaborativespace.jportal.edit.label: \u66f4\u6539\u95e8\u6237
+jcmcplugin.collaborativespace.jportal.edit-more.label: \u66f4\u6539\u95e8\u6237\u2026\u2026
+jcmsplugin.collaborativespace.jportal.edit-modal.title: \u7528\u6a21\u578b\u66f4\u6539\u540c\u6b65\u7684\u95e8\u6237
+jcmsplugin.collaborativespace.jportal.edit-modal.message: \u6ce8\u610f\uff0c\u8be5\u95e8\u6237\u5df2\u4e0e\u4e00\u4e2a\u6a21\u578b\u540c\u6b65\u3002
+jcmsplugin.collaborativespace.jportal.edit-modal.edit-model.label: \u66f4\u6539\u6a21\u578b
+jcmsplugin.collaborativespace.jportal.edit-modal.desynchronize-model.label: \u53d6\u6d88\u540c\u6b65\u5e76\u66f4\u6539\u95e8\u6237
+
+jcmsplugin.collaborativespace.edit-app-modal.title: \u66f4\u65b0\u5e94\u7528\u7a0b\u5e8f
+jcmsplugin.collaborativespace.edit-app-modal.template.label: \u6a21\u677f
+jcmsplugin.collaborativespace.edit-app-modal.title.label: \u6307\u5357\u6807\u9898
+
+#Tabs
+jcmsplugin.collaboratif.tabs.menu.remove: \u79fb\u9664...
+jcmsplugin.collaboratif.tabs.menu.remove.confirm: \u60a8\u771f\u7684\u5e0c\u671b\u79fb\u9664\u8be5\u5e94\u7528\u7a0b\u5e8f\uff1f
+jcmsplugin.collaboratif.tabs.menu.update.title: \u66f4\u65b0...
+jcmsplugin.collaboratif.tabs.rename.title.label: \u6307\u5357\u6807\u9898
+
+#Parameters
+jcmsplugin.collaborativespace.parameters.model.link: \u8bbf\u95ee\u6a21\u578b
+
+# Migration
+jcmsplugin.collaborativespace.migration.model: \u6a21\u578b
+jcmsplugin.collaborativespace.migration.without-model: \u65e0\u6a21\u578b
+jcmsplugin.collaborativespace.migration.no-typologies: \u65e0\u7c7b\u578b
+jcmsplugin.collaborativespace.migration.migrate-all: \u8f6c\u79fb\u6240\u6709\u65e0\u6a21\u578b\u7684\u5de5\u4f5c\u533a
+jcmsplugin.collaborativespace.migration.migrate-selected: \u8fc1\u79fb\u9009\u5b9a\u7684\u5de5\u4f5c\u533a
+jcmsplugin.collaborativespace.migration.no-model-no-workspace: \uff08\u8be5\u7c7b\u578b\u6ca1\u6709\u6a21\u578b\u548c\u5de5\u4f5c\u533a\uff09
+jcmsplugin.collaborativespace.migration.modal-title: \u5de5\u4f5c\u533a\u8f6c\u79fb
+jcmsplugin.collaborativespace.migration.modal-button: \u8f6c\u79fb
+jcmsplugin.collaborativespace.migration.target-typology: \u76ee\u6807\u7c7b\u578b
+jcmsplugin.collaborativespace.migration.workspace-list: \u5c06\u88ab\u8f6c\u79fb\u7684\u5de5\u4f5c\u533a\u5217\u8868
+
+portlet.header.menu-items.Portlet.edit-skin-cs: \u66f4\u65b0...

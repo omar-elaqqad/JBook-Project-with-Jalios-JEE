@@ -1,0 +1,321 @@
+# Language properties
+
+jcmsplugin.smartphone.lbl.no-result: Нет результатов
+jcmsplugin.smartphone.lbl.guest: Гость
+jcmsplugin.smartphone.lbl.index-default.choose-action: Выбрать действие
+jcmsplugin.smartphone.lbl.index-default.desktop-link: Перейти к сайту виртуального рабочего стола
+jcmsplugin.smartphone.lbl.workspace-index.filter-ws: Выполнить фильтрацию рабочих пространств
+jcmsplugin.smartphone.lbl.workspace-index.recent: Недавно посещенные
+jcmsplugin.smartphone.lbl.workspace-index.other: Другие рабочие пространства
+jcmsplugin.smartphone.lbl.workspace-index.signup: У вас нет разрешения для доступа к этому рабочему пространству.
+jcmsplugin.smartphone.lbl.vote.like: Мне нравится
+jcmsplugin.smartphone.lbl.vote.unlike: Мне не нравится
+jcmsplugin.smartphone.lbl.access-website: Войти на Веб-сайт
+jcmsplugin.smartphone.lbl.see-on-website: Смотреть на Веб-сайте
+jcmsplugin.smartphone.lbl.header.website-title: JPlatform - Смартфон
+jcmsplugin.smartphone.lbl.alert.all-alert-read: Вы прочитали все свои предупреждения.
+jcmsplugin.smartphone.lbl.alert.alert-empty: У вас нет предупреждений.
+jcmsplugin.smartphone.lbl.alert.unread: Не читать
+jcmsplugin.smartphone.lbl.alert.read: Читать
+jcmsplugin.smartphone.lbl.alert.access-publication: Отобразить публикацию
+jcmsplugin.smartphone.lbl.alert.mark-read: Отметить как прочитанное
+jcmsplugin.smartphone.lbl.forbidden: У вас нет права доступа к этому контенту.
+jcmsplugin.smartphone.lbl.alert.null-pub: Элемент не существует
+jcmsplugin.smartphone.lbl.yes: Да
+jcmsplugin.smartphone.lbl.no: Нет
+jcmsplugin.smartphone.lbl.member.contact: Контакт
+jcmsplugin.smartphone.lbl.member.address: Адрес
+jcmsplugin.smartphone.lbl.member.information: Информация
+jcmsplugin.smartphone.lbl.member.agenda: Программа
+jcmsplugin.smartphone.lbl.recommendation.no-recommendation: Вы не получили ни одной рекомендации.
+jcmsplugin.smartphone.lbl.recommendation.see-publication: Отобразить публикацию
+jcmsplugin.smartphone.lbl.admin.members: Участник
+jcmsplugin.smartphone.lbl.admin.see-logs: Войти в журналы регистрации
+jcmsplugin.smartphone.lbl.admin.memory: Память
+jcmsplugin.smartphone.lbl.member.add-to-address-book: Добавить в адресную книгу
+jcmsplugin.smartphone.lbl.mention.noemail: У этого пользователя нет адреса электронной почты, и он не может быть упомянут
+jcmsplugin.smartphone.lbl.jquerymobile.error: Возникла ошибка.
+jcmsplugin.smartphone.lbl.invalid-home-page: Домашняя страница не настроена.
+jcmsplugin.smartphone.lbl.access-all-spaces: Доступ ко всем пространствам
+jcmsplugin.smartphone.lbl.jmobile.about-jmobile: Подробнее о JMobile
+
+jcmsplugin.smartphone.action.showmore: Показать больше...
+jcmsplugin.smartphone.action.filter: Фильтровать...
+jcmsplugin.smartphone.action.see-publication: Отобразить публикацию
+jcmsplugin.smartphone.lbl.new: Новый
+
+jcmsplugin.smartphone.recommendation.placeholder.members: Выбрать участников
+jcmsplugin.smartphone.recommendation.placeholder.groups: Выбрать группы
+
+jcmsplugin.smartphone.jmobile.version.numero: Версия {0} Copyright © Jalios 2022
+jcmsplugin.smartphone.jmobile.version.droits: Все права защищены
+jcmsplugin.smartphone.jmobile.notification: Уведомления
+jcmsplugin.smartphone.jmobile.notification.appareil.registred: Зарегистрированное устройство
+jcmsplugin.smartphone.jmobile.notification.appareil.not-registred: Незарегистрированное устройство
+jcmsplugin.smartphone.jmobile.notification.permission : Разрешение
+jcmsplugin.smartphone.jmobile.notification.type-alerte.inactive: Тип оповещения не активирован
+jcmsplugin.smartphone.jmobile.notification.type-alerte.active: Тип оповещения активирован
+
+jcmsplugin.smartphone.lbl.download-mobile-app: Скачать мобильное приложение
+
+# Portal
+
+## History
+portal.edition.history.save-by.label: Сохранено {0}
+portal.edition.history.published-by.label: Опубликовано {0}
+portal.edition.history.breadcrumb.label: История портала
+portal.edition.history.back-edition.label: Вернуться к редактированию
+portal.edition.history.back-to-version.label: Вернуться к этой версии
+portal.edition.history.back-to-version.confirm: Вернуться к этой версии?
+portal.edition.history.show-more: Показать больше
+portal.edition.history.portlet-chooser: Инструмент выбора портлета
+portal.edition.history.create-portlet: Создать новый портлет
+portal.edition.history.existing-portlets: Существующие портлеты
+portal.structure.custom-title.label: Имя версии
+portal.structure.rename-title.label: Переименовать версию
+portal.edition.sidebar.portal-edit.tab-edit.title: Параметры портала
+portal.edition.sidebar.portal-edit.tab-ui.title: Стиль портала
+portal.edition.sidebar.portal-edit.template.title: Шаблоны портлетов
+portal.edition.sidebar.portal-edit.portal-advanced.title: Расширенное редактирование
+
+
+jcmsplugin.smartphone.service.search.no-result: Нет результатов
+jcmsplugin.smartphone.service.search.members.no-result: Участник не обнаружен
+jcmsplugin.smartphone.service.search.publications.no-result: Ни одна публикация не найдена
+jcmsplugin.smartphone.service.search.tabs.all.label: Все
+jcmsplugin.smartphone.service.search.tabs.members.label: Участники
+jcmsplugin.smartphone.service.search.tabs.publications.label: Публикации
+
+
+jcmsplugin.smartphone.portal.default-portal.title: Мобильный портал
+jcmsplugin.smartphone.portal.default-wysiwyg.title: Добро пожаловать на мобильный портал
+jcmsplugin.smartphone.portal.default-wysiwyg.content: Это страница по умолчанию вашего мобильного портала
+jcmsplugin.smartphone.portal.edition.edit-portal: Редактирование портала
+jcmsplugin.smartphone.portal.lbl.assembly-zone: Зона сборки
+jcmsplugin.smartphone.portal.lbl.final-output: Окончательный вывод
+jcmsplugin.smartphone.portal.lbl.portal-parameters: Параметры портала
+jcmsplugin.smartphone.portal.lbl.duplicate: Дублировать
+jcmsplugin.smartphone.portal.lbl.publish: Опубликовать
+jcmsplugin.smartphone.portal.lbl.duplicate.modal.title: Дублировать портал
+jcmsplugin.smartphone.portal.lbl.filter-workspace: Выполнить фильтрацию на рабочем пространстве...
+jcmsplugin.smartphone.portal.topbar-title.lbl: Верхняя панель
+jcmsplugin.smartphone.portal.administration.title: Администрация
+jcmsplugin.smartphone.portal.administration.mobile-portals: Мобильные порталы
+jcmsplugin.smartphone.portal.administration.default-portals: Порталы по умолчанию
+jcmsplugin.smartphone.portal.administration.default-portal: Портал по умолчанию
+jcmsplugin.smartphone.portal.administration.settings: Настройки
+jcmsplugin.smartphone.portal.creation-modal.title: Создать мобильный портал
+jcmsplugin.smartphone.portal.administration.topbar-color: Цвет фона верхней панели
+jcmsplugin.smartphone.portal.administration.portal-edition: Редактирование портала - {0}
+jcmsplugin.smartphone.portal.administration.topbar-font-color: Цвет шрифта верхней панели
+jcmsplugin.smartphone.portal.administration.topbar-logo: Логотип
+jcmsplugin.smartphone.portal.administration-table.title: Заголовок
+jcmsplugin.smartphone.portal.administration-table.mdate: Последнее обновление
+jcmsplugin.smartphone.portal.administration.create-portal: Создать портал
+jcmsplugin.smartphone.portal.administration.return-to-home: Вернуться в редактор портала главной страницы приложений
+jcmsplugin.smartphone.portal.administration.msg.settings-updated: Настройки сохранены.
+
+# MyDay
+jcmsplugin.smartphone.my-day.today.label: Сегодня
+jcmsplugin.smartphone.my-day.calendar.service-link.title: Вывести на экран мою программу
+jcmsplugin.smartphone.my-day.jtask.service-link.title: Отобразить мои задачи
+
+data.$id.jcmsplugin.smartphone.category.nav-root.name: Мобильная навигация
+data.$id.jcmsplugin.smartphone.category.nav-root-home.name: Главная страница
+
+# Properties
+jcmsplugin.smartphone.home.news: Новости
+jcmsplugin.smartphone.workspace.news: Новости рабочего пространства
+jcmsplugin.smartphone.default.page.size: Размер страницы по умолчанию
+jcmsplugin.smartphone.lbl.topbar-title: Заголовок сайта для смартфона
+jcmsplugin.smartphone.image.resize.max-width: Макс ширина изображений с измененным размером
+jcmsplugin.smartphone.map-service: Сервис карты
+jcmsplugin.smartphone.search.searchable-types: Сервис поиска - Типы, включенные в результаты поиска
+jcmsplugin.smartphone.search.portletId: Сервис поиска - Портлет
+jcmsplugin.smartphone.search.portletId.help: Портлет поиска, используемый для определения поведения по умолчанию сервиса поиска
+jcmsplugin.smartphone.search.not-searchable-types: Сервис поиска - Типы, исключенные из результатов поиска
+jcmsplugin.smartphone.drawer.background-image: Фоновое изображение секции сервиса
+
+jcmsplugin.smartphone.mobileapp.android.play-store : Магазин Android Play
+jcmsplugin.smartphone.mobileapp.ios.app-store : Магазин приложений для iOS
+
+# Services
+jcmsplugin.smartphone.service.recenthistory:   Последняя история
+jcmsplugin.smartphone.service.admin:    Админ
+jcmsplugin.smartphone.service.search: Искать
+jcmsplugin.smartphone.service.workflow: Рабочий поток
+jcmsplugin.smartphone.service.news: Новости
+jcmsplugin.smartphone.service.workspace: Рабочее пространство
+
+# Member menu
+jcmsplugin.smartphone.member-menu.application-menu: Приложения
+jcmsplugin.smartphone.member-menu.my-day: Мой день
+jcmsplugin.smartphone.member-menu.navigate: Перемещаться
+
+# Workspace Services
+jcmsplugin.smartphone.workspace-service.search: Искать
+jcmsplugin.smartphone.workspace-service.news: Новости
+
+portlet.ability.jcmsplugin-smartphone:                Смартфон
+portlet.ability.jcmsplugin-smartphone.application:    Сервис
+
+# Labels
+jcmsplugin.smartphone.fulldisplay.webpage.view-site: Посетить Веб-сайт
+
+jcmsplugin.smartphone.share.empty: Нет доступного сервиса для совместного использования URL {0}.
+
+# Feedback Mobile App
+jcmsplugin.smartphone.mobileapp.feedback.lbl: Отправить отчет
+jcmsplugin.smartphone.mobileapp.feedback.email: Электронный адрес получателя
+jcmsplugin.smartphone.mobileapp.feedback.email.help: Этот адрес электронной почты будет получать отзывы пользователей из мобильного приложения. Если адрес электронной почты не установлен, отправка в мобильном приложении отключена и недоступна.
+jcmsplugin.smartphone.mobileapp.feedback.settings: Настройки
+
+jcmsplugin.smartphone.mobileapp.feedback.subject: {0} отправил отчет из мобильного приложения
+jcmsplugin.smartphone.mobileapp.feedback.hello: Здравствуйте,
+jcmsplugin.smartphone.mobileapp.feedback.description: {0} отправил вам отчет об его использовании мобильного приложения.
+jcmsplugin.smartphone.mobileapp.feedback.user-info: Информация о пользователе:
+jcmsplugin.smartphone.mobileapp.feedback.user-info.login: Логин: {0}
+jcmsplugin.smartphone.mobileapp.feedback.user-info.siteurl: URL сайта: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info: Информация об устройстве:
+jcmsplugin.smartphone.mobileapp.feedback.device-info.platform: Платформа: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info.version: Версия платформы: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info.model: Модель устройства: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info.uuid: Идентификатор устройства: {0}
+jcmsplugin.smartphone.mobileapp.shareurl.message: Что вы хотите сделать?
+
+# AlertChannel
+jcmsplugin.smartphone.alert.channel.label: JMobile
+jcmsplugin.smartphone.alert.channel.description: Отправлять предупреждения через протокол JMobile
+
+# ExtraDBData
+extradb.Member.jcmsplugin.smartphone.token: Токен JMobile
+extra.Shortcut.jcmsplugin.smartphone.mobile-url: JMobile - URL ярлыка
+extra.Shortcut.jcmsplugin.smartphone.mobile-available: JMobile - Отображать в лаунчере приложений?
+
+# Editable Properties
+jcmplugin.smartphone.jpush.fcm.project-id: FCM - Идентификатор проекта
+jcmplugin.smartphone.notification.encrypt : Зашифровать уведомления
+jcmsplugin.smartphone.ios.download-code.url-prefix: iOS - Код скачивания - Префикс URL
+jcmsplugin.smartphone.ios.download-code.threshold: iOS - Код скачивания - Порог предупреждения
+$id.jcmsplugin.smartphone.ios.downloadcode.manager-group: iOS - Код скачивания - Группа менеджеров
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.ios.teamId: Apple - Идентификатор команды
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.appId: Идентификатор приложения JMobile
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.android.fingerprints: отпечатки сертификата (sha256)
+jcmplugin.smartphone.space.show-introduction: Отображать введение пространств
+
+$id.jcmsplugin.smartphone.portal.default-portal: Портал по умолчанию
+# Templates
+types.PortletQueryForeach.templates.jmobile.default.label: Шаблон по умолчанию
+types.PortletQueryForeach.templates.jmobile.dataimage.label: Список с шаблоном изображения
+
+types.PortletQueryForeachCards.templates.jmobile.withBorderGrid.label: Шаблон карт с рамкой в виде сетки
+types.PortletQueryForeachCards.templates.jmobile.withoutBorderGrid.label: Шаблон карт без рамки в виде сетки
+types.PortletQueryForeachCards.templates.jmobile.withBorder.label: Шаблон карт с рамкой в виде сетки
+types.PortletQueryForeachCards.templates.jmobile.light.label: Шаблон карт без мета
+types.PortletQueryForeachCards.templates.jmobile.default.label: Шаблон карты по умолчанию
+types.PortletQueryForeachCards.templates.jmobile.withLead.label: Карты с рамкой и с шаблоном междустрочного пробела
+types.PortletQueryForeachCards.templates.jmobile.withSliding.label: Шаблон раздвижной карты без рамки
+types.PortletQueryForeachCards.templates.jmobile.withSlidingBorder.label: Шаблон раздвижной карты с рамкой
+types.PortletQueryForeachCards.templates.jmobile.horizontalwithSliding.label: Шаблон раздвижной горизонтальной карты без рамки
+types.PortletQueryForeachCards.templates.jmobile.carousel.label: Шаблон карусельной карты
+
+types.PortletQueryForeachDetail.templates.jmobile.default.label: Шаблон по умолчанию
+types.PortletQueryForeachDetail.templates.jmobile.dataimage.label: Список с шаблоном изображения
+
+types.PortletCarousel.templates.jmobile.default.label: Шаблон по умолчанию
+
+types.PortletWYSIWYG.templates.jmobile.default.label:  Шаблон по умолчанию
+
+types.AbstractPortletSkinable.templates.jmobile.default.label: Шаблон по умолчанию
+
+types.AbstractPortletSkinable.templates.jmobile.light.label: Без шаблона заголовка
+
+types.PortletImage.templates.jmobile.default.label: Шаблон по умолчанию
+
+types.PortletJsp.templates.jmobile.default.label: Шаблон по умолчанию
+
+types.PortletRSS.templates.jmobile.default.label: Шаблон по умолчанию
+
+
+# From SmartPhonePortal.xml
+types.SmartPhonePortal.label: Портал JMobile
+types.SmartPhonePortal.description: Основной портал с минимумом опций
+types.SmartPhonePortal.fields.image.label: Изображение
+types.SmartPhonePortal.fields.pageTitle.description: Заголовок, отображаемый в заголовке страницы
+types.SmartPhonePortal.fields.description.label: Описание
+types.SmartPhonePortal.fields.pageTitle.label: Заголовок страницы
+types.SmartPhonePortal.fields.css.label: CSS
+types.SmartPhonePortal.fields.structure.label: Структура
+types.SmartPhonePortal.title.label: Заголовок
+types.SmartPhonePortal.fields.displayScrollToTop.label: Показывать прокрутку до верхней ссылки
+types.SmartPhonePortal.fields.keywords.label: Ключевые слова (SEO)
+types.SmartPhonePortal.fields.keywords.description: Эти ключевые слова (отделенные запятыми) будут использоваться на домашней странице портала.
+types.SmartPhonePortal.fields.portlets.label: Портлеты
+types.SmartPhonePortal.fields.portlets.description: Список портлетов
+
+# REST
+doc.rest.rsrc-meth.FeedbackResource: POST
+doc.rest.rsrc-desc./smartphone/feedback: Отправляет отзывы пользователей из мобильного приложения на адрес электронной почты, указанный в свойствах модуля JMobile.
+
+doc.rest.rsrc-meth.AddJWTokenResource: GET
+doc.rest.rsrc-desc./smartphone/auth/addjwtoken: Возвращает JWToken вошедших в систему пользователей
+doc.rest.rsrc-desc./smartphone/auth/addjwtoken/{memberId}: Возвращает JWToken участника с помощью идентификатора <code>memberId</code>.
+
+doc.rest.rsrc-meth.RegisterJMobileTokenResource: GET
+doc.rest.rsrc-desc./smartphone/registerToken/{deviceId}/{deviceOs}/{deviceModel}: Сохраняет информацию для мобильного телефона участника.
+
+doc.rest.rsrc-meth.DeleteDeviceInfoResource: GET
+doc.rest.rsrc-desc./smartphone/deleteToken/{deviceId}/{deviceOs}/{deviceModel}: Удаляет информацию с мобильного телефона участника.
+
+doc.rest.rsrc-meth.GetNotificationDiagnosticResource: GET
+doc.rest.rsrc-desc./smartphone/notificationDiagnostic/{deviceId}/{deviceOs}/{deviceModel}: Возвращает количество типов оповещений, активированных в JPlatform.
+
+doc.rest.rsrc-meth.JMobileInfoResource: GET
+doc.rest.rsrc-desc./smartphone/info: Возвращает информацию о плагине JMobile.
+
+doc.rest.rsrc-meth.IOSDownloadResource: GET
+doc.rest.rsrc-desc./smartphone/ios/download: Возвращает URL-адрес скачивания для приложения iOS.
+
+data.$id.shortcut.jcmsplugin.smartphone-portals.title: Порталы JMobile
+data.$id.shortcut.jcmsplugin.smartphone-portals.text: Управлять своими порталами JMobile и навигацией
+
+jcmplugin.smartphone.bottom-nav-item.home: Главная страница
+jcmplugin.smartphone.bottom-nav-item.alerts: Предупреждение
+jcmplugin.smartphone.bottom-nav-item.search: Искать
+jcmplugin.smartphone.bottom-nav-item.application-menu: Приложения
+
+ui.editportlet.usage.jmobile: JMobile
+ui.editportlet.usage.skin.jmobile: JMobile
+
+# ------------------------------------------------------------
+# IOS Download Code
+# ------------------------------------------------------------
+jcmsplugin.smartphone.ios.admin-menu: Управлять кодом скачивания для мобильного приложения iOS
+jcmsplugin.smartphone.ios.add-codes.title: Добавить коды скачивания
+jcmsplugin.smartphone.ios.add-codes.lbl.codes: Коды
+jcmsplugin.smartphone.ios.add-codes.lbl.codes.h: Введите коды, которые нужно добавить, через пробел или новую строку.
+jcmsplugin.smartphone.ios.add-codes.btn.delete-all: Удалить все неиспользуемые коды...
+jcmsplugin.smartphone.ios.add-codes.msg.code-count:  <p>{0,choice,0#Код не использовался|1#Был использован один код|2#{0} было использовано}.</p><p>{1,choice,0#Больше нет неиспользованного кода|1#Остается только один неиспользованный код.|2#Есть {1} неиспользованные коды}.
+jcmsplugin.smartphone.ios.add-codes.msg.codes-added:  {0,choice,0#Код не добавлен|1#Один код был добавлен|2#{0} было добавлено}.
+jcmsplugin.smartphone.ios.add-codes.msg.code-deleted: {0,choice,0#Код не был удален|1#Один неиспользованный код был удален|2#{0} неиспользованных кодов было удалено}.
+jcmsplugin.smartphone.ios.download.msg.oodc: <p>Приносим извинения :-(</p><p>Вы не можете скачать мобильное приложение в данный момент.</p><p>Больше нет кода для скачивания.</p><p>Повторите попытку позже.</p> 
+jcmsplugin.smartphone.ios.download.msg.ldnr: <p>Приносим извинения :-(</p><p>Вы не можете скачать мобильное приложение в данный момент.</p><p>Служба предоставления кода скачивания не отвечает.</p><p>Повторите попытку позже.</p>
+
+data.$id.jcmsplugin.smartphone.ios.downloadcode.manager-group.name: Менеджеры кода скачивания приложений для iOS
+
+# ------------------------------------------------------------
+# ALERT
+# ------------------------------------------------------------
+alert.name.jcmsplugin-smartphone:                                              JMobile
+alert.name.jcmsplugin-smartphone.ios-downloadcode-shortage:                    Нехватка кода для скачивания
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.title:               Нехватка кода для скачивания
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.short-description:   {remainingCount}
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.description:         <p>{remainingCount}</p><p>Чтобы добавить новые коды скачивания, перейдите в раздел «Работа» в <a href="admin/admin.jsp">Области администрирования</a>.</p>
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.remaining-count:     {0,choice,0#Использованы все коды загрузки|1#Остался только один код скачивания|2#Есть только {0} кода скачивания}.
+
+# ------------------------------------------------------------
+# ACL
+# ------------------------------------------------------------
+acl.resource.plugins/jmobile: JMobile
+acl.resource.plugins/jmobile/can-administrate-mobile-portals: Администрирование мобильного портала
+acl.resource.admin/operation/can-manage-ios-downloadcode: Управление кодом скачивания iOS

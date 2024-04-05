@@ -1,0 +1,169 @@
+.app-dbpoll .app-header {
+  background-color: #1abc9c;
+}
+.app-dbpoll .app-header .app-publication-actions .list-group-item.pub-action-toggle {
+  background-color: #1abc9c;
+}
+.app-dbpoll .app-sidebar .app-sidebar-icon .jalios-icon {
+  color: #1abc9c;
+}
+.PortletPoll .poll-form .poll-answers {
+  border-radius: 8px;
+}
+.PortletPoll .btn-access-app {
+  display: block;
+  width: max-content;
+  margin: 10px auto;
+}
+.app-dbpoll .app-sidebar .app-sidebar-section .poll-search {
+  padding-bottom: 0;
+}
+.app-dbpoll .app-sidebar .app-sidebar-button {
+  width: -webkit-fill-available;
+  width: -moz-available;
+}
+.app-dbpoll .card-block-footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+.app-dbpoll .banner-dbpoll {
+  border-radius: 8px 0 0;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  padding: 0 10px;
+}
+.app-dbpoll .poll-title {
+  font-size: 32px;
+}
+.poll-image {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.poll-description {
+  margin-top: 15px;
+}
+.poll-title {
+  font-size: 20px;
+  margin-top: 0;
+}
+.poll-title a {
+  color: #333;
+  text-decoration: none;
+}
+.poll-info {
+  display: flex;
+  margin-bottom: 35px;
+}
+.poll-info .author-link {
+  color: #555;
+}
+.poll-info div:last-child {
+  margin-left: 4px;
+}
+.poll-form .poll-answers {
+  padding: 0 10px;
+}
+ul.poll-answers {
+  padding-left: 0;
+}
+ul.poll-answers li {
+  list-style-type: none;
+}
+.progress.poll-answer-votes {
+  max-width: 600px;
+  font-size: 12px;
+}
+.progress.poll-answer-votes span {
+  margin-left: 10px;
+}
+.poll-answer-desc {
+  margin-bottom: 4px;
+}
+.poll-unifiedinsert .poll-cards {
+  padding-left: 16px;
+}
+.all-poll .poll {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.vote-count {
+  color: #999;
+}
+.poll-result-container .main-actions,
+.poll-footer {
+  display: flex;
+  column-gap: 10px;
+}
+.media-template-poll .poll-container,
+.media-template-poll .poll-result-container {
+  padding: 10px;
+}
+.dbpoll-content {
+  background-color: #eee;
+}
+.dbpoll-content .card .card-img-wrapper {
+  margin-top: 0px;
+}
+.dbpoll-content .app-no-results {
+  padding: 32px;
+  text-align: center;
+}
+.dbpoll-content .app-no-results p {
+  margin-top: 20px;
+}
+.dbpoll-content .showmore {
+  width: 90%;
+  max-height: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.poll-content .body {
+  margin: 0 15px 0 15px;
+}
+.poll-content .answer {
+  display: flex;
+  flex-direction: column;
+}
+.poll-content .progress {
+  margin: 5px 0 0 0;
+  border-radius: 4px;
+  height: 7px;
+  background-color: #dddd;
+}
+.poll-content .progress-bar {
+  border-radius: 4px;
+  float: left;
+  height: 7px;
+  color: #fff;
+  text-align: center;
+  background-color: #5cb85c;
+}
+.poll-content .percentage {
+  font-size: 18px;
+  font-weight: bold;
+}
+.poll-content .title {
+  font-size: 28px;
+}
+.poll-content .answers {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  margin-bottom: 20px;
+}
+.poll-content .answers label,
+.poll-content .answers .ui-radio {
+  margin: 0;
+  border: none;
+}
+/*# sourceMappingURL=poll.css.map */

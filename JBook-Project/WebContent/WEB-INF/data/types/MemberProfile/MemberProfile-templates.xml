@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates version="5.0">
+  <template name="default" usage="box" file="doMemberProfileFullDisplay.jsp" />
+  <template name="default" usage="edit" file="editMemberProfile.jsp" />
+  <template name="default" usage="full" file="doMemberProfileFullDisplay.jsp" />
+  <template name="default" usage="query" file="doMemberProfileResultDisplay.jsp" />
+  <template name="default" usage="editFront" file="editFOMemberProfile.jsp" />
+</templates>
+

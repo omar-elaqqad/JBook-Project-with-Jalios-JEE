@@ -1,0 +1,114 @@
+jcmsplugin.dbcomment.edit.lbl.add-comment:    添加一条评论
+jcmsplugin.dbcomment.edit.lbl.add-comment-verb:  评论
+jcmsplugin.dbcomment.edit.lbl.create-comment: 发布评论
+jcmsplugin.dbcomment.edit.lbl.cancel:         取消
+jcmsplugin.dbcomment.edit.lbl.link-top:       返回页面顶部
+jcmsplugin.dbcomment.edit.lbl.comment-on:     {0}的评论
+jcmsplugin.dbcomment.edit.lbl.title:          评论
+jcmsplugin.dbcomment.edit.lbl.view-comment:   显示评论
+jcmsplugin.dbcomment.edit.lbl.disable-comment:  禁用评论
+jcmsplugin.dbcomment.edit.lbl.enable-comment:   激活评论
+jcmsplugin.dbcomment.edit.lbl.view-all-comments: {0,choice,0#无评论|1#显示评论|2#显示 {0} 评论}
+jcmsplugin.dbcomment.edit.lbl.collapse-comments: 折叠评论
+jcmsplugin.dbcomment.edit.lbl.warn.edit-moderation.disabled:        您无法在当前的审查类型中修改评论内容，只能更改其他字段。但是您可以更新评论工作流状态。
+jcmsplugin.dbcomment.edit.follow:        订阅发布
+
+jcmsplugin.dbcomment.lbl.comment:             评论
+jcmsplugin.dbcomment.lbl.comments:            评论
+jcmsplugin.dbcomment.lbl.comment-count:       {0,choice,0#评论|1#{0}评论|2#{0}评论}
+jcmsplugin.dbcomment.lbl.comment-count-text:  {0,choice,0#评论|1#评论|2#评论}
+jcmsplugin.dbcomment.lbl.new:                 未读
+jcmsplugin.dbcomment.lbl.see-previous-comments: {0,choice,1#查看之前评论|2#查看之前{0}条评论。}
+jcmsplugin.dbcomment.lbl.major-update-date:   上次主要更新{0}
+jcmsplugin.dbcomment.lbl.private:             非公开
+jcmsplugin.dbcomment.lbl.private-description: 该评论可被"{0}"组的成员看到。
+jcmsplugin.dbcomment.lbl.private-edit-tooltip: 启动私人评论功能可使该评论仅由"{0}"组的成员可见。
+jcmsplugin.dbcomment.lbl.non-visible-created-comment: 您的评论已创建，目前正在检查当中。
+jcmsplugin.dbcomment.lbl.closed-comment:     该发布内容已关闭评论。
+
+jcmsplugin.dbcomment.commentTop-section:评论次数最多的内容
+jcmsplugin.dbcomment.commentTop-section.help: 评论次数最多的前10排行榜
+jcmsplugin.dbcomment.commentTop.name:指南标题
+jcmsplugin.dbcomment.commentTop.number: 评论
+
+# ----------------------------------------------------------------------
+# Alert
+# ----------------------------------------------------------------------
+alert.name.jcmsplugin-dbcomment:                              评论
+alert.name.jcmsplugin-dbcomment.new-comment:                  新评论
+alert.msg.jcmsplugin-dbcomment.new-comment.title:             "{parent}"的新评论
+alert.msg.jcmsplugin-dbcomment.new-comment.short-description: {author}已发布了一条对"{parent}"的新评论。{parent.link}
+alert.msg.jcmsplugin-dbcomment.new-comment.description:       <p>{author}已发布一个新{data}。</p>
+alert.name.jcmsplugin-dbcomment.new-mention:                  新注释
+alert.msg.jcmsplugin-dbcomment.new-mention.title:             您在“{parent}”的新评论内被提及
+alert.msg.jcmsplugin-dbcomment.new-mention.short-description:  {author}在对"{parent}"的新评论中提到了您。{parent.link}
+alert.msg.jcmsplugin-dbcomment.new-mention.description:        <p>{author}在对"{parent.data}"的新评论中提到了您。</p> 
+alert.new-comment-mention.title:     您在“{parent}”的新评论内被提及
+alert.new-comment-mention.short-description: {author}在对"{parent}"的新评论中提到了您。{parent.link}
+alert.new-comment-mention.description:       <p>{author}在对"{parent.data}"的新评论中提到了您。</p> 
+
+# ----------------------------------------------------------------------
+# Editable properties
+# ----------------------------------------------------------------------
+jcmsplugin.dbcomment.anonymous:               匿名评论
+jcmsplugin.dbcomment.anonymous.notify:        通知匿名用户
+jcmsplugin.dbcomment.compatible-types:        可评论类型
+jcmsplugin.dbcomment.edit-moderation.enabled:  严格审核模式
+jcmsplugin.dbcomment.edit-moderation.enabled.boolean: false
+jcmsplugin.dbcomment.edit-moderation.enabled.help: 在选择“是”的情况下，可更新评论的用户将能对评论内容以外的其他所有字段内容进行更新。只有评论作者才有权更改评论内容。
+
+jcmsplugin.dbcomment.edit-commentable.enabled: 允许禁用每项发布的评论功能
+jcmsplugin.dbcomment.edit-commentable.enabled.boolean:false
+jcmsplugin.dbcomment.edit-commentable.enabled.boolean.help: 在选择“是”的情况下，可更新评论的用户将能对评论内容以外的其他所有字段内容进行更新。
+
+jcmsplugin.dbcomment.commentable-default-value: 启用或禁用评论：默认值
+jcmsplugin.dbcomment.commentable-default-value.boolean.help: 若启用“禁用发布评论”，请定义发布项在默认情况下是否为可评论
+
+jcmsplugin.dbcomment.commentable.title : 评论
+jcmsplugin.dbcomment.commentable.description : 激活评论
+jcmsplugin.dbcomment.commentable.desactivate-comment: 停用 {0}评论
+jcmsplugin.dbcomment.commentable.activate-comment: 激活 {0}评论
+jcmsplugin.dbcomment.commentable.forbidden-comment: 对目标内容的评论已停用。
+
+jcmsplugin.dbcomment.private-comment.group: 私人评论 - 组
+jcmsplugin.dbcomment.private-comment.group.help: 该组可发布并阅读私人评论
+jcmsplugin.dbcomment.private-comment.enabled: 私人评论 - 启用私人评论
+jcmsplugin.dbcomment.private-comment.default-value: 私人评论 - 私人评论默认值
+jcmsplugin.dbcomment.private-comment.default-value.help: 选择是以后，在发布新评论后，私人评论的选择便会被设置为“是”。
+
+jcmsplugin.dbcomment.reverse-order: 反向排序
+jcmsplugin.dbcomment.reverse-order.help: 选择“是”，将首先显示最早的评论
+jcmsplugin.dbcomment.change-sort: 排序 - 选定的字段
+jcmsplugin.dbcomment.change-sort.help: 按选定的字段排列评论
+
+jcmsplugin.dbcomment.smart.comment-display.enabled: 激活简洁评论显示
+jcmsplugin.dbcomment.smart.comment-display.enabled.boolean: false
+jcmsplugin.dbcomment.smart.comment-display.enabled.help: 该系统可隐藏发布项较早的评论
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From DBComment-templates.xml
+types.DBComment.templates.query.default.label: 默认模板
+types.DBComment.templates.full.default.label: 默认模板
+
+# From DBComment.xml
+types.DBComment.fields.email.description: 地址将不会被公开
+types.DBComment.fields.email.label: 电子邮箱
+types.DBComment.title.label: 指南标题
+types.DBComment.fields.referer.label: 引用
+types.DBComment.fields.ipAddress.label: IP 地址
+types.DBComment.fields.name.label: 名称
+types.DBComment.fields.targetContent.label: 目标内容
+types.DBComment.fields.userAgent.label: 用户代理
+types.DBComment.label: 评论
+types.DBComment.fields.webSite.label: 网址
+types.DBComment.fields.description.label: 评论
+types.DBComment.fields.privateComment.label: 私人评论
+
+# SmartPhone
+jcmsplugin.dbcomment.smartphone.lbl.dbcomment.add-comment.placeholder: 添加一条评论……
+
+# Explorer sidebar integration
+jcmsplugin.explorer-sidebar.see-comments: 访问评论
+jcmsplugin.explorer.app.sidebar-tab.comments: 评论

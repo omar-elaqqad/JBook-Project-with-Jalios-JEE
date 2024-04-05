@@ -1,0 +1,100 @@
+/* ************************************* */
+/* Primary, success, danger, ... buttons */
+/* ************************************* */
+
+.smartphone-button-variant(default);
+.smartphone-button-variant(primary);
+.smartphone-button-variant(success);
+.smartphone-button-variant(info);
+.smartphone-button-variant(warning);
+.smartphone-button-variant(danger);
+
+/* ************************************* */
+/* Custom Full Width Buttons             */
+/* ************************************* */
+
+html {
+  .ui-page-theme-a,
+  .ui-page-theme-b {
+    .ui-btn,
+    .ui-btn:visited {
+      border-radius: 4px;
+      border: 1px solid #999;
+      background-color: white;
+      color: #333;
+      font-size: 16px;
+      font-weight: 400;
+      box-shadow: none;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      &:active,
+      &:hover {
+        background-color: rgba(153, 153, 153, 0.2);
+      }
+    }
+  }
+  .ui-btn,
+  .ui-btn:visited {
+    border-radius: 4px;
+    border: 1px solid #999;
+    background-color: white;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    box-shadow: none;
+    margin-top: 20px;
+    margin-bottom: 20px;    
+    &:active,
+    &:hover {
+      background-color: rgba(153, 153, 153, 0.2);
+    }    
+  }
+}
+
+html
+  head
+  + body
+  .ui-page-theme-a
+  .full-width-control-group
+  .ui-controlgroup-controls {
+  display: flex;
+
+  .ui-radio {
+    display: flex;
+    flex: 1;
+
+    input {
+      opacity: 0;
+    }
+
+    .ui-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      border-bottom: 1px solid #999999;
+    }
+  }
+}
+
+html head + body .ui-page-theme-b .ui-btn.btn-primary,
+html head + body .ui-page-theme-a .ui-btn.btn-primary,
+html head + body .ui-page-theme-a .ui-btn.btn-primary:visited,
+html head + body .ui-page-theme-b .ui-btn.btn-primary:visited {
+  color: #009EF5;
+  background-color: #ffffff;
+  border-color: #009EF5;
+  text-shadow: none;
+  font-weight: 500;
+  &:hover,
+  &:active {
+    background-color: rgba(0, 158, 245, 0.2);
+    color: #009EF5;
+    border-color: #009EF5;
+  }
+}
+
+HTML .ui-page-theme-a .ui-navbar > UL > LI > A.ui-btn,
+HTML .ui-page-theme-b .ui-navbar > UL > LI > A.ui-btn {
+  padding: 13px 15px;
+}

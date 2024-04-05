@@ -1,0 +1,14 @@
+<%@page import="com.jalios.jcms.taglib.ThumbnailTag"%>
+<% String pubImage = pub.getDataImage(userLang); %>
+<% if (Util.notEmpty(pubImage)) { %>
+<div class="pub-dataimage">
+  <a href="#pub-data-image-photo" data-rel="popup" data-position-to="window" data-transition="fade">
+    <jalios:thumbnail css="thumbnail nobr center-block" path="<%= pubImage %>" width='480' height='480'><jalios:icon src="image" /></jalios:thumbnail>
+  </a>
+</div>
+<div data-role="popup" id="pub-data-image-photo" data-overlay-theme="b" data-theme="b" data-corners="false">
+  <a href="#" data-rel="back">
+    <jalios:thumbnail css="center-block popphoto" path="<%= pubImage %>" width='320' height='320'><jalios:icon src="image" /></jalios:thumbnail>
+  </a>
+</div>
+<% } %>

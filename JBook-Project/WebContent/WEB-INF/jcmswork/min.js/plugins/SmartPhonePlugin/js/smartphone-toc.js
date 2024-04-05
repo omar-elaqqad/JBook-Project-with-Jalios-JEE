@@ -1,0 +1,1 @@
+!(function(b){const a=function(){b(document).on("click","nav.toc  A",function(c){let url=b(c.currentTarget).prop("href");let hash=url.substring(url.indexOf("#")+1);b("html, body").animate({scrollTop:b(hash).offset().top-(160)},1000)})};b(document).ready(a)})(window.jQuery);

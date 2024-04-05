@@ -1,0 +1,127 @@
+jcmsplugin.dbpoll.btn.vote:            我投票
+jcmsplugin.dbpoll.lbl.vote:            投票
+jcmsplugin.dbpoll.lbl.open:            打开该测试
+jcmsplugin.dbpoll.lbl.close:           关闭该测试
+jcmsplugin.dbpoll.lbl.show-result:     显示结果
+jcmsplugin.dbpoll.lbl.vote-cnt:        {0,choice,0#0个投票|1#1个投票|2#{0,number,integer}个投票}
+jcmsplugin.dbpoll.lbl.dates:           从 {0} 至 {1}的测试
+jcmsplugin.dbpoll.lbl.all-polls:       所有测试
+jcmsplugin.dbpoll.lbl.all-polls-ws:    {0}中的所有测试
+jcmsplugin.dbpoll.lbl.view-all-polls:  显示所有测试
+jcmsplugin.dbpoll.lbl.view-all-polls-ws:  显示当前工作区内的所有测试
+jcmsplugin.dbpoll.lbl.vote-title:      为 {0}投票
+jcmsplugin.dbpoll.lbl.create-poll:     发布新测试
+jcmsplugin.dbpoll.msg.option-change:   您无法更改测试选项，因为个别用户已为当前选项投票。
+jcmsplugin.dbpoll.msg.already-voted:   您已为本次测试投票。
+jcmsplugin.dbpoll.msg.no-result:       该测试尚未收到任何投票。
+jcmsplugin.dbpoll.msg.choose-option:   您必须选择一个用来投票的选项。
+jcmsplugin.dbpoll.msg.closed-poll:     该测试已关闭，您无法投票。
+jcmsplugin.dbpoll.msg.poll-loop:       您不能对自己的说明进行投票。
+
+jcmsplugin.dbpoll.modal.step1:         测试选项
+jcmsplugin.dbpoll.modal.step2:         推荐测试
+jcmsplugin.dbpoll.modal.btn.publish:   发布
+jcmsplugin.dbpoll.modal.btn.publish.alt:  发布测试
+jcmsplugin.dbpoll.modal.btn.next.alt:  发布并推荐测试...
+jcmsplugin.dbpoll.modal.success-info:  您的测试已创建，可从这里访问：{0}
+
+jcmsplugin.dbpoll.publish-menu.add-poll: 测试
+
+jcmsplugin.dbpoll.cs.options:  请为该测试添加至少两个选项
+jcmsplugin.dbpoll.cs.optionsml:  请为该测试添加至少两个选项（在{0}）
+
+jcmsplugin.dbpoll.search.placeholder: 搜索测试……
+
+jcmsplugin.dbpoll.app.title: 测试
+
+jcmsplugin.dbpoll.app.no-result-welcome: 欢迎访问Polls（测试）应用程序
+
+jcmsplugin.dbpoll.app.catalog.title: 测试
+jcmsplugin.dbpoll.app.catalog.root: 主页
+jcmsplugin.dbpoll.app.catalog.btn.add-poll: 添加测试
+jcmsplugin.dbpoll.app.catalog.polls-number: {0} {0,choice,0#|1#测试|2#测试}
+
+jcmsplugin.dbpoll.app.card.closed-poll: 完成的测试
+
+jcmsplugin.dbpoll.app.filter.status.all: 所有测试
+jcmsplugin.dbpoll.app.filter.status.opened: 进行中的测试
+jcmsplugin.dbpoll.app.filter.status.closed: 完成的测试
+jcmsplugin.dbpoll.app.filter.mbr:        添加人为……
+jcmsplugin.dbpoll.app.filter.begin-date: 之后添加……
+jcmsplugin.dbpoll.app.filter.end-date:   之前添加……
+jcmsplugin.dbpoll.app.filter.workspace:  添加至工作区……
+
+# ------------------------------------------------------------
+#  Unified insert
+# ------------------------------------------------------------
+unified-insert.items.poll: 测试
+unified-insert.items.poll.longtitle: 测试
+unified-insert.items.poll.subtitle:
+
+# ------------------------------------------------------------
+#  Smartphone
+# ------------------------------------------------------------
+jcmsplugin.smartphone.dbpoll: 测试
+jcmsplugin.smartphone.dbpoll.navbar.opened: 打开的测试
+jcmsplugin.smartphone.dbpoll.navbar.closed: 完成的测试
+
+# ------------------------------------------------------------
+#  Recommendation
+# ------------------------------------------------------------
+alert.name.recommendation.dbpoll-recommendation:                      邀请完成测试
+alert.msg.recommendation.dbpoll-recommendation.title:                 邀请完成测试：{data}
+alert.msg.recommendation.dbpoll-recommendation.short-description:     {author}邀请您完成测试 {data}。{data.url}
+alert.msg.recommendation.dbpoll-recommendation.description:           <p>{author}邀请您完成测试 {data}。</p>
+jcmsplugin.dbpoll.recommendation.Poll:                                邀请成员完成测试：{0}
+
+# ------------------------------------------------------------
+#  ESN
+# ------------------------------------------------------------
+jcmsplugin.esn.activity.form-tab.poll: 测试
+
+# ------------------------------------------------------------
+#  Shortcuts
+# ------------------------------------------------------------
+data.$id.shortcut.jcmsplugin.dbpoll.title: 测试
+data.$id.shortcut.jcmsplugin.dbpoll.text: 测试处理应用程序
+
+# ------------------------------------------------------------
+#  Plugin label and description
+# ------------------------------------------------------------
+plugin.DBPollPlugin.label: 测试Plugin
+plugin.DBPollPlugin.description: 该插件可让您创建简单的测试。测试通过测试Portlet显示。投票被保存在RDBMS中。
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From Poll.xml
+types.Poll.title.description: 测试标题
+types.Poll.fields.description.label: 指南说明
+types.Poll.label: 测试
+types.Poll.fields.options.description: 可投票的选项。
+types.Poll.fields.description.description: 测试简短描述（在问题与选项间显示）
+types.Poll.description: 只有一个问题的迷你测试
+types.Poll.fields.options.label: 选项
+types.Poll.title.label: 指南标题
+types.Poll.fields.image.label: 图片
+types.Poll.fields.image.description: 该测试描述内容的可选图片。
+types.Poll.fields.closed.label: 关闭测试
+types.Poll.fields.closed.onLabel: 是
+types.Poll.fields.closed.offLabel: 否
+types.Poll.fields.closed.description: 是否关闭测试？
+
+# From PortletPoll.xml
+types.PortletPoll.fields.refineWorkspace.labelList: 显示工作区内的最新测试|显示所有工作区内的最新测试
+types.PortletPoll.fields.poll.label: 测试
+types.PortletPoll.title.description: 指南标题
+types.PortletPoll.description: 该portlet可显示测试，并在投票结束后显示结果。
+types.PortletPoll.fields.poll.description: 待显示的测试（若没有结果，则显示已发布的最新测试）
+types.PortletPoll.fields.refineWorkspace.description: 显示当前工作区内或所有工作区内的最新测试。
+types.PortletPoll.label: 测试Portlet
+types.PortletPoll.title.label: 指南标题
+types.PortletPoll.fields.refineWorkspace.label: 精简
+types.PortletPoll.fields.hideWhenNoResults.label: 在无测试的情况下隐藏portlet
+types.PortletPoll.fields.hideWhenNoResults.onLabel: 是
+types.PortletPoll.fields.hideWhenNoResults.offLabel: 否
+types.PortletPoll.fields.hideWhenNoResults.description: 如果没有可显示的测试，可隐藏portlet。

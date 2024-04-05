@@ -1,0 +1,23 @@
+<%@page import="com.jalios.jcmsplugin.smartphone.SmartPhoneCtxMenuManager"%>
+<%@page import="com.jalios.jcmsplugin.smartphone.SmartPhoneManager"%>
+<%@page import="com.jalios.jcms.recommendation.RecommendationManager"%>
+<%@page import="com.jalios.jcmsplugin.smartphone.SmartPhoneCtxMenuManager.CtxMenuItem"%>
+<% 
+SmartPhoneCtxMenuManager ctxMenuManager = SmartPhoneCtxMenuManager.getInstance();
+Set<CtxMenuItem> ctxMenuItems = ctxMenuManager.getPublicationFullDisplayCtxMenuItems();
+%>
+<div data-role="popup" id="<%= uniqueId %>" data-theme="a" class="topbar-menu-dropdown">
+  <ul data-role="listview" data-inset="true" style="min-width:210px;">
+    <jalios:include target="SMARTPHONE_TOPBAR_PUBLICATION_ACTIONS_TOP" targetContext="LI" />
+    
+    <% for (CtxMenuItem ctxMenuItem : ctxMenuItems) { %>
+      <jalios:include jsp="<%= ctxMenuItem.getUrl() %>" />
+    <% } %>
+    
+    <jalios:include target="SMARTPHONE_TOPBAR_PUBLICATION_ACTIONS_BOTTOM" targetContext="LI" />
+    <% if (FileDocument.class.isAssignableFrom(pub.getClass())) { %>
+      <jalios:include target="SMARTPHONE_TOPBAR_FILE_DOCUMENT" targetContext="LI" />
+    <% } %>
+    <jalios:include target="SMARTPHONE_TOPBAR_PUBLICATION_ACTIONS_BOTTOM_2" targetContext="LI" />
+  </ul>
+</div>

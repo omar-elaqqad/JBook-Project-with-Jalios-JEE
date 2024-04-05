@@ -1,0 +1,58 @@
+<%
+PollResult result = pollMgr.getPollResult(poll);
+DecimalFormat twoDForm = new DecimalFormat("#.##");
+int count = result.getCount();
+String[] options = poll.getOptions(userLang, true);
+%>
+
+<div>
+  <% if (count < 1) { %>
+    <jalios:message title='' dismissable='false'><%= glp("jcmsplugin.dbpoll.msg.no-result") %></jalios:message>
+    <% if (!poll.isClosed()) { %>
+    <a class="ajax-refresh ui-btn" data-jalios-ajax-target=".poll-content" data-jalios-ajax-params='{"id": "<%= poll.getId() %>"}' href="plugins/DBPollPlugin/smartphone/jsp/doPollBody.jsp"><%= glp("jcmsplugin.dbpoll.btn.vote") %></a>
+    <% } %>
+  <% } else { %>
+    <p>
+      <jalios:icon src="jcmsplugin-poll-stats"/>
+      <%= glp("jcmsplugin.dbpoll.lbl.vote-cnt", count) %>
+    </p>
+  <% } %>
+</div>
+
+<% if (count > 0){ %>
+  <div class="answers">
+    <%
+    Set<PollOptionResult> pollOptionResultSet = pollMgr.getPollOptionResultSet(poll, new PollOptionResultComparator(), userLang);
+    %>
+    <jalios:foreach collection='<%= pollOptionResultSet %>' name='pollOptionResult' type='PollOptionResult'>
+      <%
+      int index = pollOptionResult.getIndex();  // starts at 1
+      int voteCount = pollOptionResult.getVoteCount();
+      double ratio = (double) voteCount / (double) count;
+      String percent = twoDForm.format(ratio * 100);
+      int barWidth = (int) (100.0 * ratio);
+      String option = options != null && options.length > (index - 1) ? options[index - 1] : "";
+      %>  
+      <div class="answer">    
+        <div>
+          <%= itCounter %>.
+          <span><%= option %></span>
+        </div>
+        <div class="progress">
+          <div class="progress-bar" style="width: <%= barWidth %>%"></div>
+        </div>
+        <div>
+          <span class="percentage"><%= percent %>% </span>
+          <span>(<%= glp("jcmsplugin.dbpoll.lbl.vote-cnt", voteCount)%>)</span>
+        </div>
+      </div>
+    </jalios:foreach>
+  </div>
+<% } %>
+<% if (hasAlreadyVoted && !poll.isClosed()) { %>
+  <form action="plugins/DBPollPlugin/jsp/pollVote.jsp" method="post">
+    <button type="submit" name="opDelete" class="btn btn-default" value="true"><%= glp("jcmsplugin.dbpoll.btn.delete-vote") %></button>
+    <input type="hidden" name="redirect" value="<%= ServletUtil.getUrl(request) %>" />
+    <input type="hidden" name="poll" value="<%= poll.getId() %>" />
+  </form>
+<% } %>

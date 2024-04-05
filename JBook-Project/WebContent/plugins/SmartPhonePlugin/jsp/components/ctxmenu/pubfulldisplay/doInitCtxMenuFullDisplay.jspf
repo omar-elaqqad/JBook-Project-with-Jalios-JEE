@@ -1,0 +1,10 @@
+<%@ include file='/plugins/SmartPhonePlugin/jsp/common/doInitSmartPhonePage.jspf' %><%
+Publication pub = (Publication) request.getAttribute("jcms.plugin.smartphone.fulldisplay.pub");
+if (pub == null) {
+  return;
+}
+if (!pub.canBeReadBy(loggedMember)) {
+  return;
+}
+boolean isPubFileDocument = pub instanceof FileDocument;
+%>

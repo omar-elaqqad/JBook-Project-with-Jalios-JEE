@@ -1,0 +1,91 @@
+// Include variables and mixins
+@import "../../../css/jalios/core/init-mixins.less"; // Use init-mixins.less if more mixins are required
+
+// PLUGIN LESS VARIABLES
+@import "cs-variables.less";
+
+// Hook for JCMS
+@import "../../../css/plugin.less";
+
+// ------------------------------------------------------------------- 
+//  PLUGIN CSS DECLARATION                                             
+// ------------------------------------------------------------------- 
+
+.cs-search-form {
+  .PortletSearch {
+    max-width: 300px;
+    float: right;
+    // Exception in "XXS"
+    @media (max-width: (@cs-header-title-min - 1)) {
+      float: none;
+    }
+  }
+}
+// XXS
+@media (max-width: (@cs-header-title-min - 1)) {
+  // Take full width when < @cs-header-title-min (equivalent to col-xs-12 but for a smaller breakpoint)
+  .cs-search-form { 
+    width: 100%;
+  }
+}
+
+.cs-header-search {
+
+  min-width: 250px;
+
+  .search-container {
+    position: relative;
+  }
+
+  .cs-header-search-query {
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #999;
+    box-shadow: none;
+    -webkit-appearance: none;
+    padding-left: 15px;
+    padding-right: 44px;
+
+    &:focus + .btn-cs-header-search {
+      background-color: @cs-header-search-btn-color-hover;
+      .jalios-icon {
+        color: white;
+      }
+    }
+  }
+
+  .btn-cs-header-search {
+    height: 34px; // force height for border vs browser zoom issue
+    position: absolute;
+    top: 3px;
+    right: 4px;
+    background-color: white;
+    border-radius: 18px;
+    transition: background-color 200ms ease-in;
+    height: 34px; // force height for Firefox and IE
+    width: 34px;
+    margin-left: 0;
+    border-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:active {
+      outline: none;
+    }
+
+    &:hover {
+      background-color: @cs-header-search-btn-color-hover;
+
+      .jalios-icon {
+        color: white;
+      }
+    }
+
+    .jalios-icon {
+      color: #666;
+      font-size: 16px;
+      transition: color 200ms ease-in;
+    }
+  }
+}

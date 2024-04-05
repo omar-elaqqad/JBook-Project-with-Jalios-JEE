@@ -1,0 +1,122 @@
+/*
+ Why 2 selectors? Rules with or without .wrapper-photo (it is not always included in some UIs)
+  1. with .wrapper-photo selector ".wrapper-photo .initials" or ".wrapper-photo .photo"
+  2. no .wrapper-photo selector ".initials-photo.initials"
+*/
+.wrapper-photo .initials,
+.initials-photo.initials {
+  font-family: embedded-roboto-condensed, embedded-roboto, Helvetica, Arial, sans-serif;
+  align-items: center;
+  color: white;
+  display: inline-flex;
+  justify-content: center;
+  background-color: #005db4;
+}
+.table-data .wrapper-photo.initials-photo A {
+  color: white;
+}
+.wrapper-photo.initials-photo > A:hover,
+.wrapper-photo.initials-photo > A:focus {
+  text-decoration: none;
+}
+.wrapper-photo.icon-photo .photo,
+.initials-photo.initials.icon-photo {
+  padding-left: 1px;
+  padding-right: 1px;
+  border-radius: 3px;
+}
+.wrapper-photo.icon-photo IMG.photo {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.wrapper-photo.icon-photo .photo,
+.initials-photo.initials.icon-photo {
+  font-size: 9px;
+}
+.wrapper-photo.tiny-photo .photo,
+.initials-photo.initials.tiny-photo {
+  font-size: 20px;
+}
+.wrapper-photo.small-photo .photo,
+.initials-photo.initials.small-photo {
+  font-size: 40px;
+}
+.wrapper-photo.normal-photo .photo,
+.initials-photo.initials.normal-photo {
+  font-size: 70px;
+}
+.wrapper-photo.large-photo .photo,
+.initials-photo.initials.large-photo {
+  font-size: 85px;
+}
+.wrapper-photo.icon-photo .photo,
+.initials-photo.initials.icon-photo {
+  line-height: 16px;
+}
+.wrapper-photo.tiny-photo .photo,
+.initials-photo.initials.tiny-photo {
+  line-height: 40px;
+}
+.wrapper-photo.small-photo .photo,
+.initials-photo.initials.small-photo {
+  line-height: 80px;
+}
+.wrapper-photo.normal-photo .photo,
+.initials-photo.initials.normal-photo {
+  line-height: 140px;
+}
+.wrapper-photo.large-photo .photo,
+.initials-photo.initials.large-photo {
+  line-height: 170px;
+}
+.wrapper-photo.icon-photo .photo,
+.initials-photo.initials.icon-photo {
+  height: 16px;
+  width: 16px;
+}
+.wrapper-photo.tiny-photo .photo,
+.initials-photo.initials.tiny-photo {
+  height: 40px;
+  width: 40px;
+}
+.wrapper-photo.small-photo .photo,
+.initials-photo.initials.small-photo {
+  height: 80px;
+  width: 80px;
+}
+.wrapper-photo.normal-photo .photo,
+.initials-photo.initials.normal-photo {
+  height: 140px;
+  width: 140px;
+}
+.wrapper-photo.large-photo .photo,
+.initials-photo.initials.large-photo {
+  height: 170px;
+  width: 170px;
+}
+.wrapper-photo.small-photo .photo,
+.initials-photo.initials.small-photo {
+  font-weight: 300;
+}
+.wrapper-photo.normal-photo .photo,
+.initials-photo.initials.normal-photo {
+  font-weight: 300;
+}
+.wrapper-photo.large-photo .photo,
+.initials-photo.initials.large-photo {
+  font-weight: 300;
+}
+.wrapper-photo .initials,
+.initials-photo.initials {
+  border-radius: 50%;
+  font-weight: 400;
+}
+HTML .ui-listview .itemlist-item-detailed .wrapper-photo.initials-photo.icon-photo .initials {
+  width: 18px;
+  height: 18px;
+}
+HTML .ui-listview .itemlist-item-detailed .wrapper-photo.initials-photo .initials {
+  width: 48px;
+  height: 48px;
+}
+/*# sourceMappingURL=smartphone-member-photo-initials.css.map */

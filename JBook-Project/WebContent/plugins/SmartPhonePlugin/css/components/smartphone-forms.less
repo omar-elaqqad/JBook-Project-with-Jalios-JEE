@@ -1,0 +1,95 @@
+/* FORM */
+.form-group {
+  margin-bottom: 20px;
+
+  &.nobr {
+    margin-bottom: 0;
+  }
+}
+
+.expanded-textarea-wrapper TEXTAREA {
+  height: auto !important; /* !important is used to force override. */
+}
+
+.input-in-header {
+  padding: 5px 10px;
+}
+.padded-input {
+  padding: 5px 10px;
+}
+
+/* ************** */
+/* Flipswitch fix */
+/* ************** */
+
+HTML {
+  .ui-flipswitch {
+    box-sizing: content-box;
+    font-size: 16px;
+    &.ui-flipswitch-active .ui-btn {
+      color: white;
+    }
+  }
+}
+/* ********* */
+/* Radio fix */
+/* ********* */
+
+.ui-radio *,
+.ui-radio *:before,
+.ui-radio *:after {
+  box-sizing: content-box;
+}
+
+
+.ui-page-theme-a {
+  .ui-input-search,
+  .ui-input-text {
+    border-radius: 4px;
+    box-shadow: initial;
+
+    INPUT::placeholder {
+      color: #AAA;
+    }
+  }
+  .ui-input-text {
+    border: 0 none;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: rgba(244, 244, 244, 0.57);
+    padding: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+.ui-filterable .input-in-header .ui-input-search {
+  border-radius: 24px;
+}
+
+.ui-input-search input {
+  padding-left: 30px;
+}
+.ui-input-search:after {
+  left: 10px;
+}
+.control-label.is-required > LABEL:before {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\2a";
+  color: #ff6b58;
+  font-size: 12px;
+}
+
+
+TEXTAREA.ui-input-text {
+  min-height: 64px;
+}

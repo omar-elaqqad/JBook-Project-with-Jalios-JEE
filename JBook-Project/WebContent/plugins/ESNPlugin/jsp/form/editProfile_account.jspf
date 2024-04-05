@@ -1,0 +1,53 @@
+<%-- TAB - ACCOUNT INFORMATION ---------------------------------------------- --%>
+<% if (isAccount) { %>
+<%  
+	String accountClass = "account" + (memberFH.getAvailableUsage() == 1 ? " hide" : "");
+	String delegationDescription = glp("ui.adm.mbr-edit.del.delegates", loggedMember == member ? 0 : 1);
+  final boolean loginDisabled = isLdapAccount || (JcmsUtil.isSameId(loggedMember, memberFH.getMember()) && !channel.getBooleanProperty("member.rights.allow-login-change", true));
+%>
+<div class="tab-page form-horizontal">
+	<h2 class="tab"><jalios:icon src="jcmsplugin-esn-profile-account" /> <%= glp("ui.adm.mbr-edit.fs.account") %></h2>
+	
+	<jalios:field label="ui.adm.mbr-edit.lbl.login" name='login' value='<%= memberFH.getAvailableLogin() %>' css='<%= accountClass %>' tooltip="ui.adm.mbr-edit.txt.login" required='<%= true %>'
+                disabled='<%= loginDisabled %>'>
+	  <% String htmlAttributes = "autocomplete=\"off\""; %>
+      <jalios:control settings='<%= new TextFieldSettings().htmlAttributes(htmlAttributes) %>' />
+	</jalios:field>
+    
+  <% if (!isLdapAccount) { %>
+	  <%-- OLD PASSWORD --%>
+	  <jalios:field label="ui.adm.mbr-edit.lbl.oldpwd" name="password0">
+        <jalios:control type="<%= ControlType.PASSWORD %>" />
+	  </jalios:field>
+	  <%-- NEW PASSWORD --%>
+	  <jalios:field label="ui.adm.mbr-edit.lbl.pwd" name='password1'>
+      <jalios:control settings='<%= new PasswordSettings().name("password1").aria("aria-label", glp("ui.fo.resetpass.reset.password1.placeholder")).placeholder(glp("ui.fo.resetpass.reset.password1.placeholder")) %>' />
+      <jalios:control settings='<%= new PasswordSettings().name("password2").aria("aria-label", glp("ui.fo.resetpass.reset.password2.placeholder")).placeholder(glp("ui.fo.resetpass.reset.password2.placeholder")) %>' />
+	  </jalios:field>    
+  <% } %>
+          
+  <%-- Delegate members -------------------------------------------------------- --%>
+  <% if (formHandler.showDelegateMemberSet()) { %><%-- ESN-617 --%>
+    <%-- DELEGATION --%>
+    <jalios:field label="ui.adm.mbr-edit.delegation" name="delegateMbrIds" value='<%= memberFH.getAvailableDelegateMemberSet() %>' description="<%= delegationDescription %>" mv="1" keyword="true">
+    <jalios:control settings="<%= new MemberSettings().filter(MemberSettings.MemberFilter.ACCOUNT) %>" />
+    </jalios:field>
+  <% } %>
+  
+  
+  <% if (channel.getBooleanProperty("mail.incoming.enabled", false)) { %>
+  <%-- INCOMING MAIL --%>
+  <jalios:field label="ui.adm.mbr-edit.lbl.incoming" tooltip="ui.adm.mbr-edit.lbl.incoming.h">
+    <div class="form-control-static">
+	  <%= com.jalios.jcms.mail.MailManager.getIncomingAddress("&lt;service&gt;",member,null) %>
+    </div>
+  </jalios:field>
+  <% } %>
+
+  <% request.setAttribute("extraDataSet", formHandler.getExtraDataSet("account")); %>
+  <jalios:include jsp="/jcore/doEditExtraData.jsp" />
+  <% request.removeAttribute("extraDataSet"); %>
+  
+  <jalios:include target="PLUGIN_ESN_EDIT_PROFILE_ACCOUNT" />
+</div>     
+<% } %>

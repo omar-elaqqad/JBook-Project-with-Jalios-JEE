@@ -1,0 +1,20 @@
+<%--
+  @Summary: Fragment template to print a Publication's abstract field, for SmartPhone. Copied from JCMS core's doPublicationAbstract.jspf
+--%><% 
+String resultAbstract = pub.getAbstract(userLang);
+if (Util.notEmpty(resultAbstract)) { %>
+  <div class="abstract" <%= JcmsUtil.getFieldLangAttributes(pub, "abstract", userLang) %>>
+    <%
+    TypeFieldEntry tfe = channel.getTypeAbstractFieldEntry(pub.getClass());
+    if (tfe != null && tfe.isWysiwyg()) { %>
+      <div class="zoomable-images">
+        <jalios:wysiwyg><%= resultAbstract %></jalios:wysiwyg>
+      </div>
+    <% } else { 
+      String truncateSuffix = "...";
+      int truncateLength = tfe != null ? tfe.getAbstractLength() : 400;
+      %>
+      <jalios:wiki css="wiki zoomable-images" attributeMap="<%= smartPhoneManager.getWikiAttributeMap() %>" truncateLength="<%= truncateLength %>" truncateSuffix="<%= truncateSuffix %>"><%= resultAbstract %></jalios:wiki>
+    <% } %>
+  </div>
+<% } %>

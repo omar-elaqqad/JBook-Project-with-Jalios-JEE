@@ -1,0 +1,5 @@
+<% if (appHandler.showPoll()) { %>
+  <%@ include file='/plugins/DBPollPlugin/jsp/app/doDBPollPoll.jspf' %>
+<% } else { %>
+  <%@ include file='/plugins/DBPollPlugin/jsp/app/doDBPollCatalog.jspf' %>
+<% } %>

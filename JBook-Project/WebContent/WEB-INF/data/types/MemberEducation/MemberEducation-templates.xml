@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates version="5.0">
+  <template name="default" usage="box" file="doMemberEducationFullDisplay.jsp" />
+  <template name="default" usage="edit" file="editMemberEducation.jsp" />
+  <template name="default" usage="full" file="doMemberEducationFullDisplay.jsp" />
+  <template name="default" usage="query" file="doMemberEducationResultDisplay.jsp" />
+</templates>
+

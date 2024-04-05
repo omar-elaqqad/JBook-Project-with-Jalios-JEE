@@ -1,0 +1,70 @@
+// Include variables and mixins
+@import "../../../css/jalios/core/init-mixins.less";
+
+// -------------------------------------------------------------------
+// PLUGINS LESS VARIABLES
+// -------------------------------------------------------------------
+@import "esn-variables.less";
+
+
+// Hook for JCMS
+@import "../../../css/plugin.less";
+
+// ------------------------------------------------------------------- 
+//  PLUGIN CSS DECLARATION                                             
+// ------------------------------------------------------------------- 
+//                                                                   
+//  To Include this file in a JSP:                                     
+//  * jcmsContext.addCSSHeader("plugins/ESNPlugin/css/esn-activity.css");      
+//  * You MUST uncomment property in plugin.prop
+//                                                                   
+//  You can also use implements PortalPolicyFilter.setupHeaders()      
+//                            
+.microblogging-fulldisplay {
+  background: none repeat scroll 0 0 #FAFAFA;
+  border: 1px solid #DADADA;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  max-width: 750px;
+  padding: 10px 40px 20px 15px;
+  position:relative;
+  margin-top:15px;
+  
+  .infos-row{
+    padding-top: 5px;
+    color:#666;
+  }
+  
+  .content-row {
+    padding-left: 50px;
+    padding-top: 10px;
+    
+    IMG{
+      max-width:100%;
+      height:auto;
+    }
+    P, LI {
+      color: #444444;
+      font-family: Georgia,times New Roman,serif;
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 27px;
+    }
+  } 
+  
+  .quote{
+    position: absolute;
+    right: 10px;
+    top: 0;
+  }
+  
+  .author-row .wrapper-photo{
+    margin-right:10px;
+  }
+  
+  .author-infos a{
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+

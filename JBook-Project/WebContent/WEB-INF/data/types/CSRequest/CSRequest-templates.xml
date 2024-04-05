@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates version="5.0">
+  <template name="default" file="doCSRequestFullDisplay.jsp" usage="full" />
+  <template name="default" file="doCSRequestResultDisplay.jsp" usage="query" />
+</templates>
+

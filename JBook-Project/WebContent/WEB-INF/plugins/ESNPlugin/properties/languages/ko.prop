@@ -1,0 +1,720 @@
+jcmsplugin.esn.categories:                    자격 범주 분야
+jcmsplugin.esn.categories.help:               카테고리 식별자 또는 공백을 구분된 식별자 목록을 정의합니다.
+$id.jcmsplugin.esn.profile.portal:            회원 프로필 표시 포털 (이전 프로필)
+jcmsplugin.esn.microblogging.Workspace:       마이크로블로깅을 위한 기본 작업공간
+
+jcmsplugin.esn.connection-request.enabled:    연결 승인
+jcmsplugin.esn.connection-request.decline-alert.enabled: 거부된 회원 접속에 대해 알림을 보냅니다.
+
+jcmsplugin.esn.follower-notification:         새로운 팔로워 알림
+jcmsplugin.esn.graphviz.dot.exe:              "점" 경로 Graphviz
+jcmsplugin.esn.graphviz.dot.exe.help:         회원 프로필의 관계 그래프 생성 Graphviz. "점"으로의 경로. 예를 들어 윈도우에서는 이렇습니다: "C:&#92;Program Files&#92;Graphviz2.22&#92;bin&#92;dot.exe".
+
+jcmsplugin.esn.external-contacts:             외부 연락처
+
+jcmsplugin.esn.map-service:                   지도 서비스
+
+jcmsplugin.esn.contact-referrers.qs:          리퍼러 게시물 검색
+
+jcmsplugin.esn.mbr-extended-search-limit:      회원 확장 검색 - 트리거 제한
+jcmsplugin.esn.mbr-extended-search-limit.help: 회원 검색이 한도보다 적은 결과를 반환한 경우에만 회원 확장 검색(ES. N 정보로) 이 실행되었습니다
+
+jcmsplugin.esn.agreement.required:            ESN 약관과 조건 동의
+jcmsplugin.esn.agreement.terms.pub:           ESN 약관과 조건 - 게시
+jcmsplugin.esn.agreement.terms.field:         ESN 약관과 조건 - 필드
+jcmsplugin.esn.agreement.btn.agree:           동의합니다
+jcmsplugin.esn.agreement.btn.disagree:        거부합니다
+
+jcmsplugin.esn.group-expertise.assignment:    자격에 그룹 지정
+
+ui.com.lbl.guest: 손님
+jcmsplugin.esn.panel-toggle-show: 열기
+jcmsplugin.esn.panel-toggle-hide: 종료
+jcmsplugin.esn.profile.see-photo: 더 큰 프로필 사진 보기
+jcmsplugin.esn.profile.action.open-action-menu: 활동 메뉴 열기
+jcmsplugin.esn.profile.action.create-event-with: 이벤트에 초대하기...
+jcmsplugin.esn.profile.action.change-photo: 사진 변경하기...
+jcmsplugin.esn.profile.action.change-photo.me: 내 사진 변경하기...
+jcmsplugin.esn.profile.lbl.goto-calendar:     캘린더 표시
+jcmsplugin.esn.profile.lbl.disabled-account:  비활성화된 계정
+jcmsplugin.esn.profile.lbl.disabled-guest-account: 비활성화된 손님
+jcmsplugin.esn.profile.lbl.ws-role.admin:     {0}이(가) 애니메이션합니다:
+jcmsplugin.esn.profile.lbl.ws-role.worker:    {0}이(가) 기부합니다:
+jcmsplugin.esn.profile.lbl.ws-role.reader:    {0}이(가) 참여합니다:
+jcmsplugin.esn.profile.lbl.ws-role.me.admin:  귀하가 활동합니다:
+jcmsplugin.esn.profile.lbl.ws-role.me.worker: 귀하가 기부합니다:
+jcmsplugin.esn.profile.lbl.ws-role.me.reader: 귀하가 참여합니다:
+jcmsplugin.esn.profile.tab.access:            액세스
+jcmsplugin.esn.profile.tab.activity:          활동
+jcmsplugin.esn.profile.tab.calendar:        일정표
+jcmsplugin.esn.profile.tab.communities:       커뮤니티
+jcmsplugin.esn.profile.tab.connections:       인맥
+jcmsplugin.esn.profile.tab.contacts:          인맥
+jcmsplugin.esn.profile.tab.cv:                이력서
+jcmsplugin.esn.profile.tab.expertises:        자격
+jcmsplugin.esn.profile.tab.info:              정보.
+jcmsplugin.esn.profile.tab.invitations:       초대
+jcmsplugin.esn.profile.tab.profil:            프로필
+jcmsplugin.esn.profile.tab.resume:            다시 계속
+jcmsplugin.esn.profile-edit.tab.info:         정보.
+jcmsplugin.esn.profile-edit.tab.expertises:   자격
+jcmsplugin.esn.profile-edit.tab.account:      액세스
+jcmsplugin.esn.profile-edit.tab.alert:        알림
+jcmsplugin.esn.profile-edit.tab.notification: 구독
+
+jcmsplugin.esn.lbl.status:                    메시지
+jcmsplugin.esn.lbl.status-info:               업데이트된 메시지 {0}
+jcmsplugin.esn.lbl.last-connection:           마지막 접속
+jcmsplugin.esn.lbl.online:                    온라인
+jcmsplugin.esn.lbl.offline:                   오프라인
+jcmsplugin.esn.lbl.interest:                  관심 분야
+jcmsplugin.esn.lbl.introduction:              프레젠테이션
+jcmsplugin.esn.lbl.external-contact:          외부 연락처
+jcmsplugin.esn.lbl.activity:                  활동
+jcmsplugin.esn.lbl.network-activity:          나의 네트워크 활동
+jcmsplugin.esn.lbl.categories:                자격
+jcmsplugin.esn.lbl.categories.add:            자격 추가
+jcmsplugin.esn.lbl.categories.placeholder.search: 자격 검색...
+jcmsplugin.esn.lbl.calendar:                  일정표
+jcmsplugin.esn.lbl.publications:              최종 게시물
+jcmsplugin.esn.lbl.jobs:                      전문 경력
+jcmsplugin.esn.lbl.jobs.add:                  위치 추가
+jcmsplugin.esn.lbl.jobs.add.error.date:       시작 날짜는 끝 날짜 이전이라야 합니다.
+jcmsplugin.esn.lbl.educations:                교육
+jcmsplugin.esn.lbl.educations.add:            교육 추가하기
+jcmsplugin.esn.lbl.vcard:                     Outlook으로 가져오기...
+jcmsplugin.esn.lbl.contact-referrers:         추천자 게시물
+jcmsplugin.esn.lbl.comment-count:             {0,choice,1#{0}코멘트|2# 보기 코멘트 {0} 보기}
+
+jcmsplugin.esn.lbl.info:                      연락처 정보
+jcmsplugin.esn.lbl.date-of-birth:             생일
+jcmsplugin.esn.lbl.date-of-arrival:           도착 날짜
+jcmsplugin.esn.lbl.connections.suggestions:   제안된 인맥
+jcmsplugin.esn.lbl.connections.suggestions.del: 이 제안 삭제하기
+jcmsplugin.esn.lbl.connections.suggestions.reset: 제안 재설정...
+jcmsplugin.esn.lbl.connections.requests:      연결에 초대
+jcmsplugin.esn.lbl.connections.requests.in:   받은 초대
+jcmsplugin.esn.lbl.connections.requests.out:  초대장 보내기
+jcmsplugin.esn.lbl.connections.requests.out2: 전송
+jcmsplugin.esn.lbl.connections.requests.edit: 이 초대 처리하기...
+jcmsplugin.esn.lbl.connections.requests.received: {0}, {1} 가 귀하에게 {2} 초대장을 보냈습니다.
+jcmsplugin.esn.lbl.connections.requests.sent: {0}, 귀하가 {1}에게 {2}의 초대장을 보냈습니다.
+jcmsplugin.esn.lbl.connections.requests.missing: 이 초대는 더 이상 존재하지 않습니다.
+jcmsplugin.esn.lbl.connections.connected:     {0}은(는) 귀하의 인맥 중 하나입니다.
+jcmsplugin.esn.lbl.connections.recommendation:{0}을(를) 귀하의 인맥에 권장합니다...
+jcmsplugin.esn.lbl.connections.recommendation2:귀하의 인맥에 권장합니다 ...
+jcmsplugin.esn.lbl.connections.connect-contact: 다른 연락처에 {0}를 연결합니다...
+jcmsplugin.esn.lbl.connections.connect-contact2: 다른 연락처에 연결합니다...
+jcmsplugin.esn.lbl.connections.no-link:       {0}은(는) 귀하의 인맥에서 연결할 수 없습니다.
+jcmsplugin.esn.lbl.connections.add.member:    {0}을(를) 귀하 인맥에 추가하기...
+jcmsplugin.esn.lbl.connections.add.member2:   귀하의 인맥에 추가하기...
+jcmsplugin.esn.lbl.connections.add.contact:   귀하의 연락처에 {0} 추가합니다
+jcmsplugin.esn.lbl.connections.add.contact2:  귀하의 연락처에 추가합니다
+jcmsplugin.esn.lbl.connections:               인맥
+jcmsplugin.esn.lbl.connections.common:        귀하의 일반 인맥
+jcmsplugin.esn.lbl.connections.me:            내 연결
+jcmsplugin.esn.lbl.connections.other:         그/그녀의 기타 인맥
+jcmsplugin.esn.lbl.connections.all-contacts:  모든 인맥
+jcmsplugin.esn.lbl.connections.all:           모든
+jcmsplugin.esn.lbl.connections.internal:      회원
+jcmsplugin.esn.lbl.connections.external:      연락처
+jcmsplugin.esn.lbl.connections.show.me:       나의 모든 인맥 표시
+jcmsplugin.esn.lbl.connections.show.other:    {0}의 모든 인맥 표시
+
+jcmsplugin.esn.lbl.connections.views:         보기:
+jcmsplugin.esn.lbl.connections.list:          목록
+jcmsplugin.esn.lbl.connections.card:          카드
+jcmsplugin.esn.lbl.connections.cloud:         클라우드
+jcmsplugin.esn.lbl.connections.csv:           CSV
+jcmsplugin.esn.lbl.connections.level:         인맥 수준
+jcmsplugin.esn.lbl.connections.map:           지도
+jcmsplugin.esn.lbl.connections.map.tt.profile:{0}의 프로필로 가기
+jcmsplugin.esn.lbl.connections.map.tt.map:    {0}의 센터 지도
+
+jcmsplugin.esn.lbl.connections.new-contact:   연락처 추가하기
+jcmsplugin.esn.lbl.disconnect:                이 연결 제거...
+jcmsplugin.esn.lbl.disconnect.title:          연락처 제거하기
+jcmsplugin.esn.lbl.disconnect.contact:        귀하의 연락처에서 {0} 제거하기...
+jcmsplugin.esn.lbl.disconnect.contact2:       귀하의 연락처에서 제거하기...
+jcmsplugin.esn.lbl.disconnect.confirm:        귀하의 연락처에서 정말로 <strong>{0}</strong>을(를) 제거하시겠습니까?
+jcmsplugin.esn.lbl.disconnect.confirm-contact:<strong>{1}</strong>'의 연락처에서 정말로 <strong>{0}</strong>을(를) 제거하시겠습니까?
+jcmsplugin.esn.lbl.disconnect.confirm-warn:   경고! 귀하는 <strong>{0}</strong> 의 마지막 연락처입니다. 정말로 이 연락처를 삭제하시겠습니까?
+jcmsplugin.esn.lbl.disconnect.btn.disconnect: 나의 연락처에서 제거하기
+jcmsplugin.esn.lbl.disconnect.btn.disconnect-other: 그/그녀의 연락처에서 제거하기
+jcmsplugin.esn.lbl.disconnect.btn.delete:     이 연락처 삭제하기
+
+jcmsplugin.esn.lbl.followings:                팔로우잉
+jcmsplugin.esn.lbl.followers:                 팔로워
+jcmsplugin.esn.lbl.follow:                    {0}'의 활동 팔로우
+jcmsplugin.esn.lbl.follow2:                   팔로우 활동
+jcmsplugin.esn.lbl.unfollow:                  {0}의 활동 팔로우 중지하기
+jcmsplugin.esn.lbl.unfollow2                  Stop following activity
+jcmsplugin.esn.lbl.contact-followers:         {0} 이 {1,choice,0#제로 회원|1#한 회원|2#{1} 회원} 을 팔로우하고 {2,choice,0#제로 회원|1#한 회원 |2#{2} 회원} 이 팔로우 {0}
+
+jcmsplugin.esn.lbl.ws-role.admin:             관리자
+jcmsplugin.esn.lbl.ws-role.worker:            기여자
+jcmsplugin.esn.lbl.ws-role.reader:            리더
+
+jcmsplugin.esn.lbl.links.me:                  나에 대해 보다 자세한...
+jcmsplugin.esn.lbl.links.other:               {0}에 대해 보다 자세한...
+jcmsplugin.esn.lbl.links.intro:               귀하가 홍보하려는 모든 공개 소셜 네트워크의 귀하의 프로필) 외부 사이트(귀하의 블로그, 의 링크를 추가하십시오
+jcmsplugin.esn.lbl.links.intro.other:         홍보할 외부 사이트의 링크를 추가하십시오(블로그, 공개 소셜 네트워크에 있는 프로필, ...)
+jcmsplugin.esn.lbl.links.add:                 링크 추가하기
+
+jcmsplugin.esn.lbl.edit.me:                   나의 프로필 편집
+jcmsplugin.esn.lbl.edit.other:                {0}의 프로필 편집하기
+jcmsplugin.esn.lbl.edit.other2:               프로필 편집
+jcmsplugin.esn.lbl.editLabel:                 편집
+jcmsplugin.esn.lbl.editProfile.progress:      프로필 <strong>{0}%</strong> 완성.
+
+jcmsplugin.esn.edit-profile.title.me:         귀하의 프로필
+jcmsplugin.esn.edit-profile.title.other:      {0}의 프로필
+jcmsplugin.esn.edit-profile.presentation:     프레젠테이션
+jcmsplugin.esn.edit-profile.change-photo:     내 사진 변경하기
+
+jcmsplugin.esn.edit-expertises.title:         {0}의 자격 업데이트
+
+jcmsplugin.esn.add-contact.title:             연락처 추가하기
+jcmsplugin.esn.add-contact.steps.0:           확인
+jcmsplugin.esn.add-contact.steps.1:           제안
+jcmsplugin.esn.add-contact.steps.2:           정보
+jcmsplugin.esn.add-contact.steps.3:           자격
+jcmsplugin.esn.add-contact.steps-intro.0:     이 사람이 이미 존재하는지 확인하기 위해 귀하의 연락처의 이름 및/또는 이메일을 입력하십시오.
+jcmsplugin.esn.add-contact.steps-intro.1.1:   이 정보에 대응하는 회원이 발견되었습니다. 새로운 사람을 생성하기 전에 같은 사람이 아닌지 확인하십시오.
+jcmsplugin.esn.add-contact.steps-intro.1.2:   이 정보에 일치하는 기존 회원이 발견되었습니다. 새로운 연락처를 생성하기 전에 귀하가 생성하려는 연락처가 이미 존재하는지 확인하십시오.
+jcmsplugin.esn.add-contact.add-to-my-contacts:나의 연락처 추가하기
+jcmsplugin.esn.add-contact.view-contact:      이 연락처 보기
+jcmsplugin.esn.add-contact.lbl.check:         확인...
+jcmsplugin.esn.add-contact.lbl.create:        새로운 연락처 생성하기...
+jcmsplugin.esn.add-contact.lbl.wait:          확인 진행 중...
+jcmsplugin.esn.add-contact.lbl.add:           나의 연락처 추가하기
+jcmsplugin.esn.add-contact.lbl.contact-added: 협력 공간 <b>>{0}</b>>이 생성되었습니다.
+jcmsplugin.esn.add-contact.btn.continue:      저장하고 다른 연락처를 추가하십시오
+
+jcmsplugin.esn.mcr.request.title:             귀하의 네트워크에 {0}를 추가합니다
+jcmsplugin.esn.mcr.request.lbl.send:          전송
+jcmsplugin.esn.mcr.request.info.title1:       왜 연결해야 합니까?
+jcmsplugin.esn.mcr.request.info.content1:     {0}에 접속은 그/그녀의<strong>전체 프로필을</strong> 볼 수 있도록 그리고 그/그녀의  <strong>활동을</strong> 팔로우 할 수 있도록 할 것입니다 . 마찬가지로, {0}가 귀하의 전체 프로필에 </strong> 그리고 <strong>귀하의 활동에 </strong> 액세스합니다 <strong>. 일단 접속하면, 귀하의 네트워크의 다른 회원들에게 <strong>권장</strong> {0}할 수 있습니다.
+jcmsplugin.esn.mcr.request.info.title2:       어떻게 접속하십니까?
+jcmsplugin.esn.mcr.request.info.content2:     귀하와 접속하려면 {0}에게 이 초대장만 보내면 됩니다 . {0} 가 귀하의 초대를 받아들이자 마자 귀하는 접속됩니다.
+
+jcmsplugin.esn.mcr.request.msg: {0},\n\n귀하를 나의 연락처에 추가하고 싶습니다.\n\n{1}\n
+
+jcmsplugin.esn.mcr.validate.title:            초대
+jcmsplugin.esn.mcr.validate.info:             <b>이 초대가 무엇입니까?</b><p>{0} 이 귀하와 접속하고 싶어합니다. 이 초대를 받아들이면 귀하는 {0}의 <strong>전체 프로필에</strong>그리고 <strong>의 활동</strong>에 액세스할 것입니다. 이는 상호 연결입니다. 수락하면서 귀하는 {0} 귀하의 전체 프로필에 </strong> 그리고 <strong>귀하의 활동에</strong>.</p> 액세스를 <strong>허락합니다
+jcmsplugin.esn.mcr.validate.common:           귀하의 일반 인맥
+jcmsplugin.esn.mcr.validate.common-some:      귀하의 일반적인 인맥의 일부
+jcmsplugin.esn.mcr.validate.lbl.accept:       동의
+jcmsplugin.esn.mcr.validate.lbl.decline:      거절
+jcmsplugin.esn.mcr.validate.lbl.close:        종료
+jcmsplugin.esn.mcr.lbl.confirm-delete:        <strong>{0}</strong>에게 보낸 초대를 정말로 삭제하시겠습니까 ?
+
+jcmsplugin.esn.connect-contact.title:          연락처 연결
+jcmsplugin.esn.connect-contact.no-contact:     귀하의 모든 연락처는 <span class="contact">{0}</span>와 연결되어 있습니다.
+jcmsplugin.esn.connect-contact.info:           <span class="contact">{0}</span>에 연결하고자 하는 연락처를 선택하십시오.
+jcmsplugin.esn.connect-contact.lbl.contacts:   귀하의 연락처
+jcmsplugin.esn.connect-contact.lbl.connect:    연결
+
+jcmsplugin.esn.activity.enabled:                 활동 - 다른 추적 활동 사용하도록 설정
+
+jcmsplugin.esn.activity.none:                    활동 없음
+jcmsplugin.esn.activity.profile.job:             {0}이(가) 위치 <span class="message">{1}</span>을 추가했습니다
+jcmsplugin.esn.activity.profile.education:       {0}이(가) 훈련 <span class="message">{1}</span>을 추가했습니다
+jcmsplugin.esn.activity.profile.link:            {0}이(가) 링크 {1}를 추가했습니다
+jcmsplugin.esn.activity.profile.categories:      {0}이(가) 자신의 자격을 채웠습니다
+jcmsplugin.esn.activity.profile.categories.add:  {0}이(가) 자신의 자격을 업데이트했습니다: <span class="message">{1}</span>
+jcmsplugin.esn.activity.profile.categories.add-empty:  {0}이(가) 자신의 자격을 업데이트했습니다
+jcmsplugin.esn.activity.profile.info:            {0}이(가) 그의 정보를 업데이트했습니다
+jcmsplugin.esn.activity.profile:                 {0}이(가) 그의 프로필을 업로드했습니다
+jcmsplugin.esn.activity.contact.profile:         {0}이(가) {1}의 프로필을 업로드했습니다
+jcmsplugin.esn.activity.contact.note:            {0}이(가) {1} 에 주석을 추가했습니다
+jcmsplugin.esn.activity.connect-account:         {0}은(는) 지금 {1}와 접속했습니다
+jcmsplugin.esn.activity.connect:                 {0}이(가) {1}을(를) 인맥에 추가했습니다
+jcmsplugin.esn.activity.ws:                      {0}이(가) 작업공간 {1}에 등록했습니다
+jcmsplugin.esn.activity.create:                  {0}이(가) {1} 를 생성했습니다
+jcmsplugin.esn.activity.update:                  {0}이(가) {1} 을(를) 업데이트했습니다
+jcmsplugin.esn.activity.delete:                  {0}이(가) <span class="message">{1}</span> 를 삭제했습니다
+jcmsplugin.esn.activity.create.Publication:      {0}이(가) {1} 를 게시했습니다
+jcmsplugin.esn.activity.create.Event:            {0}이(가) 이벤트 {1}를 게시했습니다
+jcmsplugin.esn.activity.create.CalendarEvent:    {0}이(가) 이벤트 {1}를 게시했습니다
+jcmsplugin.esn.activity.update.CalendarEvent:    {0}이(가) 이벤트 {1}를 업데이트했습니다
+jcmsplugin.esn.activity.update.Event:            {0}이(가) 이벤트 {1}를 업데이트했습니다
+jcmsplugin.esn.activity.create.Review:           {0}이(가) {1}를 리뷰했습니다
+jcmsplugin.esn.activity.create.FileDocument:     {0}이(가) {1}를 업로드했습니다
+jcmsplugin.esn.activity.create.DBComment:        {0}이(가) 새로운 주석을 추가했습니다
+jcmsplugin.esn.activity.description-full.create.DBComment:        {0}이(가) {1}에 새로운 주석을 추가했습니다
+jcmsplugin.esn.activity.create.DBForumTopic:     {0}이(가) 주제 {1} 를 게시했습니다
+jcmsplugin.esn.activity.create.DBPollVote:       {0}이(가) 설문조사 {1} 에 답변합니다
+jcmsplugin.esn.activity.create.MicroBlogging:
+jcmsplugin.esn.activity.create.WebPage:          {0}이(가) {1}을(를) 공유했습니다
+jcmsplugin.esn.activity.update-pstatus:          {0}이(가) {1} 의 상태를 <span class="message">{2}</span>로 변경합니다.
+jcmsplugin.esn.activity.unzip:                   {0}이(가) 아카이브 zip  {1}에서 파일을 업로드했습니다
+jcmsplugin.esn.activity.lock:                    {0}이(가) 문서 {1} 를 잠궜습니다
+jcmsplugin.esn.activity.unlock:                  {0}이(가) 문서 {1} 를 풀었습니다
+jcmsplugin.esn.activity.vote:                    {0}이(가) {1} 에 투표합니다
+jcmsplugin.esn.activity.filter:                  필터링된 활동
+jcmsplugin.esn.activity.see-activity:            활동 표시
+jcmsplugin.esn.activity.hide-activity:           활동 숨기기
+jcmsplugin.esn.activity.delete-activity:         이 활동 삭제하기
+jcmsplugin.esn.activity.delete-activity-ask:     이 활동을 삭제하시겠습니까?
+jcmsplugin.esn.activity.delete-activity-ask-title:  활동 삭제하기
+jcmsplugin.esn.activity.edit-comment:            코멘트 편집하기
+jcmsplugin.esn.activity.options-menu-title:      활동 메뉴 열기      
+jcmsplugin.esn.activity.comment:                 코멘트
+jcmsplugin.esn.activity.show-comments:           {0,choice,1# 코멘트|2# 코멘트} 표시/숨기기
+jcmsplugin.esn.activity.show-previous-activity:   이전 활동 보기
+jcmsplugin.esn.activity.hide-previous-activity:  활동 숨기기
+jcmsplugin.esn.activity.lbl.no-activity:         {0} 가 아직 아무런 활동도 없습니다.
+jcmsplugin.esn.activity.nextpage:                더 보기
+
+jcmsplugin.esn.activity-card.vote-action:        좋아요
+jcmsplugin.esn.activity-card.menu-title:         활동 메뉴 열기
+jcmsplugin.esn.activity-card.menu-alt:           작업
+jcmsplugin.esn.activity-card.event-attending:    {0} 참석
+jcmsplugin.esn.activity-card.event-invited:      {0} 참석자
+jcmsplugin.esn.activity-card.event.show-attendees: 참석자 상세정보 보기
+jcmsplugin.esn.activity-card.comment-count-title:  코멘트 액세스
+
+jcmsplugin.esn.activity.filter.microBlogging:    마이크로 블로깅
+jcmsplugin.esn.activity.filter.profile:          프로필 업데이트
+jcmsplugin.esn.activity.filter.contact:          외부 연락처 추가하기
+jcmsplugin.esn.activity.filter.connect:          회원 연결
+jcmsplugin.esn.activity.filter.ws:               작업공간에 합류하기
+jcmsplugin.esn.activity.filter.create:           데이터 추가
+jcmsplugin.esn.activity.filter.update:           데이터 업데이트
+jcmsplugin.esn.activity.filter.delete:           데이터 삭제
+jcmsplugin.esn.activity.filter.lock:             잠겨진 문서
+jcmsplugin.esn.activity.filter.upload:           문서 업로드하기
+jcmsplugin.esn.activity.filter.update-pstatus:   워크플로우 상태 업데이트
+jcmsplugin.esn.activity.filter.others:           기타 활동
+jcmsplugin.esn.activity.filter.ws-include:       로 제한...
+jcmsplugin.esn.activity.filter.ws-exclude:       제외하고 모두...
+
+jcmsplugin.esn.activity.filter.editor:               활동 필터
+jcmsplugin.esn.activity.filter.editor.link:          필터 편집
+jcmsplugin.esn.activity.filter.editor.steps.0:       활동 유형
+jcmsplugin.esn.activity.filter.editor.steps.1:       고급 필터링
+jcmsplugin.esn.activity.filter.editor.steps-intro.0: 스트림 활동에서 표시할 활동 유형을 선택하세요.
+jcmsplugin.esn.activity.filter.editor.steps-intro.1: 스트림 활동을 필터링하는 다른 기준을 선택할 수 있습니다.
+
+jcmsplugin.esn.activity.share.remove-webpage: 다른 페이지 공유하기
+jcmsplugin.esn.activity.share.webpage-next-image: 다음 이미지로 전환하기
+jcmsplugin.esn.activity.share.webpage-prev-image: 이전 이미지로 전환하기
+jcmsplugin.esn.activity.form-tab.document: 문서
+jcmsplugin.esn.activity.form-tab.microblogging: 메시지
+jcmsplugin.esn.activity.form-tab.webpage: 웹 페이지
+
+icon.jcmsplugin-esn-activity-share-webpage-img-prev: 이전
+icon.jcmsplugin-esn-activity-share-webpage-img-next: 다음
+icon.jcmsplugin-esn-activity-share-webpage-remove: 삭제
+
+jcmsplugin.esn.lbl.communities:                  커뮤니티
+jcmsplugin.esn.lbl.common-communities:           공통 커뮤니티
+jcmsplugin.esn.lbl.communities.info:             생성된 {0}. {1,choice,0#회원 없음|1#1명의 회원|2#{1,number,integer}명의 회원}. {2,choice,0#콘텐츠 없음 |1#1 콘텐츠|2#{2,number,integer} 콘텐츠}.
+
+jcmsplugin.esn.status.title:            귀하의 메시지 업데이트
+jcmsplugin.esn.status.intro:            어디에 있는지 어떤 기분인지를 무엇을 하는지 나타냅니다,... ?
+jcmsplugin.esn.status.mail:             에게 이메일로 메시지를 전송하여 귀하의 프로필을 업데이트할 수 있습니다
+jcmsplugin.esn.status.msg.singleton:    {0} 은 이미 상태를 가집니다.
+
+jcmsplugin.esn.link.lbl.name:           사이트 이름
+jcmsplugin.esn.link.lbl.url:            URL
+jcmsplugin.esn.link.lbl.description:    설명
+jcmsplugin.esn.link.msg.empty-title:    '사이트 이름'이 필요합니다.
+jcmsplugin.esn.link.msg.empty-url:      'URL' 이 필요합니다.
+jcmsplugin.esn.link.msg.bad-url:        'URL' 필드가 잘못된 형식입니다.
+
+jcmsplugin.esn.lbl.notes:     주석
+jcmsplugin.esn.lbl.notes.add: 메모 추가
+jcmsplugin.esn.lbl.notes.add-link: 주석 추가...
+
+jcmsplugin.esn.directory.lbl.view-profile:      전체 프로필 표시
+jcmsplugin.esn.directory.lbl.expert-directory:  전문가 디렉토리
+
+jcmsplugin.esn.directory.app.nav-competencies: 자격
+jcmsplugin.esn.directory.app.breadcrumb.root: 자격
+jcmsplugin.esn.directory.app.competence.expertise.filter.add: 이 자격에 대한 필터
+jcmsplugin.esn.directory.app.competence.expertise.filter.node.add: 이 자격에 대한 필터 및 하위 자격 보기
+jcmsplugin.esn.directory.app.competence.expertise.filter.remove: 이 자격 필터 제거
+jcmsplugin.esn.directory.app.competence.expertise.filters.add: 이 자격을 필터에 추가
+jcmsplugin.esn.directory.app.competence.expertise.filters.remove: 필터에서 이 자격 제거
+jcmsplugin.esn.directory.app.competence.expertise.is-in-filters: 이 자격은 귀하의 필터에 들어 있습니다. 연결된 버튼을 사용하여 제거하십시오
+jcmsplugin.esn.directory.app.competence.expertise.node.is-in-filters: 이 자격은 귀하의 필터에 들어 있습니다. 하위 자격을 보기 위해 연결된 버튼으로 제거하십시오
+
+jcmsplugin.esn.directory.app.context-menu-label: 자격 컨텍스트 메뉴
+jcmsplugin.esn.directory.app.competence-action.add: 자격 추가...
+jcmsplugin.esn.directory.app.competence-action.add-sub: 하위 자격 추가...
+jcmsplugin.esn.directory.app.competence-action.add-prompt: 새 자격 이름 입력(쉼표로 구분):
+jcmsplugin.esn.directory.app.competence-action.rename-prompt: 새 자격 이름 입력
+jcmsplugin.esn.directory.app.competence-action.move-to: 이동 대상...
+jcmsplugin.esn.directory.app.competence-action.modal.move-to.title: 이동 대상
+jcmsplugin.esn.directory.app.competence-action.modal.move-to.op-action: 이동하기
+
+jcmsplugin.esn.expert-dir.title:                  전문가 디렉토리
+jcmsplugin.esn.expert-dir.lbl.home:               홈
+jcmsplugin.esn.expert-dir.lbl.all:                모든 전문가
+jcmsplugin.esn.expert-dir.lbl.expert-count:       {0,choice,0#결과 없음|1#{0} 결과|2#{0} 결과}
+jcmsplugin.esn.expert-dir.lbl.related.connexe:    자격 닫기:
+jcmsplugin.esn.expert-dir.lbl.related.others:     기타 자격:
+jcmsplugin.esn.expert-dir.msg.home:               전문가 디렉토리에 오신 것을 환영합니다. 특정 자격에 대한 전문가 목록을 나열하려면 왼쪽에 있는 탐색 바를 클릭합니다.
+jcmsplugin.esn.expert-dir.msg.no-expert.all:      자격 <i>{0}</i>에 대한 결과가 없습니다.
+jcmsplugin.esn.expert-dir.msg.no-expert.account:  자격 <i>{0}</i>에 회원이 없습니다.
+jcmsplugin.esn.expert-dir.msg.no-expert.contact:  자격 <i>{0}</i>에 대한 연락처가 없습니다.
+jcmsplugin.esn.expert-dir.lbl.expert-search:      자격별로 검색
+jcmsplugin.esn.expert-dir.lbl.filter:             필터
+jcmsplugin.esn.expert-dir.lbl.filter.info:        자격을 필터링하려면 {0} 아이콘을 클릭합니다.
+jcmsplugin.esn.expert-dir.lbl.filter.add:         이 자격에 대한 필터
+jcmsplugin.esn.expert-dir.lbl.filter.remove:      이 필터 제거
+jcmsplugin.esn.expert-dir.lbl.edit-expertises:    자격 관리
+
+jcmsplugin.esn.expertise.root-cat-forbidden:      자격을 저장하는 ESN플러그인에서 사용되기 때문에 이 범주를 삭제하거나 편집할 수 없습니다. 관리자나 인증된 회원 만이 이를 편집하거나 삭제할 수 있습니다.
+jcmsplugin.esn.expertise.expertise-cat-forbidden: 이 범주는 ESN 플러그인에 의해 자격으로 사용됩니다. 이미 다른 회원에 의해 사용되었습니다. 관리자나 인증된 회원 만이 이를 편집할 수 있습니다.
+
+jcmsplugin.esn.ctxmenu.mbr.profile:  프로필 표시
+
+$id.jcmsplugin.esn.portlet.header:              ESN - 헤더
+$id.jcmsplugin.esn.portlet.actions:             ESN - 액션
+$id.jcmsplugin.esn.portlet.connection-requests: ESN - 접속 요청
+$id.jcmsplugin.esn.portlet.suggestions:         ESN - 제안
+$id.jcmsplugin.esn.portlet.common-connections:  ESN - 일반 인맥
+$id.jcmsplugin.esn.portlet.connections:         ESN - 인맥
+$id.jcmsplugin.esn.portlet.links:               ESN - 링크
+$id.jcmsplugin.esn.portlet.activities:          ESN - 활동
+$id.jcmsplugin.esn.portlet.network-activities:  ESN - 네트워크 활동
+$id.jcmsplugin.esn.portlet.publications:        ESN - 게시물
+$id.jcmsplugin.esn.portlet.calendar:            ESN - 일정
+$id.jcmsplugin.esn.portlet.presentation:        ESN - 프레젠테이션
+$id.jcmsplugin.esn.portlet.workspaces:          ESN - 작업공간
+$id.jcmsplugin.esn.portlet.expertise:           ESN - 자격
+$id.jcmsplugin.esn.portlet.contact-notes:       ESN - 연락처 - 주석
+$id.jcmsplugin.esn.portlet.contact-calendar:    ESN - 연락처 - 일정
+$id.jcmsplugin.esn.portlet.contact-referrers:   ESN - 연락처 - 리퍼러
+$id.jcmsplugin.esn.portlet.contacts:            ESN - 연락처
+$id.jcmsplugin.esn.portlet.jobs:                ESN - 위치
+$id.jcmsplugin.esn.portlet.educations:          ESN - 교육
+
+jcmsplugin.esn.portlet-mbr-status.no-mbr:       회원 없음
+
+jcmsplugin.esn.birthday.portlet.day:  {0,choice,0#오늘|1#내일|2#에 {0} 일}
+jcmsplugin.esn.birthday.portlet.none: 생일 아님
+jcmsplugin.esn.birthday-reminder.enabled: 생일 알리미 활성화하기
+jcmsplugin.esn.birthday-happy: 생일 축하합니다!
+
+jcmsplugin.esn.microblogging.share:               공유
+jcmsplugin.esn.microblogging.modify:            업데이트
+jcmsplugin.esn.microblogging.label.microblogging: 마이크로 블로깅
+jcmsplugin.esn.microblogging.menu.message:        메시지
+jcmsplugin.esn.microblogging.title.create-message:메시지 게시하기
+jcmsplugin.esn.microblogging.delete-confirm:      귀하의 마지막 메시지를 삭제하시겠습니까?
+jcmsplugin.esn.microblogging.microblogging-prompt:무엇을 하고 계십니까?
+jcmsplugin.esn.microblogging.update-message:      이 메시지를 편집
+jcmsplugin.esn.microblogging.delete-message:      이 메시지 삭제하기
+jcmsplugin.esn.microblogging.member-microblogging-title: {0}의 마이크로 블로깅
+jcmsplugin.esn.microblogging.warn.existing-webpage-ws: 이 페이지는 이미 현재 작업 공간내에 존재합니다.
+jcmsplugin.esn.microblogging.warn.existing-webpage-ws-other: {0}가 작업 공간에서 {1} 웹페이지를 게시하였습니다 : {2}.
+jcmsplugin.esn.microblogging.warn.existing-webpage-ws.btn: 웹페이지 접근
+jcmsplugin.esn.microblogging.warn.bad-url-format: 제공된 URL은 유효하지 않습니다.
+jcmsplugin.esn.microblogging.warn.missing-url: URL을 입력하십시오.
+jcmsplugin.esn.microblogging.warn.missing-url-meta: 웹사이트의 데이터를 로드할 수 없습니다. 정보 수동으로 제공해야 합니다.
+
+jcmsplugin.esn.collaborativespace.private-home.connections: 이 공간에서 귀하의 인맥
+
+jcmsplugin.esn.expert-directory.open-access: 전문가 디렉토리에 대한 오픈 액세스
+jcmsplugin.esn.expert-directory.open-access.help: 오픈 디렉토리가 활성화되면 전문가 디렉토리는 액세스하는데 로그인할 사용자가 필요가 없습니다.
+jcmsplugin.esn.member-profile.open-access: 회원 프로필에 대한 오픈 액세스
+jcmsplugin.esn.member-profile.open-access.help: 오픈 디렉토리가 활성화되면 사용자는 액세스하는데 로그인할 필요가 없습니다.
+jcmsplugin.esn.member-profile.event-intro: {0}이(가) 이벤트가 참석하지 않습니다
+jcmsplugin.esn.member-profile.event-intro.me: 귀하는 이벤트에 참석합니다
+
+jcmsplugin.esn.contact-by-email.title: 이메일로 연락...
+jcmsplugin.esn.contact-by-email.title2: 이메일로 연락({0})...
+jcmsplugin.esn.contact-by-sms.title: SMS로 연락...
+jcmsplugin.esn.contact-by-phone.title: 전화로 연락...
+jcmsplugin.esn.contact-by-other.title: {0}(으)로 연락...
+jcmsplugin.esn.call-at-number.title: {0}에 전화...
+jcmsplugin.esn.profile.contact.email: 메일
+jcmsplugin.esn.profile.full.contact.sms: SMS
+jcmsplugin.esn.profile.contact.webchat: WebChat
+
+# ExtraData
+extra.Category.jcmsplugin.esn.groups: ESN - 관련 그룹
+
+# Publish Menu
+jcmsplugin.esn.publish-menu.contact:       연락처
+jcmsplugin.esn.publish-menu.microblogging: 메시지
+
+# Alerts
+alert.name.jcmsplugin-esn : 소셜 네트워크
+alert.name.jcmsplugin-esn.follower:             새로운 팔로워
+alert.name.jcmsplugin-esn.connection:           새로운  접속 추가하기
+alert.name.jcmsplugin-esn.connection-request:   연결 요청
+alert.name.jcmsplugin-esn.connection-accepted:  수락된 접속
+alert.name.jcmsplugin-esn.connection-declined:  거절된 접속
+alert.name.jcmsplugin-esn.birthday-reminder:    생일 알림
+
+alert.msg.jcmsplugin-esn.follower.title:                        새로운 팔로워
+alert.msg.jcmsplugin-esn.follower.short-description:            {author} 가 이제 귀하의 활동을 따르고 있습니다.
+
+alert.msg.jcmsplugin-esn.connection.title:                      새 접속
+alert.msg.jcmsplugin-esn.connection.short-description:          {author} 자신의 인맥에 귀하를 추가했습니다.
+
+alert.msg.jcmsplugin-esn.connection-request.title:              접속으로 초대
+alert.msg.jcmsplugin-esn.connection-request.short-description:  {author} 가 귀하에게 접속 초대장을 보냈습니다.
+alert.msg.jcmsplugin-esn.connection-request.description:        <p>{author} 가 귀하에게 접속 초대장을 보냈습니다.</p> {accept} {showProfile}
+jcmsplugin.esn.connection-request.mail:                         {0}가 귀하에게 접속 초대장을 보냈습니다.
+
+alert.msg.jcmsplugin-esn.connection-accepted.title:             수락된 초대
+alert.msg.jcmsplugin-esn.connection-accepted.short-description: {author} 가 귀하의 초대를 수락하였습니다. 귀하는 이제 접속되었습니다.
+
+alert.msg.jcmsplugin-esn.connection-declined.title:             거절된 초대
+alert.msg.jcmsplugin-esn.connection-declined.short-description: {author} 가 귀하의 초대를 거절하였습니다.
+
+alert.msg.jcmsplugin-esn.birthday-reminder.title:               생일 알림
+alert.msg.jcmsplugin-esn.birthday-reminder.short-description:   다음 생일: {birthday-list}
+alert.msg.jcmsplugin-esn.birthday-reminder.description:         <p>곧 귀하의 네트워크 일부 회원의 생일이 다가옵니다:</p>{birthday-list}
+alert.msg.jcmsplugin-esn.birthday-reminder.txt.today:    오늘:
+alert.msg.jcmsplugin-esn.birthday-reminder.txt.tomorrow: 내일:
+alert.msg.jcmsplugin-esn.birthday-reminder.txt.later:    7일 이내 ({0}):
+
+# ------------------------------------------------------------
+#  Recommendation
+# ------------------------------------------------------------
+alert.name.recommendation.esn-member-recommendation: 인맥 권장
+alert.msg.recommendation.esn-member-recommendation.title:      에 추천 {data}
+alert.msg.recommendation.esn-member-recommendation.short-description: {author} {data}을(를) 귀하의 인맥에 추가할 것을 권장합니다. {recoContent}
+alert.msg.recommendation.esn-member-recommendation.description: <p>{author} 이(가) {data}을(를) 귀하의 인맥에 추가할 것을 권장합니다.</p> <p>{recoContent}</p>
+alert.msg.recommendation.esn-member-recommendation.reply.short-description: {author} 가 {data}에 대한 귀하의 권장에 응답했습니다: {replyRecommendation} {data.url} {reply}
+alert.msg.recommendation.esn-member-recommendation.reply.description: <p>{author} 가 {data} 에 대한 귀하의 추천에 응답했습니다:</p><hr/><p>{replyRecommendation}</p><hr/> {recoContent} {reply}
+jcmsplugin.esn.recommendation.Member: 다른 회원들에게 <b>{0}</b> 를 추천.
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From MemberCategories-templates.xml
+types.MemberCategories.templates.query.default.label: 기본 템플릿
+types.MemberCategories.templates.query.default.description: 이 게시물에 대한 기본 템플릿
+types.MemberCategories.templates.full.default.label: 기본 템플릿
+types.MemberCategories.templates.box.default.description: 이 게시물에 대한 기본 템플릿
+types.MemberCategories.templates.box.default.label: 기본 템플릿
+types.MemberCategories.templates.edit.default.description: 이 게시물에 대한 기본 템플릿
+types.MemberCategories.templates.edit.default.label: 기본 템플릿
+types.MemberCategories.templates.full.default.description: 이 게시물에 대한 기본 템플릿
+
+# From MemberCategories.xml
+types.MemberCategories.label: ESN - 자격
+types.MemberCategories.title.label: 제목
+
+# From MemberEducation-templates.xml
+types.MemberEducation.templates.query.default.description: 이 게시물에 대한 기본 템플릿
+types.MemberEducation.templates.full.default.description: 이 게시물에 대한 기본 템플릿
+types.MemberEducation.templates.full.default.label: 기본 템플릿
+types.MemberEducation.templates.box.default.label: 기본 템플릿
+types.MemberEducation.templates.query.default.label: 기본 템플릿
+types.MemberEducation.templates.edit.default.label: 기본 템플릿
+types.MemberEducation.templates.box.default.description: 이 게시물에 대한 기본 템플릿
+types.MemberEducation.templates.edit.default.description: 이 게시물에 대한 기본 템플릿
+
+# From MemberEducation.xml
+types.MemberEducation.fields.endDate.label: 종료 날짜
+types.MemberEducation.label: ESN - 교육
+types.MemberEducation.title.label: 제목
+types.MemberEducation.fields.degree.label: 졸업장
+types.MemberEducation.fields.startDate.label: 시작 날짜
+types.MemberEducation.fields.site.label: 사이트
+types.MemberEducation.fields.place.label: 위치
+types.MemberEducation.fields.trainingCenter.label: 교육 기관
+types.MemberEducation.fields.description.label: 설명
+
+# From MemberJob-templates.xml
+types.MemberJob.templates.box.default.description: 이 게시물에 대한 기본 템플릿
+types.MemberJob.templates.box.default.label: 기본 템플릿
+types.MemberJob.templates.full.default.label: 기본 템플릿
+types.MemberJob.templates.query.default.label: 기본 템플릿
+types.MemberJob.templates.edit.default.description: 이 게시물에 대한 기본 템플릿
+types.MemberJob.templates.edit.default.label: 기본 템플릿
+types.MemberJob.templates.full.default.description: 이 게시물에 대한 기본 템플릿
+types.MemberJob.templates.query.default.description: 이 게시물에 대한 기본 템플릿
+
+# From MemberJob.xml
+types.MemberJob.title.label: 직함
+types.MemberJob.fields.startDate.label: 시작 날짜
+types.MemberJob.fields.place.label: 위치
+types.MemberJob.label: ESN -  직업
+types.MemberJob.fields.description.label: 설명
+types.MemberJob.fields.organization.label: 조직
+types.MemberJob.fields.endDate.label: 종료 날짜
+types.MemberJob.fields.site.label: 웹사이트
+
+# From MemberProfile-templates.xml
+types.MemberProfile.templates.edit.default.label: 기본 템플릿
+types.MemberProfile.templates.box.default.label: 기본 템플릿
+types.MemberProfile.templates.full.default.label: 기본 템플릿
+types.MemberProfile.templates.full.default.description: 이 게시물에 대한 기본 템플릿
+types.MemberProfile.templates.fullold.default.label: 이전 기본 템플릿 (<6.2)
+types.MemberProfile.templates.query.default.label: 기본 템플릿
+types.MemberProfile.templates.editFront.default.label: Front - Office 편집 템플릿.
+types.MemberProfile.templates.edit.default.description: 이 게시물에 대한 기본 템플릿
+types.MemberProfile.templates.box.default.description: 이 게시물에 대한 기본 템플릿
+types.MemberProfile.templates.query.default.description: 이 게시물에 대한 기본 템플릿
+
+# From MemberProfile.xml
+types.MemberProfile.label: ESN -  프로필
+types.MemberProfile.fields.dateOfBirth.label: 생일
+types.MemberProfile.title.label: 제목
+types.MemberProfile.fields.introduction.label: 소개
+types.MemberProfile.fields.interest.label: 관심 분야
+types.MemberProfile.fields.dateOfArrival.label: 도착 날짜
+
+# From MicroBlogging.xml
+types.MicroBlogging.fields.text.label: 텍스트
+types.MicroBlogging.label: 마이크로 블로깅
+types.MicroBlogging.title.label: 제목
+
+# From PortletBirthday-templates.xml
+types.PortletBirthday.templates.box.default.label: 대시보드 템플릿
+types.PortletBirthday.templates.full.default.label: 응용 프로그램 템플릿
+
+# From PortletBirthday.xml
+types.PortletBirthday.fields.relationshipFilter.description: 로그인한 회원과 접속한 회원만 표시합니까?
+types.PortletBirthday.fields.relationshipFilter.onLabel: 예
+types.PortletBirthday.fields.workspaceMembers.label: 작업공간 회원
+types.PortletBirthday.fields.relationshipFilter.label: 인맥에 필터
+types.PortletBirthday.fields.workspaceMembers.description: 현재 작업공간 회원만 표시합니까?
+types.PortletBirthday.fields.workspaceMembers.offLabel: 아니오
+types.PortletBirthday.fields.workspaceMembers.onLabel: 예
+types.PortletBirthday.label: 생일 포틀릿
+types.PortletBirthday.fields.relationshipFilter.offLabel: 아니오
+types.PortletBirthday.title.label: 제목
+types.PortletBirthday.description: 귀하 인맥의 곧 다가올 생일 표시
+
+# From PortletMemberActivity-templates.xml
+types.PortletMemberActivity.templates.box.default.label: 대시보드 템플릿
+types.PortletMemberActivity.templates.full.default.label: 응용 프로그램 템플릿
+types.PortletMemberActivity.templates.full.card.label: 응용 프로그램 카드 템플릿
+types.PortletMemberActivity.templates.box.card.label: 대시보드 카드 템플릿
+types.PortletMemberActivity.templates.jmobile.default.label: 기본 템플릿
+
+# From PortletMemberActivity.xml
+types.PortletMemberActivity.fields.activityMode.label: 표시된 활동
+types.PortletMemberActivity.fields.activityMode.labelList: 모든 작업공간에서 팔로우된 회원들 | 작업공간에서 팔로우된 활동 I 속한 | 작업공간 활동 | 현재 작업공간 활동
+types.PortletMemberActivity.fields.showComments.label: 코멘트 표시
+types.PortletMemberActivity.fields.showMedia.label: 미디어 표시
+types.PortletMemberActivity.fields.filters.label: 필터
+types.PortletMemberActivity.fields.defaultPageSize.label: 표시된 활동 수
+types.PortletMemberActivity.fields.showComments.onLabel: 예
+types.PortletMemberActivity.fields.showMedia.onLabel: 예
+types.PortletMemberActivity.fields.showComments.offLabel: 아니오
+types.PortletMemberActivity.fields.showAbstract.onLabel: 예
+types.PortletMemberActivity.fields.showMedia.offLabel: 아니오
+types.PortletMemberActivity.fields.showAbstract.label: 개요 표시
+types.PortletMemberActivity.fields.showAbstract.offLabel: 아니오
+types.PortletMemberActivity.label: 회원 활동 포틀릿
+types.PortletMemberActivity.title.label: 제목
+types.PortletMemberActivity.fields.displayAllEvent.label:       모든 일정 이벤트 표시
+types.PortletMemberActivity.fields.displayAllEvent.onLabel:     예
+types.PortletMemberActivity.fields.displayAllEvent.offLabel:    아니오
+types.PortletMemberActivity.fields.displayAllEvent.description: "예"일 경우, 모든 이벤트가 벽에 표시됩니다(사용 가능 권한에 따라 필터링됨), "아니요"일 경우, 무료 등록 이벤트와 회원이 속한 이벤트가 표시됩니다
+types.PortletMemberActivity.description: 활동 표시
+
+# From PortletMemberProfile-templates.xml
+types.PortletMemberProfile.templates.full.default.label: 응용 프로그램 템플릿
+types.PortletMemberProfile.templates.box.default.label: 대시보드 템플릿
+
+# From PortletMemberProfile.xml
+types.PortletMemberProfile.fields.showSuggestions.offLabel: 아니오
+types.PortletMemberProfile.fields.showConnectionRequests.onLabel: 예
+types.PortletMemberProfile.label: 프로필 포틀릿
+types.PortletMemberProfile.fields.showConnectionRequests.offLabel: 아니오
+types.PortletMemberProfile.fields.showSuggestions.onLabel: 예
+types.PortletMemberProfile.fields.showConnectionRequests.label: 접속 요청 표시
+types.PortletMemberProfile.title.label: 제목
+types.PortletMemberProfile.fields.showSuggestions.label: 제안 표시
+types.PortletMemberProfile.description: 회원 프로필과 회원 인맥의 요청 및 제안을 표시합니다
+
+# From PortletMemberStatus-templates.xml
+types.PortletMemberStatus.templates.box.default.label: 대시보드 템플릿
+types.PortletMemberStatus.templates.full.default.label: 응용 프로그램 템플릿
+
+# From PortletMemberStatus.xml
+types.PortletMemberStatus.fields.workspaceMembers.description: 현재 작업공간 회원의 활동만 표시합니까?
+types.PortletMemberStatus.label: 회원 상태 포틀릿
+types.PortletMemberStatus.fields.workspaceMembers.label: 작업공간 회원
+types.PortletMemberStatus.fields.workspaceMembers.offLabel: 아니오
+types.PortletMemberStatus.fields.workspaceMembers.onLabel: 예
+types.PortletMemberStatus.title.label: 제목
+types.PortletMemberStatus.description: 귀하 인맥의 상태 또는 작업공간 회원 상태를 표시합니다
+
+# Analytics
+ui.analytics.ESNAgent.name:                         소셜
+ui.analytics.ESNAgent.report.network:               소셜 네트워크
+ui.analytics.ESNAgent.report.network.h:             소셜 네트워크 밀도.
+ui.analytics.ESNAgent.report.new-profile:           새로운 프로필
+ui.analytics.ESNAgent.report.new-profile.h:         생성된 새로운 프로필.
+ui.analytics.ESNAgent.report.account-profile-count: 프로필 계정
+ui.analytics.ESNAgent.report.contact-profile-count: 연락처 프로필
+ui.analytics.ESNAgent.report.connection-ratio:      회원 당 접속 비율
+ui.analytics.ESNAgent.report.follower-ratio:        회원 당 팔로워 비율
+ui.analytics.ESNAgent.report.following-ratio:       회원 당 팔로윙 비율
+ui.analytics.ESNAgent.report.activity-count:        활동
+ui.analytics.ESNAgent.report.activity-count.h:      활동 수
+ui.analytics.ESNAgent.report.activity-top:          최상위 활동 
+ui.analytics.ESNAgent.report.activity-top.h:        활동 내영
+ui.analytics.ESNAgent.report.network:               인맥
+ui.analytics.ESNAgent.report.network.h:             소셜 네트워크에서의 관계율.
+ui.analytics.ESNAgent.report.new-profile:           새로운 프로필
+ui.analytics.ESNAgent.report.new-profile.h:         생성된 새로운 프로필.
+ui.analytics.ESNAgent.report.account-profile-count: 계정
+ui.analytics.ESNAgent.report.contact-profile-count: 연락처
+ui.analytics.ESNAgent.report.profile-completeness:   프로필 완성도
+ui.analytics.ESNAgent.report.profile-completeness.h: 회원 프로필 완성도 퍼센트
+ui.analytics.ESNAgent.report.connection-ratio:      회원 인맥 평균
+ui.analytics.ESNAgent.report.follower-ratio:        회원 팔로윙 평균
+ui.analytics.ESNAgent.report.following-ratio:       회원 팔로워 평균
+ui.analytics.ESNAgent.report.microblogging-count:   마이크로 블로깅
+ui.analytics.ESNAgent.report.microblogging-count.h: 게시된 메시지 MicroBlogging 수.
+
+ # From plugin.xml
+types.PortletMemberActivity.templates.jcmsplugin.virtualdesktop.editInline.default.label: 회원 활동 서비스를 편집할 때 가상 데스크탑에서 사용된 템플릿.
+types.AbstractPortletSkinable.templates.box.esnSkin.label: ESN 스킨
+types.AbstractPortletSkinable.templates.box.esnSkin.description: (CSS) 통합 스킨
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.activity: 활동
+jcmsplugin.smartphone.workspace-service.PortletMemberActivity: 활동
+jcmsplugin.esn.smartphone.lbl.presentation: 프레젠테이션
+jcmsplugin.esn.smartphone.lbl.expertises: 자격
+jcmsplugin.esn.smartphone.lbl.member.activity: 활동
+jcmsplugin.esn.smartphone.lbl.activity.microblogging.text.placeholder: 여기에 귀하의 메시지를 입력하십시오...
+jcmsplugin.esn.smartphone.lbl.activity.microblogging.add-message: 메시지 추가하기
+
+jcmsplugin.smartphone.shareurl.label.esn: 마이크로 블로깅
+
+# Microblogging icon label
+jcmsplugin.esn.smartphone.microblogging.camera : 카메라
+jcmsplugin.esn.smartphone.microblogging.galery : 사진 갤러리
+
+# ----------------------------------------------------------------------
+# OpenApi
+# ----------------------------------------------------------------------
+acl.resource.admin/work/canManageExpertiseCategory: ESN - 자격 범주 관리 권한
+acl.resource.plugins: 플러그인
+acl.resource.plugins/esn: ESN
+acl.resource.plugins/esn/openapi: API 열기
+acl.resource.plugins/esn/openapi/anyActivity: 활동을 만듭니다
+acl.resource.plugins/esn/openapi/anyActivity.h: 활동 만들기 활성화(모든 회원이 활동 작성자가 될 수 있습니다)
+acl.resource.plugins/esn/openapi/activity: 개인 활동을 만듭니다
+acl.resource.plugins/esn/openapi/activity.h: 회원 개인 활동 만들기 활성화(로그온 회원은 활동 작성자가 될 수 있습니다)
+doc.rest.rsrc-meth.ActivityResource: GET<br/>POST<br/>DELETE
+doc.rest.rsrc-desc./plugins/esn/activities: POST 방법: 다음 파라미터가 있는 활동 목록: <br/> <ul><li>회원: 읽기 권한을 확인하는 데 사용하는 회원(로그온 회원에게 '활동 작성' ACL이 없을 경우, 로그온한 회원으로 강제합니다)</li><li>모드: MemberActivityMode의 인스턴스 : <ul><li>FOLLOWED_MEMBERS</li><li>FOLLOWED_MEMBERS_WS</li><li>WORKSPACE_ACTIVITIES</li><li>MEMBER_WORKSPACE_ACTIVITIES</li><li>MEMBER_ACTIVITIES</li></ul></li><li>작업공간: 검색에 사용하는 작업공간</li><li>activityMember: 활동의 회원 작성자</li><li>startActivityDate: 검색 시작 날짜</li><li>pageSize: 기본값 10</li><ul>
+doc.rest.rsrc-desc./plugins/esn/activities/followedMembers/{memberId}: GET 방법: 제공된 회원 뒤에 오는 회원들의 활동 목록.<br/>읽기 권한에 사용된 회원은 로그온 회원에게 '활동 작성' ACL이 있을 경우에만 제공된 회원입니다. 그렇지 않은 경우 로그온한 회원입니다.<br/>이 끝점의 사용자 지정은 활동 끝점을 통해 수행되어야 합니다.
+doc.rest.rsrc-desc./plugins/esn/activities/followedMembersWs/{memberId}:GET 방법: 회원의 작업공간에 있을 경우에만 제공된 회원 뒤에 오는 회원들의 활동 목록.<br/>읽기 권한에 사용된 회원은 로그온 회원에게 '활동 작성' ACL이 있을 경우에만 제공된 회원입니다. 그렇지 않은 경우 로그온한 회원입니다.<br/>이 끝점의 사용자 지정은 활동 끝점을 통해 수행되어야 합니다.
+doc.rest.rsrc-desc./plugins/esn/activities/member/{memberId}: GET 방법: 제공된 회원의 활동 목록.<br/>읽기 권한에 사용된 회원은 로그온 회원에게 '활동 작성' ACL이 있을 경우에만 제공된 회원입니다. 그렇지 않은 경우 로그온된 회원입니다.<br/>이 끝점의 사용자 지정은 활동 끝점을 통해 수행되어야 합니다.
+doc.rest.rsrc-desc./plugins/esn/activities/memberWorspaces/{memberId}: GET 방법: 제공된 회원의 작업공간의 활동 목록.<br/>읽기 권한에 사용된 회원은 로그온 회원에게 '활동 작성' ACL이 있을 경우에만 제공된 회원입니다. 그렇지 않은 경우 로그온된 회원입니다.<br/>이 끝점의 사용자 지정은 활동 끝점을 통해 수행되어야 합니다.
+doc.rest.rsrc-desc./plugins/esn/activities/workspace/{workspaceId}: GET 방법: 제공된 작업공간의 활동 목록.<br/>읽기 권한에 사용된 회원은 로그온 회원에게 '활동 작성' ACL이 있을 경우에만 제공된 회원입니다. 그렇지 않은 경우 로그온된 회원입니다.<br/>이 끝점의 사용자 지정은 활동 끝점을 통해 수행되어야 합니다.
+doc.rest.rsrc-desc./plugins/esn/activity/{id}: GET 방식 : ID로 MemberActivity 받기<br/> POST 방식 : 활동을 업데이트합니다(작성과 동일한 필드 사용<br/> DELETE 방식 : 활동 삭제
+doc.rest.rsrc-desc./plugins/esn/activity: POST 방법: 활동을 만듭니다. <br/> 파라미터 :<ul><li>속성: COMPULSORY - 이 활동에 사용되는 속성</li><li>회원: COMPULSORY - 활동 회원(로그온한 회원이 '활동 만들기' ACL을 갖고 있지 않은 경우 로그온한 회원으로 강제됩니다)</li><li>데이터: 활동 데이터와 관련이 있습니다</li><li>메시지: 추가 메시지 </li><li>작업공간: 활동 작업공간(비어 있을 경우, 데이터가 제공된 경우, 데이터의 작업공간이 사용됩니다.)</li><ul>
+

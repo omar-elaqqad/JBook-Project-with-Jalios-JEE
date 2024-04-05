@@ -1,0 +1,16 @@
+<%@ include file='/jcore/doMessageBox.jspf' %>
+
+<jalios:message msg='<%= glp("jcmsplugin.collaborativespace.space-recommendation.intro", cs.getTitle(userLang)) %>' title="" dismissable="false" />
+<%
+jcmsContext.setAjaxRequestAttribute("ACContact", false);
+jcmsContext.setAjaxRequestAttribute("ACContactSet", null);
+%>
+<jalios:field name="members" value='<%= formHandler.getAvailableMemberSet() %>' label="ui.com.lbl.members" keyword="true">
+  <jalios:control settings="<%= new MemberSettings().filter(MemberSettings.MemberFilter.ACCOUNT) %>" />
+</jalios:field>
+<jalios:field name="groups" value='<%= formHandler.getAvailableGroupSet() %>' label="ui.com.lbl.groups" keyword="true">
+  <jalios:control type="<%= ControlType.GROUP %>" />
+</jalios:field>
+<jalios:field name="message" value='<%= formHandler.getAvailableMessage() %>' label="jcmsplugin.collaborativespace.space-recommendation.field.msg">
+  <jalios:control settings='<%= new WikiAreaSettings().rows(4) %>' />
+</jalios:field>

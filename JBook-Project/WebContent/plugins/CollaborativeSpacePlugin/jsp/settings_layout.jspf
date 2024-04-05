@@ -1,0 +1,21 @@
+<%@page import="com.jalios.jcms.jportal.json.JPortalMapping"%><%
+%><%@page import="com.jalios.jcms.jportal.json.JBlockMapping"%><%
+%><% JPortalMapping mapping = csHandler.getAvailableJPortalMapping(); %>
+<% String containerCSS = (mapping.getUi() != null)?mapping.getUi().getContainer():""; %>
+<div class="jportal-display-layout <%= containerCSS %>">
+   <% if(csHandler.showEditJPortalButton()){
+    //String editPortalUrl = JPortalUtils.getJPortalEditionUrl((JPortal) csHandler.getAssociatedJPortal()); Not used ??
+    if(csHandler.isJPortalSynchronized()){ //warning modal & then remove the association & create the jportal%>
+      <jalios:buttonModal css="btn btn-primary" label="jcmcplugin.collaborativespace.jportal.edit-more.label" url="<%= csHandler.getJPortalSyncModalUrl() %>" />
+    <% } else { %>
+      <a class="btn btn-primary" href="<%= csHandler.getJPortalEditionUrl() %>">
+        <%= glp("jcmcplugin.collaborativespace.jportal.edit.label") %>
+      </a>
+    <%} %>
+  <%}%>
+  <% for (JBlockMapping jBlock : mapping.getjBlocks()) { %>
+    <% request.setAttribute("jcms.jportal.jblock-mapping",jBlock); %>
+    <jalios:include jsp="types/JPortal/doJBlocksLayout.jsp" />
+    <% request.removeAttribute("jcms.jportal.jblock-mapping"); %>
+  <% } %>
+</div>

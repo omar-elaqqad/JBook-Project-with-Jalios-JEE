@@ -1,0 +1,9 @@
+<%@ include file='/plugins/SmartPhonePlugin/jsp/common/header.jspf' %><%
+SmartPhoneService service = new DefaultSmartPhoneWSService((Portlet) getDataParameter("portletId"), workspace);
+if (!service.isEnabled(jcmsContext)) {
+  sendRedirect(SmartPhoneConstants.FORBIDDEN_JSP_PATH);
+  return;
+}
+
+Portlet portlet = (Portlet) getPublicationParameter("portletId");
+%>

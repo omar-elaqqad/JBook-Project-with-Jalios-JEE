@@ -1,0 +1,27 @@
+<%@page import="com.jalios.jcmsplugin.smartphone.SmartPhoneControlType"%><%
+%><%@page import="com.jalios.jcmsplugin.smartphone.SmartPhoneConstants"%><%
+%><%@page import="com.jalios.jcms.taglib.settings.impl.TextAreaSettings"%>
+<% if (dbcommentMgr.canComment(loggedMember, pub)) { %>
+<a href="#" data-role="none" class="ui-btn toggle add-comment" data-jalios-target=".ui-page-active .add-comment" data-jalios-toggle="hide" data-theme="f"><%= glp("jcmsplugin.dbcomment.edit.lbl.add-comment") %></a>
+<form action="plugins/DBCommentPlugin/smartphone/jsp/doDBCommentFooter.jsp" class="dbcomment-form add-comment hide" method="POST" data-history="false">
+  <jalios:field resource="<%= SmartPhoneConstants.FIELD_PROP %>" name="description">
+    <jalios:control settings='<%= new TextAreaSettings().placeholder("jcmsplugin.dbcomment.smartphone.lbl.dbcomment.add-comment.placeholder") %>' resource="<%= SmartPhoneControlType.WIKIAREA.getResource() %>" />
+  </jalios:field>
+  <input type="hidden" name="opComment" value="true"/>
+  <input type="hidden" name="title" value="<%= glp("jcmsplugin.dbcomment.edit.lbl.comment-on", pub.getTitle(userLang)) %>"/>
+  <input type="hidden" name="pubId" value="<%= pub.getId() %>"/>
+  <% if (dbcommentMgr.canPublishPrivateComment(loggedMember)) { %>
+    <% 
+      boolean privateCommentValue = hasValidate ? dbcommentMgr.getPrivateCommentDefaultValue() :  getBooleanParameter("privateComment", dbcommentMgr.getPrivateCommentDefaultValue()); 
+      String privateCommentDescription = glp("jcmsplugin.dbcomment.lbl.private-edit-tooltip", dbcommentMgr.getPrivateCommentGroup());
+    %>
+    <%-- PrivateComment ------------------------------------------------------------ --%>
+    <jalios:field name="privateComment" resource="<%= SmartPhoneConstants.FIELD_PROP %>" formHandler="<%= formHandler %>" value="<%= privateCommentValue %>">
+      <jalios:control resource="<%= SmartPhoneControlType.FLIPSWITCH.getResource() %>"/>
+    </jalios:field>
+      
+  <% } %>
+  
+  <button type="button" name="opCreate" class="ajax-refresh btn-primary ui-btn ui-shadow ui-corner-all" value="true"><%= glp("ui.com.btn.publish") %></button>
+</form>
+<% } %>

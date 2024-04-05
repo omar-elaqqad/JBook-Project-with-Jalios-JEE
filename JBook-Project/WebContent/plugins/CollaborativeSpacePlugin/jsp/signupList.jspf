@@ -1,0 +1,76 @@
+<%@page import="com.jalios.jcms.uicomponent.Button.ButtonType"%><%
+%><%@page import="com.jalios.util.ServletUtil"%><%
+%><%@page import="java.text.MessageFormat"%><%
+%><%@page import="com.jalios.jcms.WFState"%><%
+%><%@page import="com.jalios.jcms.Member"%><%
+%><%@page import="generated.CSSignupRequest"%><%
+%><%@page import="com.jalios.jcms.Workflow"%><%
+%><%@ page contentType="text/html; charset=UTF-8" %><%
+List<CSSignupRequest> signupList = csMgr.getSignupList(workspace);
+boolean processContextCompatible = workspace.isOpen() && channel.isDataWriteEnabled();
+String validationModalUrl = channel.getProperty("jcmsplugin.collaborativespace.signup.validate-modal", "plugins/CollaborativeSpacePlugin/types/CSSignupRequest/validateCSSignupRequestModal.jsp");
+String validationUrlPattern = validationModalUrl + "?id={0}&ws={1}&redirect={2}";
+Workflow csSignupRequestWorkflow = workspace.getWorkflow(CSSignupRequest.class);
+%>
+<div id="signups">
+
+  <table class="table-data">
+    <thead>
+    <%-- HEADER --%>
+    <tr>
+      <td class="right"></td>
+      <th><%= glp("ui.com.lbl.status") %></th>
+      <th><%= glp("ui.com.lbl.date") %></th>
+      <th colspan="2"><%= glp("jcmsplugin.collaborativespace.signup.lbl.submit-mbr") %></th>
+      <% if (processContextCompatible) { %>
+        <td></td>
+      <% } %>
+    </tr>
+    </thead>
+    <tbody>
+    
+    <%-- ITERATION --%>
+    <jalios:pager name='signupPagerHandler' 
+                  declare='true' 
+                  action='init' 
+                  pageSize='5' 
+                  size='<%= signupList.size() %>'/>  
+    <jalios:foreach collection="<%= signupList %>" 
+                    type="CSSignupRequest" 
+                    name="signup"
+                    max="<%= signupPagerHandler.getPageSize() %>"
+                    skip="<%= signupPagerHandler.getStart() %>">
+      <%
+      int pstatus = signup.getPstatus();
+      // Check member can work on pub in THIS WFState
+      boolean showProcessAction = processContextCompatible && csSignupRequestWorkflow != null && csSignupRequestWorkflow.canWorkInState(signup, loggedMember, signup.getWFState());
+      // Redirect to the current page
+      String redirect = ServletUtil.getUrl(request, false);
+      String validationUrl = MessageFormat.format(validationUrlPattern, signup.getId(), signup.getWorkspaceId(), ServletUtil.encodeURL(redirect));
+      %>
+      <tr>
+        <td class="numeric">
+          <%= signupPagerHandler.getStart() + itCounter.intValue() %>.
+          <jalios:edit data='<%= signup %>' />
+        </td> 
+        <td class="nowrap"><span class="label signup-status signup-status<%= pstatus %>"><%= signup.getWFStateLabel(userLang) %></span></td>
+        <td class="date-time nowrap"><jalios:date format="timeDateOrTime" date="<%= signup.getMdate() %>" /></td>
+        <td class="member-part"><jalios:memberphoto member="<%= signup.getSubmitMember() %>" size="<%= PhotoSize.TINY %>"/></td>
+        <td class="nowrap">
+        <% if (showProcessAction) { %>
+          <jalios:buttonModal buttonType="<%= ButtonType.A %>" label="<%= signup.getTitle(userLang) %>" url="<%= validationUrl %>" />
+        <% } else { %>
+          <jalios:link data="<%= signup %>" />
+        <% } %>
+        </td>
+        <td class="nowrap">
+        <% if (showProcessAction) { %>
+          <jalios:buttonModal css="btn btn-default" label="jcmsplugin.collaborativespace.signup.lbl.process" url="<%= validationUrl %>" />
+        <% } %>
+        </td>
+      </tr>
+    </jalios:foreach>
+    </tbody>
+  </table>
+  <jalios:pager name='signupPagerHandler' />
+</div>

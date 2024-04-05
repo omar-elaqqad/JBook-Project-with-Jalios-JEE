@@ -1,0 +1,2 @@
+<%@page import="com.jalios.util.Util"%>
+<li><a data-ajax="false" target="_blank" href="<%= workspace.getDisplayUrl(userLocale) %>?<%= SmartPhonePortalPolicyFilter.FORCE_NO_SMARTPHONE_REQUEST_PARAM %>"><jalios:icon src="smartphone-access-website" />  <%= glp("jcmsplugin.smartphone.lbl.index-default.desktop-link") %></a></li>

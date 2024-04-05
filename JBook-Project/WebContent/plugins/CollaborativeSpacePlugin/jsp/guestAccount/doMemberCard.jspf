@@ -1,0 +1,70 @@
+<% { %>
+  <%-- Card --%>
+  <div class="contact-card">
+    <div class="header"></div>
+    <div class="inner">
+      <% if (contact.hasPhoto() && Util.toBoolean(request.getAttribute("jcmsplugin.cs.contact-card.photo"), false)) { %>
+        <div class="photo" style="float:left;">
+          <%-- fake 40x40px image for proper alignment (IMG tag verified) --%>
+          <img src="s.gif" width='<%= PhotoSize.TINY.getWidth() %>px' height='<%= PhotoSize.TINY.getHeight() %>px' alt=""/>
+        </div>         
+        <div class="photo">
+			    <jalios:memberphoto member="<%= contact %>" size="<%= PhotoSize.TINY %>"/>
+        </div>   
+      <% } %>
+      <div class="name"><jalios:link data="<%= contact %>" /></div>
+      
+      <% if (Util.notEmpty(contact.getJobTitle())) { %>
+      <div class="jobTitle"><%= contact.getJobTitle() %></div>
+      <% } %>
+      
+      <% if (Util.notEmpty(contact.getOrganization())) { %>
+      <div class="organization"><%= contact.getOrganization() %></div>
+      <% } %>
+      
+       
+      <% if (Util.notEmpty(contact.getAddress())) { %>
+      <div class="address">
+        <jalios:wiki><%= contact.getAddress() %></jalios:wiki>
+      </div>
+      <% } %>    
+    
+      <table class="contact-info" width="100%">
+        <tr>
+          <td>
+            <%-- PHONE ------------------------------------------------------- --%> 
+            <% if (Util.notEmpty(contact.getPhone())) { %>
+              <div class="phone">
+                <jalios:icon src="telephone" />
+                <jalios:phone number="<%= contact.getPhone() %>" region="<%= contact.getCountry() %>" />
+              </div>
+            <% } %>
+            
+            <%-- MOBILE ------------------------------------------------------- --%> 
+            <% if (Util.notEmpty(contact.getMobile())) { %>
+              <div class="mobile">
+                <jalios:icon src="phone" />
+                <jalios:phone number="<%= contact.getMobile() %>" region="<%= contact.getCountry() %>" />
+              </div>
+            <% } %>          
+          </td>
+        
+          <td>
+            <%-- E-MAIL ---------------------------------------------------------------- --%> 
+            <% if (Util.notEmpty(contact.getEmail()) && (isAdmin || contact.isEmailVisible())) { %>
+              <div class="email">
+                <jalios:icon src="mail" /> 
+                <% if (isLogged) { %>
+                  <a href='mailto:<%= encodeForHTMLAttribute(contact.getEmail()) %>'><%= contact.getEmail() %></a>
+                <% } else { %>
+                  <%= contact.getEmail() %> 
+                <% } %>
+              </div>
+            <% } %>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="footer"></div>
+  </div>
+<% } %>

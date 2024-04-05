@@ -1,0 +1,30 @@
+<%-- TAB - PRESENTATION ---------------------------------------------- --%>
+<div class="tab-page form-horizontal">
+	<h2 class="tab"><jalios:icon src="jcmsplugin-esn-profile-presentation" /> <%= glp("jcmsplugin.esn.edit-profile.presentation") %></h2>
+	<%-- Introduction ------------------------------------------------------------ --%>
+	<jalios:field name="introduction" formHandler="<%= profileFH %>">
+	  <jalios:control />
+	</jalios:field>
+	<%-- Interest ------------------------------------------------------------ --%>
+	<jalios:field name="interest" formHandler="<%= profileFH %>">
+	  <jalios:control />
+	</jalios:field>
+	<%-- DateOfBirth ------------------------------------------------------------ --%>
+  <% if (isAccount) { %>
+	<jalios:field name="dateOfBirth" formHandler="<%= profileFH %>">
+	  <jalios:control />
+	</jalios:field>
+  <% } %>
+	<%-- DateOfArrival ------------------------------------------------------------ --%>
+  <% if (isAccount) { %>
+	<jalios:field name="dateOfArrival" formHandler="<%= profileFH %>">
+	  <jalios:control />
+	</jalios:field>
+  <% } %>
+  
+  <% request.setAttribute("extraDataSet", formHandler.getExtraDataSet("presentation")); %>
+  <jalios:include jsp="/jcore/doEditExtraData.jsp" />
+  
+  <% request.removeAttribute("extraDataSet"); %>
+  <jalios:include target="PLUGIN_ESN_EDIT_PROFILE_PRESENTATION" />      
+</div>     

@@ -1,0 +1,26 @@
+<div class="activity-meta text-info">
+  <% if (isDBCommentActivity) { %>
+    <jalios:memberphoto member="<%= activityData.getAuthor() %>" resource="memberphoto-phone" size="<%= PhotoSize.ICON %>"/>
+    <span class="activity-meta-main"><%= activityPub.getAuthor() %></span>
+    <span class="activity-meta-separator">
+      &middot; 
+    </span>
+  <% } %>
+  <% if (isDBCommentActivity) { %>
+    <span class="activity-date">
+      <jalios:date format="timeDateOrTime" date="<%= ((Publication)activityData).getMdate() %>"  />
+    </span>
+  <% } else { %>
+    <span class="activity-date">
+      <jalios:date format="timeDateOrTime" date="<%= itActivityEntry.getLastActivityCdate() %>" />
+    </span>
+  <% } %>
+  <% if (itActivity.getWorkspace() != null) { %>
+    <span class="activity-meta-separator">
+      &middot; 
+    </span>
+    <span class="activity-workspace">
+      <%= itActivity.getWorkspace().getTitle(userLang) %>
+    </span>
+  <% } %>
+</div>

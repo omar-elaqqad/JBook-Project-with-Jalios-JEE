@@ -1,0 +1,68 @@
+<%@page import="com.jalios.jcms.Member"%><%
+%><%@page import="com.jalios.util.Util"%><%
+%><%@page import="com.jalios.jcms.i18n.PhoneNumberUtil"%><%
+%><%@page import="com.jalios.jcms.i18n.PhoneNumber"%><%
+%><% if(Util.notEmpty(member.getEmail()) || Util.notEmpty(member.getPhone()) || Util.notEmpty(member.getAddress()) || Util.notEmpty(member.getMobile())) { %>
+    <div data-role="collapsible" data-collapsed="false" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+      <h3><%= glp("jcmsplugin.smartphone.lbl.member.contact") %></h3>
+      <ul data-role="listview">
+          <%-- E-mail --%>
+        <% String email = member.getEmail(); %>
+        <% if (Util.notEmpty(email) && (member.isEmailVisible() || isAdmin)) { %>        
+          <li data-icon="false"><a rel="external" href='mailto:<%= encodeForHTMLAttribute(email) %>'>
+          <%= email %>
+          </a></li>
+        <% } %>
+        <%-- Phone --%>
+        <%
+          String phone = member.getPhone();
+          if (Util.notEmpty(phone)) {
+            PhoneNumber phoneNumber = PhoneNumberUtil.parseNumber(phone, member.getCountry());
+            if (Util.notEmpty(phoneNumber)) {
+              String formattedPhone = phoneNumber.toRFC3966String();
+              if(Util.notEmpty(formattedPhone)) {
+                %><li data-icon="phone" title="<%= glp("ui.adm.mbr-edit.lbl.phone") %>">
+                  <a rel="external"  href="<%= formattedPhone %>" data-ajax="false" class="phone"><%= phoneNumber.toInternationalString() %></a>
+                </li><%
+              }
+            }
+          }
+        %>
+
+        <%-- Mobile (+ SMS) --%>
+        <%
+          String mobile = member.getMobile();
+          if (Util.notEmpty(mobile)) {
+            PhoneNumber mobileNumber = PhoneNumberUtil.parseNumber(mobile, member.getCountry());
+            if (Util.notEmpty(mobileNumber)) {
+              String formattedMobile = mobileNumber.toRFC3966String();
+              if(Util.notEmpty(formattedMobile)) {
+                %><li data-role="none" class="ui-li-has-alt" title="<%= glp("ui.adm.mbr-edit.lbl.mobile") %>">
+                  <a rel="external" href="<%= formattedMobile %>" data-ajax="false" class="phone ui-btn ui-btn-icon-right ui-icon-phone"><%= mobileNumber.toInternationalString() %></a>
+                  <a rel="external" href="<%= formattedMobile.replace("tel:", "sms:") %>" data-ajax="false" class="sms ui-btn ui-btn-icon-notext ui-icon-comment"><%= mobile %></a>
+                </li><%
+              }
+            }
+          }
+        %>
+      </ul>
+    </div>
+
+    <%-- Address --%>
+    <% Member addressMember = member; %>
+    <% if (addressMember.hasAnyAddress()) { %>
+      <div data-role="collapsible" data-collapsed="true" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+        <h3><%= glp("jcmsplugin.smartphone.lbl.member.address") %></h3>
+        <ul data-role="listview">
+          <li data-icon="false">
+            <% String mapUrl = smartPhoneManager.getSmartPhoneMapUrl(smartPhoneManager.getFormattedMemberAdress(addressMember, ", ")); %>
+            <% if (Util.notEmpty(mapUrl)) { %>
+              <a rel="external"  data-ajax="false" href="<%= mapUrl  %>" title="<%= glp("ui.adm.mbr-edit.lbl.addr") %>"><jalios:wiki attributeMap="<%= smartPhoneManager.getWikiAttributeMap() %>"><%@ include file='/front/doMemberAddress.jspf' %></jalios:wiki></a>
+            <% } else { %>
+              <jalios:wiki attributeMap="<%= smartPhoneManager.getWikiAttributeMap() %>"><%@ include file='/front/doMemberAddress.jspf' %></jalios:wiki>
+            <% } %>
+          </li>
+        </ul>
+      </div>
+    <% } %>
+<% } %>

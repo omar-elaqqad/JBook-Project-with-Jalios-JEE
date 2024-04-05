@@ -1,0 +1,33 @@
+<%-- TAB - CATEGORIES ---------------------------------------------- --%>
+<div class="tab-page form-horizontal">
+	<h2 class="tab"><jalios:icon src="star" /> <%= glp("jcmsplugin.esn.lbl.categories") %></h2>
+	<% 
+		Set<Category> allCatSet = categoriesFH.getCategorySet("cids"); 
+		Set<Category> rootSet = esnMgr.getMemberCategoriesRootSet();
+		boolean showRoots = Util.getSize(rootSet) > 1;
+	%>        
+	<jalios:foreach collection="<%= rootSet %>" name="itRoot" type="Category">
+	  <% 
+      Comparator childrenComparator = itRoot.isAlphabeticalOrder() ? Category.getNameComparator(userLang) : Category.getOrderComparator(userLang);
+      Set<Category> childrenSet = new TreeSet<Category>(childrenComparator);
+	    childrenSet.addAll(itRoot.getChildrenSet());
+    %>
+    <% if (showRoots && itRoot.canBeReadBy(loggedMember,true,true)) { %>
+		  <h3><%= itRoot.getName(userLang) %></h3>
+	  <% } %>
+	  <jalios:foreach collection="<%= childrenSet %>" name="itSubRoot" type="Category" counter="itCounter2">
+		  <% if(itSubRoot.canBeReadBy(loggedMember,true,true)){%>
+			  <% Set<Category> catSet = Util.interSet(itSubRoot.getDescendantSet(), allCatSet); %>
+	      <jalios:field name="categoriesFH_cids" label="<%= itSubRoot.getName(userLang) %>"
+                  keyword="true" mv="1" value="<%= catSet %>"
+                  disabled='<%= !formHandler.canWorkOnMemberCategories() %>'>
+            <jalios:control settings='<%= new CategorySettings().root(itSubRoot) %>' />
+	      </jalios:field>        
+		  <% } %>
+	  </jalios:foreach>
+	</jalios:foreach>
+	<jalios:include target="PLUGIN_ESN_EDIT_PROFILE_EXPERTISE" />      
+	
+	<%-- Add an empty cids to allow to remove all checked categories (update by delta) --%>
+	<input type='hidden' name='categoriesFH_cids' value='' />
+</div>

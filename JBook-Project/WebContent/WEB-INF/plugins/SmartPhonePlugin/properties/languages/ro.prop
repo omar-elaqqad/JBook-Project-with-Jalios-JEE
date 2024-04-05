@@ -1,0 +1,321 @@
+# Language properties
+
+jcmsplugin.smartphone.lbl.no-result: Nu există rezultate
+jcmsplugin.smartphone.lbl.guest: Invitat
+jcmsplugin.smartphone.lbl.index-default.choose-action: Alege o acțiune
+jcmsplugin.smartphone.lbl.index-default.desktop-link: Mergi la site-ul desktop-ului
+jcmsplugin.smartphone.lbl.workspace-index.filter-ws: Filtrează spații de lucru
+jcmsplugin.smartphone.lbl.workspace-index.recent: Vizitate recent
+jcmsplugin.smartphone.lbl.workspace-index.other: Alte spații de lucru
+jcmsplugin.smartphone.lbl.workspace-index.signup: Nu ai acces la acest spațiu de lucru.
+jcmsplugin.smartphone.lbl.vote.like: Îmi place
+jcmsplugin.smartphone.lbl.vote.unlike: Nu-mi mai place
+jcmsplugin.smartphone.lbl.access-website: Accesează site web
+jcmsplugin.smartphone.lbl.see-on-website: Vezi pe site-ul web
+jcmsplugin.smartphone.lbl.header.website-title: JPlatform - Telefon inteligent
+jcmsplugin.smartphone.lbl.alert.all-alert-read: Ți-ai citit toate alertele.
+jcmsplugin.smartphone.lbl.alert.alert-empty: Nu ai alerte.
+jcmsplugin.smartphone.lbl.alert.unread: Necitite
+jcmsplugin.smartphone.lbl.alert.read: Citite
+jcmsplugin.smartphone.lbl.alert.access-publication: Afișează publicarea
+jcmsplugin.smartphone.lbl.alert.mark-read: Marchează ca citit
+jcmsplugin.smartphone.lbl.forbidden: Nu ai dreptul de a accesa acest conținut.
+jcmsplugin.smartphone.lbl.alert.null-pub: Elementul nu există
+jcmsplugin.smartphone.lbl.yes: Da
+jcmsplugin.smartphone.lbl.no: Nu
+jcmsplugin.smartphone.lbl.member.contact: Contact
+jcmsplugin.smartphone.lbl.member.address: Adresa
+jcmsplugin.smartphone.lbl.member.information: Informații
+jcmsplugin.smartphone.lbl.member.agenda: Agendă
+jcmsplugin.smartphone.lbl.recommendation.no-recommendation: Nu ai primit nicio recomandare.
+jcmsplugin.smartphone.lbl.recommendation.see-publication: Afișează publicarea
+jcmsplugin.smartphone.lbl.admin.members: Membru
+jcmsplugin.smartphone.lbl.admin.see-logs: Jurnale de acces
+jcmsplugin.smartphone.lbl.admin.memory: Memorie
+jcmsplugin.smartphone.lbl.member.add-to-address-book: Adaugă în agendă
+jcmsplugin.smartphone.lbl.mention.noemail: Acest utilizator nu are adresă de e-mail și nu poate fi menționat
+jcmsplugin.smartphone.lbl.jquerymobile.error: S-a produs o eroare.
+jcmsplugin.smartphone.lbl.invalid-home-page: Pagina de pornire nu este configurată.
+jcmsplugin.smartphone.lbl.access-all-spaces: Accesează toate spațiile
+jcmsplugin.smartphone.lbl.jmobile.about-jmobile: Despre JMobile
+
+jcmsplugin.smartphone.action.showmore: Arată mai mult...
+jcmsplugin.smartphone.action.filter: Filtru...
+jcmsplugin.smartphone.action.see-publication: Afișează publicarea
+jcmsplugin.smartphone.lbl.new: Nou
+
+jcmsplugin.smartphone.recommendation.placeholder.members: Selectează membri
+jcmsplugin.smartphone.recommendation.placeholder.groups: Selectează grupuri
+
+jcmsplugin.smartphone.jmobile.version.numero: Versiune {0} Drept de autor © Jalios 2022
+jcmsplugin.smartphone.jmobile.version.droits: Toate drepturile rezervate
+jcmsplugin.smartphone.jmobile.notification: Notificări
+jcmsplugin.smartphone.jmobile.notification.appareil.registred: Dispozitiv înregistrat
+jcmsplugin.smartphone.jmobile.notification.appareil.not-registred: Dispozitiv neînregistrat
+jcmsplugin.smartphone.jmobile.notification.permission : Permisiune
+jcmsplugin.smartphone.jmobile.notification.type-alerte.inactive: Nu este activat niciun tip de alertă
+jcmsplugin.smartphone.jmobile.notification.type-alerte.active: Tip de alertă activată
+
+jcmsplugin.smartphone.lbl.download-mobile-app: Descarcă aplicația mobilă
+
+# Portal
+
+## History
+portal.edition.history.save-by.label: Salvat de {0}
+portal.edition.history.published-by.label: Publicat de {0}
+portal.edition.history.breadcrumb.label: Istoric portal
+portal.edition.history.back-edition.label: Înapoi la editare
+portal.edition.history.back-to-version.label: Înapoi la această versiune
+portal.edition.history.back-to-version.confirm: Dorești să revii la această versiune?
+portal.edition.history.show-more: Arată mai mult
+portal.edition.history.portlet-chooser: Selector portlet
+portal.edition.history.create-portlet: Creează un portlet nou
+portal.edition.history.existing-portlets: Părăsire portlete
+portal.structure.custom-title.label: Numele versiunii
+portal.structure.rename-title.label: Redenumește versiunea
+portal.edition.sidebar.portal-edit.tab-edit.title: Parametri portal
+portal.edition.sidebar.portal-edit.tab-ui.title: Stil portal
+portal.edition.sidebar.portal-edit.template.title: Șabloane portlet
+portal.edition.sidebar.portal-edit.portal-advanced.title: Editare avansată
+
+
+jcmsplugin.smartphone.service.search.no-result: Nu există rezultate
+jcmsplugin.smartphone.service.search.members.no-result: Nu a fost găsit niciun membru
+jcmsplugin.smartphone.service.search.publications.no-result: Nu s-a găsit nicio publicație
+jcmsplugin.smartphone.service.search.tabs.all.label: Toate
+jcmsplugin.smartphone.service.search.tabs.members.label: Membri
+jcmsplugin.smartphone.service.search.tabs.publications.label: Publicații
+
+
+jcmsplugin.smartphone.portal.default-portal.title: Portal mobil
+jcmsplugin.smartphone.portal.default-wysiwyg.title: Bine ai venit la portalul mobil
+jcmsplugin.smartphone.portal.default-wysiwyg.content: Aceasta este pagina implicită a portalului tău mobil
+jcmsplugin.smartphone.portal.edition.edit-portal: Ediție portal
+jcmsplugin.smartphone.portal.lbl.assembly-zone: Zonă de asamblare
+jcmsplugin.smartphone.portal.lbl.final-output: Rezultat final
+jcmsplugin.smartphone.portal.lbl.portal-parameters: Parametri portal
+jcmsplugin.smartphone.portal.lbl.duplicate: Duplicat
+jcmsplugin.smartphone.portal.lbl.publish: Publică
+jcmsplugin.smartphone.portal.lbl.duplicate.modal.title: Duplică portal
+jcmsplugin.smartphone.portal.lbl.filter-workspace: Filtrare în funcție de spațiul de lucru...
+jcmsplugin.smartphone.portal.topbar-title.lbl: Bara de sus
+jcmsplugin.smartphone.portal.administration.title: Administrare
+jcmsplugin.smartphone.portal.administration.mobile-portals: Portaluri mobile
+jcmsplugin.smartphone.portal.administration.default-portals: Portaluri implicite
+jcmsplugin.smartphone.portal.administration.default-portal: Portal implicit
+jcmsplugin.smartphone.portal.administration.settings: Setări
+jcmsplugin.smartphone.portal.creation-modal.title: Creează un portal mobil
+jcmsplugin.smartphone.portal.administration.topbar-color: Culoare fundal bară de sus
+jcmsplugin.smartphone.portal.administration.portal-edition: Ediție portal - {0}
+jcmsplugin.smartphone.portal.administration.topbar-font-color: Culoare font bară de sus
+jcmsplugin.smartphone.portal.administration.topbar-logo: Logo
+jcmsplugin.smartphone.portal.administration-table.title: Titlu
+jcmsplugin.smartphone.portal.administration-table.mdate: Ultima actualizare
+jcmsplugin.smartphone.portal.administration.create-portal: Creează portal
+jcmsplugin.smartphone.portal.administration.return-to-home: Revino la aplicația acasă editor portal
+jcmsplugin.smartphone.portal.administration.msg.settings-updated: Setările au fost salvate.
+
+# MyDay
+jcmsplugin.smartphone.my-day.today.label: Astăzi
+jcmsplugin.smartphone.my-day.calendar.service-link.title: Afișează agenda mea
+jcmsplugin.smartphone.my-day.jtask.service-link.title: Afișează activitățile mele
+
+data.$id.jcmsplugin.smartphone.category.nav-root.name: Navigare mobilă
+data.$id.jcmsplugin.smartphone.category.nav-root-home.name: Acasă
+
+# Properties
+jcmsplugin.smartphone.home.news: Știri
+jcmsplugin.smartphone.workspace.news: Știrile din spațiul de lucru
+jcmsplugin.smartphone.default.page.size: Dimensiune implicită pagină
+jcmsplugin.smartphone.lbl.topbar-title: Titlul site-ului pentru smartphone
+jcmsplugin.smartphone.image.resize.max-width: Lățimea max. a imaginilor redimensionate
+jcmsplugin.smartphone.map-service: Serviciu hartă
+jcmsplugin.smartphone.search.searchable-types: Serviciul Căutare - Tipurile incluse în rezultatele căutării
+jcmsplugin.smartphone.search.portletId: Serviciul Căutare - Portlet
+jcmsplugin.smartphone.search.portletId.help: Portletul de căutare utilizat pentru a defini comportamentul implicit al serviciului Căutare
+jcmsplugin.smartphone.search.not-searchable-types: Serviciul Căutare - Tipurile excluse din rezultatele căutării
+jcmsplugin.smartphone.drawer.background-image: Imaginea de fundal al sertarului serviciului
+
+jcmsplugin.smartphone.mobileapp.android.play-store : Magazin Play Android
+jcmsplugin.smartphone.mobileapp.ios.app-store : iOS App Store
+
+# Services
+jcmsplugin.smartphone.service.recenthistory:   Istoric recent
+jcmsplugin.smartphone.service.admin:    Administrator
+jcmsplugin.smartphone.service.search: Căutare
+jcmsplugin.smartphone.service.workflow: Flux de lucru
+jcmsplugin.smartphone.service.news: Știri
+jcmsplugin.smartphone.service.workspace: Spațiu de lucru
+
+# Member menu
+jcmsplugin.smartphone.member-menu.application-menu: Aplicații
+jcmsplugin.smartphone.member-menu.my-day: Ziua mea
+jcmsplugin.smartphone.member-menu.navigate: Navigare
+
+# Workspace Services
+jcmsplugin.smartphone.workspace-service.search: Căutare
+jcmsplugin.smartphone.workspace-service.news: Știri
+
+portlet.ability.jcmsplugin-smartphone:                SmartPhone
+portlet.ability.jcmsplugin-smartphone.application:    Serviciu
+
+# Labels
+jcmsplugin.smartphone.fulldisplay.webpage.view-site: Vizitează site-ul web
+
+jcmsplugin.smartphone.share.empty: Nu există serviciu disponibil pentru partajarea URL-ului {0}.
+
+# Feedback Mobile App
+jcmsplugin.smartphone.mobileapp.feedback.lbl: Trimite un raport
+jcmsplugin.smartphone.mobileapp.feedback.email: Adresa de e-mail a destinatarului
+jcmsplugin.smartphone.mobileapp.feedback.email.help: Această adresă de e-mail va primi feedback de la utilizatorii aplicației mobile. Dacă nu s-a setat o adresă de e-mail, trimiterea este dezactivată și nu este disponibilă din aplicația mobilă.
+jcmsplugin.smartphone.mobileapp.feedback.settings: Setări
+
+jcmsplugin.smartphone.mobileapp.feedback.subject: {0} a trimis un raport din aplicația mobilă
+jcmsplugin.smartphone.mobileapp.feedback.hello: Salut,
+jcmsplugin.smartphone.mobileapp.feedback.description: {0} i-a trimis un raport despre cum utilizează aplicația mobilă.
+jcmsplugin.smartphone.mobileapp.feedback.user-info: Informații utilizator:
+jcmsplugin.smartphone.mobileapp.feedback.user-info.login: Conectare: {0}
+jcmsplugin.smartphone.mobileapp.feedback.user-info.siteurl: URL site: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info: Informații despre dispozitiv:
+jcmsplugin.smartphone.mobileapp.feedback.device-info.platform: Platformă: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info.version: Versiune platformă: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info.model: Model dispozitiv: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info.uuid: ID dispozitiv: {0}
+jcmsplugin.smartphone.mobileapp.shareurl.message: Ce dorești să faci?
+
+# AlertChannel
+jcmsplugin.smartphone.alert.channel.label: JMobile
+jcmsplugin.smartphone.alert.channel.description: Trimite alertele prin protocolul JMobile
+
+# ExtraDBData
+extradb.Member.jcmsplugin.smartphone.token: Token JMobile
+extra.Shortcut.jcmsplugin.smartphone.mobile-url: JMobile - URL scurtătură
+extra.Shortcut.jcmsplugin.smartphone.mobile-available: JMobile - Afișare în lansatorul de aplicații?
+
+# Editable Properties
+jcmplugin.smartphone.jpush.fcm.project-id: FCM - ID proiect
+jcmplugin.smartphone.notification.encrypt : Notificări criptare
+jcmsplugin.smartphone.ios.download-code.url-prefix: iOS - Cod de descărcare - Prefix URL
+jcmsplugin.smartphone.ios.download-code.threshold: iOS - Cod descărcare - Prag alertă
+$id.jcmsplugin.smartphone.ios.downloadcode.manager-group: iOS - Cod descărcare - Grup manager
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.ios.teamId: Apple - Id echipă
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.appId: Id aplicație JMobile
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.android.fingerprints: amprente certificat (sha256)
+jcmplugin.smartphone.space.show-introduction: Afișează introducerea spațiilor
+
+$id.jcmsplugin.smartphone.portal.default-portal: Portal implicit
+# Templates
+types.PortletQueryForeach.templates.jmobile.default.label: Șablon implicit
+types.PortletQueryForeach.templates.jmobile.dataimage.label: Listă cu șablon imagine
+
+types.PortletQueryForeachCards.templates.jmobile.withBorderGrid.label: Carduri șablon cu margine ca grilă
+types.PortletQueryForeachCards.templates.jmobile.withoutBorderGrid.label: Carduri șablon fără margine ca grilă
+types.PortletQueryForeachCards.templates.jmobile.withBorder.label: Carduri șablon cu margine ca grilă
+types.PortletQueryForeachCards.templates.jmobile.light.label: Carduri șablon fără meta
+types.PortletQueryForeachCards.templates.jmobile.default.label: Șablon card implicit
+types.PortletQueryForeachCards.templates.jmobile.withLead.label: Șablon carduri cu margine și parte introductivă
+types.PortletQueryForeachCards.templates.jmobile.withSliding.label: Șablon card glisant fără margine
+types.PortletQueryForeachCards.templates.jmobile.withSlidingBorder.label: Șablon card glisant cu margine
+types.PortletQueryForeachCards.templates.jmobile.horizontalwithSliding.label: Șablon card glisant orizontal fără margine
+types.PortletQueryForeachCards.templates.jmobile.carousel.label: Șablon card carusel
+
+types.PortletQueryForeachDetail.templates.jmobile.default.label: Șablon implicit
+types.PortletQueryForeachDetail.templates.jmobile.dataimage.label: Listă cu șablon imagine
+
+types.PortletCarousel.templates.jmobile.default.label: Șablon implicit
+
+types.PortletWYSIWYG.templates.jmobile.default.label:  Șablon implicit
+
+types.AbstractPortletSkinable.templates.jmobile.default.label: Șablon implicit
+
+types.AbstractPortletSkinable.templates.jmobile.light.label: Șablon fără titlu
+
+types.PortletImage.templates.jmobile.default.label: Șablon implicit
+
+types.PortletJsp.templates.jmobile.default.label: Șablon implicit
+
+types.PortletRSS.templates.jmobile.default.label: Șablon implicit
+
+
+# From SmartPhonePortal.xml
+types.SmartPhonePortal.label: Portal JMobile
+types.SmartPhonePortal.description: Un portal de bază cu opțiuni minime
+types.SmartPhonePortal.fields.image.label: Imagine
+types.SmartPhonePortal.fields.pageTitle.description: Titlul afișat în titlul paginii
+types.SmartPhonePortal.fields.description.label: Descriere
+types.SmartPhonePortal.fields.pageTitle.label: Titlul paginii
+types.SmartPhonePortal.fields.css.label: CSS
+types.SmartPhonePortal.fields.structure.label: Structură
+types.SmartPhonePortal.title.label: Titlu
+types.SmartPhonePortal.fields.displayScrollToTop.label: Arată defilare către linkul superior
+types.SmartPhonePortal.fields.keywords.label: Cuvinte cheie (SEO)
+types.SmartPhonePortal.fields.keywords.description: Aceste cuvinte cheie (separate prin virgule) vor fi utilizare în pagina de pornire a portalului.
+types.SmartPhonePortal.fields.portlets.label: Portlete
+types.SmartPhonePortal.fields.portlets.description: Listă portlete
+
+# REST
+doc.rest.rsrc-meth.FeedbackResource: POST
+doc.rest.rsrc-desc./smartphone/feedback: Trimite feedback utilizatorului din aplicația mobilă către adresa de e-mail introdusă în proprietățile modulului JMobile.
+
+doc.rest.rsrc-meth.AddJWTokenResource: GET
+doc.rest.rsrc-desc./smartphone/auth/addjwtoken: Returnează token-ul JWT al membrului conectat.
+doc.rest.rsrc-desc./smartphone/auth/addjwtoken/{memberId}: Returnează JWToken al unui membru cu <code>memberId</code> ID.
+
+doc.rest.rsrc-meth.RegisterJMobileTokenResource: GET
+doc.rest.rsrc-desc./smartphone/registerToken/{deviceId}/{deviceOs}/{deviceModel}: Salvează informațiile pentru telefonul mobil al unui membru.
+
+doc.rest.rsrc-meth.DeleteDeviceInfoResource: GET
+doc.rest.rsrc-desc./smartphone/deleteToken/{deviceId}/{deviceOs}/{deviceModel}: Șterge informații din telefonul mobil al unui membru.
+
+doc.rest.rsrc-meth.GetNotificationDiagnosticResource: GET
+doc.rest.rsrc-desc./smartphone/notificationDiagnostic/{deviceId}/{deviceOs}/{deviceModel}: Returnează numărul de tipuri de alerte activate pe JPlatform.
+
+doc.rest.rsrc-meth.JMobileInfoResource: GET
+doc.rest.rsrc-desc./smartphone/info: Returnează informațiile plugin-ului JMobile.
+
+doc.rest.rsrc-meth.IOSDownloadResource: GET
+doc.rest.rsrc-desc./smartphone/ios/download: Returnează un URL de descărcare pentru aplicația iOS.
+
+data.$id.shortcut.jcmsplugin.smartphone-portals.title: Portaluri JMobile
+data.$id.shortcut.jcmsplugin.smartphone-portals.text: Gestionează portalurile tale JMobile și navigarea
+
+jcmplugin.smartphone.bottom-nav-item.home: Acasă
+jcmplugin.smartphone.bottom-nav-item.alerts: Alertă
+jcmplugin.smartphone.bottom-nav-item.search: Căutare
+jcmplugin.smartphone.bottom-nav-item.application-menu: Aplicații
+
+ui.editportlet.usage.jmobile: JMobile
+ui.editportlet.usage.skin.jmobile: JMobile
+
+# ------------------------------------------------------------
+# IOS Download Code
+# ------------------------------------------------------------
+jcmsplugin.smartphone.ios.admin-menu: Gestionează codul de descărcare pentru aplicația mobilă iOS
+jcmsplugin.smartphone.ios.add-codes.title: Adaugă codurile de descărcare
+jcmsplugin.smartphone.ios.add-codes.lbl.codes: Coduri
+jcmsplugin.smartphone.ios.add-codes.lbl.codes.h: Introdu codurile care vor fi adăugate separate prin spații sau rând nou.
+jcmsplugin.smartphone.ios.add-codes.btn.delete-all: Șterge toate codurile neutilizate...
+jcmsplugin.smartphone.ios.add-codes.msg.code-count:  <p>{0,choice,0#Nu s-a utilizat niciun cod|1#A fost utilizat un cod|2#{0} a fost utilizat}.</p><p>{1,choice,0#Nu mai există coduri neutilizate|1#mai există un singur cod neutilizat.|2#Mai există {1} coduri neutilizate}.
+jcmsplugin.smartphone.ios.add-codes.msg.codes-added:  {0,choice,0#Nu a fost adăugat niciun cod|1#A fost adăugat un cod|2#{0} a fost adăugat}.
+jcmsplugin.smartphone.ios.add-codes.msg.code-deleted: {0,choice,0#Nu a fost șters niciun cod|1#Un cod neutilizat a fost șters|2#{0} coduri neutilizate au fost șterse}.
+jcmsplugin.smartphone.ios.download.msg.oodc: <p>Ne pare rău:-(</p><p>Momentan, nu poți descărca aplicația mobilă.</p><p>Nu mai există coduri de descărcare.</p><p>Încercați din nou mai târziu.</p> 
+jcmsplugin.smartphone.ios.download.msg.ldnr: <p>Ne pare rău:-(</p><p>Momentan, nu poți descărca aplicația mobilă.</p><p>Serviciul de distribuire a codurilor de descărcare nu răspunde.</p><p>Încercați din nou mai târziu.</p>
+
+data.$id.jcmsplugin.smartphone.ios.downloadcode.manager-group.name: Manageri coduri descărcare aplicație iOS
+
+# ------------------------------------------------------------
+# ALERT
+# ------------------------------------------------------------
+alert.name.jcmsplugin-smartphone:                                              JMobile
+alert.name.jcmsplugin-smartphone.ios-downloadcode-shortage:                    Lipsă coduri descărcare
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.title:               Lipsă coduri descărcare
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.short-description:   {remainingCount}
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.description:         <p>{remainingCount}</p><p>Pentru a adăuga coduri de descărcare noi, mergi la secțiunea „Operațiuni” din <a href="admin/admin.jsp">Zonă administrator</a>.</p>
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.remaining-count:     {0,choice,0#Toate codurile de descărcare au fost utilizate|1#Mai există numai un cod de descărcare|2#Mai există numai {0} coduri de descărcare}.
+
+# ------------------------------------------------------------
+# ACL
+# ------------------------------------------------------------
+acl.resource.plugins/jmobile: JMobile
+acl.resource.plugins/jmobile/can-administrate-mobile-portals: Administrare portal mobil
+acl.resource.admin/operation/can-manage-ios-downloadcode: Gestionare coduri de descărcare iOS

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow id="wfguestaccountrequest" type="process" init="-200" version="4">
+  <state pstatus="-200" reminder="0" duration="0" targetPstatus="0">
+    <action when="in" type="alertWorkers" repeat="0" />
+  </state>
+  <state pstatus="20" reminder="0" duration="0" targetPstatus="0" />
+  <state pstatus="50" reminder="0" duration="0" targetPstatus="0" />
+  <state pstatus="60" reminder="0" duration="0" targetPstatus="0" />
+  <transition source="-200" target="60" roleId="guestvalidator" />
+  <transition source="-200" target="50" roleId="guestvalidator" />
+  <transition source="50" target="20" roleId="guestvalidator" />
+  <transition source="50" target="60" roleId="guestvalidator" />
+  <transition source="60" target="20" roleId="guestvalidator" />
+  <role roleId="guestvalidator" />
+</workflow>
+

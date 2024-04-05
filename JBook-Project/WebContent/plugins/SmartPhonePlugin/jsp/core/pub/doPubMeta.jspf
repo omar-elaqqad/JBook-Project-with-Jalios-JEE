@@ -1,0 +1,21 @@
+<%@page import="com.jalios.jcms.PhotoSize"%>
+<div class="pub-meta card-item">
+	<jalios:memberphoto resource="memberphoto-phone" member="<%= pub.getAuthor() %>" size="<%= PhotoSize.TINY %>" />
+	<div class="pub-meta-inner">
+		<a class="pub-meta-item pub-meta-item-author" href="<%= smartPhoneManager.getDataUrl(pub.getAuthor()) %>">
+		  <%= pub.getAuthor() %> 
+		</a>
+		<% if (pub.getPdate() != null) { %><span class="pub-meta-item">&middot; <%= JcmsUtil.getFriendlyDate(pub.getPdate(), DateFormat.SHORT, true, userLocale) %></span><% } %>
+		<div class="pub-meta-item"><%= pub.getWorkspace() %></div>
+		<div class="pub-meta-categories">
+		  <% { %>
+		    <% Category[] categories = pub.getCategories(); %>
+		    <% if (Util.notEmpty(categories)) { %>
+		      <div class="pub-category">
+		        <%@ include file="/plugins/SmartPhonePlugin/jsp/core/doCategoryList.jspf" %>
+		      </div>
+		    <% } %>
+		  <% } %>
+		</div>	
+	</div>
+</div>

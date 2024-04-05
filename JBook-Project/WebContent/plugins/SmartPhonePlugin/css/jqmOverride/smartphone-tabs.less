@@ -1,0 +1,55 @@
+/* *** */
+/* Tabs */
+/* *** */
+
+.ui-tabs.ui-tabs-sticky {
+  padding: 0;
+}
+
+.ui-page-theme-a .ui-tabs-active .ui-tabs-anchor {
+  /* copied from jquery.mobile-1.4.5.css line 1041 and onwards */
+  background-color:     #3388cc /*{a-active-background-color}*/;
+  border-color:     #3388cc /*{a-active-border}*/;
+  color:          #fff /*{a-active-color}*/;
+  text-shadow: 0 /*{a-active-shadow-x}*/ 1px /*{a-active-shadow-y}*/ 0 /*{a-active-shadow-radius}*/ #005599 /*{a-active-shadow-color}*/;
+}
+
+
+html .ui-page-theme-a {
+  .ui-grid-a,
+  .ui-grid-b {
+    > li > .ui-btn {
+      border-radius: 0;
+      border: 0 none;
+      text-shadow: initial;
+      border-bottom: 2px solid white;
+      color: #999;
+      background-color: white;
+      font-size: 16px;
+      padding-bottom: 8px;
+      margin-top: 0;
+      margin-bottom: 0;
+      &.ui-btn-active {
+        border-bottom: 2px solid @sp-color-active;
+        color: @sp-color-active;
+      }
+      &:active,
+      &:hover {
+        background-color: rgba(239, 239, 239, 0.2);
+      }
+    }
+  }
+}
+
+
+.nav-tabs-underlined {
+  li > a {
+    height: 100%;
+    /* background-color: red; */
+    width: 100%;
+  }
+}
+
+HTML .nav-tabs.nav-tabs-underlined > LI > A {
+  padding: 13px 15px;
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<type name="SmartPhonePortal" superclass="com.jalios.jcmsplugin.smartphone.portal.AbstractSmartPhonePortal" debatable="false" unitFieldEdition="true" audienced="false" categoryTab="true" readRightTab="true" updateRightTab="true" templateTab="true" workflowTab="true" advancedTab="true">
+  <title ml="true"/>
+  <fields>
+    <field name="description" editor="wysiwyg" required="false" type="String" searchable="true" wysiwygConfigurationId="default" ml="true" compactDisplay="false" descriptionType="tooltip" abstract="true" truncate="400" html="false" checkHtml="true" inline="true"/>
+    <field name="structure" editor="textarea" required="false" compactDisplay="false" type="String" searchable="false" rows="5" cols="80" ml="false" wiki="false" html="false" wysiwygConfigurationId="" checkHtml="true"/>
+    <field name="portlets" editor="link" required="false" compactDisplay="false" type="com.jalios.jcms.portlet.PortalElement[]"/>
+    <field name="displayScrollToTop" editor="boolean" required="false" compactDisplay="false" type="boolean" default="on"/>
+    <field name="pageTitle" editor="textfield" required="false" compactDisplay="false" type="String" searchable="false" size="80" ml="true" html="false" checkHtml="true"/>
+    <field name="image" editor="textfield" required="false" compactDisplay="false" type="String" searchable="false" size="80" ml="false" html="false" checkHtml="true"/>
+    <field name="css" editor="textarea" required="false" compactDisplay="false" type="String" searchable="false" rows="5" cols="80" ml="false" wiki="false" html="false" wysiwygConfigurationId="" checkHtml="true"/>
+  </fields>
+</type>

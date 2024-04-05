@@ -1,0 +1,24 @@
+.cs-theme-cs-white #cs-header {
+  background-color: #FFFFFF;
+}
+.cs-theme-cs-white #cs-header:not(.cs-custom-header) #cs-header-tabs UL.nav-tabs > LI > A,
+.cs-theme-cs-white #cs-header:not(.cs-custom-header) #cs-header-tabs UL.nav-tabs > LI.nav-admin > A {
+  color: #555555;
+}
+.cs-theme-cs-white #cs-header:not(.cs-custom-header) #cs-header-tabs UL.nav-tabs > LI > A:active,
+.cs-theme-cs-white #cs-header:not(.cs-custom-header) #cs-header-tabs UL.nav-tabs > LI.nav-admin > A:active,
+.cs-theme-cs-white #cs-header:not(.cs-custom-header) #cs-header-tabs UL.nav-tabs > LI > A:hover,
+.cs-theme-cs-white #cs-header:not(.cs-custom-header) #cs-header-tabs UL.nav-tabs > LI.nav-admin > A:hover,
+.cs-theme-cs-white #cs-header:not(.cs-custom-header) #cs-header-tabs UL.nav-tabs > LI > A:focus,
+.cs-theme-cs-white #cs-header:not(.cs-custom-header) #cs-header-tabs UL.nav-tabs > LI.nav-admin > A:focus {
+  color: white;
+}
+.cs-theme-cs-white #cs-header:not(.cs-custom-header) #cs-header-tabs UL.nav-tabs > LI.active > A:after,
+.cs-theme-cs-white #cs-header:not(.cs-custom-header) #cs-header-tabs UL.nav-tabs > LI.active-child > A:after {
+  background-color: #DDD;
+}
+.cs-theme-cs-white #cs-header:not(.cs-custom-header) UL.nav-tabs {
+  border-bottom: 1px solid #ddd;
+  background: rgba(220, 220, 220, 0.1);
+}
+/*# sourceMappingURL=cs-white.css.map */

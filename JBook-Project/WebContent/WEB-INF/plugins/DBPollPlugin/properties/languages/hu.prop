@@ -1,0 +1,127 @@
+jcmsplugin.dbpoll.btn.vote:            Szavazok
+jcmsplugin.dbpoll.lbl.vote:            Szavazat
+jcmsplugin.dbpoll.lbl.open:            Nyissa meg ezt a közvélemény-kutatást
+jcmsplugin.dbpoll.lbl.close:           Zárja be ezt a közvélemény-kutatást
+jcmsplugin.dbpoll.lbl.show-result:     Eredmények megjelenítése
+jcmsplugin.dbpoll.lbl.vote-cnt:        {0,choice,0#0 szavazat|1#1 szavazat|2#{0,number,integer} szavazat}
+jcmsplugin.dbpoll.lbl.dates:           Közvélemény-kutatás ettől: {0} eddig: {1}
+jcmsplugin.dbpoll.lbl.all-polls:       Minden közvélemény-kutatás
+jcmsplugin.dbpoll.lbl.all-polls-ws:    Minden közvélemény-kutatás ebben {0}
+jcmsplugin.dbpoll.lbl.view-all-polls:  Minden közvélemény-kutatás megtekintése
+jcmsplugin.dbpoll.lbl.view-all-polls-ws:  Az összes közvélemény-kutatás megtekintése az aktuális munkaterületben
+jcmsplugin.dbpoll.lbl.vote-title:      Szavazás erre {0}
+jcmsplugin.dbpoll.lbl.create-poll:     Egy új közvélemény-kutatás közzététele
+jcmsplugin.dbpoll.msg.option-change:   Nem módosíthatja a közvélemény-kutatás opcióit, mert bizonyos felhasználók már szavaztak az aktuális opciók esetén.
+jcmsplugin.dbpoll.msg.already-voted:   Ön már szavazott erre a közvélemény-kutatásra.
+jcmsplugin.dbpoll.msg.no-result:       Ez a közvélemény-kutatás még nem kapott szavazatokat.
+jcmsplugin.dbpoll.msg.choose-option:   A szavazáshoz ki kell választani egy lehetőséget.
+jcmsplugin.dbpoll.msg.closed-poll:     Ez a közvélemény-kutatás lezárult, nem szavazhat.
+jcmsplugin.dbpoll.msg.poll-loop:       Nem indíthat közvélemény-kutatást annak saját leírásáról.
+
+jcmsplugin.dbpoll.modal.step1:         Közvélemény-kutatás opciók
+jcmsplugin.dbpoll.modal.step2:         A közvélemény-kutatás ajánlása
+jcmsplugin.dbpoll.modal.btn.publish:   Közzététel
+jcmsplugin.dbpoll.modal.btn.publish.alt:  A közvélemény-kutatás közzététele
+jcmsplugin.dbpoll.modal.btn.next.alt:  A közvélemény-kutatás közzététele és ajánlása...
+jcmsplugin.dbpoll.modal.success-info:  A közvélemény-kutatása létre lett hozva és elérhető itt: {0}
+
+jcmsplugin.dbpoll.publish-menu.add-poll: Közvélemény-kutatás
+
+jcmsplugin.dbpoll.cs.options:  Kérjük, adjon meg legalább két lehetőség a közvélemény-kutatás esetén
+jcmsplugin.dbpoll.cs.optionsml:  Kérjük, adjon meg legalább két lehetőséget a közvélemény-kutatás esetén (a következőben: {0})
+
+jcmsplugin.dbpoll.search.placeholder: Közvélemény-kutatás keresése...
+
+jcmsplugin.dbpoll.app.title: Közvélemény-kutatások
+
+jcmsplugin.dbpoll.app.no-result-welcome: Üdvözöljük a Polls alkalmazásban
+
+jcmsplugin.dbpoll.app.catalog.title: Közvélemény-kutatások
+jcmsplugin.dbpoll.app.catalog.root: Kezdőlap
+jcmsplugin.dbpoll.app.catalog.btn.add-poll: Közvélemény-kutatás hozzáadása
+jcmsplugin.dbpoll.app.catalog.polls-number: {0} {0,choice,0#|1#közvélemény-kutatás|2#közvélemény-kutatás}
+
+jcmsplugin.dbpoll.app.card.closed-poll: Befejezett közvélemény-kutatás
+
+jcmsplugin.dbpoll.app.filter.status.all: Minden közvélemény-kutatás
+jcmsplugin.dbpoll.app.filter.status.opened: Folyamatban lévő közvélemény-kutatások
+jcmsplugin.dbpoll.app.filter.status.closed: Befejezett közvélemény-kutatások
+jcmsplugin.dbpoll.app.filter.mbr:        Hozzáadta...
+jcmsplugin.dbpoll.app.filter.begin-date: Hozzáadás ezután...
+jcmsplugin.dbpoll.app.filter.end-date:   Hozzáadás ezelőtt...
+jcmsplugin.dbpoll.app.filter.workspace:  Hozzáadva a munkaterülethez...
+
+# ------------------------------------------------------------
+#  Unified insert
+# ------------------------------------------------------------
+unified-insert.items.poll: Közvélemény-kutatás
+unified-insert.items.poll.longtitle: Közvélemény-kutatás
+unified-insert.items.poll.subtitle:
+
+# ------------------------------------------------------------
+#  Smartphone
+# ------------------------------------------------------------
+jcmsplugin.smartphone.dbpoll: Közvélemény-kutatások
+jcmsplugin.smartphone.dbpoll.navbar.opened: Folyamatban lévő közvélemény-kutatások
+jcmsplugin.smartphone.dbpoll.navbar.closed: Befejezett közvélemény-kutatások
+
+# ------------------------------------------------------------
+#  Recommendation
+# ------------------------------------------------------------
+alert.name.recommendation.dbpoll-recommendation:                      Felkérés a közvélemény-kutatás elvégzésére
+alert.msg.recommendation.dbpoll-recommendation.title:                 Felkérés a közvélemény-kutatás elvégzésére: {data}
+alert.msg.recommendation.dbpoll-recommendation.short-description:     {author} felkérte Önt, hogy végezze el a/az {data} közvélemény-kutatást.{data.url}
+alert.msg.recommendation.dbpoll-recommendation.description:           <p>{author} felkérte Önt, hogy végezze el a/az {data} közvélemény-kutatást.</p>
+jcmsplugin.dbpoll.recommendation.Poll:                                Tagok felkérése a közvélemény-kutatás elvégzésére: {0}
+
+# ------------------------------------------------------------
+#  ESN
+# ------------------------------------------------------------
+jcmsplugin.esn.activity.form-tab.poll: Közvélemény-kutatás
+
+# ------------------------------------------------------------
+#  Shortcuts
+# ------------------------------------------------------------
+data.$id.shortcut.jcmsplugin.dbpoll.title: Közvélemény-kutatások
+data.$id.shortcut.jcmsplugin.dbpoll.text: Közvélemény-kutatás kezelő alkalmazás
+
+# ------------------------------------------------------------
+#  Plugin label and description
+# ------------------------------------------------------------
+plugin.DBPollPlugin.label: Közvélemény-kutatás bővítmény
+plugin.DBPollPlugin.description: Ezzel a bővítménnyel egyszerű közvélemény-kutatásokat hozhat létre. A közvélemény-kutatások a közvélemény-kutatás portleten keresztül jelennek meg. A szavazatok tárolása az RDBMS-ben történik.
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From Poll.xml
+types.Poll.title.description: Közvélemény-kutatás címe
+types.Poll.fields.description.label: Leírás
+types.Poll.label: Közvélemény-kutatás
+types.Poll.fields.options.description: A szavazási opciók.
+types.Poll.fields.description.description: A közvélemény-kutatás rövid leírása (a kérdés és az opciók között jelenik meg)
+types.Poll.description: Mini közvélemény-kutatás egy kérdéssel
+types.Poll.fields.options.label: Opciók
+types.Poll.title.label: Cím
+types.Poll.fields.image.label: Kép
+types.Poll.fields.image.description: Opcionális kép a közvélemény-kutatás leírása esetén.
+types.Poll.fields.closed.label: a közvélemény-kutatás bezárása
+types.Poll.fields.closed.onLabel: Igen
+types.Poll.fields.closed.offLabel: Nem
+types.Poll.fields.closed.description: Be kell zárni a közvélemény-kutatást?
+
+# From PortletPoll.xml
+types.PortletPoll.fields.refineWorkspace.labelList: Az utolsó közvélemény-kutatás megjelenítése a munkaterületről|Megjeleníti az utolsó közvélemény-kutatást minden munkaterületről
+types.PortletPoll.fields.poll.label: Közvélemény-kutatás
+types.PortletPoll.title.description: Cím
+types.PortletPoll.description: Ez a portlet megjeleníti egy közvélemény-kutatást, majd az aktuális eredményeket, ha a szavazás befejeződött.
+types.PortletPoll.fields.poll.description: A megjelenítendő közvélemény-kutatás (ha nincs, az utolsó közzétett közvélemény-kutatást jeleníti meg)
+types.PortletPoll.fields.refineWorkspace.description: Az utolsó közvélemény-kutatás megjelenítése a aktuális munkaterületről vagy minden munkaterületről.
+types.PortletPoll.label: Közvélemény-kutatás portlet
+types.PortletPoll.title.label: Cím
+types.PortletPoll.fields.refineWorkspace.label: Finomítás
+types.PortletPoll.fields.hideWhenNoResults.label: A portlet elrejtése, ha nincs közvélemény-kutatás
+types.PortletPoll.fields.hideWhenNoResults.onLabel: Igen
+types.PortletPoll.fields.hideWhenNoResults.offLabel: Nem
+types.PortletPoll.fields.hideWhenNoResults.description: Ha nincs megjelenítendő közvélemény-kutatás, a portlet elrejtése.

@@ -1,0 +1,65 @@
+.typology-form .presentation {
+  margin-bottom: 20px;
+}
+.typology-form .presentation:before,
+.typology-form .presentation:after {
+  content: " ";
+  display: table;
+}
+.typology-form .presentation:after {
+  clear: both;
+}
+.typology-form .presentation:before,
+.typology-form .presentation:after {
+  display: table;
+  content: " ";
+}
+.typology-form .presentation:after {
+  clear: both;
+}
+.typology-form .presentation IMG.thumbnail {
+  float: left;
+  margin-right: 12px;
+  margin-bottom: 6px;
+}
+.typology-form .typology-name {
+  font-size: 30px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #eeeeee;
+}
+.typology-form .CollaborativeSpace.resultDisplay .meta-datas {
+  color: #777777;
+  font-size: 0.9em;
+  margin-bottom: 6px;
+}
+.typology-form .cs-item {
+  margin-bottom: 20px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #eeeeee;
+}
+.typology-form .cs-item.last {
+  border-bottom: none;
+}
+.typology-form .spaces-list > UL.items {
+  padding-left: 0;
+  margin-left: 0;
+  list-style-type: none;
+}
+.typology-form .spaces-list > UL.items LI .content {
+  padding-left: 15px;
+}
+.typology-form .spaces-list > UL.items .wiki IMG {
+  max-width: 500px;
+}
+.typology-form .content .hl {
+  font-weight: bold;
+}
+.typology-form .content .meta-datas .admins,
+.typology-form .content .meta-datas .admins .cs-animators {
+  display: inline;
+}
+.typology-form .no-result-label {
+  margin-top: 10px;
+  display: block;
+}
+/*# sourceMappingURL=cs-typology.css.map */

@@ -1,0 +1,114 @@
+jcmsplugin.dbcomment.edit.lbl.add-comment:    コメントを追加する
+jcmsplugin.dbcomment.edit.lbl.add-comment-verb:  コメント
+jcmsplugin.dbcomment.edit.lbl.create-comment: コメントを投稿する
+jcmsplugin.dbcomment.edit.lbl.cancel:         キャンセル
+jcmsplugin.dbcomment.edit.lbl.link-top:       ページトップに戻る
+jcmsplugin.dbcomment.edit.lbl.comment-on:     {0}にコメントする
+jcmsplugin.dbcomment.edit.lbl.title:          コメント
+jcmsplugin.dbcomment.edit.lbl.view-comment:   コメントを見る
+jcmsplugin.dbcomment.edit.lbl.disable-comment:  コメントを無効にする
+jcmsplugin.dbcomment.edit.lbl.enable-comment:   コメントを有効にする
+jcmsplugin.dbcomment.edit.lbl.view-all-comments: {0,choice,0#コメントがありません|1#件のコメントを表示する|2# {0} 件のコメントを表示する}
+jcmsplugin.dbcomment.edit.lbl.collapse-comments: コメントを折りたたむ
+jcmsplugin.dbcomment.edit.lbl.warn.edit-moderation.disabled:        現在のモデレーションタイプは、あなたにコメントの変更を許可していません。あなたは他のフィールドのみ許可されています。ただしコメントのワークフローステータスを更新することができます。
+jcmsplugin.dbcomment.edit.follow:        パブリケーションを購読する
+
+jcmsplugin.dbcomment.lbl.comment:             コメント
+jcmsplugin.dbcomment.lbl.comments:            コメント
+jcmsplugin.dbcomment.lbl.comment-count:       {0,choice,0#コメントがありません|1#{0} 件のコメント|2#{0} 件のコメント}
+jcmsplugin.dbcomment.lbl.comment-count-text:  {0,choice,0#コメント|1#件のコメント|2#件のコメント}
+jcmsplugin.dbcomment.lbl.new:                 未読
+jcmsplugin.dbcomment.lbl.see-previous-comments: {0,choice,1#以前のコメントを表示する。|2#{0}以前の件のコメントを表示する。}
+jcmsplugin.dbcomment.lbl.major-update-date:   最近の主な更新{0}
+jcmsplugin.dbcomment.lbl.private:             プライベート
+jcmsplugin.dbcomment.lbl.private-description: このコメントはグループ"{0}"のメンバーが読むことができます。
+jcmsplugin.dbcomment.lbl.private-edit-tooltip: プライベートコメントを有効化すると、このコメントはグループ"{0}"のユーザーに限りアクセス可能になります。
+jcmsplugin.dbcomment.lbl.non-visible-created-comment: あなたのコメントが作成されました。現在検証中です。
+jcmsplugin.dbcomment.lbl.closed-comment:     このパブリケーションへのコメントが終了されました。
+
+jcmsplugin.dbcomment.commentTop-section:最もコメントが多かったコンテンツ
+jcmsplugin.dbcomment.commentTop-section.help: コメントが多かったコンテンツトップ10
+jcmsplugin.dbcomment.commentTop.name:タイトル
+jcmsplugin.dbcomment.commentTop.number: コメント
+
+# ----------------------------------------------------------------------
+# Alert
+# ----------------------------------------------------------------------
+alert.name.jcmsplugin-dbcomment:                              コメント
+alert.name.jcmsplugin-dbcomment.new-comment:                  新規コメント
+alert.msg.jcmsplugin-dbcomment.new-comment.title:             "{parent}"への新規コメント
+alert.msg.jcmsplugin-dbcomment.new-comment.short-description: {author}が"{parent}"への新規コメントをパブリッシュしました。{parent.link}
+alert.msg.jcmsplugin-dbcomment.new-comment.description:       <p>{author}が新規 {data}をパブリッシュしました。</p>
+alert.name.jcmsplugin-dbcomment.new-mention:                  新規の言及
+alert.msg.jcmsplugin-dbcomment.new-mention.title:             {parent}への新規コメントであなたについて言及がありました
+alert.msg.jcmsplugin-dbcomment.new-mention.short-description:  {author}が"{parent}"への新規コメントであなたについて言及しました。{parent.link}
+alert.msg.jcmsplugin-dbcomment.new-mention.description:        <p>{author}が"{parent.data}"への新規コメントであなたについて言及しました。</p> 
+alert.new-comment-mention.title:     {parent}への新規コメントであなたについて言及がありました
+alert.new-comment-mention.short-description: {author}が"{parent}"への新規コメントであなたについて言及しました。{parent.link}
+alert.new-comment-mention.description:       <p>{author}が"{parent.data}"への新規コメントであなたについて言及しました。</p> 
+
+# ----------------------------------------------------------------------
+# Editable properties
+# ----------------------------------------------------------------------
+jcmsplugin.dbcomment.anonymous:               匿名のコメント
+jcmsplugin.dbcomment.anonymous.notify:        匿名ユーザーに通知する
+jcmsplugin.dbcomment.compatible-types:        コメント可能なタイプ
+jcmsplugin.dbcomment.edit-moderation.enabled:  厳しいモデレーションタイプ
+jcmsplugin.dbcomment.edit-moderation.enabled.boolean: False
+jcmsplugin.dbcomment.edit-moderation.enabled.help: 「はい」を選択すると、コメントの更新権を持つユーザーは、コメントの内容以外の全フィールドを更新することができるようになります。テキストを変更できるのは、コメントの著者のみです。
+
+jcmsplugin.dbcomment.edit-commentable.enabled: 各パブリケーションのコメントの無効化を許可する
+jcmsplugin.dbcomment.edit-commentable.enabled.boolean:False
+jcmsplugin.dbcomment.edit-commentable.enabled.boolean.help: 「はい」を選択すると、コメントの更新権を持つユーザーは、コメントの内容以外の全フィールドを更新することができるようになります。
+
+jcmsplugin.dbcomment.commentable-default-value: コメントを有効または無効にする: デフォルト値
+jcmsplugin.dbcomment.commentable-default-value.boolean.help: 「パブリケーションへのコメントを無効にする」を選択した場合、デフォルトでパブリケーションへのコメントが可能かどうかを定義します。
+
+jcmsplugin.dbcomment.commentable.title : コメント
+jcmsplugin.dbcomment.commentable.description : コメントを有効にする
+jcmsplugin.dbcomment.commentable.desactivate-comment: {0}へのコメントを無効にする
+jcmsplugin.dbcomment.commentable.activate-comment: {0}へのコメントを有効にする
+jcmsplugin.dbcomment.commentable.forbidden-comment: ターゲットコンテンツで、コメントは無効になっています。
+
+jcmsplugin.dbcomment.private-comment.group: プライベートコメント - グループ
+jcmsplugin.dbcomment.private-comment.group.help: プライベートコメントをパブリッシュして読むことのできるグループ
+jcmsplugin.dbcomment.private-comment.enabled: プライベートコメント - プリあべーとコメントを有効化する
+jcmsplugin.dbcomment.private-comment.default-value: プライベートコメント - プライベートコメントのデフォルト値
+jcmsplugin.dbcomment.private-comment.default-value.help: 「はい」を選択すると、新規コメント作成時にプライベートコメントの選択が「はい」になるよう設定されます。
+
+jcmsplugin.dbcomment.reverse-order: リバースのソート順
+jcmsplugin.dbcomment.reverse-order.help: 「はい」を選択すると、古いコメントが最初に表示されます
+jcmsplugin.dbcomment.change-sort: ソート - 選択フィールド
+jcmsplugin.dbcomment.change-sort.help: 選択フィールドでコメントをソート
+
+jcmsplugin.dbcomment.smart.comment-display.enabled: スマートコメント表示をアクティブにする
+jcmsplugin.dbcomment.smart.comment-display.enabled.boolean: False
+jcmsplugin.dbcomment.smart.comment-display.enabled.help: このシステムを使うと、パブリケーションの古いコメントが非表示になります
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From DBComment-templates.xml
+types.DBComment.templates.query.default.label: デフォルトテンプレート
+types.DBComment.templates.full.default.label: デフォルトテンプレート
+
+# From DBComment.xml
+types.DBComment.fields.email.description: アドレスはパブリッシュされません。
+types.DBComment.fields.email.label: メール
+types.DBComment.title.label: タイトル
+types.DBComment.fields.referer.label: リファラ
+types.DBComment.fields.ipAddress.label: IPアドレス
+types.DBComment.fields.name.label: 名前
+types.DBComment.fields.targetContent.label: ターゲットコンテンツ
+types.DBComment.fields.userAgent.label: ユーザーエージェント
+types.DBComment.label: コメント
+types.DBComment.fields.webSite.label: ウェブサイト
+types.DBComment.fields.description.label: コメント
+types.DBComment.fields.privateComment.label: プライベートコメント
+
+# SmartPhone
+jcmsplugin.dbcomment.smartphone.lbl.dbcomment.add-comment.placeholder: コメントを追加する...
+
+# Explorer sidebar integration
+jcmsplugin.explorer-sidebar.see-comments: コメントにアクセスする
+jcmsplugin.explorer.app.sidebar-tab.comments: コメント

@@ -1,0 +1,36 @@
+.member-profile {
+
+  .profile-event {
+    padding: @padding-large-vertical @padding-large-horizontal;
+    border: 1px solid #CCCCCC;
+    border-radius: 10px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    
+    .profile-event-dates {
+      UL.event-dates.list-inline {
+        display: inline;
+      }
+    }
+    .profile-event-dates {
+      UL.event-dates {
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+      }
+      UL.event-date-times {
+        display: inline-flex;
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+        &:before {
+          content: "(";
+        }
+        &:after {
+          content: ")";
+        }
+      }
+    }
+  }
+} // .member-profile

@@ -1,0 +1,30 @@
+<%@page import="com.jalios.util.DateUtil"%><%
+%><%@page import="java.time.format.FormatStyle"%><%
+%><%@page import="java.time.format.DateTimeFormatter"%><%
+%><%@page import="java.time.ZonedDateTime"%><%
+%><%
+{
+  boolean showLanguage = channel.getBooleanProperty("jcmsplugin.esn.profile.show-language", false) && channel.isMultilingual();
+  boolean showTimeZone = channel.getBooleanProperty("jcmsplugin.esn.profile.show-timezone", true) && channel.isTimeZoneEnabled() && !userZoneId.equals(itMember.getZoneId());
+  %>
+  <%-- Language --%>
+  <% if (showLanguage) {
+    StringBuffer langIconSB = new StringBuffer();
+    LangTag.appendFlag(langIconSB, itMember.getLanguage(), glp("ui.com.lbl.language") + " : " + glp("lang." + itMember.getLanguage()));
+    String langIcon = langIconSB.toString();
+  %>
+  <li title="<%= encodeForHTMLAttribute(glp("ui.com.lbl.language")) %> : <%= encodeForHTMLAttribute(glp("lang." + itMember.getLanguage())) %>" itemprop="language" class="esn-member-language">
+    <%= langIcon %>
+  </li>
+  <% } %>
+  <%-- TimeZone --%>
+  <% if (showTimeZone) {
+    ZonedDateTime userTime = DateUtil.getZonedDateTime(new Date(), itMember.getZoneId());
+    %>
+  <li title="<%= encodeForHTMLAttribute(glp("ui.com.lbl.timezone")) %> : <%= encodeForHTMLAttribute(itMember.getZoneId().getDisplayName(java.time.format.TextStyle.FULL, userLocale)) %>, <%= encodeForHTMLAttribute(userTime.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT).withLocale(userLocale))) %>" itemprop="timezone" class="esn-member-timezone">
+    <jalios:icon src="jcmsplugin-esn-profile-timezone"/> <%= encodeForHTML(itMember.getZoneId().toString()) %>
+  </li>
+  <% } %>
+  <%
+}
+%>

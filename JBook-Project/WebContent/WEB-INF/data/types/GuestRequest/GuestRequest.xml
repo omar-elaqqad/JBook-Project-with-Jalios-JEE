@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<type name="GuestRequest" superclass="com.jalios.jcms.Form" formOneSubmit="false" formNotify="false" formAuthor="j_2" formRedirectMode="home" categoryTab="true" readRightTab="true" updateRightTab="true" templateTab="true" workflowTab="true" advancedTab="true" database="true" hbm="true" reviewable="false" debatable="false" unitFieldEdition="true" audienced="false" abstract="true">
+  <title ml="false" />
+  <fields>
+    <field name="groups" editor="group" required="true" compactDisplay="false" type="Set&lt;com.jalios.jcms.Group&gt;" chooser="popup" ml="false" descriptionType="text" searchable="false" html="false" checkHtml="true" />
+  </fields>
+</type>
+

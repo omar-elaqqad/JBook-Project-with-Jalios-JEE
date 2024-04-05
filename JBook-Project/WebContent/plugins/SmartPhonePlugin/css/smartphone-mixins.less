@@ -1,0 +1,88 @@
+/* *************** */
+/* Colored headers */
+/* *************** */
+
+.service-colored-header(@service-name) {
+  @service-color-variable-name: "service-@{service-name}-color";
+  @service-color: @@service-color-variable-name;
+  
+  .service-@{service-name}-page .colored-banner {
+    background: @service-color;
+  }
+  .service-@{service-name}-page .colored-banner-content {
+    color: contrast(@service-color, #333, white, 80%);
+  }
+}
+
+.hierarchical-header(@service-name){
+  .@{service-name}-service-header {
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 15px;
+    &.can-return-to-parent {
+      padding: 5px 15px;
+    }
+    
+    .@{service-name}-service-header-back-icon {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
+  
+  .@{service-name}-service-header-icon {
+    margin-right: 7px;
+  }  
+  
+}
+
+/* ************************************* */
+/* Service drawer                        */
+/* ************************************* */
+.smartphone-drawer-service(@service-name) {
+  @service-color-variable-name: "service-@{service-name}-color";
+  @service-color: @@service-color-variable-name;  
+  
+  .service-drawer .service.service-@{service-name} .service-icon{
+    background-color: @@service-color-variable-name;
+  }
+}
+
+
+/* ************************************* */
+/* Primary, success, danger, ... buttons */
+/* ************************************* */
+
+.smartphone-button-variant(@variant-name) {
+  html head + body .ui-page-theme-a {
+
+    @btn-color-variable-name: "btn-@{variant-name}-color";
+    @btn-bg-variable-name: "btn-@{variant-name}-bg";
+    @btn-border-variable-name: "btn-@{variant-name}-border";
+
+    .ui-btn.btn-@{variant-name},
+    .ui-btn.btn-@{variant-name}:visited {
+      
+      color: @@btn-color-variable-name;
+      background-color: @@btn-bg-variable-name;
+      border-color: @@btn-border-variable-name;
+      text-shadow: none;
+    }
+    .ui-btn.btn-@{variant-name}:hover,
+    .ui-btn.btn-@{variant-name}:active,
+    .ui-btn-active.btn-@{variant-name} {
+      color: @@btn-color-variable-name;
+      background-color: darken(@@btn-bg-variable-name, 10%);
+      border-color: darken(@@btn-border-variable-name, 12%);
+      text-shadow: none;
+    }
+  }
+}
+
+.common-portal-padding() {
+  padding-left: @sp-portal-spacing;
+  padding-right: @sp-portal-spacing;
+}
+.common-portal-margin() {
+  margin-left: @sp-portal-spacing;
+  margin-right: @sp-portal-spacing;
+}

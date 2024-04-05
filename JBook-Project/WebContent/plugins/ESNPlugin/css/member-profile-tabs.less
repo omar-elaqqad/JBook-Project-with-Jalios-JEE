@@ -1,0 +1,84 @@
+// Include variables and mixins
+@import "../../../css/jalios/core/init-mixins.less";
+
+// -------------------------------------------------------------------
+// PLUGINS LESS VARIABLES
+// -------------------------------------------------------------------
+@import "../../../plugins/ESNPlugin/css/esn-variables.less";
+// Hook for JCMS
+@import "../../../css/plugin.less";
+
+// ------------------------------------------------------------------- 
+//  PLUGIN CSS DECLARATION                                             
+// ------------------------------------------------------------------- 
+
+.member-profile {
+
+  .esn-ui-tabs.nav-tabs-underlined {
+    margin: 0;
+    background-color: @esn-profile-bg;
+    display: block;
+    &.nav-tabs {
+      border-bottom-width: 0;
+    }
+    
+    > LI {
+      &:after {
+        height: @esn-profile-tab-border-width;
+      }
+      > A {
+        color: @esn-profile-tab-color;
+        padding: 20px;
+        border-bottom-width: @esn-profile-tab-border-width;
+        border-bottom-style: solid;
+        border-bottom-color: transparent;
+        overflow: hidden;
+        &:not(.dropdown-toggle) {
+          .text-overflow();
+        }
+      }
+      &.active > A {
+        &, 
+        &:hover, 
+        &:focus {
+          color: @esn-profile-tab-active-color;
+        }
+      }
+    }
+  }
+  .esn-ui-tabs.nav-tabs-underlined {
+    > LI > A:not(.dropdown-toggle) {
+      font-size: 20px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+  &[max-width~="@{screen-lg-min}"] {
+   .esn-ui-tabs.nav-tabs-underlined {
+      > LI > A:not(.dropdown-toggle) {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    }
+  }
+  &[max-width~="@{screen-md-min}"] {
+   .esn-ui-tabs.nav-tabs-underlined {
+      > LI > A:not(.dropdown-toggle) {
+        font-size: 18px;
+        max-width: 300px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  }
+  &[max-width~="@{screen-sm-min}"] {
+    .esn-ui-tabs.nav-tabs-underlined {
+      > LI > A:not(.dropdown-toggle) {
+        font-size: 16px;
+        padding-left: 10px;
+        padding-right: 10px;
+        max-width: 100px;
+      }
+    }
+  }
+}

@@ -1,0 +1,851 @@
+# ------------------------------------------------------------
+#  ACL
+# ------------------------------------------------------------
+acl.resource.admin/work/createCS: Kolaborat\u00edvny priestor \u2013 Vytvorenie
+acl.resource.plugins: Doplnky
+acl.resource.plugins/collaborativespace: Kolaborat\u00edvny priestor
+acl.resource.plugins/collaborativespace/manageCSGuest: Spravovanie hos\u0165a
+acl.resource.plugins/collaborativespace/manageCSGuest.h: Povo\u013euje spr\u00e1vcovi kolaborat\u00edvneho priestoru vytv\u00e1ra\u0165 kont\u00e1 hos\u0165a v priestore.
+acl.resource.admin-ws/plugins: Doplnky
+acl.resource.admin-ws/plugins/collaborativespace: Kolaborat\u00edvny priestor
+acl.resource.admin-ws/plugins/collaborativespace/manageCSServices: Aplik\u00e1cie
+acl.resource.admin-ws/plugins/collaborativespace/manageCSServices.h: Riadenie Front-office aplik\u00e1ci\u00ed kolaborat\u00edvneho priestoru.
+acl.resource.admin-ws/plugins/collaborativespace/manageCSSettings: Nastavenia
+acl.resource.admin-ws/plugins/collaborativespace/manageCSSettings.h: Nastavenia spr\u00e1vy kolaborat\u00edvneho priestoru (n\u00e1zov, opis, rozlo\u017eenie, vzh\u013ead).
+
+# ------------------------------------------------------------
+#  Common
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.lbl.filter:                 Filtrova\u0165
+jcmsplugin.collaborativespace.lbl.administrator:          Ved\u00faci
+jcmsplugin.collaborativespace.lbl.administrators:         Ved\u00faci
+jcmsplugin.collaborativespace.lbl.administrators.h:       Spr\u00e1vcovia komunity
+# A member that belongs to the space
+jcmsplugin.collaborativespace.lbl.profile.member-count:   {0,choice,0#\u017diadni pozvan\u00ed|1#{0} pozvan\u00fd|2#{0} pozvan\u00ed}
+# A member that is administrator of the space
+jcmsplugin.collaborativespace.lbl.profile.leader-count:   {0,choice,0#\u017diadni ved\u00faci|1#{0} ved\u00faci|2#{0} ved\u00faci}
+# A member that is a Guest of the space
+jcmsplugin.collaborativespace.lbl.profile.guest:          Hos\u0165
+jcmsplugin.collaborativespace.lbl.profile.guest-count:    {0,choice,0#\u017diadni hostia|1#{0} hos\u0165|2#{0} hostia}
+jcmsplugin.collaborativespace.lbl.signup:                 Registr\u00e1cia
+jcmsplugin.collaborativespace.lbl.signup-action:          Registrujem sa...
+jcmsplugin.collaborativespace.lbl.unsignup:               Zru\u0161i\u0165 odber
+jcmsplugin.collaborativespace.lbl.unsignup-action:        Odch\u00e1dzam...
+jcmsplugin.collaborativespace.lbl.card.signup:            Registr\u00e1cia
+
+jcmsplugin.collaborativespace.cssignup.title: \u017diados\u0165 o registr\u00e1ciu od ''{0}''
+jcmsplugin.collaborativespace.cssignup-notfound.msg-title: \u017diados\u0165 o\u00a0registr\u00e1ciu sa nepodarilo n\u00e1js\u0165
+jcmsplugin.collaborativespace.cssignup-notfound.msg-content: Konkr\u00e9tnu \u017eiados\u0165 o\u00a0registr\u00e1ciu sa nepodarilo n\u00e1js\u0165.<br/>Mo\u017eno u\u017e bola spracovan\u00e1 alebo bol \u010dlen do priestoru zaregistrovan\u00fd manu\u00e1lne.
+
+jcmsplugin.collaborativespace.data-controller.msg.incompatible-access-signup: Pr\u00edstupov\u00fd re\u017eim nie je kompatibiln\u00fd so z\u00e1sadami registr\u00e1cie.
+jcmsplugin.collaborativespace.data-controller.msg.invalid-ability: Tento portlet nem\u00e1 mo\u017enos\u0165 \u201e{0}\u201c.
+jcmsplugin.collaborativespace.data-controller.msg.service-not-in-public-model: Portlety, pre ktor\u00e9 je re\u017eim kop\u00edrovania Pod\u013ea referencie a s mo\u017enos\u0165ou Aplik\u00e1cia alebo Ovl\u00e1dac\u00ed panel musia patri\u0165 do modelu verejn\u00e9ho kolaborat\u00edvneho priestoru.
+jcmsplugin.collaborativespace.data-controller.msg.no-portlet-selection: Pole \u201e{0}\u201c mus\u00ed obsahova\u0165 \u201e{1}\u201c.
+jcmsplugin.collaborativespace.data-controller.msg.invalid-guest-wsadmin: Hos\u0165 nem\u00f4\u017ee by\u0165 spr\u00e1vcom pracovn\u00e9ho priestoru.
+jcmsplugin.collaborativespace.data-controller.msg.invalid-guest-wsadmin-detail: Hos\u0165 ''{0}'' ({1}) nem\u00f4\u017ee by\u0165 spr\u00e1vcom pracovn\u00e9ho priestoru.
+jcmsplugin.collaborativespace.data-controller.msg.sub-status: Aktualiz\u00e1cia s\u00favisiacich \u00fadajov zlyhala: {0}
+jcmsplugin.collaborativespace.data-controller.msg.invalid-cat: Nemo\u017eno kategorizova\u0165 portlet \u201e{0}\u201c pod \u201e<strong>{1}</strong>\u201c.
+jcmsplugin.collaborativespace.data-controller.msg.missing-root-cat: Portlet Kolaborat\u00edny priestor mus\u00ed ma\u0165 hlavn\u00fa kateg\u00f3riu.
+jcmsplugin.collaborativespace.data-controller.msg.wrong-model-typology: Vybran\u00fd model nezodpoved\u00e1 typol\u00f3gii
+jcmsplugin.collaborativespace.data-controller.msg.missing-model: Je potrebn\u00e9 vybra\u0165 model
+jcmsplugin.collaborativespace.data-controller.msg.workspace-not-model: Pracovn\u00fd priestor vybran\u00fd ako model nie je model
+jcmsplugin.collaborativespace.space-wizard.msg.model-not-found: Konkr\u00e9tny model sa nepodarilo n\u00e1js\u0165.
+jcmsplugin.collaborativespace.space-wizard.msg.failed: Kolaborat\u00edvny priestor {0} sa nepodarilo vytvori\u0165
+
+# FO action labels
+jcmsplugin.collaborativespace.create.lbl.create:                  Vytvori\u0165 priestor...
+jcmsplugin.collaborativespace.create.lbl.create-sub:              Vytvori\u0165 podpriestor...
+jcmsplugin.collaborativespace.create.lbl.request-create:          \u017diados\u0165 o vytvorenie priestoru...
+jcmsplugin.collaborativespace.create.lbl.request-create-sub:      \u017diados\u0165 o vytvorenie podpriestoru...
+# Admin BO action labels (keep "collaborative" word)
+jcmsplugin.collaborativespace.create.lbl.create-cs:               Vytvori\u0165 kolaborat\u00edvny priestor...
+
+# Create space modal labels
+jcmsplugin.collaborativespace.create.title:                       Vytvori\u0165 kolaborat\u00edvny priestor
+jcmsplugin.collaborativespace.create.title-request:               \u017diados\u0165 o vytvorenie kolaborat\u00edvneho priestoru
+jcmsplugin.collaborativespace.create-sub.title:                   Vytvori\u0165 podpriestor
+jcmsplugin.collaborativespace.create-sub.title-request:           \u017diados\u0165 o vytvorenie podpriestoru
+jcmsplugin.collaborativespace.create.steps.0:                     Model
+jcmsplugin.collaborativespace.create.steps.1:                     Inform\u00e1cie
+jcmsplugin.collaborativespace.create-sub.steps.1.intro:           Vytvori\u0165 priestor v <strong>{0}</strong>
+jcmsplugin.collaborativespace.create-sub.steps.1.intro-request:   \u017diados\u0165 o vytvorenie priestoru v <strong>{0}</strong>.
+jcmsplugin.collaborativespace.create.steps.2:                     Pozvan\u00ed
+
+jcmsplugin.collaborativespace.create.info.name:                         N\u00e1zov priestoru
+jcmsplugin.collaborativespace.create.info.typology:                     Typ pracovn\u00e9ho priestoru
+jcmsplugin.collaborativespace.create.info.description:                  Opis
+jcmsplugin.collaborativespace.create.info.introduction:                 \u00davod
+jcmsplugin.collaborativespace.create.info.access:                       Pr\u00edstup
+jcmsplugin.collaborativespace.create.info.access.public:                Verejn\u00e9
+jcmsplugin.collaborativespace.create.info.access.private:               S\u00fakromn\u00e9
+jcmsplugin.collaborativespace.create.info.access.secret:                Tajn\u00fd
+jcmsplugin.collaborativespace.create.info.signup:                       Registr\u00e1cia
+jcmsplugin.collaborativespace.create.info.signup.admin:                 Registr\u00e1cie spravovan\u00e9 ved\u00facimi
+jcmsplugin.collaborativespace.create.info.signup.request:               \u017diadosti o registr\u00e1ciu overovan\u00e9 ved\u00facimi
+jcmsplugin.collaborativespace.create.info.signup.free:                  Vo\u013en\u00e9 registr\u00e1cie
+jcmsplugin.collaborativespace.create.info.language:                     Hlavn\u00fd jazyk
+jcmsplugin.collaborativespace.create.model.intro:                       Vyberte model pre tento kolaborat\u00edvny priestor.
+jcmsplugin.collaborativespace.create.model.intro-typo:                  Vyberte typol\u00f3giu a model pre tento kolaborat\u00edvny priestor.
+jcmsplugin.collaborativespace.create.model.intro-typo-nomodel:          Vyberte typol\u00f3giu pre tento kolaborat\u00edvny priestor.
+jcmsplugin.collaborativespace.create.model.intro-end:                   Po vytvoren\u00ed priestoru m\u00f4\u017eu ved\u00faci priestoru prid\u00e1va\u0165 nov\u00e9 slu\u017eby.
+jcmsplugin.collaborativespace.create.model.model:                       Na z\u00e1klade modelu
+jcmsplugin.collaborativespace.create.model.sync-toggle:                 Synchronizova\u0165 s\u00a0modelom
+jcmsplugin.collaborativespace.create.attendees.intro:                   Vyberte ved\u00facich a pozvan\u00fdch do tohto kolaborat\u00edvneho priestoru.<br />Po vytvoren\u00ed priestoru m\u00f4\u017eu ved\u00faci odosiela\u0165 pozv\u00e1nky, prid\u00e1va\u0165 a odstra\u0148ova\u0165 \u010dlenov.
+jcmsplugin.collaborativespace.create.attendees.intro-no-leader:         Vyberte pozvan\u00fdch do tohto kolaborat\u00edvneho priestoru.<br />Po vytvoren\u00ed priestoru m\u00f4\u017eu ved\u00faci odosiela\u0165 pozv\u00e1nky, prid\u00e1va\u0165 a odstra\u0148ova\u0165 \u010dlenov.
+jcmsplugin.collaborativespace.create.attendees.admins:                  Ved\u00faci
+jcmsplugin.collaborativespace.create.attendees.admins.custom:           {0,choice,0#\u017diadni ved\u00faci|1# ved\u00faci|2# ved\u00faci/ved\u00facich}
+jcmsplugin.collaborativespace.create.attendees.groups:                  Skupiny
+jcmsplugin.collaborativespace.create.attendees.members:                 \u010clenovia
+jcmsplugin.collaborativespace.create.attendees.notification:            Ozn\u00e1menie
+jcmsplugin.collaborativespace.create.attendees.notification.invitation: Posla\u0165 pozv\u00e1nku pozvan\u00fdm
+jcmsplugin.collaborativespace.create.attendees.notification.mail:       Prida\u0165 a ozn\u00e1mi\u0165 pozvan\u00fdm
+jcmsplugin.collaborativespace.create.attendees.notification.no:         Prida\u0165 pozvan\u00fdch bez ozn\u00e1menia
+jcmsplugin.collaborativespace.create.too-many-cs:                       Nem\u00f4\u017eete vytvori\u0165 nov\u00fd kolaborat\u00edvny priestor. Bol dosiahnut\u00fd maxim\u00e1lny limit po\u010dtu kolaborat\u00edvnych priestorov ({0}).
+jcmsplugin.collaborativespace.create.finish:                            <p>Va\u0161a po\u017eiadavka na vytvorenie nov\u00e9ho kolaborat\u00edvneho priestoru bola zaznamenan\u00e1.</p><p>Po overen\u00ed bude priestor vytvoren\u00fd a ved\u00faci dostan\u00fa ozn\u00e1menie.</p>
+jcmsplugin.collaborativespace.access-policy.public.desc:                Ktoko\u013evek si m\u00f4\u017ee zobrazi\u0165 verejn\u00fd priestor a \u010d\u00edta\u0165 jeho obsah.
+jcmsplugin.collaborativespace.access-policy.private.desc:               Ktoko\u013evek m\u00f4\u017ee ma\u0165 povedomie o s\u00fakromnom priestore, ale len \u00fa\u010dastn\u00edci m\u00f4\u017eu \u010d\u00edta\u0165 jeho obsah.
+jcmsplugin.collaborativespace.access-policy.secret.desc:                Len \u00fa\u010dastn\u00edci tajn\u00e9ho priestoru m\u00f4\u017eu o \u0148om ma\u0165 povedomie a \u010d\u00edta\u0165 jeho obsah.
+
+jcmsplugin.collaborativespace.header.home:                              Domovsk\u00e1 str\u00e1nka
+jcmsplugin.collaborativespace.header.introduction:                      \u00davod
+jcmsplugin.collaborativespace.header.backoffice:                        Back-Office
+jcmsplugin.collaborativespace.header.help:                              Pomocn\u00edk
+jcmsplugin.collaborativespace.header.admin-menu:                        Spr\u00e1va
+jcmsplugin.collaborativespace.header.admin-menu.home:                   Domov
+jcmsplugin.collaborativespace.header.admin-menu.members:                \u010clenovia
+jcmsplugin.collaborativespace.header.admin-menu.services:               Aplik\u00e1cie
+jcmsplugin.collaborativespace.header.admin-menu.settings:               Nastavenia
+jcmsplugin.collaborativespace.header.admin-menu.typo-models:            Model a\u00a0typol\u00f3gie
+
+jcmsplugin.collaborativespace.metas.toggle.show:                        Viac
+jcmsplugin.collaborativespace.metas.toggle.hide:                        Menej
+jcmsplugin.collaborativespace.metas.show-all-typos:                     Zobrazi\u0165 v\u0161etky typol\u00f3gie
+jcmsplugin.collaborativespace.metas.introduction:                       \u00davod
+jcmsplugin.collaborativespace.metas.manage-members.link:                Spravova\u0165 \u010dlenov
+jcmsplugin.collaborativespace.metas.member-list.others:                 A {0,choice,1# 1 \u010fal\u0161\u00ed|2# {0} \u010fal\u0161\u00ed}...
+jcmsplugin.collaborativespace.metas.actions-menu-title:                 Otvori\u0165 ponuku \u00fakonov pre kolaborat\u00edvny priestor
+
+jcmsplugin.collaborativespace.private-home.title:                  Pr\u00edstup do tohto priestoru je obmedzen\u00fd
+jcmsplugin.collaborativespace.private-home.signup:                 Ak chcete otvori\u0165 tento priestor, je potrebn\u00e1 registr\u00e1cia.
+jcmsplugin.collaborativespace.private-home.already-signup:         Po\u017eiadali ste o registr\u00e1ciu do tohto priestoru. Dostane ozn\u00e1menie, ke\u010f bude va\u0161a po\u017eiadavka spracovan\u00e1.
+jcmsplugin.collaborativespace.private-home.no-signup:              Registr\u00e1cia do tohto priestoru je na pozv\u00e1nku.
+
+jcmsplugin.collaborativespace.settings.lbl.info:                    V\u0161eobecn\u00e9 inform\u00e1cie
+jcmsplugin.collaborativespace.settings.lbl.info.presentation:       Prezent\u00e1cia
+jcmsplugin.collaborativespace.settings.lbl.info.access:             Pr\u00edstup a registr\u00e1cia
+jcmsplugin.collaborativespace.settings.lbl.layout:                  Rozlo\u017eenie
+jcmsplugin.collaborativespace.settings.lbl.model:                   Model
+jcmsplugin.collaborativespace.settings.lbl.look:                    Hlavi\u010dka
+jcmsplugin.collaborativespace.settings.lbl.look.theme:              Mot\u00edv
+jcmsplugin.collaborativespace.settings.lbl.look.condensed:          Re\u017eim zhustenia
+jcmsplugin.collaborativespace.settings.lbl.look.condensed.h:        Re\u017eim zhustenia redukuje v\u00fd\u0161ku hlavi\u010dky a pou\u017e\u00edva iba farbu pozadia
+jcmsplugin.collaborativespace.settings.lbl.look.color-tab:          Farby
+jcmsplugin.collaborativespace.settings.lbl.look.header-tab:         Obr\u00e1zok pozadia
+jcmsplugin.collaborativespace.settings.lbl.look.color:              Farba pozadia
+jcmsplugin.collaborativespace.settings.lbl.look.headers:            Hlavi\u010dka
+jcmsplugin.collaborativespace.settings.lbl.look.no-header:          Bez hlavi\u010dky
+jcmsplugin.collaborativespace.settings.lbl.look.header-background:  Pozadie
+jcmsplugin.collaborativespace.settings.lbl.look.header-custom:      Obr\u00e1zok pozadia
+jcmsplugin.collaborativespace.settings.lbl.look.header-custom.h:    Pre hlavi\u010dku m\u00f4\u017eete vybra\u0165 vlastn\u00fd obr\u00e1zok alebo si m\u00f4\u017eete nejak\u00fd vybra\u0165 z preddefinovan\u00e9ho zoznamu.
+jcmsplugin.collaborativespace.settings.lbl.look.header-no-image:    \u017diadny obr\u00e1zok pozadia
+jcmsplugin.collaborativespace.settings.lbl.look.header-position:    Umiestnenie obr\u00e1zka
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat:      Opakovanie obr\u00e1zka
+jcmsplugin.collaborativespace.settings.lbl.look.header-no-repeat:   \u017diadne
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat-x:    Horizont\u00e1lne
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat-y:    Vertik\u00e1lne
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat-both: Oboje
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror:      Zrkadlovo
+jcmsplugin.collaborativespace.settings.lbl.look.header-no-mirror:   \u017diadne
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror-x:    Horizont\u00e1lne
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror-y:    Vertik\u00e1lne
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror-both: Oboje
+jcmsplugin.collaborativespace.settings.lbl.look.header-color:       Farba nadpisu
+jcmsplugin.collaborativespace.settings.lbl.look.header-tabs-color:  Farba textu na kart\u00e1ch
+jcmsplugin.collaborativespace.settings.lbl.look.header-tabs-bgcolor: Farba pozadia na kart\u00e1ch
+jcmsplugin.collaborativespace.settings.lbl.look.header-tabs-opacity: Neprieh\u013eadnos\u0165 kariet
+jcmsplugin.collaborativespace.settings.lbl.layout:                  Rozlo\u017eenie
+jcmsplugin.collaborativespace.settings.lbl.layout.main:             Rozvrhnutie str\u00e1nky
+jcmsplugin.collaborativespace.settings.lbl.layout.dashboard:        Domov
+jcmsplugin.collaborativespace.settings.lbl.layout.dashboard.column: St\u013apce
+jcmsplugin.collaborativespace.settings.lbl.jmobile:                 JMobile
+jcmsplugin.collaborativespace.settings.lbl.jmobile-delete-portlet:  Odstr\u00e1ni\u0165 portlet z port\u00e1lu
+jcmsplugin.collaborativespace.settings.lbl.jmobile-drag-portlet:    Dlh\u00e9 kliknutie na presunutie portletu
+jcmsplugin.collaborativespace.settings.alt.test:                    Testova\u0165
+jcmsplugin.collaborativespace.settings.alt.jmobile-template:        \u0160abl\u00f3na JMobile
+jcmsplugin.collaborativespace.settings.lbl.add-portlet:             Prida\u0165 portlet
+
+jcmsplugin.collaborativespace.services.lbl.title:                   Prida\u0165 aplik\u00e1cie
+jcmsplugin.collaborativespace.services.lbl.all-services:            V\u0161etky aplik\u00e1cie
+jcmsplugin.collaborativespace.services.lbl.installed-services:      In\u0161talovan\u00e9 aplik\u00e1cie
+jcmsplugin.collaborativespace.services.lbl.installed-service.title: In\u0161talovan\u00e9
+jcmsplugin.collaborativespace.services.lbl.not-installed-services:  In\u00e9 aplik\u00e1cie
+jcmsplugin.collaborativespace.services.lbl.status:                  Stav
+jcmsplugin.collaborativespace.services.lbl.type:                    Typ
+jcmsplugin.collaborativespace.services.lbl.type.application:        Aplik\u00e1cia
+jcmsplugin.collaborativespace.services.lbl.type.dashboard:          Ovl\u00e1dac\u00ed panel
+jcmsplugin.collaborativespace.services.lbl.name:                    N\u00e1zov aplik\u00e1cie
+jcmsplugin.collaborativespace.services.lbl.description:             Opis
+jcmsplugin.collaborativespace.services.lbl.add:                     Prida\u0165
+jcmsplugin.collaborativespace.services.lbl.edit:                    Zmeni\u0165
+jcmsplugin.collaborativespace.services.lbl.preview-action:          Uk\u00e1\u017eka
+jcmsplugin.collaborativespace.services.lbl.preview:                 Uk\u00e1\u017eka
+jcmsplugin.collaborativespace.services.btn.add-service:             Prida\u0165 t\u00fato aplik\u00e1ciu
+jcmsplugin.collaborativespace.services.btn.customize-service:       Prisp\u00f4sobi\u0165 t\u00fato aplik\u00e1ciu...
+jcmsplugin.collaborativespace.services.btn.remove-service:          Odstr\u00e1ni\u0165 t\u00fato aplik\u00e1ciu
+jcmsplugin.collaborativespace.services.btn.add:                     Prida\u0165
+jcmsplugin.collaborativespace.services.btn.remove:                  Odstr\u00e1ni\u0165
+jcmsplugin.collaborativespace.services.lbl.add-title:               Prida\u0165 aplik\u00e1ciu
+jcmsplugin.collaborativespace.services.lbl.add-modal-title:         Prida\u0165 aplik\u00e1ciu...
+jcmsplugin.collaborativespace.services.lbl.add-new-title:           Prida\u0165 nov\u00fa aplik\u00e1ciu
+jcmsplugin.collaborativespace.services.smartphone-ability.label:    Zobrazi\u0165 v JMobile
+
+jcmsplugin.collaborativespace.settings.lbl.model-instances:         In\u0161tancie modelu
+jcmsplugin.collaborativespace.settings.lbl.model-instances-count:   {0,choice,0# \u017diadna in\u0161tancia|1# 1 in\u0161tancia|2# {0} in\u0161tancie/in\u0161tanci\u00ed}
+
+jcmsplugin.collaborativespace.settings.model-instances.csp.title:   Kolaborat\u00edvny priestor
+jcmsplugin.collaborativespace.settings.model-instances.sync.title:  Re\u017eimy synchroniz\u00e1cie
+
+jcmsplugin.collaborativespace.members.btn.enroll-members:               Zap\u00edsa\u0165 \u010dlenov\u2026
+jcmsplugin.collaborativespace.members.lbl.enroll-members:               Zap\u00edsa\u0165 \u010dlenov
+jcmsplugin.collaborativespace.members.enroll-modal.intro:               Vybra\u0165 \u010dlenov a/alebo skupiny, ktor\u00e9 sa maj\u00fa prida\u0165 do cie\u013eovej skupiny.
+jcmsplugin.collaborativespace.members.enroll-modal.target-group:        Cie\u013eov\u00e1 skupina
+jcmsplugin.collaborativespace.members.enroll-modal.groups.description:  \u010clenovia t\u00fdchto skup\u00edn bud\u00fa pridan\u00ed do cie\u013eovej skupiny.
+jcmsplugin.collaborativespace.members.btn.add-group:                    Prida\u0165 skupinu...
+jcmsplugin.collaborativespace.members.lbl.add-group:                    Prida\u0165 skupinu
+jcmsplugin.collaborativespace.members.btn.edit-group:                   Upravi\u0165 skupinu...
+
+jcmsplugin.collaborativespace.members.validate-signup-modal.groups:     Cie\u013eov\u00e9 skupiny
+jcmsplugin.collaborativespace.members.validate-signup-modal.groups.h:   Skupiny, do ktor\u00fdch bude \u010dlen pridan\u00fd.
+
+jcmsplugin.collaborativespace.invitations.lbl.invitations:     Pozv\u00e1nky
+jcmsplugin.collaborativespace.invitations.lbl.all-status:      V\u0161etky pozv\u00e1nky
+jcmsplugin.collaborativespace.invitations.lbl.guest:           Hos\u0165
+jcmsplugin.collaborativespace.invitations.lbl.target-group:    Cie\u013eov\u00e1 skupina
+jcmsplugin.collaborativespace.invitations.btn.send-invitation: Odosla\u0165 pozv\u00e1nky...
+
+jcmsplugin.collaborativespace.invitations.status.0: Odoslan\u00e9
+jcmsplugin.collaborativespace.invitations.status.1: Prijat\u00e9
+jcmsplugin.collaborativespace.invitations.status.2: Zamietnut\u00e9
+
+jcmsplugin.collaborativespace.invitations.status.long.0: Pozv\u00e1nka odoslan\u00e1
+jcmsplugin.collaborativespace.invitations.status.long.1: Pozv\u00e1nka prijat\u00e1
+jcmsplugin.collaborativespace.invitations.status.long.2: Pozv\u00e1nka odmietnut\u00e1
+
+jcmsplugin.collaborativespace.invitations.send.title:            Odosla\u0165 pozv\u00e1nky
+jcmsplugin.collaborativespace.invitations.send.info:             Vyberte \u010dlenov alebo skupiny, ktor\u00fdm posla\u0165 pozv\u00e1nku na pridanie sa do tohto kolaborat\u00edvneho priestoru
+jcmsplugin.collaborativespace.invitations.send.lbl.message:      Spr\u00e1va
+jcmsplugin.collaborativespace.invitations.send.btn.send:         Odosla\u0165
+
+jcmsplugin.collaborativespace.invitations.title: Pozv\u00e1nka pre {0}
+
+jcmsplugin.collaborativespace.invitations.process-modal.title:    Pozv\u00e1nka
+jcmsplugin.collaborativespace.invitations.process-modal.info:     {0} v\u00e1s poz\u00fdva na \u010dlenstvo v kolaborat\u00edvnom priestore {1}.<br />M\u00f4\u017eete prija\u0165, odmietnu\u0165 alebo rozhodn\u00fa\u0165 sa nesk\u00f4r.
+jcmsplugin.collaborativespace.invitations.process-modal.btn.accept:     Prija\u0165
+jcmsplugin.collaborativespace.invitations.process-modal.btn.decline:    Odmietnu\u0165...
+
+jcmsplugin.collaborativespace.signup.info.free:           Do tohto kolaborat\u00edvneho priestoru sa m\u00f4\u017eete okam\u017eite zaregistrova\u0165
+jcmsplugin.collaborativespace.signup.info.request:        Ak sa chcete zaregistrova\u0165 do tohto kolaborat\u00edvneho priestoru, po\u0161lite po\u017eiadavku. Po schv\u00e1len\u00ed po\u017eiadavky dostanete ozn\u00e1menie.
+jcmsplugin.collaborativespace.signup.btn.signup:          Zaregistrujte ma
+jcmsplugin.collaborativespace.signup.info.already-signup: {0}, u\u017e ste po\u017eiadali o t\u00fato registr\u00e1ciu.
+jcmsplugin.collaborativespace.signup.error.workspace-no-group: Po\u017eiadavky na registr\u00e1ciu vy\u017eaduj\u00fa, aby mal pracovn\u00fd priestor predvolen\u00fa skupinu.
+
+jcmsplugin.collaborativespace.signup.lbl.signups:         Po\u017eiadavky na registr\u00e1ciu
+jcmsplugin.collaborativespace.signup.lbl.signup:          Po\u017eiadavka na registr\u00e1ciu
+jcmsplugin.collaborativespace.signup.lbl.submit-mbr:      \u017diadate\u013e
+jcmsplugin.collaborativespace.signup.lbl.process:         Spracova\u0165 t\u00fato po\u017eiadavku
+jcmsplugin.collaborativespace.signup.btn.accept:          Prija\u0165
+jcmsplugin.collaborativespace.signup.btn.reject:          Odmietnu\u0165
+jcmsplugin.collaborativespace.unsignup.confirm:           Naozaj chcete zru\u0161i\u0165 odber?
+
+jcmsplugin.collaborativespace.welcome.title:   Vitajte!
+jcmsplugin.collaborativespace.welcome.content: <p>Blaho\u017eel\u00e1me! V\u00e1\u0161 kolaborat\u00edvny priestor je vytvoren\u00fd a v \u010dinnosti.</p><p>Nieko\u013eko tipov, \u010do m\u00f4\u017eete urobi\u0165</p><ul><li class='cs-welcome-tip-look-and-feel'><a href="{0}">Zme\u0148te vzh\u013ead</a></li><li class='cs-welcome-tip-add-members'><a href="{1}">Pridajte \u010dlenov</a></li><li class='cs-welcome-tip-send-invitations'><a href="{2}">Po\u0161lite pozv\u00e1nky</a></li><li class='cs-welcome-tip-services'><a href="{3}">Pridajte aplik\u00e1cie</a></li></ul>
+
+jcmsplugin.collaborativespace.lbl.cs:    Kolaborat\u00edvny priestor
+jcmsplugin.collaborativespace.lbl.model: Model
+
+jcmsplugin.collaborativespace.lbl.follow.action:        Sledova\u0165
+jcmsplugin.collaborativespace.lbl.unfollow.action:      Nesledova\u0165
+jcmsplugin.collaborativespace.lbl.follow.title:         Sledova\u0165 priestor
+jcmsplugin.collaborativespace.lbl.follow.description:   Budete upozor\u0148ovan\u00ed na aktu\u00e1lne novinky v tomto priestore
+jcmsplugin.collaborativespace.lbl.unfollow.title:       Nesledova\u0165 priestor
+jcmsplugin.collaborativespace.lbl.unfollow.description: Nebudete viac upozor\u0148ovan\u00ed na aktu\u00e1lne novinky v tomto priestore.
+
+jcmsplugin.collaborativespace.lbl.synchronization-on-model: Tento port\u00e1l je zosynchronizovan\u00fd s pr\u00edslu\u0161n\u00fdm modelom, zobrazenie preto nem\u00f4\u017eete meni\u0165.
+
+jcmsplugin.collaborativespace.msg.cannot-update-sync-data: "{0}\u201c nemo\u017eno meni\u0165, preto\u017ee tieto \u00fadaje s\u00fa zosynchronizovan\u00e9 s\u00a0pr\u00edslu\u0161n\u00fdm modelom.
+
+jcmsplugin.collaborativespace.header.search-button: Spusti\u0165 h\u013eadanie v pracovnom priestore {0}
+
+# ------------------------------------------------------------
+#  ADMIN LIST
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.admin-list.remove-member: Odstr\u00e1ni\u0165 zo zoznamu ved\u00facich
+jcmsplugin.collaborativespace.admin-list.add-member-btn: Prida\u0165 ved\u00faceho...
+
+# ------------------------------------------------------------
+#  SUGGESTIONS
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.suggestion.none: \u017diadne n\u00e1vrhy.
+jcmsplugin.collaborativespace.suggestion.reset: Vynulova\u0165 n\u00e1vrhy...
+jcmsplugin.collaborativespace.suggestion.reject: Nie, v\u010faka!
+
+# ------------------------------------------------------------
+#  APP
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.app.home.title: Prejs\u0165 na domovsk\u00fa str\u00e1nku komun\u00edt
+
+# ------------------------------------------------------------
+#  PUBLISH MENU
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.publish-menu.create: Kolaborat\u00edvny priestor
+
+# ------------------------------------------------------------
+#  CollaborativeSpace Recommendation (+alert)
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.space-recommendation.title: Odpor\u00fa\u010danie na pridanie do priestoru
+jcmsplugin.collaborativespace.space-recommendation.intro: Odpor\u00fa\u010da\u0165 \u010dlenom prida\u0165 sa do priestoru <strong>{0}</strong>.
+jcmsplugin.collaborativespace.space-recommendation.no-recipient: Vyberte aspo\u0148 jedn\u00e9ho \u010dlena alebo jednu skupinu.
+jcmsplugin.collaborativespace.space-recommendation.field.msg: Va\u0161a spr\u00e1va
+
+# ------------------------------------------------------------
+#  EDITABLE PROPERTIES
+# ------------------------------------------------------------
+$id.jcmsplugin.collaborativespace.typology-root: Hlavn\u00e1 kateg\u00f3ria typol\u00f3gie kolaborat\u00edvneho priestoru
+$id.CSRequest.formAuthor: Autor po\u017eiadavky kol. priestoru
+$id.CSRequest.workspace:  Pracovn\u00fd priestor po\u017eiadavky kol. priestoru
+$id.jcmsplugin.collaborativespace.typology-portal: Port\u00e1l kol. priestoru pod\u013ea typol\u00f3gie
+$id.jcmsplugin.collaborativespace.cs-creation-group: Skupina vytvorenia kol. priestoru
+$id.jcmsplugin.collaborativespace.cs-creation-group.help: Identifik\u00e1tor skupiny, ktor\u00fd d\u00e1va pr\u00e1vo vykon\u00e1va\u0165 priame vytv\u00e1ranie kol. priestoru bez overenia pracovn\u00e9ho postupu. ide o alternat\u00edvu d\u00e1vania ACl \u010dlenovi.
+jcmsplugin.collaborativespace.guestaccounts.enabled: Aktivova\u0165 kont\u00e1 hos\u0165a?
+$id.jcmsplugin.collaborativespace.guestaccounts.group: Skupina kont hos\u0165a
+$id.jcmsplugin.collaborativespace.guestaccounts.group.help: Identifik\u00e1tor skupiny, ktor\u00fd obsahuje v\u0161etky kont\u00e1 hos\u0165a organiz\u00e1cie
+$id.GuestRequest.workspace: Hos\u0165uj\u00faci pracovn\u00fd priestor po\u017eiadavky na konto hos\u0165a
+$id.GuestRequest.workspace.help: Identifik\u00e1tor pracovn\u00e9ho priestoru pre pracovn\u00fd priestor, v ktorom bud\u00fa po\u017eiadavky na konto hos\u0165a ulo\u017een\u00e9 (\u0161tandardne ide o predvolen\u00fd pracovn\u00fd priestor).
+$id.jcmsplugin.collaborativespace.guestaccounts.homepage-ws: Uv\u00edtac\u00ed pracovn\u00fd priestor pre host\u00ed
+$id.jcmsplugin.collaborativespace.guestaccounts.homepage-ws.help: Pracovn\u00fd priestor pr\u00edstupn\u00fd pre v\u0161etk\u00fdch host\u00ed, ktor\u00fd mo\u017eno pou\u017ei\u0165 na poskytnutie z\u00e1kladn\u00fdch inform\u00e1ci\u00ed o pou\u017e\u00edvan\u00ed platformy
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE ABILITIES
+# ------------------------------------------------------------
+portlet.ability.jcmsplugin.collaborativespace:                Kolaborat\u00edvne priestory
+portlet.ability.jcmsplugin.collaborativespace.dashboard:      Ovl\u00e1dac\u00ed panel
+portlet.ability.jcmsplugin.collaborativespace.application:    Aplik\u00e1cia
+
+ui.editportlet.usage.skin.collaborativeSpace: Vzh\u013ead kolaborat\u00edvneho priestoru
+ui.editportlet.usage.skin.collaborativeSpaceNoSkin: Vzh\u013ead kolaborat\u00edvneho priestoru (\u017eiadny)
+
+# ------------------------------------------------------------
+#  PORTLET MY COLLABORATIVE SPACES
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.portlet.mycs.lbl.mine:   Moje priestory
+jcmsplugin.collaborativespace.portlet.mycs.lbl.other:  In\u00e9 priestory
+jcmsplugin.collaborativespace.portlet.mycs.lbl.none:   \u017diadne priestory
+jcmsplugin.collaborativespace.portlet.mycs.lbl.filter: Filtrova\u0165 pod\u013ea...
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE I18N
+# ------------------------------------------------------------
+
+jcmsplugin.collaborativespace.label.edit:         Upravi\u0165
+jcmsplugin.collaborativespace.label.objectives:   Ciele
+jcmsplugin.collaborativespace.label.support:      Podpora:
+jcmsplugin.collaborativespace.label.breadcrumb:   Smer rozdrobenia:
+jcmsplugin.collaborativespace.request-date:       D\u00e1tum po\u017eiadavky: {0}
+
+jcmsplugin.collaborativespace.editform.create:    Vytvori\u0165 kolaborat\u00edvny priestor
+jcmsplugin.collaborativespace.editform.update:    Aktualizova\u0165 kolaborat\u00edvny priestor
+
+jcmsplugin.collaborativespace.csrequest.model:    Vygenerovan\u00fd model
+
+jcmsplugin.collaborativespace.handler.msg.cs-max: Povolen\u00fd je len 1 kolaborat\u00edvny priestor na jeden pracovn\u00fd priestor.
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.title: Aktivovanie prich\u00e1dzaj\u00facich e-mailov
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.content: Prich\u00e1dzaj\u00faci e-mail je teraz v tomto priestore akt\u00edvny.
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.footer: Upravte nastavenia, ktor\u00fdmi prisp\u00f4sobi\u0165 predponu prich\u00e1dzaj\u00faceho e-mailu: <strong>{0}</strong>.
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.edit-button: Upravi\u0165 nastavenia
+
+jcmsplugin.collaborativespace.dashboard.new:      \u017diadny obsah na zobrazenie.<br/><img src='images/jalios/icons/add.gif' class='icon' alt=''/>&nbsp;Vytvorte nov\u00fd obsah.
+jcmsplugin.collaborativespace.dashboard.warn.invalid-portal-container: T\u00e1to \u0161abl\u00f3na portletu V\u00fdber funguje len na port\u00e1li kolaborat\u00edvneho priestoru.
+
+jcmsplugin.collaborativespace.introduction.edit: Upravi\u0165 \u00favod
+jcmsplugin.collaborativespace.introduction.empty.default-message: \u00davod do tohto priestoru zatia\u013e nebol nap\u00edsan\u00fd.
+jcmsplugin.collaborativespace.introduction.infos.access.header: Pr\u00edstup
+jcmsplugin.collaborativespace.introduction.infos.access.membership.true: (Ste zaregistrovan\u00ed)
+jcmsplugin.collaborativespace.introduction.infos.access.membership.false: (Nie ste zaregistrovan\u00ed)
+jcmsplugin.collaborativespace.introduction.infos.guests.header: Hostia
+jcmsplugin.collaborativespace.introduction.infos.guests.info: {0,choice,0# \u017eiadny hos\u0165|1# 1 hos\u0165|2# {0} hostia}.
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail: E-mailov\u00e1 schr\u00e1nka
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail.h: E-maily odoslan\u00e9 na t\u00fato adresu bud\u00fa vo va\u0161om mene ulo\u017een\u00e9 v tomto priestore
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail.your-address: Va\u0161a osobn\u00e1 adresa na prispievanie v tomto priestore:
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail.warning: Upozornenie! T\u00e1to adresa je osobn\u00e1. Nikomu ju nehovorte.
+
+jcmsplugin.collaborativespace.typology-portal.presentation.edit: Upravi\u0165 prezent\u00e1ciu
+jcmsplugin.collaborativespace.typology-portal.presentation.empty.default-message: Prezent\u00e1cia pre t\u00fato kateg\u00f3riu zatia\u013e nebola vyplnen\u00e1.
+jcmsplugin.collaborativespace.typology-portal.spaces-list.title: Zoznam priestorov
+jcmsplugin.collaborativespace.typology-portal.pqfe.lbl.cs-result: {0,choice,0#\u017diadne priestory|1#Jeden priestor|2#{0,number,integer} priestory}.
+jcmsplugin.collaborativespace.typology-portal.pqfe.lbl.placeholder.search: H\u013eada\u0165 v {0}
+jcmsplugin.collaborativespace.typology-portal.lbl.csList.header: {0,choice,0# \u017diadne priestory|1#1 priestor|2#{0,number,integer} priestory}.
+jcmsplugin.collaborativespace.typology-portal.lbl.cs-typology.info: Vytvoren\u00e9 {0}. {1,choice,0#\u017diadni pozvan\u00ed|1#1 pozvan\u00fd|2#{1,number,integer} pozvan\u00ed}. Ved\u00faci: {2}
+jcmsplugin.collaborativespace.typology-portal.lbl.cs-typology.info-parent: V
+jcmsplugin.collaborativespace.typology-portal.lbl.cs-typology.admins-list: {0,choice,0# \u017eiadni ved\u00faci|1# {2}|2# {1} a {2}}
+
+
+# Query dates
+jcmsplugin.collaborativespace.query.today:     Dnes
+jcmsplugin.collaborativespace.query.tomorrow:  Zajtra
+jcmsplugin.collaborativespace.query.yesterday: V\u010dera
+jcmsplugin.collaborativespace.query.before:    Predt\u00fdm
+jcmsplugin.collaborativespace.query.after:     Nesk\u00f4r
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE CONTROL
+# ------------------------------------------------------------
+
+jcmsplugin.collaborativespace.msg.edit.cslicense:     S\u00fa\u010dasn\u00e1 licencia syst\u00e9mu JCMS neumo\u017e\u0148uje vytv\u00e1ra\u0165 viac kolaborat\u00edvnych priestorov.
+jcmsplugin.collaborativespace.msg.edit.workspace.typology-used: Typol\u00f3gia <i>({0})</i> nem\u00f4\u017ee by\u0165 pou\u017eit\u00e1 na pracovnom priestore, ale na portlete Kolaborat\u00edvny priestor.
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE DATA
+# ------------------------------------------------------------
+
+data.$id.jcmsplugin.collaborativespace.data.cat:                        Kolaborat\u00edvne priestory
+data.$id.jcmsplugin.collaborativespace.data.group.writer:               Kolaborat\u00edvny priestor \u2013 Autori
+data.$id.jcmsplugin.collaborativespace.data.group.reader:               Kolaborat\u00edvny priestor \u2013 Pozvan\u00ed
+data.$id.jcmsplugin.collaborativespace.data.internal.dashboard:         Ovl\u00e1dac\u00ed panel
+data.$id.jcmsplugin.collaborativespace.data.internal.icons:             Ikony
+data.$id.jcmsplugin.collaborativespace.data.internal.search:            H\u013eada\u0165
+data.$id.jcmsplugin.collaborativespace.data.service.latest-contents:    Najnov\u0161\u00ed obsah
+data.$id.jcmsplugin.collaborativespace.data.service.latest-contents.d:  Zoznam najnov\u0161ieho obsahu v tomto kolaborat\u00edvnom priestore
+data.$id.jcmsplugin.collaborativespace.data.service.latest-documents:   Najnov\u0161ie dokumenty
+data.$id.jcmsplugin.collaborativespace.data.service.latest-documents.d: Zoznam najnov\u0161\u00edch dokumentov v tomto kolaborat\u00edvnom priestore
+data.$id.jcmsplugin.collaborativespace.data.service.workflow:           Pracovn\u00fd postup
+data.$id.jcmsplugin.collaborativespace.data.service.workflow.d:         Zoznam publik\u00e1ci\u00ed na spracovanie
+data.$id.jcmsplugin.collaborativespace.data.service.glossary:           Glos\u00e1re
+data.$id.jcmsplugin.collaborativespace.data.service.glossary.d:         Zobrazuje slovn\u00edky v tomto kolaborat\u00edvnom priestore.
+data.$id.jcmsplugin.collaborativespace.data.service.faq:                FAQ
+data.$id.jcmsplugin.collaborativespace.data.service.faq.d:              Zobrazuje FAQ v tomto kolaborat\u00edvnom priestore.
+data.$id.jcmsplugin.collaborativespace.data.service.introduction:       \u00davod
+data.$id.jcmsplugin.collaborativespace.data.service.introduction.d:     Zobrazuje \u00favod v tomto kolaborat\u00edvnom priestore
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-full:      Kalend\u00e1r
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-full.d:    Aplik\u00e1cia spr\u00e1vy \u010dlensk\u00fdch udalost\u00ed kolaborat\u00edvneho priestoru
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-small:     Mal\u00fd kalend\u00e1r
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-small.d:   Zobrazuje kalend\u00e1r aktu\u00e1lneho mesiaca
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-diary:     Denn\u00edk
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-diary.d:   Zobrazuje di\u00e1r aktu\u00e1lneho mesiaca.
+data.$id.jcmsplugin.collaborativespace.data.service.event-schedule:     Pl\u00e1n udalosti
+data.$id.jcmsplugin.collaborativespace.data.service.event-schedule.d:   Zoznam pl\u00e1nov udalost\u00ed pre tento priestor
+data.$id.jcmsplugin.collaborativespace.data.service.subspaces:          Podkateg\u00f3rie priestoru
+data.$id.jcmsplugin.collaborativespace.data.service.subspaces.d:        Zoznam podkateg\u00f3ri\u00ed v\u00a0r\u00e1mci tohto priestoru
+data.$id.jcmsplugin.collaborativespace.data.model.ws:                   Model kolaborat\u00edvneho priestoru
+data.$id.jcmsplugin.collaborativespace.data.model.portal:               Model kolaborat\u00edvneho priestoru
+data.$id.jcmsplugin.collaborativespace.data.model.portal.desc:          Model vytv\u00e1rania nov\u00e9ho kolaborat\u00edvneho priestoru
+data.$id.jcmsplugin.collaborativespace.data.model.cat:                  $NAME$ Kolaborat\u00edvny priestor
+data.$id.jcmsplugin.collaborativespace.data.model.group.writer:         $NAME$ \u2013 Editori
+data.$id.jcmsplugin.collaborativespace.data.model.group.reader:         $NAME$ \u2013 Pozvan\u00ed
+data.$id.jcmsplugin.collaborativespace.data.model.group.follower:       $NAME$ \u2013 Odberatelia
+
+# ------------------------------------------------------------
+#  Guest Accounts Feature
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.guestaccounts.guest.label: Hos\u0165
+jcmsplugin.collaborativespace.guestaccounts.guestGroup.label: Hostia
+jcmsplugin.collaborativespace.guestaccounts.guestManagerGroup.label: Spr\u00e1vcovia host\u00ed
+jcmsplugin.collaborativespace.guestaccounts.guestManagerACL.label: Spr\u00e1vcovia host\u00ed
+jcmsplugin.collaborativespace.guestaccounts.account-creation.label: Otvori\u0165 konto hos\u0165a...
+jcmsplugin.collaborativespace.guestaccounts.contact-transformation.member-profile-target.label: Previes\u0165 na konto hos\u0165a...
+jcmsplugin.collaborativespace.guestaccounts.workspaces-and-groups.workspace.label.title: Kliknut\u00edm sem zobraz\u00edte/skryjete zoznam skup\u00edn pre tento pracovn\u00fd priestor
+jcmsplugin.collaborativespace.guestaccounts.no-guest-group-defined: Aktiv\u00e1cia funkcie konta hos\u0165a vy\u017eaduje platn\u00e9 ur\u010denie skupiny Kont\u00e1 hos\u0165a.<br />Skontrolujte vlastnos\u0165 <strong>{0}</strong> ($id.jcmsplugin.collaborativespace.guestaccounts.group).
+jcmsplugin.collaborativespace.guestaccounts.member-controller.error.account-already-in-workspaces: <p>Konto <strong>hos\u0165a</strong> nesmie patri\u0165 do skupiny <strong>nekolaborat\u00edvneho</strong> priestoru.</p><ul><li><strong>Odstr\u00e1\u0148te</strong> skupinu nekolaborat\u00edvneho priestoru, ak chcete vytvori\u0165 konto hos\u0165a({0})</li><li>, alebo ho <strong>odstr\u00e1\u0148te</strong> zo skupiny Kont\u00e1 hos\u0165a, aby k nemu bol mo\u017en\u00fd pr\u00edstup z nekolaborat\u00edvnych pracovn\u00fdch priestorov</li></ul>
+jcmsplugin.collaborativespace.guestaccounts.member-controller.error.no-valid-email: Konto hos\u0165a mus\u00ed ma\u0165 platn\u00fa e-mailov\u00fa adresu.
+jcmsplugin.collaborativespace.guestaccounts.member-controller.error.contact-creation-forbidden: Konto hos\u0165a nem\u00f4\u017ee vytvori\u0165 Kontakt.
+jcmsplugin.collaborativespace.guestaccounts.member-controller.warning.guest-group-removal: Po odstr\u00e1nen\u00ed tohto konta zo skupiny Kont\u00e1 hos\u0165a bude mo\u017en\u00fd \u010fal\u0161\u00ed pr\u00edstup na konto.<br />Pokra\u010dujte vyn\u00faten\u00edm odstr\u00e1nenia tohto konta zo skupiny Hos\u0165.
+jcmsplugin.collaborativespace.guestaccounts.member-controller.guest-group-removal.lbl: Odstr\u00e1ni\u0165 zo skupiny Hostia
+jcmsplugin.collaborativespace.guestaccounts.member-controller.guest-group-removal.lbl.h: Vyn\u00fati\u0165 odstr\u00e1nenie tohto konta zo skupiny Kont\u00e1 hos\u0165a?
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.feature-not-enabled: Po\u017eiadavka sa ned\u00e1 spracova\u0165. Skontrolujte nastavenie funkcie Hostia.
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-submitter: Odosielate\u013e je povinn\u00e1 polo\u017eka.
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-group: Vyberte aspo\u0148 jednu skupinu kolaborat\u00edvneho priestoru.
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-name: Hos\u0165 mus\u00ed ma\u0165 Meno.
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-organization: Hos\u0165 mus\u00ed ma\u0165 Organiz\u00e1ciu.
+jcmsplugin.collaborativespace.guestaccounts.request-modal.use-with-worflow.title: \u017diados\u0165 o vytvorenie konta hos\u0165a
+jcmsplugin.collaborativespace.guestaccounts.request-modal.use-with-no-worflow.title: Vytvorenie konta hos\u0165a
+jcmsplugin.collaborativespace.guestaccounts.creation-request-controller.create.finish: <p>\u017diados\u0165 o vytvorenie konta hos\u0165a bola \u00faspe\u0161ne odoslan\u00e1.</p><p>Po overen\u00ed \u017eiadosti bude konto hos\u0165a vytvoren\u00e9 a dostanete ozn\u00e1menie.</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-controller.account-creation-success.mail.email-notsent: E-mail sa nepodarilo odosla\u0165: {0}. Sk\u00faste to znova, pr\u00edpadne sa obr\u00e1\u0165te na ved\u00faceho.
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.0: Kontrola
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1: N\u00e1vrhy
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.2: Inform\u00e1cie
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.3: Priestory
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.0.intro: <p class='info'>Zadajte meno a/alebo e-mail konta hos\u0165a a skontrolujte tak, \u010di t\u00e1to osoba u\u017e existuje:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.intro.1: <p class='info'>Na\u0161lo sa existuj\u00face konto s t\u00fdmito \u00fadajmi. Skontrolujte e\u0161te pred vytvoren\u00edm konta hos\u0165a, \u010di po\u017eadovan\u00e9 konto u\u017e neexistuje.</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.intro.2: <p class='info'>Na\u0161li sa existuj\u00face kont\u00e1. Pred t\u00fdm, ako vytvorte nov\u00e9, skontrolujte, \u010di nepatria tej istej osobe.<br />Kliknut\u00edm na kartu zobraz\u00edte \u010dlena v novom okne, podr\u017ean\u00edm kurzora nad kartou a kliknut\u00edm na tla\u010didlo budete pokra\u010dova\u0165 s t\u00fdmto \u010dlenom.</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.see-profile.btn: Zobrazi\u0165 profil
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.see-profile.btn.title: Zobrazte cel\u00fd profil konta v novom okne a a\u017e potom vyberte \u00fakon
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.select-account.title: Vyberte toto existuj\u00face konto, aby ste ho mohli priradi\u0165 do priestorov
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.select-account.btn: Vybra\u0165
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.transform-contact-to-guest.btn-label: Konvertova\u0165 na hos\u0165a
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.transform-contact-to-guest.btn.title: Vyberte tento kontakt a nastavte ho ako hos\u0165a, aby ste ho mohli priradi\u0165 do priestorov
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.2.intro: <p class='info'>Vypl\u0148te \u00fadaje pre konto hos\u0165a, ktor\u00e9 vytv\u00e1rate:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.2.intro.convert-contact: <p class='info'>Vypl\u0148te \u00fadaje pre kontakt <strong>{0}</strong>, ktor\u00fd chcete zmeni\u0165 na hos\u0165a:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.3.intro: <p class='info'>V t\u00fdchto kolaborat\u00edvnych priestoroch skontrolujte skupiny, do ktor\u00fdch bude konto pridan\u00e9:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.3.intro.convert-contact: <p class='info'>V t\u00fdchto kolaborat\u00edvnych priestoroch skontrolujte skupiny, do ktor\u00fdch sa m\u00e1 prida\u0165 kontakt <strong>{0}</strong>:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.use-with-worflow.validate: Odosla\u0165 \u017eiados\u0165
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.use-with-no-worflow.validate: Vytvori\u0165 konto
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.use-with-worflow.validate: Odosla\u0165 \u017eiados\u0165
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.use-with-no-worflow.validate: Previes\u0165
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.contact-reminder: Prevod <strong>{0}</strong> na konto hos\u0165a.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.groups-intro: <p class='info'>V t\u00fdchto kolaborat\u00edvnych priestoroch skontrolujte skupiny, do ktor\u00fdch bude konto hos\u0165a pridan\u00e9:</p>
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.error.no-email: Kontakt mus\u00ed ma\u0165 platn\u00fa e-mailov\u00fa adresu, ktor\u00e1 bude preveden\u00e1 na konto hos\u0165a.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.error.email-already-used: Kontakt nemo\u017eno previes\u0165 na konto hos\u0165a. Existuj\u00face konto u\u017e pou\u017e\u00edva e-mailov\u00fa adresu <strong>{0}</strong>.<br />Pou\u017eite in\u00fd e-mail, pr\u00edpadne preve\u010fte existuj\u00face konto na konto hos\u0165a.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.error.not-a-contact: \u010clen, ktor\u00e9ho chcete previes\u0165, mus\u00ed by\u0165 kontakt.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.create.finish: <p>\u017diados\u0165 o prevod kontaktu na konto hos\u0165a bola \u00faspe\u0161ne odoslan\u00e1.</p><p>Po overen\u00ed \u017eiadosti bude konto hos\u0165a vytvoren\u00e9 a dostanete ozn\u00e1menie.</p>
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.account-transformation-success: Kontakt <a href='{0}' target='_blank' title='New window'>{1}</a> bol \u00faspe\u0161ne preveden\u00fd na konto hos\u0165a.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.account-creation-success.mail.email-notsent: E-mail sa nepodarilo odosla\u0165: {0}. Sk\u00faste to znova, pr\u00edpadne sa obr\u00e1\u0165te na ved\u00faceho.
+jcmsplugin.collaborativespace.guestaccounts.guest-request.notification.warn.no-request: E-mail so zmenou hesla sa nepodarilo odosla\u0165. Na konto hos\u0165a ({0}) nebude doru\u010den\u00e9 ozn\u00e1menie.
+jcmsplugin.collaborativespace.guestaccounts.guest-request.notification.warn.mail-disabled: E-maily s\u00fa deaktivovan\u00e9. Konto hos\u0165a nedostane ozn\u00e1menie.
+jcmsplugin.collaborativespace.guestaccounts.guest-request.notification.warn.unknown-error: \u013dutujeme, nie\u010do sa pokazilo... Konto hos\u0165a nedostane ozn\u00e1menie.
+jcmsplugin.collaborativespace.guestaccounts.process-request.btn.accept:  Prija\u0165
+jcmsplugin.collaborativespace.guestaccounts.process-request.btn.reject:  Odmietnu\u0165
+
+
+jcmsplugin.collaborativespace.syncMode.tabs: Aplik\u00e1cie
+jcmsplugin.collaborativespace.syncMode.dashboard: Domovsk\u00e1 str\u00e1nka
+jcmsplugin.collaborativespace.syncMode.data: \u00dadaje \u0161trukt\u00fary (typy, WF, skupiny, ...)
+jcmsplugin.collaborativespace.syncMode.categories: Kateg\u00f3rie
+jcmsplugin.collaborativespace.syncMode.activate-help.message: Ak je synchroniz\u00e1cia povolen\u00e1, niektor\u00e9 parametre modelu aplikuje na tento pracovn\u00fd priestor
+
+#jcmsplugin.collaborativespace.modelSyncMode.dashboard: Applications
+#jcmsplugin.collaborativespace.modelSyncMode.dashboard: Home 
+#jcmsplugin.collaborativespace.modelSyncMode.dashboard: Data
+
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal: Upravi\u0165 str\u00e1nku (Pokro\u010dil\u00e9 \u00fapravy)...
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-simple: Upravi\u0165 str\u00e1nku...
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-simple-stop: Zastavi\u0165 \u00fapravu
+jcmsplugin.collaborativespace.actions-menu.recommend-collaborative-space: Zdie\u013ea\u0165...
+jcmsplugin.collaborativespace.modelSyncMode.locked.message: Kolaborat\u00edvny priestor je zosynchronizovan\u00fd s\u00a0modelom: <b>{0}</b>
+
+# ------------------------------------------------------------
+# Alerts
+# ------------------------------------------------------------
+alert.name.jcmsplugin-collaborativespace:                         Kolaborat\u00edvne priestory
+alert.name.jcmsplugin-collaborativespace.cs-creation:             Vytvorenie kolaborat\u00edvneho priestoru
+alert.name.jcmsplugin-collaborativespace.cs-creation-rejected-submitter: \u017diados\u0165 o\u00a0vytvorenie kolaborat\u00edvneho priestoru zamietnut\u00e1
+alert.name.jcmsplugin-collaborativespace.invitation:              Pozv\u00e1nka na pridanie do priestoru
+alert.name.jcmsplugin-collaborativespace.enrollment:              Registr\u00e1cia do priestoru
+alert.name.jcmsplugin-collaborativespace.join:                    Registr\u00e1cia do priestoru
+alert.name.jcmsplugin-collaborativespace.recommendation:          Odpor\u00fa\u010danie na priestor
+alert.name.jcmsplugin-collaborativespace.signup-request:          Odoslanie registr\u00e1cie
+alert.name.jcmsplugin-collaborativespace.signup-accepted:         Registr\u00e1cia prijat\u00e1
+alert.name.jcmsplugin-collaborativespace.signup-rejected:         Registr\u00e1cia zamietnut\u00e1
+alert.name.jcmsplugin-collaborativespace.unsignup:                Ukon\u010denie odberu
+alert.name.jcmsplugin-collaborativespace.guest-creation:          Aktiv\u00e1cia konta hos\u0165a
+alert.name.jcmsplugin-collaborativespace.silent-guest-creation:   Aktiv\u00e1cia konta hos\u0165a
+alert.name.jcmsplugin-collaborativespace.contact-to-guest:        Prevod kontaktu na konto hos\u0165a
+alert.name.jcmsplugin-collaborativespace.silent-contact-to-guest: Prevod kontaktu na konto hos\u0165a
+
+alert.msg.jcmsplugin-collaborativespace.cs-creation.title:                          Vytvorenie kolaborat\u00edvneho priestoru {data}
+alert.msg.jcmsplugin-collaborativespace.cs-creation.short-description:              Kolaborat\u00edvny priestor {data} bol vytvoren\u00fd.
+alert.msg.jcmsplugin-collaborativespace.cs-creation.description:                    <p>Kolaborat\u00edvny priestor {data} bol vytvoren\u00fd.</p><p>Ste ved\u00faci tohto priestoru.</p>
+
+alert.msg.jcmsplugin-collaborativespace.cs-creation-rejected-submitter.title:             Vytvorenie kolaborat\u00edvneho priestoru zamietnut\u00e9
+alert.msg.jcmsplugin-collaborativespace.cs-creation-rejected-submitter.short-description: \u017diados\u0165 o vytvorenie kolaborat\u00edvneho priestoru (\u201e{cs-title}\u201c) bola zamietnut\u00e1. Koment\u00e1r overovate\u013ea: {validator-comment}
+
+alert.msg.jcmsplugin-collaborativespace.invitation.title:                           Pozvanie na \u00fa\u010das\u0165 {data}
+alert.msg.jcmsplugin-collaborativespace.invitation.short-description:               {author} v\u00e1s poz\u00fdva sta\u0165 sa \u010dlenom v kolaborat\u00edvnom priestore {data}.
+alert.msg.jcmsplugin-collaborativespace.invitation.description:                     <p>{author} v\u00e1s poz\u00fdva sta\u0165 sa \u010dlenom v kolaborat\u00edvnom priestore {data}.</p><p><a href="{accept-url}">Prija\u0165 toto pozvanie</a></p><p><a href="{decline-url}">Odmietnu\u0165 toto pozvanie</a></p><br /><p><b>Popis priestoru:</b></p><p>{cs-description}</p>
+
+alert.msg.jcmsplugin-collaborativespace.enrollment.title:                           Registr\u00e1cia do {data}
+alert.msg.jcmsplugin-collaborativespace.enrollment.short-description:               Ste \u010dlen kolaborat\u00edvneho priestoru {data}.
+
+alert.msg.jcmsplugin-collaborativespace.join.title:                                 Registr\u00e1cia do {data}
+alert.msg.jcmsplugin-collaborativespace.join.short-description:                     {author} sa pridal/a do kolaborat\u00edvneho priestoru {data}.
+alert.msg.jcmsplugin-collaborativespace.join.description:                           <p><a href="{author-url}">{author}</a> sa pridal/a do kolaborat\u00edvneho priestoru {data}.</p>
+
+alert.msg.jcmsplugin-collaborativespace.recommendation.title:                       Odpor\u00fa\u010danie na kolaborat\u00edvny priestor {data}
+alert.msg.jcmsplugin-collaborativespace.recommendation.short-description:           {author} v\u00e1m odpor\u00fa\u010da prida\u0165 sa do kolaborat\u00edvneho priestoru {data}.
+alert.msg.jcmsplugin-collaborativespace.recommendation.description:                 <p>{author} v\u00e1m odpor\u00fa\u010da prida\u0165 sa do kolaborat\u00edvneho priestoru {data}.</p>
+
+alert.msg.jcmsplugin-collaborativespace.signup-request.title:                       \u017diados\u0165 o registr\u00e1ciu do {data}
+alert.msg.jcmsplugin-collaborativespace.signup-request.short-description:           {author} odoslal/a \u017eiados\u0165 o registr\u00e1ciu do kolaborat\u00edvneho priestoru {data}.
+alert.msg.jcmsplugin-collaborativespace.signup-request.description:                 <p>{author} odoslal/a <a href="{signup-url}">\u017eiados\u0165 o registr\u00e1ciu</a> do kolaborat\u00edvneho priestoru {data}.</p>
+
+alert.msg.jcmsplugin-collaborativespace.signup-accepted.title:                      \u017diados\u0165 o registr\u00e1ciu do {data}
+alert.msg.jcmsplugin-collaborativespace.signup-accepted.short-description:          Va\u0161u \u017eiados\u0165 o registr\u00e1ciu do kolaborat\u00edvneho priestoru {data} schv\u00e1lil/a {author}.
+alert.msg.jcmsplugin-collaborativespace.signup-accepted.description:                <p>Blaho\u017eel\u00e1me! Va\u0161u \u017eiados\u0165 o registr\u00e1ciu do kolaborat\u00edvneho priestoru {data} schv\u00e1lil/a {author}. Odteraz ste \u010dlen tohto priestoru.</p>
+
+alert.msg.jcmsplugin-collaborativespace.signup-rejected.title:                      \u017diados\u0165 o registr\u00e1ciu do {data}
+alert.msg.jcmsplugin-collaborativespace.signup-rejected.short-description:          Va\u0161a \u017eiados\u0165 o registr\u00e1ciu do kolaborat\u00edvneho priestoru {data} bola zamietnut\u00e1. Koment\u00e1r overovate\u013ea: {validator-comment}
+
+alert.msg.jcmsplugin-collaborativespace.unsignup.title:                             Zru\u0161i\u0165 odber z {data}
+alert.msg.jcmsplugin-collaborativespace.unsignup.short-description:                 {author} zru\u0161il/a odber z kolaborat\u00edvneho priestoru {data}.
+
+alert.msg.jcmsplugin-collaborativespace.guest-creation.title:                       Aktiv\u00e1cia konta hos\u0165a
+alert.msg.jcmsplugin-collaborativespace.guest-creation.short-description:           Konto hos\u0165a {data} ({organization}) bolo \u00faspe\u0161ne vytvoren\u00e9 a e-mailom bolo odoslan\u00e9 ozn\u00e1menie.
+
+alert.msg.jcmsplugin-collaborativespace.contact-to-guest.title:                     Aktiv\u00e1cia konta hos\u0165a
+alert.msg.jcmsplugin-collaborativespace.contact-to-guest.short-description:         Kontakt {data} ({organization}) bol preveden\u00fd na konto hos\u0165a a e-mailom bolo odoslan\u00e9 ozn\u00e1menie.
+
+alert.msg.jcmsplugin-collaborativespace.silent-guest-creation.title:                Aktiv\u00e1cia konta hos\u0165a
+alert.msg.jcmsplugin-collaborativespace.silent-guest-creation.short-description:    Konto hos\u0165a {data} ({organization}) bolo \u00faspe\u0161ne vytvoren\u00e9.
+
+alert.msg.jcmsplugin-collaborativespace.silent-contact-to-guest.title:              Aktiv\u00e1cia konta hos\u0165a
+alert.msg.jcmsplugin-collaborativespace.silent-contact-to-guest.short-description:  Kontakt {data} ({organization}) bol preveden\u00fd na konto hos\u0165a.
+
+wf-alert.ANY.CSRequest.wfcsrequest.-201.form-submission.alertWorkers.ANY.title: {reminder} \u017diados\u0165 o vytvorenie kolaborat\u00edvneho priestoru bola odoslan\u00e1.
+wf-alert.ANY.CSRequest.wfcsrequest.-201.form-submission.alertWorkers.ANY.short-description: \u017diados\u0165 o vytvorenie kolaborat\u00edvneho priestoru bola odoslan\u00e1: {data.url}
+wf-alert.ANY.CSRequest.wfcsrequest.-201.form-submission.alertWorkers.ANY.description: <p>\u017diados\u0165 o vytvorenie kolaborat\u00edvneho priestoru {data} bola odoslan\u00e1.</p><p>M\u00f4\u017eete ju schv\u00e1li\u0165.</p>
+
+wf-alert.ANY.CSSignupRequest.wfcssignup.-201.form-submission.alertWorkers.ANY.title: {reminder} \u017diados\u0165 o registr\u00e1ciu kolaborat\u00edvneho priestoru bola odoslan\u00e1
+wf-alert.ANY.CSSignupRequest.wfcssignup.-201.form-submission.alertWorkers.ANY.short-description: \u017diados\u0165 o registr\u00e1ciu kolaborat\u00edvneho priestoru bola odoslan\u00e1: {data.url}
+wf-alert.ANY.CSSignupRequest.wfcssignup.-201.form-submission.alertWorkers.ANY.description: <p>\u017diados\u0165 o registr\u00e1ciu kolaborat\u00edvneho priestoru bola odoslan\u00e1: {data}.</p><p>M\u00f4\u017eete ju schv\u00e1li\u0165.</p>
+
+# ----------------------------------------------------------------------
+# SHORTCUT
+# ----------------------------------------------------------------------
+
+data.$id.shortcut.jcmsplugin.collaborativespace-hub.title: Priestory
+data.$id.shortcut.jcmsplugin.collaborativespace-hub.text: Pristupujte ku v\u0161etk\u00fdm svojim priestorom, spravujte si ob\u013e\u00faben\u00e9 priestory a objavujte n\u00e1vrhy priestorov.
+
+# ----------------------------------------------------------------------
+# CategoryBrowser
+# ----------------------------------------------------------------------
+category.category-browser.collaborativespace-search: H\u013eada\u0165 v tomto priestore
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From CollaborativeSpace-templates.xml
+types.CollaborativeSpace.templates.box.default.label: Predvolen\u00e1 \u0161abl\u00f3na
+
+# From CollaborativeSpace.xml
+types.CollaborativeSpace.fields.header.label: Hlavi\u010dka
+types.CollaborativeSpace.fields.headerSettings.label: Prisp\u00f4sobenie hlavi\u010dky
+types.CollaborativeSpace.fields.introduction.label: \u00davod
+types.CollaborativeSpace.tabs.layout.label: Rozlo\u017eenie
+types.CollaborativeSpace.fields.accessPolicy.label: Pr\u00edstup
+types.CollaborativeSpace.title.label: N\u00e1zov
+types.CollaborativeSpace.fields.exactCategory.label: Presn\u00e1 kateg\u00f3ria
+types.CollaborativeSpace.fields.signupPolicy.labelList: Vo\u013en\u00e1 registr\u00e1cia|\u017diados\u0165 o registr\u00e1ciu|Registr\u00e1cia spravovan\u00e1 ved\u00facimi
+types.CollaborativeSpace.fields.layout.label: Rozlo\u017eenie
+types.CollaborativeSpace.label: Kolaborat\u00edvny priestor
+types.CollaborativeSpace.description: Portlet kolaborat\u00edvneho priestoru ur\u010duje, ktor\u00e9 aplik\u00e1cie sa maj\u00fa zobrazova\u0165.
+types.CollaborativeSpace.fields.layout.labelList: Bez bo\u010dn\u00e9ho panela|Bo\u010dn\u00fd panel v\u013eavo|Bo\u010dn\u00fd panel vpravo
+types.CollaborativeSpace.fields.signupPolicy.label: Z\u00e1sady registr\u00e1cie
+types.CollaborativeSpace.fields.dashboardColumnCount.label: St\u013apce ovl\u00e1dacieho panela
+types.CollaborativeSpace.fields.accessPolicy.labelList: Verejn\u00e9|S\u00fakromn\u00e9|Tajn\u00e9
+types.CollaborativeSpace.fields.exactCategory.onLabel: \u00c1no
+types.CollaborativeSpace.fields.exactCategory.offLabel: Nie
+types.CollaborativeSpace.fields.description.label: Opis
+types.CollaborativeSpace.tabs.access.label: Pr\u00edstup
+types.CollaborativeSpace.fields.theme.label: Mot\u00edv
+types.CollaborativeSpace.fields.followersGroup.label: Skupina odberate\u013eov
+types.CollaborativeSpace.fields.followersGroup.description: \u010clenovia tejto skupiny bud\u00fa upozornen\u00ed na nov\u00fd obsah v priestore.
+types.CollaborativeSpace.fields.jportal.label: JPortal
+types.CollaborativeSpace.fields.syncMode.label: Synchronizovan\u00e9 polo\u017eky
+types.CollaborativeSpace.fields.syncMode.labelList: Domovsk\u00e1 str\u00e1nka|Aplik\u00e1cie|\u00dadaje \u0161trukt\u00fary (typy, WF, skupiny, ...)|Kateg\u00f3rie
+types.CollaborativeSpace.fields.model.label: Model pracovn\u00e9ho priestoru
+types.CollaborativeSpace.fields.applications.label: Aplik\u00e1cie
+types.CollaborativeSpace.fields.mobileShowIntro.label: Zobrazi\u0165 \u00favod
+types.CollaborativeSpace.fields.mobileShowApplications.label: Zobrazi\u0165 aplik\u00e1cie
+types.CollaborativeSpace.fields.mobilePortlets.label: Portlety
+types.CollaborativeSpace.fields.modelSyncMode.label: Povinn\u00e1 synchroniz\u00e1cia
+types.CollaborativeSpace.fields.modelSyncMode.labelList: Domovsk\u00e1 str\u00e1nka|Aplik\u00e1cie|\u00dadaje \u0161trukt\u00fary (typy, WF, skupiny, ...)|Kateg\u00f3rie
+
+# From CSRequest-templates.xml
+types.CSRequest.templates.query.default.label: Predvolen\u00e1 \u0161abl\u00f3na
+types.CSRequest.templates.full.default.description: Predvolen\u00e1 \u0161abl\u00f3na
+types.CSRequest.templates.full.default.label: Predvolen\u00e1 \u0161abl\u00f3na
+types.CSRequest.templates.query.default.description: Predvolen\u00e1 \u0161abl\u00f3na
+
+# From CSRequest.xml
+types.CSRequest.fields.description.label: Opis
+types.CSRequest.title.label: N\u00e1zov
+types.CSRequest.fields.notificationPolicy.label: Z\u00e1sady upozornen\u00ed
+types.CSRequest.fields.groups.label: Skupiny
+types.CSRequest.fields.accessPolicy.labelList: Verejn\u00e9|S\u00fakromn\u00e9|Tajn\u00e9
+types.CSRequest.fields.signupPolicy.labelList: Vo\u013en\u00e1 registr\u00e1cia|\u017diados\u0165 o registr\u00e1ciu|Registr\u00e1cia spravovan\u00e1 ved\u00facimi
+types.CSRequest.fields.notificationPolicy.labelList: Odosla\u0165 pozv\u00e1nku pozvan\u00fdm|Prida\u0165 a ozn\u00e1mi\u0165 pozvan\u00fdm|Prida\u0165 pozvan\u00fdch bez ozn\u00e1menia
+types.CSRequest.fields.signupPolicy.label: Z\u00e1sady registr\u00e1cie
+types.CSRequest.label: Kolaborat\u00edvny priestor\u00a0\u2013\u00a0\u017diados\u0165 o\u00a0vytvorenie
+types.CSRequest.fields.admins.label: Ved\u00faci
+types.CSRequest.fields.language.label: Jazyk
+types.CSRequest.fields.members.label: \u010clenovia
+types.CSRequest.fields.name.label: N\u00e1zov priestoru
+types.CSRequest.fields.accessPolicy.label: Pr\u00edstup
+types.CSRequest.fields.model.label: Model
+types.CSRequest.fields.parent.label: Nadraden\u00fd priestor
+types.CSRequest.fields.syncMode.label: Synchronizovan\u00e9 polo\u017eky
+types.CSRequest.fields.syncMode.labelList: Domovsk\u00e1 str\u00e1nka|Aplik\u00e1cie|\u00dadaje \u0161trukt\u00fary (typy, WF, skupiny, ...)|Kateg\u00f3rie
+
+# From CSSignupRequest-templates.xml
+types.CSSignupRequest.templates.full.default.label: Predvolen\u00e1 \u0161abl\u00f3na
+types.CSSignupRequest.templates.full.default.description: Predvolen\u00e1 \u0161abl\u00f3na
+types.CSSignupRequest.templates.query.default.label: Predvolen\u00e1 \u0161abl\u00f3na
+types.CSSignupRequest.templates.query.default.description: Predvolen\u00e1 \u0161abl\u00f3na
+
+# From CSSignupRequest.xml
+types.CSSignupRequest.title.label: N\u00e1zov
+types.CSSignupRequest.label: Kolaborat\u00edvny priestor\u00a0\u2013\u00a0\u017diados\u0165 o\u00a0registr\u00e1ciu
+types.CSSignupRequest.fields.name.label: N\u00e1zov
+
+# From GuestCrea.xml
+types.GuestCrea.title.label: N\u00e1zov
+types.GuestCrea.label: Konto hos\u0165a \u2013 \u017diados\u0165 o vytvorenie
+types.GuestCrea.description: Tento formul\u00e1r umo\u017e\u0148uje po\u017eiada\u0165 o vytvorenie konta hos\u0165a, ktor\u00e9 m\u00e1 len pr\u00edstup do kolaborat\u00edvnych priestorov.
+types.GuestCrea.fields.name.label: N\u00e1zov
+types.GuestCrea.fields.email.label: E-mail
+types.GuestCrea.fields.organization.label: Organiz\u00e1cia
+types.GuestCrea.fields.firstname.label: Krstn\u00e9 meno
+types.GuestCrea.fields.language.label: Jazyk
+types.GuestCrea.fields.country.label: Krajina
+
+# From GuestConv.xml
+types.GuestConv.title.label: N\u00e1zov
+types.GuestConv.label: Konto hos\u0165a \u2013 \u017diados\u0165 o prevod kontaktu
+types.GuestConv.fields.contact.description: Existuj\u00faci \u010dlene (typ Kontakt) bude preveden\u00fd na konto hos\u0165a.
+types.GuestConv.description: Tento formul\u00e1r umo\u017e\u0148uje po\u017eiada\u0165 o prevod existuj\u00faceho kontaktu na konto hos\u0165a, ktor\u00e9 m\u00e1 len pr\u00edstup do kolaborat\u00edvnych priestorov.
+types.GuestConv.fields.contact.label: Kontakt
+
+# From GuestRequest.xml
+types.GuestRequest.fields.submit-mbr.label: \u017diadate\u013e
+types.GuestRequest.fields.groups.label: Cie\u013eov\u00e9 skupiny
+types.GuestRequest.fields.groups.description: V\u0161etky skupiny kolaborat\u00edvnych priestorov, do ktor\u00fdch bude konto hos\u0165a pridan\u00e9.
+types.GuestRequest.title.label: N\u00e1zov
+types.GuestRequest.label: [Abstrakt] Konto hos\u0165a \u2013 \u017diados\u0165 o otvorenie
+
+# From PortletMyCollaborativeSpaces-templates.xml
+types.PortletMyCollaborativeSpaces.templates.box.default.label: \u0160abl\u00f3na Moje priestory
+types.PortletMyCollaborativeSpaces.templates.full.default.label: \u0160abl\u00f3na Moje priestory
+types.PortletMyCollaborativeSpaces.templates.box.itemBox.label: \u0160abl\u00f3na item box pre moje priestory
+types.PortletMyCollaborativeSpaces.templates.box.hierarchy.label: \u0160abl\u00f3na Hierarchick\u00e9 priestory
+types.PortletMyCollaborativeSpaces.templates.box.hierarchyItemBox.label: \u0160abl\u00f3na item box pre hierarchick\u00e9 priestory
+types.PortletMyCollaborativeSpaces.templates.query.default.label: \u0160abl\u00f3na dopytu
+
+# From PortletMyCollaborativeSpaces.xml
+types.PortletMyCollaborativeSpaces.label: Portlet Moje kolaborat\u00edvne priestory
+types.PortletMyCollaborativeSpaces.description: Portlet Moje kolaborat\u00edvne priestory zobrazuje zoznam kolaborat\u00edvnych priestorov.
+types.PortletMyCollaborativeSpaces.title.label: N\u00e1zov
+types.PortletMyCollaborativeSpaces.fields.depth.label: \u00darovne
+types.PortletMyCollaborativeSpaces.fields.depth.description: Po\u010det \u00farovn\u00ed podpriestoru na zobrazenie.
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.label: Filter typol\u00f3gie
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.description: Zobrazi\u0165 filter pod\u013ea typol\u00f3gie priestoru?
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.onLabel: \u00c1no
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.offLabel: Nie
+
+# From PortletCollaborativeSpaceSuggestion.xml
+types.PortletCollaborativeSpaceSuggestion.label: Portlet pre n\u00e1vrh kolaborat\u00edvnych priestorov
+types.PortletCollaborativeSpaceSuggestion.description: Portlet pre n\u00e1vrh kolaborat\u00edvnych priestorov zobrazuje prihl\u00e1sen\u00e9mu \u010dlenovi n\u00e1vrhy kolaborat\u00edvnych priestorov.
+types.PortletCollaborativeSpaceSuggestion.title.label: N\u00e1zov
+types.PortletCollaborativeSpaceSuggestion.fields.threshold.label: Hrani\u010dn\u00e1 hodnota
+types.PortletCollaborativeSpaceSuggestion.fields.typology.label: Typol\u00f3gie
+types.PortletCollaborativeSpaceSuggestion.fields.hideWhenNoResults.label: Skry\u0165, ke\u010f nie s\u00fa \u017eiadne n\u00e1vrhy
+types.PortletCollaborativeSpaceSuggestion.fields.maxItems.label: Po\u010det n\u00e1vrhov 
+
+# From PortletCollaborativeSpaceSuggestion-templates.xml
+types.PortletCollaborativeSpaceSuggestion.templates.full.default.label: \u0160abl\u00f3na n\u00e1vrhov
+types.PortletCollaborativeSpaceSuggestion.templates.box.default.label: \u0160abl\u00f3na n\u00e1vrhov
+types.PortletCollaborativeSpaceSuggestion.templates.box.itemBox.label: \u0160abl\u00f3na item box n\u00e1vrhov
+
+# From plugin.xml
+types.PortletQueryForeach.templates.box.jcmsplugin.collaborativespace.dashboard.label: Zobrazenie ovl\u00e1dacieho panela (CSP)
+types.PortletQueryForeachDetail.templates.box.jcmsplugin.collaborativespace.dashboard.label: Zobrazenie ovl\u00e1dacieho panela (CSP)
+types.PortletSearch.templates.box.jcmsplugin.collaborativespace.search-header.label: Kolaborat\u00edvny priestor \u2013 Hlavi\u010dka
+types.PortletSelection.templates.box.jcmsplugin.collaborativespace.dashboard.label: Kolaborat\u00edvny priestor \u2013 Ovl\u00e1dac\u00ed panel
+types.AbstractPortletSkinable.templates.collaborativeSpace.noskin.label: Svetl\u00e1 (bez nadpisu)
+types.AbstractPortletSkinable.templates.collaborativeSpace.default.label: Panel so zaoblen\u00fdmi rohmi
+types.AbstractPortletSkinable.templates.collaborativeSpace.borderless.label: Svetl\u00e1 s pod\u010diarknut\u00fdm nadpisom
+
+# From wfcsrequest.xml
+workflows.wfcsrequest.states.60.label: Prijat\u00e9
+workflows.wfcsrequest.states.50.label: Zamietnut\u00e9
+workflows.wfcsrequest.states.-201.label: Predlo\u017een\u00e9
+workflows.wfcsrequest.label: Kolaborat\u00edvny priestor \u2013 Pracovn\u00fd postup po\u017eiadavky na vytvorenie
+workflows.wfcsrequest.roles.validator.name: Overovate\u013e
+workflows.wfcsrequest.states.60.description: \u017diados\u0165 overen\u00e1, kolaborat\u00edvny priestor bol vytvoren\u00fd.
+workflows.wfcsrequest.states.50.description: \u017diados\u0165 o vytvorenie kolaborat\u00edvneho priestoru bola zamietnut\u00e1. Po\u017eadovan\u00fd kolaborat\u00edvny priestor nebude vytvoren\u00fd. Podrobnosti tohto zamietnutia n\u00e1jdete v pozn\u00e1mkach k pracovn\u00e9mu postupu.
+workflows.wfcsrequest.roles.validator.description: Prija\u0165/zamietnu\u0165 \u017eiados\u0165 o kolaborat\u00edvny priestor
+
+# From wfcssignup.xml
+workflows.wfcssignup.roles.validator1.description: Prijme/Zamietne \u017eiados\u0165 o registr\u00e1ciu o kolaborat\u00edvny priestor
+workflows.wfcssignup.label: Kolaborat\u00edvny priestor \u2013 Pracovn\u00fd postup registr\u00e1cie
+workflows.wfcssignup.roles.validator1.name: Overovate\u013e
+workflows.wfcssignup.states.60.label: Prijat\u00e9
+workflows.wfcssignup.states.50.label: Zamietnut\u00e9
+workflows.wfcssignup.states.-201.label: Predlo\u017een\u00e9
+
+# From wfguestaccountrequest.xml
+workflows.wfguestaccountrequest.states.60.description: \u017diados\u0165 overen\u00e1, konto hos\u0165a bolo vytvoren\u00e9.
+workflows.wfguestaccountrequest.states.50.description: \u017diados\u0165 o konto hos\u0165a bola zamietnut\u00e1. Konto hos\u0165a nebolo vytvoren\u00e9. Podrobnosti tohto zamietnutia n\u00e1jdete v pozn\u00e1mkach k pracovn\u00e9mu postupu.
+workflows.wfguestaccountrequest.states.60.label: Prijat\u00e9
+workflows.wfguestaccountrequest.states.50.label: Zamietnut\u00e9
+workflows.wfguestaccountrequest.label: Konto hos\u0165a \u2013 Pracovn\u00fd postup \u017eiadosti o otvorenie
+workflows.wfguestaccountrequest.roles.guestvalidator.description: Prijme/Zamietne \u017eiadosti o otvorenie konta hos\u0165a
+workflows.wfguestaccountrequest.roles.guestvalidator.name: Overovate\u013e
+workflows.wfguestaccountrequest.states.-200.label: Predlo\u017een\u00e9
+
+# Analytics
+ui.analytics.CSAgent.name:                    Kolaborat\u00edvne priestory
+ui.analytics.CSAgent.report.typology:         Typol\u00f3gia
+ui.analytics.CSAgent.report.typology.h:       Porucha typol\u00f3gie.
+ui.analytics.CSAgent.report.access-policy:    Z\u00e1sady pr\u00edstupu
+ui.analytics.CSAgent.report.access-policy.h:  Vysvetlenie z\u00e1sad pr\u00edstupu.
+ui.analytics.CSAgent.report.members:          Top \u010dlen
+ui.analytics.CSAgent.report.members.h:        Po\u010det \u010dlenov na kolaborat\u00edvny priestor.
+ui.analytics.CSAgent.report.activity:         Top pr\u00edspevky
+ui.analytics.CSAgent.report.activity.h:       Po\u010det pr\u00edspevkov na kolaborat\u00edvny priestor.
+ui.analytics.CSAgent.report.activity.count:   Po\u010det pr\u00edspevkov
+
+# DBComment
+jcmsplugin.collaborativespace.lbl.signup-to-comment: Ak chcete t\u00fato publik\u00e1ciu komentova\u0165, zaregistrujte sa do tohto priestoru.
+
+# SocialConversation
+jcmsplugin.collaborativespace.lbl.signup-to-react: Ak sa chcete prida\u0165 k tejto konverz\u00e1cii, zaregistrujte sa do tohto priestoru.
+
+# Collaborative Space hub
+jcmsplugin.collaborativespace.hub: Centrum priestorov
+jcmsplugin.collaborativespace.hub.type-cs: Kolaborat\u00edvne priestory
+jcmsplugin.collaborativespace.hub.type-ws: Port\u00e1ly
+jcmsplugin.collaborativespace.hub.mode-all: V\u0161etky priestory
+jcmsplugin.collaborativespace.hub.mode-member: Moje priestory
+jcmsplugin.collaborativespace.hub.mode-favorite: Moje ob\u013e\u00faben\u00e9
+jcmsplugin.collaborativespace.hub.mode-suggestions: N\u00e1vrhy
+jcmsplugin.collaborativespace.hub.mode-csrequest: \u017diadosti o vytvorenie
+jcmsplugin.collaborativespace.hub.mode-member.intro: <p>Kliknut\u00edm na symbol hviezdi\u010dky vpravo v hornej \u010dasti priestoru m\u00f4\u017eete priestor prida\u0165 do ob\u013e\u00faben\u00fdch polo\u017eiek alebo ho z\u00a0ob\u013e\u00faben\u00fdch polo\u017eiek odstr\u00e1ni\u0165.</p>
+jcmsplugin.collaborativespace.hub.mode-member.intro-has-favorites: <p>V\u0161etky svoje ob\u013e\u00faben\u00e9 polo\u017eky m\u00f4\u017eete preh\u013ead\u00e1va\u0165 a spravova\u0165 v\u00a0\u010dasti \u201eMoje ob\u013e\u00faben\u00e9\u201c.</p>
+jcmsplugin.collaborativespace.hub.search-text.placeholder: H\u013eada\u0165 priestory\u2026
+jcmsplugin.collaborativespace.hub.sidebar-section.accessPolicy: Pr\u00edstup
+jcmsplugin.collaborativespace.hub.sidebar-section.typology: Typol\u00f3gia
+jcmsplugin.collaborativespace.hub.sidebar-section.type: Typ
+
+#JPortal
+jcmcplugin.collaborativespace.jportal.edit.label: Upravi\u0165 port\u00e1l
+jcmcplugin.collaborativespace.jportal.edit-more.label: Upravi\u0165 port\u00e1l...
+jcmsplugin.collaborativespace.jportal.edit-modal.title: Upravi\u0165 zosynchronizovan\u00fd port\u00e1l s modelom
+jcmsplugin.collaborativespace.jportal.edit-modal.message: Upozor\u0148ujeme, \u017ee tento port\u00e1l je zosynchronizovan\u00fd s\u00a0modelom.
+jcmsplugin.collaborativespace.jportal.edit-modal.edit-model.label: Upravi\u0165 model
+jcmsplugin.collaborativespace.jportal.edit-modal.desynchronize-model.label: Zru\u0161i\u0165 synchroniz\u00e1ciu a\u00a0upravi\u0165 port\u00e1l
+
+jcmsplugin.collaborativespace.edit-app-modal.title: Aktualizova\u0165 aplik\u00e1ciu
+jcmsplugin.collaborativespace.edit-app-modal.template.label: \u0160abl\u00f3na
+jcmsplugin.collaborativespace.edit-app-modal.title.label: N\u00e1zov
+
+#Tabs
+jcmsplugin.collaboratif.tabs.menu.remove: Odstr\u00e1ni\u0165...
+jcmsplugin.collaboratif.tabs.menu.remove.confirm: Naozaj chcete odstr\u00e1ni\u0165 t\u00fato aplik\u00e1ciu?
+jcmsplugin.collaboratif.tabs.menu.update.title: Aktualizova\u0165...
+jcmsplugin.collaboratif.tabs.rename.title.label: N\u00e1zov
+
+#Parameters
+jcmsplugin.collaborativespace.parameters.model.link: Z\u00edska\u0165 pr\u00edstup k modelu
+
+# Migration
+jcmsplugin.collaborativespace.migration.model: Model
+jcmsplugin.collaborativespace.migration.without-model: Bez modelu
+jcmsplugin.collaborativespace.migration.no-typologies: Bez typol\u00f3gie
+jcmsplugin.collaborativespace.migration.migrate-all: Presun\u00fa\u0165 v\u0161etky pracovn\u00e9 priestory bez modelu
+jcmsplugin.collaborativespace.migration.migrate-selected: Prenies\u0165 vybran\u00e9 pracovn\u00e9 priestory
+jcmsplugin.collaborativespace.migration.no-model-no-workspace: (T\u00e1to typol\u00f3gia nem\u00e1 ani model, ani pracovn\u00fd priestor)
+jcmsplugin.collaborativespace.migration.modal-title: Presun pracovn\u00fdch priestorov
+jcmsplugin.collaborativespace.migration.modal-button: Presun\u00fa\u0165
+jcmsplugin.collaborativespace.migration.target-typology: Cie\u013eov\u00e1 typol\u00f3gia
+jcmsplugin.collaborativespace.migration.workspace-list: Zoznam pracovn\u00fdch priestorov, ktor\u00e9 sa presun\u00fa
+
+portlet.header.menu-items.Portlet.edit-skin-cs: Aktualizova\u0165...

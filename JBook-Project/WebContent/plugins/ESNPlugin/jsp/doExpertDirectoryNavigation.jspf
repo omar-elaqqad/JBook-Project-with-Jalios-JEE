@@ -1,0 +1,36 @@
+
+<%-- Search --%>
+<div class="expertise-search">
+  <div class="search-box">
+  <form action="plugins/ESNPlugin/jsp/expertDirectory.jsp" class="form-search">
+    <input name="expertiseAutocomplete" placeholder="<%= glp("ui.com.placeholder.search") %>" type="text" class="typeahead search-query form-control" data-jalios-ajax-refresh-url="/plugins/ESNPlugin/jsp/directory/autocomplete.jsp" />
+    <input type="hidden" name="mcat" id="autocomplete_mcat" value="" />
+    <jalios:foreach collection="<%= selectedList %>" name="itCat" type="Category">
+    <input type="hidden" name="smcats" value="<%= itCat.getId() %>" />
+    </jalios:foreach>
+  </form>
+  </div>
+</div>
+
+<%-- Categories --%>
+<ul class='expertise-entries list-unstyled'>
+  <% Category backCat = navCat != null ? navCat.getParent() : null ; %>
+  <% if (backCat != null) { %>
+  <li class="category back">
+    <% if (esnMgr.getMemberCategoriesRootSet().contains(backCat)) { %>
+    <a class="ajax-refresh" href="<%= urlPrefix %>home"><span class="back">&lt;</span> <%= glp("jcmsplugin.esn.expert-dir.lbl.home") %></a>
+    <% } else { %>
+    <a class="ajax-refresh" href="<%= urlPrefix + backCat.getId() %>"><span class="back">&lt;</span> <%= backCat.getName(userLang) %></a>
+    <% } %>
+  </li>
+  <% } %>
+  <jalios:foreach collection="<%= subCatSet %>" name="itCat" type="Category">
+  <li class="category<%= itCat.isNode() ? " node" : " leaf" %><%= itCat == cat ? " selected" : "" %>" >
+    <% if (itCat == cat && itCat.isLeaf() && !selectedList.contains(itCat)) { %>
+      <a class="ajax-refresh" href="<%= urlPrefix + itCat.getId() + "&smcats=" + itCat.getId() %>" title="<%= encodeForHTMLAttribute(glp("jcmsplugin.esn.expert-dir.lbl.filter.add")) %>"><%= itCat.getName(userLang) %> <jalios:icon src='jcmsplugin-esn-expert-directory-cat-unstuck' /></a>
+    <% } else { %>
+    <a class="ajax-refresh" href="<%= urlPrefix + itCat.getId() %>"> <% if (itCat.isNode()) { %><span class='esn-expand'>&gt;</span> <% } %><%= itCat.getName(userLang) %></a>
+    <% } %>          
+  </li>
+  </jalios:foreach>
+</ul>

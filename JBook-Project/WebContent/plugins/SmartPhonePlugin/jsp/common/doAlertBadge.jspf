@@ -1,0 +1,13 @@
+<%@ page import="com.jalios.jcms.alert.*" %><%--  
+--%><%  
+  if (isLogged) {
+  AlertManager alertMgr = AlertManager.getInstance();
+  int alertCount = alertMgr.getUnreadAlertCount(loggedMember); 
+  Alert.Level maxLevel = null;
+  if (alertCount > 0) {
+    maxLevel = alertMgr.getMaxUnreadAlertLevel(loggedMember); 
+  }  
+%><div class="topbar-item alert-link<%= (maxLevel != null) ? " alert-link-"+ maxLevel.getKey() : "" %>"><%--  
+--%><a data-transition="none" data-role="none" href="plugins/SmartPhonePlugin/jsp/core/alert.jsp"><%= alertCount %></a>
+</div>
+<% } %>

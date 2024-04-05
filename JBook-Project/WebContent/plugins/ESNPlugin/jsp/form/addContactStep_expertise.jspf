@@ -1,0 +1,24 @@
+<% if (step == 3) { %>
+<jalios:include target="PLUGIN_ESN_ADD_CONTACT_EXPERTISE_START" />
+<% 
+Set<Category> allCatSet = formHandler.getCategorySet(); 
+Set<Category> rootSet = esnMgr.getMemberCategoriesRootSet();
+boolean showRoots = Util.getSize(rootSet) > 1;
+%>
+<div id="expertise">
+  <jalios:foreach collection="<%= rootSet %>" name="itRoot" type="Category">
+    <% if (showRoots) { %>
+    <h3><%= itRoot.getName(userLang) %></h3>
+    <% } %>
+    <jalios:foreach collection="<%= itRoot.getChildrenSet() %>" name="itSubRoot" type="Category" counter="itCounter2">
+		  <% if(itSubRoot.canBeReadBy(loggedMember,true,true)){%>
+			  <% Set<Category> catSet = Util.interSet(itSubRoot.getDescendantSet(), allCatSet); %>
+	      <jalios:field name="cids" label="<%= itSubRoot.getName(userLang) %>" keyword="true" mv="1" value="<%= catSet %>">        
+  	      <jalios:control settings='<%= new CategorySettings().root(itSubRoot) %>' />
+	      </jalios:field>        
+		  <% } %>
+    </jalios:foreach>
+  </jalios:foreach>
+</div>
+<jalios:include target="PLUGIN_ESN_ADD_CONTACT_EXPERTISE_END" />
+<% } %>

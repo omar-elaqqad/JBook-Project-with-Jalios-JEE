@@ -1,0 +1,720 @@
+jcmsplugin.esn.categories:                    Ветвь категории компетенций
+jcmsplugin.esn.categories.help:               Определить идентификатор категории или вывести список идентификаторов через пробел.
+$id.jcmsplugin.esn.profile.portal:            Портал отображения профиля участника (старый профиль)
+jcmsplugin.esn.microblogging.Workspace:       Рабочее пространство по умолчанию для микроблогинга
+
+jcmsplugin.esn.connection-request.enabled:    Подтверждение соединения
+jcmsplugin.esn.connection-request.decline-alert.enabled: Отправьте уведомление об отклонении подключения участника.
+
+jcmsplugin.esn.follower-notification:         Уведомить новых последователей
+jcmsplugin.esn.graphviz.dot.exe:              Путь "dot" Graphviz
+jcmsplugin.esn.graphviz.dot.exe.help:         Graphviz генерирует график отношения на профиле участника. Путь к "dot". Как пример, для окон, это: "C:&#92;Program Files&#92;Graphviz2.22&#92;bin&#92;dot.exe".
+
+jcmsplugin.esn.external-contacts:             Внешние контакты
+
+jcmsplugin.esn.map-service:                   Сервис карты
+
+jcmsplugin.esn.contact-referrers.qs:          Поиск реферера публикации
+
+jcmsplugin.esn.mbr-extended-search-limit:      Расширенный поиск участника - Предел запуска
+jcmsplugin.esn.mbr-extended-search-limit.help: Расширенный поиск участника (с информацией ESN) запускается, если только при стандартном поиске участника получено меньше результатов, чем при ограниченном.
+
+jcmsplugin.esn.agreement.required:            Принять общие положения ESN
+jcmsplugin.esn.agreement.terms.pub:           Общие положения ESN - Публикация
+jcmsplugin.esn.agreement.terms.field:         Общие положения ESN - Поле
+jcmsplugin.esn.agreement.btn.agree:           Я принимаю
+jcmsplugin.esn.agreement.btn.disagree:        Я отказываюсь
+
+jcmsplugin.esn.group-expertise.assignment:    Присвоение компетенций группе
+
+ui.com.lbl.guest: Гость
+jcmsplugin.esn.panel-toggle-show: Открыть
+jcmsplugin.esn.panel-toggle-hide: Закрыть
+jcmsplugin.esn.profile.see-photo: Посмотреть увеличенное фото профиля
+jcmsplugin.esn.profile.action.open-action-menu: Открыть меню действий
+jcmsplugin.esn.profile.action.create-event-with: Пригласить на событие ...
+jcmsplugin.esn.profile.action.change-photo: Поменять фотографию ...
+jcmsplugin.esn.profile.action.change-photo.me: Изменить мою фотографию ...
+jcmsplugin.esn.profile.lbl.goto-calendar:     Отобразить календарь
+jcmsplugin.esn.profile.lbl.disabled-account:  Выключенный аккаунт
+jcmsplugin.esn.profile.lbl.disabled-guest-account: Выключенный гость
+jcmsplugin.esn.profile.lbl.ws-role.admin:     {0} анимирует:
+jcmsplugin.esn.profile.lbl.ws-role.worker:    {0} вносит дополнение в:
+jcmsplugin.esn.profile.lbl.ws-role.reader:    {0} участвует в:
+jcmsplugin.esn.profile.lbl.ws-role.me.admin:  Вы анимируете:
+jcmsplugin.esn.profile.lbl.ws-role.me.worker: Вы вносите дополнение в:
+jcmsplugin.esn.profile.lbl.ws-role.me.reader: Вы участвуете в:
+jcmsplugin.esn.profile.tab.access:            Доступ
+jcmsplugin.esn.profile.tab.activity:          Активность
+jcmsplugin.esn.profile.tab.calendar:        Календарь
+jcmsplugin.esn.profile.tab.communities:       Сообщества
+jcmsplugin.esn.profile.tab.connections:       Знакомства
+jcmsplugin.esn.profile.tab.contacts:          Знакомства
+jcmsplugin.esn.profile.tab.cv:                Резюме
+jcmsplugin.esn.profile.tab.expertises:        Компетенции
+jcmsplugin.esn.profile.tab.info:              Информация
+jcmsplugin.esn.profile.tab.invitations:       Приглашения
+jcmsplugin.esn.profile.tab.profil:            Профиль
+jcmsplugin.esn.profile.tab.resume:            Возобновить
+jcmsplugin.esn.profile-edit.tab.info:         Информация
+jcmsplugin.esn.profile-edit.tab.expertises:   Компетенции
+jcmsplugin.esn.profile-edit.tab.account:      Доступ
+jcmsplugin.esn.profile-edit.tab.alert:        Уведомления
+jcmsplugin.esn.profile-edit.tab.notification: Подписка
+
+jcmsplugin.esn.lbl.status:                    Сообщение
+jcmsplugin.esn.lbl.status-info:               Сообщение обновлено {0}
+jcmsplugin.esn.lbl.last-connection:           Последнее соединение
+jcmsplugin.esn.lbl.online:                    Онлайн
+jcmsplugin.esn.lbl.offline:                   Не в сети
+jcmsplugin.esn.lbl.interest:                  Сферы интересов
+jcmsplugin.esn.lbl.introduction:              Презентация
+jcmsplugin.esn.lbl.external-contact:          Внешний контакт
+jcmsplugin.esn.lbl.activity:                  Активность
+jcmsplugin.esn.lbl.network-activity:          Моя активности в сети
+jcmsplugin.esn.lbl.categories:                Компетенции
+jcmsplugin.esn.lbl.categories.add:            Добавить компетенцию
+jcmsplugin.esn.lbl.categories.placeholder.search: Искать компетенцию...
+jcmsplugin.esn.lbl.calendar:                  Календарь
+jcmsplugin.esn.lbl.publications:              Последние публикации
+jcmsplugin.esn.lbl.jobs:                      Профессиональный опыт
+jcmsplugin.esn.lbl.jobs.add:                  Добавить позицию
+jcmsplugin.esn.lbl.jobs.add.error.date:       Дата начала должна быть ранее даты окончания.
+jcmsplugin.esn.lbl.educations:                Образование
+jcmsplugin.esn.lbl.educations.add:            Добавить образование
+jcmsplugin.esn.lbl.vcard:                     Импортировать в Outlook...
+jcmsplugin.esn.lbl.contact-referrers:         Публикации реферера
+jcmsplugin.esn.lbl.comment-count:             {0,choice,1#Отображать {0} комментариев |2#Отображать {0}  комментария}
+
+jcmsplugin.esn.lbl.info:                      Информация о контакте
+jcmsplugin.esn.lbl.date-of-birth:             День рождения
+jcmsplugin.esn.lbl.date-of-arrival:           Дата прибытия
+jcmsplugin.esn.lbl.connections.suggestions:   Предложенные знакомые
+jcmsplugin.esn.lbl.connections.suggestions.del: Удалить это предложение
+jcmsplugin.esn.lbl.connections.suggestions.reset: Сбросить предложения...
+jcmsplugin.esn.lbl.connections.requests:      Приглашение добавиться в контакты
+jcmsplugin.esn.lbl.connections.requests.in:   Полученные приглашения
+jcmsplugin.esn.lbl.connections.requests.out:  Отправленные приглашения
+jcmsplugin.esn.lbl.connections.requests.out2: Отправлен
+jcmsplugin.esn.lbl.connections.requests.edit: Обработать это приглашение...
+jcmsplugin.esn.lbl.connections.requests.received: {0}, {1} отправил вам приглашение в {2}.
+jcmsplugin.esn.lbl.connections.requests.sent: {0}, отправил вам приглашение для {1} в {2}.
+jcmsplugin.esn.lbl.connections.requests.missing: Это приглашение больше не существует.
+jcmsplugin.esn.lbl.connections.connected:     {0} является одним из ваших установленных отношений.
+jcmsplugin.esn.lbl.connections.recommendation:Рекомендовать {0} своим знакомым...
+jcmsplugin.esn.lbl.connections.recommendation2:Рекомендовать своим знакомым...
+jcmsplugin.esn.lbl.connections.connect-contact: Познакомиться {0} с другими контактами...
+jcmsplugin.esn.lbl.connections.connect-contact2: Познакомиться с другими контактами...
+jcmsplugin.esn.lbl.connections.no-link:       {0} не доступен из вашей сети знакомств.
+jcmsplugin.esn.lbl.connections.add.member:    Добавить {0} в свои знакомства...
+jcmsplugin.esn.lbl.connections.add.member2:   Добавить в свои знакомства...
+jcmsplugin.esn.lbl.connections.add.contact:   Добавить {0} в свои контакты
+jcmsplugin.esn.lbl.connections.add.contact2:  Добавить в свои контакты
+jcmsplugin.esn.lbl.connections:               Отношения
+jcmsplugin.esn.lbl.connections.common:        Ваши общие знакомые
+jcmsplugin.esn.lbl.connections.me:            Мои знакомые
+jcmsplugin.esn.lbl.connections.other:         Его/ее другие знакомые
+jcmsplugin.esn.lbl.connections.all-contacts:  Все знакомые
+jcmsplugin.esn.lbl.connections.all:           Все
+jcmsplugin.esn.lbl.connections.internal:      Участники
+jcmsplugin.esn.lbl.connections.external:      Контакты
+jcmsplugin.esn.lbl.connections.show.me:       Показать всех моих знакомых
+jcmsplugin.esn.lbl.connections.show.other:    Показать всех знакомых {0}
+
+jcmsplugin.esn.lbl.connections.views:         Просмотры:
+jcmsplugin.esn.lbl.connections.list:          Список
+jcmsplugin.esn.lbl.connections.card:          Карты
+jcmsplugin.esn.lbl.connections.cloud:         Облако
+jcmsplugin.esn.lbl.connections.csv:           CSV
+jcmsplugin.esn.lbl.connections.level:         Уровень связи
+jcmsplugin.esn.lbl.connections.map:           Карта
+jcmsplugin.esn.lbl.connections.map.tt.profile:Перейти к профилю {0}
+jcmsplugin.esn.lbl.connections.map.tt.map:    Расположить по центру карту на {0}
+
+jcmsplugin.esn.lbl.connections.new-contact:   Добавить контакт
+jcmsplugin.esn.lbl.disconnect:                Удалить это соединение...
+jcmsplugin.esn.lbl.disconnect.title:          Удалить контакт
+jcmsplugin.esn.lbl.disconnect.contact:        Удалить {0} из своих контактов...
+jcmsplugin.esn.lbl.disconnect.contact2:       Удалить из своих контактов...
+jcmsplugin.esn.lbl.disconnect.confirm:        Вы действительно хотите удалить <strong>{0}</strong> из своих контактов?
+jcmsplugin.esn.lbl.disconnect.confirm-contact:Вы действительно хотите удалить <strong>{0}</strong> из контактов <strong>{1}</strong>?
+jcmsplugin.esn.lbl.disconnect.confirm-warn:   Предупреждение! Вы являетесь последним контактом <strong>{0}</strong>. Вы хотите также удалить и этот контакт?
+jcmsplugin.esn.lbl.disconnect.btn.disconnect: Удалить из моих контактов
+jcmsplugin.esn.lbl.disconnect.btn.disconnect-other: Удалить из его/ее контактов
+jcmsplugin.esn.lbl.disconnect.btn.delete:     Удалить этот контакт
+
+jcmsplugin.esn.lbl.followings:                Фолловинги
+jcmsplugin.esn.lbl.followers:                 Фолловеры
+jcmsplugin.esn.lbl.follow:                    Отслеживать активность {0}
+jcmsplugin.esn.lbl.follow2:                   Отслеживать активность
+jcmsplugin.esn.lbl.unfollow:                  Остановить отслеживать активность {0}
+jcmsplugin.esn.lbl.unfollow2                  Stop following activity
+jcmsplugin.esn.lbl.contact-followers:         {0} отслеживает {1,choice,0#нет участников|1#один участник|2#{1} участника} и {2,choice,0#нет участников|1#один у частник|2#{2} участника} отслеживают {0}
+
+jcmsplugin.esn.lbl.ws-role.admin:             Администратор
+jcmsplugin.esn.lbl.ws-role.worker:            Контрибьютор
+jcmsplugin.esn.lbl.ws-role.reader:            Читатель
+
+jcmsplugin.esn.lbl.links.me:                  Подробнее обо мне...
+jcmsplugin.esn.lbl.links.other:               Подробнее о {0}...
+jcmsplugin.esn.lbl.links.intro:               Добавить ссылки на внешние сайты, которые вы хотите продвинуть (ваш блог, ваш профиль на общедоступных социальных сетях ...)
+jcmsplugin.esn.lbl.links.intro.other:         Добавить ссылки на внешние сайты, которые следует продвинуть (блог, профиль на общедоступных социальных сетях ...)
+jcmsplugin.esn.lbl.links.add:                 Добавить ссылку
+
+jcmsplugin.esn.lbl.edit.me:                   Редактировать мой профиль
+jcmsplugin.esn.lbl.edit.other:                Редактировать профиль {0}
+jcmsplugin.esn.lbl.edit.other2:               Редактировать профиль
+jcmsplugin.esn.lbl.editLabel:                 Редактировать
+jcmsplugin.esn.lbl.editProfile.progress:      Профиль заполнен на <strong>{0}%</strong>.
+
+jcmsplugin.esn.edit-profile.title.me:         Ваш профиль
+jcmsplugin.esn.edit-profile.title.other:      Профиль {0}
+jcmsplugin.esn.edit-profile.presentation:     Презентация
+jcmsplugin.esn.edit-profile.change-photo:     Изменить мою фотографию
+
+jcmsplugin.esn.edit-expertises.title:         Обновить компетенции {0}
+
+jcmsplugin.esn.add-contact.title:             Добавить контакт
+jcmsplugin.esn.add-contact.steps.0:           Проверить
+jcmsplugin.esn.add-contact.steps.1:           Предложения
+jcmsplugin.esn.add-contact.steps.2:           Информация
+jcmsplugin.esn.add-contact.steps.3:           Компетенции
+jcmsplugin.esn.add-contact.steps-intro.0:     Ввести имя и/или электронный адрес вашего контакта, чтобы проверить, существует ли уже этот человек.
+jcmsplugin.esn.add-contact.steps-intro.1.1:   Участник был обнаружен в соответствии с этой информацией. Перед созданием нового следует убедиться, что это не тот же человек.
+jcmsplugin.esn.add-contact.steps-intro.1.2:   Существующие участники были обнаружены в соответствии с этой информацией. Перед созданием нового контакта следует убедиться, что контакт, который вы хотите создать, уже не существует.
+jcmsplugin.esn.add-contact.add-to-my-contacts:Добавить в мои контакты
+jcmsplugin.esn.add-contact.view-contact:      Просмотреть этот контакт
+jcmsplugin.esn.add-contact.lbl.check:         Проверить...
+jcmsplugin.esn.add-contact.lbl.create:        Создать новый контакт...
+jcmsplugin.esn.add-contact.lbl.wait:          Идет выполнение проверки...
+jcmsplugin.esn.add-contact.lbl.add:           Добавить в мои контакты
+jcmsplugin.esn.add-contact.lbl.contact-added: Контакт <b>{0}</b> был создан.
+jcmsplugin.esn.add-contact.btn.continue:      Сохранить и добавить другой контакт
+
+jcmsplugin.esn.mcr.request.title:             Добавить {0} в свою сеть
+jcmsplugin.esn.mcr.request.lbl.send:          Отправить
+jcmsplugin.esn.mcr.request.info.title1:       Зачем устанавливать знакомство?
+jcmsplugin.esn.mcr.request.info.content1:     Установление знакомства с {0} позволит вам просматривать его/ее <strong>полный профиль</strong> и следить за его/ее <strong>активностью</strong>. Точно так же {0} будет иметь доступ к <strong>вашему полному профилю</strong> и к <strong>вашим активностям</strong>. Сразу после установления знакомства вы сможете <strong>рекомендовать</strong> {0} другим участникам вашей сети.
+jcmsplugin.esn.mcr.request.info.title2:       Как установить знакомство?
+jcmsplugin.esn.mcr.request.info.content2:     Просто отправить это приглашение {0}, чтобы познакомиться с вами. Как только {0} примет ваше приглашение, ваше знакомство будет установлено.
+
+jcmsplugin.esn.mcr.request.msg: {0},\n\nЯ бы хотел добавить вас в свои контакты.\n\n{1}\n
+
+jcmsplugin.esn.mcr.validate.title:            Приглашение
+jcmsplugin.esn.mcr.validate.info:             <b>Что значит это приглашение?</b><p>{0} хотел бы установить знакомство с вами. Приняв это приглашение, вы получите доступ к <strong>полному профилю</strong> и <strong>активностям</strong> {0}. Это взаимное знакомство. Принимая, вы разрешаете {0} просматривать <strong>ваш полный профиль</strong> и <strong>ваши активности</strong>.</p>
+jcmsplugin.esn.mcr.validate.common:           Ваши общие знакомые
+jcmsplugin.esn.mcr.validate.common-some:      Некоторые из ваших общих знакомых
+jcmsplugin.esn.mcr.validate.lbl.accept:       Принять
+jcmsplugin.esn.mcr.validate.lbl.decline:      Отклонить
+jcmsplugin.esn.mcr.validate.lbl.close:        Закрыть
+jcmsplugin.esn.mcr.lbl.confirm-delete:        Вы действительно хотите удалить приглашение, отправленное <strong>{0}</strong>?
+
+jcmsplugin.esn.connect-contact.title:          Познакомить с контактами
+jcmsplugin.esn.connect-contact.no-contact:     Все ваши контакты знакомы с <span class="contact">{0}</span>.
+jcmsplugin.esn.connect-contact.info:           Выбрать контакты, которые вы хотите познакомить с <span class="contact">{0}</span>.
+jcmsplugin.esn.connect-contact.lbl.contacts:   Ваши контакты
+jcmsplugin.esn.connect-contact.lbl.connect:    Подключиться
+
+jcmsplugin.esn.activity.enabled:                 Активность - Включить отслеживание активности
+
+jcmsplugin.esn.activity.none:                    Нет активности
+jcmsplugin.esn.activity.profile.job:             {0} добавил позицию <span class="message">{1}</span>
+jcmsplugin.esn.activity.profile.education:       {0} добавил тренинг <span class="message">{1}</span>
+jcmsplugin.esn.activity.profile.link:            {0} добавил ссылку {1}
+jcmsplugin.esn.activity.profile.categories:      {0} внес информацию о своих компетенциях
+jcmsplugin.esn.activity.profile.categories.add:  {0} обновил свои компетенции: <span class="message">{1}</span>
+jcmsplugin.esn.activity.profile.categories.add-empty:  {0} обновил свои компетенции
+jcmsplugin.esn.activity.profile.info:            {0} обновил информацию о себе
+jcmsplugin.esn.activity.profile:                 {0} обновил свой профиль
+jcmsplugin.esn.activity.contact.profile:         {0} обновил профиль {1}
+jcmsplugin.esn.activity.contact.note:            {0} добавил примечание к {1}
+jcmsplugin.esn.activity.connect-account:         {0} теперь соединен с {1}
+jcmsplugin.esn.activity.connect:                 {0} добавил {1} к его/ее знакомым
+jcmsplugin.esn.activity.ws:                      {0} подписался на рабочее пространство {1}
+jcmsplugin.esn.activity.create:                  {0} создал {1}
+jcmsplugin.esn.activity.update:                  {0} обновил {1}
+jcmsplugin.esn.activity.delete:                  {0} удалил <span class="message">{1}</span>
+jcmsplugin.esn.activity.create.Publication:      {0} опубликовал {1}
+jcmsplugin.esn.activity.create.Event:            {0} опубликовал событие {1}
+jcmsplugin.esn.activity.create.CalendarEvent:    {0} опубликовал событие {1}
+jcmsplugin.esn.activity.update.CalendarEvent:    {0} обновил событие {1}
+jcmsplugin.esn.activity.update.Event:            {0} обновил событие {1}
+jcmsplugin.esn.activity.create.Review:           {0} оставил отзыв {1}
+jcmsplugin.esn.activity.create.FileDocument:     {0} загрузил {1}
+jcmsplugin.esn.activity.create.DBComment:        {0} добавил новый комментарий
+jcmsplugin.esn.activity.description-full.create.DBComment:        {0} добавил новый комментарий о {1}
+jcmsplugin.esn.activity.create.DBForumTopic:     {0} опубликовал пост в теме {1}
+jcmsplugin.esn.activity.create.DBPollVote:       {0} ответил на опрос {1}
+jcmsplugin.esn.activity.create.MicroBlogging:
+jcmsplugin.esn.activity.create.WebPage:          {0} поделился {1}
+jcmsplugin.esn.activity.update-pstatus:          {0} изменил статус {1} на <span class="message">{2}</span>.
+jcmsplugin.esn.activity.unzip:                   {0} загрузил файлы из архива zip {1}
+jcmsplugin.esn.activity.lock:                    {0} заблокировал документ {1}
+jcmsplugin.esn.activity.unlock:                  {0} снял блокировку с документа {1}
+jcmsplugin.esn.activity.vote:                    {0} проголосовал за {1}
+jcmsplugin.esn.activity.filter:                  Фильтрованная активность
+jcmsplugin.esn.activity.see-activity:            Смотреть активность
+jcmsplugin.esn.activity.hide-activity:           Скрыть активность
+jcmsplugin.esn.activity.delete-activity:         Удалить эту активность
+jcmsplugin.esn.activity.delete-activity-ask:     Вы действительно хотите удалить эту активность?
+jcmsplugin.esn.activity.delete-activity-ask-title:  Удалить активность
+jcmsplugin.esn.activity.edit-comment:            Редактировать комментарий
+jcmsplugin.esn.activity.options-menu-title:      Открыть меню активности      
+jcmsplugin.esn.activity.comment:                 Комментарий
+jcmsplugin.esn.activity.show-comments:           Показать/скрыть{0,choice,1# комментариев|2# комментария}
+jcmsplugin.esn.activity.show-previous-activity:   Смотреть предыдущие активности
+jcmsplugin.esn.activity.hide-previous-activity:  Скрыть активности
+jcmsplugin.esn.activity.lbl.no-activity:         У {0} еще нет активности.
+jcmsplugin.esn.activity.nextpage:                Посмотреть другие
+
+jcmsplugin.esn.activity-card.vote-action:        Мне нравится
+jcmsplugin.esn.activity-card.menu-title:         Открыть меню действий
+jcmsplugin.esn.activity-card.menu-alt:           Действия
+jcmsplugin.esn.activity-card.event-attending:    {0} присутствуют
+jcmsplugin.esn.activity-card.event-invited:      {0} участники
+jcmsplugin.esn.activity-card.event.show-attendees: Смотреть подробности участников
+jcmsplugin.esn.activity-card.comment-count-title:  Войти в комментарии
+
+jcmsplugin.esn.activity.filter.microBlogging:    Микроблогинг
+jcmsplugin.esn.activity.filter.profile:          Обновление профиля
+jcmsplugin.esn.activity.filter.contact:          Добавить внешний контакт
+jcmsplugin.esn.activity.filter.connect:          Знакомства участника
+jcmsplugin.esn.activity.filter.ws:               Присоединиться к рабочему пространству
+jcmsplugin.esn.activity.filter.create:           Добавить данные
+jcmsplugin.esn.activity.filter.update:           Обновить данные
+jcmsplugin.esn.activity.filter.delete:           Удалить данные
+jcmsplugin.esn.activity.filter.lock:             Заблокировать документы
+jcmsplugin.esn.activity.filter.upload:           Загрузить документы
+jcmsplugin.esn.activity.filter.update-pstatus:   Обновление статуса рабочего потока
+jcmsplugin.esn.activity.filter.others:           Другие активности
+jcmsplugin.esn.activity.filter.ws-include:       Ограничить до....
+jcmsplugin.esn.activity.filter.ws-exclude:       Все, кроме...
+
+jcmsplugin.esn.activity.filter.editor:               Фильтр активности
+jcmsplugin.esn.activity.filter.editor.link:          Редактировать фильтры
+jcmsplugin.esn.activity.filter.editor.steps.0:       Тип активности
+jcmsplugin.esn.activity.filter.editor.steps.1:       Расширенная фильтрация
+jcmsplugin.esn.activity.filter.editor.steps-intro.0: Выбрать типы активности для отображения в потоке активности.
+jcmsplugin.esn.activity.filter.editor.steps-intro.1: Для фильтрации потока активности вы можете выбрать другие критерии.
+
+jcmsplugin.esn.activity.share.remove-webpage: Поделиться другой страницей
+jcmsplugin.esn.activity.share.webpage-next-image: Переключиться на следующее изображение
+jcmsplugin.esn.activity.share.webpage-prev-image: Переключиться на предыдущее изображение
+jcmsplugin.esn.activity.form-tab.document: Документ
+jcmsplugin.esn.activity.form-tab.microblogging: Сообщение
+jcmsplugin.esn.activity.form-tab.webpage: Веб-страница
+
+icon.jcmsplugin-esn-activity-share-webpage-img-prev: Назад
+icon.jcmsplugin-esn-activity-share-webpage-img-next: Далее
+icon.jcmsplugin-esn-activity-share-webpage-remove: Удалить
+
+jcmsplugin.esn.lbl.communities:                  Сообщества
+jcmsplugin.esn.lbl.common-communities:           Общие сообщества
+jcmsplugin.esn.lbl.communities.info:             Создано {0}. {1,choice,0#Нет участников|1#1 участник|2#{1,number,integer} участника}. {2,choice,0#Нет контента|1#1 контент|2#{2,number,integer} контента}.
+
+jcmsplugin.esn.status.title:            Обновить свое сообщение
+jcmsplugin.esn.status.intro:            Укажите, чем вы заняты, где находитесь, какое у вас настроение ... ?
+jcmsplugin.esn.status.mail:             Вы можете обновить свой профиль по электронной почте, отправив сообщение
+jcmsplugin.esn.status.msg.singleton:    {0} уже имеет статус.
+
+jcmsplugin.esn.link.lbl.name:           Имя сайта
+jcmsplugin.esn.link.lbl.url:            URL
+jcmsplugin.esn.link.lbl.description:    Описание
+jcmsplugin.esn.link.msg.empty-title:    'Имя сайта' обязательно.
+jcmsplugin.esn.link.msg.empty-url:      Необходимо ввести 'URL'.
+jcmsplugin.esn.link.msg.bad-url:        Поле 'URL' имеет неправильный формат.
+
+jcmsplugin.esn.lbl.notes:     Заметки
+jcmsplugin.esn.lbl.notes.add: Добавить примечание
+jcmsplugin.esn.lbl.notes.add-link: Добавить примечание...
+
+jcmsplugin.esn.directory.lbl.view-profile:      Просмотреть полный профиль
+jcmsplugin.esn.directory.lbl.expert-directory:  Директория экспертов
+
+jcmsplugin.esn.directory.app.nav-competencies: Компетенции
+jcmsplugin.esn.directory.app.breadcrumb.root: Компетенции
+jcmsplugin.esn.directory.app.competence.expertise.filter.add: Фильтровать по этой компетенции
+jcmsplugin.esn.directory.app.competence.expertise.filter.node.add: Фильтровать по этой компетенции и просмотреть подкомпетенции
+jcmsplugin.esn.directory.app.competence.expertise.filter.remove: Удалить этот фильтр компетенций
+jcmsplugin.esn.directory.app.competence.expertise.filters.add: Добавить эту компетенцию в фильтры
+jcmsplugin.esn.directory.app.competence.expertise.filters.remove: Удалить эту компетенцию из фильтров
+jcmsplugin.esn.directory.app.competence.expertise.is-in-filters: Эта компетенция находится в ваших фильтрах. Удалить ее с помощью соответствующей кнопки
+jcmsplugin.esn.directory.app.competence.expertise.node.is-in-filters: Эта компетенция находится в ваших фильтрах. Удалите ее с помощью соответствующей кнопки, чтобы просмотреть подкомпетенции
+
+jcmsplugin.esn.directory.app.context-menu-label: Контекстное меню компетенций
+jcmsplugin.esn.directory.app.competence-action.add: Добавить компетенции...
+jcmsplugin.esn.directory.app.competence-action.add-sub: Добавить подкомпетенции...
+jcmsplugin.esn.directory.app.competence-action.add-prompt: Введите названия новых компетенций (через запятую):
+jcmsplugin.esn.directory.app.competence-action.rename-prompt: Введите новое название компетенции
+jcmsplugin.esn.directory.app.competence-action.move-to: Переместить в...
+jcmsplugin.esn.directory.app.competence-action.modal.move-to.title: Переместить в
+jcmsplugin.esn.directory.app.competence-action.modal.move-to.op-action: Переместить
+
+jcmsplugin.esn.expert-dir.title:                  Директория экспертов
+jcmsplugin.esn.expert-dir.lbl.home:               Главная страница
+jcmsplugin.esn.expert-dir.lbl.all:                Все эксперты
+jcmsplugin.esn.expert-dir.lbl.expert-count:       {0,choice,0#Нет результатов|1#{0} результат|2#{0} результата}
+jcmsplugin.esn.expert-dir.lbl.related.connexe:    Близкие компетенции:
+jcmsplugin.esn.expert-dir.lbl.related.others:     Прочие компетенции:
+jcmsplugin.esn.expert-dir.msg.home:               Добро пожаловать в директорию экспертов. Нажать на панель навигации слева, чтобы перечислить экспертов для данной компетенции.
+jcmsplugin.esn.expert-dir.msg.no-expert.all:      Нет результатов для компетенции <i>{0}</i>.
+jcmsplugin.esn.expert-dir.msg.no-expert.account:  Нет участников в компетенции <i>{0}</i>.
+jcmsplugin.esn.expert-dir.msg.no-expert.contact:  Нет контактов для компетенции <i>{0}</i>.
+jcmsplugin.esn.expert-dir.lbl.expert-search:      Искать по компетенциям
+jcmsplugin.esn.expert-dir.lbl.filter:             Фильтры
+jcmsplugin.esn.expert-dir.lbl.filter.info:        Нажмите на значки {0}, чтобы выполнить фильтрацию по компетенции.
+jcmsplugin.esn.expert-dir.lbl.filter.add:         Фильтровать по этой компетенции
+jcmsplugin.esn.expert-dir.lbl.filter.remove:      Удалить этот фильтр
+jcmsplugin.esn.expert-dir.lbl.edit-expertises:    Управлять компетенциями
+
+jcmsplugin.esn.expertise.root-cat-forbidden:      Вы не можете удалить или отредактировать эту категорию, потому что она используется плагином ESN для хранения компетенции. Только администратор или авторизованный участник могут отредактировать или удалить ее.
+jcmsplugin.esn.expertise.expertise-cat-forbidden: Эта категория используется плагином ESN в качестве компетенции. Она уже используется другим участником. Только администратор или авторизованный участник могут редактировать ее.
+
+jcmsplugin.esn.ctxmenu.mbr.profile:  Просмотреть профиль
+
+$id.jcmsplugin.esn.portlet.header:              ESN - Заголовок
+$id.jcmsplugin.esn.portlet.actions:             ESN - Действия
+$id.jcmsplugin.esn.portlet.connection-requests: ESN - Запросы соединения
+$id.jcmsplugin.esn.portlet.suggestions:         ESN - Предложения
+$id.jcmsplugin.esn.portlet.common-connections:  ESN - Общие знакомые
+$id.jcmsplugin.esn.portlet.connections:         ESN - Знакомые
+$id.jcmsplugin.esn.portlet.links:               ESN - Ссылки
+$id.jcmsplugin.esn.portlet.activities:          ESN - Активности
+$id.jcmsplugin.esn.portlet.network-activities:  ESN - Активности сети
+$id.jcmsplugin.esn.portlet.publications:        ESN - Публикации
+$id.jcmsplugin.esn.portlet.calendar:            ESN - Календарь
+$id.jcmsplugin.esn.portlet.presentation:        ESN - Презентация
+$id.jcmsplugin.esn.portlet.workspaces:          ESN - Рабочие пространства
+$id.jcmsplugin.esn.portlet.expertise:           ESN - Компетенции
+$id.jcmsplugin.esn.portlet.contact-notes:       ESN - Контакты - Примечания
+$id.jcmsplugin.esn.portlet.contact-calendar:    ESN - Контакты - Календарь
+$id.jcmsplugin.esn.portlet.contact-referrers:   ESN - Контакты - Рефереры
+$id.jcmsplugin.esn.portlet.contacts:            ESN - Контакты
+$id.jcmsplugin.esn.portlet.jobs:                ESN - Положения
+$id.jcmsplugin.esn.portlet.educations:          ESN - Образование
+
+jcmsplugin.esn.portlet-mbr-status.no-mbr:       Нет участников
+
+jcmsplugin.esn.birthday.portlet.day:  {0,choice,0#Сегодня|1#Завтра|2#Через {0} дней}
+jcmsplugin.esn.birthday.portlet.none: Нет дня рождения
+jcmsplugin.esn.birthday-reminder.enabled: Активировать напоминание о дне рождения
+jcmsplugin.esn.birthday-happy: С днем рождения!
+
+jcmsplugin.esn.microblogging.share:               Поделиться
+jcmsplugin.esn.microblogging.modify:            Обновить
+jcmsplugin.esn.microblogging.label.microblogging: Микроблогинг
+jcmsplugin.esn.microblogging.menu.message:        Сообщение
+jcmsplugin.esn.microblogging.title.create-message:Опубликовать сообщение
+jcmsplugin.esn.microblogging.delete-confirm:      Вы хотите удалить свое последнее сообщение?
+jcmsplugin.esn.microblogging.microblogging-prompt:Что вы делаете?
+jcmsplugin.esn.microblogging.update-message:      Редактировать это сообщение
+jcmsplugin.esn.microblogging.delete-message:      Удалить это сообщение
+jcmsplugin.esn.microblogging.member-microblogging-title: Микроблогинг {0}
+jcmsplugin.esn.microblogging.warn.existing-webpage-ws: Эта Веб-страница уже существует в текущем рабочем пространстве.
+jcmsplugin.esn.microblogging.warn.existing-webpage-ws-other: Эта Веб-страница была опубликована {0} {1} в рабочем пространстве: {2}.
+jcmsplugin.esn.microblogging.warn.existing-webpage-ws.btn: Осуществить доступ к Веб-странице
+jcmsplugin.esn.microblogging.warn.bad-url-format: Предоставленный URL не действителен.
+jcmsplugin.esn.microblogging.warn.missing-url: Пожалуйста, предоставьте URL.
+jcmsplugin.esn.microblogging.warn.missing-url-meta: Данные с Веб-сайта не могут быть загружены, вы должны ввести информацию вручную.
+
+jcmsplugin.esn.collaborativespace.private-home.connections: Ваши знакомые в этом пространстве
+
+jcmsplugin.esn.expert-directory.open-access: Открыть доступ в директорию экспертов
+jcmsplugin.esn.expert-directory.open-access.help: Для входа в директорию экспертов при включенном открытом доступе пользователю не нужно осуществлять вход в систему.
+jcmsplugin.esn.member-profile.open-access: Открыть доступ к профилю участника
+jcmsplugin.esn.member-profile.open-access.help: Для посещения профиля участника при включенном открытом доступе пользователю не нужно осуществлять вход в систему.
+jcmsplugin.esn.member-profile.event-intro: {0} присутствует на мероприятии
+jcmsplugin.esn.member-profile.event-intro.me: Вы присутствуете на мероприятии
+
+jcmsplugin.esn.contact-by-email.title: Связаться по электронной почте...
+jcmsplugin.esn.contact-by-email.title2: Связаться по электронной почте ({0})...
+jcmsplugin.esn.contact-by-sms.title: Связаться через SMS...
+jcmsplugin.esn.contact-by-phone.title: Связаться по телефону...
+jcmsplugin.esn.contact-by-other.title: Связаться по {0}...
+jcmsplugin.esn.call-at-number.title: Позвонить по номеру {0}...
+jcmsplugin.esn.profile.contact.email: Почта
+jcmsplugin.esn.profile.full.contact.sms: SMS
+jcmsplugin.esn.profile.contact.webchat: WebChat
+
+# ExtraData
+extra.Category.jcmsplugin.esn.groups: ESN - Связанные группы
+
+# Publish Menu
+jcmsplugin.esn.publish-menu.contact:       Контакт
+jcmsplugin.esn.publish-menu.microblogging: Сообщение
+
+# Alerts
+alert.name.jcmsplugin-esn : Социальная сеть
+alert.name.jcmsplugin-esn.follower:             Новый фолловер
+alert.name.jcmsplugin-esn.connection:           Добавить новое соединение
+alert.name.jcmsplugin-esn.connection-request:   Запрос на соединение
+alert.name.jcmsplugin-esn.connection-accepted:  Соединение принято
+alert.name.jcmsplugin-esn.connection-declined:  Соединение отклонено
+alert.name.jcmsplugin-esn.birthday-reminder:    Напоминание о дне рождения
+
+alert.msg.jcmsplugin-esn.follower.title:                        Новый фолловер
+alert.msg.jcmsplugin-esn.follower.short-description:            {author} сейчас отслеживает вашу активность.
+
+alert.msg.jcmsplugin-esn.connection.title:                      Новое знакомство
+alert.msg.jcmsplugin-esn.connection.short-description:          {author} добавил вас к его/ее знакомым.
+
+alert.msg.jcmsplugin-esn.connection-request.title:              Приглашение к установлению знакомства
+alert.msg.jcmsplugin-esn.connection-request.short-description:  {author} отправил вам приглашение для установления знакомства.
+alert.msg.jcmsplugin-esn.connection-request.description:        <p>{author} отправил вам приглашение для установления знакомства.</p> {accept} {showProfile}
+jcmsplugin.esn.connection-request.mail:                         {0} отправил вам приглашение для установления знакомства.
+
+alert.msg.jcmsplugin-esn.connection-accepted.title:             Приглашение принято
+alert.msg.jcmsplugin-esn.connection-accepted.short-description: {author} принял ваше приглашение. Теперь вы знакомы.
+
+alert.msg.jcmsplugin-esn.connection-declined.title:             Приглашение отклонено
+alert.msg.jcmsplugin-esn.connection-declined.short-description: {author} отклонил ваше приглашение.
+
+alert.msg.jcmsplugin-esn.birthday-reminder.title:               Напоминание о дне рождения
+alert.msg.jcmsplugin-esn.birthday-reminder.short-description:   Следующие дни рождения: {birthday-list}
+alert.msg.jcmsplugin-esn.birthday-reminder.description:         <p>Скоро некоторые из участников вашей сети будут праздновать свои дни рождения:</p>{birthday-list}
+alert.msg.jcmsplugin-esn.birthday-reminder.txt.today:    Сегодня:
+alert.msg.jcmsplugin-esn.birthday-reminder.txt.tomorrow: Завтра:
+alert.msg.jcmsplugin-esn.birthday-reminder.txt.later:    Через 7 дней ({0}):
+
+# ------------------------------------------------------------
+#  Recommendation
+# ------------------------------------------------------------
+alert.name.recommendation.esn-member-recommendation: Рекомендуемое знакомство
+alert.msg.recommendation.esn-member-recommendation.title:      Рекомендация по {data}
+alert.msg.recommendation.esn-member-recommendation.short-description: {author} рекомендует вам добавить {data} к своим знакомым. {recoContent}
+alert.msg.recommendation.esn-member-recommendation.description: <p>{author} рекомендует вам добавить {data} к своим знакомым.</p> <p>{recoContent}</p>
+alert.msg.recommendation.esn-member-recommendation.reply.short-description: {author} ответил на рекомендацию в {data} : {replyRecommendation} {data.url} {reply}
+alert.msg.recommendation.esn-member-recommendation.reply.description: <p>{author} ответил на рекомендацию в {data} :</p><hr/><p>{replyRecommendation}</p><hr/> {recoContent} {reply}
+jcmsplugin.esn.recommendation.Member: Рекомендовать <b>{0}</b> другим участникам.
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From MemberCategories-templates.xml
+types.MemberCategories.templates.query.default.label: Шаблон по умолчанию
+types.MemberCategories.templates.query.default.description: Шаблон по умолчанию для этой публикации
+types.MemberCategories.templates.full.default.label: Шаблон по умолчанию
+types.MemberCategories.templates.box.default.description: Шаблон по умолчанию для этой публикации
+types.MemberCategories.templates.box.default.label: Шаблон по умолчанию
+types.MemberCategories.templates.edit.default.description: Шаблон по умолчанию для этой публикации
+types.MemberCategories.templates.edit.default.label: Шаблон по умолчанию
+types.MemberCategories.templates.full.default.description: Шаблон по умолчанию для этой публикации
+
+# From MemberCategories.xml
+types.MemberCategories.label: ESN - Компетенции
+types.MemberCategories.title.label: Заголовок
+
+# From MemberEducation-templates.xml
+types.MemberEducation.templates.query.default.description: Шаблон по умолчанию для этой публикации
+types.MemberEducation.templates.full.default.description: Шаблон по умолчанию для этой публикации
+types.MemberEducation.templates.full.default.label: Шаблон по умолчанию
+types.MemberEducation.templates.box.default.label: Шаблон по умолчанию
+types.MemberEducation.templates.query.default.label: Шаблон по умолчанию
+types.MemberEducation.templates.edit.default.label: Шаблон по умолчанию
+types.MemberEducation.templates.box.default.description: Шаблон по умолчанию для этой публикации
+types.MemberEducation.templates.edit.default.description: Шаблон по умолчанию для этой публикации
+
+# From MemberEducation.xml
+types.MemberEducation.fields.endDate.label: Дата окончания
+types.MemberEducation.label: ESN - Образование
+types.MemberEducation.title.label: Заголовок
+types.MemberEducation.fields.degree.label: Диплом
+types.MemberEducation.fields.startDate.label: Дата начала
+types.MemberEducation.fields.site.label: Сайт
+types.MemberEducation.fields.place.label: Местоположение
+types.MemberEducation.fields.trainingCenter.label: Учебная организация
+types.MemberEducation.fields.description.label: Описание
+
+# From MemberJob-templates.xml
+types.MemberJob.templates.box.default.description: Шаблон по умолчанию для этой публикации
+types.MemberJob.templates.box.default.label: Шаблон по умолчанию
+types.MemberJob.templates.full.default.label: Шаблон по умолчанию
+types.MemberJob.templates.query.default.label: Шаблон по умолчанию
+types.MemberJob.templates.edit.default.description: Шаблон по умолчанию для этой публикации
+types.MemberJob.templates.edit.default.label: Шаблон по умолчанию
+types.MemberJob.templates.full.default.description: Шаблон по умолчанию для этой публикации
+types.MemberJob.templates.query.default.description: Шаблон по умолчанию для этой публикации
+
+# From MemberJob.xml
+types.MemberJob.title.label: Должность
+types.MemberJob.fields.startDate.label: Дата начала
+types.MemberJob.fields.place.label: Местоположение
+types.MemberJob.label: ESN - Работа
+types.MemberJob.fields.description.label: Описание
+types.MemberJob.fields.organization.label: Организация
+types.MemberJob.fields.endDate.label: Дата окончания
+types.MemberJob.fields.site.label: Веб-сайт
+
+# From MemberProfile-templates.xml
+types.MemberProfile.templates.edit.default.label: Шаблон по умолчанию
+types.MemberProfile.templates.box.default.label: Шаблон по умолчанию
+types.MemberProfile.templates.full.default.label: Шаблон по умолчанию
+types.MemberProfile.templates.full.default.description: Шаблон по умолчанию для этой публикации
+types.MemberProfile.templates.fullold.default.label: Старый шаблон по умолчанию (<6.2)
+types.MemberProfile.templates.query.default.label: Шаблон по умолчанию
+types.MemberProfile.templates.editFront.default.label: Шаблон редактирования фронт-офиса.
+types.MemberProfile.templates.edit.default.description: Шаблон по умолчанию для этой публикации
+types.MemberProfile.templates.box.default.description: Шаблон по умолчанию для этой публикации
+types.MemberProfile.templates.query.default.description: Шаблон по умолчанию для этой публикации
+
+# From MemberProfile.xml
+types.MemberProfile.label: ESN - Профиль
+types.MemberProfile.fields.dateOfBirth.label: Дата рождения
+types.MemberProfile.title.label: Заголовок
+types.MemberProfile.fields.introduction.label: Введение
+types.MemberProfile.fields.interest.label: Сферы интересов
+types.MemberProfile.fields.dateOfArrival.label: Дата прибытия
+
+# From MicroBlogging.xml
+types.MicroBlogging.fields.text.label: Текст
+types.MicroBlogging.label: Микроблогинг
+types.MicroBlogging.title.label: Заголовок
+
+# From PortletBirthday-templates.xml
+types.PortletBirthday.templates.box.default.label: Шаблон панели управления
+types.PortletBirthday.templates.full.default.label: Шаблон приложения
+
+# From PortletBirthday.xml
+types.PortletBirthday.fields.relationshipFilter.description: Отображать только участников, с которыми вошедший в систему участник знаком?
+types.PortletBirthday.fields.relationshipFilter.onLabel: Да
+types.PortletBirthday.fields.workspaceMembers.label: Участники рабочего пространства
+types.PortletBirthday.fields.relationshipFilter.label: Выполнить фильтрацию на знакомствах
+types.PortletBirthday.fields.workspaceMembers.description: Выводить на экран только участников текущего рабочего пространства?
+types.PortletBirthday.fields.workspaceMembers.offLabel: Нет
+types.PortletBirthday.fields.workspaceMembers.onLabel: Да
+types.PortletBirthday.label: Портлет дня рождения
+types.PortletBirthday.fields.relationshipFilter.offLabel: Нет
+types.PortletBirthday.title.label: Заголовок
+types.PortletBirthday.description: Отображает предстоящие дни рождения знакомых
+
+# From PortletMemberActivity-templates.xml
+types.PortletMemberActivity.templates.box.default.label: Шаблон панели управления
+types.PortletMemberActivity.templates.full.default.label: Шаблон приложения
+types.PortletMemberActivity.templates.full.card.label: Шаблон карт приложения
+types.PortletMemberActivity.templates.box.card.label: Шаблон карт панели управления
+types.PortletMemberActivity.templates.jmobile.default.label: Шаблон по умолчанию
+
+# From PortletMemberActivity.xml
+types.PortletMemberActivity.fields.activityMode.label: Отображенные активности
+types.PortletMemberActivity.fields.activityMode.labelList: Отслеженная активность участников во всех рабочих пространствах | Отслеженная активность участников в рабочем пространстве, к которому я принадлежу | Активность рабочего пространства | Текущая активность рабочего пространства
+types.PortletMemberActivity.fields.showComments.label: Показать комментарии
+types.PortletMemberActivity.fields.showMedia.label: Показать медиа
+types.PortletMemberActivity.fields.filters.label: Фильтры
+types.PortletMemberActivity.fields.defaultPageSize.label: Количество отображенных активностей
+types.PortletMemberActivity.fields.showComments.onLabel: Да
+types.PortletMemberActivity.fields.showMedia.onLabel: Да
+types.PortletMemberActivity.fields.showComments.offLabel: Нет
+types.PortletMemberActivity.fields.showAbstract.onLabel: Да
+types.PortletMemberActivity.fields.showMedia.offLabel: Нет
+types.PortletMemberActivity.fields.showAbstract.label: Показать абстрактный объект
+types.PortletMemberActivity.fields.showAbstract.offLabel: Нет
+types.PortletMemberActivity.label: Портлет активности участника
+types.PortletMemberActivity.title.label: Заголовок
+types.PortletMemberActivity.fields.displayAllEvent.label:       Отображать все события календаря
+types.PortletMemberActivity.fields.displayAllEvent.onLabel:     Да
+types.PortletMemberActivity.fields.displayAllEvent.offLabel:    Нет
+types.PortletMemberActivity.fields.displayAllEvent.description: Если "Да", на стене будут отображаться все события (Фильтрация по доступным правам), если "Нет", будут отображаться только события с бесплатной регистрацией и событие, к которому принадлежит участник
+types.PortletMemberActivity.description: Отображает активности
+
+# From PortletMemberProfile-templates.xml
+types.PortletMemberProfile.templates.full.default.label: Шаблон приложения
+types.PortletMemberProfile.templates.box.default.label: Шаблон панели управления
+
+# From PortletMemberProfile.xml
+types.PortletMemberProfile.fields.showSuggestions.offLabel: Нет
+types.PortletMemberProfile.fields.showConnectionRequests.onLabel: Да
+types.PortletMemberProfile.label: Портлет профиля
+types.PortletMemberProfile.fields.showConnectionRequests.offLabel: Нет
+types.PortletMemberProfile.fields.showSuggestions.onLabel: Да
+types.PortletMemberProfile.fields.showConnectionRequests.label: Показать запросы на установление знакомства
+types.PortletMemberProfile.title.label: Заголовок
+types.PortletMemberProfile.fields.showSuggestions.label: Показать предложения
+types.PortletMemberProfile.description: Отображает профиль участника и его запросы и предложения на установление знакомства
+
+# From PortletMemberStatus-templates.xml
+types.PortletMemberStatus.templates.box.default.label: Шаблон панели управления
+types.PortletMemberStatus.templates.full.default.label: Шаблон приложения
+
+# From PortletMemberStatus.xml
+types.PortletMemberStatus.fields.workspaceMembers.description: Выводить на экран только активность участников текущего рабочего пространства?
+types.PortletMemberStatus.label: Портлет статуса участника
+types.PortletMemberStatus.fields.workspaceMembers.label: Участники рабочего пространства
+types.PortletMemberStatus.fields.workspaceMembers.offLabel: Нет
+types.PortletMemberStatus.fields.workspaceMembers.onLabel: Да
+types.PortletMemberStatus.title.label: Заголовок
+types.PortletMemberStatus.description: Отображает статусы ваших знакомых или статус участника рабочего пространства
+
+# Analytics
+ui.analytics.ESNAgent.name:                         Социальный
+ui.analytics.ESNAgent.report.network:               Социальная сеть
+ui.analytics.ESNAgent.report.network.h:             Плотность социальной сети.
+ui.analytics.ESNAgent.report.new-profile:           Новые профили
+ui.analytics.ESNAgent.report.new-profile.h:         Созданы новые профили.
+ui.analytics.ESNAgent.report.account-profile-count: Профили аккаунта
+ui.analytics.ESNAgent.report.contact-profile-count: Профили контакта
+ui.analytics.ESNAgent.report.connection-ratio:      Коэффициент знакомств на участника
+ui.analytics.ESNAgent.report.follower-ratio:        Коэффициент фолловеров на участника
+ui.analytics.ESNAgent.report.following-ratio:       Коэффициент фолловинга на участника
+ui.analytics.ESNAgent.report.activity-count:        Активность
+ui.analytics.ESNAgent.report.activity-count.h:      Подсчет активности
+ui.analytics.ESNAgent.report.activity-top:          Топ активности 
+ui.analytics.ESNAgent.report.activity-top.h:        Сбой активности
+ui.analytics.ESNAgent.report.network:               Отношения
+ui.analytics.ESNAgent.report.network.h:             Показатель отношения в социальной сети.
+ui.analytics.ESNAgent.report.new-profile:           Новые профили
+ui.analytics.ESNAgent.report.new-profile.h:         Созданы новые профили.
+ui.analytics.ESNAgent.report.account-profile-count: Учетная запись
+ui.analytics.ESNAgent.report.contact-profile-count: Контакт
+ui.analytics.ESNAgent.report.profile-completeness:   Заполненность профиля
+ui.analytics.ESNAgent.report.profile-completeness.h: Процент заполненности профилей участника.
+ui.analytics.ESNAgent.report.connection-ratio:      Среднее отношения участника
+ui.analytics.ESNAgent.report.follower-ratio:        Среднее фолловинга участника
+ui.analytics.ESNAgent.report.following-ratio:       Среднее фолловера участника
+ui.analytics.ESNAgent.report.microblogging-count:   Микроблогинг
+ui.analytics.ESNAgent.report.microblogging-count.h: Количество опубликованных сообщений микроблогинга.
+
+ # From plugin.xml
+types.PortletMemberActivity.templates.jcmsplugin.virtualdesktop.editInline.default.label: Шаблон, использованный в Виртуальном рабочем столе при редактировании сервиса Активности участника.
+types.AbstractPortletSkinable.templates.box.esnSkin.label: Скин ESN
+types.AbstractPortletSkinable.templates.box.esnSkin.description: Закругленный скин (CSS)
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.activity: Активность
+jcmsplugin.smartphone.workspace-service.PortletMemberActivity: Активности
+jcmsplugin.esn.smartphone.lbl.presentation: Презентация
+jcmsplugin.esn.smartphone.lbl.expertises: Компетенции
+jcmsplugin.esn.smartphone.lbl.member.activity: Активность
+jcmsplugin.esn.smartphone.lbl.activity.microblogging.text.placeholder: Ввести здесь свое сообщение...
+jcmsplugin.esn.smartphone.lbl.activity.microblogging.add-message: Добавить сообщение
+
+jcmsplugin.smartphone.shareurl.label.esn: Микроблогинг
+
+# Microblogging icon label
+jcmsplugin.esn.smartphone.microblogging.camera : Камера
+jcmsplugin.esn.smartphone.microblogging.galery : Фотогалерея
+
+# ----------------------------------------------------------------------
+# OpenApi
+# ----------------------------------------------------------------------
+acl.resource.admin/work/canManageExpertiseCategory: ESN - Право на управление категориями компетенций
+acl.resource.plugins: Плагины
+acl.resource.plugins/esn: ESN
+acl.resource.plugins/esn/openapi: Откройте API
+acl.resource.plugins/esn/openapi/anyActivity: Создавать любые активности
+acl.resource.plugins/esn/openapi/anyActivity.h: Включить создание любых активностей (автором активности может быть любой участник)
+acl.resource.plugins/esn/openapi/activity: Создать личную активность.
+acl.resource.plugins/esn/openapi/activity.h: Включить создание личной активности участника (автором активности будет зарегистрированный участник)
+doc.rest.rsrc-meth.ActivityResource: GET<br/>POST<br/>DELETE
+doc.rest.rsrc-desc./plugins/esn/activities: Метод POST: Список активности со следующими параметрами: <br/> <ul><li>участник: Режим участника, используемого для проверки прав на чтение (принудительно зарегистрированный участник, если зарегистрированный участник не имеет ACL «Создавать любые активности»)</li><li>: пример MemberActivityMode: <ul><li>FOLLOWED_MEMBERS</li><li>FOLLOWED_MEMBERS_WS</li><li>WORKSPACE_ACTIVITIES</li><li>MEMBER_WORKSPACE_ACTIVITIES</li><li>MEMBER_ACTIVITIES</li></ul></li><li>рабочее пространство: рабочее пространство, используемое для поиска</li><li>activityMember: Участник-автор активностей</li><li>startActivityDate: дата начала поиска</li><li>pageSize: по умолчанию 10</li><ul>
+doc.rest.rsrc-desc./plugins/esn/activities/followedMembers/{memberId}: Метод GET: Список активности участников, отслеживаемый предоставленным участником.<br/>Используемым участником для прав на чтение является предоставленный участник, только если зарегистрированный участник имеет ACL «Создавать любые активности», в противном случае это зарегистрированный участник.<br/>Настройка этой конечной точки должна выполняться через конечную точку активностей.
+doc.rest.rsrc-desc./plugins/esn/activities/followedMembersWs/{memberId}:Метод GET: Список активности участников, отслеживаемый предоставленным участником, но только в рабочих пространствах участника.<br/>Используемым участником для прав на чтение является предоставленный участник, только если зарегистрированный участник имеет ACL «Создавать любые активности», в противном случае это зарегистрированный участник.<br/>Настройка этой конечной точки должна выполняться через конечную точку активностей.
+doc.rest.rsrc-desc./plugins/esn/activities/member/{memberId}: Метод GET: Список активности предоставленного участника.<br/>Используемым участником для прав на чтение является предоставленный участник, только если зарегистрированный участник имеет ACL «Создавать любые активности», в противном случае это зарегистрированный участник.<br/>Настройка этой конечной точки должна выполняться через конечную точку активностей.
+doc.rest.rsrc-desc./plugins/esn/activities/memberWorspaces/{memberId}: Метод GET: Список активности рабочих пространств предоставленного участника.<br/>Используемым участником для прав на чтение является предоставленный участник, только если зарегистрированный участник имеет ACL «Создавать любые активности», в противном случае это зарегистрированный участник.<br/>Настройка этой конечной точки должна выполняться через конечную точку активностей.
+doc.rest.rsrc-desc./plugins/esn/activities/workspace/{workspaceId}: Метод GET: Список активности предоставленного рабочего пространства.<br/>Используемым участником для прав на чтение является предоставленный участник, только если зарегистрированный участник имеет ACL «Создавать любые активности», в противном случае это зарегистрированный участник.<br/>Настройка этой конечной точки должна выполняться через конечную точку активностей.
+doc.rest.rsrc-desc./plugins/esn/activity/{id}: Метод GET: получить MemberActivity по идентификатору<br/> Метод POST: обновить активность (с теми же полями, что и для создания)<br/> Метод DELETE: удалить активность
+doc.rest.rsrc-desc./plugins/esn/activity: Метод POST: Создать активность. <br/> параметры:<ul><li>свойство: ОБЯЗАТЕЛЬНО - свойство, используемое для этого участника</li><li>активности: ОБЯЗАТЕЛЬНО - участник активности (принудительно зарегистрированный участник, если зарегистрированный участник не имеет ACL «Создавать любые активности»)</li><li>данные: относится к данным об активности</li><li>сообщение: дополнительное сообщение </li><li>рабочее пространство: рабочее пространство активности (если пусто, если данные предоставлены, рабочее пространство данных будет использоваться.)</li><ul>
+

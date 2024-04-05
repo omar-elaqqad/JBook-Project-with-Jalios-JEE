@@ -1,0 +1,851 @@
+# ------------------------------------------------------------
+#  ACL
+# ------------------------------------------------------------
+acl.resource.admin/work/createCS: Spa\u021biu de colaborare - Creare
+acl.resource.plugins: Plugin-uri
+acl.resource.plugins/collaborativespace: Spa\u021biu de colaborare
+acl.resource.plugins/collaborativespace/manageCSGuest: Gestionarea invita\u021bilor
+acl.resource.plugins/collaborativespace/manageCSGuest.h: Autorizeaz\u0103 un administrator de spa\u021biu de colaborare s\u0103 creeze conturi de invita\u021bi \u00een spa\u021biul respectiv.
+acl.resource.admin-ws/plugins: Plugin-uri
+acl.resource.admin-ws/plugins/collaborativespace: Spa\u021biu de colaborare
+acl.resource.admin-ws/plugins/collaborativespace/manageCSServices: Aplica\u021bii
+acl.resource.admin-ws/plugins/collaborativespace/manageCSServices.h: Gestionare front office a aplica\u021biilor din spa\u021biul de colaborare.
+acl.resource.admin-ws/plugins/collaborativespace/manageCSSettings: Set\u0103ri
+acl.resource.admin-ws/plugins/collaborativespace/manageCSSettings.h: Gestionarea set\u0103rilor spa\u021biului de colaborare (nume, descriere, structur\u0103, aspect \u0219i stil).
+
+# ------------------------------------------------------------
+#  Common
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.lbl.filter:                 Filtru
+jcmsplugin.collaborativespace.lbl.administrator:          Lider
+jcmsplugin.collaborativespace.lbl.administrators:         Lideri
+jcmsplugin.collaborativespace.lbl.administrators.h:       Administratorii comunit\u0103\u021bii
+# A member that belongs to the space
+jcmsplugin.collaborativespace.lbl.profile.member-count:   {0,choice,0#Niciun participant|1#{0} un participant|2#{0} participan\u021bi}
+# A member that is administrator of the space
+jcmsplugin.collaborativespace.lbl.profile.leader-count:   {0,choice,0#Nu exist\u0103 lider|1#{0} lider|2#{0} lideri}
+# A member that is a Guest of the space
+jcmsplugin.collaborativespace.lbl.profile.guest:          Invitat
+jcmsplugin.collaborativespace.lbl.profile.guest-count:    {0,choice,0#Niciun invitat|1#{0} invitat|2#{0} invita\u021bi}
+jcmsplugin.collaborativespace.lbl.signup:                 \u00cenregistrare
+jcmsplugin.collaborativespace.lbl.signup-action:          M\u0103 \u00eenregistrez...
+jcmsplugin.collaborativespace.lbl.unsignup:               Dezaboneaz\u0103-te
+jcmsplugin.collaborativespace.lbl.unsignup-action:        Plec...
+jcmsplugin.collaborativespace.lbl.card.signup:            \u00cenregistrare
+
+jcmsplugin.collaborativespace.cssignup.title: Solicitare \u00eenregistrare de c\u0103tre \u201e{0}\u201d
+jcmsplugin.collaborativespace.cssignup-notfound.msg-title: Solicitarea de \u00eenregistrare nu a fost g\u0103sit\u0103
+jcmsplugin.collaborativespace.cssignup-notfound.msg-content: Solicitarea de \u00eenregistrare specificat\u0103 nu a fost g\u0103sit\u0103.<br/>Aceasta se poate \u00eent\u00e2mpla c\u00e2nd a fost deja prelucrat\u0103, sau membrul a fost \u00eenscris manual \u00een spa\u021biu.
+
+jcmsplugin.collaborativespace.data-controller.msg.incompatible-access-signup: Modul de acces nu este compatibil cu politica de \u00eenregistrare.
+jcmsplugin.collaborativespace.data-controller.msg.invalid-ability: Acest portlet nu poate avea capacitatea \u201e{0}\u201d.
+jcmsplugin.collaborativespace.data-controller.msg.service-not-in-public-model: Portleturi pentru care modul copiere este Prin referin\u021b\u0103 \u0219i cu capacitatea Aplica\u021bie sau Tablou de bord trebuie s\u0103 apar\u021bin\u0103 modelului de spa\u021biu de colaborare public.
+jcmsplugin.collaborativespace.data-controller.msg.no-portlet-selection: C\u00e2mpul \u201e{0}\u201d trebuie s\u0103 con\u021bin\u0103 un \u201e{1}\u201d.
+jcmsplugin.collaborativespace.data-controller.msg.invalid-guest-wsadmin: Invita\u021bii nu pot fi administratori de spa\u021bii de lucru.
+jcmsplugin.collaborativespace.data-controller.msg.invalid-guest-wsadmin-detail: Invitatul \u201e{0}\u201d ({1}) nu poate fi administratorul spa\u021biului de lucru.
+jcmsplugin.collaborativespace.data-controller.msg.sub-status: Actualizarea datelor conexe nu a reu\u0219it: {0}
+jcmsplugin.collaborativespace.data-controller.msg.invalid-cat: Nu se poate clasifica portletul \u201e{0}\u201d la \u201e<strong>{1}</strong>\u201d.
+jcmsplugin.collaborativespace.data-controller.msg.missing-root-cat: Portletul spa\u021biului de colaborare trebuie s\u0103 aib\u0103 o categorie r\u0103d\u0103cin\u0103.
+jcmsplugin.collaborativespace.data-controller.msg.wrong-model-typology: Modelul ales nu corespunde tipologiei
+jcmsplugin.collaborativespace.data-controller.msg.missing-model: Trebuie s\u0103 alege\u021bi alt model
+jcmsplugin.collaborativespace.data-controller.msg.workspace-not-model: Spa\u021biul de lucru ales ca model nu este un model
+jcmsplugin.collaborativespace.space-wizard.msg.model-not-found: Modelul specificat nu a fost g\u0103sit.
+jcmsplugin.collaborativespace.space-wizard.msg.failed: Nu s-a putut crea spa\u021biul de colaborare: {0}
+
+# FO action labels
+jcmsplugin.collaborativespace.create.lbl.create:                  Creeaz\u0103 un spa\u021biu...
+jcmsplugin.collaborativespace.create.lbl.create-sub:              Creeaz\u0103 un sub-spa\u021biu...
+jcmsplugin.collaborativespace.create.lbl.request-create:          Solicit\u0103 crearea unui spa\u021biu...
+jcmsplugin.collaborativespace.create.lbl.request-create-sub:      Solicit\u0103 crearea unui sub-spa\u021biu...
+# Admin BO action labels (keep "collaborative" word)
+jcmsplugin.collaborativespace.create.lbl.create-cs:               Creeaz\u0103 un spa\u021biu de colaborare...
+
+# Create space modal labels
+jcmsplugin.collaborativespace.create.title:                       Creeaz\u0103 un spa\u021biu de colaborare
+jcmsplugin.collaborativespace.create.title-request:               Solicit\u0103 crearea unui spa\u021biu de colaborare
+jcmsplugin.collaborativespace.create-sub.title:                   Creeaz\u0103 un sub-spa\u021biu
+jcmsplugin.collaborativespace.create-sub.title-request:           Solicit\u0103 crearea unui sub-spa\u021biu
+jcmsplugin.collaborativespace.create.steps.0:                     Model
+jcmsplugin.collaborativespace.create.steps.1:                     Informa\u021bii
+jcmsplugin.collaborativespace.create-sub.steps.1.intro:           Creeaz\u0103 un spa\u021biu \u00een <strong>{0}</strong>
+jcmsplugin.collaborativespace.create-sub.steps.1.intro-request:   Solicit\u0103 crearea unui spa\u021biu \u00een <strong>{0}</strong>.
+jcmsplugin.collaborativespace.create.steps.2:                     Participan\u021bi
+
+jcmsplugin.collaborativespace.create.info.name:                         Nume spa\u021biu
+jcmsplugin.collaborativespace.create.info.typology:                     Tip spa\u021biu de lucru
+jcmsplugin.collaborativespace.create.info.description:                  Descriere
+jcmsplugin.collaborativespace.create.info.introduction:                 Introducere
+jcmsplugin.collaborativespace.create.info.access:                       Acceseaz\u0103
+jcmsplugin.collaborativespace.create.info.access.public:                Public
+jcmsplugin.collaborativespace.create.info.access.private:               Privat
+jcmsplugin.collaborativespace.create.info.access.secret:                Secret
+jcmsplugin.collaborativespace.create.info.signup:                       \u00cenregistrare
+jcmsplugin.collaborativespace.create.info.signup.admin:                 \u00cenregistr\u0103ri gestionate de lideri
+jcmsplugin.collaborativespace.create.info.signup.request:               Remiteri de \u00eenregistr\u0103ri validate de lideri
+jcmsplugin.collaborativespace.create.info.signup.free:                  \u00cenregistr\u0103ri gratuite
+jcmsplugin.collaborativespace.create.info.language:                     Limba principal\u0103
+jcmsplugin.collaborativespace.create.model.intro:                       Selecteaz\u0103 un model pentru acest spa\u021biu de colaborare.
+jcmsplugin.collaborativespace.create.model.intro-typo:                  Selecteaz\u0103 o tipologie \u0219i un model pentru acest spa\u021biu de colaborare.
+jcmsplugin.collaborativespace.create.model.intro-typo-nomodel:          Selecteaz\u0103 o tipologie pentru acest spa\u021biu de colaborare.
+jcmsplugin.collaborativespace.create.model.intro-end:                   Dup\u0103 ce spa\u021biul este creat, liderii spa\u021biului pot ad\u0103uga servicii noi.
+jcmsplugin.collaborativespace.create.model.model:                       Pe baza modelului
+jcmsplugin.collaborativespace.create.model.sync-toggle:                 Sincronizare cu modelul
+jcmsplugin.collaborativespace.create.attendees.intro:                   Alege liderii \u0219i participan\u021bii pentru acest spa\u021biu de colaborare.<br />Dup\u0103 ce spa\u021biul este creat, liderii spa\u021biului pot trimite invita\u021bii, ad\u0103uga \u0219i elimina membri.
+jcmsplugin.collaborativespace.create.attendees.intro-no-leader:         Alege participan\u021bii pentru acest spa\u021biu de colaborare.<br />Dup\u0103 ce spa\u021biul este creat, liderii spa\u021biului pot trimite invita\u021bii, ad\u0103uga \u0219i elimina membri.
+jcmsplugin.collaborativespace.create.attendees.admins:                  Lider
+jcmsplugin.collaborativespace.create.attendees.admins.custom:           {0,choice,0#Nu exist\u0103 lider|1#Lider|2#Lideri}
+jcmsplugin.collaborativespace.create.attendees.groups:                  Grupuri
+jcmsplugin.collaborativespace.create.attendees.members:                 Membri
+jcmsplugin.collaborativespace.create.attendees.notification:            Notificare
+jcmsplugin.collaborativespace.create.attendees.notification.invitation: Trimite o invita\u021bie participan\u021bilor
+jcmsplugin.collaborativespace.create.attendees.notification.mail:       Adaug\u0103 \u0219i notific\u0103 participan\u021bi
+jcmsplugin.collaborativespace.create.attendees.notification.no:         Adaug\u0103 participan\u021bi f\u0103r\u0103 notificare
+jcmsplugin.collaborativespace.create.too-many-cs:                       Nu po\u021bi crea un nou spa\u021biu de colaborare. A fost atins num\u0103rul maxim de spa\u021bii de colaborare ({0}).
+jcmsplugin.collaborativespace.create.finish:                            <p>Solicitarea ta pentru un nou spa\u021biu de colaborare a fost \u00eenregistrat\u0103.</p><p>Dup\u0103 ce este validat\u0103, spa\u021biul va fi creat \u0219i liderii vor fi notifica\u021bi.</p>
+jcmsplugin.collaborativespace.access-policy.public.desc:                Oricine poate vedea un spa\u021biu public \u0219i-i poate citi con\u021binutul.
+jcmsplugin.collaborativespace.access-policy.private.desc:               Oricine poate \u0219ti c\u0103 exist\u0103 spa\u021bii private, dar doar participan\u021bii le pot citi con\u021binuturile.
+jcmsplugin.collaborativespace.access-policy.secret.desc:                Doar participan\u021bii la un spa\u021biu secret pot \u0219ti c\u0103 exist\u0103 \u0219i \u00eei pot citi con\u021binutul.
+
+jcmsplugin.collaborativespace.header.home:                              Pagin\u0103 de pornire
+jcmsplugin.collaborativespace.header.introduction:                      Introducere
+jcmsplugin.collaborativespace.header.backoffice:                        Back-Office
+jcmsplugin.collaborativespace.header.help:                              Ajutor
+jcmsplugin.collaborativespace.header.admin-menu:                        Administrare
+jcmsplugin.collaborativespace.header.admin-menu.home:                   Acas\u0103
+jcmsplugin.collaborativespace.header.admin-menu.members:                Membri
+jcmsplugin.collaborativespace.header.admin-menu.services:               Aplica\u021bii
+jcmsplugin.collaborativespace.header.admin-menu.settings:               Set\u0103ri
+jcmsplugin.collaborativespace.header.admin-menu.typo-models:            Model \u0219i tipologii
+
+jcmsplugin.collaborativespace.metas.toggle.show:                        Mai mult
+jcmsplugin.collaborativespace.metas.toggle.hide:                        Mai pu\u021bin
+jcmsplugin.collaborativespace.metas.show-all-typos:                     Arat\u0103 toate tipologiile
+jcmsplugin.collaborativespace.metas.introduction:                       Introducere
+jcmsplugin.collaborativespace.metas.manage-members.link:                Gestioneaz\u0103 membri
+jcmsplugin.collaborativespace.metas.member-list.others:                 \u0218i {0,choice,1# un alt|2# {0} al\u021bi}...
+jcmsplugin.collaborativespace.metas.actions-menu-title:                 Deschide meniul de ac\u021biuni din spa\u021biul de colaborare
+
+jcmsplugin.collaborativespace.private-home.title:                  Accesul la acest spa\u021biu este restric\u021bionat
+jcmsplugin.collaborativespace.private-home.signup:                 Pentru a accesa acest spa\u021biu, trebuie s\u0103 te \u00eenregistrezi.
+jcmsplugin.collaborativespace.private-home.already-signup:         Ai solicitat s\u0103 te \u00eenregistrezi \u00een acest spa\u021biu. Vei fi anun\u021bat imediat ce solicitarea ta este procesat\u0103.
+jcmsplugin.collaborativespace.private-home.no-signup:              \u00cenregistrarea \u00een acest spa\u021biu se face pe baz\u0103 de invita\u021bie.
+
+jcmsplugin.collaborativespace.settings.lbl.info:                    Informa\u021bii generale
+jcmsplugin.collaborativespace.settings.lbl.info.presentation:       Prezentare
+jcmsplugin.collaborativespace.settings.lbl.info.access:             Acces \u0219i \u00eenregistrare
+jcmsplugin.collaborativespace.settings.lbl.layout:                  Aspect
+jcmsplugin.collaborativespace.settings.lbl.model:                   Model
+jcmsplugin.collaborativespace.settings.lbl.look:                    Antet
+jcmsplugin.collaborativespace.settings.lbl.look.theme:              Tem\u0103
+jcmsplugin.collaborativespace.settings.lbl.look.condensed:          Mod condensat
+jcmsplugin.collaborativespace.settings.lbl.look.condensed.h:        Modul condensat reduce \u00een\u0103l\u021bimea antetului, \u0219i folose\u0219te numai o culoare de fundal
+jcmsplugin.collaborativespace.settings.lbl.look.color-tab:          Culori
+jcmsplugin.collaborativespace.settings.lbl.look.header-tab:         Imagine de fundal
+jcmsplugin.collaborativespace.settings.lbl.look.color:              Culoare fundal
+jcmsplugin.collaborativespace.settings.lbl.look.headers:            Antet
+jcmsplugin.collaborativespace.settings.lbl.look.no-header:          Nu exist\u0103 antet
+jcmsplugin.collaborativespace.settings.lbl.look.header-background:  Fundal
+jcmsplugin.collaborativespace.settings.lbl.look.header-custom:      Imagine de fundal
+jcmsplugin.collaborativespace.settings.lbl.look.header-custom.h:    Po\u021bi selecta o imagine personalizat\u0103 pentru antet sau pute\u021bi alege una dintr-o list\u0103 predefinit\u0103.
+jcmsplugin.collaborativespace.settings.lbl.look.header-no-image:    Nu exist\u0103 imagine de fundal
+jcmsplugin.collaborativespace.settings.lbl.look.header-position:    Pozi\u021bionarea imaginii
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat:      Repetarea imaginii
+jcmsplugin.collaborativespace.settings.lbl.look.header-no-repeat:   Niciunul
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat-x:    Orizontal
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat-y:    Vertical
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat-both: Ambele
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror:      Oglind\u0103
+jcmsplugin.collaborativespace.settings.lbl.look.header-no-mirror:   Niciunul
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror-x:    Orizontal
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror-y:    Vertical
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror-both: Ambele
+jcmsplugin.collaborativespace.settings.lbl.look.header-color:       Culoare titlu
+jcmsplugin.collaborativespace.settings.lbl.look.header-tabs-color:  Culoare text file
+jcmsplugin.collaborativespace.settings.lbl.look.header-tabs-bgcolor: Culoarea de fundal a filelor
+jcmsplugin.collaborativespace.settings.lbl.look.header-tabs-opacity: Opacitatea filelor
+jcmsplugin.collaborativespace.settings.lbl.layout:                  Aspect
+jcmsplugin.collaborativespace.settings.lbl.layout.main:             Aspect pagin\u0103
+jcmsplugin.collaborativespace.settings.lbl.layout.dashboard:        Acas\u0103
+jcmsplugin.collaborativespace.settings.lbl.layout.dashboard.column: Coloane
+jcmsplugin.collaborativespace.settings.lbl.jmobile:                 JMobile
+jcmsplugin.collaborativespace.settings.lbl.jmobile-delete-portlet:  Elimin\u0103 portlet-ul din portal
+jcmsplugin.collaborativespace.settings.lbl.jmobile-drag-portlet:    Apas\u0103 lung pentru a glisa portlet-ul
+jcmsplugin.collaborativespace.settings.alt.test:                    Testeaz\u0103
+jcmsplugin.collaborativespace.settings.alt.jmobile-template:        \u0218ablon JMobile
+jcmsplugin.collaborativespace.settings.lbl.add-portlet:             Adaug\u0103 un portlet
+
+jcmsplugin.collaborativespace.services.lbl.title:                   Adaug\u0103 aplica\u021bii
+jcmsplugin.collaborativespace.services.lbl.all-services:            Toate aplica\u021biile
+jcmsplugin.collaborativespace.services.lbl.installed-services:      Aplica\u021bii instalate
+jcmsplugin.collaborativespace.services.lbl.installed-service.title: Instalat
+jcmsplugin.collaborativespace.services.lbl.not-installed-services:  Alte aplica\u021bii
+jcmsplugin.collaborativespace.services.lbl.status:                  Stare
+jcmsplugin.collaborativespace.services.lbl.type:                    Tip
+jcmsplugin.collaborativespace.services.lbl.type.application:        Aplica\u021bie
+jcmsplugin.collaborativespace.services.lbl.type.dashboard:          Tablou de bord
+jcmsplugin.collaborativespace.services.lbl.name:                    Nume aplica\u021bie
+jcmsplugin.collaborativespace.services.lbl.description:             Descriere
+jcmsplugin.collaborativespace.services.lbl.add:                     Adaug\u0103
+jcmsplugin.collaborativespace.services.lbl.edit:                    Modific\u0103
+jcmsplugin.collaborativespace.services.lbl.preview-action:          Previzualizeaz\u0103
+jcmsplugin.collaborativespace.services.lbl.preview:                 Previzualizeaz\u0103
+jcmsplugin.collaborativespace.services.btn.add-service:             Adaug\u0103 aceast\u0103 aplica\u021bie
+jcmsplugin.collaborativespace.services.btn.customize-service:       Personalizeaz\u0103 aceast\u0103 aplica\u021bie
+jcmsplugin.collaborativespace.services.btn.remove-service:          Elimin\u0103 aceast\u0103 aplica\u021bie
+jcmsplugin.collaborativespace.services.btn.add:                     Adaug\u0103
+jcmsplugin.collaborativespace.services.btn.remove:                  Elimin\u0103
+jcmsplugin.collaborativespace.services.lbl.add-title:               Adaug\u0103 o aplica\u021bie
+jcmsplugin.collaborativespace.services.lbl.add-modal-title:         Adaug\u0103 o aplica\u021bie...
+jcmsplugin.collaborativespace.services.lbl.add-new-title:           Adaug\u0103 o aplica\u021bie nou\u0103
+jcmsplugin.collaborativespace.services.smartphone-ability.label:    Afi\u0219eaz\u0103 pe JMobile
+
+jcmsplugin.collaborativespace.settings.lbl.model-instances:         Instan\u021be ale modelului
+jcmsplugin.collaborativespace.settings.lbl.model-instances-count:   {0,choice,0# Nicio instan\u021b\u0103|1# 1 instan\u021b\u0103|2# {0} instan\u021be}
+
+jcmsplugin.collaborativespace.settings.model-instances.csp.title:   Spa\u021biu de colaborare
+jcmsplugin.collaborativespace.settings.model-instances.sync.title:  Moduri de sincronizare
+
+jcmsplugin.collaborativespace.members.btn.enroll-members:               \u00censcrie membri...
+jcmsplugin.collaborativespace.members.lbl.enroll-members:               \u00censcrie membri
+jcmsplugin.collaborativespace.members.enroll-modal.intro:               Selecteaz\u0103 membri \u0219i/sau grupuri de ad\u0103ugat la un grup \u021bint\u0103.
+jcmsplugin.collaborativespace.members.enroll-modal.target-group:        Grup \u021bint\u0103
+jcmsplugin.collaborativespace.members.enroll-modal.groups.description:  Membrii acelor grupuri vor fi ad\u0103uga\u021bi la grupul \u021bint\u0103.
+jcmsplugin.collaborativespace.members.btn.add-group:                    Adaug\u0103 un grup...
+jcmsplugin.collaborativespace.members.lbl.add-group:                    Adaug\u0103 un grup
+jcmsplugin.collaborativespace.members.btn.edit-group:                   Editeaz\u0103 grupul...
+
+jcmsplugin.collaborativespace.members.validate-signup-modal.groups:     Grupuri \u021bint\u0103
+jcmsplugin.collaborativespace.members.validate-signup-modal.groups.h:   Grupurile la care membrul va fi ad\u0103ugat.
+
+jcmsplugin.collaborativespace.invitations.lbl.invitations:     Invita\u021bii
+jcmsplugin.collaborativespace.invitations.lbl.all-status:      Toate invita\u021biile
+jcmsplugin.collaborativespace.invitations.lbl.guest:           Invitat
+jcmsplugin.collaborativespace.invitations.lbl.target-group:    Grup \u021bint\u0103
+jcmsplugin.collaborativespace.invitations.btn.send-invitation: Trimite invita\u021bii...
+
+jcmsplugin.collaborativespace.invitations.status.0: Trimis
+jcmsplugin.collaborativespace.invitations.status.1: Acceptate
+jcmsplugin.collaborativespace.invitations.status.2: Refuzate
+
+jcmsplugin.collaborativespace.invitations.status.long.0: Invita\u021bie trimis\u0103
+jcmsplugin.collaborativespace.invitations.status.long.1: Invita\u021bie acceptat\u0103
+jcmsplugin.collaborativespace.invitations.status.long.2: Invita\u021bie refuzat\u0103
+
+jcmsplugin.collaborativespace.invitations.send.title:            Trimite invita\u021bii
+jcmsplugin.collaborativespace.invitations.send.info:             Alege membrii sau grupurile c\u0103rora dore\u0219ti s\u0103 le trimi\u021bi invita\u021bia de a se al\u0103tura acestui spa\u021biu de colaborare
+jcmsplugin.collaborativespace.invitations.send.lbl.message:      Mesaj
+jcmsplugin.collaborativespace.invitations.send.btn.send:         Trimite
+
+jcmsplugin.collaborativespace.invitations.title: Invita\u021bie pentru {0}
+
+jcmsplugin.collaborativespace.invitations.process-modal.title:    Invita\u021bie
+jcmsplugin.collaborativespace.invitations.process-modal.info:     {0} te-a invitat s\u0103 devii membru al spa\u021biului de colaborare {1}.<br />Po\u021bi accepta, refuza aceast\u0103 invita\u021bie, sau po\u021bi decide mai t\u00e2rziu.
+jcmsplugin.collaborativespace.invitations.process-modal.btn.accept:     Accept\u0103
+jcmsplugin.collaborativespace.invitations.process-modal.btn.decline:    Refuz\u0103...
+
+jcmsplugin.collaborativespace.signup.info.free:           Te po\u021bi \u00eenregistra imediat \u00een acest spa\u021biu de colaborare
+jcmsplugin.collaborativespace.signup.info.request:        Pentru a te \u00eenregistra \u00een acest spa\u021biu de colaborare, trimite o solicitare. De \u00eendat\u0103 ce solicitarea ta este aprobat\u0103, vei fi anun\u021bat.
+jcmsplugin.collaborativespace.signup.btn.signup:          \u00cenregistreaz\u0103-m\u0103
+jcmsplugin.collaborativespace.signup.info.already-signup: {0}, ai solicitat deja aceast\u0103 \u00eenregistrare.
+jcmsplugin.collaborativespace.signup.error.workspace-no-group: Condi\u021bia pentru solicit\u0103rile de \u00eenregistrare este ca spa\u021biul lor de lucru s\u0103 aib\u0103 un grup implicit.
+
+jcmsplugin.collaborativespace.signup.lbl.signups:         Cereri de \u00eenregistrare
+jcmsplugin.collaborativespace.signup.lbl.signup:          Cerere de \u00eenregistrare
+jcmsplugin.collaborativespace.signup.lbl.submit-mbr:      Solicitant
+jcmsplugin.collaborativespace.signup.lbl.process:         Prelucreaz\u0103 aceast\u0103 solicitare
+jcmsplugin.collaborativespace.signup.btn.accept:          Accept\u0103
+jcmsplugin.collaborativespace.signup.btn.reject:          Refuz\u0103
+jcmsplugin.collaborativespace.unsignup.confirm:           E\u0219ti sigur c\u0103 dore\u0219ti s\u0103 te dezabonezi?
+
+jcmsplugin.collaborativespace.welcome.title:   Bine ai venit!
+jcmsplugin.collaborativespace.welcome.content: <p>Felicit\u0103ri! Spa\u021biul t\u0103u de colaborare a fost creat \u0219i func\u021bioneaz\u0103.</p><p>C\u00e2teva sfaturi referitoare la ceea ce po\u021bi face</p><ul><li class='cs-welcome-tip-look-and-feel'><a href="{0}">Modific\u0103 aspectul \u0219i stilul</a></li><li class='cs-welcome-tip-add-members'><a href="{1}">Adaug\u0103 membri</a></li><li class='cs-welcome-tip-send-invitations'><a href="{2}">Trimite invita\u021bii</a></li><li class='cs-welcome-tip-services'><a href="{3}">Adaug\u0103 aplica\u021bii</a></li></ul>
+
+jcmsplugin.collaborativespace.lbl.cs:    Spa\u021biu de colaborare
+jcmsplugin.collaborativespace.lbl.model: Model
+
+jcmsplugin.collaborativespace.lbl.follow.action:        Urm\u0103re\u0219te
+jcmsplugin.collaborativespace.lbl.unfollow.action:      Nu mai urm\u0103ri
+jcmsplugin.collaborativespace.lbl.follow.title:         Urm\u0103re\u0219te un spa\u021biu
+jcmsplugin.collaborativespace.lbl.follow.description:   Vei fi notificat despre ultimele nout\u0103\u021bi din acest spa\u021biu
+jcmsplugin.collaborativespace.lbl.unfollow.title:       Nu mai urm\u0103ri un spa\u021biu
+jcmsplugin.collaborativespace.lbl.unfollow.description: Nu vei mai fi notificat despre ultimele nout\u0103\u021bi din acest spa\u021biu.
+
+jcmsplugin.collaborativespace.lbl.synchronization-on-model: Portalul este sincronizat cu modelul s\u0103u, nu po\u021bi modifica afi\u0219area.
+
+jcmsplugin.collaborativespace.msg.cannot-update-sync-data: Nu po\u021bi modifica \u201e{0}\u201d deoarece aceste date sunt sincronizate cu modelul lor.
+
+jcmsplugin.collaborativespace.header.search-button: Lanseaz\u0103 c\u0103utarea \u00een spa\u021biul de lucru {0}
+
+# ------------------------------------------------------------
+#  ADMIN LIST
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.admin-list.remove-member: Elimin\u0103 din lista lider
+jcmsplugin.collaborativespace.admin-list.add-member-btn: Adaug\u0103 un lider...
+
+# ------------------------------------------------------------
+#  SUGGESTIONS
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.suggestion.none: Nu exist\u0103 sugestii.
+jcmsplugin.collaborativespace.suggestion.reset: Reseteaz\u0103 sugestiile...
+jcmsplugin.collaborativespace.suggestion.reject: Nu, mul\u021bumesc!
+
+# ------------------------------------------------------------
+#  APP
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.app.home.title: Mergi la pagina de pornire a comunit\u0103\u021bilor
+
+# ------------------------------------------------------------
+#  PUBLISH MENU
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.publish-menu.create: Spa\u021biu de colaborare
+
+# ------------------------------------------------------------
+#  CollaborativeSpace Recommendation (+alert)
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.space-recommendation.title: Recomandare pentru a te al\u0103tura unui spa\u021biu
+jcmsplugin.collaborativespace.space-recommendation.intro: Recomand\u0103 membri pentru a se al\u0103tura spa\u021biului <strong>{0}</strong>.
+jcmsplugin.collaborativespace.space-recommendation.no-recipient: Alege cel pu\u021bin un membru sau grup.
+jcmsplugin.collaborativespace.space-recommendation.field.msg: Mesajul t\u0103u
+
+# ------------------------------------------------------------
+#  EDITABLE PROPERTIES
+# ------------------------------------------------------------
+$id.jcmsplugin.collaborativespace.typology-root: R\u0103d\u0103cina tipologiei spa\u021biului de colaborare
+$id.CSRequest.formAuthor: Autor solicitare SC
+$id.CSRequest.workspace:  Spa\u021biu de lucru solicit\u0103ri SC
+$id.jcmsplugin.collaborativespace.typology-portal: Portal SC pe tipologii
+$id.jcmsplugin.collaborativespace.cs-creation-group: Grup creare SC
+$id.jcmsplugin.collaborativespace.cs-creation-group.help: Un identificator de grup care d\u0103 dreptul de a efectua creare de SC direct, f\u0103r\u0103 validarea fluxului de lucru. Este o alternativ\u0103 pentru alocarea ACL pentru membru.
+jcmsplugin.collaborativespace.guestaccounts.enabled: Dore\u0219ti s\u0103 activezi conturile de invita\u021bi?
+$id.jcmsplugin.collaborativespace.guestaccounts.group: Grup conturi invita\u021bi
+$id.jcmsplugin.collaborativespace.guestaccounts.group.help: Un identificator de grup care con\u021bine toate conturile de invita\u021bi ale organiza\u021biei.
+$id.GuestRequest.workspace: Spa\u021biu de lucru g\u0103zduire solicit\u0103ri de cont de invita\u021bi
+$id.GuestRequest.workspace.help: Un identificator de spa\u021biu de lucru pentru spa\u021biul \u00een care vor fi salvate solicit\u0103rile de cont de invitat (implicit, spa\u021biul de lucru implicit).
+$id.jcmsplugin.collaborativespace.guestaccounts.homepage-ws: Spa\u021biu de lucru bun venit invitat
+$id.jcmsplugin.collaborativespace.guestaccounts.homepage-ws.help: Un spa\u021biu de lucru accesibil pentru to\u021bi invita\u021bii, care poate fi utilizat pentru ca ace\u0219tia s\u0103 se familiarizeze cu platforma
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE ABILITIES
+# ------------------------------------------------------------
+portlet.ability.jcmsplugin.collaborativespace:                Spa\u021bii de colaborare
+portlet.ability.jcmsplugin.collaborativespace.dashboard:      Tablou de bord
+portlet.ability.jcmsplugin.collaborativespace.application:    Aplica\u021bie
+
+ui.editportlet.usage.skin.collaborativeSpace: Fa\u021bet\u0103 spa\u021biu de colaborare
+ui.editportlet.usage.skin.collaborativeSpaceNoSkin: Fa\u021bet\u0103 spa\u021biu de colaborare (niciuna)
+
+# ------------------------------------------------------------
+#  PORTLET MY COLLABORATIVE SPACES
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.portlet.mycs.lbl.mine:   Spa\u021biile mele
+jcmsplugin.collaborativespace.portlet.mycs.lbl.other:  Alte spa\u021bii
+jcmsplugin.collaborativespace.portlet.mycs.lbl.none:   Nu exist\u0103 spa\u021bii
+jcmsplugin.collaborativespace.portlet.mycs.lbl.filter: Filtreaz\u0103 \u00een func\u021bie de...
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE I18N
+# ------------------------------------------------------------
+
+jcmsplugin.collaborativespace.label.edit:         Editeaz\u0103
+jcmsplugin.collaborativespace.label.objectives:   Obiective
+jcmsplugin.collaborativespace.label.support:      Suport:
+jcmsplugin.collaborativespace.label.breadcrumb:   Urm\u0103 firimitur\u0103:
+jcmsplugin.collaborativespace.request-date:       Data solicit\u0103rii: {0}
+
+jcmsplugin.collaborativespace.editform.create:    Creeaz\u0103 un spa\u021biu de colaborare
+jcmsplugin.collaborativespace.editform.update:    Actualizeaz\u0103 un spa\u021biu de colaborare
+
+jcmsplugin.collaborativespace.csrequest.model:    Model generat
+
+jcmsplugin.collaborativespace.handler.msg.cs-max: Este permis un singur spa\u021biu de colaborare pe spa\u021biu de lucru.
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.title: Activare e-mail primit
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.content: E-mailul primit este acum activ \u00een acest spa\u021biu.
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.footer: Editeaz\u0103 set\u0103rile pentru a particulariza prefixul e-mailului: <strong>{0}</strong>.
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.edit-button: Editeaz\u0103 set\u0103ri
+
+jcmsplugin.collaborativespace.dashboard.new:      Nu exist\u0103 con\u021binut de afi\u0219at.<br/><img src='images/jalios/icons/add.gif' class='icon' alt=''/>&nbsp;Creeaz\u0103 con\u021binut nou.
+jcmsplugin.collaborativespace.dashboard.warn.invalid-portal-container: Acest \u0219ablon de selec\u021bie a portletului func\u021bioneaz\u0103 doar \u00eentr-un portal de spa\u021biu de colaborare.
+
+jcmsplugin.collaborativespace.introduction.edit: Editeaz\u0103 introducerea
+jcmsplugin.collaborativespace.introduction.empty.default-message: Introducerea la acest spa\u021biu nu a fost scris\u0103 \u00eenc\u0103.
+jcmsplugin.collaborativespace.introduction.infos.access.header: Acceseaz\u0103
+jcmsplugin.collaborativespace.introduction.infos.access.membership.true: (E\u0219ti \u00eenregistrat)
+jcmsplugin.collaborativespace.introduction.infos.access.membership.false: (Nu e\u0219ti \u00eenregistrat)
+jcmsplugin.collaborativespace.introduction.infos.guests.header: Invita\u021bi
+jcmsplugin.collaborativespace.introduction.infos.guests.info: Exist\u0103 {0,choice,0# 0 invita\u021bi|1# 1 invitat|2# {0} invita\u021bi}.
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail: Mailbox
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail.h: E-mailurile trimise la aceast\u0103 adres\u0103 vor fi salvate \u00een acest spa\u021biu \u00een numele t\u0103u
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail.your-address: Adresa ta personal\u0103 pentru a contribui la acest spa\u021biu:
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail.warning: Aten\u021bie! Aceast\u0103 adres\u0103 este personal\u0103. Nu o comunica\u021bi.
+
+jcmsplugin.collaborativespace.typology-portal.presentation.edit: Editeaz\u0103 prezentarea
+jcmsplugin.collaborativespace.typology-portal.presentation.empty.default-message: Prezentarea pentru aceast\u0103 categorie nu a fost completat\u0103 \u00eenc\u0103.
+jcmsplugin.collaborativespace.typology-portal.spaces-list.title: List\u0103 spa\u021biu
+jcmsplugin.collaborativespace.typology-portal.pqfe.lbl.cs-result: {0,choice,0#Niciun spa\u021biu|1#Un spa\u021biu|2#{0,number,integer} spa\u021bii}.
+jcmsplugin.collaborativespace.typology-portal.pqfe.lbl.placeholder.search: Caut\u0103 \u00een {0}
+jcmsplugin.collaborativespace.typology-portal.lbl.csList.header: {0,choice,0# Niciun spa\u021biu|1#1 spa\u021biu|2#{0,number,integer} spa\u021bii}
+jcmsplugin.collaborativespace.typology-portal.lbl.cs-typology.info: Creat {0}. {1,choice,0#Niciun participant|1#1 participant|2#{1,number,integer} participan\u021bi}.Condus de {2}
+jcmsplugin.collaborativespace.typology-portal.lbl.cs-typology.info-parent: Sub
+jcmsplugin.collaborativespace.typology-portal.lbl.cs-typology.admins-list: {0,choice,0# niciun lider|1# {2}|2# {1} \u0219i {2}}
+
+
+# Query dates
+jcmsplugin.collaborativespace.query.today:     Ast\u0103zi
+jcmsplugin.collaborativespace.query.tomorrow:  M\u00e2ine
+jcmsplugin.collaborativespace.query.yesterday: Ieri
+jcmsplugin.collaborativespace.query.before:    Anterior
+jcmsplugin.collaborativespace.query.after:     Mai t\u00e2rziu
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE CONTROL
+# ------------------------------------------------------------
+
+jcmsplugin.collaborativespace.msg.edit.cslicense:     Licen\u021ba curent\u0103 JCMS nu permite crearea mai multor spa\u021bii de lucru.
+jcmsplugin.collaborativespace.msg.edit.workspace.typology-used: Tipologia <i>({0})</i> nu trebuie utilizat\u0103 la spa\u021biul de lucru, ci la portletul spa\u021biului de colaborare.
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE DATA
+# ------------------------------------------------------------
+
+data.$id.jcmsplugin.collaborativespace.data.cat:                        Spa\u021bii de colaborare
+data.$id.jcmsplugin.collaborativespace.data.group.writer:               Spa\u021biu de colaborare - Scriitori
+data.$id.jcmsplugin.collaborativespace.data.group.reader:               Spa\u021biu de colaborare - Participan\u021bi
+data.$id.jcmsplugin.collaborativespace.data.internal.dashboard:         Tablou de bord
+data.$id.jcmsplugin.collaborativespace.data.internal.icons:             Pictograme
+data.$id.jcmsplugin.collaborativespace.data.internal.search:            C\u0103utare
+data.$id.jcmsplugin.collaborativespace.data.service.latest-contents:    Cel mai recent con\u021binut
+data.$id.jcmsplugin.collaborativespace.data.service.latest-contents.d:  Listeaz\u0103 cel mai nou con\u021binut din acest spa\u021biu de colaborare
+data.$id.jcmsplugin.collaborativespace.data.service.latest-documents:   Cele mai noi documente
+data.$id.jcmsplugin.collaborativespace.data.service.latest-documents.d: Listeaz\u0103 cele mai noi documente din acest spa\u021biu de colaborare
+data.$id.jcmsplugin.collaborativespace.data.service.workflow:           Flux de lucru
+data.$id.jcmsplugin.collaborativespace.data.service.workflow.d:         Listeaz\u0103 publica\u021biile de procesat
+data.$id.jcmsplugin.collaborativespace.data.service.glossary:           Glosare
+data.$id.jcmsplugin.collaborativespace.data.service.glossary.d:         Afi\u0219eaz\u0103 glosarele din acest spa\u021biu de colaborare.
+data.$id.jcmsplugin.collaborativespace.data.service.faq:                \u00centreb\u0103ri frecvente
+data.$id.jcmsplugin.collaborativespace.data.service.faq.d:              Afi\u0219eaz\u0103 \u00eentreb\u0103rile frecvente pentru acest spa\u021biu de colaborare.
+data.$id.jcmsplugin.collaborativespace.data.service.introduction:       Introducere
+data.$id.jcmsplugin.collaborativespace.data.service.introduction.d:     Afi\u0219eaz\u0103 introducerea la acest spa\u021biu de colaborare.
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-full:      Calendar
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-full.d:    Aplica\u021bie de gestionare a evenimentului membrilor spa\u021biului de colaborare
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-small:     Calendar mic
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-small.d:   Afi\u0219eaz\u0103 calendarul pentru luna curent\u0103
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-diary:     Jurnal
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-diary.d:   Afi\u0219eaz\u0103 jurnalul pentru luna curent\u0103.
+data.$id.jcmsplugin.collaborativespace.data.service.event-schedule:     Programare evenimente
+data.$id.jcmsplugin.collaborativespace.data.service.event-schedule.d:   Listeaz\u0103 program\u0103rile evenimentelor pentru acest spa\u021biu
+data.$id.jcmsplugin.collaborativespace.data.service.subspaces:          Subspa\u021bii
+data.$id.jcmsplugin.collaborativespace.data.service.subspaces.d:        List\u0103 de subspa\u021bii din acest spa\u021biu
+data.$id.jcmsplugin.collaborativespace.data.model.ws:                   Model spa\u021biu de colaborare
+data.$id.jcmsplugin.collaborativespace.data.model.portal:               Model spa\u021biu de colaborare
+data.$id.jcmsplugin.collaborativespace.data.model.portal.desc:          Model pentru crearea unui nou spa\u021biu de colaborare
+data.$id.jcmsplugin.collaborativespace.data.model.cat:                  $NAME$ spa\u021biu de colaborare
+data.$id.jcmsplugin.collaborativespace.data.model.group.writer:         $NAME$ - Scriitori
+data.$id.jcmsplugin.collaborativespace.data.model.group.reader:         $NAME$ - Participan\u021bi
+data.$id.jcmsplugin.collaborativespace.data.model.group.follower:       $NAME$ - Urm\u0103ritori
+
+# ------------------------------------------------------------
+#  Guest Accounts Feature
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.guestaccounts.guest.label: Invitat
+jcmsplugin.collaborativespace.guestaccounts.guestGroup.label: Invita\u021bi
+jcmsplugin.collaborativespace.guestaccounts.guestManagerGroup.label: Manageri invita\u021bi
+jcmsplugin.collaborativespace.guestaccounts.guestManagerACL.label: Manageri invita\u021bi
+jcmsplugin.collaborativespace.guestaccounts.account-creation.label: Deschide un cont invitat...
+jcmsplugin.collaborativespace.guestaccounts.contact-transformation.member-profile-target.label: Transform\u0103 \u00een cont invitat...
+jcmsplugin.collaborativespace.guestaccounts.workspaces-and-groups.workspace.label.title: F\u0103 clic aici pentru a ar\u0103ta/ascunde lista grupurilor pentru acest spa\u021biu de lucru
+jcmsplugin.collaborativespace.guestaccounts.no-guest-group-defined: Activarea caracteristicii contului invitat necesit\u0103 definirea unui grup de conturi invitate.<br />Verific\u0103 proprietatea <strong>{0}</strong> ($id.jcmsplugin.collaborativespace.guestaccounts.group).
+jcmsplugin.collaborativespace.guestaccounts.member-controller.error.account-already-in-workspaces: <p>Un cont <strong>invitat</strong> nu trebuie s\u0103 apar\u021bin\u0103 unui Grup de spa\u021bii care <strong>nu</strong> sunt de colaborare.</p><ul><li><strong>Elimin\u0103</strong> grupul de spa\u021bii care nu sunt de colaborare pentru a-l transforma \u00een cont invitat({0})</li><li>sau, <strong>elimin\u0103-l</strong> din grupul de conturi invitate pentru a-i permite accesul la spa\u021bii care nu sunt de colaborare</li></ul>
+jcmsplugin.collaborativespace.guestaccounts.member-controller.error.no-valid-email: Un cont invitat trebuie s\u0103 aib\u0103 o adres\u0103 de e-mail valid\u0103.
+jcmsplugin.collaborativespace.guestaccounts.member-controller.error.contact-creation-forbidden: Un cont invitat nu poate crea un contact.
+jcmsplugin.collaborativespace.guestaccounts.member-controller.warning.guest-group-removal: Eliminarea acestui cont din Grupul de conturi invitate ar da mai mult acces la acest cont.<br />Elimin\u0103 for\u021bat acest cont din Grupul de invita\u021bi pentru a continua.
+jcmsplugin.collaborativespace.guestaccounts.member-controller.guest-group-removal.lbl: Elimin\u0103 din Invita\u021bi
+jcmsplugin.collaborativespace.guestaccounts.member-controller.guest-group-removal.lbl.h: Dore\u0219ti s\u0103 elimini for\u021bat acest cont din Grupul conturilor invitate?
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.feature-not-enabled: Solicitarea ta nu poate fi procesat\u0103. Verific\u0103 setarea caracteristicii Invita\u021bi.
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-submitter: Solicitantul remiterii este obligatoriu.
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-group: Alege cel pu\u021bin un grup de spa\u021bii de colaborare.
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-name: Invitatul trebuie s\u0103 aib\u0103 un Nume.
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-organization: Invitatul trebuie s\u0103 aib\u0103 o Organiza\u021bie.
+jcmsplugin.collaborativespace.guestaccounts.request-modal.use-with-worflow.title: Solicitare de creare a unui cont invitat
+jcmsplugin.collaborativespace.guestaccounts.request-modal.use-with-no-worflow.title: Creare cont invitat
+jcmsplugin.collaborativespace.guestaccounts.creation-request-controller.create.finish: <p>Solicitarea ta de creare a unui cont invitat a fost remis\u0103 cu succes.</p><p>Dup\u0103 ce solicitarea este validat\u0103, contul invitat va fi creat \u0219i vei fi notificat \u00een acest sens.</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-controller.account-creation-success.mail.email-notsent: E-mailul nu a putut fi trimis: {0}. \u00cencearc\u0103 din nou, sau contacteaz\u0103 un lider.
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.0: Verificare
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1: Propuneri
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.2: Informa\u021bii
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.3: Spa\u021bii
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.0.intro: <p class='info'>Introdu numele \u0219i/sau adresa de e-mail a contului invitat pentru a verifica dac\u0103 aceast\u0103 persoan\u0103 exist\u0103 deja:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.intro.1: <p class='info'>A fost g\u0103sit un cont existent pentru aceste informa\u021bii. Verific\u0103 dac\u0103 nu cumva contul invitat nu exist\u0103 deja \u00eenainte de a-l crea.</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.intro.2: <p class='info'>Conturi existente g\u0103site. Verifica\u021bi dac\u0103 nu sunt aceea\u0219i persoan\u0103 \u00eenainte de a crea unul nou.<br />Face\u021bi clic pe o fi\u0219\u0103 pentru a afi\u0219a membrul \u00eentr-o fereastr\u0103 nou\u0103, plana\u021bi peste o fi\u0219\u0103 \u0219i face\u021bi clic pe buton pentru a continua cu acest membru.</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.see-profile.btn: Vizualizeaz\u0103 profilul
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.see-profile.btn.title: Afi\u0219eaz\u0103 profilul complet al contului \u00eentr-o fereastr\u0103 nou\u0103, \u00eenainte de a alege o ac\u021biune
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.select-account.title: Selecteaz\u0103 acest cont existent, ca s\u0103 \u00eel pute\u021bi \u00eenregistra \u00een spa\u021bii
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.select-account.btn: Selecteaz\u0103
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.transform-contact-to-guest.btn-label: Converti\u021bi la invitat
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.transform-contact-to-guest.btn.title: Selecteaz\u0103 acest contact pentru a-l transforma \u00een invitat, ca s\u0103 \u00eel pute\u021bi \u00eenregistra \u00een spa\u021bii
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.2.intro: <p class='info'>Completeaz\u0103 informa\u021biile pentru contul invitat de creat:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.2.intro.convert-contact: <p class='info'>Completeaz\u0103 informa\u021biile pentru contactul <strong>{0}</strong> pentru a-l transforma \u00eentr-un invitat:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.3.intro: <p class='info'>\u00cen urm\u0103toarele spa\u021bii de colaborare, verific\u0103 grupurile la care va fi ad\u0103ugat contul:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.3.intro.convert-contact: <p class='info'>\u00cen urm\u0103toarele spa\u021bii de colaborare, verific\u0103 grupurile la care va fi ad\u0103ugat contactul <strong>{0}</strong>:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.use-with-worflow.validate: Trimite cererea
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.use-with-no-worflow.validate: Creeaz\u0103 cont
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.use-with-worflow.validate: Trimite cererea
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.use-with-no-worflow.validate: Converte\u0219te
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.contact-reminder: Transformarea <strong>{0}</strong> \u00een cont invitat.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.groups-intro: <p class='info'>\u00cen urm\u0103toarele spa\u021bii de colaborare, verific\u0103 grupurile la care va fi ad\u0103ugat contul invitat:</p>
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.error.no-email: Contactul trebuie s\u0103 aib\u0103 o adres\u0103 de e-mail valid\u0103 pentru a fi transformat \u00een cont invitat.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.error.email-already-used: Contactul nu poate fi transformat \u00een cont invitat. Un cont existent utilizeaz\u0103 deja adresa de e-mail <strong>{0}</strong>.<br />Utilizeaz\u0103 o alt\u0103 adres\u0103 de e-mail, sau transform\u0103 contul existent \u00een cont invitat.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.error.not-a-contact: Membrul de transformat trebuie s\u0103 fie un contact.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.create.finish: <p>Solicitarea ta de transformare a unui contact \u00een cont invitat a fost remis\u0103 cu succes.</p><p>Dup\u0103 ce este validat\u0103, contul invitat va fi creat \u0219i tu vei fi anun\u021bat.</p>
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.account-transformation-success: Contactul <a href='{0}' target='_blank' title='New window'>{1}</a> a fost transformat cu succes \u00een cont invitat.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.account-creation-success.mail.email-notsent: E-mailul nu a putut fi trimis: {0}. \u00cencearc\u0103 din nou, sau contacteaz\u0103 un lider.
+jcmsplugin.collaborativespace.guestaccounts.guest-request.notification.warn.no-request: Nu se poate trimite e-mailul de schimbare a parolei. Contul invitat ({0}) nu a putut fi notificat.
+jcmsplugin.collaborativespace.guestaccounts.guest-request.notification.warn.mail-disabled: E-mailurile sunt dezactivate. Contul invitat nu a putut fi notificat.
+jcmsplugin.collaborativespace.guestaccounts.guest-request.notification.warn.unknown-error: Ne pare r\u0103u, ceva nu a mers. Contul invitat nu a putut fi notificat.
+jcmsplugin.collaborativespace.guestaccounts.process-request.btn.accept:  Accept\u0103
+jcmsplugin.collaborativespace.guestaccounts.process-request.btn.reject:  Refuz\u0103
+
+
+jcmsplugin.collaborativespace.syncMode.tabs: Aplica\u021bii
+jcmsplugin.collaborativespace.syncMode.dashboard: Pagina de pornire
+jcmsplugin.collaborativespace.syncMode.data: Structur\u0103 date (tipuri, WF, grupuri, ...)
+jcmsplugin.collaborativespace.syncMode.categories: Categorii
+jcmsplugin.collaborativespace.syncMode.activate-help.message: Dac\u0103 este activat\u0103, sincronizarea aplic\u0103 anumi\u021bi parametri ai modelului pe acest spa\u021biu de lucru
+
+#jcmsplugin.collaborativespace.modelSyncMode.dashboard: Applications
+#jcmsplugin.collaborativespace.modelSyncMode.dashboard: Home 
+#jcmsplugin.collaborativespace.modelSyncMode.dashboard: Data
+
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal: Editeaz\u0103 pagina (Editare avansat\u0103)...
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-simple: Editeaz\u0103 pagina...
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-simple-stop: Opre\u0219te editarea
+jcmsplugin.collaborativespace.actions-menu.recommend-collaborative-space: Partajeaz\u0103...
+jcmsplugin.collaborativespace.modelSyncMode.locked.message: Spa\u021biul de colaborare este sincronizat cu modelul: <b>{0}</b>
+
+# ------------------------------------------------------------
+# Alerts
+# ------------------------------------------------------------
+alert.name.jcmsplugin-collaborativespace:                         Spa\u021bii de colaborare
+alert.name.jcmsplugin-collaborativespace.cs-creation:             Creare spa\u021biu de colaborare
+alert.name.jcmsplugin-collaborativespace.cs-creation-rejected-submitter: Creare spa\u021biu de colaborare refuzat\u0103
+alert.name.jcmsplugin-collaborativespace.invitation:              Invita\u021bie pentru a te al\u0103tura unui spa\u021biu
+alert.name.jcmsplugin-collaborativespace.enrollment:              \u00cenregistreaz\u0103-te la un spa\u021biu
+alert.name.jcmsplugin-collaborativespace.join:                    \u00cenregistreaz\u0103-te la un spa\u021biu
+alert.name.jcmsplugin-collaborativespace.recommendation:          Recomandarea unui spa\u021biu
+alert.name.jcmsplugin-collaborativespace.signup-request:          Remitere \u00eenregistrare
+alert.name.jcmsplugin-collaborativespace.signup-accepted:         \u00cenregistrare acceptat\u0103
+alert.name.jcmsplugin-collaborativespace.signup-rejected:         \u00cenregistrare refuzat\u0103
+alert.name.jcmsplugin-collaborativespace.unsignup:                Dezabonare
+alert.name.jcmsplugin-collaborativespace.guest-creation:          Activare cont invitat
+alert.name.jcmsplugin-collaborativespace.silent-guest-creation:   Activare cont invitat
+alert.name.jcmsplugin-collaborativespace.contact-to-guest:        Contactul pentru transformare \u00een cont invitat
+alert.name.jcmsplugin-collaborativespace.silent-contact-to-guest: Contactul pentru transformare \u00een cont invitat
+
+alert.msg.jcmsplugin-collaborativespace.cs-creation.title:                          Creare spa\u021biu de colaborare {data}
+alert.msg.jcmsplugin-collaborativespace.cs-creation.short-description:              Spa\u021biul de colaborare {data} a fost creat.
+alert.msg.jcmsplugin-collaborativespace.cs-creation.description:                    <p>Spa\u021biul de colaborare {data} a fost creat.</p><p>E\u0219ti liderul acestui spa\u021biu.</p>
+
+alert.msg.jcmsplugin-collaborativespace.cs-creation-rejected-submitter.title:             Creare spa\u021biu de colaborare refuzat\u0103
+alert.msg.jcmsplugin-collaborativespace.cs-creation-rejected-submitter.short-description: Solicitarea de creare spa\u021biu colaborativ (\u201e{cs-title}\u201d) a fost refuzat\u0103. Comentariu validator: {validator-comment}
+
+alert.msg.jcmsplugin-collaborativespace.invitation.title:                           Invita\u021bie de participare {data}
+alert.msg.jcmsplugin-collaborativespace.invitation.short-description:               {author} te-a invitat s\u0103 faci parte din spa\u021biul de colaborare {data}.
+alert.msg.jcmsplugin-collaborativespace.invitation.description:                     <p>{author} te-a invitat s\u0103 faci parte din spa\u021biul de colaborare {data}.</p><p><a href="{accept-url}">Accept\u0103 aceast\u0103 invita\u021bie</a></p><p><a href="{decline-url}">Refuz\u0103 aceast\u0103 invita\u021bie</a></p><br /><p><b>Descriere spa\u021biu:</b></p><p>{cs-description}</p>
+
+alert.msg.jcmsplugin-collaborativespace.enrollment.title:                           \u00cenregistreaz\u0103-te la {data}
+alert.msg.jcmsplugin-collaborativespace.enrollment.short-description:               E\u0219ti membru al spa\u021biului de colaborare {data}.
+
+alert.msg.jcmsplugin-collaborativespace.join.title:                                 \u00cenregistreaz\u0103-te la {data}
+alert.msg.jcmsplugin-collaborativespace.join.short-description:                     {author} s-a al\u0103turat spa\u021biului de colaborare {data}.
+alert.msg.jcmsplugin-collaborativespace.join.description:                           <p><a href="{author-url}">{author}</a> s-a al\u0103turat spa\u021biului de colaborare {data}.</p>
+
+alert.msg.jcmsplugin-collaborativespace.recommendation.title:                       Recomandare pentru spa\u021biu de colaborare {data}
+alert.msg.jcmsplugin-collaborativespace.recommendation.short-description:           {author} \u00ee\u021bi recomand\u0103 s\u0103 te al\u0103turi spa\u021biului de colaborare {data}.
+alert.msg.jcmsplugin-collaborativespace.recommendation.description:                 <p>{author} \u00ee\u021bi recomand\u0103 s\u0103 te al\u0103turi spa\u021biului de colaborare {data}.</p>
+
+alert.msg.jcmsplugin-collaborativespace.signup-request.title:                       Cerere de \u00eenregistrare pentru {data}
+alert.msg.jcmsplugin-collaborativespace.signup-request.short-description:           {author} a trimis o cerere de \u00eenregistrare \u00een spa\u021biul de colaborare {data}.
+alert.msg.jcmsplugin-collaborativespace.signup-request.description:                 <p>{author} a trimis o <a href="{signup-url}">cerere de \u00eenregistrare</a> \u00een spa\u021biul de colaborare {data}.</p>
+
+alert.msg.jcmsplugin-collaborativespace.signup-accepted.title:                      Cerere de \u00eenregistrare pentru {data}
+alert.msg.jcmsplugin-collaborativespace.signup-accepted.short-description:          Remiterea ta de \u00eenregistrare la spa\u021biul de colaborare {data} a fost aprobat\u0103 de {author}.
+alert.msg.jcmsplugin-collaborativespace.signup-accepted.description:                <p>Felicit\u0103ri! Remiterea ta de \u00eenregistrare la spa\u021biul de colaborare {data} a fost aprobat\u0103 de {author}. De acum \u00eenainte, e\u0219ti membru al acestui spa\u021biu.</p>
+
+alert.msg.jcmsplugin-collaborativespace.signup-rejected.title:                      Cerere de \u00eenregistrare pentru {data}
+alert.msg.jcmsplugin-collaborativespace.signup-rejected.short-description:          Remiterea ta de \u00eenregistrare la spa\u021biul de colaborare {data} a fost refuzat\u0103. Comentariu validator: {validator-comment}
+
+alert.msg.jcmsplugin-collaborativespace.unsignup.title:                             Dezaboneaz\u0103-te de la {data}
+alert.msg.jcmsplugin-collaborativespace.unsignup.short-description:                 {author} s-a dezabonat de la spa\u021biul de colaborare {data}.
+
+alert.msg.jcmsplugin-collaborativespace.guest-creation.title:                       Activare cont invitat
+alert.msg.jcmsplugin-collaborativespace.guest-creation.short-description:           Contul invitat {data} ({organization}) a fost creat cu succes \u0219i notificat pe e-mail.
+
+alert.msg.jcmsplugin-collaborativespace.contact-to-guest.title:                     Activare cont invitat
+alert.msg.jcmsplugin-collaborativespace.contact-to-guest.short-description:         Contactul {data} ({organization}) a fost transformat \u00een cont invitat \u0219i notificat pe e-mail.
+
+alert.msg.jcmsplugin-collaborativespace.silent-guest-creation.title:                Activare cont invitat
+alert.msg.jcmsplugin-collaborativespace.silent-guest-creation.short-description:    Contul invitat {data} ({organization}) a fost creat cu succes.
+
+alert.msg.jcmsplugin-collaborativespace.silent-contact-to-guest.title:              Activare cont invitat
+alert.msg.jcmsplugin-collaborativespace.silent-contact-to-guest.short-description:  Contactul {data} ({organization}) a fost transformat \u00een cont invitat.
+
+wf-alert.ANY.CSRequest.wfcsrequest.-201.form-submission.alertWorkers.ANY.title: {reminder} Solicitarea de creare a unui spa\u021biu de colaborare a fost transmis\u0103
+wf-alert.ANY.CSRequest.wfcsrequest.-201.form-submission.alertWorkers.ANY.short-description: S-a transmis o solicitare de creare a unui spa\u021biu de colaborare: {data.url}
+wf-alert.ANY.CSRequest.wfcsrequest.-201.form-submission.alertWorkers.ANY.description: <p>O solicitare de creare a unui spa\u021biu colaborativ {data} a fost transmis\u0103.</p><p>E\u0219ti invitat s\u0103 o validezi.</p>
+
+wf-alert.ANY.CSSignupRequest.wfcssignup.-201.form-submission.alertWorkers.ANY.title: {reminder} O solicitare de \u00eenregistrare \u00een spa\u021biu de colaborare a fost transmis\u0103
+wf-alert.ANY.CSSignupRequest.wfcssignup.-201.form-submission.alertWorkers.ANY.short-description: O solicitare de \u00eenregistrare \u00een spa\u021biu de colaborare a fost transmis\u0103: {data.url}
+wf-alert.ANY.CSSignupRequest.wfcssignup.-201.form-submission.alertWorkers.ANY.description: <p>O solicitare de \u00eenregistrare \u00een spa\u021biu de colaborare a fost transmis\u0103: {data}.</p><p>E\u0219ti invitat s\u0103 o validezi.</p>
+
+# ----------------------------------------------------------------------
+# SHORTCUT
+# ----------------------------------------------------------------------
+
+data.$id.shortcut.jcmsplugin.collaborativespace-hub.title: Spa\u021bii
+data.$id.shortcut.jcmsplugin.collaborativespace-hub.text: Acceseaz\u0103 toate spa\u021biile tale, gestioneaz\u0103 spa\u021biile tale favorite \u0219i descoper\u0103 sugestii de spa\u021bii.
+
+# ----------------------------------------------------------------------
+# CategoryBrowser
+# ----------------------------------------------------------------------
+category.category-browser.collaborativespace-search: Caut\u0103 \u00een acest spa\u021biu
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From CollaborativeSpace-templates.xml
+types.CollaborativeSpace.templates.box.default.label: \u0218ablon implicit
+
+# From CollaborativeSpace.xml
+types.CollaborativeSpace.fields.header.label: Antet
+types.CollaborativeSpace.fields.headerSettings.label: Personalizare antet
+types.CollaborativeSpace.fields.introduction.label: Introducere
+types.CollaborativeSpace.tabs.layout.label: Aspect
+types.CollaborativeSpace.fields.accessPolicy.label: Acceseaz\u0103
+types.CollaborativeSpace.title.label: Titlu
+types.CollaborativeSpace.fields.exactCategory.label: Categoria exact\u0103
+types.CollaborativeSpace.fields.signupPolicy.labelList: \u00cenregistrare gratuit\u0103|Solicitare de \u00eenregistrare|\u00cenregistrare gestionat\u0103 de lideri
+types.CollaborativeSpace.fields.layout.label: Aspect
+types.CollaborativeSpace.label: Spa\u021biu de colaborare
+types.CollaborativeSpace.description: Portletul spa\u021biului de colaborare define\u0219te aplica\u021biile de afi\u0219at.
+types.CollaborativeSpace.fields.layout.labelList: Nicio bar\u0103 lateral\u0103|Bar\u0103 lateral\u0103 st\u00e2nga|Bar\u0103 lateral\u0103 dreapta
+types.CollaborativeSpace.fields.signupPolicy.label: Politic\u0103 de \u00eenregistrare
+types.CollaborativeSpace.fields.dashboardColumnCount.label: Coloane tablou de bord
+types.CollaborativeSpace.fields.accessPolicy.labelList: Public|Privat|Secret
+types.CollaborativeSpace.fields.exactCategory.onLabel: Da
+types.CollaborativeSpace.fields.exactCategory.offLabel: Nu
+types.CollaborativeSpace.fields.description.label: Descriere
+types.CollaborativeSpace.tabs.access.label: Acceseaz\u0103
+types.CollaborativeSpace.fields.theme.label: Tem\u0103
+types.CollaborativeSpace.fields.followersGroup.label: Grup urm\u0103ritori
+types.CollaborativeSpace.fields.followersGroup.description: Membrii din acest grup vor fi notifica\u021bi despre Con\u021binuturile noi din spa\u021biu
+types.CollaborativeSpace.fields.jportal.label: JPortal
+types.CollaborativeSpace.fields.syncMode.label: Elemente sincronizate
+types.CollaborativeSpace.fields.syncMode.labelList: Pagin\u0103 de pornire|Aplica\u021bii|Structur\u0103 date (tipuri, WF, grupuri, ...)|Categorii
+types.CollaborativeSpace.fields.model.label: Model spa\u021biu de lucru
+types.CollaborativeSpace.fields.applications.label: Aplica\u021bii
+types.CollaborativeSpace.fields.mobileShowIntro.label: Afi\u0219are introducere
+types.CollaborativeSpace.fields.mobileShowApplications.label: Afi\u0219are aplica\u021bii
+types.CollaborativeSpace.fields.mobilePortlets.label: Portlete
+types.CollaborativeSpace.fields.modelSyncMode.label: Sincronizare necesar\u0103
+types.CollaborativeSpace.fields.modelSyncMode.labelList: Pagin\u0103 de pornire|Aplica\u021bii|Structur\u0103 date (tipuri, WF, grupuri, ...)|Categorii
+
+# From CSRequest-templates.xml
+types.CSRequest.templates.query.default.label: \u0218ablon implicit
+types.CSRequest.templates.full.default.description: \u0218ablon implicit
+types.CSRequest.templates.full.default.label: \u0218ablon implicit
+types.CSRequest.templates.query.default.description: \u0218ablon implicit
+
+# From CSRequest.xml
+types.CSRequest.fields.description.label: Descriere
+types.CSRequest.title.label: Titlu
+types.CSRequest.fields.notificationPolicy.label: Politic\u0103 de notificare
+types.CSRequest.fields.groups.label: Grupuri
+types.CSRequest.fields.accessPolicy.labelList: Public|Privat|Secret
+types.CSRequest.fields.signupPolicy.labelList: \u00cenregistrare gratuit\u0103|Solicitare de \u00eenregistrare|\u00cenregistrare gestionat\u0103 de lideri
+types.CSRequest.fields.notificationPolicy.labelList: Trimite o invita\u021bie participan\u021bilor|Adaug\u0103 \u0219i notific\u0103 participan\u021bi|Adaug\u0103 participan\u021bi f\u0103r\u0103 notificare
+types.CSRequest.fields.signupPolicy.label: Politic\u0103 de \u00eenregistrare
+types.CSRequest.label: Spa\u021biu de colaborare - Creare solicitare
+types.CSRequest.fields.admins.label: Lideri
+types.CSRequest.fields.language.label: Limba
+types.CSRequest.fields.members.label: Membri
+types.CSRequest.fields.name.label: Nume spa\u021biu
+types.CSRequest.fields.accessPolicy.label: Acceseaz\u0103
+types.CSRequest.fields.model.label: Model
+types.CSRequest.fields.parent.label: Spa\u021biu p\u0103rinte
+types.CSRequest.fields.syncMode.label: Elemente sincronizate
+types.CSRequest.fields.syncMode.labelList: Pagin\u0103 de pornire|Aplica\u021bii|Structur\u0103 date (tipuri, WF, grupuri, ...)|Categorii
+
+# From CSSignupRequest-templates.xml
+types.CSSignupRequest.templates.full.default.label: \u0218ablon implicit
+types.CSSignupRequest.templates.full.default.description: \u0218ablon implicit
+types.CSSignupRequest.templates.query.default.label: \u0218ablon implicit
+types.CSSignupRequest.templates.query.default.description: \u0218ablon implicit
+
+# From CSSignupRequest.xml
+types.CSSignupRequest.title.label: Titlu
+types.CSSignupRequest.label: Spa\u021biu de colaborare - Solicitare \u00eenregistrare
+types.CSSignupRequest.fields.name.label: Nume
+
+# From GuestCrea.xml
+types.GuestCrea.title.label: Titlu
+types.GuestCrea.label: Cont invitat - Solicitare de creare
+types.GuestCrea.description: Acest formular \u00ee\u021bi permite s\u0103 solici\u021bi crearea unui cont invitat, care va avea acces doar la spa\u021bii de colaborare.
+types.GuestCrea.fields.name.label: Nume
+types.GuestCrea.fields.email.label: E-mail
+types.GuestCrea.fields.organization.label: Organiza\u021bia
+types.GuestCrea.fields.firstname.label: Prenume
+types.GuestCrea.fields.language.label: Limba
+types.GuestCrea.fields.country.label: \u021aara
+
+# From GuestConv.xml
+types.GuestConv.title.label: Titlu
+types.GuestConv.label: Cont invitat - Solicitare transformare contact
+types.GuestConv.fields.contact.description: Membrul existent (Tipul de contact) de transformat \u00een cont invitat.
+types.GuestConv.description: Acest formular \u00ee\u021bi permite s\u0103 solici\u021bi transformarea unui contact existent \u00een cont invitat, care va avea acces doar la spa\u021bii de colaborare.
+types.GuestConv.fields.contact.label: Contactul
+
+# From GuestRequest.xml
+types.GuestRequest.fields.submit-mbr.label: Solicitant
+types.GuestRequest.fields.groups.label: Grupuri \u021bint\u0103
+types.GuestRequest.fields.groups.description: Toate grupurile de spa\u021bii de colaborare la care va fi ad\u0103ugat contul invitat.
+types.GuestRequest.title.label: Titlu
+types.GuestRequest.label: [Abstract] Cont invitat - Solicitare de deschidere
+
+# From PortletMyCollaborativeSpaces-templates.xml
+types.PortletMyCollaborativeSpaces.templates.box.default.label: \u0218ablonul Spa\u021biile mele
+types.PortletMyCollaborativeSpaces.templates.full.default.label: \u0218ablonul Spa\u021biile mele
+types.PortletMyCollaborativeSpaces.templates.box.itemBox.label: \u0218ablon spa\u021biile mele item box
+types.PortletMyCollaborativeSpaces.templates.box.hierarchy.label: \u0218ablon spa\u021bii ierarhice
+types.PortletMyCollaborativeSpaces.templates.box.hierarchyItemBox.label: \u0218ablon spa\u021biile mele ierarhice item box
+types.PortletMyCollaborativeSpaces.templates.query.default.label: \u0218ablon de interogare
+
+# From PortletMyCollaborativeSpaces.xml
+types.PortletMyCollaborativeSpaces.label: Portlet Spa\u021biile mele de colaborare
+types.PortletMyCollaborativeSpaces.description: Portletul Spa\u021biile mele de colaborare afi\u0219eaz\u0103 o list\u0103 a spa\u021biilor de colaborare.
+types.PortletMyCollaborativeSpaces.title.label: Titlu
+types.PortletMyCollaborativeSpaces.fields.depth.label: Niveluri
+types.PortletMyCollaborativeSpaces.fields.depth.description: Num\u0103rul de niveluri de sub-spa\u021bii de afi\u0219at.
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.label: Filtru tipologie
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.description: Afi\u0219ezi filtrul dup\u0103 tipologia spa\u021biului?
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.onLabel: Da
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.offLabel: Nu
+
+# From PortletCollaborativeSpaceSuggestion.xml
+types.PortletCollaborativeSpaceSuggestion.label: Portlet sugestie spa\u021biu de colaborare
+types.PortletCollaborativeSpaceSuggestion.description: Portletul de sugestii pentru spa\u021biul de colaborare afi\u0219eaz\u0103 sugestii de spa\u021biu de colaborare pentru membru conectat.
+types.PortletCollaborativeSpaceSuggestion.title.label: Titlu
+types.PortletCollaborativeSpaceSuggestion.fields.threshold.label: Prag
+types.PortletCollaborativeSpaceSuggestion.fields.typology.label: Tipologii
+types.PortletCollaborativeSpaceSuggestion.fields.hideWhenNoResults.label: Ascunde atunci c\u00e2nd nu exist\u0103 sugestii
+types.PortletCollaborativeSpaceSuggestion.fields.maxItems.label: Num\u0103r de sugestii 
+
+# From PortletCollaborativeSpaceSuggestion-templates.xml
+types.PortletCollaborativeSpaceSuggestion.templates.full.default.label: \u0218ablon sugestii
+types.PortletCollaborativeSpaceSuggestion.templates.box.default.label: \u0218ablon sugestii
+types.PortletCollaborativeSpaceSuggestion.templates.box.itemBox.label: \u0218ablon sugestii item box
+
+# From plugin.xml
+types.PortletQueryForeach.templates.box.jcmsplugin.collaborativespace.dashboard.label: Afi\u0219aj tablou de bord (CSP)
+types.PortletQueryForeachDetail.templates.box.jcmsplugin.collaborativespace.dashboard.label: Afi\u0219aj tablou de bord (CSP)
+types.PortletSearch.templates.box.jcmsplugin.collaborativespace.search-header.label: Spa\u021biu de colaborare - Antet
+types.PortletSelection.templates.box.jcmsplugin.collaborativespace.dashboard.label: Spa\u021biu de colaborare - Tablou de bord
+types.AbstractPortletSkinable.templates.collaborativeSpace.noskin.label: Simplu (f\u0103r\u0103 titlu)
+types.AbstractPortletSkinable.templates.collaborativeSpace.default.label: Panou cu col\u021buri rotunjite
+types.AbstractPortletSkinable.templates.collaborativeSpace.borderless.label: Simplu cu titlu subliniat
+
+# From wfcsrequest.xml
+workflows.wfcsrequest.states.60.label: Acceptate
+workflows.wfcsrequest.states.50.label: Refuzate
+workflows.wfcsrequest.states.-201.label: Remis
+workflows.wfcsrequest.label: Spa\u021biu de colaborare - Flux de lucru solicitare creare
+workflows.wfcsrequest.roles.validator.name: Validator
+workflows.wfcsrequest.states.60.description: Solicitare autorizat\u0103, s-a creat un spa\u021biu de colaborare.
+workflows.wfcsrequest.states.50.description: Aceast\u0103 solicitare de creare a unui spa\u021biu de colaborare a fost respins\u0103. Acest spa\u021biu de colaborare solicitat nu va fi creat. Consult\u0103 notele fluxului de lucru pentru mai multe detalii despre aceast\u0103 respingere.
+workflows.wfcsrequest.roles.validator.description: Accept\u0103/respinge solicitare spa\u021biu de colaborare
+
+# From wfcssignup.xml
+workflows.wfcssignup.roles.validator1.description: Accept\u0103/Respinge solicit\u0103rile de \u00eenregistrare a spa\u021biilor de colaborare
+workflows.wfcssignup.label: Spa\u021biu de colaborare - Flux de lucru \u00eenregistrare
+workflows.wfcssignup.roles.validator1.name: Validator
+workflows.wfcssignup.states.60.label: Acceptate
+workflows.wfcssignup.states.50.label: Respins
+workflows.wfcssignup.states.-201.label: Remis
+
+# From wfguestaccountrequest.xml
+workflows.wfguestaccountrequest.states.60.description: Solicitare autorizat\u0103, s-a creat un cont invitat.
+workflows.wfguestaccountrequest.states.50.description: Aceast\u0103 solicitare de cont invitat a fost respins\u0103. Contul invitat nu a fost creat. Consult\u0103 notele fluxului de lucru pentru mai multe detalii despre aceast\u0103 respingere.
+workflows.wfguestaccountrequest.states.60.label: Acceptate
+workflows.wfguestaccountrequest.states.50.label: Respins
+workflows.wfguestaccountrequest.label: Cont invitat - Fluxul de lucru al solicit\u0103rilor de deschidere
+workflows.wfguestaccountrequest.roles.guestvalidator.description: Accept\u0103/Respinge solicit\u0103rile de deschidere de cont invitat
+workflows.wfguestaccountrequest.roles.guestvalidator.name: Validator
+workflows.wfguestaccountrequest.states.-200.label: Remis
+
+# Analytics
+ui.analytics.CSAgent.name:                    Spa\u021bii de colaborare
+ui.analytics.CSAgent.report.typology:         Tipologie
+ui.analytics.CSAgent.report.typology.h:       Defalcare tipologie.
+ui.analytics.CSAgent.report.access-policy:    Politica de acces
+ui.analytics.CSAgent.report.access-policy.h:  Defalcare politic\u0103 de acces.
+ui.analytics.CSAgent.report.members:          Top Membri
+ui.analytics.CSAgent.report.members.h:        Num\u0103r de membri pe spa\u021biu de colaborare.
+ui.analytics.CSAgent.report.activity:         Top contribu\u021bii
+ui.analytics.CSAgent.report.activity.h:       Num\u0103r de contribu\u021bii pe spa\u021biu de colaborare.
+ui.analytics.CSAgent.report.activity.count:   Num\u0103rul contribu\u021biilor
+
+# DBComment
+jcmsplugin.collaborativespace.lbl.signup-to-comment: Pentru a comenta aceast\u0103 publica\u021bie, \u00eenregistreaz\u0103-te la acest spa\u021biu.
+
+# SocialConversation
+jcmsplugin.collaborativespace.lbl.signup-to-react: Pentru a participa la aceast\u0103 conversa\u021bie, \u00eenregistreaz\u0103-te la acest spa\u021biu.
+
+# Collaborative Space hub
+jcmsplugin.collaborativespace.hub: Hub spa\u021bii
+jcmsplugin.collaborativespace.hub.type-cs: Spa\u021bii de colaborare
+jcmsplugin.collaborativespace.hub.type-ws: Portaluri
+jcmsplugin.collaborativespace.hub.mode-all: Toate spa\u021biile
+jcmsplugin.collaborativespace.hub.mode-member: Spa\u021biile mele
+jcmsplugin.collaborativespace.hub.mode-favorite: Favoritele mele
+jcmsplugin.collaborativespace.hub.mode-suggestions: Sugestii
+jcmsplugin.collaborativespace.hub.mode-csrequest: Solicit\u0103ri de creare
+jcmsplugin.collaborativespace.hub.mode-member.intro: <p>Adaug\u0103 sau elimin\u0103 un spa\u021biu la favoritele tale prin clic pe steaua din partea din dreapta sus a unui spa\u021biu.</p>
+jcmsplugin.collaborativespace.hub.mode-member.intro-has-favorites: <p>G\u0103se\u0219te \u0219i gestioneaz\u0103 toate favoritele tale \u00een \u201eFavoritele mele\u201d.</p>
+jcmsplugin.collaborativespace.hub.search-text.placeholder: Caut\u0103 spa\u021bii...
+jcmsplugin.collaborativespace.hub.sidebar-section.accessPolicy: Acceseaz\u0103
+jcmsplugin.collaborativespace.hub.sidebar-section.typology: Tipologie
+jcmsplugin.collaborativespace.hub.sidebar-section.type: Tip
+
+#JPortal
+jcmcplugin.collaborativespace.jportal.edit.label: Modific\u0103 portalul
+jcmcplugin.collaborativespace.jportal.edit-more.label: Modific\u0103 portalul...
+jcmsplugin.collaborativespace.jportal.edit-modal.title: Modific\u0103 un portal sincronizat cu un model
+jcmsplugin.collaborativespace.jportal.edit-modal.message: Aten\u021bie, acest portal este sincronizat cu un model.
+jcmsplugin.collaborativespace.jportal.edit-modal.edit-model.label: Modific\u0103 modelul
+jcmsplugin.collaborativespace.jportal.edit-modal.desynchronize-model.label: Desincronizeaz\u0103 \u0219i modific\u0103 portalul
+
+jcmsplugin.collaborativespace.edit-app-modal.title: Actualizeaz\u0103 aplica\u021bia
+jcmsplugin.collaborativespace.edit-app-modal.template.label: \u0218ablon
+jcmsplugin.collaborativespace.edit-app-modal.title.label: Titlu
+
+#Tabs
+jcmsplugin.collaboratif.tabs.menu.remove: Elimin\u0103...
+jcmsplugin.collaboratif.tabs.menu.remove.confirm: Sigur dore\u0219ti s\u0103 elimini aceast\u0103 aplica\u021bie?
+jcmsplugin.collaboratif.tabs.menu.update.title: Actualizeaz\u0103...
+jcmsplugin.collaboratif.tabs.rename.title.label: Titlu
+
+#Parameters
+jcmsplugin.collaborativespace.parameters.model.link: Acceseaz\u0103 modelul
+
+# Migration
+jcmsplugin.collaborativespace.migration.model: Model
+jcmsplugin.collaborativespace.migration.without-model: F\u0103r\u0103 model
+jcmsplugin.collaborativespace.migration.no-typologies: F\u0103r\u0103 tipologie
+jcmsplugin.collaborativespace.migration.migrate-all: Migreaz\u0103 toate spa\u021biile de lucru f\u0103r\u0103 model
+jcmsplugin.collaborativespace.migration.migrate-selected: Migreaz\u0103 spa\u021biile de lucru selectate
+jcmsplugin.collaborativespace.migration.no-model-no-workspace: (Aceast\u0103 tipologie nu are nici model, nici spa\u021biu de lucru)
+jcmsplugin.collaborativespace.migration.modal-title: Migrare spa\u021biu de lucru
+jcmsplugin.collaborativespace.migration.modal-button: Migrare
+jcmsplugin.collaborativespace.migration.target-typology: Tipologie \u021bint\u0103
+jcmsplugin.collaborativespace.migration.workspace-list: Lista spa\u021biilor de lucru care vor fi migrate
+
+portlet.header.menu-items.Portlet.edit-skin-cs: Actualizeaz\u0103...

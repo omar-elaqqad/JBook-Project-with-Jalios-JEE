@@ -1,0 +1,73 @@
+.service-drawer .service.service-bookmark .service-icon {
+  background-color: #fadd0b;
+}
+.service-bookmark-page .colored-banner {
+  background: #fadd0b;
+}
+.service-bookmark-page .colored-banner-content {
+  color: white;
+}
+.service-drawer .service-bookmark .service-icon {
+  padding-top: 14px;
+  padding-left: 4px;
+}
+.service-bookmark-page .folder-back.ui-link {
+  display: flex;
+  padding: 14px 14px 14px 9px;
+  color: #666;
+}
+.service-bookmark-page .folder-back.ui-link .jalios-icon {
+  padding-right: 14px;
+}
+/*
+Bookmarks context menu
+*/
+.bookmarks-ctx-menu.is-bookmarked .bookmark-remove {
+  display: block;
+}
+.bookmarks-ctx-menu.is-bookmarked .bookmark-add {
+  display: none;
+}
+.bookmarks-ctx-menu .bookmark-remove {
+  display: none;
+}
+.bookmarks-ctx-menu .bookmark-add {
+  display: block;
+}
+/* **************************** */
+/* Bookmark-specific input icon */
+/* **************************** */
+.bookmark-service-header {
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 15px;
+}
+.bookmark-service-header.can-return-to-parent {
+  padding: 5px 15px;
+}
+.bookmark-service-header .bookmark-service-header-back-icon {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.bookmark-service-header-icon {
+  margin-right: 7px;
+}
+.bookmark-service-header {
+  padding-bottom: 5px;
+}
+.service-bookmark-content .ui-listview li.ui-listview-nofilter a.ui-btn {
+  display: flex;
+  padding-left: 8px;
+  align-items: center;
+}
+.service-bookmark-content .ui-listview li.ui-listview-nofilter a.ui-btn img.jalios-icon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin-right: 14px;
+}
+.bookmark-service-header.can-return-to-parent {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+/*# sourceMappingURL=smartphone-bookmarks.css.map */

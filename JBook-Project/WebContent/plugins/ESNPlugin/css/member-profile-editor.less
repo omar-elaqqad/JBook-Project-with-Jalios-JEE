@@ -1,0 +1,114 @@
+// Include variables and mixins
+@import "../../../css/jalios/core/init-mixins.less";
+
+// -------------------------------------------------------------------
+// PLUGINS LESS VARIABLES
+// -------------------------------------------------------------------
+@import "../../../plugins/ESNPlugin/css/esn-variables.less";
+// Hook for JCMS
+@import "../../../css/plugin.less";
+
+// ------------------------------------------------------------------- 
+//  PLUGIN CSS DECLARATION                                             
+// ------------------------------------------------------------------- 
+
+// Profile edition
+.edit-member-profile {
+  .profile-completeness {
+    padding-bottom: 10px;
+    .progress-bar-desc {
+      line-height: 2em;
+    }
+    .progress {
+      height: @esn-profile-completeness-height;
+    }
+    .progress-bar-percent {
+      display: none;
+    }
+  }
+  .profile-name {
+    font-size: @font-size-h2;
+  }
+  .tab-page H2.tab {
+    // Hide title from legacy / reused tempalte
+    display: none;
+  }
+  
+  .edit-profile-accordion {
+    .panel {
+      box-shadow: none;
+      border: 0 none;
+    }
+    .panel-heading {
+      background: transparent;
+    }
+  }
+  
+  // Replace bootstrap sep hidden when collapse, by a alwyas visible one
+  .panel-group .panel-heading + .panel-collapse > .panel-body {
+    border-top: 0 none;
+  }
+  .panel-group .panel-heading  {
+    border-bottom: 1px solid @panel-default-border;
+  }
+  
+  .panel-heading {
+  .panel-action-open {
+      display: none;
+    }
+    &.collapsed {
+      .panel-action-open {
+        display: inline;
+      }
+      .panel-action-close {
+        display: none;
+      }
+    } 
+    .panel-action-close {
+      display: inline;
+    }
+  }
+  .profile-body-inner {
+    .form-horizontal {
+      H3 {
+        padding-bottom: 10px;
+        font-size: @font-size-h4;
+        border-bottom: 1px solid #CCC;
+        margin-bottom: @baseline;
+      }
+    }
+  }
+  
+  .esn-tab-info,
+  .esn-tab-expertises,
+  .esn-tab-account {
+    .edit-profile-buttons {
+      .make-md-column-offset(3);
+      .make-lg-column-offset(3);
+    }
+  }
+  .esn-tab-notification {
+    .profile-body-block {
+      padding-left: 20px;    
+      padding-right: 20px;    
+    }
+  }
+  
+  // -------------------------------------------------------------------
+  //  Expertises
+  // -------------------------------------------------------------------
+  .esn-tab-expertises {
+    .form-horizontal {
+      .control-label LABEL {
+        font-weight: normal;
+      }
+    }
+  }
+  // -------------------------------------------------------------------
+  //  Alert
+  // -------------------------------------------------------------------
+  .esn-tab-Alert {
+    background: red;
+  }
+
+} // EOF .edit-member-profile 

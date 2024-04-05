@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN" "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+
+<taglib>
+  <tlib-version>1.0</tlib-version>
+  <jsp-version>1.2</jsp-version>
+  <short-name>smartphone</short-name>
+  <uri>/jcmsplugin/SmartPhonePlugin/tld/smartphone.tld</uri>
+  <display-name>SmartPhone Tag Library</display-name>
+  <description></description>
+  <tag>
+    <name>pager</name>
+    <tag-class>com.jalios.jcmsplugin.smartphone.taglib.SmartPhonePagerTag</tag-class>
+    <body-content>empty</body-content>
+    <description>Print a pager.</description>
+    <attribute>
+      <name>css</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+      <description>The css class added to the list item wrapper</description>
+    </attribute>
+    <attribute>
+      <name>pageSize</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>int</type>
+      <description>The page size</description>
+    </attribute> 
+    <attribute>
+      <name>resource</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+      <description>The resource name bind to a property describing a JSP.</description>
+    </attribute>      
+    <attribute>
+      <name>start</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>int</type>
+      <description>The start item number</description>
+    </attribute>
+    <attribute>
+      <name>totalSize</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>int</type>
+      <description>The total size of the collection</description>
+    </attribute>
+    <attribute>
+      <name>parametersPrefix</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+      <description>A prefix applied to all parameters on the buttons</description>
+    </attribute>
+    <attribute>
+      <name>pagerMode</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>com.jalios.jcmsplugin.smartphone.taglib.SmartPhonePagerTag.PagerMode</type>
+      <description>The mode of the pager to use</description>
+    </attribute>        
+    <attribute>
+      <name>parametersMap</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.util.Map</type>
+      <description>The maps of parameter to add to each link provided by pager</description>
+    </attribute>
+  </tag>  
+  
+  <tag>
+    <name>listItem</name>
+    <tag-class>com.jalios.jcmsplugin.smartphone.taglib.SmartPhoneListItemTag</tag-class>
+    <description>Print a HTML list item.</description>
+    <attribute>
+      <name>data</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>com.jalios.jcms.Data</type>
+      <description>The data to be displayed.</description>
+    </attribute>
+    <attribute>
+      <name>css</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+      <description>The css class added to the list item wrapper</description>
+    </attribute>
+    <attribute>
+      <name>readable</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>boolean</type>
+      <description>Defines if the list item should handle mark as read</description>
+    </attribute> 
+    <attribute>
+      <name>resource</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+      <description>The resource name bind to a property describing a JSP.</description>
+    </attribute>      
+    <attribute>
+      <name>displayAbstract</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>boolean</type>
+      <description>Defines if the list item should display its abstract content. (Only for publication)</description>
+    </attribute>
+    <attribute>
+      <name>displayDataIcon</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>boolean</type>
+      <description>Defines if the list item should display its data icon.</description>
+    </attribute>              
+  </tag>
+  <tag>
+    <name>card</name>
+    <tag-class>com.jalios.jcmsplugin.smartphone.taglib.SmartPhoneCardTag</tag-class>
+    <description>Print a card.</description>
+    <attribute>
+      <name>data</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>com.jalios.jcms.Data</type>
+      <description>The data to be displayed.</description>
+    </attribute>
+    <attribute>
+      <name>css</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+      <description>The css class added to the card wrapper</description>
+    </attribute>
+    <attribute>
+      <name>readable</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>boolean</type>
+      <description>Defines if the card should handle mark as read</description>
+    </attribute>  
+    <attribute>
+      <name>resource</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+      <description>The resource name bind to a property describing a JSP.</description>
+    </attribute>     
+    <attribute>
+      <name>displayAbstract</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>boolean</type>
+      <description>Defines if the card should display its abstract content. (Only for publication)</description>
+    </attribute>     
+    <attribute>
+      <name>votable</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>boolean</type>
+      <description>Defines if the card has vote buttons below the card</description>
+    </attribute>
+  </tag>
+  <tag>
+    <name>breadcrumb</name>
+    <tag-class>com.jalios.jcmsplugin.smartphone.taglib.SmartPhoneBreadCrumbTag</tag-class>
+    <description>Print a HTML list item.</description>
+    <attribute>
+      <name>data</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>com.jalios.jcms.Data</type>
+      <description>The data to be displayed.</description>
+    </attribute>
+    <attribute>
+      <name>service</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>com.jalios.jcmsplugin.smartphone.service.SmartPhoneService</type>
+      <description>The current SmartPhoneService</description>
+    </attribute>
+    <attribute>
+      <name>workspace</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>boolean</type>
+      <description>The current Workspace</description>
+    </attribute>   
+    <attribute>
+      <name>css</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>String</type>
+      <description>Additionnal CSS classes</description>
+    </attribute>
+    <attribute>
+      <name>icon</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>String</type>
+      <description>Icon to display</description>
+    </attribute>    
+    <attribute>
+      <name>addedItems</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>[Ljava.lang.String;</type>
+      <description>Additionnal items added to the breadcrumb menu</description>
+    </attribute>    
+  </tag>  
+  <tag>
+    <name>includePortlet</name>
+    <tag-class>com.jalios.jcmsplugin.smartphone.taglib.SmartPhoneIncludePortletTag</tag-class>
+    <description>Includes a portlet.</description>
+    <attribute>
+      <name>portlet</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>com.jalios.jcms.portlet.PortalElement</type>
+      <description>The portlet to be displayed.</description>
+    </attribute>
+  </tag>
+</taglib>

@@ -1,0 +1,861 @@
+# ------------------------------------------------------------
+#  ACL
+# ------------------------------------------------------------
+acl.resource.admin/work/createCS: Gemeinschaftsbereich – Erstellung
+acl.resource.plugins: Plug-ins
+acl.resource.plugins/collaborativespace: Gemeinschaftsbereich
+acl.resource.plugins/collaborativespace/manageCSGuest: Gästeverwaltung
+acl.resource.plugins/collaborativespace/manageCSGuest.h: Erlaubt dem Administrator eines Gemeinschaftsbereichs, Gästekonten im Bereich zu erstellen.
+acl.resource.admin-ws/plugins: Plug-ins
+acl.resource.admin-ws/plugins/collaborativespace: Gemeinschaftsbereich
+acl.resource.admin-ws/plugins/collaborativespace/manageCSServices: Anwendungen
+acl.resource.admin-ws/plugins/collaborativespace/manageCSServices.h: Frontoffice-Management der Anwendungen des Gemeinschaftsbereichs.
+acl.resource.admin-ws/plugins/collaborativespace/manageCSSettings: Einstellungen
+acl.resource.admin-ws/plugins/collaborativespace/manageCSSettings.h: Einstellungen des Gemeinschaftsarbeitsbereichs (Name, Beschreibung, Layout, Aussehen).
+
+# ------------------------------------------------------------
+#  Common
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.lbl.filter:                 Filter
+jcmsplugin.collaborativespace.lbl.administrator:          Leiter
+jcmsplugin.collaborativespace.lbl.administrators:         Leiter
+jcmsplugin.collaborativespace.lbl.administrators.h:       Administratoren der Community
+# A member that belongs to the space
+jcmsplugin.collaborativespace.lbl.profile.member-count:   {0,choice,0#Keine Teilnehmer |1#{0} Teilnehmer |2#{0} Teilnehmer}
+# A member that is administrator of the space
+jcmsplugin.collaborativespace.lbl.profile.leader-count:   {0,choice,0#Keine Leitung |1#{0} Leitung|2#{0} Leitung}
+# A member that is a Guest of the space
+jcmsplugin.collaborativespace.lbl.profile.guest:          Gast
+jcmsplugin.collaborativespace.lbl.profile.guest-count:    {0,choice,0#Keine Gäste|1#{0} Gast|2#{0} Gäste}
+jcmsplugin.collaborativespace.lbl.signup:                 Registrieren
+jcmsplugin.collaborativespace.lbl.signup-action:          Ich registriere mich …
+jcmsplugin.collaborativespace.lbl.unsignup:               Abbestellen
+jcmsplugin.collaborativespace.lbl.unsignup-action:        Verlassen …
+jcmsplugin.collaborativespace.lbl.card.signup:            Registrieren
+jcmsplugin.collaborativespace.lbl.header-navigation:      {0} – Navigation
+
+jcmsplugin.collaborativespace.cssignup.title: Registrierungsantrag von „{0}“
+jcmsplugin.collaborativespace.cssignup-notfound.msg-title: Registrierungsantrag nicht gefunden
+jcmsplugin.collaborativespace.cssignup-notfound.msg-content: Angegebener Registrierungsantrag wurde nicht gefunden.<br/>Dies kann passieren, wenn er schon bearbeitet oder das Mitglied manuell im Bereich registriert wurde.
+
+jcmsplugin.collaborativespace.data-controller.msg.incompatible-access-signup: Zugriffsmodus ist nicht kompatibel mit der Teilnahme.
+jcmsplugin.collaborativespace.data-controller.msg.invalid-ability: Dieses Portlet kann die Fähigkeit "{0}" nicht haben.
+jcmsplugin.collaborativespace.data-controller.msg.service-not-in-public-model: Portlets mit dem Kopiermodus „Nach Referenz“ und mit Anwendungs- oder Dashboard-Funktion müssen zu einem öffentlichen Gemeinschaftsbereichsmodell gehören.
+jcmsplugin.collaborativespace.data-controller.msg.no-portlet-selection: Feld "{0}" muss ein "{1}" enthalten.
+jcmsplugin.collaborativespace.data-controller.msg.invalid-guest-wsadmin: Ein Gast kann kein Administrator eines Arbeitsbereichs sein.
+jcmsplugin.collaborativespace.data-controller.msg.invalid-guest-wsadmin-detail: Gast „{0}“ ({1}) kann nicht der Arbeitsbereichadministrator sein.
+jcmsplugin.collaborativespace.data-controller.msg.sub-status: Update an speziellem Datum fehlgeschlagen: {0}
+jcmsplugin.collaborativespace.data-controller.msg.invalid-cat: Kann Portlet "{0}" unter "<strong>{1}</strong>" nicht kategorisieren.
+jcmsplugin.collaborativespace.data-controller.msg.missing-root-cat: Gemeinschaftsbereichportlet muss eine Stammkategorie haben.
+jcmsplugin.collaborativespace.data-controller.msg.wrong-model-typology: Das ausgewählte Modell entspricht nicht der Typologie.
+jcmsplugin.collaborativespace.data-controller.msg.missing-model: Es muss ein Modell ausgewählt werden.
+jcmsplugin.collaborativespace.data-controller.msg.workspace-not-model: Der als Modell ausgewählte Arbeitsbereich ist kein Modell.
+jcmsplugin.collaborativespace.space-wizard.msg.model-not-found: Angegebenes Modell wurde nicht gefunden.
+jcmsplugin.collaborativespace.space-wizard.msg.failed: Gemeinschaftsbereich konnte nicht erstellt werden: {0}
+
+# FO action labels
+jcmsplugin.collaborativespace.create.lbl.create:                  Einen Bereich erstellen …
+jcmsplugin.collaborativespace.create.lbl.create-sub:              Einen Teilbereich erstellen …
+jcmsplugin.collaborativespace.create.lbl.request-create:          Erstellung eines Bereichs beantragen …
+jcmsplugin.collaborativespace.create.lbl.request-create-sub:      Erstellung eines Teilbereichs beantragen …
+# Admin BO action labels (keep "collaborative" word)
+jcmsplugin.collaborativespace.create.lbl.create-cs:               Einen Gemeinschaftsbereich erstellen …
+
+# Create space modal labels
+jcmsplugin.collaborativespace.create.title:                       Einen Gemeinschaftsbereich erstellen
+jcmsplugin.collaborativespace.create.title-request:               Erstellung eines Gemeinschaftsbereich beantragen …
+jcmsplugin.collaborativespace.create-sub.title:                   Einen Teilbereich erstellen
+jcmsplugin.collaborativespace.create-sub.title-request:           Erstellung eines Teilbereichs beantragen
+jcmsplugin.collaborativespace.create.steps.0:                     Modell
+jcmsplugin.collaborativespace.create.steps.1:                     Information
+jcmsplugin.collaborativespace.create-sub.steps.1.intro:           Einen Bereich in <strong>{0}</strong> erstellen
+jcmsplugin.collaborativespace.create-sub.steps.1.intro-request:   Erstellung eines Bereichs in <strong>{0}</strong> beantragen
+jcmsplugin.collaborativespace.create.steps.2:                     Teilnehmer
+
+jcmsplugin.collaborativespace.create.info.name:                         Bereichsname
+jcmsplugin.collaborativespace.create.info.typology:                     Arbeitsbereichstyp
+jcmsplugin.collaborativespace.create.info.description:                  Beschreibung
+jcmsplugin.collaborativespace.create.info.introduction:                 Einführung
+jcmsplugin.collaborativespace.create.info.access:                       Zugriff
+jcmsplugin.collaborativespace.create.info.access.public:                Öffentlich
+jcmsplugin.collaborativespace.create.info.access.private:               Geschlossen
+jcmsplugin.collaborativespace.create.info.access.secret:                Geheim
+jcmsplugin.collaborativespace.create.info.signup:                       Registrieren
+jcmsplugin.collaborativespace.create.info.signup.admin:                 Teilnahme auf Einladung
+jcmsplugin.collaborativespace.create.info.signup.request:               Teilnahme auf Anfrage
+jcmsplugin.collaborativespace.create.info.signup.free:                  Ohne Registrierung
+jcmsplugin.collaborativespace.create.info.language:                     Hauptsprache
+jcmsplugin.collaborativespace.create.model.intro:                       Wählen Sie ein Modell für diesen Gemeinschaftsbereich.
+jcmsplugin.collaborativespace.create.model.intro-typo:                  Wählen Sie eine Typologie und ein Modell für diesen Gemeinschaftsbereich.
+jcmsplugin.collaborativespace.create.model.intro-typo-nomodel:          Wählen Sie eine Typologie für diesen Gemeinschaftsbereich.
+jcmsplugin.collaborativespace.create.model.intro-end:                   Nachdem der Bereich erstellt wurde, können Bereichsleiter neue Dienste hinzufügen.
+jcmsplugin.collaborativespace.create.model.model:                       Basierend auf Modell
+jcmsplugin.collaborativespace.create.model.sync-toggle:                 Mit dem Modell synchronisieren
+jcmsplugin.collaborativespace.create.attendees.intro:                   Wählen Sie die Leiter und Teilnehmer dieses Gemeinschaftsbereichs. <br />Sobald der Raum erstellt wurde, können Sie Einladungen versenden sowie Mitglieder hinzufügen und entfernen.
+jcmsplugin.collaborativespace.create.attendees.intro-no-leader:         Wählen Sie die Teilnehmer dieses Gemeinschaftsbereichs. <br />Sobald der Raum erstellt wurde, können Sie Einladungen versenden sowie Mitglieder hinzufügen und entfernen.
+jcmsplugin.collaborativespace.create.attendees.admins:                  Leiter
+jcmsplugin.collaborativespace.create.attendees.admins.custom:           {0,choice,0#Kein Leiter|1# Leiter|2# Leiter}
+jcmsplugin.collaborativespace.create.attendees.groups:                  Gruppen
+jcmsplugin.collaborativespace.create.attendees.members:                 Mitglieder
+jcmsplugin.collaborativespace.create.attendees.notification:            Benachrichtigung
+jcmsplugin.collaborativespace.create.attendees.notification.invitation: Einladungs-E-Mail an Teilnehmer versenden
+jcmsplugin.collaborativespace.create.attendees.notification.mail:       Teilnehmer hinzufügen und benachrichtigen
+jcmsplugin.collaborativespace.create.attendees.notification.no:         Teilnehmer ohne Benachrichtigung hinzufügen
+jcmsplugin.collaborativespace.create.too-many-cs:                       Sie dürfen keinen neuen Gemeinschaftsbereich erstellen. Die maximale Anzahl von Gemeinschaftsbereichen ({0}) wurde erreicht.
+jcmsplugin.collaborativespace.create.finish:                            <p>Ihre Anfrage für einen neuen Gemeinschaftsbereich ist eingegangen. </p><p>Sobald sie überprüft wurde, wird der Bereich erstellt und Sie werden benachrichtigt.</p>
+jcmsplugin.collaborativespace.access-policy.public.desc:                Jeder Nutzer kann einen öffentlichen Bereich einsehen und dessen Inhalte lesen.
+jcmsplugin.collaborativespace.access-policy.private.desc:               Jeder Nutzer kann den privaten Bereich sehen, aber nur berechtigte Teilnehmer dürfen Inhalte lesen.
+jcmsplugin.collaborativespace.access-policy.secret.desc:                Nur berechtigte Teilnehmer können den geheimen Bereich sehen und dessen Inhalte lesen.
+
+jcmsplugin.collaborativespace.header.home:                              Start-Website
+jcmsplugin.collaborativespace.header.introduction:                      Einführung
+jcmsplugin.collaborativespace.header.backoffice:                        Back-Office
+jcmsplugin.collaborativespace.header.help:                              Hilfe
+jcmsplugin.collaborativespace.header.admin-menu:                        Verwaltung
+jcmsplugin.collaborativespace.header.admin-menu.home:                   Startseite
+jcmsplugin.collaborativespace.header.admin-menu.members:                Mitglieder
+jcmsplugin.collaborativespace.header.admin-menu.services:               Anwendungen
+jcmsplugin.collaborativespace.header.admin-menu.settings:               Einstellungen
+jcmsplugin.collaborativespace.header.admin-menu.typo-models:            Modell und Typologien
+
+jcmsplugin.collaborativespace.metas.toggle.show:                        Mehr
+jcmsplugin.collaborativespace.metas.toggle.show.for-aria:               Weitere Informationen zu diesem Bereich anzeigen
+jcmsplugin.collaborativespace.metas.toggle.hide:                        Weniger
+jcmsplugin.collaborativespace.metas.toggle.hide.for-aria:               Weniger Informationen zu diesem Bereich anzeigen
+jcmsplugin.collaborativespace.metas.show-all-typos:                     Alle Typologien anzeigen
+jcmsplugin.collaborativespace.metas.introduction:                       Einführung
+jcmsplugin.collaborativespace.metas.manage-members.link:                Mitglieder verwalten
+jcmsplugin.collaborativespace.metas.member-list.others:                 Und {0,choice,1# 1 weiterer|2# {0} weitere} …
+jcmsplugin.collaborativespace.metas.actions-menu-title:                 Gemeinschaftsbereich-Aktionsmenü öffnen
+
+jcmsplugin.collaborativespace.private-home.title:                  Zugriff auf diesen Bereich ist beschränkt
+jcmsplugin.collaborativespace.private-home.signup:                 Sie müssen sich registrieren, um auf diesen Bereich zuzugreifen.
+jcmsplugin.collaborativespace.private-home.already-signup:         Sie haben eine Registrierung für diesen Bereich beantragt. Sie werden benachrichtigt, sobald Ihre Anfrage bearbeitet wurde.
+jcmsplugin.collaborativespace.private-home.no-signup:              Die Registrierung zu diesem Bereich erfolgt auf Einladung.
+
+jcmsplugin.collaborativespace.settings.lbl.info:                    Allgemeine Informationen
+jcmsplugin.collaborativespace.settings.lbl.info.presentation:       Präsentation
+jcmsplugin.collaborativespace.settings.lbl.info.access:             Zugriff und Registrierung
+jcmsplugin.collaborativespace.settings.lbl.layout:                  Layout
+jcmsplugin.collaborativespace.settings.lbl.model:                   Modell
+jcmsplugin.collaborativespace.settings.lbl.look:                    Header
+jcmsplugin.collaborativespace.settings.lbl.look.theme:              Thema
+jcmsplugin.collaborativespace.settings.lbl.look.condensed:          Komprimierter Modus
+jcmsplugin.collaborativespace.settings.lbl.look.condensed.h:        Der komprimierte Modus reduziert die Kopfzeilenhöhe und es wird nur eine Hintergrundfarbe verwendet.
+jcmsplugin.collaborativespace.settings.lbl.look.color-tab:          Farben
+jcmsplugin.collaborativespace.settings.lbl.look.header-tab:         Hintergrundbild
+jcmsplugin.collaborativespace.settings.lbl.look.color:              Hintergrundfarbe
+jcmsplugin.collaborativespace.settings.lbl.look.headers:            Header
+jcmsplugin.collaborativespace.settings.lbl.look.no-header:          Kein Header
+jcmsplugin.collaborativespace.settings.lbl.look.header-background:  Hintergrund
+jcmsplugin.collaborativespace.settings.lbl.look.header-custom:      Hintergrundbild
+jcmsplugin.collaborativespace.settings.lbl.look.header-custom.h:    Sie können ein Bild Ihrer Wahl für die Kopfzeile wählen oder eines aus der Liste auswählen. Wenn Sie ein Bild hochladen, muss es 1920x180 groß sein, andernfalls wird es zugeschnitten.
+jcmsplugin.collaborativespace.settings.lbl.look.header-no-image:    Kein Hintergrundbild
+jcmsplugin.collaborativespace.settings.lbl.look.header-position:    Bildpositionierung
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat:      Bildwiederholung
+jcmsplugin.collaborativespace.settings.lbl.look.header-no-repeat:   Keine
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat-x:    Horizontal
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat-y:    Vertikal
+jcmsplugin.collaborativespace.settings.lbl.look.header-repeat-both: Beides
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror:      Spiegeln
+jcmsplugin.collaborativespace.settings.lbl.look.header-no-mirror:   Keine
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror-x:    Horizontal
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror-y:    Vertikal
+jcmsplugin.collaborativespace.settings.lbl.look.header-mirror-both: Beides
+jcmsplugin.collaborativespace.settings.lbl.look.header-color:       Titelfarbe
+jcmsplugin.collaborativespace.settings.lbl.look.header-tabs-color:  Textfarbe der Registerkarten
+jcmsplugin.collaborativespace.settings.lbl.look.header-tabs-bgcolor: Hintergrundfarbe der Registerkarten
+jcmsplugin.collaborativespace.settings.lbl.look.header-tabs-opacity: Deckkraft der Registerkarten
+jcmsplugin.collaborativespace.settings.lbl.layout:                  Layout
+jcmsplugin.collaborativespace.settings.lbl.layout.main:             Seitenlayout
+jcmsplugin.collaborativespace.settings.lbl.layout.dashboard:        Startseite
+jcmsplugin.collaborativespace.settings.lbl.layout.dashboard.column: Spalten
+jcmsplugin.collaborativespace.settings.lbl.jmobile:                 JMobile
+jcmsplugin.collaborativespace.settings.lbl.jmobile-delete-portlet:  Das Portlet aus dem Portal entfernen
+jcmsplugin.collaborativespace.settings.lbl.jmobile-drag-portlet:    Gedrückt halten, um das Portlet zu ziehen
+jcmsplugin.collaborativespace.settings.lbl.jmobile-missing-portlet: Bitte ein Portlet auswählen
+jcmsplugin.collaborativespace.settings.alt.test:                    Test
+jcmsplugin.collaborativespace.settings.alt.jmobile-template:        JMobile-Vorlage
+jcmsplugin.collaborativespace.settings.lbl.add-portlet:             Ein Portlet hinzufügen
+jcmsplugin.collaborativespace.settings.lbl.open-model:              Das Modell öffnen
+
+jcmsplugin.collaborativespace.services.lbl.title:                   Anwendungen hinzufügen
+jcmsplugin.collaborativespace.services.lbl.all-services:            All Anwendungen
+jcmsplugin.collaborativespace.services.lbl.installed-services:      Installierte Anwendungen
+jcmsplugin.collaborativespace.services.lbl.installed-service.title: Installiert
+jcmsplugin.collaborativespace.services.lbl.not-installed-services:  Andere Anwendungen
+jcmsplugin.collaborativespace.services.lbl.status:                  Status
+jcmsplugin.collaborativespace.services.lbl.type:                    Typ
+jcmsplugin.collaborativespace.services.lbl.type.application:        Anwendung
+jcmsplugin.collaborativespace.services.lbl.type.dashboard:          Dashboard
+jcmsplugin.collaborativespace.services.lbl.name:                    Anwendungsname
+jcmsplugin.collaborativespace.services.lbl.description:             Beschreibung
+jcmsplugin.collaborativespace.services.lbl.add:                     Hinzufügen
+jcmsplugin.collaborativespace.services.lbl.edit:                    Ändern
+jcmsplugin.collaborativespace.services.lbl.preview-action:          Vorschau
+jcmsplugin.collaborativespace.services.lbl.preview:                 Vorschau
+jcmsplugin.collaborativespace.services.btn.add-service:             Diese Anwendung hinzufügen
+jcmsplugin.collaborativespace.services.btn.customize-service:       Diese Anwendung anpassen …
+jcmsplugin.collaborativespace.services.btn.remove-service:          Diese Anwendung entfernen
+jcmsplugin.collaborativespace.services.btn.add:                     Hinzufügen
+jcmsplugin.collaborativespace.services.btn.remove:                  Entfernen
+jcmsplugin.collaborativespace.services.lbl.add-title:               Eine Anwendung hinzufügen
+jcmsplugin.collaborativespace.services.lbl.add-modal-title:         Eine Anwendung hinzufügen …
+jcmsplugin.collaborativespace.services.lbl.add-new-title:           Eine neue Anwendung hinzufügen
+jcmsplugin.collaborativespace.services.smartphone-ability.label:    In JMobile anzeigen
+jcmsplugin.collaborativespace.settings.lbl.model-instances:         Instanzen des Modells
+jcmsplugin.collaborativespace.settings.lbl.model-instances-count:   {0,choice,0# Keine Instanz|1# 1 Instanz|2# {0} Instanzen}
+jcmsplugin.collaborativespace.settings.model-instances.csp.title:   Gemeinschaftsbereich
+jcmsplugin.collaborativespace.settings.model-instances.sync.title:  Synchronisierungsmodi
+
+jcmsplugin.collaborativespace.members.btn.enroll-members:               Mitglieder anmelden …
+jcmsplugin.collaborativespace.members.lbl.enroll-members:               Mitglieder anmelden
+jcmsplugin.collaborativespace.members.enroll-modal.intro:               Wählen Sie Mitglieder und/oder Gruppen, die der Zielgruppe hinzugefügt werden sollen.
+jcmsplugin.collaborativespace.members.enroll-modal.target-group:        Zielgruppe
+jcmsplugin.collaborativespace.members.enroll-modal.groups.description:  Mitglieder dieser Gruppen werden der Zielgruppe hinzugefügt.
+jcmsplugin.collaborativespace.members.btn.add-group:                    Gruppe hinzufügen …
+jcmsplugin.collaborativespace.members.lbl.add-group:                    Gruppe hinzufügen
+jcmsplugin.collaborativespace.members.btn.edit-group:                   Gruppe bearbeiten …
+
+jcmsplugin.collaborativespace.members.validate-signup-modal.groups:     Zielgruppen
+jcmsplugin.collaborativespace.members.validate-signup-modal.groups.h:   Die Gruppen, zu denen das Mitglied hinzugefügt wird.
+
+jcmsplugin.collaborativespace.invitations.lbl.invitations:     Einladungen
+jcmsplugin.collaborativespace.invitations.lbl.all-status:      Alle Einladungen
+jcmsplugin.collaborativespace.invitations.lbl.guest:           Gast
+jcmsplugin.collaborativespace.invitations.lbl.target-group:    Zielgruppe
+jcmsplugin.collaborativespace.invitations.btn.send-invitation: Einladungen versenden …
+
+jcmsplugin.collaborativespace.invitations.status.0: Versendet
+jcmsplugin.collaborativespace.invitations.status.1: Akzeptiert
+jcmsplugin.collaborativespace.invitations.status.2: Abgelehnt
+
+jcmsplugin.collaborativespace.invitations.status.long.0: Einladung versendet
+jcmsplugin.collaborativespace.invitations.status.long.1: Einladung akzeptiert
+jcmsplugin.collaborativespace.invitations.status.long.2: Einladung abgelehnt
+
+jcmsplugin.collaborativespace.invitations.send.title:            Einladungen versenden
+jcmsplugin.collaborativespace.invitations.send.info:             Wählen Sie die Mitglieder oder Gruppen aus, an die Sie eine Einladung versenden möchten, um diesem Gemeinschaftsbereich beizutreten
+jcmsplugin.collaborativespace.invitations.send.lbl.message:      Nachricht
+jcmsplugin.collaborativespace.invitations.send.btn.send:         Absenden
+
+jcmsplugin.collaborativespace.invitations.title: Einladung für {0}
+
+jcmsplugin.collaborativespace.invitations.process-modal.title:    Einladung
+jcmsplugin.collaborativespace.invitations.process-modal.info:     {0} hat Sie eingeladen, Mitglied des Gemeinschaftsbereichs {1} zu werden. <br />Sie können diese Einladung annehmen oder ablehnen oder sich später entscheiden.
+jcmsplugin.collaborativespace.invitations.process-modal.btn.accept:     Akzeptieren
+jcmsplugin.collaborativespace.invitations.process-modal.btn.decline:    Ablehnen
+
+jcmsplugin.collaborativespace.signup.info.free:           Sie können sich sofort für diesen Gemeinschaftsbereich registrieren
+jcmsplugin.collaborativespace.signup.info.request:        Bitte senden Sie eine Anfrage, um sich für diesen Gemeinschaftsbereich zu registrieren. Sobald Ihr Antrag genehmigt wurde, werden Sie benachrichtigt.
+jcmsplugin.collaborativespace.signup.btn.signup:          Ich möchte mich gerne registrieren
+jcmsplugin.collaborativespace.signup.info.already-signup: {0}, Sie haben diese Registrierung bereits beantragt.
+jcmsplugin.collaborativespace.signup.error.workspace-no-group: Für Registrierungsanfragen müssen Arbeitsbereiche eine Standardgruppe aufweisen.
+
+jcmsplugin.collaborativespace.signup.lbl.signups:         Registrierungsanträge
+jcmsplugin.collaborativespace.signup.lbl.signup:          Registrierungsantrag
+jcmsplugin.collaborativespace.signup.lbl.submit-mbr:      Anfragende Person
+jcmsplugin.collaborativespace.signup.lbl.process:         Diese Anfrage verarbeiten
+jcmsplugin.collaborativespace.signup.btn.accept:          Akzeptieren
+jcmsplugin.collaborativespace.signup.btn.reject:          Ablehnen
+jcmsplugin.collaborativespace.unsignup.confirm:           Möchten Sie sich wirklich abmelden?
+
+jcmsplugin.collaborativespace.welcome.title:   Willkommen!
+jcmsplugin.collaborativespace.welcome.content: <p>Herzlichen Glückwunsch! Ihr Gemeinschaftsbereich ist aktiviert und läuft.</p><p>Ein paar Tipps, was Sie tun können </p><ul><li class='cs-welcome-tip-look-and-feel'><a href="{0}">Haptik ändern </a></li><li class='cs-welcome-tip-add-members'><a href="{1}">Mitglieder hinzufügen </a></li><li class='cs-welcome-tip-send-invitations'><a href="{2}">Einladungen versenden </a></li><li class='cs-welcome-tip-services'><a href="{3}">Anwendungen hinzufügen</a></li></ul>
+
+jcmsplugin.collaborativespace.lbl.cs:    Gemeinschaftsbereich
+jcmsplugin.collaborativespace.lbl.model: Modell
+
+jcmsplugin.collaborativespace.lbl.follow.action:        Verfolgen
+jcmsplugin.collaborativespace.lbl.unfollow.action:      Nicht mehr verfolgen
+jcmsplugin.collaborativespace.lbl.follow.title:         Verfolgen eines Bereichs
+jcmsplugin.collaborativespace.lbl.follow.description:   Sie werden über die neuesten Nachrichten dieses Bereichs informiert werden.
+jcmsplugin.collaborativespace.lbl.unfollow.title:       Bereich nicht mehr verfolgen
+jcmsplugin.collaborativespace.lbl.unfollow.description: Sie werden nicht mehr über die neuesten Nachrichten dieses Bereichs informiert werden.
+
+jcmsplugin.collaborativespace.lbl.synchronization-on-model: Dieses Portal wird mit seinem Modell synchronisiert, Sie können die Anzeige nicht ändern.
+
+jcmsplugin.collaborativespace.msg.cannot-update-sync-data: Sie können „{0}“ nicht ändern, da diese Daten mit seinem Modell synchronisiert werden.
+jcmsplugin.collaborativespace.msg.cannot-change-sync-model: Sie können das Modell des Gemeinschaftsbereichs nicht ändern, wenn die Datenstruktur oder die Kategorien synchronisiert werden. 
+
+jcmsplugin.collaborativespace.header.search-button: Die Suche im Arbeitsbereich {0} starten
+jcmsplugin.collaborativespace.a11y.avoidance-link.workspace-search: Zur Arbeitsbereichsuche springen
+jcmsplugin.collaborativespace.a11y.avoidance-link.navigation-tabs: Zur Navigation springen
+
+# ------------------------------------------------------------
+#  ADMIN LIST
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.admin-list.remove-member: Aus der Leiterliste entfernen
+jcmsplugin.collaborativespace.admin-list.add-member-btn: Einen Leiter hinzufügen …
+
+# ------------------------------------------------------------
+#  SUGGESTIONS
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.suggestion.none: Es gibt keine Vorschläge.
+jcmsplugin.collaborativespace.suggestion.reset: Vorschläge zurücksetzen …
+jcmsplugin.collaborativespace.suggestion.reject: Nein, danke!
+
+# ------------------------------------------------------------
+#  APP
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.app.home.title: Auf Communitysstartseite wechseln
+
+# ------------------------------------------------------------
+#  PUBLISH MENU
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.publish-menu.create: Gemeinschaftsbereich
+
+# ------------------------------------------------------------
+#  CollaborativeSpace Recommendation (+alert)
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.space-recommendation.title: Empfehlung, einem Bereich beizutreten
+jcmsplugin.collaborativespace.space-recommendation.intro: Mitgliedern empfehlen, dem Bereich <strong>{0}</strong> beizutreten.
+jcmsplugin.collaborativespace.space-recommendation.no-recipient: Bitte wählen Sie mindestens ein Mitglied oder eine Gruppe aus.
+jcmsplugin.collaborativespace.space-recommendation.field.msg: Ihre Nachricht
+
+# ------------------------------------------------------------
+#  EDITABLE PROPERTIES
+# ------------------------------------------------------------
+$id.jcmsplugin.collaborativespace.typology-root: Stammverzeichnis der Gemeinschaftsarbeitsbereichs-Typologie
+$id.CSRequest.formAuthor: CS Anfragender Verfasser
+$id.CSRequest.workspace:  CS Arbeitsbereichsanfragen
+$id.jcmsplugin.collaborativespace.typology-portal: CS-Portal nach Typologie
+$id.jcmsplugin.collaborativespace.cs-creation-group: CS Erstellergruppe
+$id.jcmsplugin.collaborativespace.cs-creation-group.help: Eine Gruppenkennung, die das Recht einräumt, direkt CS zu erstellen, ohne den Workflow zu prüfen. Dies ist eine Alternative zur Möglichkeit, dem Mitglied die ACL einzuräumen.
+jcmsplugin.collaborativespace.guestaccounts.enabled: Gästekontos aktivieren?
+$id.jcmsplugin.collaborativespace.guestaccounts.group: Gästekonto-Gruppe
+$id.jcmsplugin.collaborativespace.guestaccounts.group.help: Eine Gruppen-ID, die alle Gästekonten der Organisation enthält
+$id.GuestRequest.workspace: Aufnehmender Arbeitsbereich für Gästekonto-Anfragen
+$id.GuestRequest.workspace.help: Eine Arbeitsbereich-ID für den Arbeitsbereich, in dem Anträge auf Gästekonten gespeichert werden (standardmäßig der Standard-Arbeitsbereich).
+$id.jcmsplugin.collaborativespace.guestaccounts.homepage-ws: Begrüßungsbereich für Gäste
+$id.jcmsplugin.collaborativespace.guestaccounts.homepage-ws.help: Ein zugänglicher Arbeitsbereich für alle Gäste, der dazu verwendet werden kann, ihnen den Einstieg in die Plattform zu erleichtern.
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE ABILITIES
+# ------------------------------------------------------------
+portlet.ability.jcmsplugin.collaborativespace:                Gemeinschaftsbereiche
+portlet.ability.jcmsplugin.collaborativespace.dashboard:      Dashboard
+portlet.ability.jcmsplugin.collaborativespace.application:    Anwendung
+
+ui.editportlet.usage.skin.collaborativeSpace: Skin des Gemeinschaftsarbeitsbereichs
+ui.editportlet.usage.skin.collaborativeSpaceNoSkin: Skin des Gemeinschaftsbereichs (keine)
+
+# ------------------------------------------------------------
+#  PORTLET MY COLLABORATIVE SPACES
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.portlet.mycs.lbl.mine:   Meine Bereiche
+jcmsplugin.collaborativespace.portlet.mycs.lbl.other:  Andere Bereiche
+jcmsplugin.collaborativespace.portlet.mycs.lbl.none:   Keine Bereiche
+jcmsplugin.collaborativespace.portlet.mycs.lbl.filter: Filtern nach …
+jcmsplugin.collaborativespace.portlet.mycs.btn.toggle-subspaces.show: Unterbereiche anzeigen
+jcmsplugin.collaborativespace.portlet.mycs.btn.toggle-subspaces.hide: Unterbereiche ausblenden
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE I18N
+# ------------------------------------------------------------
+
+jcmsplugin.collaborativespace.label.edit:         Bearbeiten
+jcmsplugin.collaborativespace.label.objectives:   Ziele
+jcmsplugin.collaborativespace.label.support:      Support:
+jcmsplugin.collaborativespace.label.breadcrumb:   Breadcrumb-Pfad:
+jcmsplugin.collaborativespace.request-date:       Anfragedatum: {0}
+
+jcmsplugin.collaborativespace.editform.create:    Einen Gemeinschaftsbereich erstellen
+jcmsplugin.collaborativespace.editform.update:    Einen Gemeinschaftsbereich aktualisieren
+
+jcmsplugin.collaborativespace.csrequest.model:    Erstelltes Modell
+
+jcmsplugin.collaborativespace.handler.msg.cs-max: Es ist nur 1 Gemeinschaftsbereich pro Arbeitsbereich zulässig.
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.title: Eingehende E-Mail-Aktivierung
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.content: Eingehende E-Mails sind in diesem Bereich jetzt aktiv.
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.footer: Einstellungen bearbeiten, um das Präfix der eingehenden E-Mails anzupassen: <strong>{0}</strong>.
+jcmsplugin.collaborativespace.incoming-mail-enabled.modal.edit-button: Einstellungen bearbeiten
+
+jcmsplugin.collaborativespace.dashboard.new:      Es sind keine Inhalte anzuzeigen. <br/><img src='images/jalios/icons/add.gif' class='icon' alt=''/>&nbsp;Erstellen Sie neue Inhalte.
+jcmsplugin.collaborativespace.dashboard.warn.invalid-portal-container: Diese Portlet-Auswahlvorlage funktioniert nur auf einem Gemeinschaftsbereichsportal.
+
+jcmsplugin.collaborativespace.introduction.edit: Einführung bearbeiten
+jcmsplugin.collaborativespace.introduction.empty.default-message: Die Einführung zu diesem Bereich wurde noch nicht geschrieben.
+jcmsplugin.collaborativespace.introduction.infos.access.header: Zugriff
+jcmsplugin.collaborativespace.introduction.infos.access.membership.true: (Sie sind registriert)
+jcmsplugin.collaborativespace.introduction.infos.access.membership.false: (Sie sind nicht registriert)
+jcmsplugin.collaborativespace.introduction.infos.guests.header: Gäste
+jcmsplugin.collaborativespace.introduction.infos.guests.info: Es gibt {0,choice,0#keine Gäste |1#1 Gast |2#{0} Gäste}.
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail: Postfach
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail.h: An diese Adresse gesendete E-Mails werden in diesem Bereich in Ihrem Namen gespeichert
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail.your-address: Ihre persönliche Adresse für Beiträge in diesem Bereich:
+jcmsplugin.collaborativespace.introduction.infos.incoming-mail.warning: Achtung! Diese Adresse ist privat. Geben Sie sie nicht weiter.
+
+jcmsplugin.collaborativespace.typology-portal.presentation.edit: Präsentation bearbeiten
+jcmsplugin.collaborativespace.typology-portal.presentation.empty.default-message: Die Präsentation dieser Kategorie wurde noch nicht ausgefüllt.
+jcmsplugin.collaborativespace.typology-portal.spaces-list.title: Liste der Bereiche
+jcmsplugin.collaborativespace.typology-portal.pqfe.lbl.cs-result: {0,choice,0#Keine Bereiche|1#Ein Bereich|2#{0,number,integer} Bereiche}.
+jcmsplugin.collaborativespace.typology-portal.pqfe.lbl.placeholder.search: Suche in {0}
+jcmsplugin.collaborativespace.typology-portal.lbl.csList.header: {0,choice,0# Keine Bereiche|1#1 Bereich|2#{0,number,integer} Bereiche}
+jcmsplugin.collaborativespace.typology-portal.lbl.cs-typology.info: Erstellte {0}. {1,choice,0#Keine Teilnehmer|1#1 Teilnehmer|2#{1,number,integer} Teilnehmer}. Geführt von {2}
+jcmsplugin.collaborativespace.typology-portal.lbl.cs-typology.info-parent: Unter
+jcmsplugin.collaborativespace.typology-portal.lbl.cs-typology.admins-list: {0,choice,0# Keine Leitung |1# {2}|2# {1} und {2}}
+
+
+# Query dates
+jcmsplugin.collaborativespace.query.today:     Heute
+jcmsplugin.collaborativespace.query.tomorrow:  Morgen
+jcmsplugin.collaborativespace.query.yesterday: Gestern
+jcmsplugin.collaborativespace.query.before:    Vorher
+jcmsplugin.collaborativespace.query.after:     Später
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE CONTROL
+# ------------------------------------------------------------
+
+jcmsplugin.collaborativespace.msg.edit.cslicense:     Die aktuelle JCMS-Lizenz lässt keine Erstellung weiterer Gemeinschaftsbereiche zu.
+jcmsplugin.collaborativespace.msg.edit.workspace.typology-used: Typologie <i>({0})</i> sollte nicht im Arbeitsbereich, sondern im Gemeinschaftsbereichportlet verwendet werden.
+
+# ------------------------------------------------------------
+#  COLLABORATIVE SPACE DATA
+# ------------------------------------------------------------
+
+data.$id.jcmsplugin.collaborativespace.data.cat:                        Gemeinschaftsbereiche
+data.$id.jcmsplugin.collaborativespace.data.group.writer:               Gemeinschaftsarbeitsbereich – Verfasser
+data.$id.jcmsplugin.collaborativespace.data.group.reader:               Gemeinschaftsarbeitsbereich – Teilnehmer
+data.$id.jcmsplugin.collaborativespace.data.internal.dashboard:         Dashboard
+data.$id.jcmsplugin.collaborativespace.data.internal.icons:             Symbole
+data.$id.jcmsplugin.collaborativespace.data.internal.search:            Suche
+data.$id.jcmsplugin.collaborativespace.data.service.latest-contents:    Neuester Inhalt
+data.$id.jcmsplugin.collaborativespace.data.service.latest-contents.d:  Auflisten der neuesten Inhalte im Gemeinschaftsbereich
+data.$id.jcmsplugin.collaborativespace.data.service.latest-documents:   Neueste Dokumente
+data.$id.jcmsplugin.collaborativespace.data.service.latest-documents.d: Liste der neuesten Dokumente in diesem Gemeinschaftsbereich
+data.$id.jcmsplugin.collaborativespace.data.service.workflow:           Workflow
+data.$id.jcmsplugin.collaborativespace.data.service.workflow.d:         Auflisten der zu verarbeitenden Veröffentlichungen
+data.$id.jcmsplugin.collaborativespace.data.service.glossary:           Glossare
+data.$id.jcmsplugin.collaborativespace.data.service.glossary.d:         Anzeige der Glossare in diesem Gemeinschaftsbereich.
+data.$id.jcmsplugin.collaborativespace.data.service.faq:                Häufig gestellte Fragen
+data.$id.jcmsplugin.collaborativespace.data.service.faq.d:              Anzeige der FAQ für diesen Gemeinschaftsbereich.
+data.$id.jcmsplugin.collaborativespace.data.service.introduction:       Einführung
+data.$id.jcmsplugin.collaborativespace.data.service.introduction.d:     Anzeige der Einführung für diesen Gemeinschaftsbereich
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-full:      Kalender
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-full.d:    Gemeinschaftsarbeitsbereich – Managementanwendung für Mitgliederereignisse
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-small:     Kleiner Kalender
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-small.d:   Anzeige des Kalenders für den aktuellen Monat
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-diary:     Tagebuch
+data.$id.jcmsplugin.collaborativespace.data.service.calendar-diary.d:   Anzeige des Tagebuchs für den aktuellen Monat.
+data.$id.jcmsplugin.collaborativespace.data.service.event-schedule:     Veranstaltungsplanung
+data.$id.jcmsplugin.collaborativespace.data.service.event-schedule.d:   Auflisten der Veranstaltungspläne für diesen Bereich
+data.$id.jcmsplugin.collaborativespace.data.service.subspaces:          Unterbereiche
+data.$id.jcmsplugin.collaborativespace.data.service.subspaces.d:        Liste der Unterbereiche dieses Bereichs
+data.$id.jcmsplugin.collaborativespace.data.model.ws:                   Modell des Gemeinschaftsbereichs
+data.$id.jcmsplugin.collaborativespace.data.model.portal:               Modell des Gemeinschaftsbereichs
+data.$id.jcmsplugin.collaborativespace.data.model.portal.desc:          Modell zum Erstellen eines neuen Gemeinschaftsbereichs
+data.$id.jcmsplugin.collaborativespace.data.model.cat:                  $NAME$ Gemeinschaftsbereich
+data.$id.jcmsplugin.collaborativespace.data.model.group.writer:         $NAME$ – Verfasser
+data.$id.jcmsplugin.collaborativespace.data.model.group.reader:         $NAME$ – Teilnehmer
+data.$id.jcmsplugin.collaborativespace.data.model.group.follower:       $NAME$ – Follower
+
+# ------------------------------------------------------------
+#  Guest Accounts Feature
+# ------------------------------------------------------------
+jcmsplugin.collaborativespace.guestaccounts.guest.label: Gast
+jcmsplugin.collaborativespace.guestaccounts.guestGroup.label: Gäste
+jcmsplugin.collaborativespace.guestaccounts.guestManagerGroup.label: Gästemanager
+jcmsplugin.collaborativespace.guestaccounts.guestManagerACL.label: Gästemanager
+jcmsplugin.collaborativespace.guestaccounts.account-creation.label: Gästekonto eröffnen …
+jcmsplugin.collaborativespace.guestaccounts.contact-transformation.member-profile-target.label: In ein Gästekonto umwandeln …
+jcmsplugin.collaborativespace.guestaccounts.workspaces-and-groups.workspace.label.title: Klicken Sie hier, um die Gruppenliste für diesen Arbeitsbereich anzuzeigen/zu verbergen
+jcmsplugin.collaborativespace.guestaccounts.no-guest-group-defined: Für die Aktivierung der Gästekonto-Funktion muss eine gültige Gästekonto-Gruppe definiert werden. <br />Bitte überprüfen Sie die Eigenschaft <strong>{0}</strong> ($id.jcmsplugin.collaborativespace.guestaccounts.group).
+jcmsplugin.collaborativespace.guestaccounts.member-controller.error.account-already-in-workspaces: <p>Ein <strong>Gästekonto</strong> darf nicht zu einem <strong>Nicht</strong>-Gemeinschaftsbereich gehören. </p><ul><li><strong>Entfernen</strong> Sie die Nicht-Gemeinschaftsbereichsgruppe, um daraus ein </li><li>Gästekonto ({0}) zu machen, oder <strong>entfernen</strong> Sie sie aus der Gästekonto-Gruppe, um auf Nicht-Gemeinschaftsbereiche zuzugreifen</li></ul>
+jcmsplugin.collaborativespace.guestaccounts.member-controller.error.no-valid-email: Ein Gästekonto muss eine gültige E-Mail-Adresse haben.
+jcmsplugin.collaborativespace.guestaccounts.member-controller.error.contact-creation-forbidden: Ein Gästekonto darf keine Kontakte erstellen.
+jcmsplugin.collaborativespace.guestaccounts.member-controller.warning.guest-group-removal: Das Entfernen dieses Kontos aus der Gästekonto-Gruppe würde diesem Konto mehr Zugriff ermöglichen. <br />Bitte erzwingen Sie das Entfernen dieses Benutzerkontos aus der Gästekonto-Gruppe, um fortzufahren
+jcmsplugin.collaborativespace.guestaccounts.member-controller.guest-group-removal.lbl: Von den Gästen entfernen
+jcmsplugin.collaborativespace.guestaccounts.member-controller.guest-group-removal.lbl.h: Entfernen dieses Benutzerkontos aus der Gästekonto-Gruppe erzwingen?
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.feature-not-enabled: Kann Ihre Anfrage nicht verarbeiten. Bitte prüfen Sie den Funktionsumfang für die Gäste.
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-submitter: Der Absender ist eine Pflichtangabe.
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-group: Bitte wählen Sie mindestens eine Gemeinschaftsbereichsgruppe.
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-name: Ein Gast muss einen Namen haben.
+jcmsplugin.collaborativespace.guestaccounts.request-controller.error.no-organization: Ein Gast muss eine Organisation haben.
+jcmsplugin.collaborativespace.guestaccounts.request-modal.use-with-worflow.title: Antrag auf Erstellung eines Gästekontos
+jcmsplugin.collaborativespace.guestaccounts.request-modal.use-with-no-worflow.title: Erstellung eines Gästekontos
+jcmsplugin.collaborativespace.guestaccounts.creation-request-controller.create.finish: <p>Ihr Antrag auf Erstellung eines Gästekontos wurde erfolgreich übermittelt. </p><p>Sobald er überprüft wurde, wird das Gästekonto erstellt und Sie werden benachrichtigt.</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-controller.account-creation-success.mail.email-notsent: Die E-Mail konnte nicht versendet werden: {0}. Bitte versuchen Sie es erneut oder wenden Sie sich an einen Leiter.
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.0: Prüfen
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1: Vorschläge
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.2: Information
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.3: Bereiche
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.0.intro: <p class='info'>Geben Sie den Namen und/oder die E-Mail des Gästekontos ein, um zu überprüfen, ob diese Person bereits vorhanden ist:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.intro.1: <p class='info'>Für diese Informationen wurde ein bestehendes Benutzerkonto gefunden. Überprüfen Sie vorab, ob das Gästekonto, das Sie erstellen möchten, nicht bereits vorhanden ist.</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.intro.2: <p class='info'>Vorhandene Konten gefunden. Vergewissern Sie sich, dass sie nicht dieselbe Person sind, bevor Sie ein neues erstellen.<br />Klicken Sie auf eine Karte, um das Mitglied in einem neuen Fenster anzuzeigen, bewegen Sie den Mauszeiger über eine Karte und klicken Sie auf die Schaltfläche, um mit diesem Mitglied fortzufahren.</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.see-profile.btn: Profil anzeigen
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.see-profile.btn.title: Zeigen Sie das vollständige Profil des Kontos in einem neuen Fenster an, bevor Sie eine Aktion auswählen.
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.select-account.title: Wählen Sie dieses bestehende Konto, damit Sie es in Bereichen registrieren können.
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.select-account.btn: Auswählen
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.transform-contact-to-guest.btn-label: In Gast umwandeln
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.1.proposed-member-card.transform-contact-to-guest.btn.title: Wählen Sie diesen Kontakt aus, um ihn als Gast umzuwandeln, damit Sie ihn in Bereichen registrieren können.
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.2.intro: <p class='info'>Bitte füllen Sie die Informationen aus, um das Gästekonto zu erstellen:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.2.intro.convert-contact: <p class='info'>Bitte füllen Sie die Informationen für den Kontakt <strong>{0}</strong> aus, um ihn in einen Gast umzuwandeln:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.3.intro: <p class='info'>Bitte überprüfen Sie in den folgenden Gemeinschaftsbereichen die Gruppen, denen das Konto hinzugefügt wird:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.steps.3.intro.convert-contact: <p class='info'>Bitte überprüfen Sie in den folgenden Gemeinschaftsbereichen die Gruppen, denen der Kontakt <strong>{0}</strong> hinzugefügt wird:</p>
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.use-with-worflow.validate: Anfrage absenden
+jcmsplugin.collaborativespace.guestaccounts.creation-request-modal.use-with-no-worflow.validate: Benutzerkonto erstellen
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.use-with-worflow.validate: Anfrage absenden
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.use-with-no-worflow.validate: Umwandeln
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.contact-reminder: Umwandlung von <strong>{0}</strong> in ein Gästekonto.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-modal.groups-intro: <p class='info'>Bitte überprüfen Sie in den folgenden Gemeinschaftsbereichen die Gruppen, denen das Gästekonto hinzugefügt wird:</p>
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.error.no-email: Der Kontakt muss eine gültige E-Mail-Adresse haben, um in ein Gästekonto umgewandelt werden zu können.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.error.email-already-used: Kontakt kann nicht in ein Gästekonto umgewandelt werden. Ein vorhandenes Konto verwendet bereits die E-Mail-Adresse <strong>{0}</strong>.<br /> Bitte verwenden Sie eine andere E-Mail-Adresse oder konvertieren Sie das vorhandene Konto in ein Gästekonto.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.error.not-a-contact: Das zu konvertierende Mitglied muss ein Kontakt sein.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.create.finish: <p>Ihre Anfrage, einen Kontakt in ein Gästekonto zu konvertieren, wurde erfolgreich übermittelt. </p><p>Sobald die Anfrage überprüft wurde, wird das Gästekonto erstellt und Sie werden benachrichtigt.</p>
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.account-transformation-success: Kontakt <a href='{0}' target='_blank' title='New window'>{1}</a> wurde erfolgreich in ein Gästekonto umgewandelt.
+jcmsplugin.collaborativespace.guestaccounts.transformation-request-controller.account-creation-success.mail.email-notsent: Die E-Mail konnte nicht versendet werden: {0}. Bitte versuchen Sie es erneut oder wenden Sie sich an einen Leiter.
+jcmsplugin.collaborativespace.guestaccounts.guest-request.notification.warn.no-request: Passwortänderungs-E‑Mail konnte nicht versendet werden. Das Gästekonto ({0}) konnte nicht benachrichtigt werden.
+jcmsplugin.collaborativespace.guestaccounts.guest-request.notification.warn.mail-disabled: E-Mails sind deaktiviert. Das Gästekonto konnte nicht benachrichtigt werden.
+jcmsplugin.collaborativespace.guestaccounts.guest-request.notification.warn.unknown-error: Oh, da ist etwas falsch gelaufen. Das Gästekonto konnte nicht benachrichtigt werden.
+jcmsplugin.collaborativespace.guestaccounts.process-request.btn.accept:  Akzeptieren
+jcmsplugin.collaborativespace.guestaccounts.process-request.btn.reject:  Ablehnen
+
+
+jcmsplugin.collaborativespace.syncMode.tabs: Anwendungen
+jcmsplugin.collaborativespace.syncMode.dashboard: Startseite
+jcmsplugin.collaborativespace.syncMode.data: Strukturdaten (Typen, WF, Gruppen, …)
+jcmsplugin.collaborativespace.syncMode.categories: Kategorien
+jcmsplugin.collaborativespace.syncMode.activate-help.message: Die Synchronisierung wendet, sofern aktiviert, einige Parameter des Modells auf diesen Arbeitsbereich an.
+
+#jcmsplugin.collaborativespace.modelSyncMode.dashboard: Applications
+#jcmsplugin.collaborativespace.modelSyncMode.dashboard: Home 
+#jcmsplugin.collaborativespace.modelSyncMode.dashboard: Data
+
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal: Die Seite bearbeiten (fortgeschrittener Editor) …
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-simple: Die Seite bearbeiten …
+jcmsplugin.collaborativespace.actions-menu.edit-collaborative-space-portal-simple-stop: Bearbeitung beenden
+jcmsplugin.collaborativespace.actions-menu.recommend-collaborative-space: Teilen …
+jcmsplugin.collaborativespace.modelSyncMode.locked.message: Der Gemeinschaftsbereich wird mit diesem Modell synchronisiert: <b>{0}</b>.
+
+# ------------------------------------------------------------
+# Alerts
+# ------------------------------------------------------------
+alert.name.jcmsplugin-collaborativespace:                         Gemeinschaftsbereiche
+alert.name.jcmsplugin-collaborativespace.cs-creation:             Erstellung des Gemeinschaftsbereichs
+alert.name.jcmsplugin-collaborativespace.cs-creation-rejected-submitter: Gemeinschaftsbereicherstellung abgelehnt
+alert.name.jcmsplugin-collaborativespace.invitation:              Einladung, einem Bereich beizutreten
+alert.name.jcmsplugin-collaborativespace.enrollment:              Für einen Bereich registrieren
+alert.name.jcmsplugin-collaborativespace.join:                    Für einen Bereich registrieren
+alert.name.jcmsplugin-collaborativespace.recommendation:          Empfehlung zu einem Bereich
+alert.name.jcmsplugin-collaborativespace.signup-request:          Registrierungs-Einsendung
+alert.name.jcmsplugin-collaborativespace.signup-accepted:         Registrierung akzeptiert
+alert.name.jcmsplugin-collaborativespace.signup-rejected:         Registrierung abgelehnt
+alert.name.jcmsplugin-collaborativespace.unsignup:                Abmeldung
+alert.name.jcmsplugin-collaborativespace.guest-creation:          Gästekonto aktivieren
+alert.name.jcmsplugin-collaborativespace.silent-guest-creation:   Gästekonto aktivieren
+alert.name.jcmsplugin-collaborativespace.contact-to-guest:        Konvertierung von Kontakt zu Gästekonto
+alert.name.jcmsplugin-collaborativespace.silent-contact-to-guest: Konvertierung von Kontakt zu Gästekonto
+
+alert.msg.jcmsplugin-collaborativespace.cs-creation.title:                          Erstellen des Gemeinschaftsbereichs {data}
+alert.msg.jcmsplugin-collaborativespace.cs-creation.short-description:              Gemeinschaftsbereich {data} wurde erstellt.
+alert.msg.jcmsplugin-collaborativespace.cs-creation.description:                    <p>Gemeinschaftsbereich {data} wurde erstellt.</p><p>Sie sind Leiter dieses Bereichs.</p>
+
+alert.msg.jcmsplugin-collaborativespace.cs-creation-rejected-submitter.title:             Erstellen des Gemeinschaftsbereichs abgelehnt
+alert.msg.jcmsplugin-collaborativespace.cs-creation-rejected-submitter.short-description: Antrag („{cs-title}“) auf Erstellung eines Gemeinschaftsbereichs wurde abgelehnt. Kommentar der prüfenden Person: {validator-comment}
+
+alert.msg.jcmsplugin-collaborativespace.invitation.title:                           Beitrittsaufforderung für {data}
+alert.msg.jcmsplugin-collaborativespace.invitation.short-description:               {author} hat Sie eingeladen, Mitglied des Gemeinschaftsbereichs {data} zu werden.
+alert.msg.jcmsplugin-collaborativespace.invitation.description:                     <p>{author} hat Sie eingeladen, Mitglied des Gemeinschaftsarbeitsbereichs {data} zu werden.</p><p><a href="{accept-url}">Diese Einladung akzeptieren</a></p><p><a href="{decline-url}">Diese Einladung ablehnen</a></p><br /><p><b>Bereichsbeschreibung:</b></p><p>{cs-description}</p>
+
+alert.msg.jcmsplugin-collaborativespace.enrollment.title:                           Registrierung für {data}
+alert.msg.jcmsplugin-collaborativespace.enrollment.short-description:               Sie sind Mitglied des Gemeinschaftsbereichs {data}.
+
+alert.msg.jcmsplugin-collaborativespace.join.title:                                 Registrierung für {data}
+alert.msg.jcmsplugin-collaborativespace.join.short-description:                     {author} ist dem Gemeinschaftsbereich {data} beigetreten.
+alert.msg.jcmsplugin-collaborativespace.join.description:                           <p><a href="{author-url}">{author}</a> ist dem Gemeinschaftsbereich {data} beigetreten.</p>
+
+alert.msg.jcmsplugin-collaborativespace.recommendation.title:                       Empfehlung für Gemeinschaftsbereich {data}
+alert.msg.jcmsplugin-collaborativespace.recommendation.short-description:           {author} empfiehlt Ihnen den Beitritt zum Gemeinschaftsbereich {data}.
+alert.msg.jcmsplugin-collaborativespace.recommendation.description:                 <p>{author} empfiehlt Ihnen den Beitritt zum Gemeinschaftsbereich {data}.</p>
+
+alert.msg.jcmsplugin-collaborativespace.signup-request.title:                       Registrierungsanfrage für {data}
+alert.msg.jcmsplugin-collaborativespace.signup-request.short-description:           {author} hat eine Registrierungsanfrage für den Gemeinschaftsbereich {data} versendet.
+alert.msg.jcmsplugin-collaborativespace.signup-request.description:                 <p>{author} hat eine <a href="{signup-url}">Registrierungsanfrage</a> für den Gemeinschaftsbereich {data} versendet.</p>
+
+alert.msg.jcmsplugin-collaborativespace.signup-accepted.title:                      Registrierungsanfrage für {data}
+alert.msg.jcmsplugin-collaborativespace.signup-accepted.short-description:          Ihre Registrierungsanfrage für den Gemeinschaftsbereich {data} wurde von {author} genehmigt.
+alert.msg.jcmsplugin-collaborativespace.signup-accepted.description:                <p>Herzlichen Glückwunsch! Ihre Registrierungsanfrage für den Gemeinschaftsbereich {data} wurde von {author} genehmigt. Ab jetzt sind Sie Mitglied dieses Bereichs.</p>
+
+alert.msg.jcmsplugin-collaborativespace.signup-rejected.title:                      Registrierungsanfrage für {data}
+alert.msg.jcmsplugin-collaborativespace.signup-rejected.short-description:          Ihre Registrierungsanfrage für den Gemeinschaftsbereich {data} wurde abgelehnt. Kommentar der prüfenden Person: {validator-comment}
+
+alert.msg.jcmsplugin-collaborativespace.unsignup.title:                             Von {data} abmelden
+alert.msg.jcmsplugin-collaborativespace.unsignup.short-description:                 {author} hat sich vom Gemeinschaftsbereich {data} abgemeldet.
+
+alert.msg.jcmsplugin-collaborativespace.guest-creation.title:                       Gästekonto aktivieren
+alert.msg.jcmsplugin-collaborativespace.guest-creation.short-description:           Das Gästekonto {data} ({organization}) wurde erfolgreich erstellt und per E-Mail benachrichtigt.
+
+alert.msg.jcmsplugin-collaborativespace.contact-to-guest.title:                     Gästekonto aktivieren
+alert.msg.jcmsplugin-collaborativespace.contact-to-guest.short-description:         Der Kontakt {data} ({organization}) wurde in ein Gästekonto umgewandelt und per E-Mail benachrichtigt.
+
+alert.msg.jcmsplugin-collaborativespace.silent-guest-creation.title:                Gästekonto aktivieren
+alert.msg.jcmsplugin-collaborativespace.silent-guest-creation.short-description:    Das Gästekonto {data} ({organization}) wurde erfolgreich erstellt.
+
+alert.msg.jcmsplugin-collaborativespace.silent-contact-to-guest.title:              Gästekonto aktivieren
+alert.msg.jcmsplugin-collaborativespace.silent-contact-to-guest.short-description:  Der Kontakt {data} ({organization}) wurde in ein Gästekonto umgewandelt.
+
+wf-alert.ANY.CSRequest.wfcsrequest.-201.form-submission.alertWorkers.ANY.title: {reminder} Antrag auf Erstellung eines Gemeinschaftsbereichs wurde abgeschickt.
+wf-alert.ANY.CSRequest.wfcsrequest.-201.form-submission.alertWorkers.ANY.short-description: Es wurde ein Antrag auf Erstellung eines Gemeinschaftsbereichs abgeschickt: {data.url}
+wf-alert.ANY.CSRequest.wfcsrequest.-201.form-submission.alertWorkers.ANY.description: <p>Es wurde eine Anforderung zur Erstellung eines Gemeinschaftsbereichs {data} abgeschickt.</p><p>Sie sind eingeladen, sie zu prüfen.</p>
+
+wf-alert.ANY.CSSignupRequest.wfcssignup.-201.form-submission.alertWorkers.ANY.title: {reminder} Antrag auf Registrierung eines Gemeinschaftsbereichs wurde abgeschickt.
+wf-alert.ANY.CSSignupRequest.wfcssignup.-201.form-submission.alertWorkers.ANY.short-description: Es wurde ein Antrag auf Registrierung eines Gemeinschaftsbereichs abgeschickt: {data.url}
+wf-alert.ANY.CSSignupRequest.wfcssignup.-201.form-submission.alertWorkers.ANY.description: <p>Ein Antrag auf Registrierung eines Gemeinschaftsbereichs wurde abgeschickt: {data}.</p><p>Sie sind eingeladen, ihn zu prüfen.</p>
+
+# ----------------------------------------------------------------------
+# SHORTCUT
+# ----------------------------------------------------------------------
+
+data.$id.shortcut.jcmsplugin.collaborativespace-hub.title: Bereiche
+data.$id.shortcut.jcmsplugin.collaborativespace-hub.text: Greifen Sie auf all Ihre Bereiche zu, verwalten Sie Ihre Lieblingsbereiche und entdecken Sie Bereichvorschläge.
+
+# ----------------------------------------------------------------------
+# CategoryBrowser
+# ----------------------------------------------------------------------
+category.category-browser.collaborativespace-search: In diesem Bereich suchen …
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From CollaborativeSpace-templates.xml
+types.CollaborativeSpace.templates.box.default.label: Standardvorlage
+
+# From CollaborativeSpace.xml
+types.CollaborativeSpace.fields.header.label: Header
+types.CollaborativeSpace.fields.headerSettings.label: Kopfzeilenanpassung
+types.CollaborativeSpace.fields.introduction.label: Einführung
+types.CollaborativeSpace.tabs.layout.label: Layout
+types.CollaborativeSpace.fields.accessPolicy.label: Zugriff
+types.CollaborativeSpace.title.label: Titel
+types.CollaborativeSpace.fields.exactCategory.label: Genaue Kategorie
+types.CollaborativeSpace.fields.signupPolicy.labelList: Ohne Registrierung|Registrierungsanfrage|Von Leitern verwaltete Registrierungen
+types.CollaborativeSpace.fields.layout.label: Layout
+types.CollaborativeSpace.label: Gemeinschaftsbereich
+types.CollaborativeSpace.description: Das Portlet „Gemeinschaftsbereich“ definiert, welche Anwendungen angezeigt werden.
+types.CollaborativeSpace.fields.layout.labelList: Keine Seitenleiste|Linke Seitenleiste|Rechte Seitenleiste
+types.CollaborativeSpace.fields.signupPolicy.label: Teilnahme
+types.CollaborativeSpace.fields.dashboardColumnCount.label: Dashboard-Spalten
+types.CollaborativeSpace.fields.accessPolicy.labelList: Öffentlich|Privat|Geheim
+types.CollaborativeSpace.fields.exactCategory.onLabel: Ja
+types.CollaborativeSpace.fields.exactCategory.offLabel: Nein
+types.CollaborativeSpace.fields.description.label: Beschreibung
+types.CollaborativeSpace.tabs.access.label: Zugriff
+types.CollaborativeSpace.fields.theme.label: Thema
+types.CollaborativeSpace.fields.followersGroup.label: Follower-Gruppe
+types.CollaborativeSpace.fields.followersGroup.description: Mitglieder dieser Gruppe werden über neue Inhalte im Bereich informiert werden
+types.CollaborativeSpace.fields.jportal.label: JPortal
+types.CollaborativeSpace.fields.syncMode.label: Synchronisierte Elemente
+types.CollaborativeSpace.fields.syncMode.labelList: Startseite|Anwendungen|Strukturdaten (Typen, WF, Gruppen, …)|Kategorien
+types.CollaborativeSpace.fields.model.label: Arbeitsbereichsmodell
+types.CollaborativeSpace.fields.applications.label: Anwendungen
+types.CollaborativeSpace.fields.mobileShowIntro.label: Einführung anzeigen
+types.CollaborativeSpace.fields.mobileShowApplications.label: Anwendungen anzeigen
+types.CollaborativeSpace.fields.mobilePortlets.label: Portlets
+types.CollaborativeSpace.fields.modelSyncMode.label: Erforderliche Synchronisierung
+types.CollaborativeSpace.fields.modelSyncMode.labelList: Startseite|Anwendungen|Strukturdaten (Typen, WF, Gruppen, …)|Kategorien
+types.CollaborativeSpace.tabs.portal.label: Portal
+
+# From CSRequest-templates.xml
+types.CSRequest.templates.query.default.label: Standardvorlage
+types.CSRequest.templates.full.default.description: Standardvorlage
+types.CSRequest.templates.full.default.label: Standardvorlage
+types.CSRequest.templates.query.default.description: Standardvorlage
+
+# From CSRequest.xml
+types.CSRequest.fields.description.label: Beschreibung
+types.CSRequest.title.label: Titel
+types.CSRequest.fields.notificationPolicy.label: Benachrichtigungsrichtlinie
+types.CSRequest.fields.groups.label: Gruppen
+types.CSRequest.fields.accessPolicy.labelList: Öffentlich|Privat|Geheim
+types.CSRequest.fields.signupPolicy.labelList: Ohne Registrierung|Registrierungsanfrage|Von Leitern verwaltete Registrierungen
+types.CSRequest.fields.notificationPolicy.labelList: Einladung an Teilnehmer versenden|Teilnehmer hinzufügen und benachrichtigen|Teilnehmer ohne Benachrichtigung hinzufügen
+types.CSRequest.fields.signupPolicy.label: Teilnahme
+types.CSRequest.label: Gemeinschaftsbereich – Erstellunganfrage
+types.CSRequest.fields.admins.label: Leiter
+types.CSRequest.fields.language.label: Sprache
+types.CSRequest.fields.members.label: Mitglieder
+types.CSRequest.fields.name.label: Bereichsname
+types.CSRequest.fields.accessPolicy.label: Zugriff
+types.CSRequest.fields.model.label: Modell
+types.CSRequest.fields.parent.label: Übergeordneter Bereich
+types.CSRequest.fields.syncMode.label: Synchronisierte Elemente
+types.CSRequest.fields.syncMode.labelList: Startseite|Anwendungen|Strukturdaten (Typen, WF, Gruppen, …)|Kategorien
+
+# From CSSignupRequest-templates.xml
+types.CSSignupRequest.templates.full.default.label: Standardvorlage
+types.CSSignupRequest.templates.full.default.description: Standardvorlage
+types.CSSignupRequest.templates.query.default.label: Standardvorlage
+types.CSSignupRequest.templates.query.default.description: Standardvorlage
+
+# From CSSignupRequest.xml
+types.CSSignupRequest.title.label: Titel
+types.CSSignupRequest.label: Gemeinschaftsbereich – Registrierungsanfrage
+types.CSSignupRequest.fields.name.label: Name
+
+# From GuestCrea.xml
+types.GuestCrea.title.label: Titel
+types.GuestCrea.label: Gästekonto – Erstellungsanfrage
+types.GuestCrea.description: Dieses Formular ermöglicht Ihnen, ein Gästekonto zu beantragen, das ausschließlich Zugriff auf Gemeinschaftsbereiche hat.
+types.GuestCrea.fields.name.label: Name
+types.GuestCrea.fields.email.label: E-Mail
+types.GuestCrea.fields.organization.label: Gesellschaft
+types.GuestCrea.fields.firstname.label: Vorname
+types.GuestCrea.fields.language.label: Sprache
+types.GuestCrea.fields.country.label: Land
+
+# From GuestConv.xml
+types.GuestConv.title.label: Titel
+types.GuestConv.label: Gästekonto – Antrag auf Konvertierung eines Kontakts
+types.GuestConv.fields.contact.description: Das vorhandene Mitglied (Contact Type), das in ein Gästekonto umgewandelt werden soll.
+types.GuestConv.description: Dieses Formular ermöglicht Ihnen, die Konvertierung eines bestehenden Kontakts in ein Gästekonto zu beantragen, das ausschließlich Zugriff auf Gemeinschaftsbereiche hat.
+types.GuestConv.fields.contact.label: Kontakt
+
+# From GuestRequest.xml
+types.GuestRequest.fields.submit-mbr.label: Anfragende Person
+types.GuestRequest.fields.groups.label: Zielgruppen
+types.GuestRequest.fields.groups.description: Alle Gruppen von Gemeinschaftsbereichen, in denen das Mitglied hinzugefügt wird.
+types.GuestRequest.title.label: Titel
+types.GuestRequest.label: [Abstrakt] Gästekonto – Eröffnungsanfrage
+
+# From PortletMyCollaborativeSpaces-templates.xml
+types.PortletMyCollaborativeSpaces.templates.box.default.label: Meine Bereichsvorlage
+types.PortletMyCollaborativeSpaces.templates.full.default.label: Meine Bereichsvorlage
+types.PortletMyCollaborativeSpaces.templates.box.itemBox.label: Elemente-Box Meine Bereichsvorlage
+types.PortletMyCollaborativeSpaces.templates.box.hierarchy.label: Vorlage für hierarchische Bereiche
+types.PortletMyCollaborativeSpaces.templates.box.hierarchyItemBox.label: Elemente-Box hierarchische Bereichsvorlage
+types.PortletMyCollaborativeSpaces.templates.query.default.label: Abfragenvorlage
+
+# From PortletMyCollaborativeSpaces.xml
+types.PortletMyCollaborativeSpaces.label: Portlet ‚Meine Gemeinschaftsbereiche‘
+types.PortletMyCollaborativeSpaces.description: Das Portlet „Meine Gemeinschaftsbereiche“ zeigt eine Liste aller Gemeinschaftsbereiche an.
+types.PortletMyCollaborativeSpaces.title.label: Titel
+types.PortletMyCollaborativeSpaces.fields.depth.label: Stufen
+types.PortletMyCollaborativeSpaces.fields.depth.description: Anzahl der anzuzeigenden Unterbereichsebenen.
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.label: Typologiefilter
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.description: Filtern nach Bereichstypologie anzeigen?
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.onLabel: Ja
+types.PortletMyCollaborativeSpaces.fields.typologyFilter.offLabel: Nein
+
+# From PortletCollaborativeSpaceSuggestion.xml
+types.PortletCollaborativeSpaceSuggestion.label: Vorschlagsportlet für Gemeinschaftsarbeitsbereich
+types.PortletCollaborativeSpaceSuggestion.description: Das Portlet Gemeinschaftsbereichsvorschlag zeigt Gemeinschaftsbereichsvorschläge für das angemeldete Mitglied an.
+types.PortletCollaborativeSpaceSuggestion.title.label: Titel
+types.PortletCollaborativeSpaceSuggestion.fields.threshold.label: Grenzwert
+types.PortletCollaborativeSpaceSuggestion.fields.typology.label: Typologien
+types.PortletCollaborativeSpaceSuggestion.fields.hideWhenNoResults.label: Verbergen, wenn keine Vorschläge
+types.PortletCollaborativeSpaceSuggestion.fields.maxItems.label: Anzahl der Vorschläge 
+
+# From PortletCollaborativeSpaceSuggestion-templates.xml
+types.PortletCollaborativeSpaceSuggestion.templates.full.default.label: Vorschlagsvorlage
+types.PortletCollaborativeSpaceSuggestion.templates.box.default.label: Vorschlagsvorlage
+types.PortletCollaborativeSpaceSuggestion.templates.box.itemBox.label: Elemente-Box Vorschlagsvorlage
+
+# From plugin.xml
+types.PortletQueryForeach.templates.box.jcmsplugin.collaborativespace.dashboard.label: Dashboard-Anzeige (CSP)
+types.PortletQueryForeachDetail.templates.box.jcmsplugin.collaborativespace.dashboard.label: Dashboard-Anzeige (CSP)
+types.PortletSearch.templates.box.jcmsplugin.collaborativespace.search-header.label: Gemeinschaftsbereich – Kopfzeile
+types.PortletSelection.templates.box.jcmsplugin.collaborativespace.dashboard.label: Gemeinschaftsbereich – Dashboard
+types.AbstractPortletSkinable.templates.collaborativeSpace.noSkin.label: Randlos ohne Titel
+types.AbstractPortletSkinable.templates.collaborativeSpace.default.label: Bereich
+types.AbstractPortletSkinable.templates.collaborativeSpace.borderless.label: Randlos mit unterstrichenem Titel
+types.AbstractPortletSkinable.templates.collaborativeSpace.lightSkin.label: Randlos
+
+# From wfcsrequest.xml
+workflows.wfcsrequest.states.60.label: Akzeptiert
+workflows.wfcsrequest.states.50.label: Abgelehnt
+workflows.wfcsrequest.states.-201.label: Versendet
+workflows.wfcsrequest.label: Gemeinschaftsbereich – Arbeitsschritt Erstellungsanfrage
+workflows.wfcsrequest.roles.validator.name: Validierer
+workflows.wfcsrequest.states.60.description: Anfrage genehmigt – ein Gemeinschaftsbereich wurde erstellt.
+workflows.wfcsrequest.states.50.description: Dieser Antrag auf Erstellung eines Gemeinschaftsbereichs wurde abgelehnt. Der angeforderte Gemeinschaftsbereich wird nicht erstellt. Weitere Informationen über diese Ablehnung finden Sie in den Arbeitschritthinweisen.
+workflows.wfcsrequest.roles.validator.description: Anfrage für Gemeinschaftsarbeitsbereich akzeptieren/ablehnen
+
+# From wfcssignup.xml
+workflows.wfcssignup.roles.validator1.description: Registrierungsanfragen für Gemeinschaftsbereich akzeptieren/ablehnen
+workflows.wfcssignup.label: Gemeinschaftsbereich – Registrierungsarbeitsablauf
+workflows.wfcssignup.roles.validator1.name: Validierer
+workflows.wfcssignup.states.60.label: Akzeptiert
+workflows.wfcssignup.states.50.label: Zurückgewiesen
+workflows.wfcssignup.states.-201.label: Versendet
+
+# From wfguestaccountrequest.xml
+workflows.wfguestaccountrequest.states.60.description: Anfrage genehmigt – ein Gästekonto wurde erstellt.
+workflows.wfguestaccountrequest.states.50.description: Diese Anfrage nach einem Gästekonto wurde abgelehnt. Das Gästekonto wurde nicht erstellt. Weitere Informationen über diese Ablehnung finden Sie in den Arbeitschritthinweisen.
+workflows.wfguestaccountrequest.states.60.label: Akzeptiert
+workflows.wfguestaccountrequest.states.50.label: Zurückgewiesen
+workflows.wfguestaccountrequest.label: Gästekonto – Arbeitschritt für Eröffnungsanfrage
+workflows.wfguestaccountrequest.roles.guestvalidator.description: Eröffnungsanfrage für Gästekonto akzeptiert/abgelehnt
+workflows.wfguestaccountrequest.roles.guestvalidator.name: Validierer
+workflows.wfguestaccountrequest.states.-200.label: Versendet
+
+# Analytics
+ui.analytics.CSAgent.name:                    Gemeinschaftsbereiche
+ui.analytics.CSAgent.report.typology:         Typologie
+ui.analytics.CSAgent.report.typology.h:       Typologieaufstellung.
+ui.analytics.CSAgent.report.access-policy:    Zugriffsrichtlinie
+ui.analytics.CSAgent.report.access-policy.h:  Übersicht der Zugriffsrichtlinie.
+ui.analytics.CSAgent.report.members:          Top-Mitglieder
+ui.analytics.CSAgent.report.members.h:        Anzahl der Mitglieder je Gemeinschaftsbereich.
+ui.analytics.CSAgent.report.activity:         Häufigster Beitrag
+ui.analytics.CSAgent.report.activity.h:       Anzahl der Beitragenden je Gemeinschaftsbereich.
+ui.analytics.CSAgent.report.activity.count:   Anzahl der Beitragenden
+
+# DBComment
+jcmsplugin.collaborativespace.lbl.signup-to-comment: Um diese Veröffentlichung zu kommentieren, melden Sie sich bitte für diesen Bereich an.
+
+# SocialConversation
+jcmsplugin.collaborativespace.lbl.signup-to-react: Um an dieser Diskussion teilzunehmen, müssen Sie sich für diesen Bereich registrieren.
+
+# Collaborative Space hub
+jcmsplugin.collaborativespace.hub: Bereiche
+jcmsplugin.collaborativespace.hub.type-cs: Gemeinschaftsbereiche
+jcmsplugin.collaborativespace.hub.type-ws: Portale
+jcmsplugin.collaborativespace.hub.mode-all: Alle Bereiche
+jcmsplugin.collaborativespace.hub.mode-member: Meine Bereiche
+jcmsplugin.collaborativespace.hub.mode-favorite: Meine Favoriten
+jcmsplugin.collaborativespace.hub.mode-suggestions: Vorschläge
+jcmsplugin.collaborativespace.hub.mode-csrequest: Erstellungsanforderungen
+jcmsplugin.collaborativespace.hub.mode-member.intro: <p>Fügen Sie Ihren Favoriten einen Bereich hinzu oder entfernen Sie ihn, indem Sie den Stern eines Bereichs oben rechts anklicken.</p>
+jcmsplugin.collaborativespace.hub.mode-member.intro-has-favorites: <p>Finden und verwalten Sie alle Ihre Favoriten unter „Meine Favoriten“.</p>
+jcmsplugin.collaborativespace.hub.search-text.placeholder: Bereiche durchsuchen …
+jcmsplugin.collaborativespace.hub.sidebar-section.accessPolicy: Zugriff
+jcmsplugin.collaborativespace.hub.sidebar-section.typology: Typologie
+jcmsplugin.collaborativespace.hub.sidebar-section.type: Typ
+
+#JPortal
+jcmcplugin.collaborativespace.jportal.edit.label: Das Portal ändern
+jcmcplugin.collaborativespace.jportal.edit-more.label: Das Portal ändern …
+jcmsplugin.collaborativespace.jportal.edit-modal.title: Ein synchronisiertes Portal mit einem Modell ändern
+jcmsplugin.collaborativespace.jportal.edit-modal.message: Achtung: Dieses Portal wird mit einem Modell synchronisiert.
+jcmsplugin.collaborativespace.jportal.edit-modal.edit-model.label: Das Modell ändern
+jcmsplugin.collaborativespace.jportal.edit-modal.desynchronize-model.label: Desynchronisieren und das Portal ändern
+
+jcmsplugin.collaborativespace.edit-app-modal.title: Anwendung aktualisieren
+jcmsplugin.collaborativespace.edit-app-modal.template.label: Vorlage
+jcmsplugin.collaborativespace.edit-app-modal.title.label: Titel
+
+#Tabs
+jcmsplugin.collaboratif.tabs.menu.remove: Entfernen …
+jcmsplugin.collaboratif.tabs.menu.remove.confirm: Möchten Sie diese Anwendung wirklich löschen?
+jcmsplugin.collaboratif.tabs.menu.update.title: Aktualisieren …
+jcmsplugin.collaboratif.tabs.rename.title.label: Titel
+
+#Parameters
+jcmsplugin.collaborativespace.parameters.model.link: Auf Modell zugreifen
+
+# Migration
+jcmsplugin.collaborativespace.migration.model: Modell
+jcmsplugin.collaborativespace.migration.without-model: Ohne Modell
+jcmsplugin.collaborativespace.migration.no-typologies: Ohne Typologie
+jcmsplugin.collaborativespace.migration.migrate-all: Alle Arbeitsbereiche ohne Modell umziehen
+jcmsplugin.collaborativespace.migration.migrate-selected: Ausgewählte Arbeitsbereiche umziehen
+jcmsplugin.collaborativespace.migration.no-model-no-workspace: (Diese Typologie hat weder Modell noch Arbeitsbereich)
+jcmsplugin.collaborativespace.migration.modal-title: Arbeitsbereichsumzug
+jcmsplugin.collaborativespace.migration.modal-button: Umziehen
+jcmsplugin.collaborativespace.migration.target-typology: Zieltypologie
+jcmsplugin.collaborativespace.migration.workspace-list: Liste der Arbeitsbereiche, die umgezogen werden
+
+portlet.header.menu-items.Portlet.edit-skin-cs: Aktualisieren …

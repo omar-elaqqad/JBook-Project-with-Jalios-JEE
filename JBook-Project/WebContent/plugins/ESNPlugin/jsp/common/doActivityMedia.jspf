@@ -1,0 +1,30 @@
+<%@page import="generated.WebPage"%>
+<%-- FileDocument activity --%>
+<% if (activityShowMedia && itActivity.getData() instanceof FileDocument && (itActivity.getProperty().startsWith("jcmsplugin.esn.activity.create.") || itActivityEntry.isTodayActivity())) { %>
+  <%   
+  FileDocument doc = (FileDocument)itActivity.getData();
+  %>
+
+  <% if (doc.isMedia()) { %>
+  <div class="media-preview activity-body-item">
+    <jalios:media fileDoc="<%= doc %>" maxWidth="300" maxHeight="300"/>
+  </div>
+  <% } %>
+
+<% } else if(itActivity.getData() instanceof DBComment && ((DBComment)itActivity.getData()).getTargetContent() instanceof FileDocument){ %>
+  <%-- DBComment activity on a FileDocument --%>
+  <%   
+  FileDocument doc = (FileDocument) ((DBComment)itActivity.getData()).getTargetContent();
+  %>
+
+  <% if (doc.isMedia()) { %>
+  <div class="media-preview activity-body-item">
+    <jalios:media fileDoc="<%= doc %>" maxWidth="300" maxHeight="300"/>
+  </div>
+  <% } %>
+<% } else if (displayDedicatedMedia) { %>
+  <% String mediaPath = itActivity.getData() instanceof DBComment ? ((WebPage)((DBComment)itActivity.getData()).getTargetContent()).getUrl() : ((WebPage) itActivity.getData()).getUrl(); %>
+  <div class="activity-body-item">
+    <jalios:media path="<%= mediaPath %>"  />
+  </div>
+<% } %>

@@ -1,0 +1,145 @@
+.mobile-my-day {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .day-navigation {
+    padding: 14px;
+    font-size: 24px;
+    padding: 7px 16px;
+    color: #999;
+  }
+
+  .my-day-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+
+    .today {
+      font-size: 20px;
+    }
+
+    .current-date {
+      font-size: 18px;
+    }
+  }
+}
+
+.mobile-my-day-calendar {
+  padding-top: 20px;
+  margin-bottom: 20px;
+  .padded-content();
+
+  .agenda {
+    margin-bottom: 8px;
+    font-weight: 300;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+
+    .jalios-icon {
+      margin-right: 10px;
+    }
+  }
+
+  .calendar-link {
+    display: block;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    display: block;
+    color: #666;
+    display: flex;
+
+    .event-date {
+      color: #333;
+      font-size: 14px;
+      margin-right: 8px;
+      line-height: 24px;
+	    white-space: nowrap;
+	
+      &.item-expired {
+        color: #888;
+      }
+    }
+
+    .event-title {
+      font-size: 16px;
+      color: #005db4;
+
+      &.item-expired {
+        color: #888;
+      }
+    }
+  }
+
+  .no-result {
+    margin: 10px;
+    margin-bottom: 16px;
+    text-align: center;
+    color: #999;
+
+    > .jalios-icon {
+      font-size: 36px;
+    }
+
+    .error-message {
+      padding: 10px 10px 0;
+    }
+  }
+}
+
+.mobile-my-day-jtask {
+  padding-top: 20px;
+  .padded-content();
+
+  .jtask-header {
+    margin-bottom: 8px;
+    font-weight: 300;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+
+    .jalios-icon {
+      margin-right: 10px;
+    }
+  }
+
+  .jtask-link {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    display: block;
+    color: #666;
+    font-size: 16px;
+
+    .jalios-icon {
+      margin-right: 4px;
+    }
+  }
+
+  .no-result {
+    color: #999;
+    text-align: center;
+    margin: 10px;
+
+    > .jalios-icon {
+      font-size: 36px;
+    }
+  }
+
+  .overdue-tasks {
+    padding-top: 16px;
+    text-align: center;
+    color: #d9534f;
+  }
+
+  .display-tasks {
+    text-align: center;
+  }
+}

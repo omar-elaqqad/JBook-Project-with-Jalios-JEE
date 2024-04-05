@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow id="wfcssignup" type="process" init="-201" version="4">
+  <state pstatus="-201" reminder="0" duration="0" targetPstatus="0" />
+  <state pstatus="20" reminder="0" duration="0" targetPstatus="0" />
+  <state pstatus="50" reminder="0" duration="0" targetPstatus="0" />
+  <state pstatus="60" reminder="0" duration="0" targetPstatus="0" />
+  <transition source="-201" target="60" roleId="validator1" />
+  <transition source="-201" target="50" roleId="validator1" />
+  <transition source="50" target="20" roleId="validator1" />
+  <transition source="50" target="60" roleId="validator1" />
+  <transition source="60" target="20" roleId="validator1" />
+  <role roleId="validator1" />
+</workflow>
+

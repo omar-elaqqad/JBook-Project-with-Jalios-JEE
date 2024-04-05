@@ -1,0 +1,127 @@
+jcmsplugin.dbpoll.btn.vote:            Hlasuji
+jcmsplugin.dbpoll.lbl.vote:            Hlasovat
+jcmsplugin.dbpoll.lbl.open:            Otevřít tuto anketu
+jcmsplugin.dbpoll.lbl.close:           Zavřít tuto anketu
+jcmsplugin.dbpoll.lbl.show-result:     Zobrazit výsledky
+jcmsplugin.dbpoll.lbl.vote-cnt:        {0,choice,0#0 hlasů|1# 1 hlas|2#{0,number,integer} hlasů}
+jcmsplugin.dbpoll.lbl.dates:           Anketa probíhající od {0} do {1}
+jcmsplugin.dbpoll.lbl.all-polls:       Všechny ankety
+jcmsplugin.dbpoll.lbl.all-polls-ws:    Všechny ankety v {0}
+jcmsplugin.dbpoll.lbl.view-all-polls:  Zobrazit všechny ankety
+jcmsplugin.dbpoll.lbl.view-all-polls-ws:  Zobrazit všechny ankety tohoto pracovního prostoru
+jcmsplugin.dbpoll.lbl.vote-title:      Hlas pro {0}
+jcmsplugin.dbpoll.lbl.create-poll:     Zveřejnit novou anketu
+jcmsplugin.dbpoll.msg.option-change:   Nemůžete měnit možnosti ankety, protože někteří uživatelé již hlasovali s aktuálním výběrem.
+jcmsplugin.dbpoll.msg.already-voted:   V této anketě jste již hlasoval(a).
+jcmsplugin.dbpoll.msg.no-result:       V této anketě zatím nikdo nehlasoval.
+jcmsplugin.dbpoll.msg.choose-option:   Chcete-li hlasovat, musíte zvolit jednu z možností.
+jcmsplugin.dbpoll.msg.closed-poll:     Toto hlasování bylo uzavřeno, již nelze hlasovat.
+jcmsplugin.dbpoll.msg.poll-loop:       Nemůžete provést anketu na její vlastní popis.
+
+jcmsplugin.dbpoll.modal.step1:         Možnosti ankety
+jcmsplugin.dbpoll.modal.step2:         Doporučit anketu
+jcmsplugin.dbpoll.modal.btn.publish:   Zveřejnit
+jcmsplugin.dbpoll.modal.btn.publish.alt:  Zveřejnit anketu
+jcmsplugin.dbpoll.modal.btn.next.alt:  Zveřejnit anketu a doporučit ji...
+jcmsplugin.dbpoll.modal.success-info:  Anketa byla vytvořena a je dostupná zde: {0}
+
+jcmsplugin.dbpoll.publish-menu.add-poll: Anketa
+
+jcmsplugin.dbpoll.cs.options:  Zadejte do ankety alespoň dvě možnosti
+jcmsplugin.dbpoll.cs.optionsml:  Zadejte do ankety (v {0}) alespoň dvě možnosti
+
+jcmsplugin.dbpoll.search.placeholder: Hledat anketu...
+
+jcmsplugin.dbpoll.app.title: Ankety
+
+jcmsplugin.dbpoll.app.no-result-welcome: Vítejte v aplikaci Ankety
+
+jcmsplugin.dbpoll.app.catalog.title: Ankety
+jcmsplugin.dbpoll.app.catalog.root: Úvodní stránka
+jcmsplugin.dbpoll.app.catalog.btn.add-poll: Přidat anketu
+jcmsplugin.dbpoll.app.catalog.polls-number: {0} {0,choice,0#|1#anketu|2# anket}
+
+jcmsplugin.dbpoll.app.card.closed-poll: Dokončená anketa
+
+jcmsplugin.dbpoll.app.filter.status.all: Všechny ankety
+jcmsplugin.dbpoll.app.filter.status.opened: Probíhající ankety
+jcmsplugin.dbpoll.app.filter.status.closed: Dokončené ankety
+jcmsplugin.dbpoll.app.filter.mbr:        Přidal(a)...
+jcmsplugin.dbpoll.app.filter.begin-date: Přidáno po...
+jcmsplugin.dbpoll.app.filter.end-date:   Přidáno před...
+jcmsplugin.dbpoll.app.filter.workspace:  Přidat pracovní prostor...
+
+# ------------------------------------------------------------
+#  Unified insert
+# ------------------------------------------------------------
+unified-insert.items.poll: Anketa
+unified-insert.items.poll.longtitle: Anketa
+unified-insert.items.poll.subtitle:
+
+# ------------------------------------------------------------
+#  Smartphone
+# ------------------------------------------------------------
+jcmsplugin.smartphone.dbpoll: Ankety
+jcmsplugin.smartphone.dbpoll.navbar.opened: Probíhající ankety
+jcmsplugin.smartphone.dbpoll.navbar.closed: Dokončené ankety
+
+# ------------------------------------------------------------
+#  Recommendation
+# ------------------------------------------------------------
+alert.name.recommendation.dbpoll-recommendation:                      Pozvánka k hlasování v anketě
+alert.msg.recommendation.dbpoll-recommendation.title:                 Pozvánka k hlasování v anketě: {data}
+alert.msg.recommendation.dbpoll-recommendation.short-description:     {author} vás požádal(a) o hlasování v anketě {data}. {data.url}
+alert.msg.recommendation.dbpoll-recommendation.description:           <p>{author} vás požádal(a) o hlasování v anketě {data}.</p>
+jcmsplugin.dbpoll.recommendation.Poll:                                Požádat členy o hlasování v anketě: {0}
+
+# ------------------------------------------------------------
+#  ESN
+# ------------------------------------------------------------
+jcmsplugin.esn.activity.form-tab.poll: Anketa
+
+# ------------------------------------------------------------
+#  Shortcuts
+# ------------------------------------------------------------
+data.$id.shortcut.jcmsplugin.dbpoll.title: Ankety
+data.$id.shortcut.jcmsplugin.dbpoll.text: Aplikace pro zpracování anket
+
+# ------------------------------------------------------------
+#  Plugin label and description
+# ------------------------------------------------------------
+plugin.DBPollPlugin.label: Zásuvný modul Anketa
+plugin.DBPollPlugin.description: Tento zásuvný modul umožňuje vytvářet jednoduché ankety. Ankety se zobrazují v portletu Anketa. Hlasování se ukládá v relační databázi (RDBMS).
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From Poll.xml
+types.Poll.title.description: Název ankety
+types.Poll.fields.description.label: Popis
+types.Poll.label: Anketa
+types.Poll.fields.options.description: Možné odpovědi při hlasování.
+types.Poll.fields.description.description: Stručný popis ankety (objeví se mezi otázkou a jednotlivými možnostmi)
+types.Poll.description: Minianketa s jedinou otázkou
+types.Poll.fields.options.label: Možnosti
+types.Poll.title.label: Název
+types.Poll.fields.image.label: Ikona
+types.Poll.fields.image.description: Volitelný obrázek pro ilustraci popisu této ankety.
+types.Poll.fields.closed.label: Zavřít anketu
+types.Poll.fields.closed.onLabel: Ano
+types.Poll.fields.closed.offLabel: Ne
+types.Poll.fields.closed.description: Chcete anketu uzavřít?
+
+# From PortletPoll.xml
+types.PortletPoll.fields.refineWorkspace.labelList: Zobrazit poslední anketu pracovního prostoru | Zobrazit poslední anketu všech pracovních prostorů
+types.PortletPoll.fields.poll.label: Anketa
+types.PortletPoll.title.description: Název
+types.PortletPoll.description: Tento portlet zobrazuje anketu a poté, co uživatel odhlasuje, zobrazí aktuální výsledky.
+types.PortletPoll.fields.poll.description: Anketa k zobrazení (standardně se zobrazuje naposledy zveřejněná anketa)
+types.PortletPoll.fields.refineWorkspace.description: Zobrazit poslední anketu tohoto pracovního prostoru nebo poslední z anket všech pracovních prostorů.
+types.PortletPoll.label: Portlet Anketa
+types.PortletPoll.title.label: Název
+types.PortletPoll.fields.refineWorkspace.label: Zpřesnit
+types.PortletPoll.fields.hideWhenNoResults.label: Skrýt portlet, pokud neprobíhá žádná anketa
+types.PortletPoll.fields.hideWhenNoResults.onLabel: Ano
+types.PortletPoll.fields.hideWhenNoResults.offLabel: Ne
+types.PortletPoll.fields.hideWhenNoResults.description: Skrýt portlet, pokud nejsou žádné ankety k zobrazení.

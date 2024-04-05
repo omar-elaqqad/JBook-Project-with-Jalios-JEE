@@ -1,0 +1,31 @@
+<style>
+  HTML .topbar.ui-header {
+    background-color: <%= encodeForHTMLAttribute(smartPhoneManager.getTopbarColor()) %>;
+  }
+  
+  HTML .topbar.ui-header {
+    color: <%= encodeForHTMLAttribute(smartPhoneManager.getTopbarFontColor()) %>;
+  }
+  
+  HTML .topbar.ui-header .topbar-left .topbar-item,
+  HTML .topbar.ui-header .topbar-right .topbar-item,
+  HTML .topbar.ui-header .topbar-right .topbar-item A
+  {
+    color: <%= encodeForHTMLAttribute(smartPhoneManager.getTopbarFontColor()) %>;
+  }
+  
+  HTML .topbar.ui-header SVG.topbar-logo,
+  HTML .topbar.ui-header SVG.topbar-logo *
+  {
+    fill: <%= encodeForHTMLAttribute(smartPhoneManager.getTopbarFontColor()) %>;
+  }
+  
+  
+  HTML .topbar .hamburger-inner,
+  HTML .topbar .hamburger-inner:before,
+  HTML .topbar .hamburger-inner:after
+  {
+    background-color: <%= encodeForHTMLAttribute(smartPhoneManager.getTopbarFontColor()) %>;
+  }
+  
+</style>

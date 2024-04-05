@@ -1,0 +1,39 @@
+<%@page import="java.util.List"%>
+<%@page import="com.jalios.util.Util"%>
+<%@page import="com.jalios.jcms.JcmsConstants"%>
+<%@ page contentType="text/html; charset=UTF-8" %><%
+%><%@ page import="com.jalios.jcmsplugin.collaborativespace.*" %><%--
+ @Summary: Gives a list of given CS's administrators in Collaborative space PQFE by typology display context.
+--%><%
+%>
+
+<%-- -- Animators / Functionnal administrators ----------------------------------- --%>
+<% 
+List<Member> adminList = workspace.getAdministrators();
+adminList = (List<Member>) Util.cleanCollection(adminList);
+
+StringBuffer adminListBuffer = new StringBuffer("");
+boolean first = true;
+
+String lastMemberBuffer = ""; 
+for ( Iterator<Member> it = adminList.iterator(); it.hasNext(); ) {
+  Member itMember = it.next();
+  if (itMember != null) {
+    if (it.hasNext() && adminList.size() > 1) {
+		  %><jalios:buffer name='itMemberBuffer'><span class='member-wrapper'><jalios:link data='<%= itMember %>' /></span></jalios:buffer><%
+		  if (! first) {
+			  adminListBuffer.append(",&nbsp;");
+		  }
+		  adminListBuffer.append(itMemberBuffer);
+		  first = false;
+    } else {
+		  %><jalios:buffer name='lastMemberJaliosBuffer'><span class='member-wrapper'><jalios:link data='<%= itMember %>' /></span></jalios:buffer><%
+      lastMemberBuffer = lastMemberJaliosBuffer.toString();
+    }
+  }
+}
+%>
+<div class="cs-animators">
+  <%= glp("jcmsplugin.collaborativespace.typology-portal.lbl.cs-typology.admins-list", adminList.size(), adminListBuffer, lastMemberBuffer) %>
+</div>
+<div style="clear: both;"></div>

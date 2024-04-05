@@ -1,0 +1,720 @@
+jcmsplugin.esn.categories:                    適格性カテゴリブランチ
+jcmsplugin.esn.categories.help:               カテゴリ識別子、またはスペースで区切られた識別子一覧を定義します。
+$id.jcmsplugin.esn.profile.portal:            メンバープロフィール表示ポータル（古いプロファイルル）
+jcmsplugin.esn.microblogging.Workspace:       MicroBloggingのデフォルトワークスペース
+
+jcmsplugin.esn.connection-request.enabled:    接続の承認
+jcmsplugin.esn.connection-request.decline-alert.enabled: 却下されたメンバーコネクションについて通知を送信します。
+
+jcmsplugin.esn.follower-notification:         新規のフォロワーに通知する
+jcmsplugin.esn.graphviz.dot.exe:              Graphviz "dot" パス
+jcmsplugin.esn.graphviz.dot.exe.help:         Graphvizは、メンバープロファイルの関連グラフを生成します。"dot"へのパス。例えば、ウィンドウの場合は以下のようになります："C:&#92;Program Files&#92;Graphviz2.22&#92;bin&#92;dot.exe".
+
+jcmsplugin.esn.external-contacts:             外部のコンタクト
+
+jcmsplugin.esn.map-service:                   マップサービス
+
+jcmsplugin.esn.contact-referrers.qs:          リファラのパブリケーション検索
+
+jcmsplugin.esn.mbr-extended-search-limit:      メンバー拡張検索 - 制限数のトリガ
+jcmsplugin.esn.mbr-extended-search-limit.help: メンバー拡張検索（ESN情報あり）は、検索結果が標準メンバー検索の制限数より少ない場合のみ開始されます。
+
+jcmsplugin.esn.agreement.required:            ESN利用条件に同意する
+jcmsplugin.esn.agreement.terms.pub:           ESN利用条件 - パブリケーション
+jcmsplugin.esn.agreement.terms.field:         ESN利用条件 - フィールド
+jcmsplugin.esn.agreement.btn.agree:           同意する
+jcmsplugin.esn.agreement.btn.disagree:        同意しない
+
+jcmsplugin.esn.group-expertise.assignment:    適格性へのグループ割当
+
+ui.com.lbl.guest: ゲスト
+jcmsplugin.esn.panel-toggle-show: 開く
+jcmsplugin.esn.panel-toggle-hide: 閉じる
+jcmsplugin.esn.profile.see-photo: 大きいプロフィール写真を見る
+jcmsplugin.esn.profile.action.open-action-menu: アクションメニューを開く
+jcmsplugin.esn.profile.action.create-event-with: イベントに案内する...
+jcmsplugin.esn.profile.action.change-photo: 写真を変更...
+jcmsplugin.esn.profile.action.change-photo.me: 自分の写真を変更する...
+jcmsplugin.esn.profile.lbl.goto-calendar:     カレンダーを表示する
+jcmsplugin.esn.profile.lbl.disabled-account:  無効化されたアカウント
+jcmsplugin.esn.profile.lbl.disabled-guest-account: 無効化されたゲスト
+jcmsplugin.esn.profile.lbl.ws-role.admin:     {0}が動画化:
+jcmsplugin.esn.profile.lbl.ws-role.worker:    {0}が貢献:
+jcmsplugin.esn.profile.lbl.ws-role.reader:    {0}が参加:
+jcmsplugin.esn.profile.lbl.ws-role.me.admin:  あなたが動画化:
+jcmsplugin.esn.profile.lbl.ws-role.me.worker: あなたが貢献:
+jcmsplugin.esn.profile.lbl.ws-role.me.reader: あなたが参加:
+jcmsplugin.esn.profile.tab.access:            アクセス
+jcmsplugin.esn.profile.tab.activity:          アクティビティ
+jcmsplugin.esn.profile.tab.calendar:        カレンダー
+jcmsplugin.esn.profile.tab.communities:       コミュニティ
+jcmsplugin.esn.profile.tab.connections:       コネクション
+jcmsplugin.esn.profile.tab.contacts:          コネクション
+jcmsplugin.esn.profile.tab.cv:                CV
+jcmsplugin.esn.profile.tab.expertises:        適格性
+jcmsplugin.esn.profile.tab.info:              情報
+jcmsplugin.esn.profile.tab.invitations:       案内状
+jcmsplugin.esn.profile.tab.profil:            プロファイル
+jcmsplugin.esn.profile.tab.resume:            履歴書
+jcmsplugin.esn.profile-edit.tab.info:         情報
+jcmsplugin.esn.profile-edit.tab.expertises:   適格性
+jcmsplugin.esn.profile-edit.tab.account:      アクセス
+jcmsplugin.esn.profile-edit.tab.alert:        通知
+jcmsplugin.esn.profile-edit.tab.notification: サブスクリプション
+
+jcmsplugin.esn.lbl.status:                    メッセージ
+jcmsplugin.esn.lbl.status-info:               メッセージが更新されました {0}
+jcmsplugin.esn.lbl.last-connection:           最後の接続
+jcmsplugin.esn.lbl.online:                    オンライン
+jcmsplugin.esn.lbl.offline:                   オフライン
+jcmsplugin.esn.lbl.interest:                  関心のあるフィールド
+jcmsplugin.esn.lbl.introduction:              プレゼンテーション
+jcmsplugin.esn.lbl.external-contact:          外部のコンタクト
+jcmsplugin.esn.lbl.activity:                  アクティビティ
+jcmsplugin.esn.lbl.network-activity:          マイネットワークのアクティビティ
+jcmsplugin.esn.lbl.categories:                適格性
+jcmsplugin.esn.lbl.categories.add:            能力/資格を追加する
+jcmsplugin.esn.lbl.categories.placeholder.search: 能力/資格を検索する...
+jcmsplugin.esn.lbl.calendar:                  カレンダー
+jcmsplugin.esn.lbl.publications:              最後のパブリケーション
+jcmsplugin.esn.lbl.jobs:                      プロとしての経験
+jcmsplugin.esn.lbl.jobs.add:                  ポジションを追加する
+jcmsplugin.esn.lbl.jobs.add.error.date:       開始日は終了日より前でなければなりません。
+jcmsplugin.esn.lbl.educations:                教育
+jcmsplugin.esn.lbl.educations.add:            教育を追加する
+jcmsplugin.esn.lbl.vcard:                     Outlookにインポートする...
+jcmsplugin.esn.lbl.contact-referrers:         リファラのパブリケーション
+jcmsplugin.esn.lbl.comment-count:             {0,choice,1#{0}件のコメントを表示する |2#{0}件のコメントを表示する}
+
+jcmsplugin.esn.lbl.info:                      コンタクト情報
+jcmsplugin.esn.lbl.date-of-birth:             誕生日
+jcmsplugin.esn.lbl.date-of-arrival:           到着日
+jcmsplugin.esn.lbl.connections.suggestions:   推薦されたコネクション
+jcmsplugin.esn.lbl.connections.suggestions.del: この推薦を削除する
+jcmsplugin.esn.lbl.connections.suggestions.reset: 推薦をリセットする...
+jcmsplugin.esn.lbl.connections.requests:      コネクションへの案内状
+jcmsplugin.esn.lbl.connections.requests.in:   受信した案内状
+jcmsplugin.esn.lbl.connections.requests.out:  送信された案内状
+jcmsplugin.esn.lbl.connections.requests.out2: 送信されました
+jcmsplugin.esn.lbl.connections.requests.edit: この案内状を処理する...
+jcmsplugin.esn.lbl.connections.requests.received: {0}さん、{1}さんから{2}の案内状が届いています。
+jcmsplugin.esn.lbl.connections.requests.sent: {0}さん、あなたは{1}さんに{2}の案内状を送信しました。
+jcmsplugin.esn.lbl.connections.requests.missing: ほかに案内状はありません。
+jcmsplugin.esn.lbl.connections.connected:     {0}さんは、あなたのコネクションの一人です。
+jcmsplugin.esn.lbl.connections.recommendation:あなたのコネクションに {0}さん を推薦する...
+jcmsplugin.esn.lbl.connections.recommendation2:あなたのコネクションに推薦されました...
+jcmsplugin.esn.lbl.connections.connect-contact: {0}さんを他のコンタクトとコネクトする...
+jcmsplugin.esn.lbl.connections.connect-contact2: 他のコンタクトとコネクトする...
+jcmsplugin.esn.lbl.connections.no-link:       あなたのコネクションネットワークでは、{0}さんに連絡がつきません。
+jcmsplugin.esn.lbl.connections.add.member:    {0}さんをあなたのコネクションに追加する...
+jcmsplugin.esn.lbl.connections.add.member2:   あなたのコネクションに追加する...
+jcmsplugin.esn.lbl.connections.add.contact:   {0}さんをあなたのコンタクトに追加する
+jcmsplugin.esn.lbl.connections.add.contact2:  あなたのコネクションに追加する
+jcmsplugin.esn.lbl.connections:               関連
+jcmsplugin.esn.lbl.connections.common:        あなたの共通コネクション
+jcmsplugin.esn.lbl.connections.me:            マイコネクション
+jcmsplugin.esn.lbl.connections.other:         その人の他のコネクション
+jcmsplugin.esn.lbl.connections.all-contacts:  全てのコネクション
+jcmsplugin.esn.lbl.connections.all:           全て
+jcmsplugin.esn.lbl.connections.internal:      メンバー
+jcmsplugin.esn.lbl.connections.external:      コンタクト
+jcmsplugin.esn.lbl.connections.show.me:       全てのマイコネクションを表示する
+jcmsplugin.esn.lbl.connections.show.other:    {0}さんのコネクションを全て表示する
+
+jcmsplugin.esn.lbl.connections.views:         ビュー:
+jcmsplugin.esn.lbl.connections.list:          一覧
+jcmsplugin.esn.lbl.connections.card:          カード
+jcmsplugin.esn.lbl.connections.cloud:         クラウド
+jcmsplugin.esn.lbl.connections.csv:           CSV
+jcmsplugin.esn.lbl.connections.level:         コネクションレベル
+jcmsplugin.esn.lbl.connections.map:           マップ
+jcmsplugin.esn.lbl.connections.map.tt.profile:{0}さんのプロファイルを見る
+jcmsplugin.esn.lbl.connections.map.tt.map:    マップを{0}の中央に配置する
+
+jcmsplugin.esn.lbl.connections.new-contact:   コンタクトを追加する
+jcmsplugin.esn.lbl.disconnect:                このコネクションを削除する...
+jcmsplugin.esn.lbl.disconnect.title:          コンタクトを削除する
+jcmsplugin.esn.lbl.disconnect.contact:        {0}をあなたのコンタクトから削除する...
+jcmsplugin.esn.lbl.disconnect.contact2:       あなたのコンタクトから削除する...
+jcmsplugin.esn.lbl.disconnect.confirm:        本当に<strong>{0}</strong> をあなたのコンタクトから削除してもよろしいですか？
+jcmsplugin.esn.lbl.disconnect.confirm-contact:本当に<strong>{0}</strong>を<strong>{1}</strong>のコンタクトから削除してもよろしいですか？
+jcmsplugin.esn.lbl.disconnect.confirm-warn:   警告！あなたは <strong>{0}</strong>の最後のコンタクトです。本当にこのコンタクトを削除してもよろしいですか？
+jcmsplugin.esn.lbl.disconnect.btn.disconnect: マイコンタクトから削除する
+jcmsplugin.esn.lbl.disconnect.btn.disconnect-other: その人のコンタクトから削除する
+jcmsplugin.esn.lbl.disconnect.btn.delete:     このコンタクトを削除する
+
+jcmsplugin.esn.lbl.followings:                フォロー
+jcmsplugin.esn.lbl.followers:                 フォロワー
+jcmsplugin.esn.lbl.follow:                    {0}のアクティビティをフォローする
+jcmsplugin.esn.lbl.follow2:                   アクティビティをフォローする
+jcmsplugin.esn.lbl.unfollow:                  {0}のアクティビティのフォローを停止する
+jcmsplugin.esn.lbl.unfollow2                  Stop following activity
+jcmsplugin.esn.lbl.contact-followers:         {0} は、{1,choice,0#0名のメンバー|1#1名のメンバー|2#{1}名のメンバー}をフォローし、{2,choice,0#0名のメンバー|1#1名のメンバー|2#{2}名のメンバー}にフォローされています {0}
+
+jcmsplugin.esn.lbl.ws-role.admin:             アドミニストレータ
+jcmsplugin.esn.lbl.ws-role.worker:            コントリビュータ
+jcmsplugin.esn.lbl.ws-role.reader:            読者
+
+jcmsplugin.esn.lbl.links.me:                  自分の詳細...
+jcmsplugin.esn.lbl.links.other:               {0}の詳細...
+jcmsplugin.esn.lbl.links.intro:               あなたがプロモートしたい外部サイト（あなたのブログ、ソーシャルネットワーク上のあなたのプロファイル）にリンクを追加する
+jcmsplugin.esn.lbl.links.intro.other:         プロモートする外部サイト（ブログ、ソーシャルネットワーク上のプロファイルなど）にリンクを追加する
+jcmsplugin.esn.lbl.links.add:                 リンクを追加する
+
+jcmsplugin.esn.lbl.edit.me:                   自分のプロファイルを編集する
+jcmsplugin.esn.lbl.edit.other:                {0}のプロファイルを編集する
+jcmsplugin.esn.lbl.edit.other2:               プロファイルを編集する
+jcmsplugin.esn.lbl.editLabel:                 編集
+jcmsplugin.esn.lbl.editProfile.progress:      プロファイルの<strong>{0}%</strong>が完了しています。
+
+jcmsplugin.esn.edit-profile.title.me:         あなたのプロファイル
+jcmsplugin.esn.edit-profile.title.other:      {0}さんのプロファイル
+jcmsplugin.esn.edit-profile.presentation:     プレゼンテーション
+jcmsplugin.esn.edit-profile.change-photo:     自分の写真を変更する
+
+jcmsplugin.esn.edit-expertises.title:         {0}の適格性を更新する
+
+jcmsplugin.esn.add-contact.title:             コンタクトを追加する
+jcmsplugin.esn.add-contact.steps.0:           チェック
+jcmsplugin.esn.add-contact.steps.1:           提案
+jcmsplugin.esn.add-contact.steps.2:           情報
+jcmsplugin.esn.add-contact.steps.3:           適格性
+jcmsplugin.esn.add-contact.steps-intro.0:     あなたのコンタクトの名前および／またはメールを入力し、該当者が既に存在するかをチェックします。
+jcmsplugin.esn.add-contact.steps-intro.1.1:   この情報に一致するメンバー1名が見つかりました。新規作成前に、同一人物ではないことを確認してください。
+jcmsplugin.esn.add-contact.steps-intro.1.2:   この情報に一致する既存のメンバーが複数見つかりました。新規作成前に、あなたが作成したいコンタクトがまだ存在しないことを確認してください。
+jcmsplugin.esn.add-contact.add-to-my-contacts:マイコンタクトに追加する
+jcmsplugin.esn.add-contact.view-contact:      このコンタクトを見る
+jcmsplugin.esn.add-contact.lbl.check:         チェックする...
+jcmsplugin.esn.add-contact.lbl.create:        新規コンタクトを作成する...
+jcmsplugin.esn.add-contact.lbl.wait:          チェック中です...
+jcmsplugin.esn.add-contact.lbl.add:           マイコンタクトに追加する
+jcmsplugin.esn.add-contact.lbl.contact-added: コンタクト <b>{0}</b>が作成されました。
+jcmsplugin.esn.add-contact.btn.continue:      保存して別のコンタクトを追加する
+
+jcmsplugin.esn.mcr.request.title:             {0}をあなたのネットワークに追加する
+jcmsplugin.esn.mcr.request.lbl.send:          送信
+jcmsplugin.esn.mcr.request.info.title1:       なぜコネクトするのですか？
+jcmsplugin.esn.mcr.request.info.content1:     {0}とコネクトすることで、あなたはその人の<strong>フルプロファイル</strong>を見たり、その人の<strong>アクティビティ</strong>をフォローしたりできます。同様に、{0}は<strong>あなたのフルプロファル</strong>と<strong>あなたのアクティビティ</strong>にアクセスできます。いったんコネクトすると、あなたは{0}をあなたのネットワークの他のメンバーに<strong>推薦</strong>することができます。
+jcmsplugin.esn.mcr.request.info.title2:       コネクトする方法は？
+jcmsplugin.esn.mcr.request.info.content2:     あなたにコネクトするよう{0}に案内状を送信するだけです。{0} があなたの案内状を承認すれば、あなたはその人とコネクトすることができます。
+
+jcmsplugin.esn.mcr.request.msg: {0}さん、あなたを\n\n私のコンタクトに追加させてください。\n\n{1}\n
+
+jcmsplugin.esn.mcr.validate.title:            案内状
+jcmsplugin.esn.mcr.validate.info:             <b>案内状とは何ですか？</b><p>{0} さんがあなたとコネクトを希望しています。案内状を承認した場合、あなたは{0}さんの<strong>フルプロファイル</strong>とその人の<strong>アクティビティ</strong>にアクセスすることができます。これは手動でコネクトする方法です。案内状を承認した場合、あなたは {0} さんが<strong>あなたのフルプロファイル</strong>と<strong>あなたのアクティビティ</strong>にアクセスすることを許可することになります。</p>
+jcmsplugin.esn.mcr.validate.common:           あなたの共通コネクション
+jcmsplugin.esn.mcr.validate.common-some:      あなたの共通コネクションの一部
+jcmsplugin.esn.mcr.validate.lbl.accept:       承認する
+jcmsplugin.esn.mcr.validate.lbl.decline:      却下する
+jcmsplugin.esn.mcr.validate.lbl.close:        閉じる
+jcmsplugin.esn.mcr.lbl.confirm-delete:        本当に<strong>{0}</strong>に送られた案内状を削除してもよろしいですか？
+
+jcmsplugin.esn.connect-contact.title:          コンタクトにコネクトする
+jcmsplugin.esn.connect-contact.no-contact:     あなたの全てのコンタクトは、<span class="contact">{0}</span>とコネクトしています。
+jcmsplugin.esn.connect-contact.info:           あなたが <span class="contact">{0}</span>とコネクトさせたいコンタクトを選択します。
+jcmsplugin.esn.connect-contact.lbl.contacts:   あなたのコンタクト
+jcmsplugin.esn.connect-contact.lbl.connect:    接続する
+
+jcmsplugin.esn.activity.enabled:                 アクティビティ - アクティビティの追跡を有効にする
+
+jcmsplugin.esn.activity.none:                    アクティビティがありません
+jcmsplugin.esn.activity.profile.job:             {0} がポジション <span class="message">{1}</span>を追加しました
+jcmsplugin.esn.activity.profile.education:       {0} がトレーニング <span class="message">{1}</span>を追加しました
+jcmsplugin.esn.activity.profile.link:            {0} がリンク {1}を追加しました
+jcmsplugin.esn.activity.profile.categories:      {0} が自分の適格性を記入しました
+jcmsplugin.esn.activity.profile.categories.add:  {0} が自分の適格性を更新しました: <span class="message">{1}</span>
+jcmsplugin.esn.activity.profile.categories.add-empty:  {0} が自分の適格性を更新しました:
+jcmsplugin.esn.activity.profile.info:            {0} が自分の情報を更新しました
+jcmsplugin.esn.activity.profile:                 {0} が自分のプロファイルを更新しました
+jcmsplugin.esn.activity.contact.profile:         {0} が{1}のプロファイルを更新しました
+jcmsplugin.esn.activity.contact.note:            {0} が {1}にノートを追加しました
+jcmsplugin.esn.activity.connect-account:         {0} が {1}とコネクトしました
+jcmsplugin.esn.activity.connect:                 {0} が {1} をコンタクトに追加しました
+jcmsplugin.esn.activity.ws:                      {0} がワークスペース{1}にサインアップしました。
+jcmsplugin.esn.activity.create:                  {0} が {1}を作成しました
+jcmsplugin.esn.activity.update:                  {0} が {1}を更新しました
+jcmsplugin.esn.activity.delete:                  {0} が <span class="message">{1}</span>を削除しました
+jcmsplugin.esn.activity.create.Publication:      {0} が {1} をパブリッシュしました
+jcmsplugin.esn.activity.create.Event:            {0} がイベント {1}をパブリッシュしました
+jcmsplugin.esn.activity.create.CalendarEvent:    {0} がイベント {1}をパブリッシュしました
+jcmsplugin.esn.activity.update.CalendarEvent:    {0} がイベント {1}を更新しました
+jcmsplugin.esn.activity.update.Event:            {0} がイベント {1}を更新しました
+jcmsplugin.esn.activity.create.Review:           {0} が {1}をレビューしました
+jcmsplugin.esn.activity.create.FileDocument:     {0} が {1}をアップロードしました
+jcmsplugin.esn.activity.create.DBComment:        {0} が新規コメントを追加しました
+jcmsplugin.esn.activity.description-full.create.DBComment:        {0}さんが {1} への新規コメントを追加しました
+jcmsplugin.esn.activity.create.DBForumTopic:     {0} がトピック {1}を投稿しました
+jcmsplugin.esn.activity.create.DBPollVote:       {0} が調査 {1}に回答しました
+jcmsplugin.esn.activity.create.MicroBlogging:
+jcmsplugin.esn.activity.create.WebPage:          {0} が {1}をシェアしました
+jcmsplugin.esn.activity.update-pstatus:          {0} が {1} のステータスを <span class="message">{2}</span>に変更しました。
+jcmsplugin.esn.activity.unzip:                   {0} がzipアーカイブ {1}からのファイルをアップロードしました
+jcmsplugin.esn.activity.lock:                    {0} がドキュメント {1}をロックしました
+jcmsplugin.esn.activity.unlock:                  {0} がドキュメント {1}をリリースしました
+jcmsplugin.esn.activity.vote:                    {0} が {1}に投票しました
+jcmsplugin.esn.activity.filter:                  フィルター済みアクティビティ
+jcmsplugin.esn.activity.see-activity:            アクティビティを表示する
+jcmsplugin.esn.activity.hide-activity:           アクティビティを非表示にする
+jcmsplugin.esn.activity.delete-activity:         このアクティビティを削除する
+jcmsplugin.esn.activity.delete-activity-ask:     本当にアクティビティを削除してもよろしいですか？
+jcmsplugin.esn.activity.delete-activity-ask-title:  アクティビティを削除する
+jcmsplugin.esn.activity.edit-comment:            コメントを編集する
+jcmsplugin.esn.activity.options-menu-title:      アクティビティのメニューを開く      
+jcmsplugin.esn.activity.comment:                 コメント
+jcmsplugin.esn.activity.show-comments:           {0,choice,1#1件のコメント |2#件のコメント}を表示/非表示にする
+jcmsplugin.esn.activity.show-previous-activity:   前回のアクティビティを表示する
+jcmsplugin.esn.activity.hide-previous-activity:  アクティビティを非表示にする
+jcmsplugin.esn.activity.lbl.no-activity:         {0}にはまだアクティビティがありません。
+jcmsplugin.esn.activity.nextpage:                詳細を見る
+
+jcmsplugin.esn.activity-card.vote-action:        いいね！
+jcmsplugin.esn.activity-card.menu-title:         アクションメニューを開く
+jcmsplugin.esn.activity-card.menu-alt:           アクション
+jcmsplugin.esn.activity-card.event-attending:    {0}現在の
+jcmsplugin.esn.activity-card.event-invited:      {0}名の参加者
+jcmsplugin.esn.activity-card.event.show-attendees: 参加者の詳細を見る
+jcmsplugin.esn.activity-card.comment-count-title:  コメントにアクセスする
+
+jcmsplugin.esn.activity.filter.microBlogging:    MicroBlogging
+jcmsplugin.esn.activity.filter.profile:          プロファイル更新
+jcmsplugin.esn.activity.filter.contact:          外部コンタクトを追加する
+jcmsplugin.esn.activity.filter.connect:          メンバーのコネクション
+jcmsplugin.esn.activity.filter.ws:               ワークスペースに参加する
+jcmsplugin.esn.activity.filter.create:           データを追加する
+jcmsplugin.esn.activity.filter.update:           データを更新する
+jcmsplugin.esn.activity.filter.delete:           データを削除する
+jcmsplugin.esn.activity.filter.lock:             ドキュメントをロックする
+jcmsplugin.esn.activity.filter.upload:           ドキュメントをアップロードする
+jcmsplugin.esn.activity.filter.update-pstatus:   ワークフローステータスの更新
+jcmsplugin.esn.activity.filter.others:           他のアクティビティ
+jcmsplugin.esn.activity.filter.ws-include:       ...に限定する
+jcmsplugin.esn.activity.filter.ws-exclude:       ...を除く全て
+
+jcmsplugin.esn.activity.filter.editor:               アクティビティフィルター
+jcmsplugin.esn.activity.filter.editor.link:          フィルターを編集する
+jcmsplugin.esn.activity.filter.editor.steps.0:       アクティビティの種類
+jcmsplugin.esn.activity.filter.editor.steps.1:       詳細フィルタリング
+jcmsplugin.esn.activity.filter.editor.steps-intro.0: アクティビティストリームに表示するアクティビティのタイプを選択します。
+jcmsplugin.esn.activity.filter.editor.steps-intro.1: アクティビティストリームの他のフィルター基準を選択することができます。
+
+jcmsplugin.esn.activity.share.remove-webpage: 別のページを共有
+jcmsplugin.esn.activity.share.webpage-next-image: 次の画像へ切り替え
+jcmsplugin.esn.activity.share.webpage-prev-image: 前の画像へ切り替え
+jcmsplugin.esn.activity.form-tab.document: ドキュメント
+jcmsplugin.esn.activity.form-tab.microblogging: メッセージ
+jcmsplugin.esn.activity.form-tab.webpage: ウェブページ
+
+icon.jcmsplugin-esn-activity-share-webpage-img-prev: 前へ
+icon.jcmsplugin-esn-activity-share-webpage-img-next: 次へ
+icon.jcmsplugin-esn-activity-share-webpage-remove: 削除する
+
+jcmsplugin.esn.lbl.communities:                  コミュニティ
+jcmsplugin.esn.lbl.common-communities:           共通コミュニティ
+jcmsplugin.esn.lbl.communities.info:             {0}に作成されました。{1,choice,0#メンバーがいません|1#1名のメンバー|2#{1,number,integer}名のメンバー}。{2,choice,0#コンテンツがありません|1#1件のコンテンツ|2#{2,number,integer}件のコンテンツ}。
+
+jcmsplugin.esn.status.title:            メッセージを更新する
+jcmsplugin.esn.status.intro:            あなたが何をしているのか、どこにいるのか、あなたの今の気持ちなどを書いてください...？
+jcmsplugin.esn.status.mail:             次の人にメッセージをメールで送れば、プロファイルを更新することができます
+jcmsplugin.esn.status.msg.singleton:    {0} には既にステータスがあります。
+
+jcmsplugin.esn.link.lbl.name:           サイト名
+jcmsplugin.esn.link.lbl.url:            URL
+jcmsplugin.esn.link.lbl.description:    記述
+jcmsplugin.esn.link.msg.empty-title:    「サイト名」は必須です。
+jcmsplugin.esn.link.msg.empty-url:      「URL」は必須です。
+jcmsplugin.esn.link.msg.bad-url:        フィールド'URL'にフォーマットの誤りがあります。
+
+jcmsplugin.esn.lbl.notes:     メモ
+jcmsplugin.esn.lbl.notes.add: ノートを追加する
+jcmsplugin.esn.lbl.notes.add-link: ノートを追加する...
+
+jcmsplugin.esn.directory.lbl.view-profile:      フルプロファイルを見る
+jcmsplugin.esn.directory.lbl.expert-directory:  エキスパートディレクトリ
+
+jcmsplugin.esn.directory.app.nav-competencies: 適格性
+jcmsplugin.esn.directory.app.breadcrumb.root: 適格性
+jcmsplugin.esn.directory.app.competence.expertise.filter.add: この能力/資格でフィルターする
+jcmsplugin.esn.directory.app.competence.expertise.filter.node.add: この能力/資格でフィルターしてサブカテゴリの適格性を見る
+jcmsplugin.esn.directory.app.competence.expertise.filter.remove: この能力/資格フィルターを削除
+jcmsplugin.esn.directory.app.competence.expertise.filters.add: この能力/資格をフィルターに追加
+jcmsplugin.esn.directory.app.competence.expertise.filters.remove: この能力/資格をフィルターから削除
+jcmsplugin.esn.directory.app.competence.expertise.is-in-filters: この能力/資格はあなたのフィルターにあります。関連付けられたボタンで削除する
+jcmsplugin.esn.directory.app.competence.expertise.node.is-in-filters: この能力/資格はあなたのフィルターにあります。関連付けられたボタンで削除してサブカテゴリの適格性を見る
+
+jcmsplugin.esn.directory.app.context-menu-label: 適格性コンテキストメニュー
+jcmsplugin.esn.directory.app.competence-action.add: 適格性を追加する...
+jcmsplugin.esn.directory.app.competence-action.add-sub: サブカテゴリの適格性を追加...
+jcmsplugin.esn.directory.app.competence-action.add-prompt: 新しい適格性の名称を入力する (コンマ区切り):
+jcmsplugin.esn.directory.app.competence-action.rename-prompt: 能力/資格の新規名称を入力する
+jcmsplugin.esn.directory.app.competence-action.move-to: 移動...
+jcmsplugin.esn.directory.app.competence-action.modal.move-to.title: 移動先:
+jcmsplugin.esn.directory.app.competence-action.modal.move-to.op-action: 移動
+
+jcmsplugin.esn.expert-dir.title:                  エキスパートディレクトリ
+jcmsplugin.esn.expert-dir.lbl.home:               ホーム
+jcmsplugin.esn.expert-dir.lbl.all:                全てのエキスパート
+jcmsplugin.esn.expert-dir.lbl.expert-count:       {0,choice,0#結果がありません|1#{0}件の結果|2#{0}件の結果}
+jcmsplugin.esn.expert-dir.lbl.related.connexe:    適格性を閉じる:
+jcmsplugin.esn.expert-dir.lbl.related.others:     その他の適格性:
+jcmsplugin.esn.expert-dir.msg.home:               エキスパートディレクトリにようこそ。左のナビゲーションバーをクリックすると、指定された能力/資格のエキスパートを一覧表示します。
+jcmsplugin.esn.expert-dir.msg.no-expert.all:      能力/資格 <i>{0}</i> の結果がありません。
+jcmsplugin.esn.expert-dir.msg.no-expert.account:  能力/資格 <i>{0}</i> にはメンバーがいません。
+jcmsplugin.esn.expert-dir.msg.no-expert.contact:  能力/資格 <i>{0}</i> にはコンタクトがいません。
+jcmsplugin.esn.expert-dir.lbl.expert-search:      適格性で検索
+jcmsplugin.esn.expert-dir.lbl.filter:             フィルター
+jcmsplugin.esn.expert-dir.lbl.filter.info:        アイコン {0} をクリックして能力/資格でフィルターします。
+jcmsplugin.esn.expert-dir.lbl.filter.add:         この能力/資格でフィルターする
+jcmsplugin.esn.expert-dir.lbl.filter.remove:      このフィルターを削除する
+jcmsplugin.esn.expert-dir.lbl.edit-expertises:    適格性の管理
+
+jcmsplugin.esn.expertise.root-cat-forbidden:      このカテゴリは、能力/資格を保存するためにESNプラグインが使用するため、削除または編集はできません。アドミニストレータまたは許可されたメンバーのみ削除または編集することができます。
+jcmsplugin.esn.expertise.expertise-cat-forbidden: このカテゴリはESNプラグインによって能力/資格として使用されています。既に別のメンバーによって使用されています。アドミニストレータまたは許可されたメンバーのみ編集することができます。
+
+jcmsplugin.esn.ctxmenu.mbr.profile:  プロファイルを見る
+
+$id.jcmsplugin.esn.portlet.header:              ESN - ヘッダー
+$id.jcmsplugin.esn.portlet.actions:             ESN - アクション
+$id.jcmsplugin.esn.portlet.connection-requests: ESN - コネクションリクエスト
+$id.jcmsplugin.esn.portlet.suggestions:         ESN - 提案
+$id.jcmsplugin.esn.portlet.common-connections:  ESN - 共通コネクション
+$id.jcmsplugin.esn.portlet.connections:         ESN - コネクション
+$id.jcmsplugin.esn.portlet.links:               ESN - リンク
+$id.jcmsplugin.esn.portlet.activities:          ESN - アクティビティ
+$id.jcmsplugin.esn.portlet.network-activities:  ESN - ネットワークアクティビティ
+$id.jcmsplugin.esn.portlet.publications:        ESN - パブリケーション
+$id.jcmsplugin.esn.portlet.calendar:            ESN - カレンダー
+$id.jcmsplugin.esn.portlet.presentation:        ESN - プレゼンテーション
+$id.jcmsplugin.esn.portlet.workspaces:          ESN - ワークスペース
+$id.jcmsplugin.esn.portlet.expertise:           ESN - 適格性
+$id.jcmsplugin.esn.portlet.contact-notes:       ESN - コンタクト - ノート
+$id.jcmsplugin.esn.portlet.contact-calendar:    ESN - コンタクト - カレンダー
+$id.jcmsplugin.esn.portlet.contact-referrers:   ESN - コンタクト - リファラ
+$id.jcmsplugin.esn.portlet.contacts:            ESN - コンタクト
+$id.jcmsplugin.esn.portlet.jobs:                ESN - ポジション
+$id.jcmsplugin.esn.portlet.educations:          ESN - 教育
+
+jcmsplugin.esn.portlet-mbr-status.no-mbr:       メンバーがいません
+
+jcmsplugin.esn.birthday.portlet.day:  {0,choice,0#今日|1#明日|2# {0}日以内}
+jcmsplugin.esn.birthday.portlet.none: 誕生日がありません
+jcmsplugin.esn.birthday-reminder.enabled: 誕生日リマインダをアクティブにする
+jcmsplugin.esn.birthday-happy: 誕生日おめでとうございます！
+
+jcmsplugin.esn.microblogging.share:               シェア
+jcmsplugin.esn.microblogging.modify:            更新
+jcmsplugin.esn.microblogging.label.microblogging: MicroBlogging
+jcmsplugin.esn.microblogging.menu.message:        メッセージ
+jcmsplugin.esn.microblogging.title.create-message:メッセージをパブリッシュする
+jcmsplugin.esn.microblogging.delete-confirm:      あなたの最後のメッセージを削除しますか？
+jcmsplugin.esn.microblogging.microblogging-prompt:今、何をしていますか？
+jcmsplugin.esn.microblogging.update-message:      このメッセージを編集する
+jcmsplugin.esn.microblogging.delete-message:      このメッセージを削除する
+jcmsplugin.esn.microblogging.member-microblogging-title: {0}のMicroblogging
+jcmsplugin.esn.microblogging.warn.existing-webpage-ws: このウェブページは既に現在のワークスペースに存在します。
+jcmsplugin.esn.microblogging.warn.existing-webpage-ws-other: このウェブページは以下のワークスペースで{1}の{0}によってパブリッシュされました：{2}.
+jcmsplugin.esn.microblogging.warn.existing-webpage-ws.btn: ウェブページにアクセス
+jcmsplugin.esn.microblogging.warn.bad-url-format: 提供されたURLは間違っています。
+jcmsplugin.esn.microblogging.warn.missing-url: URLを提供してください。
+jcmsplugin.esn.microblogging.warn.missing-url-meta: データがウェブサイトからロードできませんでした。情報を手動で提供してください。
+
+jcmsplugin.esn.collaborativespace.private-home.connections: この空間内のあなたのコネクション
+
+jcmsplugin.esn.expert-directory.open-access: エキスパートディレクトリへのアクセスをオープンにする
+jcmsplugin.esn.expert-directory.open-access.help: アクセスがオープンになっている場合、エキスパートディレクトリにアクセスする際、ユーザーはログインする必要がありません。
+jcmsplugin.esn.member-profile.open-access: メンバープロファイルへのアクセスをオープンにする
+jcmsplugin.esn.member-profile.open-access.help: アクセスがオープンになっている場合、メンバープロファイルにアクセスする際、ユーザーはログインする必要がありません。
+jcmsplugin.esn.member-profile.event-intro: {0}がイベントに出席
+jcmsplugin.esn.member-profile.event-intro.me: あなたがイベントに出席
+
+jcmsplugin.esn.contact-by-email.title: メールで問い合わせる...
+jcmsplugin.esn.contact-by-email.title2: メールで問い合わせる ({0})...
+jcmsplugin.esn.contact-by-sms.title: SMSで問い合わせる...
+jcmsplugin.esn.contact-by-phone.title: 電話で問い合わせる...
+jcmsplugin.esn.contact-by-other.title: {0}で問い合わせる...
+jcmsplugin.esn.call-at-number.title: {0}に電話する...
+jcmsplugin.esn.profile.contact.email: メール
+jcmsplugin.esn.profile.full.contact.sms: SMS
+jcmsplugin.esn.profile.contact.webchat: WebChat
+
+# ExtraData
+extra.Category.jcmsplugin.esn.groups: ESN - 関連グループ
+
+# Publish Menu
+jcmsplugin.esn.publish-menu.contact:       コンタクト
+jcmsplugin.esn.publish-menu.microblogging: メッセージ
+
+# Alerts
+alert.name.jcmsplugin-esn : ソーシャルネットワーク
+alert.name.jcmsplugin-esn.follower:             新規フォロワー
+alert.name.jcmsplugin-esn.connection:           新規コネクションを追加する
+alert.name.jcmsplugin-esn.connection-request:   コネクションリクエスト
+alert.name.jcmsplugin-esn.connection-accepted:  承認されたコネクション
+alert.name.jcmsplugin-esn.connection-declined:  却下されたコネクション
+alert.name.jcmsplugin-esn.birthday-reminder:    誕生日リマインダ
+
+alert.msg.jcmsplugin-esn.follower.title:                        新規フォロワー
+alert.msg.jcmsplugin-esn.follower.short-description:            {author} は現在、あなたのアクティビティをフォローしています。
+
+alert.msg.jcmsplugin-esn.connection.title:                      新規コネクション
+alert.msg.jcmsplugin-esn.connection.short-description:          {author} があなたを自分のコネクションに追加しました。
+
+alert.msg.jcmsplugin-esn.connection-request.title:              コネクションの案内状
+alert.msg.jcmsplugin-esn.connection-request.short-description:  {author} があなたにコネクションの案内状を送りました。
+alert.msg.jcmsplugin-esn.connection-request.description:        <p>{author} があなたにコネクションの案内状を送りました。</p> {accept} {showProfile}
+jcmsplugin.esn.connection-request.mail:                         {0}があなたにコネクションの案内状を送りました。
+
+alert.msg.jcmsplugin-esn.connection-accepted.title:             案内状が承認されました
+alert.msg.jcmsplugin-esn.connection-accepted.short-description: {author} があなたの案内状を承認しました。あなたはコネクトされました。
+
+alert.msg.jcmsplugin-esn.connection-declined.title:             案内状を却下する
+alert.msg.jcmsplugin-esn.connection-declined.short-description: {author} があなたの案内状を却下しました。
+
+alert.msg.jcmsplugin-esn.birthday-reminder.title:               誕生日リマインダ
+alert.msg.jcmsplugin-esn.birthday-reminder.short-description:   次の誕生日: {birthday-list}
+alert.msg.jcmsplugin-esn.birthday-reminder.description:         <p>もうすぐ、あなたのネットワークのメンバーの誕生日です：</p>{birthday-list}
+alert.msg.jcmsplugin-esn.birthday-reminder.txt.today:    今日:
+alert.msg.jcmsplugin-esn.birthday-reminder.txt.tomorrow: 明日:
+alert.msg.jcmsplugin-esn.birthday-reminder.txt.later:    残り7日 ({0}):
+
+# ------------------------------------------------------------
+#  Recommendation
+# ------------------------------------------------------------
+alert.name.recommendation.esn-member-recommendation: コネクションの推薦
+alert.msg.recommendation.esn-member-recommendation.title:      次に関する推薦 {data}
+alert.msg.recommendation.esn-member-recommendation.short-description: {author} が{data}をあなたのコネクションに追加するよう推薦しています。 {recoContent}
+alert.msg.recommendation.esn-member-recommendation.description: <p>{author} がをあなたのコネクションに{data}を追加するよう推薦しています。</p><p>{recoContent}</p>
+alert.msg.recommendation.esn-member-recommendation.reply.short-description: {author} が {data} についてのあなたの推薦に回答しました： {replyRecommendation} {data.url} {reply}
+alert.msg.recommendation.esn-member-recommendation.reply.description: <p>{author} が {data} についてのあなたの推薦に回答しました：</p><hr/><p>{replyRecommendation}</p><hr/> {recoContent} {reply}
+jcmsplugin.esn.recommendation.Member: <b>{0}</b>を他のメンバーに推薦する。
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From MemberCategories-templates.xml
+types.MemberCategories.templates.query.default.label: デフォルトテンプレート
+types.MemberCategories.templates.query.default.description: このパブリケーションのデフォルトテンプレート
+types.MemberCategories.templates.full.default.label: デフォルトテンプレート
+types.MemberCategories.templates.box.default.description: このパブリケーションのデフォルトテンプレート
+types.MemberCategories.templates.box.default.label: デフォルトテンプレート
+types.MemberCategories.templates.edit.default.description: このパブリケーションのデフォルトテンプレート
+types.MemberCategories.templates.edit.default.label: デフォルトテンプレート
+types.MemberCategories.templates.full.default.description: このパブリケーションのデフォルトテンプレート
+
+# From MemberCategories.xml
+types.MemberCategories.label: ESN - 適格性
+types.MemberCategories.title.label: タイトル
+
+# From MemberEducation-templates.xml
+types.MemberEducation.templates.query.default.description: このパブリケーションのデフォルトテンプレート
+types.MemberEducation.templates.full.default.description: このパブリケーションのデフォルトテンプレート
+types.MemberEducation.templates.full.default.label: デフォルトテンプレート
+types.MemberEducation.templates.box.default.label: デフォルトテンプレート
+types.MemberEducation.templates.query.default.label: デフォルトテンプレート
+types.MemberEducation.templates.edit.default.label: デフォルトテンプレート
+types.MemberEducation.templates.box.default.description: このパブリケーションのデフォルトテンプレート
+types.MemberEducation.templates.edit.default.description: このパブリケーションのデフォルトテンプレート
+
+# From MemberEducation.xml
+types.MemberEducation.fields.endDate.label: 終了日
+types.MemberEducation.label: ESN - 教育
+types.MemberEducation.title.label: タイトル
+types.MemberEducation.fields.degree.label: 終了証書
+types.MemberEducation.fields.startDate.label: 開始日
+types.MemberEducation.fields.site.label: サイト
+types.MemberEducation.fields.place.label: ロケーション
+types.MemberEducation.fields.trainingCenter.label: トレーニング機関
+types.MemberEducation.fields.description.label: 記述
+
+# From MemberJob-templates.xml
+types.MemberJob.templates.box.default.description: このパブリケーションのデフォルトテンプレート
+types.MemberJob.templates.box.default.label: デフォルトテンプレート
+types.MemberJob.templates.full.default.label: デフォルトテンプレート
+types.MemberJob.templates.query.default.label: デフォルトテンプレート
+types.MemberJob.templates.edit.default.description: このパブリケーションのデフォルトテンプレート
+types.MemberJob.templates.edit.default.label: デフォルトテンプレート
+types.MemberJob.templates.full.default.description: このパブリケーションのデフォルトテンプレート
+types.MemberJob.templates.query.default.description: このパブリケーションのデフォルトテンプレート
+
+# From MemberJob.xml
+types.MemberJob.title.label: 職務
+types.MemberJob.fields.startDate.label: 開始日
+types.MemberJob.fields.place.label: ロケーション
+types.MemberJob.label: ESN - 仕事
+types.MemberJob.fields.description.label: 記述
+types.MemberJob.fields.organization.label: 組織
+types.MemberJob.fields.endDate.label: 終了日
+types.MemberJob.fields.site.label: ウェブサイト
+
+# From MemberProfile-templates.xml
+types.MemberProfile.templates.edit.default.label: デフォルトテンプレート
+types.MemberProfile.templates.box.default.label: デフォルトテンプレート
+types.MemberProfile.templates.full.default.label: デフォルトテンプレート
+types.MemberProfile.templates.full.default.description: このパブリケーションのデフォルトテンプレート
+types.MemberProfile.templates.fullold.default.label: 古いデフォルトテンプレート (6.2より前)
+types.MemberProfile.templates.query.default.label: デフォルトテンプレート
+types.MemberProfile.templates.editFront.default.label: フロントオフィス編集テンプレート。
+types.MemberProfile.templates.edit.default.description: このパブリケーションのデフォルトテンプレート
+types.MemberProfile.templates.box.default.description: このパブリケーションのデフォルトテンプレート
+types.MemberProfile.templates.query.default.description: このパブリケーションのデフォルトテンプレート
+
+# From MemberProfile.xml
+types.MemberProfile.label: ESN - プロファイル
+types.MemberProfile.fields.dateOfBirth.label: 誕生日
+types.MemberProfile.title.label: タイトル
+types.MemberProfile.fields.introduction.label: イントロダクション
+types.MemberProfile.fields.interest.label: 関心のあるフィールド
+types.MemberProfile.fields.dateOfArrival.label: 到着日
+
+# From MicroBlogging.xml
+types.MicroBlogging.fields.text.label: テキスト
+types.MicroBlogging.label: MicroBlogging
+types.MicroBlogging.title.label: タイトル
+
+# From PortletBirthday-templates.xml
+types.PortletBirthday.templates.box.default.label: ダッシュボードテンプレート
+types.PortletBirthday.templates.full.default.label: アプリケーションテンプレート
+
+# From PortletBirthday.xml
+types.PortletBirthday.fields.relationshipFilter.description: ログインメンバーがコネクトしているメンバーのみ表示しますか？
+types.PortletBirthday.fields.relationshipFilter.onLabel: はい
+types.PortletBirthday.fields.workspaceMembers.label: ワークスペースのメンバー
+types.PortletBirthday.fields.relationshipFilter.label: コネクションのフィルター
+types.PortletBirthday.fields.workspaceMembers.description: 現在のワークスペースのメンバーのみ表示しますか？
+types.PortletBirthday.fields.workspaceMembers.offLabel: いいえ
+types.PortletBirthday.fields.workspaceMembers.onLabel: はい
+types.PortletBirthday.label: 誕生日ポートレット
+types.PortletBirthday.fields.relationshipFilter.offLabel: いいえ
+types.PortletBirthday.title.label: タイトル
+types.PortletBirthday.description: コネクション内で間もなく訪れる誕生日を表示します
+
+# From PortletMemberActivity-templates.xml
+types.PortletMemberActivity.templates.box.default.label: ダッシュボードテンプレート
+types.PortletMemberActivity.templates.full.default.label: アプリケーションテンプレート
+types.PortletMemberActivity.templates.full.card.label: アプリケーションカードテンプレート
+types.PortletMemberActivity.templates.box.card.label: ダッシュボードカードテンプレート
+types.PortletMemberActivity.templates.jmobile.default.label: デフォルトテンプレート
+
+# From PortletMemberActivity.xml
+types.PortletMemberActivity.fields.activityMode.label: 表示されたアクティビティ
+types.PortletMemberActivity.fields.activityMode.labelList: 全ワークスペースのフォロー済みメンバーのアクティビティ | 私が属するワークスペースのフォロー済みメンバーのアクティビティ | ワークスペースのアクティビティ | 現在のワークスペースのアクティビティ
+types.PortletMemberActivity.fields.showComments.label: コメントを表示する
+types.PortletMemberActivity.fields.showMedia.label: メディアを表示する
+types.PortletMemberActivity.fields.filters.label: フィルター
+types.PortletMemberActivity.fields.defaultPageSize.label: 表示されたアクティビティの数
+types.PortletMemberActivity.fields.showComments.onLabel: はい
+types.PortletMemberActivity.fields.showMedia.onLabel: はい
+types.PortletMemberActivity.fields.showComments.offLabel: いいえ
+types.PortletMemberActivity.fields.showAbstract.onLabel: はい
+types.PortletMemberActivity.fields.showMedia.offLabel: いいえ
+types.PortletMemberActivity.fields.showAbstract.label: 要約を表示する
+types.PortletMemberActivity.fields.showAbstract.offLabel: いいえ
+types.PortletMemberActivity.label: メンバーアクティビティポートレット
+types.PortletMemberActivity.title.label: タイトル
+types.PortletMemberActivity.fields.displayAllEvent.label:       全てのカレンダーイベントを表示する
+types.PortletMemberActivity.fields.displayAllEvent.onLabel:     はい
+types.PortletMemberActivity.fields.displayAllEvent.offLabel:    いいえ
+types.PortletMemberActivity.fields.displayAllEvent.description: 「はい」で全てのイベントが掲示板に表示され（利用可能な権限に基づきフィルターされます）、「いいえ」で無料サインアップイベントとメンバー所属イベントのみ表示されます。
+types.PortletMemberActivity.description: アクティビティを表示します
+
+# From PortletMemberProfile-templates.xml
+types.PortletMemberProfile.templates.full.default.label: アプリケーションテンプレート
+types.PortletMemberProfile.templates.box.default.label: ダッシュボードテンプレート
+
+# From PortletMemberProfile.xml
+types.PortletMemberProfile.fields.showSuggestions.offLabel: いいえ
+types.PortletMemberProfile.fields.showConnectionRequests.onLabel: はい
+types.PortletMemberProfile.label: プロファイルポートレット
+types.PortletMemberProfile.fields.showConnectionRequests.offLabel: いいえ
+types.PortletMemberProfile.fields.showSuggestions.onLabel: はい
+types.PortletMemberProfile.fields.showConnectionRequests.label: コネクションリクエストを表示する
+types.PortletMemberProfile.title.label: タイトル
+types.PortletMemberProfile.fields.showSuggestions.label: 提案を表示する
+types.PortletMemberProfile.description: メンバープロフィールとそのコネクションのリクエストおよび提案を表示します
+
+# From PortletMemberStatus-templates.xml
+types.PortletMemberStatus.templates.box.default.label: ダッシュボードテンプレート
+types.PortletMemberStatus.templates.full.default.label: アプリケーションテンプレート
+
+# From PortletMemberStatus.xml
+types.PortletMemberStatus.fields.workspaceMembers.description: 現在のワークスペースのメンバーのアクティビティのみ表示しますか？
+types.PortletMemberStatus.label: メンバーステータスポートレット
+types.PortletMemberStatus.fields.workspaceMembers.label: ワークスペースのメンバー
+types.PortletMemberStatus.fields.workspaceMembers.offLabel: いいえ
+types.PortletMemberStatus.fields.workspaceMembers.onLabel: はい
+types.PortletMemberStatus.title.label: タイトル
+types.PortletMemberStatus.description: コネクションのステータス、またはワークスペースメンバーのステータスを表示します
+
+# Analytics
+ui.analytics.ESNAgent.name:                         ソーシャル
+ui.analytics.ESNAgent.report.network:               ソーシャルネットワーク
+ui.analytics.ESNAgent.report.network.h:             ソーシャルネットワーク密度。
+ui.analytics.ESNAgent.report.new-profile:           新規プロファイル
+ui.analytics.ESNAgent.report.new-profile.h:         新規プロファイルが作成されました。
+ui.analytics.ESNAgent.report.account-profile-count: アカウントプロファイル
+ui.analytics.ESNAgent.report.contact-profile-count: コンタクトプロファイル
+ui.analytics.ESNAgent.report.connection-ratio:      １メンバーあたりのコネクション率
+ui.analytics.ESNAgent.report.follower-ratio:        １メンバーあたりのフォロワー率
+ui.analytics.ESNAgent.report.following-ratio:       １メンバーあたりのフォロー率
+ui.analytics.ESNAgent.report.activity-count:        アクティビティ
+ui.analytics.ESNAgent.report.activity-count.h:      アクティビティ数
+ui.analytics.ESNAgent.report.activity-top:          トップアクティビティ 
+ui.analytics.ESNAgent.report.activity-top.h:        アクティビティの内容
+ui.analytics.ESNAgent.report.network:               関連
+ui.analytics.ESNAgent.report.network.h:             ソーシャルネットワークの関連率
+ui.analytics.ESNAgent.report.new-profile:           新規プロファイル
+ui.analytics.ESNAgent.report.new-profile.h:         新規プロファイルが作成されました。
+ui.analytics.ESNAgent.report.account-profile-count: アカウント
+ui.analytics.ESNAgent.report.contact-profile-count: コンタクト
+ui.analytics.ESNAgent.report.profile-completeness:   プロファイルの完全性
+ui.analytics.ESNAgent.report.profile-completeness.h: メンバープロファイルの完成率。
+ui.analytics.ESNAgent.report.connection-ratio:      メンバーの関連平均
+ui.analytics.ESNAgent.report.follower-ratio:        メンバーのフォロー平均
+ui.analytics.ESNAgent.report.following-ratio:       メンバーのフォロワー平均
+ui.analytics.ESNAgent.report.microblogging-count:   MicroBlogging
+ui.analytics.ESNAgent.report.microblogging-count.h: 投稿されたMicroBloggingメッセージの数。
+
+ # From plugin.xml
+types.PortletMemberActivity.templates.jcmsplugin.virtualdesktop.editInline.default.label: メンバーアクティビティサービスの編集中に、バーチャルデスクトップで使用されるテンプレート。
+types.AbstractPortletSkinable.templates.box.esnSkin.label: ESNスキン
+types.AbstractPortletSkinable.templates.box.esnSkin.description: (CSS) ラウンドスキン
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.activity: アクティビティ
+jcmsplugin.smartphone.workspace-service.PortletMemberActivity: アクティビティ
+jcmsplugin.esn.smartphone.lbl.presentation: プレゼンテーション
+jcmsplugin.esn.smartphone.lbl.expertises: 適格性
+jcmsplugin.esn.smartphone.lbl.member.activity: アクティビティ
+jcmsplugin.esn.smartphone.lbl.activity.microblogging.text.placeholder: ここにメッセージを入力する...
+jcmsplugin.esn.smartphone.lbl.activity.microblogging.add-message: メッセージを追加する
+
+jcmsplugin.smartphone.shareurl.label.esn: MicroBlogging
+
+# Microblogging icon label
+jcmsplugin.esn.smartphone.microblogging.camera : カメラ
+jcmsplugin.esn.smartphone.microblogging.galery : フォトギャラリー
+
+# ----------------------------------------------------------------------
+# OpenApi
+# ----------------------------------------------------------------------
+acl.resource.admin/work/canManageExpertiseCategory: ESN - 適格性カテゴリの管理権
+acl.resource.plugins: プラグイン
+acl.resource.plugins/esn: ESN
+acl.resource.plugins/esn/openapi: Open API
+acl.resource.plugins/esn/openapi/anyActivity: 何らかのアクティビティを作成する
+acl.resource.plugins/esn/openapi/anyActivity.h: 何らかのアクティビティの作成を有効化（どのメンバーもアクティビティの著者になれる）
+acl.resource.plugins/esn/openapi/activity: 個人的アクティビティを作成する
+acl.resource.plugins/esn/openapi/activity.h: メンバーの個人的アクティビティの作成を有効化（ログインしたメンバーがアクティビティの著者になる）
+doc.rest.rsrc-meth.ActivityResource: GET<br/>POST<br/>DELETE
+doc.rest.rsrc-desc./plugins/esn/activities: POSTメソッド: 以下のパラメータのアクティビティ一覧: <br/> <ul><li>メンバー: 読取り権のチェックを任せられたメンバー（ログインしたメンバーが '何らかのアクティビティを作成する' ACLを持っていない場合、ログインしたメンバーに対し強制される）</li><li>モード: MemberActivityModeのインスタンス: <ul><li>FOLLOWED_MEMBERS</li><li>FOLLOWED_MEMBERS_WS</li><li>WORKSPACE_ACTIVITIES</li><li>MEMBER_WORKSPACE_ACTIVITIES</li><li>MEMBER_ACTIVITIES</li></ul></li><li>ワークスペース: 検索に使用されるワークスペース</li><li>ativityMember: アクティビティのメンバー著者</li><li>startActivityDate: 検索開始日</li><li>pageSize: デフォルトで10</li><ul>
+doc.rest.rsrc-desc./plugins/esn/activities/followedMembers/{memberId}: GETメソッド: 提供メンバーがフォローするメンバーのアクティビティリスト。<br/>ログインしたメンバーが '何らかのアクティビティを作成する' ACLを持っている場合には、読取り権について任ぜられたメンバーが提供メンバーであるが、そうでない場合はこれはログインしたメンバーである。<br/>このエンドポイントのカスタマイズはアクティビティのエンドポイントを介して行われなければならない。
+doc.rest.rsrc-desc./plugins/esn/activities/followedMembersWs/{memberId}:GETメソッド: 提供メンバーがフォローするメンバーのアクティビティリスト。ただしメンバーのワークスペース内に限る。<br/>ログインしたメンバーが '何らかのアクティビティを作成する' ACLを持っている場合には、読取り権について任ぜられたメンバーが提供メンバーであるが、そうでない場合はこれはログインしたメンバーである。<br/>このエンドポイントのカスタマイズはアクティビティのエンドポイントを介して行われなければならない。
+doc.rest.rsrc-desc./plugins/esn/activities/member/{memberId}: GETメソッド: 提供メンバーのアクティビティリスト。<br/>ログインしたメンバーが '何らかのアクティビティを作成する' ACLを持っている場合には、読取り権について任ぜられたメンバーが提供メンバーであるが、そうでない場合はこれはログインしたメンバーである。<br/>このエンドポイントのカスタマイズはアクティビティのエンドポイントを介して行われなければならない。
+doc.rest.rsrc-desc./plugins/esn/activities/memberWorspaces/{memberId}: GETメソッド: 提供メンバーのワークスペースのアクティビティリスト。<br/>ログインしたメンバーが '何らかのアクティビティを作成する' ACLを持っている場合には、読取り権について任せられたメンバーが提供メンバーであるが、そうでない場合はこれはログインしたメンバーである。<br/>このエンドポイントのカスタマイズはアクティビティのエンドポイントを介して行われなければならない。
+doc.rest.rsrc-desc./plugins/esn/activities/workspace/{workspaceId}: GETメソッド: 提供ワークスペースのアクティビティリスト。<br/>ログインしたメンバーが '何らかのアクティビティを作成する' ACLを持っている場合には、読取り権について任ぜられたメンバーが提供メンバーであるが、そうでない場合はこれはログインしたメンバーである。<br/>このエンドポイントのカスタマイズはアクティビティのエンドポイントを介して行われなければならない。
+doc.rest.rsrc-desc./plugins/esn/activity/{id}: GETメソッド: IDによるMemberActivityの取得<br/>POSTメソッド: アクティビティの更新（作成用を除く同じフィールド）<br/>DELETEメソッド: アクティビティの削除
+doc.rest.rsrc-desc./plugins/esn/activity: POSTメソッド: アクティビティを作成する。<br/>パラメータ: <ul><li>プロパティ: 強制 - このアクティビティで使用されるプロパティ</li><li>メンバー: 強制 - アクティビティメンバー（ログインしたメンバーが '何らかのアクティビティを作成する' ACLを持っていない場合、ログインしたメンバーに対し強制される）</li><li>データ: アクティビティデータに関連する</li><li>メッセージ: 追加メッセージ</li><li>ワークスペース: アクティビティのワークスペース（空欄の場合、データが提供されていればそのデータのワークスペースが使用される。）</li><ul>
+

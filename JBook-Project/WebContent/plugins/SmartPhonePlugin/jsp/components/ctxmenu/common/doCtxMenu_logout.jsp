@@ -1,0 +1,2 @@
+<%@ include file='/plugins/SmartPhonePlugin/jsp/common/doInitSmartPhonePage.jspf' %>
+<li class="action-logout"><a data-ajax="false" class="confirm logout-link" href="<%= HttpUtil.getUrlWithCSRFToken("plugins/SmartPhonePlugin/jsp/core/logout.jsp",request,true) %>"><jalios:icon src="smartphone-logout" /> <%= glp("ui.com.alt.logout") %></a></li>

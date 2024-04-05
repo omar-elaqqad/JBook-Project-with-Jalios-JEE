@@ -1,0 +1,148 @@
+/* ------------------------------------------------------------------------- */
+/*  This file has been automatically generated from cs-hub-app-sidebar.less  */
+/* ------------------------------------------------------------------------- */
+.app-cs-hub LI LABEL.app-sidebar-menu-node:after {
+  display: inline-block;
+  margin-left: 5px;
+  vertical-align: middle;
+  content: "";
+  color: var(--app-sidebar-text-color);
+  position: initial;
+  width: 0;
+  height: 0;
+  border-top: 4px solid;
+  border-bottom: 0;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+.app-cs-hub LI LABEL.app-sidebar-menu-node.expanded:after {
+  width: 0;
+  height: 0;
+  border-top: 4px solid;
+  border-bottom: 0;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+.app-cs-hub LI LABEL.app-sidebar-menu-node.collapsed:after {
+  width: 0;
+  height: 0;
+  border-top: 0;
+  border-bottom: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+.app-cs-hub LI.active LABEL.app-sidebar-menu-node {
+  padding-right: 37px;
+}
+.app-cs-hub LI.active LABEL.app-sidebar-menu-node:after {
+  color: #fff;
+}
+.app-cs-hub .app-sidebar-treecat LABEL {
+  position: initial;
+}
+.app-cs-hub.app .app-sidebar-menu-formitems > LI > UL > LI > UL > LI > LABEL {
+  padding-left: 48px;
+}
+.app-cs-hub.app .app-sidebar-menu-formitems > LI > UL > LI > UL > LI > UL > LI > LABEL {
+  padding-left: 64px;
+}
+.app-cs-hub.app .app-sidebar-menu-formitems > LI > UL > LI > UL > LI > UL > LI > UL > LI > LABEL {
+  padding-left: 80px;
+}
+.app-cs-hub.app .app-sidebar UL.app-sidebar-menu > LI.active[data-jalios-cs-hub-access-policy=public] {
+  background-color: #5cb85c;
+}
+.app-cs-hub.app .app-sidebar UL.app-sidebar-menu > LI.active[data-jalios-cs-hub-access-policy=private] {
+  background-color: #F89406;
+}
+.app-cs-hub.app .app-sidebar UL.app-sidebar-menu > LI.active[data-jalios-cs-hub-access-policy=secret] {
+  background-color: #d9534f;
+}
+.app-cs-hub .app-header {
+  background-color: #009EF5;
+}
+.app-cs-hub .app-header .app-publication-actions .list-group-item.pub-action-toggle {
+  background-color: #009EF5;
+}
+.app-cs-hub .app-sidebar .app-sidebar-icon .jalios-icon {
+  color: #009EF5;
+}
+@keyframes addFavoriteAnimation {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+}
+@keyframes removeFavoriteAnimation {
+  0% {
+    transform: scale(1.4);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+}
+.app-cs-hub .card .card-close-action:not(.card-cs-remove-suggestion) {
+  border-radius: 50%;
+  top: 5px;
+  right: 5px;
+  background-color: #FFFFFF;
+}
+.app-cs-hub .is-centered .cs-hub-intro.jcms-message {
+  max-width: 1131px;
+  margin-bottom: 40px;
+}
+.app-cs-hub .card-link.ui-sortable-handle {
+  display: inline-flex;
+  width: 289px;
+  height: 380px;
+  vertical-align: top;
+  overflow: hidden;
+  position: relative;
+}
+.app-cs-hub .card-link.ui-sortable-handle.ui-sortable-placeholder {
+  display: inline-flex;
+  visibility: visible !important;
+  width: 253px;
+  height: 324px !important;
+  margin: 0 36px 56px 0;
+  border: 1px dashed rgba(0, 0, 0, 0.2);
+}
+.app-cs-hub .ui-sortable-helper {
+  transform: rotate(-3deg);
+}
+.app-cs-hub .card.card-collaborativespace .card-cs-add-favorite:hover,
+.app-cs-hub .card.card-collaborativespace .card-cs-remove-favorite:hover {
+  box-shadow: 2px 2px 5px #555;
+}
+.app-cs-hub .card.card-collaborativespace.added-as-favorite .card-cs-remove-favorite {
+  animation: addFavoriteAnimation .3s linear;
+}
+.app-cs-hub .card.card-collaborativespace.removed-from-favorite .card-cs-add-favorite {
+  animation: removeFavoriteAnimation .3s linear;
+}
+.app-cs-hub .jcmsplugin-collaborativespace-card-space-add-favorite.icomoon-star-empty {
+  vertical-align: text-bottom;
+}
+.app-cs-hub LI.active LABEL.app-sidebar-menu-node:after {
+  color: inherit;
+}
+.app-cs-hub .cs-hub-filter-text .control-textfield {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+.app-cs-hub .input-group-btn .btn:last-child {
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+.app-cs-hub .csrequest-list .field-admins OL {
+  margin: 0;
+}
+/*# sourceMappingURL=cs-hub.css.map */

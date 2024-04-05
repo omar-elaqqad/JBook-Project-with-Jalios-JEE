@@ -1,0 +1,35 @@
+<%-- E-mail --%>
+<%
+String email = itMember.getEmail();
+{
+  boolean showMail = Util.notEmpty(email) && (itMember.isEmailVisible() || isAdmin);
+  boolean showPhone = Util.notEmpty(itMember.getPhone());
+  boolean showMobile = Util.notEmpty(itMember.getMobile());
+  %>
+  <% if (showMail) { %>
+  <li title="<%= encodeForHTMLAttribute(glp("ui.com.lbl.email")) %>" class="esn-member-mail">
+    <jalios:icon src='<%= Util.getString(request.getAttribute("esn.email.icon"), "mail") %>' />
+    <a itemprop="email" href='mailto:<%= encodeForHTMLAttribute(email) %>'
+        title='<%= encodeForHTMLAttribute(glp("jcmsplugin.esn.contact-by-email.title", itMember.getFullName(), email)) %>'>
+      <%= email %>
+    </a>
+  </li>
+  <% } %>
+  
+  <%-- Phone --%>
+  <% if (showPhone) { %>
+  <li title="<%= encodeForHTMLAttribute(glp("ui.adm.mbr-edit.lbl.phone")) %>" itemprop="telephone" class='esn-member-telephone<%= showMobile ? " has-mobile" : "" %>'>
+    <jalios:icon src='<%= Util.getString(request.getAttribute("esn.telephone.icon"), "telephone") %>' />
+    <jalios:phone number="<%= itMember.getPhone() %>" region="<%= itMember.getCountry() %>" />
+  </li>
+  <% } %>
+  
+  <%-- Mobile --%>
+  <% if (showMobile) { %>
+  <li title="<%= encodeForHTMLAttribute(glp("ui.adm.mbr-edit.lbl.mobile")) %>" itemprop="telephone" class='esn-member-mobile<%= showPhone ? " has-phone" : "" %>'>
+    <jalios:icon src='<%= Util.getString(request.getAttribute("esn.phone.icon"), "phone") %>' />
+    <jalios:phone number="<%= itMember.getMobile() %>" region="<%= itMember.getCountry() %>" />
+  </li>
+  <% } %>
+  <jalios:include target="PLUGIN_ESN_EMAIL_PHONE" targetContext="li" />
+<% } %>

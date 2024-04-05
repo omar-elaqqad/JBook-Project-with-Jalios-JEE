@@ -1,0 +1,65 @@
+.cs-search-form .PortletSearch {
+  max-width: 300px;
+  float: right;
+}
+@media (max-width: 659px) {
+  .cs-search-form .PortletSearch {
+    float: none;
+  }
+}
+@media (max-width: 659px) {
+  .cs-search-form {
+    width: 100%;
+  }
+}
+.cs-header-search {
+  min-width: 250px;
+}
+.cs-header-search .search-container {
+  position: relative;
+}
+.cs-header-search .cs-header-search-query {
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #999;
+  box-shadow: none;
+  -webkit-appearance: none;
+  padding-left: 15px;
+  padding-right: 44px;
+}
+.cs-header-search .cs-header-search-query:focus + .btn-cs-header-search {
+  background-color: #009EF5;
+}
+.cs-header-search .cs-header-search-query:focus + .btn-cs-header-search .jalios-icon {
+  color: white;
+}
+.cs-header-search .btn-cs-header-search {
+  position: absolute;
+  top: 3px;
+  right: 4px;
+  background-color: white;
+  border-radius: 18px;
+  transition: background-color 200ms ease-in;
+  height: 34px;
+  width: 34px;
+  margin-left: 0;
+  border-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cs-header-search .btn-cs-header-search:active {
+  outline: none;
+}
+.cs-header-search .btn-cs-header-search:hover {
+  background-color: #009EF5;
+}
+.cs-header-search .btn-cs-header-search:hover .jalios-icon {
+  color: white;
+}
+.cs-header-search .btn-cs-header-search .jalios-icon {
+  color: #666;
+  font-size: 16px;
+  transition: color 200ms ease-in;
+}
+/*# sourceMappingURL=cs-header-search.css.map */

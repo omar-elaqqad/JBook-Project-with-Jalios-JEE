@@ -1,0 +1,22 @@
+<%--
+  @Summary: Private Collaborative Space Home for non worker
+--%>
+<div class="cs-private-home">
+  <jalios:message title="jcmsplugin.collaborativespace.private-home.title" dismissable="false">
+    <div class="private-signup">
+      <% if (csHandler.showSignupLink()) { %>
+        <p><%= glp("jcmsplugin.collaborativespace.private-home.signup") %></p>
+        <div class="signup-button">
+          <jalios:buttonModal css="btn btn-primary" label="jcmsplugin.collaborativespace.signup.btn.signup" url="plugins/CollaborativeSpacePlugin/jsp/signup.jsp" />
+        </div>
+      <% } else { %>
+        <% if (csHandler.hasAlreadySignup() && CSHelper.isRequestSignup(cs)) { %>
+          <p><%= glp("jcmsplugin.collaborativespace.private-home.already-signup") %></p>
+        <% } else { %>
+          <p><%= glp("jcmsplugin.collaborativespace.private-home.no-signup") %></p>
+        <% } %>
+      <% } %>
+    </div>
+  </jalios:message>
+  <jalios:include target="PLUGIN_CSP_PRIVATE_HOME"/>
+</div>

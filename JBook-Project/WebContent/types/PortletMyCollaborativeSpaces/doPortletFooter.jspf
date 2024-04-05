@@ -1,0 +1,20 @@
+<%--
+  @Summary: PortletMyCollaborativeSpaces MySpace / Subspace footer
+  @Category: Custom
+  @Author: Sylvain Devaux <sylvain.devaux@jalios.com> 
+  @Since: csp-4.3, csp-5.0 
+--%><%
+%><%@page import="generated.PortletMyCollaborativeSpaces"%><%
+%><%@ page contentType="text/html; charset=UTF-8" %><%
+
+//----------------------------------------------------------------------
+//  FOOTER ACTION
+//----------------------------------------------------------------------
+final String footer = (String) request.getAttribute(PortletMyCollaborativeSpaces.class.getSimpleName() + "_footerBuffer");
+if (Util.notEmpty(footer)) {
+  %><div class="item-box-footer"><%
+    %><%= footer %><%
+  %></div><%
+  request.removeAttribute(PortletMyCollaborativeSpaces.class.getSimpleName() + "_footerBuffer");
+}
+%>

@@ -1,0 +1,321 @@
+# Language properties
+
+jcmsplugin.smartphone.lbl.no-result: 결과 없음
+jcmsplugin.smartphone.lbl.guest: 손님
+jcmsplugin.smartphone.lbl.index-default.choose-action: 작업을 선택하세요
+jcmsplugin.smartphone.lbl.index-default.desktop-link: 바탕화면 사이트로 이동
+jcmsplugin.smartphone.lbl.workspace-index.filter-ws: 작업공간 필터
+jcmsplugin.smartphone.lbl.workspace-index.recent: 최근 방문한
+jcmsplugin.smartphone.lbl.workspace-index.other: 다른 작업공간
+jcmsplugin.smartphone.lbl.workspace-index.signup: 이 작업공간에 액세스할 수 없습니다.
+jcmsplugin.smartphone.lbl.vote.like: 좋아요
+jcmsplugin.smartphone.lbl.vote.unlike: 좋아요 취소
+jcmsplugin.smartphone.lbl.access-website: 웹사이트 액세스
+jcmsplugin.smartphone.lbl.see-on-website: 웹사이트 참조
+jcmsplugin.smartphone.lbl.header.website-title: JPlatform - 스마트폰
+jcmsplugin.smartphone.lbl.alert.all-alert-read: 모든 경고를 읽었습니다.
+jcmsplugin.smartphone.lbl.alert.alert-empty: 경고가 없습니다.
+jcmsplugin.smartphone.lbl.alert.unread: 읽지 않음
+jcmsplugin.smartphone.lbl.alert.read: 읽음
+jcmsplugin.smartphone.lbl.alert.access-publication: 게시물 표시
+jcmsplugin.smartphone.lbl.alert.mark-read: 읽은 상태로 표시
+jcmsplugin.smartphone.lbl.forbidden: 이 콘텐츠에 액세스할 수 있는 권한이 없습니다.
+jcmsplugin.smartphone.lbl.alert.null-pub: 요소가 존재하지 않습니다.
+jcmsplugin.smartphone.lbl.yes: 예
+jcmsplugin.smartphone.lbl.no: 아니오
+jcmsplugin.smartphone.lbl.member.contact: 연락처
+jcmsplugin.smartphone.lbl.member.address: 주소
+jcmsplugin.smartphone.lbl.member.information: 정보
+jcmsplugin.smartphone.lbl.member.agenda: 의제
+jcmsplugin.smartphone.lbl.recommendation.no-recommendation: 아무런 추천도 받지 않았습니다.
+jcmsplugin.smartphone.lbl.recommendation.see-publication: 게시물 표시
+jcmsplugin.smartphone.lbl.admin.members: 회원
+jcmsplugin.smartphone.lbl.admin.see-logs: 로그 액세스
+jcmsplugin.smartphone.lbl.admin.memory: 메모리
+jcmsplugin.smartphone.lbl.member.add-to-address-book: 주소록에 추가
+jcmsplugin.smartphone.lbl.mention.noemail: 이 사용자는 이메일 주소가 없으므로 언급될 수 없습니다
+jcmsplugin.smartphone.lbl.jquerymobile.error: 에러가 발생했습니다:
+jcmsplugin.smartphone.lbl.invalid-home-page: 홈 페이지가 설정되지 않았습니다.
+jcmsplugin.smartphone.lbl.access-all-spaces: 모든 공간 액세스
+jcmsplugin.smartphone.lbl.jmobile.about-jmobile: JMobile 정보
+
+jcmsplugin.smartphone.action.showmore: 더 보기......
+jcmsplugin.smartphone.action.filter: 필터...
+jcmsplugin.smartphone.action.see-publication: 게시물 표시
+jcmsplugin.smartphone.lbl.new: 새로운
+
+jcmsplugin.smartphone.recommendation.placeholder.members: 회원 선택하기
+jcmsplugin.smartphone.recommendation.placeholder.groups: 그룹 선택하기
+
+jcmsplugin.smartphone.jmobile.version.numero: 버전 {0} Copyright © Jalios 2022
+jcmsplugin.smartphone.jmobile.version.droits: 모든 권한 보유
+jcmsplugin.smartphone.jmobile.notification: 알림
+jcmsplugin.smartphone.jmobile.notification.appareil.registred: 등록된 기기
+jcmsplugin.smartphone.jmobile.notification.appareil.not-registred: 등록 안 된 기기
+jcmsplugin.smartphone.jmobile.notification.permission : 권한
+jcmsplugin.smartphone.jmobile.notification.type-alerte.inactive: 활성화된 경고 유형이 없습니다
+jcmsplugin.smartphone.jmobile.notification.type-alerte.active: 경고 유형 활성화됨
+
+jcmsplugin.smartphone.lbl.download-mobile-app: 모바일 애플리케이션 다운로드
+
+# Portal
+
+## History
+portal.edition.history.save-by.label: 저장자: {0}
+portal.edition.history.published-by.label: 게시자 {0}
+portal.edition.history.breadcrumb.label: 포털 사용 기록
+portal.edition.history.back-edition.label: 편집으로 돌아가기
+portal.edition.history.back-to-version.label: 이 버전으로 되돌리기
+portal.edition.history.back-to-version.confirm: 이 버전으로 되돌리겠습니까?
+portal.edition.history.show-more: 더 보기
+portal.edition.history.portlet-chooser: 포틀릿 선택기
+portal.edition.history.create-portlet: 새 포틀릿 만들기
+portal.edition.history.existing-portlets: 기존 포틀릿
+portal.structure.custom-title.label: 버전 이름
+portal.structure.rename-title.label: 버전 이름 바꾸기
+portal.edition.sidebar.portal-edit.tab-edit.title: 포털 파라미터
+portal.edition.sidebar.portal-edit.tab-ui.title: 포털 스타일
+portal.edition.sidebar.portal-edit.template.title: 포틀릿 템플릿
+portal.edition.sidebar.portal-edit.portal-advanced.title: 고급 판
+
+
+jcmsplugin.smartphone.service.search.no-result: 결과 없음
+jcmsplugin.smartphone.service.search.members.no-result: 회원이 없습니다
+jcmsplugin.smartphone.service.search.publications.no-result: 게시물이 없습니다
+jcmsplugin.smartphone.service.search.tabs.all.label: 모든
+jcmsplugin.smartphone.service.search.tabs.members.label: 회원
+jcmsplugin.smartphone.service.search.tabs.publications.label: 게시물
+
+
+jcmsplugin.smartphone.portal.default-portal.title: 모바일 포털
+jcmsplugin.smartphone.portal.default-wysiwyg.title: 모바일 포털 시작
+jcmsplugin.smartphone.portal.default-wysiwyg.content: 모바일 포털의 기본 페이지입니다.
+jcmsplugin.smartphone.portal.edition.edit-portal: 포털 편집
+jcmsplugin.smartphone.portal.lbl.assembly-zone: 어셈블리 영역
+jcmsplugin.smartphone.portal.lbl.final-output: 최종 출력
+jcmsplugin.smartphone.portal.lbl.portal-parameters: 포털 파라미터
+jcmsplugin.smartphone.portal.lbl.duplicate: 복제
+jcmsplugin.smartphone.portal.lbl.publish: 게시하기
+jcmsplugin.smartphone.portal.lbl.duplicate.modal.title: 포털 복제
+jcmsplugin.smartphone.portal.lbl.filter-workspace: 작업공간에 필터...
+jcmsplugin.smartphone.portal.topbar-title.lbl: 상단 바
+jcmsplugin.smartphone.portal.administration.title: 관리
+jcmsplugin.smartphone.portal.administration.mobile-portals: 모바일 포털
+jcmsplugin.smartphone.portal.administration.default-portals: 기본 포털
+jcmsplugin.smartphone.portal.administration.default-portal: 기본 포털
+jcmsplugin.smartphone.portal.administration.settings: 설정
+jcmsplugin.smartphone.portal.creation-modal.title: 모바일 포털을 만듭니다
+jcmsplugin.smartphone.portal.administration.topbar-color: 상단 바 배경색
+jcmsplugin.smartphone.portal.administration.portal-edition: 포털 에디션 - {0}
+jcmsplugin.smartphone.portal.administration.topbar-font-color: 상단 바 글꼴 색
+jcmsplugin.smartphone.portal.administration.topbar-logo: 로고
+jcmsplugin.smartphone.portal.administration-table.title: 제목
+jcmsplugin.smartphone.portal.administration-table.mdate: 최종 업데이트
+jcmsplugin.smartphone.portal.administration.create-portal: 포털 만들기
+jcmsplugin.smartphone.portal.administration.return-to-home: 앱 홈 포털 편집기로 돌아가기
+jcmsplugin.smartphone.portal.administration.msg.settings-updated: 설정이 저장되었습니다.
+
+# MyDay
+jcmsplugin.smartphone.my-day.today.label: 오늘
+jcmsplugin.smartphone.my-day.calendar.service-link.title: 내 의제 표시
+jcmsplugin.smartphone.my-day.jtask.service-link.title: 내 작업 표시
+
+data.$id.jcmsplugin.smartphone.category.nav-root.name: 모바일 네비게이션
+data.$id.jcmsplugin.smartphone.category.nav-root-home.name: 홈
+
+# Properties
+jcmsplugin.smartphone.home.news: 뉴스
+jcmsplugin.smartphone.workspace.news: 작업영역 뉴스
+jcmsplugin.smartphone.default.page.size: 페이지 기본 크기
+jcmsplugin.smartphone.lbl.topbar-title: 스마트폰을 위한 사이트 제목
+jcmsplugin.smartphone.image.resize.max-width: 이미지 크기 재조정 최대 폭
+jcmsplugin.smartphone.map-service: 지도 서비스
+jcmsplugin.smartphone.search.searchable-types: 검색 서비스 - 검색 결과에 포함된 유형
+jcmsplugin.smartphone.search.portletId: 검색 서비스 - 포틀릿
+jcmsplugin.smartphone.search.portletId.help: 검색 서비스의 기본 작동을 정의하는 데 사용하는 검색 포틀릿
+jcmsplugin.smartphone.search.not-searchable-types: 검색 서비스 - 검색 결과에서 제외된 유형
+jcmsplugin.smartphone.drawer.background-image: 배경 이미지 서랍 서비스
+
+jcmsplugin.smartphone.mobileapp.android.play-store : Android 플레이 스토어
+jcmsplugin.smartphone.mobileapp.ios.app-store : iOS 앱 스토어
+
+# Services
+jcmsplugin.smartphone.service.recenthistory:   최근 검색 기록
+jcmsplugin.smartphone.service.admin:    관리자
+jcmsplugin.smartphone.service.search: 검색
+jcmsplugin.smartphone.service.workflow: 워크플로우
+jcmsplugin.smartphone.service.news: 뉴스
+jcmsplugin.smartphone.service.workspace: 작업공간
+
+# Member menu
+jcmsplugin.smartphone.member-menu.application-menu: 응용 프로그램
+jcmsplugin.smartphone.member-menu.my-day: 나의 하루 일정
+jcmsplugin.smartphone.member-menu.navigate: 검색하기
+
+# Workspace Services
+jcmsplugin.smartphone.workspace-service.search: 검색
+jcmsplugin.smartphone.workspace-service.news: 뉴스
+
+portlet.ability.jcmsplugin-smartphone:                SmartPhone
+portlet.ability.jcmsplugin-smartphone.application:    서비스
+
+# Labels
+jcmsplugin.smartphone.fulldisplay.webpage.view-site: 웹사이트 방문
+
+jcmsplugin.smartphone.share.empty: {0} URL을 공유할 서비스가 없습니다.
+
+# Feedback Mobile App
+jcmsplugin.smartphone.mobileapp.feedback.lbl: 보고서 보내기
+jcmsplugin.smartphone.mobileapp.feedback.email: 받는 사람 이메일
+jcmsplugin.smartphone.mobileapp.feedback.email.help: 이 이메일 주소는 모바일 앱에서 사용자의 의견을 받습니다. 이메일 주소가 설정되지 않으면 전송할 수 없고 모바일 앱에서 사용할 수 없습니다.
+jcmsplugin.smartphone.mobileapp.feedback.settings: 설정
+
+jcmsplugin.smartphone.mobileapp.feedback.subject: {0}이(가) 모바일 앱에서 보고서를 전송했습니다.
+jcmsplugin.smartphone.mobileapp.feedback.hello: 안녕하세요,
+jcmsplugin.smartphone.mobileapp.feedback.description: {0}이(가) 귀하에게 모바일 앱을 사용하여 보고서를 보냈습니다.
+jcmsplugin.smartphone.mobileapp.feedback.user-info: 사용자 정보:
+jcmsplugin.smartphone.mobileapp.feedback.user-info.login: 로그인: {0}
+jcmsplugin.smartphone.mobileapp.feedback.user-info.siteurl: 사이트 URL: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info: 기기 정보:
+jcmsplugin.smartphone.mobileapp.feedback.device-info.platform: 플랫폼: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info.version: 플랫폼 버전: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info.model: 기기 모델: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info.uuid: 기기 ID: {0}
+jcmsplugin.smartphone.mobileapp.shareurl.message: 무엇을 하고 싶습니까?
+
+# AlertChannel
+jcmsplugin.smartphone.alert.channel.label: JMobile
+jcmsplugin.smartphone.alert.channel.description: JMobile 프로토콜을 통해 알림 보내기
+
+# ExtraDBData
+extradb.Member.jcmsplugin.smartphone.token: JMobile 토큰
+extra.Shortcut.jcmsplugin.smartphone.mobile-url: JMobile - 바로가기 URL
+extra.Shortcut.jcmsplugin.smartphone.mobile-available: JMobile - 애플리케이션 론처에 표시하겠습니까?
+
+# Editable Properties
+jcmplugin.smartphone.jpush.fcm.project-id: FCM - 프로젝트 ID
+jcmplugin.smartphone.notification.encrypt : 알림 암호화
+jcmsplugin.smartphone.ios.download-code.url-prefix: iOS - 다운로드 코드 - URL 접두사
+jcmsplugin.smartphone.ios.download-code.threshold: iOS - 다운로드 코드 - 경고 임계값
+$id.jcmsplugin.smartphone.ios.downloadcode.manager-group: iOS - 다운로드 코드 - 관리자 그룹
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.ios.teamId: Apple - 팀 ID
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.appId: JMobile 앱 ID
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.android.fingerprints: 인증서 지문(sha256)
+jcmplugin.smartphone.space.show-introduction: 공간 소개 표시
+
+$id.jcmsplugin.smartphone.portal.default-portal: 기본 포털
+# Templates
+types.PortletQueryForeach.templates.jmobile.default.label: 기본 템플릿
+types.PortletQueryForeach.templates.jmobile.dataimage.label: 이미지 템플릿이 있는 목록
+
+types.PortletQueryForeachCards.templates.jmobile.withBorderGrid.label: 그리드 테두리가 있는 템플릿 카드
+types.PortletQueryForeachCards.templates.jmobile.withoutBorderGrid.label: 그리드 테두리가 없는 템플릿 카드
+types.PortletQueryForeachCards.templates.jmobile.withBorder.label: 그리드 테두리가 있는 템플릿 카드
+types.PortletQueryForeachCards.templates.jmobile.light.label: 메타가 없는 템플릿 카드
+types.PortletQueryForeachCards.templates.jmobile.default.label: 기본 카드 템플릿
+types.PortletQueryForeachCards.templates.jmobile.withLead.label: 테두리 및 리드 팀플릿이 있는 카드
+types.PortletQueryForeachCards.templates.jmobile.withSliding.label: 테두리 템플릿이 없는 슬라이딩 카드
+types.PortletQueryForeachCards.templates.jmobile.withSlidingBorder.label: 테두리 템플릿이 있는 슬라이딩 카드
+types.PortletQueryForeachCards.templates.jmobile.horizontalwithSliding.label: 테두리 템플릿이 없는 슬라이딩 카드 가로
+types.PortletQueryForeachCards.templates.jmobile.carousel.label: 캐러셀 카드 템플릿
+
+types.PortletQueryForeachDetail.templates.jmobile.default.label: 기본 템플릿
+types.PortletQueryForeachDetail.templates.jmobile.dataimage.label: 이미지 템플릿이 있는 목록
+
+types.PortletCarousel.templates.jmobile.default.label: 기본 템플릿
+
+types.PortletWYSIWYG.templates.jmobile.default.label:  기본 템플릿
+
+types.AbstractPortletSkinable.templates.jmobile.default.label: 기본 템플릿
+
+types.AbstractPortletSkinable.templates.jmobile.light.label: 제목 템플릿 없음
+
+types.PortletImage.templates.jmobile.default.label: 기본 템플릿
+
+types.PortletJsp.templates.jmobile.default.label: 기본 템플릿
+
+types.PortletRSS.templates.jmobile.default.label: 기본 템플릿
+
+
+# From SmartPhonePortal.xml
+types.SmartPhonePortal.label: JMobile 포털
+types.SmartPhonePortal.description: 최소 옵션의 기본 포틀릿
+types.SmartPhonePortal.fields.image.label: 이미지
+types.SmartPhonePortal.fields.pageTitle.description: 페이지 제목에서 표시되는 제목
+types.SmartPhonePortal.fields.description.label: 설명
+types.SmartPhonePortal.fields.pageTitle.label: 페이지 제목
+types.SmartPhonePortal.fields.css.label: CSS
+types.SmartPhonePortal.fields.structure.label: 구조체
+types.SmartPhonePortal.title.label: 제목
+types.SmartPhonePortal.fields.displayScrollToTop.label: 상단 링크에 스크롤 표시
+types.SmartPhonePortal.fields.keywords.label: 키워드(SEO)
+types.SmartPhonePortal.fields.keywords.description: (쉼표로 분리된) 키워드는 포털 홈페이지에 사용됩니다.
+types.SmartPhonePortal.fields.portlets.label: 포틀릿
+types.SmartPhonePortal.fields.portlets.description: 포틀릿 목록
+
+# REST
+doc.rest.rsrc-meth.FeedbackResource: POST
+doc.rest.rsrc-desc./smartphone/feedback: 사용자 피드백을 모바일 애플리케이션에서 JMobile 모듈 속성에 입력한 이메일 주소로 보냅니다.
+
+doc.rest.rsrc-meth.AddJWTokenResource: GET
+doc.rest.rsrc-desc./smartphone/auth/addjwtoken: 로그인한 회원의 JWT 토큰 반환
+doc.rest.rsrc-desc./smartphone/auth/addjwtoken/{memberId}: 회원의 JWToken을 <code>memberId</code> ID와 함께 반환합니다.
+
+doc.rest.rsrc-meth.RegisterJMobileTokenResource: GET
+doc.rest.rsrc-desc./smartphone/registerToken/{deviceId}/{deviceOs}/{deviceModel}: 회원의 휴대 전화 정보를 저장합니다.
+
+doc.rest.rsrc-meth.DeleteDeviceInfoResource: GET
+doc.rest.rsrc-desc./smartphone/deleteToken/{deviceId}/{deviceOs}/{deviceModel}: 회원의 휴대 전화에서 정보를 삭제합니다.
+
+doc.rest.rsrc-meth.GetNotificationDiagnosticResource: GET
+doc.rest.rsrc-desc./smartphone/notificationDiagnostic/{deviceId}/{deviceOs}/{deviceModel}: JPlatform에 활성화한 경고 유형의 수를 반환합니다.
+
+doc.rest.rsrc-meth.JMobileInfoResource: GET
+doc.rest.rsrc-desc./smartphone/info: JMobile 플러그인 정보를 반환합니다.
+
+doc.rest.rsrc-meth.IOSDownloadResource: GET
+doc.rest.rsrc-desc./smartphone/ios/download: iOS 앱에 대한 다운로드 URL을 반환합니다.
+
+data.$id.shortcut.jcmsplugin.smartphone-portals.title: JMobile 포털
+data.$id.shortcut.jcmsplugin.smartphone-portals.text: 귀하의 JMobile 포털 및 네비게이션을 관리하십시오
+
+jcmplugin.smartphone.bottom-nav-item.home: 홈
+jcmplugin.smartphone.bottom-nav-item.alerts: 경계
+jcmplugin.smartphone.bottom-nav-item.search: 검색
+jcmplugin.smartphone.bottom-nav-item.application-menu: 앱
+
+ui.editportlet.usage.jmobile: JMobile
+ui.editportlet.usage.skin.jmobile: JMobile
+
+# ------------------------------------------------------------
+# IOS Download Code
+# ------------------------------------------------------------
+jcmsplugin.smartphone.ios.admin-menu: iOS 모바일 애플리케이션용 다운로드 코드 관리
+jcmsplugin.smartphone.ios.add-codes.title: 다운로드 코드 추가
+jcmsplugin.smartphone.ios.add-codes.lbl.codes: 코드
+jcmsplugin.smartphone.ios.add-codes.lbl.codes.h: 공백 또는 새 줄로 구분하여 추가할 코드를 입력하십시오.
+jcmsplugin.smartphone.ios.add-codes.btn.delete-all: 사용 안 된 모드 코드 삭제...
+jcmsplugin.smartphone.ios.add-codes.msg.code-count:  <p>{0,choice,0#사용된 코드 없음|1#코드 하나 사용됨|2#{0}이(가) 사용됨}.</p><p>{1,choice,0#사용 안 된 코드 더 이상 없음|1#사용 안 된 코드 하나만 남음.|2#{1}개의 사용 안 된 코드 있음}.
+jcmsplugin.smartphone.ios.add-codes.msg.codes-added:  {0,choice,0#추가된 코드 없음|1#코드 하나가 추가됨|2#{0}이(가) 추가됨}.
+jcmsplugin.smartphone.ios.add-codes.msg.code-deleted: {0,choice,0#삭제된 코드 없음|1#사용 안 된 코드 하나 삭제됨|2#{0} 사용 안 된 코드가 삭제됨}.
+jcmsplugin.smartphone.ios.download.msg.oodc: <p>죄송합니다 :-(</p><p>현재 모바일 앱을 다운로드할 수 없습니다.</p><p>다운로드 코드가 더 이상 없습니다.</p><p>나중에 다시 시도하십시오.</p> 
+jcmsplugin.smartphone.ios.download.msg.ldnr: <p>죄송합니다 :-(</p><p>현재 모바일 앱을 다운로드할 수 없습니다.</p><p>다운로드 코드 배포 서비스가 응답하지 않습니다.</p><p>나중에 다시 시도하십시오.</p>
+
+data.$id.jcmsplugin.smartphone.ios.downloadcode.manager-group.name: iOS 앱 다운로드 코드 관리자
+
+# ------------------------------------------------------------
+# ALERT
+# ------------------------------------------------------------
+alert.name.jcmsplugin-smartphone:                                              JMobile
+alert.name.jcmsplugin-smartphone.ios-downloadcode-shortage:                    다운로드 코드 부족
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.title:               다운로드 코드 부족
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.short-description:   {remainingCount}
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.description:         <p>{remainingCount}</p><p>새 다운로드 코드를 추가하려면 <a href="admin/admin.jsp">관리 영역</a>에서 "작업" 섹션으로 이동하십시오.</p>
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.remaining-count:     {0,choice,0#모든 다운로드 코드가 사용되었습니다|1#다운로드 코드가 하나만 남았습니다|2#{0} 다운로드 코드만 있습니다}.
+
+# ------------------------------------------------------------
+# ACL
+# ------------------------------------------------------------
+acl.resource.plugins/jmobile: JMobile
+acl.resource.plugins/jmobile/can-administrate-mobile-portals: 모바일 포털 관리
+acl.resource.admin/operation/can-manage-ios-downloadcode: iOS 다운로드 코드 관리

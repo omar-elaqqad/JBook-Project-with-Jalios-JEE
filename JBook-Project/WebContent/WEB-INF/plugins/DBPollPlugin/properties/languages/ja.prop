@@ -1,0 +1,127 @@
+jcmsplugin.dbpoll.btn.vote:            I 投票
+jcmsplugin.dbpoll.lbl.vote:            投票
+jcmsplugin.dbpoll.lbl.open:            この投票を開く
+jcmsplugin.dbpoll.lbl.close:           この投票を終了する
+jcmsplugin.dbpoll.lbl.show-result:     結果を表示する
+jcmsplugin.dbpoll.lbl.vote-cnt:        {0,choice,0#0 票|1#1票|2#{0,number,integer}票}
+jcmsplugin.dbpoll.lbl.dates:           {0} から {1}までの調査
+jcmsplugin.dbpoll.lbl.all-polls:       全ての調査
+jcmsplugin.dbpoll.lbl.all-polls-ws:    {0}の全ての調査
+jcmsplugin.dbpoll.lbl.view-all-polls:  全ての調査を見る
+jcmsplugin.dbpoll.lbl.view-all-polls-ws:  現在のワークスペースの全ての調査を見る
+jcmsplugin.dbpoll.lbl.vote-title:      {0}に投票する
+jcmsplugin.dbpoll.lbl.create-poll:     新規の調査をパブリッシュする
+jcmsplugin.dbpoll.msg.option-change:   一部のユーザーが現在のオプションに既に投票したため、調査オプションを変更できません。
+jcmsplugin.dbpoll.msg.already-voted:   あなたは既にこの調査に投票しています。
+jcmsplugin.dbpoll.msg.no-result:       この調査はまだ投票されていません。
+jcmsplugin.dbpoll.msg.choose-option:   投票するオプションを選んでください。
+jcmsplugin.dbpoll.msg.closed-poll:     この投票は終了したため票は入れられません。
+jcmsplugin.dbpoll.msg.poll-loop:       調査をそれ自体の説明文に記載することはできません。
+
+jcmsplugin.dbpoll.modal.step1:         調査のオプション
+jcmsplugin.dbpoll.modal.step2:         調査を推薦する
+jcmsplugin.dbpoll.modal.btn.publish:   パブリッシュする
+jcmsplugin.dbpoll.modal.btn.publish.alt:  調査をパブリッシュする
+jcmsplugin.dbpoll.modal.btn.next.alt:  調査をパブリッシュして、推薦する
+jcmsplugin.dbpoll.modal.success-info:  あなたの調査が作成されました。こちらからアクセスできます: {0}
+
+jcmsplugin.dbpoll.publish-menu.add-poll: 調査
+
+jcmsplugin.dbpoll.cs.options:  この調査に少なくとも2個のオプションを追加してください。
+jcmsplugin.dbpoll.cs.optionsml:  この調査に少なくとも2個のオプションを追加してください（{0}で）。
+
+jcmsplugin.dbpoll.search.placeholder: 投票を検索...
+
+jcmsplugin.dbpoll.app.title: 投票
+
+jcmsplugin.dbpoll.app.no-result-welcome: 投票アプリへようこそ
+
+jcmsplugin.dbpoll.app.catalog.title: 投票
+jcmsplugin.dbpoll.app.catalog.root: ホーム
+jcmsplugin.dbpoll.app.catalog.btn.add-poll: 投票を追加
+jcmsplugin.dbpoll.app.catalog.polls-number: {0} {0,choice,0#|1#投票|2#投票}
+
+jcmsplugin.dbpoll.app.card.closed-poll: 完了した投票
+
+jcmsplugin.dbpoll.app.filter.status.all: 全ての投票
+jcmsplugin.dbpoll.app.filter.status.opened: 進行中の投票
+jcmsplugin.dbpoll.app.filter.status.closed: 完了した投票
+jcmsplugin.dbpoll.app.filter.mbr:        追加手段...
+jcmsplugin.dbpoll.app.filter.begin-date: 後に追加されました...
+jcmsplugin.dbpoll.app.filter.end-date:   前に追加されました...
+jcmsplugin.dbpoll.app.filter.workspace:  ワークスペースに追加されました...
+
+# ------------------------------------------------------------
+#  Unified insert
+# ------------------------------------------------------------
+unified-insert.items.poll: 調査
+unified-insert.items.poll.longtitle: 投票
+unified-insert.items.poll.subtitle:
+
+# ------------------------------------------------------------
+#  Smartphone
+# ------------------------------------------------------------
+jcmsplugin.smartphone.dbpoll: 投票
+jcmsplugin.smartphone.dbpoll.navbar.opened: 進行中の投票
+jcmsplugin.smartphone.dbpoll.navbar.closed: 完了した投票
+
+# ------------------------------------------------------------
+#  Recommendation
+# ------------------------------------------------------------
+alert.name.recommendation.dbpoll-recommendation:                      調査の案内状
+alert.msg.recommendation.dbpoll-recommendation.title:                 調査の案内状: {data}
+alert.msg.recommendation.dbpoll-recommendation.short-description:     {author}からあなたに調査{data}の案内がきています。{data.url}
+alert.msg.recommendation.dbpoll-recommendation.description:           <p>{author}からあなたに調査{data}の案内がきています。</p>
+jcmsplugin.dbpoll.recommendation.Poll:                                調査参加の案内状をメンバーに送る: {0}
+
+# ------------------------------------------------------------
+#  ESN
+# ------------------------------------------------------------
+jcmsplugin.esn.activity.form-tab.poll: 調査
+
+# ------------------------------------------------------------
+#  Shortcuts
+# ------------------------------------------------------------
+data.$id.shortcut.jcmsplugin.dbpoll.title: 投票
+data.$id.shortcut.jcmsplugin.dbpoll.text: 投票処理アプリケーション
+
+# ------------------------------------------------------------
+#  Plugin label and description
+# ------------------------------------------------------------
+plugin.DBPollPlugin.label: 投票プラグイン
+plugin.DBPollPlugin.description: このプラグインで簡単な投票を作成できます。調査は調査ポートレットを介して表示されます。票はRDBMSに保存されています。
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From Poll.xml
+types.Poll.title.description: 調査のタイトル
+types.Poll.fields.description.label: 記述
+types.Poll.label: 調査
+types.Poll.fields.options.description: 調査のオプション。
+types.Poll.fields.description.description: 調査の命題を要約したもの（質問とオプションの間に表示されます）
+types.Poll.description: 質問が1個だけのミニ調査
+types.Poll.fields.options.label: オプション
+types.Poll.title.label: タイトル
+types.Poll.fields.image.label: 画像
+types.Poll.fields.image.description: この調査の記述に使われるオプション画像
+types.Poll.fields.closed.label: 投票を終了する
+types.Poll.fields.closed.onLabel: はい
+types.Poll.fields.closed.offLabel: いいえ
+types.Poll.fields.closed.description: 投票を終了してよろしいですか？
+
+# From PortletPoll.xml
+types.PortletPoll.fields.refineWorkspace.labelList: ワークスペースの最新の調査を表示する|全てのワークスペースの最新の調査を表示する
+types.PortletPoll.fields.poll.label: 調査
+types.PortletPoll.title.description: タイトル
+types.PortletPoll.description: このポートレットは、調査ならびに投票終了後の現在の結果を表示します。
+types.PortletPoll.fields.poll.description: 表示する調査（調査がない場合、パブリッシュされた最新の調査を表示します）
+types.PortletPoll.fields.refineWorkspace.description: 現在のワークスペース、または全てのワークスペースの最新の調査を表示する
+types.PortletPoll.label: 調査ポートレット
+types.PortletPoll.title.label: タイトル
+types.PortletPoll.fields.refineWorkspace.label: 絞り込み
+types.PortletPoll.fields.hideWhenNoResults.label: 調査がない場合、ポートレットを非表示にする
+types.PortletPoll.fields.hideWhenNoResults.onLabel: はい
+types.PortletPoll.fields.hideWhenNoResults.offLabel: いいえ
+types.PortletPoll.fields.hideWhenNoResults.description: 表示する調査がない場合、ポートレットを非表示にします。

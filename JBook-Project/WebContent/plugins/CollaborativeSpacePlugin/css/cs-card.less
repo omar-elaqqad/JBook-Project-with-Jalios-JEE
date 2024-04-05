@@ -1,0 +1,126 @@
+// Include "generated file" message for CSS output
+/* ------------------------------------------------------------- */
+/*  This file has been automatically generated from cs-card.less */
+/* ------------------------------------------------------------- */
+
+// Include variables and mixins
+@import "../../../css/jalios/core/init-mixins.less"; // Use init-mixins.less if more mixins are required 
+
+// PLUGIN LESS VARIABLES
+@import "cs-variables.less";
+
+// Hook for JCMS
+@import "cs-access-policies.less";
+@import "../../../css/plugin.less";
+
+.card-collaborativespace {
+  .card-cs-title {
+    padding-bottom: 10px; // Reduce default 16px padding-bottom for more info displayed
+  }
+  .card-title {
+    text-align: center;
+  }
+  &:hover {
+    .label.typology-label {
+      background: rgba(255,255,255,1);
+    }
+  }
+  .card-attendees,
+  .card-cs-signup {
+    text-align: center;
+    padding-top: 0; // reduce space between 2 card-block
+    padding-bottom: 5px; // Reduce default 16px padding-bottom for more info displayed
+  }
+  .meta-cat {
+    border: 0 none;
+    background: inherit;
+    padding-left: 0;
+  }
+  .card-block.card-block-footer-default {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 40px;
+    background: none;
+    padding: 0;
+    margin: 0;
+    .meta-cat { 
+      color: #999;
+    }
+    .typologies {
+      padding-left: 16px;
+      float: left; // for nth ones to be displayed when "... (see more)" is toggled
+    }
+  }
+  &.has-back-card {
+    .typologies {
+      // Limit typos width to let space for card-flipper icon
+      max-width: 82%;
+    }
+  }
+  .access-policy-icon {
+    position: absolute;
+    top: 180px;
+    margin-top: -36px;
+    width: 42px;
+    border-radius: 21px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 5px;
+    font-size: 1.5em;
+    color: #999;
+    text-align: center;
+  }
+
+  .card-flipper {
+    &.btn-link {
+      text-decoration: none;
+    }
+  }
+  .card-back {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  
+    .cs-abstract {
+      margin-bottom: 40px; // Substract height of footer
+      overflow-wrap: break-word;
+      .hyphens();
+      .jalios-scrollbar {
+        max-height: 180px;
+        position: relative;
+      }
+    }
+    .display-cs-btn-link {
+      transform: translateX(-50%);
+      margin-left: 50%;
+      text-align: center;
+    }
+  }
+}
+.browser-IE11 {
+  .card-collaborativespace {
+     .card-title {
+      word-break: break-all;
+    }
+    .card-back {
+      display: flex !important;
+      flex-direction: column !important;
+      flex: 1 !important;
+
+      .card-block.card-cs-title {
+        // Force back card's title to have a minimal height
+        min-height: 75px;
+      }
+    }
+  }
+}
+
+.card-responsive-layout .card.card-collaborativespace {
+  min-height: 324px;
+}

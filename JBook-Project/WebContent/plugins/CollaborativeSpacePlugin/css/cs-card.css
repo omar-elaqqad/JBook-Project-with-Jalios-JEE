@@ -1,0 +1,132 @@
+.access-public > .label {
+  background-color: #5cb85c;
+}
+.access-public > .label[href]:hover,
+.access-public > .label[href]:focus {
+  background-color: #449d44;
+}
+.access-public > .label[href]:hover,
+.access-public > .label[href]:focus {
+  background-color: #449d44;
+}
+.access-private > .label {
+  background-color: #F89406;
+}
+.access-private > .label[href]:hover,
+.access-private > .label[href]:focus {
+  background-color: #c67605;
+}
+.access-private > .label[href]:hover,
+.access-private > .label[href]:focus {
+  background-color: #c67605;
+}
+.access-secret > .label {
+  background-color: #d9534f;
+}
+.access-secret > .label[href]:hover,
+.access-secret > .label[href]:focus {
+  background-color: #c9302c;
+}
+.access-secret > .label[href]:hover,
+.access-secret > .label[href]:focus {
+  background-color: #c9302c;
+}
+.card-collaborativespace .card-cs-title {
+  padding-bottom: 10px;
+}
+.card-collaborativespace .card-title {
+  text-align: center;
+}
+.card-collaborativespace:hover .label.typology-label {
+  background: #ffffff;
+}
+.card-collaborativespace .card-attendees,
+.card-collaborativespace .card-cs-signup {
+  text-align: center;
+  padding-top: 0;
+  padding-bottom: 5px;
+}
+.card-collaborativespace .meta-cat {
+  border: 0 none;
+  background: inherit;
+  padding-left: 0;
+}
+.card-collaborativespace .card-block.card-block-footer-default {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 40px;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+.card-collaborativespace .card-block.card-block-footer-default .meta-cat {
+  color: #999;
+}
+.card-collaborativespace .card-block.card-block-footer-default .typologies {
+  padding-left: 16px;
+  float: left;
+}
+.card-collaborativespace.has-back-card .typologies {
+  max-width: 82%;
+}
+.card-collaborativespace .access-policy-icon {
+  position: absolute;
+  top: 180px;
+  margin-top: -36px;
+  width: 42px;
+  border-radius: 21px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 5px;
+  font-size: 1.5em;
+  color: #999;
+  text-align: center;
+}
+.card-collaborativespace .card-flipper.btn-link {
+  text-decoration: none;
+}
+.card-collaborativespace .card-back {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.card-collaborativespace .card-back .cs-abstract {
+  margin-bottom: 40px;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+}
+.card-collaborativespace .card-back .cs-abstract .jalios-scrollbar {
+  max-height: 180px;
+  position: relative;
+}
+.card-collaborativespace .card-back .display-cs-btn-link {
+  transform: translateX(-50%);
+  margin-left: 50%;
+  text-align: center;
+}
+.browser-IE11 .card-collaborativespace .card-title {
+  word-break: break-all;
+}
+.browser-IE11 .card-collaborativespace .card-back {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 !important;
+}
+.browser-IE11 .card-collaborativespace .card-back .card-block.card-cs-title {
+  min-height: 75px;
+}
+.card-responsive-layout .card.card-collaborativespace {
+  min-height: 324px;
+}
+/*# sourceMappingURL=cs-card.css.map */

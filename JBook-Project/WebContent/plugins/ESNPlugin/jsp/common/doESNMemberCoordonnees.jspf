@@ -1,0 +1,33 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
+<% { %>
+  <%
+  Member itMember = member;
+  request.setAttribute("esn.email.icon", "jcmsplugin-esn-email");
+  %>
+  <jalios:buffer name="coordonneesBuffer">
+    <%@ include file="/plugins/ESNPlugin/jsp/common/doEmailAndPhone.jspf" %>
+    
+    <%@ include file="/plugins/ESNPlugin/jsp/common/doESNMemberLanguageAndTimeZone.jspf" %>
+
+    <% 
+    Member addressMember = member;
+    if (addressMember != null && addressMember.hasAnyAddress()) {
+    %>
+    <li class="profile-address">
+      <%@ include file="/plugins/ESNPlugin/jsp/common/doESNMemberAddress.jspf" %>     
+    </li>
+    <% } %>
+    
+    <%-- OTHER CONTACT INFOS --%>
+    <% if (Util.toBoolean(request.getAttribute("esn.member-profile.target.header-contact"), true)) { %>
+      <jalios:include target="PLUGIN_ESN_PROFILE_HEADER_CONTACT" targetContext="li" />
+    <% } %>
+  </jalios:buffer>
+  <% if (Util.notEmpty(coordonneesBuffer.toString())) { %>
+  <div class="profile-coordonnees-wrapper">
+    <ul class="profile-coordonnees">
+    <%= coordonneesBuffer.toString() %>
+    </ul>
+  </div>
+  <% } %>
+<% } %>

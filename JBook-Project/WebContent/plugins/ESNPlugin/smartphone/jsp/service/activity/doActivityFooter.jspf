@@ -1,0 +1,28 @@
+<%@page import="com.jalios.util.Util"%><%
+%><%@page import="com.jalios.jcmsplugin.smartphone.SmartPhonePublicationManager.PublicationActionItem"%><%
+%><%@page import="com.jalios.jcmsplugin.smartphone.SmartPhonePublicationManager"%><%
+// When included
+
+if(activityPub == null) {
+  // When AJAX call
+  activityPub = getPublicationParameter("pubId");
+}
+
+if(activityPub != null) {
+  ServletUtil.backupAttribute(pageContext, "jcms.plugin.smartphone.pub");
+  request.setAttribute("jcms.plugin.smartphone.pub", activityPub);
+  
+  SmartPhonePublicationManager pubManager = SmartPhonePublicationManager.getInstance();
+  Set<PublicationActionItem> actionItems = pubManager.getActionItems(activityPub, "jcmplugin.smartphone.activity.action-item.");
+  if (Util.notEmpty(actionItems)) {
+    %>
+    <div class="actions-wrapper">
+      <% for (PublicationActionItem item : actionItems) { %>
+        <jalios:include jsp="<%= item.getUrl() %>" />
+      <% } %>
+    </div>
+    <%
+  }
+  ServletUtil.restoreAttribute(pageContext, "jcms.plugin.smartphone.pub");
+}
+%>

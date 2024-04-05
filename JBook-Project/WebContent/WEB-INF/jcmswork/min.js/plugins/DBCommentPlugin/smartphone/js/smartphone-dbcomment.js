@@ -1,0 +1,1 @@
+!function(a){a(document).on("click",".action-item-comment",function(b){a([document.documentElement,document.body]).animate({scrollTop:a(".comment-list .add-comment").offset().top},200);a(".comment-list .add-comment").trigger("tap");a(".comment-list .widget-name-description TEXTAREA").focus()})}(window.jQuery);

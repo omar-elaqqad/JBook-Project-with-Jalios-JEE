@@ -1,0 +1,114 @@
+jcmsplugin.dbcomment.edit.lbl.add-comment:    코멘트 추가하기
+jcmsplugin.dbcomment.edit.lbl.add-comment-verb:  코멘트
+jcmsplugin.dbcomment.edit.lbl.create-comment: 코멘트 게시하기
+jcmsplugin.dbcomment.edit.lbl.cancel:         취소
+jcmsplugin.dbcomment.edit.lbl.link-top:       페이지 상단으로 돌아가기
+jcmsplugin.dbcomment.edit.lbl.comment-on:     {0}에 코멘트
+jcmsplugin.dbcomment.edit.lbl.title:          댓글
+jcmsplugin.dbcomment.edit.lbl.view-comment:   코멘트 보기
+jcmsplugin.dbcomment.edit.lbl.disable-comment:  비활성화된 코멘트
+jcmsplugin.dbcomment.edit.lbl.enable-comment:   활성화된 코멘트
+jcmsplugin.dbcomment.edit.lbl.view-all-comments: {0,choice,0#노코멘트|1#코멘트 보기|2#코멘트{0} 보기}
+jcmsplugin.dbcomment.edit.lbl.collapse-comments: 코멘트 축소
+jcmsplugin.dbcomment.edit.lbl.warn.edit-moderation.disabled:        현재의 중재 유형은 코멘트 자체를 변경할 권한을 주지 않습니다. 오로지 다른 필드 만 변경할 수 있습니다. 그렇지만 코멘트 워클플로우 상태를 업데이트할 수 있습니다.
+jcmsplugin.dbcomment.edit.follow:        게시물에 등록
+
+jcmsplugin.dbcomment.lbl.comment:             코멘트
+jcmsplugin.dbcomment.lbl.comments:            댓글
+jcmsplugin.dbcomment.lbl.comment-count:       {0,choice,0#노코멘트|1#{0} 코멘트|2#{0} 코멘트}
+jcmsplugin.dbcomment.lbl.comment-count-text:  {0,choice,0#코멘트|1#코멘트|2#코멘트}
+jcmsplugin.dbcomment.lbl.new:                 읽지 않음
+jcmsplugin.dbcomment.lbl.see-previous-comments: {0,choice,1#이전 코멘트를 참조하십시오.|2#{0} 이전 코멘트를 참조하십시오.}
+jcmsplugin.dbcomment.lbl.major-update-date:   마지막 주요 업데이트 {0}
+jcmsplugin.dbcomment.lbl.private:             비공개
+jcmsplugin.dbcomment.lbl.private-description: 이 콘텐츠는 그룹"{0}" 의 구성원이 읽을 수 있습니다.
+jcmsplugin.dbcomment.lbl.private-edit-tooltip: 사적인 콘텐츠 사용하기는 그룹"{0}" 의 구성원만 해당 콘텐츠에 액세스 할 수 있도록 해줍니다.
+jcmsplugin.dbcomment.lbl.non-visible-created-comment: 귀하의 댓글이 생성되었고 현재 인증 중입니다.
+jcmsplugin.dbcomment.lbl.closed-comment:     이 게시물에서 댓글들이 폐쇄됩니다.
+
+jcmsplugin.dbcomment.commentTop-section:가장 많은 코멘트가 달린 콘텐츠
+jcmsplugin.dbcomment.commentTop-section.help: 톱 10 코멘트 콘텐츠
+jcmsplugin.dbcomment.commentTop.name:제목
+jcmsplugin.dbcomment.commentTop.number: 댓글
+
+# ----------------------------------------------------------------------
+# Alert
+# ----------------------------------------------------------------------
+alert.name.jcmsplugin-dbcomment:                              댓글
+alert.name.jcmsplugin-dbcomment.new-comment:                  새로운 코멘트
+alert.msg.jcmsplugin-dbcomment.new-comment.title:             "{parent}"에 대한 새로운 코멘트
+alert.msg.jcmsplugin-dbcomment.new-comment.short-description: {author}님이 "{parent}"에 새로운 코멘트를 게시했습니다. {parent.link}
+alert.msg.jcmsplugin-dbcomment.new-comment.description:       <p>{author}님이 새로운 {data}을(를) 게시했습니다.</p>
+alert.name.jcmsplugin-dbcomment.new-mention:                  새로운 언급
+alert.msg.jcmsplugin-dbcomment.new-mention.title:             "{parent}"에 대한 새로운 코멘트에서 귀하가 언급되었습니다
+alert.msg.jcmsplugin-dbcomment.new-mention.short-description:  {author}님이 "{parent}"에 대한 새로운 코멘트에서 귀하를 언급했습니다. {parent.link}
+alert.msg.jcmsplugin-dbcomment.new-mention.description:        <p>{author}님이 "{parent.data}"에 대한 새로운 코멘트에서 귀하를 언급했습니다.</p> 
+alert.new-comment-mention.title:     "{parent}"에 대한 새로운 코멘트에서 귀하가 언급되었습니다
+alert.new-comment-mention.short-description: {author}님이 "{parent}"에 대한 새로운 코멘트에서 귀하를 언급했습니다. {parent.link}
+alert.new-comment-mention.description:       <p>{author}님이 "{parent.data}"에 대한 새로운 코멘트에서 귀하를 언급했습니다.</p> 
+
+# ----------------------------------------------------------------------
+# Editable properties
+# ----------------------------------------------------------------------
+jcmsplugin.dbcomment.anonymous:               익명 코멘트
+jcmsplugin.dbcomment.anonymous.notify:        익명의 사용자에게 알림
+jcmsplugin.dbcomment.compatible-types:        코멘트 가능 유형
+jcmsplugin.dbcomment.edit-moderation.enabled:  엄격한 중재 모드
+jcmsplugin.dbcomment.edit-moderation.enabled.boolean: 거짓
+jcmsplugin.dbcomment.edit-moderation.enabled.help: 예를 선택하여 코멘트를 업데이트할 수 있는 권한을 가진 사용자는 코멘트의 콘텐츠를 제외한 모든 필드를 업데이트할 수 있습니다. 오직 코멘트 저자 만이 이 텍스트를 수정할 권한이 있습니다.
+
+jcmsplugin.dbcomment.edit-commentable.enabled: 각 게시물에 대해 비활성화된 콘텐츠 활성화 허가하기
+jcmsplugin.dbcomment.edit-commentable.enabled.boolean:거짓
+jcmsplugin.dbcomment.edit-commentable.enabled.boolean.help: 예를 선택하여 코멘트를 업데이트할 수 있는 권한을 가진 사용자는 코멘트의 콘텐츠를 제외한 모든 필드를 업데이트할 수 있습니다.
+
+jcmsplugin.dbcomment.commentable-default-value: 코멘트의 활성화 또는 비활성화 : 기본 값
+jcmsplugin.dbcomment.commentable-default-value.boolean.help: "게시물에 대해 활성화된 코멘트"가 활성화되면 게시물이 기본적으로 코멘트가 가능한지 아닌지를 정의하십시오.
+
+jcmsplugin.dbcomment.commentable.title : 댓글
+jcmsplugin.dbcomment.commentable.description : 코멘트 활성화시키기
+jcmsplugin.dbcomment.commentable.desactivate-comment: {0} 에서 코멘트 비활성화시키기
+jcmsplugin.dbcomment.commentable.activate-comment: {0} 에서 코멘트 활성화시키기
+jcmsplugin.dbcomment.commentable.forbidden-comment: 코멘트가 대상 콘텐츠에서 비활성화되었습니다.
+
+jcmsplugin.dbcomment.private-comment.group: 사적인 코멘트 - 그룹
+jcmsplugin.dbcomment.private-comment.group.help: 사적인 코멘트를 게시하고 읽을 수 있는 그룹
+jcmsplugin.dbcomment.private-comment.enabled: 사적인 코멘트 - 사적인 코멘트 사용
+jcmsplugin.dbcomment.private-comment.default-value: 사적인 코멘트 - 사적인 코멘트에 대한 기본값
+jcmsplugin.dbcomment.private-comment.default-value.help: 예를 선택하면 새로운 코멘트를 생성할 때 사적인 코멘트 선택이 "예"로 설정됩니다
+
+jcmsplugin.dbcomment.reverse-order: 거꾸로 정렬 순서
+jcmsplugin.dbcomment.reverse-order.help: "예"를 선택하면 오래된 코멘트가 먼저 표시됩니다
+jcmsplugin.dbcomment.change-sort: 정렬 - 선택한 필드
+jcmsplugin.dbcomment.change-sort.help: 선택한 필드의 코멘트 정렬
+
+jcmsplugin.dbcomment.smart.comment-display.enabled: 스마트 코멘트 표시 활성화
+jcmsplugin.dbcomment.smart.comment-display.enabled.boolean: 거짓
+jcmsplugin.dbcomment.smart.comment-display.enabled.help: 이 시스템은 게시물에서 오래된 코멘트를 숨깁니다
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From DBComment-templates.xml
+types.DBComment.templates.query.default.label: 기본 템플릿
+types.DBComment.templates.full.default.label: 기본 템플릿
+
+# From DBComment.xml
+types.DBComment.fields.email.description: 주소가 게시지 않을 것입니다.
+types.DBComment.fields.email.label: 이메일
+types.DBComment.title.label: 제목
+types.DBComment.fields.referer.label: 추천자
+types.DBComment.fields.ipAddress.label: IP 주소
+types.DBComment.fields.name.label: 이름
+types.DBComment.fields.targetContent.label: 대상 콘텐츠
+types.DBComment.fields.userAgent.label: 매개 사용자
+types.DBComment.label: 코멘트
+types.DBComment.fields.webSite.label: 웹사이트
+types.DBComment.fields.description.label: 코멘트
+types.DBComment.fields.privateComment.label: 사적인 코멘트
+
+# SmartPhone
+jcmsplugin.dbcomment.smartphone.lbl.dbcomment.add-comment.placeholder: 코멘트 추가하기...
+
+# Explorer sidebar integration
+jcmsplugin.explorer-sidebar.see-comments: 코멘트 액세스
+jcmsplugin.explorer.app.sidebar-tab.comments: 댓글

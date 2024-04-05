@@ -1,0 +1,35 @@
+<%@page import="com.jalios.jcmsplugin.smartphone.SmartPhoneCtxMenuManager"%>
+<%@page import="com.jalios.jcmsplugin.smartphone.SmartPhoneCtxMenuManager.CtxMenuItem"%>
+<%@page import="com.jalios.util.ServletUtil"%><%
+%><%@page import="com.jalios.jcmsplugin.smartphone.SmartPhoneManager"%><% 
+SmartPhoneCtxMenuManager ctxMenuManager = SmartPhoneCtxMenuManager.getInstance();
+Set<CtxMenuItem> ctxMenuItems = ctxMenuManager.getWorkspaceCtxMenuItems();
+%>
+<jalios:buffer name="menuItems" trim="true">
+  <jalios:include target="SMARTPHONE_TOPBAR_WORKSPACE_ACTIONS" targetContext="LI" />
+  <% for (CtxMenuItem ctxMenuItem : ctxMenuItems) { %>
+    <jalios:include jsp="<%= ctxMenuItem.getUrl() %>" />
+  <% } %>
+  <jalios:include target="SMARTPHONE_TOPBAR_WORKSPACE_ACTIONS_BOTTOM" targetContext="LI" />
+</jalios:buffer>
+<% if(Util.notEmpty(menuItems)) { %>
+<% String uniqueId = ServletUtil.generateUniqueDOMId(request, "topbarWorkspaceMenu"); %>
+<div class="topbar-actions topbar-item topbar-right" data-role="none">
+  <% if (Util.notEmpty(request.getAttribute("topbarLeftItems"))) { %>
+    <%= request.getAttribute("topbarLeftItems") %>
+  <% } %>  
+  <div class="topbar-item open-panel">
+    <a href="#<%= uniqueId %>" data-rel="popup" data-transition="slideup">
+      <jalios:icon src="smartphone-topbar-action-menu" />
+    </a>
+  </div>
+  <% if (Util.notEmpty(request.getAttribute("topbarRightItems"))) { %>
+    <%= request.getAttribute("topbarRightItems") %>
+  <% } %>   
+</div>
+<div data-role="popup" id="<%= uniqueId %>" data-theme="a" class="topbar-menu-dropdown">
+  <ul data-role="listview" data-inset="true" style="min-width:210px;">
+    <%= menuItems %>
+  </ul>
+</div>
+<% } %>

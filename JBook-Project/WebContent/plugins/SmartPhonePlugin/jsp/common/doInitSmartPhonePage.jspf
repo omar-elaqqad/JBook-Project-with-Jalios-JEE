@@ -1,0 +1,12 @@
+<%@ include file='/jcore/doInitPage.jspf' %><%
+
+if (!isLogged) {
+  String currentResourcePath = ServletUtil.getResourcePath(request);
+  if (!"plugins/SmartPhonePlugin/jsp/core/login.jsp".equals(currentResourcePath)) {
+    sendRedirect("plugins/SmartPhonePlugin/jsp/core/login.jsp?redirect=" + ServletUtil.encodeURL(ServletUtil.getUrl(request, false)));
+    return;
+  }
+}
+
+request.setAttribute("jcms.plugin.smartphone.smartphone-resource", true);
+%><%@ include file="/plugins/SmartPhonePlugin/jsp/common/doInitSmartPhoneWorkspace.jspf" %>

@@ -1,0 +1,151 @@
+// Include "generated file" message for CSS output
+/* ------------------------------------------------------------------------- */
+/*  This file has been automatically generated from collaborativeSpace.less  */
+/* ------------------------------------------------------------------------- */
+
+// Include variables and mixins
+@import "../../../css/jalios/core/init-mixins.less"; // Use init-mixins.less if more mixins are required
+
+// PLUGIN LESS VARIABLES
+@import "cs-variables.less";
+
+// Hook for JCMS
+@import "../../../css/plugin.less";
+
+// ------------------------------------------------------------------- 
+//  PLUGIN CSS DECLARATION                                             
+// ------------------------------------------------------------------- 
+
+// Layout
+@import "cs-layout.less";
+
+// Header tabs
+@import "cs-tabs.less"; 
+
+// Introduction
+@import "cs-intro.less";
+
+// Access policies
+@import "cs-access-policies.less";
+
+// Badges / Labels
+@import "cs-badges.less";
+
+// Misc
+.cs-members, 
+#invitations,
+#signups {
+  #JCMS > .br();
+}
+
+BODY {
+  .CollaborativeSpace {
+    .cs-portal .app .app-main,
+    .app-conversation-space .app-main {
+      background-color: white;
+    }
+  }
+}
+
+// Fix https://issues.jalios.com/browse/CSP-706
+.itemlist-wrapper {
+  .itemlist-item,
+  .itemlist-item-detailed {
+    &.has-action:hover .itemlist-item-actions {
+      display: flex;
+    }
+  }
+}
+
+.csNoSkin.Portlet {
+    margin-bottom: 40px;
+}
+
+.cs-body .selection-body {
+  margin-top: 0;
+}
+
+
+.mobile-settings {
+  display:flex;
+  
+  .mobile-portlet {
+    display: flex;
+    width: 100%;
+    gap: 16px;
+    background-color: #F9f9f9;
+    border: 1px solid #DDD;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    position: relative;
+    .mobile-portlet-name {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    > IMG {
+      width: 150px;
+      aspect-ratio: 16/9;
+    }
+
+    .mobile-portlet-actions {
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      color: #666;
+      display: flex;
+      > button {
+        text-decoration: none;
+        padding: 8px;
+        color: #666;
+      }
+    }
+
+    .mobile-portlet-drag {
+      cursor: grab;
+    }
+    
+    &.mobile-portlet-add {
+      padding: 8px;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      transition: background-color 200ms ease-in;
+      cursor: pointer;
+      &:hover {
+        background-color: darken(#F9f9f9, 5%);
+      }
+    }
+    &.mobile-portlet-add-form {
+      display: block;
+    }
+  }
+  .mobile-settings-inputs {
+    padding-right: 48px;
+    width: 600px;
+  }
+  .mobile-preview-wrapper {
+    height: 736px;
+    width: 414px;
+    border: 1px solid #CCC;
+    position: relative;
+    .mobile-preview {
+      position: absolute;
+      top:0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      border: 0 none;
+    }
+  }
+  
+}
+
+// For anchor (Avoidance link search)
+html {
+  scroll-padding-top: @topbar-height;
+}

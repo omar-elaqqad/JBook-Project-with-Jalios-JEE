@@ -1,0 +1,31 @@
+<%@page import="com.jalios.util.Util"%><%
+%><%@page import="com.jalios.jcmsplugin.collaborativespace.CSHubHandler"%><%
+%><%@ page contentType="text/html; charset=UTF-8"%><%
+%><% if (showAccessPolicyFilter) { %>
+  <%
+  boolean collapsed = Util.isEmpty(formHandler.getAvailableAccessPolicy());
+  boolean isFilterExclusive = true;
+  
+  EnumerateSettings accessPolicySettings = (EnumerateSettings) formHandler.getAccessPolicySettings();
+  Object[] accessPolicyValues = (Object[]) accessPolicySettings.getOption(SelectorSettings.ENUM_VALUES);
+  Object[] accessPolicyLabels = (Object[]) accessPolicySettings.getOption(SelectorSettings.ENUM_LABELS);
+  
+  String sidebarFilterId = "sidebarFilter_" + "accessPolicy";
+  %>
+  <jalios:appSidebarSection name="access-policy" css="cs-hub-sidebar-access-policy" title="jcmsplugin.collaborativespace.hub.sidebar-section.accessPolicy" collapsable="true" collapsed="<%= collapsed %>">
+    <ul class="app-sidebar-menu app-sidebar-menu-formitems app-sidebar-treecat cs-hub-access-policy-root-filter"  id="<%= sidebarFilterId %>">
+        <% for (int i=0; i<accessPolicyValues.length; i++) { %>
+        <%
+        String accessPolicyValue = (String) accessPolicyValues[i];
+        String accessPolicyLabel = (String) accessPolicyLabels[i];
+        %>
+        <li class="<%= formHandler.isActive(accessPolicyValue) ? "active" : "" %>" data-jalios-cs-hub-access-policy='<%= encodeForHTMLAttribute(accessPolicyValue) %>'>
+          <% if (formHandler.isActive(accessPolicyValue)) { %>
+            <%= JcmsUtil.getHtmlIcon("app-list-check", "", "", "app-list-right-icon", "", userLang) %>
+          <% } %>
+          <jalios:control settings='<%= formHandler.getAccessPolicySettings(accessPolicyValue, accessPolicyLabel) %>' />
+        </li>
+      <% } %>
+    </ul>
+  </jalios:appSidebarSection>
+<% } %><%-- .showAccessPolicyFilter --%>

@@ -1,0 +1,76 @@
+#index-service {
+  background-color:white;
+  bottom:0; //Background different from usual background
+}
+
+.ui-page-theme-a .service-drawer A {
+  color: #333;
+}
+
+.service-drawer {
+  padding:0 0 20px 0;
+  display:flex; 
+  display: flex;
+  flex: 1 1 33%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 33%;
+  
+  .jcms-message {
+    margin: 20px 40px 5px;
+  }
+  
+	.service {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    align-items: center;	
+		text-align: center;
+		overflow: auto;
+    padding: @drawer-service-padding;
+		.service-inner {
+			display: inline-block;
+			margin: 0 auto;
+			width: @drawer-service-inner-width;
+		}
+		.service-icon  {
+			display: block;
+			text-shadow: none;
+			font-size: @drawer-service-icon-size;
+			color: @drawer-service-icon-color;
+			margin-bottom: @drawer-service-icon-margin-bottom;
+			padding: @drawer-service-icon-padding;
+			border-radius: @drawer-service-icon-radius;
+			width: @drawer-service-icon-width;
+			height: @drawer-service-icon-height;
+			background-color: @drawer-service-background-color;
+		}
+		.service-title {
+			display: block;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			font-size: @drawer-title-font-size;
+		}
+		
+		//Specific service override
+		&.service-workflow .service-icon{
+			padding-left: 3px;
+		}		
+		&.service-recenthistory .service-icon {
+      padding-top: 14px;
+		}
+    &.service-workspace .service-icon {
+      padding-left: 4px;
+    }
+  }
+}
+
+//Service background color
+.smartphone-drawer-service(workflow);
+.smartphone-drawer-service(recenthistory);
+.smartphone-drawer-service(admin);
+.smartphone-drawer-service(news);
+.smartphone-drawer-service(workspace);
+.smartphone-drawer-service(search);

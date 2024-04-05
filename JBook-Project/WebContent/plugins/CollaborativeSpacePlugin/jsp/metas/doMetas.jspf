@@ -1,0 +1,30 @@
+<%--
+  @Summary: CollaborativeSpace meta datas for Full Display template
+  @Category: Portal
+  @Author: Jalios SA 
+  @Customizable: True
+  @Requestable: False 
+--%><%@page import="com.jalios.jcmsplugin.collaborativespace.guest.GuestAccountManager"%><%
+
+// Toggle processed by JS
+String memberListSuffix = "...";
+%>
+
+<jalios:include target="PLUGIN_CSP_METAS_START" />
+<div class="cs-metas-wrapper<%= csHandler.isMetasOpened() || !csHandler.isFullAccess() ? " opened" : "" %>">
+  <div class="navbar cs-meta-navbar" role="navigation">
+    <div class="container-fluid">
+
+      <%-- COLLAPSED VIEW --%>
+      <div class="cs-metas-collapsed">
+        <%@ include file="doMetasCollapsed.jspf" %>
+      </div>
+    
+      <%-- FULL VIEW --%>
+      <div class="cs-metas-opened">
+        <%@ include file="doMetasOpened.jspf" %>
+      </div>
+    </div>
+  </div>
+</div>
+<jalios:include target="PLUGIN_CSP_METAS_END" />

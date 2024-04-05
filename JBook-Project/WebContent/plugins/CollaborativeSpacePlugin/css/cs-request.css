@@ -1,0 +1,10 @@
+.CSRequest.fullDisplay .card-member,
+.DBCSRequest.fullDisplay .card-member {
+  max-width: 350px;
+  margin-bottom: 20px;
+}
+.CSRequest.fullDisplay .card-inline-layout .card-flip-wrapper,
+.DBCSRequest.fullDisplay .card-inline-layout .card-flip-wrapper {
+  margin-bottom: 20px;
+}
+/*# sourceMappingURL=cs-request.css.map */

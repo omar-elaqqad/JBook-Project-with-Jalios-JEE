@@ -1,0 +1,79 @@
+/* ********************** */
+/* Breadcrumb and headers */
+/* ********************** */
+
+.breadcrumb + .ui-content > .ui-listview  {
+  margin-top: 0;
+}
+
+HTML .breadcrumb {
+  margin: 0;
+  border: 0 none transparent;
+  font-size: 16px;
+  border-radius: 0;
+  font-weight: 400;
+  background: #424242;
+  padding: 15px;
+  
+  > LI + LI:before {
+    content: ">";
+    color: #333;
+  }
+ 
+  > LI A {
+    font-weight: 400;
+    color: #333 !important;
+  }
+  .colored-banner-content {
+    display: inline-flex;
+    align-items: center;
+    color: #333;
+    font-weight: 400;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    max-width: 100%;
+    
+    .jalios-icon {
+      margin-right: 8px;
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.breadcrumb > .active {
+  color: white;
+}
+
+
+
+.colored-banner.input-in-header {
+  background-color: #EEE !important;
+}
+
+HTML .breadcrumb.colored-banner  {
+  &.application-breadcrumb {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    padding-bottom: 11px;
+    padding-top: 12px;    
+    .colored-banner-content {
+      line-height: 24px;
+    }
+    .colored-banner-content {
+      color: #333;
+      font-size: 24px;
+      font-weight: 400;
+    }
+  }
+  background-color: white !important;
+  border-bottom: 1px solid rgba(171, 171, 171, 0.24);
+  padding-bottom: 8px;
+  padding-top: 8px;
+
+}

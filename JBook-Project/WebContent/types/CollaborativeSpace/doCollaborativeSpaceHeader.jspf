@@ -1,0 +1,62 @@
+<%--
+  @Summary: CollaborativeSpace header template
+  @Category: Portal
+  @Author: Jalios SA 
+  @Customizable: True
+  @Requestable: False 
+--%>
+<section role="presentation" id="cs-header" class="<%= csHandler.getHeaderElement().getHeaderCss() %>" <%= csHandler.getHeaderElement().getHeaderBgStyle() %>>
+  <div id="cs-header-middle" class="container-fluid<%= csHandler.isChild() && csHandler.canAccessParent() ? " subspace" : ""%>">
+    <div class="row">
+      <%-- TITLE --%>
+      <div id="cs-header-title" class="cs-header-title col-xs-7 col-md-8 col-lg-9">
+        <% if (csHandler.showParentLink()) { %>
+          <div class="parent-link-wrapper">
+            <jalios:link data='<%= csHandler.getCSParent() %>' css="parent-cs-link condensed-link" title='<%= glp("ui.wrkspc-edit.parent-workspace") %>'>
+              &lt;
+            </jalios:link>
+            <jalios:link data='<%= csHandler.getCSParent() %>' css="parent-cs-link" title='<%= glp("ui.wrkspc-edit.parent-workspace") %>'>
+              <%= csHandler.getCSParent().getTitle(userLang) %>
+            </jalios:link>
+          </div>
+        <% } %>
+        <% if (csHandler.useH1ForCSHeader()) { %>
+          <h1 class="cs-header-index">
+            <a href="<%= cs.getDisplayUrl(userLocale) %>" class="cs-link">
+              <%= cs.getTitle(userLang) %>
+            </a>
+          </h1>
+        <% } else { %>
+          <jalios:link data='<%= cs %>' css="cs-link" />
+        <% } %>
+      </div>
+      <%-- SEARCH BOX --%>
+      <% if (csHandler.isFullAccess()) { %>
+        <%
+        String workspaceSearchAvoidanceAnchor = "workspace-search-field";
+        // Add this to skip avoidance link
+        // request.setAttribute("jcmsplugin.collaborativespace.a11y.avoidance-link.workspace-search", "");
+        // Add this to override target anchor
+        // request.setAttribute("jcmsplugin.collaborativespace.a11y.avoidance-link.workspace-search", "custom-workspace-search");
+        if (request.getAttribute("jcmsplugin.collaborativespace.a11y.avoidance-link.workspace-search") != null) {
+          workspaceSearchAvoidanceAnchor = Util.getString(request.getAttribute("jcmsplugin.collaborativespace.a11y.avoidance-link.workspace-search"), "");
+        }
+        // Add avoidance link if only an anchor is set
+        if (Util.notEmpty(workspaceSearchAvoidanceAnchor)) {
+          jcmsContext.addAvoidanceLink(workspaceSearchAvoidanceAnchor, glp("jcmsplugin.collaborativespace.a11y.avoidance-link.workspace-search"));
+        }
+        %>
+        <div id="cs-search-form" class="cs-search-form hidden-print col-xs-5 col-md-4 col-lg-3">
+          <jalios:include id="$id.jcmsplugin.collaborativespace.data.portlet.search" />
+        </div>
+      <% } %>
+    </div>
+  </div>
+  
+  <%-- TABS --%>  
+  <div id="cs-header-bottom">
+    <div id="cs-header-tabs" class="hidden-print">
+      <%@ include file='doHeaderNav.jspf'%>
+    </div>
+  </div>
+</section>

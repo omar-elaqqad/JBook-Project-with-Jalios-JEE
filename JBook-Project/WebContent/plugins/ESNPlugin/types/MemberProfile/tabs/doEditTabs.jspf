@@ -1,0 +1,64 @@
+<%@page import="com.jalios.jcmsplugin.esn.profile.ui.ProfileUIInitContext"%><%
+%><%@page import="com.jalios.jcmsplugin.esn.EditFullProfileHandler"%><%
+%><%@page import="com.jalios.jcms.handler.EditMemberHandler"%><%
+%><%@page import="com.jalios.jcms.uicomponent.DataAttribute"%><%
+%><%@page import="com.jalios.util.Util"%><%
+%><%@page import="com.jalios.jcmsplugin.esn.ui.UITab"%><%
+%><%@page import="com.jalios.jcmsplugin.esn.ui.UITabs"%><%
+%><%@ page contentType="text/html; charset=UTF-8"%><%
+
+jcmsContext.addCSSHeader("css/jalios/core/components/tabs/jalios-tabs-underlined.css");
+
+StringBuilder uiTabsNavigationBuilder = new StringBuilder(); 
+StringBuilder uiTabsBodyBuilder = new StringBuilder(); 
+if (tabs != null && Util.notEmpty(tabs.getItems())) {
+  // Refresh tab list
+  tabs.refresh(request);
+  for (UITab tab : tabs.getItems()) {
+    String tabRequestAttr = UITabs.TAB_REQUEST_ATTR;
+    //logger.info("doInitEditTabs.jspf: set attr: " + tabRequestAttr + "=" + tab);
+    boolean isActive = tabs.isActive(tab, request);
+    request.setAttribute(tabRequestAttr, tab);
+    String tabCss = "";
+    String tabId = tab.getId();
+    tabCss += Util.notEmpty(tabId) ? (" esn-tab-" + tabId.toLowerCase()) : "";
+    tabCss += isActive ? " active in" : "";
+    String hrefUrl = tab.getUrl(request);
+    DataAttribute dataAttribute = new DataAttribute();
+    String linkIdAttr = "esn-tab-" + tabId.toLowerCase();
+    tabCss = tabCss.trim();
+    String contentCss = "tab-pane fade " + linkIdAttr;
+    contentCss += isActive ? " active in" : "";
+    contentCss = contentCss.trim();
+    %><%-- RENDER TAB --%><%
+    %><jalios:buffer name="tabBuffer"><%
+      %><li role="presentation" class="<%= tabCss %>"><%
+        %><a class="js-tab-link js-ripple"<%
+            %> aria-controls="<%= encodeForHTMLAttribute(linkIdAttr) %>"<%
+            %> data-target="#<%= encodeForHTMLAttribute(linkIdAttr) %>"<%
+            %> data-toggle="tab"<%
+            %> role="tab"<%
+            %><%= dataAttribute != null ? " " + dataAttribute.toString() : "" %>><%
+          %><%= tab.getLabel(userLang) %><%
+        %></a><%
+      %></li><%
+      out.println("");
+    %></jalios:buffer><%
+    %><% uiTabsNavigationBuilder.append(tabBuffer.toString()); %><%
+
+    %><%-- RENDER BODY --%><%
+    // Request attribute: esn.showEditInfo, esn.showEditExpertises, ...
+    String tabActiveAttribute = "esn.show" + Util.recapitalize(tabId);
+    request.setAttribute(tabActiveAttribute, Boolean.TRUE);
+    %>
+    <jalios:buffer name="bodyBuffer">
+      <div id="<%= linkIdAttr %>" class='<%= contentCss %>'>
+        <div class='profile-body-inner'>
+          <jalios:include jsp='<%= tab.getJsp() %>' />
+        </div>
+      </div>
+    </jalios:buffer>
+    <% uiTabsBodyBuilder.append(bodyBuffer.toString()); %>
+    <% request.removeAttribute(tabRequestAttr); %>
+  <% } %>
+<% } %>

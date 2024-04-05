@@ -1,0 +1,66 @@
+.smartphone-badge-parent {
+  position: relative;
+
+  .smartphone-badge {
+    background-color: @brand-info;
+    position: absolute;
+    padding: 2px 4px;
+    font-size: 10px;
+    line-height: 10px;
+    color: white;
+    border-radius: 10px;
+    left: calc(~"50%" - 4px);
+    top: 2px;
+    margin-left: 2px;
+    border: 1px solid white;
+    
+    &.application-badge{
+    	left: calc(~"50%" - -4px);
+    }
+
+    &.badge-info {
+      background-color: @brand-info;
+    }
+
+    &.badge-warning {
+      background-color: @brand-warning;
+    }
+
+    &.badge-danger {
+      background-color: @brand-danger;
+    }
+
+    &.badge-animate {
+      animation: 1s badgeBounce;
+    }
+  }
+}
+@keyframes badgeBounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-30px);
+  }
+
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+
+
+.badge.badge-default {
+  border: 1px solid #DDD;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-right: 4px;
+  color: #999;
+  background-color: white;
+}

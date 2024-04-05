@@ -1,0 +1,114 @@
+jcmsplugin.dbcomment.edit.lbl.add-comment:    添加評論
+jcmsplugin.dbcomment.edit.lbl.add-comment-verb:  評論
+jcmsplugin.dbcomment.edit.lbl.create-comment: 發布評論
+jcmsplugin.dbcomment.edit.lbl.cancel:         取消
+jcmsplugin.dbcomment.edit.lbl.link-top:       返回頁首
+jcmsplugin.dbcomment.edit.lbl.comment-on:     {0}評論
+jcmsplugin.dbcomment.edit.lbl.title:          評語
+jcmsplugin.dbcomment.edit.lbl.view-comment:   查看評論
+jcmsplugin.dbcomment.edit.lbl.disable-comment:  禁用評論
+jcmsplugin.dbcomment.edit.lbl.enable-comment:   激活評論
+jcmsplugin.dbcomment.edit.lbl.view-all-comments: {0,choice,0#沒有評論|1#查看評論|2#查看{0}的評論}
+jcmsplugin.dbcomment.edit.lbl.collapse-comments: 不可信評論
+jcmsplugin.dbcomment.edit.lbl.warn.edit-moderation.disabled:        當前調整類型不允許您來修改評論自身，只能是其他項。但是，您可以更新評論工作流狀態。
+jcmsplugin.dbcomment.edit.follow:        注冊到該文章
+
+jcmsplugin.dbcomment.lbl.comment:             評論
+jcmsplugin.dbcomment.lbl.comments:            評語
+jcmsplugin.dbcomment.lbl.comment-count:       {0,choice,0#沒有評論|1#{0} 評論|2#{0} 條評論}
+jcmsplugin.dbcomment.lbl.comment-count-text:  {0,choice,0#評論|1#評論|2#評論}
+jcmsplugin.dbcomment.lbl.new:                 未閱讀
+jcmsplugin.dbcomment.lbl.see-previous-comments: {0,choice,1#查看之前評論|2#查看之前{0}評論。}
+jcmsplugin.dbcomment.lbl.major-update-date:   上次主要更新{0}
+jcmsplugin.dbcomment.lbl.private:             不公開
+jcmsplugin.dbcomment.lbl.private-description: 該品類可為組"{0}"的成員可見。
+jcmsplugin.dbcomment.lbl.private-edit-tooltip: 激活私人評論后，該評論僅可由組"{0}"的用戶可見。
+jcmsplugin.dbcomment.lbl.non-visible-created-comment: 您的評論已創建，正在檢查當中。
+jcmsplugin.dbcomment.lbl.closed-comment:     該發佈項已關閉評論。
+
+jcmsplugin.dbcomment.commentTop-section:評論頻率最高的內容
+jcmsplugin.dbcomment.commentTop-section.help: 評論頻率最高的前10個內容
+jcmsplugin.dbcomment.commentTop.name:標題
+jcmsplugin.dbcomment.commentTop.number: 評語
+
+# ----------------------------------------------------------------------
+# Alert
+# ----------------------------------------------------------------------
+alert.name.jcmsplugin-dbcomment:                              評語
+alert.name.jcmsplugin-dbcomment.new-comment:                  新評論
+alert.msg.jcmsplugin-dbcomment.new-comment.title:             對 "{parent}"的新評論
+alert.msg.jcmsplugin-dbcomment.new-comment.short-description: {author}已經對"{parent}".發表新評論。{parent.link}
+alert.msg.jcmsplugin-dbcomment.new-comment.description:       <p>{author}已經發表新評論{data}。</p>
+alert.name.jcmsplugin-dbcomment.new-mention:                  新注釋
+alert.msg.jcmsplugin-dbcomment.new-mention.title:             您在{parent}的一個新評論中被人提及
+alert.msg.jcmsplugin-dbcomment.new-mention.short-description:  {author}在對"{parent}"的新評論中提到了您。{parent.link}
+alert.msg.jcmsplugin-dbcomment.new-mention.description:        <p>{author}在對"{parent.data}"的新評論中提到了您。</p> 
+alert.new-comment-mention.title:     您在{parent}的一個新評論中被人提及
+alert.new-comment-mention.short-description: {author}在對"{parent}"的新評論中提到了您。{parent.link}
+alert.new-comment-mention.description:       <p>{author}在對"{parent.data}"的新評論中提到了您。</p> 
+
+# ----------------------------------------------------------------------
+# Editable properties
+# ----------------------------------------------------------------------
+jcmsplugin.dbcomment.anonymous:               匿名評論
+jcmsplugin.dbcomment.anonymous.notify:        通知匿名用戶
+jcmsplugin.dbcomment.compatible-types:        評論類型
+jcmsplugin.dbcomment.edit-moderation.enabled:  嚴格審查模式
+jcmsplugin.dbcomment.edit-moderation.enabled.boolean: false
+jcmsplugin.dbcomment.edit-moderation.enabled.help: 如果選擇對，擁有更新評論權的用戶將可以更新評論內容之外的所有領域。僅評論作者可以有權修改評論正文。
+
+jcmsplugin.dbcomment.edit-commentable.enabled: 允許禁用每次發布的評論功能
+jcmsplugin.dbcomment.edit-commentable.enabled.boolean:false
+jcmsplugin.dbcomment.edit-commentable.enabled.boolean.help: 如果選擇對，擁有更新評論權的用戶將可以更新評論內容之外的所有領域。
+
+jcmsplugin.dbcomment.commentable-default-value: 啓用或禁用評論：默認值
+jcmsplugin.dbcomment.commentable-default-value.boolean.help: 如果選擇禁用文章的評論，那麽要定義該文章的默認值是可評論或是不可評論
+
+jcmsplugin.dbcomment.commentable.title : 評語
+jcmsplugin.dbcomment.commentable.description : 激活評論
+jcmsplugin.dbcomment.commentable.desactivate-comment: 禁用評論{0}
+jcmsplugin.dbcomment.commentable.activate-comment: 啓用 {0}評論
+jcmsplugin.dbcomment.commentable.forbidden-comment: 目標內容的評論被禁用。
+
+jcmsplugin.dbcomment.private-comment.group: 私人評論 - 組
+jcmsplugin.dbcomment.private-comment.group.help: 該組可發佈并閱讀私人評論。
+jcmsplugin.dbcomment.private-comment.enabled: 私人評論 - 激活私人評論
+jcmsplugin.dbcomment.private-comment.default-value: 私人評論 - 私人評論默認值
+jcmsplugin.dbcomment.private-comment.default-value.help: 選擇是后，創新新評論時，私人評論選擇將被設置為“是”。
+
+jcmsplugin.dbcomment.reverse-order: 反向排列順序
+jcmsplugin.dbcomment.reverse-order.help: 選擇“是”，舊文檔將最先可見
+jcmsplugin.dbcomment.change-sort: 排序 - 選定的字段
+jcmsplugin.dbcomment.change-sort.help: 按選定的字段排列評論
+
+jcmsplugin.dbcomment.smart.comment-display.enabled: 啓動智能評論顯示
+jcmsplugin.dbcomment.smart.comment-display.enabled.boolean: false
+jcmsplugin.dbcomment.smart.comment-display.enabled.help: 該系統隱藏該文章以前的評論
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From DBComment-templates.xml
+types.DBComment.templates.query.default.label: 默認模板
+types.DBComment.templates.full.default.label: 默認模板
+
+# From DBComment.xml
+types.DBComment.fields.email.description: 該地址將不會發布
+types.DBComment.fields.email.label: 電子郵箱
+types.DBComment.title.label: 標題
+types.DBComment.fields.referer.label: 推薦人
+types.DBComment.fields.ipAddress.label: IP地址
+types.DBComment.fields.name.label: 名稱
+types.DBComment.fields.targetContent.label: 目標內容
+types.DBComment.fields.userAgent.label: 用戶代理
+types.DBComment.label: 評論
+types.DBComment.fields.webSite.label: 網絡網站
+types.DBComment.fields.description.label: 評論
+types.DBComment.fields.privateComment.label: 私人評論
+
+# SmartPhone
+jcmsplugin.dbcomment.smartphone.lbl.dbcomment.add-comment.placeholder: 添加評論……
+
+# Explorer sidebar integration
+jcmsplugin.explorer-sidebar.see-comments: 訪問評論
+jcmsplugin.explorer.app.sidebar-tab.comments: 評語

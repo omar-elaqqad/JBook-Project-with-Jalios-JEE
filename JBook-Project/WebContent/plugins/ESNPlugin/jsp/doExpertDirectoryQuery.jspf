@@ -1,0 +1,68 @@
+<%
+Category cat = getDataParameter("mcat", Category.class);
+List<Category> selectedList = channel.getDataList(getStringParameterValues("smcats", HttpUtil.DATAID_REGEX), true, Category.class);
+
+ESNManager esnMgr = ESNManager.getInstance();
+
+Set<Category> tmpCatSet = cat != null ? (cat.isNode() ? cat.getChildrenSet() : cat.getParent().getChildrenSet()) : esnMgr.getMemberCategoriesDisplayRootSet();
+
+Set<Category> subCatSet = JcmsUtil.select(tmpCatSet, new Category.AuthorizedSelector(loggedMember), new Category.NameComparator(userLang));
+
+List<Category> ancestorList = null;
+Category navCat = cat;
+Set<Category> displayRootSet = esnMgr.getMemberCategoriesDisplayRootSet();
+
+if (cat != null) {
+  if (cat.isLeaf() && !displayRootSet.contains(cat)) {
+    navCat = cat.getParent();
+  }
+  Category root = null;
+  for(Category itRoot: displayRootSet) {
+
+    if (itRoot == cat || itRoot == navCat || cat.hasAncestor(itRoot)) {
+      root = itRoot;
+      break;
+    }
+  }
+  ancestorList = navCat.getAncestorList(root, true);
+  Collections.reverse(ancestorList);
+}
+
+String memberUsage = getStringEnumParameter("memberUsage", "all", new String[] {"all", "account", "contact"});
+String view = getAlphaNumParameter("view", "card");
+
+
+String urlPrefix = "plugins/ESNPlugin/jsp/expertDirectory.jsp?memberUsage=" + memberUsage + "&view=" + view + "&";
+
+if (selectedList != null) {
+  for(Category selectedCat: selectedList) {
+    urlPrefix += "smcats=" + selectedCat.getId() + "&";
+  }
+}
+urlPrefix += "mcat=";
+Set<Member> memberSet = esnMgr.getMemberByCategory(cat != null ? cat : channel.getRootCategory());
+if (selectedList != null) {
+  for(Category selectedCat: selectedList) {
+    memberSet = Util.interSet(memberSet, esnMgr.getMemberByCategory(selectedCat));
+  }
+}
+
+//Remove disabled members
+memberSet = JcmsUtil.select(memberSet, new OrDataSelector(new Member.EnabledSelector(), new Member.ContactSelector()), Member.getNameComparator());
+
+boolean isUsageAll = false;
+boolean isUsageAccount = false;
+boolean isUsageContact = false;
+
+if ("account".equals(memberUsage)) {
+  memberSet = JcmsUtil.select(memberSet, new Member.UsageSelector(Member.USAGE_ACCOUNT), Member.getNameComparator());
+  isUsageAccount = true;
+}
+else if ("contact".equals(memberUsage)) {
+  memberSet = JcmsUtil.select(memberSet, new Member.UsageSelector(Member.USAGE_CONTACT), Member.getNameComparator());
+  isUsageContact = true;
+} 
+else {
+  isUsageAll = true;
+}
+%>

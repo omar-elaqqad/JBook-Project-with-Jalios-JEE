@@ -1,0 +1,44 @@
+<%@page import="java.text.MessageFormat"%><%
+%><%@page import="com.jalios.jcmsplugin.esn.*"%><%
+%><%@page import="com.jalios.jcmsplugin.esn.ui.*"%><%
+%><%@page import="com.jalios.jcmsplugin.esn.profile.*"%><%
+%><%@page import="com.jalios.jcmsplugin.esn.profile.ui.*"%><%
+%><%@ page contentType="text/html; charset=UTF-8" %><%
+
+if (Util.isEmpty(request.getAttribute(ProfileDisplayHandler.HANDLER_REQUEST_ATTR))) {
+  %><jalios:include jsp="plugins/ESNPlugin/types/MemberProfile/doProfileHandler.jsp" /><%
+}
+ProfileDisplayHandler esnProfileDisplayHandler = (ProfileDisplayHandler)request.getAttribute(ProfileDisplayHandler.HANDLER_REQUEST_ATTR);
+String profileLogPrefix = ProfileDisplayHandler.getLoggerPrefix(request);
+if (esnProfileDisplayHandler == null && jcmsContext.isAjaxRequest()) {
+  esnProfileDisplayHandler = (ProfileDisplayHandler)jcmsContext.getAjaxRequestAttribute(ProfileDisplayHandler.HANDLER_AJAX_REQUEST_ATTR);
+}
+if (esnProfileDisplayHandler == null) {
+  logger.warn(MessageFormat.format("{0}{1} no request nor ajax request handler retrieved. Exit", profileLogPrefix, "(doInitMemberProfile.jspf)", esnProfileDisplayHandler));
+  return;
+}
+Member member = esnProfileDisplayHandler.getMember();
+
+if (member == null) {
+  logger.warn(MessageFormat.format("{0} no member retrieved. Exit", profileLogPrefix, "(doInitMemberProfile.jspf)"));
+  return;
+}
+ESNManager esnMgr = ESNManager.getInstance();
+
+MemberProfile profile = esnProfileDisplayHandler.getProfile(); 
+boolean isMyProfile = esnProfileDisplayHandler.isMyProfile();
+boolean isDBAccount = member instanceof DBMember;
+boolean isAccount = member.isAccount();
+boolean isLdapAccount = member.isLdapAccount() && channel.isLdapEnabled();
+boolean isContact = !isAccount;
+boolean isConnected = esnProfileDisplayHandler.isConnected();
+boolean hasPhoto = member.hasPhoto();
+boolean canEdit = esnProfileDisplayHandler.canEditProfile();
+boolean isEdit = esnProfileDisplayHandler.isEdit();
+boolean isFollowing = esnProfileDisplayHandler.isFollowing();
+String friendlyName = member.getFriendlyName();
+boolean dataWriteEnabled = channel.isDataWriteEnabled();
+esnProfileDisplayHandler.setMemberContentSetPageSize(getIntParameter("esnProfilePubs-pageSize", 10));
+esnProfileDisplayHandler.setMemberContentSetStart(getIntParameter("esnProfilePubs-start", 0));
+esnProfileDisplayHandler.setMemberContentSetPagerAll(getBooleanParameter("esnProfilePubs-pagerAll", false));
+%>

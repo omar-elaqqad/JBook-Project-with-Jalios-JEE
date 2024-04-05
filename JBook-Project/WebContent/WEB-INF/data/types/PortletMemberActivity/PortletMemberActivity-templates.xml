@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates version="5.0">
+  <template usage="full" name="default" file="doPortletMemberActivityFullDisplay.jsp" />
+  <template usage="full" name="card" file="doPortletMemberActivityFullDisplayCards.jsp" />
+  <template usage="box" name="default" file="doPortletMemberActivityFullDisplay.jsp" />
+  <template usage="box" name="card" file="doPortletMemberActivityFullDisplayCards.jsp" />
+  <template usage="jmobile" name="default" file="doPortletMemberActivityMobileDisplay.jsp" />
+</templates>

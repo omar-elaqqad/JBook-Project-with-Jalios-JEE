@@ -1,0 +1,127 @@
+jcmsplugin.dbpoll.btn.vote:            저는 투표합니다
+jcmsplugin.dbpoll.lbl.vote:            투표
+jcmsplugin.dbpoll.lbl.open:            이 설문 조사 열기
+jcmsplugin.dbpoll.lbl.close:           이 설문 조사 닫기
+jcmsplugin.dbpoll.lbl.show-result:     결과 보기
+jcmsplugin.dbpoll.lbl.vote-cnt:        {0,choice,0#0 투표|1#1 투표|2#{0,number,integer} 투표}
+jcmsplugin.dbpoll.lbl.dates:           {0} 부터 {1} 까지 설문조사
+jcmsplugin.dbpoll.lbl.all-polls:       모든 설문 조사
+jcmsplugin.dbpoll.lbl.all-polls-ws:    {0} 에서 모든 설문 조사
+jcmsplugin.dbpoll.lbl.view-all-polls:  모든 설문 조사 보기
+jcmsplugin.dbpoll.lbl.view-all-polls-ws:  현재의 작업공간에서 모든 설문조사 보기
+jcmsplugin.dbpoll.lbl.vote-title:      {0} 에 투표
+jcmsplugin.dbpoll.lbl.create-poll:     새로운 설문 조사 게시하기
+jcmsplugin.dbpoll.msg.option-change:   일부 사용자가 이미 현재의 옵션에 투표하였기 때문에 이 설문 조사 옵션을 변경할 수 없습니다.
+jcmsplugin.dbpoll.msg.already-voted:   귀하는 이미 이 설문조사에 투표했습니다.
+jcmsplugin.dbpoll.msg.no-result:       이 설문 조사는 아직 투표를 받지 않았습니다.
+jcmsplugin.dbpoll.msg.choose-option:   투표할 옵션을 선택해야 합니다.
+jcmsplugin.dbpoll.msg.closed-poll:     이 설문 조사는 종료되었습니다. 투표할 수 없습니다.
+jcmsplugin.dbpoll.msg.poll-loop:       자체 설명에 설문 조사를 넣을 수 없습니다.
+
+jcmsplugin.dbpoll.modal.step1:         설문 조사 옵션
+jcmsplugin.dbpoll.modal.step2:         설문 조사 추천
+jcmsplugin.dbpoll.modal.btn.publish:   게시하기
+jcmsplugin.dbpoll.modal.btn.publish.alt:  설문 조사를 게시하기
+jcmsplugin.dbpoll.modal.btn.next.alt:  설문 조사를 게시하고 추천하기...
+jcmsplugin.dbpoll.modal.success-info:  귀하의 설문 조사가 생성되었으며 여기에 액세스 할 수 있습니다: {0}
+
+jcmsplugin.dbpoll.publish-menu.add-poll: 설문 조사
+
+jcmsplugin.dbpoll.cs.options:  이 설문 조사에 적어도 두 개의 옵션을 추가하시기 바랍니다
+jcmsplugin.dbpoll.cs.optionsml:  이 설문 조사에 적어도 두 개의 옵션을 추가하시기 바랍니다({0})
+
+jcmsplugin.dbpoll.search.placeholder: 설문 조사 검색...
+
+jcmsplugin.dbpoll.app.title: 설문 조사
+
+jcmsplugin.dbpoll.app.no-result-welcome: Polls 앱 시작
+
+jcmsplugin.dbpoll.app.catalog.title: 설문 조사
+jcmsplugin.dbpoll.app.catalog.root: 홈
+jcmsplugin.dbpoll.app.catalog.btn.add-poll: 설문 조사 추가
+jcmsplugin.dbpoll.app.catalog.polls-number: {0} {0,choice,0#|1#설문 조사|2#설문 조사}
+
+jcmsplugin.dbpoll.app.card.closed-poll: 완료된 설문 조사
+
+jcmsplugin.dbpoll.app.filter.status.all: 모든 설문 조사
+jcmsplugin.dbpoll.app.filter.status.opened: 진행 중인 설문 조사
+jcmsplugin.dbpoll.app.filter.status.closed: 완료된 설문 조사
+jcmsplugin.dbpoll.app.filter.mbr:        추가한 사람...
+jcmsplugin.dbpoll.app.filter.begin-date: 뒤에 추가됨...
+jcmsplugin.dbpoll.app.filter.end-date:   앞에 추가됨...
+jcmsplugin.dbpoll.app.filter.workspace:  작업공간에 추가됨...
+
+# ------------------------------------------------------------
+#  Unified insert
+# ------------------------------------------------------------
+unified-insert.items.poll: 설문 조사
+unified-insert.items.poll.longtitle: 설문 조사
+unified-insert.items.poll.subtitle:
+
+# ------------------------------------------------------------
+#  Smartphone
+# ------------------------------------------------------------
+jcmsplugin.smartphone.dbpoll: 설문 조사
+jcmsplugin.smartphone.dbpoll.navbar.opened: 진행 중인 설문 조사
+jcmsplugin.smartphone.dbpoll.navbar.closed: 완료된 설문 조사
+
+# ------------------------------------------------------------
+#  Recommendation
+# ------------------------------------------------------------
+alert.name.recommendation.dbpoll-recommendation:                      설문 조사 완료에 초대
+alert.msg.recommendation.dbpoll-recommendation.title:                 설문 조사 완료에 초대: {data}
+alert.msg.recommendation.dbpoll-recommendation.short-description:     {author}님이 귀하가 {data} 설문 조사를 완료하도록 초대했습니다. {data.url}
+alert.msg.recommendation.dbpoll-recommendation.description:           <p>{author}님이 귀하가 {data} 설문 조사를 완료하도록 초대했습니다.</p>
+jcmsplugin.dbpoll.recommendation.Poll:                                이 설문 조사를 완료할 회원 초대: {0}
+
+# ------------------------------------------------------------
+#  ESN
+# ------------------------------------------------------------
+jcmsplugin.esn.activity.form-tab.poll: 설문 조사
+
+# ------------------------------------------------------------
+#  Shortcuts
+# ------------------------------------------------------------
+data.$id.shortcut.jcmsplugin.dbpoll.title: 설문 조사
+data.$id.shortcut.jcmsplugin.dbpoll.text: 설문 조사 처리 애플리케이션
+
+# ------------------------------------------------------------
+#  Plugin label and description
+# ------------------------------------------------------------
+plugin.DBPollPlugin.label: 설문 조사 플러그인
+plugin.DBPollPlugin.description: 이 플러그인으로 간단한 설문 조사를 만들 수 있습니다. 설문 조사는 포틀릿 설문 조사에 표시됩니다. 투표는 RDBMS에 저장됩니다.
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From Poll.xml
+types.Poll.title.description: 설문조사 제목
+types.Poll.fields.description.label: 설명
+types.Poll.label: 설문 조사
+types.Poll.fields.options.description: 투표 대상 옵션.
+types.Poll.fields.description.description: 설문 조사에 대한 짧은 설명 (질문과 옵션 사이에 나타남)
+types.Poll.description: 하나의 질문이 있는 미니 설문 조사
+types.Poll.fields.options.label: 옵션
+types.Poll.title.label: 제목
+types.Poll.fields.image.label: 이미지
+types.Poll.fields.image.description: 이 설문조사 설명을 위한 옵션 이미지
+types.Poll.fields.closed.label: 설문 조사 닫기
+types.Poll.fields.closed.onLabel: 예
+types.Poll.fields.closed.offLabel: 아니오
+types.Poll.fields.closed.description: 이 설문 조사를 닫겠습니까?
+
+# From PortletPoll.xml
+types.PortletPoll.fields.refineWorkspace.labelList: 작업공간으로부터 마지막 설문 조사 표시|모든 작업공간으로부터 마지막 설문 조사 표시
+types.PortletPoll.fields.poll.label: 설문 조사
+types.PortletPoll.title.description: 제목
+types.PortletPoll.description: 이 포틀릿은 설문조사를 표시하고 일단 투표가 완료되면 현재 결과를 표시합니다.
+types.PortletPoll.fields.poll.description: 표시될 설문조사(아니면 마지막 게시된 설문조사가 표시됩니다)
+types.PortletPoll.fields.refineWorkspace.description: 현재 작업공간 또는 모든 작업공간으로부터 마지막 설문조사 표시하기.
+types.PortletPoll.label: 설문조사 포틀릿
+types.PortletPoll.title.label: 제목
+types.PortletPoll.fields.refineWorkspace.label: 개선하기
+types.PortletPoll.fields.hideWhenNoResults.label: 설문 조사가 없으면 포틀릿을 숨깁니다
+types.PortletPoll.fields.hideWhenNoResults.onLabel: 예
+types.PortletPoll.fields.hideWhenNoResults.offLabel: 아니오
+types.PortletPoll.fields.hideWhenNoResults.description: 표시할 설문 조사가 없으면 포틀릿을 숨기십시오.

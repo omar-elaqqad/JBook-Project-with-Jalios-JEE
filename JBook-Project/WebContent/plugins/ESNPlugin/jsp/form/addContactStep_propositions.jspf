@@ -1,0 +1,40 @@
+<%@page import="com.jalios.jcms.taglib.card.CardsDisplayMode"%>
+<% if (step == 1) { %>
+<jalios:include target="PLUGIN_ESN_ADD_CONTACT_PROPOSITIONS_START" />
+<% 
+	Set<Member> contactSet = formHandler.getContactSet(); 
+	jcmsContext.addCSSHeader("css/jalios/core/jalios-member-card.css");
+%>
+<% if (Util.getSize(contactSet) == 1) { %>
+<p class="info">
+<%= glp("jcmsplugin.esn.add-contact.steps-intro.1.1") %>
+</p>
+<% Member contact = Util.getFirst(contactSet); %>
+<div class="proposition">
+  <jalios:cards mode="<%= CardsDisplayMode.INLINE %>">
+    <jalios:cardData data="<%= contact %>" template="small" link="<%= contact.getDisplayUrl(userLocale) %>"/>
+  </jalios:cards>
+</div>
+<div>
+  <% if (esnMgr.isConnected(loggedMember, contact)) { %>
+    <jalios:icon src="jcmsplugin-esn-connection" /> 
+    <%= glp("jcmsplugin.esn.lbl.connections.connected", contact.getFriendlyName()) %>
+  <% } else if (contact.isContact() || !esnMgr.isConnectionRequestEnabled()) { %>
+    <a class="btn btn-primary" href="plugins/ESNPlugin/jsp/form/connectionContact.jsp?target=<%= contact.getId() %>&amp;redirect=<%= ServletUtil.encodeURL(contact.getDisplayUrl(userLocale)) %>"><%= glp("jcmsplugin.esn.add-contact.add-to-my-contacts") %></a>
+  <% } %>
+</div>
+<% } else { %>
+<% 
+  int itRowCounter = 1;
+%>
+<jalios:message msg="jcmsplugin.esn.add-contact.steps-intro.1.2" level="<%= MessageLevel.INFO %>" />
+<div class="propositions">
+  <jalios:cards mode="<%= CardsDisplayMode.INLINE %>">
+    <jalios:foreach collection="<%= contactSet %>" type="Member" name="itMember" max="12">
+      <jalios:cardData data="<%= itMember %>" template="small" link="<%= itMember.getDisplayUrl(userLocale) %>"/>
+    </jalios:foreach>
+  </jalios:cards>
+</div>
+<% } %>
+<jalios:include target="PLUGIN_ESN_ADD_CONTACT_PROPOSITIONS_END" />
+<% } %>

@@ -1,0 +1,163 @@
+.cs-settings .model-syncs .sync-mode {
+  white-space: nowrap;
+  padding: 2px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  color: #666;
+  background-color: #efefef;
+  position: relative;
+}
+.cs-settings .instances__no-result {
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+}
+.cs-portal.cs-is-condensed .header-image-options,
+.cs-portal.cs-is-condensed .tabs-opacity-chooser,
+.cs-portal.cs-is-condensed .tabs-bgcolor-chooser,
+.cs-portal.cs-is-condensed .settings-header-nav-tabs {
+  display: none;
+}
+.cs-portal.cs-is-condensed .tabs-opacity-chooser + .clear {
+  display: none;
+}
+.cs-portal:not(.cs-is-condensed) .settings-header-tab-content .tab-pane.fade:not(.in) {
+  display: none;
+}
+.cs-portal:not(.cs-is-condensed) .widget-name-headerTabsColor,
+.cs-portal:not(.cs-is-condensed) .widget-name-headerTabsBgColor,
+.cs-portal:not(.cs-is-condensed) .tabs-opacity-chooser {
+  width: 250px;
+  float: left;
+  margin-right: 30px;
+}
+.cs-portal:not(.cs-is-condensed) .tabs-opacity-chooser {
+  width: 300px;
+}
+.cs-portal .cs-settings .csp-header-position {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #b2cdd1;
+  margin: 5px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+.cs-portal .cs-settings .csp-header-position:hover {
+  opacity: 1;
+}
+.cs-portal .cs-settings .csp-header-position.active {
+  opacity: 1;
+  background: #4caf50;
+}
+.cs-portal .cs-settings .existing-color-chooser {
+  max-width: 850px;
+}
+.cs-portal .cs-settings .existing-color-chooser .input-group {
+  margin-left: -20px;
+}
+.cs-portal .cs-settings .widget-content-radio-text {
+  padding-top: 7px;
+  font-weight: bold;
+}
+.cs-portal .cs-settings .widget-name-csp-header-position,
+.cs-portal .cs-settings .widget-name-csp-header-repeat,
+.cs-portal .cs-settings .widget-name-csp-header-miror {
+  width: 200px;
+  float: left;
+}
+.cs-portal .cs-settings .widget-name-customColor .widget-content .input-group {
+  padding-top: 7px;
+}
+.cs-portal .cs-settings .custom-image-chooser .widget-content .input-group {
+  padding-top: 7px;
+}
+.cs-portal .cs-settings UL.theme-color-list LI {
+  white-space: nowrap;
+}
+.cs-portal .cs-settings UL.theme-color-list .color-sample {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border-radius: 50%;
+}
+.cs-portal .cs-settings UL.theme-color-list LI.cs-theme-cs-white .color-sample {
+  border: 1px solid #ccc;
+}
+.cs-portal .cs-settings UL.theme-color-list INPUT + .color-sample:before {
+  content: '';
+  opacity: 0;
+  display: block;
+  transform: scale(1);
+  transition: all 200ms ease-in;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 30px;
+  width: 30px;
+  margin-left: -15px;
+  margin-top: -15px;
+  border: 1px solid #777;
+  border-radius: 50%;
+}
+.cs-portal .cs-settings UL.theme-color-list INPUT:checked + .color-sample:before {
+  opacity: 1;
+  transform: scale(1.3);
+}
+.cs-portal .cs-settings UL.header-list LI LABEL {
+  display: inline;
+}
+.cs-portal .cs-settings UL.header-list LI IMG:hover {
+  cursor: pointer;
+}
+.cs-portal .cs-settings UL.theme-color-list LI,
+.cs-portal .cs-settings UL.header-list LI {
+  white-space: nowrap;
+  float: left;
+}
+.cs-portal .cs-settings .header-list-scroll {
+  overflow-y: auto;
+  max-height: 300px;
+  position: relative;
+}
+.cs-portal .cs-settings .header-list-scroll.ps > .ps__rail-y {
+  opacity: 0.6;
+}
+.cs-portal .cs-settings .header-background-image-chooser INPUT[type='RADIO'] {
+  display: none;
+}
+.cs-portal .cs-settings .header-background-image-chooser:not(.widget-name-header) {
+  max-width: 800px;
+}
+.cs-portal .cs-settings .header-background-image-chooser LABEL.checkbox-inline {
+  padding-left: 0;
+}
+.cs-portal .cs-settings .header-background-image-chooser .widget-content .input-group {
+  padding-top: 7px;
+}
+.cs-portal .cs-settings UL.header-list LI {
+  height: 50px;
+  width: 300px;
+}
+.cs-portal .cs-settings UL.header-list LI IMG {
+  width: 250px;
+  height: 30px;
+  object-fit: cover;
+}
+.cs-portal .cs-settings UL.header-list LI.no-header {
+  width: 100%;
+}
+.cs-portal .cs-settings .cs-settings-nav.is-left-aligned {
+  margin-left: 0px;
+}
+.cs-portal .cs-settings .field-checkbox-vertical LABEL.checkbox-inline {
+  padding-left: 0;
+  margin-left: 0;
+  display: block;
+}
+.widget.color-chooser .widget-content,
+.widget.background-image-chooser .widget-content {
+  max-width: none;
+}
+/*# sourceMappingURL=cs-settings.css.map */

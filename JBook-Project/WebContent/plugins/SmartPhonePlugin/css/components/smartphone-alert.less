@@ -1,0 +1,99 @@
+.itemlist-item-detailed {
+  &.level-INFO {
+    border-left:10px solid @alert-info;
+  }   
+  &.level-ACTION {
+    border-left: 10px solid @alert-action;
+  } 
+  &.level-WARNING {
+    border-left: 10px solid @alert-warning;
+  }
+}
+HTML .ui-page-theme-a {
+  .alert-entry {
+    > A.ui-btn.link,
+    > A.ui-btn.alert-entry-action {
+      border-left: 0;
+      border-radius: 0;
+    }
+  }
+}
+
+.alert-full {
+  border-radius: 0 0 4px 4px;
+  
+  .alert-header {
+    border-radius: 4px 4px 0 0 ;
+  }
+  
+  &.level-INFO .alert-header {
+    border-top: 10px solid @alert-info;
+  } 
+  
+  &.level-ACTION .alert-header {
+    border-top: 10px solid @alert-action;
+  } 
+  
+  &.level-WARNING .alert-header {
+    border-top: 10px solid @alert-warning;
+  }
+}
+
+.ui-listview > LI.message-list-item {
+  border: medium none;
+  font-size: 20px;
+  padding: 10px;
+
+  .jcms-message {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+.card.alert-full {
+  .card-item {
+    padding: 10px;
+  }
+}
+
+.alert-list {
+  .ui-btn.btn-alerts-show-more {
+    color: white;
+    text-shadow: none;
+  }
+  .no-result {
+    text-align: center;
+    .jcmsplugin-smartphone-alerts-no-result {
+      font-size: 5em;
+      color: #CCC;
+    }
+  }
+  .ui-li-divider {
+    background: none;
+    padding-top: 24px;
+    padding-bottom: 1em;
+  }
+  // Prevent double border after show more
+  .ui-content .ui-listview > .ui-content .ui-listview {
+    LI:first-child {
+      &, A.link, A.alert-entry-action {
+        border-top-width: 0px;
+      }
+    }
+  }
+}
+
+.itemlist-item-Alert.itemlist-item-detailed {
+  line-height: 22px;
+  padding-top: 16px;
+  padding-bottom: 16px; 
+  .itemlist-item-link {
+    padding-left: 16px;
+  }
+  .itemlist-item-link {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  > A .jalios-icon {
+    font-size: 24px;
+  }
+}

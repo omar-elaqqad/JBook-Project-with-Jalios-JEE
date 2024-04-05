@@ -1,0 +1,143 @@
+<%@page import="com.jalios.jcms.FileDocument"%>
+<%@page import="com.jalios.util.Orientation"%>
+<%@page import="java.awt.Dimension"%>
+<%@page import="com.jalios.io.ImageUtil"%>
+<%@page import="generated.MicroBlogging"%><%
+%><%@page import="com.jalios.jcms.PhotoSize"%><%
+%><%@page import="com.jalios.jcmsplugin.smartphone.SmartPhoneManager"%><%
+%><%@page import="java.util.HashMap"%><%
+%><%@ page import="com.jalios.jcms.vote.*" %><%
+%><%@ page import="com.jalios.jcmsplugin.dbcomment.*" %><%
+
+if (itActivity.getAuthor() != null) {
+  SmartPhoneManager smartphoneManager = SmartPhoneManager.getInstance();
+  
+  Data activityData = itActivityEntry.getActivityData();
+
+  boolean isMicroBlogging = itActivityEntry.isMicroBlogging();
+  boolean isDocument = itActivityEntry.getPublication() instanceof FileDocument;
+  boolean isDBCommentActivity = itActivity.isDBCommentActivity();
+  boolean isActionActivity = itActivity.isActionActivity();
+  boolean isUpdateActivity = itActivity.isUpdateActivity();  
+  boolean isMemberActivity = activityData instanceof Member;
+  boolean isWorkspaceActivity = activityData instanceof Workspace;
+  Date activityDate = itActivityEntry.getLastActivityMdate();
+
+  boolean hasAbstract = itActivityEntry.getPublication() != null && Util.notEmpty(itActivityEntry.getPublication().getAbstract()) && !isMicroBlogging;
+  String dataImage = itActivityEntry.getPublication() != null ? itActivityEntry.getPublication().getDataImage() : "";
+  boolean hasMedia = Util.notEmpty(dataImage);
+  int dataImageThWidth = 300;
+  int dataImageThHeight = 300;
+  boolean isMediaDisplayCover = false;
+  if (hasMedia) {
+    File mediaFile = new File(channel.getRealPath(dataImage));
+    // Dimensions tests made with thumbnail (reduced dimensions) file
+    File mediaThFile = FileDocument.getThumbnailFile(mediaFile, dataImageThWidth, dataImageThHeight);
+    Dimension mediaDimensions = ImageUtil.isImage(mediaThFile) ? ImageUtil.getDimension(mediaThFile) : null;
+    // If image has minimal dimensions
+    boolean isImageGreaterThan = ImageUtil.isImageGreaterThan(mediaThFile, dataImageThWidth, 100);
+    isMediaDisplayCover = isImageGreaterThan;
+  }
+  
+  Publication activityPub = isDBCommentActivity ? (Publication) itActivity.getData() : itActivityEntry.getPublication();
+  
+  Member author = itActivity.getAuthor();
+  
+  Data activityLinkData = isMemberActivity || isWorkspaceActivity ? activityData : activityPub;
+  
+  int dbCommentCount = activityPub != null ? DBCommentManager.getInstance().getDBCommentCount(activityPub, loggedMember, true) : 0;
+  boolean isCommentable = DBCommentManager.getInstance().isCommentable(activityPub) && channel.isDataWriteEnabled();
+  
+  int voteCount = VoteManager.getInstance().getVoteCount(activityPub);
+  boolean canVote = VoteManager.getInstance().canVote(activityPub, loggedMember);
+  String dataIdAttr = activityData != null ? "data-jalios-dataid=\"" + activityData.getId() +"\"" : "";
+%>
+<div class="card card-activity" data-role="none" <%= dataIdAttr %>>
+  <div>
+    
+    <%-- 
+      Block which contains the last DBComment of a publication
+    --%>
+    <div class="clickable card-activity-header" data-jalios-link="<%= smartPhoneManager.getDataUrl(activityLinkData) %>" data-transition="slide">
+      <% if (!isDBCommentActivity) { %>
+        <%-- 
+          Block which contains the activity description (
+        --%>    
+        <div class="activity-description card-item">
+          <% if (itActivity.getAuthor() != null) { %>
+          <div class="media-left clickable" data-jalios-link="plugins/SmartPhonePlugin/jsp/core/member.jsp?id=<%= itActivity.getAuthor().getId() %>&display=activity">
+            <jalios:memberphoto member="<%= itActivity.getAuthor() %>" resource="memberphoto-phone" size="<%= PhotoSize.TINY %>"/>
+          </div>
+          <% } %>  
+          <div class="media-body media-middle">
+            <div>
+              <%= itActivity.getDataIconHtml(userLang) %>
+              <span class="activity-meta-main"><%= itActivity.getAuthor() %></span>
+              <%= isMicroBlogging ? "" : itActivity.getDescription(userLocale) %>
+            </div>
+            <%@ include file='/plugins/ESNPlugin/smartphone/jsp/service/activity/doActivityMeta.jspf' %>
+          </div>
+        </div>
+      <% } %>
+      
+      <%-- 
+        Block which contains the activity target publication description
+      --%>        
+      <% if (activityData != null && itActivityEntry.isPublication()) { %>
+      <div class="activity-content card-item">
+        <% if (isDBCommentActivity) { %>
+          <% 
+            boolean canVoteDBComment = VoteManager.getInstance().canVote((Publication) activityData, loggedMember);
+          %>
+          <div class="activity-comment">
+            <div class="media activity-comment-description">
+              <% if (itActivity.getAuthor() != null) { %>
+              <div class="media-left clickable" data-jalios-link="plugins/SmartPhonePlugin/jsp/core/member.jsp?id=<%= itActivity.getAuthor().getId() %>&display=activity">
+                <jalios:memberphoto member="<%= itActivity.getAuthor() %>" resource="memberphoto-phone" size="<%= PhotoSize.TINY %>" />
+              </div>
+              <% } %>
+              <div class="media-body media-middle">
+                <% 
+                  String activityAuthorTitle = "<span class='activity-meta-main'>" + itActivity.getAuthor() + "</span>"; 
+                  String activityAuthorTarget = activityData.getDisplayLink(userLocale); 
+                %>
+                <div class="activity-comment-title"><%= itActivity.getDataIconHtml(userLang)  %> <%= glp("jcmsplugin.esn.activity.description-full.create.DBComment", activityAuthorTitle, activityAuthorTarget) %></div>
+              </div>
+            </div>
+            <div class="message-content activity-comment-content">
+              <span class="tail"></span>
+              <span class="tail-border"></span>
+              <jalios:wiki attributeMap="<%= smartPhoneManager.getWikiAttributeMap() %>"><%= ((DBComment) itActivity.getData()).getDescription() %></jalios:wiki>
+            </div>
+            <div class="comment-date">
+              <%= JcmsUtil.getFriendlyDate(itActivity.getCdate(), DateFormat.SHORT, true, userLocale) %>
+            </div>
+          </div>        
+        <% } else if (!isMicroBlogging) { %>
+          <%@ include file='/plugins/ESNPlugin/smartphone/jsp/service/activity/doActivityAbstract.jspf' %>
+        <% } %>
+        
+        <% if (!isDBCommentActivity && isMicroBlogging) { %>
+          <div class="activity-description">
+            <jalios:wiki attributeMap="<%= smartPhoneManager.getWikiAttributeMap() %>"><%= ((MicroBlogging)itActivityEntry.getPublication()).getText() %></jalios:wiki>
+          </div>
+        <% } %>
+        <% if (itActivityEntry.getActivityData() instanceof Publication) { %>
+          <%
+            request.setAttribute("jcms.plugin.smartphone.pub", itActivity.getData());
+          %>
+          <jalios:include jsp="plugins/SmartPhonePlugin/jsp/core/pub/doPubSocialFooter.jsp" />
+        <% } %>
+      </div>
+      <% } %>
+    </div>
+    <%-- 
+      Block which contains the activity footer
+    --%>      
+    <%@ include file='/plugins/ESNPlugin/smartphone/jsp/service/activity/doActivityFooter.jspf' %>
+
+  </div>
+</div>
+<%
+} // IF.itActivity.getAuthor() != null
+%>

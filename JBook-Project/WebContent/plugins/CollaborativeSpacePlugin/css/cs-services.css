@@ -1,0 +1,87 @@
+.app .cs-services .card-inline-layout:not(.is-centered) .card-flip-wrapper {
+  margin-bottom: 0;
+}
+.cs-services .navbar-form .btn.btn-default > .jalios-icon {
+  margin-right: 4px;
+}
+.cs-services .navbar-form.navbar-left {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.cs-services .card-block-footer form {
+  height: 100%;
+}
+.cs-services .card-block-footer .actions {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.cs-services .card-block-footer .edit-application {
+  position: absolute;
+  right: 4px;
+}
+.cs-services .card-block-footer .edit-application::after {
+  display: none;
+}
+.cs-services .card-cs-service.card {
+  height: 284px;
+}
+.cs-services .card-cs-service .label.service-application {
+  background-color: #5bc0de;
+}
+.cs-services .card-cs-service .label.service-application[href]:hover,
+.cs-services .card-cs-service .label.service-application[href]:focus {
+  background-color: #31b0d5;
+}
+.cs-services .card-cs-service .label.service-application[href]:hover,
+.cs-services .card-cs-service .label.service-application[href]:focus {
+  background-color: #31b0d5;
+}
+.cs-services .card-cs-service .label.service-dashboard {
+  background-color: #5cb85c;
+}
+.cs-services .card-cs-service .label.service-dashboard[href]:hover,
+.cs-services .card-cs-service .label.service-dashboard[href]:focus {
+  background-color: #449d44;
+}
+.cs-services .card-cs-service .label.service-dashboard[href]:hover,
+.cs-services .card-cs-service .label.service-dashboard[href]:focus {
+  background-color: #449d44;
+}
+.cs-services .card-cs-service .cs-service-installed-icon {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 50px 0 0;
+  border-color: #4cd963 transparent transparent transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.cs-services .card-cs-service .jalios-icon.jcmsplugin-collaborativespace-service-card-installed {
+  position: absolute;
+  top: -43px;
+  left: 6px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+.cs-services .service-actions {
+  text-align: center;
+}
+.cs-services .services-menu {
+  display: flex;
+  justify-content: space-between;
+}
+.servicePreviewShield {
+  position: absolute;
+  background: url('../../../s.gif');
+  width: 100%;
+  height: 100%;
+  z-index: 42;
+  margin: 0 -15px;
+}
+/*# sourceMappingURL=cs-services.css.map */

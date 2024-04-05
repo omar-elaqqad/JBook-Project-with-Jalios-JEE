@@ -1,0 +1,85 @@
+<%@page import="com.jalios.jcmsplugin.esn.ui.ESNHTMLConstants"%><%
+%><%@page import="com.jalios.jcmsplugin.esn.ui.HTMLAttributes"%><%
+
+boolean displayShowHideActivity = isActionActivity && !hasTodayComments && hasAbstract && activityShowAbstract; 
+boolean canWorkOnMicroBlogging = isMicroBlogging && isLogged && loggedMember.canWorkOn((MicroBlogging)activityData);
+boolean canDeleteActivity = maMgr.canDeleteActivity(loggedMember, itActivity);
+if (canWorkOnMicroBlogging || displayShowHideActivity || canDeleteActivity) {
+  %><div class="ctxEditActivity"><%
+    if (canWorkOnMicroBlogging || displayShowHideActivity) {
+      String activityMessageDescText = glp("jcmsplugin.esn.microblogging.member-microblogging-title", itActivity.getAuthor());
+      String uniqueId = box != null ? boxId + "_ctxMicroBloggingMenu_" + itActivity.getId() : "ctxMicroBloggingMenu_" + itActivity.getId(); 
+      %><div class="dropdown"><%
+        %><jalios:buffer name="openActionMenuBtnContent"><%
+          %><jalios:icon src='jcmsplugin-esn-card-activity-menu' alt='' /><%
+        %></jalios:buffer><%
+        out.print(new Link()
+            .ariaLabel(glp("jcmsplugin.esn.activity-card.message.menu.for-aria-label", activityMessageDescText))
+            .css("activity-menu-opener btn btn-rounded open-activity-menu-btn")
+            .dataAttribute(new DataAttribute().addData(ESNHTMLConstants.DATA_TOGGLE_ATTR, ESNHTMLConstants.DATA_TOGGLE_DROPDOWN))
+            .htmlContent(openActionMenuBtnContent.toString())
+            .title(glp("jcmsplugin.esn.activity-card.menu-title"))
+            .html());
+      %><ul class="dropdown-menu activity-dropdown-menu" role="menu"><%
+        if (displayShowHideActivity) {
+          %><li class="activity-toggler"><%
+            %><a href="#" class="activity-plus" data-jalios-action="toggle:hide" data-jalios-target=".activity-id-<%= itActivity.getId() %> .activity-toggler" role="button" tabindex="0"><%
+              %><jalios:icon src='jcmsplugin-esn-activity-show' /><%
+              %> <%= glp("jcmsplugin.esn.activity.see-activity") %><%
+            %></a><%
+          %></li><%
+          %><li class="activity-toggler hide"><%
+            %><a href="#" class="activity-less" data-jalios-action="toggle:hide" data-jalios-target=".activity-id-<%= itActivity.getId() %> .activity-toggler" role="button" tabindex="0"><%
+              %><jalios:icon src='jcmsplugin-esn-activity-hide' /><%
+              %> <%= glp("jcmsplugin.esn.activity.hide-activity") %><%
+            %></a><%
+          %></li><%
+        }
+        if (isMicroBlogging && canWorkOnMicroBlogging && activityData != null) {
+          %><li><%
+            %><jalios:buffer name="editMicroblogingBtnContent"><%
+              %><jalios:icon src="edit-small" alt="" /><%
+              %> <%= glp("jcmsplugin.esn.microblogging.update-message") %><%
+            %></jalios:buffer><%
+            out.print(new Link()
+                .ariaLabel(glp("jcmsplugin.esn.microblogging.update-message.for-aria-label", activityMessageDescText))
+                .css("modal")
+                .href("plugins/ESNPlugin/jsp/form/editStatus.jsp?mid=" + loggedMember.getId() + "&mbId=" + activityData.getId())
+                .htmlContent(editMicroblogingBtnContent.toString())
+                .html());
+          %></li><%
+          %><li><%
+            %><jalios:buffer name="deleteMicroblogingBtnContent"><%
+              %><jalios:icon src="remove-small" alt="" /><%
+              %>&nbsp;<%= glp("jcmsplugin.esn.microblogging.delete-message") %><%
+            %></jalios:buffer><%
+            out.print(new Link()
+                .ariaLabel(glp("jcmsplugin.esn.activity.delete-message.for-aria-label", activityMessageDescText))
+                .css("ajax-action confirm")
+                .dataAttribute(new DataAttribute().addData("jalios-text", glp("jcmsplugin.esn.activity.delete-message-ask")))
+                .jaliosAction("ajax-refresh")
+                .href(ServletUtil.getResourcePath(request) + "?opDeleteMicroBlogging=true&microBloggingId=" + itActivity.getData().getId() + "&boxId=" + boxId)
+                .htmlContent(deleteMicroblogingBtnContent.toString())
+                .html());
+          %></li><%
+        }
+      %></ul><%
+    %></div><%
+  } else if (canDeleteActivity) {
+    %><jalios:buffer name="deleteActivityBtnContent"><%
+      %><jalios:icon src="remove-small" alt='' /><%
+    %></jalios:buffer><%
+    String activityDescText = HtmlUtil.html2text(itActivity.getDescription(userLocale));
+    out.print(new Link()
+        .ariaLabel(glp("jcmsplugin.esn.activity.delete-activity.for-aria-label", itActivity.getAuthor(), activityDescText))
+        .css("btn btn-rounded delete-activity-btn ajax-action confirm")
+        .dataAttribute(new DataAttribute().addData("jalios-text", glp("jcmsplugin.esn.activity.delete-activity-ask")))
+        .jaliosAction("ajax-refresh")
+        .href(ServletUtil.getResourcePath(request) + "?opDeleteActivity=true&activityId=" + itActivity.getId() + "&boxId=" + boxId)
+        .htmlContent(deleteActivityBtnContent.toString())
+        .title(glp("jcmsplugin.esn.activity.delete-activity.for-title"))
+        .html());
+  }
+  %></div><%
+}
+%>

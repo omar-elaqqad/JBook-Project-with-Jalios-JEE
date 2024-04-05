@@ -1,0 +1,148 @@
+<%@page import="com.jalios.jcmsplugin.collaborativespace.actionsmenu.impl.CSActionMenuItemFavorite"%>
+<%@page import="com.jalios.jcms.JcmsUtil"%>
+<%@page import="com.jalios.util.Util"%>
+<%@page import="com.jalios.jcms.taglib.card.CardsDisplayMode"%>
+
+<%
+boolean isModeSuggestions = formHandler.isModeSuggestions();
+boolean isModeFavorites = formHandler.isModeFavorites();
+boolean isModeMember = formHandler.isModeMember();
+
+if (isModeFavorites) {
+  comp = formHandler.getFavoritePortalComparator();
+}
+Set<PortalElement> resultSet = formHandler.getResultSet(comp);
+%>
+
+<% if (Util.notEmpty(resultSet)) { %>
+  <%
+  Collection<String> searchedCidsCol = formHandler.getAvailableCids();
+  String[] searchedCids = Util.notEmpty(searchedCidsCol) ? searchedCidsCol.toArray(new String[]{}) : new String[]{};
+
+  boolean showRemoveSuggestion = isModeSuggestions && channel.isDataWriteEnabled();
+  boolean showRemoveFavorite = isModeFavorites && channel.isDataWriteEnabled();
+  boolean showAddRemoveFavorite = isModeMember && channel.isDataWriteEnabled();
+  boolean allowSortFavorite = isModeFavorites && resultSet.size() > 1 && channel.isDataWriteEnabled();
+  String cardsCss = "is-centered ";
+  if (allowSortFavorite) {
+    cardsCss += "card-sortable-wrapper ";
+  }
+  boolean showCardTop = showRemoveSuggestion || showRemoveFavorite || showAddRemoveFavorite;
+  %>
+  <jalios:pager name="pagerHandler" declare='true' action='init' size='<%= resultSet.size() %>' pageSize="12" pageSizes="24,48" />
+  <jalios:cards mode="<%= CardsDisplayMode.INLINE %>" css="<%= cardsCss.trim() %>">
+  
+  <% if (isModeMember) { %>
+    <%
+    String intro = glp("jcmsplugin.collaborativespace.hub.mode-member.intro");
+    // true if member has any opened, not model, favorite spaces, matching
+    boolean hasFavorites = formHandler.hasFavoriteSpaces();
+    if (hasFavorites) {
+      intro += glp("jcmsplugin.collaborativespace.hub.mode-member.intro-has-favorites");
+    }
+    %>
+    <jalios:message title='' css='cs-hub-intro'><%= intro %></jalios:message>
+  <% } %>
+  
+    <jalios:foreach name='itPortalElement' type='PortalElement' collection='<%= resultSet %>' max='<%= pagerHandler.getPageSize() %>' skip='<%= pagerHandler.getStart() %>'><%
+      String css = "";
+      if (isModeSuggestions) { css += "cs-card-suggestion "; }
+      if (allowSortFavorite) { css += "ui-sortable-handle "; }
+      if (addedFavoriteWS != null && JcmsUtil.isSameId(itPortalElement.getWorkspace(), addedFavoriteWS)) {
+        css += "added-as-favorite ";
+      }
+      if (removedFavoriteWS != null && JcmsUtil.isSameId(itPortalElement.getWorkspace(), removedFavoriteWS)) {
+        css += "removed-from-favorite ";
+      }
+      
+      boolean showCSAddFavorite = showAddRemoveFavorite;
+      boolean showCSRemoveFavorite = showAddRemoveFavorite;
+      if (showAddRemoveFavorite) {
+        boolean isFavorite = false;
+        if (!CSActionMenuItemFavorite.canAddRemoveFavorite(loggedMember, itPortalElement.getWorkspace())) {
+          showCSAddFavorite = false;
+          showCSRemoveFavorite = false;
+        } else {
+          isFavorite = FavoriteWorkspaceManager.getInstance().isFavorite(loggedMember, itPortalElement.getWorkspace());
+          showCSAddFavorite &= !isFavorite;
+          showCSRemoveFavorite &= isFavorite;
+        }
+      }
+      %>
+      <jalios:cardData data="<%= itPortalElement %>" css="<%= css %>" template="cs-hub">
+        <% if (itPortalElement instanceof CollaborativeSpace) { %>
+        <jalios:buffer name="CARD_CS_CATEGORIES"><%
+          CollaborativeSpace itCS = (CollaborativeSpace) itPortalElement;
+          Set<Category> typologies = CSManager.getInstance().getTypologies(itCS, loggedMember);
+          if (Util.notEmpty(typologies)) {
+            Category[] categories = typologies.toArray(new Category[]{});
+            %><div class="typologies"><%@ include file="/plugins/CollaborativeSpacePlugin/jsp/hub/doCategoryList.jspf" %></div><%
+          }
+        %></jalios:buffer>
+        <% } %>
+        <% if (showCardTop) { %>
+        <jalios:buffer name="CARD_BOTTOM">
+          <% if (showRemoveSuggestion) { %>
+            <%-- Action + refresh handled by JS --%>
+            <span role="button" class="card-close-action card-action-item card-cs-remove-suggestion js-remove-suggestion" 
+              data-jalios-id="<%= itPortalElement.getId() %>"
+              onclick="return false;" 
+              title="<%= encodeForHTMLAttribute(glp("jcmsplugin.collaborativespace.suggestion.reject")) %>"><jalios:icon src="jcmsplugin-collaborativespace-card-space-remove-suggestion" alt="jcmsplugin.collaborativespace.suggestion.reject" /></span>
+          <% } %>
+          <% if (showAddRemoveFavorite) { %>
+            <% if (showCSAddFavorite) { %>
+            <%-- Action + refresh handled by JS --%>
+            <span role="button" aria-describedby="cs-card-<%= itPortalElement.getWorkspace().getId() %>" class="card-close-action card-action-item card-cs-add-favorite js-add-favorite" 
+              data-jalios-ws-id="<%= itPortalElement.getWorkspace().getId() %>"
+              data-jalios-id="<%= itPortalElement.getId() %>"
+              onclick="return false;" 
+              title="<%= encodeForHTMLAttribute(glp("ui.com.btn.add-favorite-ws.h")) %>"><jalios:icon src="jcmsplugin-collaborativespace-card-space-add-favorite" alt="ui.com.btn.add-favorite-ws.h" /></span>
+            <% } %>
+            <% if (showCSRemoveFavorite) { %>
+            <%-- Action + refresh handled by JS --%>
+            <span role="button" aria-describedby="cs-card-<%= itPortalElement.getWorkspace().getId() %>" class="card-close-action card-action-item card-cs-remove-favorite js-remove-favorite" 
+              data-jalios-ws-id="<%= itPortalElement.getWorkspace().getId() %>"
+              data-jalios-id="<%= itPortalElement.getId() %>"
+              onclick="return false;" 
+              title="<%= encodeForHTMLAttribute(glp("ui.com.btn.remove-favorite-ws.h")) %>"><jalios:icon src="jcmsplugin-collaborativespace-card-space-remove-favorite" alt="ui.com.btn.remove-favorite-ws.h" /></span>
+            <% } %>
+          <% } %>
+          <% if (showRemoveFavorite) { %>
+            <%-- Action + refresh handled by JS --%>
+            <span role="button" class="card-close-action card-action-item card-cs-remove-favorite js-remove-favorite" 
+              data-jalios-ws-id="<%= itPortalElement.getWorkspace().getId() %>"
+              data-jalios-id="<%= itPortalElement.getId() %>"
+              onclick="return false;" 
+              title="<%= encodeForHTMLAttribute(glp("ui.com.btn.remove-favorite-ws.h")) %>"><jalios:icon src="jcmsplugin-collaborativespace-card-space-remove-favorite" alt="ui.com.btn.remove-favorite-ws.h" /></span>
+          <% } %>
+        </jalios:buffer>
+        <% } %>
+      </jalios:cardData>
+    </jalios:foreach>
+  </jalios:cards> 
+  <jalios:pager name='pagerHandler' />
+  
+  <input type='hidden' name='start' value='<%= pagerHandler.getStart() %>' />
+  <input type='hidden' name='reverse' value='<%= pagerHandler.isReverse() %>' />
+  <input type='hidden' name='pageSize' value='<%= pagerHandler.getPageSize() %>' />
+  <input type='hidden' name='pagerAll' value='<%= pagerHandler.isPagerAll() %>' />
+  
+<% } else { %>
+  <% if (isModeSuggestions) { %>
+    <jalios:buffer name="resetSuggestionButton">
+    <a class="confirm btn btn-default"
+          data-jalios-action="ajax-refresh"
+          data-jalios-ajax-refresh="isform"
+          data-jalios-ajax-refresh-url="<%= CSHubHandler.APP_JSP %>?opResetSuggestions=true" 
+          title="<%= encodeForHTMLAttribute(glp("jcmsplugin.collaborativespace.suggestion.reset")) %>">
+        <%= glp("jcmsplugin.collaborativespace.suggestion.reset") %>
+    </a>
+    </jalios:buffer>
+    <% 
+    request.setAttribute("app.no-result.text", glp("jcmsplugin.collaborativespace.suggestion.none"));  
+    request.setAttribute("app.no-result.content", resetSuggestionButton);
+    %>
+  <% } %>
+
+  <%@ include file='/front/app/doAppNoResult.jspf' %>
+<% } %>

@@ -1,0 +1,114 @@
+jcmsplugin.dbcomment.edit.lbl.add-comment:    Přidat komentář
+jcmsplugin.dbcomment.edit.lbl.add-comment-verb:  Komentář
+jcmsplugin.dbcomment.edit.lbl.create-comment: Odeslat komentář
+jcmsplugin.dbcomment.edit.lbl.cancel:         Zrušit
+jcmsplugin.dbcomment.edit.lbl.link-top:       Zpět nahoru na stránku
+jcmsplugin.dbcomment.edit.lbl.comment-on:     Vložit komentář k {0}
+jcmsplugin.dbcomment.edit.lbl.title:          Komentáře
+jcmsplugin.dbcomment.edit.lbl.view-comment:   Zobrazit komentáře
+jcmsplugin.dbcomment.edit.lbl.disable-comment:  Zakázat komentáře
+jcmsplugin.dbcomment.edit.lbl.enable-comment:   Povolit komentáře
+jcmsplugin.dbcomment.edit.lbl.view-all-comments: {0,choice,0#Žádné komentáře|1#Zobrazit komentář|2#Zobrazit {0} komentářů}
+jcmsplugin.dbcomment.edit.lbl.collapse-comments: Sbalit komentáře
+jcmsplugin.dbcomment.edit.lbl.warn.edit-moderation.disabled:        Aktuální typ moderování nedovoluje, abyste upravovali tento komentář, můžete upravovat pouze ostatní pole. Můžete však aktualizovat stav workflow komentáře.
+jcmsplugin.dbcomment.edit.follow:        Sledovat tuto publikaci
+
+jcmsplugin.dbcomment.lbl.comment:             Komentář
+jcmsplugin.dbcomment.lbl.comments:            Komentáře
+jcmsplugin.dbcomment.lbl.comment-count:       {0,choice,0#Žádný komentář|1#{0}komentáře |2#{0} komentářů}
+jcmsplugin.dbcomment.lbl.comment-count-text:  {0,choice,0#komentář|1#komentáře|2#komentářů}
+jcmsplugin.dbcomment.lbl.new:                 Nepřečtené
+jcmsplugin.dbcomment.lbl.see-previous-comments: {0,choice,1#Zobrazit předchozí komentář.|2#Zobrazit {0} předchozích komentářů.}
+jcmsplugin.dbcomment.lbl.major-update-date:   Poslední významná aktualizace {0}
+jcmsplugin.dbcomment.lbl.private:             Soukromé
+jcmsplugin.dbcomment.lbl.private-description: Tento komentář mohou číst členové skupiny "{0}".
+jcmsplugin.dbcomment.lbl.private-edit-tooltip: Aktivujete-li soukromý komentář, bude tento příspěvek přístupný pouze uživatelům ze skupiny "{0}".
+jcmsplugin.dbcomment.lbl.non-visible-created-comment: Váš komentář byl vytvořen a v současné době je schvalován.
+jcmsplugin.dbcomment.lbl.closed-comment:     Komentáře k této publikaci jsou uzavřeny.
+
+jcmsplugin.dbcomment.commentTop-section:Nejkomentovanější obsahy
+jcmsplugin.dbcomment.commentTop-section.help: Top 10 nejkomentovanějších obsahů
+jcmsplugin.dbcomment.commentTop.name:Název
+jcmsplugin.dbcomment.commentTop.number: Komentáře
+
+# ----------------------------------------------------------------------
+# Alert
+# ----------------------------------------------------------------------
+alert.name.jcmsplugin-dbcomment:                              Komentáře
+alert.name.jcmsplugin-dbcomment.new-comment:                  Nový komentář
+alert.msg.jcmsplugin-dbcomment.new-comment.title:             Nový komentář k "{parent}"
+alert.msg.jcmsplugin-dbcomment.new-comment.short-description: {author} uveřejnil(a) nový komentář k "{parent}". {parent.link}
+alert.msg.jcmsplugin-dbcomment.new-comment.description:       <p>{author} uveřejnil(a) nový {data}.</p>
+alert.name.jcmsplugin-dbcomment.new-mention:                  Nová zmínka
+alert.msg.jcmsplugin-dbcomment.new-mention.title:             Byl(a) jste zmíněn(a) v novém komentáři k {parent}
+alert.msg.jcmsplugin-dbcomment.new-mention.short-description:  {author} vás zmínil(a) v novém komentáři k "{parent}". {parent.link}
+alert.msg.jcmsplugin-dbcomment.new-mention.description:        <p>{author} vás zmínil(a) v novém komentáři k "{parent.data}".</p> 
+alert.new-comment-mention.title:     Byl(a) jste zmíněn(a) v novém komentáři k {parent}
+alert.new-comment-mention.short-description: {author} vás zmínil(a) v novém komentáři k "{parent}". {parent.link}
+alert.new-comment-mention.description:       <p>{author} vás zmínil(a) v novém komentáři k "{parent.data}".</p> 
+
+# ----------------------------------------------------------------------
+# Editable properties
+# ----------------------------------------------------------------------
+jcmsplugin.dbcomment.anonymous:               Anonymní komentáře
+jcmsplugin.dbcomment.anonymous.notify:        Oznamovat anonymním uživatelům
+jcmsplugin.dbcomment.compatible-types:        Typy, které je možné komentovat
+jcmsplugin.dbcomment.edit-moderation.enabled:  Přísný režim moderování
+jcmsplugin.dbcomment.edit-moderation.enabled.boolean: false
+jcmsplugin.dbcomment.edit-moderation.enabled.help: Pokud zvolíte možnost Ano, uživatelé, kteří mají právo upravovat komentáře, budou moci editovat všechna pole kromě obsahu komentáře. Text komentáře bude moci upravit pouze jeho autor.
+
+jcmsplugin.dbcomment.edit-commentable.enabled: U každé publikace nabídnout možnost zakázat komentáře
+jcmsplugin.dbcomment.edit-commentable.enabled.boolean:false
+jcmsplugin.dbcomment.edit-commentable.enabled.boolean.help: Pokud zvolíte možnost Ano, uživatelé, kteří mají právo upravovat komentáře, budou moci editovat všechna pole kromě obsahu komentáře.
+
+jcmsplugin.dbcomment.commentable-default-value: Povolit/Zakázat komentáře: výchozí hodnota
+jcmsplugin.dbcomment.commentable-default-value.boolean.help: Výchozí hodnota, která se použije, pokud je u každé publikace nabízena možnost zakázat komentáře
+
+jcmsplugin.dbcomment.commentable.title : Komentáře
+jcmsplugin.dbcomment.commentable.description : Povolit komentáře
+jcmsplugin.dbcomment.commentable.desactivate-comment: Zakázat komentáře k {0}
+jcmsplugin.dbcomment.commentable.activate-comment: Povolit komentáře k {0}
+jcmsplugin.dbcomment.commentable.forbidden-comment: Komentáře k cílovému obsahu jsou zakázány.
+
+jcmsplugin.dbcomment.private-comment.group: Soukromý komentář - Skupina
+jcmsplugin.dbcomment.private-comment.group.help: Skupina, která bude mít možnost zveřejňovat a číst soukromé komentáře
+jcmsplugin.dbcomment.private-comment.enabled: Soukromý komentář - Aktivovat soukromé komentáře
+jcmsplugin.dbcomment.private-comment.default-value: Soukromý komentář - Výchozí hodnota pro soukromé komentáře
+jcmsplugin.dbcomment.private-comment.default-value.help: Zvolíte-li ano, při vytváření nového komentáře bude volba soukromého komentáře nastavena na "ano".
+
+jcmsplugin.dbcomment.reverse-order: Opačné řazení
+jcmsplugin.dbcomment.reverse-order.help: Je-li zvolena možnost „ano“, budou se nejprve zobrazovat staré komentáře
+jcmsplugin.dbcomment.change-sort: Řadit - Vybrané pole
+jcmsplugin.dbcomment.change-sort.help: Řadit komentáře podle vybraného pole
+
+jcmsplugin.dbcomment.smart.comment-display.enabled: Aktivovat inteligentní zobrazování komentářů
+jcmsplugin.dbcomment.smart.comment-display.enabled.boolean: false
+jcmsplugin.dbcomment.smart.comment-display.enabled.help: Inteligentní zobrazování umožňuje skrýt staré komentáře k publikaci
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From DBComment-templates.xml
+types.DBComment.templates.query.default.label: Výchozí šablona
+types.DBComment.templates.full.default.label: Výchozí šablona
+
+# From DBComment.xml
+types.DBComment.fields.email.description: Adresa nebude zveřejněna
+types.DBComment.fields.email.label: E-mail
+types.DBComment.title.label: Název
+types.DBComment.fields.referer.label: Referrer
+types.DBComment.fields.ipAddress.label: IP adresa
+types.DBComment.fields.name.label: Název
+types.DBComment.fields.targetContent.label: Cílový obsah
+types.DBComment.fields.userAgent.label: Uživatelský agent
+types.DBComment.label: Komentář
+types.DBComment.fields.webSite.label: Webové stránky
+types.DBComment.fields.description.label: Komentář
+types.DBComment.fields.privateComment.label: Soukromý komentář
+
+# SmartPhone
+jcmsplugin.dbcomment.smartphone.lbl.dbcomment.add-comment.placeholder: Přidat komentář...
+
+# Explorer sidebar integration
+jcmsplugin.explorer-sidebar.see-comments: Přístup ke komentářům
+jcmsplugin.explorer.app.sidebar-tab.comments: Komentáře

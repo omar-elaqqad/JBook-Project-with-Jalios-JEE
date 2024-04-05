@@ -1,0 +1,4 @@
+<%--
+Provide Member listItemMemberImage = yourMember; to use this jspf
+--%>
+<jalios:memberphoto resource="memberphoto-phone" member="<%= listItemMemberImage %>" showStatus="<%= true %>" size="<%= PhotoSize.TINY %>" link="<%= false %>" />

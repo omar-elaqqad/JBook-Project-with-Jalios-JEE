@@ -1,0 +1,136 @@
+<%--
+  @Summary: PortletMyCollaborativeSpaces Subspace list
+  @Category: Custom
+  @Author: Sylvain Devaux <sylvain.devaux@jalios.com> 
+  @Since: csp-4.3, csp-5.0 
+--%><%@page import="com.jalios.jcmsplugin.collaborativespace.CSCollaborativeSpaceSelector"%>
+<%@page import="com.jalios.jcmsplugin.collaborativespace.CSTypologySelector"%><%
+%><%@page import="com.jalios.jcmsplugin.collaborativespace.CSManager"%><%
+%><%@page import="com.jalios.jcms.JcmsUtil"%><%
+%><%@page import="com.jalios.jcmsplugin.collaborativespace.CSHelper"%><% 
+%><%@ page contentType="text/html; charset=UTF-8" %><%!
+
+// ----------------------------------------------------------------------
+// Static utility classes
+// ----------------------------------------------------------------------
+
+public static String csLeafIcon = JcmsUtil.getHtmlIcon("jcmsplugin-collaborativespace-cs-sub-list-leaf");
+public static String treeNodeClosedIcon = JcmsUtil.getHtmlIcon("treenode-close");
+public static String treeNodeOpenedIcon = JcmsUtil.getHtmlIcon("treenode-open");
+
+public static void printOpenLink(JspWriter out, 
+    CSNode csNode, 
+    HttpServletRequest request, 
+    String refinePortletParam,
+    List<CollaborativeSpace> openedCSList) throws IOException {
+  
+  // Do CS have childs ?
+  Collection<CSNode> childs = csNode.getTreeChildren();
+  if (Util.isEmpty(childs)) {
+    out.print(csLeafIcon);
+    return;
+  }
+  CollaborativeSpace cs = csNode.getCs();
+  String param = HttpUtil.getDataIdParameter(request, refinePortletParam);
+  
+  String openUrl;
+  if (cs.getId().equals(param)) {
+    openUrl = ServletUtil.getAbsUrlWithRemovedParams(request, new String[]{refinePortletParam});
+  } else {
+    openUrl = ServletUtil.getAbsUrlWithUpdatedParam(request, refinePortletParam, cs.getId());
+  }
+
+  out.print("<a href='"+openUrl+"' class='ajax-refresh'>");
+  if (openedCSList.contains(cs)) {
+    out.print(treeNodeClosedIcon);
+  } else {
+    out.print(treeNodeOpenedIcon);
+  }
+  out.print("</a>");
+}
+
+%><%
+//----------------------------------------------------------------------
+// Variables initialization
+//----------------------------------------------------------------------
+
+boolean isTypoFilter = typoCat != null;
+Comparator<Workspace> comparator = Workspace.getNameComparator(userLang);
+
+DataSelector csSelector = new CSCollaborativeSpaceSelector(loggedMember);
+
+if (isTypoFilter) {
+  csSelector = new AndDataSelector(csSelector, new CSTypologySelector(typoCat, loggedMember));
+}
+
+int maxLevel = ((PortletMyCollaborativeSpaces)portlet).getDepth();
+
+CSNode rootNode = csMgr.getCSTree(workspace, null, 0, maxLevel, csSelector, comparator);
+//----------------------------------------------------------------------
+//  HTML Start
+//----------------------------------------------------------------------
+%>
+<div class="subCollaborativeSpaces">
+  <%-- TYPOLOGY --%>
+  <%@ include file='/types/PortletMyCollaborativeSpaces/doTypologyFilter.jspf' %>
+
+  <%
+  if (rootNode.isTreeLeaf()) {
+    %><div class="no-cs"><%= glp("jcmsplugin.collaborativespace.portlet.mycs.lbl.none") %></div><%
+  } else {
+    String refinePortletParam = "subspace_" + portlet.getId();
+    String clickedCSId = Util.getString(HttpUtil.getDataIdParameter(request, refinePortletParam), "");    // A CS which has been clicked, to be expand
+    
+    CollaborativeSpace clickedCs = (CollaborativeSpace) channel.getData(clickedCSId);
+    
+    List<CollaborativeSpace> openedCSList = new ArrayList<CollaborativeSpace>();
+    if (clickedCs != null) {
+      openedCSList.add(clickedCs); // Add to "CS to be opened" list
+    } else {
+      clickedCSId = ""; // Clear if not a valid CS
+    }
+    %><ul class="item-box">
+      <jalios:tree root='<%= rootNode %>' type='CSNode' name='itNode'><%
+      
+        CollaborativeSpace itCS = itNode.getCs();
+        
+        // Am I an ancestor of the opened CS
+        boolean isAncestor = clickedCs != null && itNode.hasDescendant(clickedCs);
+        if (isAncestor) {
+          openedCSList.add(itCS);
+        }
+        
+        // Is my parent opened ?
+        boolean isMyParentOpen = false;
+        for (CollaborativeSpace openedCS : openedCSList) {
+          isMyParentOpen = itNode.hasParent(openedCS);
+          if (isMyParentOpen) {
+            break;
+          }
+        }
+        
+        // Should CS to be displayed ?
+          // Yes, if first level
+          // Yes, if my parent has been clicked
+          // Yes, if any of my descendant has been clicked
+        boolean displayCS = itLevel == 0 || isMyParentOpen;
+
+        if (displayCS) {
+          boolean isPublic = CSHelper.isPublic(itCS);
+          String csInnerClass = "sub-workspace level-"+(itLevel + 1);
+          csInnerClass += " " + (isPublic ? "access-public" : (CSHelper.isPrivate(itCS) ? "access-private" : (CSHelper.isSecret(itCS) ? "access-secret" : "")));
+          %><li class='<%= csInnerClass %>'>
+            <span class='spacer'>&nbsp;</span>
+            
+            <jalios:icon src='<%= CSHelper.getIcon(itCS) %>' />
+            <jalios:link data='<%= itCS %>' />
+            <%
+            printOpenLink(out, itNode, request, refinePortletParam, openedCSList);
+            %>
+          </li><%
+        }
+      %></jalios:tree><%
+    %></ul><%
+  }
+  %><%@ include file='/types/PortletMyCollaborativeSpaces/doPortletFooter.jspf' %>
+</div>

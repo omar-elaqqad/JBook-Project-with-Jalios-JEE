@@ -1,0 +1,88 @@
+<%--
+  @Summary: CollaborativeSpace header navigation
+  @Category: Portal
+  @Author: Jalios SA 
+  @Customizable: True
+  @Requestable: False
+--%><%@page import="com.jalios.jcmsplugin.collaborativespace.actionsmenu.CSActionMenuItem"%><%
+%><%@page import="java.util.ArrayList"%><%
+%><%@page import="com.jalios.jcms.portlet.PortalElement"%><%
+%><%@page import="com.jalios.util.Util"%><%
+%><%@page import="generated.AbstractPortletSkinable"%><%
+%><%@page import="com.jalios.jcms.Publication.TitleComparator"%><%
+
+String navTabsAvoidanceAnchor = "a11y-cs-navigation";
+// Add this to skip avoidance link
+// request.setAttribute("jcmsplugin.collaborativespace.a11y.avoidance-link.a11y-cs-navigation", "");
+// Add this to override target anchor
+// request.setAttribute("jcmsplugin.collaborativespace.a11y.avoidance-link.a11y-cs-navigation", "custom-cs-navigation");
+if (request.getAttribute("jcmsplugin.collaborativespace.a11y.avoidance-link.a11y-cs-navigation") != null) {
+  navTabsAvoidanceAnchor = Util.getString(request.getAttribute("jcmsplugin.collaborativespace.a11y.avoidance-link.a11y-cs-navigation"), "");
+}
+// Add avoidance link if only an anchor is set
+if (Util.notEmpty(navTabsAvoidanceAnchor)) {
+  jcmsContext.addAvoidanceLink(navTabsAvoidanceAnchor, glp("jcmsplugin.collaborativespace.a11y.avoidance-link.navigation-tabs"));
+}
+boolean isHome = csHandler.isHome();
+String navigationAvoidanceAttr = Util.notEmpty(navTabsAvoidanceAnchor) ? (" id=\"" + navTabsAvoidanceAnchor + "\"") : "";
+%>
+<nav role="navigation" aria-label="<%= encodeForHTMLAttribute(glp("jcmsplugin.collaborativespace.lbl.header-navigation", cs.getTitle(userLang))) %>">
+<ul id="<%= cs.getId() %>TabHeaders" 
+    data-remove-app-confirm-message='<%= encodeForHTMLAttribute(glp("jcmsplugin.collaboratif.tabs.menu.remove.confirm")) %>'
+    class="nav nav-tabs">
+  <%-- Administration links --%>
+  <% if (csHandler.showActionsMenu()) { %>
+    <% String menuWrapperCss = "nav-admin pull-right tabdrop "+(csHandler.isDropdownActive() ?  "active-child" : ""); %>
+    <jalios:dropdown triggerIcon="nav-burger" 
+                     triggerCss="btn-link"
+                     triggerTitle="jcmsplugin.collaborativespace.metas.actions-menu-title"
+                     triggerIconAlt="jcmsplugin.collaborativespace.metas.actions-menu-title"
+                     triggerTag="a"
+                     wrapperTag="li" 
+                     wrapperHtmlAttributes=''
+                     wrapperCss="<%= menuWrapperCss %>" 
+                     itemsPropPrefix ="jcmsplugin.collaborativespace.actions-menu." />
+          
+  <% } %>
+
+  <%-- HOME TAB --%>
+  <li  id="TabHeader_home" class="cs-tab-index <%= isHome ? "active" : "" %>">
+    <a class="title" <%= isHome ? "aria-current=\"page\"" : "" %> href='<%= portalCategory.getDisplayUrl(userLocale) %>'<%= navigationAvoidanceAttr %>>
+      <%= glp("jcmsplugin.collaborativespace.header.admin-menu.home") %>
+    </a>
+  </li>
+
+  <%-- APP TABS --%>
+  <% if (csHandler.isFullAccess()) { %>
+    <jalios:foreach collection="<%= csHandler.getApplicationTabs() %>" name="itTab" type="com.jalios.jcmsplugin.collaborativespace.portal.CSDisplayHandler.ApplicationTab">
+      <% boolean isEditable = isLogged && loggedMember.canWorkOn(itTab.getPortalElement());%>
+      <li data-app-index="<%= itCounter %>" 
+          data-portlet-id="<%= encodeForHTMLAttribute(itTab.getId()) %>" 
+          data-is-editable="<%= isEditable %>"
+           id="<%= itTab.getId() %>TabHeader_<%= itCounter %>" class="<%= itTab.getCss() %>">
+        <a href="<%= portalCategory.getDisplayUrl(userLocale) + "?portlet=" + itTab.getId() %>"  <%= itTab.getLinkAttributes() %>>
+          <span class="application-title"><%= itTab.getLabel() %></span>
+          <% if (itTab.hasAnyReadRights() && isEditable) { %>
+            <jalios:tooltip icon="jcmsplugin-collaborativespace-tab-read-rights" longdesc='<%= "jcore/tooltip/ttPublicationRights.jsp?id="+ itTab.getId() %>' />
+          <% } %>
+        </a>
+        <% if(csHandler.showApplicationTabMenu(itTab)){ %>
+          <jalios:dropdown wrapperCss="tab-menu" triggerIcon="caret" triggerCss="btn btn-rounded btn-application-menu"  triggerTitle="application-launcher.edit-tab" >
+            <li><a role="button" tabindex="0" data-jalios-cs-action="updateTab" class="tab-menu-update"><jalios:icon src="jcmsplugin-collaborativespace-app-dropdown-update" /><%= glp("jcmsplugin.collaboratif.tabs.menu.update.title") %></a></li>
+            <li><a role="button" tabindex="0" data-jalios-cs-action="deleteTab" class="tab-menu-delete"><jalios:icon src="jcmsplugin-collaborativespace-app-dropdown-remove" /><%= glp("jcmsplugin.collaboratif.tabs.menu.remove") %></a></li>
+          </jalios:dropdown>
+        <% } %>
+      </li>
+    </jalios:foreach>
+      
+    <%-- Add Service + --%>
+    <% if(csHandler.showAddApplicationTab()){ %>
+      <li  class="add-application-tab">
+        <jalios:link htmlAttributes='' data='<%= portalCategory %>' params='<%= "jsp=plugins/CollaborativeSpacePlugin/jsp/services.jsp" %>' title='<%= glp("jcmsplugin.collaborativespace.services.lbl.add-title") %>'>
+          <jalios:icon alt='jcmsplugin.collaborativespace.services.lbl.add-title' src="jcmsplugin-collaborativespace-add-services" />
+        </jalios:link>
+      </li>
+    <% } %>
+  <% } %><%-- isFullAccess --%>
+</ul>
+</nav>

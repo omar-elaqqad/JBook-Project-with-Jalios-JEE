@@ -1,0 +1,35 @@
+<%@ page import="com.jalios.jcms.vote.*" %>
+<%  
+    VoteManager voteMgr = VoteManager.getInstance();
+    boolean canBeVoted = voteMgr.canVote(itComment,loggedMember);
+%>
+	<div id="<%= itComment.getId() %>" class="media well well-sm comment-pane <%= itComment.isAuthorComment() ? "author" : "" %> <%= itCounter % 2 == 0 ? "odd" : "even" %>">
+    <jalios:memberphoto css="comment-photo pull-left" size="<%= PhotoSize.TINY %>" member="<%= itComment.getAuthor() %>" link="<%= isAnonymousComment ? false : true %>"/>
+    <div class="comment media-body">
+	    <div class="comment-header">
+	      <div class='comment-info pull-right'>                
+	        <jalios:link css="comment-link" data="<%= itComment %>"><jalios:date date="<%= itComment.getCdate() %>" format='<%= "long" %>'/> <jalios:time date="<%= itComment.getCdate() %>" format='<%= "short" %>'/></jalios:link>
+	        <% if (isLogged && loggedMember.canWorkOn(itComment)) {%><jalios:edit pub='<%= itComment %>' popup='true'/><% } %>
+	        <span class="counter"><%= itCounter %></span>
+	      </div>               
+	      <div class="comment-author">
+	      <jalios:include target="DBCOMMENT_HEADER_LEFT" />
+	        <% if (isAnonymousComment) { %>
+	        <% if (Util.notEmpty(itComment.getWebSite())) { %>
+	            <a href='<%= itComment.getWebSite() %>' target='_blank'><%= itComment.getName() %></a>
+	        <% } else { %>
+	            <%= itComment.getName() %>
+	        <% } %>
+	        <% } else { %>
+	        <jalios:link data="<%= itComment.getAuthor() %>" />
+	        <% } %>
+	        <% if (canBeVoted) { %>&middot; <jalios:vote pub="<%= itComment %>"/>  <% } %> 
+	        <jalios:include target="DBCOMMENT_HEADER_RIGHT" />
+	        <%= wfLabel %>
+	         
+       </div><%-- EOF .comment-author --%>
+ 	     <jalios:vote pub="<%= itComment %>" usage="<%= VoteConstants.VOTE_TAG_USAGE_VOTELIST %>"  />     
+	     </div>
+		   <div class='comment-text internal-comment-block'><jalios:wiki data="<%= itComment %>" field="description"><%= itComment.getDescription() %></jalios:wiki></div>
+	    </div><%-- EOF .comment --%>
+  </div><%-- EOF .comment-pane --%>

@@ -1,0 +1,9 @@
+<%
+String description = Util.getString(poll.getDescription(userLang), "");
+if (Util.notEmpty(description)) { %>
+  <div class="poll-description">
+    <% request.setAttribute("jcmsplugin.poll.inserted-poll", true); %> 
+    <jalios:wiki><%= description %></jalios:wiki>
+    <% request.removeAttribute("jcmsplugin.poll.inserted-poll"); %>
+  </div>
+<% } %>

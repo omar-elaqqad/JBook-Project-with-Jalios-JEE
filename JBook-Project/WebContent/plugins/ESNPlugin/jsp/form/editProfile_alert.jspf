@@ -1,0 +1,8 @@
+<%-- TAB - ALERT ---------------------------------------------- --%>
+<% if (isAccount) { %>
+<div class="tab-page">    
+  <h2 class="tab"><jalios:icon src="web-alert" /> <%= glp("alert.rule-editor.lbl.title") %></h2>   
+  <%@ include file="/jcore/alert/doAlertRuleEditor.jspf" %>
+  <jalios:include target="PLUGIN_ESN_EDIT_PROFILE_ALERT"/>      
+</div>
+<% }  %>    

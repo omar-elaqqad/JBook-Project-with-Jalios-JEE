@@ -1,0 +1,3 @@
+<div class="card-item pub-header">
+  <div class="pub-title"><h1><%= pub.getTitle(userLang,true) %></h1></div>
+</div><%-- EOF .pub.header --%>

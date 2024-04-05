@@ -1,0 +1,4 @@
+<li class="readable <%= itPub.hasBeenReadBy(loggedMember) ? "read" : "" %>"><a data-role="none" href="<%= smartPhoneManager.getDataUrl(itPub) %>">
+  <h2><jalios:dataicon data="<%= itPub %>" /> <%= itPub.getTitle(userLang,true) %></h2>
+  </a>
+</li>

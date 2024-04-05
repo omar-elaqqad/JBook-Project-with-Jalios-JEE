@@ -1,0 +1,23 @@
+<%@page import="com.jalios.jcmsplugin.esn.profile.ProfileDisplayHandler"%><%
+%><%@page import="com.jalios.jcmsplugin.esn.profile.ui.UIAction"%><%
+%><%@ page contentType="text/html; charset=UTF-8" %><%
+%><%@ include file='/plugins/ESNPlugin/types/MemberProfile/doInitMemberProfile.jspf' %><%
+
+UIAction ui = (UIAction) request.getAttribute(ProfileDisplayHandler.ACTION_REQUEST_ATTR);
+if (ui == null) {
+  logger.warn("doInitAction.jspf: no UIACtion retrieve in request. Exit");
+  return;
+}
+Member uiMember = ui.getContext().getMember();
+if (uiMember == null) {
+  logger.warn("doInitAction.jspf: no Member attached to UIAction. Exit");
+  return;
+}
+String actionLabel = ui.getLabel(userLang);
+String redirectSuffixNoEncode, redirectSuffix;
+{
+  String redirectSuffixSource = "redirect=" + ServletUtil.encodeURL(member.getDisplayUrl(userLocale));
+  redirectSuffixNoEncode = "&" + redirectSuffixSource;
+  redirectSuffix = "&amp;" + redirectSuffixSource;
+}
+%>

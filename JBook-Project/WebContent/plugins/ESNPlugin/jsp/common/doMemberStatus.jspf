@@ -1,0 +1,54 @@
+<%
+ServletUtil.backupAttribute(pageContext, "esn-member-status-member");
+request.setAttribute("esn-member-status-member", itMember);
+%>
+<div class="member-status">
+  <jalios:memberphoto link="false" member="<%= itMember %>" size="<%= PhotoSize.TINY %>" htmlAttributes='aria-hidden="true"' />
+  <div class="info-part">
+    <%-- Name --%>
+    <div class="name">
+      <jalios:link data="<%= itMember %>" />
+    </div>
+
+    <%-- Current Event --%>
+    <jalios:include target="ESN_MEMBER_STATUS_CURRENT_EVENT" />
+    
+    <%-- Status --%>
+    <%
+    boolean canMicroBlog = MicroBloggingManager.getInstance().canMicroBlog(loggedMember,workspace);
+
+    MicroBlogging microBlogging = (MicroBlogging) MicroBloggingManager.getInstance().getLastMicroBlogging(itMember,loggedMember);
+    String message = microBlogging != null ? microBlogging.getText() : null;
+    String statusInfo = microBlogging != null ? "" + glp("jcmsplugin.esn.lbl.status-info", JcmsUtil.getFriendlyDate(microBlogging.getMdate(), DateFormat.SHORT, DateUtil.isToday(microBlogging.getMdate()), userLocale)) : "";
+    %>
+    <% if (Util.notEmpty(message) || itMember == loggedMember) { %>
+    <div class="status-info status" title="<%= encodeForHTMLAttribute(statusInfo) %>">
+      <% if (Util.notEmpty(message)) { %>
+          <jalios:wiki><%= message %></jalios:wiki>
+          <% if (itMember == loggedMember && canMicroBlog) { %>
+          <a class="modal" onclick="return false;" href="plugins/ESNPlugin/jsp/form/editStatus.jsp?mid=<%= itMember.getId() %>"><jalios:icon src="add-small" title='<%= glp("jcmsplugin.esn.microblogging.title.create-message") %>' /></a>
+          <jalios:delete data="<%= microBlogging %>" icon="remove-small" redirect="<%= ServletUtil.getUrl(request) %>"/>
+          <% } %>
+
+      <% }else{ %>
+          <% if (itMember == loggedMember && canMicroBlog) { %>
+          <a class="modal" onclick="return false;" href="plugins/ESNPlugin/jsp/form/editStatus.jsp?mid=<%= itMember.getId() %>"><jalios:icon src="add-small" title='<%= glp("jcmsplugin.esn.microblogging.title.create-message") %>' /></a>
+          <% } %>
+      <% } %>
+    </div>
+    <% } %>
+
+    <%-- Last Login Date --%>
+    <% Date lastLoginDate = itMember.getLastLoginDate(); %>
+    <% if (lastLoginDate != null) { %>
+    <div class="status-info last-login-date">
+      <% int mbrStatus = itMember.getStatus(); %>
+      <jalios:icon src='<%= "mbr-status-" + mbrStatus %>' css='mbr-status' title='<%= glp("ui.com.alt.mbr.status." + mbrStatus) %>' />
+      <%= glp("jcmsplugin.esn.lbl.last-connection") %> <%= JcmsUtil.getFriendlyDate(lastLoginDate, DateFormat.SHORT, true, userLocale) %>
+    </div>
+    <% } %>
+  </div>
+</div>
+<%
+ServletUtil.restoreAttribute(pageContext, "esn-member-status-member");
+%>

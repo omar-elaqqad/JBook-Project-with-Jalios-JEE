@@ -1,0 +1,88 @@
+.topbar {
+  height: @smartphone-topbar-height;
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  background-color: #00adb8;
+  transition: background-color 250ms ease-in;
+
+  &.member-menu-is-active {
+    .topbar-right {
+      visibility: hidden;
+    }
+
+    .topbar-left .ui-toolbar-back-btn {
+      visibility: hidden;
+    }
+  }
+
+  .hamburger.is-active {
+    .hamburger-inner {
+      //background-color: #999;
+      &::before {
+        //background-color: #999;
+        width: 24px;
+      }
+
+      &::after {
+        //  background-color: #999;
+        width: 24px;
+      }
+    }
+  }
+
+  .hamburger-box {
+    width: 22px;
+    height: 10px;
+  }
+
+  .hamburger-inner {
+    width: 22px;
+    height: 3px;
+    background-color: white;
+    //transition: background-color 300ms ease-in;
+    &::before {
+      top: -5px;
+      height: 3px;
+      width: 22px;
+      background-color: white;
+      //transition: background-color 300ms ease-in;
+    }
+
+    &::after {
+      bottom: -5px;
+      width: 22px;
+      height: 3px;
+      background-color: white;
+      //transition: background-color 300ms ease-in;
+    }
+  }
+
+}
+
+.topbar-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-height: @smartphone-topbar-height;
+  max-width: 160px;
+  max-height: 24px
+}
+
+.member-menu-topbar-placeholder {
+  height: 56px;
+  flex-shrink: 0;
+}
+
+.topbar-menu-navigate {
+  margin-top: -16px !important;
+  .navigate-item {
+    color: #3388cc;
+    display: block;
+    font-family: @font-family-condensed;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+}
+

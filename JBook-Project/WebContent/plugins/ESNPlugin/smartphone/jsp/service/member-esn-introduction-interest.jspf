@@ -1,0 +1,36 @@
+<%  
+  String introduction = Util.getString(profile.getIntroduction(), "");
+  List<String> interest = profile.getInterest();
+%>
+<% if (Util.notEmpty(introduction) || Util.notEmpty(interest)) { %>
+<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+    <h3><%= glp("jcmsplugin.esn.smartphone.lbl.presentation") %></h3>
+    <div>
+    <jalios:wiki attributeMap="<%= smartPhoneManager.getWikiAttributeMap() %>"><%= introduction %></jalios:wiki>
+      <%-- DateOfBirth --%>
+      <% if (Util.notEmpty(profile.getDateOfBirth())) { %>
+      <div class="other-info">
+        <b><%= glp("jcmsplugin.esn.lbl.date-of-birth") %> :</b>
+        <jalios:date date="<%= profile.getDateOfBirth() %>" format="dd MMMM" />
+      </div>
+      <% } %>          
+    
+      <%-- DateOfArrival --%>
+      <% if (Util.notEmpty(profile.getDateOfArrival())) { %>
+      <div class="other-info">
+        <b><%= glp("jcmsplugin.esn.lbl.date-of-arrival") %> :</b>
+        <jalios:date date="<%= profile.getDateOfArrival() %>" format="dd MMMM yyyy" />
+      </div>
+      <% } %>
+      
+      <%-- Interest --%>
+      <% if (Util.notEmpty(interest)) { %>
+      <div class="other-info">
+        <b><%= glp("jcmsplugin.esn.lbl.interest") %> :</b>
+        <%= Util.join(profile.getInterest(), ", ") %>
+      </div>
+      <% } %>          
+    
+    </div>
+</div>
+<% } %>   

@@ -1,0 +1,902 @@
+/* -------------------------------------- */
+/*                 MemberProfile          */
+/* -------------------------------------- */
+#member-profile .column-main {
+  min-height: 500px;
+}
+#member-profile TABLE A {
+  word-break: break-word;
+  white-space: normal;
+}
+#member-profile.viewMemberProfile H2,
+#member-profile.editMemberProfile H2 {
+  border-bottom: 1px dashed #CCCCCC;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+#member-profile.viewMemberProfile .esn-experience .esn-experience-title,
+#member-profile.editMemberProfile .esn-experience .esn-experience-title {
+  font-weight: bold;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+#member-profile.viewMemberProfile .esn-component-item-title,
+#member-profile.editMemberProfile .esn-component-item-title {
+  font-weight: bold;
+}
+#member-profile.viewMemberProfile .label,
+#member-profile.editMemberProfile .label {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #999999;
+}
+/* -------------------------------------- */
+/*                Introduction            */
+/* -------------------------------------- */
+#member-profile.viewMemberProfile .introduction .other-info,
+#member-profile.editMemberProfile .introduction .other-info {
+  margin-top: 4px;
+}
+#member-profile.viewMemberProfile .introduction .other-info SPAN,
+#member-profile.editMemberProfile .introduction .other-info SPAN {
+  font-weight: bold;
+  color: #999;
+}
+#member-profile .wiki H1 {
+  border-bottom: 0 none;
+  font-size: 15px;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+#member-profile .wiki H2 {
+  border-bottom: 0 none;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+#member-profile .wiki H3 {
+  border-bottom: 0 none;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+#member-profile TABLE.layout {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.esn H3 {
+  margin: 0;
+  padding: 0;
+}
+#member-profile H2 SPAN.right {
+  float: right;
+}
+#member-profile .esnSkin {
+  margin-bottom: 20px;
+}
+#member-profile .box H2 {
+  text-align: center;
+  margin-top: 6px;
+}
+#member-profile .dot {
+  background: transparent url(../images/doted.png) repeat-x scroll bottom;
+  padding-bottom: 3px;
+}
+#member-profile .esn-experience .esn-experience-organization {
+  margin-bottom: 10px;
+}
+#member-profile .esn-experience .esn-experience-address {
+  margin-bottom: 10px;
+}
+#member-profile .esn-component-experience H2 {
+  margin-top: 0;
+}
+#member-profile .esn-experience-job-actions {
+  display: inline-block;
+  margin-left: 10px;
+}
+/* -------------------------------------- */
+/*                 Wiki           */
+/* -------------------------------------- */
+#member-profile .wiki P {
+  margin: 0;
+  padding: 2px 0;
+}
+#member-profile .wiki UL {
+  margin: 0;
+  padding-left: 25px;
+}
+#member-profile .wiki UL LI {
+  list-style-type: disc;
+}
+/* -------------------------------------- */
+/*                 MemberHeader           */
+/* -------------------------------------- */
+#esn-header {
+  margin-bottom: 20px;
+  padding-left: 1px;
+  background-color: #F8F8F8;
+}
+.esn A.phone {
+  color: #000;
+}
+#esn-header-profil .nav.nav-tabs {
+  padding-left: 10px;
+  margin-top: 10px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+#esn-header-profil .inner-tabs {
+  margin-top: 5px;
+}
+#esn-header #esn-header-profil .esn-column {
+  padding: 3px 1px 0 1px;
+}
+#esn-header-profil .wrapper-photo {
+  float: none;
+}
+.esn-left-column H2 {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 9px;
+  border-bottom: 1px dashed #DDDDDD;
+}
+.esn-left-column .Portlet {
+  margin-bottom: 18px;
+}
+#esn-header .profile-header-photo {
+  float: left;
+  margin: 6px 0 3px 10px;
+}
+.browser-IE6 #esn-header .wrapper-photo {
+  margin-right: 16px;
+}
+#esn-header .wrapper-photo IMG.photo {
+  border: 2px solid #FFF;
+  padding: 0;
+  display: block;
+}
+#esn-header ul.profil-menu {
+  margin: 0;
+  padding: 0;
+}
+#esn-header ul.profil-menu li {
+  margin: 0;
+  padding: 5px 2px 5px 10px;
+}
+#esn-header-others {
+  margin: 0 0 20px 0;
+}
+#esn-header-others .profil-info,
+#esn-header-others .profil-warn {
+  margin-bottom: 4px;
+  padding: 15px;
+  background-color: #E8F3FF;
+  font-size: 14px;
+  color: #495B70;
+}
+#esn-header .profil-details {
+  min-height: 180px;
+  overflow: hidden;
+  padding-left: 16px;
+}
+.browser-IE6 #esn-header .profil-details {
+  height: 170px;
+}
+#esn-header .profil-details h1.profil-name {
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+#esn-header .profil-details p.profil-function-company {
+  color: #8a94a0;
+  font-size: 14px;
+  font-weight: normal;
+}
+#esn-header .profil-details .address {
+  margin: 15px 0 5px 0;
+}
+#esn-header .profil-details .address A {
+  color: #000;
+}
+#esn-header .profil-details .address A:focus {
+  outline: none;
+}
+#esn-header .profil-details ul.coordonnees-infos {
+  margin-top: 10px;
+  list-style: none;
+}
+#esn-header-others .profil-details ul.coordonnees-infos {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* Menu profil */
+/*
+#esn-header-menu .tab-menu {
+    background-color: transparent;
+}
+
+#esn-header-menu .tab-menu ul {
+    background-color: transparent;
+}
+
+#esn-header-menu .tab-menu ul li a {
+    padding: 4px 6px;
+}
+*/
+/* Lien menu entete col droite*/
+#esn-header-others ul.profil-menu {
+  margin: 0 0 9px;
+  padding: 0;
+}
+#esn-header-others ul.profil-menu li {
+  margin: 0;
+  padding: 5px 2px 5px 5px;
+  border-bottom: 1px dotted #DDDDDD;
+}
+#esn-header-others UL.profil-menu LI A {
+  font-weight: bold;
+}
+#esn-header-others UL.profil-menu .gauge {
+  margin-bottom: 0;
+}
+/* status */
+#wrapper-status {
+  background-color: #FAFFF0;
+  border: 1px solid #CCCCCC;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0 0 4px #71A83A inset;
+  position: relative;
+}
+DIV > #wrapper-status {
+  width: 98%;
+  min-height: 70px;
+}
+#wrapper-status .arrow {
+  background: url("../images/left-arrow.gif") no-repeat scroll left top transparent;
+  height: 23px;
+  left: -13px;
+  position: absolute;
+  top: 30px;
+  width: 18px;
+}
+#wrapper-status .status {
+  position: relative;
+  left: 13px;
+  padding: 12px 22px 10px 13px;
+}
+#wrapper-status .status .microblogging-container {
+  position: relative;
+}
+#wrapper-status .status .microblogging-link {
+  left: -20px;
+  position: absolute;
+}
+#wrapper-status p A:hover {
+  text-decoration: underline;
+}
+#wrapper-status p.info-calendar {
+  margin-top: 8px;
+  font-weight: bold;
+}
+#wrapper-status p.info-connection {
+  margin-top: 8px;
+}
+#wrapper-status .wiki {
+  color: #225645;
+  font-size: 13px;
+  border-bottom: 1px dashed #EEEEEE;
+}
+#wrapper-status .status-date {
+  color: #666666;
+  font-size: 10px;
+}
+#wrapper-status .wiki * {
+  color: #225645;
+  font-size: 13px;
+}
+#wrapper-status .wiki IMG {
+  height: auto;
+  max-height: 600px;
+  max-width: 100%;
+}
+#wrapper-status .wiki A {
+  color: #0069D6;
+}
+/* -------------------------------------- */
+/*              Contact Card              */
+/* -------------------------------------- */
+.esn .contact-card {
+  border: 1px solid #DDDDDD;
+  width: 420px;
+  margin: 0 auto 18px auto;
+}
+.esn .contact-card .header {
+  height: 4px;
+  background-color: #EEEEFF;
+  font-size: 1px;
+}
+.esn .contact-card .footer {
+  height: 8px;
+  background-color: #EEEEFF;
+  font-size: 1px;
+}
+.esn .contact-card .inner {
+  padding: 6px;
+}
+.esn .contact-card DIV.photo {
+  float: right;
+  width: 50px;
+}
+.esn .contact-card .name {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  margin-top: 14px;
+}
+.esn .contact-card .jobTitle {
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 12px;
+  color: #999999;
+}
+.esn .contact-card .organization {
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.esn .contact-card .address {
+  text-align: center;
+  margin-top: 6px;
+  color: #999999;
+}
+.esn .contact-card .address P {
+  margin: 0;
+  padding: 0;
+}
+.esn .contact-card .contact-info {
+  margin-top: 20px;
+}
+.esn .contact-card .contact-info .left {
+  float: left;
+}
+.esn .contact-card .contact-info .right {
+  float: right;
+}
+/* -------------------------------------- */
+/*            View / Edit                 */
+/* -------------------------------------- */
+#member-profile H2 .edit-link {
+  font-size: 12px;
+  white-space: nowrap;
+}
+/* -------------------------------------- */
+/*                 Log                   */
+/* -------------------------------------- */
+#member-profile TABLE.logs {
+  width: 100%;
+}
+#member-profile .logs .log-date {
+  vertical-align: top;
+  text-align: right;
+  color: #8A94A0;
+  font-size: 90%;
+  width: 90px;
+  white-space: nowrap;
+}
+#member-profile .logs .log-date A {
+  color: #666666;
+}
+#member-profile .logs .log-info {
+  vertical-align: top;
+  text-align: left;
+  padding-left: 12px;
+  padding-bottom: 0;
+}
+#member-profile .logs .log-info .pager {
+  text-align: left;
+  margin-left: 0;
+}
+/* -------------------------------------- */
+/*              Job / Education           */
+/* -------------------------------------- */
+#member-profile .jobs .log-info .title,
+#member-profile .educations .log-info .title {
+  font-weight: bold;
+}
+/* -------------------------------------- */
+/*             Network Activities         */
+/* -------------------------------------- */
+#member-profile .network-activity .logs .log-info {
+  padding-bottom: 0px;
+}
+#member-profile .network-activity TD {
+  vertical-align: top;
+}
+#member-profile .network-activity .info-part .time {
+  color: #999999;
+  font-size: 90%;
+}
+#member-profile .network-activity .photo-part img.photo {
+  height: 30px;
+}
+.browser-IE6 #member-profile .network-activity .wrapper-photo.tiny-photo {
+  height: 30px;
+}
+#member-profile .activity .log-info.microblogging A.microblogging-link {
+  color: #404040;
+}
+#member-profile .activity .log-info.microblogging A.microblogging-link:hover {
+  text-decoration: underline;
+}
+/* -------------------------------------- */
+/*                Workspace               */
+/* -------------------------------------- */
+#member-profile .workspaces UL {
+  margin: 0;
+  padding-left: 0px;
+  list-style: none;
+}
+#member-profile .workspaces LI.workspace {
+  padding-bottom: 10px;
+}
+#member-profile .workspaces .wsInfo {
+  margin: 3px 0 0 16px;
+  color: #999999;
+}
+/* -------------------------------------- */
+/*           Member Info                  */
+/* -------------------------------------- */
+#member-profile .info TD {
+  vertical-align: top;
+  text-align: left;
+}
+/* -------------------------------------- */
+/*            item-box-member                  */
+/* -------------------------------------- */
+.esn .item-box-member TR.item {
+  height: 63px;/* height == min-height for TR */
+}
+.esn .item-box-member TR.item TD.photo-part {
+  width: 1%;
+  padding: 3px 9px;
+  vertical-align: top;
+}
+/* -------------------------------------- */
+/*           Connections                  */
+/* -------------------------------------- */
+#member-profile .name {
+  font-weight: bold;
+}
+#member-profile .connections H3 {
+  color: #666666;
+  margin: 5px 0;
+}
+#member-profile .suggestions .no-suggestion {
+  margin: 5px;
+}
+#member-profile .box.common-connections ul.pager li.pgCurrent,
+#member-profile .box.otherConnections ul.pager li.pgCurrent {
+  background-color: #FFFFFF;
+}
+/* -------------------------------------- */
+/*                Links                   */
+/* -------------------------------------- */
+#member-profile .links .intro {
+  margin: 5px;
+}
+/* -------------------------------------- */
+/*                Notes                   */
+/* -------------------------------------- */
+#member-profile .box.notes .note {
+  border-bottom: 2px solid #EEEEEE;
+  margin-bottom: 3px;
+}
+#member-profile .box.notes .note .info {
+  font-size: 12px;
+  color: #999999;
+  margin-bottom: 3px;
+}
+#member-profile .box.notes .addNote {
+  margin: 3px 0 6px 0;
+  text-align: right;
+}
+/* -------------------------------------- */
+/*       Member Connection Request        */
+/* -------------------------------------- */
+.esn-mcr-message .date {
+  color: #999999;
+  margin-bottom: 10px;
+}
+.esn-mcr-message .message {
+  position: relative;
+  background: #EDF8FE;
+  border: 1px solid #DAEDF9;
+  padding: 15px;
+  border-radius: 5px;
+}
+.esn-mcr-message {
+  margin-left: 65px;
+  overflow: initial;
+}
+.esn-mcr-message .message .tail {
+  left: -16px;
+  position: absolute;
+  top: 2px;
+}
+/* -------------------------------------- */
+/*                Edit Status             */
+/* -------------------------------------- */
+#edit-status .statusMessage {
+  font-size: 16px;
+}
+/* -------------------------------------- */
+/*                Add Contact             */
+/* -------------------------------------- */
+#add-contact .contact A {
+  font-weight: bold;
+}
+#add-contact TD.formLabel {
+  color: #999999;
+}
+#check-contact-message {
+  text-align: center;
+  font-weight: bold;
+}
+#check-contact-message IMG {
+  margin: 10px 0;
+}
+#add-contact .propositions .contact {
+  text-align: center;
+}
+#add-contact .propositions .contact .wrapper-photo {
+  float: none;
+  margin: 0 auto;
+}
+#add-contact .contact .wrapper-photo.tiny-photo {
+  width: 35px;
+}
+.browser-IE9 #add-contact #expertise {
+  max-height: none;
+}
+/* -------------------------------------- */
+/*              Recommendations           */
+/* -------------------------------------- */
+#recommendation .recipients,
+#connect-contact .contacts {
+  margin-left: 6px;
+  height: 254px;
+  overflow: auto;
+  position: relative;
+}
+#recommendation .recommended,
+#connect-contact .contact {
+  color: #888888;
+  font-weight: bold;
+}
+/* -------------------------------------- */
+/*        Connection Navigator            */
+/* -------------------------------------- */
+#connection-navigator {
+  margin: 20px 0 0 10px;
+}
+#connection-navigator .nav.nav-tabs {
+  padding-left: 10px;
+}
+#connection-navigator .connection-view-menu .icon {
+  vertical-align: middle;
+}
+#connection-navigator .connection-navigator-header {
+  overflow: auto;
+  clear: both;
+}
+#connection-navigator .connection-type-menu A {
+  padding-right: 20px;
+}
+/* -------------------------------------- */
+/*          Connection Card              */
+/* -------------------------------------- */
+.connection-card {
+  padding: 8px 0 4px 0;
+  border: 0;
+  background: transparent url(../images/bg/bg-point-1px-4px.gif) repeat-x bottom left;
+  min-height: 60px;
+}
+.connection-card TD {
+  vertical-align: top;
+}
+.connection-card TD.connection-photo {
+  padding-left: 18px;
+}
+.connection-card .wrapper-photo {
+  margin: 0 18px 18px 0;
+}
+.connection-card .content-details {
+  overflow: hidden;
+}
+.connection-card h3 {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+}
+.connection-card P.function-company {
+  line-height: 13px;
+  margin-bottom: 0;
+}
+.connection-card .content-details td.fit {
+  padding-left: 0;
+}
+/* -------------------------------------- */
+/*          Connection List              */
+/* -------------------------------------- */
+#connection-list {
+  margin-top: 10px;
+}
+#connection-list TABLE.list {
+  border-collapse: collapse;
+  margin-top: 10px;
+  padding: 0;
+  margin: 0;
+}
+#connection-list .list TR.info {
+  border-top: 1px solid #EEEEEE;
+}
+#connection-list .list TD,
+#connection-list .list TH {
+  padding: 6px;
+}
+#connection-list .list TD.count {
+  text-align: right;
+}
+/* -------------------------------------- */
+/*          Connection Cloud              */
+/* -------------------------------------- */
+#connection-cloud {
+  margin-top: 20px;
+}
+#connection-cloud .cloud {
+  text-align: center;
+}
+#connection-cloud .cloud A {
+  padding: 0 4px;
+  white-space: nowrap;
+  line-height: 30px;
+}
+#connection-cloud .cloud A.contact {
+  color: #7DB545;
+}
+#connection-cloud .cloud A.account {
+  color: #005CCC;
+}
+#connection-cloud .cloud A.size1 {
+  font-size: 90%;
+}
+#connection-cloud .cloud A.size2 {
+  font-size: 120%;
+}
+#connection-cloud .cloud A.size3 {
+  font-size: 150%;
+}
+#connection-cloud .cloud A.size4 {
+  font-size: 190%;
+}
+#connection-cloud .cloud A.size5 {
+  font-size: 220%;
+}
+#connection-cloud .cloud A.size6 {
+  font-size: 260%;
+}
+/* -------------------------------------- */
+/*          Connection Map              */
+/* -------------------------------------- */
+#connection-navigator .connection-view .graph {
+  overflow: auto;
+  width: 900px;
+}
+/* -------------------------------------- */
+/*             Member Status              */
+/* -------------------------------------- */
+.member-status .name A {
+  font-weight: bold;
+}
+.member-status .status-info {
+  padding-top: 2px;
+}
+.member-status .last-login-date {
+  color: #999999;
+  font-size: 90%;
+}
+.member-status IMG {
+  max-width: 100%;
+  max-height: 300px;
+  height: auto;
+}
+/* -------------------------------------- */
+/*             Agreement           */
+/* -------------------------------------- */
+#esn-agreement .wiki P {
+  margin: 0;
+  padding: 2px 0;
+}
+#esn-agreement .terms .wiki UL {
+  margin: 0;
+  padding-left: 25px;
+}
+#esn-agreement .terms .wiki LI {
+  list-style-type: disc;
+  padding: 2px 0;
+}
+#esn-agreement FORM {
+  margin-top: 10px;
+}
+/* -------------------------------------- */
+/*               Edit Profile             */
+/* -------------------------------------- */
+#edit-profile TD.formLabel {
+  vertical-align: top;
+  margin-top: 8px;
+  padding: 0px 8px 12px 0;
+  color: #999999;
+}
+#edit-profile TD.formInput {
+  vertical-align: top;
+  margin-top: 8px;
+}
+#edit-profile TD.missing {
+  color: #0033CC;
+}
+#edit-profile .buttons {
+  margin-top: 20px;
+}
+#edit-profile .member-photo .photo-part {
+  padding-right: 18px;
+  padding-bottom: 9px;
+}
+/* -------------------------------------- */
+/*           PortletDirectory             */
+/* -------------------------------------- */
+.directory .esn .expertise {
+  margin-left: 18px;
+}
+.directory .esn UL.selected-expertise {
+  margin: 0;
+  padding-left: 0px;
+  list-style: none;
+}
+.directory .esn .expertise .treeCat {
+  margin-top: 5px;
+}
+.directory .esn .expert-directory {
+  margin: 5px 0;
+}
+.directory .add-contact {
+  margin-top: 10px;
+  padding: 5px 3px 4px 10px;
+  border-top: 1px solid #DDDDDD;
+}
+.dsk-service-content .directory .add-contact {
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-bottom: -8px;
+}
+.browser-IE6 .dsk-service-content .directory .add-contact,
+.browser-IE7 .dsk-service-content .directory .add-contact,
+.browser-IE8 .dsk-service-content .directory .add-contact {
+  margin: 0;
+}
+.dsk-service-content .directory .add-contact {
+  background-color: #F7F7F7;
+  background: -moz-linear-gradient(center top, #F7F7F7, #F0F0F0);
+  background: -webkit-gradient(linear, left top, left bottom, from(#F7F7F7), to(#F0F0F0));
+}
+.browser-IE6 .dsk-service-content .directory .add-contact,
+.browser-IE7 .dsk-service-content .directory .add-contact,
+.browser-IE8 .dsk-service-content .directory .add-contact {
+  background-color: transparent;
+}
+.directory .add-contact A,
+.directory .add-contact A:visited {
+  color: #666;
+  text-decoration: none;
+}
+.directory .add-contact A:hover {
+  color: #000;
+  text-decoration: none;
+}
+.directory .add-contact A:focus {
+  outline: none;
+}
+/* -------------------------------------- */
+/*           PortletMemberStatus          */
+/* -------------------------------------- */
+#portlet-member-status .member-status {
+  margin: 9px 0;
+  overflow: hidden;
+}
+#portlet-member-status .sort {
+  color: #999999;
+  font-size: 90%;
+  margin-bottom: 5px;
+}
+#portlet-member-status .sort A {
+  color: #999999;
+}
+/* -------------------------------------- */
+/*          PortletMemberProfile          */
+/* -------------------------------------- */
+#portlet-member-profile .member-status {
+  overflow: hidden;
+}
+#portlet-member-profile .member-info {
+  margin-bottom: 9px;
+  margin-left: -9px;
+}
+#portlet-member-profile .member-status .info-part {
+  margin-left: 60px;
+}
+#portlet-member-profile TABLE.member TD {
+  vertical-align: top;
+}
+#portlet-member-profile .status,
+#portlet-member-status .status {
+  color: #666666;
+}
+#portlet-member-status .item-box .items LI {
+  padding: 0;
+}
+#portlet-member-profile .status UL {
+  list-style: disc outside none;
+}
+#portlet-member-profile .status *,
+#portlet-member-status .status *,
+#portlet-birthday .status * {
+  color: #666666;
+  font-size: 12px;
+}
+#portlet-member-status .status A {
+  color: #0088cc;
+}
+#portlet-member-status .status A:hover {
+  color: #005580;
+}
+#portlet-member-profile .status IMG,
+#portlet-member-status .status IMG {
+  max-width: 100%;
+  height: auto;
+}
+#portlet-member-profile .activity-icon,
+#portlet-member-status .activity-icon {
+  float: left;
+  margin-right: 5px;
+}
+.member-status {
+  overflow: hidden;
+}
+.member-status .wrapper-photo {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.member-status .info-part {
+  margin-left: 50px;
+}
+/* -------------------------------------- */
+/*          IE FIX                        */
+/* -------------------------------------- */
+.nav-tabs > .enabled > a,
+.nav-tabs > .enabled > a:hover {
+  color: #555555;
+  background-color: #FFF;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+  cursor: default;
+}
+.esn-component .esn-component-header {
+  overflow: auto;
+}
+/*# sourceMappingURL=esn.css.map */

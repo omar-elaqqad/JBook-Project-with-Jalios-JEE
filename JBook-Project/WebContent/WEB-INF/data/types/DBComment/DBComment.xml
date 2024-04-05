@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<type name="DBComment" database="true" hbm="true" superclass="com.jalios.jcmsplugin.dbcomment.AbstractDBComment" reviewable="false" debatable="false" unitFieldEdition="true" audienced="false" categoryTab="false" readRightTab="false" updateRightTab="false" templateTab="true" workflowTab="true" advancedTab="false" authgroups="|||||" revision="true" formhandler="com.jalios.jcmsplugin.dbcomment.EditAbstractDBCommentHandler">
+  <title ml="false" searchable="false" />
+  <fields>
+    <field name="name" editor="textfield" required="false" compactDisplay="false" type="String" searchable="true" size="80" ml="false" html="false" />
+    <field name="email" editor="email" required="false" compactDisplay="false" type="String" searchable="false" size="50" maxlength="500" pattern="([-0-9a-zA-Z_\.']+@[-0-9a-zA-Z_\.]+)?" ml="false" descriptionType="tooltip" html="false" />
+    <field name="webSite" editor="url" required="false" compactDisplay="false" type="String" searchable="false" size="80" maxlength="500" ml="false" openWindow="false" pattern="^((http)|(https)|(ftp)|(mailto)):.*" />
+    <field name="description" editor="textarea" required="true" type="String" searchable="true" wiki="true" rows="5" cols="80" compactDisplay="false" ml="false" descriptionType="tooltip" abstract="true" truncate="400" html="false" />
+    <field name="targetContent" editor="link" required="true" compactDisplay="false" type="com.jalios.jcms.Publication" parent="true" ml="false" descriptionType="tooltip" searchable="false" html="false" />
+    <field name="ipAddress" editor="textfield" required="false" compactDisplay="false" type="String" searchable="false" size="80" ml="false" html="false" checkHtml="true" hidden="true" descriptionType="tooltip" />
+    <field name="userAgent" editor="textfield" required="false" compactDisplay="false" type="String" searchable="false" size="80" ml="false" html="false" checkHtml="true" hidden="true" descriptionType="tooltip" />
+    <field name="referer" editor="textfield" required="false" compactDisplay="false" type="String" searchable="false" size="80" ml="false" html="false" checkHtml="true" hidden="true" descriptionType="tooltip" />
+    <field name="privateComment" editor="boolean" required="false" compactDisplay="false" type="boolean" default="false" ml="false" descriptionType="text" searchable="false" html="false" checkHtml="true"/>
+  </fields>
+</type>

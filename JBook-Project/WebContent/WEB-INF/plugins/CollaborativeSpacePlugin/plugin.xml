@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plugin PUBLIC "-//JALIOS//DTD JCMS-PLUGIN 1.6//EN" "https://community.jalios.com/dtd/jcms-plugin-1.6.dtd">
+
+<plugin name="CollaborativeSpacePlugin" 
+        version="8.0.6" 
+        author="Jalios SA" 
+        license="Jalios" 
+        initialize="true" 
+        jcms="10\.0\.[7-9].*|10\.[1-9].*" 
+        order="0" 
+        url="https://community.jalios.com/plugin/collaborativespace" 
+        jsync="true" 
+        appserver="">
+        
+  <label xml:lang="en">Collaborative Space Plugin</label>
+  <label xml:lang="fr">Module Espaces Collaboratifs</label>
+  <description xml:lang="en">This plugin provides support for Collaborative Spaces.</description>
+  <description xml:lang="fr">Ce module apporte la gestion des Espaces Collaboratifs.</description>
+  
+  <types>
+    <type name="CollaborativeSpace">
+      <file path="doCollaborativeSpaceFullDisplay.jsp"  />
+      <file path="doCollaborativeSpaceFullDisplay.jpg"  />
+      <file path="doCollaborativeSpaceHeader.jspf"  />
+      <file path="doCollaborativeSpaceDiff.jsp"  />
+      <file path="doEditCollaborativeSpace.jsp" />
+      <file path="doHeaderNav.jspf"  />
+      <file path="editCollaborativeSpace.js"  />
+      <file path="doEditCollaborativeSpace.jsp"  />
+      <file path="doOldCollaborativeSpaceDisplay.jsp" />
+    </type>
+    
+    <type name="PortletCollaborativeSpaceSuggestion">
+      <file path="doPortletCollaborativeSpaceSuggestionFullDisplay.jsp"/>
+      <file path="doPortletCollaborativeSpaceSuggestionFullDisplay.png"/>
+      <file path="doPortletCollaborativeSpaceSuggestionItemBox.jsp"/>
+      <file path="doPortletCollaborativeSpaceSuggestionItemBox.png"/>
+      <file path="PortletCollaborativeSpaceSuggestion_grey.png"/>
+      <file path="PortletCollaborativeSpaceSuggestion.png"/>
+    </type>    
+    
+    <type name="PortletMyCollaborativeSpaces">
+      <file path="hierarchical/doHierarchicalFooter.jspf" />
+      <file path="hierarchical/doHierarchicalListItem.jsp" />
+      <file path="csList.jspf" />
+      <file path="doPortletFooter.jspf" />
+      <file path="doPortletMyCollaborativeSpacesFullDisplay.jsp" />
+      <file path="doPortletMyCollaborativeSpacesFullDisplay.png" />
+      <file path="doPortletMyCollaborativeSpacesHierarchicalFullDisplay.jsp" />
+      <file path="doPortletMyCollaborativeSpacesHierarchicalFullDisplay.png" />
+      <file path="doPortletMyCollaborativeSpacesHierarchicalFullDisplayItembox.jsp" />
+      <file path="doPortletMyCollaborativeSpacesHierarchicalFullDisplayItembox.png" />
+      <file path="doPortletMyCollaborativeSpacesItemBox.jsp" />
+      <file path="doPortletMyCollaborativeSpacesItemBox.png" />
+      <file path="doSubCsTree.jspf" />
+      <file path="doTypologyFilter.jspf" />
+      <file path="PortletMyCollaborativeSpaces_grey.png" />
+      <file path="PortletMyCollaborativeSpaces.png" />
+    </type>
+        
+    <templates type="AbstractPortletSkinable">
+      <template name="default" file="doDefaultSkin.jsp" usage="collaborativeSpace">
+        <label xml:lang="en">Panel</label>
+        <label xml:lang="fr">Panneau</label>
+      </template>
+      <template name="lightSkin" file="doLightSkinWithTitle.jsp" usage="collaborativeSpace">
+        <label xml:lang="en">Borderless with title</label>
+        <label xml:lang="fr">Sans contour avec titre</label>
+      </template>      
+      <template name="noSkin" file="doLightSkin.jsp" usage="collaborativeSpace">
+        <label xml:lang="en">Borderless</label>
+        <label xml:lang="fr">Sans contour</label>
+      </template>
+      <template name="borderless" file="doBorderlessSkin.jsp" usage="collaborativeSpace">
+        <label xml:lang="en">Borderless with underlined title</label>
+        <label xml:lang="fr">Sans contour avec titre souligné</label>
+      </template>      
+    </templates>
+    <type name="CSRequest">
+      <file path="doEditCSRequest.jsp"/>
+    </type>
+    <templates type="CSRequest">
+      <template name="default" file="doCSRequestFullDisplay.jsp" usage="full">
+        <label xml:lang="en">Default display</label>
+        <label xml:lang="fr">Gabarit par défaut</label>
+      </template>
+      <template name="default" file="doCSRequestFullDisplay.jsp" usage="box">
+        <label xml:lang="en">Default display</label>
+        <label xml:lang="fr">Gabarit par défaut</label>
+      </template>
+    </templates>
+
+    <type name="CSSignupRequest" />
+    <templates type="CSSignupRequest">
+      <template name="default" file="doCSSignupRequestFullDisplay.jsp" usage="full">
+        <label xml:lang="en">Default display</label>
+        <label xml:lang="fr">Gabarit par défaut</label>
+      </template>
+      <template name="default" file="doCSSignupRequestFullDisplay.jsp" usage="box">
+        <label xml:lang="en">Default display</label>
+        <label xml:lang="fr">Gabarit par défaut</label>
+      </template>
+    </templates>
+
+    <type name="GuestRequest"/>
+    <templates type="GuestRequest">
+      <template name="default" file="doGuestRequestFullDisplay.jsp" usage="full">
+        <label xml:lang="en">Default display</label>
+        <label xml:lang="fr">Gabarit par défaut</label>
+      </template>
+    </templates>
+
+    <type name="GuestCrea"/>
+    <templates type="GuestCrea">
+      <template name="default" file="doGuestCreaFullDisplay.jsp" usage="full">
+        <label xml:lang="en">Default display</label>
+        <label xml:lang="fr">Gabarit par défaut</label>
+      </template>
+    </templates>
+
+    <type name="GuestConv"/>
+    <templates type="GuestConv">
+      <template name="default" file="doGuestConvFullDisplay.jsp" usage="full">
+        <label xml:lang="en">Default display</label>
+        <label xml:lang="fr">Gabarit par défaut</label>
+      </template>
+    </templates>
+    
+    <templates type="PortletSearch">
+      <template name="jcmsplugin.collaborativespace.search-header" file="doPortletSearchCollaborativeSpaceHeader.jsp" usage="box">
+        <label xml:lang="en">Collaborative Space - Header</label>
+        <label xml:lang="fr">Espaces Collaboratifs - En-tête</label>
+      </template>
+    </templates>
+        
+    <templates type="PortletSelection">
+      <template name="jcmsplugin.collaborativespace.dashboard" file="doCollaborativeSpaceDashboard.jsp" usage="box">
+        <label xml:lang="en">Collaborative Space - Dashboard</label>
+        <label xml:lang="fr">Espaces Collaboratifs - Tableau de bord</label>
+      </template>
+    </templates>
+  </types>
+  
+  <workflows>
+    <workflow id="wfcsrequest" />
+    <workflow id="wfcssignup" />
+    <workflow id="wfguestaccountrequest" />
+  </workflows>
+
+  <java-classes>
+    <java package="com.jalios.jcmsplugin.collaborativespace" />
+  </java-classes>
+
+  <plugincomponents>
+    <storelistener    class="com.jalios.jcmsplugin.collaborativespace.CSCollaborativeSpaceListener"                          types="generated.CollaborativeSpace" beforeStoreLoad="true" repeat="true"  />
+    <storelistener    class="com.jalios.jcmsplugin.collaborativespace.CSWorkspaceListener"                                   types="com.jalios.jcms.workspace.Workspace" beforeStoreLoad="false" repeat="true"  />
+    <storelistener    class="com.jalios.jcmsplugin.collaborativespace.portal.override.CSPortletOverrideListener"             types="generated.CollaborativeSpace" beforeStoreLoad="false" repeat="true"  />
+    <datacontroller   class="com.jalios.jcmsplugin.collaborativespace.CSDataController"                                      types="com.jalios.jcms.workspace.Workspace|generated.CollaborativeSpace"/>
+    <datacontroller   class="com.jalios.jcmsplugin.collaborativespace.CSGroupController"                                     types="com.jalios.jcms.Group"/>
+    <datacontroller   class="com.jalios.jcmsplugin.collaborativespace.CSMemberController"                                    types="com.jalios.jcms.Member"/>
+    <datacontroller   class="com.jalios.jcmsplugin.collaborativespace.CSPortalElementController"                             types="com.jalios.jcms.portlet.PortalElement"/>
+    <datacontroller   class="com.jalios.jcmsplugin.collaborativespace.CSRequestController"                                   types="generated.CSRequest"/>
+    <datacontroller   class="com.jalios.jcmsplugin.collaborativespace.CSSignupRequestController"                             types="generated.CSSignupRequest"/>
+    <datacontroller   class="com.jalios.jcmsplugin.collaborativespace.CSSlaveDataController"                                 types="com.jalios.jcms.Category|com.jalios.jcms.workspace.Workspace|generated.CollaborativeSpace" />
+    <datacontroller   class="com.jalios.jcmsplugin.collaborativespace.CSWKRoleController"                                    types="com.jalios.jcms.workspace.WKRole"/>
+    <datacontroller   class="com.jalios.jcmsplugin.collaborativespace.CSWorkspaceController"                                 types="com.jalios.jcms.workspace.Workspace|generated.CollaborativeSpace" />
+    <datacontroller   class="com.jalios.jcmsplugin.collaborativespace.WorkspaceTypologyDataController"                       types="com.jalios.jcms.workspace.Workspace" />
+    <datacontroller   class="com.jalios.jcmsplugin.collaborativespace.CSWorkspaceModelDataController"                        types="com.jalios.jcms.workspace.Workspace|generated.CollaborativeSpace" />
+    <datacontroller   class="com.jalios.jcmsplugin.collaborativespace.guest.controller.GuestAccountConversionRequestController" types="generated.GuestConv" />
+    <datacontroller   class="com.jalios.jcmsplugin.collaborativespace.guest.controller.GuestAccountCreationRequestController"   types="generated.GuestCrea" />
+    <datacontroller   class="com.jalios.jcmsplugin.collaborativespace.guest.controller.GuestAccountGroupController"             types="com.jalios.jcms.Group" />
+    <datacontroller   class="com.jalios.jcmsplugin.collaborativespace.guest.controller.GuestAccountMemberController"            types="com.jalios.jcms.Member" />
+    <datacontroller   class="com.jalios.jcmsplugin.collaborativespace.guest.controller.GuestWorkspaceController"                types="com.jalios.jcms.workspace.Workspace" />
+    <datacontroller   class="com.jalios.jcmsplugin.collaborativespace.portal.JPortalDataController"                             types="generated.JPortal" />
+    <datacontroller   class="com.jalios.jcmsplugin.collaborativespace.portal.override.CSPortletOverrideWysiwygInlineController" types="com.jalios.jcms.portlet.PortalElement"/>
+    <channellistener  class="com.jalios.jcmsplugin.collaborativespace.CSChannelListener" />
+    <channellistener  class="com.jalios.jcmsplugin.collaborativespace.migration.CSMigrationChannelListener" />
+    <policyfilter     class="com.jalios.jcmsplugin.collaborativespace.CSTemplatePolicyFilter"/>
+    <policyfilter     class="com.jalios.jcmsplugin.collaborativespace.CSRightPolicyFilter"/>
+    <policyfilter     class="com.jalios.jcmsplugin.collaborativespace.CSRequestRightPolicyFilter"/>
+    <policyfilter     class="com.jalios.jcmsplugin.collaborativespace.CSPortalPolicyFilter"/>
+    <policyfilter     class="com.jalios.jcmsplugin.collaborativespace.CSWizardPolicyFilter" />
+    <policyfilter     class="com.jalios.jcmsplugin.collaborativespace.guest.filter.GuestAccountMemberCtxMenuPolicyFilter" />
+    <policyfilter     class="com.jalios.jcmsplugin.collaborativespace.guest.filter.GuestAccountMemberQueryFilter" />
+    <policyfilter     class="com.jalios.jcmsplugin.collaborativespace.guest.filter.GuestAccountPortalPolicyFilter" />
+    <policyfilter     class="com.jalios.jcmsplugin.collaborativespace.guest.filter.GuestAccountRightPolicyFilter" />
+    <policyfilter     class="com.jalios.jcmsplugin.collaborativespace.portal.CSJPortalPolicyFilter" />
+    <policyfilter     class="com.jalios.jcmsplugin.collaborativespace.portal.PortletActionsMenuPolicyFilter" />
+    <policyfilter     class="com.jalios.jcmsplugin.collaborativespace.portal.CollaborativeSpaceWizardPolicyFilter" />
+  </plugincomponents>
+
+  <hibernate>
+    <mapping resource="com/jalios/jcmsplugin/collaborativespace/CSInvitation.hbm.xml"/>
+    <mapping resource="com/jalios/jcmsplugin/collaborativespace/analytics/CSReportMetric.hbm.xml"/>
+  </hibernate>
+    
+  <private-files>
+    <directory path="properties" />
+  </private-files>
+  
+  <public-files>
+    <directory path="css/" />
+    <directory path="docs/" />
+    <directory path="front/" />
+    <directory path="images/" />
+    <directory path="js/" />
+    <directory path="jsp/" />
+    <directory path="smartphone/" />
+    <!--
+    CSP-823:
+    - include all files in types: <directory path="types/" />
+    - do NOT declare other than CSP types' files using <types><type name="NotCSPType">
+        to prevent other than CSP files to be packaged in csp.zip
+    - include explicit list of types's files which types are not from CSP
+    -->
+    <directory path="types/" />
+    <file path="types/PortletQueryForeach/doDashboardDisplay.jpg" />
+    <file path="types/PortletQueryForeachDetail/doDashboardDisplay.jpg" />
+    <file path="types/PortletSearch/doPortletSearchCollaborativeSpaceHeader.jpg" />
+    <file path="types/PortletSelection/doCollaborativeSpaceDashboard.jpg" />
+    
+    <file path="jsp/adminCreateCS.jsp"                                              include="ADMIN_WORK" />
+    <file path="jsp/doCSTypologyListBoxAction.jsp"                                  include="SKIN_AFTERTITLE" />
+    <file path="jsp/guestAccount/doEmptyHeader.jsp"                                 include="EMPTY_HEADER_START" />
+    <file path="jsp/guestAccount/editMbrMainTabFooter.jsp"                          include="EDIT_MBR_MAINTAB_FOOTER" />
+    <file path="jsp/guestAccount/contactTransform/transformContactTarget.jsp"       include="PLUGIN_ESN_PROFILE_ACTION" />
+    <file path="jsp/filterEsnProfileTarget.jsp"                                     include="PLUGIN_ESN_PROFILE_TOP" />
+    <file path="types/CollaborativeSpace/doEditCSEditPubMaintabTarget.jsp"          include="EDIT_PUB_MAINTAB" />
+    <file path="jsp/guestAccount/mbrPhotoAnchor.jsp"                                include="MBR_PHOTO_ANCHOR" />
+    <!-- Following target requires DBC-6.0 (DBCP-142) -->
+    <file path="jsp/dbcomment/addCommentTarget.jsp"                                 include="DBCOMMENT_AFTER" />
+    <!-- Following target requires SCP-4.3 (SCP-288) -->
+    <file path="jsp/socialConversation/reactFormTarget.jsp"                         include="SOCIALCONVERSATION_REACT_FORM" />
+    <file path="jsp/sidebarWorkspacesTarget.jsp"                                    include="SIDEBAR_WORKSPACES" />
+    <file path="jsp/portal/doTopbarEditJPortalAdminMenu.jsp"              				  include="SITE_TOPBAR_ADMIN_MENU" />
+  </public-files>
+  
+  <webapp-files>
+    <!-- Compatibity for CSP-608 on < 10.0.3 (to remove when CSP depends on 10.0.3)-->
+    <file path="images/jalios/icons/guest.png" />
+  </webapp-files>
+</plugin>

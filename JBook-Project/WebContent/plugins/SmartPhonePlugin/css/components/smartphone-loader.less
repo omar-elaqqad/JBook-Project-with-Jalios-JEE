@@ -1,0 +1,143 @@
+/* ****** */
+/* Loader */
+/* ****** */
+
+/* Taken from http://david.ingledow.co.uk/blog/google-material-designs-animated-loading-spinner-svg-and-css/ with adaptations */
+
+.ui-loader.ui-body-g {
+  top: 40px;
+  background-color: white;
+  opacity: 1;
+  margin-left: -28px;
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  
+  .errorMessage {
+    display: none;
+  }
+ .loader {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: -22px;
+    top: -22px;
+  }
+
+  .circular {
+    -webkit-animation: rotate 2s linear infinite;
+    animation: rotate 2s linear infinite;
+    height: 100px;
+    position: relative;
+    width: 100px;
+  }
+  
+  .path {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+    -webkit-animation: 
+      dash 1.5s ease-in-out infinite,
+      color 6s ease-in-out infinite
+    ;
+    animation: 
+      dash 1.5s ease-in-out infinite,
+      color 6s ease-in-out infinite
+    ;
+    stroke-linecap: round;
+    stroke: grey;
+  }
+}
+.ui-loader.ui-body-h {
+  top: 0;
+  left: 0;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: @btn-danger-bg;
+  opacity: 1;
+  border-radius: 0;
+  
+ .loader {
+    display: none;
+  }
+  .errorMessage {
+    font-weight: bold;
+    color: white;
+    line-height: 50px;
+    text-align: center;
+    font-size: 16px;
+    text-shadow: none;
+  }
+}
+
+
+@-webkit-keyframes rotate {
+  100%{
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  100%{
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes dash{
+  0%{
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+  }
+  50%{
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -35;
+  }
+  100%{
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -124;
+  }
+}
+@keyframes dash{
+  0%{
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+  }
+  50%{
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -35;
+  }
+  100%{
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -124;
+  }
+}
+@-webkit-keyframes color{
+  100%, 1% {
+    stroke: #d62d20;
+  }
+  40% {
+    stroke: #0057e7;
+  }
+  66% {
+    stroke: #008744;
+  }
+  80%, 90% {
+    stroke: #ffa700;
+  }
+}
+@keyframes color{
+  100%, 1% {
+    stroke: #d62d20;
+  }
+  40% {
+    stroke: #0057e7;
+  }
+  66% {
+    stroke: #008744;
+  }
+  80%, 90% {
+    stroke: #ffa700;
+  }
+}

@@ -1,0 +1,92 @@
+<%@page import="com.jalios.jcmsplugin.esn.ui.*"%><%
+%><%@page import="com.jalios.jcmsplugin.dbcomment.DBCommentManager"%>
+<%@page import="com.jalios.jcms.recommendation.RecommendationManager"%>
+<%@page import="com.jalios.jcms.vote.VoteManager"%><%
+
+//Social metas
+boolean displayCommentCount = activityShowComments && isCommentable && dbCommentCount > 0;
+boolean displayVoteList = VoteManager.getInstance().hasVote(itActivityEntry.getPublication());
+boolean displaySocialMetas = displayVoteList || displayCommentCount;
+
+//Actions
+boolean canVote = VoteManager.getInstance().canVote(itActivityEntry.getPublication(), loggedMember);
+boolean canComment = isLogged && loggedMember.canPublish(DBComment.class,workspace) && activityShowComments && isCommentable;
+boolean canRecommend = RecommendationManager.getInstance().canBeRecommendedBy(itActivityEntry.getPublication(), loggedMember);
+boolean displayActions = channel.isDataWriteEnabled() && isLogged && (canVote || canComment || canRecommend); 
+
+if (displayActions || displaySocialMetas) { %>
+  <div class="activity-footer">
+    <% if (displaySocialMetas) { %>
+      <div class="activity-social-metas">
+        <% if (displayCommentCount) {
+          // "X comments"
+          String showCommentsLabel = glp("jcmsplugin.dbcomment.lbl.comment-count", dbCommentCount);
+          // "Access the X comments"
+          String showCommentsTitle = glp("jcmsplugin.esn.activity-card.comment-count.for-title", dbCommentCount);
+          // "Access the X comments on 'Pub'"
+          String showCommentsAriaLabel = "";
+          if (itActivityEntry.getPublication() != null) {
+            showCommentsAriaLabel = glp("jcmsplugin.esn.activity-card.comment-count.for-aria-label", itActivityEntry.getPublication().getTitle(userLang), dbCommentCount);
+          }
+          Link showCommentsLink = new Link()
+              .ariaLabel(showCommentsAriaLabel)
+              .css("btn btn-link btn-show-comments activity-comment-count js-access-comment")
+              .text(showCommentsLabel)
+              .title(showCommentsTitle);
+          %><div class="comment comment-count activity-show-comments-action-item"><%
+            %><%= showCommentsLink.html() %><%
+          %></div><%
+        }
+        %>
+
+        <% if (displayVoteList) { %>
+          <div class="activity-voter-list">
+            <jalios:vote templateProperty="vote.template.votelist" pub="<%= itActivityEntry.getPublication() %>" />
+          </div>
+        <% } %>
+    
+      </div>
+    <% } %>
+    <% if (displayActions) { %>
+      <div class="activity-actions">
+
+        <jalios:include target="ESN_ACTIVITY_ACTIONS_CARD_LEFT" />
+
+        <jalios:vote css="activity-action-item activity-add-vote" templateProperty="vote.template.activity-card" pub="<%= itActivityEntry.getPublication() %>" />
+
+        <%-- Comment Action --%>
+        <% if (canComment) {
+          %><jalios:buffer name="commentActionHtmlContent"><%
+            %><jalios:icon src="jcmsplugin-esn-card-comment" /><%
+            %><span class="activity-action-item-label"><%
+              %><%= glp("jcmsplugin.esn.activity.comment") %><%
+            %></span><%
+          %></jalios:buffer><%
+          String addCommentLabel = glp("jcmsplugin.esn.activity.add-comment.show-form");
+          String addCommentAriaLabel = glp("jcmsplugin.esn.activity.add-comment.show-form.aria-label",
+              itActivityEntry.getPublication().getTitle(userLang), dbCommentCount);
+          Link commentBtn = new Link()
+              .ariaLabel(addCommentAriaLabel)
+              .css("btn btn-xs btn-link activity-add-comment btn-add-comment")
+              .jaliosAction("activity-show-comments")
+              .htmlContent(commentActionHtmlContent.toString())
+              .title(addCommentAriaLabel);
+          %><span class="activity-action-item"><%
+            %><%= commentBtn.html() %><%
+          %></span><%
+        }
+        %>
+
+        <%-- Recommendation Action --%>
+        <% if (canRecommend) { %>
+          <span class="activity-action-item">
+            <jalios:recommendation css="activity-recommend" data="<%= itActivityEntry.getPublication() %>"><jalios:icon src="jcmsplugin-esn-card-recommend" /><span class="activity-action-item-label"><%= glp("ui.recommendation") %></span></jalios:recommendation>             
+          </span>
+        <% } %>
+
+       <jalios:include target="ESN_ACTIVITY_ACTIONS_CARD_RIGHT" />
+
+      </div>
+    <% } %>
+  </div>
+<% } %>

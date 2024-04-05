@@ -1,0 +1,20 @@
+<%--
+  @Summary: CollaborativeSpace - Access policy label
+  @Category: Portal
+  @Author: Jalios SA 
+  @Customizable: True
+  @Requestable: False 
+
+ How to use:
+ <% String accessPolicy = "private"; %>
+ <%@ include file="/plugins/CollaborativeSpacePlugin/jsp/template/doAccessBadge.jspf" %>
+--%><%@page import="com.jalios.util.Util"%><%
+
+if (Util.notEmpty(accessPolicy)) {
+  %><span class="access access-<%= accessPolicy %>" title='<%= encodeForHTMLAttribute(glp("jcmsplugin.collaborativespace.access-policy."+accessPolicy+".desc")) %>'><%
+    %><span class="label"><%
+      %><%= glp("jcmsplugin.collaborativespace.create.info.access." + accessPolicy) %><%
+    %></span><%
+  %></span><%
+}
+%>

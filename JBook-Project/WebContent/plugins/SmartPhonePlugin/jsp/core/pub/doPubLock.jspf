@@ -1,0 +1,18 @@
+<%-- Lock Info --%>
+<%
+  boolean showLockInfo = isLogged && loggedMember.isWorker(pub.getWorkspace()) && pub.isStrongLocked();
+  if (showLockInfo) {
+%>
+  <div class="ui-content">
+    <jalios:message dismissable="false">
+      <p><%= pub.getStrongLockInfo(userLocale) %></p>
+      <% if (channel.isDataWriteEnabled() && isLogged) { %>
+        <p>
+          <% if (loggedMember.canWorkOn(pub) && pub.isStrongLocked()) { %>
+            <a data-role="button" data-mini="true" class="ajax-action confirm btn-default" title="<%= glp("msg.js.confirm-unlock", HttpUtil.encodeForHTMLAttribute(pub.getTitle(userLang))) %>" href="edit.jsp?opUnlock=true&amp;id=<%= pub.getId() %>&amp;redirect=<%= ServletUtil.encodeURL(ServletUtil.getUrl(request)) %>"><%= glp("ui.com.alt.unlock") %></a>
+          <% } %>
+        </p>
+      <% } %>
+    </jalios:message>
+  </div>
+<% }%>

@@ -1,0 +1,17 @@
+.app .app-body .app-cards-horizontal-wrapper .card.pub-jnews {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.app-blog.blog-fulldisplay.app .app-body .app-cards-horizontal-wrapper .publication-header {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.app-blog.blog-fulldisplay.blog-jnews-display .app-body .app-body-content {
+  display: flex;
+  justify-content: center;
+}
+.app-blog.blog-fulldisplay.blog-jnews-display .app-cards-jnews {
+  flex-basis: 1144px;
+  width: 1144px;
+}
+/*# sourceMappingURL=blog-app-jnews.css.map */

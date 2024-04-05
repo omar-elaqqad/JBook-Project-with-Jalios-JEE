@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<type name="MemberEducation" superclass="com.jalios.jcmsplugin.esn.AbstractMemberInfo" categoryTab="false" readRightTab="false" updateRightTab="false" templateTab="false" workflowTab="true" advancedTab="true" database="true" hbm="true">
+  <title ml="false" />
+  <fields>
+    <field name="trainingCenter" editor="textfield" required="true" compactDisplay="false" type="String" searchable="true" size="80" ml="false" html="false" checkHtml="true" descriptionType="tooltip" />
+    <field name="degree" editor="textfield" required="false" compactDisplay="false" type="String" searchable="true" size="80" ml="false" html="false" checkHtml="true" />
+    <field name="description" editor="textarea" required="false" type="String" searchable="true" wiki="true" rows="5" cols="80" compactDisplay="false" ml="false" descriptionType="tooltip" abstract="true" truncate="400" html="false" checkHtml="true" />
+    <field name="place" editor="textfield" required="false" compactDisplay="false" type="String" searchable="true" size="80" ml="false" html="false" checkHtml="true" />
+    <field name="site" editor="url" required="false" compactDisplay="false" type="String" searchable="false" size="80" maxlength="500" ml="false" openWindow="false" pattern="^((http)|(https)|(ftp)|(mailto)):.*" />
+    <field name="startDate" editor="date" required="true" compactDisplay="false" type="java.util.Date" future="true" past="true" dateOnly="true" dateFormat="short" ml="false" descriptionType="tooltip" searchable="false" html="false" checkHtml="true" />
+    <field name="endDate" editor="date" required="false" compactDisplay="false" type="java.util.Date" future="true" past="true" dateOnly="true" dateFormat="short" ml="false" descriptionType="tooltip" searchable="false" html="false" checkHtml="true" />
+  </fields>
+</type>
+

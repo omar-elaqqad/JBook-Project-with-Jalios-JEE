@@ -1,0 +1,8 @@
+<%@page import="com.jalios.jcmsplugin.smartphone.portal.SmartPhonePortalManager"%><% 
+%><%@ include file="/plugins/SmartPhonePlugin/jsp/common/doInitSmartPhonePage.jspf" %><%
+%><%@ taglib uri="/jcmsplugin/SmartPhonePlugin/tld/smartphone.tld" prefix="smartphone" %><%
+PortalElement portlet = (PortalElement) request.getAttribute(SmartPhonePortalManager.PORTLET_REQUEST_ATTRIBUTE_NAME);
+if (portlet == null) {
+  portlet = (PortalElement) getPublicationParameter("refreshedPortlet");
+}
+%>

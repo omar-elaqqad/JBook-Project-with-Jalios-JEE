@@ -1,0 +1,16 @@
+<% 
+List<Member> adminList = workspace.getAdministrators();
+if (Util.notEmpty(adminList)) { 
+%>
+<div class="cs-animators">
+  <h2 class="title"><%= glp("jcmsplugin.collaborativespace.create.attendees.admins.custom", adminList != null ? adminList.size() : 0) %></h2>
+  <ul class="item-list">
+    <jalios:foreach collection="<%= adminList %>" type="Member" name="itMember" >
+      <li>
+		    <jalios:memberphoto member="<%= itMember %>" size="<%= PhotoSize.ICON %>"/>
+        <jalios:link data="<%= itMember %>"/>
+      </li>
+    </jalios:foreach>  
+  </ul>
+</div>
+<% } %>

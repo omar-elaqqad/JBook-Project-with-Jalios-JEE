@@ -1,0 +1,176 @@
+<%
+Set<CSRequest> csRequestSet = formHandler.getCSRequestSet();
+%>
+
+<% if (Util.notEmpty(csRequestSet)) { %>
+
+  <%
+  // Redirect to the current page
+  String redirect = ServletUtil.getUrl(request, false);
+  
+  Category typoRoot = CSManager.getInstance().getTypologyRoot();
+  boolean isTypoActive = typoRoot != null;
+  %>
+
+  <div class="csrequest-list table-responsive">
+    <table class="table-data">
+      <thead>
+        <%-- HEADER --%>
+        <tr>
+          <td class="right"></td>
+          <th ><%= glp("ui.com.lbl.date") %></th>
+          <th ><%= glp("ui.work.forms.lbl.submit-mbr") %></th>
+          <th  class="expand"><%= glp("types.CSRequest.fields.name.label") %></th>
+          <%--wrap" class="field-description"><%= glp("types.CSRequest.fields.description.label") %></th> --%>
+          <th ><%= channel.getTypeFieldLabel(CSRequest.class, "parent", userLang) %></th>
+          <th ><%= glp("jcmsplugin.collaborativespace.create.info.typology") %></th>
+          <th ><%= channel.getTypeFieldLabel(CSRequest.class, "accessPolicy", userLang) %></th>
+          <th ><%= channel.getTypeFieldLabel(CSRequest.class, "signupPolicy", userLang) %></th>
+          <th ><%= channel.getTypeFieldLabel(CSRequest.class, "language", userLang) %></th>
+          <th ><%= channel.getTypeFieldLabel(CSRequest.class, "model", userLang) %></th>
+          <th ><%= channel.getTypeFieldLabel(CSRequest.class, "admins", userLang) %></th>
+        </tr>
+      </thead>
+      <tbody>
+      
+      <%-- ITERATION --%>
+      <jalios:pager name='csrequestPagerHandler' 
+                    declare='true' 
+                    action='init' 
+                    paramPrefix='csrequest'
+                    pageSize='10' 
+                    size='<%= csRequestSet.size() %>'/>  
+      <jalios:foreach collection="<%= csRequestSet %>" 
+                      type="CSRequest" 
+                      name="csrequest"
+                      max="<%= csrequestPagerHandler.getPageSize() %>"
+                      skip="<%= csrequestPagerHandler.getStart() %>">
+        <%
+        Set<Category> typoSet = new TreeSet<Category>();
+        if (isTypoActive) {
+          Set<Category> catSet = csrequest.getCategorySet();
+          for (Category cat : catSet) {
+            if (CSManager.getInstance().isTypology(cat, false)) {
+              typoSet.add(cat);
+            }
+          }
+        }
+        boolean hasTypology = Util.notEmpty(typoSet);
+        %>
+        <tr>
+          <td class="numeric nowrap">
+            <%= csrequestPagerHandler.getStart() + itCounter.intValue() %>.
+            <%
+            String hubQS = ServletUtil.getUpdatedParams(request, new String[] {"jsp"}, new String[] {"plugins/CollaborativeSpacePlugin/jsp/hub/hubApp.jsp"}, new String[] {"id", "csrftoken"}, false);
+            %>
+            <jalios:edit data='<%= csrequest %>' redirect='<%= ServletUtil.getResourcePath(request) + hubQS %>' />
+          </td> 
+          <td class="right">
+            <jalios:date format="timeDateOrTime" date="<%= csrequest.getMdate() %>" />
+          </td>
+          <td class="member-part nowrap">
+            <jalios:memberphoto member="<%= csrequest.getSubmitMember() %>" size="<%= PhotoSize.ICON %>"/>
+            &nbsp;
+            <jalios:link data="<%= csrequest.getSubmitMember() %>" />
+          </td>
+          <td class="expand">
+            <jalios:link data='<%= csrequest %>'><%= csrequest.getName(userLang) %></jalios:link>
+          </td>
+          <%--
+          <td class="field-description">
+            <% if (Util.notEmpty(csrequest.getDescription(userLang))) { %>
+              <jalios:wysiwyg><%= csrequest.getDescription(userLang) %></jalios:wysiwyg>
+            <% } %>
+          </td>
+          --%>
+          <td class="field-parent">
+            <%
+            String parentId = Util.getString(csrequest.getParent(), "");
+            Workspace wsParent = Util.notEmpty(parentId) ? channel.getWorkspace(parentId) : null;
+            if (Util.notEmpty(parentId)) {
+              %>
+              <% if (wsParent!= null) { %>
+                <% if (isLogged && loggedMember.belongsToWorkspace(wsParent)) { %>
+                  <jalios:link data='<%= wsParent %>'/>
+                <% } else { %>
+                  <%= wsParent.getTitle(userLang) %>
+                <% } %>
+              <% } else { %>
+                <%= parentId %>
+              <% } %>
+            <% } %>
+          </td>
+
+          <%-- Typologies --%>
+          <td class="field-typology">
+            <% if (hasTypology) { %>
+              <% for (Category typoCat : typoSet) { %>
+                <%@ include file="/plugins/CollaborativeSpacePlugin/jsp/template/doTypologyBadge.jspf" %>
+              <% } %>
+            <% } %>
+          </td>
+          <td class="field-accessPolicy">
+            <% String accessPolicy = csrequest.getAccessPolicy(); %>
+            <%@ include file="/plugins/CollaborativeSpacePlugin/jsp/template/doAccessBadge.jspf" %>
+          </td>
+          <td class="field-signupPolicy">
+            <% if (Util.notEmpty(csrequest.getSignupPolicy())) { %>
+              <%= csrequest.getSignupPolicyLabel(csrequest.getSignupPolicy(), userLang) %>
+            <% } %>
+          </td>
+          <td class="field-language">
+            <% if (Util.notEmpty(csrequest.getLanguage())) { %>
+              <%
+              String langLabelKey = Util.getString("lang." + csrequest.getLanguage(), "");
+              String langLabel = glp(langLabelKey);
+              %>
+              <% if (!langLabelKey.equals(langLabel)) { %>
+                <jalios:lang lang="<%= csrequest.getLanguage() %>"/>
+                <%= langLabel %>
+              <% } else { %>
+                <%= csrequest.getLanguage() %>
+              <% } %>
+            <% } %>
+          </td>
+          <td class="field-model">
+            <%
+            String modelId = Util.getString(csrequest.getModel(), "");
+            Workspace wsModel = null;
+            if (Util.notEmpty(modelId) && channel.getWorkspace(modelId) != null) {
+              wsModel = channel.getWorkspace(modelId);
+              %>
+              <% if (Util.notEmpty(wsModel)) { %>
+                <% if (isLogged && loggedMember.belongsToWorkspace(wsModel)) { %>
+                  <jalios:link data='<%= wsModel %>'/>
+                <% } else { %>
+                  <%= wsModel.getTitle(userLang) %>
+                <% } %>
+              <% } %>
+            <% } else { %>
+              <%= modelId %>
+            <% } %>
+          </td>
+          <td class="field-admins">
+            <% if (Util.notEmpty(csrequest.getAdmins())) { %>
+            <ol class="list-unstyled">
+              <% for (Member itAdmin : csrequest.getAdmins()) { %>
+                <% if (itAdmin != null) { %>
+                <li>
+                  <jalios:memberphoto member="<%= itAdmin %>" size="<%= PhotoSize.ICON %>" />
+                  <jalios:link data='<%= itAdmin %>'/>
+                </li>
+                <% } %>
+              <% } %>
+            </ol>
+            <% } %>
+          </td>
+        </tr>
+      </jalios:foreach>
+      </tbody>
+    </table>
+    <jalios:pager name='csrequestPagerHandler' />
+  </div>
+
+<% } else { %>
+  <%@ include file='/front/app/doAppNoResult.jspf' %>
+<% } %>

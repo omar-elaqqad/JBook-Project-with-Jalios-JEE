@@ -1,0 +1,321 @@
+# Language properties
+
+jcmsplugin.smartphone.lbl.no-result: Žiadne výsledky
+jcmsplugin.smartphone.lbl.guest: Hosť
+jcmsplugin.smartphone.lbl.index-default.choose-action: Vyberte úkon
+jcmsplugin.smartphone.lbl.index-default.desktop-link: Prejsť na úplnú stránku
+jcmsplugin.smartphone.lbl.workspace-index.filter-ws: Filtrovať pracovné priestory
+jcmsplugin.smartphone.lbl.workspace-index.recent: Nedávno navštívené
+jcmsplugin.smartphone.lbl.workspace-index.other: Ďalšie pracovné priestory
+jcmsplugin.smartphone.lbl.workspace-index.signup: Nemáte prístup k tomuto pracovnému priestoru.
+jcmsplugin.smartphone.lbl.vote.like: Páči sa mi to
+jcmsplugin.smartphone.lbl.vote.unlike: Už sa mi to nepáči
+jcmsplugin.smartphone.lbl.access-website: Otvoriť webovú stránku
+jcmsplugin.smartphone.lbl.see-on-website: Zobraziť na webovej stránke
+jcmsplugin.smartphone.lbl.header.website-title: JPlatform – smartfón
+jcmsplugin.smartphone.lbl.alert.all-alert-read: Prečítali ste všetky upozornenia.
+jcmsplugin.smartphone.lbl.alert.alert-empty: Nemáte žiadne upozornenie.
+jcmsplugin.smartphone.lbl.alert.unread: Neprečítané
+jcmsplugin.smartphone.lbl.alert.read: Prečítané
+jcmsplugin.smartphone.lbl.alert.access-publication: Zobraziť publikáciu
+jcmsplugin.smartphone.lbl.alert.mark-read: Označiť ako prečítané
+jcmsplugin.smartphone.lbl.forbidden: Nemáte právo prístupu k tomuto obsahu.
+jcmsplugin.smartphone.lbl.alert.null-pub: Prvok neexistuje
+jcmsplugin.smartphone.lbl.yes: Áno
+jcmsplugin.smartphone.lbl.no: Nie
+jcmsplugin.smartphone.lbl.member.contact: Kontakt
+jcmsplugin.smartphone.lbl.member.address: Adresa
+jcmsplugin.smartphone.lbl.member.information: Informácie
+jcmsplugin.smartphone.lbl.member.agenda: Program
+jcmsplugin.smartphone.lbl.recommendation.no-recommendation: Nedostali ste zatiaľ žiadne odporúčanie.
+jcmsplugin.smartphone.lbl.recommendation.see-publication: Zobraziť publikáciu
+jcmsplugin.smartphone.lbl.admin.members: Člen
+jcmsplugin.smartphone.lbl.admin.see-logs: Prístup k denníkom
+jcmsplugin.smartphone.lbl.admin.memory: Pamäť
+jcmsplugin.smartphone.lbl.member.add-to-address-book: Pridať do adresára
+jcmsplugin.smartphone.lbl.mention.noemail: Tento používateľ nemá e-mailovú adresu a nie je ho možné spomenúť
+jcmsplugin.smartphone.lbl.jquerymobile.error: Vyskytla sa chyba.
+jcmsplugin.smartphone.lbl.invalid-home-page: Domovská stránka nie je nastavená.
+jcmsplugin.smartphone.lbl.access-all-spaces: Prístup ku všetkým priestorom
+jcmsplugin.smartphone.lbl.jmobile.about-jmobile: O JMobile
+
+jcmsplugin.smartphone.action.showmore: Zobraziť viac...
+jcmsplugin.smartphone.action.filter: Filtrovať…
+jcmsplugin.smartphone.action.see-publication: Zobraziť publikáciu
+jcmsplugin.smartphone.lbl.new: Nová
+
+jcmsplugin.smartphone.recommendation.placeholder.members: Vybrať členov
+jcmsplugin.smartphone.recommendation.placeholder.groups: Vybrať skupiny
+
+jcmsplugin.smartphone.jmobile.version.numero: Verzia {0} Copyright © Jalios 2022
+jcmsplugin.smartphone.jmobile.version.droits: Všetky práva vyhradené
+jcmsplugin.smartphone.jmobile.notification: Upozornenia
+jcmsplugin.smartphone.jmobile.notification.appareil.registred: Registrované zariadenie
+jcmsplugin.smartphone.jmobile.notification.appareil.not-registred: Neregistrované zariadenie
+jcmsplugin.smartphone.jmobile.notification.permission : Povolenie
+jcmsplugin.smartphone.jmobile.notification.type-alerte.inactive: Nie je aktivovaný žiadny typ upozornenia
+jcmsplugin.smartphone.jmobile.notification.type-alerte.active: Typ upozornenia je aktivovaný
+
+jcmsplugin.smartphone.lbl.download-mobile-app: Stiahnuť mobilnú aplikáciu
+
+# Portal
+
+## History
+portal.edition.history.save-by.label: Uložil/-a: {0}
+portal.edition.history.published-by.label: Uverejnil/-a: {0}
+portal.edition.history.breadcrumb.label: História portálu
+portal.edition.history.back-edition.label: Späť na úpravy
+portal.edition.history.back-to-version.label: Späť na túto verziu
+portal.edition.history.back-to-version.confirm: Prejsť späť na túto verziu?
+portal.edition.history.show-more: Zobraziť viac
+portal.edition.history.portlet-chooser: Výber portletov
+portal.edition.history.create-portlet: Vytvoriť nový portlet
+portal.edition.history.existing-portlets: Dostupné portlety
+portal.structure.custom-title.label: Názov verzie
+portal.structure.rename-title.label: Premenovať verziu
+portal.edition.sidebar.portal-edit.tab-edit.title: Parametre portálu
+portal.edition.sidebar.portal-edit.tab-ui.title: Štýl portálu
+portal.edition.sidebar.portal-edit.template.title: Šablóny portletu
+portal.edition.sidebar.portal-edit.portal-advanced.title: Rozšírené úpravy
+
+
+jcmsplugin.smartphone.service.search.no-result: Žiadne výsledky
+jcmsplugin.smartphone.service.search.members.no-result: Nenašiel sa žiadny člen
+jcmsplugin.smartphone.service.search.publications.no-result: Nenašla sa žiadna publikácia
+jcmsplugin.smartphone.service.search.tabs.all.label: Všetko
+jcmsplugin.smartphone.service.search.tabs.members.label: Členovia
+jcmsplugin.smartphone.service.search.tabs.publications.label: Publikácie
+
+
+jcmsplugin.smartphone.portal.default-portal.title: Mobilný portál
+jcmsplugin.smartphone.portal.default-wysiwyg.title: Vitajte v mobilnom portáli
+jcmsplugin.smartphone.portal.default-wysiwyg.content: Toto je predvolená stránka vášho mobilného portálu
+jcmsplugin.smartphone.portal.edition.edit-portal: Úprava portálu
+jcmsplugin.smartphone.portal.lbl.assembly-zone: Zóna zostavy
+jcmsplugin.smartphone.portal.lbl.final-output: Finálny výstup
+jcmsplugin.smartphone.portal.lbl.portal-parameters: Parametre portálu
+jcmsplugin.smartphone.portal.lbl.duplicate: Dvojité zobrazenie
+jcmsplugin.smartphone.portal.lbl.publish: Uverejniť
+jcmsplugin.smartphone.portal.lbl.duplicate.modal.title: Duplikovať portál
+jcmsplugin.smartphone.portal.lbl.filter-workspace: Filtrovať pracovný priestor...
+jcmsplugin.smartphone.portal.topbar-title.lbl: Horný panel
+jcmsplugin.smartphone.portal.administration.title: Správa
+jcmsplugin.smartphone.portal.administration.mobile-portals: Mobilné portály
+jcmsplugin.smartphone.portal.administration.default-portals: Predvolené portály
+jcmsplugin.smartphone.portal.administration.default-portal: Predvolený portál
+jcmsplugin.smartphone.portal.administration.settings: Nastavenia
+jcmsplugin.smartphone.portal.creation-modal.title: Vytvoriť mobilný portál
+jcmsplugin.smartphone.portal.administration.topbar-color: Farba pozadia horného panelu
+jcmsplugin.smartphone.portal.administration.portal-edition: Úprava portálu – {0}
+jcmsplugin.smartphone.portal.administration.topbar-font-color: Farba písma horného panelu
+jcmsplugin.smartphone.portal.administration.topbar-logo: Logo
+jcmsplugin.smartphone.portal.administration-table.title: Názov
+jcmsplugin.smartphone.portal.administration-table.mdate: Posledná aktualizácia
+jcmsplugin.smartphone.portal.administration.create-portal: Vytvoriť portál
+jcmsplugin.smartphone.portal.administration.return-to-home: Vrátiť sa do editora portálu pre domovskú stránku aplikácie
+jcmsplugin.smartphone.portal.administration.msg.settings-updated: Nastavenia sa uložili.
+
+# MyDay
+jcmsplugin.smartphone.my-day.today.label: Dnes
+jcmsplugin.smartphone.my-day.calendar.service-link.title: Zobraziť môj program
+jcmsplugin.smartphone.my-day.jtask.service-link.title: Zobraziť moje úlohy
+
+data.$id.jcmsplugin.smartphone.category.nav-root.name: Mobilná navigácia
+data.$id.jcmsplugin.smartphone.category.nav-root-home.name: Domov
+
+# Properties
+jcmsplugin.smartphone.home.news: Novinky
+jcmsplugin.smartphone.workspace.news: Novinky pracovného priestoru
+jcmsplugin.smartphone.default.page.size: Predvolená veľkosť stránky
+jcmsplugin.smartphone.lbl.topbar-title: Názov stránky pre smartfón
+jcmsplugin.smartphone.image.resize.max-width: Max. šírka obrázkov so zmenenou veľkosťou
+jcmsplugin.smartphone.map-service: Mapová služba
+jcmsplugin.smartphone.search.searchable-types: Služba Hľadať – typy zahrnuté do výsledkov hľadania
+jcmsplugin.smartphone.search.portletId: Služba Hľadať – Portlet
+jcmsplugin.smartphone.search.portletId.help: Portlet Hľadať sa používa na definovanie predvoleného fungovania služby Hľadať
+jcmsplugin.smartphone.search.not-searchable-types: Služba Hľadať – typy nezahrnuté do výsledkov hľadania
+jcmsplugin.smartphone.drawer.background-image: Obrázok pozadia zásobníka služby
+
+jcmsplugin.smartphone.mobileapp.android.play-store : Android Play Store
+jcmsplugin.smartphone.mobileapp.ios.app-store : iOS App Store
+
+# Services
+jcmsplugin.smartphone.service.recenthistory:   Nedávna história
+jcmsplugin.smartphone.service.admin:    Správca
+jcmsplugin.smartphone.service.search: Hľadať
+jcmsplugin.smartphone.service.workflow: Pracovný postup
+jcmsplugin.smartphone.service.news: Novinky
+jcmsplugin.smartphone.service.workspace: Pracovný priestor
+
+# Member menu
+jcmsplugin.smartphone.member-menu.application-menu: Aplikácie
+jcmsplugin.smartphone.member-menu.my-day: Môj deň
+jcmsplugin.smartphone.member-menu.navigate: Navigovať
+
+# Workspace Services
+jcmsplugin.smartphone.workspace-service.search: Hľadať
+jcmsplugin.smartphone.workspace-service.news: Novinky
+
+portlet.ability.jcmsplugin-smartphone:                Smartfón
+portlet.ability.jcmsplugin-smartphone.application:    Služba
+
+# Labels
+jcmsplugin.smartphone.fulldisplay.webpage.view-site: Navštíviť webovú stránku
+
+jcmsplugin.smartphone.share.empty: Nie sú k dispozícii žiadne adresy na zdieľanie tejto adresy URL {0}.
+
+# Feedback Mobile App
+jcmsplugin.smartphone.mobileapp.feedback.lbl: Odoslať hlásenie
+jcmsplugin.smartphone.mobileapp.feedback.email: E-mail adresáta
+jcmsplugin.smartphone.mobileapp.feedback.email.help: Na túto e-mailovú adresu sa zašlú ohlasy používateľa z mobilnej aplikácie. Ak nie je nastavená žiadna e-mailová adresa, odosielanie je vypnuté a z mobilnej aplikácie nie je možné.
+jcmsplugin.smartphone.mobileapp.feedback.settings: Nastavenia
+
+jcmsplugin.smartphone.mobileapp.feedback.subject: {0} odoslal/a hlásenie z mobilnej aplikácie
+jcmsplugin.smartphone.mobileapp.feedback.hello: Dobrý deň,
+jcmsplugin.smartphone.mobileapp.feedback.description: {0} vám odoslal/a hlásenie o svojom používaní mobilnej aplikácie.
+jcmsplugin.smartphone.mobileapp.feedback.user-info: Informácie o používateľovi:
+jcmsplugin.smartphone.mobileapp.feedback.user-info.login: Prihlasovacie meno: {0}
+jcmsplugin.smartphone.mobileapp.feedback.user-info.siteurl: URL adresa stránky: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info: Informácie o zariadení:
+jcmsplugin.smartphone.mobileapp.feedback.device-info.platform: Platforma: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info.version: Verzia platformy: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info.model: Model zariadenia: {0}
+jcmsplugin.smartphone.mobileapp.feedback.device-info.uuid: ID zariadenia: {0}
+jcmsplugin.smartphone.mobileapp.shareurl.message: Čo chcete urobiť?
+
+# AlertChannel
+jcmsplugin.smartphone.alert.channel.label: JMobile
+jcmsplugin.smartphone.alert.channel.description: Zasielanie upozornení cez protokol JMobile
+
+# ExtraDBData
+extradb.Member.jcmsplugin.smartphone.token: Token JMobile
+extra.Shortcut.jcmsplugin.smartphone.mobile-url: JMobile – skratka URL
+extra.Shortcut.jcmsplugin.smartphone.mobile-available: JMobile – zobraziť v spúšťači aplikácií?
+
+# Editable Properties
+jcmplugin.smartphone.jpush.fcm.project-id: FCM – ID projektu
+jcmplugin.smartphone.notification.encrypt : Šifrované upozornenia
+jcmsplugin.smartphone.ios.download-code.url-prefix: iOS – Kód preberania – Predpona adresy URL
+jcmsplugin.smartphone.ios.download-code.threshold: iOS – Kód preberania – Hraničná hodnota na výstrahu
+$id.jcmsplugin.smartphone.ios.downloadcode.manager-group: iOS – Kód preberania – Manažérska skupina
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.ios.teamId: Apple – ID tímu
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.appId: ID aplikácie JMobile
+jcmsplugin.smartphone.mobileapp.deep-link.well-known.android.fingerprints: odtlačky certifikátu (sha256)
+jcmplugin.smartphone.space.show-introduction: Zobraziť vkladanie medzier
+
+$id.jcmsplugin.smartphone.portal.default-portal: Predvolený portál
+# Templates
+types.PortletQueryForeach.templates.jmobile.default.label: Predvolená šablóna
+types.PortletQueryForeach.templates.jmobile.dataimage.label: Šablóna zoznamu s obrázkom
+
+types.PortletQueryForeachCards.templates.jmobile.withBorderGrid.label: Šablóna kariet s ohraničením ako mriežka
+types.PortletQueryForeachCards.templates.jmobile.withoutBorderGrid.label: Šablóna kariet bez ohraničenia ako mriežka
+types.PortletQueryForeachCards.templates.jmobile.withBorder.label: Šablóna kariet s ohraničením ako mriežka
+types.PortletQueryForeachCards.templates.jmobile.light.label: Šablóna kariet bez meta
+types.PortletQueryForeachCards.templates.jmobile.default.label: šablóna predvolenej karty
+types.PortletQueryForeachCards.templates.jmobile.withLead.label: Šablóna kariet s ohraničením a so vzorom
+types.PortletQueryForeachCards.templates.jmobile.withSliding.label: Šablóna posuvnej karty bez ohraničenia
+types.PortletQueryForeachCards.templates.jmobile.withSlidingBorder.label: Šablóna posuvnej karty s ohraničením
+types.PortletQueryForeachCards.templates.jmobile.horizontalwithSliding.label: Šablóna posuvnej karty horizontálnej bez ohraničenia
+types.PortletQueryForeachCards.templates.jmobile.carousel.label: Šablóna kolotočovej karty
+
+types.PortletQueryForeachDetail.templates.jmobile.default.label: Predvolená šablóna
+types.PortletQueryForeachDetail.templates.jmobile.dataimage.label: Šablóna zoznamu s obrázkom
+
+types.PortletCarousel.templates.jmobile.default.label: Predvolená šablóna
+
+types.PortletWYSIWYG.templates.jmobile.default.label:  Predvolená šablóna
+
+types.AbstractPortletSkinable.templates.jmobile.default.label: Predvolená šablóna
+
+types.AbstractPortletSkinable.templates.jmobile.light.label: Šablóna Bez názvu
+
+types.PortletImage.templates.jmobile.default.label: Predvolená šablóna
+
+types.PortletJsp.templates.jmobile.default.label: Predvolená šablóna
+
+types.PortletRSS.templates.jmobile.default.label: Predvolená šablóna
+
+
+# From SmartPhonePortal.xml
+types.SmartPhonePortal.label: Portál Jmobile
+types.SmartPhonePortal.description: Základný portál s minimom možností
+types.SmartPhonePortal.fields.image.label: Obrázok
+types.SmartPhonePortal.fields.pageTitle.description: Názov zobrazený v názve stránky
+types.SmartPhonePortal.fields.description.label: Opis
+types.SmartPhonePortal.fields.pageTitle.label: Názov stránky
+types.SmartPhonePortal.fields.css.label: CSS
+types.SmartPhonePortal.fields.structure.label: Štruktúra
+types.SmartPhonePortal.title.label: Názov
+types.SmartPhonePortal.fields.displayScrollToTop.label: Zobraziť odkaz na rolovanie nahor
+types.SmartPhonePortal.fields.keywords.label: Kľúčové slová (SEO)
+types.SmartPhonePortal.fields.keywords.description: Tieto kľúčové slová (oddelené čiarkami) sa použijú na domovskej stránke portálu.
+types.SmartPhonePortal.fields.portlets.label: Portlety
+types.SmartPhonePortal.fields.portlets.description: Zoznam portletov
+
+# REST
+doc.rest.rsrc-meth.FeedbackResource: POST
+doc.rest.rsrc-desc./smartphone/feedback: Posiela spätnú väzbu používateľov z mobilnej aplikácie na e-mailové adresy zadané vo vlastnostiach modulu JMobile.
+
+doc.rest.rsrc-meth.AddJWTokenResource: GET
+doc.rest.rsrc-desc./smartphone/auth/addjwtoken: Vráti token JWT prihláseného člena.
+doc.rest.rsrc-desc./smartphone/auth/addjwtoken/{memberId}: Vráti JWToken člena s ID <code>memberId</code>.
+
+doc.rest.rsrc-meth.RegisterJMobileTokenResource: GET
+doc.rest.rsrc-desc./smartphone/registerToken/{deviceId}/{deviceOs}/{deviceModel}: Uloží informácie pre mobilný telefón člena.
+
+doc.rest.rsrc-meth.DeleteDeviceInfoResource: GET
+doc.rest.rsrc-desc./smartphone/deleteToken/{deviceId}/{deviceOs}/{deviceModel}: Odstráni informácie z mobilného telefónu člena.
+
+doc.rest.rsrc-meth.GetNotificationDiagnosticResource: GET
+doc.rest.rsrc-desc./smartphone/notificationDiagnostic/{deviceId}/{deviceOs}/{deviceModel}: Vráti počet typov upozornení aktivovaných na JPlatform.
+
+doc.rest.rsrc-meth.JMobileInfoResource: GET
+doc.rest.rsrc-desc./smartphone/info: Vráti informácie o doplnku JMobile.
+
+doc.rest.rsrc-meth.IOSDownloadResource: GET
+doc.rest.rsrc-desc./smartphone/ios/download: Vyhľadá URL adresu prevzatia pre aplikáciu pre iOS.
+
+data.$id.shortcut.jcmsplugin.smartphone-portals.title: Portály Jmobile
+data.$id.shortcut.jcmsplugin.smartphone-portals.text: Spravovať portály JMobile a navigáciu
+
+jcmplugin.smartphone.bottom-nav-item.home: Domov
+jcmplugin.smartphone.bottom-nav-item.alerts: Upozornenie
+jcmplugin.smartphone.bottom-nav-item.search: Hľadať
+jcmplugin.smartphone.bottom-nav-item.application-menu: Aplikácie
+
+ui.editportlet.usage.jmobile: JMobile
+ui.editportlet.usage.skin.jmobile: JMobile
+
+# ------------------------------------------------------------
+# IOS Download Code
+# ------------------------------------------------------------
+jcmsplugin.smartphone.ios.admin-menu: Spravovať kódy preberania pre mobilnú aplikáciu pre iOS
+jcmsplugin.smartphone.ios.add-codes.title: Pridať kódy preberania
+jcmsplugin.smartphone.ios.add-codes.lbl.codes: Kódy
+jcmsplugin.smartphone.ios.add-codes.lbl.codes.h: Kódy, ktoré chcete pridať, musia byť oddelené medzerami alebo uvedené jednotlivo v nových riadkoch.
+jcmsplugin.smartphone.ios.add-codes.btn.delete-all: Vymazať všetky nepoužívané kódy...
+jcmsplugin.smartphone.ios.add-codes.msg.code-count:  <p>{0,choice,0#Nepoužil sa žiadny kód|1#Použil sa jeden kód|2#{0} sa použili}.</p><p>{1,choice,0#Neexistujú žiadne nepoužívané kódy|1#Zostal už iba jeden nepoužívaný kód.|2#Existuje nasledujúci počet nepoužívaných kódov: {1}}.
+jcmsplugin.smartphone.ios.add-codes.msg.codes-added:  {0,choice,0#Nebol pridaný žiadny kód|1#Bol pridaný jeden kód|2#{0} pridané/pridaných}.
+jcmsplugin.smartphone.ios.add-codes.msg.code-deleted: {0,choice,0#Nebol vymazaný žiadny kód|1#Bol vymazaný jeden nepoužívaný kód|2#{0} – počet nepoužívaných kódov, ktoré boli vymazané}.
+jcmsplugin.smartphone.ios.download.msg.oodc: <p>Ľutujeme:-(</p><p>Teraz nemôžete prevziať mobilnú aplikáciu.</p><p>K dispozícii nie je žiadny kód preberania.</p><p>Skúste to znova neskôr.</p> 
+jcmsplugin.smartphone.ios.download.msg.ldnr: <p>Ľutujeme:-(</p><p>Teraz nemôžete prevziať mobilnú aplikáciu.</p><p>Služba na distribúciu kódov preberania neodpovedá.</p><p>Skúste to znova neskôr.</p>
+
+data.$id.jcmsplugin.smartphone.ios.downloadcode.manager-group.name: Správcovia kódov preberania pre aplikáciu pre iOS
+
+# ------------------------------------------------------------
+# ALERT
+# ------------------------------------------------------------
+alert.name.jcmsplugin-smartphone:                                              JMobile
+alert.name.jcmsplugin-smartphone.ios-downloadcode-shortage:                    Skratka kódu preberania
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.title:               Skratka kódu preberania
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.short-description:   {remainingCount}
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.description:         <p>{remainingCount}</p><p>Ak chcete pridať nové kódy preberania, prejdite do sekcie Činnosť v <a href="admin/admin.jsp">správcovskej oblasti</a>.</p>
+alert.msg.jcmsplugin-smartphone.ios-downloadcode-shortage.remaining-count:     {0,choice,0#Všetky kódy preberania sa už použili|1#K dispozícii je iba jeden kód preberania|2#K dispozícii je už iba nasledujúci počet kódov preberania: {0}}.
+
+# ------------------------------------------------------------
+# ACL
+# ------------------------------------------------------------
+acl.resource.plugins/jmobile: JMobile
+acl.resource.plugins/jmobile/can-administrate-mobile-portals: Správa mobilného portálu
+acl.resource.admin/operation/can-manage-ios-downloadcode: Správa kódov preberania pre iOS

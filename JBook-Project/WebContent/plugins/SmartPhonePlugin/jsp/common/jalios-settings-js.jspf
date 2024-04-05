@@ -1,0 +1,15 @@
+<script>
+
+jaliosSettings = {};
+jaliosSettings["confirm-dialog-title"] = "<%= glp("ui.com.lbl.confirm") %>";
+jaliosSettings["confirm-dialog-text"] = "<%= glp("js.msg.js.confirm") %>";
+jaliosSettings["confirm-dialog-close"] = "<%= glp("ui.com.btn.close") %>";
+jaliosSettings["confirm-dialog-ok"] = "<%= glp("ui.com.btn.ok") %>";
+jaliosSettings["lbl-mention-noemail"] = "<%= glp("jcmsplugin.smartphone.lbl.mention.noemail") %>";
+
+
+// Non-jalios properties depending on properties
+$.mobile.loader.prototype.options.html = '<div class="errorMessage"><%= glp("jcmsplugin.smartphone.lbl.jquerymobile.error") %></div><div class="loader"><svg class="circular"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg></div>';
+
+
+</script>

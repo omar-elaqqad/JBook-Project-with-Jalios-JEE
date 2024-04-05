@@ -1,0 +1,22 @@
+<% { %>
+<tr class="item">
+  <td class="photo-part fit">
+		<jalios:memberphoto member="<%= itMember %>" size="<%= PhotoSize.TINY %>" />
+  </td>
+  <td class="info-part">
+    <% String confirmMsg = member == loggedMember ? glp("jcmsplugin.esn.lbl.disconnect.confirm", itMember.getFullName()) : glp("jcmsplugin.esn.lbl.disconnect.confirm-contact", itMember.getFullName(), member.getFullName()); %>
+    <% if (showDisconnect && dataWriteEnabled) { %> 
+    <div class="item-icons">
+    <a class="modal" onclick="return false;" href="plugins/ESNPlugin/jsp/form/disconnect.jsp?member=<%= member.getId() %>&amp;target=<%= itMember.getId() %>" title="<%= confirmMsg %>"><jalios:icon src="remove-small" css="hover-action" title='<%= glp("jcmsplugin.esn.lbl.disconnect") %>' /></a>
+    </div>
+    <% } %> 
+  
+    <jalios:link data="<%= itMember %>" css="name" /><br/>
+    <% if (itMember.isContact()) { %>
+    <%= Util.join(" - ", itMember.getOrganization(), itMember.getJobTitle()) %>
+    <% } else { %>
+    <%= itMember.getJobTitle() %>
+    <% } %>
+  </td>
+</tr>
+<% } %>

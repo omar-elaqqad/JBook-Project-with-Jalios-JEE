@@ -1,0 +1,25 @@
+.app-directory.directory-nav-competencies {
+
+  .expertise-list {
+    TD.name {
+      min-width: 200px;
+    }
+  }
+  TR.esn-competencies-item {
+    &:hover {
+      & > TH,
+      & > TD {
+        background-color: @table-bg-hover;
+      }
+    }
+    > TD {
+      background-color: transparent;
+    }
+    &.is-active,
+    &.is-pinned {
+      > TD {
+        background-color: @esn-directory-expertise-filter-pinned-bg-color;
+      }
+    }
+  }
+}

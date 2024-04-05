@@ -1,0 +1,720 @@
+jcmsplugin.esn.categories:                    Ramură categorie competențe
+jcmsplugin.esn.categories.help:               Definește un identificator de categorie, sau o listă de identificatori separați prin spațiu.
+$id.jcmsplugin.esn.profile.portal:            Portal de afișare al profilului de membru (profil vechi)
+jcmsplugin.esn.microblogging.Workspace:       Spațiu de lucru implicit pentru MicroBlogging
+
+jcmsplugin.esn.connection-request.enabled:    Aprobare conexiune
+jcmsplugin.esn.connection-request.decline-alert.enabled: Trimite o notificare privind conectarea refuzată a membrului.
+
+jcmsplugin.esn.follower-notification:         Notifică noii urmăritori
+jcmsplugin.esn.graphviz.dot.exe:              Calea „dot” Graphviz
+jcmsplugin.esn.graphviz.dot.exe.help:         Graphviz generează un grafic de relație cu privire la profilul membrului. Calea până la „dot”. Ca exemplu, pentru windows, este: „C:&#92;Program Files&#92;Graphviz2.22&#92;bin&#92;dot.exe”.
+
+jcmsplugin.esn.external-contacts:             Contacte externe
+
+jcmsplugin.esn.map-service:                   Serviciu hartă
+
+jcmsplugin.esn.contact-referrers.qs:          Căutare publicație referință
+
+jcmsplugin.esn.mbr-extended-search-limit:      Căutare extinsă membri - Limită declanșatoare
+jcmsplugin.esn.mbr-extended-search-limit.help: Căutarea extinsă de membri (cu informații ESN) este lansată doar în cazul în care căutarea standard de membri a returnat un rezultat mai mic decât limita.
+
+jcmsplugin.esn.agreement.required:            Acceptă termenii și condițiile ESN
+jcmsplugin.esn.agreement.terms.pub:           Termenii și condițiile ESN - Publicație
+jcmsplugin.esn.agreement.terms.field:         Termenii și condițiile ESN - Câmp
+jcmsplugin.esn.agreement.btn.agree:           Accept
+jcmsplugin.esn.agreement.btn.disagree:        Refuz
+
+jcmsplugin.esn.group-expertise.assignment:    Alocare grup la competență
+
+ui.com.lbl.guest: Invitat
+jcmsplugin.esn.panel-toggle-show: Deschis
+jcmsplugin.esn.panel-toggle-hide: Închide
+jcmsplugin.esn.profile.see-photo: Vezi poză de profil mai mare
+jcmsplugin.esn.profile.action.open-action-menu: Deschide meniul acțiunilor
+jcmsplugin.esn.profile.action.create-event-with: Invită la un eveniment...
+jcmsplugin.esn.profile.action.change-photo: Schimbă fotografia...
+jcmsplugin.esn.profile.action.change-photo.me: Schimb fotografia mea...
+jcmsplugin.esn.profile.lbl.goto-calendar:     Afișează calendar
+jcmsplugin.esn.profile.lbl.disabled-account:  Cont dezactivat
+jcmsplugin.esn.profile.lbl.disabled-guest-account: Invitat dezactivat
+jcmsplugin.esn.profile.lbl.ws-role.admin:     {0} animează:
+jcmsplugin.esn.profile.lbl.ws-role.worker:    {0} contribuie la:
+jcmsplugin.esn.profile.lbl.ws-role.reader:    {0} participă în:
+jcmsplugin.esn.profile.lbl.ws-role.me.admin:  Tu animezi:
+jcmsplugin.esn.profile.lbl.ws-role.me.worker: Tu contribui la:
+jcmsplugin.esn.profile.lbl.ws-role.me.reader: Tu participi la:
+jcmsplugin.esn.profile.tab.access:            Accesează
+jcmsplugin.esn.profile.tab.activity:          Activitate
+jcmsplugin.esn.profile.tab.calendar:        Calendar
+jcmsplugin.esn.profile.tab.communities:       Comunități
+jcmsplugin.esn.profile.tab.connections:       Conectări
+jcmsplugin.esn.profile.tab.contacts:          Conectări
+jcmsplugin.esn.profile.tab.cv:                CV
+jcmsplugin.esn.profile.tab.expertises:        Competențe
+jcmsplugin.esn.profile.tab.info:              Informații
+jcmsplugin.esn.profile.tab.invitations:       Invitații
+jcmsplugin.esn.profile.tab.profil:            Profil
+jcmsplugin.esn.profile.tab.resume:            Reia
+jcmsplugin.esn.profile-edit.tab.info:         Informații
+jcmsplugin.esn.profile-edit.tab.expertises:   Competențe
+jcmsplugin.esn.profile-edit.tab.account:      Accesează
+jcmsplugin.esn.profile-edit.tab.alert:        Notificări
+jcmsplugin.esn.profile-edit.tab.notification: Abonament
+
+jcmsplugin.esn.lbl.status:                    Mesaj
+jcmsplugin.esn.lbl.status-info:               Mesaj actualizat {0}
+jcmsplugin.esn.lbl.last-connection:           Ultima conectare
+jcmsplugin.esn.lbl.online:                    Online
+jcmsplugin.esn.lbl.offline:                   Offline
+jcmsplugin.esn.lbl.interest:                  Domenii de interes
+jcmsplugin.esn.lbl.introduction:              Prezentare
+jcmsplugin.esn.lbl.external-contact:          Contact extern
+jcmsplugin.esn.lbl.activity:                  Activitate
+jcmsplugin.esn.lbl.network-activity:          Activitatea rețelei mele
+jcmsplugin.esn.lbl.categories:                Competențe
+jcmsplugin.esn.lbl.categories.add:            Adaugă o competență
+jcmsplugin.esn.lbl.categories.placeholder.search: Caută o competență...
+jcmsplugin.esn.lbl.calendar:                  Calendar
+jcmsplugin.esn.lbl.publications:              Cele mai recente publicații
+jcmsplugin.esn.lbl.jobs:                      Experiență profesională
+jcmsplugin.esn.lbl.jobs.add:                  Adaugă funcție
+jcmsplugin.esn.lbl.jobs.add.error.date:       Data de început trebuie să fie anterioară datei de sfârșit.
+jcmsplugin.esn.lbl.educations:                Educație
+jcmsplugin.esn.lbl.educations.add:            Adaugă studii
+jcmsplugin.esn.lbl.vcard:                     Importă în Outlook...
+jcmsplugin.esn.lbl.contact-referrers:         Publicații referință
+jcmsplugin.esn.lbl.comment-count:             {0,choice,1#Afișează {0} comentariul |2#Afișează {0}  comentariile}
+
+jcmsplugin.esn.lbl.info:                      Informații de contact
+jcmsplugin.esn.lbl.date-of-birth:             Zi de naștere
+jcmsplugin.esn.lbl.date-of-arrival:           Data sosirii
+jcmsplugin.esn.lbl.connections.suggestions:   Contacte sugerate
+jcmsplugin.esn.lbl.connections.suggestions.del: Șterge această sugestie
+jcmsplugin.esn.lbl.connections.suggestions.reset: Resetează sugestiile...
+jcmsplugin.esn.lbl.connections.requests:      Invitații la conexiuni
+jcmsplugin.esn.lbl.connections.requests.in:   Invitații primite
+jcmsplugin.esn.lbl.connections.requests.out:  Invitații trimise
+jcmsplugin.esn.lbl.connections.requests.out2: Trimis
+jcmsplugin.esn.lbl.connections.requests.edit: Prelucrează invitația...
+jcmsplugin.esn.lbl.connections.requests.received: {0}, {1} ți-a trimis o invitație la {2}.
+jcmsplugin.esn.lbl.connections.requests.sent: {0}, i-ai trimis o invitație lui {1} la {2}.
+jcmsplugin.esn.lbl.connections.requests.missing: Această categorie nu mai există.
+jcmsplugin.esn.lbl.connections.connected:     {0} este unul dintre contactele tale.
+jcmsplugin.esn.lbl.connections.recommendation:Recomandă {0} contactelor tale...
+jcmsplugin.esn.lbl.connections.recommendation2:Recomandă contactelor tale...
+jcmsplugin.esn.lbl.connections.connect-contact: Adaugă {0} alte contacte...
+jcmsplugin.esn.lbl.connections.connect-contact2: Conectează la alte persoane de contact...
+jcmsplugin.esn.lbl.connections.no-link:       {0} nu este accesibil din rețeaua ta de contacte.
+jcmsplugin.esn.lbl.connections.add.member:    Adaugă pe {0} la contactele tale...
+jcmsplugin.esn.lbl.connections.add.member2:   Adaugă la contactele tale...
+jcmsplugin.esn.lbl.connections.add.contact:   Adaugă pe {0} la contactele tale
+jcmsplugin.esn.lbl.connections.add.contact2:  Adaugă la contactele tale
+jcmsplugin.esn.lbl.connections:               Relații
+jcmsplugin.esn.lbl.connections.common:        Contactele voastre comune
+jcmsplugin.esn.lbl.connections.me:            Conexiunile mele
+jcmsplugin.esn.lbl.connections.other:         Celelalte contacte ale sale
+jcmsplugin.esn.lbl.connections.all-contacts:  Toate conexiunile
+jcmsplugin.esn.lbl.connections.all:           Toate
+jcmsplugin.esn.lbl.connections.internal:      Membri
+jcmsplugin.esn.lbl.connections.external:      Contacte
+jcmsplugin.esn.lbl.connections.show.me:       Arată toate contactele mele
+jcmsplugin.esn.lbl.connections.show.other:    Arată toate contactele lui {0}
+
+jcmsplugin.esn.lbl.connections.views:         Vizualizări:
+jcmsplugin.esn.lbl.connections.list:          Listă
+jcmsplugin.esn.lbl.connections.card:          Cartele
+jcmsplugin.esn.lbl.connections.cloud:         Cloud
+jcmsplugin.esn.lbl.connections.csv:           CSV
+jcmsplugin.esn.lbl.connections.level:         Nivel conexiune
+jcmsplugin.esn.lbl.connections.map:           Hartă
+jcmsplugin.esn.lbl.connections.map.tt.profile:Mergi la profilul lui {0}
+jcmsplugin.esn.lbl.connections.map.tt.map:    Centrează harta la {0}
+
+jcmsplugin.esn.lbl.connections.new-contact:   Adaugă un contact
+jcmsplugin.esn.lbl.disconnect:                Elimină acest contact...
+jcmsplugin.esn.lbl.disconnect.title:          Elimină un contact
+jcmsplugin.esn.lbl.disconnect.contact:        Elimină pe {0} dintre contactele tale...
+jcmsplugin.esn.lbl.disconnect.contact2:       Elimină din contactele tale...
+jcmsplugin.esn.lbl.disconnect.confirm:        Dorești cu adevărat să elimini pe <strong>{0}</strong> dintre contactele tale?
+jcmsplugin.esn.lbl.disconnect.confirm-contact:Dorești cu adevărat să elimini pe <strong>{0}</strong> dintre contactele lui <strong>{1}</strong>?
+jcmsplugin.esn.lbl.disconnect.confirm-warn:   Atenție! ești ultimul contact al lui <strong>{0}</strong>. Ești sigur că dorești să ștergi acest contact?
+jcmsplugin.esn.lbl.disconnect.btn.disconnect: Elimină din contactele mele
+jcmsplugin.esn.lbl.disconnect.btn.disconnect-other: Elimină din contactele lui/ei
+jcmsplugin.esn.lbl.disconnect.btn.delete:     Șterge acest contact
+
+jcmsplugin.esn.lbl.followings:                Urmăriri
+jcmsplugin.esn.lbl.followers:                 Urmăritori
+jcmsplugin.esn.lbl.follow:                    Urmărește activitatea lui {0}
+jcmsplugin.esn.lbl.follow2:                   Urmărește activitatea lui
+jcmsplugin.esn.lbl.unfollow:                  Nu mai urmări activitatea lui {0}
+jcmsplugin.esn.lbl.unfollow2                  Stop following activity
+jcmsplugin.esn.lbl.contact-followers:         {0} urmărește {1,choice,0#niciun membru|1#un membru|2#{1} membri} și {2,choice,0#niciun membru|1#un membru|2#{2} membri} nu/urmărește/urmăresc {0}
+
+jcmsplugin.esn.lbl.ws-role.admin:             Administrator
+jcmsplugin.esn.lbl.ws-role.worker:            Contribuitor
+jcmsplugin.esn.lbl.ws-role.reader:            Cititor
+
+jcmsplugin.esn.lbl.links.me:                  Mai multe despre mine...
+jcmsplugin.esn.lbl.links.other:               Mai multe despre {0}...
+jcmsplugin.esn.lbl.links.intro:               Toate linkurile către site-urile externe pe care dorești să le promovezi (blogul tău, profilul tău din rețelele publice de socializare, ...)
+jcmsplugin.esn.lbl.links.intro.other:         Adaugă linkuri către site-uri externe pentru a promova (un blog, un profil pe rețele publice sociale, ...)
+jcmsplugin.esn.lbl.links.add:                 Adaugă un link
+
+jcmsplugin.esn.lbl.edit.me:                   Editează profilul meu
+jcmsplugin.esn.lbl.edit.other:                Editează profilul lui {0}
+jcmsplugin.esn.lbl.edit.other2:               Editează profil
+jcmsplugin.esn.lbl.editLabel:                 Editează
+jcmsplugin.esn.lbl.editProfile.progress:      Profil <strong>{0}%</strong> complet.
+
+jcmsplugin.esn.edit-profile.title.me:         Profilul tău
+jcmsplugin.esn.edit-profile.title.other:      Profilul lui {0}
+jcmsplugin.esn.edit-profile.presentation:     Prezentare
+jcmsplugin.esn.edit-profile.change-photo:     Schimbă fotografia mea
+
+jcmsplugin.esn.edit-expertises.title:         Actualizează competențele {0}
+
+jcmsplugin.esn.add-contact.title:             Adaugă un contact
+jcmsplugin.esn.add-contact.steps.0:           Verificare
+jcmsplugin.esn.add-contact.steps.1:           Propuneri
+jcmsplugin.esn.add-contact.steps.2:           Informații
+jcmsplugin.esn.add-contact.steps.3:           Competențe
+jcmsplugin.esn.add-contact.steps-intro.0:     Introdu numele și/sau adresa de e-mail a contactului tău, pentru a verifica dacă această persoană există deja.
+jcmsplugin.esn.add-contact.steps-intro.1.1:   A fost găsit un membru care corespunde acestor informații. Asigură-te că nu este aceeași persoană înainte de a crea una nouă.
+jcmsplugin.esn.add-contact.steps-intro.1.2:   Au fost găsiți membri existenți care corespund acestor informații. Asigură-te că acest contact pe care dorești să-l creezi nu există deja înainte de a crea unul nou.
+jcmsplugin.esn.add-contact.add-to-my-contacts:Adaugă la contactele mele
+jcmsplugin.esn.add-contact.view-contact:      Vizualizează acest contact
+jcmsplugin.esn.add-contact.lbl.check:         Verifică...
+jcmsplugin.esn.add-contact.lbl.create:        Creează un contact nou...
+jcmsplugin.esn.add-contact.lbl.wait:          Verificare în curs...
+jcmsplugin.esn.add-contact.lbl.add:           Adaugă la contactele mele
+jcmsplugin.esn.add-contact.lbl.contact-added: Contactul <b>{0}</b> a fost creat.
+jcmsplugin.esn.add-contact.btn.continue:      Salvează și adaugă un alt contact
+
+jcmsplugin.esn.mcr.request.title:             Adaugă pe {0} la rețeaua ta
+jcmsplugin.esn.mcr.request.lbl.send:          Trimite
+jcmsplugin.esn.mcr.request.info.title1:       De ce să te conectezi?
+jcmsplugin.esn.mcr.request.info.content1:     Adăugarea la contacte a lui {0} îți va permite să-i vizualizezi <strong>profilul complet</strong> și să-i urmărești <strong>activitatea</strong>. De asemenea, {0} va avea acces la <strong>profilul tău complet</strong> și la <strong>activitățile tale</strong>. După ce-l adaugi la contacte, îl/o vei putea <strong>recomanda</strong> pe {0} celorlalți membri ai rețelei tale.
+jcmsplugin.esn.mcr.request.info.title2:       Cum să-l/s-o adaugi la contacte?
+jcmsplugin.esn.mcr.request.info.content2:     Este de ajuns să-i trimiți această invitație lui {0} pentru a-l/a o adăuga la contacte. Imediat ce {0} acceptă invitația ta, va fi adăugat/ă la contactele tale.
+
+jcmsplugin.esn.mcr.request.msg: {0},\n\naș dori să te adaug la contactele mele.\n\n{1}\n
+
+jcmsplugin.esn.mcr.validate.title:            Invitație
+jcmsplugin.esn.mcr.validate.info:             <b>Ce este această invitație?</b><p>{0} ar dori să te adauge la contactele sale. Acceptând această invitație, vei avea acces la {0}, <strong>profilul său complet</strong> și <strong>activitățile sale</strong>. Acesta este un contact reciproc. Acceptând, îi permiți lui {0} să aibă acces la <strong>profilul tău complet</strong> și <strong>activitățile tale</strong>.</p>
+jcmsplugin.esn.mcr.validate.common:           Contactele voastre comune
+jcmsplugin.esn.mcr.validate.common-some:      Unele dintre contactele voastre comune
+jcmsplugin.esn.mcr.validate.lbl.accept:       Acceptă
+jcmsplugin.esn.mcr.validate.lbl.decline:      Refuză
+jcmsplugin.esn.mcr.validate.lbl.close:        Închide
+jcmsplugin.esn.mcr.lbl.confirm-delete:        Ești sigur că dorești să ștergi invitația trimisă lui <strong>{0}</strong>?
+
+jcmsplugin.esn.connect-contact.title:          Conectează contacte
+jcmsplugin.esn.connect-contact.no-contact:     Toate contactele tale sunt conectate la <span class="contact">{0}</span>.
+jcmsplugin.esn.connect-contact.info:           Selectează contactele pe care dorești să le conectezi la <span class="contact">{0}</span>.
+jcmsplugin.esn.connect-contact.lbl.contacts:   Contactele tale
+jcmsplugin.esn.connect-contact.lbl.connect:    Conectează
+
+jcmsplugin.esn.activity.enabled:                 Activitate - Permite urmărirea activității
+
+jcmsplugin.esn.activity.none:                    Nu există activitate
+jcmsplugin.esn.activity.profile.job:             {0} a adăugat funcția <span class="message">{1}</span>
+jcmsplugin.esn.activity.profile.education:       {0} a adăugat formarea <span class="message">{1}</span>
+jcmsplugin.esn.activity.profile.link:            {0} a adăugat linkul {1}
+jcmsplugin.esn.activity.profile.categories:      {0} a completat competențele
+jcmsplugin.esn.activity.profile.categories.add:  {0} și-a actualizat competențele: <span class="message">{1}</span>
+jcmsplugin.esn.activity.profile.categories.add-empty:  {0} și-a actualizat competențele
+jcmsplugin.esn.activity.profile.info:            {0} și-a actualizat informațiile
+jcmsplugin.esn.activity.profile:                 {0} și-a actualizat profilul
+jcmsplugin.esn.activity.contact.profile:         {0} a actualizat profilul lui {1}
+jcmsplugin.esn.activity.contact.note:            {0} a adăugat o notă la {1}
+jcmsplugin.esn.activity.connect-account:         {0} este acum conectat cu {1}
+jcmsplugin.esn.activity.connect:                 {0} a adăugat {1} la contactele sale
+jcmsplugin.esn.activity.ws:                      {0} s-a înscris la spațiul de lucru {1}
+jcmsplugin.esn.activity.create:                  {0} a creat {1}
+jcmsplugin.esn.activity.update:                  {0} a actualizat {1}
+jcmsplugin.esn.activity.delete:                  {0} a șters <span class="message">{1}</span>
+jcmsplugin.esn.activity.create.Publication:      {0} a publicat {1}
+jcmsplugin.esn.activity.create.Event:            {0} a publicat evenimentul {1}
+jcmsplugin.esn.activity.create.CalendarEvent:    {0} a publicat evenimentul {1}
+jcmsplugin.esn.activity.update.CalendarEvent:    {0} a actualizat evenimentul {1}
+jcmsplugin.esn.activity.update.Event:            {0} a actualizat evenimentul {1}
+jcmsplugin.esn.activity.create.Review:           {0} a recenzat {1}
+jcmsplugin.esn.activity.create.FileDocument:     {0} a încărcat  {1}
+jcmsplugin.esn.activity.create.DBComment:        {0} a adăugat un nou comentariu
+jcmsplugin.esn.activity.description-full.create.DBComment:        {0} a adăugat un nou comentariu la {1}
+jcmsplugin.esn.activity.create.DBForumTopic:     {0} a publicat subiectul {1}
+jcmsplugin.esn.activity.create.DBPollVote:       {0} a răspuns la sondaj {1}
+jcmsplugin.esn.activity.create.MicroBlogging:
+jcmsplugin.esn.activity.create.WebPage:          {0} a distribuit {1}
+jcmsplugin.esn.activity.update-pstatus:          {0} a schimbat starea {1} în <span class="message">{2}</span>.
+jcmsplugin.esn.activity.unzip:                   {0} a încărcat fișiere dintr-o arhivă zip {1}
+jcmsplugin.esn.activity.lock:                    {0} a blocat documentul {1}
+jcmsplugin.esn.activity.unlock:                  {0} a eliberat documentul {1}
+jcmsplugin.esn.activity.vote:                    {0} a votat pentru {1}
+jcmsplugin.esn.activity.filter:                  Activitate filtrată
+jcmsplugin.esn.activity.see-activity:            Vezi activitatea
+jcmsplugin.esn.activity.hide-activity:           Ascunde activitatea
+jcmsplugin.esn.activity.delete-activity:         Șterge această activitate
+jcmsplugin.esn.activity.delete-activity-ask:     Sigur dorești să ștergi această activitate?
+jcmsplugin.esn.activity.delete-activity-ask-title:  Șterge activitatea
+jcmsplugin.esn.activity.edit-comment:            Editează comentariul
+jcmsplugin.esn.activity.options-menu-title:      Deschide meniul activității      
+jcmsplugin.esn.activity.comment:                 Comentariu
+jcmsplugin.esn.activity.show-comments:           Arată/ascunde{0,choice,1# comentariul|2# comentariile}
+jcmsplugin.esn.activity.show-previous-activity:   Afișează activități anterioare
+jcmsplugin.esn.activity.hide-previous-activity:  Ascunde activități
+jcmsplugin.esn.activity.lbl.no-activity:         {0} nu are încă nicio activitate.
+jcmsplugin.esn.activity.nextpage:                Vezi mai mult
+
+jcmsplugin.esn.activity-card.vote-action:        Îmi place
+jcmsplugin.esn.activity-card.menu-title:         Deschide meniul acțiunilor
+jcmsplugin.esn.activity-card.menu-alt:           Acțiuni
+jcmsplugin.esn.activity-card.event-attending:    {0} prezent
+jcmsplugin.esn.activity-card.event-invited:      {0} participanți
+jcmsplugin.esn.activity-card.event.show-attendees: Vezi detalii participanți
+jcmsplugin.esn.activity-card.comment-count-title:  Comentarii acces
+
+jcmsplugin.esn.activity.filter.microBlogging:    MicroBlogging
+jcmsplugin.esn.activity.filter.profile:          Actualizare profil
+jcmsplugin.esn.activity.filter.contact:          Adaugă un contact extern
+jcmsplugin.esn.activity.filter.connect:          Conexiuni membru
+jcmsplugin.esn.activity.filter.ws:               Alătură-te unui spațiu de lucru
+jcmsplugin.esn.activity.filter.create:           Adaugă date
+jcmsplugin.esn.activity.filter.update:           Actualizează date
+jcmsplugin.esn.activity.filter.delete:           Șterge date
+jcmsplugin.esn.activity.filter.lock:             Blochează documente
+jcmsplugin.esn.activity.filter.upload:           Încarcă documente
+jcmsplugin.esn.activity.filter.update-pstatus:   Actualizare stare flux de lucru
+jcmsplugin.esn.activity.filter.others:           Alte activități
+jcmsplugin.esn.activity.filter.ws-include:       Restricționează la...
+jcmsplugin.esn.activity.filter.ws-exclude:       Toate cu excepția...
+
+jcmsplugin.esn.activity.filter.editor:               Filtru activitate
+jcmsplugin.esn.activity.filter.editor.link:          Editează filtre
+jcmsplugin.esn.activity.filter.editor.steps.0:       Tip de activitate
+jcmsplugin.esn.activity.filter.editor.steps.1:       Filtrare avansată
+jcmsplugin.esn.activity.filter.editor.steps-intro.0: Selectează tipurile de activitate de afișat în fluxul de activități.
+jcmsplugin.esn.activity.filter.editor.steps-intro.1: Poți selecta alte criterii pentru a filtra fluxul de activități.
+
+jcmsplugin.esn.activity.share.remove-webpage: Partajează o altă pagină
+jcmsplugin.esn.activity.share.webpage-next-image: Comută la imaginea următoare
+jcmsplugin.esn.activity.share.webpage-prev-image: Comută la imaginea anterioară
+jcmsplugin.esn.activity.form-tab.document: Document
+jcmsplugin.esn.activity.form-tab.microblogging: Mesaj
+jcmsplugin.esn.activity.form-tab.webpage: Pagină web
+
+icon.jcmsplugin-esn-activity-share-webpage-img-prev: Anterior
+icon.jcmsplugin-esn-activity-share-webpage-img-next: Următorul
+icon.jcmsplugin-esn-activity-share-webpage-remove: Șterge
+
+jcmsplugin.esn.lbl.communities:                  Comunități
+jcmsplugin.esn.lbl.common-communities:           Comunități obișnuite
+jcmsplugin.esn.lbl.communities.info:             Creat {0}. {1,choice,0#Niciun membru|1#1 membru|2#{1,number,integer} membri}. {2,choice,0#Niciun conținut|1#1 conținut|2#{2,number,integer} conținuturi}.
+
+jcmsplugin.esn.status.title:            Actualizează-ți mesajul
+jcmsplugin.esn.status.intro:            Indică ce faci, unde te afli, starea de spirit, ... ?
+jcmsplugin.esn.status.mail:             Îți poți actualiza profilul pe e-mail trimițând un mesaj la
+jcmsplugin.esn.status.msg.singleton:    {0} are deja o stare.
+
+jcmsplugin.esn.link.lbl.name:           Nume site
+jcmsplugin.esn.link.lbl.url:            URL
+jcmsplugin.esn.link.lbl.description:    Descriere
+jcmsplugin.esn.link.msg.empty-title:    „Nume site” este obligatoriu.
+jcmsplugin.esn.link.msg.empty-url:      „URL-ul” este obligatoriu.
+jcmsplugin.esn.link.msg.bad-url:        Câmpul „URL” are formatul greșit.
+
+jcmsplugin.esn.lbl.notes:     Note
+jcmsplugin.esn.lbl.notes.add: Adaugă o notă
+jcmsplugin.esn.lbl.notes.add-link: Adaugă o notă...
+
+jcmsplugin.esn.directory.lbl.view-profile:      Vizualizează profilul complet
+jcmsplugin.esn.directory.lbl.expert-directory:  Director expert
+
+jcmsplugin.esn.directory.app.nav-competencies: Competențe
+jcmsplugin.esn.directory.app.breadcrumb.root: Competențe
+jcmsplugin.esn.directory.app.competence.expertise.filter.add: Filtrează în funcție de această competență
+jcmsplugin.esn.directory.app.competence.expertise.filter.node.add: Filtrează în funcție de această competență și vezi subcompetențele
+jcmsplugin.esn.directory.app.competence.expertise.filter.remove: Elimină acest filtru de competență
+jcmsplugin.esn.directory.app.competence.expertise.filters.add: Adaugă această competență la filtre
+jcmsplugin.esn.directory.app.competence.expertise.filters.remove: Elimină această competență din filtre
+jcmsplugin.esn.directory.app.competence.expertise.is-in-filters: Această competență este în filtrele tale. Elimin-o cu butonul asociat
+jcmsplugin.esn.directory.app.competence.expertise.node.is-in-filters: Această competență este în filtrele tale. Elimin-o cu butonul asociat pentru a vedea subcompetențele
+
+jcmsplugin.esn.directory.app.context-menu-label: Meniu context competențe
+jcmsplugin.esn.directory.app.competence-action.add: Adaugă competențe...
+jcmsplugin.esn.directory.app.competence-action.add-sub: Adaugă subcompetențe...
+jcmsplugin.esn.directory.app.competence-action.add-prompt: Introdu denumiri de competențe noi (separate prin virgulă):
+jcmsplugin.esn.directory.app.competence-action.rename-prompt: Introdu noua denumire a competenței
+jcmsplugin.esn.directory.app.competence-action.move-to: Mută la...
+jcmsplugin.esn.directory.app.competence-action.modal.move-to.title: Mută la
+jcmsplugin.esn.directory.app.competence-action.modal.move-to.op-action: Mută
+
+jcmsplugin.esn.expert-dir.title:                  Director expert
+jcmsplugin.esn.expert-dir.lbl.home:               Acasă
+jcmsplugin.esn.expert-dir.lbl.all:                Toți experții
+jcmsplugin.esn.expert-dir.lbl.expert-count:       {0,choice,0#Niciun rezultat|1#{0} rezultat|2#{0} rezultate}
+jcmsplugin.esn.expert-dir.lbl.related.connexe:    Închide competențe:
+jcmsplugin.esn.expert-dir.lbl.related.others:     Alte competențe:
+jcmsplugin.esn.expert-dir.msg.home:               Bun-venit la Directorul experților. Fă clic pe bara de navigare din partea din stânga pentru a lista experții pentru o anumită competență.
+jcmsplugin.esn.expert-dir.msg.no-expert.all:      Nu există rezultate pentru competența <i>{0}</i>.
+jcmsplugin.esn.expert-dir.msg.no-expert.account:  Nu există membri în competența <i>{0}</i>.
+jcmsplugin.esn.expert-dir.msg.no-expert.contact:  Nu există contacte pentru competența <i>{0}</i>.
+jcmsplugin.esn.expert-dir.lbl.expert-search:      Caută în funcție de competențe
+jcmsplugin.esn.expert-dir.lbl.filter:             Filtre
+jcmsplugin.esn.expert-dir.lbl.filter.info:        Fă clic pe pictogramele {0} pentru a filtra în funcție de o competență.
+jcmsplugin.esn.expert-dir.lbl.filter.add:         Filtrează în funcție de această competență
+jcmsplugin.esn.expert-dir.lbl.filter.remove:      Elimină acest filtru
+jcmsplugin.esn.expert-dir.lbl.edit-expertises:    Gestionează competențe
+
+jcmsplugin.esn.expertise.root-cat-forbidden:      Nu poți șterge sau edita această categorie, deoarece este utilizată de plugin-ul ESN pentru stocarea competențelor. Doar un administrator sau un membru autorizat o poate edita sau șterge.
+jcmsplugin.esn.expertise.expertise-cat-forbidden: Această categorie este utilizată drept competență de plugin-ul ESN. Se utilizează deja de un alt membru. Doar un administrator sau un membru autorizat o poate edita.
+
+jcmsplugin.esn.ctxmenu.mbr.profile:  Vizualizează profilul
+
+$id.jcmsplugin.esn.portlet.header:              ESN - Titlu
+$id.jcmsplugin.esn.portlet.actions:             ESN - Acțiuni
+$id.jcmsplugin.esn.portlet.connection-requests: ESN - Solicitări conexiune
+$id.jcmsplugin.esn.portlet.suggestions:         ESN - Sugestii
+$id.jcmsplugin.esn.portlet.common-connections:  ESN - Contacte obișnuite
+$id.jcmsplugin.esn.portlet.connections:         ESN - Contacte
+$id.jcmsplugin.esn.portlet.links:               ESN - Linkuri
+$id.jcmsplugin.esn.portlet.activities:          ESN - Activități
+$id.jcmsplugin.esn.portlet.network-activities:  ESN - Activități rețea
+$id.jcmsplugin.esn.portlet.publications:        ESN - Publicații
+$id.jcmsplugin.esn.portlet.calendar:            ESN - Calendar
+$id.jcmsplugin.esn.portlet.presentation:        ESN - Prezentare
+$id.jcmsplugin.esn.portlet.workspaces:          ESN - Spații de lucru
+$id.jcmsplugin.esn.portlet.expertise:           ESN - Competențe
+$id.jcmsplugin.esn.portlet.contact-notes:       ESN - Contacte - Note
+$id.jcmsplugin.esn.portlet.contact-calendar:    ESN - Contacte - Calendar
+$id.jcmsplugin.esn.portlet.contact-referrers:   ESN - Contacte - Referințe
+$id.jcmsplugin.esn.portlet.contacts:            ESN - Contacte
+$id.jcmsplugin.esn.portlet.jobs:                ESN - Poziții
+$id.jcmsplugin.esn.portlet.educations:          ESN - Studii
+
+jcmsplugin.esn.portlet-mbr-status.no-mbr:       Nu există membri
+
+jcmsplugin.esn.birthday.portlet.day:  {0,choice,0#Astăzi|1#Mâine|2#În {0} zile}
+jcmsplugin.esn.birthday.portlet.none: Nicio zi de naștere
+jcmsplugin.esn.birthday-reminder.enabled: Activează memento zi de naștere
+jcmsplugin.esn.birthday-happy: La mulți ani!
+
+jcmsplugin.esn.microblogging.share:               Partajează
+jcmsplugin.esn.microblogging.modify:            Actualizează
+jcmsplugin.esn.microblogging.label.microblogging: MicroBlogging
+jcmsplugin.esn.microblogging.menu.message:        Mesaj
+jcmsplugin.esn.microblogging.title.create-message:Publică un mesaj
+jcmsplugin.esn.microblogging.delete-confirm:      Dorești să ștergi ultimul tău mesaj?
+jcmsplugin.esn.microblogging.microblogging-prompt:Ce faci?
+jcmsplugin.esn.microblogging.update-message:      Editează acest mesaj
+jcmsplugin.esn.microblogging.delete-message:      Șterge acest mesaj
+jcmsplugin.esn.microblogging.member-microblogging-title: Microblogging-ul lui {0}
+jcmsplugin.esn.microblogging.warn.existing-webpage-ws: Această pagină web există deja în spațiul de lucru.
+jcmsplugin.esn.microblogging.warn.existing-webpage-ws-other: Această pagină web a fost publicată de {0} la {1} în spațiul de lucru: {2}.
+jcmsplugin.esn.microblogging.warn.existing-webpage-ws.btn: Pagina web de acces
+jcmsplugin.esn.microblogging.warn.bad-url-format: URL-ul furnizat nu este valid.
+jcmsplugin.esn.microblogging.warn.missing-url: Furnizați un URL.
+jcmsplugin.esn.microblogging.warn.missing-url-meta: Datele de pe site-ul web nu au putut fi încărcate, trebuie să furnizați informații manual.
+
+jcmsplugin.esn.collaborativespace.private-home.connections: Contactele tale din acest spațiu
+
+jcmsplugin.esn.expert-directory.open-access: Acces deschis la directorul de experți
+jcmsplugin.esn.expert-directory.open-access.help: Directorul de experți nu necesită ca utilizatorul să fie conectat pentru a accesa directorul de experți atunci când accesul deschis este activat.
+jcmsplugin.esn.member-profile.open-access: Acces deschis la profilul membrului
+jcmsplugin.esn.member-profile.open-access.help: Utilizatorul nu trebuie să fie conectat pentru a accesa profilul unui membru atunci când accesul deschis este activat.
+jcmsplugin.esn.member-profile.event-intro: {0} participă la eveniment
+jcmsplugin.esn.member-profile.event-intro.me: Tu participi la eveniment
+
+jcmsplugin.esn.contact-by-email.title: Contactează prin e-mail...
+jcmsplugin.esn.contact-by-email.title2: Contactează prin e-mail ({0})...
+jcmsplugin.esn.contact-by-sms.title: Contactează prin SMS...
+jcmsplugin.esn.contact-by-phone.title: Contactează prin telefon...
+jcmsplugin.esn.contact-by-other.title: Contactează prin {0}...
+jcmsplugin.esn.call-at-number.title: Apelează la {0}...
+jcmsplugin.esn.profile.contact.email: E-mail
+jcmsplugin.esn.profile.full.contact.sms: SMS
+jcmsplugin.esn.profile.contact.webchat: WebChat
+
+# ExtraData
+extra.Category.jcmsplugin.esn.groups: ESN - Grupuri asociate
+
+# Publish Menu
+jcmsplugin.esn.publish-menu.contact:       Contact
+jcmsplugin.esn.publish-menu.microblogging: Mesaj
+
+# Alerts
+alert.name.jcmsplugin-esn : Rețea de socializare
+alert.name.jcmsplugin-esn.follower:             Urmăritor nou
+alert.name.jcmsplugin-esn.connection:           Adaugă un contact nou
+alert.name.jcmsplugin-esn.connection-request:   Solicitare conexiune
+alert.name.jcmsplugin-esn.connection-accepted:  Solicitare de adăugare la contacte acceptată
+alert.name.jcmsplugin-esn.connection-declined:  Solicitare de adăugare la contacte refuzată
+alert.name.jcmsplugin-esn.birthday-reminder:    Memento zi de naștere
+
+alert.msg.jcmsplugin-esn.follower.title:                        Urmăritor nou
+alert.msg.jcmsplugin-esn.follower.short-description:            {author} îți urmărește acum activitatea.
+
+alert.msg.jcmsplugin-esn.connection.title:                      Conexiune nouă
+alert.msg.jcmsplugin-esn.connection.short-description:          {author} te-a a adăugat la contactele sale.
+
+alert.msg.jcmsplugin-esn.connection-request.title:              Invitație pentru adăugare la contacte
+alert.msg.jcmsplugin-esn.connection-request.short-description:  {author} ți-a trimis o invitație pentru adăugare la contacte.
+alert.msg.jcmsplugin-esn.connection-request.description:        <p>{author} ți-a trimis o invitație pentru adăugare la contacte.</p> {accept} {showProfile}
+jcmsplugin.esn.connection-request.mail:                         {0} ți-a trimis o invitație pentru adăugare la contacte.
+
+alert.msg.jcmsplugin-esn.connection-accepted.title:             Invitație acceptată
+alert.msg.jcmsplugin-esn.connection-accepted.short-description: {author} ți-a acceptat invitația. Acum faceți parte din aceeași rețea de contacte.
+
+alert.msg.jcmsplugin-esn.connection-declined.title:             Invitație refuzată
+alert.msg.jcmsplugin-esn.connection-declined.short-description: {author} ți-a refuzat invitația.
+
+alert.msg.jcmsplugin-esn.birthday-reminder.title:               Memento zi de naștere
+alert.msg.jcmsplugin-esn.birthday-reminder.short-description:   Următoarele zile de naștere: {birthday-list}
+alert.msg.jcmsplugin-esn.birthday-reminder.description:         <p>În curând va fi ziua de naștere a unor membri din rețeaua ta:</p>{birthday-list}
+alert.msg.jcmsplugin-esn.birthday-reminder.txt.today:    Astăzi:
+alert.msg.jcmsplugin-esn.birthday-reminder.txt.tomorrow: Mâine:
+alert.msg.jcmsplugin-esn.birthday-reminder.txt.later:    În 7 zile ({0}):
+
+# ------------------------------------------------------------
+#  Recommendation
+# ------------------------------------------------------------
+alert.name.recommendation.esn-member-recommendation: Recomandare de conexiune
+alert.msg.recommendation.esn-member-recommendation.title:      Recomandare la {data}
+alert.msg.recommendation.esn-member-recommendation.short-description: {author} îți recomandă să adaugi pe {data} la contactele tale. {recoContent}
+alert.msg.recommendation.esn-member-recommendation.description: <p>{author} îți recomandă să adaugi pe {data} la contactele tale.</p> <p>{recoContent}</p>
+alert.msg.recommendation.esn-member-recommendation.reply.short-description: {author} a răspuns la recomandarea ta în data de {data}: {replyRecommendation} {data.url} {reply}
+alert.msg.recommendation.esn-member-recommendation.reply.description: <p>{author} a răspuns la recomandarea ta în data de {data}:</p><hr/><p>{replyRecommendation}</p><hr/> {recoContent} {reply}
+jcmsplugin.esn.recommendation.Member: Recomandă pe <b>{0}</b> altor membri.
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From MemberCategories-templates.xml
+types.MemberCategories.templates.query.default.label: Șablon implicit
+types.MemberCategories.templates.query.default.description: Șablonul implicit pentru această publicație
+types.MemberCategories.templates.full.default.label: Șablon implicit
+types.MemberCategories.templates.box.default.description: Șablonul implicit pentru această publicație
+types.MemberCategories.templates.box.default.label: Șablon implicit
+types.MemberCategories.templates.edit.default.description: Șablonul implicit pentru această publicație
+types.MemberCategories.templates.edit.default.label: Șablon implicit
+types.MemberCategories.templates.full.default.description: Șablonul implicit pentru această publicație
+
+# From MemberCategories.xml
+types.MemberCategories.label: ESN - Competențe
+types.MemberCategories.title.label: Titlu
+
+# From MemberEducation-templates.xml
+types.MemberEducation.templates.query.default.description: Șablonul implicit pentru această publicație
+types.MemberEducation.templates.full.default.description: Șablonul implicit pentru această publicație
+types.MemberEducation.templates.full.default.label: Șablon implicit
+types.MemberEducation.templates.box.default.label: Șablon implicit
+types.MemberEducation.templates.query.default.label: Șablon implicit
+types.MemberEducation.templates.edit.default.label: Șablon implicit
+types.MemberEducation.templates.box.default.description: Șablonul implicit pentru această publicație
+types.MemberEducation.templates.edit.default.description: Șablonul implicit pentru această publicație
+
+# From MemberEducation.xml
+types.MemberEducation.fields.endDate.label: Data de finalizare
+types.MemberEducation.label: ESN - Studii
+types.MemberEducation.title.label: Titlu
+types.MemberEducation.fields.degree.label: Diplomă
+types.MemberEducation.fields.startDate.label: Data de începere
+types.MemberEducation.fields.site.label: Site
+types.MemberEducation.fields.place.label: Localizare
+types.MemberEducation.fields.trainingCenter.label: Centrul de formare
+types.MemberEducation.fields.description.label: Descriere
+
+# From MemberJob-templates.xml
+types.MemberJob.templates.box.default.description: Șablonul implicit pentru această publicație
+types.MemberJob.templates.box.default.label: Șablon implicit
+types.MemberJob.templates.full.default.label: Șablon implicit
+types.MemberJob.templates.query.default.label: Șablon implicit
+types.MemberJob.templates.edit.default.description: Șablonul implicit pentru această publicație
+types.MemberJob.templates.edit.default.label: Șablon implicit
+types.MemberJob.templates.full.default.description: Șablonul implicit pentru această publicație
+types.MemberJob.templates.query.default.description: Șablonul implicit pentru această publicație
+
+# From MemberJob.xml
+types.MemberJob.title.label: Funcția
+types.MemberJob.fields.startDate.label: Data de începere
+types.MemberJob.fields.place.label: Localizare
+types.MemberJob.label: ESN - Funcție
+types.MemberJob.fields.description.label: Descriere
+types.MemberJob.fields.organization.label: Organizația
+types.MemberJob.fields.endDate.label: Data de finalizare
+types.MemberJob.fields.site.label: Site web
+
+# From MemberProfile-templates.xml
+types.MemberProfile.templates.edit.default.label: Șablon implicit
+types.MemberProfile.templates.box.default.label: Șablon implicit
+types.MemberProfile.templates.full.default.label: Șablon implicit
+types.MemberProfile.templates.full.default.description: Șablonul implicit pentru această publicație
+types.MemberProfile.templates.fullold.default.label: Șablon implicit vechi (<6.2)
+types.MemberProfile.templates.query.default.label: Șablon implicit
+types.MemberProfile.templates.editFront.default.label: Șablon de editare Front-office.
+types.MemberProfile.templates.edit.default.description: Șablonul implicit pentru această publicație
+types.MemberProfile.templates.box.default.description: Șablonul implicit pentru această publicație
+types.MemberProfile.templates.query.default.description: Șablonul implicit pentru această publicație
+
+# From MemberProfile.xml
+types.MemberProfile.label: ESN - Profil
+types.MemberProfile.fields.dateOfBirth.label: Data nașterii
+types.MemberProfile.title.label: Titlu
+types.MemberProfile.fields.introduction.label: Introducere
+types.MemberProfile.fields.interest.label: Domenii de interes
+types.MemberProfile.fields.dateOfArrival.label: Data sosirii
+
+# From MicroBlogging.xml
+types.MicroBlogging.fields.text.label: Text
+types.MicroBlogging.label: MicroBlogging
+types.MicroBlogging.title.label: Titlu
+
+# From PortletBirthday-templates.xml
+types.PortletBirthday.templates.box.default.label: Șablon tablou de bord
+types.PortletBirthday.templates.full.default.label: Șablon aplicație
+
+# From PortletBirthday.xml
+types.PortletBirthday.fields.relationshipFilter.description: Dorești să afișezi doar membrii din contactele membrul conectat?
+types.PortletBirthday.fields.relationshipFilter.onLabel: Da
+types.PortletBirthday.fields.workspaceMembers.label: Membri spațiu de lucru
+types.PortletBirthday.fields.relationshipFilter.label: Filtrare după conexiuni
+types.PortletBirthday.fields.workspaceMembers.description: Dorești să afișezi doar membrii din spațiul de lucru curent?
+types.PortletBirthday.fields.workspaceMembers.offLabel: Nu
+types.PortletBirthday.fields.workspaceMembers.onLabel: Da
+types.PortletBirthday.label: Portlet zi de naștere
+types.PortletBirthday.fields.relationshipFilter.offLabel: Nu
+types.PortletBirthday.title.label: Titlu
+types.PortletBirthday.description: Afișează zilele de naștere viitoare ale contactelor tale
+
+# From PortletMemberActivity-templates.xml
+types.PortletMemberActivity.templates.box.default.label: Șablon tablou de bord
+types.PortletMemberActivity.templates.full.default.label: Șablon aplicație
+types.PortletMemberActivity.templates.full.card.label: Șablon carduri aplicație
+types.PortletMemberActivity.templates.box.card.label: Șablon carduri tablou de bord
+types.PortletMemberActivity.templates.jmobile.default.label: Șablon implicit
+
+# From PortletMemberActivity.xml
+types.PortletMemberActivity.fields.activityMode.label: Activități afișate
+types.PortletMemberActivity.fields.activityMode.labelList: Activitatea membrilor urmăriți în toate spațiile de lucru | Activitatea membrilor urmăriți în spațiul de lucru I aparțin | Activitatea din spațiile de lucru | Activitatea din spațiul de lucru curent
+types.PortletMemberActivity.fields.showComments.label: Arată comentariile
+types.PortletMemberActivity.fields.showMedia.label: Afișează fișiere media
+types.PortletMemberActivity.fields.filters.label: Filtre
+types.PortletMemberActivity.fields.defaultPageSize.label: Numărul activităților afișate
+types.PortletMemberActivity.fields.showComments.onLabel: Da
+types.PortletMemberActivity.fields.showMedia.onLabel: Da
+types.PortletMemberActivity.fields.showComments.offLabel: Nu
+types.PortletMemberActivity.fields.showAbstract.onLabel: Da
+types.PortletMemberActivity.fields.showMedia.offLabel: Nu
+types.PortletMemberActivity.fields.showAbstract.label: Arată Rezumat
+types.PortletMemberActivity.fields.showAbstract.offLabel: Nu
+types.PortletMemberActivity.label: Portlet activitate membru
+types.PortletMemberActivity.title.label: Titlu
+types.PortletMemberActivity.fields.displayAllEvent.label:       Afișează toate evenimentele din calendar
+types.PortletMemberActivity.fields.displayAllEvent.onLabel:     Da
+types.PortletMemberActivity.fields.displayAllEvent.offLabel:    Nu
+types.PortletMemberActivity.fields.displayAllEvent.description: Dacă „Da”, toate evenimentele vor fi afișate pe perete (Filtrate în funcție de drepturile disponibile), dacă „Nu”, vor fi afișate doar evenimentele cu înregistrare gratuită și evenimentul de care aparține membrul
+types.PortletMemberActivity.description: Afișează activități
+
+# From PortletMemberProfile-templates.xml
+types.PortletMemberProfile.templates.full.default.label: Șablon aplicație
+types.PortletMemberProfile.templates.box.default.label: Șablon tablou de bord
+
+# From PortletMemberProfile.xml
+types.PortletMemberProfile.fields.showSuggestions.offLabel: Nu
+types.PortletMemberProfile.fields.showConnectionRequests.onLabel: Da
+types.PortletMemberProfile.label: Portlet profil
+types.PortletMemberProfile.fields.showConnectionRequests.offLabel: Nu
+types.PortletMemberProfile.fields.showSuggestions.onLabel: Da
+types.PortletMemberProfile.fields.showConnectionRequests.label: Arată solicitările de conectare
+types.PortletMemberProfile.title.label: Titlu
+types.PortletMemberProfile.fields.showSuggestions.label: Afișează sugestii
+types.PortletMemberProfile.description: Afișează profilul membrilor și cererile și sugestiile de contact
+
+# From PortletMemberStatus-templates.xml
+types.PortletMemberStatus.templates.box.default.label: Șablon tablou de bord
+types.PortletMemberStatus.templates.full.default.label: Șablon aplicație
+
+# From PortletMemberStatus.xml
+types.PortletMemberStatus.fields.workspaceMembers.description: Afișează doar activitatea membrilor din spațiul de lucru curent?
+types.PortletMemberStatus.label: Portlet stare membru
+types.PortletMemberStatus.fields.workspaceMembers.label: Membri spațiu de lucru
+types.PortletMemberStatus.fields.workspaceMembers.offLabel: Nu
+types.PortletMemberStatus.fields.workspaceMembers.onLabel: Da
+types.PortletMemberStatus.title.label: Titlu
+types.PortletMemberStatus.description: Afișează stările conexiunilor tale sau starea membrului spațiului de lucru
+
+# Analytics
+ui.analytics.ESNAgent.name:                         Social
+ui.analytics.ESNAgent.report.network:               Rețea de socializare
+ui.analytics.ESNAgent.report.network.h:             Densitate rețea de socializare.
+ui.analytics.ESNAgent.report.new-profile:           Profiluri noi
+ui.analytics.ESNAgent.report.new-profile.h:         Noi profiluri au fost create.
+ui.analytics.ESNAgent.report.account-profile-count: Profiluri cont
+ui.analytics.ESNAgent.report.contact-profile-count: Profiluri contact
+ui.analytics.ESNAgent.report.connection-ratio:      Raport conectare pe membru
+ui.analytics.ESNAgent.report.follower-ratio:        Raport urmăritori pe membru
+ui.analytics.ESNAgent.report.following-ratio:       Raport urmăriri pe membru
+ui.analytics.ESNAgent.report.activity-count:        Activitate
+ui.analytics.ESNAgent.report.activity-count.h:      Număr activități
+ui.analytics.ESNAgent.report.activity-top:          Activitate de top 
+ui.analytics.ESNAgent.report.activity-top.h:        Defalcare activitate
+ui.analytics.ESNAgent.report.network:               Relații
+ui.analytics.ESNAgent.report.network.h:             Rata relațiilor din rețeaua de socializare.
+ui.analytics.ESNAgent.report.new-profile:           Profiluri noi
+ui.analytics.ESNAgent.report.new-profile.h:         Noi profiluri au fost create.
+ui.analytics.ESNAgent.report.account-profile-count: Cont
+ui.analytics.ESNAgent.report.contact-profile-count: Contact
+ui.analytics.ESNAgent.report.profile-completeness:   Completudinea profilului
+ui.analytics.ESNAgent.report.profile-completeness.h: Procentul de completudine pentru profilurile membrilor.
+ui.analytics.ESNAgent.report.connection-ratio:      Media relațiilor membrilor
+ui.analytics.ESNAgent.report.follower-ratio:        Media urmăririlor membrilor
+ui.analytics.ESNAgent.report.following-ratio:       Media urmăritorilor membrilor
+ui.analytics.ESNAgent.report.microblogging-count:   MicroBlogging
+ui.analytics.ESNAgent.report.microblogging-count.h: Numărul mesajelor MicroBlogging publicate.
+
+ # From plugin.xml
+types.PortletMemberActivity.templates.jcmsplugin.virtualdesktop.editInline.default.label: Șablon utilizat în Virtual Desktop în momentul editării unui serviciu din activitatea membrului.
+types.AbstractPortletSkinable.templates.box.esnSkin.label: Fațetă ESN
+types.AbstractPortletSkinable.templates.box.esnSkin.description: O fațetă rotunjită (CSS)
+
+# ----------------------------------------------------------------------
+# SmartPhone
+# ----------------------------------------------------------------------
+
+jcmsplugin.smartphone.service.activity: Activitate
+jcmsplugin.smartphone.workspace-service.PortletMemberActivity: Activități
+jcmsplugin.esn.smartphone.lbl.presentation: Prezentare
+jcmsplugin.esn.smartphone.lbl.expertises: Competențe
+jcmsplugin.esn.smartphone.lbl.member.activity: Activitate
+jcmsplugin.esn.smartphone.lbl.activity.microblogging.text.placeholder: Tastează mesajul tău aici...
+jcmsplugin.esn.smartphone.lbl.activity.microblogging.add-message: Adaugă un mesaj
+
+jcmsplugin.smartphone.shareurl.label.esn: MicroBlogging
+
+# Microblogging icon label
+jcmsplugin.esn.smartphone.microblogging.camera : Cameră foto
+jcmsplugin.esn.smartphone.microblogging.galery : Galerie foto
+
+# ----------------------------------------------------------------------
+# OpenApi
+# ----------------------------------------------------------------------
+acl.resource.admin/work/canManageExpertiseCategory: ESN - Dreptul de a gestiona categoriile de competențe
+acl.resource.plugins: Plugin-uri
+acl.resource.plugins/esn: ESN
+acl.resource.plugins/esn/openapi: API deschis
+acl.resource.plugins/esn/openapi/anyActivity: Creează orice activități
+acl.resource.plugins/esn/openapi/anyActivity.h: Activează crearea oricăror activități (orice membru poate fi autorul unei activități)
+acl.resource.plugins/esn/openapi/activity: Creează o activitate personală
+acl.resource.plugins/esn/openapi/activity.h: Activează crearea de activități personale pentru membri (membrul conectat va fi autorul activității)
+doc.rest.rsrc-meth.ActivityResource: GET<br/>POST<br/>DELETE
+doc.rest.rsrc-desc./plugins/esn/activities: Metodă POST: Listă de activități cu următorii parametri: <br/> <ul><li>membru: Membru utilizat pentru a verifica drepturile de lectură (forțat la membrul conectat, dacă acesta nu are ACL „Creează orice activități”)</li><li>mod: o instanță a MemberActivityMode: <ul><li>FOLLOWED_MEMBERS</li><li>FOLLOWED_MEMBERS_WS</li><li>WORKSPACE_ACTIVITIES</li><li>MEMBER_WORKSPACE_ACTIVITIES</li><li>MEMBER_ACTIVITIES</li></ul></li><li>spațiu de lucru: spațiul de lucru utilizat pentru căutare </li><li>activityMember: membrul care este autor al activităților</li><li>startActivityDate: data de început a căutării</li><li>pageSize: implicit 10</li><ul>
+doc.rest.rsrc-desc./plugins/esn/activities/followedMembers/{memberId}: Metodă GET: Listă de activități ale membrilor urmată de membrul furnizat.<br/>Membrul utilizat pentru drepturile de lectură este membrul furnizat numai dacă membrul conectat are ACT „Creează orice activități”, în caz contrar, este membrul conectat.<br/>Personalizarea acestui punct final trebuie efectuată prin punctul final al activităților.
+doc.rest.rsrc-desc./plugins/esn/activities/followedMembersWs/{memberId}:Metodă GET: Listă de activități ale membrilor urmată de membrul furnizat, dar numai n spațiile de lucru ale membrului.<br/>Membrul utilizat pentru drepturile de lectură este membrul furnizat numai dacă membrul conectat are ACT „Creează orice activități”, în caz contrar, este membrul conectat.<br/>Personalizarea acestui punct final trebuie efectuată prin punctul final al activităților.
+doc.rest.rsrc-desc./plugins/esn/activities/member/{memberId}: Metodă GET: Listă de activități ale membrilor furnizați.<br/>Membrul utilizat pentru drepturile de lectură este membrul furnizat numai dacă membrul conectat are ACT „Creează orice activități”, în caz contrar, este membrul conectat.<br/>Personalizarea acestui punct final trebuie efectuată prin punctul final al activităților.
+doc.rest.rsrc-desc./plugins/esn/activities/memberWorspaces/{memberId}: Metodă GET: Listă de activități ale spațiilor de lucru ale membrilor furnizați.<br/>Membrul utilizat pentru drepturile de lectură este membrul furnizat numai dacă membrul conectat are ACT „Creează orice activități”, în caz contrar, este membrul conectat.<br/>Personalizarea acestui punct final trebuie efectuată prin punctul final al activităților.
+doc.rest.rsrc-desc./plugins/esn/activities/workspace/{workspaceId}: Metodă GET: Listă de activități ale membrilor furnizați.<br/>Membrul utilizat pentru drepturile de lectură este membrul furnizat numai dacă membrul conectat are ACT „Creează orice activități”, în caz contrar, este membrul conectat.<br/>Personalizarea acestui punct final trebuie efectuată prin punctul final al activităților.
+doc.rest.rsrc-desc./plugins/esn/activity/{id}: Metoda GET: obținere MemberActivity după id<br/> Metoda POST: actualizează o activitate (cu aceleași câmpuri ca pentru creație<br/> Metoda DELETE: șterge o activitate
+doc.rest.rsrc-desc./plugins/esn/activity: Metodă POST: creează o activitate <br/> parametri:<ul><li>proprietate: OBLIGATORIU - proprietate utilizate pentru această activitate</li><li>membru: OBLIGATORIU - membrul activității (forțat la membrul conectat dacă acesta nu are ACL „Creează orice activități”)</li><li>date: legate de datele de activitate</li><li>mesaj: mesaj suplimentar </li><li>spațiu de lucru: spațiu de lucru pentru activitate (dacă este necompletat, dacă s-au furnizat date, spațiul de lucru pentru date va fi utilizat.)</li><ul>
+

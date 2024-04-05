@@ -1,0 +1,56 @@
+// Include "generated file" message for CSS output
+/* ------------------------------------------------------------------------- */
+/*  This file has been automatically generated from cs-white.less            */
+/* ------------------------------------------------------------------------- */
+
+// Include variables and mixins
+@import "../../../../css/jalios/core/init.less"; // Use init-mixins.less if more mixins are required 
+
+// -------------------------------------------------------------------
+// PLUGINS LESS VARIABLES
+// -------------------------------------------------------------------
+@cs-theme-color: #FFFFFF;
+
+// Hook for JCMS
+@import "../../../../css/plugin.less";
+
+.cs-theme-cs-white {
+  @import "theme.less";
+  @import "light-theme.less";
+
+  // FIX: cs-theme-cs-white + no custom image
+  #cs-header:not(.cs-custom-header) {
+    #cs-header-tabs {
+      UL.nav-tabs > LI {
+        // make text readable on white background
+        &, &.nav-admin {
+          > A {
+            color: #555555; // as in v6.6
+            &:active,
+            &:hover,
+            &:focus {
+              color: white;
+            }
+          }
+        }
+        // change color of active tab
+        &.active,
+        &.active-child {
+           > A {
+            &:after {
+              background-color: #DDD;
+            }
+          }
+        }
+      }
+    }
+  
+    UL.nav-tabs {
+      // Add tabs border
+      border-bottom: 1px solid #ddd;
+      // Add tabs background
+      background: rgba(220, 220, 220, 0.1);
+    }
+  }
+}
+

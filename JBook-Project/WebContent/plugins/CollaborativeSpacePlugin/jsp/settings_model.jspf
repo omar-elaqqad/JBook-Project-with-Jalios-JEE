@@ -1,0 +1,25 @@
+<%@page import="com.jalios.util.Util"%>
+<%@page import="com.jalios.jcms.taglib.settings.impl.BooleanSettings"%>
+<%@page import="com.jalios.jcms.taglib.settings.impl.EnumerateSettings"%>
+<div class="row">
+  <div class="col-xs-12 col-lg-7">
+  <% if(!csHandler.isModel() && !csHandler.canChooseSyncMode()){ %>
+    <div class="model-locked-message">
+	    <%= glp("jcmsplugin.collaborativespace.modelSyncMode.locked.message",encodeForHTML(csHandler.getCSPModelTitle()))%>
+	  
+	    <% if(loggedMember.canWorkOn(csHandler.getCSPModel())){ %>
+	      <a class="btn btn-default model-link" href="<%= csHandler.getCSPModel().getDisplayUrl(userLocale) %>" target="_blank"><%= glp("jcmsplugin.collaborativespace.parameters.model.link")%></a>
+	    <% } %>
+	  </div>
+  <% }else{ %>
+     <%-- Typologie & Model --%> 
+      <% request.setAttribute("display-mode", "field-vertical"); %>
+      <% request.setAttribute("display-multiple-typo", true); %>
+      <jalios:include jsp="plugins/CollaborativeSpacePlugin/jsp/doCSModelSelection.jsp" />
+      <% request.removeAttribute("display-mode"); %>
+      <% request.removeAttribute("display-multiple-typo"); %>
+      <% request.setAttribute("field-vertical", true); %>
+     
+  <% } %>
+  </div>
+</div>

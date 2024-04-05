@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "classpath://org/hibernate/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="generated.DBCommentRevision" table="G_DBCOMMENTREVISION">
+    <cache usage="read-write" />  
+    <id name="rowId" column="rowId">
+      <generator class="native"/>
+    </id>
+    <property name="revDate" not-null="true" index="IG_DBCOMMENTREVISION_REVDATE" />
+    <property name="revAuthorId" length="32" />
+    <property name="revDataId" column="revDataId" not-null="true" index="IG_DBCOMMENTREVISION_REVDATAID" />
+    <property name="revOp" column="revOp" />
+    <property name="revDelegateId"/>    
+    
+    <property name="cdate" />
+    <property name="mdate"  />
+    <property name="authorId" length="32" />
+    
+    <property name="pstatus" />
+    <property name="workspaceId" not-null="true" length="32" index="IG_DBCOMMENTREVISION_WSID" />
+    <property name="pdate" />
+    <property name="edate" />
+    <property name="adate" />
+    <property name="udate" />
+    <property name="majorVersion" />
+    <property name="minorVersion" />    
+    <property name="tracked" />     
+    <property name="mainInstanceId" not-null="false" length="32"  />
+    <property name="mergeId" not-null="false" length="32" />
+    <property name="mergeDate" />
+    <property name="catIdSetSerial" type="text" length="65536" />
+    <property name="authGrpIdSetSerial" type="text" length="65536" />
+    <property name="authMbrIdSetSerial" type="text" length="65536" />       
+    <property name="updateGrpIdSetSerial" type="text" length="65536" />
+    <property name="updateMbrIdSetSerial" type="text" length="65536" />       
+   
+    
+   
+    
+    <property name="title" />
+    
+    <property name="name"/>
+    <property name="email"/>
+    <property name="webSite"/>
+    <property name="description" type="text" length="65536"/>
+    <property name="targetContentId" length="64"/>
+    <property name="ipAddress"/>
+    <property name="userAgent"/>
+    <property name="referer"/>
+    <property name="privateComment"/>
+  </class>
+</hibernate-mapping>
+<!-- **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY * DO NOT EDIT ANYTHING BELOW THIS LINE *** -->
+<!-- c3sOwOftaBWbcMU4J4JXaw== -->

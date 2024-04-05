@@ -1,0 +1,69 @@
+<%
+if (canComment) { 
+  EditDBCommentHandler formHandler = (EditDBCommentHandler) request.getAttribute("jcmsplugin.dbcomment.formhandler");
+  boolean  allowAnonymousComment = dbcommentMgr.allowAnonymousComment();
+  boolean hasComments = commentCount > 0;
+  String uniqueId = ServletUtil.generateUniqueDOMId(request,"dbcomment");
+  
+%><%@ page import="com.jalios.jcms.publicationfollower.PublicationFollowerManager" %>
+<div class="comment-pane comment-form comment-form-<%= uniqueId %> hidden-print<%= hasComments ? "" : " no-comment " %> ">
+  <% if (isLogged) {%>
+  <div class="comment-photo pull-left">
+    <jalios:memberphoto link="false" member="<%= loggedMember %>" size="<%= PhotoSize.TINY %>" />
+  </div><%-- EOF .comment-photo --%>   
+  <% } %>   
+    <div class="well well-sm new-comment-container dbcomment">
+    <div class='comment-toggle dbcomment-add<%= hasParameter("opCreate") && !hasValidate ? " hide" : "" %>'>
+	    <button type="button" tabindex="0" data-jalios-target=".comment-form-<%= uniqueId %> .comment-toggle" data-jalios-action="toggle:hide" class="comment-btn-add" onclick="return false;">
+		    <jalios:icon src="add"/>
+		    <%= glp("jcmsplugin.dbcomment.edit.lbl.add-comment") %>
+	    </button>
+    </div>
+    <form class="comment-toggle dbcommentEdit box-content<%= hasParameter("opCreate") && !hasValidate ? "" : " hide" %>" name="comment-edit-form" method="post" action="<%= pub.getDisplayUrl(userLocale) %>#comment-edit-form">  
+      <%@ include file='/jcore/doMessageBox.jspf' %>
+      <jalios:field name="description" resource="field-light" css="comment-textarea br" formHandler="<%= formHandler %>">
+        <jalios:control settings='<%= new WysiwygSettings().configurationId("light").workspace(pub.getWorkspace()) %>'/>
+      </jalios:field>     
+      <% request.setAttribute("field-vertical",true); %>
+      <% if (!isLogged) { %>
+        <%-- Name ------------------------------------------------------------ --%>
+        <jalios:field name="name" required="true" formHandler="<%= formHandler %>">
+          <jalios:control />
+        </jalios:field>
+        <%-- Email ------------------------------------------------------------ --%>
+        <jalios:field name="email" required="true" formHandler="<%= formHandler %>">
+          <jalios:control />
+        </jalios:field>
+        <%-- WebSite ------------------------------------------------------------ --%>
+        <jalios:field name="webSite" formHandler="<%= formHandler %>">
+          <jalios:control />
+        </jalios:field>
+      <% } %>   
+      <% if (dbcommentMgr.canPublishPrivateComment(loggedMember)) { %>
+        <% 
+          boolean privateCommentValue = hasValidate ? dbcommentMgr.getPrivateCommentDefaultValue() :  getBooleanParameter("privateComment", dbcommentMgr.getPrivateCommentDefaultValue()); 
+          String privateCommentDescription = glp("jcmsplugin.dbcomment.lbl.private-edit-tooltip", dbcommentMgr.getPrivateCommentGroup());
+        %>
+        <%-- PrivateComment ------------------------------------------------------------ --%>
+        <jalios:field name="privateComment" tooltip="<%= privateCommentDescription %>" formHandler="<%= formHandler %>" value="<%= privateCommentValue %>">
+          <jalios:control />
+        </jalios:field>
+      <% } %>      
+      <% request.removeAttribute("field-vertical"); %>
+        <jalios:include target="DBCOMMENT" />      
+        
+        <div class="buttons">
+          <input type="hidden" name="opComment" value="true"/>
+          <input type="hidden" name="commentedPub" value="<%= pub.getId() %>"/>
+          <input type="hidden" name="displayAllComments" value="<%= dbCommentHandler.isDisplayAllComments() %>"/>
+          <input type='hidden' name='redirect' value='<%= pub.getDisplayUrl(userLocale) + (pub instanceof FileDocument ? "?details=true" : "" ) %>#$ID$' />
+          <button type="button" name="opCreate" value="true" class="btn btn-primary ajax-refresh">
+          	<%= glp("jcmsplugin.dbcomment.edit.lbl.create-comment") %>
+          </button>
+        </div>
+      </form>  
+  </div><%-- EOF .new-comment-container --%>
+</div>
+<% request.removeAttribute("jcmsplugin.dbcomment.formhandler"); %>
+<% } %>
+<jalios:include target="DBCOMMENT_AFTER" />

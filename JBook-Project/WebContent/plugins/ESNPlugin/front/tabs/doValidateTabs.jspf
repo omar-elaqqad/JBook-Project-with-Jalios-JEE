@@ -1,0 +1,28 @@
+<%@page import="com.jalios.util.Util"%><%
+%><%@page import="com.jalios.jcmsplugin.esn.ui.UITabs"%><%
+%><%@page import="com.jalios.jcmsplugin.esn.ui.UITab"%><%
+%><%@ page contentType="text/html; charset=UTF-8"%><%
+
+if (logger.isTraceEnabled()) { logger.trace("doValidateTabs.jspf: start render"); }
+
+// tabs field must be declared in parent.
+if (Util.notEmpty(tabs.getItems())) {
+  for (UITab tab : tabs.getItems()) {
+    // Default validation JSP
+    if (tab.canIncludeValidationJsp()) {
+      request.setAttribute(UITabs.TAB_REQUEST_ATTR, tab);
+      String validationJsp = tab.getValidationJsp();
+      if (logger.isTraceEnabled()) { logger.trace("doValidateTabs.jspf: start validation JSP: " + validationJsp); }
+      %><jalios:include jsp='<%= validationJsp %>' /><%
+      request.removeAttribute(UITabs.TAB_REQUEST_ATTR);
+      if (logger.isTraceEnabled()) { logger.trace("doValidateTabs.jspf: end validation JSP: " + validationJsp); }
+    }
+  }
+  
+  // Refresh tab list
+  tabs.refresh(request);
+}
+%>
+<%
+if (logger.isTraceEnabled()) { logger.trace("doValidateTabs.jspf: end render"); }
+%>

@@ -1,0 +1,110 @@
+// Hook for JCMS
+@import "../../../../plugins/SmartPhonePlugin/css/smartphone-init.less";
+
+// -------------------------------------------------------------------
+// PLUGINS LESS VARIABLES
+// -------------------------------------------------------------------
+
+// Hook for JCMS
+@import "../../../../plugins/SmartPhonePlugin/css/smartphone-plugin-override.less";
+
+// -------------------------------------------------------------------
+//  PLUGIN CSS DECLARATION
+// -------------------------------------------------------------------
+
+.comment-list {
+  .card {
+    padding: 0 @sp-default-spacing-double @sp-default-spacing-double
+      @sp-default-spacing-double;
+    border-bottom: @sp-border-bottom;
+    .comment-meta-count {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      &:before {
+        content: "#";
+      }
+    }
+
+    .actions-wrapper {
+      padding-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+      border-top: 0 none;
+      padding-top: 0;
+      .action-item {
+        padding-top: 0;
+      }
+    }
+
+    .message-content {
+      background-color: transparent;
+      border: 0 none;
+      margin-bottom: 16px;
+      position: relative;
+      background: #edf8fe;
+      border: 1px solid #daedf9;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+      .tail {
+        position: absolute;
+        top: -20px;
+        left: 8px;
+        width: 0;
+        height: 0;
+        border-color: transparent transparent #daedf9 transparent;
+        border-width: 10px;
+        border-style: solid;
+      }
+      .tail-border {
+        position: absolute;
+        top: -18px;
+        left: 8px;
+        width: 0;
+        height: 0;
+        border-color: transparent transparent #edf8fe transparent;
+        border-width: 10px;
+        border-style: solid;
+      }
+    }
+
+    .pub-social-footer {
+      &:empty {
+        display: none;
+      }
+    }
+    .text-info {
+      color: #666;
+    }
+  }
+  .comment-list-header {
+    padding: 0 8px 8px;
+    border-bottom: @sp-border-bottom;
+    margin-bottom: 16px;
+    font-weight: bold;
+  }
+
+  .comment {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    .comment-header {
+      overflow: auto;
+    }
+  }
+  .comment-meta-author {
+    font-weight: bold;
+  }
+  .add-comment {
+    .common-portal-margin();
+  }
+}
+.pub-comments {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 16px;
+  &:first-child {
+    margin-left: 0;
+  }
+}

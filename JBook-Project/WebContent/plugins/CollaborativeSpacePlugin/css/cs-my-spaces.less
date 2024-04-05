@@ -1,0 +1,102 @@
+// Include "generated file" message for CSS output
+/* ------------------------------------------------------------------------- */
+/*  This file has been automatically generated from cs-my-spaces.less        */
+/* ------------------------------------------------------------------------- */
+
+// Include variables and mixins
+@import "../../../css/jalios/core/init-mixins.less";
+
+.subSpacePadding(@level: 1) {
+  SPAN.spacer {
+    margin-left: (10 * @level);
+  }
+}
+.subSpacePaddingDataList(@level: 1) {
+  padding-left: (15 * @level);
+}
+
+.PortletMyCollaborativeSpaces {
+  .no-cs { #JCMS > .br(); }
+}
+.subCollaborativeSpaces {
+  OPTION.placeholder {
+    color: #CCC;
+  }
+  UL.item-box LI.sub-workspace {
+    &.level-1  { .subSpacePadding(0px); SPAN.spacer { display: none; } }
+    &.level-2  { .subSpacePadding(1px); }
+    &.level-3  { .subSpacePadding(2px); }
+    &.level-4  { .subSpacePadding(3px); }
+    &.level-5  { .subSpacePadding(4px); }
+    &.level-6  { .subSpacePadding(5px); }
+    &.level-7  { .subSpacePadding(6px); }
+    &.level-8  { .subSpacePadding(7px); }
+    &.level-9  { .subSpacePadding(8px); }
+    &.level-10 { .subSpacePadding(9px); }
+  }
+  .itemlist-wrapper .itemlist-item-CollaborativeSpace {
+    &.level-1  { .subSpacePaddingDataList(0px); }
+    &.level-2  { .subSpacePaddingDataList(1px); }
+    &.level-3  { .subSpacePaddingDataList(2px); }
+    &.level-4  { .subSpacePaddingDataList(3px); }
+    &.level-5  { .subSpacePaddingDataList(4px); }
+    &.level-6  { .subSpacePaddingDataList(5px); }
+    &.level-7  { .subSpacePaddingDataList(6px); }
+    &.level-8  { .subSpacePaddingDataList(7px); }
+    &.level-9  { .subSpacePaddingDataList(8px); }
+    &.level-10 { .subSpacePaddingDataList(9px); }
+  }
+  
+  .itemlist-wrapper .itemlist-item-CollaborativeSpace {
+    .cs-node-toggle-childs {
+      background: transparent;
+      border: 0 none;
+
+      // Like a .btn
+      text-align: center;
+      cursor: pointer;
+      white-space: nowrap;
+      .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @border-radius-base);
+      margin-left: @padding-base-horizontal;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 3px;
+      transition: background-color 200ms ease-in;
+      padding: 4px 8px;
+      position: absolute;
+      &:hover {
+        background-color: rgba(167,153,153,0.34);
+        background-color: white;
+        &, .ctx-caret:after {
+          color: @text-color;
+        }
+      }
+      &.ctx-caret:after {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        vertical-align: middle;
+        border-left: 4px solid;
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        content: '';
+      }
+    }
+    &.is-opened {
+     .cs-node-toggle-childs {
+        padding: 4px 10px;
+        &.ctx-caret:after {
+          border-top: 4px solid;
+          border-right: 4px solid transparent;
+          border-left: 4px solid transparent;
+          margin-bottom: 0;
+          margin-top: 4px;
+          margin-left: 0;
+        }
+      }
+    }
+    .itemlist-item-date {
+      display: none;
+    }
+  }
+}

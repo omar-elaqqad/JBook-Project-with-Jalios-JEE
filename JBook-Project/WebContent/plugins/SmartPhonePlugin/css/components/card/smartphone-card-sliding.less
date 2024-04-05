@@ -1,0 +1,420 @@
+// SmartPhone init
+@import "../../smartphone-init.less";
+
+
+
+.card-layout-sliding {
+  padding-left: @sp-default-spacing-double;
+  padding-right: @sp-default-spacing-double;
+  .slick-list  {
+    margin-left: -8px;
+    overflow: visible;
+  }
+
+  &.card-horizontal-layout-sliding  {
+    .slick-slide {
+      padding: 0;
+    }
+  }
+
+  .slick-slide {
+    padding: 8px;
+    .is-horizontal {
+      height: 120px;
+      margin-right: @sp-default-spacing-double;
+      box-shadow: initial;
+      display: block;
+      overflow: hidden;
+      .card-img-wrapper {
+        width: 120px;
+        height: 120px;
+        float: left;
+        margin-right: @sp-default-spacing-double;
+        border-left: 0 none;
+        border-top: 0 none;
+      }
+    }
+  }
+
+  .slick-slide.is-horizontal {
+    height: 122px !important;
+    margin-right: @sp-default-spacing-double;
+    border: solid 2px #abb2b9;
+    box-shadow: none;
+    display: block;
+
+    .card-img-wrapper {
+      width: 120px;
+      height: 120px;
+      float: left;
+      margin-right: @sp-default-spacing-double;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .slick-list {
+      padding: 0 20% 0 0;
+    }
+  }
+  @media screen and (min-width: 500px) {
+    .slick-list {
+      padding: 0 40% 0 0;
+    }
+  }
+}
+
+.card-horizontal-layout-sliding {
+  .slick-list {
+    margin: 0;
+    padding: 0 30px 0 0;
+  }
+
+  .slick-slide {
+    margin: 0;
+  }
+
+  .card-horizontal .card-block {
+    height: 122px;
+
+    .card-title {
+      height: 80px ;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.card-layout-carousel {
+  width: 80%;
+  margin: auto;
+
+  .slick-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  .slick-slide {
+    margin: 0 @sp-default-spacing-double;
+  }
+
+  .slide-arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .prev-arrow {
+    left: -30px;
+    width: 0;
+    height: 0;
+    color: #abb2b9;
+  }
+
+  .next-arrow {
+    right: 0;
+    width: 0;
+    height: 0;
+    color: #abb2b9;
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0 0 @sp-default-spacing-double;
+    list-style-type: none;
+
+    li {
+      margin: 0 0.25rem;
+      width: 40px;
+    }
+
+    button {
+      display: block;
+      width: 10px;
+      height: 10px;
+      padding: 0;
+      margin: auto;
+      border: none;
+      border-radius: 100%;
+      background-color: #abb2b9;
+      text-indent: -9999px;
+      outline: none;
+    }
+
+    li.slick-active button {
+      background-color: #33afff;
+    }
+  }
+}
+
+.card-layout-carousel.pqf-carousel {
+  width: 100%;
+  .carousel-image {
+    width: 100%;
+    object-fit: cover;
+    height: 500px;
+  }
+  &.is-multiple-slides {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+  &.is-multiple-slides .slick-slide {
+    margin-left: 8px;
+    margin-right: 8px;
+    .carousel-overlay {
+      padding: 4px;
+      font-size: 14px;
+      padding-left: 8px;
+      padding-right: 8px;
+      display: flex;
+      align-items: end;
+      padding-bottom: 8px;
+    }
+  }
+  .slick-slide {
+    margin: 0;
+  }
+  .slick-dots {
+    padding-top: 16px;
+  }
+  .slide-arrow {
+    top: 36%;
+  }
+  .prev-arrow, .next-arrow {
+    z-index: 1;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+  }  
+  .prev-arrow {
+    height: 62px;
+    width: 58px;
+    left: 0px;
+    padding: 16px;
+  }
+  .next-arrow {
+    right: 8px;
+    height: 62px;
+    width: 58px;
+    padding: 16px;
+  }  
+  .carousel-title-overlay {
+    position: relative;
+    bottom: 90px;
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
+    font-weight: normal;
+    text-shadow: 2px 2px 2px #000;
+    height: 0px;
+    .carousel-overlay {
+      height: 90px;
+      background: linear-gradient(0,rgba(0,0,0,0.95) 0,transparent 100%);
+      padding: 16px 16px 16px 16px;
+      overflow: hidden;
+      .carousel-pub-title {
+        height: 60px;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+      }
+    }  
+  }
+  //https://www.calculateur.com/taille-ecran-mobile.html
+  @media screen and (max-width: 672px) {  //7 inch
+    .carousel-image {
+      height: 378px;
+    }
+  }
+  @media screen and (max-width: 662px) {  //6,9 inch
+    .carousel-image {
+      height: 372px;
+    }
+  }
+  @media screen and (max-width: 652px) {  //6,8 inch
+    .carousel-image {
+      height: 367px;
+    }
+  }
+  @media screen and (max-width: 643px) {  //6,7 inch
+    .carousel-image {
+      height: 361px;
+    }
+  }
+  @media screen and (max-width: 633px) {  //6,6 inch
+    .carousel-image {
+      height: 356px;
+    }
+  }
+  @media screen and (max-width: 624px) {  //6,5 inch
+    .carousel-image {
+      height: 351px;
+    }
+  }
+  @media screen and (max-width: 614px) {  //6,4 inch
+    .carousel-image {
+      height: 345px;
+    }
+  }
+  @media screen and (max-width: 604px) {  //6,3 inch
+    .carousel-image {
+      height: 340px;
+    }
+  }
+  @media screen and (max-width: 595px) {  //6,2 inch
+    .carousel-image {
+      height: 334px;
+    }
+  }
+  @media screen and (max-width: 585px) {  //6,1 inch
+    .carousel-image {
+      height: 329px;
+    }
+  }
+   @media screen and (max-width: 576px) {  //6 inch
+    .carousel-image {
+      height: 324px;
+    }
+  }
+  @media screen and (max-width: 566px) {  //5,9 inch
+    .carousel-image {
+      height: 318px;
+    }
+  }
+  @media screen and (max-width: 556px) {  //5,8 inch
+    .carousel-image {
+      height: 313px;
+    }
+  }
+  @media screen and (max-width: 547px) {  //5,7 inch
+    .carousel-image {
+      height: 307px;
+    }
+  }
+  @media screen and (max-width: 537px) {  //5,6 inch
+    .carousel-image {
+      height: 302px;
+    }
+  }
+  @media screen and (max-width: 528px) {  //5,5 inch
+    .carousel-image {
+      height: 297px;
+    }
+  }
+  @media screen and (max-width: 518px) {  //5,4 inch
+    .carousel-image {
+      height: 291px;
+    }
+  }
+  @media screen and (max-width: 508px) {  //5,3 inch
+    .carousel-image {
+      height: 286px;
+    }
+  }
+  @media screen and (max-width: 499px) {  //5,2 inch
+    .carousel-image {
+      height: 280px;
+    }
+  }
+  @media screen and (max-width: 489px) {  //5,1 inch
+    .carousel-image {
+      height: 276px;
+    }
+  }
+  @media screen and (max-width: 480px) {  //5 inch
+    .carousel-image {
+      height: 270px;
+    }
+  } 
+  @media screen and (max-width: 470px) {  //4,9 inch
+    .carousel-image {
+      height: 264px;
+    }
+  }
+  @media screen and (max-width: 460px) {  //4,8 inch
+    .carousel-image {
+      height: 259px;
+    }
+  }
+  @media screen and (max-width: 451px) {  //4,7 inch
+    .carousel-image {
+      height: 253px;
+    }
+  }
+  @media screen and (max-width: 441px) {  //4,6 inch
+    .carousel-image {
+      height: 248px;
+    }
+  }
+  @media screen and (max-width: 432px) {  //4,5 inch
+    .carousel-image {
+      height: 243px;
+    }
+  }
+  @media screen and (max-width: 422px) {  //4,4 inch
+    .carousel-image {
+      height: 237px;
+    }
+  }
+  @media screen and (max-width: 412px) {  //4,3 inch
+    .carousel-image {
+      height: 232px;
+    }
+  }
+  @media screen and (max-width: 403px) {  //4,2 inch
+    .carousel-image {
+      height: 226px;
+    }
+  }
+  @media screen and (max-width: 393px) {  //4,1 inch
+    .carousel-image {
+      height: 221px;
+    }
+  }
+  @media screen and (max-width: 384px) {  //4 inch
+    .carousel-image {
+      height: 216px;
+    }
+  }
+  @media screen and (max-width: 364px) {  //3,8 inch
+    .carousel-image {
+      height: 205px;
+    }
+  }
+  @media screen and (max-width: 355px) {  //3,7 inch
+    .carousel-image {
+      height: 199px;
+    }
+  }
+  @media screen and (max-width: 336px) {  //3,5 inch
+    .carousel-image {
+      height: 189px;
+    }
+  }
+}
+
+.card-layout-carousel,
+.card-layout-sliding {
+  .slick-track {
+    padding-bottom: 16px;
+  }
+}
+
+.pqf-sliding-cards {
+  .card-link {
+    margin-bottom: 0;
+  }
+  .card.is-borderless {
+    overflow: visible;
+    margin-bottom: 0;
+    .card-block {
+      padding-bottom: 0;
+    }
+  }
+}

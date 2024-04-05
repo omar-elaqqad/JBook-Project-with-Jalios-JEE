@@ -1,0 +1,127 @@
+jcmsplugin.dbpoll.btn.vote:            I voto
+jcmsplugin.dbpoll.lbl.vote:            Votar
+jcmsplugin.dbpoll.lbl.open:            Abrir este inquérito
+jcmsplugin.dbpoll.lbl.close:           Fechar este inquérito
+jcmsplugin.dbpoll.lbl.show-result:     Mostrar resultados
+jcmsplugin.dbpoll.lbl.vote-cnt:        {0,choice,0#0 votos|1#1 voto|2#{0,number,integer} votos}
+jcmsplugin.dbpoll.lbl.dates:           Inquérito de {0} a {1}
+jcmsplugin.dbpoll.lbl.all-polls:       Todos os inquéritos
+jcmsplugin.dbpoll.lbl.all-polls-ws:    Todos os inquéritos em {0}
+jcmsplugin.dbpoll.lbl.view-all-polls:  Ver todos os inquéritos
+jcmsplugin.dbpoll.lbl.view-all-polls-ws:  Ver todos os inquéritos no atual espaço de trabalho
+jcmsplugin.dbpoll.lbl.vote-title:      Votar em {0}
+jcmsplugin.dbpoll.lbl.create-poll:     Publicar um novo inquérito
+jcmsplugin.dbpoll.msg.option-change:   Não pode alterar as opções do inquérito, pois alguns utilizadores já votaram nas propostas atuais.
+jcmsplugin.dbpoll.msg.already-voted:   Já votou neste inquérito.
+jcmsplugin.dbpoll.msg.no-result:       Este inquérito ainda não recebeu votos.
+jcmsplugin.dbpoll.msg.choose-option:   Tem de selecionar uma opção para votar.
+jcmsplugin.dbpoll.msg.closed-poll:     Este inquérito está encerrado. Não pode votar.
+jcmsplugin.dbpoll.msg.poll-loop:       Não pode colocar um inquérito na sua própria descrição.
+
+jcmsplugin.dbpoll.modal.step1:         Opções do inquérito
+jcmsplugin.dbpoll.modal.step2:         Recomendar o inquérito
+jcmsplugin.dbpoll.modal.btn.publish:   Publicar
+jcmsplugin.dbpoll.modal.btn.publish.alt:  Publicar o inquérito
+jcmsplugin.dbpoll.modal.btn.next.alt:  Publicar o inquérito e recomendá-lo...
+jcmsplugin.dbpoll.modal.success-info:  O seu inquérito foi criado e pode ser acedido aqui: {0}
+
+jcmsplugin.dbpoll.publish-menu.add-poll: Inquérito
+
+jcmsplugin.dbpoll.cs.options:  Por favor, adicione, pelo menos, duas opções para este inquérito
+jcmsplugin.dbpoll.cs.optionsml:  Por favor, adicione, pelo menos, duas opções para este inquérito (em {0})
+
+jcmsplugin.dbpoll.search.placeholder: Procurar um inquérito...
+
+jcmsplugin.dbpoll.app.title: Inquéritos
+
+jcmsplugin.dbpoll.app.no-result-welcome: Boas-vindas à aplicação Polls
+
+jcmsplugin.dbpoll.app.catalog.title: Inquéritos
+jcmsplugin.dbpoll.app.catalog.root: Página inicial
+jcmsplugin.dbpoll.app.catalog.btn.add-poll: Adicionar um inquérito
+jcmsplugin.dbpoll.app.catalog.polls-number: {0} {0,choice,0#|1#inquérito|2#inquéritos}
+
+jcmsplugin.dbpoll.app.card.closed-poll: Inquérito terminado
+
+jcmsplugin.dbpoll.app.filter.status.all: Todos os inquéritos
+jcmsplugin.dbpoll.app.filter.status.opened: Inquéritos a decorrer
+jcmsplugin.dbpoll.app.filter.status.closed: Inquéritos terminados
+jcmsplugin.dbpoll.app.filter.mbr:        Adicionado por...
+jcmsplugin.dbpoll.app.filter.begin-date: Adicionado após...
+jcmsplugin.dbpoll.app.filter.end-date:   Adicionado antes de...
+jcmsplugin.dbpoll.app.filter.workspace:  Adicionado no espaço de trabalho...
+
+# ------------------------------------------------------------
+#  Unified insert
+# ------------------------------------------------------------
+unified-insert.items.poll: Inquérito
+unified-insert.items.poll.longtitle: Um inquérito
+unified-insert.items.poll.subtitle:
+
+# ------------------------------------------------------------
+#  Smartphone
+# ------------------------------------------------------------
+jcmsplugin.smartphone.dbpoll: Inquéritos
+jcmsplugin.smartphone.dbpoll.navbar.opened: Inquéritos a decorrer
+jcmsplugin.smartphone.dbpoll.navbar.closed: Inquéritos terminados
+
+# ------------------------------------------------------------
+#  Recommendation
+# ------------------------------------------------------------
+alert.name.recommendation.dbpoll-recommendation:                      Convite para completar o inquérito
+alert.msg.recommendation.dbpoll-recommendation.title:                 Convite para completar o inquérito: {data}
+alert.msg.recommendation.dbpoll-recommendation.short-description:     {author} convida-o a completar o inquérito {data}. {data.url}
+alert.msg.recommendation.dbpoll-recommendation.description:           <p>{author} convida-o a completar o inquérito {data}.</p>
+jcmsplugin.dbpoll.recommendation.Poll:                                Convidar membros para completar o inquérito: {0}
+
+# ------------------------------------------------------------
+#  ESN
+# ------------------------------------------------------------
+jcmsplugin.esn.activity.form-tab.poll: Inquérito
+
+# ------------------------------------------------------------
+#  Shortcuts
+# ------------------------------------------------------------
+data.$id.shortcut.jcmsplugin.dbpoll.title: Inquéritos
+data.$id.shortcut.jcmsplugin.dbpoll.text: Aplicação de gestão de inquéritos
+
+# ------------------------------------------------------------
+#  Plugin label and description
+# ------------------------------------------------------------
+plugin.DBPollPlugin.label: Plug-in do inquérito
+plugin.DBPollPlugin.description: Este plug-in permite-lhe criar inquéritos simples. Os inquéritos são apresentados através do Portlet Inquérito. Os votos são armazenados no RDBMS.
+
+# ----------------------------------------------------------------------
+# Types, templates & workflows I18N properties (for JCMS 8 and above)
+# ----------------------------------------------------------------------
+
+# From Poll.xml
+types.Poll.title.description: Título do inquérito
+types.Poll.fields.description.label: Descrição
+types.Poll.label: Inquérito
+types.Poll.fields.options.description: Opções em que pode votar.
+types.Poll.fields.description.description: Curta descrição do inquérito (aparece entre a pergunta e as opções)
+types.Poll.description: Mini inquérito com uma única pergunta
+types.Poll.fields.options.label: Opções
+types.Poll.title.label: Título
+types.Poll.fields.image.label: Imagem
+types.Poll.fields.image.description: Uma imagem opcional para a descrição deste inquérito.
+types.Poll.fields.closed.label: Fechar o inquérito
+types.Poll.fields.closed.onLabel: Sim
+types.Poll.fields.closed.offLabel: Não
+types.Poll.fields.closed.description: O inquérito deve ser fechado?
+
+# From PortletPoll.xml
+types.PortletPoll.fields.refineWorkspace.labelList: Apresenta o último inquérito do espaço de trabalho|Apresenta o último inquérito de todos os espaços de trabalho
+types.PortletPoll.fields.poll.label: Inquérito
+types.PortletPoll.title.description: Título
+types.PortletPoll.description: Este portlet apresenta um inquérito, depois os resultados atuais quando a votação estiver completa.
+types.PortletPoll.fields.poll.description: Inquérito a ser apresentado (se não for nenhum, o último inquérito publicado)
+types.PortletPoll.fields.refineWorkspace.description: Apresenta o último inquérito do atual espaço de trabalho ou de todos os espaços de trabalho.
+types.PortletPoll.label: Portlet do inquérito
+types.PortletPoll.title.label: Título
+types.PortletPoll.fields.refineWorkspace.label: Refinar
+types.PortletPoll.fields.hideWhenNoResults.label: Ocultar portlet se não houver inquérito
+types.PortletPoll.fields.hideWhenNoResults.onLabel: Sim
+types.PortletPoll.fields.hideWhenNoResults.offLabel: Não
+types.PortletPoll.fields.hideWhenNoResults.description: Se não houver inquérito a apresentar, ocultar o portlet.

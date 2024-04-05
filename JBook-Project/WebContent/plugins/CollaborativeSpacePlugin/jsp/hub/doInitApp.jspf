@@ -1,0 +1,7 @@
+<%@page import="com.jalios.jcmsplugin.collaborativespace.CSHubHandler"%><%
+
+CSHubHandler formHandler = (CSHubHandler) request.getAttribute("formHandler");
+if (formHandler == null) {
+  return;
+}
+%>

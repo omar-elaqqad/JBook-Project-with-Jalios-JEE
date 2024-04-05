@@ -1,0 +1,68 @@
+<%
+QueryResultSet queryResultSet = appHandler.getResultSet();
+SortedSet<Publication> sortedResultSet = appHandler.getSortedResultSet();
+PollManager pollMgr = PollManager.getInstance();
+%>
+
+<jalios:pager name='pagerHandler' declare='true' action='init'
+                size='<%= sortedResultSet.size() %>'
+                pageSize='12'
+                pageSizes='12,24,36,60'
+                sizeAccurate='<%= queryResultSet.isTotalAccurate()  %>'
+                sort='<%= appHandler.getSort() %>'
+                />
+
+<%-- No results --%>
+<% if (appHandler.showNoResults()) { %>  
+  <% if (!appHandler.isClosedPollsView() && !appHandler.hasFilter() && appHandler.showAddPoll()) { %>
+		<jalios:appBodyNoResult text="jcmsplugin.dbpoll.app.no-result-welcome" icon="character-hello">
+		  <jalios:buffer name="APP_BODY_NORESULT_CONTENT_BOTTOM">
+		    <button class="btn btn-primary btn-add-poll" type="button" data-jalios-action="modal" data-jalios-modal-url="<%= appHandler.getAddPollUrl() %>">
+		      <jalios:icon src="add" /> <%= glp("jcmsplugin.dbpoll.app.catalog.btn.add-poll") %>
+		    </button>
+		  </jalios:buffer>
+		</jalios:appBodyNoResult>
+	<% } else { %>
+	  <jalios:appBodyNoResult />
+	<% } %>
+
+<% } else { %>
+
+	<nav class="navbar navbar-default">
+    <a class="navbar-brand" href="#" tabindex="-1"><%= glp("jcmsplugin.dbpoll.app.catalog.polls-number", sortedResultSet.size()) %></a>
+	</nav>
+    
+  <%-- Cards --%>
+  <jalios:cards>
+    <jalios:foreach collection="<%= sortedResultSet %>" name="poll" type="Poll"
+                    skip="<%= pagerHandler.getStart()%>"
+                    max="<%= pagerHandler.getPageSize() %>">
+      <% int count = pollMgr.getPollResult(poll).getCount(); %>
+      <jalios:cardData data="<%= poll %>">
+        <jalios:buffer name="CARD_BOTTOM">
+          <% if (pollMgr.hasAlreadyVoted(poll, loggedMember)) { %>
+            <div class="card-corner-right card-corner-triangle" title='<%= glp("jcmsplugin.dbpoll.msg.already-voted") %>'>
+              <jalios:icon src="appstore-installed" />
+            </div>
+          <% } %>
+          <jalios:cardBlock mode="<%= CardBlockMode.FOOTER %>">
+            <% if (count > 0) { %>
+              <jalios:icon src="icon.jcmsplugin-poll-stats"/>
+              <span><%= glp("jcmsplugin.dbpoll.lbl.vote-cnt", count) %> &middot; </span>
+            <% } %>
+            <jalios:date date="<%= poll.getCdate() %>" format="short" />
+          </jalios:cardBlock>
+          <% if (poll.isClosed()) { %>
+            <div class="banner-dbpoll">
+              <%= glp("jcmsplugin.dbpoll.app.card.closed-poll") %>
+            </div>
+          <% } %>
+        </jalios:buffer>
+      </jalios:cardData>
+    </jalios:foreach>
+
+  </jalios:cards>
+
+  <jalios:pager name="pagerHandler" />
+
+<% } %>

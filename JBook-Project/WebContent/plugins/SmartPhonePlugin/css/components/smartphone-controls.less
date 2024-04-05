@@ -1,0 +1,112 @@
+
+/* JCMS Choosers */
+
+.chooser {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1100;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.chooser-input-wrapper {
+  margin: 10px;
+  border: thin solid grey;
+  background-color: white;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.chooser-input {
+  padding: 15px;
+  border: none 0 transparent;
+  outline: nont 0 transparent;
+  font-size: 16px;
+  width: 100%;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  margin: 0;
+  padding-right: 0 14px;
+  outline: 0 none transparent;
+}
+.chooser-close {
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+  margin: 0 10px 0 0;
+}
+.chooser-results-wrapper {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; /* prevent scrolling on layers beneath */
+  cursor: pointer;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  
+  //Ugly override for show more button
+  .ui-listview.chooser-results .ui-listview-showmore {
+    background-color: white;
+  }
+}
+.chooser-results {
+  display: block;
+  padding-left: 0;
+  
+  .chooser-result {
+    cursor: pointer;
+  }
+  .chooser-noresults {
+    cursor: default;
+  }
+  
+  .chooser-result,
+  .chooser-noresults {
+    border-top: thin solid #E8E8E8;
+    padding: 10px;
+    background-color: white;
+    
+    &:first-child {
+      .border-top-radius(@border-radius-base);
+    }
+    &:last-child {
+      .border-bottom-radius(@border-radius-base);
+    }
+  }
+  
+}
+
+/* *********** */
+/* jqm-Datebox */
+/* *********** */
+/* Reset */
+.ui-datebox-container.fade {
+  opacity: 1;
+}
+
+/* Add horizontal space between date chooser and time chooser */
+.timeChooser-wrapper {
+  padding-left: 8px;
+}
+
+/* For date-only (no time) choosers */
+.timeChooser-wrapper-hidden {
+  display: none;
+}
+
+/* For time choosers : highlighted time in blue instead of black */
+.ui-datebox-flipcontent .ui-body-b {
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  text-shadow: none;
+}
+
+.ui-body-a .ui-datebox-griddate.ui-btn-c {
+  background-color: #AAD5FA;
+  border-color: #7FBEF5;
+}

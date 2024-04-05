@@ -1,0 +1,26 @@
+// -------------------------------------- 
+// CSP badges / labels
+// --------------------------------------
+
+.label {
+  // SPACE
+  &.cs-closed           { .label-variant(@cs-label-closed-bg); }
+  &.cs-model            { .label-variant(@cs-label-model-bg); }
+
+  // INVITATIONS
+  &.invitation-status0  { .label-variant(@cs-label-invitation-status-0-bg); }
+  &.invitation-status1  { .label-variant(@cs-label-invitation-status-1-bg); }
+  &.invitation-status2  { .label-variant(@cs-label-invitation-status-2-bg); }
+
+  // MEMBER
+  &.ws-admin            { .label-variant(@cs-label-member-admin-bg); }
+
+  // SIGNUP
+  &.signup-status       { .label-variant(@cs-label-signup-status-default-bg); }
+  &.signup-status-201   { .label-variant(@cs-label-signup-status-submit-bg); }
+  &.signup-status50     { .label-variant(@cs-label-signup-status-decline-bg); }
+  &.signup-status60     { .label-variant(@cs-label-signup-status-accept-bg); }
+
+  // TYPOLOGY
+  &.typology-label      { .label-variant(@cs-label-typology); }
+}

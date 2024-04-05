@@ -1,0 +1,290 @@
+// Include "generated file" message for CSS output
+/* ------------------------------------------------------------------------- */
+/*  This file has been automatically generated from cs-metas.less            */
+/* ------------------------------------------------------------------------- */
+
+// Include variables and mixins
+@import '../../../css/jalios/core/init-mixins.less'; // Use init-mixins.less if more mixins are required
+
+// PLUGIN LESS VARIABLES
+@import 'cs-variables.less';
+
+@cs-metas-collapsed-color: @gray-light;
+@cs-metas-collapsed-photo-fontsize: 12px;
+@cs-metas-collapsed-photo-width-sm: 24px;
+@cs-metas-collapsed-photo-height-sm: 24px;
+@cs-metas-collapsed-photo-padding: 10px;
+
+// deprecated
+@cs-metas-collapsed-photo-width-xs: 20px;
+@cs-metas-collapsed-photo-height-xs: 20px;
+
+// Hook for JCMS
+@import '../../../css/plugin.less';
+
+// -------------------------------------------------------------------
+//  DEBUG
+// -------------------------------------------------------------------
+/* .cs-metas-wrapper {   */
+/*   &.debug { */
+/*     .meta-wrapper { border: 1px dotted red; } */
+/*     .meta-label { border: 1px dotted green; } */
+/*     .meta-body { border: 1px dotted blue; } */
+/*   } */
+/* } */
+
+// -------------------------------------------------------------------
+//  PLUGIN CSS DECLARATION
+// -------------------------------------------------------------------
+
+// WRAPPER
+// ------------
+.cs-metas-wrapper {
+  margin-bottom: 30px;
+
+  .cs-meta-navbar {
+    border-color: @navbar-default-border;
+  }
+
+  // WRAPPER in FULL view
+  &.opened {
+    padding: 0;
+    border: none;
+  }
+
+  // ToggleManager
+  .cs-metas-opened {
+    display: none;
+  }
+  .cs-metas-hidden-collapsed {
+    display: none;
+  }
+  &.opened {
+    .cs-metas-hidden-opened {
+      display: none;
+    }
+    .cs-metas-opened {
+      display: block;
+    }
+    .cs-metas-visible-collapsed {
+      display: none;
+    }
+    .cs-metas-visible-opened {
+      display: block;
+    }
+    SPAN,
+    A {
+      &.cs-metas-visible-opened {
+        display: inline-block;
+      }
+    }
+    .cs-toggle-favorite-workspace {
+      display: inline-block;
+    }
+  }
+
+  .cs-introduction {
+    .wiki IMG {
+      max-width: 100%;
+    } // For responsive images in wiki
+  }
+
+  .jalios-icon.recommendation {
+    opacity: 0.6; // For homogeneity with grey text and this "non" glyph icon
+  }
+  .meta-wrapper {
+    .pagination-wrapper .pagination {
+      margin-bottom: 0; // Prevent duplicate 20px margin bottom
+    }
+  }
+}
+
+// INLINE View
+// ------------
+.cs-metas-collapsed {
+  .clearfix();
+  .actions {
+    float: right;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    gap: 16px;
+    .jalios-icon {
+      margin-right: 0;
+    }
+  }
+
+  //.meta-label,
+  .cs-member-list {
+    float: left;
+    vertical-align: middle;
+  }
+
+  .meta-wrapper {
+    &.navbar-text {
+      margin-left: 0;
+      float: left;
+    }
+    margin-right: @padding-small-horizontal;
+    @media (min-width: @screen-sm-min) {
+      margin-right: @padding-large-horizontal;
+    }
+  }
+
+  .meta-label {
+    &.navbar-text {
+      margin-left: 0;
+    }
+    margin-right: @padding-small-vertical;
+  }
+  BUTTON,
+  A[role=button] {
+    margin-right: 5px;
+  }
+  .toggle-label {
+    @media (max-width: @screen-xs-max) {
+      // Hide the label, only show dropdown icon
+      display: none;
+    }
+  }
+
+  .cs-signup-requests {
+    position: relative;
+    // the badge
+    .cs-signup-requests-count {
+      position: absolute;
+      top: 7px;
+      right: -5px;
+      background-color: @brand-danger;
+      padding: 2px 6px; // reduce a little BS's padding
+    }
+    .cs-signup-requests-icon {
+      padding-top: 9px; // 50px (navbar) - (32px (img's height) /2) = 18px padding / 2 = 9px padding-top
+    }
+  }
+
+  .cs-members,
+  .cs-signup-requests,
+  .cs-signup,
+  .cs-unsignup,
+  .cs-follow,
+  .cs-unfollow {
+    float: left;
+  }
+
+  // Members
+  .cs-members {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    .cs-member-list {
+      padding-top: @cs-metas-collapsed-photo-padding;
+      padding-bottom: @cs-metas-collapsed-photo-padding;
+
+      display: none;
+      @media (min-width: @screen-md-min) {
+        display: block;
+      }
+    }
+  }
+
+  // Members Photos
+  .cs-wrapper-photo {
+    float: left;
+    vertical-align: middle;
+    margin-right: 5px;
+
+    // Reduce TINY Photo's width
+    .wrapper-photo {
+      .box-shadow(none);
+      .photo {
+        width: @cs-metas-collapsed-photo-width-sm;
+        height: @cs-metas-collapsed-photo-height-sm;
+        &.initials {
+          font-size: @cs-metas-collapsed-photo-fontsize;
+          line-height: @cs-metas-collapsed-photo-height-sm;
+        }
+      }
+      .guest-icon {
+        display: none;
+      }
+    }
+  }
+
+  // Typologies
+  .typology-entry:last-child {
+    margin-right: @padding-xs-horizontal;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  // Add Member button
+  .cs-enroll-member-link {
+    border-radius: 50%;
+    padding: 0px 5px;
+    line-height: floor((16px * @line-height-base));
+    &,
+    .jalios-icon {
+      font-size: 12px;
+      color: #999999;
+    }
+  }
+}
+
+// Opened view
+// ------------
+.cs-metas-opened {
+  .panel-footer {
+    text-align: center;
+  }
+  .meta-label {
+    font-weight: bold;
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 12px;
+    font-size: @font-size-base;
+    margin-top: 0;
+    padding-bottom: 4px;
+  }
+  .meta-wrapper {
+    .clearfix();
+    #JCMS > .br();
+  }
+  .cs-animators .cs-member-list {
+    position: relative; // For absolute suffix positionning
+    .suffix {
+      // Vertical align
+      position: absolute;
+      bottom: 0;
+    }
+  }
+  .cs-member-list {
+    .cs-wrapper-photo {
+      margin-right: @padding-small-horizontal;
+      margin-bottom: @padding-small-vertical;
+      float: left;
+    }
+  }
+  // Hide/show toggle link
+  .toggle-link-div {
+    margin-top: -7px; // to keep same alignment as INLINE view
+  }
+}
+
+.action-item_bookmark_icon{
+  .bookmark__remove{
+    display: inline;
+  }
+  .bookmark__add{
+    display: none;
+  }
+}
+
+.action-item_bookmark_icon.status__remove{
+  .bookmark__remove{
+    display: none;
+  }
+  .bookmark__add{
+    display: inline;
+  }
+}

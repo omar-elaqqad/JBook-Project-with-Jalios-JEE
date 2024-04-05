@@ -1,0 +1,11 @@
+<%-- Copied from "/plugins/CalendarPlugin/jsp/fulldisplay/displayDate.jspf"  --%>
+
+<jalios:buffer name="dateDetailBuffer">
+  <%@ include file='/plugins/ESNPlugin/jsp/common/doESNEventDate.jspf' %>
+</jalios:buffer>
+
+<% if (Util.notEmpty(dateDetailBuffer.toString().trim())) { %>
+<div class="activity-event-date-description activity-event-item">
+  <%= dateDetailBuffer.toString().trim() %>
+</div>
+<% } %>

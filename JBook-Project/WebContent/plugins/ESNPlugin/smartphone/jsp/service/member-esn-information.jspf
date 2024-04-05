@@ -1,0 +1,47 @@
+<%@ include file='/plugins/ESNPlugin/smartphone/jsp/service/expertise-list.jspf' %>
+    <%
+      List<MemberJob> jobList = ESNManager.getInstance().getMemberJobList(member);
+    %>
+    <% if (Util.notEmpty(jobList)) { %>
+    <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+      <h3><%= glp("jcmsplugin.esn.lbl.jobs") %></h3>
+      <ul data-role="listview">
+      <jalios:foreach collection="<%= jobList %>" name="job" type="MemberJob">
+      <li>
+      <% if (Util.notEmpty(job.getSite())) { %><a target="_BLANK" rel="noreferrer" href="<%= encodeForHTMLAttribute(job.getSite()) %>"><% } %> 
+        <h2><%= job.getOrganization() %></h2>
+        <p><strong><%= job.getTitle() %></strong></p>
+        <% if (Util.notEmpty(job.getPlace())) { %>
+        <p><%= job.getPlace()%></p>
+        <% } %>        
+        <% if (Util.notEmpty(job.getDescription())) { %>      
+          <jalios:wiki attributeMap="<%= smartPhoneManager.getWikiAttributeMap() %>"><%= job.getDescription() %></jalios:wiki>
+        <% } %>        
+        <% if (Util.notEmpty(job.getStartDate())) { %><p class="ui-li-aside"><%= JcmsUtil.getFriendlyPeriod(job.getStartDate(), job.getEndDate(), userLocale) %></p><% } %>
+      <% if (Util.notEmpty(job.getSite())) { %></a><% } %> </li>      
+      </jalios:foreach>
+      </ul>
+    </div>    
+    <% } %>
+    <% List<MemberEducation> educationList = ESNManager.getInstance().getMemberEducationList(member); %>
+    <% if (Util.notEmpty(educationList)) {%>
+    <div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u">
+    <h3><%= glp("jcmsplugin.esn.lbl.educations") %></h3>
+    <ul data-role="listview">
+    <jalios:foreach collection="<%= educationList %>" name="education" type="MemberEducation" >    
+    <li>
+    <% if (Util.notEmpty(education.getSite())) { %><a target="_BLANK" rel="noreferrer" href="<%= encodeForHTMLAttribute(education.getSite()) %>"><% } %> 
+    <h2><%= education.getTrainingCenter() %></h2>
+    <p><strong><%= education.getTitle() %></strong></p>
+    <% if (Util.notEmpty(education.getPlace())) { %>
+      <p><%= education.getPlace()%></p>
+    <% } %>        
+    <% if (Util.notEmpty(education.getDescription())) { %>      
+        <jalios:wiki attributeMap="<%= smartPhoneManager.getWikiAttributeMap() %>"><%= education.getDescription() %></jalios:wiki>
+    <% } %>        
+    <p class="ui-li-aside"><%= JcmsUtil.getFriendlyPeriod(education.getStartDate(), education.getEndDate(), userLocale) %></p>
+    <% if (Util.notEmpty(education.getSite())) { %></a><% } %> </li>          
+    </jalios:foreach>
+    </ul>
+    </div>
+    <% } %>

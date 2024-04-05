@@ -1,0 +1,19 @@
+<%@ page contentType="text/html; charset=UTF-8" %><%
+
+//----------------------------------------------------------------------
+//FOOTER ACTION
+//----------------------------------------------------------------------
+boolean showOpenSpace = !workspace.isClosed() && csMgr.showCSCreationLink(loggedMember);
+if (showOpenSpace) {
+  boolean canCreate = csMgr.canCreateCS(loggedMember, false);
+  String creationLabel = "jcmsplugin.collaborativespace.create.lbl." + (canCreate ? "create-sub" : "request-create-sub");
+  String typoParam = typoCat == null ? "" : "cids=" + typoCat.getId();
+  String wsParentParam = CreateSpaceHandler.PARENT_WORKSPACE_PARAM + "=" + JcmsUtil.getId(workspace);
+  String params = "?" + (Util.notEmpty(typoParam) ? typoParam : "") + (Util.notEmpty(typoParam) ? "&amp;" : "") + wsParentParam;
+  %><jalios:buffer name="footerBuffer"><%
+    %><a href="plugins/CollaborativeSpacePlugin/jsp/createSpace.jsp<%= params %>" class="modal open-space-link <%= canCreate ? "cs-creation-link" : "cs-creation-request-link" %>"><%
+     %><jalios:icon src='add'/> <%= glp(creationLabel) %><%
+  %></a></jalios:buffer><%
+  request.setAttribute(PortletMyCollaborativeSpaces.class.getSimpleName() + "_footerBuffer", footerBuffer);
+}
+%>
