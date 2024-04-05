@@ -1,0 +1,10 @@
+<%@ page import="com.jalios.jcms.uicomponent.app.AppConstants" %>
+<div class="book-display">
+<%
+request.setAttribute(AppConstants.BODY_INCLUDE_PUB_REQUEST_ATTR, appHandler.getSelectedBook());
+request.setAttribute(AppConstants.BODY_INCLUDE_PATH_REQUEST_ATTR, "/types/Book/doBookFullDisplay.jsp");
+request.setAttribute("PUBLICATION_ACTIONS_DELETE_REDIRECT", appUrl);
+request.setAttribute("jbook.appHandler", appHandler);
+%>
+<jalios:include jsp="/front/app/doAppBodyInclude.jsp" />
+</div>

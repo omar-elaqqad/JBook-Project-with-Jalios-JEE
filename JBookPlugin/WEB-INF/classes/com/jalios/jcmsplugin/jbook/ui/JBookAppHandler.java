@@ -11,65 +11,77 @@ import com.jalios.util.Util;
 
 import generated.Book;
 
-public class JBookAppHandler extends QueryHandler{
-	
-	
+public class JBookAppHandler extends QueryHandler {
+
 	protected QueryResultSet resultSet;
-	
+	protected Book book;
+
 	public boolean showAppTitle() {
 		return !getWorkspace().isCollaborativeSpace();
-		
+
 	}
-	
+
 	public String getAppTitle() {
 		return glp("jcmsplugin.jbook.app.catalog.title");
 	}
 
-	
 	@Override
-	protected void init(){
+	protected void init() {
 		setTypes("generated.Book");
 		setSort("title");
 	}
 
 	@Override
 	public QueryResultSet getResultSet() {
-	  if (resultSet == null) {
-	    resultSet = super.getResultSet();
-	  }
-	  return resultSet;
+		if (resultSet == null) {
+			resultSet = super.getResultSet();
+		}
+		return resultSet;
 	}
 
 	public SortedSet<Publication> getSortedResultSet() {
-	  Comparator comparator = ComparatorManager.getComparator(Publication.class, getSort());
-	  return getResultSet().getAsSortedSet(comparator);
-	  
+		Comparator comparator = ComparatorManager.getComparator(Publication.class, getSort());
+		return getResultSet().getAsSortedSet(comparator);
+
 	}
 
-
-	public boolean showNoResults(){
-		  return Util.isEmpty(getResultSet());
+	public boolean showNoResults() {
+		return Util.isEmpty(getResultSet());
 	}
-	
-	
+
 	public String getAppUrl() {
 		return "plugins/JBookPlugin/jsp/app/jbook.jsp";
-		
+
 	}
-	
-	
+
 	public boolean showAddBook() {
-		if(!isLogged) {
+		if (!isLogged) {
 			return false;
 		}
 		return loggedMember.canPublishSome(Book.class);
-		
+
 	}
-	
+
 	public String getAddBookUrl() {
-		
+
 		return "types/Book/editBookModal.jsp";
-		
+
 	}
-	
+
+	public boolean showCatalog() {
+		return !showBook();
+	}
+
+	public boolean showBook() {
+		return getSelectedBook() != null;
+	}
+
+	public Book getSelectedBook() {
+		return book;
+	}
+
+	public void setBook(String id) {
+		book = channel.getData(Book.class, id);
+	}
+
 }

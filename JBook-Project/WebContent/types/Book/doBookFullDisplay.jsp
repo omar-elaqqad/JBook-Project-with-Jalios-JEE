@@ -1,44 +1,49 @@
 <%@ page contentType="text/html; charset=UTF-8" %><%
-%><%-- This file has been automatically generated. --%><%
-%><%--
-  @Summary: Book display page
-  @Category: Generated
-  @Author: JCMS Type Processor
-  @Customizable: True
-  @Requestable: True
---%><%
 %><%@ include file='/jcore/doInitPage.jspf' %><%
-%><% Book obj = (Book)request.getAttribute(PortalManager.PORTAL_PUBLICATION); %><%
+%><%@ page import="com.jalios.jcms.handler.*" %><%
+%><%@ page import="com.jalios.jcmsplugin.jbook.*" %><%
+%><%@ page import="com.jalios.jcmsplugin.jbook.ui.*" %><%
+%><%
+
+Book book = (Book)request.getAttribute(PortalManager.PORTAL_PUBLICATION);
+
+JBookAppHandler appHandler = (JBookAppHandler)request.getAttribute("jbook.appHandler");
+if (appHandler == null) {
+  sendRedirect("plugins/JBookPlugin/jsp/app/jbook.jsp?book=" + JcmsUtil.getId(book));
+  return;
+}
+
 %><%@ include file='/front/doFullDisplay.jspf' %>
-<div class="fullDisplay Book <%= obj.canBeEditedFieldByField(loggedMember) ? "unitFieldEdition" : "" %>" itemscope="itemscope">
-<%@ include file='/front/publication/doPublicationHeader.jspf' %>
-<table class="fields">
-  <tr class="field description wysiwygEditor abstract <%= Util.isEmpty(obj.getDescription(userLang)) ? "empty" : "" %>">
-    <td class='field-label'><%= channel.getTypeFieldLabel(Book.class, "description", userLang) %><jalios:edit pub='<%= obj %>' fields='description'/></td>
-    <td class='field-data' <%= gfla(obj, "description") %>>
-            <% if (Util.notEmpty(obj.getDescription(userLang))) { %>
-            <jalios:wysiwyg data='<%= obj %>' field='description'><%= obj.getDescription(userLang) %></jalios:wysiwyg>            
-            <% } %>
-    </td>
-  </tr>
-  <tr class="field image imageEditor  <%= Util.isEmpty(obj.getImage()) ? "empty" : "" %>">
-    <td class='field-label'><%= channel.getTypeFieldLabel(Book.class, "image", userLang) %><jalios:edit pub='<%= obj %>' fields='image'/></td>
-    <td class='field-data' <%= gfla(obj, "image") %>>
-            <% if (Util.notEmpty(obj.getImage())) { %>
-            <img src='<%= Util.encodeUrl(obj.getImage()) %>' alt='' />
-            <% } %>
-    </td>
-  </tr>
-  <tr class="field isbn textfieldEditor  <%= Util.isEmpty(obj.getIsbn()) ? "empty" : "" %>">
-    <td class='field-label'><%= channel.getTypeFieldLabel(Book.class, "isbn", userLang) %><jalios:edit pub='<%= obj %>' fields='isbn'/></td>
-    <td class='field-data' <%= gfla(obj, "isbn") %>>
-            <% if (Util.notEmpty(obj.getIsbn())) { %>
-            <%= obj.getIsbn() %>
-            <% } %>
-    </td>
-  </tr>
- 
-</table>
-<jsp:include page="/front/doFullDisplayCommonFields.jsp" />
-</div><%-- **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY * DO NOT EDIT ANYTHING BELOW THIS LINE *** --%><%
-%><%-- 8NEYzrEy3vF5X2YrU2mKvg== --%>
+<div class="fullDisplay Book <%= book.canBeEditedFieldByField(loggedMember) ? "unitFieldEdition" : "" %>" itemscope="itemscope">
+
+  <%-- Title --%>
+  <h1><%= book.getTitle(userLang) %></h1>
+
+  <%-- Image --%>
+  <% if (Util.notEmpty(book.getImage())) { %>
+  <div class="image">
+    <jalios:thumbnail data="<%= book %>" width="1200" height="400"/>
+  </div>
+  <% } %>
+
+
+  <dl class="dl-horizontal">
+
+  <%-- Description --%>
+  <% String description = book.getDescription(userLang);  %>
+  <% if (Util.notEmpty(description)) { %>
+  <dt><%= channel.getTypeFieldLabel(Book.class, "description", userLang) %></dt>
+  <dd><jalios:wysiwyg data='<%= book %>' field='description'><%= description %></jalios:wysiwyg></dd>
+  <% } %>
+
+  </dl>
+
+  <%-- RELATED RESOURCES --%>
+  <%
+  QueryHandler qh = new QueryHandler();
+  qh.setTypes(new String[] {"generated.Book"});
+  Collection pubRelatedCollection = QueryManager.getInstance().getRelatedPublicationSet(book, qh);
+  int pubRelatedMax = 6;
+  %>
+  <%@ include file="/front/publication/doPublicationRelated.jspf" %>
+</div>

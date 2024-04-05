@@ -5,6 +5,12 @@
 
   <label xml:lang="fr">JBookPlugin</label>
   <description xml:lang="fr">JBookPlugin</description>
+  
+  <types>
+      <type name="Book">
+        <file path="doBookFullDisplay.jsp" />
+      </type>
+  </types>
 
   <private-files>
     <directory path="properties" />
