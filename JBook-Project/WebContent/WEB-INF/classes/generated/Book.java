@@ -18,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
  
 @SuppressWarnings({"unchecked", "unused"})
-public  class Book extends com.jalios.jcms.Content 
+public  class Book extends com.jalios.jcms.Content
              implements 
                 com.jalios.jstore.Searchable
                , DBData

@@ -83,5 +83,12 @@ public class JBookAppHandler extends QueryHandler {
 	public void setBook(String id) {
 		book = channel.getData(Book.class, id);
 	}
+	
+	public String getEditBookUrl() {
+		if(book==null) {
+			return null;
+		}
+		return "types/Book/editBookModal.jsp?id=" + book.getId();
+	}
 
 }
