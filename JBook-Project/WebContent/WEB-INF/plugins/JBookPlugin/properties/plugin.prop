@@ -26,7 +26,7 @@ icon.jcmsplugin-jbook-app: glyph: icomoon-book3
 shortcut.jcmsplugin.jbook.icon: plugins/JBookPlugin/images/jbook48.png
 shortcut.jcmsplugin.jbook.link: plugins/JBookPlugin/jsp/app/jbook.jsp
 
-# LESS/CSS 
+# LESS/CSS
 channel.less.plugins/JBookPlugin/css/jbook.css: plugins/JBookPlugin/css/jbook.less
 
 

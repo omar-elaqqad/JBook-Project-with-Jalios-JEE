@@ -11,3 +11,9 @@ jcmsplugin.jbook.app.catalog.btn.add-book : Ajouter un livre
 data.$id.jcmsplugin.jbook.catalog.topic-root: Racine des thématiques
 
 jcmsplugin.jbook.app.catalog.root : Accueil
+
+#filtrer
+jcmsplugin.jbook.app.filters: Filtres
+jcmsplugin.jbook.app.filter.begin-date: Ajouté après...
+jcmsplugin.jbook.app.filter.end-date:   Ajouté avant...
+jcmsplugin.jbook.app.filter.mbr:        Ajouté par...

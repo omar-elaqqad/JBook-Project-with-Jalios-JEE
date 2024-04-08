@@ -3,16 +3,21 @@ package com.jalios.jcmsplugin.jbook.ui;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 import java.util.SortedSet;
 
 import com.jalios.jcms.Category;
 import com.jalios.jcms.JcmsUtil;
+import com.jalios.jcms.Member;
 import com.jalios.jcms.Publication;
 import com.jalios.jcms.QueryResultSet;
 import com.jalios.jcms.comparator.ComparatorManager;
 import com.jalios.jcms.handler.QueryHandler;
+import com.jalios.jcms.taglib.settings.BasicSettings;
+import com.jalios.jcms.taglib.settings.impl.DateSettings;
+import com.jalios.jcms.taglib.settings.impl.MemberSettings;
 import com.jalios.jcms.uicomponent.BreadcrumbItem;
 import com.jalios.jcms.uicomponent.DataAttribute;
 import com.jalios.jcmsplugin.jbook.JBookManager;
@@ -47,12 +52,19 @@ public class JBookAppHandler extends QueryHandler {
 
 	private void initQuery() {
 		setTypes("generated.Book");
+		
 		setSort("title");
-		setExactCat(showTopics);
+		
+		setDateType("pdate");
+		if(showTopics) {
+			setExactCat(showTopics);
+		}
+				
 
 	}
 
 	private void initTopic() {
+		
 		Set<Category> catSet = getCategorySet("cids");
 
 		if (Util.isEmpty(catSet)) {
@@ -63,8 +75,12 @@ public class JBookAppHandler extends QueryHandler {
 		}
 
 		topic = Util.getFirst(catSet);
+		
 
-		showTopics = Util.isEmpty(getText());
+		showTopics = Util.isEmpty(getText())&& 
+				Util.isEmpty(getMids()) &&
+				getBeginDate()==null &&
+				getEndDate()==null;
 
 	}
 
@@ -133,6 +149,8 @@ public class JBookAppHandler extends QueryHandler {
 		return list;
 	}
 
+	
+	
 	public String getAppUrl() {
 		return "plugins/JBookPlugin/jsp/app/jbook.jsp";
 	}
@@ -213,4 +231,54 @@ public class JBookAppHandler extends QueryHandler {
 		}
 		return "types/Book/editBookModal.jsp?id=" + book.getId();
 	}
+	
+	// to filter the search 
+	
+	public MemberSettings getMemberSettings() {
+		  Member mbr = channel.getMember(Util.getFirst(getMids()));
+		  MemberSettings settings = new MemberSettings()
+		      .name("mids")
+		      .value(mbr)
+		      .placeholder("jcmsplugin.jbook.app.filter.mbr")
+		      .onChange("ajax-refresh");
+
+		  // Hide the clear button if there's no value
+		  if (mbr == null) {
+		    settings.addOption(BasicSettings.HIDE_CLEAR_BUTTON, Boolean.TRUE);
+		  }
+
+		  return settings;
+		}
+
+		public DateSettings getBeginDateSettings() {
+		  Date beginDate = getBeginDate();
+		  DateSettings settings = new DateSettings()
+		  .name("beginDateStr")
+		  .value(beginDate)
+		  .placeholder("jcmsplugin.jbook.app.filter.begin-date")
+		  .onChange("ajax-refresh");
+
+		  // Hide the clear button if there's no value
+		  if (beginDate == null) {
+		    settings.addOption(BasicSettings.HIDE_CLEAR_BUTTON, Boolean.TRUE);
+		  }
+
+		  return settings;
+		}
+
+		public DateSettings getEndDateSettings() {
+		  Date endDate = getEndDate();
+		  DateSettings settings = new DateSettings()
+		  .name("endDateStr")
+		  .value(endDate)
+		  .placeholder("jcmsplugin.jbook.app.filter.end-date")
+		  .onChange("ajax-refresh");
+
+		  // Hide the clear button if there's no value
+		  if (endDate == null) {
+		    settings.addOption(BasicSettings.HIDE_CLEAR_BUTTON, Boolean.TRUE);
+		  }
+
+		  return settings;
+		}
 }
