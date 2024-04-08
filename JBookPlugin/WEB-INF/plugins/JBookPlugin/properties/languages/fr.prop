@@ -6,3 +6,8 @@ jcmsplugin.jbook.app.catalog.title: Livres à emprunter
 
 #le button
 jcmsplugin.jbook.app.catalog.btn.add-book : Ajouter un livre
+
+#racine de themeatiques des livres
+data.$id.jcmsplugin.jbook.catalog.topic-root: Racine des thématiques
+
+jcmsplugin.jbook.app.catalog.root : Accueil

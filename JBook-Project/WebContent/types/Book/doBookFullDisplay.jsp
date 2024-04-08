@@ -26,14 +26,27 @@ if (appHandler == null) {
   </div>
   <% } %>
 
-
   <dl class="dl-horizontal">
+
 
   <%-- Description --%>
   <% String description = book.getDescription(userLang);  %>
   <% if (Util.notEmpty(description)) { %>
   <dt><%= channel.getTypeFieldLabel(Book.class, "description", userLang) %></dt>
   <dd><jalios:wysiwyg data='<%= book %>' field='description'><%= description %></jalios:wysiwyg></dd>
+  <% } %>
+
+  <%-- Topics --%>
+  <% Set<Category> topicSet = book.getTopics(loggedMember);  %>
+  <% if (Util.notEmpty(topicSet)) { %>
+  <dt><%= channel.getTypeFieldLabel(Book.class, "topics", userLang) %></dt>
+  <dd>
+    <ul class="list-unstyled">
+      <jalios:foreach collection="<%= topicSet %>" name="topic" type="Category">
+      <li><a class="meta-cat" href="<%= appHandler.getAppUrl(topic) %>"><%= topic.getName(userLang) %></a></li>
+      </jalios:foreach>
+    </ul>
+  </dd>
   <% } %>
 
   </dl>
@@ -46,4 +59,3 @@ if (appHandler == null) {
   int pubRelatedMax = 6;
   %>
   <%@ include file="/front/publication/doPublicationRelated.jspf" %>
-</div>

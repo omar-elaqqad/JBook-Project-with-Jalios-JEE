@@ -18,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
  
 @SuppressWarnings({"unchecked", "unused"})
-public  class Book extends com.jalios.jcms.Content
+public  class Book extends com.jalios.jcms.Content 
              implements 
                 com.jalios.jstore.Searchable
                , DBData
@@ -206,6 +206,7 @@ public  class Book extends com.jalios.jcms.Content
    * @throws NoSuchFieldException if the field was not found in the given <code>Data</code>.
    */
   public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
+    if ("topics".equals(fieldName)) { return getTopics(mbr); }
     return super.getCategoryFieldValue(fieldName, mbr);
   }
   /**
@@ -403,6 +404,12 @@ public  class Book extends com.jalios.jcms.Content
     return sb.toString();
   }
   
+  public TreeSet<Category> getTopics(Member member) {
+    return getDescendantCategorySet(channel.getCategory("$id.jcmsplugin.jbook.catalog.topic-root"), false, member);
+  }
+  public Category getFirstTopics(Member member) {
+    return getFirstDescendantCategory(channel.getCategory("$id.jcmsplugin.jbook.catalog.topic-root"), false, member);
+  }
   @Override
   public <T extends Data> TreeSet<T> getLinkDataSet(Class<T> clazz) {
     if (clazz == null) {
@@ -464,4 +471,4 @@ public  class Book extends com.jalios.jcms.Content
   }
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
-// dfwpOdsBE0cPFoBLr2jUGQ==
+// q/Z9ifwnalLqR3U6NTPurQ==

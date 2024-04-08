@@ -39,7 +39,9 @@
 <% 
   TreeSet  removedCatSet = new TreeSet(); 
   Category itRemoveCat = null;
+  itRemoveCat = channel.getCategory("$id.jcmsplugin.jbook.catalog.topic-root");
+  if (itRemoveCat != null){	removedCatSet.add(itRemoveCat);  }
   request.setAttribute("removedCatSet", removedCatSet);
 %>
   <%-- **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY * DO NOT EDIT ANYTHING BELOW THIS LINE *** --%><%
-%><%-- fMGJ2SajIMPBZqczHLqZkA== --%>
+%><%-- sRKfBQZ0z1+tDfmiGWlzFg== --%>

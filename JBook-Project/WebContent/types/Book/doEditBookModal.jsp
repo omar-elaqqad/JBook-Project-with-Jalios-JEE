@@ -21,6 +21,10 @@
 <jalios:field name="image" formHandler="<%= formHandler %>">
   <jalios:control />
 </jalios:field>
+<%-- Topics ------------------------------------------------------------ --%>
+<jalios:field name="topics" formHandler="<%= formHandler %>">
+  <jalios:control />
+</jalios:field>
 <%-- Isbn ------------------------------------------------------------ --%>
 <jalios:field name="isbn" formHandler="<%= formHandler %>">
   <jalios:control />
@@ -31,4 +35,4 @@
 <jalios:include target="EDIT_PUB_MAINTAB" targetContext="div" />
 <jalios:include jsp="/jcore/doEditExtraData.jsp" />
 <% ServletUtil.restoreAttribute(pageContext , "classBeingProcessed"); %><%-- **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY * DO NOT EDIT ANYTHING BELOW THIS LINE *** --%><%
-%><%-- K3Zw+EV5YlNvd4bWT8aR1Q== --%>
+%><%-- txvukhVw1C1j2PGRV6zlDA== --%>

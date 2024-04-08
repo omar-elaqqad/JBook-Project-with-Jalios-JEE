@@ -680,3 +680,4 @@ $id.shortcut.jcmsplugin.smartphone-portals: c_5077
 $id.shortcut.jcmsplugin.jbook: c_5083
 
 channel.less-compile.autocompile: true
+$id.jcmsplugin.jbook.catalog.topic-root: c_5084

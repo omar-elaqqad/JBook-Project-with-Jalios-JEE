@@ -8,3 +8,22 @@
 09:47:45,060 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
 09:55:40,370 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
 09:55:47,253 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+10:31:15,678 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+10:31:22,604 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+10:31:23,990 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+10:37:36,050 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+10:37:42,785 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+10:37:44,197 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+10:43:20,526 INFO [Catalina-utility-1] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+10:43:27,763 INFO [Catalina-utility-1] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+10:43:29,439 INFO [Catalina-utility-1] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+10:44:42,370 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+10:44:49,523 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+10:44:51,024 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+10:46:17,860 INFO [http-nio-8080-exec-5] [JPlatform 10] [handlers.LoggingAuthenticationHandler] [0:0:0:0:0:0:0:1, j_2, Admin] [SECURITY] - Administrator "Admin" starts a new session
+11:34:20,026 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+11:34:26,757 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+11:34:28,162 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+11:57:32,857 INFO [Catalina-utility-1] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+11:57:38,062 INFO [Catalina-utility-1] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+11:57:39,675 INFO [Catalina-utility-1] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties

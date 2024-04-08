@@ -36,6 +36,17 @@
             <img src='<%= Util.encodeUrl(pub.getImage()) %>' alt='' />
             </jalios:if>
           </dd>
+          <%-- Topics ------------------------------------------------------------ --%>
+          <dt class="smartphone-fulldisplay-key"><%= channel.getTypeFieldLabel(Book.class, "topics", userLang) %></dt>
+          <dd class="smartphone-fulldisplay-value" >
+            <% if (Util.notEmpty(pub.getTopics(loggedMember))) { %>
+            <ol>
+            <jalios:foreach collection="<%= pub.getTopics(loggedMember) %>" type="Category" name="itCategory" >
+              <li><% if (itCategory != null) { %><a href="<%= ResourceHelper.getQuery() %>?cids=<%= itCategory.getId() %>"><%= itCategory.getAncestorString(channel.getCategory("$id.jcmsplugin.jbook.catalog.topic-root"), " > ", true, userLang) %></a><% } %></li>
+            </jalios:foreach>
+            </ol>
+            <% } %>
+          </dd>
           <%-- Isbn ------------------------------------------------------------ --%>
           <dt class="smartphone-fulldisplay-key"><%= channel.getTypeFieldLabel(Book.class, "isbn", userLang) %></dt>
           <dd class="smartphone-fulldisplay-value" <%= gfla(pub, "isbn") %>>
@@ -57,4 +68,4 @@
   </div><%-- EOF .content --%>
 </div><%-- EOF #pub-default --%>
 <%@ include file='/plugins/SmartPhonePlugin/jsp/common/footer.jspf' %><%-- **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY * DO NOT EDIT ANYTHING BELOW THIS LINE *** --%><%
-%><%-- 2pUuZg80H4UyUF4IGPcoQA== --%>
+%><%-- Sm2egP+iZl7tauEXOayoYQ== --%>

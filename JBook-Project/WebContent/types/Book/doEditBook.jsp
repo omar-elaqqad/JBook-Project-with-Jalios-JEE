@@ -23,6 +23,11 @@
   <jalios:control />
 </jalios:field>
  
+<%-- Topics ------------------------------------------------------------ --%>
+<jalios:field name="topics" formHandler="<%= formHandler %>">
+  <jalios:control />
+</jalios:field>
+ 
 <%-- Isbn ------------------------------------------------------------ --%>
 <jalios:field name="isbn" formHandler="<%= formHandler %>">
   <jalios:control />
@@ -32,10 +37,12 @@
 { 
   TreeSet  removedCatSet = new TreeSet(); 
   Category itRemoveCat = null;
+  itRemoveCat = channel.getCategory("$id.jcmsplugin.jbook.catalog.topic-root");
+  if (itRemoveCat != null){ removedCatSet.add(itRemoveCat);  }
   request.setAttribute("Book.removedCatSet", removedCatSet);
 }  
 %>
 <jalios:include target="EDIT_PUB_MAINTAB" targetContext="div" />
 <jalios:include jsp="/jcore/doEditExtraData.jsp" />
 <% ServletUtil.restoreAttribute(pageContext , "classBeingProcessed"); %><%-- **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY * DO NOT EDIT ANYTHING BELOW THIS LINE *** --%><%
-%><%-- atbxlGxNqKX1BeLT7aoD6g== --%>
+%><%-- vRFYChBzDli1Yy0p1xc9HQ== --%>

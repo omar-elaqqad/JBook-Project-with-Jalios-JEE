@@ -677,3 +677,6 @@ $id.jcmsplugin.smartphone.category.nav-root: c_5074
 $id.jcmsplugin.smartphone.portal.default-wysiwyg-portlet: c_5073
 $id.jcmsplugin.smartphone.portal.default-portal: c_5076
 $id.shortcut.jcmsplugin.smartphone-portals: c_5077
+$id.shortcut.jcmsplugin.jbook: c_5083
+
+channel.less-compile.autocompile: true

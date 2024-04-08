@@ -10,7 +10,9 @@
 
 <%if (appHandler.showAddBook()) { %>
 
-<a href="<%= appHandler.getAddBookUrl()%> " class="btn btn-default app-sidebar-button modal"><jalios:icon src="add"/> <%= glp("jcmsplugin.jbook.app.catalog.btn.add-book")%></a>
+<a href="<%= appHandler.getAddBookUrl()%> " class="btn btn-default app-sidebar-button modal">
+<jalios:icon src="add"/> <%= glp("jcmsplugin.jbook.app.catalog.btn.add-book")%>
+</a>
 
 <%} %>
 </jalios:appSidebarSection>

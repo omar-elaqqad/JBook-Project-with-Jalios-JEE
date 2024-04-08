@@ -176,6 +176,31 @@ String fieldDomId = "";
     <td><%= Util.getString(oldObj.getImage(), "") %></td>
   </tr>
   </jalios:if>
+  <%-- ** topics ***************** --%>
+  <jalios:if predicate='<%= !Util.isSameContent(newObj.getTopics(loggedMember), oldObj.getTopics(loggedMember)) %>'>
+  <tr class="vTop">
+    <td class="text-right"><%= fieldCount++ %>.</td>
+    <td nowrap="nowrap"><%= channel.getTypeFieldLabel(generated.Book.class, "topics", userLang) %></td>
+    <td>
+      <% if (Util.notEmpty(newObj.getTopics(loggedMember))) { %>
+      <ol>
+        <jalios:foreach collection="<%= newObj.getTopics(loggedMember) %>" type="Category" name="itCategory" >
+        <li><%= itCategory == null ? "" : itCategory.getAncestorString(channel.getCategory("$id.jcmsplugin.jbook.catalog.topic-root"), " > ", true) %></li>
+        </jalios:foreach>
+      </ol>
+      <% } %>
+    </td>
+    <td>
+      <% if (Util.notEmpty(oldObj.getTopics(loggedMember))) { %>
+      <ol>
+        <jalios:foreach collection="<%= oldObj.getTopics(loggedMember) %>" type="Category" name="itCategory" >
+        <li><%= itCategory == null ? "" : itCategory.getAncestorString(channel.getCategory("$id.jcmsplugin.jbook.catalog.topic-root"), " > ", true) %></li>
+        </jalios:foreach>
+      </ol>
+      <% } %>
+    </td>
+  </tr>
+  </jalios:if>
   <%-- ** isbn ***************** --%>
   <jalios:if predicate='<%= !Util.isSameContent(newObj.getIsbn(), oldObj.getIsbn()) %>'>
   <tr class="vTop">
@@ -235,4 +260,4 @@ String fieldDomId = "";
      request.setAttribute("fieldCount", new Integer(fieldCount));
  } %>
 <% } %><%-- **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY * DO NOT EDIT ANYTHING BELOW THIS LINE *** --%><%
-%><%-- cLX9O/FXfImq4MevCltuUw== --%>
+%><%-- 8iMgmOQYGC/2YxZJYjEnYw== --%>

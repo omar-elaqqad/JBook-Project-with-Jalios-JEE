@@ -47,6 +47,10 @@ public class EditBookHandler extends EditPublicationHandler {
       return getAvailableImage();
     }
     
+    if ("topics".equals(field)) {
+      return getTopicsCatSet();
+    }
+    
     if ("isbn".equals(field)) {
       return getAvailableIsbn();
     }
@@ -236,9 +240,27 @@ public class EditBookHandler extends EditPublicationHandler {
   
     
   
+  
+  public void setTopics(String[] v) {
+    updateCids(v);
+  }
+  public Category getTopicsRoot() {
+    return channel.getCategory("$id.jcmsplugin.jbook.catalog.topic-root");
+  }  
+    
+  public Set<Category> getTopicsCatSet() {
+    Category rootCat = getTopicsRoot();
+    if (rootCat == null) {
+      return Util.emptyTreeSet();
+    }
+    Set<Category> set = new HashSet<>(rootCat.getDescendantSet());
+    set.add(rootCat);
+    return Util.interSet(getCategorySet(null), set);
+  }
+  
  
    
  
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
-// GFH5xJXZS7ODJlfbwh3jPg==
+// f645NOn6NTuNyIWPGR6/IQ==

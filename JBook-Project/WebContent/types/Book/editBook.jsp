@@ -23,7 +23,9 @@
 <% 
   TreeSet  removedCatSet = new TreeSet(); 
   Category itRemoveCat = null;
+  itRemoveCat = channel.getCategory("$id.jcmsplugin.jbook.catalog.topic-root");
+  if (itRemoveCat != null){	removedCatSet.add(itRemoveCat);  }
   request.setAttribute("removedCatSet", removedCatSet);
   %>
 <jalios:include jsp="work/edition/doEditPubFooter.jsp" /><%-- **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY * DO NOT EDIT ANYTHING BELOW THIS LINE *** --%><%
-%><%-- sLr6zEazDbfz4XnYvKdjpA== --%>
+%><%-- g4YRp7I2gTgGsvSumKU5pw== --%>
