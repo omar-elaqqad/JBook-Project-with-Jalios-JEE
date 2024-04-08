@@ -1,69 +1,65 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
-import com.jalios.util.Util;
-import custom.*;
+
+
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditPortletLoggedMembersHandler extends EditAbstractPortletSkinableHandler {
-   
+
   protected PortletLoggedMembers theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return PortletLoggedMembers.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpPortletLoggedMembers  
+  // validateBeforeOpPortletLoggedMembers
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("limitPortletAccess".equals(field)) {
       return getAvailableLimitPortletAccess();
     }
-    
+
     if ("displayNumbers".equals(field)) {
       return getAvailableDisplayNumbers();
     }
-    
+
     if ("displayMembers".equals(field)) {
       return getAvailableDisplayMembers();
     }
-    
+
     if ("displayLinkToMembersProfile".equals(field)) {
       return getAvailableDisplayLinkToMembersProfile();
     }
-    
+
     if ("maximumMembers".equals(field)) {
       return getAvailableMaximumMembers();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     if ("limitPortletAccess".equals(field)) {
       return PortletLoggedMembers.getLimitPortletAccessValues();
     }
@@ -80,7 +76,7 @@ public class EditPortletLoggedMembersHandler extends EditAbstractPortletSkinable
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     if ("limitPortletAccess".equals(field)) {
       return PortletLoggedMembers.getLimitPortletAccessLabels(userLang);
     }
@@ -96,7 +92,7 @@ public class EditPortletLoggedMembersHandler extends EditAbstractPortletSkinable
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdatePortletLoggedMembers  
+  // validateCommonCreateUpdatePortletLoggedMembers
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdatePortletLoggedMembers() {
     if (!isMaximumMembersValidated) {
@@ -105,39 +101,35 @@ public class EditPortletLoggedMembersHandler extends EditAbstractPortletSkinable
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdatePortletLoggedMembers()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdatePortletLoggedMembers()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdatePortletLoggedMembers()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdatePortletLoggedMembers()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -146,7 +138,8 @@ public class EditPortletLoggedMembersHandler extends EditAbstractPortletSkinable
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -155,7 +148,8 @@ public class EditPortletLoggedMembersHandler extends EditAbstractPortletSkinable
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -164,7 +158,8 @@ public class EditPortletLoggedMembersHandler extends EditAbstractPortletSkinable
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     PortletLoggedMembers obj = (PortletLoggedMembers)data;
     obj.setLimitPortletAccess(getAvailableLimitPortletAccess());
@@ -173,8 +168,9 @@ public class EditPortletLoggedMembersHandler extends EditAbstractPortletSkinable
     obj.setDisplayLinkToMembersProfile(getAvailableDisplayLinkToMembersProfile());
     obj.setMaximumMembers(getAvailableMaximumMembers());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof PortletLoggedMembers) {
       super.setId(v);
       theContent = (PortletLoggedMembers)publication;
@@ -183,17 +179,17 @@ public class EditPortletLoggedMembersHandler extends EditAbstractPortletSkinable
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // limitPortletAccess
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry limitPortletAccessTFE = channel.getTypeFieldEntry(PortletLoggedMembers.class, "limitPortletAccess", true);
   protected boolean limitPortletAccess = false;
   public void setLimitPortletAccess(boolean  v) {
     this.limitPortletAccess = v;
   }
-  
+
   public boolean getAvailableLimitPortletAccess() {
     if (theContent != null && isFieldMissing("limitPortletAccess")) {
      boolean objectValue = theContent.getLimitPortletAccess();
@@ -201,19 +197,19 @@ public class EditPortletLoggedMembersHandler extends EditAbstractPortletSkinable
     }
     return limitPortletAccess;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // displayNumbers
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry displayNumbersTFE = channel.getTypeFieldEntry(PortletLoggedMembers.class, "displayNumbers", true);
   protected boolean displayNumbers = true;
   public void setDisplayNumbers(boolean  v) {
     this.displayNumbers = v;
   }
-  
+
   public boolean getAvailableDisplayNumbers() {
     if (theContent != null && isFieldMissing("displayNumbers")) {
      boolean objectValue = theContent.getDisplayNumbers();
@@ -221,13 +217,13 @@ public class EditPortletLoggedMembersHandler extends EditAbstractPortletSkinable
     }
     return displayNumbers;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // displayMembers
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry displayMembersTFE = channel.getTypeFieldEntry(PortletLoggedMembers.class, "displayMembers", true);
   protected String displayMembers = channel.getTypeFieldEntry(PortletLoggedMembers.class, "displayMembers", true).getDefaultTextString();
   public void setDisplayMembers(String[] v) {
@@ -240,19 +236,19 @@ public class EditPortletLoggedMembersHandler extends EditAbstractPortletSkinable
     }
     return displayMembers;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // displayLinkToMembersProfile
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry displayLinkToMembersProfileTFE = channel.getTypeFieldEntry(PortletLoggedMembers.class, "displayLinkToMembersProfile", true);
   protected boolean displayLinkToMembersProfile = true;
   public void setDisplayLinkToMembersProfile(boolean  v) {
     this.displayLinkToMembersProfile = v;
   }
-  
+
   public boolean getAvailableDisplayLinkToMembersProfile() {
     if (theContent != null && isFieldMissing("displayLinkToMembersProfile")) {
      boolean objectValue = theContent.getDisplayLinkToMembersProfile();
@@ -260,13 +256,13 @@ public class EditPortletLoggedMembersHandler extends EditAbstractPortletSkinable
     }
     return displayLinkToMembersProfile;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // maximumMembers
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry maximumMembersTFE = channel.getTypeFieldEntry(PortletLoggedMembers.class, "maximumMembers", true);
   protected boolean isMaximumMembersValidated = true;
   protected int maximumMembers = 10;
@@ -284,12 +280,12 @@ public class EditPortletLoggedMembersHandler extends EditAbstractPortletSkinable
     }
     return maximumMembers;
   }
-  
-    
-  
- 
-   
- 
+
+
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // IsYC/hwyk2fM6mlwppFEEg==

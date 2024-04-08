@@ -1,41 +1,49 @@
 // This file has been automatically generated.
-   
+
 package generated;
- 
-import java.util.*;
- 
-import org.apache.oro.text.regex.Pattern;
-import org.apache.oro.text.regex.Perl5Compiler;
-import org.apache.oro.text.regex.Perl5Matcher;
-import org.hibernate.Hibernate;
- 
-import com.jalios.jcms.*;
-import com.jalios.jcms.db.*;
-import com.jalios.jcms.mashup.*;
-import com.jalios.jcms.wysiwyg.*;
-import com.jalios.util.*;
-import com.fasterxml.jackson.annotation.JsonIgnore; 
-import com.fasterxml.jackson.annotation.JsonProperty;
- 
+
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+import com.jalios.jcms.Category;
+import com.jalios.jcms.ControllerStatus;
+import com.jalios.jcms.Data;
+import com.jalios.jcms.EnumerateFormReport;
+import com.jalios.jcms.FileDocument;
+import com.jalios.jcms.IntegerFormReport;
+import com.jalios.jcms.JcmsUtil;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeEntry;
+import com.jalios.jcms.TypeFieldEntry;
+import com.jalios.jcms.mashup.ExportUtil;
+import com.jalios.jcms.mashup.ImportOptions;
+import com.jalios.jcms.mashup.ImportUtil;
+import com.jalios.util.ObjectIntTreeMap;
+import com.jalios.util.Util;
+
 @SuppressWarnings({"unchecked", "unused"})
-public  class PortletRSS extends generated.AbstractPortletSkinable 
-             implements 
+public  class PortletRSS extends generated.AbstractPortletSkinable
+             implements
                 com.jalios.jstore.Searchable
 {
-  
+
   // ----------------------------------------------------------------------
   // CONSTRUCTORS
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   public PortletRSS() {}
- 
- 
+
+
   public PortletRSS(AbstractPortletSkinable other) {
     super(other);
   }
- 
-  
-  
-  
+
+
+
+
   public PortletRSS(PortletRSS other) {
     super(other);
     source = other.source;
@@ -51,13 +59,14 @@ public  class PortletRSS extends generated.AbstractPortletSkinable
     skipFirstItems = other.skipFirstItems;
     sortAttribute = other.sortAttribute;
   }
-  
+
   // ----------------------------------------------------------------------
   // Import / Export
   // ----------------------------------------------------------------------
-  public void importXml(org.jdom.Element elt, ImportOptions options) {
+  @Override
+public void importXml(org.jdom.Element elt, ImportOptions options) {
     super.importXml(elt, options);
-    
+
     setSource(ImportUtil.parseFieldText(elt, "source"));
     setShowTitle(ImportUtil.parseFieldBoolean(elt, "showTitle"));
     setShowDescription(ImportUtil.parseFieldBoolean(elt, "showDescription"));
@@ -71,17 +80,19 @@ public  class PortletRSS extends generated.AbstractPortletSkinable
     setSkipFirstItems(ImportUtil.parseFieldInt(elt, "skipFirstItems"));
     setSortAttribute(ImportUtil.parseFieldText(elt, "sortAttribute"));
   }
-  
-  protected void importXmlFieldsWithReferences(org.jdom.Element elt, ImportOptions options) {
+
+  @Override
+protected void importXmlFieldsWithReferences(org.jdom.Element elt, ImportOptions options) {
     super.importXmlFieldsWithReferences(elt, options);
-      
+
     if (options.isSelfImport()) {
     } else {
-    
+
     }
   }
-  
-  public void exportXmlField(StringBuffer sb, int indentLevel) {
+
+  @Override
+public void exportXmlField(StringBuffer sb, int indentLevel) {
     super.exportXmlField(sb, indentLevel);
     sb.append(ExportUtil.exportField(indentLevel, "source", getSource(), true, true));
     sb.append(ExportUtil.exportField(indentLevel, "showTitle", getShowTitle()));
@@ -96,15 +107,16 @@ public  class PortletRSS extends generated.AbstractPortletSkinable
     sb.append(ExportUtil.exportField(indentLevel, "skipFirstItems", getSkipFirstItems()));
     sb.append(ExportUtil.exportField(indentLevel, "sortAttribute", getSortAttribute(), false, true));
   }
-  
-  public Set<FileDocument> getDocumentLinkSet() {
+
+  @Override
+public Set<FileDocument> getDocumentLinkSet() {
     Set<FileDocument> docSet = super.getDocumentLinkSet();
     return docSet;
   }
-  
+
   // ----------------------------------------------------------------------
   // TYPE AND FIELD INFOS (static methods)
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   /**
    * Returns the TypeEntry bound to <code>PortletRSS</code>. <br>
    * @see com.jalios.jcms.Channel#getTypeEntry(Class)
@@ -135,83 +147,90 @@ public  class PortletRSS extends generated.AbstractPortletSkinable
   }
   // ----------------------------------------------------------------------
   // FIELDs VALUE
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   /**
    * Gets the value of the given <code>int</code> field name for the current <code>PortletRSS</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>int</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public int getIntFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public int getIntFieldValue(String fieldName) throws NoSuchFieldException {
     if ("maxItems".equals(fieldName)) { return getMaxItems(); }
     if ("skipFirstItems".equals(fieldName)) { return getSkipFirstItems(); }
     return super.getIntFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>int</code> field name for the current <code>PortletRSS</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>int</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setIntFieldValue(String fieldName, int value) throws NoSuchFieldException {
+  @Override
+public void setIntFieldValue(String fieldName, int value) throws NoSuchFieldException {
     if ("maxItems".equals(fieldName)) { setMaxItems(value); return; }
     if ("skipFirstItems".equals(fieldName)) { setSkipFirstItems(value); return; }
     super.setIntFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>long</code> field name for the current <code>PortletRSS</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>long</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public long getLongFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public long getLongFieldValue(String fieldName) throws NoSuchFieldException {
     if ("refresh".equals(fieldName)) { return getRefresh(); }
     return super.getLongFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>long</code> field name for the current <code>PortletRSS</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>long</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setLongFieldValue(String fieldName, long value) throws NoSuchFieldException {
+  @Override
+public void setLongFieldValue(String fieldName, long value) throws NoSuchFieldException {
     if ("refresh".equals(fieldName)) { setRefresh(value); return; }
     super.setLongFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>double</code> field name for the current <code>PortletRSS</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>double</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public double getDoubleFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public double getDoubleFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getDoubleFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>double</code> field name for the current <code>PortletRSS</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>double</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setDoubleFieldValue(String fieldName, double value) throws NoSuchFieldException {
+  @Override
+public void setDoubleFieldValue(String fieldName, double value) throws NoSuchFieldException {
      super.setDoubleFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>boolean</code> field name for the current <code>PortletRSS</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>boolean</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public boolean getBooleanFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public boolean getBooleanFieldValue(String fieldName) throws NoSuchFieldException {
     if ("showTitle".equals(fieldName)) { return getShowTitle(); }
     if ("showDescription".equals(fieldName)) { return getShowDescription(); }
     if ("showImage".equals(fieldName)) { return getShowImage(); }
@@ -221,15 +240,16 @@ public  class PortletRSS extends generated.AbstractPortletSkinable
     if ("trackingEnabled".equals(fieldName)) { return getTrackingEnabled(); }
     return super.getBooleanFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>boolean</code> field name for the current <code>PortletRSS</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>boolean</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setBooleanFieldValue(String fieldName, boolean value) throws NoSuchFieldException {
+  @Override
+public void setBooleanFieldValue(String fieldName, boolean value) throws NoSuchFieldException {
     if ("showTitle".equals(fieldName)) { setShowTitle(value); return; }
     if ("showDescription".equals(fieldName)) { setShowDescription(value); return; }
     if ("showImage".equals(fieldName)) { setShowImage(value); return; }
@@ -239,7 +259,7 @@ public  class PortletRSS extends generated.AbstractPortletSkinable
     if ("trackingEnabled".equals(fieldName)) { setTrackingEnabled(value); return; }
     super.setBooleanFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>Category</code> field name for the current <code>Data</code>.
    * @param fieldName the field name from which to retrieve the field value.
@@ -247,7 +267,8 @@ public  class PortletRSS extends generated.AbstractPortletSkinable
    * @return a <code>TreeSet</code> of <code>Category</code>
    * @throws NoSuchFieldException if the field was not found in the given <code>Data</code>.
    */
-  public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
+  @Override
+public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
     return super.getCategoryFieldValue(fieldName, mbr);
   }
   /**
@@ -256,17 +277,18 @@ public  class PortletRSS extends generated.AbstractPortletSkinable
    * @param fieldName the field name from which to retrieve the field value.
    * @param lang the language (ISO-639 code) in which to retrieve the field value
    *        (used only for multilingual fields).
-   * @param useDefault whether to use the publication main language if the field value 
+   * @param useDefault whether to use the publication main language if the field value
    *        is not available in the requested language (used only for multilingual fields).
    * @return the <code>Object</code> field value
    * @throws NoSuchFieldException if the field was not found in the given <code>Publication</code>.
    */
-  public Object getFieldValue(String fieldName, String lang, boolean useDefault) throws NoSuchFieldException {
+  @Override
+public Object getFieldValue(String fieldName, String lang, boolean useDefault) throws NoSuchFieldException {
     if ("source".equals(fieldName)) { return getSource(); }
     if ("sortAttribute".equals(fieldName)) { return getSortAttribute(); }
     return super.getFieldValue(fieldName, lang, useDefault);
   }
-  
+
   /**
    * Sets the <code>Object</code> value of the given field name for this <code>PortletRSS</code>. <br>
    * Do not set <code>Category</code> fields, see {@link #setCategoryFieldValue(String, TreeSet)}.
@@ -274,55 +296,56 @@ public  class PortletRSS extends generated.AbstractPortletSkinable
    * @param value the <code>Object</code> field value
    * @param lang the language (ISO-639 code) in which to retrieve the field value
    *        (used only for multilingual fields).
-   * 
+   *
    * @throws NoSuchFieldException if the field was not found in the given <code>Publication</code>.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setFieldValue(String fieldName, Object value, String lang) throws NoSuchFieldException {
+  @Override
+public void setFieldValue(String fieldName, Object value, String lang) throws NoSuchFieldException {
     if ("source".equals(fieldName)) { setSource((String)value); return; }
     if ("sortAttribute".equals(fieldName)) { setSortAttribute((String)value); return; }
     super.setFieldValue(fieldName, value, lang);
   }
-  
+
   // ----------------------------------------------------------------------
   // source
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String source = channel.getTypeFieldEntry(PortletRSS.class, "source", true).getDefaultTextString();
-  
+
   public String getSource() { return source; }
-  
+
   public void setSource(String v) { source = v; }
-  
-  
-  
+
+
+
   public String getSource(String lang) { return source; }
   public String getSource(String lang, boolean useDefault) { return source; }
   // ----------------------------------------------------------------------
   // showTitle
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean showTitle = true;
-  
+
   public boolean getShowTitle() { return showTitle; }
-  
+
   public void setShowTitle(boolean v) { showTitle = v; }
-  
-  
-  
+
+
+
   public String getShowTitleLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "showTitle", true);
-    return showTitle ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return showTitle ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getShowTitleValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getShowTitleLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(PortletRSS.class, "showTitle", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getShowTitleReport(SortedSet<PortletRSS> set) {
@@ -332,38 +355,38 @@ public  class PortletRSS extends generated.AbstractPortletSkinable
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getShowTitle());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // showDescription
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean showDescription = true;
-  
+
   public boolean getShowDescription() { return showDescription; }
-  
+
   public void setShowDescription(boolean v) { showDescription = v; }
-  
-  
-  
+
+
+
   public String getShowDescriptionLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "showDescription", true);
-    return showDescription ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return showDescription ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getShowDescriptionValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getShowDescriptionLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(PortletRSS.class, "showDescription", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getShowDescriptionReport(SortedSet<PortletRSS> set) {
@@ -373,38 +396,38 @@ public  class PortletRSS extends generated.AbstractPortletSkinable
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getShowDescription());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // showImage
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean showImage = true;
-  
+
   public boolean getShowImage() { return showImage; }
-  
+
   public void setShowImage(boolean v) { showImage = v; }
-  
-  
-  
+
+
+
   public String getShowImageLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "showImage", true);
-    return showImage ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return showImage ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getShowImageValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getShowImageLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(PortletRSS.class, "showImage", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getShowImageReport(SortedSet<PortletRSS> set) {
@@ -414,38 +437,38 @@ public  class PortletRSS extends generated.AbstractPortletSkinable
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getShowImage());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // showWebMastersEmail
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean showWebMastersEmail = false;
-  
+
   public boolean getShowWebMastersEmail() { return showWebMastersEmail; }
-  
+
   public void setShowWebMastersEmail(boolean v) { showWebMastersEmail = v; }
-  
-  
-  
+
+
+
   public String getShowWebMastersEmailLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "showWebMastersEmail", true);
-    return showWebMastersEmail ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return showWebMastersEmail ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getShowWebMastersEmailValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getShowWebMastersEmailLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(PortletRSS.class, "showWebMastersEmail", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getShowWebMastersEmailReport(SortedSet<PortletRSS> set) {
@@ -455,38 +478,38 @@ public  class PortletRSS extends generated.AbstractPortletSkinable
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getShowWebMastersEmail());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // showItemsDescription
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean showItemsDescription = true;
-  
+
   public boolean getShowItemsDescription() { return showItemsDescription; }
-  
+
   public void setShowItemsDescription(boolean v) { showItemsDescription = v; }
-  
-  
-  
+
+
+
   public String getShowItemsDescriptionLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "showItemsDescription", true);
-    return showItemsDescription ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return showItemsDescription ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getShowItemsDescriptionValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getShowItemsDescriptionLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(PortletRSS.class, "showItemsDescription", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getShowItemsDescriptionReport(SortedSet<PortletRSS> set) {
@@ -496,38 +519,38 @@ public  class PortletRSS extends generated.AbstractPortletSkinable
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getShowItemsDescription());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // openLinksInNewWindow
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean openLinksInNewWindow = false;
-  
+
   public boolean getOpenLinksInNewWindow() { return openLinksInNewWindow; }
-  
+
   public void setOpenLinksInNewWindow(boolean v) { openLinksInNewWindow = v; }
-  
-  
-  
+
+
+
   public String getOpenLinksInNewWindowLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "openLinksInNewWindow", true);
-    return openLinksInNewWindow ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return openLinksInNewWindow ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getOpenLinksInNewWindowValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getOpenLinksInNewWindowLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(PortletRSS.class, "openLinksInNewWindow", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getOpenLinksInNewWindowReport(SortedSet<PortletRSS> set) {
@@ -537,38 +560,38 @@ public  class PortletRSS extends generated.AbstractPortletSkinable
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getOpenLinksInNewWindow());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // trackingEnabled
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean trackingEnabled = false;
-  
+
   public boolean getTrackingEnabled() { return trackingEnabled; }
-  
+
   public void setTrackingEnabled(boolean v) { trackingEnabled = v; }
-  
-  
-  
+
+
+
   public String getTrackingEnabledLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "trackingEnabled", true);
-    return trackingEnabled ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return trackingEnabled ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getTrackingEnabledValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getTrackingEnabledLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(PortletRSS.class, "trackingEnabled", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getTrackingEnabledReport(SortedSet<PortletRSS> set) {
@@ -578,37 +601,37 @@ public  class PortletRSS extends generated.AbstractPortletSkinable
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getTrackingEnabled());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // refresh
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  long refresh = 86400;
-  
+
   public long getRefresh() { return refresh; }
-  
+
   public void setRefresh(long v) { refresh = v; }
-  
-  
-  
+
+
+
   // ----------------------------------------------------------------------
   // maxItems
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  int maxItems = 10;
-  
+
   public int getMaxItems() { return maxItems; }
-  
+
   public void setMaxItems(int v) { maxItems = v; }
-  
-  
-  
+
+
+
   public static IntegerFormReport getMaxItemsReport(SortedSet<PortletRSS> set) {
     long sum = 0;
     int min = Integer.MAX_VALUE;
@@ -623,19 +646,19 @@ public  class PortletRSS extends generated.AbstractPortletSkinable
       max = Math.max(value, max);
     }
     return new IntegerFormReport(set.size(), sum, min, max);
-  }  
+  }
   // ----------------------------------------------------------------------
   // skipFirstItems
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  int skipFirstItems = 0;
-  
+
   public int getSkipFirstItems() { return skipFirstItems; }
-  
+
   public void setSkipFirstItems(int v) { skipFirstItems = v; }
-  
-  
-  
+
+
+
   public static IntegerFormReport getSkipFirstItemsReport(SortedSet<PortletRSS> set) {
     long sum = 0;
     int min = Integer.MAX_VALUE;
@@ -650,25 +673,25 @@ public  class PortletRSS extends generated.AbstractPortletSkinable
       max = Math.max(value, max);
     }
     return new IntegerFormReport(set.size(), sum, min, max);
-  }  
+  }
   // ----------------------------------------------------------------------
   // sortAttribute
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String sortAttribute = channel.getTypeFieldEntry(PortletRSS.class, "sortAttribute", true).getDefaultTextString();
-  
+
   public String getSortAttribute() { return sortAttribute; }
-  
+
   public void setSortAttribute(String v) { sortAttribute = v; }
-  
-  
-  
+
+
+
   public String getSortAttribute(String lang) { return sortAttribute; }
   public String getSortAttribute(String lang, boolean useDefault) { return sortAttribute; }
-  private static String[] sortAttributeValues;  
+  private static String[] sortAttributeValues;
   private static String[] sortAttributeLabels;
   private static Map<String, String[]> sortAttributeLabelsMap;
-  
+
   public static String[] getSortAttributeValues() {
     if(sortAttributeValues == null) {
       setSortAttributeValues(channel.getTypeFieldEntry(PortletRSS.class, "sortAttribute", true).getEnumerateValues());
@@ -698,9 +721,9 @@ public  class PortletRSS extends generated.AbstractPortletSkinable
   }
   public static String[] getSortAttributeLabels(String userLang) {
     Map<String, String[]> sortAttributeLabelMap = getSortAttributeLabelsMap();
-    String[] labels = (String[])sortAttributeLabelMap.get(userLang);
+    String[] labels = sortAttributeLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])sortAttributeLabelMap.get(channel.getLanguage());
+      labels = sortAttributeLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -720,8 +743,8 @@ public  class PortletRSS extends generated.AbstractPortletSkinable
     }
     return getSortAttributeLabel(value, channel.getLanguage());
   }
-  
-  public static String getSortAttributeLabel(String value) {    
+
+  public static String getSortAttributeLabel(String value) {
     String[] sortAttributeLabels = getSortAttributeLabels();
     if (false) {
     }
@@ -737,53 +760,53 @@ public  class PortletRSS extends generated.AbstractPortletSkinable
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getSortAttribute());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
-   
+  }
+
   // ----------------------------------------------------------------------
   // abstract
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   @Override
   public void setAbstract(String lang, String value) { setSource(value); }
   @Override
   public String getAbstract() { return source; }
   @Override
   public String getAbstract(String lang, boolean useDefault) { return getSource(lang, useDefault); }
-   
+
   // ----------------------------------------------------------------------
   // Data image
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   @Override
   public String getDataImage() {
     String _img = portletImage;
     if (Util.notEmpty(_img)) {
       return _img;
     }
-  
+
     return super.getDataImage();
   }
-  
+
   @Override
   public String getDataImage(String lang, boolean useDefault) {
     String _img = getPortletImage(lang, useDefault);
     if (Util.notEmpty(_img)) {
       return _img;
-    }  
-  
+    }
+
     return super.getDataImage(lang, useDefault);
   }
-  
+
   @Override
   public String[] getSearchStrings() {
     StringBuffer sb = new StringBuffer(super.getSearchStrings()[0]);
     sb.ensureCapacity(500 * (0 + 1 + 0 + 0 + 0 + 0) );
     if (title != null) {
-      sb.append(title); sb.append(' '); 
+      sb.append(title); sb.append(' ');
     }
     if (titleML != null) {
       for (String str : titleML.values()) {
@@ -794,14 +817,14 @@ public  class PortletRSS extends generated.AbstractPortletSkinable
     }
     return new String[] {sb.toString()};
   }
-  
+
   @Override
   public String getAllWikiText() {
     StringBuffer sb = new StringBuffer(super.getAllWikiText());
     sb.ensureCapacity(500 * (0 + 0 + 0 + 0 + 0 + 0) );
     return sb.toString();
   }
-  
+
   @Override
   public String getAllWysiwygText() {
     StringBuffer sb = new StringBuffer(super.getAllWysiwygText());
@@ -810,7 +833,7 @@ public  class PortletRSS extends generated.AbstractPortletSkinable
    // Wysiwyg fields
     return sb.toString();
   }
-  
+
   @Override
   public <T extends Data> TreeSet<T> getLinkDataSet(Class<T> clazz) {
     if (clazz == null) {
@@ -822,14 +845,15 @@ public  class PortletRSS extends generated.AbstractPortletSkinable
   }
   // ----------------------------------------------------------------------
   // DataController
-  // ----------------------------------------------------------------------  
-  public ControllerStatus checkIntegrity() {
-    
+  // ----------------------------------------------------------------------
+  @Override
+public ControllerStatus checkIntegrity() {
+
     ControllerStatus status = super.checkIntegrity();
     if (status.hasFailed()) {
       return status;
     }
-    
+
     if (Util.isEmpty(source)) {
       status = new ControllerStatus();
       status.setProp("msg.edit.empty-field", channel.getTypeFieldLabel(this, "source"), null);
@@ -843,19 +867,20 @@ public  class PortletRSS extends generated.AbstractPortletSkinable
     if (maxItems < 0 ) {
       status = new ControllerStatus();
       status.setProp("msg.edit.lesser-number", channel.getTypeFieldLabel(this, "maxItems"), "0");
-      return status;      
+      return status;
     }
     if (skipFirstItems < 0 ) {
       status = new ControllerStatus();
       status.setProp("msg.edit.lesser-number", channel.getTypeFieldLabel(this, "skipFirstItems"), "0");
-      return status;      
+      return status;
     }
     return ControllerStatus.OK;
   }
-  
-  public Set<String> getExternalLinkSet() {
+
+  @Override
+public Set<String> getExternalLinkSet() {
     Set<String> set = super.getExternalLinkSet();
-   
+
     if (Util.notEmpty(source)) {
       set.add(source);
     }
@@ -866,15 +891,16 @@ public  class PortletRSS extends generated.AbstractPortletSkinable
         it.remove();
       }
     }
-    
+
     return set;
   }
-  
+
   // ----------------------------------------------------------------------
   // WorkCopy
-  // ----------------------------------------------------------------------  
-  protected void prepareMergeCopy(Publication mergeCopy) {
-    super.prepareMergeCopy(mergeCopy);  
+  // ----------------------------------------------------------------------
+  @Override
+protected void prepareMergeCopy(Publication mergeCopy) {
+    super.prepareMergeCopy(mergeCopy);
     ((PortletRSS)mergeCopy).setSource(getSource());
     ((PortletRSS)mergeCopy).setShowTitle(getShowTitle());
     ((PortletRSS)mergeCopy).setShowDescription(getShowDescription());

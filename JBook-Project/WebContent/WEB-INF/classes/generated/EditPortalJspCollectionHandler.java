@@ -1,46 +1,47 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
+
+
+import java.util.HashMap;
+import java.util.List;
+
+import com.jalios.jcms.Data;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
 import com.jalios.util.Util;
-import custom.*;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.EditPortalElementHandler {
-   
+
   protected PortalJspCollection theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return PortalJspCollection.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpPortalJspCollection  
+  // validateBeforeOpPortalJspCollection
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     {
       List<com.jalios.jcms.portlet.PortalElement> list = processDataIds("children",__childrenStr,com.jalios.jcms.portlet.PortalElement.class);
-      this.children = (com.jalios.jcms.portlet.PortalElement[])list.toArray(new com.jalios.jcms.portlet.PortalElement[0]);
+      this.children = list.toArray(new com.jalios.jcms.portlet.PortalElement[0]);
     }
     {
       Data data = processDataId("originalPortlet", __originalPortletStr, com.jalios.jcms.portlet.PortalElement.class);
-      if (data != null) { 
+      if (data != null) {
         originalPortlet = (com.jalios.jcms.portlet.PortalElement)data;
       } else {
         isOriginalPortletValidated = Util.isEmpty(__originalPortletStr);
@@ -48,22 +49,13 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     {
       Data data = processDataId("child", __childStr, com.jalios.jcms.portlet.PortalElement.class);
-      if (data != null) { 
+      if (data != null) {
         child = (com.jalios.jcms.portlet.PortalElement)data;
       } else {
         isChildValidated = Util.isEmpty(__childStr);
       }
     }
-    if (!validateUploadedFileDocument(getAvailableChildren(),   fdauthor, getAvailableWorkspace())) {
-      return false;
-    }
-    if (!validateUploadedFileDocument(getAvailableOriginalPortlet(),   fdauthor, getAvailableWorkspace())) {
-      return false;
-    }
-    if (!validateUploadedFileDocument(getAvailableChild(),   fdauthor, getAvailableWorkspace())) {
-      return false;
-    }
-    if (!createUploadedFileDocument(getAvailableChildren(),  fdauthor, getAvailableWorkspace())) {
+    if (!validateUploadedFileDocument(getAvailableChildren(),   fdauthor, getAvailableWorkspace()) || !validateUploadedFileDocument(getAvailableOriginalPortlet(),   fdauthor, getAvailableWorkspace()) || !validateUploadedFileDocument(getAvailableChild(),   fdauthor, getAvailableWorkspace()) || !createUploadedFileDocument(getAvailableChildren(),  fdauthor, getAvailableWorkspace())) {
       return false;
     }
     if (!createUploadedFileDocument(getAvailableOriginalPortlet(),  fdauthor, getAvailableWorkspace())) {
@@ -76,140 +68,140 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("pageTitle".equals(field)) {
       return getAllAvailablePageTitleML();
     }
-    
+
     if ("jsp".equals(field)) {
       return getAvailableJsp();
     }
-    
+
     if ("description".equals(field)) {
       return getAllAvailableDescriptionML();
     }
-    
+
     if ("exactCategory".equals(field)) {
       return getAvailableExactCategory();
     }
-    
+
     if ("children".equals(field)) {
       return getAvailableChildren();
     }
-    
+
     if ("childrenBindings".equals(field)) {
       return getAvailableChildrenBindings();
     }
-    
+
     if ("portletImage".equals(field)) {
       return getAllAvailablePortletImageML();
     }
-    
+
     if ("cacheType".equals(field)) {
       return getAvailableCacheType();
     }
-    
+
     if ("cacheSensibility".equals(field)) {
       return getAvailableCacheSensibility();
     }
-    
+
     if ("invalidClass".equals(field)) {
       return getAvailableInvalidClass();
     }
-    
+
     if ("invalidTime".equals(field)) {
       return getAvailableInvalidTime();
     }
-    
+
     if ("displayCSS".equals(field)) {
       return getAvailableDisplayCSS();
     }
-    
+
     if ("width".equals(field)) {
       return getAvailableWidth();
     }
-    
+
     if ("insetLeft".equals(field)) {
       return getAvailableInsetLeft();
     }
-    
+
     if ("insetRight".equals(field)) {
       return getAvailableInsetRight();
     }
-    
+
     if ("insetTop".equals(field)) {
       return getAvailableInsetTop();
     }
-    
+
     if ("insetBottom".equals(field)) {
       return getAvailableInsetBottom();
     }
-    
+
     if ("cellPadding".equals(field)) {
       return getAvailableCellPadding();
     }
-    
+
     if ("alignH".equals(field)) {
       return getAvailableAlignH();
     }
-    
+
     if ("alignV".equals(field)) {
       return getAvailableAlignV();
     }
-    
+
     if ("alignTable".equals(field)) {
       return getAvailableAlignTable();
     }
-    
+
     if ("border".equals(field)) {
       return getAvailableBorder();
     }
-    
+
     if ("borderColor".equals(field)) {
       return getAvailableBorderColor();
     }
-    
+
     if ("backColor".equals(field)) {
       return getAvailableBackColor();
     }
-    
+
     if ("backImage".equals(field)) {
       return getAvailableBackImage();
     }
-    
+
     if ("behaviorCopy".equals(field)) {
       return getAvailableBehaviorCopy();
     }
-    
+
     if ("originalPortlet".equals(field)) {
       return getAvailableOriginalPortlet();
     }
-    
+
     if ("condition".equals(field)) {
       return getAvailableCondition();
     }
-    
+
     if ("cssId".equals(field)) {
       return getAvailableCssId();
     }
-    
+
     if ("cssClasses".equals(field)) {
       return getAvailableCssClasses();
     }
-    
+
     if ("child".equals(field)) {
       return getAvailableChild();
     }
-    
+
     if ("cssFile".equals(field)) {
       return getAvailableCssFile();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     if ("exactCategory".equals(field)) {
       return PortalJspCollection.getExactCategoryValues();
     }
@@ -247,7 +239,7 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     if ("exactCategory".equals(field)) {
       return PortalJspCollection.getExactCategoryLabels(userLang);
     }
@@ -284,7 +276,7 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdatePortalJspCollection  
+  // validateCommonCreateUpdatePortalJspCollection
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdatePortalJspCollection() {
     if (!isInvalidTimeValidated) {
@@ -325,39 +317,35 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdatePortalJspCollection()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdatePortalJspCollection()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdatePortalJspCollection()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdatePortalJspCollection()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -366,7 +354,8 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -375,7 +364,8 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -384,7 +374,8 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     PortalJspCollection obj = (PortalJspCollection)data;
     obj.setPageTitle(getAvailablePageTitle());
@@ -423,8 +414,9 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     obj.setChild(getAvailableChild());
     obj.setCssFile(getAvailableCssFile());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof PortalJspCollection) {
       super.setId(v);
       theContent = (PortalJspCollection)publication;
@@ -433,11 +425,11 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // pageTitle
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry pageTitleTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "pageTitle", true);
   protected String pageTitle = channel.getTypeFieldEntry(PortalJspCollection.class, "pageTitle", true).getDefaultTextString();
   protected HashMap<String,String> pageTitleML = pageTitleTFE.getDefaultTextMap();
@@ -452,14 +444,14 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return pageTitle;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailablePageTitleML() {
     HashMap<String,String> map = Util.getHashMap(getAvailablePageTitleML());
     map.put(channel.getLanguage(),getAvailablePageTitle(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailablePageTitleML() {
     if (theContent != null && isFieldMissing("pageTitle")) {
       return theContent.getPageTitleML();
@@ -484,11 +476,11 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return pageTitleML == null ? "" : Util.getString(pageTitleML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // jsp
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry jspTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "jsp", true);
   protected String jsp = channel.getTypeFieldEntry(PortalJspCollection.class, "jsp", true).getDefaultTextString();
   public void setJsp(String[] v) {
@@ -501,13 +493,13 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return jsp;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // description
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry descriptionTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "description", true);
   protected String description = channel.getTypeFieldEntry(PortalJspCollection.class, "description", true).getDefaultTextString();
   protected HashMap<String,String> descriptionML = descriptionTFE.getDefaultTextMap();
@@ -515,28 +507,31 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     description = getMultilingualMainValue(descriptionTFE, v);
     descriptionML = getMultilingualMLMap(descriptionTFE, v);
   }
-  public String getAvailableDescription() {
+  @Override
+public String getAvailableDescription() {
     if (theContent != null && isFieldMissing("description")) {
      String objectValue = theContent.getDescription();
       return objectValue;
     }
     return description;
   }
-  
-    
-  public HashMap<String,String> getAllAvailableDescriptionML() {
+
+
+  @Override
+public HashMap<String,String> getAllAvailableDescriptionML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableDescriptionML());
     map.put(channel.getLanguage(),getAvailableDescription(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableDescriptionML() {
     if (theContent != null && isFieldMissing("description")) {
       return theContent.getDescriptionML();
     }
     return descriptionML;
   }
-  public String getAvailableDescription(String lang) {
+  @Override
+public String getAvailableDescription(String lang) {
     if (theContent != null) {
       if (lang.equals(channel.getLanguage())) {
       	if (!Util.isSameContent(description, channel.getTypeFieldEntry(PortalJspCollection.class, "description", true).getDefaultTextString())) {
@@ -554,17 +549,17 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return descriptionML == null ? "" : Util.getString(descriptionML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // exactCategory
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry exactCategoryTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "exactCategory", true);
   protected boolean exactCategory = false;
   public void setExactCategory(boolean  v) {
     this.exactCategory = v;
   }
-  
+
   public boolean getAvailableExactCategory() {
     if (theContent != null && isFieldMissing("exactCategory")) {
      boolean objectValue = theContent.getExactCategory();
@@ -572,13 +567,13 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return exactCategory;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // children
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry childrenTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "children", true);
   protected com.jalios.jcms.portlet.PortalElement[] children = new com.jalios.jcms.portlet.PortalElement[0];
   protected int childrenAddCount = 0;
@@ -596,29 +591,29 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return children;
   }
-  
-    
-  
+
+
+
   public void setChildrenAddCount(int  v) {
     childrenAddCount = v;
   }
-  
+
   public int getChildrenCount() {
     int arraySize = Util.getSize(getAvailableChildren());
     int res = 3 + arraySize + childrenAddCount;
     return res;
   }
-   
+
   // ----------------------------------------------------------------------
   // childrenBindings
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry childrenBindingsTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "childrenBindings", true);
   protected String[] childrenBindings = new String[0];
   protected int childrenBindingsAddCount = 0;
   public void setChildrenBindings(String[] v) {
     childrenBindings = getMonolingualValueArray(childrenBindingsTFE, v);
   }
-  
+
   public String[] getAvailableChildrenBindings() {
     if (theContent != null && isFieldMissing("childrenBindings")) {
 	  String[] objectValue = theContent.getChildrenBindings();
@@ -629,22 +624,22 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return childrenBindings;
   }
-  
-    
-  
+
+
+
   public void setChildrenBindingsAddCount(int  v) {
     childrenBindingsAddCount = v;
   }
-  
+
   public int getChildrenBindingsCount() {
     int arraySize = Util.getSize(getAvailableChildrenBindings());
     int res = 3 + arraySize + childrenBindingsAddCount;
     return res;
   }
-   
+
   // ----------------------------------------------------------------------
   // portletImage
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry portletImageTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "portletImage", true);
   protected String portletImage = channel.getTypeFieldEntry(PortalJspCollection.class, "portletImage", true).getDefaultTextString();
   protected HashMap<String,String> portletImageML = portletImageTFE.getDefaultTextMap();
@@ -659,14 +654,14 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return portletImage;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailablePortletImageML() {
     HashMap<String,String> map = Util.getHashMap(getAvailablePortletImageML());
     map.put(channel.getLanguage(),getAvailablePortletImage(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailablePortletImageML() {
     if (theContent != null && isFieldMissing("portletImage")) {
       return theContent.getPortletImageML();
@@ -691,57 +686,60 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return portletImageML == null ? "" : Util.getString(portletImageML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // cacheType
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry cacheTypeTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "cacheType", true);
   protected String cacheType = channel.getTypeFieldEntry(PortalJspCollection.class, "cacheType", true).getDefaultTextString();
   public void setCacheType(String[] v) {
     cacheType = getMonolingualValue(cacheTypeTFE, v);
   }
-  public String getAvailableCacheType() {
+  @Override
+public String getAvailableCacheType() {
     if (theContent != null && isFieldMissing("cacheType")) {
      String objectValue = theContent.getCacheType();
       return objectValue;
     }
     return cacheType;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // cacheSensibility
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry cacheSensibilityTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "cacheSensibility", true);
   protected String cacheSensibility = channel.getTypeFieldEntry(PortalJspCollection.class, "cacheSensibility", true).getDefaultTextString();
   public void setCacheSensibility(String[] v) {
     cacheSensibility = getMonolingualValue(cacheSensibilityTFE, v);
   }
-  public String getAvailableCacheSensibility() {
+  @Override
+public String getAvailableCacheSensibility() {
     if (theContent != null && isFieldMissing("cacheSensibility")) {
      String objectValue = theContent.getCacheSensibility();
       return objectValue;
     }
     return cacheSensibility;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // invalidClass
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry invalidClassTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "invalidClass", true);
   protected String[] invalidClass = new String[0];
   protected int invalidClassAddCount = 0;
   public void setInvalidClass(String[] v) {
     invalidClass = getMonolingualValueArray(invalidClassTFE, v);
   }
-  
-  public String[] getAvailableInvalidClass() {
+
+  @Override
+public String[] getAvailableInvalidClass() {
     if (theContent != null && isFieldMissing("invalidClass")) {
 	  String[] objectValue = theContent.getInvalidClass();
       if (objectValue == null) {
@@ -751,22 +749,23 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return invalidClass;
   }
-  
-    
-  
+
+
+
   public void setInvalidClassAddCount(int  v) {
     invalidClassAddCount = v;
   }
-  
-  public int getInvalidClassCount() {
+
+  @Override
+public int getInvalidClassCount() {
     int arraySize = Util.getSize(getAvailableInvalidClass());
     int res = 3 + arraySize + invalidClassAddCount;
     return res;
   }
-   
+
   // ----------------------------------------------------------------------
   // invalidTime
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry invalidTimeTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "invalidTime", true);
   protected boolean isInvalidTimeValidated = true;
   protected long invalidTime = 60;
@@ -777,21 +776,22 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
       isInvalidTimeValidated = false;
     }
   }
-  
-  public long getAvailableInvalidTime() {
+
+  @Override
+public long getAvailableInvalidTime() {
     if (theContent != null && isFieldMissing("invalidTime")) {
      long objectValue = theContent.getInvalidTime();
       return objectValue;
     }
     return invalidTime;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // displayCSS
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry displayCSSTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "displayCSS", true);
   protected String displayCSS = channel.getTypeFieldEntry(PortalJspCollection.class, "displayCSS", true).getDefaultTextString();
   public void setDisplayCSS(String[] v) {
@@ -804,13 +804,13 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return displayCSS;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // width
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry widthTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "width", true);
   protected String width = channel.getTypeFieldEntry(PortalJspCollection.class, "width", true).getDefaultTextString();
   public void setWidth(String[] v) {
@@ -823,13 +823,13 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return width;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // insetLeft
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry insetLeftTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "insetLeft", true);
   protected boolean isInsetLeftValidated = true;
   protected int insetLeft = 0;
@@ -847,13 +847,13 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return insetLeft;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // insetRight
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry insetRightTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "insetRight", true);
   protected boolean isInsetRightValidated = true;
   protected int insetRight = 0;
@@ -871,13 +871,13 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return insetRight;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // insetTop
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry insetTopTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "insetTop", true);
   protected boolean isInsetTopValidated = true;
   protected int insetTop = 0;
@@ -895,13 +895,13 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return insetTop;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // insetBottom
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry insetBottomTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "insetBottom", true);
   protected boolean isInsetBottomValidated = true;
   protected int insetBottom = 0;
@@ -919,13 +919,13 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return insetBottom;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // cellPadding
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry cellPaddingTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "cellPadding", true);
   protected boolean isCellPaddingValidated = true;
   protected int cellPadding = 0;
@@ -943,13 +943,13 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return cellPadding;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // alignH
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry alignHTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "alignH", true);
   protected String alignH = channel.getTypeFieldEntry(PortalJspCollection.class, "alignH", true).getDefaultTextString();
   public void setAlignH(String[] v) {
@@ -962,13 +962,13 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return alignH;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // alignV
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry alignVTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "alignV", true);
   protected String alignV = channel.getTypeFieldEntry(PortalJspCollection.class, "alignV", true).getDefaultTextString();
   public void setAlignV(String[] v) {
@@ -981,13 +981,13 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return alignV;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // alignTable
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry alignTableTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "alignTable", true);
   protected String alignTable = channel.getTypeFieldEntry(PortalJspCollection.class, "alignTable", true).getDefaultTextString();
   public void setAlignTable(String[] v) {
@@ -1000,13 +1000,13 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return alignTable;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // border
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry borderTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "border", true);
   protected boolean isBorderValidated = true;
   protected int border = 0;
@@ -1024,13 +1024,13 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return border;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // borderColor
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry borderColorTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "borderColor", true);
   protected String borderColor = channel.getTypeFieldEntry(PortalJspCollection.class, "borderColor", true).getDefaultTextString();
   public void setBorderColor(String[] v) {
@@ -1043,13 +1043,13 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return borderColor;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // backColor
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry backColorTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "backColor", true);
   protected String backColor = channel.getTypeFieldEntry(PortalJspCollection.class, "backColor", true).getDefaultTextString();
   public void setBackColor(String[] v) {
@@ -1062,13 +1062,13 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return backColor;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // backImage
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry backImageTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "backImage", true);
   protected String backImage = channel.getTypeFieldEntry(PortalJspCollection.class, "backImage", true).getDefaultTextString();
   public void setBackImage(String[] v) {
@@ -1081,32 +1081,33 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return backImage;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // behaviorCopy
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry behaviorCopyTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "behaviorCopy", true);
   protected String behaviorCopy = channel.getTypeFieldEntry(PortalJspCollection.class, "behaviorCopy", true).getDefaultTextString();
   public void setBehaviorCopy(String[] v) {
     behaviorCopy = getMonolingualValue(behaviorCopyTFE, v);
   }
-  public String getAvailableBehaviorCopy() {
+  @Override
+public String getAvailableBehaviorCopy() {
     if (theContent != null && isFieldMissing("behaviorCopy")) {
      String objectValue = theContent.getBehaviorCopy();
       return objectValue;
     }
     return behaviorCopy;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // originalPortlet
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry originalPortletTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "originalPortlet", true);
   protected boolean isOriginalPortletValidated = true;
   protected com.jalios.jcms.portlet.PortalElement originalPortlet;
@@ -1121,20 +1122,20 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return originalPortlet;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // condition
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry conditionTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "condition", true);
   protected String[] condition = new String[0];
   protected int conditionAddCount = 0;
   public void setCondition(String[] v) {
     condition = getMonolingualValueArray(conditionTFE, v);
   }
-  
+
   public String[] getAvailableCondition() {
     if (theContent != null && isFieldMissing("condition")) {
 	  String[] objectValue = theContent.getCondition();
@@ -1145,41 +1146,42 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return condition;
   }
-  
-    
-  
+
+
+
   public void setConditionAddCount(int  v) {
     conditionAddCount = v;
   }
-  
+
   public int getConditionCount() {
     int arraySize = Util.getSize(getAvailableCondition());
     int res = 3 + arraySize + conditionAddCount;
     return res;
   }
-   
+
   // ----------------------------------------------------------------------
   // cssId
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry cssIdTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "cssId", true);
   protected String cssId = channel.getTypeFieldEntry(PortalJspCollection.class, "cssId", true).getDefaultTextString();
   public void setCssId(String[] v) {
     cssId = getMonolingualValue(cssIdTFE, v);
   }
-  public String getAvailableCssId() {
+  @Override
+public String getAvailableCssId() {
     if (theContent != null && isFieldMissing("cssId")) {
      String objectValue = theContent.getCssId();
       return objectValue;
     }
     return cssId;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // cssClasses
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry cssClassesTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "cssClasses", true);
   protected String cssClasses = channel.getTypeFieldEntry(PortalJspCollection.class, "cssClasses", true).getDefaultTextString();
   public void setCssClasses(String[] v) {
@@ -1192,13 +1194,13 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return cssClasses;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // child
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry childTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "child", true);
   protected boolean isChildValidated = true;
   protected com.jalios.jcms.portlet.PortalElement child;
@@ -1213,13 +1215,13 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return child;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // cssFile
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry cssFileTFE = channel.getTypeFieldEntry(PortalJspCollection.class, "cssFile", true);
   protected String cssFile = channel.getTypeFieldEntry(PortalJspCollection.class, "cssFile", true).getDefaultTextString();
   public void setCssFile(String[] v) {
@@ -1232,12 +1234,12 @@ public class EditPortalJspCollectionHandler extends com.jalios.jcms.portlet.Edit
     }
     return cssFile;
   }
-  
-    
-  
- 
-   
- 
+
+
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // yACPHLOIyrMb9h2VFCpJYw==

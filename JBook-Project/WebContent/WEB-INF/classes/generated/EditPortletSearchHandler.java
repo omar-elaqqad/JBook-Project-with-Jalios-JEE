@@ -1,42 +1,42 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
+
+
+import java.util.HashMap;
+
+import com.jalios.jcms.Data;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
 import com.jalios.util.Util;
-import custom.*;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditPortletSearchHandler extends EditAbstractPortletSkinableHandler {
-   
+
   protected PortletSearch theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return PortletSearch.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpPortletSearch  
+  // validateBeforeOpPortletSearch
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     {
       Data data = processDataId("queryPortlet", __queryPortletStr, generated.PortletQueryForeach.class);
-      if (data != null) { 
+      if (data != null) {
         queryPortlet = (generated.PortletQueryForeach)data;
       } else {
         isQueryPortletValidated = Util.isEmpty(__queryPortletStr);
@@ -44,7 +44,7 @@ public class EditPortletSearchHandler extends EditAbstractPortletSkinableHandler
     }
     {
       Data data = processDataId("displayPortal", __displayPortalStr, Publication.class);
-      if (data != null) { 
+      if (data != null) {
         displayPortal = (Publication)data;
       } else {
         isDisplayPortalValidated = Util.isEmpty(__displayPortalStr);
@@ -52,22 +52,13 @@ public class EditPortletSearchHandler extends EditAbstractPortletSkinableHandler
     }
     {
       Data data = processDataId("advancedSearchPortlet", __advancedSearchPortletStr, generated.PortletSearch.class);
-      if (data != null) { 
+      if (data != null) {
         advancedSearchPortlet = (generated.PortletSearch)data;
       } else {
         isAdvancedSearchPortletValidated = Util.isEmpty(__advancedSearchPortletStr);
       }
     }
-    if (!validateUploadedFileDocument(getAvailableQueryPortlet(),   fdauthor, getAvailableWorkspace())) {
-      return false;
-    }
-    if (!validateUploadedFileDocument(getAvailableDisplayPortal(),   fdauthor, getAvailableWorkspace())) {
-      return false;
-    }
-    if (!validateUploadedFileDocument(getAvailableAdvancedSearchPortlet(),   fdauthor, getAvailableWorkspace())) {
-      return false;
-    }
-    if (!createUploadedFileDocument(getAvailableQueryPortlet(),  fdauthor, getAvailableWorkspace())) {
+    if (!validateUploadedFileDocument(getAvailableQueryPortlet(),   fdauthor, getAvailableWorkspace()) || !validateUploadedFileDocument(getAvailableDisplayPortal(),   fdauthor, getAvailableWorkspace()) || !validateUploadedFileDocument(getAvailableAdvancedSearchPortlet(),   fdauthor, getAvailableWorkspace()) || !createUploadedFileDocument(getAvailableQueryPortlet(),  fdauthor, getAvailableWorkspace())) {
       return false;
     }
     if (!createUploadedFileDocument(getAvailableDisplayPortal(),  fdauthor, getAvailableWorkspace())) {
@@ -80,48 +71,48 @@ public class EditPortletSearchHandler extends EditAbstractPortletSkinableHandler
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("titleText".equals(field)) {
       return getAllAvailableTitleTextML();
     }
-    
+
     if ("searchWith".equals(field)) {
       return getAvailableSearchWith();
     }
-    
+
     if ("searchIn".equals(field)) {
       return getAvailableSearchIn();
     }
-    
+
     if ("instantSearch".equals(field)) {
       return getAvailableInstantSearch();
     }
-    
+
     if ("query".equals(field)) {
       return getAvailableQuery();
     }
-    
+
     if ("refineQueries".equals(field)) {
       return getAvailableRefineQueries();
     }
-    
+
     if ("queryPortlet".equals(field)) {
       return getAvailableQueryPortlet();
     }
-    
+
     if ("displayPortal".equals(field)) {
       return getAvailableDisplayPortal();
     }
-    
+
     if ("advancedSearchPortlet".equals(field)) {
       return getAvailableAdvancedSearchPortlet();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     if ("searchWith".equals(field)) {
       return PortletSearch.getSearchWithValues();
     }
@@ -138,7 +129,7 @@ public class EditPortletSearchHandler extends EditAbstractPortletSkinableHandler
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     if ("searchWith".equals(field)) {
       return PortletSearch.getSearchWithLabels(userLang);
     }
@@ -154,7 +145,7 @@ public class EditPortletSearchHandler extends EditAbstractPortletSkinableHandler
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdatePortletSearch  
+  // validateCommonCreateUpdatePortletSearch
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdatePortletSearch() {
     if (!isQueryPortletValidated) {
@@ -171,39 +162,35 @@ public class EditPortletSearchHandler extends EditAbstractPortletSkinableHandler
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdatePortletSearch()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdatePortletSearch()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdatePortletSearch()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdatePortletSearch()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -212,7 +199,8 @@ public class EditPortletSearchHandler extends EditAbstractPortletSkinableHandler
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -221,7 +209,8 @@ public class EditPortletSearchHandler extends EditAbstractPortletSkinableHandler
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -230,7 +219,8 @@ public class EditPortletSearchHandler extends EditAbstractPortletSkinableHandler
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     PortletSearch obj = (PortletSearch)data;
     obj.setTitleText(getAvailableTitleText());
@@ -244,8 +234,9 @@ public class EditPortletSearchHandler extends EditAbstractPortletSkinableHandler
     obj.setDisplayPortal(getAvailableDisplayPortal());
     obj.setAdvancedSearchPortlet(getAvailableAdvancedSearchPortlet());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof PortletSearch) {
       super.setId(v);
       theContent = (PortletSearch)publication;
@@ -254,11 +245,11 @@ public class EditPortletSearchHandler extends EditAbstractPortletSkinableHandler
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // titleText
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry titleTextTFE = channel.getTypeFieldEntry(PortletSearch.class, "titleText", true);
   protected String titleText = channel.getTypeFieldEntry(PortletSearch.class, "titleText", true).getDefaultTextString();
   protected HashMap<String,String> titleTextML = titleTextTFE.getDefaultTextMap();
@@ -273,14 +264,14 @@ public class EditPortletSearchHandler extends EditAbstractPortletSkinableHandler
     }
     return titleText;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailableTitleTextML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableTitleTextML());
     map.put(channel.getLanguage(),getAvailableTitleText(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableTitleTextML() {
     if (theContent != null && isFieldMissing("titleText")) {
       return theContent.getTitleTextML();
@@ -305,11 +296,11 @@ public class EditPortletSearchHandler extends EditAbstractPortletSkinableHandler
     }
     return titleTextML == null ? "" : Util.getString(titleTextML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // searchWith
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry searchWithTFE = channel.getTypeFieldEntry(PortletSearch.class, "searchWith", true);
   protected String searchWith = channel.getTypeFieldEntry(PortletSearch.class, "searchWith", true).getDefaultTextString();
   public void setSearchWith(String[] v) {
@@ -322,20 +313,20 @@ public class EditPortletSearchHandler extends EditAbstractPortletSkinableHandler
     }
     return searchWith;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // searchIn
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry searchInTFE = channel.getTypeFieldEntry(PortletSearch.class, "searchIn", true);
   protected String[] searchIn = new String[0];
   protected int searchInAddCount = 0;
   public void setSearchIn(String[] v) {
     searchIn = getMonolingualValueArray(searchInTFE, v);
   }
-  
+
   public String[] getAvailableSearchIn() {
     if (theContent != null && isFieldMissing("searchIn")) {
 	  String[] objectValue = theContent.getSearchIn();
@@ -346,28 +337,28 @@ public class EditPortletSearchHandler extends EditAbstractPortletSkinableHandler
     }
     return searchIn;
   }
-  
-    
-  
+
+
+
   public void setSearchInAddCount(int  v) {
     searchInAddCount = v;
   }
-  
+
   public int getSearchInCount() {
     int arraySize = Util.getSize(getAvailableSearchIn());
     int res = 3 + arraySize + searchInAddCount;
     return res;
   }
-   
+
   // ----------------------------------------------------------------------
   // instantSearch
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry instantSearchTFE = channel.getTypeFieldEntry(PortletSearch.class, "instantSearch", true);
   protected boolean instantSearch = true;
   public void setInstantSearch(boolean  v) {
     this.instantSearch = v;
   }
-  
+
   public boolean getAvailableInstantSearch() {
     if (theContent != null && isFieldMissing("instantSearch")) {
      boolean objectValue = theContent.getInstantSearch();
@@ -375,13 +366,13 @@ public class EditPortletSearchHandler extends EditAbstractPortletSkinableHandler
     }
     return instantSearch;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // query
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry queryTFE = channel.getTypeFieldEntry(PortletSearch.class, "query", true);
   protected String query = channel.getTypeFieldEntry(PortletSearch.class, "query", true).getDefaultTextString();
   public void setQuery(String[] v) {
@@ -394,13 +385,13 @@ public class EditPortletSearchHandler extends EditAbstractPortletSkinableHandler
     }
     return query;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // refineQueries
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry refineQueriesTFE = channel.getTypeFieldEntry(PortletSearch.class, "refineQueries", true);
   protected String refineQueries = channel.getTypeFieldEntry(PortletSearch.class, "refineQueries", true).getDefaultTextString();
   public void setRefineQueries(String[] v) {
@@ -413,13 +404,13 @@ public class EditPortletSearchHandler extends EditAbstractPortletSkinableHandler
     }
     return refineQueries;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // queryPortlet
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry queryPortletTFE = channel.getTypeFieldEntry(PortletSearch.class, "queryPortlet", true);
   protected boolean isQueryPortletValidated = true;
   protected generated.PortletQueryForeach queryPortlet;
@@ -434,13 +425,13 @@ public class EditPortletSearchHandler extends EditAbstractPortletSkinableHandler
     }
     return queryPortlet;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // displayPortal
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry displayPortalTFE = channel.getTypeFieldEntry(PortletSearch.class, "displayPortal", true);
   protected boolean isDisplayPortalValidated = true;
   protected Publication displayPortal;
@@ -455,13 +446,13 @@ public class EditPortletSearchHandler extends EditAbstractPortletSkinableHandler
     }
     return displayPortal;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // advancedSearchPortlet
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry advancedSearchPortletTFE = channel.getTypeFieldEntry(PortletSearch.class, "advancedSearchPortlet", true);
   protected boolean isAdvancedSearchPortletValidated = true;
   protected generated.PortletSearch advancedSearchPortlet;
@@ -476,12 +467,12 @@ public class EditPortletSearchHandler extends EditAbstractPortletSkinableHandler
     }
     return advancedSearchPortlet;
   }
-  
-    
-  
- 
-   
- 
+
+
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // DVAd8oLHTLdBAm/KAn/Fbw==

@@ -1,107 +1,108 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
+
+
+import java.util.HashMap;
+import java.util.List;
+
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
+import com.jalios.jcms.handler.EditFormHandler;
 import com.jalios.util.Util;
-import custom.*;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditCSRequestHandler extends EditFormHandler {
-   
+
   protected CSRequest theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return CSRequest.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpCSRequest  
+  // validateBeforeOpCSRequest
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getAvailableAuthor();
-    
-    
+
+
     {
       List<com.jalios.jcms.Member> list = processDataIds("admins",__adminsStr,com.jalios.jcms.Member.class);
-      this.admins = (com.jalios.jcms.Member[])list.toArray(new com.jalios.jcms.Member[0]);
+      this.admins = list.toArray(new com.jalios.jcms.Member[0]);
     }
     {
       List<com.jalios.jcms.Group> list = processDataIds("groups",__groupsStr,com.jalios.jcms.Group.class);
-      this.groups = (com.jalios.jcms.Group[])list.toArray(new com.jalios.jcms.Group[0]);
+      this.groups = list.toArray(new com.jalios.jcms.Group[0]);
     }
     {
       List<com.jalios.jcms.Member> list = processDataIds("members",__membersStr,com.jalios.jcms.Member.class);
-      this.members = (com.jalios.jcms.Member[])list.toArray(new com.jalios.jcms.Member[0]);
+      this.members = list.toArray(new com.jalios.jcms.Member[0]);
     }
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("name".equals(field)) {
       return getAllAvailableNameML();
     }
-    
+
     if ("description".equals(field)) {
       return getAllAvailableDescriptionML();
     }
-    
+
     if ("accessPolicy".equals(field)) {
       return getAvailableAccessPolicy();
     }
-    
+
     if ("signupPolicy".equals(field)) {
       return getAvailableSignupPolicy();
     }
-    
+
     if ("model".equals(field)) {
       return getAvailableModel();
     }
-    
+
     if ("language".equals(field)) {
       return getAvailableLanguage();
     }
-    
+
     if ("admins".equals(field)) {
       return getAvailableAdmins();
     }
-    
+
     if ("groups".equals(field)) {
       return getAvailableGroups();
     }
-    
+
     if ("members".equals(field)) {
       return getAvailableMembers();
     }
-    
+
     if ("notificationPolicy".equals(field)) {
       return getAvailableNotificationPolicy();
     }
-    
+
     if ("parent".equals(field)) {
       return getAvailableParent();
     }
-    
+
     if ("syncMode".equals(field)) {
       return getAvailableSyncMode();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     if ("accessPolicy".equals(field)) {
       return CSRequest.getAccessPolicyValues();
     }
@@ -118,7 +119,7 @@ public class EditCSRequestHandler extends EditFormHandler {
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     if ("accessPolicy".equals(field)) {
       return CSRequest.getAccessPolicyLabels(userLang);
     }
@@ -134,44 +135,40 @@ public class EditCSRequestHandler extends EditFormHandler {
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdateCSRequest  
+  // validateCommonCreateUpdateCSRequest
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdateCSRequest() {
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdateCSRequest()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdateCSRequest()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdateCSRequest()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdateCSRequest()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -180,7 +177,8 @@ public class EditCSRequestHandler extends EditFormHandler {
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -189,7 +187,8 @@ public class EditCSRequestHandler extends EditFormHandler {
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -198,7 +197,8 @@ public class EditCSRequestHandler extends EditFormHandler {
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     CSRequest obj = (CSRequest)data;
     obj.setName(getAvailableName());
@@ -216,8 +216,9 @@ public class EditCSRequestHandler extends EditFormHandler {
     obj.setParent(getAvailableParent());
     obj.setSyncMode(getAvailableSyncMode());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof CSRequest) {
       super.setId(v);
       theContent = (CSRequest)publication;
@@ -226,11 +227,11 @@ public class EditCSRequestHandler extends EditFormHandler {
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // name
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry nameTFE = channel.getTypeFieldEntry(CSRequest.class, "name", true);
   protected String name = channel.getTypeFieldEntry(CSRequest.class, "name", true).getDefaultTextString();
   protected HashMap<String,String> nameML = nameTFE.getDefaultTextMap();
@@ -245,14 +246,14 @@ public class EditCSRequestHandler extends EditFormHandler {
     }
     return name;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailableNameML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableNameML());
     map.put(channel.getLanguage(),getAvailableName(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableNameML() {
     if (theContent != null && isFieldMissing("name")) {
       return theContent.getNameML();
@@ -277,11 +278,11 @@ public class EditCSRequestHandler extends EditFormHandler {
     }
     return nameML == null ? "" : Util.getString(nameML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // description
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry descriptionTFE = channel.getTypeFieldEntry(CSRequest.class, "description", true);
   protected String description = channel.getTypeFieldEntry(CSRequest.class, "description", true).getDefaultTextString();
   protected HashMap<String,String> descriptionML = descriptionTFE.getDefaultTextMap();
@@ -296,14 +297,14 @@ public class EditCSRequestHandler extends EditFormHandler {
     }
     return description;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailableDescriptionML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableDescriptionML());
     map.put(channel.getLanguage(),getAvailableDescription(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableDescriptionML() {
     if (theContent != null && isFieldMissing("description")) {
       return theContent.getDescriptionML();
@@ -328,11 +329,11 @@ public class EditCSRequestHandler extends EditFormHandler {
     }
     return descriptionML == null ? "" : Util.getString(descriptionML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // accessPolicy
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry accessPolicyTFE = channel.getTypeFieldEntry(CSRequest.class, "accessPolicy", true);
   protected String accessPolicy = channel.getTypeFieldEntry(CSRequest.class, "accessPolicy", true).getDefaultTextString();
   public void setAccessPolicy(String[] v) {
@@ -345,13 +346,13 @@ public class EditCSRequestHandler extends EditFormHandler {
     }
     return accessPolicy;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // signupPolicy
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry signupPolicyTFE = channel.getTypeFieldEntry(CSRequest.class, "signupPolicy", true);
   protected String signupPolicy = channel.getTypeFieldEntry(CSRequest.class, "signupPolicy", true).getDefaultTextString();
   public void setSignupPolicy(String[] v) {
@@ -364,13 +365,13 @@ public class EditCSRequestHandler extends EditFormHandler {
     }
     return signupPolicy;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // model
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry modelTFE = channel.getTypeFieldEntry(CSRequest.class, "model", true);
   protected String model = channel.getTypeFieldEntry(CSRequest.class, "model", true).getDefaultTextString();
   public void setModel(String[] v) {
@@ -383,13 +384,13 @@ public class EditCSRequestHandler extends EditFormHandler {
     }
     return model;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // language
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry languageTFE = channel.getTypeFieldEntry(CSRequest.class, "language", true);
   protected String language = channel.getTypeFieldEntry(CSRequest.class, "language", true).getDefaultTextString();
   public void setLanguage(String[] v) {
@@ -402,13 +403,13 @@ public class EditCSRequestHandler extends EditFormHandler {
     }
     return language;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // admins
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry adminsTFE = channel.getTypeFieldEntry(CSRequest.class, "admins", true);
   protected com.jalios.jcms.Member[] admins = new com.jalios.jcms.Member[0];
   protected int adminsAddCount = 0;
@@ -426,22 +427,22 @@ public class EditCSRequestHandler extends EditFormHandler {
     }
     return admins;
   }
-  
-    
-  
+
+
+
   public void setAdminsAddCount(int  v) {
     adminsAddCount = v;
   }
-  
+
   public int getAdminsCount() {
     int arraySize = Util.getSize(getAvailableAdmins());
     int res = 3 + arraySize + adminsAddCount;
     return res;
   }
-   
+
   // ----------------------------------------------------------------------
   // groups
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry groupsTFE = channel.getTypeFieldEntry(CSRequest.class, "groups", true);
   protected com.jalios.jcms.Group[] groups = new com.jalios.jcms.Group[0];
   protected int groupsAddCount = 0;
@@ -459,22 +460,22 @@ public class EditCSRequestHandler extends EditFormHandler {
     }
     return groups;
   }
-  
-    
-  
+
+
+
   public void setGroupsAddCount(int  v) {
     groupsAddCount = v;
   }
-  
+
   public int getGroupsCount() {
     int arraySize = Util.getSize(getAvailableGroups());
     int res = 3 + arraySize + groupsAddCount;
     return res;
   }
-   
+
   // ----------------------------------------------------------------------
   // members
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry membersTFE = channel.getTypeFieldEntry(CSRequest.class, "members", true);
   protected com.jalios.jcms.Member[] members = new com.jalios.jcms.Member[0];
   protected int membersAddCount = 0;
@@ -492,22 +493,22 @@ public class EditCSRequestHandler extends EditFormHandler {
     }
     return members;
   }
-  
-    
-  
+
+
+
   public void setMembersAddCount(int  v) {
     membersAddCount = v;
   }
-  
+
   public int getMembersCount() {
     int arraySize = Util.getSize(getAvailableMembers());
     int res = 3 + arraySize + membersAddCount;
     return res;
   }
-   
+
   // ----------------------------------------------------------------------
   // notificationPolicy
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry notificationPolicyTFE = channel.getTypeFieldEntry(CSRequest.class, "notificationPolicy", true);
   protected String notificationPolicy = channel.getTypeFieldEntry(CSRequest.class, "notificationPolicy", true).getDefaultTextString();
   public void setNotificationPolicy(String[] v) {
@@ -520,13 +521,13 @@ public class EditCSRequestHandler extends EditFormHandler {
     }
     return notificationPolicy;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // parent
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry parentTFE = channel.getTypeFieldEntry(CSRequest.class, "parent", true);
   protected String parent = channel.getTypeFieldEntry(CSRequest.class, "parent", true).getDefaultTextString();
   public void setParent(String[] v) {
@@ -539,20 +540,20 @@ public class EditCSRequestHandler extends EditFormHandler {
     }
     return parent;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // syncMode
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry syncModeTFE = channel.getTypeFieldEntry(CSRequest.class, "syncMode", true);
   protected String[] syncMode = new String[0];
   protected int syncModeAddCount = 0;
   public void setSyncMode(String[] v) {
     syncMode = getMonolingualValueArray(syncModeTFE, v);
   }
-  
+
   public String[] getAvailableSyncMode() {
     if (theContent != null && isFieldMissing("syncMode")) {
 	  String[] objectValue = theContent.getSyncMode();
@@ -563,21 +564,21 @@ public class EditCSRequestHandler extends EditFormHandler {
     }
     return syncMode;
   }
-  
-    
-  
+
+
+
   public void setSyncModeAddCount(int  v) {
     syncModeAddCount = v;
   }
-  
+
   public int getSyncModeCount() {
     int arraySize = Util.getSize(getAvailableSyncMode());
     int res = 3 + arraySize + syncModeAddCount;
     return res;
   }
- 
-   
- 
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // d+KyFnQ2JCvt7ds1bg/gvA==

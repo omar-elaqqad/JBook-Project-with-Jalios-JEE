@@ -1,104 +1,104 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
+
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+
+import com.jalios.jcms.Category;
+import com.jalios.jcms.Data;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
 import com.jalios.util.Util;
-import custom.*;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditBlogPostHandler extends com.jalios.jcmsplugin.blog.EditAbstractBlogPostHandler {
-   
+
   protected BlogPost theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return BlogPost.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpBlogPost  
+  // validateBeforeOpBlogPost
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     {
       Data data = processDataId("blog", __blogStr, generated.Blog.class);
-      if (data != null) { 
+      if (data != null) {
         blog = (generated.Blog)data;
       } else {
         isBlogValidated = Util.isEmpty(__blogStr);
       }
     }
-    if (!validateUploadedFileDocument(getAvailableBlog(),   fdauthor, getAvailableWorkspace())) {
-      return false;
-    }
-    if (!createUploadedFileDocument(getAvailableBlog(),  fdauthor, getAvailableWorkspace())) {
+    if (!validateUploadedFileDocument(getAvailableBlog(),   fdauthor, getAvailableWorkspace()) || !createUploadedFileDocument(getAvailableBlog(),  fdauthor, getAvailableWorkspace())) {
       return false;
     }
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("content".equals(field)) {
       return getAllAvailableContentML();
     }
-    
+
     if ("summary".equals(field)) {
       return getAllAvailableSummaryML();
     }
-    
+
     if ("blog".equals(field)) {
       return getAvailableBlog();
     }
-    
+
     if ("category".equals(field)) {
       return getCategoryCatSet();
     }
-    
+
     if ("featuredImage".equals(field)) {
       return getAvailableFeaturedImage();
     }
-    
+
     if ("featuredImageAlt".equals(field)) {
       return getAllAvailableFeaturedImageAltML();
     }
-    
+
     if ("thumbnailImage".equals(field)) {
       return getAvailableThumbnailImage();
     }
-    
+
     if ("thumbnailImageAlt".equals(field)) {
       return getAllAvailableThumbnailImageAltML();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     return super.getEnumValues(field);
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdateBlogPost  
+  // validateCommonCreateUpdateBlogPost
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdateBlogPost() {
     if (!isBlogValidated) {
@@ -107,39 +107,35 @@ public class EditBlogPostHandler extends com.jalios.jcmsplugin.blog.EditAbstract
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdateBlogPost()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdateBlogPost()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdateBlogPost()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdateBlogPost()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -148,7 +144,8 @@ public class EditBlogPostHandler extends com.jalios.jcmsplugin.blog.EditAbstract
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -157,7 +154,8 @@ public class EditBlogPostHandler extends com.jalios.jcmsplugin.blog.EditAbstract
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -166,7 +164,8 @@ public class EditBlogPostHandler extends com.jalios.jcmsplugin.blog.EditAbstract
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     BlogPost obj = (BlogPost)data;
     obj.setContent(getAvailableContent());
@@ -181,8 +180,9 @@ public class EditBlogPostHandler extends com.jalios.jcmsplugin.blog.EditAbstract
     obj.setThumbnailImageAlt(getAvailableThumbnailImageAlt());
     obj.setThumbnailImageAltML(getAvailableThumbnailImageAltML());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof BlogPost) {
       super.setId(v);
       theContent = (BlogPost)publication;
@@ -191,11 +191,11 @@ public class EditBlogPostHandler extends com.jalios.jcmsplugin.blog.EditAbstract
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // content
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry contentTFE = channel.getTypeFieldEntry(BlogPost.class, "content", true);
   protected String content = channel.getTypeFieldEntry(BlogPost.class, "content", true).getDefaultTextString();
   protected HashMap<String,String> contentML = contentTFE.getDefaultTextMap();
@@ -210,14 +210,14 @@ public class EditBlogPostHandler extends com.jalios.jcmsplugin.blog.EditAbstract
     }
     return content;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailableContentML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableContentML());
     map.put(channel.getLanguage(),getAvailableContent(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableContentML() {
     if (theContent != null && isFieldMissing("content")) {
       return theContent.getContentML();
@@ -242,11 +242,11 @@ public class EditBlogPostHandler extends com.jalios.jcmsplugin.blog.EditAbstract
     }
     return contentML == null ? "" : Util.getString(contentML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // summary
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry summaryTFE = channel.getTypeFieldEntry(BlogPost.class, "summary", true);
   protected String summary = channel.getTypeFieldEntry(BlogPost.class, "summary", true).getDefaultTextString();
   protected HashMap<String,String> summaryML = summaryTFE.getDefaultTextMap();
@@ -261,14 +261,14 @@ public class EditBlogPostHandler extends com.jalios.jcmsplugin.blog.EditAbstract
     }
     return summary;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailableSummaryML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableSummaryML());
     map.put(channel.getLanguage(),getAvailableSummary(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableSummaryML() {
     if (theContent != null && isFieldMissing("summary")) {
       return theContent.getSummaryML();
@@ -293,32 +293,34 @@ public class EditBlogPostHandler extends com.jalios.jcmsplugin.blog.EditAbstract
     }
     return summaryML == null ? "" : Util.getString(summaryML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // blog
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry blogTFE = channel.getTypeFieldEntry(BlogPost.class, "blog", true);
   protected boolean isBlogValidated = true;
   protected generated.Blog blog;
   String __blogStr = null;
-  public void setBlog(String v) {
+  @Override
+public void setBlog(String v) {
     __blogStr = v;
   }
-  public generated.Blog getAvailableBlog() {
+  @Override
+public generated.Blog getAvailableBlog() {
     if (theContent != null && isFieldMissing("blog")) {
      generated.Blog objectValue = theContent.getBlog();
       return objectValue;
     }
     return blog;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // featuredImage
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry featuredImageTFE = channel.getTypeFieldEntry(BlogPost.class, "featuredImage", true);
   protected String featuredImage = channel.getTypeFieldEntry(BlogPost.class, "featuredImage", true).getDefaultTextString();
   public void setFeaturedImage(String[] v) {
@@ -331,13 +333,13 @@ public class EditBlogPostHandler extends com.jalios.jcmsplugin.blog.EditAbstract
     }
     return featuredImage;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // featuredImageAlt
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry featuredImageAltTFE = channel.getTypeFieldEntry(BlogPost.class, "featuredImageAlt", true);
   protected String featuredImageAlt = channel.getTypeFieldEntry(BlogPost.class, "featuredImageAlt", true).getDefaultTextString();
   protected HashMap<String,String> featuredImageAltML = featuredImageAltTFE.getDefaultTextMap();
@@ -352,14 +354,14 @@ public class EditBlogPostHandler extends com.jalios.jcmsplugin.blog.EditAbstract
     }
     return featuredImageAlt;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailableFeaturedImageAltML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableFeaturedImageAltML());
     map.put(channel.getLanguage(),getAvailableFeaturedImageAlt(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableFeaturedImageAltML() {
     if (theContent != null && isFieldMissing("featuredImageAlt")) {
       return theContent.getFeaturedImageAltML();
@@ -384,11 +386,11 @@ public class EditBlogPostHandler extends com.jalios.jcmsplugin.blog.EditAbstract
     }
     return featuredImageAltML == null ? "" : Util.getString(featuredImageAltML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // thumbnailImage
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry thumbnailImageTFE = channel.getTypeFieldEntry(BlogPost.class, "thumbnailImage", true);
   protected String thumbnailImage = channel.getTypeFieldEntry(BlogPost.class, "thumbnailImage", true).getDefaultTextString();
   public void setThumbnailImage(String[] v) {
@@ -401,13 +403,13 @@ public class EditBlogPostHandler extends com.jalios.jcmsplugin.blog.EditAbstract
     }
     return thumbnailImage;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // thumbnailImageAlt
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry thumbnailImageAltTFE = channel.getTypeFieldEntry(BlogPost.class, "thumbnailImageAlt", true);
   protected String thumbnailImageAlt = channel.getTypeFieldEntry(BlogPost.class, "thumbnailImageAlt", true).getDefaultTextString();
   protected HashMap<String,String> thumbnailImageAltML = thumbnailImageAltTFE.getDefaultTextMap();
@@ -422,14 +424,14 @@ public class EditBlogPostHandler extends com.jalios.jcmsplugin.blog.EditAbstract
     }
     return thumbnailImageAlt;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailableThumbnailImageAltML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableThumbnailImageAltML());
     map.put(channel.getLanguage(),getAvailableThumbnailImageAlt(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableThumbnailImageAltML() {
     if (theContent != null && isFieldMissing("thumbnailImageAlt")) {
       return theContent.getThumbnailImageAltML();
@@ -454,15 +456,15 @@ public class EditBlogPostHandler extends com.jalios.jcmsplugin.blog.EditAbstract
     }
     return thumbnailImageAltML == null ? "" : Util.getString(thumbnailImageAltML.get(lang), "");
   }
-  
-  
+
+
   public void setCategory(String[] v) {
     updateCids(v);
   }
   public Category getCategoryRoot() {
     return channel.getCategory("j_3");
-  }  
-    
+  }
+
   public Set<Category> getCategoryCatSet() {
     Category rootCat = getCategoryRoot();
     if (rootCat == null) {
@@ -472,10 +474,10 @@ public class EditBlogPostHandler extends com.jalios.jcmsplugin.blog.EditAbstract
     set.add(rootCat);
     return Util.interSet(getCategorySet(null), set);
   }
-  
- 
-   
- 
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // 3ai5KPiwfA3wyeePS4Y20Q==

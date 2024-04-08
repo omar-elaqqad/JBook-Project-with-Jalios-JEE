@@ -1,86 +1,87 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
-import com.jalios.util.Util;
-import custom.*;
+
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import com.jalios.jcms.HttpUtil;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
+import com.jalios.jcms.handler.EditPublicationHandler;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditMemberEducationHandler extends EditPublicationHandler {
-   
+
   protected MemberEducation theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return MemberEducation.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpMemberEducation  
+  // validateBeforeOpMemberEducation
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("trainingCenter".equals(field)) {
       return getAvailableTrainingCenter();
     }
-    
+
     if ("degree".equals(field)) {
       return getAvailableDegree();
     }
-    
+
     if ("description".equals(field)) {
       return getAvailableDescription();
     }
-    
+
     if ("place".equals(field)) {
       return getAvailablePlace();
     }
-    
+
     if ("site".equals(field)) {
       return getAvailableSite();
     }
-    
+
     if ("startDate".equals(field)) {
       return getAvailableStartDate();
     }
-    
+
     if ("endDate".equals(field)) {
       return getAvailableEndDate();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     return super.getEnumValues(field);
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdateMemberEducation  
+  // validateCommonCreateUpdateMemberEducation
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdateMemberEducation() {
     if (!isStartDateValidated) {
@@ -93,39 +94,35 @@ public class EditMemberEducationHandler extends EditPublicationHandler {
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdateMemberEducation()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdateMemberEducation()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdateMemberEducation()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdateMemberEducation()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -142,7 +139,8 @@ public class EditMemberEducationHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -159,7 +157,8 @@ public class EditMemberEducationHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -176,7 +175,8 @@ public class EditMemberEducationHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     MemberEducation obj = (MemberEducation)data;
     obj.setTrainingCenter(getAvailableTrainingCenter());
@@ -187,8 +187,9 @@ public class EditMemberEducationHandler extends EditPublicationHandler {
     obj.setStartDate(getAvailableStartDate());
     obj.setEndDate(getAvailableEndDate());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof MemberEducation) {
       super.setId(v);
       theContent = (MemberEducation)publication;
@@ -197,11 +198,11 @@ public class EditMemberEducationHandler extends EditPublicationHandler {
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // trainingCenter
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry trainingCenterTFE = channel.getTypeFieldEntry(MemberEducation.class, "trainingCenter", true);
   protected String trainingCenter = channel.getTypeFieldEntry(MemberEducation.class, "trainingCenter", true).getDefaultTextString();
   public void setTrainingCenter(String[] v) {
@@ -214,13 +215,13 @@ public class EditMemberEducationHandler extends EditPublicationHandler {
     }
     return trainingCenter;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // degree
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry degreeTFE = channel.getTypeFieldEntry(MemberEducation.class, "degree", true);
   protected String degree = channel.getTypeFieldEntry(MemberEducation.class, "degree", true).getDefaultTextString();
   public void setDegree(String[] v) {
@@ -233,13 +234,13 @@ public class EditMemberEducationHandler extends EditPublicationHandler {
     }
     return degree;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // description
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry descriptionTFE = channel.getTypeFieldEntry(MemberEducation.class, "description", true);
   protected String description = channel.getTypeFieldEntry(MemberEducation.class, "description", true).getDefaultTextString();
   public void setDescription(String[] v) {
@@ -252,13 +253,13 @@ public class EditMemberEducationHandler extends EditPublicationHandler {
     }
     return description;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // place
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry placeTFE = channel.getTypeFieldEntry(MemberEducation.class, "place", true);
   protected String place = channel.getTypeFieldEntry(MemberEducation.class, "place", true).getDefaultTextString();
   public void setPlace(String[] v) {
@@ -271,13 +272,13 @@ public class EditMemberEducationHandler extends EditPublicationHandler {
     }
     return place;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // site
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry siteTFE = channel.getTypeFieldEntry(MemberEducation.class, "site", true);
   protected String site = channel.getTypeFieldEntry(MemberEducation.class, "site", true).getDefaultTextString();
   public void setSite(String[] v) {
@@ -290,13 +291,13 @@ public class EditMemberEducationHandler extends EditPublicationHandler {
     }
     return site;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // startDate
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry startDateTFE = channel.getTypeFieldEntry(MemberEducation.class, "startDate", true);
   protected String __startDateStr = "";
   protected boolean isStartDateValidated = true;
@@ -305,8 +306,8 @@ public class EditMemberEducationHandler extends EditPublicationHandler {
     try {
         SimpleDateFormat dateFormatter = channel.getDateFormat(userLang);
         dateFormatter =  (SimpleDateFormat) dateFormatter.clone();
-        dateFormatter.setLenient(false);      
-      __startDateStr = v.trim();      
+        dateFormatter.setLenient(false);
+      __startDateStr = v.trim();
       startDate = dateFormatter.parse(__startDateStr);
     } catch(java.text.ParseException ex) {
       isStartDateValidated = false;
@@ -319,13 +320,13 @@ public class EditMemberEducationHandler extends EditPublicationHandler {
     }
     return startDate;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // endDate
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry endDateTFE = channel.getTypeFieldEntry(MemberEducation.class, "endDate", true);
   protected String __endDateStr = "";
   protected boolean isEndDateValidated = true;
@@ -334,8 +335,8 @@ public class EditMemberEducationHandler extends EditPublicationHandler {
     try {
         SimpleDateFormat dateFormatter = channel.getDateFormat(userLang);
         dateFormatter =  (SimpleDateFormat) dateFormatter.clone();
-        dateFormatter.setLenient(false);      
-      __endDateStr = v.trim();      
+        dateFormatter.setLenient(false);
+      __endDateStr = v.trim();
       endDate = dateFormatter.parse(__endDateStr);
     } catch(java.text.ParseException ex) {
       isEndDateValidated = false;
@@ -348,12 +349,12 @@ public class EditMemberEducationHandler extends EditPublicationHandler {
     }
     return endDate;
   }
-  
-    
-  
- 
-   
- 
+
+
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // pSOD+rTrgl+ah71H4Ms9CQ==

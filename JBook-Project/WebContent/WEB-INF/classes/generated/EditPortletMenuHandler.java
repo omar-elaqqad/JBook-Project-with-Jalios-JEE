@@ -1,57 +1,54 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
+
+
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
 import com.jalios.util.Util;
-import custom.*;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditPortletMenuHandler extends EditAbstractPortletHandler {
-   
+
   protected PortletMenu theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return PortletMenu.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpPortletMenu  
+  // validateBeforeOpPortletMenu
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("items".equals(field)) {
       return getAvailableItems();
     }
-    
+
     if ("itemSeparaor".equals(field)) {
       return getAvailableItemSeparaor();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     if ("items".equals(field)) {
       return PortletMenu.getItemsValues();
     }
@@ -59,51 +56,47 @@ public class EditPortletMenuHandler extends EditAbstractPortletHandler {
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     if ("items".equals(field)) {
       return PortletMenu.getItemsLabels(userLang);
     }
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdatePortletMenu  
+  // validateCommonCreateUpdatePortletMenu
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdatePortletMenu() {
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdatePortletMenu()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdatePortletMenu()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdatePortletMenu()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdatePortletMenu()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -112,7 +105,8 @@ public class EditPortletMenuHandler extends EditAbstractPortletHandler {
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -121,7 +115,8 @@ public class EditPortletMenuHandler extends EditAbstractPortletHandler {
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -130,14 +125,16 @@ public class EditPortletMenuHandler extends EditAbstractPortletHandler {
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     PortletMenu obj = (PortletMenu)data;
     obj.setItems(getAvailableItems());
     obj.setItemSeparaor(getAvailableItemSeparaor());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof PortletMenu) {
       super.setId(v);
       theContent = (PortletMenu)publication;
@@ -146,18 +143,18 @@ public class EditPortletMenuHandler extends EditAbstractPortletHandler {
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // items
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry itemsTFE = channel.getTypeFieldEntry(PortletMenu.class, "items", true);
   protected String[] items = new String[0];
   protected int itemsAddCount = 0;
   public void setItems(String[] v) {
     items = getMonolingualValueArray(itemsTFE, v);
   }
-  
+
   public String[] getAvailableItems() {
     if (theContent != null && isFieldMissing("items")) {
 	  String[] objectValue = theContent.getItems();
@@ -168,22 +165,22 @@ public class EditPortletMenuHandler extends EditAbstractPortletHandler {
     }
     return items;
   }
-  
-    
-  
+
+
+
   public void setItemsAddCount(int  v) {
     itemsAddCount = v;
   }
-  
+
   public int getItemsCount() {
     int arraySize = Util.getSize(getAvailableItems());
     int res = 3 + arraySize + itemsAddCount;
     return res;
   }
-   
+
   // ----------------------------------------------------------------------
   // itemSeparaor
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry itemSeparaorTFE = channel.getTypeFieldEntry(PortletMenu.class, "itemSeparaor", true);
   protected String itemSeparaor = channel.getTypeFieldEntry(PortletMenu.class, "itemSeparaor", true).getDefaultTextString();
   public void setItemSeparaor(String[] v) {
@@ -196,12 +193,12 @@ public class EditPortletMenuHandler extends EditAbstractPortletHandler {
     }
     return itemSeparaor;
   }
-  
-    
-  
- 
-   
- 
+
+
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // GGrlPsGiIvG/qYxEOhD1AQ==

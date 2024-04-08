@@ -1,42 +1,51 @@
 // This file has been automatically generated.
-   
+
 package generated;
- 
-import java.util.*;
- 
-import org.apache.oro.text.regex.Pattern;
-import org.apache.oro.text.regex.Perl5Compiler;
-import org.apache.oro.text.regex.Perl5Matcher;
-import org.hibernate.Hibernate;
- 
-import com.jalios.jcms.*;
-import com.jalios.jcms.db.*;
-import com.jalios.jcms.mashup.*;
-import com.jalios.jcms.wysiwyg.*;
-import com.jalios.util.*;
-import com.fasterxml.jackson.annotation.JsonIgnore; 
-import com.fasterxml.jackson.annotation.JsonProperty;
- 
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+import com.jalios.jcms.Category;
+import com.jalios.jcms.ControllerStatus;
+import com.jalios.jcms.Data;
+import com.jalios.jcms.EnumerateFormReport;
+import com.jalios.jcms.FileDocument;
+import com.jalios.jcms.IntegerFormReport;
+import com.jalios.jcms.JcmsUtil;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeEntry;
+import com.jalios.jcms.TypeFieldEntry;
+import com.jalios.jcms.mashup.ExportUtil;
+import com.jalios.jcms.mashup.ImportOptions;
+import com.jalios.jcms.mashup.ImportUtil;
+import com.jalios.jcms.wysiwyg.JHTMLUtils;
+import com.jalios.util.ObjectIntTreeMap;
+import com.jalios.util.Util;
+
 @SuppressWarnings({"unchecked", "unused"})
-public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespace.portal.AbstractCollaborativeSpace 
-             implements 
+public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespace.portal.AbstractCollaborativeSpace
+             implements
                 com.jalios.jcms.portlet.PortalInterface
                , com.jalios.jstore.Searchable
 {
-  
+
   // ----------------------------------------------------------------------
   // CONSTRUCTORS
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   public CollaborativeSpace() {}
- 
- 
+
+
   public CollaborativeSpace(AbstractCollection other) {
     super(other);
   }
- 
-  
-  
-  
+
+
+
+
   public CollaborativeSpace(CollaborativeSpace other) {
     super(other);
     description = other.description;
@@ -61,13 +70,14 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
     applications = other.applications;
     mobilePortlets = other.mobilePortlets;
   }
-  
+
   // ----------------------------------------------------------------------
   // Import / Export
   // ----------------------------------------------------------------------
-  public void importXml(org.jdom.Element elt, ImportOptions options) {
+  @Override
+public void importXml(org.jdom.Element elt, ImportOptions options) {
     super.importXml(elt, options);
-    
+
     setAccessPolicy(ImportUtil.parseFieldText(elt, "accessPolicy"));
     setSignupPolicy(ImportUtil.parseFieldText(elt, "signupPolicy"));
     setLayout(ImportUtil.parseFieldText(elt, "layout"));
@@ -81,10 +91,11 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
     setSyncMode(ImportUtil.parseFieldTextArray(elt, "syncMode"));
     setModelSyncMode(ImportUtil.parseFieldTextArray(elt, "modelSyncMode"));
   }
-  
-  protected void importXmlFieldsWithReferences(org.jdom.Element elt, ImportOptions options) {
+
+  @Override
+protected void importXmlFieldsWithReferences(org.jdom.Element elt, ImportOptions options) {
     super.importXmlFieldsWithReferences(elt, options);
-      
+
     if (options.isSelfImport()) {
       setDescription(ImportUtil.parseFieldText(elt, "description"));
       setDescriptionML(ImportUtil.parseFieldTextML(elt, "descriptionML"));
@@ -96,15 +107,16 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
       setApplications(ImportUtil.parseSelfFieldDataArray(elt, "applications", com.jalios.jcms.portlet.PortalElement.class));
       setMobilePortlets(ImportUtil.parseSelfFieldDataArray(elt, "mobilePortlets", com.jalios.jcms.portlet.PortalElement.class));
     } else {
-    
+
     setDescriptionML(ImportUtil.parseFieldWikiML(elt, "descriptionML"));
     setDescription(ImportUtil.parseFieldWiki(elt, "description"));
     setIntroductionML(ImportUtil.parseFieldWysiwygML(elt, "introductionML"));
     setIntroduction(ImportUtil.parseFieldWysiwyg(elt, "introduction"));
     }
   }
-  
-  public void exportXmlField(StringBuffer sb, int indentLevel) {
+
+  @Override
+public void exportXmlField(StringBuffer sb, int indentLevel) {
     super.exportXmlField(sb, indentLevel);
     sb.append(ExportUtil.exportField(indentLevel, "description", getDescription(), "descriptionML", true, true));
     sb.append(ExportUtil.exportField(indentLevel, "descriptionML", getDescriptionML(), true));
@@ -128,16 +140,17 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
     sb.append(ExportUtil.exportField(indentLevel, "applications", getApplications()));
     sb.append(ExportUtil.exportField(indentLevel, "mobilePortlets", getMobilePortlets()));
   }
-  
-  public Set<FileDocument> getDocumentLinkSet() {
+
+  @Override
+public Set<FileDocument> getDocumentLinkSet() {
     Set<FileDocument> docSet = super.getDocumentLinkSet();
     JcmsUtil.addFileDocument(docSet, header);
     return docSet;
   }
-  
+
   // ----------------------------------------------------------------------
   // TYPE AND FIELD INFOS (static methods)
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   /**
    * Returns the TypeEntry bound to <code>CollaborativeSpace</code>. <br>
    * @see com.jalios.jcms.Channel#getTypeEntry(Class)
@@ -168,99 +181,107 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
   }
   // ----------------------------------------------------------------------
   // FIELDs VALUE
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   /**
    * Gets the value of the given <code>int</code> field name for the current <code>CollaborativeSpace</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>int</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public int getIntFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public int getIntFieldValue(String fieldName) throws NoSuchFieldException {
     if ("dashboardColumnCount".equals(fieldName)) { return getDashboardColumnCount(); }
     return super.getIntFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>int</code> field name for the current <code>CollaborativeSpace</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>int</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setIntFieldValue(String fieldName, int value) throws NoSuchFieldException {
+  @Override
+public void setIntFieldValue(String fieldName, int value) throws NoSuchFieldException {
     if ("dashboardColumnCount".equals(fieldName)) { setDashboardColumnCount(value); return; }
     super.setIntFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>long</code> field name for the current <code>CollaborativeSpace</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>long</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public long getLongFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public long getLongFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getLongFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>long</code> field name for the current <code>CollaborativeSpace</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>long</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setLongFieldValue(String fieldName, long value) throws NoSuchFieldException {
+  @Override
+public void setLongFieldValue(String fieldName, long value) throws NoSuchFieldException {
     super.setLongFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>double</code> field name for the current <code>CollaborativeSpace</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>double</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public double getDoubleFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public double getDoubleFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getDoubleFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>double</code> field name for the current <code>CollaborativeSpace</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>double</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setDoubleFieldValue(String fieldName, double value) throws NoSuchFieldException {
+  @Override
+public void setDoubleFieldValue(String fieldName, double value) throws NoSuchFieldException {
      super.setDoubleFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>boolean</code> field name for the current <code>CollaborativeSpace</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>boolean</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public boolean getBooleanFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public boolean getBooleanFieldValue(String fieldName) throws NoSuchFieldException {
     if ("exactCategory".equals(fieldName)) { return getExactCategory(); }
     if ("mobileShowIntro".equals(fieldName)) { return getMobileShowIntro(); }
     if ("mobileShowApplications".equals(fieldName)) { return getMobileShowApplications(); }
     return super.getBooleanFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>boolean</code> field name for the current <code>CollaborativeSpace</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>boolean</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setBooleanFieldValue(String fieldName, boolean value) throws NoSuchFieldException {
+  @Override
+public void setBooleanFieldValue(String fieldName, boolean value) throws NoSuchFieldException {
     if ("exactCategory".equals(fieldName)) { setExactCategory(value); return; }
     if ("mobileShowIntro".equals(fieldName)) { setMobileShowIntro(value); return; }
     if ("mobileShowApplications".equals(fieldName)) { setMobileShowApplications(value); return; }
     super.setBooleanFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>Category</code> field name for the current <code>Data</code>.
    * @param fieldName the field name from which to retrieve the field value.
@@ -268,7 +289,8 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
    * @return a <code>TreeSet</code> of <code>Category</code>
    * @throws NoSuchFieldException if the field was not found in the given <code>Data</code>.
    */
-  public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
+  @Override
+public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
     return super.getCategoryFieldValue(fieldName, mbr);
   }
   /**
@@ -277,12 +299,13 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
    * @param fieldName the field name from which to retrieve the field value.
    * @param lang the language (ISO-639 code) in which to retrieve the field value
    *        (used only for multilingual fields).
-   * @param useDefault whether to use the publication main language if the field value 
+   * @param useDefault whether to use the publication main language if the field value
    *        is not available in the requested language (used only for multilingual fields).
    * @return the <code>Object</code> field value
    * @throws NoSuchFieldException if the field was not found in the given <code>Publication</code>.
    */
-  public Object getFieldValue(String fieldName, String lang, boolean useDefault) throws NoSuchFieldException {
+  @Override
+public Object getFieldValue(String fieldName, String lang, boolean useDefault) throws NoSuchFieldException {
     if ("description".equals(fieldName)) { return getDescription(lang, useDefault); }
     if ("introduction".equals(fieldName)) { return getIntroduction(lang, useDefault); }
     if ("accessPolicy".equals(fieldName)) { return getAccessPolicy(); }
@@ -300,7 +323,7 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
     if ("mobilePortlets".equals(fieldName)) { return getMobilePortlets(); }
     return super.getFieldValue(fieldName, lang, useDefault);
   }
-  
+
   /**
    * Sets the <code>Object</code> value of the given field name for this <code>CollaborativeSpace</code>. <br>
    * Do not set <code>Category</code> fields, see {@link #setCategoryFieldValue(String, TreeSet)}.
@@ -308,11 +331,12 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
    * @param value the <code>Object</code> field value
    * @param lang the language (ISO-639 code) in which to retrieve the field value
    *        (used only for multilingual fields).
-   * 
+   *
    * @throws NoSuchFieldException if the field was not found in the given <code>Publication</code>.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setFieldValue(String fieldName, Object value, String lang) throws NoSuchFieldException {
+  @Override
+public void setFieldValue(String fieldName, Object value, String lang) throws NoSuchFieldException {
     if ("description".equals(fieldName)) { setDescription(lang,(String)value); return; }
     if ("introduction".equals(fieldName)) { setIntroduction(lang,(String)value); return; }
     if ("accessPolicy".equals(fieldName)) { setAccessPolicy((String)value); return; }
@@ -330,35 +354,44 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
     if ("mobilePortlets".equals(fieldName)) { setMobilePortlets((com.jalios.jcms.portlet.PortalElement[])value); return; }
     super.setFieldValue(fieldName, value, lang);
   }
-  
+
   // ----------------------------------------------------------------------
   // description
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String description = channel.getTypeFieldEntry(CollaborativeSpace.class, "description", true).getDefaultTextString();
-  
-  public String getDescription() { return description; }
-  
-  public void setDescription(String v) { description = v; }
-  
-  
-  
-  
+
+  @Override
+public String getDescription() { return description; }
+
+  @Override
+public void setDescription(String v) { description = v; }
+
+
+
+
   protected HashMap<String,String> descriptionML = channel.getTypeFieldEntry(CollaborativeSpace.class, "description", true).getDefaultTextMap();
-  public String getDescription(String lang) { return (String)channel.getLangValue(lang, true, description, descriptionML, getMainLanguage()); }
-  public String getDescription(String lang, boolean useDefault) { return (String)channel.getLangValue(lang, useDefault, description, descriptionML, getMainLanguage()); }
-  public HashMap<String,String> getDescriptionML() { return descriptionML; }
-  public void setDescriptionML(HashMap<String,String> v) { descriptionML = v; }
-  
-  public String getDescriptionMLE() { 
+  @Override
+public String getDescription(String lang) { return channel.getLangValue(lang, true, description, descriptionML, getMainLanguage()); }
+  @Override
+public String getDescription(String lang, boolean useDefault) { return channel.getLangValue(lang, useDefault, description, descriptionML, getMainLanguage()); }
+  @Override
+public HashMap<String,String> getDescriptionML() { return descriptionML; }
+  @Override
+public void setDescriptionML(HashMap<String,String> v) { descriptionML = v; }
+
+  @Override
+public String getDescriptionMLE() {
     return JcmsUtil.encodeMLE(getDescriptionML());
   }
-  
-  public void setDescriptionMLE(String v) {
+
+  @Override
+public void setDescriptionMLE(String v) {
     setDescriptionML(JcmsUtil.decodeMLE(v));
   }
-  
-  public void setDescription(String lang, String value) {
+
+  @Override
+public void setDescription(String lang, String value) {
     if (channel.getLanguage().equals(lang)) {
       description = value;
       return;
@@ -372,31 +405,31 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
   }
   // ----------------------------------------------------------------------
   // introduction
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String introduction = channel.getTypeFieldEntry(CollaborativeSpace.class, "introduction", true).getDefaultTextString();
-  
+
   public String getIntroduction() { return introduction; }
-  
+
   public void setIntroduction(String v) { introduction = v; }
-  
-  
-  
-  
+
+
+
+
   protected HashMap<String,String> introductionML = channel.getTypeFieldEntry(CollaborativeSpace.class, "introduction", true).getDefaultTextMap();
-  public String getIntroduction(String lang) { return (String)channel.getLangValue(lang, true, introduction, introductionML, getMainLanguage()); }
-  public String getIntroduction(String lang, boolean useDefault) { return (String)channel.getLangValue(lang, useDefault, introduction, introductionML, getMainLanguage()); }
+  public String getIntroduction(String lang) { return channel.getLangValue(lang, true, introduction, introductionML, getMainLanguage()); }
+  public String getIntroduction(String lang, boolean useDefault) { return channel.getLangValue(lang, useDefault, introduction, introductionML, getMainLanguage()); }
   public HashMap<String,String> getIntroductionML() { return introductionML; }
   public void setIntroductionML(HashMap<String,String> v) { introductionML = v; }
-  
-  public String getIntroductionMLE() { 
+
+  public String getIntroductionMLE() {
     return JcmsUtil.encodeMLE(getIntroductionML());
   }
-  
+
   public void setIntroductionMLE(String v) {
     setIntroductionML(JcmsUtil.decodeMLE(v));
   }
-  
+
   public void setIntroduction(String lang, String value) {
     if (channel.getLanguage().equals(lang)) {
       introduction = value;
@@ -411,22 +444,22 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
   }
   // ----------------------------------------------------------------------
   // accessPolicy
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String accessPolicy = channel.getTypeFieldEntry(CollaborativeSpace.class, "accessPolicy", true).getDefaultTextString();
-  
+
   public String getAccessPolicy() { return accessPolicy; }
-  
+
   public void setAccessPolicy(String v) { accessPolicy = v; }
-  
-  
-  
+
+
+
   public String getAccessPolicy(String lang) { return accessPolicy; }
   public String getAccessPolicy(String lang, boolean useDefault) { return accessPolicy; }
-  private static String[] accessPolicyValues;  
+  private static String[] accessPolicyValues;
   private static String[] accessPolicyLabels;
   private static Map<String, String[]> accessPolicyLabelsMap;
-  
+
   public static String[] getAccessPolicyValues() {
     if(accessPolicyValues == null) {
       setAccessPolicyValues(channel.getTypeFieldEntry(CollaborativeSpace.class, "accessPolicy", true).getEnumerateValues());
@@ -456,9 +489,9 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
   }
   public static String[] getAccessPolicyLabels(String userLang) {
     Map<String, String[]> accessPolicyLabelMap = getAccessPolicyLabelsMap();
-    String[] labels = (String[])accessPolicyLabelMap.get(userLang);
+    String[] labels = accessPolicyLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])accessPolicyLabelMap.get(channel.getLanguage());
+      labels = accessPolicyLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -484,8 +517,8 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
     }
     return getAccessPolicyLabel(value, channel.getLanguage());
   }
-  
-  public static String getAccessPolicyLabel(String value) {    
+
+  public static String getAccessPolicyLabel(String value) {
     String[] accessPolicyLabels = getAccessPolicyLabels();
     if (false) {
     }
@@ -507,31 +540,31 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getAccessPolicy());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // signupPolicy
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String signupPolicy = channel.getTypeFieldEntry(CollaborativeSpace.class, "signupPolicy", true).getDefaultTextString();
-  
+
   public String getSignupPolicy() { return signupPolicy; }
-  
+
   public void setSignupPolicy(String v) { signupPolicy = v; }
-  
-  
-  
+
+
+
   public String getSignupPolicy(String lang) { return signupPolicy; }
   public String getSignupPolicy(String lang, boolean useDefault) { return signupPolicy; }
-  private static String[] signupPolicyValues;  
+  private static String[] signupPolicyValues;
   private static String[] signupPolicyLabels;
   private static Map<String, String[]> signupPolicyLabelsMap;
-  
+
   public static String[] getSignupPolicyValues() {
     if(signupPolicyValues == null) {
       setSignupPolicyValues(channel.getTypeFieldEntry(CollaborativeSpace.class, "signupPolicy", true).getEnumerateValues());
@@ -561,9 +594,9 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
   }
   public static String[] getSignupPolicyLabels(String userLang) {
     Map<String, String[]> signupPolicyLabelMap = getSignupPolicyLabelsMap();
-    String[] labels = (String[])signupPolicyLabelMap.get(userLang);
+    String[] labels = signupPolicyLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])signupPolicyLabelMap.get(channel.getLanguage());
+      labels = signupPolicyLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -589,8 +622,8 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
     }
     return getSignupPolicyLabel(value, channel.getLanguage());
   }
-  
-  public static String getSignupPolicyLabel(String value) {    
+
+  public static String getSignupPolicyLabel(String value) {
     String[] signupPolicyLabels = getSignupPolicyLabels();
     if (false) {
     }
@@ -612,43 +645,43 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getSignupPolicy());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // followersGroup
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  com.jalios.jcms.Group followersGroup;
-  
+
   public com.jalios.jcms.Group getFollowersGroup() { return followersGroup; }
-  
+
   public void setFollowersGroup(com.jalios.jcms.Group v) { followersGroup = v; }
-  
-  
-  
+
+
+
   // ----------------------------------------------------------------------
   // layout
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String layout = channel.getTypeFieldEntry(CollaborativeSpace.class, "layout", true).getDefaultTextString();
-  
+
   public String getLayout() { return layout; }
-  
+
   public void setLayout(String v) { layout = v; }
-  
-  
-  
+
+
+
   public String getLayout(String lang) { return layout; }
   public String getLayout(String lang, boolean useDefault) { return layout; }
-  private static String[] layoutValues;  
+  private static String[] layoutValues;
   private static String[] layoutLabels;
   private static Map<String, String[]> layoutLabelsMap;
-  
+
   public static String[] getLayoutValues() {
     if(layoutValues == null) {
       setLayoutValues(channel.getTypeFieldEntry(CollaborativeSpace.class, "layout", true).getEnumerateValues());
@@ -678,9 +711,9 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
   }
   public static String[] getLayoutLabels(String userLang) {
     Map<String, String[]> layoutLabelMap = getLayoutLabelsMap();
-    String[] labels = (String[])layoutLabelMap.get(userLang);
+    String[] labels = layoutLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])layoutLabelMap.get(channel.getLanguage());
+      labels = layoutLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -706,8 +739,8 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
     }
     return getLayoutLabel(value, channel.getLanguage());
   }
-  
-  public static String getLayoutLabel(String value) {    
+
+  public static String getLayoutLabel(String value) {
     String[] layoutLabels = getLayoutLabels();
     if (false) {
     }
@@ -729,25 +762,25 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getLayout());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // dashboardColumnCount
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  int dashboardColumnCount = 2;
-  
+
   public int getDashboardColumnCount() { return dashboardColumnCount; }
-  
+
   public void setDashboardColumnCount(int v) { dashboardColumnCount = v; }
-  
-  
-  
+
+
+
   public static IntegerFormReport getDashboardColumnCountReport(SortedSet<CollaborativeSpace> set) {
     long sum = 0;
     int min = Integer.MAX_VALUE;
@@ -762,74 +795,75 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
       max = Math.max(value, max);
     }
     return new IntegerFormReport(set.size(), sum, min, max);
-  }  
+  }
   // ----------------------------------------------------------------------
   // theme
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String theme = channel.getTypeFieldEntry(CollaborativeSpace.class, "theme", true).getDefaultTextString();
-  
+
   public String getTheme() { return theme; }
-  
+
   public void setTheme(String v) { theme = v; }
-  
-  
-  
+
+
+
   public String getTheme(String lang) { return theme; }
   public String getTheme(String lang, boolean useDefault) { return theme; }
   // ----------------------------------------------------------------------
   // header
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String header = channel.getTypeFieldEntry(CollaborativeSpace.class, "header", true).getDefaultTextString();
-  
+
   public String getHeader() { return header; }
-  
+
   public void setHeader(String v) { header = v; }
-  
-  
-  
+
+
+
   public String getHeader(String lang) { return header; }
   public String getHeader(String lang, boolean useDefault) { return header; }
   // ----------------------------------------------------------------------
   // headerSettings
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String headerSettings = channel.getTypeFieldEntry(CollaborativeSpace.class, "headerSettings", true).getDefaultTextString();
-  
+
   public String getHeaderSettings() { return headerSettings; }
-  
+
   public void setHeaderSettings(String v) { headerSettings = v; }
-  
-  
-  
+
+
+
   public String getHeaderSettings(String lang) { return headerSettings; }
   public String getHeaderSettings(String lang, boolean useDefault) { return headerSettings; }
   // ----------------------------------------------------------------------
   // exactCategory
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean exactCategory = false;
-  
-  public boolean getExactCategory() { return exactCategory; }
-  
+
+  @Override
+public boolean getExactCategory() { return exactCategory; }
+
   public void setExactCategory(boolean v) { exactCategory = v; }
-  
-  
-  
+
+
+
   public String getExactCategoryLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "exactCategory", true);
-    return exactCategory ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return exactCategory ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getExactCategoryValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getExactCategoryLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(CollaborativeSpace.class, "exactCategory", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getExactCategoryReport(SortedSet<CollaborativeSpace> set) {
@@ -839,38 +873,38 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getExactCategory());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // mobileShowIntro
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean mobileShowIntro = true;
-  
+
   public boolean getMobileShowIntro() { return mobileShowIntro; }
-  
+
   public void setMobileShowIntro(boolean v) { mobileShowIntro = v; }
-  
-  
-  
+
+
+
   public String getMobileShowIntroLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "mobileShowIntro", true);
-    return mobileShowIntro ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return mobileShowIntro ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getMobileShowIntroValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getMobileShowIntroLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(CollaborativeSpace.class, "mobileShowIntro", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getMobileShowIntroReport(SortedSet<CollaborativeSpace> set) {
@@ -880,38 +914,38 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getMobileShowIntro());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // mobileShowApplications
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean mobileShowApplications = true;
-  
+
   public boolean getMobileShowApplications() { return mobileShowApplications; }
-  
+
   public void setMobileShowApplications(boolean v) { mobileShowApplications = v; }
-  
-  
-  
+
+
+
   public String getMobileShowApplicationsLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "mobileShowApplications", true);
-    return mobileShowApplications ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return mobileShowApplications ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getMobileShowApplicationsValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getMobileShowApplicationsLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(CollaborativeSpace.class, "mobileShowApplications", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getMobileShowApplicationsReport(SortedSet<CollaborativeSpace> set) {
@@ -921,43 +955,44 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getMobileShowApplications());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // jportal
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  com.jalios.jcms.jportal.AbstractJPortal jportal;
-  
+
   public com.jalios.jcms.jportal.AbstractJPortal getJportal() { return jportal; }
-  
+
   public void setJportal(com.jalios.jcms.jportal.AbstractJPortal v) { jportal = v; }
-  
-  
-  
+
+
+
   // ----------------------------------------------------------------------
   // syncMode
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String[] syncMode;
-  
-  public String[] getSyncMode() { return syncMode; }
-  
+
+  @Override
+public String[] getSyncMode() { return syncMode; }
+
   public void setSyncMode(String[] v) { syncMode = v; }
-  
-  
-  
+
+
+
   public String[] getSyncMode(String lang) { return syncMode; }
   public String[] getSyncMode(String lang, boolean useDefault) { return syncMode; }
-  private static String[] syncModeValues;  
+  private static String[] syncModeValues;
   private static String[] syncModeLabels;
   private static Map<String, String[]> syncModeLabelsMap;
-  
+
   public static String[] getSyncModeValues() {
     if(syncModeValues == null) {
       setSyncModeValues(channel.getTypeFieldEntry(CollaborativeSpace.class, "syncMode", true).getEnumerateValues());
@@ -987,9 +1022,9 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
   }
   public static String[] getSyncModeLabels(String userLang) {
     Map<String, String[]> syncModeLabelMap = getSyncModeLabelsMap();
-    String[] labels = (String[])syncModeLabelMap.get(userLang);
+    String[] labels = syncModeLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])syncModeLabelMap.get(channel.getLanguage());
+      labels = syncModeLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -1015,8 +1050,8 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
     }
     return getSyncModeLabel(value, channel.getLanguage());
   }
-  
-  public static String getSyncModeLabel(String value) {    
+
+  public static String getSyncModeLabel(String value) {
     String[] syncModeLabels = getSyncModeLabels();
     if (false) {
     }
@@ -1046,25 +1081,25 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // modelSyncMode
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String[] modelSyncMode;
-  
+
   public String[] getModelSyncMode() { return modelSyncMode; }
-  
+
   public void setModelSyncMode(String[] v) { modelSyncMode = v; }
-  
-  
-  
+
+
+
   public String[] getModelSyncMode(String lang) { return modelSyncMode; }
   public String[] getModelSyncMode(String lang, boolean useDefault) { return modelSyncMode; }
-  private static String[] modelSyncModeValues;  
+  private static String[] modelSyncModeValues;
   private static String[] modelSyncModeLabels;
   private static Map<String, String[]> modelSyncModeLabelsMap;
-  
+
   public static String[] getModelSyncModeValues() {
     if(modelSyncModeValues == null) {
       setModelSyncModeValues(channel.getTypeFieldEntry(CollaborativeSpace.class, "modelSyncMode", true).getEnumerateValues());
@@ -1094,9 +1129,9 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
   }
   public static String[] getModelSyncModeLabels(String userLang) {
     Map<String, String[]> modelSyncModeLabelMap = getModelSyncModeLabelsMap();
-    String[] labels = (String[])modelSyncModeLabelMap.get(userLang);
+    String[] labels = modelSyncModeLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])modelSyncModeLabelMap.get(channel.getLanguage());
+      labels = modelSyncModeLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -1122,8 +1157,8 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
     }
     return getModelSyncModeLabel(value, channel.getLanguage());
   }
-  
-  public static String getModelSyncModeLabel(String value) {    
+
+  public static String getModelSyncModeLabel(String value) {
     String[] modelSyncModeLabels = getModelSyncModeLabels();
     if (false) {
     }
@@ -1153,47 +1188,49 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // model
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  com.jalios.jcms.workspace.Workspace model;
-  
-  public com.jalios.jcms.workspace.Workspace getModel() { return model; }
-  
+
+  @Override
+public com.jalios.jcms.workspace.Workspace getModel() { return model; }
+
   public void setModel(com.jalios.jcms.workspace.Workspace v) { model = v; }
-  
-  
-  
+
+
+
   // ----------------------------------------------------------------------
   // applications
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  com.jalios.jcms.portlet.PortalElement[] applications;
-  
-  public com.jalios.jcms.portlet.PortalElement[] getApplications() { return applications; }
-  
+
+  @Override
+public com.jalios.jcms.portlet.PortalElement[] getApplications() { return applications; }
+
   public void setApplications(com.jalios.jcms.portlet.PortalElement[] v) { applications = v; }
-  
-  
-  
+
+
+
   // ----------------------------------------------------------------------
   // mobilePortlets
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  com.jalios.jcms.portlet.PortalElement[] mobilePortlets;
-  
+
   public com.jalios.jcms.portlet.PortalElement[] getMobilePortlets() { return mobilePortlets; }
-  
+
   public void setMobilePortlets(com.jalios.jcms.portlet.PortalElement[] v) { mobilePortlets = v; }
-  
-  
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // abstract
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   @Override
   public void setAbstract(String lang, String value) { setDescription(lang, value); }
   @Override
@@ -1202,36 +1239,36 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
   public String getAbstract(String lang, boolean useDefault) { return getDescription(lang, useDefault); }
   @Override
   public HashMap<String,String> getAbstractML() { return getDescriptionML(); }
-   
+
   // ----------------------------------------------------------------------
   // Data image
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   @Override
   public String getDataImage() {
     String _img = portletImage;
     if (Util.notEmpty(_img)) {
       return _img;
     }
-  
+
     return super.getDataImage();
   }
-  
+
   @Override
   public String getDataImage(String lang, boolean useDefault) {
     String _img = getPortletImage(lang, useDefault);
     if (Util.notEmpty(_img)) {
       return _img;
-    }  
-  
+    }
+
     return super.getDataImage(lang, useDefault);
   }
-  
+
   @Override
   public String[] getSearchStrings() {
     StringBuffer sb = new StringBuffer(super.getSearchStrings()[0]);
     sb.ensureCapacity(500 * (0 + 3 + 0 + 0 + 0 + 0) );
     if (description != null) {
-      sb.append(description); sb.append(' '); 
+      sb.append(description); sb.append(' ');
     }
     if (descriptionML != null) {
       for (String str : descriptionML.values()) {
@@ -1241,7 +1278,7 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
       }
     }
     if (introduction != null) {
-      sb.append(introduction); sb.append(' '); 
+      sb.append(introduction); sb.append(' ');
     }
     if (introductionML != null) {
       for (String str : introductionML.values()) {
@@ -1251,7 +1288,7 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
       }
     }
     if (title != null) {
-      sb.append(title); sb.append(' '); 
+      sb.append(title); sb.append(' ');
     }
     if (titleML != null) {
       for (String str : titleML.values()) {
@@ -1262,13 +1299,13 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
     }
     return new String[] {sb.toString()};
   }
-  
+
   @Override
   public String getAllWikiText() {
     StringBuffer sb = new StringBuffer(super.getAllWikiText());
     sb.ensureCapacity(500 * (0 + 1 + 0 + 0 + 0 + 0) );
     if (description != null && !JHTMLUtils.isJHTML(null, description)) {
-      sb.append(description); sb.append(' '); 
+      sb.append(description); sb.append(' ');
     }
     if (descriptionML != null) {
       for (String str : descriptionML.values()) {
@@ -1279,14 +1316,14 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
     }
     return sb.toString();
   }
-  
+
   @Override
   public String getAllWysiwygText() {
     StringBuffer sb = new StringBuffer(super.getAllWysiwygText());
     sb.ensureCapacity(500 * (0 + 1 + 0 + 0 + 0 + 0) );
     // Wiki fields containing JHTML
     if (description != null && JHTMLUtils.isJHTML(null, description)) {
-      sb.append(description); sb.append(' '); 
+      sb.append(description); sb.append(' ');
     }
     if (descriptionML != null) {
       for (String str : descriptionML.values()) {
@@ -1297,7 +1334,7 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
     }
    // Wysiwyg fields
     if (introduction != null) {
-      sb.append(introduction); sb.append(' '); 
+      sb.append(introduction); sb.append(' ');
     }
     if (introductionML != null) {
       for (String str : introductionML.values()) {
@@ -1308,7 +1345,7 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
     }
     return sb.toString();
   }
-  
+
   @Override
   public <T extends Data> TreeSet<T> getLinkDataSet(Class<T> clazz) {
     if (clazz == null) {
@@ -1326,7 +1363,7 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
   }
   // ----------------------------------------------------------------------
   // DataController
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   public ControllerStatus checkHtmlIntroduction() {
     ControllerStatus status = JcmsUtil.checkHtml(introduction, channel.getTypeFieldLabel(this, "introduction"));
     if (status.hasFailed()) {
@@ -1338,14 +1375,15 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
     }
     return ControllerStatus.OK;
   }
-  
-  public ControllerStatus checkIntegrity() {
-    
+
+  @Override
+public ControllerStatus checkIntegrity() {
+
     ControllerStatus status = super.checkIntegrity();
     if (status.hasFailed()) {
       return status;
     }
-    
+
     status = checkHtmlIntroduction();
     if (status.hasFailed()) {
       return status;
@@ -1363,22 +1401,23 @@ public  class CollaborativeSpace extends com.jalios.jcmsplugin.collaborativespac
     if (dashboardColumnCount < 1 ) {
       status = new ControllerStatus();
       status.setProp("msg.edit.lesser-number", channel.getTypeFieldLabel(this, "dashboardColumnCount"), "1");
-      return status;      
+      return status;
     }
     if (dashboardColumnCount > 10 ) {
       status = new ControllerStatus();
       status.setProp("msg.edit.greater-number", channel.getTypeFieldLabel(this, "dashboardColumnCount"), "10");
-      return status;      
+      return status;
     }
     return ControllerStatus.OK;
   }
-  
-  
+
+
   // ----------------------------------------------------------------------
   // WorkCopy
-  // ----------------------------------------------------------------------  
-  protected void prepareMergeCopy(Publication mergeCopy) {
-    super.prepareMergeCopy(mergeCopy);  
+  // ----------------------------------------------------------------------
+  @Override
+protected void prepareMergeCopy(Publication mergeCopy) {
+    super.prepareMergeCopy(mergeCopy);
     ((CollaborativeSpace)mergeCopy).setDescription(getDescription());
     ((CollaborativeSpace)mergeCopy).setDescriptionML(JcmsUtil.getMergedMLMap(getDescriptionML(), ((CollaborativeSpace)mergeCopy).getDescriptionML()));
     ((CollaborativeSpace)mergeCopy).setIntroduction(getIntroduction());

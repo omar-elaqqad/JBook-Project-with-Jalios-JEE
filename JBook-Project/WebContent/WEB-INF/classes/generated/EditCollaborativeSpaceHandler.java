@@ -1,42 +1,43 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
+
+
+import java.util.HashMap;
+import java.util.List;
+
+import com.jalios.jcms.Data;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
 import com.jalios.util.Util;
-import custom.*;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollectionHandler {
-   
+
   protected CollaborativeSpace theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return CollaborativeSpace.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpCollaborativeSpace  
+  // validateBeforeOpCollaborativeSpace
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     {
       Data data = processDataId("followersGroup", __followersGroupStr, com.jalios.jcms.Group.class);
-      if (data != null) { 
+      if (data != null) {
         followersGroup = (com.jalios.jcms.Group)data;
       } else {
         isFollowersGroupValidated = Util.isEmpty(__followersGroupStr);
@@ -44,7 +45,7 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
     }
     {
       Data data = processDataId("jportal", __jportalStr, com.jalios.jcms.jportal.AbstractJPortal.class);
-      if (data != null) { 
+      if (data != null) {
         jportal = (com.jalios.jcms.jportal.AbstractJPortal)data;
       } else {
         isJportalValidated = Util.isEmpty(__jportalStr);
@@ -52,7 +53,7 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
     }
     {
       Data data = processDataId("model", __modelStr, com.jalios.jcms.workspace.Workspace.class);
-      if (data != null) { 
+      if (data != null) {
         model = (com.jalios.jcms.workspace.Workspace)data;
       } else {
         isModelValidated = Util.isEmpty(__modelStr);
@@ -60,22 +61,13 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
     }
     {
       List<com.jalios.jcms.portlet.PortalElement> list = processDataIds("applications",__applicationsStr,com.jalios.jcms.portlet.PortalElement.class);
-      this.applications = (com.jalios.jcms.portlet.PortalElement[])list.toArray(new com.jalios.jcms.portlet.PortalElement[0]);
+      this.applications = list.toArray(new com.jalios.jcms.portlet.PortalElement[0]);
     }
     {
       List<com.jalios.jcms.portlet.PortalElement> list = processDataIds("mobilePortlets",__mobilePortletsStr,com.jalios.jcms.portlet.PortalElement.class);
-      this.mobilePortlets = (com.jalios.jcms.portlet.PortalElement[])list.toArray(new com.jalios.jcms.portlet.PortalElement[0]);
+      this.mobilePortlets = list.toArray(new com.jalios.jcms.portlet.PortalElement[0]);
     }
-    if (!validateUploadedFileDocument(getAvailableJportal(),   fdauthor, getAvailableWorkspace())) {
-      return false;
-    }
-    if (!validateUploadedFileDocument(getAvailableModel(),   fdauthor, getAvailableWorkspace())) {
-      return false;
-    }
-    if (!validateUploadedFileDocument(getAvailableApplications(),   fdauthor, getAvailableWorkspace())) {
-      return false;
-    }
-    if (!validateUploadedFileDocument(getAvailableMobilePortlets(),   fdauthor, getAvailableWorkspace())) {
+    if (!validateUploadedFileDocument(getAvailableJportal(),   fdauthor, getAvailableWorkspace()) || !validateUploadedFileDocument(getAvailableModel(),   fdauthor, getAvailableWorkspace()) || !validateUploadedFileDocument(getAvailableApplications(),   fdauthor, getAvailableWorkspace()) || !validateUploadedFileDocument(getAvailableMobilePortlets(),   fdauthor, getAvailableWorkspace())) {
       return false;
     }
     if (!createUploadedFileDocument(getAvailableJportal(),  fdauthor, getAvailableWorkspace())) {
@@ -94,88 +86,88 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("description".equals(field)) {
       return getAllAvailableDescriptionML();
     }
-    
+
     if ("introduction".equals(field)) {
       return getAllAvailableIntroductionML();
     }
-    
+
     if ("accessPolicy".equals(field)) {
       return getAvailableAccessPolicy();
     }
-    
+
     if ("signupPolicy".equals(field)) {
       return getAvailableSignupPolicy();
     }
-    
+
     if ("followersGroup".equals(field)) {
       return getAvailableFollowersGroup();
     }
-    
+
     if ("layout".equals(field)) {
       return getAvailableLayout();
     }
-    
+
     if ("dashboardColumnCount".equals(field)) {
       return getAvailableDashboardColumnCount();
     }
-    
+
     if ("theme".equals(field)) {
       return getAvailableTheme();
     }
-    
+
     if ("header".equals(field)) {
       return getAvailableHeader();
     }
-    
+
     if ("headerSettings".equals(field)) {
       return getAvailableHeaderSettings();
     }
-    
+
     if ("exactCategory".equals(field)) {
       return getAvailableExactCategory();
     }
-    
+
     if ("mobileShowIntro".equals(field)) {
       return getAvailableMobileShowIntro();
     }
-    
+
     if ("mobileShowApplications".equals(field)) {
       return getAvailableMobileShowApplications();
     }
-    
+
     if ("jportal".equals(field)) {
       return getAvailableJportal();
     }
-    
+
     if ("syncMode".equals(field)) {
       return getAvailableSyncMode();
     }
-    
+
     if ("modelSyncMode".equals(field)) {
       return getAvailableModelSyncMode();
     }
-    
+
     if ("model".equals(field)) {
       return getAvailableModel();
     }
-    
+
     if ("applications".equals(field)) {
       return getAvailableApplications();
     }
-    
+
     if ("mobilePortlets".equals(field)) {
       return getAvailableMobilePortlets();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     if ("accessPolicy".equals(field)) {
       return CollaborativeSpace.getAccessPolicyValues();
     }
@@ -204,7 +196,7 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     if ("accessPolicy".equals(field)) {
       return CollaborativeSpace.getAccessPolicyLabels(userLang);
     }
@@ -232,7 +224,7 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdateCollaborativeSpace  
+  // validateCommonCreateUpdateCollaborativeSpace
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdateCollaborativeSpace() {
     if (!isFollowersGroupValidated) {
@@ -253,39 +245,35 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdateCollaborativeSpace()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdateCollaborativeSpace()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdateCollaborativeSpace()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdateCollaborativeSpace()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -294,7 +282,8 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -303,7 +292,8 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -312,7 +302,8 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     CollaborativeSpace obj = (CollaborativeSpace)data;
     obj.setDescription(getAvailableDescription());
@@ -337,8 +328,9 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
     obj.setApplications(getAvailableApplications());
     obj.setMobilePortlets(getAvailableMobilePortlets());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof CollaborativeSpace) {
       super.setId(v);
       theContent = (CollaborativeSpace)publication;
@@ -347,40 +339,45 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // description
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry descriptionTFE = channel.getTypeFieldEntry(CollaborativeSpace.class, "description", true);
   protected String description = channel.getTypeFieldEntry(CollaborativeSpace.class, "description", true).getDefaultTextString();
   protected HashMap<String,String> descriptionML = descriptionTFE.getDefaultTextMap();
-  public void setDescription(String[] v) {
+  @Override
+public void setDescription(String[] v) {
     description = getMultilingualMainValue(descriptionTFE, v);
     descriptionML = getMultilingualMLMap(descriptionTFE, v);
   }
-  public String getAvailableDescription() {
+  @Override
+public String getAvailableDescription() {
     if (theContent != null && isFieldMissing("description")) {
      String objectValue = theContent.getDescription();
       return objectValue;
     }
     return description;
   }
-  
-    
-  public HashMap<String,String> getAllAvailableDescriptionML() {
+
+
+  @Override
+public HashMap<String,String> getAllAvailableDescriptionML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableDescriptionML());
     map.put(channel.getLanguage(),getAvailableDescription(channel.getLanguage()));
     return map;
   }
-  
-  public HashMap<String,String> getAvailableDescriptionML() {
+
+  @Override
+public HashMap<String,String> getAvailableDescriptionML() {
     if (theContent != null && isFieldMissing("description")) {
       return theContent.getDescriptionML();
     }
     return descriptionML;
   }
-  public String getAvailableDescription(String lang) {
+  @Override
+public String getAvailableDescription(String lang) {
     if (theContent != null) {
       if (lang.equals(channel.getLanguage())) {
       	if (!Util.isSameContent(description, channel.getTypeFieldEntry(CollaborativeSpace.class, "description", true).getDefaultTextString())) {
@@ -398,11 +395,11 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
     }
     return descriptionML == null ? "" : Util.getString(descriptionML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // introduction
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry introductionTFE = channel.getTypeFieldEntry(CollaborativeSpace.class, "introduction", true);
   protected String introduction = channel.getTypeFieldEntry(CollaborativeSpace.class, "introduction", true).getDefaultTextString();
   protected HashMap<String,String> introductionML = introductionTFE.getDefaultTextMap();
@@ -417,14 +414,14 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
     }
     return introduction;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailableIntroductionML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableIntroductionML());
     map.put(channel.getLanguage(),getAvailableIntroduction(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableIntroductionML() {
     if (theContent != null && isFieldMissing("introduction")) {
       return theContent.getIntroductionML();
@@ -449,11 +446,11 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
     }
     return introductionML == null ? "" : Util.getString(introductionML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // accessPolicy
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry accessPolicyTFE = channel.getTypeFieldEntry(CollaborativeSpace.class, "accessPolicy", true);
   protected String accessPolicy = channel.getTypeFieldEntry(CollaborativeSpace.class, "accessPolicy", true).getDefaultTextString();
   public void setAccessPolicy(String[] v) {
@@ -466,13 +463,13 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
     }
     return accessPolicy;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // signupPolicy
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry signupPolicyTFE = channel.getTypeFieldEntry(CollaborativeSpace.class, "signupPolicy", true);
   protected String signupPolicy = channel.getTypeFieldEntry(CollaborativeSpace.class, "signupPolicy", true).getDefaultTextString();
   public void setSignupPolicy(String[] v) {
@@ -485,13 +482,13 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
     }
     return signupPolicy;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // followersGroup
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry followersGroupTFE = channel.getTypeFieldEntry(CollaborativeSpace.class, "followersGroup", true);
   protected boolean isFollowersGroupValidated = true;
   protected com.jalios.jcms.Group followersGroup;
@@ -506,13 +503,13 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
     }
     return followersGroup;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // layout
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry layoutTFE = channel.getTypeFieldEntry(CollaborativeSpace.class, "layout", true);
   protected String layout = channel.getTypeFieldEntry(CollaborativeSpace.class, "layout", true).getDefaultTextString();
   public void setLayout(String[] v) {
@@ -525,13 +522,13 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
     }
     return layout;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // dashboardColumnCount
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry dashboardColumnCountTFE = channel.getTypeFieldEntry(CollaborativeSpace.class, "dashboardColumnCount", true);
   protected boolean isDashboardColumnCountValidated = true;
   protected int dashboardColumnCount = 2;
@@ -549,13 +546,13 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
     }
     return dashboardColumnCount;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // theme
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry themeTFE = channel.getTypeFieldEntry(CollaborativeSpace.class, "theme", true);
   protected String theme = channel.getTypeFieldEntry(CollaborativeSpace.class, "theme", true).getDefaultTextString();
   public void setTheme(String[] v) {
@@ -568,13 +565,13 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
     }
     return theme;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // header
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry headerTFE = channel.getTypeFieldEntry(CollaborativeSpace.class, "header", true);
   protected String header = channel.getTypeFieldEntry(CollaborativeSpace.class, "header", true).getDefaultTextString();
   public void setHeader(String[] v) {
@@ -587,13 +584,13 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
     }
     return header;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // headerSettings
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry headerSettingsTFE = channel.getTypeFieldEntry(CollaborativeSpace.class, "headerSettings", true);
   protected String headerSettings = channel.getTypeFieldEntry(CollaborativeSpace.class, "headerSettings", true).getDefaultTextString();
   public void setHeaderSettings(String[] v) {
@@ -606,19 +603,19 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
     }
     return headerSettings;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // exactCategory
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry exactCategoryTFE = channel.getTypeFieldEntry(CollaborativeSpace.class, "exactCategory", true);
   protected boolean exactCategory = false;
   public void setExactCategory(boolean  v) {
     this.exactCategory = v;
   }
-  
+
   public boolean getAvailableExactCategory() {
     if (theContent != null && isFieldMissing("exactCategory")) {
      boolean objectValue = theContent.getExactCategory();
@@ -626,19 +623,19 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
     }
     return exactCategory;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // mobileShowIntro
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry mobileShowIntroTFE = channel.getTypeFieldEntry(CollaborativeSpace.class, "mobileShowIntro", true);
   protected boolean mobileShowIntro = true;
   public void setMobileShowIntro(boolean  v) {
     this.mobileShowIntro = v;
   }
-  
+
   public boolean getAvailableMobileShowIntro() {
     if (theContent != null && isFieldMissing("mobileShowIntro")) {
      boolean objectValue = theContent.getMobileShowIntro();
@@ -646,19 +643,19 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
     }
     return mobileShowIntro;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // mobileShowApplications
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry mobileShowApplicationsTFE = channel.getTypeFieldEntry(CollaborativeSpace.class, "mobileShowApplications", true);
   protected boolean mobileShowApplications = true;
   public void setMobileShowApplications(boolean  v) {
     this.mobileShowApplications = v;
   }
-  
+
   public boolean getAvailableMobileShowApplications() {
     if (theContent != null && isFieldMissing("mobileShowApplications")) {
      boolean objectValue = theContent.getMobileShowApplications();
@@ -666,13 +663,13 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
     }
     return mobileShowApplications;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // jportal
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry jportalTFE = channel.getTypeFieldEntry(CollaborativeSpace.class, "jportal", true);
   protected boolean isJportalValidated = true;
   protected com.jalios.jcms.jportal.AbstractJPortal jportal;
@@ -687,20 +684,20 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
     }
     return jportal;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // syncMode
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry syncModeTFE = channel.getTypeFieldEntry(CollaborativeSpace.class, "syncMode", true);
   protected String[] syncMode = new String[0];
   protected int syncModeAddCount = 0;
   public void setSyncMode(String[] v) {
     syncMode = getMonolingualValueArray(syncModeTFE, v);
   }
-  
+
   public String[] getAvailableSyncMode() {
     if (theContent != null && isFieldMissing("syncMode")) {
 	  String[] objectValue = theContent.getSyncMode();
@@ -711,29 +708,29 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
     }
     return syncMode;
   }
-  
-    
-  
+
+
+
   public void setSyncModeAddCount(int  v) {
     syncModeAddCount = v;
   }
-  
+
   public int getSyncModeCount() {
     int arraySize = Util.getSize(getAvailableSyncMode());
     int res = 3 + arraySize + syncModeAddCount;
     return res;
   }
-   
+
   // ----------------------------------------------------------------------
   // modelSyncMode
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry modelSyncModeTFE = channel.getTypeFieldEntry(CollaborativeSpace.class, "modelSyncMode", true);
   protected String[] modelSyncMode = new String[0];
   protected int modelSyncModeAddCount = 0;
   public void setModelSyncMode(String[] v) {
     modelSyncMode = getMonolingualValueArray(modelSyncModeTFE, v);
   }
-  
+
   public String[] getAvailableModelSyncMode() {
     if (theContent != null && isFieldMissing("modelSyncMode")) {
 	  String[] objectValue = theContent.getModelSyncMode();
@@ -744,22 +741,22 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
     }
     return modelSyncMode;
   }
-  
-    
-  
+
+
+
   public void setModelSyncModeAddCount(int  v) {
     modelSyncModeAddCount = v;
   }
-  
+
   public int getModelSyncModeCount() {
     int arraySize = Util.getSize(getAvailableModelSyncMode());
     int res = 3 + arraySize + modelSyncModeAddCount;
     return res;
   }
-   
+
   // ----------------------------------------------------------------------
   // model
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry modelTFE = channel.getTypeFieldEntry(CollaborativeSpace.class, "model", true);
   protected boolean isModelValidated = true;
   protected com.jalios.jcms.workspace.Workspace model;
@@ -774,13 +771,13 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
     }
     return model;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // applications
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry applicationsTFE = channel.getTypeFieldEntry(CollaborativeSpace.class, "applications", true);
   protected com.jalios.jcms.portlet.PortalElement[] applications = new com.jalios.jcms.portlet.PortalElement[0];
   protected int applicationsAddCount = 0;
@@ -798,22 +795,22 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
     }
     return applications;
   }
-  
-    
-  
+
+
+
   public void setApplicationsAddCount(int  v) {
     applicationsAddCount = v;
   }
-  
+
   public int getApplicationsCount() {
     int arraySize = Util.getSize(getAvailableApplications());
     int res = 3 + arraySize + applicationsAddCount;
     return res;
   }
-   
+
   // ----------------------------------------------------------------------
   // mobilePortlets
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry mobilePortletsTFE = channel.getTypeFieldEntry(CollaborativeSpace.class, "mobilePortlets", true);
   protected com.jalios.jcms.portlet.PortalElement[] mobilePortlets = new com.jalios.jcms.portlet.PortalElement[0];
   protected int mobilePortletsAddCount = 0;
@@ -831,21 +828,21 @@ public class EditCollaborativeSpaceHandler extends generated.EditAbstractCollect
     }
     return mobilePortlets;
   }
-  
-    
-  
+
+
+
   public void setMobilePortletsAddCount(int  v) {
     mobilePortletsAddCount = v;
   }
-  
+
   public int getMobilePortletsCount() {
     int arraySize = Util.getSize(getAvailableMobilePortlets());
     int res = 3 + arraySize + mobilePortletsAddCount;
     return res;
   }
- 
-   
- 
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // BfyXrHN55HsugMlpvlX0+w==

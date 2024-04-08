@@ -1,87 +1,85 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
+
+
+import java.util.HashMap;
+import java.util.List;
+
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
+import com.jalios.jcms.handler.EditPublicationHandler;
 import com.jalios.util.Util;
-import custom.*;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditSmartPhonePortalHandler extends EditPublicationHandler {
-   
+
   protected SmartPhonePortal theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return SmartPhonePortal.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpSmartPhonePortal  
+  // validateBeforeOpSmartPhonePortal
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     {
       List<com.jalios.jcms.portlet.PortalElement> list = processDataIds("portlets",__portletsStr,com.jalios.jcms.portlet.PortalElement.class);
-      this.portlets = (com.jalios.jcms.portlet.PortalElement[])list.toArray(new com.jalios.jcms.portlet.PortalElement[0]);
+      this.portlets = list.toArray(new com.jalios.jcms.portlet.PortalElement[0]);
     }
-    if (!validateUploadedFileDocument(getAvailablePortlets(),   fdauthor, getAvailableWorkspace())) {
-      return false;
-    }
-    if (!createUploadedFileDocument(getAvailablePortlets(),  fdauthor, getAvailableWorkspace())) {
+    if (!validateUploadedFileDocument(getAvailablePortlets(),   fdauthor, getAvailableWorkspace()) || !createUploadedFileDocument(getAvailablePortlets(),  fdauthor, getAvailableWorkspace())) {
       return false;
     }
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("description".equals(field)) {
       return getAllAvailableDescriptionML();
     }
-    
+
     if ("structure".equals(field)) {
       return getAvailableStructure();
     }
-    
+
     if ("portlets".equals(field)) {
       return getAvailablePortlets();
     }
-    
+
     if ("displayScrollToTop".equals(field)) {
       return getAvailableDisplayScrollToTop();
     }
-    
+
     if ("pageTitle".equals(field)) {
       return getAllAvailablePageTitleML();
     }
-    
+
     if ("image".equals(field)) {
       return getAvailableImage();
     }
-    
+
     if ("css".equals(field)) {
       return getAvailableCss();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     if ("displayScrollToTop".equals(field)) {
       return SmartPhonePortal.getDisplayScrollToTopValues();
     }
@@ -89,51 +87,47 @@ public class EditSmartPhonePortalHandler extends EditPublicationHandler {
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     if ("displayScrollToTop".equals(field)) {
       return SmartPhonePortal.getDisplayScrollToTopLabels(userLang);
     }
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdateSmartPhonePortal  
+  // validateCommonCreateUpdateSmartPhonePortal
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdateSmartPhonePortal() {
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdateSmartPhonePortal()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdateSmartPhonePortal()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdateSmartPhonePortal()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdateSmartPhonePortal()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -142,7 +136,8 @@ public class EditSmartPhonePortalHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -151,7 +146,8 @@ public class EditSmartPhonePortalHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -160,7 +156,8 @@ public class EditSmartPhonePortalHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     SmartPhonePortal obj = (SmartPhonePortal)data;
     obj.setDescription(getAvailableDescription());
@@ -173,8 +170,9 @@ public class EditSmartPhonePortalHandler extends EditPublicationHandler {
     obj.setImage(getAvailableImage());
     obj.setCss(getAvailableCss());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof SmartPhonePortal) {
       super.setId(v);
       theContent = (SmartPhonePortal)publication;
@@ -183,11 +181,11 @@ public class EditSmartPhonePortalHandler extends EditPublicationHandler {
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // description
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry descriptionTFE = channel.getTypeFieldEntry(SmartPhonePortal.class, "description", true);
   protected String description = channel.getTypeFieldEntry(SmartPhonePortal.class, "description", true).getDefaultTextString();
   protected HashMap<String,String> descriptionML = descriptionTFE.getDefaultTextMap();
@@ -202,14 +200,14 @@ public class EditSmartPhonePortalHandler extends EditPublicationHandler {
     }
     return description;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailableDescriptionML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableDescriptionML());
     map.put(channel.getLanguage(),getAvailableDescription(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableDescriptionML() {
     if (theContent != null && isFieldMissing("description")) {
       return theContent.getDescriptionML();
@@ -234,11 +232,11 @@ public class EditSmartPhonePortalHandler extends EditPublicationHandler {
     }
     return descriptionML == null ? "" : Util.getString(descriptionML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // structure
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry structureTFE = channel.getTypeFieldEntry(SmartPhonePortal.class, "structure", true);
   protected String structure = channel.getTypeFieldEntry(SmartPhonePortal.class, "structure", true).getDefaultTextString();
   public void setStructure(String[] v) {
@@ -251,13 +249,13 @@ public class EditSmartPhonePortalHandler extends EditPublicationHandler {
     }
     return structure;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // portlets
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry portletsTFE = channel.getTypeFieldEntry(SmartPhonePortal.class, "portlets", true);
   protected com.jalios.jcms.portlet.PortalElement[] portlets = new com.jalios.jcms.portlet.PortalElement[0];
   protected int portletsAddCount = 0;
@@ -275,28 +273,28 @@ public class EditSmartPhonePortalHandler extends EditPublicationHandler {
     }
     return portlets;
   }
-  
-    
-  
+
+
+
   public void setPortletsAddCount(int  v) {
     portletsAddCount = v;
   }
-  
+
   public int getPortletsCount() {
     int arraySize = Util.getSize(getAvailablePortlets());
     int res = 3 + arraySize + portletsAddCount;
     return res;
   }
-   
+
   // ----------------------------------------------------------------------
   // displayScrollToTop
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry displayScrollToTopTFE = channel.getTypeFieldEntry(SmartPhonePortal.class, "displayScrollToTop", true);
   protected boolean displayScrollToTop = true;
   public void setDisplayScrollToTop(boolean  v) {
     this.displayScrollToTop = v;
   }
-  
+
   public boolean getAvailableDisplayScrollToTop() {
     if (theContent != null && isFieldMissing("displayScrollToTop")) {
      boolean objectValue = theContent.getDisplayScrollToTop();
@@ -304,13 +302,13 @@ public class EditSmartPhonePortalHandler extends EditPublicationHandler {
     }
     return displayScrollToTop;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // pageTitle
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry pageTitleTFE = channel.getTypeFieldEntry(SmartPhonePortal.class, "pageTitle", true);
   protected String pageTitle = channel.getTypeFieldEntry(SmartPhonePortal.class, "pageTitle", true).getDefaultTextString();
   protected HashMap<String,String> pageTitleML = pageTitleTFE.getDefaultTextMap();
@@ -325,14 +323,14 @@ public class EditSmartPhonePortalHandler extends EditPublicationHandler {
     }
     return pageTitle;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailablePageTitleML() {
     HashMap<String,String> map = Util.getHashMap(getAvailablePageTitleML());
     map.put(channel.getLanguage(),getAvailablePageTitle(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailablePageTitleML() {
     if (theContent != null && isFieldMissing("pageTitle")) {
       return theContent.getPageTitleML();
@@ -357,11 +355,11 @@ public class EditSmartPhonePortalHandler extends EditPublicationHandler {
     }
     return pageTitleML == null ? "" : Util.getString(pageTitleML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // image
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry imageTFE = channel.getTypeFieldEntry(SmartPhonePortal.class, "image", true);
   protected String image = channel.getTypeFieldEntry(SmartPhonePortal.class, "image", true).getDefaultTextString();
   public void setImage(String[] v) {
@@ -374,13 +372,13 @@ public class EditSmartPhonePortalHandler extends EditPublicationHandler {
     }
     return image;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // css
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry cssTFE = channel.getTypeFieldEntry(SmartPhonePortal.class, "css", true);
   protected String css = channel.getTypeFieldEntry(SmartPhonePortal.class, "css", true).getDefaultTextString();
   public void setCss(String[] v) {
@@ -393,12 +391,12 @@ public class EditSmartPhonePortalHandler extends EditPublicationHandler {
     }
     return css;
   }
-  
-    
-  
- 
-   
- 
+
+
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // rE/yn6CgGPUNm0tJJJlHkg==

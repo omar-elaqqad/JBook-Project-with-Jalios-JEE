@@ -1,38 +1,51 @@
 // This file has been automatically generated.
-   
+
 package generated;
- 
-import java.util.*;
- 
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
 import org.apache.oro.text.regex.Pattern;
 import org.apache.oro.text.regex.Perl5Compiler;
 import org.apache.oro.text.regex.Perl5Matcher;
-import org.hibernate.Hibernate;
- 
-import com.jalios.jcms.*;
-import com.jalios.jcms.db.*;
-import com.jalios.jcms.mashup.*;
-import com.jalios.jcms.wysiwyg.*;
-import com.jalios.util.*;
-import com.fasterxml.jackson.annotation.JsonIgnore; 
-import com.fasterxml.jackson.annotation.JsonProperty;
- 
+
+import com.jalios.jcms.Category;
+import com.jalios.jcms.ControllerStatus;
+import com.jalios.jcms.Data;
+import com.jalios.jcms.EnumerateFormReport;
+import com.jalios.jcms.FileDocument;
+import com.jalios.jcms.IntegerFormReport;
+import com.jalios.jcms.JcmsUtil;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeEntry;
+import com.jalios.jcms.TypeFieldEntry;
+import com.jalios.jcms.mashup.ExportUtil;
+import com.jalios.jcms.mashup.ImportOptions;
+import com.jalios.jcms.mashup.ImportUtil;
+import com.jalios.jcms.wysiwyg.JHTMLUtils;
+import com.jalios.util.ObjectIntTreeMap;
+import com.jalios.util.Util;
+
 @SuppressWarnings({"unchecked", "unused"})
-public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet 
-             implements 
+public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
+             implements
                 com.jalios.jstore.Searchable
 {
-  
+
   // ----------------------------------------------------------------------
   // CONSTRUCTORS
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   public AbstractPortlet() {}
- 
- 
- 
-  
-  
-  
+
+
+
+
+
+
   public AbstractPortlet(AbstractPortlet other) {
     super(other);
     description = other.description;
@@ -63,13 +76,14 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
     cssId = other.cssId;
     cssClasses = other.cssClasses;
   }
-  
+
   // ----------------------------------------------------------------------
   // Import / Export
   // ----------------------------------------------------------------------
-  public void importXml(org.jdom.Element elt, ImportOptions options) {
+  @Override
+public void importXml(org.jdom.Element elt, ImportOptions options) {
     super.importXml(elt, options);
-    
+
     setPortletImage(ImportUtil.parseFieldText(elt, "portletImage"));
     setPortletImageML(ImportUtil.parseFieldTextML(elt, "portletImageML"));
     setCacheType(ImportUtil.parseFieldText(elt, "cacheType"));
@@ -95,22 +109,24 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
     setCssId(ImportUtil.parseFieldText(elt, "cssId"));
     setCssClasses(ImportUtil.parseFieldText(elt, "cssClasses"));
   }
-  
-  protected void importXmlFieldsWithReferences(org.jdom.Element elt, ImportOptions options) {
+
+  @Override
+protected void importXmlFieldsWithReferences(org.jdom.Element elt, ImportOptions options) {
     super.importXmlFieldsWithReferences(elt, options);
-      
+
     if (options.isSelfImport()) {
       setDescription(ImportUtil.parseFieldText(elt, "description"));
       setDescriptionML(ImportUtil.parseFieldTextML(elt, "descriptionML"));
       setOriginalPortlet(ImportUtil.parseSelfFieldData(elt, "originalPortlet", com.jalios.jcms.portlet.PortalElement.class));
     } else {
-    
+
     setDescriptionML(ImportUtil.parseFieldWikiML(elt, "descriptionML"));
     setDescription(ImportUtil.parseFieldWiki(elt, "description"));
     }
   }
-  
-  public void exportXmlField(StringBuffer sb, int indentLevel) {
+
+  @Override
+public void exportXmlField(StringBuffer sb, int indentLevel) {
     super.exportXmlField(sb, indentLevel);
     sb.append(ExportUtil.exportField(indentLevel, "description", getDescription(), "descriptionML", true, true));
     sb.append(ExportUtil.exportField(indentLevel, "descriptionML", getDescriptionML(), true));
@@ -140,17 +156,18 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
     sb.append(ExportUtil.exportField(indentLevel, "cssId", getCssId(), false, true));
     sb.append(ExportUtil.exportField(indentLevel, "cssClasses", getCssClasses(), false, true));
   }
-  
-  public Set<FileDocument> getDocumentLinkSet() {
+
+  @Override
+public Set<FileDocument> getDocumentLinkSet() {
     Set<FileDocument> docSet = super.getDocumentLinkSet();
     JcmsUtil.addFileDocument(docSet, portletImage, portletImageML);
     JcmsUtil.addFileDocument(docSet, backImage);
     return docSet;
   }
-  
+
   // ----------------------------------------------------------------------
   // TYPE AND FIELD INFOS (static methods)
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   /**
    * Returns the TypeEntry bound to <code>AbstractPortlet</code>. <br>
    * @see com.jalios.jcms.Channel#getTypeEntry(Class)
@@ -181,14 +198,15 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
   }
   // ----------------------------------------------------------------------
   // FIELDs VALUE
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   /**
    * Gets the value of the given <code>int</code> field name for the current <code>AbstractPortlet</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>int</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public int getIntFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public int getIntFieldValue(String fieldName) throws NoSuchFieldException {
     if ("insetLeft".equals(fieldName)) { return getInsetLeft(); }
     if ("insetRight".equals(fieldName)) { return getInsetRight(); }
     if ("insetTop".equals(fieldName)) { return getInsetTop(); }
@@ -197,15 +215,16 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
     if ("border".equals(fieldName)) { return getBorder(); }
     return super.getIntFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>int</code> field name for the current <code>AbstractPortlet</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>int</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setIntFieldValue(String fieldName, int value) throws NoSuchFieldException {
+  @Override
+public void setIntFieldValue(String fieldName, int value) throws NoSuchFieldException {
     if ("insetLeft".equals(fieldName)) { setInsetLeft(value); return; }
     if ("insetRight".equals(fieldName)) { setInsetRight(value); return; }
     if ("insetTop".equals(fieldName)) { setInsetTop(value); return; }
@@ -214,72 +233,78 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
     if ("border".equals(fieldName)) { setBorder(value); return; }
     super.setIntFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>long</code> field name for the current <code>AbstractPortlet</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>long</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public long getLongFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public long getLongFieldValue(String fieldName) throws NoSuchFieldException {
     if ("invalidTime".equals(fieldName)) { return getInvalidTime(); }
     return super.getLongFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>long</code> field name for the current <code>AbstractPortlet</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>long</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setLongFieldValue(String fieldName, long value) throws NoSuchFieldException {
+  @Override
+public void setLongFieldValue(String fieldName, long value) throws NoSuchFieldException {
     if ("invalidTime".equals(fieldName)) { setInvalidTime(value); return; }
     super.setLongFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>double</code> field name for the current <code>AbstractPortlet</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>double</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public double getDoubleFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public double getDoubleFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getDoubleFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>double</code> field name for the current <code>AbstractPortlet</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>double</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setDoubleFieldValue(String fieldName, double value) throws NoSuchFieldException {
+  @Override
+public void setDoubleFieldValue(String fieldName, double value) throws NoSuchFieldException {
      super.setDoubleFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>boolean</code> field name for the current <code>AbstractPortlet</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>boolean</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public boolean getBooleanFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public boolean getBooleanFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getBooleanFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>boolean</code> field name for the current <code>AbstractPortlet</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>boolean</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setBooleanFieldValue(String fieldName, boolean value) throws NoSuchFieldException {
+  @Override
+public void setBooleanFieldValue(String fieldName, boolean value) throws NoSuchFieldException {
     super.setBooleanFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>Category</code> field name for the current <code>Data</code>.
    * @param fieldName the field name from which to retrieve the field value.
@@ -287,7 +312,8 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
    * @return a <code>TreeSet</code> of <code>Category</code>
    * @throws NoSuchFieldException if the field was not found in the given <code>Data</code>.
    */
-  public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
+  @Override
+public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
     return super.getCategoryFieldValue(fieldName, mbr);
   }
   /**
@@ -296,12 +322,13 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
    * @param fieldName the field name from which to retrieve the field value.
    * @param lang the language (ISO-639 code) in which to retrieve the field value
    *        (used only for multilingual fields).
-   * @param useDefault whether to use the publication main language if the field value 
+   * @param useDefault whether to use the publication main language if the field value
    *        is not available in the requested language (used only for multilingual fields).
    * @return the <code>Object</code> field value
    * @throws NoSuchFieldException if the field was not found in the given <code>Publication</code>.
    */
-  public Object getFieldValue(String fieldName, String lang, boolean useDefault) throws NoSuchFieldException {
+  @Override
+public Object getFieldValue(String fieldName, String lang, boolean useDefault) throws NoSuchFieldException {
     if ("description".equals(fieldName)) { return getDescription(lang, useDefault); }
     if ("portletImage".equals(fieldName)) { return getPortletImage(lang, useDefault); }
     if ("cacheType".equals(fieldName)) { return getCacheType(); }
@@ -322,7 +349,7 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
     if ("cssClasses".equals(fieldName)) { return getCssClasses(); }
     return super.getFieldValue(fieldName, lang, useDefault);
   }
-  
+
   /**
    * Sets the <code>Object</code> value of the given field name for this <code>AbstractPortlet</code>. <br>
    * Do not set <code>Category</code> fields, see {@link #setCategoryFieldValue(String, TreeSet)}.
@@ -330,11 +357,12 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
    * @param value the <code>Object</code> field value
    * @param lang the language (ISO-639 code) in which to retrieve the field value
    *        (used only for multilingual fields).
-   * 
+   *
    * @throws NoSuchFieldException if the field was not found in the given <code>Publication</code>.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setFieldValue(String fieldName, Object value, String lang) throws NoSuchFieldException {
+  @Override
+public void setFieldValue(String fieldName, Object value, String lang) throws NoSuchFieldException {
     if ("description".equals(fieldName)) { setDescription(lang,(String)value); return; }
     if ("portletImage".equals(fieldName)) { setPortletImage(lang,(String)value); return; }
     if ("cacheType".equals(fieldName)) { setCacheType((String)value); return; }
@@ -355,34 +383,39 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
     if ("cssClasses".equals(fieldName)) { setCssClasses((String)value); return; }
     super.setFieldValue(fieldName, value, lang);
   }
-  
+
   // ----------------------------------------------------------------------
   // description
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String description = channel.getTypeFieldEntry(AbstractPortlet.class, "description", true).getDefaultTextString();
-  
+
   public String getDescription() { return description; }
-  
-  public void setDescription(String v) { description = v; }
-  
-  
-  
-  
+
+  @Override
+public void setDescription(String v) { description = v; }
+
+
+
+
   protected HashMap<String,String> descriptionML = channel.getTypeFieldEntry(AbstractPortlet.class, "description", true).getDefaultTextMap();
-  public String getDescription(String lang) { return (String)channel.getLangValue(lang, true, description, descriptionML, getMainLanguage()); }
-  public String getDescription(String lang, boolean useDefault) { return (String)channel.getLangValue(lang, useDefault, description, descriptionML, getMainLanguage()); }
-  public HashMap<String,String> getDescriptionML() { return descriptionML; }
-  public void setDescriptionML(HashMap<String,String> v) { descriptionML = v; }
-  
-  public String getDescriptionMLE() { 
+  @Override
+public String getDescription(String lang) { return channel.getLangValue(lang, true, description, descriptionML, getMainLanguage()); }
+  @Override
+public String getDescription(String lang, boolean useDefault) { return channel.getLangValue(lang, useDefault, description, descriptionML, getMainLanguage()); }
+  @Override
+public HashMap<String,String> getDescriptionML() { return descriptionML; }
+  @Override
+public void setDescriptionML(HashMap<String,String> v) { descriptionML = v; }
+
+  public String getDescriptionMLE() {
     return JcmsUtil.encodeMLE(getDescriptionML());
   }
-  
+
   public void setDescriptionMLE(String v) {
     setDescriptionML(JcmsUtil.decodeMLE(v));
   }
-  
+
   public void setDescription(String lang, String value) {
     if (channel.getLanguage().equals(lang)) {
       description = value;
@@ -397,31 +430,36 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
   }
   // ----------------------------------------------------------------------
   // portletImage
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String portletImage = channel.getTypeFieldEntry(AbstractPortlet.class, "portletImage", true).getDefaultTextString();
-  
+
   public String getPortletImage() { return portletImage; }
-  
-  public void setPortletImage(String v) { portletImage = v; }
-  
-  
-  
-  
+
+  @Override
+public void setPortletImage(String v) { portletImage = v; }
+
+
+
+
   protected HashMap<String,String> portletImageML = channel.getTypeFieldEntry(AbstractPortlet.class, "portletImage", true).getDefaultTextMap();
-  public String getPortletImage(String lang) { return (String)channel.getLangValue(lang, true, portletImage, portletImageML, getMainLanguage()); }
-  public String getPortletImage(String lang, boolean useDefault) { return (String)channel.getLangValue(lang, useDefault, portletImage, portletImageML, getMainLanguage()); }
-  public HashMap<String,String> getPortletImageML() { return portletImageML; }
-  public void setPortletImageML(HashMap<String,String> v) { portletImageML = v; }
-  
-  public String getPortletImageMLE() { 
+  @Override
+public String getPortletImage(String lang) { return channel.getLangValue(lang, true, portletImage, portletImageML, getMainLanguage()); }
+  @Override
+public String getPortletImage(String lang, boolean useDefault) { return channel.getLangValue(lang, useDefault, portletImage, portletImageML, getMainLanguage()); }
+  @Override
+public HashMap<String,String> getPortletImageML() { return portletImageML; }
+  @Override
+public void setPortletImageML(HashMap<String,String> v) { portletImageML = v; }
+
+  public String getPortletImageMLE() {
     return JcmsUtil.encodeMLE(getPortletImageML());
   }
-  
+
   public void setPortletImageMLE(String v) {
     setPortletImageML(JcmsUtil.decodeMLE(v));
   }
-  
+
   public void setPortletImage(String lang, String value) {
     if (channel.getLanguage().equals(lang)) {
       portletImage = value;
@@ -436,22 +474,24 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
   }
   // ----------------------------------------------------------------------
   // cacheType
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String cacheType = channel.getTypeFieldEntry(AbstractPortlet.class, "cacheType", true).getDefaultTextString();
-  
-  public String getCacheType() { return cacheType; }
-  
-  public void setCacheType(String v) { cacheType = v; }
-  
-  
-  
+
+  @Override
+public String getCacheType() { return cacheType; }
+
+  @Override
+public void setCacheType(String v) { cacheType = v; }
+
+
+
   public String getCacheType(String lang) { return cacheType; }
   public String getCacheType(String lang, boolean useDefault) { return cacheType; }
-  private static String[] cacheTypeValues;  
+  private static String[] cacheTypeValues;
   private static String[] cacheTypeLabels;
   private static Map<String, String[]> cacheTypeLabelsMap;
-  
+
   public static String[] getCacheTypeValues() {
     if(cacheTypeValues == null) {
       setCacheTypeValues(channel.getTypeFieldEntry(AbstractPortlet.class, "cacheType", true).getEnumerateValues());
@@ -481,9 +521,9 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
   }
   public static String[] getCacheTypeLabels(String userLang) {
     Map<String, String[]> cacheTypeLabelMap = getCacheTypeLabelsMap();
-    String[] labels = (String[])cacheTypeLabelMap.get(userLang);
+    String[] labels = cacheTypeLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])cacheTypeLabelMap.get(channel.getLanguage());
+      labels = cacheTypeLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -521,8 +561,8 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
     }
     return getCacheTypeLabel(value, channel.getLanguage());
   }
-  
-  public static String getCacheTypeLabel(String value) {    
+
+  public static String getCacheTypeLabel(String value) {
     String[] cacheTypeLabels = getCacheTypeLabels();
     if (false) {
     }
@@ -556,31 +596,33 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getCacheType());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // cacheSensibility
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String cacheSensibility = channel.getTypeFieldEntry(AbstractPortlet.class, "cacheSensibility", true).getDefaultTextString();
-  
-  public String getCacheSensibility() { return cacheSensibility; }
-  
-  public void setCacheSensibility(String v) { cacheSensibility = v; }
-  
-  
-  
+
+  @Override
+public String getCacheSensibility() { return cacheSensibility; }
+
+  @Override
+public void setCacheSensibility(String v) { cacheSensibility = v; }
+
+
+
   public String getCacheSensibility(String lang) { return cacheSensibility; }
   public String getCacheSensibility(String lang, boolean useDefault) { return cacheSensibility; }
-  private static String[] cacheSensibilityValues;  
+  private static String[] cacheSensibilityValues;
   private static String[] cacheSensibilityLabels;
   private static Map<String, String[]> cacheSensibilityLabelsMap;
-  
+
   public static String[] getCacheSensibilityValues() {
     if(cacheSensibilityValues == null) {
       setCacheSensibilityValues(channel.getTypeFieldEntry(AbstractPortlet.class, "cacheSensibility", true).getEnumerateValues());
@@ -610,9 +652,9 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
   }
   public static String[] getCacheSensibilityLabels(String userLang) {
     Map<String, String[]> cacheSensibilityLabelMap = getCacheSensibilityLabelsMap();
-    String[] labels = (String[])cacheSensibilityLabelMap.get(userLang);
+    String[] labels = cacheSensibilityLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])cacheSensibilityLabelMap.get(channel.getLanguage());
+      labels = cacheSensibilityLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -638,8 +680,8 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
     }
     return getCacheSensibilityLabel(value, channel.getLanguage());
   }
-  
-  public static String getCacheSensibilityLabel(String value) {    
+
+  public static String getCacheSensibilityLabel(String value) {
     String[] cacheSensibilityLabels = getCacheSensibilityLabels();
     if (false) {
     }
@@ -661,31 +703,33 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getCacheSensibility());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // invalidClass
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String[] invalidClass;
-  
-  public String[] getInvalidClass() { return invalidClass; }
-  
-  public void setInvalidClass(String[] v) { invalidClass = v; }
-  
-  
-  
+
+  @Override
+public String[] getInvalidClass() { return invalidClass; }
+
+  @Override
+public void setInvalidClass(String[] v) { invalidClass = v; }
+
+
+
   public String[] getInvalidClass(String lang) { return invalidClass; }
   public String[] getInvalidClass(String lang, boolean useDefault) { return invalidClass; }
-  private static String[] invalidClassValues;  
+  private static String[] invalidClassValues;
   private static String[] invalidClassLabels;
   private static Map<String, String[]> invalidClassLabelsMap;
-  
+
   public static String[] getInvalidClassValues() {
     if(invalidClassValues == null) {
       setInvalidClassValues(channel.getTypeFieldEntry(AbstractPortlet.class, "invalidClass", true).getEnumerateValues());
@@ -715,9 +759,9 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
   }
   public static String[] getInvalidClassLabels(String userLang) {
     Map<String, String[]> invalidClassLabelMap = getInvalidClassLabelsMap();
-    String[] labels = (String[])invalidClassLabelMap.get(userLang);
+    String[] labels = invalidClassLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])invalidClassLabelMap.get(channel.getLanguage());
+      labels = invalidClassLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -743,8 +787,8 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
     }
     return getInvalidClassLabel(value, channel.getLanguage());
   }
-  
-  public static String getInvalidClassLabel(String value) {    
+
+  public static String getInvalidClassLabel(String value) {
     String[] invalidClassLabels = getInvalidClassLabels();
     if (false) {
     }
@@ -774,37 +818,41 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // invalidTime
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  long invalidTime = 60;
-  
-  public long getInvalidTime() { return invalidTime; }
-  
-  public void setInvalidTime(long v) { invalidTime = v; }
-  
-  
-  
+
+  @Override
+public long getInvalidTime() { return invalidTime; }
+
+  @Override
+public void setInvalidTime(long v) { invalidTime = v; }
+
+
+
   // ----------------------------------------------------------------------
   // displayCSS
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String displayCSS = channel.getTypeFieldEntry(AbstractPortlet.class, "displayCSS", true).getDefaultTextString();
-  
-  public String getDisplayCSS() { return displayCSS; }
-  
-  public void setDisplayCSS(String v) { displayCSS = v; }
-  
-  
-  
+
+  @Override
+public String getDisplayCSS() { return displayCSS; }
+
+  @Override
+public void setDisplayCSS(String v) { displayCSS = v; }
+
+
+
   public String getDisplayCSS(String lang) { return displayCSS; }
   public String getDisplayCSS(String lang, boolean useDefault) { return displayCSS; }
-  private static String[] displayCSSValues;  
+  private static String[] displayCSSValues;
   private static String[] displayCSSLabels;
   private static Map<String, String[]> displayCSSLabelsMap;
-  
+
   public static String[] getDisplayCSSValues() {
     if(displayCSSValues == null) {
       setDisplayCSSValues(channel.getTypeFieldEntry(AbstractPortlet.class, "displayCSS", true).getEnumerateValues());
@@ -834,9 +882,9 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
   }
   public static String[] getDisplayCSSLabels(String userLang) {
     Map<String, String[]> displayCSSLabelMap = getDisplayCSSLabelsMap();
-    String[] labels = (String[])displayCSSLabelMap.get(userLang);
+    String[] labels = displayCSSLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])displayCSSLabelMap.get(channel.getLanguage());
+      labels = displayCSSLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -862,8 +910,8 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
     }
     return getDisplayCSSLabel(value, channel.getLanguage());
   }
-  
-  public static String getDisplayCSSLabel(String value) {    
+
+  public static String getDisplayCSSLabel(String value) {
     String[] displayCSSLabels = getDisplayCSSLabels();
     if (false) {
     }
@@ -885,39 +933,43 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getDisplayCSS());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // width
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String width = channel.getTypeFieldEntry(AbstractPortlet.class, "width", true).getDefaultTextString();
-  
-  public String getWidth() { return width; }
-  
-  public void setWidth(String v) { width = v; }
-  
-  
-  
+
+  @Override
+public String getWidth() { return width; }
+
+  @Override
+public void setWidth(String v) { width = v; }
+
+
+
   public String getWidth(String lang) { return width; }
   public String getWidth(String lang, boolean useDefault) { return width; }
   // ----------------------------------------------------------------------
   // insetLeft
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  int insetLeft = 0;
-  
-  public int getInsetLeft() { return insetLeft; }
-  
-  public void setInsetLeft(int v) { insetLeft = v; }
-  
-  
-  
+
+  @Override
+public int getInsetLeft() { return insetLeft; }
+
+  @Override
+public void setInsetLeft(int v) { insetLeft = v; }
+
+
+
   public static IntegerFormReport getInsetLeftReport(SortedSet<AbstractPortlet> set) {
     long sum = 0;
     int min = Integer.MAX_VALUE;
@@ -932,19 +984,21 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
       max = Math.max(value, max);
     }
     return new IntegerFormReport(set.size(), sum, min, max);
-  }  
+  }
   // ----------------------------------------------------------------------
   // insetRight
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  int insetRight = 0;
-  
-  public int getInsetRight() { return insetRight; }
-  
-  public void setInsetRight(int v) { insetRight = v; }
-  
-  
-  
+
+  @Override
+public int getInsetRight() { return insetRight; }
+
+  @Override
+public void setInsetRight(int v) { insetRight = v; }
+
+
+
   public static IntegerFormReport getInsetRightReport(SortedSet<AbstractPortlet> set) {
     long sum = 0;
     int min = Integer.MAX_VALUE;
@@ -959,19 +1013,21 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
       max = Math.max(value, max);
     }
     return new IntegerFormReport(set.size(), sum, min, max);
-  }  
+  }
   // ----------------------------------------------------------------------
   // insetTop
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  int insetTop = 0;
-  
-  public int getInsetTop() { return insetTop; }
-  
-  public void setInsetTop(int v) { insetTop = v; }
-  
-  
-  
+
+  @Override
+public int getInsetTop() { return insetTop; }
+
+  @Override
+public void setInsetTop(int v) { insetTop = v; }
+
+
+
   public static IntegerFormReport getInsetTopReport(SortedSet<AbstractPortlet> set) {
     long sum = 0;
     int min = Integer.MAX_VALUE;
@@ -986,19 +1042,21 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
       max = Math.max(value, max);
     }
     return new IntegerFormReport(set.size(), sum, min, max);
-  }  
+  }
   // ----------------------------------------------------------------------
   // insetBottom
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  int insetBottom = 0;
-  
-  public int getInsetBottom() { return insetBottom; }
-  
-  public void setInsetBottom(int v) { insetBottom = v; }
-  
-  
-  
+
+  @Override
+public int getInsetBottom() { return insetBottom; }
+
+  @Override
+public void setInsetBottom(int v) { insetBottom = v; }
+
+
+
   public static IntegerFormReport getInsetBottomReport(SortedSet<AbstractPortlet> set) {
     long sum = 0;
     int min = Integer.MAX_VALUE;
@@ -1013,19 +1071,21 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
       max = Math.max(value, max);
     }
     return new IntegerFormReport(set.size(), sum, min, max);
-  }  
+  }
   // ----------------------------------------------------------------------
   // cellPadding
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  int cellPadding = 0;
-  
-  public int getCellPadding() { return cellPadding; }
-  
-  public void setCellPadding(int v) { cellPadding = v; }
-  
-  
-  
+
+  @Override
+public int getCellPadding() { return cellPadding; }
+
+  @Override
+public void setCellPadding(int v) { cellPadding = v; }
+
+
+
   public static IntegerFormReport getCellPaddingReport(SortedSet<AbstractPortlet> set) {
     long sum = 0;
     int min = Integer.MAX_VALUE;
@@ -1040,25 +1100,27 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
       max = Math.max(value, max);
     }
     return new IntegerFormReport(set.size(), sum, min, max);
-  }  
+  }
   // ----------------------------------------------------------------------
   // alignH
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String alignH = channel.getTypeFieldEntry(AbstractPortlet.class, "alignH", true).getDefaultTextString();
-  
-  public String getAlignH() { return alignH; }
-  
-  public void setAlignH(String v) { alignH = v; }
-  
-  
-  
+
+  @Override
+public String getAlignH() { return alignH; }
+
+  @Override
+public void setAlignH(String v) { alignH = v; }
+
+
+
   public String getAlignH(String lang) { return alignH; }
   public String getAlignH(String lang, boolean useDefault) { return alignH; }
-  private static String[] alignHValues;  
+  private static String[] alignHValues;
   private static String[] alignHLabels;
   private static Map<String, String[]> alignHLabelsMap;
-  
+
   public static String[] getAlignHValues() {
     if(alignHValues == null) {
       setAlignHValues(channel.getTypeFieldEntry(AbstractPortlet.class, "alignH", true).getEnumerateValues());
@@ -1088,9 +1150,9 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
   }
   public static String[] getAlignHLabels(String userLang) {
     Map<String, String[]> alignHLabelMap = getAlignHLabelsMap();
-    String[] labels = (String[])alignHLabelMap.get(userLang);
+    String[] labels = alignHLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])alignHLabelMap.get(channel.getLanguage());
+      labels = alignHLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -1116,8 +1178,8 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
     }
     return getAlignHLabel(value, channel.getLanguage());
   }
-  
-  public static String getAlignHLabel(String value) {    
+
+  public static String getAlignHLabel(String value) {
     String[] alignHLabels = getAlignHLabels();
     if (false) {
     }
@@ -1139,31 +1201,33 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getAlignH());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // alignV
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String alignV = channel.getTypeFieldEntry(AbstractPortlet.class, "alignV", true).getDefaultTextString();
-  
-  public String getAlignV() { return alignV; }
-  
-  public void setAlignV(String v) { alignV = v; }
-  
-  
-  
+
+  @Override
+public String getAlignV() { return alignV; }
+
+  @Override
+public void setAlignV(String v) { alignV = v; }
+
+
+
   public String getAlignV(String lang) { return alignV; }
   public String getAlignV(String lang, boolean useDefault) { return alignV; }
-  private static String[] alignVValues;  
+  private static String[] alignVValues;
   private static String[] alignVLabels;
   private static Map<String, String[]> alignVLabelsMap;
-  
+
   public static String[] getAlignVValues() {
     if(alignVValues == null) {
       setAlignVValues(channel.getTypeFieldEntry(AbstractPortlet.class, "alignV", true).getEnumerateValues());
@@ -1193,9 +1257,9 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
   }
   public static String[] getAlignVLabels(String userLang) {
     Map<String, String[]> alignVLabelMap = getAlignVLabelsMap();
-    String[] labels = (String[])alignVLabelMap.get(userLang);
+    String[] labels = alignVLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])alignVLabelMap.get(channel.getLanguage());
+      labels = alignVLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -1221,8 +1285,8 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
     }
     return getAlignVLabel(value, channel.getLanguage());
   }
-  
-  public static String getAlignVLabel(String value) {    
+
+  public static String getAlignVLabel(String value) {
     String[] alignVLabels = getAlignVLabels();
     if (false) {
     }
@@ -1244,31 +1308,33 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getAlignV());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // alignTable
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String alignTable = channel.getTypeFieldEntry(AbstractPortlet.class, "alignTable", true).getDefaultTextString();
-  
-  public String getAlignTable() { return alignTable; }
-  
-  public void setAlignTable(String v) { alignTable = v; }
-  
-  
-  
+
+  @Override
+public String getAlignTable() { return alignTable; }
+
+  @Override
+public void setAlignTable(String v) { alignTable = v; }
+
+
+
   public String getAlignTable(String lang) { return alignTable; }
   public String getAlignTable(String lang, boolean useDefault) { return alignTable; }
-  private static String[] alignTableValues;  
+  private static String[] alignTableValues;
   private static String[] alignTableLabels;
   private static Map<String, String[]> alignTableLabelsMap;
-  
+
   public static String[] getAlignTableValues() {
     if(alignTableValues == null) {
       setAlignTableValues(channel.getTypeFieldEntry(AbstractPortlet.class, "alignTable", true).getEnumerateValues());
@@ -1298,9 +1364,9 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
   }
   public static String[] getAlignTableLabels(String userLang) {
     Map<String, String[]> alignTableLabelMap = getAlignTableLabelsMap();
-    String[] labels = (String[])alignTableLabelMap.get(userLang);
+    String[] labels = alignTableLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])alignTableLabelMap.get(channel.getLanguage());
+      labels = alignTableLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -1326,8 +1392,8 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
     }
     return getAlignTableLabel(value, channel.getLanguage());
   }
-  
-  public static String getAlignTableLabel(String value) {    
+
+  public static String getAlignTableLabel(String value) {
     String[] alignTableLabels = getAlignTableLabels();
     if (false) {
     }
@@ -1349,25 +1415,27 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getAlignTable());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // border
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  int border = 0;
-  
-  public int getBorder() { return border; }
-  
-  public void setBorder(int v) { border = v; }
-  
-  
-  
+
+  @Override
+public int getBorder() { return border; }
+
+  @Override
+public void setBorder(int v) { border = v; }
+
+
+
   public static IntegerFormReport getBorderReport(SortedSet<AbstractPortlet> set) {
     long sum = 0;
     int min = Integer.MAX_VALUE;
@@ -1382,67 +1450,75 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
       max = Math.max(value, max);
     }
     return new IntegerFormReport(set.size(), sum, min, max);
-  }  
+  }
   // ----------------------------------------------------------------------
   // borderColor
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String borderColor = channel.getTypeFieldEntry(AbstractPortlet.class, "borderColor", true).getDefaultTextString();
-  
-  public String getBorderColor() { return borderColor; }
-  
-  public void setBorderColor(String v) { borderColor = v; }
-  
-  
-  
+
+  @Override
+public String getBorderColor() { return borderColor; }
+
+  @Override
+public void setBorderColor(String v) { borderColor = v; }
+
+
+
   public String getBorderColor(String lang) { return borderColor; }
   public String getBorderColor(String lang, boolean useDefault) { return borderColor; }
   // ----------------------------------------------------------------------
   // backColor
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String backColor = channel.getTypeFieldEntry(AbstractPortlet.class, "backColor", true).getDefaultTextString();
-  
-  public String getBackColor() { return backColor; }
-  
-  public void setBackColor(String v) { backColor = v; }
-  
-  
-  
+
+  @Override
+public String getBackColor() { return backColor; }
+
+  @Override
+public void setBackColor(String v) { backColor = v; }
+
+
+
   public String getBackColor(String lang) { return backColor; }
   public String getBackColor(String lang, boolean useDefault) { return backColor; }
   // ----------------------------------------------------------------------
   // backImage
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String backImage = channel.getTypeFieldEntry(AbstractPortlet.class, "backImage", true).getDefaultTextString();
-  
-  public String getBackImage() { return backImage; }
-  
-  public void setBackImage(String v) { backImage = v; }
-  
-  
-  
+
+  @Override
+public String getBackImage() { return backImage; }
+
+  @Override
+public void setBackImage(String v) { backImage = v; }
+
+
+
   public String getBackImage(String lang) { return backImage; }
   public String getBackImage(String lang, boolean useDefault) { return backImage; }
   // ----------------------------------------------------------------------
   // behaviorCopy
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String behaviorCopy = channel.getTypeFieldEntry(AbstractPortlet.class, "behaviorCopy", true).getDefaultTextString();
-  
-  public String getBehaviorCopy() { return behaviorCopy; }
-  
-  public void setBehaviorCopy(String v) { behaviorCopy = v; }
-  
-  
-  
+
+  @Override
+public String getBehaviorCopy() { return behaviorCopy; }
+
+  @Override
+public void setBehaviorCopy(String v) { behaviorCopy = v; }
+
+
+
   public String getBehaviorCopy(String lang) { return behaviorCopy; }
   public String getBehaviorCopy(String lang, boolean useDefault) { return behaviorCopy; }
-  private static String[] behaviorCopyValues;  
+  private static String[] behaviorCopyValues;
   private static String[] behaviorCopyLabels;
   private static Map<String, String[]> behaviorCopyLabelsMap;
-  
+
   public static String[] getBehaviorCopyValues() {
     if(behaviorCopyValues == null) {
       setBehaviorCopyValues(channel.getTypeFieldEntry(AbstractPortlet.class, "behaviorCopy", true).getEnumerateValues());
@@ -1472,9 +1548,9 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
   }
   public static String[] getBehaviorCopyLabels(String userLang) {
     Map<String, String[]> behaviorCopyLabelMap = getBehaviorCopyLabelsMap();
-    String[] labels = (String[])behaviorCopyLabelMap.get(userLang);
+    String[] labels = behaviorCopyLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])behaviorCopyLabelMap.get(channel.getLanguage());
+      labels = behaviorCopyLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -1500,8 +1576,8 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
     }
     return getBehaviorCopyLabel(value, channel.getLanguage());
   }
-  
-  public static String getBehaviorCopyLabel(String value) {    
+
+  public static String getBehaviorCopyLabel(String value) {
     String[] behaviorCopyLabels = getBehaviorCopyLabels();
     if (false) {
     }
@@ -1523,43 +1599,45 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getBehaviorCopy());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // originalPortlet
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  com.jalios.jcms.portlet.PortalElement originalPortlet;
-  
+
   public com.jalios.jcms.portlet.PortalElement getOriginalPortlet() { return originalPortlet; }
-  
+
   public void setOriginalPortlet(com.jalios.jcms.portlet.PortalElement v) { originalPortlet = v; }
-  
-  
-  
+
+
+
   // ----------------------------------------------------------------------
   // condition
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String[] condition;
-  
-  public String[] getCondition() { return condition; }
-  
-  public void setCondition(String[] v) { condition = v; }
-  
-  
-  
+
+  @Override
+public String[] getCondition() { return condition; }
+
+  @Override
+public void setCondition(String[] v) { condition = v; }
+
+
+
   public String[] getCondition(String lang) { return condition; }
   public String[] getCondition(String lang, boolean useDefault) { return condition; }
-  private static String[] conditionValues;  
+  private static String[] conditionValues;
   private static String[] conditionLabels;
   private static Map<String, String[]> conditionLabelsMap;
-  
+
   public static String[] getConditionValues() {
     if(conditionValues == null) {
       setConditionValues(channel.getTypeFieldEntry(AbstractPortlet.class, "condition", true).getEnumerateValues());
@@ -1589,9 +1667,9 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
   }
   public static String[] getConditionLabels(String userLang) {
     Map<String, String[]> conditionLabelMap = getConditionLabelsMap();
-    String[] labels = (String[])conditionLabelMap.get(userLang);
+    String[] labels = conditionLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])conditionLabelMap.get(channel.getLanguage());
+      labels = conditionLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -1617,8 +1695,8 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
     }
     return getConditionLabel(value, channel.getLanguage());
   }
-  
-  public static String getConditionLabel(String value) {    
+
+  public static String getConditionLabel(String value) {
     String[] conditionLabels = getConditionLabels();
     if (false) {
     }
@@ -1648,39 +1726,43 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // cssId
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String cssId = channel.getTypeFieldEntry(AbstractPortlet.class, "cssId", true).getDefaultTextString();
-  
-  public String getCssId() { return cssId; }
-  
-  public void setCssId(String v) { cssId = v; }
-  
-  
-  
+
+  @Override
+public String getCssId() { return cssId; }
+
+  @Override
+public void setCssId(String v) { cssId = v; }
+
+
+
   public String getCssId(String lang) { return cssId; }
   public String getCssId(String lang, boolean useDefault) { return cssId; }
   // ----------------------------------------------------------------------
   // cssClasses
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String cssClasses = channel.getTypeFieldEntry(AbstractPortlet.class, "cssClasses", true).getDefaultTextString();
-  
-  public String getCssClasses() { return cssClasses; }
-  
-  public void setCssClasses(String v) { cssClasses = v; }
-  
-  
-  
+
+  @Override
+public String getCssClasses() { return cssClasses; }
+
+  @Override
+public void setCssClasses(String v) { cssClasses = v; }
+
+
+
   public String getCssClasses(String lang) { return cssClasses; }
   public String getCssClasses(String lang, boolean useDefault) { return cssClasses; }
-   
+
   // ----------------------------------------------------------------------
   // abstract
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   @Override
   public void setAbstract(String lang, String value) { setDescription(lang, value); }
   @Override
@@ -1689,36 +1771,36 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
   public String getAbstract(String lang, boolean useDefault) { return getDescription(lang, useDefault); }
   @Override
   public HashMap<String,String> getAbstractML() { return getDescriptionML(); }
-   
+
   // ----------------------------------------------------------------------
   // Data image
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   @Override
   public String getDataImage() {
     String _img = portletImage;
     if (Util.notEmpty(_img)) {
       return _img;
     }
-  
+
     return super.getDataImage();
   }
-  
+
   @Override
   public String getDataImage(String lang, boolean useDefault) {
     String _img = getPortletImage(lang, useDefault);
     if (Util.notEmpty(_img)) {
       return _img;
-    }  
-  
+    }
+
     return super.getDataImage(lang, useDefault);
   }
-  
+
   @Override
   public String[] getSearchStrings() {
     StringBuffer sb = new StringBuffer(super.getSearchStrings()[0]);
     sb.ensureCapacity(500 * (0 + 3 + 0 + 0 + 0 + 0) );
     if (description != null) {
-      sb.append(description); sb.append(' '); 
+      sb.append(description); sb.append(' ');
     }
     if (descriptionML != null) {
       for (String str : descriptionML.values()) {
@@ -1728,7 +1810,7 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
       }
     }
     if (portletImage != null) {
-      sb.append(portletImage); sb.append(' '); 
+      sb.append(portletImage); sb.append(' ');
     }
     if (portletImageML != null) {
       for (String str : portletImageML.values()) {
@@ -1738,7 +1820,7 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
       }
     }
     if (title != null) {
-      sb.append(title); sb.append(' '); 
+      sb.append(title); sb.append(' ');
     }
     if (titleML != null) {
       for (String str : titleML.values()) {
@@ -1749,13 +1831,13 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
     }
     return new String[] {sb.toString()};
   }
-  
+
   @Override
   public String getAllWikiText() {
     StringBuffer sb = new StringBuffer(super.getAllWikiText());
     sb.ensureCapacity(500 * (0 + 1 + 0 + 0 + 0 + 0) );
     if (description != null && !JHTMLUtils.isJHTML(null, description)) {
-      sb.append(description); sb.append(' '); 
+      sb.append(description); sb.append(' ');
     }
     if (descriptionML != null) {
       for (String str : descriptionML.values()) {
@@ -1766,14 +1848,14 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
     }
     return sb.toString();
   }
-  
+
   @Override
   public String getAllWysiwygText() {
     StringBuffer sb = new StringBuffer(super.getAllWysiwygText());
     sb.ensureCapacity(500 * (0 + 0 + 0 + 0 + 0 + 0) );
     // Wiki fields containing JHTML
     if (description != null && JHTMLUtils.isJHTML(null, description)) {
-      sb.append(description); sb.append(' '); 
+      sb.append(description); sb.append(' ');
     }
     if (descriptionML != null) {
       for (String str : descriptionML.values()) {
@@ -1785,7 +1867,7 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
    // Wysiwyg fields
     return sb.toString();
   }
-  
+
   @Override
   public <T extends Data> TreeSet<T> getLinkDataSet(Class<T> clazz) {
     if (clazz == null) {
@@ -1797,7 +1879,7 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
   }
   // ----------------------------------------------------------------------
   // DataController
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   static Pattern _widthPattern;
   static {
     try {
@@ -1807,21 +1889,22 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
       // Empty
     }
   }
-  
+
   public boolean checkPatternWidth() {
     if (Util.notEmpty(width) && !(new Perl5Matcher()).matches(width, _widthPattern)) {
-      return false; 
+      return false;
     }
     return true;
   }
-  
-  public ControllerStatus checkIntegrity() {
-    
+
+  @Override
+public ControllerStatus checkIntegrity() {
+
     ControllerStatus status = super.checkIntegrity();
     if (status.hasFailed()) {
       return status;
     }
-    
+
     if (!checkPatternWidth()) {
       status = new ControllerStatus();
       status.setProp("msg.edit.bad-field-format", channel.getTypeFieldLabel(this, "width"), "[\\d]+\\s*(pt|pc|in|mm|cm|px|em|ex|%)*");
@@ -1830,72 +1913,73 @@ public abstract class AbstractPortlet extends com.jalios.jcms.portlet.Portlet
     if (insetLeft < 0 ) {
       status = new ControllerStatus();
       status.setProp("msg.edit.lesser-number", channel.getTypeFieldLabel(this, "insetLeft"), "0");
-      return status;      
+      return status;
     }
     if (insetLeft > 1000 ) {
       status = new ControllerStatus();
       status.setProp("msg.edit.greater-number", channel.getTypeFieldLabel(this, "insetLeft"), "1000");
-      return status;      
+      return status;
     }
     if (insetRight < 0 ) {
       status = new ControllerStatus();
       status.setProp("msg.edit.lesser-number", channel.getTypeFieldLabel(this, "insetRight"), "0");
-      return status;      
+      return status;
     }
     if (insetRight > 1000 ) {
       status = new ControllerStatus();
       status.setProp("msg.edit.greater-number", channel.getTypeFieldLabel(this, "insetRight"), "1000");
-      return status;      
+      return status;
     }
     if (insetTop < 0 ) {
       status = new ControllerStatus();
       status.setProp("msg.edit.lesser-number", channel.getTypeFieldLabel(this, "insetTop"), "0");
-      return status;      
+      return status;
     }
     if (insetTop > 1000 ) {
       status = new ControllerStatus();
       status.setProp("msg.edit.greater-number", channel.getTypeFieldLabel(this, "insetTop"), "1000");
-      return status;      
+      return status;
     }
     if (insetBottom < 0 ) {
       status = new ControllerStatus();
       status.setProp("msg.edit.lesser-number", channel.getTypeFieldLabel(this, "insetBottom"), "0");
-      return status;      
+      return status;
     }
     if (insetBottom > 1000 ) {
       status = new ControllerStatus();
       status.setProp("msg.edit.greater-number", channel.getTypeFieldLabel(this, "insetBottom"), "1000");
-      return status;      
+      return status;
     }
     if (cellPadding < 0 ) {
       status = new ControllerStatus();
       status.setProp("msg.edit.lesser-number", channel.getTypeFieldLabel(this, "cellPadding"), "0");
-      return status;      
+      return status;
     }
     if (cellPadding > 1000 ) {
       status = new ControllerStatus();
       status.setProp("msg.edit.greater-number", channel.getTypeFieldLabel(this, "cellPadding"), "1000");
-      return status;      
+      return status;
     }
     if (border < 0 ) {
       status = new ControllerStatus();
       status.setProp("msg.edit.lesser-number", channel.getTypeFieldLabel(this, "border"), "0");
-      return status;      
+      return status;
     }
     if (border > 100 ) {
       status = new ControllerStatus();
       status.setProp("msg.edit.greater-number", channel.getTypeFieldLabel(this, "border"), "100");
-      return status;      
+      return status;
     }
     return ControllerStatus.OK;
   }
-  
-  
+
+
   // ----------------------------------------------------------------------
   // WorkCopy
-  // ----------------------------------------------------------------------  
-  protected void prepareMergeCopy(Publication mergeCopy) {
-    super.prepareMergeCopy(mergeCopy);  
+  // ----------------------------------------------------------------------
+  @Override
+protected void prepareMergeCopy(Publication mergeCopy) {
+    super.prepareMergeCopy(mergeCopy);
     ((AbstractPortlet)mergeCopy).setDescription(getDescription());
     ((AbstractPortlet)mergeCopy).setDescriptionML(JcmsUtil.getMergedMLMap(getDescriptionML(), ((AbstractPortlet)mergeCopy).getDescriptionML()));
     ((AbstractPortlet)mergeCopy).setPortletImage(getPortletImage());

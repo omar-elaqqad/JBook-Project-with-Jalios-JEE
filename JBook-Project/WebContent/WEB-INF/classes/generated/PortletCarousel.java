@@ -1,44 +1,52 @@
 // This file has been automatically generated.
-   
+
 package generated;
- 
-import java.util.*;
- 
-import org.apache.oro.text.regex.Pattern;
-import org.apache.oro.text.regex.Perl5Compiler;
-import org.apache.oro.text.regex.Perl5Matcher;
-import org.hibernate.Hibernate;
- 
-import com.jalios.jcms.*;
-import com.jalios.jcms.db.*;
-import com.jalios.jcms.mashup.*;
-import com.jalios.jcms.wysiwyg.*;
-import com.jalios.util.*;
-import com.fasterxml.jackson.annotation.JsonIgnore; 
-import com.fasterxml.jackson.annotation.JsonProperty;
- 
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+import com.jalios.jcms.Category;
+import com.jalios.jcms.ControllerStatus;
+import com.jalios.jcms.Data;
+import com.jalios.jcms.EnumerateFormReport;
+import com.jalios.jcms.FileDocument;
+import com.jalios.jcms.IntegerFormReport;
+import com.jalios.jcms.JcmsUtil;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeEntry;
+import com.jalios.jcms.TypeFieldEntry;
+import com.jalios.jcms.mashup.ExportUtil;
+import com.jalios.jcms.mashup.ImportOptions;
+import com.jalios.jcms.mashup.ImportUtil;
+import com.jalios.util.ObjectIntTreeMap;
+import com.jalios.util.Util;
+
 @SuppressWarnings({"unchecked", "unused"})
-public  class PortletCarousel extends generated.PortletQueryForeach 
-             implements 
+public  class PortletCarousel extends generated.PortletQueryForeach
+             implements
                 com.jalios.jstore.Searchable
 {
-  
+
   // ----------------------------------------------------------------------
   // CONSTRUCTORS
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   public PortletCarousel() {}
- 
- 
+
+
   public PortletCarousel(AbstractPortletSkinable other) {
     super(other);
   }
   public PortletCarousel(PortletQueryForeach other) {
     super(other);
   }
- 
-  
-  
-  
+
+
+
+
   public PortletCarousel(PortletCarousel other) {
     super(other);
     autoplaycarousel = other.autoplaycarousel;
@@ -50,13 +58,14 @@ public  class PortletCarousel extends generated.PortletQueryForeach
     slidesToShow = other.slidesToShow;
     numberOfLinesInTheTitle = other.numberOfLinesInTheTitle;
   }
-  
+
   // ----------------------------------------------------------------------
   // Import / Export
   // ----------------------------------------------------------------------
-  public void importXml(org.jdom.Element elt, ImportOptions options) {
+  @Override
+public void importXml(org.jdom.Element elt, ImportOptions options) {
     super.importXml(elt, options);
-    
+
     setAutoplaycarousel(ImportUtil.parseFieldLong(elt, "autoplaycarousel"));
     setArrows(ImportUtil.parseFieldBoolean(elt, "arrows"));
     setDots(ImportUtil.parseFieldBoolean(elt, "dots"));
@@ -66,17 +75,19 @@ public  class PortletCarousel extends generated.PortletQueryForeach
     setSlidesToShow(ImportUtil.parseFieldInt(elt, "slidesToShow"));
     setNumberOfLinesInTheTitle(ImportUtil.parseFieldText(elt, "numberOfLinesInTheTitle"));
   }
-  
-  protected void importXmlFieldsWithReferences(org.jdom.Element elt, ImportOptions options) {
+
+  @Override
+protected void importXmlFieldsWithReferences(org.jdom.Element elt, ImportOptions options) {
     super.importXmlFieldsWithReferences(elt, options);
-      
+
     if (options.isSelfImport()) {
     } else {
-    
+
     }
   }
-  
-  public void exportXmlField(StringBuffer sb, int indentLevel) {
+
+  @Override
+public void exportXmlField(StringBuffer sb, int indentLevel) {
     super.exportXmlField(sb, indentLevel);
     sb.append(ExportUtil.exportField(indentLevel, "autoplaycarousel", getAutoplaycarousel()));
     sb.append(ExportUtil.exportField(indentLevel, "arrows", getArrows()));
@@ -87,15 +98,16 @@ public  class PortletCarousel extends generated.PortletQueryForeach
     sb.append(ExportUtil.exportField(indentLevel, "slidesToShow", getSlidesToShow()));
     sb.append(ExportUtil.exportField(indentLevel, "numberOfLinesInTheTitle", getNumberOfLinesInTheTitle(), false, true));
   }
-  
-  public Set<FileDocument> getDocumentLinkSet() {
+
+  @Override
+public Set<FileDocument> getDocumentLinkSet() {
     Set<FileDocument> docSet = super.getDocumentLinkSet();
     return docSet;
   }
-  
+
   // ----------------------------------------------------------------------
   // TYPE AND FIELD INFOS (static methods)
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   /**
    * Returns the TypeEntry bound to <code>PortletCarousel</code>. <br>
    * @see com.jalios.jcms.Channel#getTypeEntry(Class)
@@ -126,81 +138,88 @@ public  class PortletCarousel extends generated.PortletQueryForeach
   }
   // ----------------------------------------------------------------------
   // FIELDs VALUE
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   /**
    * Gets the value of the given <code>int</code> field name for the current <code>PortletCarousel</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>int</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public int getIntFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public int getIntFieldValue(String fieldName) throws NoSuchFieldException {
     if ("slidesToShow".equals(fieldName)) { return getSlidesToShow(); }
     return super.getIntFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>int</code> field name for the current <code>PortletCarousel</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>int</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setIntFieldValue(String fieldName, int value) throws NoSuchFieldException {
+  @Override
+public void setIntFieldValue(String fieldName, int value) throws NoSuchFieldException {
     if ("slidesToShow".equals(fieldName)) { setSlidesToShow(value); return; }
     super.setIntFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>long</code> field name for the current <code>PortletCarousel</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>long</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public long getLongFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public long getLongFieldValue(String fieldName) throws NoSuchFieldException {
     if ("autoplaycarousel".equals(fieldName)) { return getAutoplaycarousel(); }
     return super.getLongFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>long</code> field name for the current <code>PortletCarousel</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>long</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setLongFieldValue(String fieldName, long value) throws NoSuchFieldException {
+  @Override
+public void setLongFieldValue(String fieldName, long value) throws NoSuchFieldException {
     if ("autoplaycarousel".equals(fieldName)) { setAutoplaycarousel(value); return; }
     super.setLongFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>double</code> field name for the current <code>PortletCarousel</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>double</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public double getDoubleFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public double getDoubleFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getDoubleFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>double</code> field name for the current <code>PortletCarousel</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>double</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setDoubleFieldValue(String fieldName, double value) throws NoSuchFieldException {
+  @Override
+public void setDoubleFieldValue(String fieldName, double value) throws NoSuchFieldException {
      super.setDoubleFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>boolean</code> field name for the current <code>PortletCarousel</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>boolean</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public boolean getBooleanFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public boolean getBooleanFieldValue(String fieldName) throws NoSuchFieldException {
     if ("arrows".equals(fieldName)) { return getArrows(); }
     if ("dots".equals(fieldName)) { return getDots(); }
     if ("showTitle".equals(fieldName)) { return getShowTitle(); }
@@ -208,15 +227,16 @@ public  class PortletCarousel extends generated.PortletQueryForeach
     if ("showAuthor".equals(fieldName)) { return getShowAuthor(); }
     return super.getBooleanFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>boolean</code> field name for the current <code>PortletCarousel</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>boolean</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setBooleanFieldValue(String fieldName, boolean value) throws NoSuchFieldException {
+  @Override
+public void setBooleanFieldValue(String fieldName, boolean value) throws NoSuchFieldException {
     if ("arrows".equals(fieldName)) { setArrows(value); return; }
     if ("dots".equals(fieldName)) { setDots(value); return; }
     if ("showTitle".equals(fieldName)) { setShowTitle(value); return; }
@@ -224,7 +244,7 @@ public  class PortletCarousel extends generated.PortletQueryForeach
     if ("showAuthor".equals(fieldName)) { setShowAuthor(value); return; }
     super.setBooleanFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>Category</code> field name for the current <code>Data</code>.
    * @param fieldName the field name from which to retrieve the field value.
@@ -232,7 +252,8 @@ public  class PortletCarousel extends generated.PortletQueryForeach
    * @return a <code>TreeSet</code> of <code>Category</code>
    * @throws NoSuchFieldException if the field was not found in the given <code>Data</code>.
    */
-  public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
+  @Override
+public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
     return super.getCategoryFieldValue(fieldName, mbr);
   }
   /**
@@ -241,16 +262,17 @@ public  class PortletCarousel extends generated.PortletQueryForeach
    * @param fieldName the field name from which to retrieve the field value.
    * @param lang the language (ISO-639 code) in which to retrieve the field value
    *        (used only for multilingual fields).
-   * @param useDefault whether to use the publication main language if the field value 
+   * @param useDefault whether to use the publication main language if the field value
    *        is not available in the requested language (used only for multilingual fields).
    * @return the <code>Object</code> field value
    * @throws NoSuchFieldException if the field was not found in the given <code>Publication</code>.
    */
-  public Object getFieldValue(String fieldName, String lang, boolean useDefault) throws NoSuchFieldException {
+  @Override
+public Object getFieldValue(String fieldName, String lang, boolean useDefault) throws NoSuchFieldException {
     if ("numberOfLinesInTheTitle".equals(fieldName)) { return getNumberOfLinesInTheTitle(); }
     return super.getFieldValue(fieldName, lang, useDefault);
   }
-  
+
   /**
    * Sets the <code>Object</code> value of the given field name for this <code>PortletCarousel</code>. <br>
    * Do not set <code>Category</code> fields, see {@link #setCategoryFieldValue(String, TreeSet)}.
@@ -258,52 +280,53 @@ public  class PortletCarousel extends generated.PortletQueryForeach
    * @param value the <code>Object</code> field value
    * @param lang the language (ISO-639 code) in which to retrieve the field value
    *        (used only for multilingual fields).
-   * 
+   *
    * @throws NoSuchFieldException if the field was not found in the given <code>Publication</code>.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setFieldValue(String fieldName, Object value, String lang) throws NoSuchFieldException {
+  @Override
+public void setFieldValue(String fieldName, Object value, String lang) throws NoSuchFieldException {
     if ("numberOfLinesInTheTitle".equals(fieldName)) { setNumberOfLinesInTheTitle((String)value); return; }
     super.setFieldValue(fieldName, value, lang);
   }
-  
+
   // ----------------------------------------------------------------------
   // autoplaycarousel
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  long autoplaycarousel = 0;
-  
+
   public long getAutoplaycarousel() { return autoplaycarousel; }
-  
+
   public void setAutoplaycarousel(long v) { autoplaycarousel = v; }
-  
-  
-  
+
+
+
   // ----------------------------------------------------------------------
   // arrows
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean arrows = true;
-  
+
   public boolean getArrows() { return arrows; }
-  
+
   public void setArrows(boolean v) { arrows = v; }
-  
-  
-  
+
+
+
   public String getArrowsLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "arrows", true);
-    return arrows ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return arrows ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getArrowsValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getArrowsLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(PortletCarousel.class, "arrows", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getArrowsReport(SortedSet<PortletCarousel> set) {
@@ -313,38 +336,38 @@ public  class PortletCarousel extends generated.PortletQueryForeach
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getArrows());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // dots
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean dots = true;
-  
+
   public boolean getDots() { return dots; }
-  
+
   public void setDots(boolean v) { dots = v; }
-  
-  
-  
+
+
+
   public String getDotsLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "dots", true);
-    return dots ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return dots ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getDotsValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getDotsLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(PortletCarousel.class, "dots", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getDotsReport(SortedSet<PortletCarousel> set) {
@@ -354,38 +377,38 @@ public  class PortletCarousel extends generated.PortletQueryForeach
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getDots());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // showTitle
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean showTitle = true;
-  
+
   public boolean getShowTitle() { return showTitle; }
-  
+
   public void setShowTitle(boolean v) { showTitle = v; }
-  
-  
-  
+
+
+
   public String getShowTitleLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "showTitle", true);
-    return showTitle ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return showTitle ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getShowTitleValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getShowTitleLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(PortletCarousel.class, "showTitle", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getShowTitleReport(SortedSet<PortletCarousel> set) {
@@ -395,38 +418,38 @@ public  class PortletCarousel extends generated.PortletQueryForeach
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getShowTitle());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // showDate
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean showDate = true;
-  
+
   public boolean getShowDate() { return showDate; }
-  
+
   public void setShowDate(boolean v) { showDate = v; }
-  
-  
-  
+
+
+
   public String getShowDateLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "showDate", true);
-    return showDate ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return showDate ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getShowDateValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getShowDateLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(PortletCarousel.class, "showDate", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getShowDateReport(SortedSet<PortletCarousel> set) {
@@ -436,38 +459,38 @@ public  class PortletCarousel extends generated.PortletQueryForeach
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getShowDate());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // showAuthor
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean showAuthor = true;
-  
+
   public boolean getShowAuthor() { return showAuthor; }
-  
+
   public void setShowAuthor(boolean v) { showAuthor = v; }
-  
-  
-  
+
+
+
   public String getShowAuthorLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "showAuthor", true);
-    return showAuthor ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return showAuthor ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getShowAuthorValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getShowAuthorLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(PortletCarousel.class, "showAuthor", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getShowAuthorReport(SortedSet<PortletCarousel> set) {
@@ -477,25 +500,25 @@ public  class PortletCarousel extends generated.PortletQueryForeach
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getShowAuthor());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // slidesToShow
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  int slidesToShow = 1;
-  
+
   public int getSlidesToShow() { return slidesToShow; }
-  
+
   public void setSlidesToShow(int v) { slidesToShow = v; }
-  
-  
-  
+
+
+
   public static IntegerFormReport getSlidesToShowReport(SortedSet<PortletCarousel> set) {
     long sum = 0;
     int min = Integer.MAX_VALUE;
@@ -510,25 +533,25 @@ public  class PortletCarousel extends generated.PortletQueryForeach
       max = Math.max(value, max);
     }
     return new IntegerFormReport(set.size(), sum, min, max);
-  }  
+  }
   // ----------------------------------------------------------------------
   // numberOfLinesInTheTitle
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String numberOfLinesInTheTitle = channel.getTypeFieldEntry(PortletCarousel.class, "numberOfLinesInTheTitle", true).getDefaultTextString();
-  
+
   public String getNumberOfLinesInTheTitle() { return numberOfLinesInTheTitle; }
-  
+
   public void setNumberOfLinesInTheTitle(String v) { numberOfLinesInTheTitle = v; }
-  
-  
-  
+
+
+
   public String getNumberOfLinesInTheTitle(String lang) { return numberOfLinesInTheTitle; }
   public String getNumberOfLinesInTheTitle(String lang, boolean useDefault) { return numberOfLinesInTheTitle; }
-  private static String[] numberOfLinesInTheTitleValues;  
+  private static String[] numberOfLinesInTheTitleValues;
   private static String[] numberOfLinesInTheTitleLabels;
   private static Map<String, String[]> numberOfLinesInTheTitleLabelsMap;
-  
+
   public static String[] getNumberOfLinesInTheTitleValues() {
     if(numberOfLinesInTheTitleValues == null) {
       setNumberOfLinesInTheTitleValues(channel.getTypeFieldEntry(PortletCarousel.class, "numberOfLinesInTheTitle", true).getEnumerateValues());
@@ -558,9 +581,9 @@ public  class PortletCarousel extends generated.PortletQueryForeach
   }
   public static String[] getNumberOfLinesInTheTitleLabels(String userLang) {
     Map<String, String[]> numberOfLinesInTheTitleLabelMap = getNumberOfLinesInTheTitleLabelsMap();
-    String[] labels = (String[])numberOfLinesInTheTitleLabelMap.get(userLang);
+    String[] labels = numberOfLinesInTheTitleLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])numberOfLinesInTheTitleLabelMap.get(channel.getLanguage());
+      labels = numberOfLinesInTheTitleLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -586,8 +609,8 @@ public  class PortletCarousel extends generated.PortletQueryForeach
     }
     return getNumberOfLinesInTheTitleLabel(value, channel.getLanguage());
   }
-  
-  public static String getNumberOfLinesInTheTitleLabel(String value) {    
+
+  public static String getNumberOfLinesInTheTitleLabel(String value) {
     String[] numberOfLinesInTheTitleLabels = getNumberOfLinesInTheTitleLabels();
     if (false) {
     }
@@ -609,17 +632,17 @@ public  class PortletCarousel extends generated.PortletQueryForeach
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getNumberOfLinesInTheTitle());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
-   
+  }
+
   // ----------------------------------------------------------------------
   // abstract
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   @Override
   public void setAbstract(String lang, String value) { setDescription(lang, value); }
   @Override
@@ -628,36 +651,36 @@ public  class PortletCarousel extends generated.PortletQueryForeach
   public String getAbstract(String lang, boolean useDefault) { return getDescription(lang, useDefault); }
   @Override
   public HashMap<String,String> getAbstractML() { return getDescriptionML(); }
-   
+
   // ----------------------------------------------------------------------
   // Data image
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   @Override
   public String getDataImage() {
     String _img = portletImage;
     if (Util.notEmpty(_img)) {
       return _img;
     }
-  
+
     return super.getDataImage();
   }
-  
+
   @Override
   public String getDataImage(String lang, boolean useDefault) {
     String _img = getPortletImage(lang, useDefault);
     if (Util.notEmpty(_img)) {
       return _img;
-    }  
-  
+    }
+
     return super.getDataImage(lang, useDefault);
   }
-  
+
   @Override
   public String[] getSearchStrings() {
     StringBuffer sb = new StringBuffer(super.getSearchStrings()[0]);
     sb.ensureCapacity(500 * (0 + 1 + 0 + 0 + 0 + 0) );
     if (title != null) {
-      sb.append(title); sb.append(' '); 
+      sb.append(title); sb.append(' ');
     }
     if (titleML != null) {
       for (String str : titleML.values()) {
@@ -668,14 +691,14 @@ public  class PortletCarousel extends generated.PortletQueryForeach
     }
     return new String[] {sb.toString()};
   }
-  
+
   @Override
   public String getAllWikiText() {
     StringBuffer sb = new StringBuffer(super.getAllWikiText());
     sb.ensureCapacity(500 * (0 + 0 + 0 + 0 + 0 + 0) );
     return sb.toString();
   }
-  
+
   @Override
   public String getAllWysiwygText() {
     StringBuffer sb = new StringBuffer(super.getAllWysiwygText());
@@ -684,7 +707,7 @@ public  class PortletCarousel extends generated.PortletQueryForeach
    // Wysiwyg fields
     return sb.toString();
   }
-  
+
   @Override
   public <T extends Data> TreeSet<T> getLinkDataSet(Class<T> clazz) {
     if (clazz == null) {
@@ -698,23 +721,25 @@ public  class PortletCarousel extends generated.PortletQueryForeach
   }
   // ----------------------------------------------------------------------
   // DataController
-  // ----------------------------------------------------------------------  
-  public ControllerStatus checkIntegrity() {
-    
+  // ----------------------------------------------------------------------
+  @Override
+public ControllerStatus checkIntegrity() {
+
     ControllerStatus status = super.checkIntegrity();
     if (status.hasFailed()) {
       return status;
     }
-    
+
     return ControllerStatus.OK;
   }
-  
-  
+
+
   // ----------------------------------------------------------------------
   // WorkCopy
-  // ----------------------------------------------------------------------  
-  protected void prepareMergeCopy(Publication mergeCopy) {
-    super.prepareMergeCopy(mergeCopy);  
+  // ----------------------------------------------------------------------
+  @Override
+protected void prepareMergeCopy(Publication mergeCopy) {
+    super.prepareMergeCopy(mergeCopy);
     ((PortletCarousel)mergeCopy).setAutoplaycarousel(getAutoplaycarousel());
     ((PortletCarousel)mergeCopy).setArrows(getArrows());
     ((PortletCarousel)mergeCopy).setDots(getDots());

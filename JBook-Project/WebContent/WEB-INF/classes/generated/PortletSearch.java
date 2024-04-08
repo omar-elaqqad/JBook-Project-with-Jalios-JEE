@@ -1,41 +1,49 @@
 // This file has been automatically generated.
-   
+
 package generated;
- 
-import java.util.*;
- 
-import org.apache.oro.text.regex.Pattern;
-import org.apache.oro.text.regex.Perl5Compiler;
-import org.apache.oro.text.regex.Perl5Matcher;
-import org.hibernate.Hibernate;
- 
-import com.jalios.jcms.*;
-import com.jalios.jcms.db.*;
-import com.jalios.jcms.mashup.*;
-import com.jalios.jcms.wysiwyg.*;
-import com.jalios.util.*;
-import com.fasterxml.jackson.annotation.JsonIgnore; 
-import com.fasterxml.jackson.annotation.JsonProperty;
- 
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+import com.jalios.jcms.Category;
+import com.jalios.jcms.ControllerStatus;
+import com.jalios.jcms.Data;
+import com.jalios.jcms.EnumerateFormReport;
+import com.jalios.jcms.FileDocument;
+import com.jalios.jcms.JcmsUtil;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeEntry;
+import com.jalios.jcms.TypeFieldEntry;
+import com.jalios.jcms.db.DBData;
+import com.jalios.jcms.mashup.ExportUtil;
+import com.jalios.jcms.mashup.ImportOptions;
+import com.jalios.jcms.mashup.ImportUtil;
+import com.jalios.util.ObjectIntTreeMap;
+import com.jalios.util.Util;
+
 @SuppressWarnings({"unchecked", "unused"})
-public  class PortletSearch extends generated.AbstractPortletSkinable 
-             implements 
+public  class PortletSearch extends generated.AbstractPortletSkinable
+             implements
                 com.jalios.jstore.Searchable
 {
-  
+
   // ----------------------------------------------------------------------
   // CONSTRUCTORS
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   public PortletSearch() {}
- 
- 
+
+
   public PortletSearch(AbstractPortletSkinable other) {
     super(other);
   }
- 
-  
-  
-  
+
+
+
+
   public PortletSearch(PortletSearch other) {
     super(other);
     titleText = other.titleText;
@@ -50,13 +58,14 @@ public  class PortletSearch extends generated.AbstractPortletSkinable
     displayPortalDBID = other.displayPortalDBID;
     advancedSearchPortlet = other.advancedSearchPortlet;
   }
-  
+
   // ----------------------------------------------------------------------
   // Import / Export
   // ----------------------------------------------------------------------
-  public void importXml(org.jdom.Element elt, ImportOptions options) {
+  @Override
+public void importXml(org.jdom.Element elt, ImportOptions options) {
     super.importXml(elt, options);
-    
+
     setTitleText(ImportUtil.parseFieldText(elt, "titleText"));
     setTitleTextML(ImportUtil.parseFieldTextML(elt, "titleTextML"));
     setSearchWith(ImportUtil.parseFieldText(elt, "searchWith"));
@@ -65,21 +74,23 @@ public  class PortletSearch extends generated.AbstractPortletSkinable
     setQuery(ImportUtil.parseFieldText(elt, "query"));
     setRefineQueries(ImportUtil.parseFieldText(elt, "refineQueries"));
   }
-  
-  protected void importXmlFieldsWithReferences(org.jdom.Element elt, ImportOptions options) {
+
+  @Override
+protected void importXmlFieldsWithReferences(org.jdom.Element elt, ImportOptions options) {
     super.importXmlFieldsWithReferences(elt, options);
-      
+
     if (options.isSelfImport()) {
       setQueryPortlet(ImportUtil.parseSelfFieldData(elt, "queryPortlet", generated.PortletQueryForeach.class));
       setAdvancedSearchPortlet(ImportUtil.parseSelfFieldData(elt, "advancedSearchPortlet", generated.PortletSearch.class));
     } else {
-    
+
     setQueryPortlet((generated.PortletQueryForeach)ImportUtil.parseFieldData(elt, "queryPortlet"));
     setAdvancedSearchPortlet((generated.PortletSearch)ImportUtil.parseFieldData(elt, "advancedSearchPortlet"));
     }
   }
-  
-  public void exportXmlField(StringBuffer sb, int indentLevel) {
+
+  @Override
+public void exportXmlField(StringBuffer sb, int indentLevel) {
     super.exportXmlField(sb, indentLevel);
     sb.append(ExportUtil.exportField(indentLevel, "titleText", getTitleText(), "titleTextML", false, true));
     sb.append(ExportUtil.exportField(indentLevel, "titleTextML", getTitleTextML(), true));
@@ -92,15 +103,16 @@ public  class PortletSearch extends generated.AbstractPortletSkinable
     sb.append(ExportUtil.exportField(indentLevel, "displayPortal", getDisplayPortal()));
     sb.append(ExportUtil.exportField(indentLevel, "advancedSearchPortlet", getAdvancedSearchPortlet()));
   }
-  
-  public Set<FileDocument> getDocumentLinkSet() {
+
+  @Override
+public Set<FileDocument> getDocumentLinkSet() {
     Set<FileDocument> docSet = super.getDocumentLinkSet();
     return docSet;
   }
-  
+
   // ----------------------------------------------------------------------
   // TYPE AND FIELD INFOS (static methods)
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   /**
    * Returns the TypeEntry bound to <code>PortletSearch</code>. <br>
    * @see com.jalios.jcms.Channel#getTypeEntry(Class)
@@ -131,93 +143,101 @@ public  class PortletSearch extends generated.AbstractPortletSkinable
   }
   // ----------------------------------------------------------------------
   // FIELDs VALUE
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   /**
    * Gets the value of the given <code>int</code> field name for the current <code>PortletSearch</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>int</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public int getIntFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public int getIntFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getIntFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>int</code> field name for the current <code>PortletSearch</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>int</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setIntFieldValue(String fieldName, int value) throws NoSuchFieldException {
+  @Override
+public void setIntFieldValue(String fieldName, int value) throws NoSuchFieldException {
     super.setIntFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>long</code> field name for the current <code>PortletSearch</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>long</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public long getLongFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public long getLongFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getLongFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>long</code> field name for the current <code>PortletSearch</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>long</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setLongFieldValue(String fieldName, long value) throws NoSuchFieldException {
+  @Override
+public void setLongFieldValue(String fieldName, long value) throws NoSuchFieldException {
     super.setLongFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>double</code> field name for the current <code>PortletSearch</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>double</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public double getDoubleFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public double getDoubleFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getDoubleFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>double</code> field name for the current <code>PortletSearch</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>double</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setDoubleFieldValue(String fieldName, double value) throws NoSuchFieldException {
+  @Override
+public void setDoubleFieldValue(String fieldName, double value) throws NoSuchFieldException {
      super.setDoubleFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>boolean</code> field name for the current <code>PortletSearch</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>boolean</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public boolean getBooleanFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public boolean getBooleanFieldValue(String fieldName) throws NoSuchFieldException {
     if ("instantSearch".equals(fieldName)) { return getInstantSearch(); }
     return super.getBooleanFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>boolean</code> field name for the current <code>PortletSearch</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>boolean</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setBooleanFieldValue(String fieldName, boolean value) throws NoSuchFieldException {
+  @Override
+public void setBooleanFieldValue(String fieldName, boolean value) throws NoSuchFieldException {
     if ("instantSearch".equals(fieldName)) { setInstantSearch(value); return; }
     super.setBooleanFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>Category</code> field name for the current <code>Data</code>.
    * @param fieldName the field name from which to retrieve the field value.
@@ -225,7 +245,8 @@ public  class PortletSearch extends generated.AbstractPortletSkinable
    * @return a <code>TreeSet</code> of <code>Category</code>
    * @throws NoSuchFieldException if the field was not found in the given <code>Data</code>.
    */
-  public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
+  @Override
+public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
     return super.getCategoryFieldValue(fieldName, mbr);
   }
   /**
@@ -234,12 +255,13 @@ public  class PortletSearch extends generated.AbstractPortletSkinable
    * @param fieldName the field name from which to retrieve the field value.
    * @param lang the language (ISO-639 code) in which to retrieve the field value
    *        (used only for multilingual fields).
-   * @param useDefault whether to use the publication main language if the field value 
+   * @param useDefault whether to use the publication main language if the field value
    *        is not available in the requested language (used only for multilingual fields).
    * @return the <code>Object</code> field value
    * @throws NoSuchFieldException if the field was not found in the given <code>Publication</code>.
    */
-  public Object getFieldValue(String fieldName, String lang, boolean useDefault) throws NoSuchFieldException {
+  @Override
+public Object getFieldValue(String fieldName, String lang, boolean useDefault) throws NoSuchFieldException {
     if ("titleText".equals(fieldName)) { return getTitleText(lang, useDefault); }
     if ("searchWith".equals(fieldName)) { return getSearchWith(); }
     if ("searchIn".equals(fieldName)) { return getSearchIn(); }
@@ -250,7 +272,7 @@ public  class PortletSearch extends generated.AbstractPortletSkinable
     if ("advancedSearchPortlet".equals(fieldName)) { return getAdvancedSearchPortlet(); }
     return super.getFieldValue(fieldName, lang, useDefault);
   }
-  
+
   /**
    * Sets the <code>Object</code> value of the given field name for this <code>PortletSearch</code>. <br>
    * Do not set <code>Category</code> fields, see {@link #setCategoryFieldValue(String, TreeSet)}.
@@ -258,11 +280,12 @@ public  class PortletSearch extends generated.AbstractPortletSkinable
    * @param value the <code>Object</code> field value
    * @param lang the language (ISO-639 code) in which to retrieve the field value
    *        (used only for multilingual fields).
-   * 
+   *
    * @throws NoSuchFieldException if the field was not found in the given <code>Publication</code>.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setFieldValue(String fieldName, Object value, String lang) throws NoSuchFieldException {
+  @Override
+public void setFieldValue(String fieldName, Object value, String lang) throws NoSuchFieldException {
     if ("titleText".equals(fieldName)) { setTitleText(lang,(String)value); return; }
     if ("searchWith".equals(fieldName)) { setSearchWith((String)value); return; }
     if ("searchIn".equals(fieldName)) { setSearchIn((String[])value); return; }
@@ -273,34 +296,34 @@ public  class PortletSearch extends generated.AbstractPortletSkinable
     if ("advancedSearchPortlet".equals(fieldName)) { setAdvancedSearchPortlet((generated.PortletSearch)value); return; }
     super.setFieldValue(fieldName, value, lang);
   }
-  
+
   // ----------------------------------------------------------------------
   // titleText
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String titleText = channel.getTypeFieldEntry(PortletSearch.class, "titleText", true).getDefaultTextString();
-  
+
   public String getTitleText() { return titleText; }
-  
+
   public void setTitleText(String v) { titleText = v; }
-  
-  
-  
-  
+
+
+
+
   protected HashMap<String,String> titleTextML = channel.getTypeFieldEntry(PortletSearch.class, "titleText", true).getDefaultTextMap();
-  public String getTitleText(String lang) { return (String)channel.getLangValue(lang, true, titleText, titleTextML, getMainLanguage()); }
-  public String getTitleText(String lang, boolean useDefault) { return (String)channel.getLangValue(lang, useDefault, titleText, titleTextML, getMainLanguage()); }
+  public String getTitleText(String lang) { return channel.getLangValue(lang, true, titleText, titleTextML, getMainLanguage()); }
+  public String getTitleText(String lang, boolean useDefault) { return channel.getLangValue(lang, useDefault, titleText, titleTextML, getMainLanguage()); }
   public HashMap<String,String> getTitleTextML() { return titleTextML; }
   public void setTitleTextML(HashMap<String,String> v) { titleTextML = v; }
-  
-  public String getTitleTextMLE() { 
+
+  public String getTitleTextMLE() {
     return JcmsUtil.encodeMLE(getTitleTextML());
   }
-  
+
   public void setTitleTextMLE(String v) {
     setTitleTextML(JcmsUtil.decodeMLE(v));
   }
-  
+
   public void setTitleText(String lang, String value) {
     if (channel.getLanguage().equals(lang)) {
       titleText = value;
@@ -315,22 +338,22 @@ public  class PortletSearch extends generated.AbstractPortletSkinable
   }
   // ----------------------------------------------------------------------
   // searchWith
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String searchWith = channel.getTypeFieldEntry(PortletSearch.class, "searchWith", true).getDefaultTextString();
-  
+
   public String getSearchWith() { return searchWith; }
-  
+
   public void setSearchWith(String v) { searchWith = v; }
-  
-  
-  
+
+
+
   public String getSearchWith(String lang) { return searchWith; }
   public String getSearchWith(String lang, boolean useDefault) { return searchWith; }
-  private static String[] searchWithValues;  
+  private static String[] searchWithValues;
   private static String[] searchWithLabels;
   private static Map<String, String[]> searchWithLabelsMap;
-  
+
   public static String[] getSearchWithValues() {
     if(searchWithValues == null) {
       setSearchWithValues(channel.getTypeFieldEntry(PortletSearch.class, "searchWith", true).getEnumerateValues());
@@ -360,9 +383,9 @@ public  class PortletSearch extends generated.AbstractPortletSkinable
   }
   public static String[] getSearchWithLabels(String userLang) {
     Map<String, String[]> searchWithLabelMap = getSearchWithLabelsMap();
-    String[] labels = (String[])searchWithLabelMap.get(userLang);
+    String[] labels = searchWithLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])searchWithLabelMap.get(channel.getLanguage());
+      labels = searchWithLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -391,8 +414,8 @@ public  class PortletSearch extends generated.AbstractPortletSkinable
     }
     return getSearchWithLabel(value, channel.getLanguage());
   }
-  
-  public static String getSearchWithLabel(String value) {    
+
+  public static String getSearchWithLabel(String value) {
     String[] searchWithLabels = getSearchWithLabels();
     if (false) {
     }
@@ -417,31 +440,31 @@ public  class PortletSearch extends generated.AbstractPortletSkinable
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getSearchWith());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // searchIn
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String[] searchIn;
-  
+
   public String[] getSearchIn() { return searchIn; }
-  
+
   public void setSearchIn(String[] v) { searchIn = v; }
-  
-  
-  
+
+
+
   public String[] getSearchIn(String lang) { return searchIn; }
   public String[] getSearchIn(String lang, boolean useDefault) { return searchIn; }
-  private static String[] searchInValues;  
+  private static String[] searchInValues;
   private static String[] searchInLabels;
   private static Map<String, String[]> searchInLabelsMap;
-  
+
   public static String[] getSearchInValues() {
     if(searchInValues == null) {
       setSearchInValues(channel.getTypeFieldEntry(PortletSearch.class, "searchIn", true).getEnumerateValues());
@@ -471,9 +494,9 @@ public  class PortletSearch extends generated.AbstractPortletSkinable
   }
   public static String[] getSearchInLabels(String userLang) {
     Map<String, String[]> searchInLabelMap = getSearchInLabelsMap();
-    String[] labels = (String[])searchInLabelMap.get(userLang);
+    String[] labels = searchInLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])searchInLabelMap.get(channel.getLanguage());
+      labels = searchInLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -499,8 +522,8 @@ public  class PortletSearch extends generated.AbstractPortletSkinable
     }
     return getSearchInLabel(value, channel.getLanguage());
   }
-  
-  public static String getSearchInLabel(String value) {    
+
+  public static String getSearchInLabel(String value) {
     String[] searchInLabels = getSearchInLabels();
     if (false) {
     }
@@ -530,32 +553,32 @@ public  class PortletSearch extends generated.AbstractPortletSkinable
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // instantSearch
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean instantSearch = true;
-  
+
   public boolean getInstantSearch() { return instantSearch; }
-  
+
   public void setInstantSearch(boolean v) { instantSearch = v; }
-  
-  
-  
+
+
+
   public String getInstantSearchLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "instantSearch", true);
-    return instantSearch ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return instantSearch ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getInstantSearchValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getInstantSearchLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(PortletSearch.class, "instantSearch", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getInstantSearchReport(SortedSet<PortletSearch> set) {
@@ -565,45 +588,45 @@ public  class PortletSearch extends generated.AbstractPortletSkinable
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getInstantSearch());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // query
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String query = channel.getTypeFieldEntry(PortletSearch.class, "query", true).getDefaultTextString();
-  
+
   public String getQuery() { return query; }
-  
+
   public void setQuery(String v) { query = v; }
-  
-  
-  
+
+
+
   public String getQuery(String lang) { return query; }
   public String getQuery(String lang, boolean useDefault) { return query; }
   // ----------------------------------------------------------------------
   // refineQueries
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String refineQueries = channel.getTypeFieldEntry(PortletSearch.class, "refineQueries", true).getDefaultTextString();
-  
+
   public String getRefineQueries() { return refineQueries; }
-  
+
   public void setRefineQueries(String v) { refineQueries = v; }
-  
-  
-  
+
+
+
   public String getRefineQueries(String lang) { return refineQueries; }
   public String getRefineQueries(String lang, boolean useDefault) { return refineQueries; }
-  private static String[] refineQueriesValues;  
+  private static String[] refineQueriesValues;
   private static String[] refineQueriesLabels;
   private static Map<String, String[]> refineQueriesLabelsMap;
-  
+
   public static String[] getRefineQueriesValues() {
     if(refineQueriesValues == null) {
       setRefineQueriesValues(channel.getTypeFieldEntry(PortletSearch.class, "refineQueries", true).getEnumerateValues());
@@ -633,9 +656,9 @@ public  class PortletSearch extends generated.AbstractPortletSkinable
   }
   public static String[] getRefineQueriesLabels(String userLang) {
     Map<String, String[]> refineQueriesLabelMap = getRefineQueriesLabelsMap();
-    String[] labels = (String[])refineQueriesLabelMap.get(userLang);
+    String[] labels = refineQueriesLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])refineQueriesLabelMap.get(channel.getLanguage());
+      labels = refineQueriesLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -664,8 +687,8 @@ public  class PortletSearch extends generated.AbstractPortletSkinable
     }
     return getRefineQueriesLabel(value, channel.getLanguage());
   }
-  
-  public static String getRefineQueriesLabel(String value) {    
+
+  public static String getRefineQueriesLabel(String value) {
     String[] refineQueriesLabels = getRefineQueriesLabels();
     if (false) {
     }
@@ -690,35 +713,35 @@ public  class PortletSearch extends generated.AbstractPortletSkinable
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getRefineQueries());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // queryPortlet
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  generated.PortletQueryForeach queryPortlet;
-  
+
   public generated.PortletQueryForeach getQueryPortlet() { return queryPortlet; }
-  
+
   public void setQueryPortlet(generated.PortletQueryForeach v) { queryPortlet = v; }
-  
-  
-  
+
+
+
   // ----------------------------------------------------------------------
   // displayPortal
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  Publication displayPortal;
-  
-  public Publication getDisplayPortal() { 
+
+  public Publication getDisplayPortal() {
     return getDisplayPortal(true);
   }
-  public Publication getDisplayPortal(boolean queryDB) { 
+  public Publication getDisplayPortal(boolean queryDB) {
    if (displayPortal != null) {
       return displayPortal;
     }
@@ -734,74 +757,74 @@ public  class PortletSearch extends generated.AbstractPortletSkinable
       displayPortal = null;
       displayPortalDBID =null;
       return;
-    }  
-  
+    }
+
     if (v instanceof DBData) {
       setDisplayPortalDBID(v.getId());
     } else {
       displayPortal = v;
     }
   }
-  public void setDisplayPortalDBID(String v) { 
+  public void setDisplayPortalDBID(String v) {
     displayPortalDBID = v;
-    if (Util.notEmpty(displayPortalDBID)) { 
+    if (Util.notEmpty(displayPortalDBID)) {
       displayPortal = null;
-    };    
-  }  
-  
-  
+    }
+  }
+
+
   // ----------------------------------------------------------------------
   // advancedSearchPortlet
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  generated.PortletSearch advancedSearchPortlet;
-  
+
   public generated.PortletSearch getAdvancedSearchPortlet() { return advancedSearchPortlet; }
-  
+
   public void setAdvancedSearchPortlet(generated.PortletSearch v) { advancedSearchPortlet = v; }
-  
-  
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // abstract
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   @Override
   public void setAbstract(String lang, String value) { setRefineQueries(value); }
   @Override
   public String getAbstract() { return refineQueries; }
   @Override
   public String getAbstract(String lang, boolean useDefault) { return getRefineQueries(lang, useDefault); }
-   
+
   // ----------------------------------------------------------------------
   // Data image
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   @Override
   public String getDataImage() {
     String _img = portletImage;
     if (Util.notEmpty(_img)) {
       return _img;
     }
-  
+
     return super.getDataImage();
   }
-  
+
   @Override
   public String getDataImage(String lang, boolean useDefault) {
     String _img = getPortletImage(lang, useDefault);
     if (Util.notEmpty(_img)) {
       return _img;
-    }  
-  
+    }
+
     return super.getDataImage(lang, useDefault);
   }
-  
+
   @Override
   public String[] getSearchStrings() {
     StringBuffer sb = new StringBuffer(super.getSearchStrings()[0]);
     sb.ensureCapacity(500 * (0 + 1 + 0 + 0 + 0 + 0) );
     if (title != null) {
-      sb.append(title); sb.append(' '); 
+      sb.append(title); sb.append(' ');
     }
     if (titleML != null) {
       for (String str : titleML.values()) {
@@ -812,14 +835,14 @@ public  class PortletSearch extends generated.AbstractPortletSkinable
     }
     return new String[] {sb.toString()};
   }
-  
+
   @Override
   public String getAllWikiText() {
     StringBuffer sb = new StringBuffer(super.getAllWikiText());
     sb.ensureCapacity(500 * (0 + 0 + 0 + 0 + 0 + 0) );
     return sb.toString();
   }
-  
+
   @Override
   public String getAllWysiwygText() {
     StringBuffer sb = new StringBuffer(super.getAllWysiwygText());
@@ -828,7 +851,7 @@ public  class PortletSearch extends generated.AbstractPortletSkinable
    // Wysiwyg fields
     return sb.toString();
   }
-  
+
   @Override
   public <T extends Data> TreeSet<T> getLinkDataSet(Class<T> clazz) {
     if (clazz == null) {
@@ -843,23 +866,25 @@ public  class PortletSearch extends generated.AbstractPortletSkinable
   }
   // ----------------------------------------------------------------------
   // DataController
-  // ----------------------------------------------------------------------  
-  public ControllerStatus checkIntegrity() {
-    
+  // ----------------------------------------------------------------------
+  @Override
+public ControllerStatus checkIntegrity() {
+
     ControllerStatus status = super.checkIntegrity();
     if (status.hasFailed()) {
       return status;
     }
-    
+
     return ControllerStatus.OK;
   }
-  
-  
+
+
   // ----------------------------------------------------------------------
   // WorkCopy
-  // ----------------------------------------------------------------------  
-  protected void prepareMergeCopy(Publication mergeCopy) {
-    super.prepareMergeCopy(mergeCopy);  
+  // ----------------------------------------------------------------------
+  @Override
+protected void prepareMergeCopy(Publication mergeCopy) {
+    super.prepareMergeCopy(mergeCopy);
     ((PortletSearch)mergeCopy).setTitleText(getTitleText());
     ((PortletSearch)mergeCopy).setTitleTextML(JcmsUtil.getMergedMLMap(getTitleTextML(), ((PortletSearch)mergeCopy).getTitleTextML()));
     ((PortletSearch)mergeCopy).setSearchWith(getSearchWith());

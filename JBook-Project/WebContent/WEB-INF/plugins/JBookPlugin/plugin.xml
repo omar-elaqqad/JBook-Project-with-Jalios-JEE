@@ -13,13 +13,20 @@
         </type>
     </types>
 
-    <java-classes>
-        <java package="com.jalios.jcmsplugin.jbook" />
-    </java-classes>
+  <!-- ========================== Classes and Jars ======================== -->
+  <java-classes>
+    <java package="com.jalios.jcmsplugin.jbook" />
+  </java-classes>
 
-    <plugincomponents>
-        <channellistener class="com.jalios.jcmsplugin.jbook.component.JBookStartupDataGenerator" />
-    </plugincomponents>
+  <!-- ========================== Plugin Components ======================= -->
+  <plugincomponents>
+    <channellistener class="com.jalios.jcmsplugin.jbook.component.JBookStartupDataGenerator" />
+  </plugincomponents>
+    
+  <!-- ============================= Hibernate ============================ -->
+  <hibernate>
+     <mapping resource="com/jalios/jcmsplugin/jbook/data/JBookBorrowing.hbm.xml"/>
+  </hibernate>
 
 
     <private-files>

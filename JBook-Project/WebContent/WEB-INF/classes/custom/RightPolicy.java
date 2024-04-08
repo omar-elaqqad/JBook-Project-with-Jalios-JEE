@@ -32,8 +32,8 @@ public class RightPolicy {
     //   return Util.toBoolean(pub.getExtraInfo("EI.isAudienced"), false);
     return pub instanceof AudiencedPublication;
   }
-  
-  
+
+
   /**
    * Check audience rights of a publication when AudienceRights is enabled.
    * @param isAuthorized true if internal JCMS control authorized the member to perform this action
@@ -51,14 +51,11 @@ public class RightPolicy {
       return false;
     }
     // Workspace Admin (or Admin)
-    if (pub.getWorkspace().isAdmin(mbr)){
-      return true;
-    }
     // Author
-    if (mbr == pub.getAuthor()) {
+    if (pub.getWorkspace().isAdmin(mbr) || (mbr == pub.getAuthor())) {
       return true;
     }
-    
+
     //                  | A. AudienceRights OK  | B. AudienceRights KO  |
     // No ReadRights  1 |         OK            |         KO            |
     // ReadRights OK  2 |        +OK*           |        +OK*           |
@@ -67,7 +64,7 @@ public class RightPolicy {
     // OK ==> authorized
     // KO ==> not authorized
     // *  ==> no need to check audience rights
-    
+
     // No read Rights (A1, B1)
     if (pub.hasNoReadRights()) {
       return AudienceRights.getInstance().checkRights(pub, mbr);
@@ -76,7 +73,7 @@ public class RightPolicy {
     // Audience rights (A2, B2, A3, B3)
     return isAuthorized || AudienceRights.getInstance().checkRights(pub, mbr);
   }
-  
+
 }
 
-  
+

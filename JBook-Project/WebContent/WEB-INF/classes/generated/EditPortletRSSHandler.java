@@ -1,97 +1,93 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
-import com.jalios.util.Util;
-import custom.*;
+
+
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditPortletRSSHandler extends EditAbstractPortletSkinableHandler {
-   
+
   protected PortletRSS theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return PortletRSS.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpPortletRSS  
+  // validateBeforeOpPortletRSS
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("source".equals(field)) {
       return getAvailableSource();
     }
-    
+
     if ("showTitle".equals(field)) {
       return getAvailableShowTitle();
     }
-    
+
     if ("showDescription".equals(field)) {
       return getAvailableShowDescription();
     }
-    
+
     if ("showImage".equals(field)) {
       return getAvailableShowImage();
     }
-    
+
     if ("showWebMastersEmail".equals(field)) {
       return getAvailableShowWebMastersEmail();
     }
-    
+
     if ("showItemsDescription".equals(field)) {
       return getAvailableShowItemsDescription();
     }
-    
+
     if ("openLinksInNewWindow".equals(field)) {
       return getAvailableOpenLinksInNewWindow();
     }
-    
+
     if ("trackingEnabled".equals(field)) {
       return getAvailableTrackingEnabled();
     }
-    
+
     if ("refresh".equals(field)) {
       return getAvailableRefresh();
     }
-    
+
     if ("maxItems".equals(field)) {
       return getAvailableMaxItems();
     }
-    
+
     if ("skipFirstItems".equals(field)) {
       return getAvailableSkipFirstItems();
     }
-    
+
     if ("sortAttribute".equals(field)) {
       return getAvailableSortAttribute();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     if ("showTitle".equals(field)) {
       return PortletRSS.getShowTitleValues();
     }
@@ -120,7 +116,7 @@ public class EditPortletRSSHandler extends EditAbstractPortletSkinableHandler {
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     if ("showTitle".equals(field)) {
       return PortletRSS.getShowTitleLabels(userLang);
     }
@@ -148,7 +144,7 @@ public class EditPortletRSSHandler extends EditAbstractPortletSkinableHandler {
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdatePortletRSS  
+  // validateCommonCreateUpdatePortletRSS
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdatePortletRSS() {
     if (!isRefreshValidated) {
@@ -165,39 +161,35 @@ public class EditPortletRSSHandler extends EditAbstractPortletSkinableHandler {
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdatePortletRSS()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdatePortletRSS()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdatePortletRSS()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdatePortletRSS()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -206,7 +198,8 @@ public class EditPortletRSSHandler extends EditAbstractPortletSkinableHandler {
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -215,7 +208,8 @@ public class EditPortletRSSHandler extends EditAbstractPortletSkinableHandler {
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -224,7 +218,8 @@ public class EditPortletRSSHandler extends EditAbstractPortletSkinableHandler {
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     PortletRSS obj = (PortletRSS)data;
     obj.setSource(getAvailableSource());
@@ -240,8 +235,9 @@ public class EditPortletRSSHandler extends EditAbstractPortletSkinableHandler {
     obj.setSkipFirstItems(getAvailableSkipFirstItems());
     obj.setSortAttribute(getAvailableSortAttribute());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof PortletRSS) {
       super.setId(v);
       theContent = (PortletRSS)publication;
@@ -250,11 +246,11 @@ public class EditPortletRSSHandler extends EditAbstractPortletSkinableHandler {
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // source
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry sourceTFE = channel.getTypeFieldEntry(PortletRSS.class, "source", true);
   protected String source = channel.getTypeFieldEntry(PortletRSS.class, "source", true).getDefaultTextString();
   public void setSource(String[] v) {
@@ -267,19 +263,19 @@ public class EditPortletRSSHandler extends EditAbstractPortletSkinableHandler {
     }
     return source;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // showTitle
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry showTitleTFE = channel.getTypeFieldEntry(PortletRSS.class, "showTitle", true);
   protected boolean showTitle = true;
   public void setShowTitle(boolean  v) {
     this.showTitle = v;
   }
-  
+
   public boolean getAvailableShowTitle() {
     if (theContent != null && isFieldMissing("showTitle")) {
      boolean objectValue = theContent.getShowTitle();
@@ -287,19 +283,19 @@ public class EditPortletRSSHandler extends EditAbstractPortletSkinableHandler {
     }
     return showTitle;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // showDescription
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry showDescriptionTFE = channel.getTypeFieldEntry(PortletRSS.class, "showDescription", true);
   protected boolean showDescription = true;
   public void setShowDescription(boolean  v) {
     this.showDescription = v;
   }
-  
+
   public boolean getAvailableShowDescription() {
     if (theContent != null && isFieldMissing("showDescription")) {
      boolean objectValue = theContent.getShowDescription();
@@ -307,19 +303,19 @@ public class EditPortletRSSHandler extends EditAbstractPortletSkinableHandler {
     }
     return showDescription;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // showImage
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry showImageTFE = channel.getTypeFieldEntry(PortletRSS.class, "showImage", true);
   protected boolean showImage = true;
   public void setShowImage(boolean  v) {
     this.showImage = v;
   }
-  
+
   public boolean getAvailableShowImage() {
     if (theContent != null && isFieldMissing("showImage")) {
      boolean objectValue = theContent.getShowImage();
@@ -327,19 +323,19 @@ public class EditPortletRSSHandler extends EditAbstractPortletSkinableHandler {
     }
     return showImage;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // showWebMastersEmail
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry showWebMastersEmailTFE = channel.getTypeFieldEntry(PortletRSS.class, "showWebMastersEmail", true);
   protected boolean showWebMastersEmail = false;
   public void setShowWebMastersEmail(boolean  v) {
     this.showWebMastersEmail = v;
   }
-  
+
   public boolean getAvailableShowWebMastersEmail() {
     if (theContent != null && isFieldMissing("showWebMastersEmail")) {
      boolean objectValue = theContent.getShowWebMastersEmail();
@@ -347,19 +343,19 @@ public class EditPortletRSSHandler extends EditAbstractPortletSkinableHandler {
     }
     return showWebMastersEmail;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // showItemsDescription
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry showItemsDescriptionTFE = channel.getTypeFieldEntry(PortletRSS.class, "showItemsDescription", true);
   protected boolean showItemsDescription = true;
   public void setShowItemsDescription(boolean  v) {
     this.showItemsDescription = v;
   }
-  
+
   public boolean getAvailableShowItemsDescription() {
     if (theContent != null && isFieldMissing("showItemsDescription")) {
      boolean objectValue = theContent.getShowItemsDescription();
@@ -367,19 +363,19 @@ public class EditPortletRSSHandler extends EditAbstractPortletSkinableHandler {
     }
     return showItemsDescription;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // openLinksInNewWindow
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry openLinksInNewWindowTFE = channel.getTypeFieldEntry(PortletRSS.class, "openLinksInNewWindow", true);
   protected boolean openLinksInNewWindow = false;
   public void setOpenLinksInNewWindow(boolean  v) {
     this.openLinksInNewWindow = v;
   }
-  
+
   public boolean getAvailableOpenLinksInNewWindow() {
     if (theContent != null && isFieldMissing("openLinksInNewWindow")) {
      boolean objectValue = theContent.getOpenLinksInNewWindow();
@@ -387,19 +383,19 @@ public class EditPortletRSSHandler extends EditAbstractPortletSkinableHandler {
     }
     return openLinksInNewWindow;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // trackingEnabled
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry trackingEnabledTFE = channel.getTypeFieldEntry(PortletRSS.class, "trackingEnabled", true);
   protected boolean trackingEnabled = false;
   public void setTrackingEnabled(boolean  v) {
     this.trackingEnabled = v;
   }
-  
+
   public boolean getAvailableTrackingEnabled() {
     if (theContent != null && isFieldMissing("trackingEnabled")) {
      boolean objectValue = theContent.getTrackingEnabled();
@@ -407,13 +403,13 @@ public class EditPortletRSSHandler extends EditAbstractPortletSkinableHandler {
     }
     return trackingEnabled;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // refresh
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry refreshTFE = channel.getTypeFieldEntry(PortletRSS.class, "refresh", true);
   protected boolean isRefreshValidated = true;
   protected long refresh = 86400;
@@ -424,7 +420,7 @@ public class EditPortletRSSHandler extends EditAbstractPortletSkinableHandler {
       isRefreshValidated = false;
     }
   }
-  
+
   public long getAvailableRefresh() {
     if (theContent != null && isFieldMissing("refresh")) {
      long objectValue = theContent.getRefresh();
@@ -432,13 +428,13 @@ public class EditPortletRSSHandler extends EditAbstractPortletSkinableHandler {
     }
     return refresh;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // maxItems
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry maxItemsTFE = channel.getTypeFieldEntry(PortletRSS.class, "maxItems", true);
   protected boolean isMaxItemsValidated = true;
   protected int maxItems = 10;
@@ -456,13 +452,13 @@ public class EditPortletRSSHandler extends EditAbstractPortletSkinableHandler {
     }
     return maxItems;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // skipFirstItems
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry skipFirstItemsTFE = channel.getTypeFieldEntry(PortletRSS.class, "skipFirstItems", true);
   protected boolean isSkipFirstItemsValidated = true;
   protected int skipFirstItems = 0;
@@ -480,13 +476,13 @@ public class EditPortletRSSHandler extends EditAbstractPortletSkinableHandler {
     }
     return skipFirstItems;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // sortAttribute
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry sortAttributeTFE = channel.getTypeFieldEntry(PortletRSS.class, "sortAttribute", true);
   protected String sortAttribute = channel.getTypeFieldEntry(PortletRSS.class, "sortAttribute", true).getDefaultTextString();
   public void setSortAttribute(String[] v) {
@@ -499,12 +495,12 @@ public class EditPortletRSSHandler extends EditAbstractPortletSkinableHandler {
     }
     return sortAttribute;
   }
-  
-    
-  
- 
-   
- 
+
+
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // 5rkCFC8Y1+ABgoV30ltstA==

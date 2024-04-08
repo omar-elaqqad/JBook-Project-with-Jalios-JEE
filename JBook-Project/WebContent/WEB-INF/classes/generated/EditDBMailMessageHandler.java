@@ -1,42 +1,47 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
+
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+import java.util.Set;
+
+import com.jalios.jcms.Data;
+import com.jalios.jcms.HttpUtil;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
+import com.jalios.jcms.handler.EditPublicationHandler;
 import com.jalios.util.Util;
-import custom.*;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditDBMailMessageHandler extends EditPublicationHandler {
-   
+
   protected DBMailMessage theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return DBMailMessage.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpDBMailMessage  
+  // validateBeforeOpDBMailMessage
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     {
       Data data = processDataId("fromMember", __fromMemberStr, Member.class);
-      if (data != null) { 
+      if (data != null) {
         fromMember = (Member)data;
       } else {
         isFromMemberValidated = Util.isEmpty(__fromMemberStr);
@@ -44,19 +49,19 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     }
     {
       List<Member> list = processDataIds("toMember",__toMemberStr,Member.class);
-      this.toMember = (Member[])list.toArray(new Member[0]);
+      this.toMember = list.toArray(new Member[0]);
     }
     {
       List<Member> list = processDataIds("ccMember",__ccMemberStr,Member.class);
-      this.ccMember = (Member[])list.toArray(new Member[0]);
+      this.ccMember = list.toArray(new Member[0]);
     }
     {
       List<Member> list = processDataIds("bccMember",__bccMemberStr,Member.class);
-      this.bccMember = (Member[])list.toArray(new Member[0]);
+      this.bccMember = list.toArray(new Member[0]);
     }
     {
       Data data = processDataId("replyToMember", __replyToMemberStr, Member.class);
-      if (data != null) { 
+      if (data != null) {
         replyToMember = (Member)data;
       } else {
         isReplyToMemberValidated = Util.isEmpty(__replyToMemberStr);
@@ -64,117 +69,114 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     }
     {
       List<com.jalios.jcms.FileDocument> list = processDataIds("attachements",__attachementsStr,com.jalios.jcms.FileDocument.class);
-      this.attachements = (com.jalios.jcms.FileDocument[])list.toArray(new com.jalios.jcms.FileDocument[0]);
+      this.attachements = list.toArray(new com.jalios.jcms.FileDocument[0]);
     }
-    if (!validateUploadedFileDocument(getAvailableAttachements(),   fdauthor, getAvailableWorkspace())) {
-      return false;
-    }
-    if (!createUploadedFileDocument(getAvailableAttachements(),  fdauthor, getAvailableWorkspace())) {
+    if (!validateUploadedFileDocument(getAvailableAttachements(),   fdauthor, getAvailableWorkspace()) || !createUploadedFileDocument(getAvailableAttachements(),  fdauthor, getAvailableWorkspace())) {
       return false;
     }
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("from".equals(field)) {
       return getAvailableFrom();
     }
-    
+
     if ("to".equals(field)) {
       return getAvailableTo();
     }
-    
+
     if ("cc".equals(field)) {
       return getAvailableCc();
     }
-    
+
     if ("bcc".equals(field)) {
       return getAvailableBcc();
     }
-    
+
     if ("replyTo".equals(field)) {
       return getAvailableReplyTo();
     }
-    
+
     if ("fromMember".equals(field)) {
       return getAvailableFromMember();
     }
-    
+
     if ("toMember".equals(field)) {
       return getAvailableToMember();
     }
-    
+
     if ("ccMember".equals(field)) {
       return getAvailableCcMember();
     }
-    
+
     if ("bccMember".equals(field)) {
       return getAvailableBccMember();
     }
-    
+
     if ("replyToMember".equals(field)) {
       return getAvailableReplyToMember();
     }
-    
+
     if ("contentText".equals(field)) {
       return getAvailableContentText();
     }
-    
+
     if ("contentHtml".equals(field)) {
       return getAvailableContentHtml();
     }
-    
+
     if ("attachements".equals(field)) {
       return getAvailableAttachements();
     }
-    
+
     if ("sentDate".equals(field)) {
       return getAvailableSentDate();
     }
-    
+
     if ("receivedDate".equals(field)) {
       return getAvailableReceivedDate();
     }
-    
+
     if ("priority".equals(field)) {
       return getAvailablePriority();
     }
-    
+
     if ("account".equals(field)) {
       return getAvailableAccount();
     }
-    
+
     if ("inReplyTo".equals(field)) {
       return getAvailableInReplyTo();
     }
-    
+
     if ("references".equals(field)) {
       return getAvailableReferences();
     }
-    
+
     if ("messageId".equals(field)) {
       return getAvailableMessageId();
     }
-    
+
     if ("thread".equals(field)) {
       return getAvailableThread();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     return super.getEnumValues(field);
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdateDBMailMessage  
+  // validateCommonCreateUpdateDBMailMessage
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdateDBMailMessage() {
     if (!isFromMemberValidated) {
@@ -199,39 +201,35 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdateDBMailMessage()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdateDBMailMessage()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdateDBMailMessage()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdateDBMailMessage()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -248,7 +246,8 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -265,7 +264,8 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -282,7 +282,8 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     DBMailMessage obj = (DBMailMessage)data;
     obj.setFrom(getAvailableFrom());
@@ -323,8 +324,9 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     obj.setMessageId(getAvailableMessageId());
     obj.setThread(getAvailableThread());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof DBMailMessage) {
       super.setId(v);
       theContent = (DBMailMessage)publication;
@@ -333,11 +335,11 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // from
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry fromTFE = channel.getTypeFieldEntry(DBMailMessage.class, "from", true);
   protected String from = channel.getTypeFieldEntry(DBMailMessage.class, "from", true).getDefaultTextString();
   public void setFrom(String[] v) {
@@ -350,19 +352,19 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     }
     return from;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // to
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry toTFE = channel.getTypeFieldEntry(DBMailMessage.class, "to", true);
   protected String[] to;
   public void setTo(String[] v) {
     to = getMonolingualValueArray(toTFE, v);
   }
-  
+
   public String[] getAvailableTo() {
     if (theContent != null && isFieldMissing("to")) {
 	  Set<String> objectValue = theContent.getTo();
@@ -373,19 +375,19 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     }
     return to;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // cc
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry ccTFE = channel.getTypeFieldEntry(DBMailMessage.class, "cc", true);
   protected String[] cc;
   public void setCc(String[] v) {
     cc = getMonolingualValueArray(ccTFE, v);
   }
-  
+
   public String[] getAvailableCc() {
     if (theContent != null && isFieldMissing("cc")) {
 	  Set<String> objectValue = theContent.getCc();
@@ -396,19 +398,19 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     }
     return cc;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // bcc
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry bccTFE = channel.getTypeFieldEntry(DBMailMessage.class, "bcc", true);
   protected String[] bcc;
   public void setBcc(String[] v) {
     bcc = getMonolingualValueArray(bccTFE, v);
   }
-  
+
   public String[] getAvailableBcc() {
     if (theContent != null && isFieldMissing("bcc")) {
 	  Set<String> objectValue = theContent.getBcc();
@@ -419,13 +421,13 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     }
     return bcc;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // replyTo
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry replyToTFE = channel.getTypeFieldEntry(DBMailMessage.class, "replyTo", true);
   protected String replyTo = channel.getTypeFieldEntry(DBMailMessage.class, "replyTo", true).getDefaultTextString();
   public void setReplyTo(String[] v) {
@@ -438,13 +440,13 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     }
     return replyTo;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // fromMember
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry fromMemberTFE = channel.getTypeFieldEntry(DBMailMessage.class, "fromMember", true);
   protected boolean isFromMemberValidated = true;
   protected Member fromMember;
@@ -459,13 +461,13 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     }
     return fromMember;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // toMember
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry toMemberTFE = channel.getTypeFieldEntry(DBMailMessage.class, "toMember", true);
   protected Member[] toMember = new Member[0];
   protected int toMemberAddCount = 0;
@@ -483,13 +485,13 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     }
     return toMember;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // ccMember
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry ccMemberTFE = channel.getTypeFieldEntry(DBMailMessage.class, "ccMember", true);
   protected Member[] ccMember = new Member[0];
   protected int ccMemberAddCount = 0;
@@ -507,13 +509,13 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     }
     return ccMember;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // bccMember
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry bccMemberTFE = channel.getTypeFieldEntry(DBMailMessage.class, "bccMember", true);
   protected Member[] bccMember = new Member[0];
   protected int bccMemberAddCount = 0;
@@ -531,13 +533,13 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     }
     return bccMember;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // replyToMember
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry replyToMemberTFE = channel.getTypeFieldEntry(DBMailMessage.class, "replyToMember", true);
   protected boolean isReplyToMemberValidated = true;
   protected Member replyToMember;
@@ -552,13 +554,13 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     }
     return replyToMember;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // contentText
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry contentTextTFE = channel.getTypeFieldEntry(DBMailMessage.class, "contentText", true);
   protected String contentText = channel.getTypeFieldEntry(DBMailMessage.class, "contentText", true).getDefaultTextString();
   public void setContentText(String[] v) {
@@ -571,13 +573,13 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     }
     return contentText;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // contentHtml
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry contentHtmlTFE = channel.getTypeFieldEntry(DBMailMessage.class, "contentHtml", true);
   protected String contentHtml = channel.getTypeFieldEntry(DBMailMessage.class, "contentHtml", true).getDefaultTextString();
   public void setContentHtml(String[] v) {
@@ -590,13 +592,13 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     }
     return contentHtml;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // attachements
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry attachementsTFE = channel.getTypeFieldEntry(DBMailMessage.class, "attachements", true);
   protected com.jalios.jcms.FileDocument[] attachements = new com.jalios.jcms.FileDocument[0];
   protected int attachementsAddCount = 0;
@@ -614,13 +616,13 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     }
     return attachements;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // sentDate
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry sentDateTFE = channel.getTypeFieldEntry(DBMailMessage.class, "sentDate", true);
   protected String __sentDateStr = "";
   protected boolean isSentDateValidated = true;
@@ -629,8 +631,8 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     try {
         SimpleDateFormat dateFormatter = channel.getDateTimeFormat(userLang);
         dateFormatter =  (SimpleDateFormat) dateFormatter.clone();
-        dateFormatter.setLenient(false);      
-      __sentDateStr = v.trim();      
+        dateFormatter.setLenient(false);
+      __sentDateStr = v.trim();
       sentDate = dateFormatter.parse(__sentDateStr);
     } catch(java.text.ParseException ex) {
       isSentDateValidated = false;
@@ -643,13 +645,13 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     }
     return sentDate;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // receivedDate
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry receivedDateTFE = channel.getTypeFieldEntry(DBMailMessage.class, "receivedDate", true);
   protected String __receivedDateStr = "";
   protected boolean isReceivedDateValidated = true;
@@ -658,8 +660,8 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     try {
         SimpleDateFormat dateFormatter = channel.getDateTimeFormat(userLang);
         dateFormatter =  (SimpleDateFormat) dateFormatter.clone();
-        dateFormatter.setLenient(false);      
-      __receivedDateStr = v.trim();      
+        dateFormatter.setLenient(false);
+      __receivedDateStr = v.trim();
       receivedDate = dateFormatter.parse(__receivedDateStr);
     } catch(java.text.ParseException ex) {
       isReceivedDateValidated = false;
@@ -672,13 +674,13 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     }
     return receivedDate;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // priority
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry priorityTFE = channel.getTypeFieldEntry(DBMailMessage.class, "priority", true);
   protected boolean isPriorityValidated = true;
   protected int priority = 0;
@@ -696,13 +698,13 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     }
     return priority;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // account
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry accountTFE = channel.getTypeFieldEntry(DBMailMessage.class, "account", true);
   protected String account = channel.getTypeFieldEntry(DBMailMessage.class, "account", true).getDefaultTextString();
   public void setAccount(String[] v) {
@@ -715,13 +717,13 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     }
     return account;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // inReplyTo
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry inReplyToTFE = channel.getTypeFieldEntry(DBMailMessage.class, "inReplyTo", true);
   protected String inReplyTo = channel.getTypeFieldEntry(DBMailMessage.class, "inReplyTo", true).getDefaultTextString();
   public void setInReplyTo(String[] v) {
@@ -734,19 +736,19 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     }
     return inReplyTo;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // references
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry referencesTFE = channel.getTypeFieldEntry(DBMailMessage.class, "references", true);
   protected String[] references;
   public void setReferences(String[] v) {
     references = getMonolingualValueArray(referencesTFE, v);
   }
-  
+
   public String[] getAvailableReferences() {
     if (theContent != null && isFieldMissing("references")) {
 	  Set<String> objectValue = theContent.getReferences();
@@ -757,13 +759,13 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     }
     return references;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // messageId
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry messageIdTFE = channel.getTypeFieldEntry(DBMailMessage.class, "messageId", true);
   protected String messageId = channel.getTypeFieldEntry(DBMailMessage.class, "messageId", true).getDefaultTextString();
   public void setMessageId(String[] v) {
@@ -776,13 +778,13 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     }
     return messageId;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // thread
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry threadTFE = channel.getTypeFieldEntry(DBMailMessage.class, "thread", true);
   protected String thread = channel.getTypeFieldEntry(DBMailMessage.class, "thread", true).getDefaultTextString();
   public void setThread(String[] v) {
@@ -795,12 +797,12 @@ public class EditDBMailMessageHandler extends EditPublicationHandler {
     }
     return thread;
   }
-  
-    
-  
- 
-   
- 
+
+
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // dMNZ0qoy3JmyJ4cN4xx8Dw==

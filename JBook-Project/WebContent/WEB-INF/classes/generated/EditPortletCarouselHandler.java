@@ -1,81 +1,77 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
-import com.jalios.util.Util;
-import custom.*;
+
+
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditPortletCarouselHandler extends EditPortletQueryForeachHandler {
-   
+
   protected PortletCarousel theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return PortletCarousel.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpPortletCarousel  
+  // validateBeforeOpPortletCarousel
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("autoplaycarousel".equals(field)) {
       return getAvailableAutoplaycarousel();
     }
-    
+
     if ("arrows".equals(field)) {
       return getAvailableArrows();
     }
-    
+
     if ("dots".equals(field)) {
       return getAvailableDots();
     }
-    
+
     if ("showTitle".equals(field)) {
       return getAvailableShowTitle();
     }
-    
+
     if ("showDate".equals(field)) {
       return getAvailableShowDate();
     }
-    
+
     if ("showAuthor".equals(field)) {
       return getAvailableShowAuthor();
     }
-    
+
     if ("slidesToShow".equals(field)) {
       return getAvailableSlidesToShow();
     }
-    
+
     if ("numberOfLinesInTheTitle".equals(field)) {
       return getAvailableNumberOfLinesInTheTitle();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     if ("arrows".equals(field)) {
       return PortletCarousel.getArrowsValues();
     }
@@ -98,7 +94,7 @@ public class EditPortletCarouselHandler extends EditPortletQueryForeachHandler {
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     if ("arrows".equals(field)) {
       return PortletCarousel.getArrowsLabels(userLang);
     }
@@ -120,7 +116,7 @@ public class EditPortletCarouselHandler extends EditPortletQueryForeachHandler {
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdatePortletCarousel  
+  // validateCommonCreateUpdatePortletCarousel
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdatePortletCarousel() {
     if (!isAutoplaycarouselValidated) {
@@ -133,39 +129,35 @@ public class EditPortletCarouselHandler extends EditPortletQueryForeachHandler {
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdatePortletCarousel()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdatePortletCarousel()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdatePortletCarousel()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdatePortletCarousel()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -174,7 +166,8 @@ public class EditPortletCarouselHandler extends EditPortletQueryForeachHandler {
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -183,7 +176,8 @@ public class EditPortletCarouselHandler extends EditPortletQueryForeachHandler {
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -192,7 +186,8 @@ public class EditPortletCarouselHandler extends EditPortletQueryForeachHandler {
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     PortletCarousel obj = (PortletCarousel)data;
     obj.setAutoplaycarousel(getAvailableAutoplaycarousel());
@@ -204,8 +199,9 @@ public class EditPortletCarouselHandler extends EditPortletQueryForeachHandler {
     obj.setSlidesToShow(getAvailableSlidesToShow());
     obj.setNumberOfLinesInTheTitle(getAvailableNumberOfLinesInTheTitle());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof PortletCarousel) {
       super.setId(v);
       theContent = (PortletCarousel)publication;
@@ -214,11 +210,11 @@ public class EditPortletCarouselHandler extends EditPortletQueryForeachHandler {
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // autoplaycarousel
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry autoplaycarouselTFE = channel.getTypeFieldEntry(PortletCarousel.class, "autoplaycarousel", true);
   protected boolean isAutoplaycarouselValidated = true;
   protected long autoplaycarousel = 0;
@@ -229,7 +225,7 @@ public class EditPortletCarouselHandler extends EditPortletQueryForeachHandler {
       isAutoplaycarouselValidated = false;
     }
   }
-  
+
   public long getAvailableAutoplaycarousel() {
     if (theContent != null && isFieldMissing("autoplaycarousel")) {
      long objectValue = theContent.getAutoplaycarousel();
@@ -237,19 +233,19 @@ public class EditPortletCarouselHandler extends EditPortletQueryForeachHandler {
     }
     return autoplaycarousel;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // arrows
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry arrowsTFE = channel.getTypeFieldEntry(PortletCarousel.class, "arrows", true);
   protected boolean arrows = true;
   public void setArrows(boolean  v) {
     this.arrows = v;
   }
-  
+
   public boolean getAvailableArrows() {
     if (theContent != null && isFieldMissing("arrows")) {
      boolean objectValue = theContent.getArrows();
@@ -257,19 +253,19 @@ public class EditPortletCarouselHandler extends EditPortletQueryForeachHandler {
     }
     return arrows;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // dots
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry dotsTFE = channel.getTypeFieldEntry(PortletCarousel.class, "dots", true);
   protected boolean dots = true;
   public void setDots(boolean  v) {
     this.dots = v;
   }
-  
+
   public boolean getAvailableDots() {
     if (theContent != null && isFieldMissing("dots")) {
      boolean objectValue = theContent.getDots();
@@ -277,19 +273,19 @@ public class EditPortletCarouselHandler extends EditPortletQueryForeachHandler {
     }
     return dots;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // showTitle
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry showTitleTFE = channel.getTypeFieldEntry(PortletCarousel.class, "showTitle", true);
   protected boolean showTitle = true;
   public void setShowTitle(boolean  v) {
     this.showTitle = v;
   }
-  
+
   public boolean getAvailableShowTitle() {
     if (theContent != null && isFieldMissing("showTitle")) {
      boolean objectValue = theContent.getShowTitle();
@@ -297,19 +293,19 @@ public class EditPortletCarouselHandler extends EditPortletQueryForeachHandler {
     }
     return showTitle;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // showDate
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry showDateTFE = channel.getTypeFieldEntry(PortletCarousel.class, "showDate", true);
   protected boolean showDate = true;
   public void setShowDate(boolean  v) {
     this.showDate = v;
   }
-  
+
   public boolean getAvailableShowDate() {
     if (theContent != null && isFieldMissing("showDate")) {
      boolean objectValue = theContent.getShowDate();
@@ -317,19 +313,19 @@ public class EditPortletCarouselHandler extends EditPortletQueryForeachHandler {
     }
     return showDate;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // showAuthor
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry showAuthorTFE = channel.getTypeFieldEntry(PortletCarousel.class, "showAuthor", true);
   protected boolean showAuthor = true;
   public void setShowAuthor(boolean  v) {
     this.showAuthor = v;
   }
-  
+
   public boolean getAvailableShowAuthor() {
     if (theContent != null && isFieldMissing("showAuthor")) {
      boolean objectValue = theContent.getShowAuthor();
@@ -337,13 +333,13 @@ public class EditPortletCarouselHandler extends EditPortletQueryForeachHandler {
     }
     return showAuthor;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // slidesToShow
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry slidesToShowTFE = channel.getTypeFieldEntry(PortletCarousel.class, "slidesToShow", true);
   protected boolean isSlidesToShowValidated = true;
   protected int slidesToShow = 1;
@@ -361,13 +357,13 @@ public class EditPortletCarouselHandler extends EditPortletQueryForeachHandler {
     }
     return slidesToShow;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // numberOfLinesInTheTitle
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry numberOfLinesInTheTitleTFE = channel.getTypeFieldEntry(PortletCarousel.class, "numberOfLinesInTheTitle", true);
   protected String numberOfLinesInTheTitle = channel.getTypeFieldEntry(PortletCarousel.class, "numberOfLinesInTheTitle", true).getDefaultTextString();
   public void setNumberOfLinesInTheTitle(String[] v) {
@@ -380,12 +376,12 @@ public class EditPortletCarouselHandler extends EditPortletQueryForeachHandler {
     }
     return numberOfLinesInTheTitle;
   }
-  
-    
-  
- 
-   
- 
+
+
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // bhVaUQRrRBX6M53s4KzPMg==

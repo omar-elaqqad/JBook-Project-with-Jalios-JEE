@@ -1,82 +1,83 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
-import com.jalios.util.Util;
-import custom.*;
+
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import com.jalios.jcms.HttpUtil;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
+import com.jalios.jcms.handler.EditPublicationHandler;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditMemberJobHandler extends EditPublicationHandler {
-   
+
   protected MemberJob theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return MemberJob.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpMemberJob  
+  // validateBeforeOpMemberJob
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("organization".equals(field)) {
       return getAvailableOrganization();
     }
-    
+
     if ("description".equals(field)) {
       return getAvailableDescription();
     }
-    
+
     if ("place".equals(field)) {
       return getAvailablePlace();
     }
-    
+
     if ("site".equals(field)) {
       return getAvailableSite();
     }
-    
+
     if ("startDate".equals(field)) {
       return getAvailableStartDate();
     }
-    
+
     if ("endDate".equals(field)) {
       return getAvailableEndDate();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     return super.getEnumValues(field);
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdateMemberJob  
+  // validateCommonCreateUpdateMemberJob
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdateMemberJob() {
     if (!isStartDateValidated) {
@@ -89,39 +90,35 @@ public class EditMemberJobHandler extends EditPublicationHandler {
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdateMemberJob()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdateMemberJob()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdateMemberJob()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdateMemberJob()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -138,7 +135,8 @@ public class EditMemberJobHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -155,7 +153,8 @@ public class EditMemberJobHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -172,7 +171,8 @@ public class EditMemberJobHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     MemberJob obj = (MemberJob)data;
     obj.setOrganization(getAvailableOrganization());
@@ -182,8 +182,9 @@ public class EditMemberJobHandler extends EditPublicationHandler {
     obj.setStartDate(getAvailableStartDate());
     obj.setEndDate(getAvailableEndDate());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof MemberJob) {
       super.setId(v);
       theContent = (MemberJob)publication;
@@ -192,11 +193,11 @@ public class EditMemberJobHandler extends EditPublicationHandler {
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // organization
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry organizationTFE = channel.getTypeFieldEntry(MemberJob.class, "organization", true);
   protected String organization = channel.getTypeFieldEntry(MemberJob.class, "organization", true).getDefaultTextString();
   public void setOrganization(String[] v) {
@@ -209,13 +210,13 @@ public class EditMemberJobHandler extends EditPublicationHandler {
     }
     return organization;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // description
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry descriptionTFE = channel.getTypeFieldEntry(MemberJob.class, "description", true);
   protected String description = channel.getTypeFieldEntry(MemberJob.class, "description", true).getDefaultTextString();
   public void setDescription(String[] v) {
@@ -228,13 +229,13 @@ public class EditMemberJobHandler extends EditPublicationHandler {
     }
     return description;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // place
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry placeTFE = channel.getTypeFieldEntry(MemberJob.class, "place", true);
   protected String place = channel.getTypeFieldEntry(MemberJob.class, "place", true).getDefaultTextString();
   public void setPlace(String[] v) {
@@ -247,13 +248,13 @@ public class EditMemberJobHandler extends EditPublicationHandler {
     }
     return place;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // site
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry siteTFE = channel.getTypeFieldEntry(MemberJob.class, "site", true);
   protected String site = channel.getTypeFieldEntry(MemberJob.class, "site", true).getDefaultTextString();
   public void setSite(String[] v) {
@@ -266,13 +267,13 @@ public class EditMemberJobHandler extends EditPublicationHandler {
     }
     return site;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // startDate
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry startDateTFE = channel.getTypeFieldEntry(MemberJob.class, "startDate", true);
   protected String __startDateStr = "";
   protected boolean isStartDateValidated = true;
@@ -281,8 +282,8 @@ public class EditMemberJobHandler extends EditPublicationHandler {
     try {
         SimpleDateFormat dateFormatter = channel.getDateFormat(userLang);
         dateFormatter =  (SimpleDateFormat) dateFormatter.clone();
-        dateFormatter.setLenient(false);      
-      __startDateStr = v.trim();      
+        dateFormatter.setLenient(false);
+      __startDateStr = v.trim();
       startDate = dateFormatter.parse(__startDateStr);
     } catch(java.text.ParseException ex) {
       isStartDateValidated = false;
@@ -295,13 +296,13 @@ public class EditMemberJobHandler extends EditPublicationHandler {
     }
     return startDate;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // endDate
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry endDateTFE = channel.getTypeFieldEntry(MemberJob.class, "endDate", true);
   protected String __endDateStr = "";
   protected boolean isEndDateValidated = true;
@@ -310,8 +311,8 @@ public class EditMemberJobHandler extends EditPublicationHandler {
     try {
         SimpleDateFormat dateFormatter = channel.getDateFormat(userLang);
         dateFormatter =  (SimpleDateFormat) dateFormatter.clone();
-        dateFormatter.setLenient(false);      
-      __endDateStr = v.trim();      
+        dateFormatter.setLenient(false);
+      __endDateStr = v.trim();
       endDate = dateFormatter.parse(__endDateStr);
     } catch(java.text.ParseException ex) {
       isEndDateValidated = false;
@@ -324,12 +325,12 @@ public class EditMemberJobHandler extends EditPublicationHandler {
     }
     return endDate;
   }
-  
-    
-  
- 
-   
- 
+
+
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // 0yqAw0PTSdScCLeMCsjmKg==

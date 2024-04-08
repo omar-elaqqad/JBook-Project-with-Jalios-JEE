@@ -1,107 +1,103 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
+
+
+import java.util.HashMap;
+
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
+import com.jalios.jcms.handler.EditPublicationHandler;
 import com.jalios.util.Util;
-import custom.*;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditPollHandler extends EditPublicationHandler {
-   
+
   protected Poll theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return Poll.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpPoll  
+  // validateBeforeOpPoll
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("description".equals(field)) {
       return getAllAvailableDescriptionML();
     }
-    
+
     if ("image".equals(field)) {
       return getAvailableImage();
     }
-    
+
     if ("options".equals(field)) {
       return getAllAvailableOptionsML();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     return super.getEnumValues(field);
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdatePoll  
+  // validateCommonCreateUpdatePoll
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdatePoll() {
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdatePoll()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdatePoll()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdatePoll()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdatePoll()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -110,7 +106,8 @@ public class EditPollHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -119,7 +116,8 @@ public class EditPollHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -128,7 +126,8 @@ public class EditPollHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     Poll obj = (Poll)data;
     obj.setDescription(getAvailableDescription());
@@ -137,8 +136,9 @@ public class EditPollHandler extends EditPublicationHandler {
     obj.setOptions(getAvailableOptions());
     obj.setOptionsML(getAvailableOptionsML());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof Poll) {
       super.setId(v);
       theContent = (Poll)publication;
@@ -147,11 +147,11 @@ public class EditPollHandler extends EditPublicationHandler {
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // description
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry descriptionTFE = channel.getTypeFieldEntry(Poll.class, "description", true);
   protected String description = channel.getTypeFieldEntry(Poll.class, "description", true).getDefaultTextString();
   protected HashMap<String,String> descriptionML = descriptionTFE.getDefaultTextMap();
@@ -166,14 +166,14 @@ public class EditPollHandler extends EditPublicationHandler {
     }
     return description;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailableDescriptionML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableDescriptionML());
     map.put(channel.getLanguage(),getAvailableDescription(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableDescriptionML() {
     if (theContent != null && isFieldMissing("description")) {
       return theContent.getDescriptionML();
@@ -198,11 +198,11 @@ public class EditPollHandler extends EditPublicationHandler {
     }
     return descriptionML == null ? "" : Util.getString(descriptionML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // image
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry imageTFE = channel.getTypeFieldEntry(Poll.class, "image", true);
   protected String image = channel.getTypeFieldEntry(Poll.class, "image", true).getDefaultTextString();
   public void setImage(String[] v) {
@@ -215,20 +215,20 @@ public class EditPollHandler extends EditPublicationHandler {
     }
     return image;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // options
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry optionsTFE = channel.getTypeFieldEntry(Poll.class, "options", true);
   protected String[] options = new String[0];
   protected int optionsAddCount = 0;
   HashMap<String,String[]> optionsML;
-  public void setOptions(String[] v) {  
+  public void setOptions(String[] v) {
    options = getMultilingualMainValueArray(optionsTFE, v);
-   optionsML = getMultilingualMLMapArray(optionsTFE, v);    
+   optionsML = getMultilingualMLMapArray(optionsTFE, v);
   }
   public String[] getAvailableOptions() {
     if (theContent != null && isFieldMissing("options")) {
@@ -240,14 +240,14 @@ public class EditPollHandler extends EditPublicationHandler {
     }
     return options;
   }
-  
-    
+
+
   public HashMap<String,String[]> getAllAvailableOptionsML() {
     HashMap<String,String[]> map = Util.getHashMap(getAvailableOptionsML());
     map.put(channel.getLanguage(),getAvailableOptions(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String[]> getAvailableOptionsML() {
     if (theContent != null && isFieldMissing("options")) {
       return theContent.getOptionsML();
@@ -272,11 +272,11 @@ public class EditPollHandler extends EditPublicationHandler {
     }
     return optionsML == null ? null : optionsML.get(lang);
   }
-  
+
   public void setOptionsAddCount(int  v) {
     optionsAddCount = v;
   }
-  
+
   public int getOptionsCount() {
     int arraySize = Util.getSize(getAvailableOptions());
     if (channel.isMultilingual()) {
@@ -290,9 +290,9 @@ public class EditPollHandler extends EditPublicationHandler {
     int res = 3 + arraySize + optionsAddCount;
     return res;
   }
- 
-   
- 
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // NHsIXmhQD3OBu49r/rt1dg==

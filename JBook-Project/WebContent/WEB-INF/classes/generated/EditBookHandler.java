@@ -1,111 +1,110 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
+
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+
+import com.jalios.jcms.Category;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
+import com.jalios.jcms.handler.EditPublicationHandler;
 import com.jalios.util.Util;
-import custom.*;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditBookHandler extends EditPublicationHandler {
-   
+
   protected Book theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return Book.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpBook  
+  // validateBeforeOpBook
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("description".equals(field)) {
       return getAllAvailableDescriptionML();
     }
-    
+
     if ("image".equals(field)) {
       return getAvailableImage();
     }
-    
+
     if ("topics".equals(field)) {
       return getTopicsCatSet();
     }
-    
+
     if ("isbn".equals(field)) {
       return getAvailableIsbn();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     return super.getEnumValues(field);
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdateBook  
+  // validateCommonCreateUpdateBook
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdateBook() {
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdateBook()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdateBook()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdateBook()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdateBook()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -114,7 +113,8 @@ public class EditBookHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -123,7 +123,8 @@ public class EditBookHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -132,7 +133,8 @@ public class EditBookHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     Book obj = (Book)data;
     obj.setDescription(getAvailableDescription());
@@ -140,8 +142,9 @@ public class EditBookHandler extends EditPublicationHandler {
     obj.setImage(getAvailableImage());
     obj.setIsbn(getAvailableIsbn());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof Book) {
       super.setId(v);
       theContent = (Book)publication;
@@ -150,11 +153,11 @@ public class EditBookHandler extends EditPublicationHandler {
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // description
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry descriptionTFE = channel.getTypeFieldEntry(Book.class, "description", true);
   protected String description = channel.getTypeFieldEntry(Book.class, "description", true).getDefaultTextString();
   protected HashMap<String,String> descriptionML = descriptionTFE.getDefaultTextMap();
@@ -169,14 +172,14 @@ public class EditBookHandler extends EditPublicationHandler {
     }
     return description;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailableDescriptionML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableDescriptionML());
     map.put(channel.getLanguage(),getAvailableDescription(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableDescriptionML() {
     if (theContent != null && isFieldMissing("description")) {
       return theContent.getDescriptionML();
@@ -201,11 +204,11 @@ public class EditBookHandler extends EditPublicationHandler {
     }
     return descriptionML == null ? "" : Util.getString(descriptionML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // image
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry imageTFE = channel.getTypeFieldEntry(Book.class, "image", true);
   protected String image = channel.getTypeFieldEntry(Book.class, "image", true).getDefaultTextString();
   public void setImage(String[] v) {
@@ -218,13 +221,13 @@ public class EditBookHandler extends EditPublicationHandler {
     }
     return image;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // isbn
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry isbnTFE = channel.getTypeFieldEntry(Book.class, "isbn", true);
   protected String isbn = channel.getTypeFieldEntry(Book.class, "isbn", true).getDefaultTextString();
   public void setIsbn(String[] v) {
@@ -237,17 +240,17 @@ public class EditBookHandler extends EditPublicationHandler {
     }
     return isbn;
   }
-  
-    
-  
-  
+
+
+
+
   public void setTopics(String[] v) {
     updateCids(v);
   }
   public Category getTopicsRoot() {
     return channel.getCategory("$id.jcmsplugin.jbook.catalog.topic-root");
-  }  
-    
+  }
+
   public Set<Category> getTopicsCatSet() {
     Category rootCat = getTopicsRoot();
     if (rootCat == null) {
@@ -257,10 +260,10 @@ public class EditBookHandler extends EditPublicationHandler {
     set.add(rootCat);
     return Util.interSet(getCategorySet(null), set);
   }
-  
- 
-   
- 
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // f645NOn6NTuNyIWPGR6/IQ==

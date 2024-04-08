@@ -1,38 +1,47 @@
 // This file has been automatically generated.
-   
+
 package generated;
- 
-import java.util.*;
- 
-import org.apache.oro.text.regex.Pattern;
-import org.apache.oro.text.regex.Perl5Compiler;
-import org.apache.oro.text.regex.Perl5Matcher;
-import org.hibernate.Hibernate;
- 
-import com.jalios.jcms.*;
-import com.jalios.jcms.db.*;
-import com.jalios.jcms.mashup.*;
-import com.jalios.jcms.wysiwyg.*;
-import com.jalios.util.*;
-import com.fasterxml.jackson.annotation.JsonIgnore; 
-import com.fasterxml.jackson.annotation.JsonProperty;
- 
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+import com.jalios.jcms.Category;
+import com.jalios.jcms.ControllerStatus;
+import com.jalios.jcms.Data;
+import com.jalios.jcms.EnumerateFormReport;
+import com.jalios.jcms.FileDocument;
+import com.jalios.jcms.JcmsUtil;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeEntry;
+import com.jalios.jcms.TypeFieldEntry;
+import com.jalios.jcms.mashup.ExportUtil;
+import com.jalios.jcms.mashup.ImportOptions;
+import com.jalios.jcms.mashup.ImportUtil;
+import com.jalios.jcms.wysiwyg.JHTMLUtils;
+import com.jalios.util.LangProperty;
+import com.jalios.util.ObjectIntTreeMap;
+import com.jalios.util.Util;
+
 @SuppressWarnings({"unchecked", "unused"})
-public  class CSRequest extends com.jalios.jcms.Form 
-             implements 
+public  class CSRequest extends com.jalios.jcms.Form
+             implements
                 com.jalios.jstore.Searchable
 {
-  
+
   // ----------------------------------------------------------------------
   // CONSTRUCTORS
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   public CSRequest() {}
- 
- 
- 
-  
-  
-  
+
+
+
+
+
+
   public CSRequest(CSRequest other) {
     super(other);
     name = other.name;
@@ -52,13 +61,14 @@ public  class CSRequest extends com.jalios.jcms.Form
     parent = other.parent;
     syncMode = other.syncMode;
   }
-  
+
   // ----------------------------------------------------------------------
   // Import / Export
   // ----------------------------------------------------------------------
-  public void importXml(org.jdom.Element elt, ImportOptions options) {
+  @Override
+public void importXml(org.jdom.Element elt, ImportOptions options) {
     super.importXml(elt, options);
-    
+
     setName(ImportUtil.parseFieldText(elt, "name"));
     setNameML(ImportUtil.parseFieldTextML(elt, "nameML"));
     setAccessPolicy(ImportUtil.parseFieldText(elt, "accessPolicy"));
@@ -69,10 +79,11 @@ public  class CSRequest extends com.jalios.jcms.Form
     setParent(ImportUtil.parseFieldText(elt, "parent"));
     setSyncMode(ImportUtil.parseFieldTextArray(elt, "syncMode"));
   }
-  
-  protected void importXmlFieldsWithReferences(org.jdom.Element elt, ImportOptions options) {
+
+  @Override
+protected void importXmlFieldsWithReferences(org.jdom.Element elt, ImportOptions options) {
     super.importXmlFieldsWithReferences(elt, options);
-      
+
     if (options.isSelfImport()) {
       setDescription(ImportUtil.parseFieldText(elt, "description"));
       setDescriptionML(ImportUtil.parseFieldTextML(elt, "descriptionML"));
@@ -80,13 +91,14 @@ public  class CSRequest extends com.jalios.jcms.Form
       setGroups(ImportUtil.parseSelfFieldDataArray(elt, "groups", com.jalios.jcms.Group.class));
       setMembers(ImportUtil.parseSelfFieldDataArray(elt, "members", com.jalios.jcms.Member.class));
     } else {
-    
+
     setDescriptionML(ImportUtil.parseFieldWikiML(elt, "descriptionML"));
     setDescription(ImportUtil.parseFieldWiki(elt, "description"));
     }
   }
-  
-  public void exportXmlField(StringBuffer sb, int indentLevel) {
+
+  @Override
+public void exportXmlField(StringBuffer sb, int indentLevel) {
     super.exportXmlField(sb, indentLevel);
     sb.append(ExportUtil.exportField(indentLevel, "name", getName(), "nameML", false, true));
     sb.append(ExportUtil.exportField(indentLevel, "nameML", getNameML(), true));
@@ -103,15 +115,16 @@ public  class CSRequest extends com.jalios.jcms.Form
     sb.append(ExportUtil.exportField(indentLevel, "parent", getParent(), false, true));
     sb.append(ExportUtil.exportField(indentLevel, "syncMode", getSyncMode(), false, true));
   }
-  
-  public Set<FileDocument> getDocumentLinkSet() {
+
+  @Override
+public Set<FileDocument> getDocumentLinkSet() {
     Set<FileDocument> docSet = super.getDocumentLinkSet();
     return docSet;
   }
-  
+
   // ----------------------------------------------------------------------
   // TYPE AND FIELD INFOS (static methods)
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   /**
    * Returns the TypeEntry bound to <code>CSRequest</code>. <br>
    * @see com.jalios.jcms.Channel#getTypeEntry(Class)
@@ -142,91 +155,99 @@ public  class CSRequest extends com.jalios.jcms.Form
   }
   // ----------------------------------------------------------------------
   // FIELDs VALUE
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   /**
    * Gets the value of the given <code>int</code> field name for the current <code>CSRequest</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>int</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public int getIntFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public int getIntFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getIntFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>int</code> field name for the current <code>CSRequest</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>int</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setIntFieldValue(String fieldName, int value) throws NoSuchFieldException {
+  @Override
+public void setIntFieldValue(String fieldName, int value) throws NoSuchFieldException {
     super.setIntFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>long</code> field name for the current <code>CSRequest</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>long</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public long getLongFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public long getLongFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getLongFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>long</code> field name for the current <code>CSRequest</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>long</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setLongFieldValue(String fieldName, long value) throws NoSuchFieldException {
+  @Override
+public void setLongFieldValue(String fieldName, long value) throws NoSuchFieldException {
     super.setLongFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>double</code> field name for the current <code>CSRequest</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>double</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public double getDoubleFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public double getDoubleFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getDoubleFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>double</code> field name for the current <code>CSRequest</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>double</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setDoubleFieldValue(String fieldName, double value) throws NoSuchFieldException {
+  @Override
+public void setDoubleFieldValue(String fieldName, double value) throws NoSuchFieldException {
      super.setDoubleFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>boolean</code> field name for the current <code>CSRequest</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>boolean</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public boolean getBooleanFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public boolean getBooleanFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getBooleanFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>boolean</code> field name for the current <code>CSRequest</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>boolean</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setBooleanFieldValue(String fieldName, boolean value) throws NoSuchFieldException {
+  @Override
+public void setBooleanFieldValue(String fieldName, boolean value) throws NoSuchFieldException {
     super.setBooleanFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>Category</code> field name for the current <code>Data</code>.
    * @param fieldName the field name from which to retrieve the field value.
@@ -234,7 +255,8 @@ public  class CSRequest extends com.jalios.jcms.Form
    * @return a <code>TreeSet</code> of <code>Category</code>
    * @throws NoSuchFieldException if the field was not found in the given <code>Data</code>.
    */
-  public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
+  @Override
+public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
     return super.getCategoryFieldValue(fieldName, mbr);
   }
   /**
@@ -243,12 +265,13 @@ public  class CSRequest extends com.jalios.jcms.Form
    * @param fieldName the field name from which to retrieve the field value.
    * @param lang the language (ISO-639 code) in which to retrieve the field value
    *        (used only for multilingual fields).
-   * @param useDefault whether to use the publication main language if the field value 
+   * @param useDefault whether to use the publication main language if the field value
    *        is not available in the requested language (used only for multilingual fields).
    * @return the <code>Object</code> field value
    * @throws NoSuchFieldException if the field was not found in the given <code>Publication</code>.
    */
-  public Object getFieldValue(String fieldName, String lang, boolean useDefault) throws NoSuchFieldException {
+  @Override
+public Object getFieldValue(String fieldName, String lang, boolean useDefault) throws NoSuchFieldException {
     if ("name".equals(fieldName)) { return getName(lang, useDefault); }
     if ("description".equals(fieldName)) { return getDescription(lang, useDefault); }
     if ("accessPolicy".equals(fieldName)) { return getAccessPolicy(); }
@@ -263,7 +286,7 @@ public  class CSRequest extends com.jalios.jcms.Form
     if ("syncMode".equals(fieldName)) { return getSyncMode(); }
     return super.getFieldValue(fieldName, lang, useDefault);
   }
-  
+
   /**
    * Sets the <code>Object</code> value of the given field name for this <code>CSRequest</code>. <br>
    * Do not set <code>Category</code> fields, see {@link #setCategoryFieldValue(String, TreeSet)}.
@@ -271,11 +294,12 @@ public  class CSRequest extends com.jalios.jcms.Form
    * @param value the <code>Object</code> field value
    * @param lang the language (ISO-639 code) in which to retrieve the field value
    *        (used only for multilingual fields).
-   * 
+   *
    * @throws NoSuchFieldException if the field was not found in the given <code>Publication</code>.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setFieldValue(String fieldName, Object value, String lang) throws NoSuchFieldException {
+  @Override
+public void setFieldValue(String fieldName, Object value, String lang) throws NoSuchFieldException {
     if ("name".equals(fieldName)) { setName(lang,(String)value); return; }
     if ("description".equals(fieldName)) { setDescription(lang,(String)value); return; }
     if ("accessPolicy".equals(fieldName)) { setAccessPolicy((String)value); return; }
@@ -290,34 +314,34 @@ public  class CSRequest extends com.jalios.jcms.Form
     if ("syncMode".equals(fieldName)) { setSyncMode((String[])value); return; }
     super.setFieldValue(fieldName, value, lang);
   }
-  
+
   // ----------------------------------------------------------------------
   // name
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String name = channel.getTypeFieldEntry(CSRequest.class, "name", true).getDefaultTextString();
-  
+
   public String getName() { return name; }
-  
+
   public void setName(String v) { name = v; }
-  
-  
-  
-  
+
+
+
+
   protected HashMap<String,String> nameML = channel.getTypeFieldEntry(CSRequest.class, "name", true).getDefaultTextMap();
-  public String getName(String lang) { return (String)channel.getLangValue(lang, true, name, nameML, getMainLanguage()); }
-  public String getName(String lang, boolean useDefault) { return (String)channel.getLangValue(lang, useDefault, name, nameML, getMainLanguage()); }
+  public String getName(String lang) { return channel.getLangValue(lang, true, name, nameML, getMainLanguage()); }
+  public String getName(String lang, boolean useDefault) { return channel.getLangValue(lang, useDefault, name, nameML, getMainLanguage()); }
   public HashMap<String,String> getNameML() { return nameML; }
   public void setNameML(HashMap<String,String> v) { nameML = v; }
-  
-  public String getNameMLE() { 
+
+  public String getNameMLE() {
     return JcmsUtil.encodeMLE(getNameML());
   }
-  
+
   public void setNameMLE(String v) {
     setNameML(JcmsUtil.decodeMLE(v));
   }
-  
+
   public void setName(String lang, String value) {
     if (channel.getLanguage().equals(lang)) {
       name = value;
@@ -332,31 +356,31 @@ public  class CSRequest extends com.jalios.jcms.Form
   }
   // ----------------------------------------------------------------------
   // description
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String description = channel.getTypeFieldEntry(CSRequest.class, "description", true).getDefaultTextString();
-  
+
   public String getDescription() { return description; }
-  
+
   public void setDescription(String v) { description = v; }
-  
-  
-  
-  
+
+
+
+
   protected HashMap<String,String> descriptionML = channel.getTypeFieldEntry(CSRequest.class, "description", true).getDefaultTextMap();
-  public String getDescription(String lang) { return (String)channel.getLangValue(lang, true, description, descriptionML, getMainLanguage()); }
-  public String getDescription(String lang, boolean useDefault) { return (String)channel.getLangValue(lang, useDefault, description, descriptionML, getMainLanguage()); }
+  public String getDescription(String lang) { return channel.getLangValue(lang, true, description, descriptionML, getMainLanguage()); }
+  public String getDescription(String lang, boolean useDefault) { return channel.getLangValue(lang, useDefault, description, descriptionML, getMainLanguage()); }
   public HashMap<String,String> getDescriptionML() { return descriptionML; }
   public void setDescriptionML(HashMap<String,String> v) { descriptionML = v; }
-  
-  public String getDescriptionMLE() { 
+
+  public String getDescriptionMLE() {
     return JcmsUtil.encodeMLE(getDescriptionML());
   }
-  
+
   public void setDescriptionMLE(String v) {
     setDescriptionML(JcmsUtil.decodeMLE(v));
   }
-  
+
   public void setDescription(String lang, String value) {
     if (channel.getLanguage().equals(lang)) {
       description = value;
@@ -371,22 +395,22 @@ public  class CSRequest extends com.jalios.jcms.Form
   }
   // ----------------------------------------------------------------------
   // accessPolicy
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String accessPolicy = channel.getTypeFieldEntry(CSRequest.class, "accessPolicy", true).getDefaultTextString();
-  
+
   public String getAccessPolicy() { return accessPolicy; }
-  
+
   public void setAccessPolicy(String v) { accessPolicy = v; }
-  
-  
-  
+
+
+
   public String getAccessPolicy(String lang) { return accessPolicy; }
   public String getAccessPolicy(String lang, boolean useDefault) { return accessPolicy; }
-  private static String[] accessPolicyValues;  
+  private static String[] accessPolicyValues;
   private static String[] accessPolicyLabels;
   private static Map<String, String[]> accessPolicyLabelsMap;
-  
+
   public static String[] getAccessPolicyValues() {
     if(accessPolicyValues == null) {
       setAccessPolicyValues(channel.getTypeFieldEntry(CSRequest.class, "accessPolicy", true).getEnumerateValues());
@@ -416,9 +440,9 @@ public  class CSRequest extends com.jalios.jcms.Form
   }
   public static String[] getAccessPolicyLabels(String userLang) {
     Map<String, String[]> accessPolicyLabelMap = getAccessPolicyLabelsMap();
-    String[] labels = (String[])accessPolicyLabelMap.get(userLang);
+    String[] labels = accessPolicyLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])accessPolicyLabelMap.get(channel.getLanguage());
+      labels = accessPolicyLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -444,8 +468,8 @@ public  class CSRequest extends com.jalios.jcms.Form
     }
     return getAccessPolicyLabel(value, channel.getLanguage());
   }
-  
-  public static String getAccessPolicyLabel(String value) {    
+
+  public static String getAccessPolicyLabel(String value) {
     String[] accessPolicyLabels = getAccessPolicyLabels();
     if (false) {
     }
@@ -467,31 +491,31 @@ public  class CSRequest extends com.jalios.jcms.Form
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getAccessPolicy());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // signupPolicy
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String signupPolicy = channel.getTypeFieldEntry(CSRequest.class, "signupPolicy", true).getDefaultTextString();
-  
+
   public String getSignupPolicy() { return signupPolicy; }
-  
+
   public void setSignupPolicy(String v) { signupPolicy = v; }
-  
-  
-  
+
+
+
   public String getSignupPolicy(String lang) { return signupPolicy; }
   public String getSignupPolicy(String lang, boolean useDefault) { return signupPolicy; }
-  private static String[] signupPolicyValues;  
+  private static String[] signupPolicyValues;
   private static String[] signupPolicyLabels;
   private static Map<String, String[]> signupPolicyLabelsMap;
-  
+
   public static String[] getSignupPolicyValues() {
     if(signupPolicyValues == null) {
       setSignupPolicyValues(channel.getTypeFieldEntry(CSRequest.class, "signupPolicy", true).getEnumerateValues());
@@ -521,9 +545,9 @@ public  class CSRequest extends com.jalios.jcms.Form
   }
   public static String[] getSignupPolicyLabels(String userLang) {
     Map<String, String[]> signupPolicyLabelMap = getSignupPolicyLabelsMap();
-    String[] labels = (String[])signupPolicyLabelMap.get(userLang);
+    String[] labels = signupPolicyLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])signupPolicyLabelMap.get(channel.getLanguage());
+      labels = signupPolicyLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -549,8 +573,8 @@ public  class CSRequest extends com.jalios.jcms.Form
     }
     return getSignupPolicyLabel(value, channel.getLanguage());
   }
-  
-  public static String getSignupPolicyLabel(String value) {    
+
+  public static String getSignupPolicyLabel(String value) {
     String[] signupPolicyLabels = getSignupPolicyLabels();
     if (false) {
     }
@@ -572,51 +596,51 @@ public  class CSRequest extends com.jalios.jcms.Form
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getSignupPolicy());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // model
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String model = channel.getTypeFieldEntry(CSRequest.class, "model", true).getDefaultTextString();
-  
+
   public String getModel() { return model; }
-  
+
   public void setModel(String v) { model = v; }
-  
-  
-  
+
+
+
   public String getModel(String lang) { return model; }
   public String getModel(String lang, boolean useDefault) { return model; }
   // ----------------------------------------------------------------------
   // language
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String language = channel.getTypeFieldEntry(CSRequest.class, "language", true).getDefaultTextString();
-  
+
   public String getLanguage() { return language; }
-  
+
   public void setLanguage(String v) { language = v; }
-  
-  
-  
+
+
+
   public String getLanguage(String lang) { return language; }
   public String getLanguage(String lang, boolean useDefault) { return language; }
   // ----------------------------------------------------------------------
   // admins
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  com.jalios.jcms.Member[] admins;
-  
+
   public com.jalios.jcms.Member[] getAdmins() {
     return getAdmins(true);
   }
-  public com.jalios.jcms.Member[] getAdmins(boolean queryDB) { 
+  public com.jalios.jcms.Member[] getAdmins(boolean queryDB) {
     if (!queryDB || Util.isEmpty(adminsDBID)) {
       return admins;
     }
@@ -626,37 +650,37 @@ public  class CSRequest extends com.jalios.jcms.Form
   public String[] getAdminsDBID() {
     return adminsDBID;
   }
-  public void setAdmins(com.jalios.jcms.Member[] v) { 
-    admins = v == null ? null : v.clone(); 
+  public void setAdmins(com.jalios.jcms.Member[] v) {
+    admins = v == null ? null : v.clone();
   }
-  
-  public void setAdminsDBID(String[] v) { 
-    adminsDBID = v; 
+
+  public void setAdminsDBID(String[] v) {
+    adminsDBID = v;
   }
-  
-  
+
+
   // ----------------------------------------------------------------------
   // groups
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  com.jalios.jcms.Group[] groups;
-  
+
   public com.jalios.jcms.Group[] getGroups() { return groups; }
-  
+
   public void setGroups(com.jalios.jcms.Group[] v) { groups = v; }
-  
-  
-  
+
+
+
   // ----------------------------------------------------------------------
   // members
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  com.jalios.jcms.Member[] members;
-  
+
   public com.jalios.jcms.Member[] getMembers() {
     return getMembers(true);
   }
-  public com.jalios.jcms.Member[] getMembers(boolean queryDB) { 
+  public com.jalios.jcms.Member[] getMembers(boolean queryDB) {
     if (!queryDB || Util.isEmpty(membersDBID)) {
       return members;
     }
@@ -666,33 +690,33 @@ public  class CSRequest extends com.jalios.jcms.Form
   public String[] getMembersDBID() {
     return membersDBID;
   }
-  public void setMembers(com.jalios.jcms.Member[] v) { 
-    members = v == null ? null : v.clone(); 
+  public void setMembers(com.jalios.jcms.Member[] v) {
+    members = v == null ? null : v.clone();
   }
-  
-  public void setMembersDBID(String[] v) { 
-    membersDBID = v; 
+
+  public void setMembersDBID(String[] v) {
+    membersDBID = v;
   }
-  
-  
+
+
   // ----------------------------------------------------------------------
   // notificationPolicy
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String notificationPolicy = channel.getTypeFieldEntry(CSRequest.class, "notificationPolicy", true).getDefaultTextString();
-  
+
   public String getNotificationPolicy() { return notificationPolicy; }
-  
+
   public void setNotificationPolicy(String v) { notificationPolicy = v; }
-  
-  
-  
+
+
+
   public String getNotificationPolicy(String lang) { return notificationPolicy; }
   public String getNotificationPolicy(String lang, boolean useDefault) { return notificationPolicy; }
-  private static String[] notificationPolicyValues;  
+  private static String[] notificationPolicyValues;
   private static String[] notificationPolicyLabels;
   private static Map<String, String[]> notificationPolicyLabelsMap;
-  
+
   public static String[] getNotificationPolicyValues() {
     if(notificationPolicyValues == null) {
       setNotificationPolicyValues(channel.getTypeFieldEntry(CSRequest.class, "notificationPolicy", true).getEnumerateValues());
@@ -722,9 +746,9 @@ public  class CSRequest extends com.jalios.jcms.Form
   }
   public static String[] getNotificationPolicyLabels(String userLang) {
     Map<String, String[]> notificationPolicyLabelMap = getNotificationPolicyLabelsMap();
-    String[] labels = (String[])notificationPolicyLabelMap.get(userLang);
+    String[] labels = notificationPolicyLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])notificationPolicyLabelMap.get(channel.getLanguage());
+      labels = notificationPolicyLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -750,8 +774,8 @@ public  class CSRequest extends com.jalios.jcms.Form
     }
     return getNotificationPolicyLabel(value, channel.getLanguage());
   }
-  
-  public static String getNotificationPolicyLabel(String value) {    
+
+  public static String getNotificationPolicyLabel(String value) {
     String[] notificationPolicyLabels = getNotificationPolicyLabels();
     if (false) {
     }
@@ -773,45 +797,45 @@ public  class CSRequest extends com.jalios.jcms.Form
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getNotificationPolicy());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // parent
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String parent = channel.getTypeFieldEntry(CSRequest.class, "parent", true).getDefaultTextString();
-  
+
   public String getParent() { return parent; }
-  
+
   public void setParent(String v) { parent = v; }
-  
-  
-  
+
+
+
   public String getParent(String lang) { return parent; }
   public String getParent(String lang, boolean useDefault) { return parent; }
   // ----------------------------------------------------------------------
   // syncMode
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String[] syncMode;
-  
+
   public String[] getSyncMode() { return syncMode; }
-  
+
   public void setSyncMode(String[] v) { syncMode = v; }
-  
-  
-  
+
+
+
   public String[] getSyncMode(String lang) { return syncMode; }
   public String[] getSyncMode(String lang, boolean useDefault) { return syncMode; }
-  private static String[] syncModeValues;  
+  private static String[] syncModeValues;
   private static String[] syncModeLabels;
   private static Map<String, String[]> syncModeLabelsMap;
-  
+
   public static String[] getSyncModeValues() {
     if(syncModeValues == null) {
       setSyncModeValues(channel.getTypeFieldEntry(CSRequest.class, "syncMode", true).getEnumerateValues());
@@ -841,9 +865,9 @@ public  class CSRequest extends com.jalios.jcms.Form
   }
   public static String[] getSyncModeLabels(String userLang) {
     Map<String, String[]> syncModeLabelMap = getSyncModeLabelsMap();
-    String[] labels = (String[])syncModeLabelMap.get(userLang);
+    String[] labels = syncModeLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])syncModeLabelMap.get(channel.getLanguage());
+      labels = syncModeLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -872,8 +896,8 @@ public  class CSRequest extends com.jalios.jcms.Form
     }
     return getSyncModeLabel(value, channel.getLanguage());
   }
-  
-  public static String getSyncModeLabel(String value) {    
+
+  public static String getSyncModeLabel(String value) {
     String[] syncModeLabels = getSyncModeLabels();
     if (false) {
     }
@@ -906,11 +930,11 @@ public  class CSRequest extends com.jalios.jcms.Form
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
-   
+  }
+
   // ----------------------------------------------------------------------
   // abstract
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   @Override
   public void setAbstract(String lang, String value) { setModel(value); }
   @Override
@@ -928,7 +952,7 @@ public  class CSRequest extends com.jalios.jcms.Form
       sb.append(title); sb.append(' ');
     }
     if (name != null) {
-      sb.append(name); sb.append(' '); 
+      sb.append(name); sb.append(' ');
     }
     if (nameML != null) {
       for (String str : nameML.values()) {
@@ -939,13 +963,13 @@ public  class CSRequest extends com.jalios.jcms.Form
     }
     return new String[] {sb.toString()};
   }
-  
+
   @Override
   public String getAllWikiText() {
     StringBuffer sb = new StringBuffer(super.getAllWikiText());
     sb.ensureCapacity(500 * (0 + 1 + 0 + 0 + 0 + 0) );
     if (description != null && !JHTMLUtils.isJHTML(null, description)) {
-      sb.append(description); sb.append(' '); 
+      sb.append(description); sb.append(' ');
     }
     if (descriptionML != null) {
       for (String str : descriptionML.values()) {
@@ -956,14 +980,14 @@ public  class CSRequest extends com.jalios.jcms.Form
     }
     return sb.toString();
   }
-  
+
   @Override
   public String getAllWysiwygText() {
     StringBuffer sb = new StringBuffer(super.getAllWysiwygText());
     sb.ensureCapacity(500 * (0 + 0 + 0 + 0 + 0 + 0) );
     // Wiki fields containing JHTML
     if (description != null && JHTMLUtils.isJHTML(null, description)) {
-      sb.append(description); sb.append(' '); 
+      sb.append(description); sb.append(' ');
     }
     if (descriptionML != null) {
       for (String str : descriptionML.values()) {
@@ -975,7 +999,7 @@ public  class CSRequest extends com.jalios.jcms.Form
    // Wysiwyg fields
     return sb.toString();
   }
-  
+
   @Override
   public <T extends Data> TreeSet<T> getLinkDataSet(Class<T> clazz) {
     if (clazz == null) {
@@ -989,14 +1013,15 @@ public  class CSRequest extends com.jalios.jcms.Form
   }
   // ----------------------------------------------------------------------
   // DataController
-  // ----------------------------------------------------------------------  
-  public ControllerStatus checkIntegrity() {
-    
+  // ----------------------------------------------------------------------
+  @Override
+public ControllerStatus checkIntegrity() {
+
     ControllerStatus status = super.checkIntegrity();
     if (status.hasFailed()) {
       return status;
     }
-    
+
     if (Util.isEmpty(getFieldInMainLanguage(name, nameML))) {
       status = new ControllerStatus();
       status.setProp("msg.edit.empty-fieldml", channel.getTypeFieldLabel(this, "name"), new LangProperty("lang." + getMainLanguage()));
@@ -1024,7 +1049,7 @@ public  class CSRequest extends com.jalios.jcms.Form
     }
     return ControllerStatus.OK;
   }
-  
+
   // ----------------------------------------------------------------------
   // splitHybridCollections
   // ----------------------------------------------------------------------
@@ -1032,16 +1057,16 @@ public  class CSRequest extends com.jalios.jcms.Form
   protected void splitHybridCollections(Data previousData) {
     super.splitHybridCollections(previousData);
     CSRequest previous = (CSRequest)previousData;
-  
+
     if (previous == null || previous.admins != admins) {
       adminsDBID = computeDBIDArray(admins);
     }
-  
+
     if (previous == null || previous.members != members) {
       membersDBID = computeDBIDArray(members);
     }
   }
-  
+
   // ----------------------------------------------------------------------
   // cleanHybridCollections
   // ----------------------------------------------------------------------
@@ -1051,12 +1076,13 @@ public  class CSRequest extends com.jalios.jcms.Form
     cleanHybridCollection(admins);
     cleanHybridCollection(members);
   }
-  
+
   // ----------------------------------------------------------------------
   // WorkCopy
-  // ----------------------------------------------------------------------  
-  protected void prepareMergeCopy(Publication mergeCopy) {
-    super.prepareMergeCopy(mergeCopy);  
+  // ----------------------------------------------------------------------
+  @Override
+protected void prepareMergeCopy(Publication mergeCopy) {
+    super.prepareMergeCopy(mergeCopy);
     ((CSRequest)mergeCopy).setName(getName());
     ((CSRequest)mergeCopy).setNameML(JcmsUtil.getMergedMLMap(getNameML(), ((CSRequest)mergeCopy).getNameML()));
     ((CSRequest)mergeCopy).setDescription(getDescription());

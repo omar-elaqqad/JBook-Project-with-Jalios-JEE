@@ -3,100 +3,105 @@
 
 package generated;
 
-import java.util.*;
-import com.jalios.jstore.*;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.jalios.jstore.DecodeContext;
+import com.jalios.jstore.StorableLogEntry;
+import com.jalios.jstore.StoreUtil;
 
 @SuppressWarnings("unchecked")
 public class SignUp_HANDLER implements com.jalios.jstore.StorableHandler {
 
-  @SuppressWarnings("rawtypes")
+  @Override
+@SuppressWarnings("rawtypes")
   public void setAttributes(com.jalios.jstore.Storable storable, StorableLogEntry sle, com.jalios.jstore.Store store) {
     SignUp handler = (generated.SignUp)storable;
     String value;
     Map<String,String> attributes = sle.getAttributes();
     value = attributes.get("name");
     if (value != null) {
-      handler.setName((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "name")));
+      handler.setName(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "name")));
     }
 
     value = attributes.get("firstName");
     if (value != null) {
-      handler.setFirstName((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "firstName")));
+      handler.setFirstName(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "firstName")));
     }
 
     value = attributes.get("email");
     if (value != null) {
-      handler.setEmail((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "email")));
+      handler.setEmail(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "email")));
     }
 
     value = attributes.get("salutation");
     if (value != null) {
-      handler.setSalutation((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "salutation")));
+      handler.setSalutation(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "salutation")));
     }
 
     value = attributes.get("jobTitle");
     if (value != null) {
-      handler.setJobTitle((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "jobTitle")));
+      handler.setJobTitle(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "jobTitle")));
     }
 
     value = attributes.get("favoriteLogin");
     if (value != null) {
-      handler.setFavoriteLogin((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "favoriteLogin")));
+      handler.setFavoriteLogin(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "favoriteLogin")));
     }
 
     value = attributes.get("message");
     if (value != null) {
-      handler.setMessage((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "message")));
+      handler.setMessage(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "message")));
     }
 
     value = attributes.get("submitMember");
     if (value != null) {
-      handler.setSubmitMember((com.jalios.jcms.Member)StoreUtil.decodeObject(com.jalios.jcms.Member.class, value, store, new DecodeContext(sle, "submitMember")));
+      handler.setSubmitMember(StoreUtil.decodeObject(com.jalios.jcms.Member.class, value, store, new DecodeContext(sle, "submitMember")));
     }
 
     value = attributes.get("submitRemoteAddr");
     if (value != null) {
-      handler.setSubmitRemoteAddr((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "submitRemoteAddr")));
+      handler.setSubmitRemoteAddr(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "submitRemoteAddr")));
     }
 
     value = attributes.get("mainLanguage");
     if (value != null) {
-      handler.setMainLanguage((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "mainLanguage")));
+      handler.setMainLanguage(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "mainLanguage")));
     }
 
     value = attributes.get("title");
     if (value != null) {
-      handler.setTitle((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "title")));
+      handler.setTitle(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "title")));
     }
 
     value = attributes.get("titleML");
     if (value != null) {
-      handler.setTitleML((java.util.HashMap)StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "titleML")));
+      handler.setTitleML(StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "titleML")));
     }
 
     value = attributes.get("pdate");
     if (value != null) {
-      handler.setPdate((java.util.Date)StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "pdate")));
+      handler.setPdate(StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "pdate")));
     }
 
     value = attributes.get("edate");
     if (value != null) {
-      handler.setEdate((java.util.Date)StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "edate")));
+      handler.setEdate(StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "edate")));
     }
 
     value = attributes.get("sdate");
     if (value != null) {
-      handler.setSdate((java.util.Date)StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "sdate")));
+      handler.setSdate(StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "sdate")));
     }
 
     value = attributes.get("adate");
     if (value != null) {
-      handler.setAdate((java.util.Date)StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "adate")));
+      handler.setAdate(StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "adate")));
     }
 
     value = attributes.get("udate");
     if (value != null) {
-      handler.setUdate((java.util.Date)StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "udate")));
+      handler.setUdate(StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "udate")));
     }
 
     value = attributes.get("majorVersion");
@@ -111,47 +116,47 @@ public class SignUp_HANDLER implements com.jalios.jstore.StorableHandler {
 
     value = attributes.get("mergeDate");
     if (value != null) {
-      handler.setMergeDate((java.util.Date)StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "mergeDate")));
+      handler.setMergeDate(StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "mergeDate")));
     }
 
     value = attributes.get("mergeId");
     if (value != null) {
-      handler.setMergeId((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "mergeId")));
+      handler.setMergeId(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "mergeId")));
     }
 
     value = attributes.get("templates");
     if (value != null) {
-      handler.setTemplates((java.lang.String[])StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "templates")));
+      handler.setTemplates(StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "templates")));
     }
 
     value = attributes.get("categories");
     if (value != null) {
-      handler.setCategories((com.jalios.jcms.Category[])StoreUtil.decodeObject(com.jalios.jcms.Category[].class, value, store, new DecodeContext(sle, "categories")));
+      handler.setCategories(StoreUtil.decodeObject(com.jalios.jcms.Category[].class, value, store, new DecodeContext(sle, "categories")));
     }
 
     value = attributes.get("authorizedMemberSet");
     if (value != null) {
-      handler.setAuthorizedMemberSet((java.util.TreeSet)StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "authorizedMemberSet")));
+      handler.setAuthorizedMemberSet(StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "authorizedMemberSet")));
     }
 
     value = attributes.get("authorizedMemberSetDBID");
     if (value != null) {
-      handler.setAuthorizedMemberSetDBID((java.util.HashSet)StoreUtil.decodeObject(java.util.HashSet.class, value, store, new DecodeContext(sle, "authorizedMemberSetDBID")));
+      handler.setAuthorizedMemberSetDBID(StoreUtil.decodeObject(java.util.HashSet.class, value, store, new DecodeContext(sle, "authorizedMemberSetDBID")));
     }
 
     value = attributes.get("authorizedGroupSet");
     if (value != null) {
-      handler.setAuthorizedGroupSet((java.util.TreeSet)StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "authorizedGroupSet")));
+      handler.setAuthorizedGroupSet(StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "authorizedGroupSet")));
     }
 
     value = attributes.get("updateMemberSet");
     if (value != null) {
-      handler.setUpdateMemberSet((java.util.TreeSet)StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "updateMemberSet")));
+      handler.setUpdateMemberSet(StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "updateMemberSet")));
     }
 
     value = attributes.get("updateGroupSet");
     if (value != null) {
-      handler.setUpdateGroupSet((java.util.TreeSet)StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "updateGroupSet")));
+      handler.setUpdateGroupSet(StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "updateGroupSet")));
     }
 
     value = attributes.get("restrictUpdateRights");
@@ -161,7 +166,7 @@ public class SignUp_HANDLER implements com.jalios.jstore.StorableHandler {
 
     value = attributes.get("mainInstance");
     if (value != null) {
-      handler.setMainInstance((com.jalios.jcms.Publication)StoreUtil.decodeObject(com.jalios.jcms.Publication.class, value, store, new DecodeContext(sle, "mainInstance")));
+      handler.setMainInstance(StoreUtil.decodeObject(com.jalios.jcms.Publication.class, value, store, new DecodeContext(sle, "mainInstance")));
     }
 
     value = attributes.get("isTracked");
@@ -176,79 +181,80 @@ public class SignUp_HANDLER implements com.jalios.jstore.StorableHandler {
 
     value = attributes.get("friendlyURLSet");
     if (value != null) {
-      handler.setFriendlyURLSet((java.util.TreeSet)StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "friendlyURLSet")));
+      handler.setFriendlyURLSet(StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "friendlyURLSet")));
     }
 
     value = attributes.get("workspace");
     if (value != null) {
-      handler.setWorkspace((com.jalios.jcms.workspace.Workspace)StoreUtil.decodeObject(com.jalios.jcms.workspace.Workspace.class, value, store, new DecodeContext(sle, "workspace")));
+      handler.setWorkspace(StoreUtil.decodeObject(com.jalios.jcms.workspace.Workspace.class, value, store, new DecodeContext(sle, "workspace")));
     }
 
     value = attributes.get("roleMap");
     if (value != null) {
-      handler.setRoleMap((java.util.HashMap)StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "roleMap")));
+      handler.setRoleMap(StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "roleMap")));
     }
 
     value = attributes.get("workflowId");
     if (value != null) {
-      handler.setWorkflowId((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "workflowId")));
+      handler.setWorkflowId(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "workflowId")));
     }
 
     value = attributes.get("attachWorkspaceSet");
     if (value != null) {
-      handler.setAttachWorkspaceSet((java.util.Set)StoreUtil.decodeObject(java.util.Set.class, value, store, new DecodeContext(sle, "attachWorkspaceSet")));
+      handler.setAttachWorkspaceSet(StoreUtil.decodeObject(java.util.Set.class, value, store, new DecodeContext(sle, "attachWorkspaceSet")));
     }
 
     value = attributes.get("author");
     if (value != null) {
-      handler.setAuthor((com.jalios.jcms.Member)StoreUtil.decodeObject(com.jalios.jcms.Member.class, value, store, new DecodeContext(sle, "author")));
+      handler.setAuthor(StoreUtil.decodeObject(com.jalios.jcms.Member.class, value, store, new DecodeContext(sle, "author")));
     }
 
     value = attributes.get("authorDBID");
     if (value != null) {
-      handler.setAuthorDBID((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "authorDBID")));
+      handler.setAuthorDBID(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "authorDBID")));
     }
 
     value = attributes.get("opAuthor");
     if (value != null) {
-      handler.setOpAuthor((com.jalios.jcms.Member)StoreUtil.decodeObject(com.jalios.jcms.Member.class, value, store, new DecodeContext(sle, "opAuthor")));
+      handler.setOpAuthor(StoreUtil.decodeObject(com.jalios.jcms.Member.class, value, store, new DecodeContext(sle, "opAuthor")));
     }
 
     value = attributes.get("opDelegate");
     if (value != null) {
-      handler.setOpDelegate((com.jalios.jcms.Member)StoreUtil.decodeObject(com.jalios.jcms.Member.class, value, store, new DecodeContext(sle, "opDelegate")));
+      handler.setOpDelegate(StoreUtil.decodeObject(com.jalios.jcms.Member.class, value, store, new DecodeContext(sle, "opDelegate")));
     }
 
     value = attributes.get("extension");
     if (value != null) {
-      handler.setExtension((com.jalios.jcms.DataExtension)StoreUtil.decodeObject(com.jalios.jcms.DataExtension.class, value, store, new DecodeContext(sle, "extension")));
+      handler.setExtension(StoreUtil.decodeObject(com.jalios.jcms.DataExtension.class, value, store, new DecodeContext(sle, "extension")));
     }
 
     value = attributes.get("importMap");
     if (value != null) {
-      handler.setImportMap((java.util.HashMap)StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "importMap")));
+      handler.setImportMap(StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "importMap")));
     }
 
     value = attributes.get("extraDataMap");
     if (value != null) {
-      handler.setExtraDataMap((java.util.HashMap)StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "extraDataMap")));
+      handler.setExtraDataMap(StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "extraDataMap")));
     }
 
     value = attributes.get("cdate");
     if (value != null) {
-      handler.setCdate((java.util.Date)StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "cdate")));
+      handler.setCdate(StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "cdate")));
     }
 
     value = attributes.get("mdate");
     if (value != null) {
-      handler.setMdate((java.util.Date)StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "mdate")));
+      handler.setMdate(StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "mdate")));
     }
 
   }
 
-  public Map<String,String> getAttributes(com.jalios.jstore.Storable storable, com.jalios.jstore.Store store) {
+  @Override
+public Map<String,String> getAttributes(com.jalios.jstore.Storable storable, com.jalios.jstore.Store store) {
     generated.SignUp handler = (generated.SignUp)storable;
-    Map<String,String> attributes = new HashMap<String,String>();
+    Map<String,String> attributes = new HashMap<>();
     attributes.put("name", StoreUtil.encodeObject(handler.getName(), store));
     attributes.put("firstName", StoreUtil.encodeObject(handler.getFirstName(), store));
     attributes.put("email", StoreUtil.encodeObject(handler.getEmail(), store));

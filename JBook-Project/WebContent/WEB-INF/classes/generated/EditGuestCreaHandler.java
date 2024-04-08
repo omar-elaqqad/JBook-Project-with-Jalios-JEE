@@ -1,117 +1,109 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
-import com.jalios.util.Util;
-import custom.*;
+
+
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditGuestCreaHandler extends com.jalios.jcmsplugin.collaborativespace.guest.handler.GuestCreationSuperHandler {
-   
+
   protected GuestCrea theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return GuestCrea.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpGuestCrea  
+  // validateBeforeOpGuestCrea
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getAvailableAuthor();
-    
-    
+
+
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("name".equals(field)) {
       return getAvailableName();
     }
-    
+
     if ("firstname".equals(field)) {
       return getAvailableFirstname();
     }
-    
+
     if ("email".equals(field)) {
       return getAvailableEmail();
     }
-    
+
     if ("organization".equals(field)) {
       return getAvailableOrganization();
     }
-    
+
     if ("language".equals(field)) {
       return getAvailableLanguage();
     }
-    
+
     if ("country".equals(field)) {
       return getAvailableCountry();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     return super.getEnumValues(field);
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdateGuestCrea  
+  // validateCommonCreateUpdateGuestCrea
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdateGuestCrea() {
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdateGuestCrea()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdateGuestCrea()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdateGuestCrea()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdateGuestCrea()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -120,7 +112,8 @@ public class EditGuestCreaHandler extends com.jalios.jcmsplugin.collaborativespa
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -129,7 +122,8 @@ public class EditGuestCreaHandler extends com.jalios.jcmsplugin.collaborativespa
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -138,7 +132,8 @@ public class EditGuestCreaHandler extends com.jalios.jcmsplugin.collaborativespa
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     GuestCrea obj = (GuestCrea)data;
     obj.setName(getAvailableName());
@@ -148,8 +143,9 @@ public class EditGuestCreaHandler extends com.jalios.jcmsplugin.collaborativespa
     obj.setLanguage(getAvailableLanguage());
     obj.setCountry(getAvailableCountry());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof GuestCrea) {
       super.setId(v);
       theContent = (GuestCrea)publication;
@@ -158,11 +154,11 @@ public class EditGuestCreaHandler extends com.jalios.jcmsplugin.collaborativespa
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // name
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry nameTFE = channel.getTypeFieldEntry(GuestCrea.class, "name", true);
   protected String name = channel.getTypeFieldEntry(GuestCrea.class, "name", true).getDefaultTextString();
   public void setName(String[] v) {
@@ -175,13 +171,13 @@ public class EditGuestCreaHandler extends com.jalios.jcmsplugin.collaborativespa
     }
     return name;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // firstname
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry firstnameTFE = channel.getTypeFieldEntry(GuestCrea.class, "firstname", true);
   protected String firstname = channel.getTypeFieldEntry(GuestCrea.class, "firstname", true).getDefaultTextString();
   public void setFirstname(String[] v) {
@@ -194,13 +190,13 @@ public class EditGuestCreaHandler extends com.jalios.jcmsplugin.collaborativespa
     }
     return firstname;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // email
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry emailTFE = channel.getTypeFieldEntry(GuestCrea.class, "email", true);
   protected String email = channel.getTypeFieldEntry(GuestCrea.class, "email", true).getDefaultTextString();
   public void setEmail(String[] v) {
@@ -213,13 +209,13 @@ public class EditGuestCreaHandler extends com.jalios.jcmsplugin.collaborativespa
     }
     return email;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // organization
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry organizationTFE = channel.getTypeFieldEntry(GuestCrea.class, "organization", true);
   protected String organization = channel.getTypeFieldEntry(GuestCrea.class, "organization", true).getDefaultTextString();
   public void setOrganization(String[] v) {
@@ -232,13 +228,13 @@ public class EditGuestCreaHandler extends com.jalios.jcmsplugin.collaborativespa
     }
     return organization;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // language
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry languageTFE = channel.getTypeFieldEntry(GuestCrea.class, "language", true);
   protected String language = channel.getTypeFieldEntry(GuestCrea.class, "language", true).getDefaultTextString();
   public void setLanguage(String[] v) {
@@ -251,13 +247,13 @@ public class EditGuestCreaHandler extends com.jalios.jcmsplugin.collaborativespa
     }
     return language;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // country
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry countryTFE = channel.getTypeFieldEntry(GuestCrea.class, "country", true);
   protected String country = channel.getTypeFieldEntry(GuestCrea.class, "country", true).getDefaultTextString();
   public void setCountry(String[] v) {
@@ -270,12 +266,12 @@ public class EditGuestCreaHandler extends com.jalios.jcmsplugin.collaborativespa
     }
     return country;
   }
-  
-    
-  
- 
-   
- 
+
+
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // wDfWXb9xm6QQTV/vT2v5/Q==

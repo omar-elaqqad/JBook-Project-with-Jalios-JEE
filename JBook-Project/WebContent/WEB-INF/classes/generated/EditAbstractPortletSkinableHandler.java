@@ -1,223 +1,220 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
+
+
+import java.util.HashMap;
+
+import com.jalios.jcms.Data;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
 import com.jalios.util.Util;
-import custom.*;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.EditPortletSkinableHandler {
-   
+
   protected AbstractPortletSkinable theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return AbstractPortletSkinable.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpAbstractPortletSkinable  
+  // validateBeforeOpAbstractPortletSkinable
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     {
       Data data = processDataId("originalPortlet", __originalPortletStr, com.jalios.jcms.portlet.PortalElement.class);
-      if (data != null) { 
+      if (data != null) {
         originalPortlet = (com.jalios.jcms.portlet.PortalElement)data;
       } else {
         isOriginalPortletValidated = Util.isEmpty(__originalPortletStr);
       }
     }
-    if (!validateUploadedFileDocument(getAvailableOriginalPortlet(),   fdauthor, getAvailableWorkspace())) {
-      return false;
-    }
-    if (!createUploadedFileDocument(getAvailableOriginalPortlet(),  fdauthor, getAvailableWorkspace())) {
+    if (!validateUploadedFileDocument(getAvailableOriginalPortlet(),   fdauthor, getAvailableWorkspace()) || !createUploadedFileDocument(getAvailableOriginalPortlet(),  fdauthor, getAvailableWorkspace())) {
       return false;
     }
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("description".equals(field)) {
       return getAllAvailableDescriptionML();
     }
-    
+
     if ("portletImage".equals(field)) {
       return getAllAvailablePortletImageML();
     }
-    
+
     if ("cacheType".equals(field)) {
       return getAvailableCacheType();
     }
-    
+
     if ("cacheSensibility".equals(field)) {
       return getAvailableCacheSensibility();
     }
-    
+
     if ("invalidClass".equals(field)) {
       return getAvailableInvalidClass();
     }
-    
+
     if ("invalidTime".equals(field)) {
       return getAvailableInvalidTime();
     }
-    
+
     if ("displayCSS".equals(field)) {
       return getAvailableDisplayCSS();
     }
-    
+
     if ("width".equals(field)) {
       return getAvailableWidth();
     }
-    
+
     if ("insetLeft".equals(field)) {
       return getAvailableInsetLeft();
     }
-    
+
     if ("insetRight".equals(field)) {
       return getAvailableInsetRight();
     }
-    
+
     if ("insetTop".equals(field)) {
       return getAvailableInsetTop();
     }
-    
+
     if ("insetBottom".equals(field)) {
       return getAvailableInsetBottom();
     }
-    
+
     if ("cellPadding".equals(field)) {
       return getAvailableCellPadding();
     }
-    
+
     if ("alignH".equals(field)) {
       return getAvailableAlignH();
     }
-    
+
     if ("alignV".equals(field)) {
       return getAvailableAlignV();
     }
-    
+
     if ("alignTable".equals(field)) {
       return getAvailableAlignTable();
     }
-    
+
     if ("border".equals(field)) {
       return getAvailableBorder();
     }
-    
+
     if ("borderColor".equals(field)) {
       return getAvailableBorderColor();
     }
-    
+
     if ("backColor".equals(field)) {
       return getAvailableBackColor();
     }
-    
+
     if ("backImage".equals(field)) {
       return getAvailableBackImage();
     }
-    
+
     if ("displayTitle".equals(field)) {
       return getAllAvailableDisplayTitleML();
     }
-    
+
     if ("skins".equals(field)) {
       return getAvailableSkins();
     }
-    
+
     if ("skinCSS".equals(field)) {
       return getAvailableSkinCSS();
     }
-    
+
     if ("popupState".equals(field)) {
       return getAvailablePopupState();
     }
-    
+
     if ("expandState".equals(field)) {
       return getAvailableExpandState();
     }
-    
+
     if ("behaviorCopy".equals(field)) {
       return getAvailableBehaviorCopy();
     }
-    
+
     if ("originalPortlet".equals(field)) {
       return getAvailableOriginalPortlet();
     }
-    
+
     if ("condition".equals(field)) {
       return getAvailableCondition();
     }
-    
+
     if ("cssId".equals(field)) {
       return getAvailableCssId();
     }
-    
+
     if ("cssClasses".equals(field)) {
       return getAvailableCssClasses();
     }
-    
+
     if ("skinClasses".equals(field)) {
       return getAvailableSkinClasses();
     }
-    
+
     if ("skinFooter".equals(field)) {
       return getAllAvailableSkinFooterML();
     }
-    
+
     if ("skinHeaderIcon".equals(field)) {
       return getAvailableSkinHeaderIcon();
     }
-    
+
     if ("skinHeaderIconColor".equals(field)) {
       return getAvailableSkinHeaderIconColor();
     }
-    
+
     if ("skinFooterButtonLabel".equals(field)) {
       return getAllAvailableSkinFooterButtonLabelML();
     }
-    
+
     if ("skinFooterButtonLink".equals(field)) {
       return getAvailableSkinFooterButtonLink();
     }
-    
+
     if ("skinFooterButtonAlign".equals(field)) {
       return getAvailableSkinFooterButtonAlign();
     }
-    
+
     if ("skinHeaderButtonLabel".equals(field)) {
       return getAllAvailableSkinHeaderButtonLabelML();
     }
-    
+
     if ("skinHeaderButtonLink".equals(field)) {
       return getAvailableSkinHeaderButtonLink();
     }
-    
+
     if ("skinHeaderSubText".equals(field)) {
       return getAllAvailableSkinHeaderSubTextML();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     if ("cacheType".equals(field)) {
       return AbstractPortletSkinable.getCacheTypeValues();
     }
@@ -261,7 +258,7 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     if ("cacheType".equals(field)) {
       return AbstractPortletSkinable.getCacheTypeLabels(userLang);
     }
@@ -304,7 +301,7 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdateAbstractPortletSkinable  
+  // validateCommonCreateUpdateAbstractPortletSkinable
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdateAbstractPortletSkinable() {
     if (!isInvalidTimeValidated) {
@@ -341,39 +338,35 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdateAbstractPortletSkinable()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdateAbstractPortletSkinable()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdateAbstractPortletSkinable()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdateAbstractPortletSkinable()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -382,7 +375,8 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -391,7 +385,8 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -400,7 +395,8 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     AbstractPortletSkinable obj = (AbstractPortletSkinable)data;
     obj.setDescription(getAvailableDescription());
@@ -451,8 +447,9 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
     obj.setSkinHeaderSubText(getAvailableSkinHeaderSubText());
     obj.setSkinHeaderSubTextML(getAvailableSkinHeaderSubTextML());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof AbstractPortletSkinable) {
       super.setId(v);
       theContent = (AbstractPortletSkinable)publication;
@@ -461,11 +458,11 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // description
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry descriptionTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "description", true);
   protected String description = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "description", true).getDefaultTextString();
   protected HashMap<String,String> descriptionML = descriptionTFE.getDefaultTextMap();
@@ -473,28 +470,31 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
     description = getMultilingualMainValue(descriptionTFE, v);
     descriptionML = getMultilingualMLMap(descriptionTFE, v);
   }
-  public String getAvailableDescription() {
+  @Override
+public String getAvailableDescription() {
     if (theContent != null && isFieldMissing("description")) {
      String objectValue = theContent.getDescription();
       return objectValue;
     }
     return description;
   }
-  
-    
-  public HashMap<String,String> getAllAvailableDescriptionML() {
+
+
+  @Override
+public HashMap<String,String> getAllAvailableDescriptionML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableDescriptionML());
     map.put(channel.getLanguage(),getAvailableDescription(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableDescriptionML() {
     if (theContent != null && isFieldMissing("description")) {
       return theContent.getDescriptionML();
     }
     return descriptionML;
   }
-  public String getAvailableDescription(String lang) {
+  @Override
+public String getAvailableDescription(String lang) {
     if (theContent != null) {
       if (lang.equals(channel.getLanguage())) {
       	if (!Util.isSameContent(description, channel.getTypeFieldEntry(AbstractPortletSkinable.class, "description", true).getDefaultTextString())) {
@@ -512,11 +512,11 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
     }
     return descriptionML == null ? "" : Util.getString(descriptionML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // portletImage
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry portletImageTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "portletImage", true);
   protected String portletImage = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "portletImage", true).getDefaultTextString();
   protected HashMap<String,String> portletImageML = portletImageTFE.getDefaultTextMap();
@@ -531,14 +531,14 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
     }
     return portletImage;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailablePortletImageML() {
     HashMap<String,String> map = Util.getHashMap(getAvailablePortletImageML());
     map.put(channel.getLanguage(),getAvailablePortletImage(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailablePortletImageML() {
     if (theContent != null && isFieldMissing("portletImage")) {
       return theContent.getPortletImageML();
@@ -563,57 +563,60 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
     }
     return portletImageML == null ? "" : Util.getString(portletImageML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // cacheType
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry cacheTypeTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "cacheType", true);
   protected String cacheType = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "cacheType", true).getDefaultTextString();
   public void setCacheType(String[] v) {
     cacheType = getMonolingualValue(cacheTypeTFE, v);
   }
-  public String getAvailableCacheType() {
+  @Override
+public String getAvailableCacheType() {
     if (theContent != null && isFieldMissing("cacheType")) {
      String objectValue = theContent.getCacheType();
       return objectValue;
     }
     return cacheType;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // cacheSensibility
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry cacheSensibilityTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "cacheSensibility", true);
   protected String cacheSensibility = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "cacheSensibility", true).getDefaultTextString();
   public void setCacheSensibility(String[] v) {
     cacheSensibility = getMonolingualValue(cacheSensibilityTFE, v);
   }
-  public String getAvailableCacheSensibility() {
+  @Override
+public String getAvailableCacheSensibility() {
     if (theContent != null && isFieldMissing("cacheSensibility")) {
      String objectValue = theContent.getCacheSensibility();
       return objectValue;
     }
     return cacheSensibility;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // invalidClass
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry invalidClassTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "invalidClass", true);
   protected String[] invalidClass = new String[0];
   protected int invalidClassAddCount = 0;
   public void setInvalidClass(String[] v) {
     invalidClass = getMonolingualValueArray(invalidClassTFE, v);
   }
-  
-  public String[] getAvailableInvalidClass() {
+
+  @Override
+public String[] getAvailableInvalidClass() {
     if (theContent != null && isFieldMissing("invalidClass")) {
 	  String[] objectValue = theContent.getInvalidClass();
       if (objectValue == null) {
@@ -623,22 +626,23 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
     }
     return invalidClass;
   }
-  
-    
-  
+
+
+
   public void setInvalidClassAddCount(int  v) {
     invalidClassAddCount = v;
   }
-  
-  public int getInvalidClassCount() {
+
+  @Override
+public int getInvalidClassCount() {
     int arraySize = Util.getSize(getAvailableInvalidClass());
     int res = 3 + arraySize + invalidClassAddCount;
     return res;
   }
-   
+
   // ----------------------------------------------------------------------
   // invalidTime
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry invalidTimeTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "invalidTime", true);
   protected boolean isInvalidTimeValidated = true;
   protected long invalidTime = 60;
@@ -649,59 +653,62 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
       isInvalidTimeValidated = false;
     }
   }
-  
-  public long getAvailableInvalidTime() {
+
+  @Override
+public long getAvailableInvalidTime() {
     if (theContent != null && isFieldMissing("invalidTime")) {
      long objectValue = theContent.getInvalidTime();
       return objectValue;
     }
     return invalidTime;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // displayCSS
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry displayCSSTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "displayCSS", true);
   protected String displayCSS = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "displayCSS", true).getDefaultTextString();
   public void setDisplayCSS(String[] v) {
     displayCSS = getMonolingualValue(displayCSSTFE, v);
   }
-  public String getAvailableDisplayCSS() {
+  @Override
+public String getAvailableDisplayCSS() {
     if (theContent != null && isFieldMissing("displayCSS")) {
      String objectValue = theContent.getDisplayCSS();
       return objectValue;
     }
     return displayCSS;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // width
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry widthTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "width", true);
   protected String width = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "width", true).getDefaultTextString();
   public void setWidth(String[] v) {
     width = getMonolingualValue(widthTFE, v);
   }
-  public String getAvailableWidth() {
+  @Override
+public String getAvailableWidth() {
     if (theContent != null && isFieldMissing("width")) {
      String objectValue = theContent.getWidth();
       return objectValue;
     }
     return width;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // insetLeft
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry insetLeftTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "insetLeft", true);
   protected boolean isInsetLeftValidated = true;
   protected int insetLeft = 0;
@@ -712,20 +719,21 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
       isInsetLeftValidated = false;
     }
   }
-  public int getAvailableInsetLeft() {
+  @Override
+public int getAvailableInsetLeft() {
     if (theContent != null && isFieldMissing("insetLeft")) {
      int objectValue = theContent.getInsetLeft();
       return objectValue;
     }
     return insetLeft;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // insetRight
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry insetRightTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "insetRight", true);
   protected boolean isInsetRightValidated = true;
   protected int insetRight = 0;
@@ -736,20 +744,21 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
       isInsetRightValidated = false;
     }
   }
-  public int getAvailableInsetRight() {
+  @Override
+public int getAvailableInsetRight() {
     if (theContent != null && isFieldMissing("insetRight")) {
      int objectValue = theContent.getInsetRight();
       return objectValue;
     }
     return insetRight;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // insetTop
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry insetTopTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "insetTop", true);
   protected boolean isInsetTopValidated = true;
   protected int insetTop = 0;
@@ -760,20 +769,21 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
       isInsetTopValidated = false;
     }
   }
-  public int getAvailableInsetTop() {
+  @Override
+public int getAvailableInsetTop() {
     if (theContent != null && isFieldMissing("insetTop")) {
      int objectValue = theContent.getInsetTop();
       return objectValue;
     }
     return insetTop;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // insetBottom
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry insetBottomTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "insetBottom", true);
   protected boolean isInsetBottomValidated = true;
   protected int insetBottom = 0;
@@ -784,20 +794,21 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
       isInsetBottomValidated = false;
     }
   }
-  public int getAvailableInsetBottom() {
+  @Override
+public int getAvailableInsetBottom() {
     if (theContent != null && isFieldMissing("insetBottom")) {
      int objectValue = theContent.getInsetBottom();
       return objectValue;
     }
     return insetBottom;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // cellPadding
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry cellPaddingTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "cellPadding", true);
   protected boolean isCellPaddingValidated = true;
   protected int cellPadding = 0;
@@ -808,77 +819,81 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
       isCellPaddingValidated = false;
     }
   }
-  public int getAvailableCellPadding() {
+  @Override
+public int getAvailableCellPadding() {
     if (theContent != null && isFieldMissing("cellPadding")) {
      int objectValue = theContent.getCellPadding();
       return objectValue;
     }
     return cellPadding;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // alignH
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry alignHTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "alignH", true);
   protected String alignH = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "alignH", true).getDefaultTextString();
   public void setAlignH(String[] v) {
     alignH = getMonolingualValue(alignHTFE, v);
   }
-  public String getAvailableAlignH() {
+  @Override
+public String getAvailableAlignH() {
     if (theContent != null && isFieldMissing("alignH")) {
      String objectValue = theContent.getAlignH();
       return objectValue;
     }
     return alignH;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // alignV
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry alignVTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "alignV", true);
   protected String alignV = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "alignV", true).getDefaultTextString();
   public void setAlignV(String[] v) {
     alignV = getMonolingualValue(alignVTFE, v);
   }
-  public String getAvailableAlignV() {
+  @Override
+public String getAvailableAlignV() {
     if (theContent != null && isFieldMissing("alignV")) {
      String objectValue = theContent.getAlignV();
       return objectValue;
     }
     return alignV;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // alignTable
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry alignTableTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "alignTable", true);
   protected String alignTable = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "alignTable", true).getDefaultTextString();
   public void setAlignTable(String[] v) {
     alignTable = getMonolingualValue(alignTableTFE, v);
   }
-  public String getAvailableAlignTable() {
+  @Override
+public String getAvailableAlignTable() {
     if (theContent != null && isFieldMissing("alignTable")) {
      String objectValue = theContent.getAlignTable();
       return objectValue;
     }
     return alignTable;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // border
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry borderTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "border", true);
   protected boolean isBorderValidated = true;
   protected int border = 0;
@@ -889,77 +904,81 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
       isBorderValidated = false;
     }
   }
-  public int getAvailableBorder() {
+  @Override
+public int getAvailableBorder() {
     if (theContent != null && isFieldMissing("border")) {
      int objectValue = theContent.getBorder();
       return objectValue;
     }
     return border;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // borderColor
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry borderColorTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "borderColor", true);
   protected String borderColor = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "borderColor", true).getDefaultTextString();
   public void setBorderColor(String[] v) {
     borderColor = getMonolingualValue(borderColorTFE, v);
   }
-  public String getAvailableBorderColor() {
+  @Override
+public String getAvailableBorderColor() {
     if (theContent != null && isFieldMissing("borderColor")) {
      String objectValue = theContent.getBorderColor();
       return objectValue;
     }
     return borderColor;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // backColor
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry backColorTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "backColor", true);
   protected String backColor = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "backColor", true).getDefaultTextString();
   public void setBackColor(String[] v) {
     backColor = getMonolingualValue(backColorTFE, v);
   }
-  public String getAvailableBackColor() {
+  @Override
+public String getAvailableBackColor() {
     if (theContent != null && isFieldMissing("backColor")) {
      String objectValue = theContent.getBackColor();
       return objectValue;
     }
     return backColor;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // backImage
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry backImageTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "backImage", true);
   protected String backImage = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "backImage", true).getDefaultTextString();
   public void setBackImage(String[] v) {
     backImage = getMonolingualValue(backImageTFE, v);
   }
-  public String getAvailableBackImage() {
+  @Override
+public String getAvailableBackImage() {
     if (theContent != null && isFieldMissing("backImage")) {
      String objectValue = theContent.getBackImage();
       return objectValue;
     }
     return backImage;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // displayTitle
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry displayTitleTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "displayTitle", true);
   protected String displayTitle = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "displayTitle", true).getDefaultTextString();
   protected HashMap<String,String> displayTitleML = displayTitleTFE.getDefaultTextMap();
@@ -967,28 +986,31 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
     displayTitle = getMultilingualMainValue(displayTitleTFE, v);
     displayTitleML = getMultilingualMLMap(displayTitleTFE, v);
   }
-  public String getAvailableDisplayTitle() {
+  @Override
+public String getAvailableDisplayTitle() {
     if (theContent != null && isFieldMissing("displayTitle")) {
      String objectValue = theContent.getDisplayTitle();
       return objectValue;
     }
     return displayTitle;
   }
-  
-    
-  public HashMap<String,String> getAllAvailableDisplayTitleML() {
+
+
+  @Override
+public HashMap<String,String> getAllAvailableDisplayTitleML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableDisplayTitleML());
     map.put(channel.getLanguage(),getAvailableDisplayTitle(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableDisplayTitleML() {
     if (theContent != null && isFieldMissing("displayTitle")) {
       return theContent.getDisplayTitleML();
     }
     return displayTitleML;
   }
-  public String getAvailableDisplayTitle(String lang) {
+  @Override
+public String getAvailableDisplayTitle(String lang) {
     if (theContent != null) {
       if (lang.equals(channel.getLanguage())) {
       	if (!Util.isSameContent(displayTitle, channel.getTypeFieldEntry(AbstractPortletSkinable.class, "displayTitle", true).getDefaultTextString())) {
@@ -1006,19 +1028,20 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
     }
     return displayTitleML == null ? "" : Util.getString(displayTitleML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // skins
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry skinsTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "skins", true);
   protected String[] skins = new String[0];
   protected int skinsAddCount = 0;
   public void setSkins(String[] v) {
     skins = getMonolingualValueArray(skinsTFE, v);
   }
-  
-  public String[] getAvailableSkins() {
+
+  @Override
+public String[] getAvailableSkins() {
     if (theContent != null && isFieldMissing("skins")) {
 	  String[] objectValue = theContent.getSkins();
       if (objectValue == null) {
@@ -1028,98 +1051,102 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
     }
     return skins;
   }
-  
-    
-  
+
+
+
   public void setSkinsAddCount(int  v) {
     skinsAddCount = v;
   }
-  
+
   public int getSkinsCount() {
     int arraySize = Util.getSize(getAvailableSkins());
     int res = 3 + arraySize + skinsAddCount;
     return res;
   }
-   
+
   // ----------------------------------------------------------------------
   // skinCSS
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry skinCSSTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "skinCSS", true);
   protected String skinCSS = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "skinCSS", true).getDefaultTextString();
   public void setSkinCSS(String[] v) {
     skinCSS = getMonolingualValue(skinCSSTFE, v);
   }
-  public String getAvailableSkinCSS() {
+  @Override
+public String getAvailableSkinCSS() {
     if (theContent != null && isFieldMissing("skinCSS")) {
      String objectValue = theContent.getSkinCSS();
       return objectValue;
     }
     return skinCSS;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // popupState
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry popupStateTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "popupState", true);
   protected String popupState = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "popupState", true).getDefaultTextString();
   public void setPopupState(String[] v) {
     popupState = getMonolingualValue(popupStateTFE, v);
   }
-  public String getAvailablePopupState() {
+  @Override
+public String getAvailablePopupState() {
     if (theContent != null && isFieldMissing("popupState")) {
      String objectValue = theContent.getPopupState();
       return objectValue;
     }
     return popupState;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // expandState
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry expandStateTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "expandState", true);
   protected String expandState = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "expandState", true).getDefaultTextString();
   public void setExpandState(String[] v) {
     expandState = getMonolingualValue(expandStateTFE, v);
   }
-  public String getAvailableExpandState() {
+  @Override
+public String getAvailableExpandState() {
     if (theContent != null && isFieldMissing("expandState")) {
      String objectValue = theContent.getExpandState();
       return objectValue;
     }
     return expandState;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // behaviorCopy
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry behaviorCopyTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "behaviorCopy", true);
   protected String behaviorCopy = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "behaviorCopy", true).getDefaultTextString();
   public void setBehaviorCopy(String[] v) {
     behaviorCopy = getMonolingualValue(behaviorCopyTFE, v);
   }
-  public String getAvailableBehaviorCopy() {
+  @Override
+public String getAvailableBehaviorCopy() {
     if (theContent != null && isFieldMissing("behaviorCopy")) {
      String objectValue = theContent.getBehaviorCopy();
       return objectValue;
     }
     return behaviorCopy;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // originalPortlet
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry originalPortletTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "originalPortlet", true);
   protected boolean isOriginalPortletValidated = true;
   protected com.jalios.jcms.portlet.PortalElement originalPortlet;
@@ -1127,28 +1154,30 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
   public void setOriginalPortlet(String v) {
     __originalPortletStr = v;
   }
-  public com.jalios.jcms.portlet.PortalElement getAvailableOriginalPortlet() {
+  @Override
+public com.jalios.jcms.portlet.PortalElement getAvailableOriginalPortlet() {
     if (theContent != null && isFieldMissing("originalPortlet")) {
      com.jalios.jcms.portlet.PortalElement objectValue = theContent.getOriginalPortlet();
       return objectValue;
     }
     return originalPortlet;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // condition
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry conditionTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "condition", true);
   protected String[] condition = new String[0];
   protected int conditionAddCount = 0;
   public void setCondition(String[] v) {
     condition = getMonolingualValueArray(conditionTFE, v);
   }
-  
-  public String[] getAvailableCondition() {
+
+  @Override
+public String[] getAvailableCondition() {
     if (theContent != null && isFieldMissing("condition")) {
 	  String[] objectValue = theContent.getCondition();
       if (objectValue == null) {
@@ -1158,41 +1187,42 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
     }
     return condition;
   }
-  
-    
-  
+
+
+
   public void setConditionAddCount(int  v) {
     conditionAddCount = v;
   }
-  
+
   public int getConditionCount() {
     int arraySize = Util.getSize(getAvailableCondition());
     int res = 3 + arraySize + conditionAddCount;
     return res;
   }
-   
+
   // ----------------------------------------------------------------------
   // cssId
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry cssIdTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "cssId", true);
   protected String cssId = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "cssId", true).getDefaultTextString();
   public void setCssId(String[] v) {
     cssId = getMonolingualValue(cssIdTFE, v);
   }
-  public String getAvailableCssId() {
+  @Override
+public String getAvailableCssId() {
     if (theContent != null && isFieldMissing("cssId")) {
      String objectValue = theContent.getCssId();
       return objectValue;
     }
     return cssId;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // cssClasses
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry cssClassesTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "cssClasses", true);
   protected String cssClasses = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "cssClasses", true).getDefaultTextString();
   public void setCssClasses(String[] v) {
@@ -1205,32 +1235,33 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
     }
     return cssClasses;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // skinClasses
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry skinClassesTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "skinClasses", true);
   protected String skinClasses = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "skinClasses", true).getDefaultTextString();
   public void setSkinClasses(String[] v) {
     skinClasses = getMonolingualValue(skinClassesTFE, v);
   }
-  public String getAvailableSkinClasses() {
+  @Override
+public String getAvailableSkinClasses() {
     if (theContent != null && isFieldMissing("skinClasses")) {
      String objectValue = theContent.getSkinClasses();
       return objectValue;
     }
     return skinClasses;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // skinFooter
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry skinFooterTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "skinFooter", true);
   protected String skinFooter = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "skinFooter", true).getDefaultTextString();
   protected HashMap<String,String> skinFooterML = skinFooterTFE.getDefaultTextMap();
@@ -1238,21 +1269,23 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
     skinFooter = getMultilingualMainValue(skinFooterTFE, v);
     skinFooterML = getMultilingualMLMap(skinFooterTFE, v);
   }
-  public String getAvailableSkinFooter() {
+  @Override
+public String getAvailableSkinFooter() {
     if (theContent != null && isFieldMissing("skinFooter")) {
      String objectValue = theContent.getSkinFooter();
       return objectValue;
     }
     return skinFooter;
   }
-  
-    
-  public HashMap<String,String> getAllAvailableSkinFooterML() {
+
+
+  @Override
+public HashMap<String,String> getAllAvailableSkinFooterML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableSkinFooterML());
     map.put(channel.getLanguage(),getAvailableSkinFooter(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableSkinFooterML() {
     if (theContent != null && isFieldMissing("skinFooter")) {
       return theContent.getSkinFooterML();
@@ -1277,49 +1310,51 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
     }
     return skinFooterML == null ? "" : Util.getString(skinFooterML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // skinHeaderIcon
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry skinHeaderIconTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "skinHeaderIcon", true);
   protected String skinHeaderIcon = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "skinHeaderIcon", true).getDefaultTextString();
   public void setSkinHeaderIcon(String[] v) {
     skinHeaderIcon = getMonolingualValue(skinHeaderIconTFE, v);
   }
-  public String getAvailableSkinHeaderIcon() {
+  @Override
+public String getAvailableSkinHeaderIcon() {
     if (theContent != null && isFieldMissing("skinHeaderIcon")) {
      String objectValue = theContent.getSkinHeaderIcon();
       return objectValue;
     }
     return skinHeaderIcon;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // skinHeaderIconColor
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry skinHeaderIconColorTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "skinHeaderIconColor", true);
   protected String skinHeaderIconColor = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "skinHeaderIconColor", true).getDefaultTextString();
   public void setSkinHeaderIconColor(String[] v) {
     skinHeaderIconColor = getMonolingualValue(skinHeaderIconColorTFE, v);
   }
-  public String getAvailableSkinHeaderIconColor() {
+  @Override
+public String getAvailableSkinHeaderIconColor() {
     if (theContent != null && isFieldMissing("skinHeaderIconColor")) {
      String objectValue = theContent.getSkinHeaderIconColor();
       return objectValue;
     }
     return skinHeaderIconColor;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // skinFooterButtonLabel
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry skinFooterButtonLabelTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "skinFooterButtonLabel", true);
   protected String skinFooterButtonLabel = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "skinFooterButtonLabel", true).getDefaultTextString();
   protected HashMap<String,String> skinFooterButtonLabelML = skinFooterButtonLabelTFE.getDefaultTextMap();
@@ -1334,14 +1369,15 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
     }
     return skinFooterButtonLabel;
   }
-  
-    
-  public HashMap<String,String> getAllAvailableSkinFooterButtonLabelML() {
+
+
+  @Override
+public HashMap<String,String> getAllAvailableSkinFooterButtonLabelML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableSkinFooterButtonLabelML());
     map.put(channel.getLanguage(),getAvailableSkinFooterButtonLabel(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableSkinFooterButtonLabelML() {
     if (theContent != null && isFieldMissing("skinFooterButtonLabel")) {
       return theContent.getSkinFooterButtonLabelML();
@@ -1366,49 +1402,51 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
     }
     return skinFooterButtonLabelML == null ? "" : Util.getString(skinFooterButtonLabelML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // skinFooterButtonLink
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry skinFooterButtonLinkTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "skinFooterButtonLink", true);
   protected String skinFooterButtonLink = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "skinFooterButtonLink", true).getDefaultTextString();
   public void setSkinFooterButtonLink(String[] v) {
     skinFooterButtonLink = getMonolingualValue(skinFooterButtonLinkTFE, v);
   }
-  public String getAvailableSkinFooterButtonLink() {
+  @Override
+public String getAvailableSkinFooterButtonLink() {
     if (theContent != null && isFieldMissing("skinFooterButtonLink")) {
      String objectValue = theContent.getSkinFooterButtonLink();
       return objectValue;
     }
     return skinFooterButtonLink;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // skinFooterButtonAlign
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry skinFooterButtonAlignTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "skinFooterButtonAlign", true);
   protected String skinFooterButtonAlign = "centered";
   public void setSkinFooterButtonAlign(String[] v) {
     skinFooterButtonAlign = getMonolingualValue(skinFooterButtonAlignTFE, v);
   }
-  public String getAvailableSkinFooterButtonAlign() {
+  @Override
+public String getAvailableSkinFooterButtonAlign() {
     if (theContent != null && isFieldMissing("skinFooterButtonAlign")) {
      String objectValue = theContent.getSkinFooterButtonAlign();
       return objectValue;
     }
     return skinFooterButtonAlign;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // skinHeaderButtonLabel
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry skinHeaderButtonLabelTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "skinHeaderButtonLabel", true);
   protected String skinHeaderButtonLabel = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "skinHeaderButtonLabel", true).getDefaultTextString();
   protected HashMap<String,String> skinHeaderButtonLabelML = skinHeaderButtonLabelTFE.getDefaultTextMap();
@@ -1416,21 +1454,23 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
     skinHeaderButtonLabel = getMultilingualMainValue(skinHeaderButtonLabelTFE, v);
     skinHeaderButtonLabelML = getMultilingualMLMap(skinHeaderButtonLabelTFE, v);
   }
-  public String getAvailableSkinHeaderButtonLabel() {
+  @Override
+public String getAvailableSkinHeaderButtonLabel() {
     if (theContent != null && isFieldMissing("skinHeaderButtonLabel")) {
      String objectValue = theContent.getSkinHeaderButtonLabel();
       return objectValue;
     }
     return skinHeaderButtonLabel;
   }
-  
-    
-  public HashMap<String,String> getAllAvailableSkinHeaderButtonLabelML() {
+
+
+  @Override
+public HashMap<String,String> getAllAvailableSkinHeaderButtonLabelML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableSkinHeaderButtonLabelML());
     map.put(channel.getLanguage(),getAvailableSkinHeaderButtonLabel(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableSkinHeaderButtonLabelML() {
     if (theContent != null && isFieldMissing("skinHeaderButtonLabel")) {
       return theContent.getSkinHeaderButtonLabelML();
@@ -1455,34 +1495,36 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
     }
     return skinHeaderButtonLabelML == null ? "" : Util.getString(skinHeaderButtonLabelML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // skinHeaderButtonLink
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry skinHeaderButtonLinkTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "skinHeaderButtonLink", true);
   protected String skinHeaderButtonLink = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "skinHeaderButtonLink", true).getDefaultTextString();
   public void setSkinHeaderButtonLink(String[] v) {
     skinHeaderButtonLink = getMonolingualValue(skinHeaderButtonLinkTFE, v);
   }
-  public String getAvailableSkinHeaderButtonLink() {
+  @Override
+public String getAvailableSkinHeaderButtonLink() {
     if (theContent != null && isFieldMissing("skinHeaderButtonLink")) {
      String objectValue = theContent.getSkinHeaderButtonLink();
       return objectValue;
     }
     return skinHeaderButtonLink;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // skinHeaderSubText
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry skinHeaderSubTextTFE = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "skinHeaderSubText", true);
   protected String skinHeaderSubText = channel.getTypeFieldEntry(AbstractPortletSkinable.class, "skinHeaderSubText", true).getDefaultTextString();
   protected HashMap<String,String> skinHeaderSubTextML = skinHeaderSubTextTFE.getDefaultTextMap();
-  public void setSkinHeaderSubText(String[] v) {
+  @Override
+public void setSkinHeaderSubText(String[] v) {
     skinHeaderSubText = getMultilingualMainValue(skinHeaderSubTextTFE, v);
     skinHeaderSubTextML = getMultilingualMLMap(skinHeaderSubTextTFE, v);
   }
@@ -1493,21 +1535,24 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
     }
     return skinHeaderSubText;
   }
-  
-    
-  public HashMap<String,String> getAllAvailableSkinHeaderSubTextML() {
+
+
+  @Override
+public HashMap<String,String> getAllAvailableSkinHeaderSubTextML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableSkinHeaderSubTextML());
     map.put(channel.getLanguage(),getAvailableSkinHeaderSubText(channel.getLanguage()));
     return map;
   }
-  
-  public HashMap<String,String> getAvailableSkinHeaderSubTextML() {
+
+  @Override
+public HashMap<String,String> getAvailableSkinHeaderSubTextML() {
     if (theContent != null && isFieldMissing("skinHeaderSubText")) {
       return theContent.getSkinHeaderSubTextML();
     }
     return skinHeaderSubTextML;
   }
-  public String getAvailableSkinHeaderSubText(String lang) {
+  @Override
+public String getAvailableSkinHeaderSubText(String lang) {
     if (theContent != null) {
       if (lang.equals(channel.getLanguage())) {
       	if (!Util.isSameContent(skinHeaderSubText, channel.getTypeFieldEntry(AbstractPortletSkinable.class, "skinHeaderSubText", true).getDefaultTextString())) {
@@ -1525,10 +1570,10 @@ public class EditAbstractPortletSkinableHandler extends com.jalios.jcms.portlet.
     }
     return skinHeaderSubTextML == null ? "" : Util.getString(skinHeaderSubTextML.get(lang), "");
   }
-  
- 
-   
- 
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // ZM0171yaDgWpBOHQ+sxJPg==

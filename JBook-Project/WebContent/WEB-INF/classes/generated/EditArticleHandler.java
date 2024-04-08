@@ -1,129 +1,123 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
+
+
+import java.util.HashMap;
+import java.util.List;
+
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
+import com.jalios.jcms.handler.EditPublicationHandler;
 import com.jalios.util.Util;
-import custom.*;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditArticleHandler extends EditPublicationHandler {
-   
+
   protected Article theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return Article.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpArticle  
+  // validateBeforeOpArticle
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     {
       List<com.jalios.jcms.Content> list = processDataIds("relatedContents",__relatedContentsStr,com.jalios.jcms.Content.class);
-      this.relatedContents = (com.jalios.jcms.Content[])list.toArray(new com.jalios.jcms.Content[0]);
+      this.relatedContents = list.toArray(new com.jalios.jcms.Content[0]);
     }
-    if (!validateUploadedFileDocument(getAvailableRelatedContents(),   fdauthor, getAvailableWorkspace())) {
-      return false;
-    }
-    if (!createUploadedFileDocument(getAvailableRelatedContents(),  fdauthor, getAvailableWorkspace())) {
+    if (!validateUploadedFileDocument(getAvailableRelatedContents(),   fdauthor, getAvailableWorkspace()) || !createUploadedFileDocument(getAvailableRelatedContents(),  fdauthor, getAvailableWorkspace())) {
       return false;
     }
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("summary".equals(field)) {
       return getAllAvailableSummaryML();
     }
-    
+
     if ("intro".equals(field)) {
       return getAllAvailableIntroML();
     }
-    
+
     if ("picture".equals(field)) {
       return getAllAvailablePictureML();
     }
-    
+
     if ("pictureAlt".equals(field)) {
       return getAllAvailablePictureAltML();
     }
-    
+
     if ("content".equals(field)) {
       return getAllAvailableContentML();
     }
-    
+
     if ("relatedContents".equals(field)) {
       return getAvailableRelatedContents();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     return super.getEnumValues(field);
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdateArticle  
+  // validateCommonCreateUpdateArticle
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdateArticle() {
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdateArticle()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdateArticle()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdateArticle()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdateArticle()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -132,7 +126,8 @@ public class EditArticleHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -141,7 +136,8 @@ public class EditArticleHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -150,7 +146,8 @@ public class EditArticleHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     Article obj = (Article)data;
     obj.setSummary(getAvailableSummary());
@@ -165,8 +162,9 @@ public class EditArticleHandler extends EditPublicationHandler {
     obj.setContentML(getAvailableContentML());
     obj.setRelatedContents(getAvailableRelatedContents());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof Article) {
       super.setId(v);
       theContent = (Article)publication;
@@ -175,11 +173,11 @@ public class EditArticleHandler extends EditPublicationHandler {
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // summary
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry summaryTFE = channel.getTypeFieldEntry(Article.class, "summary", true);
   protected String summary = channel.getTypeFieldEntry(Article.class, "summary", true).getDefaultTextString();
   protected HashMap<String,String> summaryML = summaryTFE.getDefaultTextMap();
@@ -194,14 +192,14 @@ public class EditArticleHandler extends EditPublicationHandler {
     }
     return summary;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailableSummaryML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableSummaryML());
     map.put(channel.getLanguage(),getAvailableSummary(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableSummaryML() {
     if (theContent != null && isFieldMissing("summary")) {
       return theContent.getSummaryML();
@@ -226,11 +224,11 @@ public class EditArticleHandler extends EditPublicationHandler {
     }
     return summaryML == null ? "" : Util.getString(summaryML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // intro
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry introTFE = channel.getTypeFieldEntry(Article.class, "intro", true);
   protected String intro = channel.getTypeFieldEntry(Article.class, "intro", true).getDefaultTextString();
   protected HashMap<String,String> introML = introTFE.getDefaultTextMap();
@@ -245,14 +243,14 @@ public class EditArticleHandler extends EditPublicationHandler {
     }
     return intro;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailableIntroML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableIntroML());
     map.put(channel.getLanguage(),getAvailableIntro(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableIntroML() {
     if (theContent != null && isFieldMissing("intro")) {
       return theContent.getIntroML();
@@ -277,11 +275,11 @@ public class EditArticleHandler extends EditPublicationHandler {
     }
     return introML == null ? "" : Util.getString(introML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // picture
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry pictureTFE = channel.getTypeFieldEntry(Article.class, "picture", true);
   protected String picture = channel.getTypeFieldEntry(Article.class, "picture", true).getDefaultTextString();
   protected HashMap<String,String> pictureML = pictureTFE.getDefaultTextMap();
@@ -296,14 +294,14 @@ public class EditArticleHandler extends EditPublicationHandler {
     }
     return picture;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailablePictureML() {
     HashMap<String,String> map = Util.getHashMap(getAvailablePictureML());
     map.put(channel.getLanguage(),getAvailablePicture(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailablePictureML() {
     if (theContent != null && isFieldMissing("picture")) {
       return theContent.getPictureML();
@@ -328,11 +326,11 @@ public class EditArticleHandler extends EditPublicationHandler {
     }
     return pictureML == null ? "" : Util.getString(pictureML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // pictureAlt
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry pictureAltTFE = channel.getTypeFieldEntry(Article.class, "pictureAlt", true);
   protected String pictureAlt = channel.getTypeFieldEntry(Article.class, "pictureAlt", true).getDefaultTextString();
   protected HashMap<String,String> pictureAltML = pictureAltTFE.getDefaultTextMap();
@@ -347,14 +345,14 @@ public class EditArticleHandler extends EditPublicationHandler {
     }
     return pictureAlt;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailablePictureAltML() {
     HashMap<String,String> map = Util.getHashMap(getAvailablePictureAltML());
     map.put(channel.getLanguage(),getAvailablePictureAlt(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailablePictureAltML() {
     if (theContent != null && isFieldMissing("pictureAlt")) {
       return theContent.getPictureAltML();
@@ -379,11 +377,11 @@ public class EditArticleHandler extends EditPublicationHandler {
     }
     return pictureAltML == null ? "" : Util.getString(pictureAltML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // content
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry contentTFE = channel.getTypeFieldEntry(Article.class, "content", true);
   protected String content = channel.getTypeFieldEntry(Article.class, "content", true).getDefaultTextString();
   protected HashMap<String,String> contentML = contentTFE.getDefaultTextMap();
@@ -398,14 +396,14 @@ public class EditArticleHandler extends EditPublicationHandler {
     }
     return content;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailableContentML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableContentML());
     map.put(channel.getLanguage(),getAvailableContent(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableContentML() {
     if (theContent != null && isFieldMissing("content")) {
       return theContent.getContentML();
@@ -430,11 +428,11 @@ public class EditArticleHandler extends EditPublicationHandler {
     }
     return contentML == null ? "" : Util.getString(contentML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // relatedContents
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry relatedContentsTFE = channel.getTypeFieldEntry(Article.class, "relatedContents", true);
   protected com.jalios.jcms.Content[] relatedContents = new com.jalios.jcms.Content[0];
   protected int relatedContentsAddCount = 0;
@@ -452,21 +450,21 @@ public class EditArticleHandler extends EditPublicationHandler {
     }
     return relatedContents;
   }
-  
-    
-  
+
+
+
   public void setRelatedContentsAddCount(int  v) {
     relatedContentsAddCount = v;
   }
-  
+
   public int getRelatedContentsCount() {
     int arraySize = Util.getSize(getAvailableRelatedContents());
     int res = 3 + arraySize + relatedContentsAddCount;
     return res;
   }
- 
-   
- 
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // gBH9rVg9d2EFZnTRwl4NSQ==

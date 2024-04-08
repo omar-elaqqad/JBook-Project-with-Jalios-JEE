@@ -1,41 +1,58 @@
 // This file has been automatically generated.
-   
+
 package generated;
- 
-import java.util.*;
- 
+
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
 import org.apache.oro.text.regex.Pattern;
 import org.apache.oro.text.regex.Perl5Compiler;
 import org.apache.oro.text.regex.Perl5Matcher;
-import org.hibernate.Hibernate;
- 
-import com.jalios.jcms.*;
-import com.jalios.jcms.db.*;
-import com.jalios.jcms.mashup.*;
-import com.jalios.jcms.wysiwyg.*;
-import com.jalios.util.*;
-import com.fasterxml.jackson.annotation.JsonIgnore; 
+
 import com.fasterxml.jackson.annotation.JsonProperty;
- 
+import com.jalios.jcms.Category;
+import com.jalios.jcms.ControllerStatus;
+import com.jalios.jcms.Data;
+import com.jalios.jcms.EnumerateFormReport;
+import com.jalios.jcms.FileDocument;
+import com.jalios.jcms.JcmsUtil;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeEntry;
+import com.jalios.jcms.TypeFieldEntry;
+import com.jalios.jcms.db.DBData;
+import com.jalios.jcms.db.HistorizedDBData;
+import com.jalios.jcms.mashup.ExportUtil;
+import com.jalios.jcms.mashup.ImportOptions;
+import com.jalios.jcms.mashup.ImportUtil;
+import com.jalios.jcms.wysiwyg.JHTMLUtils;
+import com.jalios.util.ObjectIntTreeMap;
+import com.jalios.util.TreeNode;
+import com.jalios.util.Util;
+
 @SuppressWarnings({"unchecked", "unused"})
-public  class DBComment extends com.jalios.jcmsplugin.dbcomment.AbstractDBComment 
-             implements 
+public  class DBComment extends com.jalios.jcmsplugin.dbcomment.AbstractDBComment
+             implements
                 com.jalios.jstore.Searchable
                , TreeNode
                , DBData
                , HistorizedDBData
 {
-  
+
   // ----------------------------------------------------------------------
   // CONSTRUCTORS
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   public DBComment() {}
- 
- 
- 
-  
-  
-  
+
+
+
+
+
+
   public DBComment(DBComment other) {
     super(other);
     name = other.name;
@@ -48,13 +65,14 @@ public  class DBComment extends com.jalios.jcmsplugin.dbcomment.AbstractDBCommen
     referer = other.referer;
     privateComment = other.privateComment;
   }
-  
+
   // ----------------------------------------------------------------------
   // Import / Export
   // ----------------------------------------------------------------------
-  public void importXml(org.jdom.Element elt, ImportOptions options) {
+  @Override
+public void importXml(org.jdom.Element elt, ImportOptions options) {
     super.importXml(elt, options);
-    
+
     setName(ImportUtil.parseFieldText(elt, "name"));
     setEmail(ImportUtil.parseFieldText(elt, "email"));
     setWebSite(ImportUtil.parseFieldText(elt, "webSite"));
@@ -63,21 +81,23 @@ public  class DBComment extends com.jalios.jcmsplugin.dbcomment.AbstractDBCommen
     setReferer(ImportUtil.parseFieldText(elt, "referer"));
     setPrivateComment(ImportUtil.parseFieldBoolean(elt, "privateComment"));
   }
-  
-  protected void importXmlFieldsWithReferences(org.jdom.Element elt, ImportOptions options) {
+
+  @Override
+protected void importXmlFieldsWithReferences(org.jdom.Element elt, ImportOptions options) {
     super.importXmlFieldsWithReferences(elt, options);
-      
+
     if (options.isSelfImport()) {
       setDescription(ImportUtil.parseFieldText(elt, "description"));
       setTargetContent(ImportUtil.parseSelfFieldData(elt, "targetContent", com.jalios.jcms.Publication.class));
     } else {
-    
+
     setDescription(ImportUtil.parseFieldWiki(elt, "description"));
     setTargetContent((com.jalios.jcms.Publication)ImportUtil.parseFieldData(elt, "targetContent"));
     }
   }
-  
-  public void exportXmlField(StringBuffer sb, int indentLevel) {
+
+  @Override
+public void exportXmlField(StringBuffer sb, int indentLevel) {
     super.exportXmlField(sb, indentLevel);
     sb.append(ExportUtil.exportField(indentLevel, "name", getName(), false, true));
     sb.append(ExportUtil.exportField(indentLevel, "email", getEmail(), false, true));
@@ -89,15 +109,16 @@ public  class DBComment extends com.jalios.jcmsplugin.dbcomment.AbstractDBCommen
     sb.append(ExportUtil.exportField(indentLevel, "referer", getReferer(), false, true));
     sb.append(ExportUtil.exportField(indentLevel, "privateComment", getPrivateComment()));
   }
-  
-  public Set<FileDocument> getDocumentLinkSet() {
+
+  @Override
+public Set<FileDocument> getDocumentLinkSet() {
     Set<FileDocument> docSet = super.getDocumentLinkSet();
     return docSet;
   }
-  
+
   // ----------------------------------------------------------------------
   // TYPE AND FIELD INFOS (static methods)
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   /**
    * Returns the TypeEntry bound to <code>DBComment</code>. <br>
    * @see com.jalios.jcms.Channel#getTypeEntry(Class)
@@ -128,93 +149,101 @@ public  class DBComment extends com.jalios.jcmsplugin.dbcomment.AbstractDBCommen
   }
   // ----------------------------------------------------------------------
   // FIELDs VALUE
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   /**
    * Gets the value of the given <code>int</code> field name for the current <code>DBComment</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>int</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public int getIntFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public int getIntFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getIntFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>int</code> field name for the current <code>DBComment</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>int</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setIntFieldValue(String fieldName, int value) throws NoSuchFieldException {
+  @Override
+public void setIntFieldValue(String fieldName, int value) throws NoSuchFieldException {
     super.setIntFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>long</code> field name for the current <code>DBComment</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>long</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public long getLongFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public long getLongFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getLongFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>long</code> field name for the current <code>DBComment</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>long</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setLongFieldValue(String fieldName, long value) throws NoSuchFieldException {
+  @Override
+public void setLongFieldValue(String fieldName, long value) throws NoSuchFieldException {
     super.setLongFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>double</code> field name for the current <code>DBComment</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>double</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public double getDoubleFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public double getDoubleFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getDoubleFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>double</code> field name for the current <code>DBComment</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>double</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setDoubleFieldValue(String fieldName, double value) throws NoSuchFieldException {
+  @Override
+public void setDoubleFieldValue(String fieldName, double value) throws NoSuchFieldException {
      super.setDoubleFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>boolean</code> field name for the current <code>DBComment</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>boolean</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public boolean getBooleanFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public boolean getBooleanFieldValue(String fieldName) throws NoSuchFieldException {
     if ("privateComment".equals(fieldName)) { return getPrivateComment(); }
     return super.getBooleanFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>boolean</code> field name for the current <code>DBComment</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>boolean</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setBooleanFieldValue(String fieldName, boolean value) throws NoSuchFieldException {
+  @Override
+public void setBooleanFieldValue(String fieldName, boolean value) throws NoSuchFieldException {
     if ("privateComment".equals(fieldName)) { setPrivateComment(value); return; }
     super.setBooleanFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>Category</code> field name for the current <code>Data</code>.
    * @param fieldName the field name from which to retrieve the field value.
@@ -222,7 +251,8 @@ public  class DBComment extends com.jalios.jcmsplugin.dbcomment.AbstractDBCommen
    * @return a <code>TreeSet</code> of <code>Category</code>
    * @throws NoSuchFieldException if the field was not found in the given <code>Data</code>.
    */
-  public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
+  @Override
+public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
     return super.getCategoryFieldValue(fieldName, mbr);
   }
   /**
@@ -231,12 +261,13 @@ public  class DBComment extends com.jalios.jcmsplugin.dbcomment.AbstractDBCommen
    * @param fieldName the field name from which to retrieve the field value.
    * @param lang the language (ISO-639 code) in which to retrieve the field value
    *        (used only for multilingual fields).
-   * @param useDefault whether to use the publication main language if the field value 
+   * @param useDefault whether to use the publication main language if the field value
    *        is not available in the requested language (used only for multilingual fields).
    * @return the <code>Object</code> field value
    * @throws NoSuchFieldException if the field was not found in the given <code>Publication</code>.
    */
-  public Object getFieldValue(String fieldName, String lang, boolean useDefault) throws NoSuchFieldException {
+  @Override
+public Object getFieldValue(String fieldName, String lang, boolean useDefault) throws NoSuchFieldException {
     if ("name".equals(fieldName)) { return getName(); }
     if ("email".equals(fieldName)) { return getEmail(); }
     if ("webSite".equals(fieldName)) { return getWebSite(); }
@@ -247,7 +278,7 @@ public  class DBComment extends com.jalios.jcmsplugin.dbcomment.AbstractDBCommen
     if ("referer".equals(fieldName)) { return getReferer(); }
     return super.getFieldValue(fieldName, lang, useDefault);
   }
-  
+
   /**
    * Sets the <code>Object</code> value of the given field name for this <code>DBComment</code>. <br>
    * Do not set <code>Category</code> fields, see {@link #setCategoryFieldValue(String, TreeSet)}.
@@ -255,11 +286,12 @@ public  class DBComment extends com.jalios.jcmsplugin.dbcomment.AbstractDBCommen
    * @param value the <code>Object</code> field value
    * @param lang the language (ISO-639 code) in which to retrieve the field value
    *        (used only for multilingual fields).
-   * 
+   *
    * @throws NoSuchFieldException if the field was not found in the given <code>Publication</code>.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setFieldValue(String fieldName, Object value, String lang) throws NoSuchFieldException {
+  @Override
+public void setFieldValue(String fieldName, Object value, String lang) throws NoSuchFieldException {
     if ("name".equals(fieldName)) { setName((String)value); return; }
     if ("email".equals(fieldName)) { setEmail((String)value); return; }
     if ("webSite".equals(fieldName)) { setWebSite((String)value); return; }
@@ -270,158 +302,164 @@ public  class DBComment extends com.jalios.jcmsplugin.dbcomment.AbstractDBCommen
     if ("referer".equals(fieldName)) { setReferer((String)value); return; }
     super.setFieldValue(fieldName, value, lang);
   }
-  
+
   // ----------------------------------------------------------------------
   // name
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String name = channel.getTypeFieldEntry(DBComment.class, "name", true).getDefaultTextString();
-  
-  public String getName() { return name; }
-  
+
+  @Override
+public String getName() { return name; }
+
   public void setName(String v) { name = v; }
-  
-  
-  
+
+
+
   public String getName(String lang) { return name; }
   public String getName(String lang, boolean useDefault) { return name; }
   // ----------------------------------------------------------------------
   // email
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String email = channel.getTypeFieldEntry(DBComment.class, "email", true).getDefaultTextString();
-  
-  public String getEmail() { return email; }
-  
+
+  @Override
+public String getEmail() { return email; }
+
   public void setEmail(String v) { email = v; }
-  
-  
-  
+
+
+
   public String getEmail(String lang) { return email; }
   public String getEmail(String lang, boolean useDefault) { return email; }
   // ----------------------------------------------------------------------
   // webSite
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String webSite = channel.getTypeFieldEntry(DBComment.class, "webSite", true).getDefaultTextString();
-  
+
   public String getWebSite() { return webSite; }
-  
+
   public void setWebSite(String v) { webSite = v; }
-  
-  
-  
+
+
+
   public String getWebSite(String lang) { return webSite; }
   public String getWebSite(String lang, boolean useDefault) { return webSite; }
   // ----------------------------------------------------------------------
   // description
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String description = channel.getTypeFieldEntry(DBComment.class, "description", true).getDefaultTextString();
-  
-  public String getDescription() { return description; }
-  
+
+  @Override
+public String getDescription() { return description; }
+
   public void setDescription(String v) { description = v; }
-  
-  
-  
+
+
+
   public String getDescription(String lang) { return description; }
   public String getDescription(String lang, boolean useDefault) { return description; }
   // ----------------------------------------------------------------------
   // targetContent
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   @JsonProperty
   protected transient com.jalios.jcms.Publication targetContent;
   protected transient String targetContentId;
-  
-  public com.jalios.jcms.Publication getTargetContent() { return targetContent; }
-  public void setTargetContent(com.jalios.jcms.Publication v) { 
+
+  @Override
+public com.jalios.jcms.Publication getTargetContent() { return targetContent; }
+  public void setTargetContent(com.jalios.jcms.Publication v) {
     targetContentId = null;
     targetContent = v;
   }
-  
-  public String getTargetContentId() { 
+
+  @Override
+public String getTargetContentId() {
     if (targetContent == null) {
       return targetContentId;
     }
-    return targetContent.getId(); 
+    return targetContent.getId();
   }
   public void setTargetContentId(String v) {
     targetContentId = v;
-    targetContent = channel.getData(com.jalios.jcms.Publication.class, v);   
+    targetContent = channel.getData(com.jalios.jcms.Publication.class, v);
   }
-  
-  
+
+
   // ----------------------------------------------------------------------
   // ipAddress
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String ipAddress = channel.getTypeFieldEntry(DBComment.class, "ipAddress", true).getDefaultTextString();
-  
+
   public String getIpAddress() { return ipAddress; }
-  
+
   public void setIpAddress(String v) { ipAddress = v; }
-  
-  
-  
+
+
+
   public String getIpAddress(String lang) { return ipAddress; }
   public String getIpAddress(String lang, boolean useDefault) { return ipAddress; }
   // ----------------------------------------------------------------------
   // userAgent
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String userAgent = channel.getTypeFieldEntry(DBComment.class, "userAgent", true).getDefaultTextString();
-  
+
   public String getUserAgent() { return userAgent; }
-  
+
   public void setUserAgent(String v) { userAgent = v; }
-  
-  
-  
+
+
+
   public String getUserAgent(String lang) { return userAgent; }
   public String getUserAgent(String lang, boolean useDefault) { return userAgent; }
   // ----------------------------------------------------------------------
   // referer
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String referer = channel.getTypeFieldEntry(DBComment.class, "referer", true).getDefaultTextString();
-  
+
   public String getReferer() { return referer; }
-  
+
   public void setReferer(String v) { referer = v; }
-  
-  
-  
+
+
+
   public String getReferer(String lang) { return referer; }
   public String getReferer(String lang, boolean useDefault) { return referer; }
   // ----------------------------------------------------------------------
   // privateComment
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean privateComment = false;
-  
-  public boolean getPrivateComment() { return privateComment; }
-  
+
+  @Override
+public boolean getPrivateComment() { return privateComment; }
+
   public void setPrivateComment(Boolean v) {
     privateComment = v == null ? false : v.booleanValue();
-  }  
-  
-  
-  
+  }
+
+
+
   public String getPrivateCommentLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "privateComment", true);
-    return privateComment ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return privateComment ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getPrivateCommentValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getPrivateCommentLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(DBComment.class, "privateComment", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getPrivateCommentReport(SortedSet<DBComment> set) {
@@ -431,17 +469,17 @@ public  class DBComment extends com.jalios.jcmsplugin.dbcomment.AbstractDBCommen
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getPrivateComment());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
-   
+  }
+
   // ----------------------------------------------------------------------
   // abstract
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   @Override
   public void setAbstract(String lang, String value) { setDescription(value); }
   @Override
@@ -460,7 +498,7 @@ public  class DBComment extends com.jalios.jcmsplugin.dbcomment.AbstractDBCommen
     }
     return new String[] {sb.toString()};
   }
-  
+
   @Override
   public String getAllWikiText() {
     StringBuffer sb = new StringBuffer(super.getAllWikiText());
@@ -470,7 +508,7 @@ public  class DBComment extends com.jalios.jcmsplugin.dbcomment.AbstractDBCommen
     }
     return sb.toString();
   }
-  
+
   @Override
   public String getAllWysiwygText() {
     StringBuffer sb = new StringBuffer(super.getAllWysiwygText());
@@ -482,7 +520,7 @@ public  class DBComment extends com.jalios.jcmsplugin.dbcomment.AbstractDBCommen
    // Wysiwyg fields
     return sb.toString();
   }
-  
+
   @Override
   public <T extends Data> TreeSet<T> getLinkDataSet(Class<T> clazz) {
     if (clazz == null) {
@@ -492,7 +530,7 @@ public  class DBComment extends com.jalios.jcmsplugin.dbcomment.AbstractDBCommen
     JcmsUtil.addData(set, clazz, getTargetContent());
     return set;
   }
-  
+
   // ----------------------------------------------------------------------
   // TreeNode implementation
   // ----------------------------------------------------------------------
@@ -500,13 +538,14 @@ public  class DBComment extends com.jalios.jcmsplugin.dbcomment.AbstractDBCommen
   public Collection<? extends TreeNode> getTreeChildren() {
     return getLinkIndexedDataSet(com.jalios.jcms.Publication.class, "parent");
   }
-  
-  public TreeNode getTreeParent() {
+
+  @Override
+public TreeNode getTreeParent() {
     return getTargetContent();
   }
   // ----------------------------------------------------------------------
   // DataController
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   static Pattern _emailPattern;
   static {
     try {
@@ -516,14 +555,14 @@ public  class DBComment extends com.jalios.jcmsplugin.dbcomment.AbstractDBCommen
       // Empty
     }
   }
-  
+
   public boolean checkPatternEmail() {
     if (Util.notEmpty(email) && !(new Perl5Matcher()).matches(email, _emailPattern)) {
-      return false; 
+      return false;
     }
     return true;
   }
-  
+
   static Pattern _webSitePattern;
   static {
     try {
@@ -533,21 +572,22 @@ public  class DBComment extends com.jalios.jcmsplugin.dbcomment.AbstractDBCommen
       // Empty
     }
   }
-  
+
   public boolean checkPatternWebSite() {
     if (Util.notEmpty(webSite) && !(new Perl5Matcher()).matches(webSite, _webSitePattern)) {
-      return false; 
+      return false;
     }
     return true;
   }
-  
-  public ControllerStatus checkIntegrity() {
-    
+
+  @Override
+public ControllerStatus checkIntegrity() {
+
     ControllerStatus status = super.checkIntegrity();
     if (status.hasFailed()) {
       return status;
     }
-    
+
     if (!Util.isValidEmail(email)) {
       status = new ControllerStatus();
       status.setProp("msg.edit.bad-email", channel.getTypeFieldLabel(this, "email"));
@@ -570,10 +610,11 @@ public  class DBComment extends com.jalios.jcmsplugin.dbcomment.AbstractDBCommen
     }
     return ControllerStatus.OK;
   }
-  
-  public Set<String> getExternalLinkSet() {
+
+  @Override
+public Set<String> getExternalLinkSet() {
     Set<String> set = super.getExternalLinkSet();
-   
+
     if (Util.notEmpty(webSite)) {
       set.add(webSite);
     }
@@ -584,15 +625,16 @@ public  class DBComment extends com.jalios.jcmsplugin.dbcomment.AbstractDBCommen
         it.remove();
       }
     }
-    
+
     return set;
   }
-  
+
   // ----------------------------------------------------------------------
   // WorkCopy
-  // ----------------------------------------------------------------------  
-  protected void prepareMergeCopy(Publication mergeCopy) {
-    super.prepareMergeCopy(mergeCopy);  
+  // ----------------------------------------------------------------------
+  @Override
+protected void prepareMergeCopy(Publication mergeCopy) {
+    super.prepareMergeCopy(mergeCopy);
     ((DBComment)mergeCopy).setName(getName());
     ((DBComment)mergeCopy).setEmail(getEmail());
     ((DBComment)mergeCopy).setWebSite(getWebSite());
@@ -603,7 +645,7 @@ public  class DBComment extends com.jalios.jcmsplugin.dbcomment.AbstractDBCommen
     ((DBComment)mergeCopy).setReferer(getReferer());
     ((DBComment)mergeCopy).setPrivateComment(getPrivateComment());
   }
-  @Override 
+  @Override
   public void performCreate(Member mbr, Map context) {
     name = Util.truncateVarchar(name);
     ipAddress = Util.truncateVarchar(ipAddress);
@@ -611,8 +653,8 @@ public  class DBComment extends com.jalios.jcmsplugin.dbcomment.AbstractDBCommen
     referer = Util.truncateVarchar(referer);
     super.performCreate(mbr, context);
   }
-  
-  @Override 
+
+  @Override
   public void performUpdate(Member mbr, Map context) {
     name = Util.truncateVarchar(name);
     ipAddress = Util.truncateVarchar(ipAddress);

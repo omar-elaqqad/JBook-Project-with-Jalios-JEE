@@ -1,38 +1,46 @@
 // This file has been automatically generated.
-   
+
 package generated;
- 
-import java.util.*;
- 
-import org.apache.oro.text.regex.Pattern;
-import org.apache.oro.text.regex.Perl5Compiler;
-import org.apache.oro.text.regex.Perl5Matcher;
-import org.hibernate.Hibernate;
- 
-import com.jalios.jcms.*;
-import com.jalios.jcms.db.*;
-import com.jalios.jcms.mashup.*;
-import com.jalios.jcms.wysiwyg.*;
-import com.jalios.util.*;
-import com.fasterxml.jackson.annotation.JsonIgnore; 
-import com.fasterxml.jackson.annotation.JsonProperty;
- 
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+import com.jalios.jcms.Category;
+import com.jalios.jcms.ControllerStatus;
+import com.jalios.jcms.Data;
+import com.jalios.jcms.EnumerateFormReport;
+import com.jalios.jcms.FileDocument;
+import com.jalios.jcms.JcmsUtil;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeEntry;
+import com.jalios.jcms.TypeFieldEntry;
+import com.jalios.jcms.mashup.ExportUtil;
+import com.jalios.jcms.mashup.ImportOptions;
+import com.jalios.jcms.mashup.ImportUtil;
+import com.jalios.jcms.wysiwyg.JHTMLUtils;
+import com.jalios.util.ObjectIntTreeMap;
+import com.jalios.util.Util;
+
 @SuppressWarnings({"unchecked", "unused"})
-public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal 
-             implements 
+public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
+             implements
                 com.jalios.jstore.Searchable
 {
-  
+
   // ----------------------------------------------------------------------
   // CONSTRUCTORS
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   public AbstractPortal() {}
- 
- 
- 
-  
-  
-  
+
+
+
+
+
+
   public AbstractPortal(AbstractPortal other) {
     super(other);
     pageTitle = other.pageTitle;
@@ -52,13 +60,14 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
     cssClasses = other.cssClasses;
     exactCategory = other.exactCategory;
   }
-  
+
   // ----------------------------------------------------------------------
   // Import / Export
   // ----------------------------------------------------------------------
-  public void importXml(org.jdom.Element elt, ImportOptions options) {
+  @Override
+public void importXml(org.jdom.Element elt, ImportOptions options) {
     super.importXml(elt, options);
-    
+
     setPageTitle(ImportUtil.parseFieldText(elt, "pageTitle"));
     setPageTitleML(ImportUtil.parseFieldTextML(elt, "pageTitleML"));
     setCssFile(ImportUtil.parseFieldText(elt, "cssFile"));
@@ -73,22 +82,24 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
     setCssClasses(ImportUtil.parseFieldText(elt, "cssClasses"));
     setExactCategory(ImportUtil.parseFieldBoolean(elt, "exactCategory"));
   }
-  
-  protected void importXmlFieldsWithReferences(org.jdom.Element elt, ImportOptions options) {
+
+  @Override
+protected void importXmlFieldsWithReferences(org.jdom.Element elt, ImportOptions options) {
     super.importXmlFieldsWithReferences(elt, options);
-      
+
     if (options.isSelfImport()) {
       setChild(ImportUtil.parseSelfFieldData(elt, "child", com.jalios.jcms.portlet.PortalElement.class));
       setDescription(ImportUtil.parseFieldText(elt, "description"));
       setDescriptionML(ImportUtil.parseFieldTextML(elt, "descriptionML"));
     } else {
-    
+
     setDescriptionML(ImportUtil.parseFieldWikiML(elt, "descriptionML"));
     setDescription(ImportUtil.parseFieldWiki(elt, "description"));
     }
   }
-  
-  public void exportXmlField(StringBuffer sb, int indentLevel) {
+
+  @Override
+public void exportXmlField(StringBuffer sb, int indentLevel) {
     super.exportXmlField(sb, indentLevel);
     sb.append(ExportUtil.exportField(indentLevel, "pageTitle", getPageTitle(), "pageTitleML", false, true));
     sb.append(ExportUtil.exportField(indentLevel, "pageTitleML", getPageTitleML(), true));
@@ -107,16 +118,17 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
     sb.append(ExportUtil.exportField(indentLevel, "cssClasses", getCssClasses(), false, true));
     sb.append(ExportUtil.exportField(indentLevel, "exactCategory", getExactCategory()));
   }
-  
-  public Set<FileDocument> getDocumentLinkSet() {
+
+  @Override
+public Set<FileDocument> getDocumentLinkSet() {
     Set<FileDocument> docSet = super.getDocumentLinkSet();
     JcmsUtil.addFileDocument(docSet, portletImage, portletImageML);
     return docSet;
   }
-  
+
   // ----------------------------------------------------------------------
   // TYPE AND FIELD INFOS (static methods)
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   /**
    * Returns the TypeEntry bound to <code>AbstractPortal</code>. <br>
    * @see com.jalios.jcms.Channel#getTypeEntry(Class)
@@ -147,95 +159,103 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
   }
   // ----------------------------------------------------------------------
   // FIELDs VALUE
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   /**
    * Gets the value of the given <code>int</code> field name for the current <code>AbstractPortal</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>int</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public int getIntFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public int getIntFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getIntFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>int</code> field name for the current <code>AbstractPortal</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>int</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setIntFieldValue(String fieldName, int value) throws NoSuchFieldException {
+  @Override
+public void setIntFieldValue(String fieldName, int value) throws NoSuchFieldException {
     super.setIntFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>long</code> field name for the current <code>AbstractPortal</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>long</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public long getLongFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public long getLongFieldValue(String fieldName) throws NoSuchFieldException {
     if ("invalidTime".equals(fieldName)) { return getInvalidTime(); }
     return super.getLongFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>long</code> field name for the current <code>AbstractPortal</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>long</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setLongFieldValue(String fieldName, long value) throws NoSuchFieldException {
+  @Override
+public void setLongFieldValue(String fieldName, long value) throws NoSuchFieldException {
     if ("invalidTime".equals(fieldName)) { setInvalidTime(value); return; }
     super.setLongFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>double</code> field name for the current <code>AbstractPortal</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>double</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public double getDoubleFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public double getDoubleFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getDoubleFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>double</code> field name for the current <code>AbstractPortal</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>double</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setDoubleFieldValue(String fieldName, double value) throws NoSuchFieldException {
+  @Override
+public void setDoubleFieldValue(String fieldName, double value) throws NoSuchFieldException {
      super.setDoubleFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>boolean</code> field name for the current <code>AbstractPortal</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>boolean</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public boolean getBooleanFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public boolean getBooleanFieldValue(String fieldName) throws NoSuchFieldException {
     if ("exactCategory".equals(fieldName)) { return getExactCategory(); }
     return super.getBooleanFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>boolean</code> field name for the current <code>AbstractPortal</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>boolean</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setBooleanFieldValue(String fieldName, boolean value) throws NoSuchFieldException {
+  @Override
+public void setBooleanFieldValue(String fieldName, boolean value) throws NoSuchFieldException {
     if ("exactCategory".equals(fieldName)) { setExactCategory(value); return; }
     super.setBooleanFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>Category</code> field name for the current <code>Data</code>.
    * @param fieldName the field name from which to retrieve the field value.
@@ -243,7 +263,8 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
    * @return a <code>TreeSet</code> of <code>Category</code>
    * @throws NoSuchFieldException if the field was not found in the given <code>Data</code>.
    */
-  public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
+  @Override
+public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
     return super.getCategoryFieldValue(fieldName, mbr);
   }
   /**
@@ -252,12 +273,13 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
    * @param fieldName the field name from which to retrieve the field value.
    * @param lang the language (ISO-639 code) in which to retrieve the field value
    *        (used only for multilingual fields).
-   * @param useDefault whether to use the publication main language if the field value 
+   * @param useDefault whether to use the publication main language if the field value
    *        is not available in the requested language (used only for multilingual fields).
    * @return the <code>Object</code> field value
    * @throws NoSuchFieldException if the field was not found in the given <code>Publication</code>.
    */
-  public Object getFieldValue(String fieldName, String lang, boolean useDefault) throws NoSuchFieldException {
+  @Override
+public Object getFieldValue(String fieldName, String lang, boolean useDefault) throws NoSuchFieldException {
     if ("pageTitle".equals(fieldName)) { return getPageTitle(lang, useDefault); }
     if ("child".equals(fieldName)) { return getChild(); }
     if ("cssFile".equals(fieldName)) { return getCssFile(); }
@@ -271,7 +293,7 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
     if ("cssClasses".equals(fieldName)) { return getCssClasses(); }
     return super.getFieldValue(fieldName, lang, useDefault);
   }
-  
+
   /**
    * Sets the <code>Object</code> value of the given field name for this <code>AbstractPortal</code>. <br>
    * Do not set <code>Category</code> fields, see {@link #setCategoryFieldValue(String, TreeSet)}.
@@ -279,11 +301,12 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
    * @param value the <code>Object</code> field value
    * @param lang the language (ISO-639 code) in which to retrieve the field value
    *        (used only for multilingual fields).
-   * 
+   *
    * @throws NoSuchFieldException if the field was not found in the given <code>Publication</code>.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setFieldValue(String fieldName, Object value, String lang) throws NoSuchFieldException {
+  @Override
+public void setFieldValue(String fieldName, Object value, String lang) throws NoSuchFieldException {
     if ("pageTitle".equals(fieldName)) { setPageTitle(lang,(String)value); return; }
     if ("child".equals(fieldName)) { setChild((com.jalios.jcms.portlet.PortalElement)value); return; }
     if ("cssFile".equals(fieldName)) { setCssFile((String)value); return; }
@@ -297,34 +320,39 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
     if ("cssClasses".equals(fieldName)) { setCssClasses((String)value); return; }
     super.setFieldValue(fieldName, value, lang);
   }
-  
+
   // ----------------------------------------------------------------------
   // pageTitle
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String pageTitle = channel.getTypeFieldEntry(AbstractPortal.class, "pageTitle", true).getDefaultTextString();
-  
+
   public String getPageTitle() { return pageTitle; }
-  
-  public void setPageTitle(String v) { pageTitle = v; }
-  
-  
-  
-  
+
+  @Override
+public void setPageTitle(String v) { pageTitle = v; }
+
+
+
+
   protected HashMap<String,String> pageTitleML = channel.getTypeFieldEntry(AbstractPortal.class, "pageTitle", true).getDefaultTextMap();
-  public String getPageTitle(String lang) { return (String)channel.getLangValue(lang, true, pageTitle, pageTitleML, getMainLanguage()); }
-  public String getPageTitle(String lang, boolean useDefault) { return (String)channel.getLangValue(lang, useDefault, pageTitle, pageTitleML, getMainLanguage()); }
-  public HashMap<String,String> getPageTitleML() { return pageTitleML; }
-  public void setPageTitleML(HashMap<String,String> v) { pageTitleML = v; }
-  
-  public String getPageTitleMLE() { 
+  @Override
+public String getPageTitle(String lang) { return channel.getLangValue(lang, true, pageTitle, pageTitleML, getMainLanguage()); }
+  @Override
+public String getPageTitle(String lang, boolean useDefault) { return channel.getLangValue(lang, useDefault, pageTitle, pageTitleML, getMainLanguage()); }
+  @Override
+public HashMap<String,String> getPageTitleML() { return pageTitleML; }
+  @Override
+public void setPageTitleML(HashMap<String,String> v) { pageTitleML = v; }
+
+  public String getPageTitleMLE() {
     return JcmsUtil.encodeMLE(getPageTitleML());
   }
-  
+
   public void setPageTitleMLE(String v) {
     setPageTitleML(JcmsUtil.decodeMLE(v));
   }
-  
+
   public void setPageTitle(String lang, String value) {
     if (channel.getLanguage().equals(lang)) {
       pageTitle = value;
@@ -339,34 +367,38 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
   }
   // ----------------------------------------------------------------------
   // child
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  com.jalios.jcms.portlet.PortalElement child;
-  
-  public com.jalios.jcms.portlet.PortalElement getChild() { return child; }
-  
-  public void setChild(com.jalios.jcms.portlet.PortalElement v) { child = v; }
-  
-  
-  
+
+  @Override
+public com.jalios.jcms.portlet.PortalElement getChild() { return child; }
+
+  @Override
+public void setChild(com.jalios.jcms.portlet.PortalElement v) { child = v; }
+
+
+
   // ----------------------------------------------------------------------
   // cssFile
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String cssFile = channel.getTypeFieldEntry(AbstractPortal.class, "cssFile", true).getDefaultTextString();
-  
-  public String getCssFile() { return cssFile; }
-  
-  public void setCssFile(String v) { cssFile = v; }
-  
-  
-  
+
+  @Override
+public String getCssFile() { return cssFile; }
+
+  @Override
+public void setCssFile(String v) { cssFile = v; }
+
+
+
   public String getCssFile(String lang) { return cssFile; }
   public String getCssFile(String lang, boolean useDefault) { return cssFile; }
-  private static String[] cssFileValues;  
+  private static String[] cssFileValues;
   private static String[] cssFileLabels;
   private static Map<String, String[]> cssFileLabelsMap;
-  
+
   public static String[] getCssFileValues() {
     if(cssFileValues == null) {
       setCssFileValues(channel.getTypeFieldEntry(AbstractPortal.class, "cssFile", true).getEnumerateValues());
@@ -396,9 +428,9 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
   }
   public static String[] getCssFileLabels(String userLang) {
     Map<String, String[]> cssFileLabelMap = getCssFileLabelsMap();
-    String[] labels = (String[])cssFileLabelMap.get(userLang);
+    String[] labels = cssFileLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])cssFileLabelMap.get(channel.getLanguage());
+      labels = cssFileLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -421,8 +453,8 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
     }
     return getCssFileLabel(value, channel.getLanguage());
   }
-  
-  public static String getCssFileLabel(String value) {    
+
+  public static String getCssFileLabel(String value) {
     String[] cssFileLabels = getCssFileLabels();
     if (false) {
     }
@@ -441,40 +473,45 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getCssFile());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // description
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String description = channel.getTypeFieldEntry(AbstractPortal.class, "description", true).getDefaultTextString();
-  
+
   public String getDescription() { return description; }
-  
-  public void setDescription(String v) { description = v; }
-  
-  
-  
-  
+
+  @Override
+public void setDescription(String v) { description = v; }
+
+
+
+
   protected HashMap<String,String> descriptionML = channel.getTypeFieldEntry(AbstractPortal.class, "description", true).getDefaultTextMap();
-  public String getDescription(String lang) { return (String)channel.getLangValue(lang, true, description, descriptionML, getMainLanguage()); }
-  public String getDescription(String lang, boolean useDefault) { return (String)channel.getLangValue(lang, useDefault, description, descriptionML, getMainLanguage()); }
-  public HashMap<String,String> getDescriptionML() { return descriptionML; }
-  public void setDescriptionML(HashMap<String,String> v) { descriptionML = v; }
-  
-  public String getDescriptionMLE() { 
+  @Override
+public String getDescription(String lang) { return channel.getLangValue(lang, true, description, descriptionML, getMainLanguage()); }
+  @Override
+public String getDescription(String lang, boolean useDefault) { return channel.getLangValue(lang, useDefault, description, descriptionML, getMainLanguage()); }
+  @Override
+public HashMap<String,String> getDescriptionML() { return descriptionML; }
+  @Override
+public void setDescriptionML(HashMap<String,String> v) { descriptionML = v; }
+
+  public String getDescriptionMLE() {
     return JcmsUtil.encodeMLE(getDescriptionML());
   }
-  
+
   public void setDescriptionMLE(String v) {
     setDescriptionML(JcmsUtil.decodeMLE(v));
   }
-  
+
   public void setDescription(String lang, String value) {
     if (channel.getLanguage().equals(lang)) {
       description = value;
@@ -489,31 +526,36 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
   }
   // ----------------------------------------------------------------------
   // portletImage
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String portletImage = channel.getTypeFieldEntry(AbstractPortal.class, "portletImage", true).getDefaultTextString();
-  
+
   public String getPortletImage() { return portletImage; }
-  
-  public void setPortletImage(String v) { portletImage = v; }
-  
-  
-  
-  
+
+  @Override
+public void setPortletImage(String v) { portletImage = v; }
+
+
+
+
   protected HashMap<String,String> portletImageML = channel.getTypeFieldEntry(AbstractPortal.class, "portletImage", true).getDefaultTextMap();
-  public String getPortletImage(String lang) { return (String)channel.getLangValue(lang, true, portletImage, portletImageML, getMainLanguage()); }
-  public String getPortletImage(String lang, boolean useDefault) { return (String)channel.getLangValue(lang, useDefault, portletImage, portletImageML, getMainLanguage()); }
-  public HashMap<String,String> getPortletImageML() { return portletImageML; }
-  public void setPortletImageML(HashMap<String,String> v) { portletImageML = v; }
-  
-  public String getPortletImageMLE() { 
+  @Override
+public String getPortletImage(String lang) { return channel.getLangValue(lang, true, portletImage, portletImageML, getMainLanguage()); }
+  @Override
+public String getPortletImage(String lang, boolean useDefault) { return channel.getLangValue(lang, useDefault, portletImage, portletImageML, getMainLanguage()); }
+  @Override
+public HashMap<String,String> getPortletImageML() { return portletImageML; }
+  @Override
+public void setPortletImageML(HashMap<String,String> v) { portletImageML = v; }
+
+  public String getPortletImageMLE() {
     return JcmsUtil.encodeMLE(getPortletImageML());
   }
-  
+
   public void setPortletImageMLE(String v) {
     setPortletImageML(JcmsUtil.decodeMLE(v));
   }
-  
+
   public void setPortletImage(String lang, String value) {
     if (channel.getLanguage().equals(lang)) {
       portletImage = value;
@@ -528,22 +570,24 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
   }
   // ----------------------------------------------------------------------
   // cacheType
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String cacheType = channel.getTypeFieldEntry(AbstractPortal.class, "cacheType", true).getDefaultTextString();
-  
-  public String getCacheType() { return cacheType; }
-  
-  public void setCacheType(String v) { cacheType = v; }
-  
-  
-  
+
+  @Override
+public String getCacheType() { return cacheType; }
+
+  @Override
+public void setCacheType(String v) { cacheType = v; }
+
+
+
   public String getCacheType(String lang) { return cacheType; }
   public String getCacheType(String lang, boolean useDefault) { return cacheType; }
-  private static String[] cacheTypeValues;  
+  private static String[] cacheTypeValues;
   private static String[] cacheTypeLabels;
   private static Map<String, String[]> cacheTypeLabelsMap;
-  
+
   public static String[] getCacheTypeValues() {
     if(cacheTypeValues == null) {
       setCacheTypeValues(channel.getTypeFieldEntry(AbstractPortal.class, "cacheType", true).getEnumerateValues());
@@ -573,9 +617,9 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
   }
   public static String[] getCacheTypeLabels(String userLang) {
     Map<String, String[]> cacheTypeLabelMap = getCacheTypeLabelsMap();
-    String[] labels = (String[])cacheTypeLabelMap.get(userLang);
+    String[] labels = cacheTypeLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])cacheTypeLabelMap.get(channel.getLanguage());
+      labels = cacheTypeLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -613,8 +657,8 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
     }
     return getCacheTypeLabel(value, channel.getLanguage());
   }
-  
-  public static String getCacheTypeLabel(String value) {    
+
+  public static String getCacheTypeLabel(String value) {
     String[] cacheTypeLabels = getCacheTypeLabels();
     if (false) {
     }
@@ -648,31 +692,33 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getCacheType());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // cacheSensibility
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String cacheSensibility = channel.getTypeFieldEntry(AbstractPortal.class, "cacheSensibility", true).getDefaultTextString();
-  
-  public String getCacheSensibility() { return cacheSensibility; }
-  
-  public void setCacheSensibility(String v) { cacheSensibility = v; }
-  
-  
-  
+
+  @Override
+public String getCacheSensibility() { return cacheSensibility; }
+
+  @Override
+public void setCacheSensibility(String v) { cacheSensibility = v; }
+
+
+
   public String getCacheSensibility(String lang) { return cacheSensibility; }
   public String getCacheSensibility(String lang, boolean useDefault) { return cacheSensibility; }
-  private static String[] cacheSensibilityValues;  
+  private static String[] cacheSensibilityValues;
   private static String[] cacheSensibilityLabels;
   private static Map<String, String[]> cacheSensibilityLabelsMap;
-  
+
   public static String[] getCacheSensibilityValues() {
     if(cacheSensibilityValues == null) {
       setCacheSensibilityValues(channel.getTypeFieldEntry(AbstractPortal.class, "cacheSensibility", true).getEnumerateValues());
@@ -702,9 +748,9 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
   }
   public static String[] getCacheSensibilityLabels(String userLang) {
     Map<String, String[]> cacheSensibilityLabelMap = getCacheSensibilityLabelsMap();
-    String[] labels = (String[])cacheSensibilityLabelMap.get(userLang);
+    String[] labels = cacheSensibilityLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])cacheSensibilityLabelMap.get(channel.getLanguage());
+      labels = cacheSensibilityLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -730,8 +776,8 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
     }
     return getCacheSensibilityLabel(value, channel.getLanguage());
   }
-  
-  public static String getCacheSensibilityLabel(String value) {    
+
+  public static String getCacheSensibilityLabel(String value) {
     String[] cacheSensibilityLabels = getCacheSensibilityLabels();
     if (false) {
     }
@@ -753,31 +799,33 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getCacheSensibility());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // invalidClass
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String[] invalidClass;
-  
-  public String[] getInvalidClass() { return invalidClass; }
-  
-  public void setInvalidClass(String[] v) { invalidClass = v; }
-  
-  
-  
+
+  @Override
+public String[] getInvalidClass() { return invalidClass; }
+
+  @Override
+public void setInvalidClass(String[] v) { invalidClass = v; }
+
+
+
   public String[] getInvalidClass(String lang) { return invalidClass; }
   public String[] getInvalidClass(String lang, boolean useDefault) { return invalidClass; }
-  private static String[] invalidClassValues;  
+  private static String[] invalidClassValues;
   private static String[] invalidClassLabels;
   private static Map<String, String[]> invalidClassLabelsMap;
-  
+
   public static String[] getInvalidClassValues() {
     if(invalidClassValues == null) {
       setInvalidClassValues(channel.getTypeFieldEntry(AbstractPortal.class, "invalidClass", true).getEnumerateValues());
@@ -807,9 +855,9 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
   }
   public static String[] getInvalidClassLabels(String userLang) {
     Map<String, String[]> invalidClassLabelMap = getInvalidClassLabelsMap();
-    String[] labels = (String[])invalidClassLabelMap.get(userLang);
+    String[] labels = invalidClassLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])invalidClassLabelMap.get(channel.getLanguage());
+      labels = invalidClassLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -835,8 +883,8 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
     }
     return getInvalidClassLabel(value, channel.getLanguage());
   }
-  
-  public static String getInvalidClassLabel(String value) {    
+
+  public static String getInvalidClassLabel(String value) {
     String[] invalidClassLabels = getInvalidClassLabels();
     if (false) {
     }
@@ -866,37 +914,41 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // invalidTime
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  long invalidTime = 60;
-  
-  public long getInvalidTime() { return invalidTime; }
-  
-  public void setInvalidTime(long v) { invalidTime = v; }
-  
-  
-  
+
+  @Override
+public long getInvalidTime() { return invalidTime; }
+
+  @Override
+public void setInvalidTime(long v) { invalidTime = v; }
+
+
+
   // ----------------------------------------------------------------------
   // behaviorCopy
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String behaviorCopy = channel.getTypeFieldEntry(AbstractPortal.class, "behaviorCopy", true).getDefaultTextString();
-  
-  public String getBehaviorCopy() { return behaviorCopy; }
-  
-  public void setBehaviorCopy(String v) { behaviorCopy = v; }
-  
-  
-  
+
+  @Override
+public String getBehaviorCopy() { return behaviorCopy; }
+
+  @Override
+public void setBehaviorCopy(String v) { behaviorCopy = v; }
+
+
+
   public String getBehaviorCopy(String lang) { return behaviorCopy; }
   public String getBehaviorCopy(String lang, boolean useDefault) { return behaviorCopy; }
-  private static String[] behaviorCopyValues;  
+  private static String[] behaviorCopyValues;
   private static String[] behaviorCopyLabels;
   private static Map<String, String[]> behaviorCopyLabelsMap;
-  
+
   public static String[] getBehaviorCopyValues() {
     if(behaviorCopyValues == null) {
       setBehaviorCopyValues(channel.getTypeFieldEntry(AbstractPortal.class, "behaviorCopy", true).getEnumerateValues());
@@ -926,9 +978,9 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
   }
   public static String[] getBehaviorCopyLabels(String userLang) {
     Map<String, String[]> behaviorCopyLabelMap = getBehaviorCopyLabelsMap();
-    String[] labels = (String[])behaviorCopyLabelMap.get(userLang);
+    String[] labels = behaviorCopyLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])behaviorCopyLabelMap.get(channel.getLanguage());
+      labels = behaviorCopyLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -954,8 +1006,8 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
     }
     return getBehaviorCopyLabel(value, channel.getLanguage());
   }
-  
-  public static String getBehaviorCopyLabel(String value) {    
+
+  public static String getBehaviorCopyLabel(String value) {
     String[] behaviorCopyLabels = getBehaviorCopyLabels();
     if (false) {
     }
@@ -977,66 +1029,72 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getBehaviorCopy());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // cssId
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String cssId = channel.getTypeFieldEntry(AbstractPortal.class, "cssId", true).getDefaultTextString();
-  
-  public String getCssId() { return cssId; }
-  
-  public void setCssId(String v) { cssId = v; }
-  
-  
-  
+
+  @Override
+public String getCssId() { return cssId; }
+
+  @Override
+public void setCssId(String v) { cssId = v; }
+
+
+
   public String getCssId(String lang) { return cssId; }
   public String getCssId(String lang, boolean useDefault) { return cssId; }
   // ----------------------------------------------------------------------
   // cssClasses
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String cssClasses = channel.getTypeFieldEntry(AbstractPortal.class, "cssClasses", true).getDefaultTextString();
-  
-  public String getCssClasses() { return cssClasses; }
-  
-  public void setCssClasses(String v) { cssClasses = v; }
-  
-  
-  
+
+  @Override
+public String getCssClasses() { return cssClasses; }
+
+  @Override
+public void setCssClasses(String v) { cssClasses = v; }
+
+
+
   public String getCssClasses(String lang) { return cssClasses; }
   public String getCssClasses(String lang, boolean useDefault) { return cssClasses; }
   // ----------------------------------------------------------------------
   // exactCategory
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean exactCategory = false;
-  
-  public boolean getExactCategory() { return exactCategory; }
-  
-  public void setExactCategory(boolean v) { exactCategory = v; }
-  
-  
-  
+
+  @Override
+public boolean getExactCategory() { return exactCategory; }
+
+  @Override
+public void setExactCategory(boolean v) { exactCategory = v; }
+
+
+
   public String getExactCategoryLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "exactCategory", true);
-    return exactCategory ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return exactCategory ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getExactCategoryValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getExactCategoryLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(AbstractPortal.class, "exactCategory", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getExactCategoryReport(SortedSet<AbstractPortal> set) {
@@ -1046,17 +1104,17 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getExactCategory());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
-   
+  }
+
   // ----------------------------------------------------------------------
   // abstract
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   @Override
   public void setAbstract(String lang, String value) { setDescription(lang, value); }
   @Override
@@ -1065,36 +1123,36 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
   public String getAbstract(String lang, boolean useDefault) { return getDescription(lang, useDefault); }
   @Override
   public HashMap<String,String> getAbstractML() { return getDescriptionML(); }
-   
+
   // ----------------------------------------------------------------------
   // Data image
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   @Override
   public String getDataImage() {
     String _img = portletImage;
     if (Util.notEmpty(_img)) {
       return _img;
     }
-  
+
     return super.getDataImage();
   }
-  
+
   @Override
   public String getDataImage(String lang, boolean useDefault) {
     String _img = getPortletImage(lang, useDefault);
     if (Util.notEmpty(_img)) {
       return _img;
-    }  
-  
+    }
+
     return super.getDataImage(lang, useDefault);
   }
-  
+
   @Override
   public String[] getSearchStrings() {
     StringBuffer sb = new StringBuffer(super.getSearchStrings()[0]);
     sb.ensureCapacity(500 * (0 + 4 + 0 + 0 + 0 + 0) );
     if (description != null) {
-      sb.append(description); sb.append(' '); 
+      sb.append(description); sb.append(' ');
     }
     if (descriptionML != null) {
       for (String str : descriptionML.values()) {
@@ -1104,7 +1162,7 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
       }
     }
     if (pageTitle != null) {
-      sb.append(pageTitle); sb.append(' '); 
+      sb.append(pageTitle); sb.append(' ');
     }
     if (pageTitleML != null) {
       for (String str : pageTitleML.values()) {
@@ -1114,7 +1172,7 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
       }
     }
     if (portletImage != null) {
-      sb.append(portletImage); sb.append(' '); 
+      sb.append(portletImage); sb.append(' ');
     }
     if (portletImageML != null) {
       for (String str : portletImageML.values()) {
@@ -1124,7 +1182,7 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
       }
     }
     if (title != null) {
-      sb.append(title); sb.append(' '); 
+      sb.append(title); sb.append(' ');
     }
     if (titleML != null) {
       for (String str : titleML.values()) {
@@ -1135,13 +1193,13 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
     }
     return new String[] {sb.toString()};
   }
-  
+
   @Override
   public String getAllWikiText() {
     StringBuffer sb = new StringBuffer(super.getAllWikiText());
     sb.ensureCapacity(500 * (0 + 1 + 0 + 0 + 0 + 0) );
     if (description != null && !JHTMLUtils.isJHTML(null, description)) {
-      sb.append(description); sb.append(' '); 
+      sb.append(description); sb.append(' ');
     }
     if (descriptionML != null) {
       for (String str : descriptionML.values()) {
@@ -1152,14 +1210,14 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
     }
     return sb.toString();
   }
-  
+
   @Override
   public String getAllWysiwygText() {
     StringBuffer sb = new StringBuffer(super.getAllWysiwygText());
     sb.ensureCapacity(500 * (0 + 0 + 0 + 0 + 0 + 0) );
     // Wiki fields containing JHTML
     if (description != null && JHTMLUtils.isJHTML(null, description)) {
-      sb.append(description); sb.append(' '); 
+      sb.append(description); sb.append(' ');
     }
     if (descriptionML != null) {
       for (String str : descriptionML.values()) {
@@ -1171,7 +1229,7 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
    // Wysiwyg fields
     return sb.toString();
   }
-  
+
   @Override
   public <T extends Data> TreeSet<T> getLinkDataSet(Class<T> clazz) {
     if (clazz == null) {
@@ -1183,23 +1241,25 @@ public abstract class AbstractPortal extends com.jalios.jcms.portlet.Portal
   }
   // ----------------------------------------------------------------------
   // DataController
-  // ----------------------------------------------------------------------  
-  public ControllerStatus checkIntegrity() {
-    
+  // ----------------------------------------------------------------------
+  @Override
+public ControllerStatus checkIntegrity() {
+
     ControllerStatus status = super.checkIntegrity();
     if (status.hasFailed()) {
       return status;
     }
-    
+
     return ControllerStatus.OK;
   }
-  
-  
+
+
   // ----------------------------------------------------------------------
   // WorkCopy
-  // ----------------------------------------------------------------------  
-  protected void prepareMergeCopy(Publication mergeCopy) {
-    super.prepareMergeCopy(mergeCopy);  
+  // ----------------------------------------------------------------------
+  @Override
+protected void prepareMergeCopy(Publication mergeCopy) {
+    super.prepareMergeCopy(mergeCopy);
     ((AbstractPortal)mergeCopy).setPageTitle(getPageTitle());
     ((AbstractPortal)mergeCopy).setPageTitleML(JcmsUtil.getMergedMLMap(getPageTitleML(), ((AbstractPortal)mergeCopy).getPageTitleML()));
     ((AbstractPortal)mergeCopy).setChild(getChild());

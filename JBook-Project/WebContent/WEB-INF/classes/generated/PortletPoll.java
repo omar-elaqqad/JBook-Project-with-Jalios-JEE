@@ -1,84 +1,95 @@
 // This file has been automatically generated.
-   
+
 package generated;
- 
-import java.util.*;
- 
-import org.apache.oro.text.regex.Pattern;
-import org.apache.oro.text.regex.Perl5Compiler;
-import org.apache.oro.text.regex.Perl5Matcher;
-import org.hibernate.Hibernate;
- 
-import com.jalios.jcms.*;
-import com.jalios.jcms.db.*;
-import com.jalios.jcms.mashup.*;
-import com.jalios.jcms.wysiwyg.*;
-import com.jalios.util.*;
-import com.fasterxml.jackson.annotation.JsonIgnore; 
-import com.fasterxml.jackson.annotation.JsonProperty;
- 
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+import com.jalios.jcms.Category;
+import com.jalios.jcms.ControllerStatus;
+import com.jalios.jcms.Data;
+import com.jalios.jcms.EnumerateFormReport;
+import com.jalios.jcms.FileDocument;
+import com.jalios.jcms.JcmsUtil;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeEntry;
+import com.jalios.jcms.TypeFieldEntry;
+import com.jalios.jcms.mashup.ExportUtil;
+import com.jalios.jcms.mashup.ImportOptions;
+import com.jalios.jcms.mashup.ImportUtil;
+import com.jalios.util.ObjectIntTreeMap;
+import com.jalios.util.Util;
+
 @SuppressWarnings({"unchecked", "unused"})
-public  class PortletPoll extends generated.AbstractPortletSkinable 
-             implements 
+public  class PortletPoll extends generated.AbstractPortletSkinable
+             implements
                 com.jalios.jstore.Searchable
 {
-  
+
   // ----------------------------------------------------------------------
   // CONSTRUCTORS
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   public PortletPoll() {}
- 
- 
+
+
   public PortletPoll(AbstractPortletSkinable other) {
     super(other);
   }
- 
-  
-  
-  
+
+
+
+
   public PortletPoll(PortletPoll other) {
     super(other);
     hideWhenNoResults = other.hideWhenNoResults;
     poll = other.poll;
     refineWorkspace = other.refineWorkspace;
   }
-  
+
   // ----------------------------------------------------------------------
   // Import / Export
   // ----------------------------------------------------------------------
-  public void importXml(org.jdom.Element elt, ImportOptions options) {
+  @Override
+public void importXml(org.jdom.Element elt, ImportOptions options) {
     super.importXml(elt, options);
-    
+
     setHideWhenNoResults(ImportUtil.parseFieldBoolean(elt, "hideWhenNoResults"));
     setRefineWorkspace(ImportUtil.parseFieldText(elt, "refineWorkspace"));
   }
-  
-  protected void importXmlFieldsWithReferences(org.jdom.Element elt, ImportOptions options) {
+
+  @Override
+protected void importXmlFieldsWithReferences(org.jdom.Element elt, ImportOptions options) {
     super.importXmlFieldsWithReferences(elt, options);
-      
+
     if (options.isSelfImport()) {
       setPoll(ImportUtil.parseSelfFieldData(elt, "poll", generated.Poll.class));
     } else {
-    
+
     setPoll((generated.Poll)ImportUtil.parseFieldData(elt, "poll"));
     }
   }
-  
-  public void exportXmlField(StringBuffer sb, int indentLevel) {
+
+  @Override
+public void exportXmlField(StringBuffer sb, int indentLevel) {
     super.exportXmlField(sb, indentLevel);
     sb.append(ExportUtil.exportField(indentLevel, "hideWhenNoResults", getHideWhenNoResults()));
     sb.append(ExportUtil.exportField(indentLevel, "poll", getPoll()));
     sb.append(ExportUtil.exportField(indentLevel, "refineWorkspace", getRefineWorkspace(), false, true));
   }
-  
-  public Set<FileDocument> getDocumentLinkSet() {
+
+  @Override
+public Set<FileDocument> getDocumentLinkSet() {
     Set<FileDocument> docSet = super.getDocumentLinkSet();
     return docSet;
   }
-  
+
   // ----------------------------------------------------------------------
   // TYPE AND FIELD INFOS (static methods)
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   /**
    * Returns the TypeEntry bound to <code>PortletPoll</code>. <br>
    * @see com.jalios.jcms.Channel#getTypeEntry(Class)
@@ -109,93 +120,101 @@ public  class PortletPoll extends generated.AbstractPortletSkinable
   }
   // ----------------------------------------------------------------------
   // FIELDs VALUE
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   /**
    * Gets the value of the given <code>int</code> field name for the current <code>PortletPoll</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>int</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public int getIntFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public int getIntFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getIntFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>int</code> field name for the current <code>PortletPoll</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>int</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setIntFieldValue(String fieldName, int value) throws NoSuchFieldException {
+  @Override
+public void setIntFieldValue(String fieldName, int value) throws NoSuchFieldException {
     super.setIntFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>long</code> field name for the current <code>PortletPoll</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>long</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public long getLongFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public long getLongFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getLongFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>long</code> field name for the current <code>PortletPoll</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>long</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setLongFieldValue(String fieldName, long value) throws NoSuchFieldException {
+  @Override
+public void setLongFieldValue(String fieldName, long value) throws NoSuchFieldException {
     super.setLongFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>double</code> field name for the current <code>PortletPoll</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>double</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public double getDoubleFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public double getDoubleFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getDoubleFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>double</code> field name for the current <code>PortletPoll</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>double</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setDoubleFieldValue(String fieldName, double value) throws NoSuchFieldException {
+  @Override
+public void setDoubleFieldValue(String fieldName, double value) throws NoSuchFieldException {
      super.setDoubleFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>boolean</code> field name for the current <code>PortletPoll</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>boolean</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public boolean getBooleanFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public boolean getBooleanFieldValue(String fieldName) throws NoSuchFieldException {
     if ("hideWhenNoResults".equals(fieldName)) { return getHideWhenNoResults(); }
     return super.getBooleanFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>boolean</code> field name for the current <code>PortletPoll</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>boolean</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setBooleanFieldValue(String fieldName, boolean value) throws NoSuchFieldException {
+  @Override
+public void setBooleanFieldValue(String fieldName, boolean value) throws NoSuchFieldException {
     if ("hideWhenNoResults".equals(fieldName)) { setHideWhenNoResults(value); return; }
     super.setBooleanFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>Category</code> field name for the current <code>Data</code>.
    * @param fieldName the field name from which to retrieve the field value.
@@ -203,7 +222,8 @@ public  class PortletPoll extends generated.AbstractPortletSkinable
    * @return a <code>TreeSet</code> of <code>Category</code>
    * @throws NoSuchFieldException if the field was not found in the given <code>Data</code>.
    */
-  public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
+  @Override
+public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
     return super.getCategoryFieldValue(fieldName, mbr);
   }
   /**
@@ -212,17 +232,18 @@ public  class PortletPoll extends generated.AbstractPortletSkinable
    * @param fieldName the field name from which to retrieve the field value.
    * @param lang the language (ISO-639 code) in which to retrieve the field value
    *        (used only for multilingual fields).
-   * @param useDefault whether to use the publication main language if the field value 
+   * @param useDefault whether to use the publication main language if the field value
    *        is not available in the requested language (used only for multilingual fields).
    * @return the <code>Object</code> field value
    * @throws NoSuchFieldException if the field was not found in the given <code>Publication</code>.
    */
-  public Object getFieldValue(String fieldName, String lang, boolean useDefault) throws NoSuchFieldException {
+  @Override
+public Object getFieldValue(String fieldName, String lang, boolean useDefault) throws NoSuchFieldException {
     if ("poll".equals(fieldName)) { return getPoll(); }
     if ("refineWorkspace".equals(fieldName)) { return getRefineWorkspace(); }
     return super.getFieldValue(fieldName, lang, useDefault);
   }
-  
+
   /**
    * Sets the <code>Object</code> value of the given field name for this <code>PortletPoll</code>. <br>
    * Do not set <code>Category</code> fields, see {@link #setCategoryFieldValue(String, TreeSet)}.
@@ -230,41 +251,42 @@ public  class PortletPoll extends generated.AbstractPortletSkinable
    * @param value the <code>Object</code> field value
    * @param lang the language (ISO-639 code) in which to retrieve the field value
    *        (used only for multilingual fields).
-   * 
+   *
    * @throws NoSuchFieldException if the field was not found in the given <code>Publication</code>.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setFieldValue(String fieldName, Object value, String lang) throws NoSuchFieldException {
+  @Override
+public void setFieldValue(String fieldName, Object value, String lang) throws NoSuchFieldException {
     if ("poll".equals(fieldName)) { setPoll((generated.Poll)value); return; }
     if ("refineWorkspace".equals(fieldName)) { setRefineWorkspace((String)value); return; }
     super.setFieldValue(fieldName, value, lang);
   }
-  
+
   // ----------------------------------------------------------------------
   // hideWhenNoResults
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean hideWhenNoResults = false;
-  
+
   public boolean getHideWhenNoResults() { return hideWhenNoResults; }
-  
+
   public void setHideWhenNoResults(boolean v) { hideWhenNoResults = v; }
-  
-  
-  
+
+
+
   public String getHideWhenNoResultsLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "hideWhenNoResults", true);
-    return hideWhenNoResults ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return hideWhenNoResults ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getHideWhenNoResultsValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getHideWhenNoResultsLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(PortletPoll.class, "hideWhenNoResults", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getHideWhenNoResultsReport(SortedSet<PortletPoll> set) {
@@ -274,43 +296,43 @@ public  class PortletPoll extends generated.AbstractPortletSkinable
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getHideWhenNoResults());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // poll
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  generated.Poll poll;
-  
+
   public generated.Poll getPoll() { return poll; }
-  
+
   public void setPoll(generated.Poll v) { poll = v; }
-  
-  
-  
+
+
+
   // ----------------------------------------------------------------------
   // refineWorkspace
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String refineWorkspace = channel.getTypeFieldEntry(PortletPoll.class, "refineWorkspace", true).getDefaultTextString();
-  
+
   public String getRefineWorkspace() { return refineWorkspace; }
-  
+
   public void setRefineWorkspace(String v) { refineWorkspace = v; }
-  
-  
-  
+
+
+
   public String getRefineWorkspace(String lang) { return refineWorkspace; }
   public String getRefineWorkspace(String lang, boolean useDefault) { return refineWorkspace; }
-  private static String[] refineWorkspaceValues;  
+  private static String[] refineWorkspaceValues;
   private static String[] refineWorkspaceLabels;
   private static Map<String, String[]> refineWorkspaceLabelsMap;
-  
+
   public static String[] getRefineWorkspaceValues() {
     if(refineWorkspaceValues == null) {
       setRefineWorkspaceValues(channel.getTypeFieldEntry(PortletPoll.class, "refineWorkspace", true).getEnumerateValues());
@@ -340,9 +362,9 @@ public  class PortletPoll extends generated.AbstractPortletSkinable
   }
   public static String[] getRefineWorkspaceLabels(String userLang) {
     Map<String, String[]> refineWorkspaceLabelMap = getRefineWorkspaceLabelsMap();
-    String[] labels = (String[])refineWorkspaceLabelMap.get(userLang);
+    String[] labels = refineWorkspaceLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])refineWorkspaceLabelMap.get(channel.getLanguage());
+      labels = refineWorkspaceLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -365,8 +387,8 @@ public  class PortletPoll extends generated.AbstractPortletSkinable
     }
     return getRefineWorkspaceLabel(value, channel.getLanguage());
   }
-  
-  public static String getRefineWorkspaceLabel(String value) {    
+
+  public static String getRefineWorkspaceLabel(String value) {
     String[] refineWorkspaceLabels = getRefineWorkspaceLabels();
     if (false) {
     }
@@ -385,17 +407,17 @@ public  class PortletPoll extends generated.AbstractPortletSkinable
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getRefineWorkspace());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
-   
+  }
+
   // ----------------------------------------------------------------------
   // abstract
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   @Override
   public void setAbstract(String lang, String value) { setDescription(lang, value); }
   @Override
@@ -404,36 +426,36 @@ public  class PortletPoll extends generated.AbstractPortletSkinable
   public String getAbstract(String lang, boolean useDefault) { return getDescription(lang, useDefault); }
   @Override
   public HashMap<String,String> getAbstractML() { return getDescriptionML(); }
-   
+
   // ----------------------------------------------------------------------
   // Data image
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   @Override
   public String getDataImage() {
     String _img = portletImage;
     if (Util.notEmpty(_img)) {
       return _img;
     }
-  
+
     return super.getDataImage();
   }
-  
+
   @Override
   public String getDataImage(String lang, boolean useDefault) {
     String _img = getPortletImage(lang, useDefault);
     if (Util.notEmpty(_img)) {
       return _img;
-    }  
-  
+    }
+
     return super.getDataImage(lang, useDefault);
   }
-  
+
   @Override
   public String[] getSearchStrings() {
     StringBuffer sb = new StringBuffer(super.getSearchStrings()[0]);
     sb.ensureCapacity(500 * (0 + 1 + 0 + 0 + 0 + 0) );
     if (title != null) {
-      sb.append(title); sb.append(' '); 
+      sb.append(title); sb.append(' ');
     }
     if (titleML != null) {
       for (String str : titleML.values()) {
@@ -444,14 +466,14 @@ public  class PortletPoll extends generated.AbstractPortletSkinable
     }
     return new String[] {sb.toString()};
   }
-  
+
   @Override
   public String getAllWikiText() {
     StringBuffer sb = new StringBuffer(super.getAllWikiText());
     sb.ensureCapacity(500 * (0 + 0 + 0 + 0 + 0 + 0) );
     return sb.toString();
   }
-  
+
   @Override
   public String getAllWysiwygText() {
     StringBuffer sb = new StringBuffer(super.getAllWysiwygText());
@@ -460,7 +482,7 @@ public  class PortletPoll extends generated.AbstractPortletSkinable
    // Wysiwyg fields
     return sb.toString();
   }
-  
+
   @Override
   public <T extends Data> TreeSet<T> getLinkDataSet(Class<T> clazz) {
     if (clazz == null) {
@@ -473,14 +495,15 @@ public  class PortletPoll extends generated.AbstractPortletSkinable
   }
   // ----------------------------------------------------------------------
   // DataController
-  // ----------------------------------------------------------------------  
-  public ControllerStatus checkIntegrity() {
-    
+  // ----------------------------------------------------------------------
+  @Override
+public ControllerStatus checkIntegrity() {
+
     ControllerStatus status = super.checkIntegrity();
     if (status.hasFailed()) {
       return status;
     }
-    
+
     if (Util.isEmpty(refineWorkspace)) {
       status = new ControllerStatus();
       status.setProp("msg.edit.empty-field", channel.getTypeFieldLabel(this, "refineWorkspace"), null);
@@ -488,13 +511,14 @@ public  class PortletPoll extends generated.AbstractPortletSkinable
     }
     return ControllerStatus.OK;
   }
-  
-  
+
+
   // ----------------------------------------------------------------------
   // WorkCopy
-  // ----------------------------------------------------------------------  
-  protected void prepareMergeCopy(Publication mergeCopy) {
-    super.prepareMergeCopy(mergeCopy);  
+  // ----------------------------------------------------------------------
+  @Override
+protected void prepareMergeCopy(Publication mergeCopy) {
+    super.prepareMergeCopy(mergeCopy);
     ((PortletPoll)mergeCopy).setHideWhenNoResults(getHideWhenNoResults());
     ((PortletPoll)mergeCopy).setPoll(getPoll());
     ((PortletPoll)mergeCopy).setRefineWorkspace(getRefineWorkspace());

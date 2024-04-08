@@ -1,107 +1,102 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
+
+
+import java.util.HashMap;
+
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
 import com.jalios.util.Util;
-import custom.*;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditPortletIFrameHandler extends EditAbstractPortletSkinableHandler {
-   
+
   protected PortletIFrame theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return PortletIFrame.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpPortletIFrame  
+  // validateBeforeOpPortletIFrame
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("source".equals(field)) {
       return getAllAvailableSourceML();
     }
-    
+
     if ("frameWidth".equals(field)) {
       return getAvailableFrameWidth();
     }
-    
+
     if ("frameHeight".equals(field)) {
       return getAvailableFrameHeight();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     return super.getEnumValues(field);
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdatePortletIFrame  
+  // validateCommonCreateUpdatePortletIFrame
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdatePortletIFrame() {
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdatePortletIFrame()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdatePortletIFrame()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdatePortletIFrame()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdatePortletIFrame()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -110,7 +105,8 @@ public class EditPortletIFrameHandler extends EditAbstractPortletSkinableHandler
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -119,7 +115,8 @@ public class EditPortletIFrameHandler extends EditAbstractPortletSkinableHandler
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -128,7 +125,8 @@ public class EditPortletIFrameHandler extends EditAbstractPortletSkinableHandler
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     PortletIFrame obj = (PortletIFrame)data;
     obj.setSource(getAvailableSource());
@@ -136,8 +134,9 @@ public class EditPortletIFrameHandler extends EditAbstractPortletSkinableHandler
     obj.setFrameWidth(getAvailableFrameWidth());
     obj.setFrameHeight(getAvailableFrameHeight());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof PortletIFrame) {
       super.setId(v);
       theContent = (PortletIFrame)publication;
@@ -146,11 +145,11 @@ public class EditPortletIFrameHandler extends EditAbstractPortletSkinableHandler
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // source
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry sourceTFE = channel.getTypeFieldEntry(PortletIFrame.class, "source", true);
   protected String source = channel.getTypeFieldEntry(PortletIFrame.class, "source", true).getDefaultTextString();
   protected HashMap<String,String> sourceML = sourceTFE.getDefaultTextMap();
@@ -165,14 +164,14 @@ public class EditPortletIFrameHandler extends EditAbstractPortletSkinableHandler
     }
     return source;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailableSourceML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableSourceML());
     map.put(channel.getLanguage(),getAvailableSource(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableSourceML() {
     if (theContent != null && isFieldMissing("source")) {
       return theContent.getSourceML();
@@ -197,11 +196,11 @@ public class EditPortletIFrameHandler extends EditAbstractPortletSkinableHandler
     }
     return sourceML == null ? "" : Util.getString(sourceML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // frameWidth
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry frameWidthTFE = channel.getTypeFieldEntry(PortletIFrame.class, "frameWidth", true);
   protected String frameWidth = channel.getTypeFieldEntry(PortletIFrame.class, "frameWidth", true).getDefaultTextString();
   public void setFrameWidth(String[] v) {
@@ -214,13 +213,13 @@ public class EditPortletIFrameHandler extends EditAbstractPortletSkinableHandler
     }
     return frameWidth;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // frameHeight
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry frameHeightTFE = channel.getTypeFieldEntry(PortletIFrame.class, "frameHeight", true);
   protected String frameHeight = channel.getTypeFieldEntry(PortletIFrame.class, "frameHeight", true).getDefaultTextString();
   public void setFrameHeight(String[] v) {
@@ -233,12 +232,12 @@ public class EditPortletIFrameHandler extends EditAbstractPortletSkinableHandler
     }
     return frameHeight;
   }
-  
-    
-  
- 
-   
- 
+
+
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // 21z7vmqpN/da+CZmTIyztw==

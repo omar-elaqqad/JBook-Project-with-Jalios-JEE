@@ -1,75 +1,72 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
-import com.jalios.util.Util;
-import custom.*;
+
+
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
+import com.jalios.jcms.handler.EditFormHandler;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditSignUpHandler extends EditFormHandler {
-   
+
   protected SignUp theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return SignUp.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpSignUp  
+  // validateBeforeOpSignUp
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getAvailableAuthor();
-    
-    
+
+
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("name".equals(field)) {
       return getAvailableName();
     }
-    
+
     if ("firstName".equals(field)) {
       return getAvailableFirstName();
     }
-    
+
     if ("email".equals(field)) {
       return getAvailableEmail();
     }
-    
+
     if ("salutation".equals(field)) {
       return getAvailableSalutation();
     }
-    
+
     if ("jobTitle".equals(field)) {
       return getAvailableJobTitle();
     }
-    
+
     if ("favoriteLogin".equals(field)) {
       return getAvailableFavoriteLogin();
     }
-    
+
     if ("message".equals(field)) {
       return getAvailableMessage();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     if ("salutation".equals(field)) {
       return SignUp.getSalutationValues();
     }
@@ -77,51 +74,47 @@ public class EditSignUpHandler extends EditFormHandler {
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     if ("salutation".equals(field)) {
       return SignUp.getSalutationLabels(userLang);
     }
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdateSignUp  
+  // validateCommonCreateUpdateSignUp
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdateSignUp() {
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdateSignUp()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdateSignUp()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdateSignUp()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdateSignUp()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -130,7 +123,8 @@ public class EditSignUpHandler extends EditFormHandler {
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -139,7 +133,8 @@ public class EditSignUpHandler extends EditFormHandler {
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -148,7 +143,8 @@ public class EditSignUpHandler extends EditFormHandler {
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     SignUp obj = (SignUp)data;
     obj.setName(getAvailableName());
@@ -159,8 +155,9 @@ public class EditSignUpHandler extends EditFormHandler {
     obj.setFavoriteLogin(getAvailableFavoriteLogin());
     obj.setMessage(getAvailableMessage());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof SignUp) {
       super.setId(v);
       theContent = (SignUp)publication;
@@ -169,11 +166,11 @@ public class EditSignUpHandler extends EditFormHandler {
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // name
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry nameTFE = channel.getTypeFieldEntry(SignUp.class, "name", true);
   protected String name = channel.getTypeFieldEntry(SignUp.class, "name", true).getDefaultTextString();
   public void setName(String[] v) {
@@ -186,13 +183,13 @@ public class EditSignUpHandler extends EditFormHandler {
     }
     return name;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // firstName
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry firstNameTFE = channel.getTypeFieldEntry(SignUp.class, "firstName", true);
   protected String firstName = channel.getTypeFieldEntry(SignUp.class, "firstName", true).getDefaultTextString();
   public void setFirstName(String[] v) {
@@ -205,13 +202,13 @@ public class EditSignUpHandler extends EditFormHandler {
     }
     return firstName;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // email
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry emailTFE = channel.getTypeFieldEntry(SignUp.class, "email", true);
   protected String email = channel.getTypeFieldEntry(SignUp.class, "email", true).getDefaultTextString();
   public void setEmail(String[] v) {
@@ -224,13 +221,13 @@ public class EditSignUpHandler extends EditFormHandler {
     }
     return email;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // salutation
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry salutationTFE = channel.getTypeFieldEntry(SignUp.class, "salutation", true);
   protected String salutation = channel.getTypeFieldEntry(SignUp.class, "salutation", true).getDefaultTextString();
   public void setSalutation(String[] v) {
@@ -243,13 +240,13 @@ public class EditSignUpHandler extends EditFormHandler {
     }
     return salutation;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // jobTitle
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry jobTitleTFE = channel.getTypeFieldEntry(SignUp.class, "jobTitle", true);
   protected String jobTitle = channel.getTypeFieldEntry(SignUp.class, "jobTitle", true).getDefaultTextString();
   public void setJobTitle(String[] v) {
@@ -262,13 +259,13 @@ public class EditSignUpHandler extends EditFormHandler {
     }
     return jobTitle;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // favoriteLogin
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry favoriteLoginTFE = channel.getTypeFieldEntry(SignUp.class, "favoriteLogin", true);
   protected String favoriteLogin = channel.getTypeFieldEntry(SignUp.class, "favoriteLogin", true).getDefaultTextString();
   public void setFavoriteLogin(String[] v) {
@@ -281,13 +278,13 @@ public class EditSignUpHandler extends EditFormHandler {
     }
     return favoriteLogin;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // message
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry messageTFE = channel.getTypeFieldEntry(SignUp.class, "message", true);
   protected String message = channel.getTypeFieldEntry(SignUp.class, "message", true).getDefaultTextString();
   public void setMessage(String[] v) {
@@ -300,17 +297,18 @@ public class EditSignUpHandler extends EditFormHandler {
     }
     return message;
   }
-  
-    
-  
- 
-    
-   
-  public boolean isNotifySubmit() {
+
+
+
+
+
+
+  @Override
+public boolean isNotifySubmit() {
     return true;
   }
-   
- 
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // E/ctQBn6qorGwt9Nsp16Yw==

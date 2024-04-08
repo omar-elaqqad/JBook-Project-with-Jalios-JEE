@@ -1,44 +1,51 @@
 // This file has been automatically generated.
-   
+
 package generated;
- 
-import java.util.*;
- 
-import org.apache.oro.text.regex.Pattern;
-import org.apache.oro.text.regex.Perl5Compiler;
-import org.apache.oro.text.regex.Perl5Matcher;
-import org.hibernate.Hibernate;
- 
-import com.jalios.jcms.*;
-import com.jalios.jcms.db.*;
-import com.jalios.jcms.mashup.*;
-import com.jalios.jcms.wysiwyg.*;
-import com.jalios.util.*;
-import com.fasterxml.jackson.annotation.JsonIgnore; 
-import com.fasterxml.jackson.annotation.JsonProperty;
- 
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+import com.jalios.jcms.Category;
+import com.jalios.jcms.ControllerStatus;
+import com.jalios.jcms.Data;
+import com.jalios.jcms.EnumerateFormReport;
+import com.jalios.jcms.FileDocument;
+import com.jalios.jcms.JcmsUtil;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeEntry;
+import com.jalios.jcms.TypeFieldEntry;
+import com.jalios.jcms.mashup.ExportUtil;
+import com.jalios.jcms.mashup.ImportOptions;
+import com.jalios.jcms.mashup.ImportUtil;
+import com.jalios.util.ObjectIntTreeMap;
+import com.jalios.util.Util;
+
 @SuppressWarnings({"unchecked", "unused"})
-public  class PortletQueryForeachDetail extends generated.PortletQueryForeach 
-             implements 
+public  class PortletQueryForeachDetail extends generated.PortletQueryForeach
+             implements
                 com.jalios.jstore.Searchable
 {
-  
+
   // ----------------------------------------------------------------------
   // CONSTRUCTORS
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   public PortletQueryForeachDetail() {}
- 
- 
+
+
   public PortletQueryForeachDetail(AbstractPortletSkinable other) {
     super(other);
   }
   public PortletQueryForeachDetail(PortletQueryForeach other) {
     super(other);
   }
- 
-  
-  
-  
+
+
+
+
   public PortletQueryForeachDetail(PortletQueryForeachDetail other) {
     super(other);
     showTitle = other.showTitle;
@@ -51,13 +58,14 @@ public  class PortletQueryForeachDetail extends generated.PortletQueryForeach
     showRights = other.showRights;
     showId = other.showId;
   }
-  
+
   // ----------------------------------------------------------------------
   // Import / Export
   // ----------------------------------------------------------------------
-  public void importXml(org.jdom.Element elt, ImportOptions options) {
+  @Override
+public void importXml(org.jdom.Element elt, ImportOptions options) {
     super.importXml(elt, options);
-    
+
     setShowTitle(ImportUtil.parseFieldBoolean(elt, "showTitle"));
     setShowAbstract(ImportUtil.parseFieldBoolean(elt, "showAbstract"));
     setShowAuthor(ImportUtil.parseFieldBoolean(elt, "showAuthor"));
@@ -68,17 +76,19 @@ public  class PortletQueryForeachDetail extends generated.PortletQueryForeach
     setShowRights(ImportUtil.parseFieldBoolean(elt, "showRights"));
     setShowId(ImportUtil.parseFieldBoolean(elt, "showId"));
   }
-  
-  protected void importXmlFieldsWithReferences(org.jdom.Element elt, ImportOptions options) {
+
+  @Override
+protected void importXmlFieldsWithReferences(org.jdom.Element elt, ImportOptions options) {
     super.importXmlFieldsWithReferences(elt, options);
-      
+
     if (options.isSelfImport()) {
     } else {
-    
+
     }
   }
-  
-  public void exportXmlField(StringBuffer sb, int indentLevel) {
+
+  @Override
+public void exportXmlField(StringBuffer sb, int indentLevel) {
     super.exportXmlField(sb, indentLevel);
     sb.append(ExportUtil.exportField(indentLevel, "showTitle", getShowTitle()));
     sb.append(ExportUtil.exportField(indentLevel, "showAbstract", getShowAbstract()));
@@ -90,15 +100,16 @@ public  class PortletQueryForeachDetail extends generated.PortletQueryForeach
     sb.append(ExportUtil.exportField(indentLevel, "showRights", getShowRights()));
     sb.append(ExportUtil.exportField(indentLevel, "showId", getShowId()));
   }
-  
-  public Set<FileDocument> getDocumentLinkSet() {
+
+  @Override
+public Set<FileDocument> getDocumentLinkSet() {
     Set<FileDocument> docSet = super.getDocumentLinkSet();
     return docSet;
   }
-  
+
   // ----------------------------------------------------------------------
   // TYPE AND FIELD INFOS (static methods)
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   /**
    * Returns the TypeEntry bound to <code>PortletQueryForeachDetail</code>. <br>
    * @see com.jalios.jcms.Channel#getTypeEntry(Class)
@@ -129,77 +140,84 @@ public  class PortletQueryForeachDetail extends generated.PortletQueryForeach
   }
   // ----------------------------------------------------------------------
   // FIELDs VALUE
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   /**
    * Gets the value of the given <code>int</code> field name for the current <code>PortletQueryForeachDetail</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>int</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public int getIntFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public int getIntFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getIntFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>int</code> field name for the current <code>PortletQueryForeachDetail</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>int</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setIntFieldValue(String fieldName, int value) throws NoSuchFieldException {
+  @Override
+public void setIntFieldValue(String fieldName, int value) throws NoSuchFieldException {
     super.setIntFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>long</code> field name for the current <code>PortletQueryForeachDetail</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>long</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public long getLongFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public long getLongFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getLongFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>long</code> field name for the current <code>PortletQueryForeachDetail</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>long</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setLongFieldValue(String fieldName, long value) throws NoSuchFieldException {
+  @Override
+public void setLongFieldValue(String fieldName, long value) throws NoSuchFieldException {
     super.setLongFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>double</code> field name for the current <code>PortletQueryForeachDetail</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>double</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public double getDoubleFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public double getDoubleFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getDoubleFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>double</code> field name for the current <code>PortletQueryForeachDetail</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>double</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setDoubleFieldValue(String fieldName, double value) throws NoSuchFieldException {
+  @Override
+public void setDoubleFieldValue(String fieldName, double value) throws NoSuchFieldException {
      super.setDoubleFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>boolean</code> field name for the current <code>PortletQueryForeachDetail</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>boolean</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public boolean getBooleanFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public boolean getBooleanFieldValue(String fieldName) throws NoSuchFieldException {
     if ("showTitle".equals(fieldName)) { return getShowTitle(); }
     if ("showAbstract".equals(fieldName)) { return getShowAbstract(); }
     if ("showAuthor".equals(fieldName)) { return getShowAuthor(); }
@@ -210,15 +228,16 @@ public  class PortletQueryForeachDetail extends generated.PortletQueryForeach
     if ("showId".equals(fieldName)) { return getShowId(); }
     return super.getBooleanFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>boolean</code> field name for the current <code>PortletQueryForeachDetail</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>boolean</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setBooleanFieldValue(String fieldName, boolean value) throws NoSuchFieldException {
+  @Override
+public void setBooleanFieldValue(String fieldName, boolean value) throws NoSuchFieldException {
     if ("showTitle".equals(fieldName)) { setShowTitle(value); return; }
     if ("showAbstract".equals(fieldName)) { setShowAbstract(value); return; }
     if ("showAuthor".equals(fieldName)) { setShowAuthor(value); return; }
@@ -229,7 +248,7 @@ public  class PortletQueryForeachDetail extends generated.PortletQueryForeach
     if ("showId".equals(fieldName)) { setShowId(value); return; }
     super.setBooleanFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>Category</code> field name for the current <code>Data</code>.
    * @param fieldName the field name from which to retrieve the field value.
@@ -237,7 +256,8 @@ public  class PortletQueryForeachDetail extends generated.PortletQueryForeach
    * @return a <code>TreeSet</code> of <code>Category</code>
    * @throws NoSuchFieldException if the field was not found in the given <code>Data</code>.
    */
-  public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
+  @Override
+public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
     return super.getCategoryFieldValue(fieldName, mbr);
   }
   /**
@@ -246,16 +266,17 @@ public  class PortletQueryForeachDetail extends generated.PortletQueryForeach
    * @param fieldName the field name from which to retrieve the field value.
    * @param lang the language (ISO-639 code) in which to retrieve the field value
    *        (used only for multilingual fields).
-   * @param useDefault whether to use the publication main language if the field value 
+   * @param useDefault whether to use the publication main language if the field value
    *        is not available in the requested language (used only for multilingual fields).
    * @return the <code>Object</code> field value
    * @throws NoSuchFieldException if the field was not found in the given <code>Publication</code>.
    */
-  public Object getFieldValue(String fieldName, String lang, boolean useDefault) throws NoSuchFieldException {
+  @Override
+public Object getFieldValue(String fieldName, String lang, boolean useDefault) throws NoSuchFieldException {
     if ("showDate".equals(fieldName)) { return getShowDate(); }
     return super.getFieldValue(fieldName, lang, useDefault);
   }
-  
+
   /**
    * Sets the <code>Object</code> value of the given field name for this <code>PortletQueryForeachDetail</code>. <br>
    * Do not set <code>Category</code> fields, see {@link #setCategoryFieldValue(String, TreeSet)}.
@@ -263,40 +284,41 @@ public  class PortletQueryForeachDetail extends generated.PortletQueryForeach
    * @param value the <code>Object</code> field value
    * @param lang the language (ISO-639 code) in which to retrieve the field value
    *        (used only for multilingual fields).
-   * 
+   *
    * @throws NoSuchFieldException if the field was not found in the given <code>Publication</code>.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setFieldValue(String fieldName, Object value, String lang) throws NoSuchFieldException {
+  @Override
+public void setFieldValue(String fieldName, Object value, String lang) throws NoSuchFieldException {
     if ("showDate".equals(fieldName)) { setShowDate((String)value); return; }
     super.setFieldValue(fieldName, value, lang);
   }
-  
+
   // ----------------------------------------------------------------------
   // showTitle
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean showTitle = true;
-  
+
   public boolean getShowTitle() { return showTitle; }
-  
+
   public void setShowTitle(boolean v) { showTitle = v; }
-  
-  
-  
+
+
+
   public String getShowTitleLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "showTitle", true);
-    return showTitle ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return showTitle ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getShowTitleValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getShowTitleLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(PortletQueryForeachDetail.class, "showTitle", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getShowTitleReport(SortedSet<PortletQueryForeachDetail> set) {
@@ -306,38 +328,38 @@ public  class PortletQueryForeachDetail extends generated.PortletQueryForeach
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getShowTitle());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // showAbstract
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean showAbstract = false;
-  
+
   public boolean getShowAbstract() { return showAbstract; }
-  
+
   public void setShowAbstract(boolean v) { showAbstract = v; }
-  
-  
-  
+
+
+
   public String getShowAbstractLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "showAbstract", true);
-    return showAbstract ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return showAbstract ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getShowAbstractValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getShowAbstractLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(PortletQueryForeachDetail.class, "showAbstract", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getShowAbstractReport(SortedSet<PortletQueryForeachDetail> set) {
@@ -347,38 +369,38 @@ public  class PortletQueryForeachDetail extends generated.PortletQueryForeach
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getShowAbstract());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // showAuthor
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean showAuthor = false;
-  
+
   public boolean getShowAuthor() { return showAuthor; }
-  
+
   public void setShowAuthor(boolean v) { showAuthor = v; }
-  
-  
-  
+
+
+
   public String getShowAuthorLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "showAuthor", true);
-    return showAuthor ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return showAuthor ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getShowAuthorValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getShowAuthorLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(PortletQueryForeachDetail.class, "showAuthor", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getShowAuthorReport(SortedSet<PortletQueryForeachDetail> set) {
@@ -388,38 +410,38 @@ public  class PortletQueryForeachDetail extends generated.PortletQueryForeach
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getShowAuthor());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // showCategories
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean showCategories = false;
-  
+
   public boolean getShowCategories() { return showCategories; }
-  
+
   public void setShowCategories(boolean v) { showCategories = v; }
-  
-  
-  
+
+
+
   public String getShowCategoriesLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "showCategories", true);
-    return showCategories ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return showCategories ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getShowCategoriesValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getShowCategoriesLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(PortletQueryForeachDetail.class, "showCategories", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getShowCategoriesReport(SortedSet<PortletQueryForeachDetail> set) {
@@ -429,31 +451,31 @@ public  class PortletQueryForeachDetail extends generated.PortletQueryForeach
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getShowCategories());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // showDate
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String showDate = channel.getTypeFieldEntry(PortletQueryForeachDetail.class, "showDate", true).getDefaultTextString();
-  
+
   public String getShowDate() { return showDate; }
-  
+
   public void setShowDate(String v) { showDate = v; }
-  
-  
-  
+
+
+
   public String getShowDate(String lang) { return showDate; }
   public String getShowDate(String lang, boolean useDefault) { return showDate; }
-  private static String[] showDateValues;  
+  private static String[] showDateValues;
   private static String[] showDateLabels;
   private static Map<String, String[]> showDateLabelsMap;
-  
+
   public static String[] getShowDateValues() {
     if(showDateValues == null) {
       setShowDateValues(channel.getTypeFieldEntry(PortletQueryForeachDetail.class, "showDate", true).getEnumerateValues());
@@ -483,9 +505,9 @@ public  class PortletQueryForeachDetail extends generated.PortletQueryForeach
   }
   public static String[] getShowDateLabels(String userLang) {
     Map<String, String[]> showDateLabelMap = getShowDateLabelsMap();
-    String[] labels = (String[])showDateLabelMap.get(userLang);
+    String[] labels = showDateLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])showDateLabelMap.get(channel.getLanguage());
+      labels = showDateLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -517,8 +539,8 @@ public  class PortletQueryForeachDetail extends generated.PortletQueryForeach
     }
     return getShowDateLabel(value, channel.getLanguage());
   }
-  
-  public static String getShowDateLabel(String value) {    
+
+  public static String getShowDateLabel(String value) {
     String[] showDateLabels = getShowDateLabels();
     if (false) {
     }
@@ -546,38 +568,38 @@ public  class PortletQueryForeachDetail extends generated.PortletQueryForeach
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getShowDate());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // showStatus
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean showStatus = false;
-  
+
   public boolean getShowStatus() { return showStatus; }
-  
+
   public void setShowStatus(boolean v) { showStatus = v; }
-  
-  
-  
+
+
+
   public String getShowStatusLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "showStatus", true);
-    return showStatus ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return showStatus ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getShowStatusValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getShowStatusLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(PortletQueryForeachDetail.class, "showStatus", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getShowStatusReport(SortedSet<PortletQueryForeachDetail> set) {
@@ -587,38 +609,38 @@ public  class PortletQueryForeachDetail extends generated.PortletQueryForeach
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getShowStatus());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // showType
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean showType = false;
-  
+
   public boolean getShowType() { return showType; }
-  
+
   public void setShowType(boolean v) { showType = v; }
-  
-  
-  
+
+
+
   public String getShowTypeLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "showType", true);
-    return showType ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return showType ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getShowTypeValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getShowTypeLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(PortletQueryForeachDetail.class, "showType", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getShowTypeReport(SortedSet<PortletQueryForeachDetail> set) {
@@ -628,38 +650,38 @@ public  class PortletQueryForeachDetail extends generated.PortletQueryForeach
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getShowType());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // showRights
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean showRights = false;
-  
+
   public boolean getShowRights() { return showRights; }
-  
+
   public void setShowRights(boolean v) { showRights = v; }
-  
-  
-  
+
+
+
   public String getShowRightsLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "showRights", true);
-    return showRights ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return showRights ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getShowRightsValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getShowRightsLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(PortletQueryForeachDetail.class, "showRights", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getShowRightsReport(SortedSet<PortletQueryForeachDetail> set) {
@@ -669,38 +691,38 @@ public  class PortletQueryForeachDetail extends generated.PortletQueryForeach
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getShowRights());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // showId
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  boolean showId = false;
-  
+
   public boolean getShowId() { return showId; }
-  
+
   public void setShowId(boolean v) { showId = v; }
-  
-  
-  
+
+
+
   public String getShowIdLabel(String lang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(this.getClass(), "showId", true);
-    return showId ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang); 
+    return showId ? tfe.getOnLabel(lang) : tfe.getOffLabel(lang);
   }
   public static String[] getShowIdValues() {
     return new String[]{ "true" , "false" };
   }
-  
+
   public static String[] getShowIdLabels(String userLang) {
     TypeFieldEntry tfe = channel.getTypeFieldEntry(PortletQueryForeachDetail.class, "showId", true);
-    String onLabel = (String) tfe.getOnLabel(userLang);
-    String offLabel = (String) tfe.getOffLabel(userLang);
-    
+    String onLabel = tfe.getOnLabel(userLang);
+    String offLabel = tfe.getOffLabel(userLang);
+
     return new String[]{ onLabel, offLabel };
   }
   public static EnumerateFormReport getShowIdReport(SortedSet<PortletQueryForeachDetail> set) {
@@ -710,17 +732,17 @@ public  class PortletQueryForeachDetail extends generated.PortletQueryForeach
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getShowId());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
-   
+  }
+
   // ----------------------------------------------------------------------
   // abstract
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   @Override
   public void setAbstract(String lang, String value) { setDescription(lang, value); }
   @Override
@@ -729,36 +751,36 @@ public  class PortletQueryForeachDetail extends generated.PortletQueryForeach
   public String getAbstract(String lang, boolean useDefault) { return getDescription(lang, useDefault); }
   @Override
   public HashMap<String,String> getAbstractML() { return getDescriptionML(); }
-   
+
   // ----------------------------------------------------------------------
   // Data image
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   @Override
   public String getDataImage() {
     String _img = portletImage;
     if (Util.notEmpty(_img)) {
       return _img;
     }
-  
+
     return super.getDataImage();
   }
-  
+
   @Override
   public String getDataImage(String lang, boolean useDefault) {
     String _img = getPortletImage(lang, useDefault);
     if (Util.notEmpty(_img)) {
       return _img;
-    }  
-  
+    }
+
     return super.getDataImage(lang, useDefault);
   }
-  
+
   @Override
   public String[] getSearchStrings() {
     StringBuffer sb = new StringBuffer(super.getSearchStrings()[0]);
     sb.ensureCapacity(500 * (0 + 1 + 0 + 0 + 0 + 0) );
     if (title != null) {
-      sb.append(title); sb.append(' '); 
+      sb.append(title); sb.append(' ');
     }
     if (titleML != null) {
       for (String str : titleML.values()) {
@@ -769,14 +791,14 @@ public  class PortletQueryForeachDetail extends generated.PortletQueryForeach
     }
     return new String[] {sb.toString()};
   }
-  
+
   @Override
   public String getAllWikiText() {
     StringBuffer sb = new StringBuffer(super.getAllWikiText());
     sb.ensureCapacity(500 * (0 + 0 + 0 + 0 + 0 + 0) );
     return sb.toString();
   }
-  
+
   @Override
   public String getAllWysiwygText() {
     StringBuffer sb = new StringBuffer(super.getAllWysiwygText());
@@ -785,7 +807,7 @@ public  class PortletQueryForeachDetail extends generated.PortletQueryForeach
    // Wysiwyg fields
     return sb.toString();
   }
-  
+
   @Override
   public <T extends Data> TreeSet<T> getLinkDataSet(Class<T> clazz) {
     if (clazz == null) {
@@ -799,23 +821,25 @@ public  class PortletQueryForeachDetail extends generated.PortletQueryForeach
   }
   // ----------------------------------------------------------------------
   // DataController
-  // ----------------------------------------------------------------------  
-  public ControllerStatus checkIntegrity() {
-    
+  // ----------------------------------------------------------------------
+  @Override
+public ControllerStatus checkIntegrity() {
+
     ControllerStatus status = super.checkIntegrity();
     if (status.hasFailed()) {
       return status;
     }
-    
+
     return ControllerStatus.OK;
   }
-  
-  
+
+
   // ----------------------------------------------------------------------
   // WorkCopy
-  // ----------------------------------------------------------------------  
-  protected void prepareMergeCopy(Publication mergeCopy) {
-    super.prepareMergeCopy(mergeCopy);  
+  // ----------------------------------------------------------------------
+  @Override
+protected void prepareMergeCopy(Publication mergeCopy) {
+    super.prepareMergeCopy(mergeCopy);
     ((PortletQueryForeachDetail)mergeCopy).setShowTitle(getShowTitle());
     ((PortletQueryForeachDetail)mergeCopy).setShowAbstract(getShowAbstract());
     ((PortletQueryForeachDetail)mergeCopy).setShowAuthor(getShowAuthor());

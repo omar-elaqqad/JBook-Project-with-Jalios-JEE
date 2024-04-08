@@ -1,84 +1,82 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
+
+
+import java.util.HashMap;
+
+import com.jalios.jcms.Data;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
+import com.jalios.jcms.handler.EditPublicationHandler;
 import com.jalios.util.Util;
-import custom.*;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditFaqEntryHandler extends EditPublicationHandler {
-   
+
   protected FaqEntry theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return FaqEntry.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpFaqEntry  
+  // validateBeforeOpFaqEntry
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     {
       Data data = processDataId("faq", __faqStr, generated.Faq.class);
-      if (data != null) { 
+      if (data != null) {
         faq = (generated.Faq)data;
       } else {
         isFaqValidated = Util.isEmpty(__faqStr);
       }
     }
-    if (!validateUploadedFileDocument(getAvailableFaq(),   fdauthor, getAvailableWorkspace())) {
-      return false;
-    }
-    if (!createUploadedFileDocument(getAvailableFaq(),  fdauthor, getAvailableWorkspace())) {
+    if (!validateUploadedFileDocument(getAvailableFaq(),   fdauthor, getAvailableWorkspace()) || !createUploadedFileDocument(getAvailableFaq(),  fdauthor, getAvailableWorkspace())) {
       return false;
     }
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("answer".equals(field)) {
       return getAllAvailableAnswerML();
     }
-    
+
     if ("faq".equals(field)) {
       return getAvailableFaq();
     }
-    
+
     if ("order".equals(field)) {
       return getAvailableOrder();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     return super.getEnumValues(field);
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdateFaqEntry  
+  // validateCommonCreateUpdateFaqEntry
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdateFaqEntry() {
     if (!isFaqValidated) {
@@ -91,39 +89,35 @@ public class EditFaqEntryHandler extends EditPublicationHandler {
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdateFaqEntry()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdateFaqEntry()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdateFaqEntry()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdateFaqEntry()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -132,7 +126,8 @@ public class EditFaqEntryHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -141,7 +136,8 @@ public class EditFaqEntryHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -150,7 +146,8 @@ public class EditFaqEntryHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     FaqEntry obj = (FaqEntry)data;
     obj.setAnswer(getAvailableAnswer());
@@ -158,8 +155,9 @@ public class EditFaqEntryHandler extends EditPublicationHandler {
     obj.setFaq(getAvailableFaq());
     obj.setOrder(getAvailableOrder());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof FaqEntry) {
       super.setId(v);
       theContent = (FaqEntry)publication;
@@ -168,11 +166,11 @@ public class EditFaqEntryHandler extends EditPublicationHandler {
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // answer
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry answerTFE = channel.getTypeFieldEntry(FaqEntry.class, "answer", true);
   protected String answer = channel.getTypeFieldEntry(FaqEntry.class, "answer", true).getDefaultTextString();
   protected HashMap<String,String> answerML = answerTFE.getDefaultTextMap();
@@ -187,14 +185,14 @@ public class EditFaqEntryHandler extends EditPublicationHandler {
     }
     return answer;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailableAnswerML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableAnswerML());
     map.put(channel.getLanguage(),getAvailableAnswer(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableAnswerML() {
     if (theContent != null && isFieldMissing("answer")) {
       return theContent.getAnswerML();
@@ -219,11 +217,11 @@ public class EditFaqEntryHandler extends EditPublicationHandler {
     }
     return answerML == null ? "" : Util.getString(answerML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // faq
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry faqTFE = channel.getTypeFieldEntry(FaqEntry.class, "faq", true);
   protected boolean isFaqValidated = true;
   protected generated.Faq faq;
@@ -238,13 +236,13 @@ public class EditFaqEntryHandler extends EditPublicationHandler {
     }
     return faq;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // order
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry orderTFE = channel.getTypeFieldEntry(FaqEntry.class, "order", true);
   protected boolean isOrderValidated = true;
   protected int order = 0;
@@ -262,12 +260,12 @@ public class EditFaqEntryHandler extends EditPublicationHandler {
     }
     return order;
   }
-  
-    
-  
- 
-   
- 
+
+
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // vjXKiNCP1SZuozFmtrdWNA==

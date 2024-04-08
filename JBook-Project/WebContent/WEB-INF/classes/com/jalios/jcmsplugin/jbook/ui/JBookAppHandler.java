@@ -52,19 +52,19 @@ public class JBookAppHandler extends QueryHandler {
 
 	private void initQuery() {
 		setTypes("generated.Book");
-		
+
 		setSort("title");
-		
+
 		setDateType("pdate");
 		if(showTopics) {
 			setExactCat(showTopics);
 		}
-				
+
 
 	}
 
 	private void initTopic() {
-		
+
 		Set<Category> catSet = getCategorySet("cids");
 
 		if (Util.isEmpty(catSet)) {
@@ -75,9 +75,9 @@ public class JBookAppHandler extends QueryHandler {
 		}
 
 		topic = Util.getFirst(catSet);
-		
 
-		showTopics = Util.isEmpty(getText())&& 
+
+		showTopics = Util.isEmpty(getText())&&
 				Util.isEmpty(getMids()) &&
 				getBeginDate()==null &&
 				getEndDate()==null;
@@ -133,11 +133,11 @@ public class JBookAppHandler extends QueryHandler {
 	}
 
 	private List<Category> getBreadCrumbCatList() {
-		
+
 		Category currentCat = getSelectedTopic();
-		
+
 		Category topicRoot = mgr.getTopicRoot();
-		
+
 		if (currentCat == null || currentCat == topicRoot) {
 			return Collections.emptyList();
 		}
@@ -149,8 +149,8 @@ public class JBookAppHandler extends QueryHandler {
 		return list;
 	}
 
-	
-	
+
+
 	public String getAppUrl() {
 		return "plugins/JBookPlugin/jsp/app/jbook.jsp";
 	}
@@ -168,7 +168,7 @@ public class JBookAppHandler extends QueryHandler {
 
 		return sb.toString();
 	}
-	
+
 	public String getAddBookUrl() {
 		  String params = "";
 		  Category topic = getSelectedTopic();
@@ -177,8 +177,8 @@ public class JBookAppHandler extends QueryHandler {
 		  }
 		  return "types/Book/editBookModal.jsp" + params;
 		}
-	
-	
+
+
 
 	@Override
 	public QueryResultSet getResultSet() {
@@ -231,9 +231,9 @@ public class JBookAppHandler extends QueryHandler {
 		}
 		return "types/Book/editBookModal.jsp?id=" + book.getId();
 	}
-	
-	// to filter the search 
-	
+
+	// to filter the search
+
 	public MemberSettings getMemberSettings() {
 		  Member mbr = channel.getMember(Util.getFirst(getMids()));
 		  MemberSettings settings = new MemberSettings()

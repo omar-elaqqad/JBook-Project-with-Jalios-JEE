@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<type name="Book" superclass="com.jalios.jcms.Content" reviewable="false" debatable="false" unitFieldEdition="true" audienced="false" categoryTab="true" readRightTab="true" updateRightTab="true" templateTab="true" workflowTab="true" advancedTab="true" database="true" hbm="true" authgroups="||" categories="">
+<type name="Book" superclass="com.jalios.jcmsplugin.jbook.data.AbstractBook" reviewable="false" debatable="false" unitFieldEdition="true" audienced="false" categoryTab="true" readRightTab="true" updateRightTab="true" templateTab="true" workflowTab="true" advancedTab="true" database="true" hbm="true" authgroups="||" categories="">
   <title ml="true">
     <label xml:lang="en">Title</label>
     <label xml:lang="fr">Titre</label>

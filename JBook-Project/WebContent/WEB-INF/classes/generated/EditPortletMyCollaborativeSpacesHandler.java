@@ -1,57 +1,53 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
-import com.jalios.util.Util;
-import custom.*;
+
+
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditPortletMyCollaborativeSpacesHandler extends EditAbstractPortletSkinableHandler {
-   
+
   protected PortletMyCollaborativeSpaces theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return PortletMyCollaborativeSpaces.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpPortletMyCollaborativeSpaces  
+  // validateBeforeOpPortletMyCollaborativeSpaces
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("depth".equals(field)) {
       return getAvailableDepth();
     }
-    
+
     if ("typologyFilter".equals(field)) {
       return getAvailableTypologyFilter();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     if ("typologyFilter".equals(field)) {
       return PortletMyCollaborativeSpaces.getTypologyFilterValues();
     }
@@ -59,14 +55,14 @@ public class EditPortletMyCollaborativeSpacesHandler extends EditAbstractPortlet
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     if ("typologyFilter".equals(field)) {
       return PortletMyCollaborativeSpaces.getTypologyFilterLabels(userLang);
     }
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdatePortletMyCollaborativeSpaces  
+  // validateCommonCreateUpdatePortletMyCollaborativeSpaces
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdatePortletMyCollaborativeSpaces() {
     if (!isDepthValidated) {
@@ -75,39 +71,35 @@ public class EditPortletMyCollaborativeSpacesHandler extends EditAbstractPortlet
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdatePortletMyCollaborativeSpaces()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdatePortletMyCollaborativeSpaces()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdatePortletMyCollaborativeSpaces()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdatePortletMyCollaborativeSpaces()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -116,7 +108,8 @@ public class EditPortletMyCollaborativeSpacesHandler extends EditAbstractPortlet
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -125,7 +118,8 @@ public class EditPortletMyCollaborativeSpacesHandler extends EditAbstractPortlet
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -134,14 +128,16 @@ public class EditPortletMyCollaborativeSpacesHandler extends EditAbstractPortlet
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     PortletMyCollaborativeSpaces obj = (PortletMyCollaborativeSpaces)data;
     obj.setDepth(getAvailableDepth());
     obj.setTypologyFilter(getAvailableTypologyFilter());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof PortletMyCollaborativeSpaces) {
       super.setId(v);
       theContent = (PortletMyCollaborativeSpaces)publication;
@@ -150,11 +146,11 @@ public class EditPortletMyCollaborativeSpacesHandler extends EditAbstractPortlet
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // depth
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry depthTFE = channel.getTypeFieldEntry(PortletMyCollaborativeSpaces.class, "depth", true);
   protected boolean isDepthValidated = true;
   protected int depth = 2;
@@ -172,19 +168,19 @@ public class EditPortletMyCollaborativeSpacesHandler extends EditAbstractPortlet
     }
     return depth;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // typologyFilter
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry typologyFilterTFE = channel.getTypeFieldEntry(PortletMyCollaborativeSpaces.class, "typologyFilter", true);
   protected boolean typologyFilter = true;
   public void setTypologyFilter(boolean  v) {
     this.typologyFilter = v;
   }
-  
+
   public boolean getAvailableTypologyFilter() {
     if (theContent != null && isFieldMissing("typologyFilter")) {
      boolean objectValue = theContent.getTypologyFilter();
@@ -192,12 +188,12 @@ public class EditPortletMyCollaborativeSpacesHandler extends EditAbstractPortlet
     }
     return typologyFilter;
   }
-  
-    
-  
- 
-   
- 
+
+
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // 7sOTSP9MFPKCiXwH39QMrQ==

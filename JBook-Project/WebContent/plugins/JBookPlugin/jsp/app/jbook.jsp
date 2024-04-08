@@ -38,6 +38,8 @@ jcmsContext.setPageTitle("JBook");
 jcmsContext.addCSSHeader("plugins/JBookPlugin/css/jbook.css");
 jcmsContext.addJavaScript("plugins/JBookPlugin/js/jbook.js");
 %>
+
+
 <%@ include file='/jcore/doHeader.jspf'%>
 
 <div class="ajax-refresh-div"

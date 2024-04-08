@@ -9,10 +9,10 @@ import com.jalios.jcms.authentication.AuthenticationHandler;
 /**
  * This class provides LEGACY entry points for initialization of custom JCMS hooks.<br>
  * You SHOULD NOT be using this class anymore and instead developp JCMS plugins.<br>
- * 
+ *
  * See http://support.jalios.com/howto/plugins
  * for more informations on how to developp JCMS plugins.
- * 
+ *
  */
 public class JcmsInit {
 //  private static final Logger logger = Logger.getLogger(JcmsInit.class);
@@ -23,16 +23,16 @@ public class JcmsInit {
    *
    * If for any reason you want to interrupt JCMS startup, you can throw an
    * exception. The exception's message will be displayed in JCMS status page (to any user!).
-   * 
+   *
    * DEPRECATED : Developp your plugin and use a {@link ChannelListener} to implement initBeforeStoreLoad().
-   * 
+   *
    * @since jcms-4.1
    * @throws Exception any exception you may want to throw if a problem occurs needing to interrupt JCMS startup.
    */
   public static void initBeforeStoreLoad() throws Exception {
-    
+
     // Add your custom code here
-    
+
     /*
       // Example of StoreListener
       StoreListener sl = new StoreListener() {
@@ -45,20 +45,20 @@ public class JcmsInit {
         public void handlePrepareUpdate(Storable storable, Map attributes, boolean firstTime) {}
         public void handleCommitUpdate(Storable storable, Storable oldStorable, boolean firstTime) {}
       };
-      
+
       channel.addStoreListener(sl, com.jalios.jcms.Publication.class, false);
     */
 
   }
-  
+
   /**
    * This method is used by ChannelInitServlet when JCMS is
    * starting. It is called just after the store has been loaded and
    * the channel has been initialized.
-   * 
+   *
    * If for any reason you want to interrupt JCMS startup, you can throw an
    * exception. The exception's message will be displayed in JCMS status page (to any user!).
-   * 
+   *
    * DEPRECATED : Developp your plugin and use a {@link ChannelListener} to implement initAfterStoreLoad().
    *
    * @since jcms-4.1
@@ -81,10 +81,10 @@ public class JcmsInit {
    */
   public static void initDataController() throws Exception {
     Channel channel = Channel.getChannel();
-    
+
     channel.addDataController(new SignUpController(), channel.getClass("generated.SignUp"));
   }
-  
+
   /**
    * Add your custom QueryFilter in this method
    *
@@ -98,20 +98,20 @@ public class JcmsInit {
     //Channel channel = Channel.getChannel();
 
     //channel.addQueryFilter(new CustomQueryFilter());
-    
+
   }
   /**
    * Add your custom AuthenticationHandler in this method
    *
    * DEPRECATED : Developp your plugin and with a {@link AuthenticationHandler} plugin component.
-   * 
+   *
    * @since jcms-5.7.0
    * @throws Exception if the initialization of authentication handlers could not be performed
    *         and that JCMS start should be interrupted
    */
   public static void initAuthenticationHandler() throws Exception {
     Channel channel = Channel.getChannel();
-    
+
     channel.addAuthenticationHandler(LdapAuthenticationHandler.getInstance());
   }
 

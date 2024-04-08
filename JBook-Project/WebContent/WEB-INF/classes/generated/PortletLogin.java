@@ -1,41 +1,44 @@
 // This file has been automatically generated.
-   
+
 package generated;
- 
-import java.util.*;
- 
-import org.apache.oro.text.regex.Pattern;
-import org.apache.oro.text.regex.Perl5Compiler;
-import org.apache.oro.text.regex.Perl5Matcher;
-import org.hibernate.Hibernate;
- 
-import com.jalios.jcms.*;
-import com.jalios.jcms.db.*;
-import com.jalios.jcms.mashup.*;
-import com.jalios.jcms.wysiwyg.*;
-import com.jalios.util.*;
-import com.fasterxml.jackson.annotation.JsonIgnore; 
-import com.fasterxml.jackson.annotation.JsonProperty;
- 
+
+import java.util.HashMap;
+import java.util.Set;
+import java.util.TreeSet;
+
+import com.jalios.jcms.Category;
+import com.jalios.jcms.ControllerStatus;
+import com.jalios.jcms.Data;
+import com.jalios.jcms.FileDocument;
+import com.jalios.jcms.JcmsUtil;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeEntry;
+import com.jalios.jcms.TypeFieldEntry;
+import com.jalios.jcms.mashup.ExportUtil;
+import com.jalios.jcms.mashup.ImportOptions;
+import com.jalios.jcms.mashup.ImportUtil;
+import com.jalios.util.Util;
+
 @SuppressWarnings({"unchecked", "unused"})
-public  class PortletLogin extends generated.AbstractPortletSkinable 
-             implements 
+public  class PortletLogin extends generated.AbstractPortletSkinable
+             implements
                 com.jalios.jstore.Searchable
 {
-  
+
   // ----------------------------------------------------------------------
   // CONSTRUCTORS
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   public PortletLogin() {}
- 
- 
+
+
   public PortletLogin(AbstractPortletSkinable other) {
     super(other);
   }
- 
-  
-  
-  
+
+
+
+
   public PortletLogin(PortletLogin other) {
     super(other);
     introduction = other.introduction;
@@ -48,13 +51,14 @@ public  class PortletLogin extends generated.AbstractPortletSkinable
     buttonTextML = other.buttonTextML;
     displayPortal = other.displayPortal;
   }
-  
+
   // ----------------------------------------------------------------------
   // Import / Export
   // ----------------------------------------------------------------------
-  public void importXml(org.jdom.Element elt, ImportOptions options) {
+  @Override
+public void importXml(org.jdom.Element elt, ImportOptions options) {
     super.importXml(elt, options);
-    
+
     setIntroduction(ImportUtil.parseFieldText(elt, "introduction"));
     setIntroductionML(ImportUtil.parseFieldTextML(elt, "introductionML"));
     setLoginText(ImportUtil.parseFieldText(elt, "loginText"));
@@ -64,19 +68,21 @@ public  class PortletLogin extends generated.AbstractPortletSkinable
     setButtonText(ImportUtil.parseFieldText(elt, "buttonText"));
     setButtonTextML(ImportUtil.parseFieldTextML(elt, "buttonTextML"));
   }
-  
-  protected void importXmlFieldsWithReferences(org.jdom.Element elt, ImportOptions options) {
+
+  @Override
+protected void importXmlFieldsWithReferences(org.jdom.Element elt, ImportOptions options) {
     super.importXmlFieldsWithReferences(elt, options);
-      
+
     if (options.isSelfImport()) {
       setDisplayPortal(ImportUtil.parseSelfFieldData(elt, "displayPortal", generated.PortletPortal.class));
     } else {
-    
+
     setDisplayPortal((generated.PortletPortal)ImportUtil.parseFieldData(elt, "displayPortal"));
     }
   }
-  
-  public void exportXmlField(StringBuffer sb, int indentLevel) {
+
+  @Override
+public void exportXmlField(StringBuffer sb, int indentLevel) {
     super.exportXmlField(sb, indentLevel);
     sb.append(ExportUtil.exportField(indentLevel, "introduction", getIntroduction(), "introductionML", false, true));
     sb.append(ExportUtil.exportField(indentLevel, "introductionML", getIntroductionML(), true));
@@ -88,15 +94,16 @@ public  class PortletLogin extends generated.AbstractPortletSkinable
     sb.append(ExportUtil.exportField(indentLevel, "buttonTextML", getButtonTextML(), true));
     sb.append(ExportUtil.exportField(indentLevel, "displayPortal", getDisplayPortal()));
   }
-  
-  public Set<FileDocument> getDocumentLinkSet() {
+
+  @Override
+public Set<FileDocument> getDocumentLinkSet() {
     Set<FileDocument> docSet = super.getDocumentLinkSet();
     return docSet;
   }
-  
+
   // ----------------------------------------------------------------------
   // TYPE AND FIELD INFOS (static methods)
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   /**
    * Returns the TypeEntry bound to <code>PortletLogin</code>. <br>
    * @see com.jalios.jcms.Channel#getTypeEntry(Class)
@@ -127,91 +134,99 @@ public  class PortletLogin extends generated.AbstractPortletSkinable
   }
   // ----------------------------------------------------------------------
   // FIELDs VALUE
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   /**
    * Gets the value of the given <code>int</code> field name for the current <code>PortletLogin</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>int</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public int getIntFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public int getIntFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getIntFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>int</code> field name for the current <code>PortletLogin</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>int</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setIntFieldValue(String fieldName, int value) throws NoSuchFieldException {
+  @Override
+public void setIntFieldValue(String fieldName, int value) throws NoSuchFieldException {
     super.setIntFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>long</code> field name for the current <code>PortletLogin</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>long</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public long getLongFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public long getLongFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getLongFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>long</code> field name for the current <code>PortletLogin</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>long</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setLongFieldValue(String fieldName, long value) throws NoSuchFieldException {
+  @Override
+public void setLongFieldValue(String fieldName, long value) throws NoSuchFieldException {
     super.setLongFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>double</code> field name for the current <code>PortletLogin</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>double</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public double getDoubleFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public double getDoubleFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getDoubleFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>double</code> field name for the current <code>PortletLogin</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>double</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setDoubleFieldValue(String fieldName, double value) throws NoSuchFieldException {
+  @Override
+public void setDoubleFieldValue(String fieldName, double value) throws NoSuchFieldException {
      super.setDoubleFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>boolean</code> field name for the current <code>PortletLogin</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>boolean</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public boolean getBooleanFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public boolean getBooleanFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getBooleanFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>boolean</code> field name for the current <code>PortletLogin</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>boolean</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setBooleanFieldValue(String fieldName, boolean value) throws NoSuchFieldException {
+  @Override
+public void setBooleanFieldValue(String fieldName, boolean value) throws NoSuchFieldException {
     super.setBooleanFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>Category</code> field name for the current <code>Data</code>.
    * @param fieldName the field name from which to retrieve the field value.
@@ -219,7 +234,8 @@ public  class PortletLogin extends generated.AbstractPortletSkinable
    * @return a <code>TreeSet</code> of <code>Category</code>
    * @throws NoSuchFieldException if the field was not found in the given <code>Data</code>.
    */
-  public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
+  @Override
+public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
     return super.getCategoryFieldValue(fieldName, mbr);
   }
   /**
@@ -228,12 +244,13 @@ public  class PortletLogin extends generated.AbstractPortletSkinable
    * @param fieldName the field name from which to retrieve the field value.
    * @param lang the language (ISO-639 code) in which to retrieve the field value
    *        (used only for multilingual fields).
-   * @param useDefault whether to use the publication main language if the field value 
+   * @param useDefault whether to use the publication main language if the field value
    *        is not available in the requested language (used only for multilingual fields).
    * @return the <code>Object</code> field value
    * @throws NoSuchFieldException if the field was not found in the given <code>Publication</code>.
    */
-  public Object getFieldValue(String fieldName, String lang, boolean useDefault) throws NoSuchFieldException {
+  @Override
+public Object getFieldValue(String fieldName, String lang, boolean useDefault) throws NoSuchFieldException {
     if ("introduction".equals(fieldName)) { return getIntroduction(lang, useDefault); }
     if ("loginText".equals(fieldName)) { return getLoginText(lang, useDefault); }
     if ("passwordText".equals(fieldName)) { return getPasswordText(lang, useDefault); }
@@ -241,7 +258,7 @@ public  class PortletLogin extends generated.AbstractPortletSkinable
     if ("displayPortal".equals(fieldName)) { return getDisplayPortal(); }
     return super.getFieldValue(fieldName, lang, useDefault);
   }
-  
+
   /**
    * Sets the <code>Object</code> value of the given field name for this <code>PortletLogin</code>. <br>
    * Do not set <code>Category</code> fields, see {@link #setCategoryFieldValue(String, TreeSet)}.
@@ -249,11 +266,12 @@ public  class PortletLogin extends generated.AbstractPortletSkinable
    * @param value the <code>Object</code> field value
    * @param lang the language (ISO-639 code) in which to retrieve the field value
    *        (used only for multilingual fields).
-   * 
+   *
    * @throws NoSuchFieldException if the field was not found in the given <code>Publication</code>.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setFieldValue(String fieldName, Object value, String lang) throws NoSuchFieldException {
+  @Override
+public void setFieldValue(String fieldName, Object value, String lang) throws NoSuchFieldException {
     if ("introduction".equals(fieldName)) { setIntroduction(lang,(String)value); return; }
     if ("loginText".equals(fieldName)) { setLoginText(lang,(String)value); return; }
     if ("passwordText".equals(fieldName)) { setPasswordText(lang,(String)value); return; }
@@ -261,34 +279,34 @@ public  class PortletLogin extends generated.AbstractPortletSkinable
     if ("displayPortal".equals(fieldName)) { setDisplayPortal((generated.PortletPortal)value); return; }
     super.setFieldValue(fieldName, value, lang);
   }
-  
+
   // ----------------------------------------------------------------------
   // introduction
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String introduction = channel.getTypeFieldEntry(PortletLogin.class, "introduction", true).getDefaultTextString();
-  
+
   public String getIntroduction() { return introduction; }
-  
+
   public void setIntroduction(String v) { introduction = v; }
-  
-  
-  
-  
+
+
+
+
   protected HashMap<String,String> introductionML = channel.getTypeFieldEntry(PortletLogin.class, "introduction", true).getDefaultTextMap();
-  public String getIntroduction(String lang) { return (String)channel.getLangValue(lang, true, introduction, introductionML, getMainLanguage()); }
-  public String getIntroduction(String lang, boolean useDefault) { return (String)channel.getLangValue(lang, useDefault, introduction, introductionML, getMainLanguage()); }
+  public String getIntroduction(String lang) { return channel.getLangValue(lang, true, introduction, introductionML, getMainLanguage()); }
+  public String getIntroduction(String lang, boolean useDefault) { return channel.getLangValue(lang, useDefault, introduction, introductionML, getMainLanguage()); }
   public HashMap<String,String> getIntroductionML() { return introductionML; }
   public void setIntroductionML(HashMap<String,String> v) { introductionML = v; }
-  
-  public String getIntroductionMLE() { 
+
+  public String getIntroductionMLE() {
     return JcmsUtil.encodeMLE(getIntroductionML());
   }
-  
+
   public void setIntroductionMLE(String v) {
     setIntroductionML(JcmsUtil.decodeMLE(v));
   }
-  
+
   public void setIntroduction(String lang, String value) {
     if (channel.getLanguage().equals(lang)) {
       introduction = value;
@@ -303,31 +321,31 @@ public  class PortletLogin extends generated.AbstractPortletSkinable
   }
   // ----------------------------------------------------------------------
   // loginText
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String loginText = channel.getTypeFieldEntry(PortletLogin.class, "loginText", true).getDefaultTextString();
-  
+
   public String getLoginText() { return loginText; }
-  
+
   public void setLoginText(String v) { loginText = v; }
-  
-  
-  
-  
+
+
+
+
   protected HashMap<String,String> loginTextML = channel.getTypeFieldEntry(PortletLogin.class, "loginText", true).getDefaultTextMap();
-  public String getLoginText(String lang) { return (String)channel.getLangValue(lang, true, loginText, loginTextML, getMainLanguage()); }
-  public String getLoginText(String lang, boolean useDefault) { return (String)channel.getLangValue(lang, useDefault, loginText, loginTextML, getMainLanguage()); }
+  public String getLoginText(String lang) { return channel.getLangValue(lang, true, loginText, loginTextML, getMainLanguage()); }
+  public String getLoginText(String lang, boolean useDefault) { return channel.getLangValue(lang, useDefault, loginText, loginTextML, getMainLanguage()); }
   public HashMap<String,String> getLoginTextML() { return loginTextML; }
   public void setLoginTextML(HashMap<String,String> v) { loginTextML = v; }
-  
-  public String getLoginTextMLE() { 
+
+  public String getLoginTextMLE() {
     return JcmsUtil.encodeMLE(getLoginTextML());
   }
-  
+
   public void setLoginTextMLE(String v) {
     setLoginTextML(JcmsUtil.decodeMLE(v));
   }
-  
+
   public void setLoginText(String lang, String value) {
     if (channel.getLanguage().equals(lang)) {
       loginText = value;
@@ -342,31 +360,31 @@ public  class PortletLogin extends generated.AbstractPortletSkinable
   }
   // ----------------------------------------------------------------------
   // passwordText
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String passwordText = channel.getTypeFieldEntry(PortletLogin.class, "passwordText", true).getDefaultTextString();
-  
+
   public String getPasswordText() { return passwordText; }
-  
+
   public void setPasswordText(String v) { passwordText = v; }
-  
-  
-  
-  
+
+
+
+
   protected HashMap<String,String> passwordTextML = channel.getTypeFieldEntry(PortletLogin.class, "passwordText", true).getDefaultTextMap();
-  public String getPasswordText(String lang) { return (String)channel.getLangValue(lang, true, passwordText, passwordTextML, getMainLanguage()); }
-  public String getPasswordText(String lang, boolean useDefault) { return (String)channel.getLangValue(lang, useDefault, passwordText, passwordTextML, getMainLanguage()); }
+  public String getPasswordText(String lang) { return channel.getLangValue(lang, true, passwordText, passwordTextML, getMainLanguage()); }
+  public String getPasswordText(String lang, boolean useDefault) { return channel.getLangValue(lang, useDefault, passwordText, passwordTextML, getMainLanguage()); }
   public HashMap<String,String> getPasswordTextML() { return passwordTextML; }
   public void setPasswordTextML(HashMap<String,String> v) { passwordTextML = v; }
-  
-  public String getPasswordTextMLE() { 
+
+  public String getPasswordTextMLE() {
     return JcmsUtil.encodeMLE(getPasswordTextML());
   }
-  
+
   public void setPasswordTextMLE(String v) {
     setPasswordTextML(JcmsUtil.decodeMLE(v));
   }
-  
+
   public void setPasswordText(String lang, String value) {
     if (channel.getLanguage().equals(lang)) {
       passwordText = value;
@@ -381,31 +399,31 @@ public  class PortletLogin extends generated.AbstractPortletSkinable
   }
   // ----------------------------------------------------------------------
   // buttonText
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String buttonText = channel.getTypeFieldEntry(PortletLogin.class, "buttonText", true).getDefaultTextString();
-  
+
   public String getButtonText() { return buttonText; }
-  
+
   public void setButtonText(String v) { buttonText = v; }
-  
-  
-  
-  
+
+
+
+
   protected HashMap<String,String> buttonTextML = channel.getTypeFieldEntry(PortletLogin.class, "buttonText", true).getDefaultTextMap();
-  public String getButtonText(String lang) { return (String)channel.getLangValue(lang, true, buttonText, buttonTextML, getMainLanguage()); }
-  public String getButtonText(String lang, boolean useDefault) { return (String)channel.getLangValue(lang, useDefault, buttonText, buttonTextML, getMainLanguage()); }
+  public String getButtonText(String lang) { return channel.getLangValue(lang, true, buttonText, buttonTextML, getMainLanguage()); }
+  public String getButtonText(String lang, boolean useDefault) { return channel.getLangValue(lang, useDefault, buttonText, buttonTextML, getMainLanguage()); }
   public HashMap<String,String> getButtonTextML() { return buttonTextML; }
   public void setButtonTextML(HashMap<String,String> v) { buttonTextML = v; }
-  
-  public String getButtonTextMLE() { 
+
+  public String getButtonTextMLE() {
     return JcmsUtil.encodeMLE(getButtonTextML());
   }
-  
+
   public void setButtonTextMLE(String v) {
     setButtonTextML(JcmsUtil.decodeMLE(v));
   }
-  
+
   public void setButtonText(String lang, String value) {
     if (channel.getLanguage().equals(lang)) {
       buttonText = value;
@@ -420,20 +438,20 @@ public  class PortletLogin extends generated.AbstractPortletSkinable
   }
   // ----------------------------------------------------------------------
   // displayPortal
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  generated.PortletPortal displayPortal;
-  
+
   public generated.PortletPortal getDisplayPortal() { return displayPortal; }
-  
+
   public void setDisplayPortal(generated.PortletPortal v) { displayPortal = v; }
-  
-  
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // abstract
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   @Override
   public void setAbstract(String lang, String value) { setLoginText(lang, value); }
   @Override
@@ -442,36 +460,36 @@ public  class PortletLogin extends generated.AbstractPortletSkinable
   public String getAbstract(String lang, boolean useDefault) { return getLoginText(lang, useDefault); }
   @Override
   public HashMap<String,String> getAbstractML() { return getLoginTextML(); }
-   
+
   // ----------------------------------------------------------------------
   // Data image
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   @Override
   public String getDataImage() {
     String _img = portletImage;
     if (Util.notEmpty(_img)) {
       return _img;
     }
-  
+
     return super.getDataImage();
   }
-  
+
   @Override
   public String getDataImage(String lang, boolean useDefault) {
     String _img = getPortletImage(lang, useDefault);
     if (Util.notEmpty(_img)) {
       return _img;
-    }  
-  
+    }
+
     return super.getDataImage(lang, useDefault);
   }
-  
+
   @Override
   public String[] getSearchStrings() {
     StringBuffer sb = new StringBuffer(super.getSearchStrings()[0]);
     sb.ensureCapacity(500 * (0 + 1 + 0 + 0 + 0 + 0) );
     if (title != null) {
-      sb.append(title); sb.append(' '); 
+      sb.append(title); sb.append(' ');
     }
     if (titleML != null) {
       for (String str : titleML.values()) {
@@ -482,14 +500,14 @@ public  class PortletLogin extends generated.AbstractPortletSkinable
     }
     return new String[] {sb.toString()};
   }
-  
+
   @Override
   public String getAllWikiText() {
     StringBuffer sb = new StringBuffer(super.getAllWikiText());
     sb.ensureCapacity(500 * (0 + 0 + 0 + 0 + 0 + 0) );
     return sb.toString();
   }
-  
+
   @Override
   public String getAllWysiwygText() {
     StringBuffer sb = new StringBuffer(super.getAllWysiwygText());
@@ -498,7 +516,7 @@ public  class PortletLogin extends generated.AbstractPortletSkinable
    // Wysiwyg fields
     return sb.toString();
   }
-  
+
   @Override
   public <T extends Data> TreeSet<T> getLinkDataSet(Class<T> clazz) {
     if (clazz == null) {
@@ -511,23 +529,25 @@ public  class PortletLogin extends generated.AbstractPortletSkinable
   }
   // ----------------------------------------------------------------------
   // DataController
-  // ----------------------------------------------------------------------  
-  public ControllerStatus checkIntegrity() {
-    
+  // ----------------------------------------------------------------------
+  @Override
+public ControllerStatus checkIntegrity() {
+
     ControllerStatus status = super.checkIntegrity();
     if (status.hasFailed()) {
       return status;
     }
-    
+
     return ControllerStatus.OK;
   }
-  
-  
+
+
   // ----------------------------------------------------------------------
   // WorkCopy
-  // ----------------------------------------------------------------------  
-  protected void prepareMergeCopy(Publication mergeCopy) {
-    super.prepareMergeCopy(mergeCopy);  
+  // ----------------------------------------------------------------------
+  @Override
+protected void prepareMergeCopy(Publication mergeCopy) {
+    super.prepareMergeCopy(mergeCopy);
     ((PortletLogin)mergeCopy).setIntroduction(getIntroduction());
     ((PortletLogin)mergeCopy).setIntroductionML(JcmsUtil.getMergedMLMap(getIntroductionML(), ((PortletLogin)mergeCopy).getIntroductionML()));
     ((PortletLogin)mergeCopy).setLoginText(getLoginText());

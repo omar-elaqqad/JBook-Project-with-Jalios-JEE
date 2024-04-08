@@ -21,7 +21,7 @@ public class CustomArchiveManager {
   /**
    * This method is called by Publication.canBeArchived
    * It checks if the publication can be archived by the given member
-   * 
+   *
    * @param pub the publication to check
    * @param mbr the member to check
    * @param context a map which contains context parameters (may be null), same map used in checkUpdate/performUpdate
@@ -77,11 +77,7 @@ public class CustomArchiveManager {
       return errorStatus;
     }
 
-    if (!checkAuthorization){
-      return ControllerStatus.OK;
-    }
-    
-    if (mbr.isAdmin()) {
+    if (!checkAuthorization || mbr.isAdmin()) {
       return ControllerStatus.OK;
     }
 
@@ -116,7 +112,7 @@ public class CustomArchiveManager {
   /**
    * This method is called by ArchiveManager.archivePublication
    * It allow any hook to be done before the publication is archived
-   * 
+   *
    * @param pub the publication to be archived
    * @since jcms-4.1.1
    */
@@ -129,7 +125,7 @@ public class CustomArchiveManager {
    * publication being archived.
    * It checks if the given file can be archived and thus copied to the
    * publication's archive directory.
-   * 
+   *
    * @param file the file to check
    * @param pub the publication of which the given the file is taken
    * @return true if the file can be archived
@@ -146,9 +142,9 @@ public class CustomArchiveManager {
   /**
    * This method is called by LuceneArchiveEngine.indexPublication
    * It should be called by any ArchiveEngine.indexPublication
-   * 
+   *
    * @param pub the publication from which we want the search texts
-   * @return the text to index 
+   * @return the text to index
    * @since jcms-4.1.1
    */
   public static String getPublicationSearchText(Publication pub) {
@@ -160,9 +156,9 @@ public class CustomArchiveManager {
 
     // Publication search strings
     String[] searchString = pub.getSearchStrings();
-    for (int i = 0; i < searchString.length; i++) {
-      if (searchString[i] != null) {
-        sb.append(searchString[i]);
+    for (String element : searchString) {
+      if (element != null) {
+        sb.append(element);
         sb.append(' ');
       }
     }
@@ -184,7 +180,7 @@ public class CustomArchiveManager {
    * This method is called by ArchiveManager.archivePublication
    * It allow any further process to be done before the publication is deleted
    * For example, deletion of any children publication
-   * 
+   *
    * @param pub the publication to be archived
    * @since jcms-4.1.1
    */

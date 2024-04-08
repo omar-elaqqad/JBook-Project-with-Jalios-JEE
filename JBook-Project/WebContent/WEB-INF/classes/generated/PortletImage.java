@@ -1,41 +1,55 @@
 // This file has been automatically generated.
-   
+
 package generated;
- 
-import java.util.*;
- 
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
 import org.apache.oro.text.regex.Pattern;
 import org.apache.oro.text.regex.Perl5Compiler;
 import org.apache.oro.text.regex.Perl5Matcher;
-import org.hibernate.Hibernate;
- 
-import com.jalios.jcms.*;
-import com.jalios.jcms.db.*;
-import com.jalios.jcms.mashup.*;
-import com.jalios.jcms.wysiwyg.*;
-import com.jalios.util.*;
-import com.fasterxml.jackson.annotation.JsonIgnore; 
-import com.fasterxml.jackson.annotation.JsonProperty;
- 
+
+import com.jalios.jcms.Category;
+import com.jalios.jcms.ControllerStatus;
+import com.jalios.jcms.Data;
+import com.jalios.jcms.EnumerateFormReport;
+import com.jalios.jcms.FileDocument;
+import com.jalios.jcms.IntegerFormReport;
+import com.jalios.jcms.JcmsUtil;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeEntry;
+import com.jalios.jcms.TypeFieldEntry;
+import com.jalios.jcms.mashup.ExportUtil;
+import com.jalios.jcms.mashup.ImportOptions;
+import com.jalios.jcms.mashup.ImportUtil;
+import com.jalios.util.LangProperty;
+import com.jalios.util.ObjectIntTreeMap;
+import com.jalios.util.Util;
+
 @SuppressWarnings({"unchecked", "unused"})
-public  class PortletImage extends generated.AbstractPortletSkinable 
-             implements 
+public  class PortletImage extends generated.AbstractPortletSkinable
+             implements
                 com.jalios.jstore.Searchable
 {
-  
+
   // ----------------------------------------------------------------------
   // CONSTRUCTORS
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   public PortletImage() {}
- 
- 
+
+
   public PortletImage(AbstractPortletSkinable other) {
     super(other);
   }
- 
-  
-  
-  
+
+
+
+
   public PortletImage(PortletImage other) {
     super(other);
     image = other.image;
@@ -48,13 +62,14 @@ public  class PortletImage extends generated.AbstractPortletSkinable
     imgWidth = other.imgWidth;
     imgHeight = other.imgHeight;
   }
-  
+
   // ----------------------------------------------------------------------
   // Import / Export
   // ----------------------------------------------------------------------
-  public void importXml(org.jdom.Element elt, ImportOptions options) {
+  @Override
+public void importXml(org.jdom.Element elt, ImportOptions options) {
     super.importXml(elt, options);
-    
+
     setImage(ImportUtil.parseFieldText(elt, "image"));
     setImageML(ImportUtil.parseFieldTextML(elt, "imageML"));
     setLink(ImportUtil.parseFieldText(elt, "link"));
@@ -65,17 +80,19 @@ public  class PortletImage extends generated.AbstractPortletSkinable
     setImgWidth(ImportUtil.parseFieldInt(elt, "imgWidth"));
     setImgHeight(ImportUtil.parseFieldInt(elt, "imgHeight"));
   }
-  
-  protected void importXmlFieldsWithReferences(org.jdom.Element elt, ImportOptions options) {
+
+  @Override
+protected void importXmlFieldsWithReferences(org.jdom.Element elt, ImportOptions options) {
     super.importXmlFieldsWithReferences(elt, options);
-      
+
     if (options.isSelfImport()) {
     } else {
-    
+
     }
   }
-  
-  public void exportXmlField(StringBuffer sb, int indentLevel) {
+
+  @Override
+public void exportXmlField(StringBuffer sb, int indentLevel) {
     super.exportXmlField(sb, indentLevel);
     sb.append(ExportUtil.exportField(indentLevel, "image", getImage(), "imageML", false, true));
     sb.append(ExportUtil.exportField(indentLevel, "imageML", getImageML(), true));
@@ -87,16 +104,17 @@ public  class PortletImage extends generated.AbstractPortletSkinable
     sb.append(ExportUtil.exportField(indentLevel, "imgWidth", getImgWidth()));
     sb.append(ExportUtil.exportField(indentLevel, "imgHeight", getImgHeight()));
   }
-  
-  public Set<FileDocument> getDocumentLinkSet() {
+
+  @Override
+public Set<FileDocument> getDocumentLinkSet() {
     Set<FileDocument> docSet = super.getDocumentLinkSet();
     JcmsUtil.addFileDocument(docSet, image, imageML);
     return docSet;
   }
-  
+
   // ----------------------------------------------------------------------
   // TYPE AND FIELD INFOS (static methods)
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   /**
    * Returns the TypeEntry bound to <code>PortletImage</code>. <br>
    * @see com.jalios.jcms.Channel#getTypeEntry(Class)
@@ -127,95 +145,103 @@ public  class PortletImage extends generated.AbstractPortletSkinable
   }
   // ----------------------------------------------------------------------
   // FIELDs VALUE
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   /**
    * Gets the value of the given <code>int</code> field name for the current <code>PortletImage</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>int</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public int getIntFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public int getIntFieldValue(String fieldName) throws NoSuchFieldException {
     if ("imgWidth".equals(fieldName)) { return getImgWidth(); }
     if ("imgHeight".equals(fieldName)) { return getImgHeight(); }
     return super.getIntFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>int</code> field name for the current <code>PortletImage</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>int</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setIntFieldValue(String fieldName, int value) throws NoSuchFieldException {
+  @Override
+public void setIntFieldValue(String fieldName, int value) throws NoSuchFieldException {
     if ("imgWidth".equals(fieldName)) { setImgWidth(value); return; }
     if ("imgHeight".equals(fieldName)) { setImgHeight(value); return; }
     super.setIntFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>long</code> field name for the current <code>PortletImage</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>long</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public long getLongFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public long getLongFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getLongFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>long</code> field name for the current <code>PortletImage</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>long</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setLongFieldValue(String fieldName, long value) throws NoSuchFieldException {
+  @Override
+public void setLongFieldValue(String fieldName, long value) throws NoSuchFieldException {
     super.setLongFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>double</code> field name for the current <code>PortletImage</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>double</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public double getDoubleFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public double getDoubleFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getDoubleFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>double</code> field name for the current <code>PortletImage</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>double</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setDoubleFieldValue(String fieldName, double value) throws NoSuchFieldException {
+  @Override
+public void setDoubleFieldValue(String fieldName, double value) throws NoSuchFieldException {
      super.setDoubleFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>boolean</code> field name for the current <code>PortletImage</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>boolean</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public boolean getBooleanFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public boolean getBooleanFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getBooleanFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>boolean</code> field name for the current <code>PortletImage</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>boolean</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setBooleanFieldValue(String fieldName, boolean value) throws NoSuchFieldException {
+  @Override
+public void setBooleanFieldValue(String fieldName, boolean value) throws NoSuchFieldException {
     super.setBooleanFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>Category</code> field name for the current <code>Data</code>.
    * @param fieldName the field name from which to retrieve the field value.
@@ -223,7 +249,8 @@ public  class PortletImage extends generated.AbstractPortletSkinable
    * @return a <code>TreeSet</code> of <code>Category</code>
    * @throws NoSuchFieldException if the field was not found in the given <code>Data</code>.
    */
-  public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
+  @Override
+public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
     return super.getCategoryFieldValue(fieldName, mbr);
   }
   /**
@@ -232,19 +259,20 @@ public  class PortletImage extends generated.AbstractPortletSkinable
    * @param fieldName the field name from which to retrieve the field value.
    * @param lang the language (ISO-639 code) in which to retrieve the field value
    *        (used only for multilingual fields).
-   * @param useDefault whether to use the publication main language if the field value 
+   * @param useDefault whether to use the publication main language if the field value
    *        is not available in the requested language (used only for multilingual fields).
    * @return the <code>Object</code> field value
    * @throws NoSuchFieldException if the field was not found in the given <code>Publication</code>.
    */
-  public Object getFieldValue(String fieldName, String lang, boolean useDefault) throws NoSuchFieldException {
+  @Override
+public Object getFieldValue(String fieldName, String lang, boolean useDefault) throws NoSuchFieldException {
     if ("image".equals(fieldName)) { return getImage(lang, useDefault); }
     if ("link".equals(fieldName)) { return getLink(lang, useDefault); }
     if ("alt".equals(fieldName)) { return getAlt(lang, useDefault); }
     if ("targetWindow".equals(fieldName)) { return getTargetWindow(); }
     return super.getFieldValue(fieldName, lang, useDefault);
   }
-  
+
   /**
    * Sets the <code>Object</code> value of the given field name for this <code>PortletImage</code>. <br>
    * Do not set <code>Category</code> fields, see {@link #setCategoryFieldValue(String, TreeSet)}.
@@ -252,45 +280,46 @@ public  class PortletImage extends generated.AbstractPortletSkinable
    * @param value the <code>Object</code> field value
    * @param lang the language (ISO-639 code) in which to retrieve the field value
    *        (used only for multilingual fields).
-   * 
+   *
    * @throws NoSuchFieldException if the field was not found in the given <code>Publication</code>.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setFieldValue(String fieldName, Object value, String lang) throws NoSuchFieldException {
+  @Override
+public void setFieldValue(String fieldName, Object value, String lang) throws NoSuchFieldException {
     if ("image".equals(fieldName)) { setImage(lang,(String)value); return; }
     if ("link".equals(fieldName)) { setLink(lang,(String)value); return; }
     if ("alt".equals(fieldName)) { setAlt(lang,(String)value); return; }
     if ("targetWindow".equals(fieldName)) { setTargetWindow((String)value); return; }
     super.setFieldValue(fieldName, value, lang);
   }
-  
+
   // ----------------------------------------------------------------------
   // image
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String image = channel.getTypeFieldEntry(PortletImage.class, "image", true).getDefaultTextString();
-  
+
   public String getImage() { return image; }
-  
+
   public void setImage(String v) { image = v; }
-  
-  
-  
-  
+
+
+
+
   protected HashMap<String,String> imageML = channel.getTypeFieldEntry(PortletImage.class, "image", true).getDefaultTextMap();
-  public String getImage(String lang) { return (String)channel.getLangValue(lang, true, image, imageML, getMainLanguage()); }
-  public String getImage(String lang, boolean useDefault) { return (String)channel.getLangValue(lang, useDefault, image, imageML, getMainLanguage()); }
+  public String getImage(String lang) { return channel.getLangValue(lang, true, image, imageML, getMainLanguage()); }
+  public String getImage(String lang, boolean useDefault) { return channel.getLangValue(lang, useDefault, image, imageML, getMainLanguage()); }
   public HashMap<String,String> getImageML() { return imageML; }
   public void setImageML(HashMap<String,String> v) { imageML = v; }
-  
-  public String getImageMLE() { 
+
+  public String getImageMLE() {
     return JcmsUtil.encodeMLE(getImageML());
   }
-  
+
   public void setImageMLE(String v) {
     setImageML(JcmsUtil.decodeMLE(v));
   }
-  
+
   public void setImage(String lang, String value) {
     if (channel.getLanguage().equals(lang)) {
       image = value;
@@ -305,31 +334,31 @@ public  class PortletImage extends generated.AbstractPortletSkinable
   }
   // ----------------------------------------------------------------------
   // link
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String link = channel.getTypeFieldEntry(PortletImage.class, "link", true).getDefaultTextString();
-  
+
   public String getLink() { return link; }
-  
+
   public void setLink(String v) { link = v; }
-  
-  
-  
-  
+
+
+
+
   protected HashMap<String,String> linkML = channel.getTypeFieldEntry(PortletImage.class, "link", true).getDefaultTextMap();
-  public String getLink(String lang) { return (String)channel.getLangValue(lang, true, link, linkML, getMainLanguage()); }
-  public String getLink(String lang, boolean useDefault) { return (String)channel.getLangValue(lang, useDefault, link, linkML, getMainLanguage()); }
+  public String getLink(String lang) { return channel.getLangValue(lang, true, link, linkML, getMainLanguage()); }
+  public String getLink(String lang, boolean useDefault) { return channel.getLangValue(lang, useDefault, link, linkML, getMainLanguage()); }
   public HashMap<String,String> getLinkML() { return linkML; }
   public void setLinkML(HashMap<String,String> v) { linkML = v; }
-  
-  public String getLinkMLE() { 
+
+  public String getLinkMLE() {
     return JcmsUtil.encodeMLE(getLinkML());
   }
-  
+
   public void setLinkMLE(String v) {
     setLinkML(JcmsUtil.decodeMLE(v));
   }
-  
+
   public void setLink(String lang, String value) {
     if (channel.getLanguage().equals(lang)) {
       link = value;
@@ -344,31 +373,31 @@ public  class PortletImage extends generated.AbstractPortletSkinable
   }
   // ----------------------------------------------------------------------
   // alt
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String alt = channel.getTypeFieldEntry(PortletImage.class, "alt", true).getDefaultTextString();
-  
+
   public String getAlt() { return alt; }
-  
+
   public void setAlt(String v) { alt = v; }
-  
-  
-  
-  
+
+
+
+
   protected HashMap<String,String> altML = channel.getTypeFieldEntry(PortletImage.class, "alt", true).getDefaultTextMap();
-  public String getAlt(String lang) { return (String)channel.getLangValue(lang, true, alt, altML, getMainLanguage()); }
-  public String getAlt(String lang, boolean useDefault) { return (String)channel.getLangValue(lang, useDefault, alt, altML, getMainLanguage()); }
+  public String getAlt(String lang) { return channel.getLangValue(lang, true, alt, altML, getMainLanguage()); }
+  public String getAlt(String lang, boolean useDefault) { return channel.getLangValue(lang, useDefault, alt, altML, getMainLanguage()); }
   public HashMap<String,String> getAltML() { return altML; }
   public void setAltML(HashMap<String,String> v) { altML = v; }
-  
-  public String getAltMLE() { 
+
+  public String getAltMLE() {
     return JcmsUtil.encodeMLE(getAltML());
   }
-  
+
   public void setAltMLE(String v) {
     setAltML(JcmsUtil.decodeMLE(v));
   }
-  
+
   public void setAlt(String lang, String value) {
     if (channel.getLanguage().equals(lang)) {
       alt = value;
@@ -383,22 +412,22 @@ public  class PortletImage extends generated.AbstractPortletSkinable
   }
   // ----------------------------------------------------------------------
   // targetWindow
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String targetWindow = channel.getTypeFieldEntry(PortletImage.class, "targetWindow", true).getDefaultTextString();
-  
+
   public String getTargetWindow() { return targetWindow; }
-  
+
   public void setTargetWindow(String v) { targetWindow = v; }
-  
-  
-  
+
+
+
   public String getTargetWindow(String lang) { return targetWindow; }
   public String getTargetWindow(String lang, boolean useDefault) { return targetWindow; }
-  private static String[] targetWindowValues;  
+  private static String[] targetWindowValues;
   private static String[] targetWindowLabels;
   private static Map<String, String[]> targetWindowLabelsMap;
-  
+
   public static String[] getTargetWindowValues() {
     if(targetWindowValues == null) {
       setTargetWindowValues(channel.getTypeFieldEntry(PortletImage.class, "targetWindow", true).getEnumerateValues());
@@ -428,9 +457,9 @@ public  class PortletImage extends generated.AbstractPortletSkinable
   }
   public static String[] getTargetWindowLabels(String userLang) {
     Map<String, String[]> targetWindowLabelMap = getTargetWindowLabelsMap();
-    String[] labels = (String[])targetWindowLabelMap.get(userLang);
+    String[] labels = targetWindowLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])targetWindowLabelMap.get(channel.getLanguage());
+      labels = targetWindowLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -453,8 +482,8 @@ public  class PortletImage extends generated.AbstractPortletSkinable
     }
     return getTargetWindowLabel(value, channel.getLanguage());
   }
-  
-  public static String getTargetWindowLabel(String value) {    
+
+  public static String getTargetWindowLabel(String value) {
     String[] targetWindowLabels = getTargetWindowLabels();
     if (false) {
     }
@@ -473,25 +502,25 @@ public  class PortletImage extends generated.AbstractPortletSkinable
       if (obj == null) {
         continue;
       }
-      
+
       map.inc("" + obj.getTargetWindow());
-      
+
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // imgWidth
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  int imgWidth = 0;
-  
+
   public int getImgWidth() { return imgWidth; }
-  
+
   public void setImgWidth(int v) { imgWidth = v; }
-  
-  
-  
+
+
+
   public static IntegerFormReport getImgWidthReport(SortedSet<PortletImage> set) {
     long sum = 0;
     int min = Integer.MAX_VALUE;
@@ -506,19 +535,19 @@ public  class PortletImage extends generated.AbstractPortletSkinable
       max = Math.max(value, max);
     }
     return new IntegerFormReport(set.size(), sum, min, max);
-  }  
+  }
   // ----------------------------------------------------------------------
   // imgHeight
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  int imgHeight = 0;
-  
+
   public int getImgHeight() { return imgHeight; }
-  
+
   public void setImgHeight(int v) { imgHeight = v; }
-  
-  
-  
+
+
+
   public static IntegerFormReport getImgHeightReport(SortedSet<PortletImage> set) {
     long sum = 0;
     int min = Integer.MAX_VALUE;
@@ -533,11 +562,11 @@ public  class PortletImage extends generated.AbstractPortletSkinable
       max = Math.max(value, max);
     }
     return new IntegerFormReport(set.size(), sum, min, max);
-  }  
-   
+  }
+
   // ----------------------------------------------------------------------
   // abstract
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   @Override
   public void setAbstract(String lang, String value) { setAlt(lang, value); }
   @Override
@@ -546,36 +575,36 @@ public  class PortletImage extends generated.AbstractPortletSkinable
   public String getAbstract(String lang, boolean useDefault) { return getAlt(lang, useDefault); }
   @Override
   public HashMap<String,String> getAbstractML() { return getAltML(); }
-   
+
   // ----------------------------------------------------------------------
   // Data image
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   @Override
   public String getDataImage() {
     String _img = image;
     if (Util.notEmpty(_img)) {
       return _img;
     }
-  
+
     return super.getDataImage();
   }
-  
+
   @Override
   public String getDataImage(String lang, boolean useDefault) {
     String _img = getImage(lang, useDefault);
     if (Util.notEmpty(_img)) {
       return _img;
-    }  
-  
+    }
+
     return super.getDataImage(lang, useDefault);
   }
-  
+
   @Override
   public String[] getSearchStrings() {
     StringBuffer sb = new StringBuffer(super.getSearchStrings()[0]);
     sb.ensureCapacity(500 * (0 + 1 + 0 + 0 + 0 + 0) );
     if (title != null) {
-      sb.append(title); sb.append(' '); 
+      sb.append(title); sb.append(' ');
     }
     if (titleML != null) {
       for (String str : titleML.values()) {
@@ -586,14 +615,14 @@ public  class PortletImage extends generated.AbstractPortletSkinable
     }
     return new String[] {sb.toString()};
   }
-  
+
   @Override
   public String getAllWikiText() {
     StringBuffer sb = new StringBuffer(super.getAllWikiText());
     sb.ensureCapacity(500 * (0 + 0 + 0 + 0 + 0 + 0) );
     return sb.toString();
   }
-  
+
   @Override
   public String getAllWysiwygText() {
     StringBuffer sb = new StringBuffer(super.getAllWysiwygText());
@@ -602,7 +631,7 @@ public  class PortletImage extends generated.AbstractPortletSkinable
    // Wysiwyg fields
     return sb.toString();
   }
-  
+
   @Override
   public <T extends Data> TreeSet<T> getLinkDataSet(Class<T> clazz) {
     if (clazz == null) {
@@ -614,7 +643,7 @@ public  class PortletImage extends generated.AbstractPortletSkinable
   }
   // ----------------------------------------------------------------------
   // DataController
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   static Pattern _altPattern;
   static {
     try {
@@ -624,39 +653,35 @@ public  class PortletImage extends generated.AbstractPortletSkinable
       // Empty
     }
   }
-  
+
   public boolean checkPatternAlt() {
     if (Util.notEmpty(alt) && !(new Perl5Matcher()).matches(alt, _altPattern)) {
-      return false; 
+      return false;
     }
     if (Util.notEmpty(altML)) {
       for (String str : ((Map<String,String>)altML).values()) {
         if (Util.notEmpty(str) && !(new Perl5Matcher()).matches(str, _altPattern)) {
-          return false; 
+          return false;
         }
       }
     }
     return true;
   }
-  
-  public ControllerStatus checkIntegrity() {
-    
+
+  @Override
+public ControllerStatus checkIntegrity() {
+
     ControllerStatus status = super.checkIntegrity();
     if (status.hasFailed()) {
       return status;
     }
-    
+
     if (Util.isEmpty(getFieldInMainLanguage(image, imageML))) {
       status = new ControllerStatus();
       status.setProp("msg.edit.empty-fieldml", channel.getTypeFieldLabel(this, "image"), new LangProperty("lang." + getMainLanguage()));
       return status;
     }
-    if (!Util.isValidUrl(link)) {
-      status = new ControllerStatus();
-      status.setProp("msg.edit.bad-url", channel.getTypeFieldLabel(this, "link"));
-      return status;
-    }
-    if (!Util.isValidUrl(linkML)) {
+    if (!Util.isValidUrl(link) || !Util.isValidUrl(linkML)) {
       status = new ControllerStatus();
       status.setProp("msg.edit.bad-url", channel.getTypeFieldLabel(this, "link"));
       return status;
@@ -669,29 +694,30 @@ public  class PortletImage extends generated.AbstractPortletSkinable
     if (imgWidth < 0 ) {
       status = new ControllerStatus();
       status.setProp("msg.edit.lesser-number", channel.getTypeFieldLabel(this, "imgWidth"), "0");
-      return status;      
+      return status;
     }
     if (imgWidth > 10000 ) {
       status = new ControllerStatus();
       status.setProp("msg.edit.greater-number", channel.getTypeFieldLabel(this, "imgWidth"), "10000");
-      return status;      
+      return status;
     }
     if (imgHeight < 0 ) {
       status = new ControllerStatus();
       status.setProp("msg.edit.lesser-number", channel.getTypeFieldLabel(this, "imgHeight"), "0");
-      return status;      
+      return status;
     }
     if (imgHeight > 10000 ) {
       status = new ControllerStatus();
       status.setProp("msg.edit.greater-number", channel.getTypeFieldLabel(this, "imgHeight"), "10000");
-      return status;      
+      return status;
     }
     return ControllerStatus.OK;
   }
-  
-  public Set<String> getExternalLinkSet() {
+
+  @Override
+public Set<String> getExternalLinkSet() {
     Set<String> set = super.getExternalLinkSet();
-   
+
     if (Util.notEmpty(link)) {
       set.add(link);
     }
@@ -705,15 +731,16 @@ public  class PortletImage extends generated.AbstractPortletSkinable
         it.remove();
       }
     }
-    
+
     return set;
   }
-  
+
   // ----------------------------------------------------------------------
   // WorkCopy
-  // ----------------------------------------------------------------------  
-  protected void prepareMergeCopy(Publication mergeCopy) {
-    super.prepareMergeCopy(mergeCopy);  
+  // ----------------------------------------------------------------------
+  @Override
+protected void prepareMergeCopy(Publication mergeCopy) {
+    super.prepareMergeCopy(mergeCopy);
     ((PortletImage)mergeCopy).setImage(getImage());
     ((PortletImage)mergeCopy).setImageML(JcmsUtil.getMergedMLMap(getImageML(), ((PortletImage)mergeCopy).getImageML()));
     ((PortletImage)mergeCopy).setLink(getLink());

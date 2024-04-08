@@ -1,41 +1,49 @@
 // This file has been automatically generated.
-   
+
 package generated;
- 
-import java.util.*;
- 
-import org.apache.oro.text.regex.Pattern;
-import org.apache.oro.text.regex.Perl5Compiler;
-import org.apache.oro.text.regex.Perl5Matcher;
-import org.hibernate.Hibernate;
- 
-import com.jalios.jcms.*;
-import com.jalios.jcms.db.*;
-import com.jalios.jcms.mashup.*;
-import com.jalios.jcms.wysiwyg.*;
-import com.jalios.util.*;
-import com.fasterxml.jackson.annotation.JsonIgnore; 
-import com.fasterxml.jackson.annotation.JsonProperty;
- 
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+import com.jalios.jcms.Category;
+import com.jalios.jcms.ControllerStatus;
+import com.jalios.jcms.Data;
+import com.jalios.jcms.EnumerateFormReport;
+import com.jalios.jcms.FileDocument;
+import com.jalios.jcms.IntegerFormReport;
+import com.jalios.jcms.JcmsUtil;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeEntry;
+import com.jalios.jcms.TypeFieldEntry;
+import com.jalios.jcms.mashup.ExportUtil;
+import com.jalios.jcms.mashup.ImportOptions;
+import com.jalios.jcms.mashup.ImportUtil;
+import com.jalios.util.ObjectIntTreeMap;
+import com.jalios.util.Util;
+
 @SuppressWarnings({"unchecked", "unused"})
-public  class PortletRow extends generated.AbstractCollection 
-             implements 
+public  class PortletRow extends generated.AbstractCollection
+             implements
                 com.jalios.jstore.Searchable
 {
-  
+
   // ----------------------------------------------------------------------
   // CONSTRUCTORS
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   public PortletRow() {}
- 
- 
+
+
   public PortletRow(AbstractCollection other) {
     super(other);
   }
- 
-  
-  
-  
+
+
+
+
   public PortletRow(PortletRow other) {
     super(other);
     rowSpacing = other.rowSpacing;
@@ -46,13 +54,14 @@ public  class PortletRow extends generated.AbstractCollection
     backgroundImage = other.backgroundImage;
     backgroundRepeat = other.backgroundRepeat;
   }
-  
+
   // ----------------------------------------------------------------------
   // Import / Export
   // ----------------------------------------------------------------------
-  public void importXml(org.jdom.Element elt, ImportOptions options) {
+  @Override
+public void importXml(org.jdom.Element elt, ImportOptions options) {
     super.importXml(elt, options);
-    
+
     setRowSpacing(ImportUtil.parseFieldInt(elt, "rowSpacing"));
     setCellWidth(ImportUtil.parseFieldTextArray(elt, "cellWidth"));
     setAlignHorizontal(ImportUtil.parseFieldTextArray(elt, "alignHorizontal"));
@@ -61,17 +70,19 @@ public  class PortletRow extends generated.AbstractCollection
     setBackgroundImage(ImportUtil.parseFieldTextArray(elt, "backgroundImage"));
     setBackgroundRepeat(ImportUtil.parseFieldTextArray(elt, "backgroundRepeat"));
   }
-  
-  protected void importXmlFieldsWithReferences(org.jdom.Element elt, ImportOptions options) {
+
+  @Override
+protected void importXmlFieldsWithReferences(org.jdom.Element elt, ImportOptions options) {
     super.importXmlFieldsWithReferences(elt, options);
-      
+
     if (options.isSelfImport()) {
     } else {
-    
+
     }
   }
-  
-  public void exportXmlField(StringBuffer sb, int indentLevel) {
+
+  @Override
+public void exportXmlField(StringBuffer sb, int indentLevel) {
     super.exportXmlField(sb, indentLevel);
     sb.append(ExportUtil.exportField(indentLevel, "rowSpacing", getRowSpacing()));
     sb.append(ExportUtil.exportField(indentLevel, "cellWidth", getCellWidth(), false, true));
@@ -81,16 +92,17 @@ public  class PortletRow extends generated.AbstractCollection
     sb.append(ExportUtil.exportField(indentLevel, "backgroundImage", getBackgroundImage(), false, true));
     sb.append(ExportUtil.exportField(indentLevel, "backgroundRepeat", getBackgroundRepeat(), false, true));
   }
-  
-  public Set<FileDocument> getDocumentLinkSet() {
+
+  @Override
+public Set<FileDocument> getDocumentLinkSet() {
     Set<FileDocument> docSet = super.getDocumentLinkSet();
     JcmsUtil.addFileDocument(docSet, backgroundImage);
     return docSet;
   }
-  
+
   // ----------------------------------------------------------------------
   // TYPE AND FIELD INFOS (static methods)
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   /**
    * Returns the TypeEntry bound to <code>PortletRow</code>. <br>
    * @see com.jalios.jcms.Channel#getTypeEntry(Class)
@@ -121,93 +133,101 @@ public  class PortletRow extends generated.AbstractCollection
   }
   // ----------------------------------------------------------------------
   // FIELDs VALUE
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   /**
    * Gets the value of the given <code>int</code> field name for the current <code>PortletRow</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>int</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public int getIntFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public int getIntFieldValue(String fieldName) throws NoSuchFieldException {
     if ("rowSpacing".equals(fieldName)) { return getRowSpacing(); }
     return super.getIntFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>int</code> field name for the current <code>PortletRow</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>int</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setIntFieldValue(String fieldName, int value) throws NoSuchFieldException {
+  @Override
+public void setIntFieldValue(String fieldName, int value) throws NoSuchFieldException {
     if ("rowSpacing".equals(fieldName)) { setRowSpacing(value); return; }
     super.setIntFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>long</code> field name for the current <code>PortletRow</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>long</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public long getLongFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public long getLongFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getLongFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>long</code> field name for the current <code>PortletRow</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>long</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setLongFieldValue(String fieldName, long value) throws NoSuchFieldException {
+  @Override
+public void setLongFieldValue(String fieldName, long value) throws NoSuchFieldException {
     super.setLongFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>double</code> field name for the current <code>PortletRow</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>double</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public double getDoubleFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public double getDoubleFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getDoubleFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>double</code> field name for the current <code>PortletRow</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>double</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setDoubleFieldValue(String fieldName, double value) throws NoSuchFieldException {
+  @Override
+public void setDoubleFieldValue(String fieldName, double value) throws NoSuchFieldException {
      super.setDoubleFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>boolean</code> field name for the current <code>PortletRow</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @return the <code>boolean</code> field value
    * @throws NoSuchFieldException if the field was not found.
    */
-  public boolean getBooleanFieldValue(String fieldName) throws NoSuchFieldException {
+  @Override
+public boolean getBooleanFieldValue(String fieldName) throws NoSuchFieldException {
     return super.getBooleanFieldValue(fieldName);
   }
-  
+
   /**
    * Sets the value of the given <code>boolean</code> field name for the current <code>PortletRow</code>.
    * @param fieldName the field name from which to retrieve the field value.
    * @param value the <code>boolean</code> field value
    * @throws NoSuchFieldException if the field was not found.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setBooleanFieldValue(String fieldName, boolean value) throws NoSuchFieldException {
+  @Override
+public void setBooleanFieldValue(String fieldName, boolean value) throws NoSuchFieldException {
     super.setBooleanFieldValue(fieldName, value);
   }
-  
+
   /**
    * Gets the value of the given <code>Category</code> field name for the current <code>Data</code>.
    * @param fieldName the field name from which to retrieve the field value.
@@ -215,7 +235,8 @@ public  class PortletRow extends generated.AbstractCollection
    * @return a <code>TreeSet</code> of <code>Category</code>
    * @throws NoSuchFieldException if the field was not found in the given <code>Data</code>.
    */
-  public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
+  @Override
+public TreeSet<Category> getCategoryFieldValue(String fieldName, Member mbr) throws NoSuchFieldException {
     return super.getCategoryFieldValue(fieldName, mbr);
   }
   /**
@@ -224,12 +245,13 @@ public  class PortletRow extends generated.AbstractCollection
    * @param fieldName the field name from which to retrieve the field value.
    * @param lang the language (ISO-639 code) in which to retrieve the field value
    *        (used only for multilingual fields).
-   * @param useDefault whether to use the publication main language if the field value 
+   * @param useDefault whether to use the publication main language if the field value
    *        is not available in the requested language (used only for multilingual fields).
    * @return the <code>Object</code> field value
    * @throws NoSuchFieldException if the field was not found in the given <code>Publication</code>.
    */
-  public Object getFieldValue(String fieldName, String lang, boolean useDefault) throws NoSuchFieldException {
+  @Override
+public Object getFieldValue(String fieldName, String lang, boolean useDefault) throws NoSuchFieldException {
     if ("cellWidth".equals(fieldName)) { return getCellWidth(); }
     if ("alignHorizontal".equals(fieldName)) { return getAlignHorizontal(); }
     if ("alignVertical".equals(fieldName)) { return getAlignVertical(); }
@@ -238,7 +260,7 @@ public  class PortletRow extends generated.AbstractCollection
     if ("backgroundRepeat".equals(fieldName)) { return getBackgroundRepeat(); }
     return super.getFieldValue(fieldName, lang, useDefault);
   }
-  
+
   /**
    * Sets the <code>Object</code> value of the given field name for this <code>PortletRow</code>. <br>
    * Do not set <code>Category</code> fields, see {@link #setCategoryFieldValue(String, TreeSet)}.
@@ -246,11 +268,12 @@ public  class PortletRow extends generated.AbstractCollection
    * @param value the <code>Object</code> field value
    * @param lang the language (ISO-639 code) in which to retrieve the field value
    *        (used only for multilingual fields).
-   * 
+   *
    * @throws NoSuchFieldException if the field was not found in the given <code>Publication</code>.
-   * @since jcms-6.3.0 
+   * @since jcms-6.3.0
    */
-  public void setFieldValue(String fieldName, Object value, String lang) throws NoSuchFieldException {
+  @Override
+public void setFieldValue(String fieldName, Object value, String lang) throws NoSuchFieldException {
     if ("cellWidth".equals(fieldName)) { setCellWidth((String[])value); return; }
     if ("alignHorizontal".equals(fieldName)) { setAlignHorizontal((String[])value); return; }
     if ("alignVertical".equals(fieldName)) { setAlignVertical((String[])value); return; }
@@ -259,19 +282,19 @@ public  class PortletRow extends generated.AbstractCollection
     if ("backgroundRepeat".equals(fieldName)) { setBackgroundRepeat((String[])value); return; }
     super.setFieldValue(fieldName, value, lang);
   }
-  
+
   // ----------------------------------------------------------------------
   // rowSpacing
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  int rowSpacing = 0;
-  
+
   public int getRowSpacing() { return rowSpacing; }
-  
+
   public void setRowSpacing(int v) { rowSpacing = v; }
-  
-  
-  
+
+
+
   public static IntegerFormReport getRowSpacingReport(SortedSet<PortletRow> set) {
     long sum = 0;
     int min = Integer.MAX_VALUE;
@@ -286,39 +309,39 @@ public  class PortletRow extends generated.AbstractCollection
       max = Math.max(value, max);
     }
     return new IntegerFormReport(set.size(), sum, min, max);
-  }  
+  }
   // ----------------------------------------------------------------------
   // cellWidth
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String[] cellWidth;
-  
+
   public String[] getCellWidth() { return cellWidth; }
-  
+
   public void setCellWidth(String[] v) { cellWidth = v; }
-  
-  
-  
+
+
+
   public String[] getCellWidth(String lang) { return cellWidth; }
   public String[] getCellWidth(String lang, boolean useDefault) { return cellWidth; }
   // ----------------------------------------------------------------------
   // alignHorizontal
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String[] alignHorizontal;
-  
+
   public String[] getAlignHorizontal() { return alignHorizontal; }
-  
+
   public void setAlignHorizontal(String[] v) { alignHorizontal = v; }
-  
-  
-  
+
+
+
   public String[] getAlignHorizontal(String lang) { return alignHorizontal; }
   public String[] getAlignHorizontal(String lang, boolean useDefault) { return alignHorizontal; }
-  private static String[] alignHorizontalValues;  
+  private static String[] alignHorizontalValues;
   private static String[] alignHorizontalLabels;
   private static Map<String, String[]> alignHorizontalLabelsMap;
-  
+
   public static String[] getAlignHorizontalValues() {
     if(alignHorizontalValues == null) {
       setAlignHorizontalValues(channel.getTypeFieldEntry(PortletRow.class, "alignHorizontal", true).getEnumerateValues());
@@ -348,9 +371,9 @@ public  class PortletRow extends generated.AbstractCollection
   }
   public static String[] getAlignHorizontalLabels(String userLang) {
     Map<String, String[]> alignHorizontalLabelMap = getAlignHorizontalLabelsMap();
-    String[] labels = (String[])alignHorizontalLabelMap.get(userLang);
+    String[] labels = alignHorizontalLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])alignHorizontalLabelMap.get(channel.getLanguage());
+      labels = alignHorizontalLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -376,8 +399,8 @@ public  class PortletRow extends generated.AbstractCollection
     }
     return getAlignHorizontalLabel(value, channel.getLanguage());
   }
-  
-  public static String getAlignHorizontalLabel(String value) {    
+
+  public static String getAlignHorizontalLabel(String value) {
     String[] alignHorizontalLabels = getAlignHorizontalLabels();
     if (false) {
     }
@@ -407,25 +430,25 @@ public  class PortletRow extends generated.AbstractCollection
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // alignVertical
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String[] alignVertical;
-  
+
   public String[] getAlignVertical() { return alignVertical; }
-  
+
   public void setAlignVertical(String[] v) { alignVertical = v; }
-  
-  
-  
+
+
+
   public String[] getAlignVertical(String lang) { return alignVertical; }
   public String[] getAlignVertical(String lang, boolean useDefault) { return alignVertical; }
-  private static String[] alignVerticalValues;  
+  private static String[] alignVerticalValues;
   private static String[] alignVerticalLabels;
   private static Map<String, String[]> alignVerticalLabelsMap;
-  
+
   public static String[] getAlignVerticalValues() {
     if(alignVerticalValues == null) {
       setAlignVerticalValues(channel.getTypeFieldEntry(PortletRow.class, "alignVertical", true).getEnumerateValues());
@@ -455,9 +478,9 @@ public  class PortletRow extends generated.AbstractCollection
   }
   public static String[] getAlignVerticalLabels(String userLang) {
     Map<String, String[]> alignVerticalLabelMap = getAlignVerticalLabelsMap();
-    String[] labels = (String[])alignVerticalLabelMap.get(userLang);
+    String[] labels = alignVerticalLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])alignVerticalLabelMap.get(channel.getLanguage());
+      labels = alignVerticalLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -486,8 +509,8 @@ public  class PortletRow extends generated.AbstractCollection
     }
     return getAlignVerticalLabel(value, channel.getLanguage());
   }
-  
-  public static String getAlignVerticalLabel(String value) {    
+
+  public static String getAlignVerticalLabel(String value) {
     String[] alignVerticalLabels = getAlignVerticalLabels();
     if (false) {
     }
@@ -520,53 +543,53 @@ public  class PortletRow extends generated.AbstractCollection
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
+  }
   // ----------------------------------------------------------------------
   // backgroundColor
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String[] backgroundColor;
-  
+
   public String[] getBackgroundColor() { return backgroundColor; }
-  
+
   public void setBackgroundColor(String[] v) { backgroundColor = v; }
-  
-  
-  
+
+
+
   public String[] getBackgroundColor(String lang) { return backgroundColor; }
   public String[] getBackgroundColor(String lang, boolean useDefault) { return backgroundColor; }
   // ----------------------------------------------------------------------
   // backgroundImage
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String[] backgroundImage;
-  
+
   public String[] getBackgroundImage() { return backgroundImage; }
-  
+
   public void setBackgroundImage(String[] v) { backgroundImage = v; }
-  
-  
-  
+
+
+
   public String[] getBackgroundImage(String lang) { return backgroundImage; }
   public String[] getBackgroundImage(String lang, boolean useDefault) { return backgroundImage; }
   // ----------------------------------------------------------------------
   // backgroundRepeat
-  // ----------------------------------------------------------------------  
-  
+  // ----------------------------------------------------------------------
+
   protected  String[] backgroundRepeat;
-  
+
   public String[] getBackgroundRepeat() { return backgroundRepeat; }
-  
+
   public void setBackgroundRepeat(String[] v) { backgroundRepeat = v; }
-  
-  
-  
+
+
+
   public String[] getBackgroundRepeat(String lang) { return backgroundRepeat; }
   public String[] getBackgroundRepeat(String lang, boolean useDefault) { return backgroundRepeat; }
-  private static String[] backgroundRepeatValues;  
+  private static String[] backgroundRepeatValues;
   private static String[] backgroundRepeatLabels;
   private static Map<String, String[]> backgroundRepeatLabelsMap;
-  
+
   public static String[] getBackgroundRepeatValues() {
     if(backgroundRepeatValues == null) {
       setBackgroundRepeatValues(channel.getTypeFieldEntry(PortletRow.class, "backgroundRepeat", true).getEnumerateValues());
@@ -596,9 +619,9 @@ public  class PortletRow extends generated.AbstractCollection
   }
   public static String[] getBackgroundRepeatLabels(String userLang) {
     Map<String, String[]> backgroundRepeatLabelMap = getBackgroundRepeatLabelsMap();
-    String[] labels = (String[])backgroundRepeatLabelMap.get(userLang);
+    String[] labels = backgroundRepeatLabelMap.get(userLang);
     if (labels == null) {
-      labels = (String[])backgroundRepeatLabelMap.get(channel.getLanguage());
+      labels = backgroundRepeatLabelMap.get(channel.getLanguage());
     }
     return labels;
   }
@@ -624,8 +647,8 @@ public  class PortletRow extends generated.AbstractCollection
     }
     return getBackgroundRepeatLabel(value, channel.getLanguage());
   }
-  
-  public static String getBackgroundRepeatLabel(String value) {    
+
+  public static String getBackgroundRepeatLabel(String value) {
     String[] backgroundRepeatLabels = getBackgroundRepeatLabels();
     if (false) {
     }
@@ -655,11 +678,11 @@ public  class PortletRow extends generated.AbstractCollection
       sum++;
     }
     return new EnumerateFormReport(map, sum);
-  }    
-   
+  }
+
   // ----------------------------------------------------------------------
   // abstract
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   @Override
   public void setAbstract(String lang, String value) { setDescription(lang, value); }
   @Override
@@ -668,36 +691,36 @@ public  class PortletRow extends generated.AbstractCollection
   public String getAbstract(String lang, boolean useDefault) { return getDescription(lang, useDefault); }
   @Override
   public HashMap<String,String> getAbstractML() { return getDescriptionML(); }
-   
+
   // ----------------------------------------------------------------------
   // Data image
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   @Override
   public String getDataImage() {
     String _img = portletImage;
     if (Util.notEmpty(_img)) {
       return _img;
     }
-  
+
     return super.getDataImage();
   }
-  
+
   @Override
   public String getDataImage(String lang, boolean useDefault) {
     String _img = getPortletImage(lang, useDefault);
     if (Util.notEmpty(_img)) {
       return _img;
-    }  
-  
+    }
+
     return super.getDataImage(lang, useDefault);
   }
-  
+
   @Override
   public String[] getSearchStrings() {
     StringBuffer sb = new StringBuffer(super.getSearchStrings()[0]);
     sb.ensureCapacity(500 * (0 + 1 + 0 + 0 + 0 + 0) );
     if (title != null) {
-      sb.append(title); sb.append(' '); 
+      sb.append(title); sb.append(' ');
     }
     if (titleML != null) {
       for (String str : titleML.values()) {
@@ -708,14 +731,14 @@ public  class PortletRow extends generated.AbstractCollection
     }
     return new String[] {sb.toString()};
   }
-  
+
   @Override
   public String getAllWikiText() {
     StringBuffer sb = new StringBuffer(super.getAllWikiText());
     sb.ensureCapacity(500 * (0 + 0 + 0 + 0 + 0 + 0) );
     return sb.toString();
   }
-  
+
   @Override
   public String getAllWysiwygText() {
     StringBuffer sb = new StringBuffer(super.getAllWysiwygText());
@@ -724,7 +747,7 @@ public  class PortletRow extends generated.AbstractCollection
    // Wysiwyg fields
     return sb.toString();
   }
-  
+
   @Override
   public <T extends Data> TreeSet<T> getLinkDataSet(Class<T> clazz) {
     if (clazz == null) {
@@ -737,33 +760,35 @@ public  class PortletRow extends generated.AbstractCollection
   }
   // ----------------------------------------------------------------------
   // DataController
-  // ----------------------------------------------------------------------  
-  public ControllerStatus checkIntegrity() {
-    
+  // ----------------------------------------------------------------------
+  @Override
+public ControllerStatus checkIntegrity() {
+
     ControllerStatus status = super.checkIntegrity();
     if (status.hasFailed()) {
       return status;
     }
-    
+
     if (rowSpacing < 0 ) {
       status = new ControllerStatus();
       status.setProp("msg.edit.lesser-number", channel.getTypeFieldLabel(this, "rowSpacing"), "0");
-      return status;      
+      return status;
     }
     if (rowSpacing > 500 ) {
       status = new ControllerStatus();
       status.setProp("msg.edit.greater-number", channel.getTypeFieldLabel(this, "rowSpacing"), "500");
-      return status;      
+      return status;
     }
     return ControllerStatus.OK;
   }
-  
-  
+
+
   // ----------------------------------------------------------------------
   // WorkCopy
-  // ----------------------------------------------------------------------  
-  protected void prepareMergeCopy(Publication mergeCopy) {
-    super.prepareMergeCopy(mergeCopy);  
+  // ----------------------------------------------------------------------
+  @Override
+protected void prepareMergeCopy(Publication mergeCopy) {
+    super.prepareMergeCopy(mergeCopy);
     ((PortletRow)mergeCopy).setRowSpacing(getRowSpacing());
     ((PortletRow)mergeCopy).setCellWidth(getCellWidth());
     ((PortletRow)mergeCopy).setAlignHorizontal(getAlignHorizontal());

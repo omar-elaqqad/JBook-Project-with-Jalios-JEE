@@ -3,55 +3,60 @@
 
 package generated;
 
-import java.util.*;
-import com.jalios.jstore.*;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.jalios.jstore.DecodeContext;
+import com.jalios.jstore.StorableLogEntry;
+import com.jalios.jstore.StoreUtil;
 
 @SuppressWarnings("unchecked")
 public class CollaborativeSpace_HANDLER implements com.jalios.jstore.StorableHandler {
 
-  @SuppressWarnings("rawtypes")
+  @Override
+@SuppressWarnings("rawtypes")
   public void setAttributes(com.jalios.jstore.Storable storable, StorableLogEntry sle, com.jalios.jstore.Store store) {
     CollaborativeSpace handler = (generated.CollaborativeSpace)storable;
     String value;
     Map<String,String> attributes = sle.getAttributes();
     value = attributes.get("description");
     if (value != null) {
-      handler.setDescription((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "description")));
+      handler.setDescription(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "description")));
     }
 
     value = attributes.get("descriptionML");
     if (value != null) {
-      handler.setDescriptionML((java.util.HashMap)StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "descriptionML")));
+      handler.setDescriptionML(StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "descriptionML")));
     }
 
     value = attributes.get("introduction");
     if (value != null) {
-      handler.setIntroduction((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "introduction")));
+      handler.setIntroduction(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "introduction")));
     }
 
     value = attributes.get("introductionML");
     if (value != null) {
-      handler.setIntroductionML((java.util.HashMap)StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "introductionML")));
+      handler.setIntroductionML(StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "introductionML")));
     }
 
     value = attributes.get("accessPolicy");
     if (value != null) {
-      handler.setAccessPolicy((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "accessPolicy")));
+      handler.setAccessPolicy(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "accessPolicy")));
     }
 
     value = attributes.get("signupPolicy");
     if (value != null) {
-      handler.setSignupPolicy((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "signupPolicy")));
+      handler.setSignupPolicy(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "signupPolicy")));
     }
 
     value = attributes.get("followersGroup");
     if (value != null) {
-      handler.setFollowersGroup((com.jalios.jcms.Group)StoreUtil.decodeObject(com.jalios.jcms.Group.class, value, store, new DecodeContext(sle, "followersGroup")));
+      handler.setFollowersGroup(StoreUtil.decodeObject(com.jalios.jcms.Group.class, value, store, new DecodeContext(sle, "followersGroup")));
     }
 
     value = attributes.get("layout");
     if (value != null) {
-      handler.setLayout((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "layout")));
+      handler.setLayout(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "layout")));
     }
 
     value = attributes.get("dashboardColumnCount");
@@ -61,17 +66,17 @@ public class CollaborativeSpace_HANDLER implements com.jalios.jstore.StorableHan
 
     value = attributes.get("theme");
     if (value != null) {
-      handler.setTheme((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "theme")));
+      handler.setTheme(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "theme")));
     }
 
     value = attributes.get("header");
     if (value != null) {
-      handler.setHeader((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "header")));
+      handler.setHeader(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "header")));
     }
 
     value = attributes.get("headerSettings");
     if (value != null) {
-      handler.setHeaderSettings((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "headerSettings")));
+      handler.setHeaderSettings(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "headerSettings")));
     }
 
     value = attributes.get("exactCategory");
@@ -91,77 +96,77 @@ public class CollaborativeSpace_HANDLER implements com.jalios.jstore.StorableHan
 
     value = attributes.get("jportal");
     if (value != null) {
-      handler.setJportal((com.jalios.jcms.jportal.AbstractJPortal)StoreUtil.decodeObject(com.jalios.jcms.jportal.AbstractJPortal.class, value, store, new DecodeContext(sle, "jportal")));
+      handler.setJportal(StoreUtil.decodeObject(com.jalios.jcms.jportal.AbstractJPortal.class, value, store, new DecodeContext(sle, "jportal")));
     }
 
     value = attributes.get("syncMode");
     if (value != null) {
-      handler.setSyncMode((java.lang.String[])StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "syncMode")));
+      handler.setSyncMode(StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "syncMode")));
     }
 
     value = attributes.get("modelSyncMode");
     if (value != null) {
-      handler.setModelSyncMode((java.lang.String[])StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "modelSyncMode")));
+      handler.setModelSyncMode(StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "modelSyncMode")));
     }
 
     value = attributes.get("model");
     if (value != null) {
-      handler.setModel((com.jalios.jcms.workspace.Workspace)StoreUtil.decodeObject(com.jalios.jcms.workspace.Workspace.class, value, store, new DecodeContext(sle, "model")));
+      handler.setModel(StoreUtil.decodeObject(com.jalios.jcms.workspace.Workspace.class, value, store, new DecodeContext(sle, "model")));
     }
 
     value = attributes.get("applications");
     if (value != null) {
-      handler.setApplications((com.jalios.jcms.portlet.PortalElement[])StoreUtil.decodeObject(com.jalios.jcms.portlet.PortalElement[].class, value, store, new DecodeContext(sle, "applications")));
+      handler.setApplications(StoreUtil.decodeObject(com.jalios.jcms.portlet.PortalElement[].class, value, store, new DecodeContext(sle, "applications")));
     }
 
     value = attributes.get("mobilePortlets");
     if (value != null) {
-      handler.setMobilePortlets((com.jalios.jcms.portlet.PortalElement[])StoreUtil.decodeObject(com.jalios.jcms.portlet.PortalElement[].class, value, store, new DecodeContext(sle, "mobilePortlets")));
+      handler.setMobilePortlets(StoreUtil.decodeObject(com.jalios.jcms.portlet.PortalElement[].class, value, store, new DecodeContext(sle, "mobilePortlets")));
     }
 
     value = attributes.get("children");
     if (value != null) {
-      handler.setChildren((com.jalios.jcms.portlet.PortalElement[])StoreUtil.decodeObject(com.jalios.jcms.portlet.PortalElement[].class, value, store, new DecodeContext(sle, "children")));
+      handler.setChildren(StoreUtil.decodeObject(com.jalios.jcms.portlet.PortalElement[].class, value, store, new DecodeContext(sle, "children")));
     }
 
     value = attributes.get("childrenBindings");
     if (value != null) {
-      handler.setChildrenBindings((java.lang.String[])StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "childrenBindings")));
+      handler.setChildrenBindings(StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "childrenBindings")));
     }
 
     value = attributes.get("description");
     if (value != null) {
-      handler.setDescription((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "description")));
+      handler.setDescription(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "description")));
     }
 
     value = attributes.get("descriptionML");
     if (value != null) {
-      handler.setDescriptionML((java.util.HashMap)StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "descriptionML")));
+      handler.setDescriptionML(StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "descriptionML")));
     }
 
     value = attributes.get("portletImage");
     if (value != null) {
-      handler.setPortletImage((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "portletImage")));
+      handler.setPortletImage(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "portletImage")));
     }
 
     value = attributes.get("portletImageML");
     if (value != null) {
-      handler.setPortletImageML((java.util.HashMap)StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "portletImageML")));
+      handler.setPortletImageML(StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "portletImageML")));
     }
 
     value = attributes.get("cacheType");
     if (value != null) {
-      handler.setCacheType((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "cacheType")));
+      handler.setCacheType(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "cacheType")));
     }
 
     value = attributes.get("cacheSensibility");
     if (value != null) {
-      handler.setCacheSensibility((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "cacheSensibility")));
+      handler.setCacheSensibility(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "cacheSensibility")));
     }
 
     value = attributes.get("invalidClass");
     if (value != null) {
-      handler.setInvalidClass((java.lang.String[])StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "invalidClass")));
+      handler.setInvalidClass(StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "invalidClass")));
     }
 
     value = attributes.get("invalidTime");
@@ -171,12 +176,12 @@ public class CollaborativeSpace_HANDLER implements com.jalios.jstore.StorableHan
 
     value = attributes.get("displayCSS");
     if (value != null) {
-      handler.setDisplayCSS((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "displayCSS")));
+      handler.setDisplayCSS(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "displayCSS")));
     }
 
     value = attributes.get("width");
     if (value != null) {
-      handler.setWidth((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "width")));
+      handler.setWidth(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "width")));
     }
 
     value = attributes.get("insetLeft");
@@ -206,17 +211,17 @@ public class CollaborativeSpace_HANDLER implements com.jalios.jstore.StorableHan
 
     value = attributes.get("alignH");
     if (value != null) {
-      handler.setAlignH((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "alignH")));
+      handler.setAlignH(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "alignH")));
     }
 
     value = attributes.get("alignV");
     if (value != null) {
-      handler.setAlignV((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "alignV")));
+      handler.setAlignV(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "alignV")));
     }
 
     value = attributes.get("alignTable");
     if (value != null) {
-      handler.setAlignTable((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "alignTable")));
+      handler.setAlignTable(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "alignTable")));
     }
 
     value = attributes.get("border");
@@ -226,87 +231,87 @@ public class CollaborativeSpace_HANDLER implements com.jalios.jstore.StorableHan
 
     value = attributes.get("borderColor");
     if (value != null) {
-      handler.setBorderColor((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "borderColor")));
+      handler.setBorderColor(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "borderColor")));
     }
 
     value = attributes.get("backColor");
     if (value != null) {
-      handler.setBackColor((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "backColor")));
+      handler.setBackColor(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "backColor")));
     }
 
     value = attributes.get("backImage");
     if (value != null) {
-      handler.setBackImage((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "backImage")));
+      handler.setBackImage(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "backImage")));
     }
 
     value = attributes.get("behaviorCopy");
     if (value != null) {
-      handler.setBehaviorCopy((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "behaviorCopy")));
+      handler.setBehaviorCopy(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "behaviorCopy")));
     }
 
     value = attributes.get("originalPortlet");
     if (value != null) {
-      handler.setOriginalPortlet((com.jalios.jcms.portlet.PortalElement)StoreUtil.decodeObject(com.jalios.jcms.portlet.PortalElement.class, value, store, new DecodeContext(sle, "originalPortlet")));
+      handler.setOriginalPortlet(StoreUtil.decodeObject(com.jalios.jcms.portlet.PortalElement.class, value, store, new DecodeContext(sle, "originalPortlet")));
     }
 
     value = attributes.get("condition");
     if (value != null) {
-      handler.setCondition((java.lang.String[])StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "condition")));
+      handler.setCondition(StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "condition")));
     }
 
     value = attributes.get("cssId");
     if (value != null) {
-      handler.setCssId((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "cssId")));
+      handler.setCssId(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "cssId")));
     }
 
     value = attributes.get("cssClasses");
     if (value != null) {
-      handler.setCssClasses((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "cssClasses")));
+      handler.setCssClasses(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "cssClasses")));
     }
 
     value = attributes.get("abilities");
     if (value != null) {
-      handler.setAbilities((java.lang.String[])StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "abilities")));
+      handler.setAbilities(StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "abilities")));
     }
 
     value = attributes.get("mainLanguage");
     if (value != null) {
-      handler.setMainLanguage((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "mainLanguage")));
+      handler.setMainLanguage(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "mainLanguage")));
     }
 
     value = attributes.get("title");
     if (value != null) {
-      handler.setTitle((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "title")));
+      handler.setTitle(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "title")));
     }
 
     value = attributes.get("titleML");
     if (value != null) {
-      handler.setTitleML((java.util.HashMap)StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "titleML")));
+      handler.setTitleML(StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "titleML")));
     }
 
     value = attributes.get("pdate");
     if (value != null) {
-      handler.setPdate((java.util.Date)StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "pdate")));
+      handler.setPdate(StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "pdate")));
     }
 
     value = attributes.get("edate");
     if (value != null) {
-      handler.setEdate((java.util.Date)StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "edate")));
+      handler.setEdate(StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "edate")));
     }
 
     value = attributes.get("sdate");
     if (value != null) {
-      handler.setSdate((java.util.Date)StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "sdate")));
+      handler.setSdate(StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "sdate")));
     }
 
     value = attributes.get("adate");
     if (value != null) {
-      handler.setAdate((java.util.Date)StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "adate")));
+      handler.setAdate(StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "adate")));
     }
 
     value = attributes.get("udate");
     if (value != null) {
-      handler.setUdate((java.util.Date)StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "udate")));
+      handler.setUdate(StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "udate")));
     }
 
     value = attributes.get("majorVersion");
@@ -321,47 +326,47 @@ public class CollaborativeSpace_HANDLER implements com.jalios.jstore.StorableHan
 
     value = attributes.get("mergeDate");
     if (value != null) {
-      handler.setMergeDate((java.util.Date)StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "mergeDate")));
+      handler.setMergeDate(StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "mergeDate")));
     }
 
     value = attributes.get("mergeId");
     if (value != null) {
-      handler.setMergeId((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "mergeId")));
+      handler.setMergeId(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "mergeId")));
     }
 
     value = attributes.get("templates");
     if (value != null) {
-      handler.setTemplates((java.lang.String[])StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "templates")));
+      handler.setTemplates(StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "templates")));
     }
 
     value = attributes.get("categories");
     if (value != null) {
-      handler.setCategories((com.jalios.jcms.Category[])StoreUtil.decodeObject(com.jalios.jcms.Category[].class, value, store, new DecodeContext(sle, "categories")));
+      handler.setCategories(StoreUtil.decodeObject(com.jalios.jcms.Category[].class, value, store, new DecodeContext(sle, "categories")));
     }
 
     value = attributes.get("authorizedMemberSet");
     if (value != null) {
-      handler.setAuthorizedMemberSet((java.util.TreeSet)StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "authorizedMemberSet")));
+      handler.setAuthorizedMemberSet(StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "authorizedMemberSet")));
     }
 
     value = attributes.get("authorizedMemberSetDBID");
     if (value != null) {
-      handler.setAuthorizedMemberSetDBID((java.util.HashSet)StoreUtil.decodeObject(java.util.HashSet.class, value, store, new DecodeContext(sle, "authorizedMemberSetDBID")));
+      handler.setAuthorizedMemberSetDBID(StoreUtil.decodeObject(java.util.HashSet.class, value, store, new DecodeContext(sle, "authorizedMemberSetDBID")));
     }
 
     value = attributes.get("authorizedGroupSet");
     if (value != null) {
-      handler.setAuthorizedGroupSet((java.util.TreeSet)StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "authorizedGroupSet")));
+      handler.setAuthorizedGroupSet(StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "authorizedGroupSet")));
     }
 
     value = attributes.get("updateMemberSet");
     if (value != null) {
-      handler.setUpdateMemberSet((java.util.TreeSet)StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "updateMemberSet")));
+      handler.setUpdateMemberSet(StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "updateMemberSet")));
     }
 
     value = attributes.get("updateGroupSet");
     if (value != null) {
-      handler.setUpdateGroupSet((java.util.TreeSet)StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "updateGroupSet")));
+      handler.setUpdateGroupSet(StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "updateGroupSet")));
     }
 
     value = attributes.get("restrictUpdateRights");
@@ -371,7 +376,7 @@ public class CollaborativeSpace_HANDLER implements com.jalios.jstore.StorableHan
 
     value = attributes.get("mainInstance");
     if (value != null) {
-      handler.setMainInstance((com.jalios.jcms.Publication)StoreUtil.decodeObject(com.jalios.jcms.Publication.class, value, store, new DecodeContext(sle, "mainInstance")));
+      handler.setMainInstance(StoreUtil.decodeObject(com.jalios.jcms.Publication.class, value, store, new DecodeContext(sle, "mainInstance")));
     }
 
     value = attributes.get("isTracked");
@@ -386,79 +391,80 @@ public class CollaborativeSpace_HANDLER implements com.jalios.jstore.StorableHan
 
     value = attributes.get("friendlyURLSet");
     if (value != null) {
-      handler.setFriendlyURLSet((java.util.TreeSet)StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "friendlyURLSet")));
+      handler.setFriendlyURLSet(StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "friendlyURLSet")));
     }
 
     value = attributes.get("workspace");
     if (value != null) {
-      handler.setWorkspace((com.jalios.jcms.workspace.Workspace)StoreUtil.decodeObject(com.jalios.jcms.workspace.Workspace.class, value, store, new DecodeContext(sle, "workspace")));
+      handler.setWorkspace(StoreUtil.decodeObject(com.jalios.jcms.workspace.Workspace.class, value, store, new DecodeContext(sle, "workspace")));
     }
 
     value = attributes.get("roleMap");
     if (value != null) {
-      handler.setRoleMap((java.util.HashMap)StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "roleMap")));
+      handler.setRoleMap(StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "roleMap")));
     }
 
     value = attributes.get("workflowId");
     if (value != null) {
-      handler.setWorkflowId((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "workflowId")));
+      handler.setWorkflowId(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "workflowId")));
     }
 
     value = attributes.get("attachWorkspaceSet");
     if (value != null) {
-      handler.setAttachWorkspaceSet((java.util.Set)StoreUtil.decodeObject(java.util.Set.class, value, store, new DecodeContext(sle, "attachWorkspaceSet")));
+      handler.setAttachWorkspaceSet(StoreUtil.decodeObject(java.util.Set.class, value, store, new DecodeContext(sle, "attachWorkspaceSet")));
     }
 
     value = attributes.get("author");
     if (value != null) {
-      handler.setAuthor((com.jalios.jcms.Member)StoreUtil.decodeObject(com.jalios.jcms.Member.class, value, store, new DecodeContext(sle, "author")));
+      handler.setAuthor(StoreUtil.decodeObject(com.jalios.jcms.Member.class, value, store, new DecodeContext(sle, "author")));
     }
 
     value = attributes.get("authorDBID");
     if (value != null) {
-      handler.setAuthorDBID((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "authorDBID")));
+      handler.setAuthorDBID(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "authorDBID")));
     }
 
     value = attributes.get("opAuthor");
     if (value != null) {
-      handler.setOpAuthor((com.jalios.jcms.Member)StoreUtil.decodeObject(com.jalios.jcms.Member.class, value, store, new DecodeContext(sle, "opAuthor")));
+      handler.setOpAuthor(StoreUtil.decodeObject(com.jalios.jcms.Member.class, value, store, new DecodeContext(sle, "opAuthor")));
     }
 
     value = attributes.get("opDelegate");
     if (value != null) {
-      handler.setOpDelegate((com.jalios.jcms.Member)StoreUtil.decodeObject(com.jalios.jcms.Member.class, value, store, new DecodeContext(sle, "opDelegate")));
+      handler.setOpDelegate(StoreUtil.decodeObject(com.jalios.jcms.Member.class, value, store, new DecodeContext(sle, "opDelegate")));
     }
 
     value = attributes.get("extension");
     if (value != null) {
-      handler.setExtension((com.jalios.jcms.DataExtension)StoreUtil.decodeObject(com.jalios.jcms.DataExtension.class, value, store, new DecodeContext(sle, "extension")));
+      handler.setExtension(StoreUtil.decodeObject(com.jalios.jcms.DataExtension.class, value, store, new DecodeContext(sle, "extension")));
     }
 
     value = attributes.get("importMap");
     if (value != null) {
-      handler.setImportMap((java.util.HashMap)StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "importMap")));
+      handler.setImportMap(StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "importMap")));
     }
 
     value = attributes.get("extraDataMap");
     if (value != null) {
-      handler.setExtraDataMap((java.util.HashMap)StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "extraDataMap")));
+      handler.setExtraDataMap(StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "extraDataMap")));
     }
 
     value = attributes.get("cdate");
     if (value != null) {
-      handler.setCdate((java.util.Date)StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "cdate")));
+      handler.setCdate(StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "cdate")));
     }
 
     value = attributes.get("mdate");
     if (value != null) {
-      handler.setMdate((java.util.Date)StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "mdate")));
+      handler.setMdate(StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "mdate")));
     }
 
   }
 
-  public Map<String,String> getAttributes(com.jalios.jstore.Storable storable, com.jalios.jstore.Store store) {
+  @Override
+public Map<String,String> getAttributes(com.jalios.jstore.Storable storable, com.jalios.jstore.Store store) {
     generated.CollaborativeSpace handler = (generated.CollaborativeSpace)storable;
-    Map<String,String> attributes = new HashMap<String,String>();
+    Map<String,String> attributes = new HashMap<>();
     attributes.put("description", StoreUtil.encodeObject(handler.getDescription(), store));
     attributes.put("descriptionML", StoreUtil.encodeObject(handler.getDescriptionML(), store));
     attributes.put("introduction", StoreUtil.encodeObject(handler.getIntroduction(), store));

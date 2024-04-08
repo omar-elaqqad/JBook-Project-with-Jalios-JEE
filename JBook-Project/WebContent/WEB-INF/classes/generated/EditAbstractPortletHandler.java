@@ -1,163 +1,160 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
+
+
+import java.util.HashMap;
+
+import com.jalios.jcms.Data;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
 import com.jalios.util.Util;
-import custom.*;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditAbstractPortletHandler extends com.jalios.jcms.portlet.EditPortletHandler {
-   
+
   protected AbstractPortlet theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return AbstractPortlet.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpAbstractPortlet  
+  // validateBeforeOpAbstractPortlet
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     {
       Data data = processDataId("originalPortlet", __originalPortletStr, com.jalios.jcms.portlet.PortalElement.class);
-      if (data != null) { 
+      if (data != null) {
         originalPortlet = (com.jalios.jcms.portlet.PortalElement)data;
       } else {
         isOriginalPortletValidated = Util.isEmpty(__originalPortletStr);
       }
     }
-    if (!validateUploadedFileDocument(getAvailableOriginalPortlet(),   fdauthor, getAvailableWorkspace())) {
-      return false;
-    }
-    if (!createUploadedFileDocument(getAvailableOriginalPortlet(),  fdauthor, getAvailableWorkspace())) {
+    if (!validateUploadedFileDocument(getAvailableOriginalPortlet(),   fdauthor, getAvailableWorkspace()) || !createUploadedFileDocument(getAvailableOriginalPortlet(),  fdauthor, getAvailableWorkspace())) {
       return false;
     }
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("description".equals(field)) {
       return getAllAvailableDescriptionML();
     }
-    
+
     if ("portletImage".equals(field)) {
       return getAllAvailablePortletImageML();
     }
-    
+
     if ("cacheType".equals(field)) {
       return getAvailableCacheType();
     }
-    
+
     if ("cacheSensibility".equals(field)) {
       return getAvailableCacheSensibility();
     }
-    
+
     if ("invalidClass".equals(field)) {
       return getAvailableInvalidClass();
     }
-    
+
     if ("invalidTime".equals(field)) {
       return getAvailableInvalidTime();
     }
-    
+
     if ("displayCSS".equals(field)) {
       return getAvailableDisplayCSS();
     }
-    
+
     if ("width".equals(field)) {
       return getAvailableWidth();
     }
-    
+
     if ("insetLeft".equals(field)) {
       return getAvailableInsetLeft();
     }
-    
+
     if ("insetRight".equals(field)) {
       return getAvailableInsetRight();
     }
-    
+
     if ("insetTop".equals(field)) {
       return getAvailableInsetTop();
     }
-    
+
     if ("insetBottom".equals(field)) {
       return getAvailableInsetBottom();
     }
-    
+
     if ("cellPadding".equals(field)) {
       return getAvailableCellPadding();
     }
-    
+
     if ("alignH".equals(field)) {
       return getAvailableAlignH();
     }
-    
+
     if ("alignV".equals(field)) {
       return getAvailableAlignV();
     }
-    
+
     if ("alignTable".equals(field)) {
       return getAvailableAlignTable();
     }
-    
+
     if ("border".equals(field)) {
       return getAvailableBorder();
     }
-    
+
     if ("borderColor".equals(field)) {
       return getAvailableBorderColor();
     }
-    
+
     if ("backColor".equals(field)) {
       return getAvailableBackColor();
     }
-    
+
     if ("backImage".equals(field)) {
       return getAvailableBackImage();
     }
-    
+
     if ("behaviorCopy".equals(field)) {
       return getAvailableBehaviorCopy();
     }
-    
+
     if ("originalPortlet".equals(field)) {
       return getAvailableOriginalPortlet();
     }
-    
+
     if ("condition".equals(field)) {
       return getAvailableCondition();
     }
-    
+
     if ("cssId".equals(field)) {
       return getAvailableCssId();
     }
-    
+
     if ("cssClasses".equals(field)) {
       return getAvailableCssClasses();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     if ("cacheType".equals(field)) {
       return AbstractPortlet.getCacheTypeValues();
     }
@@ -189,7 +186,7 @@ public class EditAbstractPortletHandler extends com.jalios.jcms.portlet.EditPort
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     if ("cacheType".equals(field)) {
       return AbstractPortlet.getCacheTypeLabels(userLang);
     }
@@ -220,7 +217,7 @@ public class EditAbstractPortletHandler extends com.jalios.jcms.portlet.EditPort
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdateAbstractPortlet  
+  // validateCommonCreateUpdateAbstractPortlet
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdateAbstractPortlet() {
     if (!isInvalidTimeValidated) {
@@ -257,39 +254,35 @@ public class EditAbstractPortletHandler extends com.jalios.jcms.portlet.EditPort
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdateAbstractPortlet()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdateAbstractPortlet()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdateAbstractPortlet()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdateAbstractPortlet()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -298,7 +291,8 @@ public class EditAbstractPortletHandler extends com.jalios.jcms.portlet.EditPort
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -307,7 +301,8 @@ public class EditAbstractPortletHandler extends com.jalios.jcms.portlet.EditPort
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -316,7 +311,8 @@ public class EditAbstractPortletHandler extends com.jalios.jcms.portlet.EditPort
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     AbstractPortlet obj = (AbstractPortlet)data;
     obj.setDescription(getAvailableDescription());
@@ -347,8 +343,9 @@ public class EditAbstractPortletHandler extends com.jalios.jcms.portlet.EditPort
     obj.setCssId(getAvailableCssId());
     obj.setCssClasses(getAvailableCssClasses());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof AbstractPortlet) {
       super.setId(v);
       theContent = (AbstractPortlet)publication;
@@ -357,11 +354,11 @@ public class EditAbstractPortletHandler extends com.jalios.jcms.portlet.EditPort
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // description
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry descriptionTFE = channel.getTypeFieldEntry(AbstractPortlet.class, "description", true);
   protected String description = channel.getTypeFieldEntry(AbstractPortlet.class, "description", true).getDefaultTextString();
   protected HashMap<String,String> descriptionML = descriptionTFE.getDefaultTextMap();
@@ -369,28 +366,31 @@ public class EditAbstractPortletHandler extends com.jalios.jcms.portlet.EditPort
     description = getMultilingualMainValue(descriptionTFE, v);
     descriptionML = getMultilingualMLMap(descriptionTFE, v);
   }
-  public String getAvailableDescription() {
+  @Override
+public String getAvailableDescription() {
     if (theContent != null && isFieldMissing("description")) {
      String objectValue = theContent.getDescription();
       return objectValue;
     }
     return description;
   }
-  
-    
-  public HashMap<String,String> getAllAvailableDescriptionML() {
+
+
+  @Override
+public HashMap<String,String> getAllAvailableDescriptionML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableDescriptionML());
     map.put(channel.getLanguage(),getAvailableDescription(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableDescriptionML() {
     if (theContent != null && isFieldMissing("description")) {
       return theContent.getDescriptionML();
     }
     return descriptionML;
   }
-  public String getAvailableDescription(String lang) {
+  @Override
+public String getAvailableDescription(String lang) {
     if (theContent != null) {
       if (lang.equals(channel.getLanguage())) {
       	if (!Util.isSameContent(description, channel.getTypeFieldEntry(AbstractPortlet.class, "description", true).getDefaultTextString())) {
@@ -408,11 +408,11 @@ public class EditAbstractPortletHandler extends com.jalios.jcms.portlet.EditPort
     }
     return descriptionML == null ? "" : Util.getString(descriptionML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // portletImage
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry portletImageTFE = channel.getTypeFieldEntry(AbstractPortlet.class, "portletImage", true);
   protected String portletImage = channel.getTypeFieldEntry(AbstractPortlet.class, "portletImage", true).getDefaultTextString();
   protected HashMap<String,String> portletImageML = portletImageTFE.getDefaultTextMap();
@@ -427,14 +427,14 @@ public class EditAbstractPortletHandler extends com.jalios.jcms.portlet.EditPort
     }
     return portletImage;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailablePortletImageML() {
     HashMap<String,String> map = Util.getHashMap(getAvailablePortletImageML());
     map.put(channel.getLanguage(),getAvailablePortletImage(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailablePortletImageML() {
     if (theContent != null && isFieldMissing("portletImage")) {
       return theContent.getPortletImageML();
@@ -459,57 +459,60 @@ public class EditAbstractPortletHandler extends com.jalios.jcms.portlet.EditPort
     }
     return portletImageML == null ? "" : Util.getString(portletImageML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // cacheType
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry cacheTypeTFE = channel.getTypeFieldEntry(AbstractPortlet.class, "cacheType", true);
   protected String cacheType = channel.getTypeFieldEntry(AbstractPortlet.class, "cacheType", true).getDefaultTextString();
   public void setCacheType(String[] v) {
     cacheType = getMonolingualValue(cacheTypeTFE, v);
   }
-  public String getAvailableCacheType() {
+  @Override
+public String getAvailableCacheType() {
     if (theContent != null && isFieldMissing("cacheType")) {
      String objectValue = theContent.getCacheType();
       return objectValue;
     }
     return cacheType;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // cacheSensibility
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry cacheSensibilityTFE = channel.getTypeFieldEntry(AbstractPortlet.class, "cacheSensibility", true);
   protected String cacheSensibility = channel.getTypeFieldEntry(AbstractPortlet.class, "cacheSensibility", true).getDefaultTextString();
   public void setCacheSensibility(String[] v) {
     cacheSensibility = getMonolingualValue(cacheSensibilityTFE, v);
   }
-  public String getAvailableCacheSensibility() {
+  @Override
+public String getAvailableCacheSensibility() {
     if (theContent != null && isFieldMissing("cacheSensibility")) {
      String objectValue = theContent.getCacheSensibility();
       return objectValue;
     }
     return cacheSensibility;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // invalidClass
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry invalidClassTFE = channel.getTypeFieldEntry(AbstractPortlet.class, "invalidClass", true);
   protected String[] invalidClass = new String[0];
   protected int invalidClassAddCount = 0;
   public void setInvalidClass(String[] v) {
     invalidClass = getMonolingualValueArray(invalidClassTFE, v);
   }
-  
-  public String[] getAvailableInvalidClass() {
+
+  @Override
+public String[] getAvailableInvalidClass() {
     if (theContent != null && isFieldMissing("invalidClass")) {
 	  String[] objectValue = theContent.getInvalidClass();
       if (objectValue == null) {
@@ -519,22 +522,23 @@ public class EditAbstractPortletHandler extends com.jalios.jcms.portlet.EditPort
     }
     return invalidClass;
   }
-  
-    
-  
+
+
+
   public void setInvalidClassAddCount(int  v) {
     invalidClassAddCount = v;
   }
-  
-  public int getInvalidClassCount() {
+
+  @Override
+public int getInvalidClassCount() {
     int arraySize = Util.getSize(getAvailableInvalidClass());
     int res = 3 + arraySize + invalidClassAddCount;
     return res;
   }
-   
+
   // ----------------------------------------------------------------------
   // invalidTime
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry invalidTimeTFE = channel.getTypeFieldEntry(AbstractPortlet.class, "invalidTime", true);
   protected boolean isInvalidTimeValidated = true;
   protected long invalidTime = 60;
@@ -545,59 +549,62 @@ public class EditAbstractPortletHandler extends com.jalios.jcms.portlet.EditPort
       isInvalidTimeValidated = false;
     }
   }
-  
-  public long getAvailableInvalidTime() {
+
+  @Override
+public long getAvailableInvalidTime() {
     if (theContent != null && isFieldMissing("invalidTime")) {
      long objectValue = theContent.getInvalidTime();
       return objectValue;
     }
     return invalidTime;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // displayCSS
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry displayCSSTFE = channel.getTypeFieldEntry(AbstractPortlet.class, "displayCSS", true);
   protected String displayCSS = channel.getTypeFieldEntry(AbstractPortlet.class, "displayCSS", true).getDefaultTextString();
   public void setDisplayCSS(String[] v) {
     displayCSS = getMonolingualValue(displayCSSTFE, v);
   }
-  public String getAvailableDisplayCSS() {
+  @Override
+public String getAvailableDisplayCSS() {
     if (theContent != null && isFieldMissing("displayCSS")) {
      String objectValue = theContent.getDisplayCSS();
       return objectValue;
     }
     return displayCSS;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // width
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry widthTFE = channel.getTypeFieldEntry(AbstractPortlet.class, "width", true);
   protected String width = channel.getTypeFieldEntry(AbstractPortlet.class, "width", true).getDefaultTextString();
   public void setWidth(String[] v) {
     width = getMonolingualValue(widthTFE, v);
   }
-  public String getAvailableWidth() {
+  @Override
+public String getAvailableWidth() {
     if (theContent != null && isFieldMissing("width")) {
      String objectValue = theContent.getWidth();
       return objectValue;
     }
     return width;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // insetLeft
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry insetLeftTFE = channel.getTypeFieldEntry(AbstractPortlet.class, "insetLeft", true);
   protected boolean isInsetLeftValidated = true;
   protected int insetLeft = 0;
@@ -608,20 +615,21 @@ public class EditAbstractPortletHandler extends com.jalios.jcms.portlet.EditPort
       isInsetLeftValidated = false;
     }
   }
-  public int getAvailableInsetLeft() {
+  @Override
+public int getAvailableInsetLeft() {
     if (theContent != null && isFieldMissing("insetLeft")) {
      int objectValue = theContent.getInsetLeft();
       return objectValue;
     }
     return insetLeft;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // insetRight
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry insetRightTFE = channel.getTypeFieldEntry(AbstractPortlet.class, "insetRight", true);
   protected boolean isInsetRightValidated = true;
   protected int insetRight = 0;
@@ -632,20 +640,21 @@ public class EditAbstractPortletHandler extends com.jalios.jcms.portlet.EditPort
       isInsetRightValidated = false;
     }
   }
-  public int getAvailableInsetRight() {
+  @Override
+public int getAvailableInsetRight() {
     if (theContent != null && isFieldMissing("insetRight")) {
      int objectValue = theContent.getInsetRight();
       return objectValue;
     }
     return insetRight;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // insetTop
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry insetTopTFE = channel.getTypeFieldEntry(AbstractPortlet.class, "insetTop", true);
   protected boolean isInsetTopValidated = true;
   protected int insetTop = 0;
@@ -656,20 +665,21 @@ public class EditAbstractPortletHandler extends com.jalios.jcms.portlet.EditPort
       isInsetTopValidated = false;
     }
   }
-  public int getAvailableInsetTop() {
+  @Override
+public int getAvailableInsetTop() {
     if (theContent != null && isFieldMissing("insetTop")) {
      int objectValue = theContent.getInsetTop();
       return objectValue;
     }
     return insetTop;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // insetBottom
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry insetBottomTFE = channel.getTypeFieldEntry(AbstractPortlet.class, "insetBottom", true);
   protected boolean isInsetBottomValidated = true;
   protected int insetBottom = 0;
@@ -680,20 +690,21 @@ public class EditAbstractPortletHandler extends com.jalios.jcms.portlet.EditPort
       isInsetBottomValidated = false;
     }
   }
-  public int getAvailableInsetBottom() {
+  @Override
+public int getAvailableInsetBottom() {
     if (theContent != null && isFieldMissing("insetBottom")) {
      int objectValue = theContent.getInsetBottom();
       return objectValue;
     }
     return insetBottom;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // cellPadding
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry cellPaddingTFE = channel.getTypeFieldEntry(AbstractPortlet.class, "cellPadding", true);
   protected boolean isCellPaddingValidated = true;
   protected int cellPadding = 0;
@@ -704,77 +715,81 @@ public class EditAbstractPortletHandler extends com.jalios.jcms.portlet.EditPort
       isCellPaddingValidated = false;
     }
   }
-  public int getAvailableCellPadding() {
+  @Override
+public int getAvailableCellPadding() {
     if (theContent != null && isFieldMissing("cellPadding")) {
      int objectValue = theContent.getCellPadding();
       return objectValue;
     }
     return cellPadding;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // alignH
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry alignHTFE = channel.getTypeFieldEntry(AbstractPortlet.class, "alignH", true);
   protected String alignH = channel.getTypeFieldEntry(AbstractPortlet.class, "alignH", true).getDefaultTextString();
   public void setAlignH(String[] v) {
     alignH = getMonolingualValue(alignHTFE, v);
   }
-  public String getAvailableAlignH() {
+  @Override
+public String getAvailableAlignH() {
     if (theContent != null && isFieldMissing("alignH")) {
      String objectValue = theContent.getAlignH();
       return objectValue;
     }
     return alignH;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // alignV
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry alignVTFE = channel.getTypeFieldEntry(AbstractPortlet.class, "alignV", true);
   protected String alignV = channel.getTypeFieldEntry(AbstractPortlet.class, "alignV", true).getDefaultTextString();
   public void setAlignV(String[] v) {
     alignV = getMonolingualValue(alignVTFE, v);
   }
-  public String getAvailableAlignV() {
+  @Override
+public String getAvailableAlignV() {
     if (theContent != null && isFieldMissing("alignV")) {
      String objectValue = theContent.getAlignV();
       return objectValue;
     }
     return alignV;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // alignTable
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry alignTableTFE = channel.getTypeFieldEntry(AbstractPortlet.class, "alignTable", true);
   protected String alignTable = channel.getTypeFieldEntry(AbstractPortlet.class, "alignTable", true).getDefaultTextString();
   public void setAlignTable(String[] v) {
     alignTable = getMonolingualValue(alignTableTFE, v);
   }
-  public String getAvailableAlignTable() {
+  @Override
+public String getAvailableAlignTable() {
     if (theContent != null && isFieldMissing("alignTable")) {
      String objectValue = theContent.getAlignTable();
       return objectValue;
     }
     return alignTable;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // border
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry borderTFE = channel.getTypeFieldEntry(AbstractPortlet.class, "border", true);
   protected boolean isBorderValidated = true;
   protected int border = 0;
@@ -785,96 +800,101 @@ public class EditAbstractPortletHandler extends com.jalios.jcms.portlet.EditPort
       isBorderValidated = false;
     }
   }
-  public int getAvailableBorder() {
+  @Override
+public int getAvailableBorder() {
     if (theContent != null && isFieldMissing("border")) {
      int objectValue = theContent.getBorder();
       return objectValue;
     }
     return border;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // borderColor
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry borderColorTFE = channel.getTypeFieldEntry(AbstractPortlet.class, "borderColor", true);
   protected String borderColor = channel.getTypeFieldEntry(AbstractPortlet.class, "borderColor", true).getDefaultTextString();
   public void setBorderColor(String[] v) {
     borderColor = getMonolingualValue(borderColorTFE, v);
   }
-  public String getAvailableBorderColor() {
+  @Override
+public String getAvailableBorderColor() {
     if (theContent != null && isFieldMissing("borderColor")) {
      String objectValue = theContent.getBorderColor();
       return objectValue;
     }
     return borderColor;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // backColor
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry backColorTFE = channel.getTypeFieldEntry(AbstractPortlet.class, "backColor", true);
   protected String backColor = channel.getTypeFieldEntry(AbstractPortlet.class, "backColor", true).getDefaultTextString();
   public void setBackColor(String[] v) {
     backColor = getMonolingualValue(backColorTFE, v);
   }
-  public String getAvailableBackColor() {
+  @Override
+public String getAvailableBackColor() {
     if (theContent != null && isFieldMissing("backColor")) {
      String objectValue = theContent.getBackColor();
       return objectValue;
     }
     return backColor;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // backImage
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry backImageTFE = channel.getTypeFieldEntry(AbstractPortlet.class, "backImage", true);
   protected String backImage = channel.getTypeFieldEntry(AbstractPortlet.class, "backImage", true).getDefaultTextString();
   public void setBackImage(String[] v) {
     backImage = getMonolingualValue(backImageTFE, v);
   }
-  public String getAvailableBackImage() {
+  @Override
+public String getAvailableBackImage() {
     if (theContent != null && isFieldMissing("backImage")) {
      String objectValue = theContent.getBackImage();
       return objectValue;
     }
     return backImage;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // behaviorCopy
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry behaviorCopyTFE = channel.getTypeFieldEntry(AbstractPortlet.class, "behaviorCopy", true);
   protected String behaviorCopy = channel.getTypeFieldEntry(AbstractPortlet.class, "behaviorCopy", true).getDefaultTextString();
   public void setBehaviorCopy(String[] v) {
     behaviorCopy = getMonolingualValue(behaviorCopyTFE, v);
   }
-  public String getAvailableBehaviorCopy() {
+  @Override
+public String getAvailableBehaviorCopy() {
     if (theContent != null && isFieldMissing("behaviorCopy")) {
      String objectValue = theContent.getBehaviorCopy();
       return objectValue;
     }
     return behaviorCopy;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // originalPortlet
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry originalPortletTFE = channel.getTypeFieldEntry(AbstractPortlet.class, "originalPortlet", true);
   protected boolean isOriginalPortletValidated = true;
   protected com.jalios.jcms.portlet.PortalElement originalPortlet;
@@ -882,28 +902,30 @@ public class EditAbstractPortletHandler extends com.jalios.jcms.portlet.EditPort
   public void setOriginalPortlet(String v) {
     __originalPortletStr = v;
   }
-  public com.jalios.jcms.portlet.PortalElement getAvailableOriginalPortlet() {
+  @Override
+public com.jalios.jcms.portlet.PortalElement getAvailableOriginalPortlet() {
     if (theContent != null && isFieldMissing("originalPortlet")) {
      com.jalios.jcms.portlet.PortalElement objectValue = theContent.getOriginalPortlet();
       return objectValue;
     }
     return originalPortlet;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // condition
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry conditionTFE = channel.getTypeFieldEntry(AbstractPortlet.class, "condition", true);
   protected String[] condition = new String[0];
   protected int conditionAddCount = 0;
   public void setCondition(String[] v) {
     condition = getMonolingualValueArray(conditionTFE, v);
   }
-  
-  public String[] getAvailableCondition() {
+
+  @Override
+public String[] getAvailableCondition() {
     if (theContent != null && isFieldMissing("condition")) {
 	  String[] objectValue = theContent.getCondition();
       if (objectValue == null) {
@@ -913,41 +935,42 @@ public class EditAbstractPortletHandler extends com.jalios.jcms.portlet.EditPort
     }
     return condition;
   }
-  
-    
-  
+
+
+
   public void setConditionAddCount(int  v) {
     conditionAddCount = v;
   }
-  
+
   public int getConditionCount() {
     int arraySize = Util.getSize(getAvailableCondition());
     int res = 3 + arraySize + conditionAddCount;
     return res;
   }
-   
+
   // ----------------------------------------------------------------------
   // cssId
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry cssIdTFE = channel.getTypeFieldEntry(AbstractPortlet.class, "cssId", true);
   protected String cssId = channel.getTypeFieldEntry(AbstractPortlet.class, "cssId", true).getDefaultTextString();
   public void setCssId(String[] v) {
     cssId = getMonolingualValue(cssIdTFE, v);
   }
-  public String getAvailableCssId() {
+  @Override
+public String getAvailableCssId() {
     if (theContent != null && isFieldMissing("cssId")) {
      String objectValue = theContent.getCssId();
       return objectValue;
     }
     return cssId;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // cssClasses
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry cssClassesTFE = channel.getTypeFieldEntry(AbstractPortlet.class, "cssClasses", true);
   protected String cssClasses = channel.getTypeFieldEntry(AbstractPortlet.class, "cssClasses", true).getDefaultTextString();
   public void setCssClasses(String[] v) {
@@ -960,12 +983,12 @@ public class EditAbstractPortletHandler extends com.jalios.jcms.portlet.EditPort
     }
     return cssClasses;
   }
-  
-    
-  
- 
-   
- 
+
+
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // N5sIctkw5H5Oesz17dzQ/Q==

@@ -1,103 +1,104 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
+
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+
+import com.jalios.jcms.Category;
+import com.jalios.jcms.Data;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
+import com.jalios.jcms.handler.EditPublicationHandler;
 import com.jalios.util.Util;
-import custom.*;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditShortcutHandler extends EditPublicationHandler {
-   
+
   protected Shortcut theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return Shortcut.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpShortcut  
+  // validateBeforeOpShortcut
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     {
       Data data = processDataId("pub", __pubStr, com.jalios.jcms.Publication.class);
-      if (data != null) { 
+      if (data != null) {
         pub = (com.jalios.jcms.Publication)data;
       } else {
         isPubValidated = Util.isEmpty(__pubStr);
       }
     }
-    if (!validateUploadedFileDocument(getAvailablePub(),   fdauthor, getAvailableWorkspace())) {
-      return false;
-    }
-    if (!createUploadedFileDocument(getAvailablePub(),  fdauthor, getAvailableWorkspace())) {
+    if (!validateUploadedFileDocument(getAvailablePub(),   fdauthor, getAvailableWorkspace()) || !createUploadedFileDocument(getAvailablePub(),  fdauthor, getAvailableWorkspace())) {
       return false;
     }
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("image".equals(field)) {
       return getAllAvailableImageML();
     }
-    
+
     if ("icon".equals(field)) {
       return getAvailableIcon();
     }
-    
+
     if ("text".equals(field)) {
       return getAllAvailableTextML();
     }
-    
+
     if ("link".equals(field)) {
       return getAvailableLink();
     }
-    
+
     if ("pub".equals(field)) {
       return getAvailablePub();
     }
-    
+
     if ("parameters".equals(field)) {
       return getAvailableParameters();
     }
-    
+
     if ("keywords".equals(field)) {
       return getAllAvailableKeywordsML();
     }
-    
+
     if ("openMode".equals(field)) {
       return getAvailableOpenMode();
     }
-    
+
     if ("showInToolsPage".equals(field)) {
       return getAvailableShowInToolsPage();
     }
-    
+
     if ("type".equals(field)) {
       return getTypeCatSet();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     if ("openMode".equals(field)) {
       return Shortcut.getOpenModeValues();
     }
@@ -108,7 +109,7 @@ public class EditShortcutHandler extends EditPublicationHandler {
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     if ("openMode".equals(field)) {
       return Shortcut.getOpenModeLabels(userLang);
     }
@@ -118,7 +119,7 @@ public class EditShortcutHandler extends EditPublicationHandler {
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdateShortcut  
+  // validateCommonCreateUpdateShortcut
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdateShortcut() {
     if (!isPubValidated) {
@@ -127,39 +128,35 @@ public class EditShortcutHandler extends EditPublicationHandler {
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdateShortcut()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdateShortcut()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdateShortcut()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdateShortcut()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -168,7 +165,8 @@ public class EditShortcutHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -177,7 +175,8 @@ public class EditShortcutHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -186,7 +185,8 @@ public class EditShortcutHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     Shortcut obj = (Shortcut)data;
     obj.setImage(getAvailableImage());
@@ -202,8 +202,9 @@ public class EditShortcutHandler extends EditPublicationHandler {
     obj.setOpenMode(getAvailableOpenMode());
     obj.setShowInToolsPage(getAvailableShowInToolsPage());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof Shortcut) {
       super.setId(v);
       theContent = (Shortcut)publication;
@@ -212,11 +213,11 @@ public class EditShortcutHandler extends EditPublicationHandler {
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // image
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry imageTFE = channel.getTypeFieldEntry(Shortcut.class, "image", true);
   protected String image = channel.getTypeFieldEntry(Shortcut.class, "image", true).getDefaultTextString();
   protected HashMap<String,String> imageML = imageTFE.getDefaultTextMap();
@@ -231,14 +232,14 @@ public class EditShortcutHandler extends EditPublicationHandler {
     }
     return image;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailableImageML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableImageML());
     map.put(channel.getLanguage(),getAvailableImage(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableImageML() {
     if (theContent != null && isFieldMissing("image")) {
       return theContent.getImageML();
@@ -263,11 +264,11 @@ public class EditShortcutHandler extends EditPublicationHandler {
     }
     return imageML == null ? "" : Util.getString(imageML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // icon
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry iconTFE = channel.getTypeFieldEntry(Shortcut.class, "icon", true);
   protected String icon = channel.getTypeFieldEntry(Shortcut.class, "icon", true).getDefaultTextString();
   public void setIcon(String[] v) {
@@ -280,13 +281,13 @@ public class EditShortcutHandler extends EditPublicationHandler {
     }
     return icon;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // text
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry textTFE = channel.getTypeFieldEntry(Shortcut.class, "text", true);
   protected String text = channel.getTypeFieldEntry(Shortcut.class, "text", true).getDefaultTextString();
   protected HashMap<String,String> textML = textTFE.getDefaultTextMap();
@@ -301,14 +302,14 @@ public class EditShortcutHandler extends EditPublicationHandler {
     }
     return text;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailableTextML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableTextML());
     map.put(channel.getLanguage(),getAvailableText(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableTextML() {
     if (theContent != null && isFieldMissing("text")) {
       return theContent.getTextML();
@@ -333,11 +334,11 @@ public class EditShortcutHandler extends EditPublicationHandler {
     }
     return textML == null ? "" : Util.getString(textML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // link
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry linkTFE = channel.getTypeFieldEntry(Shortcut.class, "link", true);
   protected String link = channel.getTypeFieldEntry(Shortcut.class, "link", true).getDefaultTextString();
   public void setLink(String[] v) {
@@ -350,13 +351,13 @@ public class EditShortcutHandler extends EditPublicationHandler {
     }
     return link;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // pub
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry pubTFE = channel.getTypeFieldEntry(Shortcut.class, "pub", true);
   protected boolean isPubValidated = true;
   protected com.jalios.jcms.Publication pub;
@@ -371,13 +372,13 @@ public class EditShortcutHandler extends EditPublicationHandler {
     }
     return pub;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // parameters
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry parametersTFE = channel.getTypeFieldEntry(Shortcut.class, "parameters", true);
   protected String parameters = channel.getTypeFieldEntry(Shortcut.class, "parameters", true).getDefaultTextString();
   public void setParameters(String[] v) {
@@ -390,13 +391,13 @@ public class EditShortcutHandler extends EditPublicationHandler {
     }
     return parameters;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // keywords
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry keywordsTFE = channel.getTypeFieldEntry(Shortcut.class, "keywords", true);
   protected String keywords = channel.getTypeFieldEntry(Shortcut.class, "keywords", true).getDefaultTextString();
   protected HashMap<String,String> keywordsML = keywordsTFE.getDefaultTextMap();
@@ -411,14 +412,14 @@ public class EditShortcutHandler extends EditPublicationHandler {
     }
     return keywords;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailableKeywordsML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableKeywordsML());
     map.put(channel.getLanguage(),getAvailableKeywords(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableKeywordsML() {
     if (theContent != null && isFieldMissing("keywords")) {
       return theContent.getKeywordsML();
@@ -443,11 +444,11 @@ public class EditShortcutHandler extends EditPublicationHandler {
     }
     return keywordsML == null ? "" : Util.getString(keywordsML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // openMode
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry openModeTFE = channel.getTypeFieldEntry(Shortcut.class, "openMode", true);
   protected String openMode = channel.getTypeFieldEntry(Shortcut.class, "openMode", true).getDefaultTextString();
   public void setOpenMode(String[] v) {
@@ -460,19 +461,19 @@ public class EditShortcutHandler extends EditPublicationHandler {
     }
     return openMode;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // showInToolsPage
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry showInToolsPageTFE = channel.getTypeFieldEntry(Shortcut.class, "showInToolsPage", true);
   protected boolean showInToolsPage = true;
   public void setShowInToolsPage(boolean  v) {
     this.showInToolsPage = v;
   }
-  
+
   public boolean getAvailableShowInToolsPage() {
     if (theContent != null && isFieldMissing("showInToolsPage")) {
      boolean objectValue = theContent.getShowInToolsPage();
@@ -480,17 +481,17 @@ public class EditShortcutHandler extends EditPublicationHandler {
     }
     return showInToolsPage;
   }
-  
-    
-  
-  
+
+
+
+
   public void setType(String[] v) {
     updateCids(v);
   }
   public Category getTypeRoot() {
     return channel.getCategory("$id.application.shortcut.category");
-  }  
-    
+  }
+
   public Set<Category> getTypeCatSet() {
     Category rootCat = getTypeRoot();
     if (rootCat == null) {
@@ -500,10 +501,10 @@ public class EditShortcutHandler extends EditPublicationHandler {
     set.add(rootCat);
     return Util.interSet(getCategorySet(null), set);
   }
-  
- 
-   
- 
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // 7qMFlJ6YTfH56iDwlmZxhA==

@@ -1,115 +1,112 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
+
+
+import java.util.HashMap;
+
+import com.jalios.jcms.Data;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
 import com.jalios.util.Util;
-import custom.*;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditAbstractPortalHandler extends com.jalios.jcms.portlet.EditPortalHandler {
-   
+
   protected AbstractPortal theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return AbstractPortal.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpAbstractPortal  
+  // validateBeforeOpAbstractPortal
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     {
       Data data = processDataId("child", __childStr, com.jalios.jcms.portlet.PortalElement.class);
-      if (data != null) { 
+      if (data != null) {
         child = (com.jalios.jcms.portlet.PortalElement)data;
       } else {
         isChildValidated = Util.isEmpty(__childStr);
       }
     }
-    if (!validateUploadedFileDocument(getAvailableChild(),   fdauthor, getAvailableWorkspace())) {
-      return false;
-    }
-    if (!createUploadedFileDocument(getAvailableChild(),  fdauthor, getAvailableWorkspace())) {
+    if (!validateUploadedFileDocument(getAvailableChild(),   fdauthor, getAvailableWorkspace()) || !createUploadedFileDocument(getAvailableChild(),  fdauthor, getAvailableWorkspace())) {
       return false;
     }
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("pageTitle".equals(field)) {
       return getAllAvailablePageTitleML();
     }
-    
+
     if ("child".equals(field)) {
       return getAvailableChild();
     }
-    
+
     if ("cssFile".equals(field)) {
       return getAvailableCssFile();
     }
-    
+
     if ("description".equals(field)) {
       return getAllAvailableDescriptionML();
     }
-    
+
     if ("portletImage".equals(field)) {
       return getAllAvailablePortletImageML();
     }
-    
+
     if ("cacheType".equals(field)) {
       return getAvailableCacheType();
     }
-    
+
     if ("cacheSensibility".equals(field)) {
       return getAvailableCacheSensibility();
     }
-    
+
     if ("invalidClass".equals(field)) {
       return getAvailableInvalidClass();
     }
-    
+
     if ("invalidTime".equals(field)) {
       return getAvailableInvalidTime();
     }
-    
+
     if ("behaviorCopy".equals(field)) {
       return getAvailableBehaviorCopy();
     }
-    
+
     if ("cssId".equals(field)) {
       return getAvailableCssId();
     }
-    
+
     if ("cssClasses".equals(field)) {
       return getAvailableCssClasses();
     }
-    
+
     if ("exactCategory".equals(field)) {
       return getAvailableExactCategory();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     if ("cssFile".equals(field)) {
       return AbstractPortal.getCssFileValues();
     }
@@ -132,7 +129,7 @@ public class EditAbstractPortalHandler extends com.jalios.jcms.portlet.EditPorta
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     if ("cssFile".equals(field)) {
       return AbstractPortal.getCssFileLabels(userLang);
     }
@@ -154,7 +151,7 @@ public class EditAbstractPortalHandler extends com.jalios.jcms.portlet.EditPorta
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdateAbstractPortal  
+  // validateCommonCreateUpdateAbstractPortal
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdateAbstractPortal() {
     if (!isChildValidated) {
@@ -167,39 +164,35 @@ public class EditAbstractPortalHandler extends com.jalios.jcms.portlet.EditPorta
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdateAbstractPortal()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdateAbstractPortal()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdateAbstractPortal()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdateAbstractPortal()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -208,7 +201,8 @@ public class EditAbstractPortalHandler extends com.jalios.jcms.portlet.EditPorta
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -217,7 +211,8 @@ public class EditAbstractPortalHandler extends com.jalios.jcms.portlet.EditPorta
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -226,7 +221,8 @@ public class EditAbstractPortalHandler extends com.jalios.jcms.portlet.EditPorta
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     AbstractPortal obj = (AbstractPortal)data;
     obj.setPageTitle(getAvailablePageTitle());
@@ -246,8 +242,9 @@ public class EditAbstractPortalHandler extends com.jalios.jcms.portlet.EditPorta
     obj.setCssClasses(getAvailableCssClasses());
     obj.setExactCategory(getAvailableExactCategory());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof AbstractPortal) {
       super.setId(v);
       theContent = (AbstractPortal)publication;
@@ -256,11 +253,11 @@ public class EditAbstractPortalHandler extends com.jalios.jcms.portlet.EditPorta
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // pageTitle
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry pageTitleTFE = channel.getTypeFieldEntry(AbstractPortal.class, "pageTitle", true);
   protected String pageTitle = channel.getTypeFieldEntry(AbstractPortal.class, "pageTitle", true).getDefaultTextString();
   protected HashMap<String,String> pageTitleML = pageTitleTFE.getDefaultTextMap();
@@ -268,28 +265,30 @@ public class EditAbstractPortalHandler extends com.jalios.jcms.portlet.EditPorta
     pageTitle = getMultilingualMainValue(pageTitleTFE, v);
     pageTitleML = getMultilingualMLMap(pageTitleTFE, v);
   }
-  public String getAvailablePageTitle() {
+  @Override
+public String getAvailablePageTitle() {
     if (theContent != null && isFieldMissing("pageTitle")) {
      String objectValue = theContent.getPageTitle();
       return objectValue;
     }
     return pageTitle;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailablePageTitleML() {
     HashMap<String,String> map = Util.getHashMap(getAvailablePageTitleML());
     map.put(channel.getLanguage(),getAvailablePageTitle(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailablePageTitleML() {
     if (theContent != null && isFieldMissing("pageTitle")) {
       return theContent.getPageTitleML();
     }
     return pageTitleML;
   }
-  public String getAvailablePageTitle(String lang) {
+  @Override
+public String getAvailablePageTitle(String lang) {
     if (theContent != null) {
       if (lang.equals(channel.getLanguage())) {
       	if (!Util.isSameContent(pageTitle, channel.getTypeFieldEntry(AbstractPortal.class, "pageTitle", true).getDefaultTextString())) {
@@ -307,11 +306,11 @@ public class EditAbstractPortalHandler extends com.jalios.jcms.portlet.EditPorta
     }
     return pageTitleML == null ? "" : Util.getString(pageTitleML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // child
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry childTFE = channel.getTypeFieldEntry(AbstractPortal.class, "child", true);
   protected boolean isChildValidated = true;
   protected com.jalios.jcms.portlet.PortalElement child;
@@ -319,39 +318,41 @@ public class EditAbstractPortalHandler extends com.jalios.jcms.portlet.EditPorta
   public void setChild(String v) {
     __childStr = v;
   }
-  public com.jalios.jcms.portlet.PortalElement getAvailableChild() {
+  @Override
+public com.jalios.jcms.portlet.PortalElement getAvailableChild() {
     if (theContent != null && isFieldMissing("child")) {
      com.jalios.jcms.portlet.PortalElement objectValue = theContent.getChild();
       return objectValue;
     }
     return child;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // cssFile
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry cssFileTFE = channel.getTypeFieldEntry(AbstractPortal.class, "cssFile", true);
   protected String cssFile = channel.getTypeFieldEntry(AbstractPortal.class, "cssFile", true).getDefaultTextString();
   public void setCssFile(String[] v) {
     cssFile = getMonolingualValue(cssFileTFE, v);
   }
-  public String getAvailableCssFile() {
+  @Override
+public String getAvailableCssFile() {
     if (theContent != null && isFieldMissing("cssFile")) {
      String objectValue = theContent.getCssFile();
       return objectValue;
     }
     return cssFile;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // description
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry descriptionTFE = channel.getTypeFieldEntry(AbstractPortal.class, "description", true);
   protected String description = channel.getTypeFieldEntry(AbstractPortal.class, "description", true).getDefaultTextString();
   protected HashMap<String,String> descriptionML = descriptionTFE.getDefaultTextMap();
@@ -359,28 +360,31 @@ public class EditAbstractPortalHandler extends com.jalios.jcms.portlet.EditPorta
     description = getMultilingualMainValue(descriptionTFE, v);
     descriptionML = getMultilingualMLMap(descriptionTFE, v);
   }
-  public String getAvailableDescription() {
+  @Override
+public String getAvailableDescription() {
     if (theContent != null && isFieldMissing("description")) {
      String objectValue = theContent.getDescription();
       return objectValue;
     }
     return description;
   }
-  
-    
-  public HashMap<String,String> getAllAvailableDescriptionML() {
+
+
+  @Override
+public HashMap<String,String> getAllAvailableDescriptionML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableDescriptionML());
     map.put(channel.getLanguage(),getAvailableDescription(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableDescriptionML() {
     if (theContent != null && isFieldMissing("description")) {
       return theContent.getDescriptionML();
     }
     return descriptionML;
   }
-  public String getAvailableDescription(String lang) {
+  @Override
+public String getAvailableDescription(String lang) {
     if (theContent != null) {
       if (lang.equals(channel.getLanguage())) {
       	if (!Util.isSameContent(description, channel.getTypeFieldEntry(AbstractPortal.class, "description", true).getDefaultTextString())) {
@@ -398,11 +402,11 @@ public class EditAbstractPortalHandler extends com.jalios.jcms.portlet.EditPorta
     }
     return descriptionML == null ? "" : Util.getString(descriptionML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // portletImage
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry portletImageTFE = channel.getTypeFieldEntry(AbstractPortal.class, "portletImage", true);
   protected String portletImage = channel.getTypeFieldEntry(AbstractPortal.class, "portletImage", true).getDefaultTextString();
   protected HashMap<String,String> portletImageML = portletImageTFE.getDefaultTextMap();
@@ -417,14 +421,14 @@ public class EditAbstractPortalHandler extends com.jalios.jcms.portlet.EditPorta
     }
     return portletImage;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailablePortletImageML() {
     HashMap<String,String> map = Util.getHashMap(getAvailablePortletImageML());
     map.put(channel.getLanguage(),getAvailablePortletImage(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailablePortletImageML() {
     if (theContent != null && isFieldMissing("portletImage")) {
       return theContent.getPortletImageML();
@@ -449,57 +453,60 @@ public class EditAbstractPortalHandler extends com.jalios.jcms.portlet.EditPorta
     }
     return portletImageML == null ? "" : Util.getString(portletImageML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // cacheType
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry cacheTypeTFE = channel.getTypeFieldEntry(AbstractPortal.class, "cacheType", true);
   protected String cacheType = channel.getTypeFieldEntry(AbstractPortal.class, "cacheType", true).getDefaultTextString();
   public void setCacheType(String[] v) {
     cacheType = getMonolingualValue(cacheTypeTFE, v);
   }
-  public String getAvailableCacheType() {
+  @Override
+public String getAvailableCacheType() {
     if (theContent != null && isFieldMissing("cacheType")) {
      String objectValue = theContent.getCacheType();
       return objectValue;
     }
     return cacheType;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // cacheSensibility
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry cacheSensibilityTFE = channel.getTypeFieldEntry(AbstractPortal.class, "cacheSensibility", true);
   protected String cacheSensibility = channel.getTypeFieldEntry(AbstractPortal.class, "cacheSensibility", true).getDefaultTextString();
   public void setCacheSensibility(String[] v) {
     cacheSensibility = getMonolingualValue(cacheSensibilityTFE, v);
   }
-  public String getAvailableCacheSensibility() {
+  @Override
+public String getAvailableCacheSensibility() {
     if (theContent != null && isFieldMissing("cacheSensibility")) {
      String objectValue = theContent.getCacheSensibility();
       return objectValue;
     }
     return cacheSensibility;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // invalidClass
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry invalidClassTFE = channel.getTypeFieldEntry(AbstractPortal.class, "invalidClass", true);
   protected String[] invalidClass = new String[0];
   protected int invalidClassAddCount = 0;
   public void setInvalidClass(String[] v) {
     invalidClass = getMonolingualValueArray(invalidClassTFE, v);
   }
-  
-  public String[] getAvailableInvalidClass() {
+
+  @Override
+public String[] getAvailableInvalidClass() {
     if (theContent != null && isFieldMissing("invalidClass")) {
 	  String[] objectValue = theContent.getInvalidClass();
       if (objectValue == null) {
@@ -509,22 +516,23 @@ public class EditAbstractPortalHandler extends com.jalios.jcms.portlet.EditPorta
     }
     return invalidClass;
   }
-  
-    
-  
+
+
+
   public void setInvalidClassAddCount(int  v) {
     invalidClassAddCount = v;
   }
-  
-  public int getInvalidClassCount() {
+
+  @Override
+public int getInvalidClassCount() {
     int arraySize = Util.getSize(getAvailableInvalidClass());
     int res = 3 + arraySize + invalidClassAddCount;
     return res;
   }
-   
+
   // ----------------------------------------------------------------------
   // invalidTime
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry invalidTimeTFE = channel.getTypeFieldEntry(AbstractPortal.class, "invalidTime", true);
   protected boolean isInvalidTimeValidated = true;
   protected long invalidTime = 60;
@@ -535,59 +543,62 @@ public class EditAbstractPortalHandler extends com.jalios.jcms.portlet.EditPorta
       isInvalidTimeValidated = false;
     }
   }
-  
-  public long getAvailableInvalidTime() {
+
+  @Override
+public long getAvailableInvalidTime() {
     if (theContent != null && isFieldMissing("invalidTime")) {
      long objectValue = theContent.getInvalidTime();
       return objectValue;
     }
     return invalidTime;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // behaviorCopy
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry behaviorCopyTFE = channel.getTypeFieldEntry(AbstractPortal.class, "behaviorCopy", true);
   protected String behaviorCopy = channel.getTypeFieldEntry(AbstractPortal.class, "behaviorCopy", true).getDefaultTextString();
   public void setBehaviorCopy(String[] v) {
     behaviorCopy = getMonolingualValue(behaviorCopyTFE, v);
   }
-  public String getAvailableBehaviorCopy() {
+  @Override
+public String getAvailableBehaviorCopy() {
     if (theContent != null && isFieldMissing("behaviorCopy")) {
      String objectValue = theContent.getBehaviorCopy();
       return objectValue;
     }
     return behaviorCopy;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // cssId
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry cssIdTFE = channel.getTypeFieldEntry(AbstractPortal.class, "cssId", true);
   protected String cssId = channel.getTypeFieldEntry(AbstractPortal.class, "cssId", true).getDefaultTextString();
   public void setCssId(String[] v) {
     cssId = getMonolingualValue(cssIdTFE, v);
   }
-  public String getAvailableCssId() {
+  @Override
+public String getAvailableCssId() {
     if (theContent != null && isFieldMissing("cssId")) {
      String objectValue = theContent.getCssId();
       return objectValue;
     }
     return cssId;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // cssClasses
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry cssClassesTFE = channel.getTypeFieldEntry(AbstractPortal.class, "cssClasses", true);
   protected String cssClasses = channel.getTypeFieldEntry(AbstractPortal.class, "cssClasses", true).getDefaultTextString();
   public void setCssClasses(String[] v) {
@@ -600,32 +611,33 @@ public class EditAbstractPortalHandler extends com.jalios.jcms.portlet.EditPorta
     }
     return cssClasses;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // exactCategory
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry exactCategoryTFE = channel.getTypeFieldEntry(AbstractPortal.class, "exactCategory", true);
   protected boolean exactCategory = false;
   public void setExactCategory(boolean  v) {
     this.exactCategory = v;
   }
-  
-  public boolean getAvailableExactCategory() {
+
+  @Override
+public boolean getAvailableExactCategory() {
     if (theContent != null && isFieldMissing("exactCategory")) {
      boolean objectValue = theContent.getExactCategory();
       return objectValue;
     }
     return exactCategory;
   }
-  
-    
-  
- 
-   
- 
+
+
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // 40XREY+pag0kstUbpCz3IQ==

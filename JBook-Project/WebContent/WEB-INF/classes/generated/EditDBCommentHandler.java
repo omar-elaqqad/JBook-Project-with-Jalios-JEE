@@ -1,99 +1,94 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
+
+
+import com.jalios.jcms.Data;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
 import com.jalios.util.Util;
-import custom.*;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditDBCommentHandler extends com.jalios.jcmsplugin.dbcomment.EditAbstractDBCommentHandler {
-   
+
   protected DBComment theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return DBComment.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpDBComment  
+  // validateBeforeOpDBComment
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     {
       Data data = processDataId("targetContent", __targetContentStr, com.jalios.jcms.Publication.class);
-      if (data != null) { 
+      if (data != null) {
         targetContent = (com.jalios.jcms.Publication)data;
       } else {
         isTargetContentValidated = Util.isEmpty(__targetContentStr);
       }
     }
-    if (!validateUploadedFileDocument(getAvailableTargetContent(),   fdauthor, getAvailableWorkspace())) {
-      return false;
-    }
-    if (!createUploadedFileDocument(getAvailableTargetContent(),  fdauthor, getAvailableWorkspace())) {
+    if (!validateUploadedFileDocument(getAvailableTargetContent(),   fdauthor, getAvailableWorkspace()) || !createUploadedFileDocument(getAvailableTargetContent(),  fdauthor, getAvailableWorkspace())) {
       return false;
     }
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("name".equals(field)) {
       return getAvailableName();
     }
-    
+
     if ("email".equals(field)) {
       return getAvailableEmail();
     }
-    
+
     if ("webSite".equals(field)) {
       return getAvailableWebSite();
     }
-    
+
     if ("description".equals(field)) {
       return getAvailableDescription();
     }
-    
+
     if ("targetContent".equals(field)) {
       return getAvailableTargetContent();
     }
-    
+
     if ("ipAddress".equals(field)) {
       return getAvailableIpAddress();
     }
-    
+
     if ("userAgent".equals(field)) {
       return getAvailableUserAgent();
     }
-    
+
     if ("referer".equals(field)) {
       return getAvailableReferer();
     }
-    
+
     if ("privateComment".equals(field)) {
       return getAvailablePrivateComment();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     if ("privateComment".equals(field)) {
       return DBComment.getPrivateCommentValues();
     }
@@ -101,14 +96,14 @@ public class EditDBCommentHandler extends com.jalios.jcmsplugin.dbcomment.EditAb
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     if ("privateComment".equals(field)) {
       return DBComment.getPrivateCommentLabels(userLang);
     }
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdateDBComment  
+  // validateCommonCreateUpdateDBComment
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdateDBComment() {
     if (!isTargetContentValidated) {
@@ -117,39 +112,35 @@ public class EditDBCommentHandler extends com.jalios.jcmsplugin.dbcomment.EditAb
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdateDBComment()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdateDBComment()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdateDBComment()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdateDBComment()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -158,7 +149,8 @@ public class EditDBCommentHandler extends com.jalios.jcmsplugin.dbcomment.EditAb
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -167,7 +159,8 @@ public class EditDBCommentHandler extends com.jalios.jcmsplugin.dbcomment.EditAb
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -176,7 +169,8 @@ public class EditDBCommentHandler extends com.jalios.jcmsplugin.dbcomment.EditAb
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     DBComment obj = (DBComment)data;
     obj.setName(getAvailableName());
@@ -189,8 +183,9 @@ public class EditDBCommentHandler extends com.jalios.jcmsplugin.dbcomment.EditAb
     obj.setReferer(getAvailableReferer());
     obj.setPrivateComment(getAvailablePrivateComment());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof DBComment) {
       super.setId(v);
       theContent = (DBComment)publication;
@@ -199,11 +194,11 @@ public class EditDBCommentHandler extends com.jalios.jcmsplugin.dbcomment.EditAb
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // name
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry nameTFE = channel.getTypeFieldEntry(DBComment.class, "name", true);
   protected String name = channel.getTypeFieldEntry(DBComment.class, "name", true).getDefaultTextString();
   public void setName(String[] v) {
@@ -216,13 +211,13 @@ public class EditDBCommentHandler extends com.jalios.jcmsplugin.dbcomment.EditAb
     }
     return name;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // email
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry emailTFE = channel.getTypeFieldEntry(DBComment.class, "email", true);
   protected String email = channel.getTypeFieldEntry(DBComment.class, "email", true).getDefaultTextString();
   public void setEmail(String[] v) {
@@ -235,13 +230,13 @@ public class EditDBCommentHandler extends com.jalios.jcmsplugin.dbcomment.EditAb
     }
     return email;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // webSite
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry webSiteTFE = channel.getTypeFieldEntry(DBComment.class, "webSite", true);
   protected String webSite = channel.getTypeFieldEntry(DBComment.class, "webSite", true).getDefaultTextString();
   public void setWebSite(String[] v) {
@@ -254,13 +249,13 @@ public class EditDBCommentHandler extends com.jalios.jcmsplugin.dbcomment.EditAb
     }
     return webSite;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // description
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry descriptionTFE = channel.getTypeFieldEntry(DBComment.class, "description", true);
   protected String description = channel.getTypeFieldEntry(DBComment.class, "description", true).getDefaultTextString();
   public void setDescription(String[] v) {
@@ -273,13 +268,13 @@ public class EditDBCommentHandler extends com.jalios.jcmsplugin.dbcomment.EditAb
     }
     return description;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // targetContent
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry targetContentTFE = channel.getTypeFieldEntry(DBComment.class, "targetContent", true);
   protected boolean isTargetContentValidated = true;
   protected com.jalios.jcms.Publication targetContent;
@@ -294,13 +289,13 @@ public class EditDBCommentHandler extends com.jalios.jcmsplugin.dbcomment.EditAb
     }
     return targetContent;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // ipAddress
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry ipAddressTFE = channel.getTypeFieldEntry(DBComment.class, "ipAddress", true);
   protected String ipAddress = channel.getTypeFieldEntry(DBComment.class, "ipAddress", true).getDefaultTextString();
   public void setIpAddress(String[] v) {
@@ -313,13 +308,13 @@ public class EditDBCommentHandler extends com.jalios.jcmsplugin.dbcomment.EditAb
     }
     return ipAddress;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // userAgent
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry userAgentTFE = channel.getTypeFieldEntry(DBComment.class, "userAgent", true);
   protected String userAgent = channel.getTypeFieldEntry(DBComment.class, "userAgent", true).getDefaultTextString();
   public void setUserAgent(String[] v) {
@@ -332,13 +327,13 @@ public class EditDBCommentHandler extends com.jalios.jcmsplugin.dbcomment.EditAb
     }
     return userAgent;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // referer
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry refererTFE = channel.getTypeFieldEntry(DBComment.class, "referer", true);
   protected String referer = channel.getTypeFieldEntry(DBComment.class, "referer", true).getDefaultTextString();
   public void setReferer(String[] v) {
@@ -351,19 +346,19 @@ public class EditDBCommentHandler extends com.jalios.jcmsplugin.dbcomment.EditAb
     }
     return referer;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // privateComment
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry privateCommentTFE = channel.getTypeFieldEntry(DBComment.class, "privateComment", true);
   protected boolean privateComment = false;
   public void setPrivateComment(boolean  v) {
     this.privateComment = v;
   }
-  
+
   public boolean getAvailablePrivateComment() {
     if (theContent != null && isFieldMissing("privateComment")) {
      boolean objectValue = theContent.getPrivateComment();
@@ -371,12 +366,12 @@ public class EditDBCommentHandler extends com.jalios.jcmsplugin.dbcomment.EditAb
     }
     return privateComment;
   }
-  
-    
-  
- 
-   
- 
+
+
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // K4CqegQ3WJGs8pj+c035sA==

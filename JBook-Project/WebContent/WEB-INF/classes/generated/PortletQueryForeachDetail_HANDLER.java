@@ -3,13 +3,18 @@
 
 package generated;
 
-import java.util.*;
-import com.jalios.jstore.*;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.jalios.jstore.DecodeContext;
+import com.jalios.jstore.StorableLogEntry;
+import com.jalios.jstore.StoreUtil;
 
 @SuppressWarnings("unchecked")
 public class PortletQueryForeachDetail_HANDLER implements com.jalios.jstore.StorableHandler {
 
-  @SuppressWarnings("rawtypes")
+  @Override
+@SuppressWarnings("rawtypes")
   public void setAttributes(com.jalios.jstore.Storable storable, StorableLogEntry sle, com.jalios.jstore.Store store) {
     PortletQueryForeachDetail handler = (generated.PortletQueryForeachDetail)storable;
     String value;
@@ -36,7 +41,7 @@ public class PortletQueryForeachDetail_HANDLER implements com.jalios.jstore.Stor
 
     value = attributes.get("showDate");
     if (value != null) {
-      handler.setShowDate((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "showDate")));
+      handler.setShowDate(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "showDate")));
     }
 
     value = attributes.get("showStatus");
@@ -66,12 +71,12 @@ public class PortletQueryForeachDetail_HANDLER implements com.jalios.jstore.Stor
 
     value = attributes.get("queries");
     if (value != null) {
-      handler.setQueries((java.lang.String[])StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "queries")));
+      handler.setQueries(StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "queries")));
     }
 
     value = attributes.get("refineQueries");
     if (value != null) {
-      handler.setRefineQueries((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "refineQueries")));
+      handler.setRefineQueries(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "refineQueries")));
     }
 
     value = attributes.get("refineWithContextualCategories");
@@ -81,17 +86,17 @@ public class PortletQueryForeachDetail_HANDLER implements com.jalios.jstore.Stor
 
     value = attributes.get("displayMode");
     if (value != null) {
-      handler.setDisplayMode((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "displayMode")));
+      handler.setDisplayMode(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "displayMode")));
     }
 
     value = attributes.get("orderBy");
     if (value != null) {
-      handler.setOrderBy((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "orderBy")));
+      handler.setOrderBy(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "orderBy")));
     }
 
     value = attributes.get("reverseOrder");
     if (value != null) {
-      handler.setReverseOrder((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "reverseOrder")));
+      handler.setReverseOrder(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "reverseOrder")));
     }
 
     value = attributes.get("maxResults");
@@ -111,22 +116,22 @@ public class PortletQueryForeachDetail_HANDLER implements com.jalios.jstore.Stor
 
     value = attributes.get("showPager");
     if (value != null) {
-      handler.setShowPager((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "showPager")));
+      handler.setShowPager(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "showPager")));
     }
 
     value = attributes.get("pagerLabel");
     if (value != null) {
-      handler.setPagerLabel((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "pagerLabel")));
+      handler.setPagerLabel(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "pagerLabel")));
     }
 
     value = attributes.get("pagerLabelML");
     if (value != null) {
-      handler.setPagerLabelML((java.util.HashMap)StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "pagerLabelML")));
+      handler.setPagerLabelML(StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "pagerLabelML")));
     }
 
     value = attributes.get("pageSizes");
     if (value != null) {
-      handler.setPageSizes((int[])StoreUtil.decodeObject(int[].class, value, store, new DecodeContext(sle, "pageSizes")));
+      handler.setPageSizes(StoreUtil.decodeObject(int[].class, value, store, new DecodeContext(sle, "pageSizes")));
     }
 
     value = attributes.get("pagerAllLimit");
@@ -141,12 +146,12 @@ public class PortletQueryForeachDetail_HANDLER implements com.jalios.jstore.Stor
 
     value = attributes.get("firstPublications");
     if (value != null) {
-      handler.setFirstPublications((com.jalios.jcms.Content[])StoreUtil.decodeObject(com.jalios.jcms.Content[].class, value, store, new DecodeContext(sle, "firstPublications")));
+      handler.setFirstPublications(StoreUtil.decodeObject(com.jalios.jcms.Content[].class, value, store, new DecodeContext(sle, "firstPublications")));
     }
 
     value = attributes.get("firstPublicationsDBID");
     if (value != null) {
-      handler.setFirstPublicationsDBID((java.lang.String[])StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "firstPublicationsDBID")));
+      handler.setFirstPublicationsDBID(StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "firstPublicationsDBID")));
     }
 
     value = attributes.get("showInCurrentPortal");
@@ -161,47 +166,47 @@ public class PortletQueryForeachDetail_HANDLER implements com.jalios.jstore.Stor
 
     value = attributes.get("publications");
     if (value != null) {
-      handler.setPublications((com.jalios.jcms.Publication[])StoreUtil.decodeObject(com.jalios.jcms.Publication[].class, value, store, new DecodeContext(sle, "publications")));
+      handler.setPublications(StoreUtil.decodeObject(com.jalios.jcms.Publication[].class, value, store, new DecodeContext(sle, "publications")));
     }
 
     value = attributes.get("publicationsDBID");
     if (value != null) {
-      handler.setPublicationsDBID((java.lang.String[])StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "publicationsDBID")));
+      handler.setPublicationsDBID(StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "publicationsDBID")));
     }
 
     value = attributes.get("description");
     if (value != null) {
-      handler.setDescription((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "description")));
+      handler.setDescription(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "description")));
     }
 
     value = attributes.get("descriptionML");
     if (value != null) {
-      handler.setDescriptionML((java.util.HashMap)StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "descriptionML")));
+      handler.setDescriptionML(StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "descriptionML")));
     }
 
     value = attributes.get("portletImage");
     if (value != null) {
-      handler.setPortletImage((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "portletImage")));
+      handler.setPortletImage(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "portletImage")));
     }
 
     value = attributes.get("portletImageML");
     if (value != null) {
-      handler.setPortletImageML((java.util.HashMap)StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "portletImageML")));
+      handler.setPortletImageML(StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "portletImageML")));
     }
 
     value = attributes.get("cacheType");
     if (value != null) {
-      handler.setCacheType((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "cacheType")));
+      handler.setCacheType(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "cacheType")));
     }
 
     value = attributes.get("cacheSensibility");
     if (value != null) {
-      handler.setCacheSensibility((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "cacheSensibility")));
+      handler.setCacheSensibility(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "cacheSensibility")));
     }
 
     value = attributes.get("invalidClass");
     if (value != null) {
-      handler.setInvalidClass((java.lang.String[])StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "invalidClass")));
+      handler.setInvalidClass(StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "invalidClass")));
     }
 
     value = attributes.get("invalidTime");
@@ -211,12 +216,12 @@ public class PortletQueryForeachDetail_HANDLER implements com.jalios.jstore.Stor
 
     value = attributes.get("displayCSS");
     if (value != null) {
-      handler.setDisplayCSS((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "displayCSS")));
+      handler.setDisplayCSS(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "displayCSS")));
     }
 
     value = attributes.get("width");
     if (value != null) {
-      handler.setWidth((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "width")));
+      handler.setWidth(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "width")));
     }
 
     value = attributes.get("insetLeft");
@@ -246,17 +251,17 @@ public class PortletQueryForeachDetail_HANDLER implements com.jalios.jstore.Stor
 
     value = attributes.get("alignH");
     if (value != null) {
-      handler.setAlignH((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "alignH")));
+      handler.setAlignH(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "alignH")));
     }
 
     value = attributes.get("alignV");
     if (value != null) {
-      handler.setAlignV((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "alignV")));
+      handler.setAlignV(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "alignV")));
     }
 
     value = attributes.get("alignTable");
     if (value != null) {
-      handler.setAlignTable((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "alignTable")));
+      handler.setAlignTable(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "alignTable")));
     }
 
     value = attributes.get("border");
@@ -266,187 +271,187 @@ public class PortletQueryForeachDetail_HANDLER implements com.jalios.jstore.Stor
 
     value = attributes.get("borderColor");
     if (value != null) {
-      handler.setBorderColor((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "borderColor")));
+      handler.setBorderColor(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "borderColor")));
     }
 
     value = attributes.get("backColor");
     if (value != null) {
-      handler.setBackColor((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "backColor")));
+      handler.setBackColor(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "backColor")));
     }
 
     value = attributes.get("backImage");
     if (value != null) {
-      handler.setBackImage((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "backImage")));
+      handler.setBackImage(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "backImage")));
     }
 
     value = attributes.get("displayTitle");
     if (value != null) {
-      handler.setDisplayTitle((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "displayTitle")));
+      handler.setDisplayTitle(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "displayTitle")));
     }
 
     value = attributes.get("displayTitleML");
     if (value != null) {
-      handler.setDisplayTitleML((java.util.HashMap)StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "displayTitleML")));
+      handler.setDisplayTitleML(StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "displayTitleML")));
     }
 
     value = attributes.get("skins");
     if (value != null) {
-      handler.setSkins((java.lang.String[])StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "skins")));
+      handler.setSkins(StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "skins")));
     }
 
     value = attributes.get("skinCSS");
     if (value != null) {
-      handler.setSkinCSS((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "skinCSS")));
+      handler.setSkinCSS(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "skinCSS")));
     }
 
     value = attributes.get("popupState");
     if (value != null) {
-      handler.setPopupState((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "popupState")));
+      handler.setPopupState(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "popupState")));
     }
 
     value = attributes.get("expandState");
     if (value != null) {
-      handler.setExpandState((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "expandState")));
+      handler.setExpandState(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "expandState")));
     }
 
     value = attributes.get("behaviorCopy");
     if (value != null) {
-      handler.setBehaviorCopy((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "behaviorCopy")));
+      handler.setBehaviorCopy(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "behaviorCopy")));
     }
 
     value = attributes.get("originalPortlet");
     if (value != null) {
-      handler.setOriginalPortlet((com.jalios.jcms.portlet.PortalElement)StoreUtil.decodeObject(com.jalios.jcms.portlet.PortalElement.class, value, store, new DecodeContext(sle, "originalPortlet")));
+      handler.setOriginalPortlet(StoreUtil.decodeObject(com.jalios.jcms.portlet.PortalElement.class, value, store, new DecodeContext(sle, "originalPortlet")));
     }
 
     value = attributes.get("condition");
     if (value != null) {
-      handler.setCondition((java.lang.String[])StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "condition")));
+      handler.setCondition(StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "condition")));
     }
 
     value = attributes.get("cssId");
     if (value != null) {
-      handler.setCssId((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "cssId")));
+      handler.setCssId(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "cssId")));
     }
 
     value = attributes.get("cssClasses");
     if (value != null) {
-      handler.setCssClasses((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "cssClasses")));
+      handler.setCssClasses(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "cssClasses")));
     }
 
     value = attributes.get("skinClasses");
     if (value != null) {
-      handler.setSkinClasses((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "skinClasses")));
+      handler.setSkinClasses(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "skinClasses")));
     }
 
     value = attributes.get("skinFooter");
     if (value != null) {
-      handler.setSkinFooter((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "skinFooter")));
+      handler.setSkinFooter(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "skinFooter")));
     }
 
     value = attributes.get("skinFooterML");
     if (value != null) {
-      handler.setSkinFooterML((java.util.HashMap)StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "skinFooterML")));
+      handler.setSkinFooterML(StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "skinFooterML")));
     }
 
     value = attributes.get("skinHeaderIcon");
     if (value != null) {
-      handler.setSkinHeaderIcon((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "skinHeaderIcon")));
+      handler.setSkinHeaderIcon(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "skinHeaderIcon")));
     }
 
     value = attributes.get("skinHeaderIconColor");
     if (value != null) {
-      handler.setSkinHeaderIconColor((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "skinHeaderIconColor")));
+      handler.setSkinHeaderIconColor(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "skinHeaderIconColor")));
     }
 
     value = attributes.get("skinFooterButtonLabel");
     if (value != null) {
-      handler.setSkinFooterButtonLabel((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "skinFooterButtonLabel")));
+      handler.setSkinFooterButtonLabel(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "skinFooterButtonLabel")));
     }
 
     value = attributes.get("skinFooterButtonLabelML");
     if (value != null) {
-      handler.setSkinFooterButtonLabelML((java.util.HashMap)StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "skinFooterButtonLabelML")));
+      handler.setSkinFooterButtonLabelML(StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "skinFooterButtonLabelML")));
     }
 
     value = attributes.get("skinFooterButtonLink");
     if (value != null) {
-      handler.setSkinFooterButtonLink((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "skinFooterButtonLink")));
+      handler.setSkinFooterButtonLink(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "skinFooterButtonLink")));
     }
 
     value = attributes.get("skinFooterButtonAlign");
     if (value != null) {
-      handler.setSkinFooterButtonAlign((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "skinFooterButtonAlign")));
+      handler.setSkinFooterButtonAlign(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "skinFooterButtonAlign")));
     }
 
     value = attributes.get("skinHeaderButtonLabel");
     if (value != null) {
-      handler.setSkinHeaderButtonLabel((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "skinHeaderButtonLabel")));
+      handler.setSkinHeaderButtonLabel(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "skinHeaderButtonLabel")));
     }
 
     value = attributes.get("skinHeaderButtonLabelML");
     if (value != null) {
-      handler.setSkinHeaderButtonLabelML((java.util.HashMap)StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "skinHeaderButtonLabelML")));
+      handler.setSkinHeaderButtonLabelML(StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "skinHeaderButtonLabelML")));
     }
 
     value = attributes.get("skinHeaderButtonLink");
     if (value != null) {
-      handler.setSkinHeaderButtonLink((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "skinHeaderButtonLink")));
+      handler.setSkinHeaderButtonLink(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "skinHeaderButtonLink")));
     }
 
     value = attributes.get("skinHeaderSubText");
     if (value != null) {
-      handler.setSkinHeaderSubText((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "skinHeaderSubText")));
+      handler.setSkinHeaderSubText(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "skinHeaderSubText")));
     }
 
     value = attributes.get("skinHeaderSubTextML");
     if (value != null) {
-      handler.setSkinHeaderSubTextML((java.util.HashMap)StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "skinHeaderSubTextML")));
+      handler.setSkinHeaderSubTextML(StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "skinHeaderSubTextML")));
     }
 
     value = attributes.get("abilities");
     if (value != null) {
-      handler.setAbilities((java.lang.String[])StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "abilities")));
+      handler.setAbilities(StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "abilities")));
     }
 
     value = attributes.get("mainLanguage");
     if (value != null) {
-      handler.setMainLanguage((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "mainLanguage")));
+      handler.setMainLanguage(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "mainLanguage")));
     }
 
     value = attributes.get("title");
     if (value != null) {
-      handler.setTitle((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "title")));
+      handler.setTitle(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "title")));
     }
 
     value = attributes.get("titleML");
     if (value != null) {
-      handler.setTitleML((java.util.HashMap)StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "titleML")));
+      handler.setTitleML(StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "titleML")));
     }
 
     value = attributes.get("pdate");
     if (value != null) {
-      handler.setPdate((java.util.Date)StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "pdate")));
+      handler.setPdate(StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "pdate")));
     }
 
     value = attributes.get("edate");
     if (value != null) {
-      handler.setEdate((java.util.Date)StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "edate")));
+      handler.setEdate(StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "edate")));
     }
 
     value = attributes.get("sdate");
     if (value != null) {
-      handler.setSdate((java.util.Date)StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "sdate")));
+      handler.setSdate(StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "sdate")));
     }
 
     value = attributes.get("adate");
     if (value != null) {
-      handler.setAdate((java.util.Date)StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "adate")));
+      handler.setAdate(StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "adate")));
     }
 
     value = attributes.get("udate");
     if (value != null) {
-      handler.setUdate((java.util.Date)StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "udate")));
+      handler.setUdate(StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "udate")));
     }
 
     value = attributes.get("majorVersion");
@@ -461,47 +466,47 @@ public class PortletQueryForeachDetail_HANDLER implements com.jalios.jstore.Stor
 
     value = attributes.get("mergeDate");
     if (value != null) {
-      handler.setMergeDate((java.util.Date)StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "mergeDate")));
+      handler.setMergeDate(StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "mergeDate")));
     }
 
     value = attributes.get("mergeId");
     if (value != null) {
-      handler.setMergeId((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "mergeId")));
+      handler.setMergeId(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "mergeId")));
     }
 
     value = attributes.get("templates");
     if (value != null) {
-      handler.setTemplates((java.lang.String[])StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "templates")));
+      handler.setTemplates(StoreUtil.decodeObject(java.lang.String[].class, value, store, new DecodeContext(sle, "templates")));
     }
 
     value = attributes.get("categories");
     if (value != null) {
-      handler.setCategories((com.jalios.jcms.Category[])StoreUtil.decodeObject(com.jalios.jcms.Category[].class, value, store, new DecodeContext(sle, "categories")));
+      handler.setCategories(StoreUtil.decodeObject(com.jalios.jcms.Category[].class, value, store, new DecodeContext(sle, "categories")));
     }
 
     value = attributes.get("authorizedMemberSet");
     if (value != null) {
-      handler.setAuthorizedMemberSet((java.util.TreeSet)StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "authorizedMemberSet")));
+      handler.setAuthorizedMemberSet(StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "authorizedMemberSet")));
     }
 
     value = attributes.get("authorizedMemberSetDBID");
     if (value != null) {
-      handler.setAuthorizedMemberSetDBID((java.util.HashSet)StoreUtil.decodeObject(java.util.HashSet.class, value, store, new DecodeContext(sle, "authorizedMemberSetDBID")));
+      handler.setAuthorizedMemberSetDBID(StoreUtil.decodeObject(java.util.HashSet.class, value, store, new DecodeContext(sle, "authorizedMemberSetDBID")));
     }
 
     value = attributes.get("authorizedGroupSet");
     if (value != null) {
-      handler.setAuthorizedGroupSet((java.util.TreeSet)StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "authorizedGroupSet")));
+      handler.setAuthorizedGroupSet(StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "authorizedGroupSet")));
     }
 
     value = attributes.get("updateMemberSet");
     if (value != null) {
-      handler.setUpdateMemberSet((java.util.TreeSet)StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "updateMemberSet")));
+      handler.setUpdateMemberSet(StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "updateMemberSet")));
     }
 
     value = attributes.get("updateGroupSet");
     if (value != null) {
-      handler.setUpdateGroupSet((java.util.TreeSet)StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "updateGroupSet")));
+      handler.setUpdateGroupSet(StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "updateGroupSet")));
     }
 
     value = attributes.get("restrictUpdateRights");
@@ -511,7 +516,7 @@ public class PortletQueryForeachDetail_HANDLER implements com.jalios.jstore.Stor
 
     value = attributes.get("mainInstance");
     if (value != null) {
-      handler.setMainInstance((com.jalios.jcms.Publication)StoreUtil.decodeObject(com.jalios.jcms.Publication.class, value, store, new DecodeContext(sle, "mainInstance")));
+      handler.setMainInstance(StoreUtil.decodeObject(com.jalios.jcms.Publication.class, value, store, new DecodeContext(sle, "mainInstance")));
     }
 
     value = attributes.get("isTracked");
@@ -526,79 +531,80 @@ public class PortletQueryForeachDetail_HANDLER implements com.jalios.jstore.Stor
 
     value = attributes.get("friendlyURLSet");
     if (value != null) {
-      handler.setFriendlyURLSet((java.util.TreeSet)StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "friendlyURLSet")));
+      handler.setFriendlyURLSet(StoreUtil.decodeObject(java.util.TreeSet.class, value, store, new DecodeContext(sle, "friendlyURLSet")));
     }
 
     value = attributes.get("workspace");
     if (value != null) {
-      handler.setWorkspace((com.jalios.jcms.workspace.Workspace)StoreUtil.decodeObject(com.jalios.jcms.workspace.Workspace.class, value, store, new DecodeContext(sle, "workspace")));
+      handler.setWorkspace(StoreUtil.decodeObject(com.jalios.jcms.workspace.Workspace.class, value, store, new DecodeContext(sle, "workspace")));
     }
 
     value = attributes.get("roleMap");
     if (value != null) {
-      handler.setRoleMap((java.util.HashMap)StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "roleMap")));
+      handler.setRoleMap(StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "roleMap")));
     }
 
     value = attributes.get("workflowId");
     if (value != null) {
-      handler.setWorkflowId((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "workflowId")));
+      handler.setWorkflowId(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "workflowId")));
     }
 
     value = attributes.get("attachWorkspaceSet");
     if (value != null) {
-      handler.setAttachWorkspaceSet((java.util.Set)StoreUtil.decodeObject(java.util.Set.class, value, store, new DecodeContext(sle, "attachWorkspaceSet")));
+      handler.setAttachWorkspaceSet(StoreUtil.decodeObject(java.util.Set.class, value, store, new DecodeContext(sle, "attachWorkspaceSet")));
     }
 
     value = attributes.get("author");
     if (value != null) {
-      handler.setAuthor((com.jalios.jcms.Member)StoreUtil.decodeObject(com.jalios.jcms.Member.class, value, store, new DecodeContext(sle, "author")));
+      handler.setAuthor(StoreUtil.decodeObject(com.jalios.jcms.Member.class, value, store, new DecodeContext(sle, "author")));
     }
 
     value = attributes.get("authorDBID");
     if (value != null) {
-      handler.setAuthorDBID((java.lang.String)StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "authorDBID")));
+      handler.setAuthorDBID(StoreUtil.decodeObject(java.lang.String.class, value, store, new DecodeContext(sle, "authorDBID")));
     }
 
     value = attributes.get("opAuthor");
     if (value != null) {
-      handler.setOpAuthor((com.jalios.jcms.Member)StoreUtil.decodeObject(com.jalios.jcms.Member.class, value, store, new DecodeContext(sle, "opAuthor")));
+      handler.setOpAuthor(StoreUtil.decodeObject(com.jalios.jcms.Member.class, value, store, new DecodeContext(sle, "opAuthor")));
     }
 
     value = attributes.get("opDelegate");
     if (value != null) {
-      handler.setOpDelegate((com.jalios.jcms.Member)StoreUtil.decodeObject(com.jalios.jcms.Member.class, value, store, new DecodeContext(sle, "opDelegate")));
+      handler.setOpDelegate(StoreUtil.decodeObject(com.jalios.jcms.Member.class, value, store, new DecodeContext(sle, "opDelegate")));
     }
 
     value = attributes.get("extension");
     if (value != null) {
-      handler.setExtension((com.jalios.jcms.DataExtension)StoreUtil.decodeObject(com.jalios.jcms.DataExtension.class, value, store, new DecodeContext(sle, "extension")));
+      handler.setExtension(StoreUtil.decodeObject(com.jalios.jcms.DataExtension.class, value, store, new DecodeContext(sle, "extension")));
     }
 
     value = attributes.get("importMap");
     if (value != null) {
-      handler.setImportMap((java.util.HashMap)StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "importMap")));
+      handler.setImportMap(StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "importMap")));
     }
 
     value = attributes.get("extraDataMap");
     if (value != null) {
-      handler.setExtraDataMap((java.util.HashMap)StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "extraDataMap")));
+      handler.setExtraDataMap(StoreUtil.decodeObject(java.util.HashMap.class, value, store, new DecodeContext(sle, "extraDataMap")));
     }
 
     value = attributes.get("cdate");
     if (value != null) {
-      handler.setCdate((java.util.Date)StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "cdate")));
+      handler.setCdate(StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "cdate")));
     }
 
     value = attributes.get("mdate");
     if (value != null) {
-      handler.setMdate((java.util.Date)StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "mdate")));
+      handler.setMdate(StoreUtil.decodeObject(java.util.Date.class, value, store, new DecodeContext(sle, "mdate")));
     }
 
   }
 
-  public Map<String,String> getAttributes(com.jalios.jstore.Storable storable, com.jalios.jstore.Store store) {
+  @Override
+public Map<String,String> getAttributes(com.jalios.jstore.Storable storable, com.jalios.jstore.Store store) {
     generated.PortletQueryForeachDetail handler = (generated.PortletQueryForeachDetail)storable;
-    Map<String,String> attributes = new HashMap<String,String>();
+    Map<String,String> attributes = new HashMap<>();
     attributes.put("showTitle", String.valueOf(handler.getShowTitle()));
     attributes.put("showAbstract", String.valueOf(handler.getShowAbstract()));
     attributes.put("showAuthor", String.valueOf(handler.getShowAuthor()));

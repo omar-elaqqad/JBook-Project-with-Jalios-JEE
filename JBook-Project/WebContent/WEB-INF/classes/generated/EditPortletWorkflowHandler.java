@@ -1,77 +1,74 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
+
+
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
 import com.jalios.util.Util;
-import custom.*;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditPortletWorkflowHandler extends EditAbstractPortletSkinableHandler {
-   
+
   protected PortletWorkflow theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return PortletWorkflow.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpPortletWorkflow  
+  // validateBeforeOpPortletWorkflow
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("queries".equals(field)) {
       return getAvailableQueries();
     }
-    
+
     if ("maximumItemsPerWorkspace".equals(field)) {
       return getAvailableMaximumItemsPerWorkspace();
     }
-    
+
     if ("orderBy".equals(field)) {
       return getAvailableOrderBy();
     }
-    
+
     if ("hideWhenNoResults".equals(field)) {
       return getAvailableHideWhenNoResults();
     }
-    
+
     if ("pageSizes".equals(field)) {
       return getAvailablePageSizes();
     }
-    
+
     if ("pagerAllLimit".equals(field)) {
       return getAvailablePagerAllLimit();
     }
-    
+
     if ("displayCSWorkspacePublication".equals(field)) {
       return getAvailableDisplayCSWorkspacePublication();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     if ("orderBy".equals(field)) {
       return PortletWorkflow.getOrderByValues();
     }
@@ -85,7 +82,7 @@ public class EditPortletWorkflowHandler extends EditAbstractPortletSkinableHandl
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     if ("orderBy".equals(field)) {
       return PortletWorkflow.getOrderByLabels(userLang);
     }
@@ -98,7 +95,7 @@ public class EditPortletWorkflowHandler extends EditAbstractPortletSkinableHandl
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdatePortletWorkflow  
+  // validateCommonCreateUpdatePortletWorkflow
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdatePortletWorkflow() {
     if (!isMaximumItemsPerWorkspaceValidated) {
@@ -115,39 +112,35 @@ public class EditPortletWorkflowHandler extends EditAbstractPortletSkinableHandl
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdatePortletWorkflow()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdatePortletWorkflow()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdatePortletWorkflow()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdatePortletWorkflow()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -156,7 +149,8 @@ public class EditPortletWorkflowHandler extends EditAbstractPortletSkinableHandl
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -165,7 +159,8 @@ public class EditPortletWorkflowHandler extends EditAbstractPortletSkinableHandl
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -174,7 +169,8 @@ public class EditPortletWorkflowHandler extends EditAbstractPortletSkinableHandl
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     PortletWorkflow obj = (PortletWorkflow)data;
     obj.setQueries(getAvailableQueries());
@@ -185,8 +181,9 @@ public class EditPortletWorkflowHandler extends EditAbstractPortletSkinableHandl
     obj.setPagerAllLimit(getAvailablePagerAllLimit());
     obj.setDisplayCSWorkspacePublication(getAvailableDisplayCSWorkspacePublication());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof PortletWorkflow) {
       super.setId(v);
       theContent = (PortletWorkflow)publication;
@@ -195,18 +192,18 @@ public class EditPortletWorkflowHandler extends EditAbstractPortletSkinableHandl
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // queries
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry queriesTFE = channel.getTypeFieldEntry(PortletWorkflow.class, "queries", true);
   protected String[] queries = new String[0];
   protected int queriesAddCount = 0;
   public void setQueries(String[] v) {
     queries = getMonolingualValueArray(queriesTFE, v);
   }
-  
+
   public String[] getAvailableQueries() {
     if (theContent != null && isFieldMissing("queries")) {
 	  String[] objectValue = theContent.getQueries();
@@ -217,22 +214,22 @@ public class EditPortletWorkflowHandler extends EditAbstractPortletSkinableHandl
     }
     return queries;
   }
-  
-    
-  
+
+
+
   public void setQueriesAddCount(int  v) {
     queriesAddCount = v;
   }
-  
+
   public int getQueriesCount() {
     int arraySize = Util.getSize(getAvailableQueries());
     int res = 3 + arraySize + queriesAddCount;
     return res;
   }
-   
+
   // ----------------------------------------------------------------------
   // maximumItemsPerWorkspace
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry maximumItemsPerWorkspaceTFE = channel.getTypeFieldEntry(PortletWorkflow.class, "maximumItemsPerWorkspace", true);
   protected boolean isMaximumItemsPerWorkspaceValidated = true;
   protected int maximumItemsPerWorkspace = 0;
@@ -250,13 +247,13 @@ public class EditPortletWorkflowHandler extends EditAbstractPortletSkinableHandl
     }
     return maximumItemsPerWorkspace;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // orderBy
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry orderByTFE = channel.getTypeFieldEntry(PortletWorkflow.class, "orderBy", true);
   protected String orderBy = "udate";
   public void setOrderBy(String[] v) {
@@ -269,19 +266,19 @@ public class EditPortletWorkflowHandler extends EditAbstractPortletSkinableHandl
     }
     return orderBy;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // hideWhenNoResults
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry hideWhenNoResultsTFE = channel.getTypeFieldEntry(PortletWorkflow.class, "hideWhenNoResults", true);
   protected boolean hideWhenNoResults = false;
   public void setHideWhenNoResults(boolean  v) {
     this.hideWhenNoResults = v;
   }
-  
+
   public boolean getAvailableHideWhenNoResults() {
     if (theContent != null && isFieldMissing("hideWhenNoResults")) {
      boolean objectValue = theContent.getHideWhenNoResults();
@@ -289,13 +286,13 @@ public class EditPortletWorkflowHandler extends EditAbstractPortletSkinableHandl
     }
     return hideWhenNoResults;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // pageSizes
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry pageSizesTFE = channel.getTypeFieldEntry(PortletWorkflow.class, "pageSizes", true);
   protected boolean isPageSizesValidated = true;
   protected int[] pageSizes = new int[0];
@@ -322,22 +319,22 @@ public class EditPortletWorkflowHandler extends EditAbstractPortletSkinableHandl
     }
     return pageSizes;
   }
-  
-    
-  
+
+
+
   public void setPageSizesAddCount(int  v) {
     pageSizesAddCount = v;
   }
-  
+
   public int getPageSizesCount() {
     int arraySize = Util.getSize(getAvailablePageSizes());
     int res = 3 + arraySize + pageSizesAddCount;
     return res;
   }
-   
+
   // ----------------------------------------------------------------------
   // pagerAllLimit
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry pagerAllLimitTFE = channel.getTypeFieldEntry(PortletWorkflow.class, "pagerAllLimit", true);
   protected boolean isPagerAllLimitValidated = true;
   protected int pagerAllLimit = -1;
@@ -355,19 +352,19 @@ public class EditPortletWorkflowHandler extends EditAbstractPortletSkinableHandl
     }
     return pagerAllLimit;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // displayCSWorkspacePublication
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry displayCSWorkspacePublicationTFE = channel.getTypeFieldEntry(PortletWorkflow.class, "displayCSWorkspacePublication", true);
   protected boolean displayCSWorkspacePublication = true;
   public void setDisplayCSWorkspacePublication(boolean  v) {
     this.displayCSWorkspacePublication = v;
   }
-  
+
   public boolean getAvailableDisplayCSWorkspacePublication() {
     if (theContent != null && isFieldMissing("displayCSWorkspacePublication")) {
      boolean objectValue = theContent.getDisplayCSWorkspacePublication();
@@ -375,12 +372,12 @@ public class EditPortletWorkflowHandler extends EditAbstractPortletSkinableHandl
     }
     return displayCSWorkspacePublication;
   }
-  
-    
-  
- 
-   
- 
+
+
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // lKe+SWH4ybnFQzA4dkLJxA==

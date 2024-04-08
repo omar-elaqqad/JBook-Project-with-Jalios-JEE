@@ -1,94 +1,87 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
+
+
+import java.util.HashMap;
+import java.util.List;
+
+import com.jalios.jcms.Data;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
+import com.jalios.jcms.handler.EditPublicationHandler;
 import com.jalios.util.Util;
-import custom.*;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditGlossaryEntryHandler extends EditPublicationHandler {
-   
+
   protected GlossaryEntry theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return GlossaryEntry.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpGlossaryEntry  
+  // validateBeforeOpGlossaryEntry
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     {
       List<generated.GlossaryEntry> list = processDataIds("seeAlso",__seeAlsoStr,generated.GlossaryEntry.class);
-      this.seeAlso = (generated.GlossaryEntry[])list.toArray(new generated.GlossaryEntry[0]);
+      this.seeAlso = list.toArray(new generated.GlossaryEntry[0]);
     }
     {
       Data data = processDataId("glossary", __glossaryStr, generated.Glossary.class);
-      if (data != null) { 
+      if (data != null) {
         glossary = (generated.Glossary)data;
       } else {
         isGlossaryValidated = Util.isEmpty(__glossaryStr);
       }
     }
-    if (!validateUploadedFileDocument(getAvailableSeeAlso(),   fdauthor, getAvailableWorkspace())) {
-      return false;
-    }
-    if (!validateUploadedFileDocument(getAvailableGlossary(),   fdauthor, getAvailableWorkspace())) {
-      return false;
-    }
-    if (!createUploadedFileDocument(getAvailableSeeAlso(),  fdauthor, getAvailableWorkspace())) {
-      return false;
-    }
-    if (!createUploadedFileDocument(getAvailableGlossary(),  fdauthor, getAvailableWorkspace())) {
+    if (!validateUploadedFileDocument(getAvailableSeeAlso(),   fdauthor, getAvailableWorkspace()) || !validateUploadedFileDocument(getAvailableGlossary(),   fdauthor, getAvailableWorkspace()) || !createUploadedFileDocument(getAvailableSeeAlso(),  fdauthor, getAvailableWorkspace()) || !createUploadedFileDocument(getAvailableGlossary(),  fdauthor, getAvailableWorkspace())) {
       return false;
     }
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("definition".equals(field)) {
       return getAllAvailableDefinitionML();
     }
-    
+
     if ("seeAlso".equals(field)) {
       return getAvailableSeeAlso();
     }
-    
+
     if ("glossary".equals(field)) {
       return getAvailableGlossary();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     return super.getEnumValues(field);
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdateGlossaryEntry  
+  // validateCommonCreateUpdateGlossaryEntry
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdateGlossaryEntry() {
     if (!isGlossaryValidated) {
@@ -97,39 +90,35 @@ public class EditGlossaryEntryHandler extends EditPublicationHandler {
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdateGlossaryEntry()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdateGlossaryEntry()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdateGlossaryEntry()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdateGlossaryEntry()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -138,7 +127,8 @@ public class EditGlossaryEntryHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -147,7 +137,8 @@ public class EditGlossaryEntryHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -156,7 +147,8 @@ public class EditGlossaryEntryHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     GlossaryEntry obj = (GlossaryEntry)data;
     obj.setDefinition(getAvailableDefinition());
@@ -164,8 +156,9 @@ public class EditGlossaryEntryHandler extends EditPublicationHandler {
     obj.setSeeAlso(getAvailableSeeAlso());
     obj.setGlossary(getAvailableGlossary());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof GlossaryEntry) {
       super.setId(v);
       theContent = (GlossaryEntry)publication;
@@ -174,11 +167,11 @@ public class EditGlossaryEntryHandler extends EditPublicationHandler {
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // definition
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry definitionTFE = channel.getTypeFieldEntry(GlossaryEntry.class, "definition", true);
   protected String definition = channel.getTypeFieldEntry(GlossaryEntry.class, "definition", true).getDefaultTextString();
   protected HashMap<String,String> definitionML = definitionTFE.getDefaultTextMap();
@@ -193,14 +186,14 @@ public class EditGlossaryEntryHandler extends EditPublicationHandler {
     }
     return definition;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailableDefinitionML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableDefinitionML());
     map.put(channel.getLanguage(),getAvailableDefinition(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableDefinitionML() {
     if (theContent != null && isFieldMissing("definition")) {
       return theContent.getDefinitionML();
@@ -225,11 +218,11 @@ public class EditGlossaryEntryHandler extends EditPublicationHandler {
     }
     return definitionML == null ? "" : Util.getString(definitionML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // seeAlso
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry seeAlsoTFE = channel.getTypeFieldEntry(GlossaryEntry.class, "seeAlso", true);
   protected generated.GlossaryEntry[] seeAlso = new generated.GlossaryEntry[0];
   protected int seeAlsoAddCount = 0;
@@ -247,22 +240,22 @@ public class EditGlossaryEntryHandler extends EditPublicationHandler {
     }
     return seeAlso;
   }
-  
-    
-  
+
+
+
   public void setSeeAlsoAddCount(int  v) {
     seeAlsoAddCount = v;
   }
-  
+
   public int getSeeAlsoCount() {
     int arraySize = Util.getSize(getAvailableSeeAlso());
     int res = 3 + arraySize + seeAlsoAddCount;
     return res;
   }
-   
+
   // ----------------------------------------------------------------------
   // glossary
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry glossaryTFE = channel.getTypeFieldEntry(GlossaryEntry.class, "glossary", true);
   protected boolean isGlossaryValidated = true;
   protected generated.Glossary glossary;
@@ -277,12 +270,12 @@ public class EditGlossaryEntryHandler extends EditPublicationHandler {
     }
     return glossary;
   }
-  
-    
-  
- 
-   
- 
+
+
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // gPcxdNpPGrO/1fBcoH+f7Q==

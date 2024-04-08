@@ -1,79 +1,74 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
+
+
+import com.jalios.jcms.Data;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
 import com.jalios.util.Util;
-import custom.*;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditPortletPublicationHandler extends EditAbstractPortletSkinableHandler {
-   
+
   protected PortletPublication theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return PortletPublication.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpPortletPublication  
+  // validateBeforeOpPortletPublication
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     {
       Data data = processDataId("pub", __pubStr, com.jalios.jcms.Publication.class);
-      if (data != null) { 
+      if (data != null) {
         pub = (com.jalios.jcms.Publication)data;
       } else {
         isPubValidated = Util.isEmpty(__pubStr);
       }
     }
-    if (!validateUploadedFileDocument(getAvailablePub(),   fdauthor, getAvailableWorkspace())) {
-      return false;
-    }
-    if (!createUploadedFileDocument(getAvailablePub(),  fdauthor, getAvailableWorkspace())) {
+    if (!validateUploadedFileDocument(getAvailablePub(),   fdauthor, getAvailableWorkspace()) || !createUploadedFileDocument(getAvailablePub(),  fdauthor, getAvailableWorkspace())) {
       return false;
     }
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("pub".equals(field)) {
       return getAvailablePub();
     }
-    
+
     if ("template".equals(field)) {
       return getAvailableTemplate();
     }
-    
+
     if ("showDisplayHeader".equals(field)) {
       return getAvailableShowDisplayHeader();
     }
-    
+
     if ("showDisplayFooter".equals(field)) {
       return getAvailableShowDisplayFooter();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     if ("showDisplayHeader".equals(field)) {
       return PortletPublication.getShowDisplayHeaderValues();
     }
@@ -84,7 +79,7 @@ public class EditPortletPublicationHandler extends EditAbstractPortletSkinableHa
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     if ("showDisplayHeader".equals(field)) {
       return PortletPublication.getShowDisplayHeaderLabels(userLang);
     }
@@ -94,7 +89,7 @@ public class EditPortletPublicationHandler extends EditAbstractPortletSkinableHa
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdatePortletPublication  
+  // validateCommonCreateUpdatePortletPublication
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdatePortletPublication() {
     if (!isPubValidated) {
@@ -103,39 +98,35 @@ public class EditPortletPublicationHandler extends EditAbstractPortletSkinableHa
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdatePortletPublication()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdatePortletPublication()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdatePortletPublication()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdatePortletPublication()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -144,7 +135,8 @@ public class EditPortletPublicationHandler extends EditAbstractPortletSkinableHa
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -153,7 +145,8 @@ public class EditPortletPublicationHandler extends EditAbstractPortletSkinableHa
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -162,7 +155,8 @@ public class EditPortletPublicationHandler extends EditAbstractPortletSkinableHa
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     PortletPublication obj = (PortletPublication)data;
     obj.setPub(getAvailablePub());
@@ -170,8 +164,9 @@ public class EditPortletPublicationHandler extends EditAbstractPortletSkinableHa
     obj.setShowDisplayHeader(getAvailableShowDisplayHeader());
     obj.setShowDisplayFooter(getAvailableShowDisplayFooter());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof PortletPublication) {
       super.setId(v);
       theContent = (PortletPublication)publication;
@@ -180,11 +175,11 @@ public class EditPortletPublicationHandler extends EditAbstractPortletSkinableHa
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // pub
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry pubTFE = channel.getTypeFieldEntry(PortletPublication.class, "pub", true);
   protected boolean isPubValidated = true;
   protected com.jalios.jcms.Publication pub;
@@ -199,13 +194,13 @@ public class EditPortletPublicationHandler extends EditAbstractPortletSkinableHa
     }
     return pub;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // template
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry templateTFE = channel.getTypeFieldEntry(PortletPublication.class, "template", true);
   protected String template = channel.getTypeFieldEntry(PortletPublication.class, "template", true).getDefaultTextString();
   public void setTemplate(String[] v) {
@@ -218,19 +213,19 @@ public class EditPortletPublicationHandler extends EditAbstractPortletSkinableHa
     }
     return template;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // showDisplayHeader
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry showDisplayHeaderTFE = channel.getTypeFieldEntry(PortletPublication.class, "showDisplayHeader", true);
   protected boolean showDisplayHeader = true;
   public void setShowDisplayHeader(boolean  v) {
     this.showDisplayHeader = v;
   }
-  
+
   public boolean getAvailableShowDisplayHeader() {
     if (theContent != null && isFieldMissing("showDisplayHeader")) {
      boolean objectValue = theContent.getShowDisplayHeader();
@@ -238,19 +233,19 @@ public class EditPortletPublicationHandler extends EditAbstractPortletSkinableHa
     }
     return showDisplayHeader;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // showDisplayFooter
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry showDisplayFooterTFE = channel.getTypeFieldEntry(PortletPublication.class, "showDisplayFooter", true);
   protected boolean showDisplayFooter = true;
   public void setShowDisplayFooter(boolean  v) {
     this.showDisplayFooter = v;
   }
-  
+
   public boolean getAvailableShowDisplayFooter() {
     if (theContent != null && isFieldMissing("showDisplayFooter")) {
      boolean objectValue = theContent.getShowDisplayFooter();
@@ -258,12 +253,12 @@ public class EditPortletPublicationHandler extends EditAbstractPortletSkinableHa
     }
     return showDisplayFooter;
   }
-  
-    
-  
- 
-   
- 
+
+
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // O1/H7s4NSomLCCGCK6LfGg==

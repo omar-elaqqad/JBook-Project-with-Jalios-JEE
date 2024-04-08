@@ -1,7 +1,5 @@
 package custom;
 
-import generated.PortletQueryForeach;
-
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -23,6 +21,8 @@ import com.jalios.jcms.workspace.WizardContext;
 import com.jalios.jcms.workspace.WorkspaceWizardContext;
 import com.jalios.util.RegexpSubstitution;
 import com.jalios.util.Util;
+
+import generated.PortletQueryForeach;
 
 public class CustomWizardPolicyFilter extends BasicWizardPolicyFilter {
 
@@ -72,7 +72,7 @@ public class CustomWizardPolicyFilter extends BasicWizardPolicyFilter {
 					update = bindPortalRedirect((PortalRedirect) itPub, (PortalRedirect) itCopy, ctxt);
 				} else if (itPub instanceof PortletQueryForeach) {
 					update = bindPortletQueryForeach((PortletQueryForeach) itPub, (PortletQueryForeach) itCopy, ctxt);
-				} 
+				}
 
 				if (!update) {
 					continue;
@@ -98,7 +98,7 @@ public class CustomWizardPolicyFilter extends BasicWizardPolicyFilter {
 		boolean update = false;
 
 		// Fix redirect categories
-		Category copyCat = (Category) ctxt.getCategoryMap().get(cat);
+		Category copyCat = ctxt.getCategoryMap().get(cat);
 		if (copyCat != null) {
 			copy.setCategory(copyCat.getId());
 			update = true;
@@ -159,21 +159,21 @@ public class CustomWizardPolicyFilter extends BasicWizardPolicyFilter {
 
 	/*
 	 * A sample getting started code to update a kind of fields
-	 * 
+	 *
 	 * private PortalElement getDuplicate(PortalElement portlet,
 	 * WorkspaceWizardContext ctxt){
-	 * 
+	 *
 	 * if (portlet == null){ return null; }
-	 * 
+	 *
 	 * TypeFieldEntry[] entries = portlet.getTypeFieldsEntries(); for (int i =
 	 * 0; i < entries.length; i++) { TypeFieldEntry tfe = entries[i]; if
 	 * (!"query".equals(tfe.getEditor())) { continue; }
-	 * 
+	 *
 	 * Object value = portlet.getFieldValue(tfe.getName());
-	 * 
+	 *
 	 * Object copy = // Call a method to update object if (copy == null){
 	 * continue; }
-	 * 
+	 *
 	 * // Call reflexivity to update field // portlet.set{Field}(tfe.set
 	 * getName(),copy); } }
 	 */
@@ -192,6 +192,7 @@ public class CustomWizardPolicyFilter extends BasicWizardPolicyFilter {
 			this.channel = Channel.getChannel();
 		}
 
+		@Override
 		public String substitute(MatchResult results) {
 			if (ctxt == null) {
 				return "";
@@ -204,7 +205,7 @@ public class CustomWizardPolicyFilter extends BasicWizardPolicyFilter {
 				return "cids=" + id;
 			}
 
-			Category copy = (Category) ctxt.getCategoryMap().get(cat);
+			Category copy = ctxt.getCategoryMap().get(cat);
 			if (copy == null || copy == cat) {
 				return "cids=" + id;
 			}

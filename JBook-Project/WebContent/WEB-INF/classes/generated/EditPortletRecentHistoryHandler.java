@@ -1,61 +1,57 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
-import com.jalios.util.Util;
-import custom.*;
+
+
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditPortletRecentHistoryHandler extends EditAbstractPortletSkinableHandler {
-   
+
   protected PortletRecentHistory theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return PortletRecentHistory.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpPortletRecentHistory  
+  // validateBeforeOpPortletRecentHistory
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("historySize".equals(field)) {
       return getAvailableHistorySize();
     }
-    
+
     if ("pageSize".equals(field)) {
       return getAvailablePageSize();
     }
-    
+
     if ("filterOnCurrentWorkspace".equals(field)) {
       return getAvailableFilterOnCurrentWorkspace();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     if ("filterOnCurrentWorkspace".equals(field)) {
       return PortletRecentHistory.getFilterOnCurrentWorkspaceValues();
     }
@@ -63,14 +59,14 @@ public class EditPortletRecentHistoryHandler extends EditAbstractPortletSkinable
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     if ("filterOnCurrentWorkspace".equals(field)) {
       return PortletRecentHistory.getFilterOnCurrentWorkspaceLabels(userLang);
     }
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdatePortletRecentHistory  
+  // validateCommonCreateUpdatePortletRecentHistory
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdatePortletRecentHistory() {
     if (!isHistorySizeValidated) {
@@ -83,39 +79,35 @@ public class EditPortletRecentHistoryHandler extends EditAbstractPortletSkinable
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdatePortletRecentHistory()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdatePortletRecentHistory()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdatePortletRecentHistory()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdatePortletRecentHistory()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -124,7 +116,8 @@ public class EditPortletRecentHistoryHandler extends EditAbstractPortletSkinable
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -133,7 +126,8 @@ public class EditPortletRecentHistoryHandler extends EditAbstractPortletSkinable
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -142,15 +136,17 @@ public class EditPortletRecentHistoryHandler extends EditAbstractPortletSkinable
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     PortletRecentHistory obj = (PortletRecentHistory)data;
     obj.setHistorySize(getAvailableHistorySize());
     obj.setPageSize(getAvailablePageSize());
     obj.setFilterOnCurrentWorkspace(getAvailableFilterOnCurrentWorkspace());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof PortletRecentHistory) {
       super.setId(v);
       theContent = (PortletRecentHistory)publication;
@@ -159,11 +155,11 @@ public class EditPortletRecentHistoryHandler extends EditAbstractPortletSkinable
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // historySize
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry historySizeTFE = channel.getTypeFieldEntry(PortletRecentHistory.class, "historySize", true);
   protected boolean isHistorySizeValidated = true;
   protected int historySize = 20;
@@ -181,13 +177,13 @@ public class EditPortletRecentHistoryHandler extends EditAbstractPortletSkinable
     }
     return historySize;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // pageSize
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry pageSizeTFE = channel.getTypeFieldEntry(PortletRecentHistory.class, "pageSize", true);
   protected boolean isPageSizeValidated = true;
   protected int pageSize = 5;
@@ -205,19 +201,19 @@ public class EditPortletRecentHistoryHandler extends EditAbstractPortletSkinable
     }
     return pageSize;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // filterOnCurrentWorkspace
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry filterOnCurrentWorkspaceTFE = channel.getTypeFieldEntry(PortletRecentHistory.class, "filterOnCurrentWorkspace", true);
   protected boolean filterOnCurrentWorkspace = false;
   public void setFilterOnCurrentWorkspace(boolean  v) {
     this.filterOnCurrentWorkspace = v;
   }
-  
+
   public boolean getAvailableFilterOnCurrentWorkspace() {
     if (theContent != null && isFieldMissing("filterOnCurrentWorkspace")) {
      boolean objectValue = theContent.getFilterOnCurrentWorkspace();
@@ -225,12 +221,12 @@ public class EditPortletRecentHistoryHandler extends EditAbstractPortletSkinable
     }
     return filterOnCurrentWorkspace;
   }
-  
-    
-  
- 
-   
- 
+
+
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // VGOBvLw6nbkZQpo3/S2GCA==

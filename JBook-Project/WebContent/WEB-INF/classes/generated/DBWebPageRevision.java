@@ -1,15 +1,11 @@
 package generated;
-import java.util.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.db.*;
-import com.jalios.jcms.mashup.*;
-import com.jalios.util.*;
+
 @SuppressWarnings({"unchecked", "unused"})
 public class DBWebPageRevision extends com.jalios.jcms.db.DBDataRevision {
   public DBWebPageRevision() {
     revisionData = new DBWebPage();
   }
-  
+
   public DBWebPageRevision(DBWebPage data, int op) {
     super(data, op);
     revisionData = data;
@@ -17,30 +13,30 @@ public class DBWebPageRevision extends com.jalios.jcms.db.DBDataRevision {
   public String getUrl() {
     return ((DBWebPage)revisionData).getUrl();
   }
-  
+
   public void setUrl(String v) {
     ((DBWebPage)revisionData).setUrl(v);
   }
-  
-  
+
+
   public String getUrlToShot() {
     return ((DBWebPage)revisionData).getUrlToShot();
   }
-  
+
   public void setUrlToShot(String v) {
     ((DBWebPage)revisionData).setUrlToShot(v);
   }
-  
-  
+
+
   public String getDescription() {
     return ((DBWebPage)revisionData).getDescription();
   }
-  
+
   public void setDescription(String v) {
     ((DBWebPage)revisionData).setDescription(v);
   }
-  
-  
+
+
   public String getDescriptionMLE() {
     return ((DBWebPage)revisionData).getDescriptionMLE();
   }

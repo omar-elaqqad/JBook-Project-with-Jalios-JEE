@@ -1,42 +1,45 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
+
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+
+import com.jalios.jcms.Category;
+import com.jalios.jcms.Data;
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
 import com.jalios.util.Util;
-import custom.*;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditPortletPortalRedirectHandler extends com.jalios.jcms.portlet.EditPortalRedirectHandler {
-   
+
   protected PortletPortalRedirect theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return PortletPortalRedirect.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpPortletPortalRedirect  
+  // validateBeforeOpPortletPortalRedirect
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     {
       Data data = processDataId("content", __contentStr, com.jalios.jcms.Content.class);
-      if (data != null) { 
+      if (data != null) {
         content = (com.jalios.jcms.Content)data;
       } else {
         isContentValidated = Util.isEmpty(__contentStr);
@@ -44,7 +47,7 @@ public class EditPortletPortalRedirectHandler extends com.jalios.jcms.portlet.Ed
     }
     {
       Data data = processDataId("redirectPortlet", __redirectPortletStr, com.jalios.jcms.portlet.PortalElement.class);
-      if (data != null) { 
+      if (data != null) {
         redirectPortlet = (com.jalios.jcms.portlet.PortalElement)data;
       } else {
         isRedirectPortletValidated = Util.isEmpty(__redirectPortletStr);
@@ -52,22 +55,13 @@ public class EditPortletPortalRedirectHandler extends com.jalios.jcms.portlet.Ed
     }
     {
       Data data = processDataId("dispPortal", __dispPortalStr, com.jalios.jcms.portlet.PortalElement.class);
-      if (data != null) { 
+      if (data != null) {
         dispPortal = (com.jalios.jcms.portlet.PortalElement)data;
       } else {
         isDispPortalValidated = Util.isEmpty(__dispPortalStr);
       }
     }
-    if (!validateUploadedFileDocument(getAvailableContent(),   fdauthor, getAvailableWorkspace())) {
-      return false;
-    }
-    if (!validateUploadedFileDocument(getAvailableRedirectPortlet(),   fdauthor, getAvailableWorkspace())) {
-      return false;
-    }
-    if (!validateUploadedFileDocument(getAvailableDispPortal(),   fdauthor, getAvailableWorkspace())) {
-      return false;
-    }
-    if (!createUploadedFileDocument(getAvailableContent(),  fdauthor, getAvailableWorkspace())) {
+    if (!validateUploadedFileDocument(getAvailableContent(),   fdauthor, getAvailableWorkspace()) || !validateUploadedFileDocument(getAvailableRedirectPortlet(),   fdauthor, getAvailableWorkspace()) || !validateUploadedFileDocument(getAvailableDispPortal(),   fdauthor, getAvailableWorkspace()) || !createUploadedFileDocument(getAvailableContent(),  fdauthor, getAvailableWorkspace())) {
       return false;
     }
     if (!createUploadedFileDocument(getAvailableRedirectPortlet(),  fdauthor, getAvailableWorkspace())) {
@@ -80,84 +74,84 @@ public class EditPortletPortalRedirectHandler extends com.jalios.jcms.portlet.Ed
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("status".equals(field)) {
       return getAvailableStatus();
     }
-    
+
     if ("content".equals(field)) {
       return getAvailableContent();
     }
-    
+
     if ("redirectForm".equals(field)) {
       return getAvailableRedirectForm();
     }
-    
+
     if ("url".equals(field)) {
       return getAllAvailableUrlML();
     }
-    
+
     if ("redirectPortlet".equals(field)) {
       return getAvailableRedirectPortlet();
     }
-    
+
     if ("category".equals(field)) {
       return getAvailableCategory();
     }
-    
+
     if ("dispPortal".equals(field)) {
       return getAvailableDispPortal();
     }
-    
+
     if ("navCategories".equals(field)) {
       return getNavCategoriesCatSet();
     }
-    
+
     if ("description".equals(field)) {
       return getAllAvailableDescriptionML();
     }
-    
+
     if ("portletImage".equals(field)) {
       return getAllAvailablePortletImageML();
     }
-    
+
     if ("cacheType".equals(field)) {
       return getAvailableCacheType();
     }
-    
+
     if ("cacheSensibility".equals(field)) {
       return getAvailableCacheSensibility();
     }
-    
+
     if ("invalidClass".equals(field)) {
       return getAvailableInvalidClass();
     }
-    
+
     if ("invalidTime".equals(field)) {
       return getAvailableInvalidTime();
     }
-    
+
     if ("behaviorCopy".equals(field)) {
       return getAvailableBehaviorCopy();
     }
-    
+
     if ("cssId".equals(field)) {
       return getAvailableCssId();
     }
-    
+
     if ("cssClasses".equals(field)) {
       return getAvailableCssClasses();
     }
-    
+
     if ("exactCategory".equals(field)) {
       return getAvailableExactCategory();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     if ("redirectForm".equals(field)) {
       return PortletPortalRedirect.getRedirectFormValues();
     }
@@ -180,7 +174,7 @@ public class EditPortletPortalRedirectHandler extends com.jalios.jcms.portlet.Ed
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     if ("redirectForm".equals(field)) {
       return PortletPortalRedirect.getRedirectFormLabels(userLang);
     }
@@ -202,7 +196,7 @@ public class EditPortletPortalRedirectHandler extends com.jalios.jcms.portlet.Ed
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdatePortletPortalRedirect  
+  // validateCommonCreateUpdatePortletPortalRedirect
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdatePortletPortalRedirect() {
     if (!isContentValidated) {
@@ -223,39 +217,35 @@ public class EditPortletPortalRedirectHandler extends com.jalios.jcms.portlet.Ed
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdatePortletPortalRedirect()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdatePortletPortalRedirect()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdatePortletPortalRedirect()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdatePortletPortalRedirect()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -264,7 +254,8 @@ public class EditPortletPortalRedirectHandler extends com.jalios.jcms.portlet.Ed
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -273,7 +264,8 @@ public class EditPortletPortalRedirectHandler extends com.jalios.jcms.portlet.Ed
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -282,7 +274,8 @@ public class EditPortletPortalRedirectHandler extends com.jalios.jcms.portlet.Ed
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     PortletPortalRedirect obj = (PortletPortalRedirect)data;
     obj.setStatus(getAvailableStatus());
@@ -306,8 +299,9 @@ public class EditPortletPortalRedirectHandler extends com.jalios.jcms.portlet.Ed
     obj.setCssClasses(getAvailableCssClasses());
     obj.setExactCategory(getAvailableExactCategory());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof PortletPortalRedirect) {
       super.setId(v);
       theContent = (PortletPortalRedirect)publication;
@@ -316,30 +310,31 @@ public class EditPortletPortalRedirectHandler extends com.jalios.jcms.portlet.Ed
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // status
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry statusTFE = channel.getTypeFieldEntry(PortletPortalRedirect.class, "status", true);
   protected String status = channel.getTypeFieldEntry(PortletPortalRedirect.class, "status", true).getDefaultTextString();
   public void setStatus(String[] v) {
     status = getMonolingualValue(statusTFE, v);
   }
-  public String getAvailableStatus() {
+  @Override
+public String getAvailableStatus() {
     if (theContent != null && isFieldMissing("status")) {
      String objectValue = theContent.getStatus();
       return objectValue;
     }
     return status;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // content
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry contentTFE = channel.getTypeFieldEntry(PortletPortalRedirect.class, "content", true);
   protected boolean isContentValidated = true;
   protected com.jalios.jcms.Content content;
@@ -347,39 +342,41 @@ public class EditPortletPortalRedirectHandler extends com.jalios.jcms.portlet.Ed
   public void setContent(String v) {
     __contentStr = v;
   }
-  public com.jalios.jcms.Content getAvailableContent() {
+  @Override
+public com.jalios.jcms.Content getAvailableContent() {
     if (theContent != null && isFieldMissing("content")) {
      com.jalios.jcms.Content objectValue = theContent.getContent();
       return objectValue;
     }
     return content;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // redirectForm
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry redirectFormTFE = channel.getTypeFieldEntry(PortletPortalRedirect.class, "redirectForm", true);
   protected String redirectForm = channel.getTypeFieldEntry(PortletPortalRedirect.class, "redirectForm", true).getDefaultTextString();
   public void setRedirectForm(String[] v) {
     redirectForm = getMonolingualValue(redirectFormTFE, v);
   }
-  public String getAvailableRedirectForm() {
+  @Override
+public String getAvailableRedirectForm() {
     if (theContent != null && isFieldMissing("redirectForm")) {
      String objectValue = theContent.getRedirectForm();
       return objectValue;
     }
     return redirectForm;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // url
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry urlTFE = channel.getTypeFieldEntry(PortletPortalRedirect.class, "url", true);
   protected String url = channel.getTypeFieldEntry(PortletPortalRedirect.class, "url", true).getDefaultTextString();
   protected HashMap<String,String> urlML = urlTFE.getDefaultTextMap();
@@ -387,21 +384,22 @@ public class EditPortletPortalRedirectHandler extends com.jalios.jcms.portlet.Ed
     url = getMultilingualMainValue(urlTFE, v);
     urlML = getMultilingualMLMap(urlTFE, v);
   }
-  public String getAvailableUrl() {
+  @Override
+public String getAvailableUrl() {
     if (theContent != null && isFieldMissing("url")) {
      String objectValue = theContent.getUrl();
       return objectValue;
     }
     return url;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailableUrlML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableUrlML());
     map.put(channel.getLanguage(),getAvailableUrl(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableUrlML() {
     if (theContent != null && isFieldMissing("url")) {
       return theContent.getUrlML();
@@ -426,11 +424,11 @@ public class EditPortletPortalRedirectHandler extends com.jalios.jcms.portlet.Ed
     }
     return urlML == null ? "" : Util.getString(urlML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // redirectPortlet
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry redirectPortletTFE = channel.getTypeFieldEntry(PortletPortalRedirect.class, "redirectPortlet", true);
   protected boolean isRedirectPortletValidated = true;
   protected com.jalios.jcms.portlet.PortalElement redirectPortlet;
@@ -438,39 +436,41 @@ public class EditPortletPortalRedirectHandler extends com.jalios.jcms.portlet.Ed
   public void setRedirectPortlet(String v) {
     __redirectPortletStr = v;
   }
-  public com.jalios.jcms.portlet.PortalElement getAvailableRedirectPortlet() {
+  @Override
+public com.jalios.jcms.portlet.PortalElement getAvailableRedirectPortlet() {
     if (theContent != null && isFieldMissing("redirectPortlet")) {
      com.jalios.jcms.portlet.PortalElement objectValue = theContent.getRedirectPortlet();
       return objectValue;
     }
     return redirectPortlet;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // category
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry categoryTFE = channel.getTypeFieldEntry(PortletPortalRedirect.class, "category", true);
   protected String category = channel.getTypeFieldEntry(PortletPortalRedirect.class, "category", true).getDefaultTextString();
   public void setCategory(String[] v) {
     category = getMonolingualValue(categoryTFE, v);
   }
-  public String getAvailableCategory() {
+  @Override
+public String getAvailableCategory() {
     if (theContent != null && isFieldMissing("category")) {
      String objectValue = theContent.getCategory();
       return objectValue;
     }
     return category;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // dispPortal
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry dispPortalTFE = channel.getTypeFieldEntry(PortletPortalRedirect.class, "dispPortal", true);
   protected boolean isDispPortalValidated = true;
   protected com.jalios.jcms.portlet.PortalElement dispPortal;
@@ -478,20 +478,21 @@ public class EditPortletPortalRedirectHandler extends com.jalios.jcms.portlet.Ed
   public void setDispPortal(String v) {
     __dispPortalStr = v;
   }
-  public com.jalios.jcms.portlet.PortalElement getAvailableDispPortal() {
+  @Override
+public com.jalios.jcms.portlet.PortalElement getAvailableDispPortal() {
     if (theContent != null && isFieldMissing("dispPortal")) {
      com.jalios.jcms.portlet.PortalElement objectValue = theContent.getDispPortal();
       return objectValue;
     }
     return dispPortal;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // description
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry descriptionTFE = channel.getTypeFieldEntry(PortletPortalRedirect.class, "description", true);
   protected String description = channel.getTypeFieldEntry(PortletPortalRedirect.class, "description", true).getDefaultTextString();
   protected HashMap<String,String> descriptionML = descriptionTFE.getDefaultTextMap();
@@ -499,28 +500,31 @@ public class EditPortletPortalRedirectHandler extends com.jalios.jcms.portlet.Ed
     description = getMultilingualMainValue(descriptionTFE, v);
     descriptionML = getMultilingualMLMap(descriptionTFE, v);
   }
-  public String getAvailableDescription() {
+  @Override
+public String getAvailableDescription() {
     if (theContent != null && isFieldMissing("description")) {
      String objectValue = theContent.getDescription();
       return objectValue;
     }
     return description;
   }
-  
-    
-  public HashMap<String,String> getAllAvailableDescriptionML() {
+
+
+  @Override
+public HashMap<String,String> getAllAvailableDescriptionML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableDescriptionML());
     map.put(channel.getLanguage(),getAvailableDescription(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableDescriptionML() {
     if (theContent != null && isFieldMissing("description")) {
       return theContent.getDescriptionML();
     }
     return descriptionML;
   }
-  public String getAvailableDescription(String lang) {
+  @Override
+public String getAvailableDescription(String lang) {
     if (theContent != null) {
       if (lang.equals(channel.getLanguage())) {
       	if (!Util.isSameContent(description, channel.getTypeFieldEntry(PortletPortalRedirect.class, "description", true).getDefaultTextString())) {
@@ -538,11 +542,11 @@ public class EditPortletPortalRedirectHandler extends com.jalios.jcms.portlet.Ed
     }
     return descriptionML == null ? "" : Util.getString(descriptionML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // portletImage
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry portletImageTFE = channel.getTypeFieldEntry(PortletPortalRedirect.class, "portletImage", true);
   protected String portletImage = channel.getTypeFieldEntry(PortletPortalRedirect.class, "portletImage", true).getDefaultTextString();
   protected HashMap<String,String> portletImageML = portletImageTFE.getDefaultTextMap();
@@ -557,14 +561,14 @@ public class EditPortletPortalRedirectHandler extends com.jalios.jcms.portlet.Ed
     }
     return portletImage;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailablePortletImageML() {
     HashMap<String,String> map = Util.getHashMap(getAvailablePortletImageML());
     map.put(channel.getLanguage(),getAvailablePortletImage(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailablePortletImageML() {
     if (theContent != null && isFieldMissing("portletImage")) {
       return theContent.getPortletImageML();
@@ -589,57 +593,60 @@ public class EditPortletPortalRedirectHandler extends com.jalios.jcms.portlet.Ed
     }
     return portletImageML == null ? "" : Util.getString(portletImageML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // cacheType
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry cacheTypeTFE = channel.getTypeFieldEntry(PortletPortalRedirect.class, "cacheType", true);
   protected String cacheType = channel.getTypeFieldEntry(PortletPortalRedirect.class, "cacheType", true).getDefaultTextString();
   public void setCacheType(String[] v) {
     cacheType = getMonolingualValue(cacheTypeTFE, v);
   }
-  public String getAvailableCacheType() {
+  @Override
+public String getAvailableCacheType() {
     if (theContent != null && isFieldMissing("cacheType")) {
      String objectValue = theContent.getCacheType();
       return objectValue;
     }
     return cacheType;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // cacheSensibility
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry cacheSensibilityTFE = channel.getTypeFieldEntry(PortletPortalRedirect.class, "cacheSensibility", true);
   protected String cacheSensibility = channel.getTypeFieldEntry(PortletPortalRedirect.class, "cacheSensibility", true).getDefaultTextString();
   public void setCacheSensibility(String[] v) {
     cacheSensibility = getMonolingualValue(cacheSensibilityTFE, v);
   }
-  public String getAvailableCacheSensibility() {
+  @Override
+public String getAvailableCacheSensibility() {
     if (theContent != null && isFieldMissing("cacheSensibility")) {
      String objectValue = theContent.getCacheSensibility();
       return objectValue;
     }
     return cacheSensibility;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // invalidClass
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry invalidClassTFE = channel.getTypeFieldEntry(PortletPortalRedirect.class, "invalidClass", true);
   protected String[] invalidClass = new String[0];
   protected int invalidClassAddCount = 0;
   public void setInvalidClass(String[] v) {
     invalidClass = getMonolingualValueArray(invalidClassTFE, v);
   }
-  
-  public String[] getAvailableInvalidClass() {
+
+  @Override
+public String[] getAvailableInvalidClass() {
     if (theContent != null && isFieldMissing("invalidClass")) {
 	  String[] objectValue = theContent.getInvalidClass();
       if (objectValue == null) {
@@ -649,22 +656,23 @@ public class EditPortletPortalRedirectHandler extends com.jalios.jcms.portlet.Ed
     }
     return invalidClass;
   }
-  
-    
-  
+
+
+
   public void setInvalidClassAddCount(int  v) {
     invalidClassAddCount = v;
   }
-  
-  public int getInvalidClassCount() {
+
+  @Override
+public int getInvalidClassCount() {
     int arraySize = Util.getSize(getAvailableInvalidClass());
     int res = 3 + arraySize + invalidClassAddCount;
     return res;
   }
-   
+
   // ----------------------------------------------------------------------
   // invalidTime
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry invalidTimeTFE = channel.getTypeFieldEntry(PortletPortalRedirect.class, "invalidTime", true);
   protected boolean isInvalidTimeValidated = true;
   protected long invalidTime = 60;
@@ -675,59 +683,62 @@ public class EditPortletPortalRedirectHandler extends com.jalios.jcms.portlet.Ed
       isInvalidTimeValidated = false;
     }
   }
-  
-  public long getAvailableInvalidTime() {
+
+  @Override
+public long getAvailableInvalidTime() {
     if (theContent != null && isFieldMissing("invalidTime")) {
      long objectValue = theContent.getInvalidTime();
       return objectValue;
     }
     return invalidTime;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // behaviorCopy
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry behaviorCopyTFE = channel.getTypeFieldEntry(PortletPortalRedirect.class, "behaviorCopy", true);
   protected String behaviorCopy = channel.getTypeFieldEntry(PortletPortalRedirect.class, "behaviorCopy", true).getDefaultTextString();
   public void setBehaviorCopy(String[] v) {
     behaviorCopy = getMonolingualValue(behaviorCopyTFE, v);
   }
-  public String getAvailableBehaviorCopy() {
+  @Override
+public String getAvailableBehaviorCopy() {
     if (theContent != null && isFieldMissing("behaviorCopy")) {
      String objectValue = theContent.getBehaviorCopy();
       return objectValue;
     }
     return behaviorCopy;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // cssId
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry cssIdTFE = channel.getTypeFieldEntry(PortletPortalRedirect.class, "cssId", true);
   protected String cssId = channel.getTypeFieldEntry(PortletPortalRedirect.class, "cssId", true).getDefaultTextString();
   public void setCssId(String[] v) {
     cssId = getMonolingualValue(cssIdTFE, v);
   }
-  public String getAvailableCssId() {
+  @Override
+public String getAvailableCssId() {
     if (theContent != null && isFieldMissing("cssId")) {
      String objectValue = theContent.getCssId();
       return objectValue;
     }
     return cssId;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // cssClasses
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry cssClassesTFE = channel.getTypeFieldEntry(PortletPortalRedirect.class, "cssClasses", true);
   protected String cssClasses = channel.getTypeFieldEntry(PortletPortalRedirect.class, "cssClasses", true).getDefaultTextString();
   public void setCssClasses(String[] v) {
@@ -740,19 +751,19 @@ public class EditPortletPortalRedirectHandler extends com.jalios.jcms.portlet.Ed
     }
     return cssClasses;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // exactCategory
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry exactCategoryTFE = channel.getTypeFieldEntry(PortletPortalRedirect.class, "exactCategory", true);
   protected boolean exactCategory = true;
   public void setExactCategory(boolean  v) {
     this.exactCategory = v;
   }
-  
+
   public boolean getAvailableExactCategory() {
     if (theContent != null && isFieldMissing("exactCategory")) {
      boolean objectValue = theContent.getExactCategory();
@@ -760,17 +771,17 @@ public class EditPortletPortalRedirectHandler extends com.jalios.jcms.portlet.Ed
     }
     return exactCategory;
   }
-  
-    
-  
-  
+
+
+
+
   public void setNavCategories(String[] v) {
     updateCids(v);
   }
   public Category getNavCategoriesRoot() {
     return channel.getCategory("j_3");
-  }  
-    
+  }
+
   public Set<Category> getNavCategoriesCatSet() {
     Category rootCat = getNavCategoriesRoot();
     if (rootCat == null) {
@@ -780,10 +791,10 @@ public class EditPortletPortalRedirectHandler extends com.jalios.jcms.portlet.Ed
     set.add(rootCat);
     return Util.interSet(getCategorySet(null), set);
   }
-  
- 
-   
- 
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // LGJVLhH46pUHTGLQLY3adg==

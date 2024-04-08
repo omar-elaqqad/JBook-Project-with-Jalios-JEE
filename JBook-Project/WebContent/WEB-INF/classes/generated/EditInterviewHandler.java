@@ -1,127 +1,123 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
+
+
+import java.util.HashMap;
+
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
+import com.jalios.jcms.handler.EditPublicationHandler;
 import com.jalios.util.Util;
-import custom.*;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditInterviewHandler extends EditPublicationHandler {
-   
+
   protected Interview theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return Interview.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpInterview  
+  // validateBeforeOpInterview
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("summary".equals(field)) {
       return getAllAvailableSummaryML();
     }
-    
+
     if ("intro".equals(field)) {
       return getAllAvailableIntroML();
     }
-    
+
     if ("bio".equals(field)) {
       return getAllAvailableBioML();
     }
-    
+
     if ("questions".equals(field)) {
       return getAllAvailableQuestionsML();
     }
-    
+
     if ("answers".equals(field)) {
       return getAvailableAnswers();
     }
-    
+
     if ("questionPrefix".equals(field)) {
       return getAvailableQuestionPrefix();
     }
-    
+
     if ("answerPrefix".equals(field)) {
       return getAvailableAnswerPrefix();
     }
-    
+
     if ("photo".equals(field)) {
       return getAvailablePhoto();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     return super.getEnumValues(field);
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdateInterview  
+  // validateCommonCreateUpdateInterview
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdateInterview() {
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdateInterview()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdateInterview()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdateInterview()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdateInterview()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -130,7 +126,8 @@ public class EditInterviewHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -139,7 +136,8 @@ public class EditInterviewHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -148,7 +146,8 @@ public class EditInterviewHandler extends EditPublicationHandler {
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     Interview obj = (Interview)data;
     obj.setSummary(getAvailableSummary());
@@ -164,8 +163,9 @@ public class EditInterviewHandler extends EditPublicationHandler {
     obj.setAnswerPrefix(getAvailableAnswerPrefix());
     obj.setPhoto(getAvailablePhoto());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof Interview) {
       super.setId(v);
       theContent = (Interview)publication;
@@ -174,11 +174,11 @@ public class EditInterviewHandler extends EditPublicationHandler {
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // summary
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry summaryTFE = channel.getTypeFieldEntry(Interview.class, "summary", true);
   protected String summary = channel.getTypeFieldEntry(Interview.class, "summary", true).getDefaultTextString();
   protected HashMap<String,String> summaryML = summaryTFE.getDefaultTextMap();
@@ -193,14 +193,14 @@ public class EditInterviewHandler extends EditPublicationHandler {
     }
     return summary;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailableSummaryML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableSummaryML());
     map.put(channel.getLanguage(),getAvailableSummary(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableSummaryML() {
     if (theContent != null && isFieldMissing("summary")) {
       return theContent.getSummaryML();
@@ -225,11 +225,11 @@ public class EditInterviewHandler extends EditPublicationHandler {
     }
     return summaryML == null ? "" : Util.getString(summaryML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // intro
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry introTFE = channel.getTypeFieldEntry(Interview.class, "intro", true);
   protected String intro = channel.getTypeFieldEntry(Interview.class, "intro", true).getDefaultTextString();
   protected HashMap<String,String> introML = introTFE.getDefaultTextMap();
@@ -244,14 +244,14 @@ public class EditInterviewHandler extends EditPublicationHandler {
     }
     return intro;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailableIntroML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableIntroML());
     map.put(channel.getLanguage(),getAvailableIntro(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableIntroML() {
     if (theContent != null && isFieldMissing("intro")) {
       return theContent.getIntroML();
@@ -276,11 +276,11 @@ public class EditInterviewHandler extends EditPublicationHandler {
     }
     return introML == null ? "" : Util.getString(introML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // bio
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry bioTFE = channel.getTypeFieldEntry(Interview.class, "bio", true);
   protected String bio = channel.getTypeFieldEntry(Interview.class, "bio", true).getDefaultTextString();
   protected HashMap<String,String> bioML = bioTFE.getDefaultTextMap();
@@ -295,14 +295,14 @@ public class EditInterviewHandler extends EditPublicationHandler {
     }
     return bio;
   }
-  
-    
+
+
   public HashMap<String,String> getAllAvailableBioML() {
     HashMap<String,String> map = Util.getHashMap(getAvailableBioML());
     map.put(channel.getLanguage(),getAvailableBio(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String> getAvailableBioML() {
     if (theContent != null && isFieldMissing("bio")) {
       return theContent.getBioML();
@@ -327,18 +327,18 @@ public class EditInterviewHandler extends EditPublicationHandler {
     }
     return bioML == null ? "" : Util.getString(bioML.get(lang), "");
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // questions
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry questionsTFE = channel.getTypeFieldEntry(Interview.class, "questions", true);
   protected String[] questions = new String[0];
   protected int questionsAddCount = 0;
   HashMap<String,String[]> questionsML;
-  public void setQuestions(String[] v) {  
+  public void setQuestions(String[] v) {
    questions = getMultilingualMainValueArray(questionsTFE, v);
-   questionsML = getMultilingualMLMapArray(questionsTFE, v);    
+   questionsML = getMultilingualMLMapArray(questionsTFE, v);
   }
   public String[] getAvailableQuestions() {
     if (theContent != null && isFieldMissing("questions")) {
@@ -350,14 +350,14 @@ public class EditInterviewHandler extends EditPublicationHandler {
     }
     return questions;
   }
-  
-    
+
+
   public HashMap<String,String[]> getAllAvailableQuestionsML() {
     HashMap<String,String[]> map = Util.getHashMap(getAvailableQuestionsML());
     map.put(channel.getLanguage(),getAvailableQuestions(channel.getLanguage()));
     return map;
   }
-  
+
   public HashMap<String,String[]> getAvailableQuestionsML() {
     if (theContent != null && isFieldMissing("questions")) {
       return theContent.getQuestionsML();
@@ -382,11 +382,11 @@ public class EditInterviewHandler extends EditPublicationHandler {
     }
     return questionsML == null ? null : questionsML.get(lang);
   }
-  
+
   public void setQuestionsAddCount(int  v) {
     questionsAddCount = v;
   }
-  
+
   public int getQuestionsCount() {
     int arraySize = Util.getSize(getAvailableQuestions());
     if (channel.isMultilingual()) {
@@ -400,17 +400,17 @@ public class EditInterviewHandler extends EditPublicationHandler {
     int res = 3 + arraySize + questionsAddCount;
     return res;
   }
-   
+
   // ----------------------------------------------------------------------
   // answers
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry answersTFE = channel.getTypeFieldEntry(Interview.class, "answers", true);
   protected String[] answers = new String[0];
   protected int answersAddCount = 0;
   public void setAnswers(String[] v) {
     answers = getMonolingualValueArray(answersTFE, v);
   }
-  
+
   public String[] getAvailableAnswers() {
     if (theContent != null && isFieldMissing("answers")) {
 	  String[] objectValue = theContent.getAnswers();
@@ -421,22 +421,22 @@ public class EditInterviewHandler extends EditPublicationHandler {
     }
     return answers;
   }
-  
-    
-  
+
+
+
   public void setAnswersAddCount(int  v) {
     answersAddCount = v;
   }
-  
+
   public int getAnswersCount() {
     int arraySize = Util.getSize(getAvailableAnswers());
     int res = 3 + arraySize + answersAddCount;
     return res;
   }
-   
+
   // ----------------------------------------------------------------------
   // questionPrefix
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry questionPrefixTFE = channel.getTypeFieldEntry(Interview.class, "questionPrefix", true);
   protected String questionPrefix = channel.getTypeFieldEntry(Interview.class, "questionPrefix", true).getDefaultTextString();
   public void setQuestionPrefix(String[] v) {
@@ -449,13 +449,13 @@ public class EditInterviewHandler extends EditPublicationHandler {
     }
     return questionPrefix;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // answerPrefix
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry answerPrefixTFE = channel.getTypeFieldEntry(Interview.class, "answerPrefix", true);
   protected String answerPrefix = channel.getTypeFieldEntry(Interview.class, "answerPrefix", true).getDefaultTextString();
   public void setAnswerPrefix(String[] v) {
@@ -468,13 +468,13 @@ public class EditInterviewHandler extends EditPublicationHandler {
     }
     return answerPrefix;
   }
-  
-    
-  
-   
+
+
+
+
   // ----------------------------------------------------------------------
   // photo
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry photoTFE = channel.getTypeFieldEntry(Interview.class, "photo", true);
   protected String photo = channel.getTypeFieldEntry(Interview.class, "photo", true).getDefaultTextString();
   public void setPhoto(String[] v) {
@@ -487,46 +487,47 @@ public class EditInterviewHandler extends EditPublicationHandler {
     }
     return photo;
   }
-  
-    
-  
-  public int getTabGroupMaxCount(String tabGroupName) {
+
+
+
+  @Override
+public int getTabGroupMaxCount(String tabGroupName) {
     String tabGroup = Util.buildID(tabGroupName, "0-9a-zA-Z");
-    
-      
+
+
       if("item".equalsIgnoreCase(tabGroup)) {
         return getAvailableItemCount();
       }
-    
-    return super.getTabGroupMaxCount(tabGroupName);    
+
+    return super.getTabGroupMaxCount(tabGroupName);
   }
-  
-  
+
+
   public int getAvailableItemCount() {
     int max = 0;
-  
-    
-    
+
+
+
       for (String lang : channel.getLanguageList()) {
         int count = Util.getSize(getAvailableQuestions(lang));
         max = count > max ? count : max;
       }
-    
-  
-    
-    
+
+
+
+
       {
         int count = Util.getSize(getAvailableAnswers());
         max = count > max ? count : max;
       }
-    
-  
+
+
     return max;
   }
-  
- 
-   
- 
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // MQOs9fQiE134r1BSihoH5A==

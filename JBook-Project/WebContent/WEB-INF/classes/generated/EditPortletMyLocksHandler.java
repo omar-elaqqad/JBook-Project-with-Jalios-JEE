@@ -1,53 +1,49 @@
 // This file has been automatically generated.
 package generated;
-   
-   
-import java.text.*;
-import java.util.*;
-import org.apache.oro.text.regex.*;
-import com.jalios.jcms.*;
-import com.jalios.jcms.handler.*;
-import com.jalios.jcms.wysiwyg.WysiwygManager;
-import com.jalios.util.ObjectIntTreeMap;
-import com.jalios.util.Util;
-import custom.*;
+
+
+import com.jalios.jcms.Member;
+import com.jalios.jcms.Publication;
+import com.jalios.jcms.TypeFieldEntry;
 @SuppressWarnings({"unchecked", "unused"})
 public class EditPortletMyLocksHandler extends EditAbstractPortletSkinableHandler {
-   
+
   protected PortletMyLocks theContent;
-  
-  public Class<? extends Publication> getPublicationClass() {
+
+  @Override
+public Class<? extends Publication> getPublicationClass() {
     return PortletMyLocks.class;
   }
-  
+
   // ----------------------------------------------------------------------
-  // validateBeforeOpPortletMyLocks  
+  // validateBeforeOpPortletMyLocks
   // ----------------------------------------------------------------------
-  
-  public boolean validateBeforeOp() {
+
+  @Override
+public boolean validateBeforeOp() {
     if (!super.validateBeforeOp()) {
       return false;
     }
-    
+
     Member fdauthor = getLoggedMember();
-    
+
            fdauthor = (fdauthor == null) ? getAvailableAuthor() : fdauthor;
-    
-    
+
+
     return true;
   }
   @Override
   public Object getAvailableField(String field) {
-  
+
     if ("refineWorkspace".equals(field)) {
       return getAvailableRefineWorkspace();
     }
-    
+
     return super.getAvailableField(field);
   }
   @Override
   public Object getEnumValues(String field) {
-  
+
     if ("refineWorkspace".equals(field)) {
       return PortletMyLocks.getRefineWorkspaceValues();
     }
@@ -55,51 +51,47 @@ public class EditPortletMyLocksHandler extends EditAbstractPortletSkinableHandle
   }
   @Override
   public Object getEnumLabels(String field, String userLang) {
-  
+
     if ("refineWorkspace".equals(field)) {
       return PortletMyLocks.getRefineWorkspaceLabels(userLang);
     }
     return super.getEnumLabels(field, userLang);
   }
   // ----------------------------------------------------------------------
-  // validateCommonCreateUpdatePortletMyLocks  
+  // validateCommonCreateUpdatePortletMyLocks
   // ----------------------------------------------------------------------
   public boolean validateCommonCreateUpdatePortletMyLocks() {
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Create
   // ----------------------------------------------------------------------
-  public boolean validateCreate() throws java.io.IOException {
-    if (!super.validateCreate()) {
-      return false;
-    }
-    if (!validateCommonCreateUpdatePortletMyLocks()) {
+  @Override
+public boolean validateCreate() throws java.io.IOException {
+    if (!super.validateCreate() || !validateCommonCreateUpdatePortletMyLocks()) {
       return false;
     }
     return true;
   }
-  
+
   // ----------------------------------------------------------------------
   // Update
   // ----------------------------------------------------------------------
-  public boolean validateUpdate() throws java.io.IOException {
-    if (!super.validateUpdate()) {
+  @Override
+public boolean validateUpdate() throws java.io.IOException {
+    if (!super.validateUpdate() || !validateCommonCreateUpdatePortletMyLocks()) {
       return false;
     }
-    
-    if (!validateCommonCreateUpdatePortletMyLocks()) {
-      return false;
-    }
-    
+
     return true;
   }
- 
+
   // ----------------------------------------------------------------------
   // Next
   // ----------------------------------------------------------------------
-  protected boolean validateNext() throws java.io.IOException {
+  @Override
+protected boolean validateNext() throws java.io.IOException {
    if (!super.validateNext()) {
       return false;
     }
@@ -108,7 +100,8 @@ public class EditPortletMyLocksHandler extends EditAbstractPortletSkinableHandle
   // ----------------------------------------------------------------------
   // Previous
   // ----------------------------------------------------------------------
-  protected boolean validatePrevious() throws java.io.IOException {
+  @Override
+protected boolean validatePrevious() throws java.io.IOException {
   	if (!super.validatePrevious()) {
       return false;
     }
@@ -117,7 +110,8 @@ public class EditPortletMyLocksHandler extends EditAbstractPortletSkinableHandle
   // ----------------------------------------------------------------------
   // Finish
   // ----------------------------------------------------------------------
-  protected boolean validateFinish() throws java.io.IOException {
+  @Override
+protected boolean validateFinish() throws java.io.IOException {
   	if (!super.validateFinish()) {
       return false;
     }
@@ -126,13 +120,15 @@ public class EditPortletMyLocksHandler extends EditAbstractPortletSkinableHandle
   // ----------------------------------------------------------------------
   // setFields
   // ----------------------------------------------------------------------
-  public void setFields(Publication data) {
+  @Override
+public void setFields(Publication data) {
     super.setFields(data);
     PortletMyLocks obj = (PortletMyLocks)data;
     obj.setRefineWorkspace(getAvailableRefineWorkspace());
   }
-  
-  public void setId(String  v) {
+
+  @Override
+public void setId(String  v) {
     if (channel.getData(v) instanceof PortletMyLocks) {
       super.setId(v);
       theContent = (PortletMyLocks)publication;
@@ -141,17 +137,17 @@ public class EditPortletMyLocksHandler extends EditAbstractPortletSkinableHandle
       theContent = null;
     }
   }
-  
-   
+
+
   // ----------------------------------------------------------------------
   // refineWorkspace
-  // ----------------------------------------------------------------------  
+  // ----------------------------------------------------------------------
   protected TypeFieldEntry refineWorkspaceTFE = channel.getTypeFieldEntry(PortletMyLocks.class, "refineWorkspace", true);
   protected boolean refineWorkspace = false;
   public void setRefineWorkspace(boolean  v) {
     this.refineWorkspace = v;
   }
-  
+
   public boolean getAvailableRefineWorkspace() {
     if (theContent != null && isFieldMissing("refineWorkspace")) {
      boolean objectValue = theContent.getRefineWorkspace();
@@ -159,12 +155,12 @@ public class EditPortletMyLocksHandler extends EditAbstractPortletSkinableHandle
     }
     return refineWorkspace;
   }
-  
-    
-  
- 
-   
- 
+
+
+
+
+
+
 }
 // **********4A616C696F73204A434D53 *** SIGNATURE BOUNDARY ***
 // OaTe5H/G/sA4hzlWoHN77Q==

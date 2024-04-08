@@ -27,7 +27,6 @@ import com.jalios.jcms.Data;
 import com.jalios.jcms.DataController;
 import com.jalios.jcms.Group;
 import com.jalios.jcms.HttpUtil;
-import com.jalios.jcms.JcmsConstants;
 import com.jalios.jcms.JcmsUtil;
 import com.jalios.jcms.Member;
 import com.jalios.jcms.authentication.AuthenticationContext;
@@ -44,6 +43,7 @@ import com.jalios.jspengine.FakedServletRequest;
 import com.jalios.ldap.LDAPConfiguration;
 import com.jalios.ldap.LDAPMapper;
 import com.jalios.ldap.LDAPUtil;
+import com.jalios.util.JaliosConstants;
 import com.jalios.util.ServletUtil;
 import com.jalios.util.Util;
 import com.unboundid.ldap.sdk.LDAPException;
@@ -62,7 +62,7 @@ import com.unboundid.ldap.sdk.SearchResultEntry;
  */
 public class LdapAuthenticationHandler extends AuthenticationHandler {
 
-  private static final Logger logger = Logger.getLogger(LdapAuthenticationHandler.class); 
+  private static final Logger logger = Logger.getLogger(LdapAuthenticationHandler.class);
   private static final LdapManager ldapMgr = LdapManager.getInstance();
   private static final Striped<Lock> memberCreationStripedLock = Striped.lazyWeakLock(1024);
   private static final Striped<Lock> groupCreationStripedLock = Striped.lazyWeakLock(32);
@@ -88,7 +88,7 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
   public static String USER_LANGUAGE_ATTR;     // preferredLanguage
   public static String USER_ADDRESS_ATTR;      // postalAddress (legacy)
   public static String USER_INFO_ATTR;         // description
-  
+
   // Group fields mapping properties
   public static String GROUP_NAME_ATTR;      // cn
   public static String GROUP_MEMBER_ATTR;    // memberUid, member
@@ -98,9 +98,9 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
   public static String[] USER_ATTRIBUTES;
   // List of attributes retrieved in groups LDAP Entry
   public static String[] GROUP_ATTRIBUTES;
-  
+
   //-----------------------------------------------
-  // Singleton 
+  // Singleton
   //-----------------------------------------------
 
   private static final LdapAuthenticationHandler singleton = new LdapAuthenticationHandler();
@@ -115,7 +115,7 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
 
   /**
    * Method called each time JCMS properties are saved/reloaded.
-   */  
+   */
   @Override
   public void loadProperties() {
     USER_LOGIN_ATTR        = channel.getProperty("ldap.mapping.login", "");         // uid, sAMAccountName
@@ -138,7 +138,7 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
     USER_LANGUAGE_ATTR     = channel.getProperty("ldap.mapping.language", "");      // preferredLanguage
     USER_ADDRESS_ATTR      = channel.getProperty("ldap.mapping.address", "");       // postalAddress (legacy)
     USER_INFO_ATTR         = channel.getProperty("ldap.mapping.info", "");          // description
-     
+
     GROUP_NAME_ATTR    = channel.getProperty("ldap.grp-mapping.name", "");          // cn
     GROUP_MEMBER_ATTR  = channel.getProperty("ldap.grp-mapping.member", "");        // memberUid, member
     GROUP_UUID_ATTR    = channel.getProperty("ldap.grp-mapping.uuid", "");          // objectGUID, entryUUID, ...
@@ -147,7 +147,7 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
         LDAPUtil.OBJECT_CLASS_ATTR,
         USER_LOGIN_ATTR,      USER_LASTNAME_ATTR,     USER_FIRSTNAME_ATTR,
         USER_SALUTATION_ATTR, USER_ORGANIZATION_ATTR, USER_DEPARTMENT_ATTR, USER_MANAGER_ATTR, USER_JOBTITLE_ATTR,
-        USER_EMAIL_ATTR,      USER_PHONE_ATTR,        USER_MOBILE_ATTR,  
+        USER_EMAIL_ATTR,      USER_PHONE_ATTR,        USER_MOBILE_ATTR,
         USER_STREET_ATTR, USER_POSTAL_CODE_ATTR, USER_PO_BOX_ATTR,
         USER_LOCALITY_ATTR, USER_REGION_ATTR, USER_COUNTRY_ATTR, USER_LANGUAGE_ATTR,
         USER_ADDRESS_ATTR,    USER_INFO_ATTR
@@ -157,48 +157,43 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
         GROUP_NAME_ATTR, GROUP_MEMBER_ATTR, GROUP_UUID_ATTR
     });
   }
-  
+
   //-----------------------------------------------
-  // AuthenticationHandler implementation 
+  // AuthenticationHandler implementation
   //-----------------------------------------------
 
   @Override
   public void login(AuthenticationContext ctxt) throws IOException {
-    
-    // No need to do anything if user is already logged 
-    if (ctxt.isLogged()) {
+
+    // No need to do anything if user is already logged
+    // the ldap authentication handler only works when credential are provided
+    // (form submit or login/password available) and of course when ldap is enabled
+    if (ctxt.isLogged() || !ctxt.isCredentialProvided() || !ldapMgr.isLdapEnabled()) {
       ctxt.doChain();
       return;
     }
 
-    // the ldap authentication handler only works when credential are provided
-    // (form submit or login/password available) and of course when ldap is enabled
-    if (!ctxt.isCredentialProvided() || !ldapMgr.isLdapEnabled()) {
-      ctxt.doChain();
-      return;
-    }
-    
     // Skip existing member completely detached from LDAP (Improvement JCMS-3313)
     Member memberFromLogin = channel.getMemberFromLogin(ctxt.getLogin());
     if (memberFromLogin != null && !memberFromLogin.getLdapSync() && !memberFromLogin.isLdapAccount()) {
       ctxt.doChain();
       return;
     }
-    
+
     // Require valid CSRF token to authorize LDAP login attempt (Improvement JCMS-8373)
     // Control is not performed with FakedServletRequest, as it indicates a login through AuthenticationManager.login(String, String)
     final boolean checkCSRF = channel.getBooleanProperty("auth-mgr.ldapauth.check-csrf", true);
     if (checkCSRF && !(ctxt.getRequest() instanceof FakedServletRequest) && !HttpUtil.checkCSRF(ctxt.getRequest())) {
-      JcmsContext.addMsgSession(ctxt.getRequest(), 
+      JcmsContext.addMsgSession(ctxt.getRequest(),
                                 new JcmsMessage(JcmsMessage.Level.WARN, JcmsUtil.glp(ctxt.getUserLang(), "msg.security.csrf", "authentication", ServletUtil.getRequestId(ctxt.getRequest()))));
       return;
     }
-    
+
     // 1. Authenticate using LDAP
     LDAPConfiguration ldapConf = ldapMgr.getLDAPConfigurationFromLogin(ctxt.getLogin());
     LDAPMapper mapper = new LDAPMapper(ldapConf);
     boolean ldapAdminConnectionFailed = false;
-    final Member member;    
+    final Member member;
     if (!mapper.isConnected()) {
       logger.warn("Could not connect to LDAP", mapper.getLastException());
       ldapAdminConnectionFailed = true;
@@ -209,23 +204,23 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
                                   true, ldapConf.getSynchronize() && ldapConf.getSynchronizeDuringAuthentication());
       mapper.disconnect();
     }
-    
+
     // 2. Authentication Success
     if (member != null && member.isValidAccount()) {
       logger.debug("Authentication processed using LDAP");
       ctxt.setLoggedMember(member);
     }
-    
+
     // 3. Authentication Failed
     if (ldapAdminConnectionFailed) {
       ctxt.setWarningMsg("msg.login.ldap-error");
     }
     if (mapper.getLastException() != null) {
-      // Should you need to provide a detailed explanation of the connection 
+      // Should you need to provide a detailed explanation of the connection
       // failure to your users, customize login jsp and use this exception.
       ctxt.getRequest().setAttribute("ldapException", mapper.getLastException());
     }
-    
+
     ctxt.doChain();
   }
 
@@ -233,11 +228,11 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
   // Account ang Group synchronization Method
   // !!! used internally by JCMS, do not change methods signatures
   // ------------------------------------------------------------------------------
-  
+
   /**
    * This methods performs member LDAP authentication and/or member account
    * synchronization (creation/update) with LDAP fields.
-   * 
+   *
    * It is called by :
    * - LdapAuthenticationManager#login(....) to authenticate AND synchronize
    *   member during their connexion to the site.
@@ -246,11 +241,11 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
    *
    * <b>You MUST not change the signature of this method as it called
    * internally by JCMS.</b>
-   * 
+   *
    * <p>
    * This method will automatically disable any existing Member with the
    * specified login if the corresponding LDAP user could not be found.
-   * 
+   *
    * @param mapper         the configured LDAPMapper
    * @param login          the typed/entered login
    * @param password       the typed/entered password
@@ -263,7 +258,7 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
    */
   public static Member synchronizeAccount(LDAPMapper mapper, String login, String password,
       Member opAuthor, boolean authenticate, boolean synchronize) {
-    
+
     // STEP 1: Retrieve user entry in LDAP
     String ldapEntryLogin = login;
     // Extract the sAMAccountName from the login (for "DOMAIN\login" format only)
@@ -275,9 +270,9 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
     SearchResultEntry entry = mapper.getUserLDAPEntry(ldapEntryLogin, synchronize ? USER_ATTRIBUTES : new String[] { USER_LOGIN_ATTR });
     if (entry == null) {
       // Automatically disable existing LDAP Member which cannot be find anymore in LDAP
-      // Known limit (related to behavior introduced by bug fix JCMS-3981) : 
+      // Known limit (related to behavior introduced by bug fix JCMS-3981) :
       //  Member will be disabled only if the exact same login sync'ed with the LDAP was specified by the user
-      //  e.g : member was synchronized with Member.login == LDAPEntry.mail == "johnsmith@example.com" 
+      //  e.g : member was synchronized with Member.login == LDAPEntry.mail == "johnsmith@example.com"
       //    - if user tries to log in with "johnsmith", Member will not be found, therefore not disabled
       //    - if user tries to log in with "EXAMPLE\johnsmith", Member will not be found, therefore not disabled
       //    - if user tries to log in with "johnsmith@example.com", Member will be found, therefore correctly disabled
@@ -288,8 +283,8 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
         // Invoke checkUpdate to ensure account can be disabled.
         //  - the default admin is never disabled (bug JCMS-5191)
         //  - the last workspace admin is never disabled (bug JCMS-8454)
-        // however, DO NOT check integrity constraints to ensure account gets disabled even though some integrity 
-        // constraint are not respected (invalid email, name or other minor element compared to account activation) 
+        // however, DO NOT check integrity constraints to ensure account gets disabled even though some integrity
+        // constraint are not respected (invalid email, name or other minor element compared to account activation)
         Map<String, Boolean> dcContext = Util.getHashMap(DataController.CTXT_SYNC_LDAP, Boolean.TRUE);
         dcContext.put(DataController.CTXT_IGNORE_INTEGRITY_CHECK, Boolean.TRUE);
         ControllerStatus updateStatus = updated.checkUpdate(opAuthor, dcContext);
@@ -298,11 +293,11 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
               + "Resolve constraints preventing the deactivation, or detach member from LDAP if member is still authorized to connect without its LDAP account.");
           return null;
         }
-        updated.performUpdate(opAuthor); 
+        updated.performUpdate(opAuthor);
       }
       return null;
     }
-    
+
     // STEP 2: Authenticate LDAP user using its dn and credential
     if (authenticate && !mapper.authenticate(entry.getDN(), password)) {
       return null;
@@ -310,15 +305,15 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
 
     // STEP 3: Synchronize LDAP user, Update/Create the Member
     if (!synchronize) {
-      login = LDAPUtil.getString(entry.getAttribute(USER_LOGIN_ATTR), login); 
+      login = LDAPUtil.getString(entry.getAttribute(USER_LOGIN_ATTR), login);
       return channel.getMemberFromLogin(login);
     }
     return updateOrCreateAccount(mapper, entry, login, opAuthor);
   }
-  
+
   /**
    * Synchronize given LDAP group, retrieve all its members from LDAP and create them.
-   * 
+   *
    * <b>You MUST not change the signature of this method as it called
    * internally by JCMS.</b>
 
@@ -334,7 +329,7 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
     if (Util.isEmpty(groupDN_or_UUID)) {
       return;
     }
-    final SearchResultEntry groupEntry; 
+    final SearchResultEntry groupEntry;
     if (LDAPUtil.isUUID(groupDN_or_UUID)) {
       groupEntry = mapper.getGroupLDAPEntryFromGUID(groupDN_or_UUID, GROUP_ATTRIBUTES);
     } else {
@@ -343,14 +338,14 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
     if (groupEntry == null) {
       return;
     }
-    
+
     updateOrCreateGroups(mapper, groupEntry, true, opAuthor, null, null);
   }
 
   // ------------------------------------------------------------------------------
   // LDAP Synchronization methods
   // ------------------------------------------------------------------------------
-  
+
   /**
    * This methods use the given user's LDAP Entry to create/update the
    * corresponding member in JCMS.
@@ -366,34 +361,34 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
     if (logger.isDebugEnabled()) {
       logger.debug("updateOrCreateAccount [userEntryDN: '" + userEntry.getDN() + "', login='" + login +"']");
     }
-    
+
     Member member;
-    
+
     // Use a lock to prevent creation of two user with same login (since JCMS-324)
     // Use a striped lock to maximize concurrency (since JCMS-8271)
     Lock memberCreationLock = null;
     try {
-      
+
       // Fix bug JCMS-3981 : Duplicate Member accounts created by LDAP synchronization when using different login
       // Make sure we always use the login from the ldap for member synchronisation
-      login = LDAPUtil.getString(userEntry.getAttribute(USER_LOGIN_ATTR), login); 
+      login = LDAPUtil.getString(userEntry.getAttribute(USER_LOGIN_ATTR), login);
       if (Util.isEmpty(login)) {
         logger.warn("Cannot synchronize LDAP account '"+userEntry.getDN()+"' without a valid login.");
         return null;
       }
-      
+
       memberCreationLock = memberCreationStripedLock.get(login);
       memberCreationLock.lock();
 
       // Retrieve existing member if any
       member = channel.getMemberFromLogin(login);
-      
+
       boolean synchronizeMember = mapper.getLDAPConfiguration().getSynchronize();
       if (!synchronizeMember || !channel.isDataWriteEnabled()) {
         return member;
       }
 
-      // 1. Retrieve Member's groups, 
+      // 1. Retrieve Member's groups,
       //         existing groups if any and LDAP groups (create or update them as needed)
       boolean synchronizeGroups = synchronizeMember && mapper.getLDAPConfiguration().getSynchronizeGroups();
       Group[] groups = synchronizeGroups ? getAccountGroups(mapper, userEntry, member, opAuthor) : null;
@@ -401,16 +396,16 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
       // Determine which LDAP fields have been properly configured in the mapping,
       // and only synchronize those fields
       // This is required for fix JCMS-3120 : emptied fields are not taken into account when updating a Member
-      // We want to clear member's field if they have been cleared in the LDAP, 
+      // We want to clear member's field if they have been cleared in the LDAP,
       // but we do not want the field which are not mapped to be erased just because no
       // value was retrieved
-      boolean syncName         = Util.notEmpty(USER_LASTNAME_ATTR);  
-      boolean syncFirstName    = Util.notEmpty(USER_FIRSTNAME_ATTR); 
-      boolean syncSalutation   = Util.notEmpty(USER_SALUTATION_ATTR); 
-      boolean syncOrganization = Util.notEmpty(USER_ORGANIZATION_ATTR); 
-      boolean syncdepartment   = Util.notEmpty(USER_DEPARTMENT_ATTR); 
-      boolean syncManager      = Util.notEmpty(USER_MANAGER_ATTR); 
-      boolean syncJobTitle     = Util.notEmpty(USER_JOBTITLE_ATTR); 
+      boolean syncName         = Util.notEmpty(USER_LASTNAME_ATTR);
+      boolean syncFirstName    = Util.notEmpty(USER_FIRSTNAME_ATTR);
+      boolean syncSalutation   = Util.notEmpty(USER_SALUTATION_ATTR);
+      boolean syncOrganization = Util.notEmpty(USER_ORGANIZATION_ATTR);
+      boolean syncdepartment   = Util.notEmpty(USER_DEPARTMENT_ATTR);
+      boolean syncManager      = Util.notEmpty(USER_MANAGER_ATTR);
+      boolean syncJobTitle     = Util.notEmpty(USER_JOBTITLE_ATTR);
       boolean syncEmail        = Util.notEmpty(USER_EMAIL_ATTR);
       boolean syncPhone        = Util.notEmpty(USER_PHONE_ATTR);
       boolean syncMobile       = Util.notEmpty(USER_MOBILE_ATTR);
@@ -422,34 +417,34 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
       boolean syncCountry      = Util.notEmpty(USER_COUNTRY_ATTR);
       boolean syncLanguage     = Util.notEmpty(USER_LANGUAGE_ATTR);
       boolean syncAddress      = Util.notEmpty(USER_ADDRESS_ATTR);
-      boolean syncInfo         = Util.notEmpty(USER_INFO_ATTR);  
-      
-      // 2. Read LDAP fields    
-      String name         = LDAPUtil.getString(userEntry.getAttribute(USER_LASTNAME_ATTR), "");  
-      String firstName    = LDAPUtil.getString(userEntry.getAttribute(USER_FIRSTNAME_ATTR) , ""); 
-      String salutation   = LDAPUtil.getString(userEntry.getAttribute(USER_SALUTATION_ATTR) , ""); 
-      String organization = LDAPUtil.getString(userEntry.getAttribute(USER_ORGANIZATION_ATTR) , ""); 
-      String department   = LDAPUtil.getString(userEntry.getAttribute(USER_DEPARTMENT_ATTR) , ""); 
+      boolean syncInfo         = Util.notEmpty(USER_INFO_ATTR);
+
+      // 2. Read LDAP fields
+      String name         = LDAPUtil.getString(userEntry.getAttribute(USER_LASTNAME_ATTR), "");
+      String firstName    = LDAPUtil.getString(userEntry.getAttribute(USER_FIRSTNAME_ATTR) , "");
+      String salutation   = LDAPUtil.getString(userEntry.getAttribute(USER_SALUTATION_ATTR) , "");
+      String organization = LDAPUtil.getString(userEntry.getAttribute(USER_ORGANIZATION_ATTR) , "");
+      String department   = LDAPUtil.getString(userEntry.getAttribute(USER_DEPARTMENT_ATTR) , "");
       Member managerMember = null;
       if (syncManager)      {
-        String managerDN = LDAPUtil.getString(userEntry.getAttribute(USER_MANAGER_ATTR) , ""); 
+        String managerDN = LDAPUtil.getString(userEntry.getAttribute(USER_MANAGER_ATTR) , "");
         SearchResultEntry managerEntry = Util.notEmpty(managerDN) ? mapper.getUserLDAPEntryFromDN(managerDN, USER_ATTRIBUTES) : null;
         if (managerEntry != null) {
-          // KISS. To keep our implementation simple, managers Member are NOT synchronized with LDAP  
+          // KISS. To keep our implementation simple, managers Member are NOT synchronized with LDAP
           // during this step, they must exist prior to this invocation and are simply retrieved by login.
-          // Why ? : 
+          // Why ? :
           //  - handling circular reference would require refatoring (for example using visitor set)
           //    this would change the public method signature which are used internally...
-          //  - handling synchronization of DBMember would require complex refactoring, as only one 
+          //  - handling synchronization of DBMember would require complex refactoring, as only one
           //    transaction is used per synchro (for performance reason), getMemberFromLogin() fails
           //    to retrieve member created before in the same transcation but not yet commited
           // Consequence : the manager of a Member might only be correct after a second LDAP synchronization
-          // If you are SURE you do not have to deal with the above problems, replace with : 
+          // If you are SURE you do not have to deal with the above problems, replace with :
           // managerMember = updateOrCreateAccount(mapper, managerEntry, null, opAuthor);
           managerMember = channel.getMemberFromLogin(LDAPUtil.getString(managerEntry.getAttribute(USER_LOGIN_ATTR), null));
         }
       }
-      String jobTitle     = LDAPUtil.getString(userEntry.getAttribute(USER_JOBTITLE_ATTR) , ""); 
+      String jobTitle     = LDAPUtil.getString(userEntry.getAttribute(USER_JOBTITLE_ATTR) , "");
       String email        = LDAPUtil.getString(userEntry.getAttribute(USER_EMAIL_ATTR) , "");
       String phone        = LDAPUtil.getString(userEntry.getAttribute(USER_PHONE_ATTR) , "");
       String mobile       = LDAPUtil.getString(userEntry.getAttribute(USER_MOBILE_ATTR) , "");
@@ -498,13 +493,13 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
 
         member.setLastLdapSynchro(new Date());
         member.setPassword(Member.EXTERNAL_PASSWORD);
-        
+
         ControllerStatus createStatus = member.checkCreate(opAuthor, dcContext);
         if (createStatus.hasFailed()) {
           logger.warn("Member [login:'"+ login + "', full name :'" + member.getFullName() + "'] CANNOT be created : " + createStatus.getMessage(channel.getLanguage()));
           return null;
         }
-        
+
         member.performCreate(opAuthor, dcContext);
         if (logger.isDebugEnabled()) {
           logger.debug("Member '" + member.getFullName() + "' ('"+member.getId()+"') created.");
@@ -514,19 +509,19 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
 
       //  JCMS account exists, update it.
       else {
-        
+
         // Improvement JCMS-2450 : Add an option to each Member to prevent/stop LDAP synchronisation
-        if (member.getLdapSync() == false) { 
+        if (!member.getLdapSync()) {
           if (logger.isDebugEnabled()) {
             logger.debug("Member [login:'"+ login + "', name:'" + name + "'] already exists but its LDAP synchronization has been disabled, skip update...");
           }
           return member;
         }
-        
+
         if (logger.isDebugEnabled()) {
           logger.debug("Member [login:'"+ login + "', name:'" + name + "'] already exists, update it if needed...");
         }
-        
+
         Member updated = (Member) member.getUpdateInstance();
 
         updated.setLogin(login);
@@ -552,17 +547,17 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
         if (syncLocality)     { before = member.getLocality();     updated.setLocality(locality);         after = updated.getLocality();     change = change || !Util.getString(after, "").equals(Util.getString(before, "")); }
         if (syncRegion)       { before = member.getRegion();       updated.setRegion(region);             after = updated.getRegion();       change = change || !Util.getString(after, "").equals(Util.getString(before, "")); }
         if (syncCountry)      { before = member.getCountry();      updated.setCountry(country);           after = updated.getCountry();      change = change || !Util.getString(after, "").equals(Util.getString(before, "")); }
-        if (syncLanguage)     { 
-          // Special behavior for language : if empty language retrieved from LDAP, ensure the existing member's language is kept 
-          before = member.getLanguage();     updated.setLanguage(Util.getString(language, member.getLanguage()));         after = updated.getLanguage();     
-          change = change || !Util.getString(after, "").equals(Util.getString(before, "")); 
+        if (syncLanguage)     {
+          // Special behavior for language : if empty language retrieved from LDAP, ensure the existing member's language is kept
+          before = member.getLanguage();     updated.setLanguage(Util.getString(language, member.getLanguage()));         after = updated.getLanguage();
+          change = change || !Util.getString(after, "").equals(Util.getString(before, ""));
         }
         if (syncAddress)      { before = member.getAddress();      updated.setAddress(address);           after = updated.getAddress();      change = change || !Util.getString(after, "").equals(Util.getString(before, "")); }
         if (syncInfo)         { before = member.getInfo();         updated.setInfo(info);                 after = updated.getInfo();         change = change || !Util.getString(after, "").equals(Util.getString(before, "")); }
-        
+
         if (synchronizeGroups) {
-          HashSet<Group> oldGroupSet = new HashSet<Group>(); Util.addAll(member.getDeclaredGroups(), oldGroupSet);
-          HashSet<Group> newGroupSet = new HashSet<Group>(); Util.addAll(groups, newGroupSet);
+          HashSet<Group> oldGroupSet = new HashSet<>(); Util.addAll(member.getDeclaredGroups(), oldGroupSet);
+          HashSet<Group> newGroupSet = new HashSet<>(); Util.addAll(groups, newGroupSet);
           boolean sameGroups = Util.isSameContent(oldGroupSet, newGroupSet);
           if (!sameGroups) {
             updated.setDeclaredGroups(groups);
@@ -570,22 +565,22 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
           }
         }
 
-        // Fix bug JCMS-3164 Disabled LDAP Member is not re-activated if there is 
+        // Fix bug JCMS-3164 Disabled LDAP Member is not re-activated if there is
         // not any difference between fields value of JCMS Member and LDAP user
         if (updated.isDisabled()) {
           change = true;
         }
-        
+
         /*
          * Update the account:
-         * - if it has been updated 
+         * - if it has been updated
          * - if the last sync is older than 1 month
          * - if the member account has never been synchronized (account existed in the store/db before any LDAP was used)
          */
         long delta = System.currentTimeMillis() - (member.getLastLdapSynchro() != null ? member.getLastLdapSynchro().getTime() : 0);
-        if (change || delta > JcmsConstants.MILLIS_IN_ONE_MONTH) {
+        if (change || delta > JaliosConstants.MILLIS_IN_ONE_MONTH) {
           updated.setLastLdapSynchro(new Date());
-          
+
           // JCMS-3388 - Do not systematically update the Member password when synchronizing a Member with the LDAP
           // Only update the password if the account was disable to ensure it is being enable again
           if (Util.isEmpty(member.getPassword()) || Member.DISABLED_PASSWORD.equals(member.getPassword())) {
@@ -597,7 +592,7 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
             logger.warn("Member [login:'"+ login + "', full name :'" + updated.getFullName() + "'] CANNOT be updated : " + updateStatus.getMessage(channel.getLanguage()));
             return member;
           }
-          
+
           updated.performUpdate(opAuthor, dcContext);
           if (logger.isDebugEnabled()) {
             logger.debug("Member '" + updated.getFullName() + "' ('"+updated.getId()+"') updated.");
@@ -606,7 +601,7 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
         }
       }
        SyncLdapHandler.updateLdapGroupSyncProgressInformation(SyncLdapHandler.SYNC_PROGRESS_MEMBER_TREATED, member);
-      
+
     } finally {
       if (memberCreationLock != null) {
         memberCreationLock.unlock();
@@ -618,11 +613,11 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
 
   /**
    * Retrieve groups of given user entry.
-   * 
-   * This method is called by 
+   *
+   * This method is called by
    * {@link #synchronizeAccount(LDAPMapper, String, String, Member, boolean, boolean)}
    * when LDAP groups synchronizing is enabled (ldap.synchronize-groups.enable).
-   * 
+   *
    * @param mapper     the LDAPMapper used to communicate with the LDAP
    * @param userEntry  the SearchResultEntry already retrieved for the member being synchronized.
    * @param mbr        the member being created or updated
@@ -635,10 +630,10 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
   protected static Group[] getAccountGroups(LDAPMapper mapper, SearchResultEntry userEntry,
       Member mbr, Member opAuthor) {
     Set<Group> ldapGroupSet = updateOrCreateGroups(mapper, userEntry, false, opAuthor, null, null);
-    
+
     // Retrieve current member group set and remove all its ldap group to
     // replace them with the newly found ones
-    Set<Group> mbrGroupSet = new HashSet<Group>();
+    Set<Group> mbrGroupSet = new HashSet<>();
     if (mbr != null) {
       Util.addAll(mbr.getDeclaredGroups(), mbrGroupSet);
     }
@@ -649,37 +644,37 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
       }
     }
     mbrGroupSet.addAll(ldapGroupSet);
-    
+
     // Return updated member's groups
     return mbrGroupSet.toArray(new Group[mbrGroupSet.size()]);
   }
-  
-  static private ThreadLocal<Map<String, Group>> synchronizedDnToGroupMap = new ThreadLocal<Map<String, Group>>();
-  
+
+  static private ThreadLocal<Map<String, Group>> synchronizedDnToGroupMap = new ThreadLocal<>();
+
   static public void initSynchronizedGroupsCache() {
-    synchronizedDnToGroupMap.set(new HashMap<String, Group>());    
+    synchronizedDnToGroupMap.set(new HashMap<>());
   }
-  
+
   static public void clearSynchronizedGroupsCache() {
     synchronizedDnToGroupMap.remove();
   }
-  
+
   /**
    * Synchronize groups of the given LDAP entry.
-   * 
+   *
    * @param mapper     the LDAPMapper used to communicate with the LDAP
    * @param entry      the SearchResultEntry already retrieved for the member being synchronized.
    * @param importGroupChild whether to import group's members too (user or groups)
    * @param opAuthor   the author of the operation (may be null)
    * @param visitedCnSet a set containing all CN processed for the current group hierarchy, used to prevent infinite loop if circular reference are encountered (GroupA in GroupB in GroupC in GroupA)
    * @param cnToGroupMap a map of CN to Group, used to optimize performance (allows us to skip group which have already been processed/updated).
-   *        eg: Member 1 belongs to GroupA and GroupB, GroupA belongs to GroupC, GroupB belongs to GroupC. When GroupC has been synchronized during synchronization of GroupA, there is no need to treat it a second time when synchronizing GroupB) 
+   *        eg: Member 1 belongs to GroupA and GroupB, GroupA belongs to GroupC, GroupB belongs to GroupC. When GroupC has been synchronized during synchronization of GroupA, there is no need to treat it a second time when synchronizing GroupB)
    * @return a Set of created/updated {@link Group} to which the given LDAP entry belong, never return null.
    * @since jcms-5.7
    */
   protected static Set<Group> updateOrCreateGroups(LDAPMapper mapper, SearchResultEntry entry,
       boolean importGroupChild, Member opAuthor, LinkedHashSet<String> visitedCnSet, HashMap<String,Group> cnToGroupMap) {
-    
+
     // Use log4j NDC (Nested Diagnostics Context) to clarify logging of recursive methods
     NDC.push(Integer.toHexString(entry.hashCode())); // NDC.pop in finally {...}
     // Use a striped lock to prevent creation of two group with same uuid while still allowing high concurrency (since JCMS-8271)
@@ -690,7 +685,7 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
       }
 
       // A. Prevent infinite recusive loop
-      visitedCnSet = (visitedCnSet != null) ? visitedCnSet : new LinkedHashSet<String>();
+      visitedCnSet = (visitedCnSet != null) ? visitedCnSet : new LinkedHashSet<>();
       if (visitedCnSet.contains(entry.getDN())) {
         logger.warn("Circular group reference detected in LDAP, Member & Group synchronization may not work properly, try to update your LDAP. The following LDAP entries are concerned :");
         int i = 0;
@@ -698,22 +693,22 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
           logger.warn(" " + (i++) + ". '" + cn + "'");
         }
         logger.warn(" " + (i++) + ". '" + entry.getDN() + "'...");
-        return new HashSet<Group>();
+        return new HashSet<>();
       }
       visitedCnSet.add(entry.getDN()); // Add entry here, remove it in finally
-      
+
       // B. Prevent double update of groups already treated
-      cnToGroupMap = (cnToGroupMap != null) ? cnToGroupMap : new HashMap<String,Group>();
+      cnToGroupMap = (cnToGroupMap != null) ? cnToGroupMap : new HashMap<>();
       Group groupAlreadyProcessed = cnToGroupMap.get(entry.getDN());
       // group Globally processed in a global synchronization action JCMS-1903
       Map<String, Group> globalCnToGroupMap = synchronizedDnToGroupMap.get();
       if (globalCnToGroupMap != null && groupAlreadyProcessed == null) {
         groupAlreadyProcessed = globalCnToGroupMap.get(entry.getDN());
       }
-      
+
       if (groupAlreadyProcessed != null) {
         logger.debug("Entry already processed during this synchronization, skip it.");
-        HashSet<Group> setWithOneGroup = new HashSet<Group>();
+        HashSet<Group> setWithOneGroup = new HashSet<>();
         setWithOneGroup.add(groupAlreadyProcessed);
         return setWithOneGroup; // FIX bug JCMS-1578
       }
@@ -727,7 +722,7 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
       if (!isGroupEntry) {
         return parentGroupSet;
       }
-      
+
       // 3. It's a group, retrieve existing data if any
       String groupDN = entry.getDN();
       String groupName = LDAPUtil.getString(entry.getAttribute(GROUP_NAME_ATTR), "");
@@ -747,8 +742,8 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
 
       // 4. If a JCMS group already existed for this LDAP group,
       //    check that we are allowed to synchronize it, otherwise return immediately
-      if (group != null && group.getLdapSync() == false) {
-        HashSet<Group> setWithOneGroup = new HashSet<Group>();
+      if (group != null && !group.getLdapSync()) {
+        HashSet<Group> setWithOneGroup = new HashSet<>();
         setWithOneGroup.add(group);
         cnToGroupMap.put(entry.getDN(), group);
         if (globalCnToGroupMap != null ) {
@@ -756,10 +751,10 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
         }
         return setWithOneGroup;
       }
-      
+
       // 5. If requested, import childs of groups (can be users or groups)
-      Set<Data> childSet = new HashSet<Data>();
-      if (/*isGroupEntry &&*/ importGroupChild) { 
+      Set<Data> childSet = new HashSet<>();
+      if (/*isGroupEntry &&*/ importGroupChild) {
         childSet = importGroupChild(mapper, entry, opAuthor);
       }
 
@@ -768,18 +763,18 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
         group = createGroup(entry, opAuthor, parentGroupSet, groupDN, groupName, groupUUID);
         // If group could not be created, skip processing
         if (group == null) {
-          return new HashSet<Group>();
+          return new HashSet<>();
         }
       } else {
         updateGroup(entry, opAuthor, parentGroupSet, groupDN, groupName, groupUUID, group);
       }
       SyncLdapHandler.updateLdapGroupSyncProgressInformation(SyncLdapHandler.SYNC_PROGRESS_GROUP_TREATED, group);
 
-      // 7. Remove old children which are no longer in the Group 
-      // Fix bug JCMS-2974 - case#1 : 
-      //  LDAP Groups are not correctly removed from the JCMS Member 
+      // 7. Remove old children which are no longer in the Group
+      // Fix bug JCMS-2974 - case#1 :
+      //  LDAP Groups are not correctly removed from the JCMS Member
       //  if they have been removed from the LDAP user
-      // --> Iterate all LDAP members & groups to remove them from the 
+      // --> Iterate all LDAP members & groups to remove them from the
       //     LDAP group if they have been removed on LDAP server side
       if (/*isGroupEntry &&*/ importGroupChild) {
         // Members
@@ -792,7 +787,7 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
           // Request a member synchronization to ensure proper update
           synchronizeAccount(mapper, childMember.getLogin(), null, opAuthor, false, true);
         }
-        
+
         // DBMembers
         boolean updateChildDBember = channel.getBooleanProperty("ldap.synchronize.sync-child-dbmbr", true);  // kill switch in case of performance issue;
         if (updateChildDBember) {
@@ -811,7 +806,7 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
             synchronizeAccount(mapper, childDBMember.getLogin(), null, opAuthor, false, true);
           }
         }
-        
+
         // Groups
         for (Group childGroup : group.getChildrenSet()) {
           if (!childGroup.isLdapGroup() || childSet.contains(childGroup)) {
@@ -827,9 +822,9 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
           }
         }
       }
-      
+
       // return the created/updated group, so it can be added to parent set when doing recursive call
-      HashSet<Group> setWithOneGroup = new HashSet<Group>();
+      HashSet<Group> setWithOneGroup = new HashSet<>();
       setWithOneGroup.add(group);
       cnToGroupMap.put(entry.getDN(), group);
       if (globalCnToGroupMap != null ) {
@@ -848,7 +843,7 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
 
   /**
    * Find and import all LDAP groups entries referencing the given entry == "parent groups".
-   * 
+   *
    * @param mapper     the LDAPMapper used to communicate with the LDAP
    * @param entry      the SearchResultEntry already retrieved for the member being synchronized.
    * @param opAuthor   the author of the operation (may be null)
@@ -857,8 +852,8 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
    */
   private static HashSet<Group> importParentGroups(LDAPMapper mapper, SearchResultEntry entry, Member opAuthor,
                                             LinkedHashSet<String> visitedCnSet, HashMap<String,Group> cnToGroupMap) {
-    HashSet<Group> parentGroupSet = new HashSet<Group>();
-    
+    HashSet<Group> parentGroupSet = new HashSet<>();
+
     // 1 Retrieve all LDAP group entries which reference the given entry
     ArrayList<SearchResultEntry> groupEntryList;
     if (mapper.getLDAPConfiguration().isUsingPosixGroup()) {
@@ -870,7 +865,7 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
     } else {
       groupEntryList = mapper.getGroupsLDAPEntries(entry.getDN(), GROUP_ATTRIBUTES);
     }
-    
+
 
     // 2 Iterate on all LDAP entries (groups) referencing the given entry
     //   call ourself recursively to find and create/update parent groups
@@ -886,23 +881,23 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
 
   /**
    * Import all childs of groups (can be users or groups).
-   * 
+   *
    * @param mapper     the LDAPMapper used to communicate with the LDAP
    * @param entry      the SearchResultEntry already retrieved for the group being synchronized.
    * @param opAuthor   the author of the operation (may be null)
    * @return a set of all child Member and Group imported (created or updated)
    */
   private static Set<Data> importGroupChild(LDAPMapper mapper, SearchResultEntry entry, Member opAuthor) {
-    // Iterate on all {MEMBER} attributes, as defined by property "ldap.grp-mapping.member" 
+    // Iterate on all {MEMBER} attributes, as defined by property "ldap.grp-mapping.member"
     // For each attribute, read entry,
     // if entry is group, as defined with objectclass property
     //  => updateOrCreateGroups
     // if entry is member, as defined with objectclass property
     //  => updateOrCreateAccount
-    
+
     // Fill set of all child processed, use to fix bug JCMS-2974-case#1
-    Set<Data> childSet = new HashSet<Data>(); // Member or groups
-    
+    Set<Data> childSet = new HashSet<>(); // Member or groups
+
     List<String> groupChildList = mapper.getRangedAttributeStringValues(entry, GROUP_MEMBER_ATTR);
     for (String childDN : groupChildList) {
       // when using posixGroup, the member field only contains the uid, not
@@ -912,13 +907,13 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
       }
 
       // Fix JCMS-2682 : LDAP user filter is not used when synchronizing child of a LDAP group
-      // 
+      //
       // In order to fix this issue, we must not use the simple method "LDAPConnection.read(childDN)"
       // Doing this would not apply the user or group filter configured in JCMS.
       // Instead invoke custom made search method.
       // Warning : it has a small performance penalty because we will perform two
       // LDAP search if the childDN did not match a user because of the filter.
-      // Possible improvement : The best way do implement this would be to read the 
+      // Possible improvement : The best way do implement this would be to read the
       // child entry and have a simple method entry.matchFilter()...
 
       // Attempt to retrieve this child DN as a User Entry, using proper member filter
@@ -929,7 +924,7 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
         continue;
       }
 
-      // If the DN did not match any valid user : 
+      // If the DN did not match any valid user :
       // Attempt to retrieve this child DN as a Group Entry, using proper group filter
       SearchResultEntry childGroupEntry = mapper.getGroupLDAPEntryFromDN(childDN, GROUP_ATTRIBUTES);
       if (childGroupEntry != null) {
@@ -938,13 +933,13 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
         continue;
       }
     }
-    
+
     return childSet;
   }
 
   /**
    * Create a new JCMS group using specified informations.
-   * 
+   *
    * @param entry      the SearchResultEntry already retrieved for the group being synchronized.
    * @param opAuthor   the author of the operation (may be null)
    * @param parentGroupSet a Set of {@link Group} to which this group belongs
@@ -963,21 +958,21 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
     group.setLastLdapSynchro(new Date());
     group.setLdapDN(Util.notEmpty(groupUUID) ? groupUUID : groupDN);
     group.setParentSet(parentGroupSet);
-    group.setUseCategorySet(new TreeSet<Category>()); // Fix JCMS-2271 : Ensure no default use right is defined 
-    
+    group.setUseCategorySet(new TreeSet<>()); // Fix JCMS-2271 : Ensure no default use right is defined
+
     /**
      * Uncomment this if you want to ensure integrity of created group.
      * Default behavior of JCMS is not to care, otherwise it would prevent creation
      * of LDAP Group "Foo" if an JCMS Group "Foo" was already existing. We don't want that
      */
     /*
-    ControllerStatus createStatus = group.checkCreate(opAuthor, Util.getHashMap(DataController.CTXT_SYNC_LDAP, Boolean.TRUE)); 
+    ControllerStatus createStatus = group.checkCreate(opAuthor, Util.getHashMap(DataController.CTXT_SYNC_LDAP, Boolean.TRUE));
     if (createStatus.hasFailed()) {
       logger.warn("Group [db:'"+ entry.getDN() + "', name :'" + groupName + "'] CANNOT be created : " + createStatus.getMessage(channel.getLanguage()));
       return null;
-    } 
-    */        
-    
+    }
+    */
+
     group.performCreate(opAuthor, Util.getHashMap(DataController.CTXT_SYNC_LDAP, Boolean.TRUE));
     if (logger.isDebugEnabled()) {
       logger.debug("Group '" + groupName + "' ('"+group.getId()+"') created.");
@@ -988,7 +983,7 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
 
   /**
    * Update the specified JCMS group using specified informations.
-   * 
+   *
    * @param entry      the SearchResultEntry already retrieved for the group being synchronized.
    * @param opAuthor   the author of the operation (may be null)
    * @param parentGroupSet a Set of {@link Group} to which this group belongs
@@ -1004,7 +999,7 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
 
     Group updated = new Group(group);
     // Remove all LDAP groups from parent set to replace it with new ones
-    HashSet<Group> parentSet = updated.getParentSet() != null ? new HashSet<Group>(updated.getParentSet()) : new HashSet<Group>();  // don't forget to clone the set otherwise it's the original set that will be updated
+    HashSet<Group> parentSet = updated.getParentSet() != null ? new HashSet<>(updated.getParentSet()) : new HashSet<>();  // don't forget to clone the set otherwise it's the original set that will be updated
     for (Iterator<Group> it = parentSet.iterator(); it.hasNext();) {
       Group itGroup = it.next();
       if (itGroup.isLdapGroup()) {
@@ -1012,7 +1007,7 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
       }
     }
     parentSet.addAll(parentGroupSet);
-    
+
     boolean change = false;
     updated.setName(groupName);      change = change || !updated.getName().equals(group.getName());
     updated.setParentSet(parentSet); change = change || !Util.isSameContent(group.getParentSet(), updated.getParentSet());
@@ -1021,7 +1016,7 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
     // Fix bug JCMS-3041 : LDAP Group created manually from JCMS with its DN field does not appear with the appropriate icon when synchronized
     // Force change if last LDAP Synchro date has never been set so we can clearly tag the group has an LDAP group
     change = change || group.getLastLdapSynchro() == null;
-    
+
     // Update group if changed
     if (change) {
       updated.setLastLdapSynchro(new Date());
@@ -1030,13 +1025,13 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
        * Uncomment this if you want to ensure integrity of updated group.
        */
       /*
-      ControllerStatus updateStatus = updated.checkUpdate(opAuthor, Util.getHashMap(DataController.CTXT_SYNC_LDAP, Boolean.TRUE));  
+      ControllerStatus updateStatus = updated.checkUpdate(opAuthor, Util.getHashMap(DataController.CTXT_SYNC_LDAP, Boolean.TRUE));
       if (updateStatus.hasFailed()) {
         logger.warn("Group [dn:'"+ entry.getDN() + "', name:'" + groupName + "'] CANNOT be updated : " + updateStatus.getMessage(channel.getLanguage()));
         return;
-      } 
-      */        
-      
+      }
+      */
+
       updated.performUpdate(opAuthor, Util.getHashMap(DataController.CTXT_SYNC_LDAP, Boolean.TRUE));
       if (logger.isDebugEnabled()) {
         logger.debug("Group '" + groupName + "' ('"+updated.getId()+"') updated.");
@@ -1044,5 +1039,5 @@ public class LdapAuthenticationHandler extends AuthenticationHandler {
       SyncLdapHandler.updateLdapGroupSyncProgressInformation(SyncLdapHandler.SYNC_PROGRESS_GROUP_UPDATED, group);
     }
   }
-  
+
 }
