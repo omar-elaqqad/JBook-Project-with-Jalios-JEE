@@ -16,7 +16,9 @@ import com.jalios.jcms.QueryResultSet;
 import com.jalios.jcms.comparator.ComparatorManager;
 import com.jalios.jcms.handler.QueryHandler;
 import com.jalios.jcms.taglib.settings.BasicSettings;
+import com.jalios.jcms.taglib.settings.ControlSettings;
 import com.jalios.jcms.taglib.settings.impl.DateSettings;
+import com.jalios.jcms.taglib.settings.impl.EnumerateSettings;
 import com.jalios.jcms.taglib.settings.impl.MemberSettings;
 import com.jalios.jcms.uicomponent.BreadcrumbItem;
 import com.jalios.jcms.uicomponent.DataAttribute;
@@ -36,14 +38,30 @@ public class JBookAppHandler extends QueryHandler {
 
 	protected JBookManager mgr = JBookManager.getInstance();
 
+	protected View view = View.CATALOG;
+
 	public boolean showAppTitle() {
 		return !getWorkspace().isCollaborativeSpace();
 
 	}
 
 	public String getAppTitle() {
-		return glp("jcmsplugin.jbook.app.catalog.title");
+		
+		switch(view) {
+
+		  case MY_BORROWINGS:
+		    return glp("jcmsplugin.jbook.app.view.my-borrowings");
+
+		  case ALL_BORROWINGS:
+		    return glp("jcmsplugin.jbook.app.view.all-borrowings");
+
+		  default:
+		  case CATALOG:
+		    return glp("jcmsplugin.jbook.app.catalog.title");
+		  }
 	}
+	
+	
 
 	@Override
 	protected void init() {
@@ -57,10 +75,9 @@ public class JBookAppHandler extends QueryHandler {
 		setSort("title");
 
 		setDateType("pdate");
-		if(showTopics) {
+		if (showTopics) {
 			setExactCat(showTopics);
 		}
-
 
 	}
 
@@ -77,11 +94,8 @@ public class JBookAppHandler extends QueryHandler {
 
 		topic = Util.getFirst(catSet);
 
-
-		showTopics = Util.isEmpty(getText())&&
-				Util.isEmpty(getMids()) &&
-				getBeginDate()==null &&
-				getEndDate()==null;
+		showTopics = Util.isEmpty(getText()) && Util.isEmpty(getMids()) && getBeginDate() == null
+				&& getEndDate() == null;
 
 	}
 
@@ -150,8 +164,6 @@ public class JBookAppHandler extends QueryHandler {
 		return list;
 	}
 
-
-
 	public String getAppUrl() {
 		return "plugins/JBookPlugin/jsp/app/jbook.jsp";
 	}
@@ -171,15 +183,13 @@ public class JBookAppHandler extends QueryHandler {
 	}
 
 	public String getAddBookUrl() {
-		  String params = "";
-		  Category topic = getSelectedTopic();
-		  if (topic != null) {
-		    params = "?cids=" + topic.getId();
-		  }
-		  return "types/Book/editBookModal.jsp" + params;
+		String params = "";
+		Category topic = getSelectedTopic();
+		if (topic != null) {
+			params = "?cids=" + topic.getId();
 		}
-
-
+		return "types/Book/editBookModal.jsp" + params;
+	}
 
 	@Override
 	public QueryResultSet getResultSet() {
@@ -208,11 +218,6 @@ public class JBookAppHandler extends QueryHandler {
 
 	}
 
-	// display the book on the app
-
-	public boolean showCatalog() {
-		return !showBook();
-	}
 
 	public boolean showBook() {
 		return getSelectedBook() != null;
@@ -236,58 +241,105 @@ public class JBookAppHandler extends QueryHandler {
 	// to filter the search
 
 	public MemberSettings getMemberSettings() {
-		  Member mbr = channel.getMember(Util.getFirst(getMids()));
-		  MemberSettings settings = new MemberSettings()
-		      .name("mids")
-		      .value(mbr)
-		      .placeholder("jcmsplugin.jbook.app.filter.mbr")
+		Member mbr = channel.getMember(Util.getFirst(getMids()));
+		MemberSettings settings = new MemberSettings().name("mids").value(mbr)
+				.placeholder("jcmsplugin.jbook.app.filter.mbr").onChange("ajax-refresh");
+
+		// Hide the clear button if there's no value
+		if (mbr == null) {
+			settings.addOption(BasicSettings.HIDE_CLEAR_BUTTON, Boolean.TRUE);
+		}
+
+		return settings;
+	}
+
+	public DateSettings getBeginDateSettings() {
+		Date beginDate = getBeginDate();
+		DateSettings settings = new DateSettings().name("beginDateStr").value(beginDate)
+				.placeholder("jcmsplugin.jbook.app.filter.begin-date").onChange("ajax-refresh");
+
+		// Hide the clear button if there's no value
+		if (beginDate == null) {
+			settings.addOption(BasicSettings.HIDE_CLEAR_BUTTON, Boolean.TRUE);
+		}
+
+		return settings;
+	}
+
+	public DateSettings getEndDateSettings() {
+		Date endDate = getEndDate();
+		DateSettings settings = new DateSettings().name("endDateStr").value(endDate)
+				.placeholder("jcmsplugin.jbook.app.filter.end-date").onChange("ajax-refresh");
+
+		// Hide the clear button if there's no value
+		if (endDate == null) {
+			settings.addOption(BasicSettings.HIDE_CLEAR_BUTTON, Boolean.TRUE);
+		}
+
+		return settings;
+	}
+
+	// to get all borrowins
+	public List<JBookBorrowing> getAllBorrowingList() {
+		return mgr.getAllCurrentBorrowingList();
+	}
+
+	public List<JBookBorrowing> getMyBorrowingList() {
+		return mgr.getCurrentBorrowingList(loggedMember);
+	}
+	
+	// vues management
+
+	public void setView(String v) {
+		try {
+			this.view = View.valueOf(v);
+		} catch (IllegalArgumentException ignore) {
+			// EMPTY
+		}
+	}
+
+	public String getCatalogUrl() {
+		return getViewUrl(View.CATALOG);
+	}
+
+	public String getMyBorrowingsUrl() {
+		return getViewUrl(View.MY_BORROWINGS);
+	}
+
+	public String getAllBorrowingsUrl() {
+		return getViewUrl(View.ALL_BORROWINGS);
+	}
+
+	private String getViewUrl(View view) {
+		return getAppUrl() + "?view=" + view;
+	}
+	
+
+	// display the book on the app
+
+	public boolean showCatalog() {
+		return view == View.CATALOG && !showBook();
+	}
+
+	public boolean showMyBorrowings() {
+		return view == View.MY_BORROWINGS && !showBook();
+	}
+
+	public boolean showAllBorrowings() {
+		return view == View.ALL_BORROWINGS && !showBook();
+	}
+	
+	
+	// pour produire le menu des vues dans la sidebar
+	public ControlSettings getViewSettings() {
+		  EnumerateSettings settings = new EnumerateSettings()
+		      .name("view")
+		      .value(view)
+		      .enumLabels("jcmsplugin.jbook.app.view.catalog", "jcmsplugin.jbook.app.view.my-borrowings", "jcmsplugin.jbook.app.view.all-borrowings")
+		      .enumValues(View.CATALOG.toString(), View.MY_BORROWINGS.toString(), View.ALL_BORROWINGS.toString())
 		      .onChange("ajax-refresh");
 
-		  // Hide the clear button if there's no value
-		  if (mbr == null) {
-		    settings.addOption(BasicSettings.HIDE_CLEAR_BUTTON, Boolean.TRUE);
-		  }
-
 		  return settings;
 		}
-
-		public DateSettings getBeginDateSettings() {
-		  Date beginDate = getBeginDate();
-		  DateSettings settings = new DateSettings()
-		  .name("beginDateStr")
-		  .value(beginDate)
-		  .placeholder("jcmsplugin.jbook.app.filter.begin-date")
-		  .onChange("ajax-refresh");
-
-		  // Hide the clear button if there's no value
-		  if (beginDate == null) {
-		    settings.addOption(BasicSettings.HIDE_CLEAR_BUTTON, Boolean.TRUE);
-		  }
-
-		  return settings;
-		}
-
-		public DateSettings getEndDateSettings() {
-		  Date endDate = getEndDate();
-		  DateSettings settings = new DateSettings()
-		  .name("endDateStr")
-		  .value(endDate)
-		  .placeholder("jcmsplugin.jbook.app.filter.end-date")
-		  .onChange("ajax-refresh");
-
-		  // Hide the clear button if there's no value
-		  if (endDate == null) {
-		    settings.addOption(BasicSettings.HIDE_CLEAR_BUTTON, Boolean.TRUE);
-		  }
-
-		  return settings;
-		}
-		
-		public List<JBookBorrowing> getAllBorrowingList() {
-			  return mgr.getAllCurrentBorrowingList();
-			}
-
-			public List<JBookBorrowing> getMyBorrowingList() {
-			  return mgr.getCurrentBorrowingList(loggedMember);
-			}
+	
 }

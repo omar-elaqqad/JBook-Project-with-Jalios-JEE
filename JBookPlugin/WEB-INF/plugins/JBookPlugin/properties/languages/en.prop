@@ -35,3 +35,13 @@ jcmsplugin.jbook.lbl.prev-borrowers: Previous Borrowers
 jcmsplugin.jbook.lbl.borrowed-by-you: You borrow it
 jcmsplugin.jbook.lbl.borrowed-by: {0} borrows it
 jcmsplugin.jbook.lbl.available: Available
+
+#menu for the sidebar
+jcmsplugin.jbook.app.view.my-borrowings: My borrowings
+jcmsplugin.jbook.app.view.all-borrowings: All borrowings
+
+jcmsplugin.jbook.app.views: Views
+jcmsplugin.jbook.app.view.catalog: Catalog
+
+jcmsplugin.jbook.msg.my-borrowings.none: You have no outstanding borrowings.
+jcmsplugin.jbook.msg.all-borrowings.none: There are no outstanding borrowings.

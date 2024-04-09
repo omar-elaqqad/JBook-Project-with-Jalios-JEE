@@ -18,7 +18,7 @@ String footerStatus = isBorrowedByMe ? "is-borrowed-by-you" : (isBorrowed ? "is-
 
     <%-- FOOTER --%>
     <jalios:cardBlock mode="<%= com.jalios.jcms.taglib.card.CardBlockMode.FOOTER %>" css="<%= footerStatus %>">
-      <% if (isBorrowedByMe ) { %>
+      <% if (isBorrowedByMe) { %>
       <jalios:memberphoto member="<%= borrower %>" size="<%= PhotoSize.ICON %>" link="false" />
       <%= glp("jcmsplugin.jbook.lbl.borrowed-by-you") %>
       <% } else if (isBorrowed) { %>

@@ -35,3 +35,13 @@ jcmsplugin.jbook.lbl.prev-borrowers: Précédents emprunteurs
 jcmsplugin.jbook.lbl.borrowed-by-you: Vous l'empruntez
 jcmsplugin.jbook.lbl.borrowed-by: {0} l'emprunte
 jcmsplugin.jbook.lbl.available: Disponible
+
+#le menu pour le sidebar
+jcmsplugin.jbook.app.view.my-borrowings: Mes emprunts
+jcmsplugin.jbook.app.view.all-borrowings: Tous les emprunts
+
+jcmsplugin.jbook.app.views: Affichage
+jcmsplugin.jbook.app.view.catalog: Catalogue
+
+jcmsplugin.jbook.msg.my-borrowings.none: Vous n'avez aucun emprunt en curs.
+jcmsplugin.jbook.msg.all-borrowings.none: Il n'y aucun emprunt en cours.

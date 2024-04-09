@@ -5,25 +5,38 @@
     <div class="app-sidebar-icon">
       <a href="<%= appHandler.getAppUrl() %>" title="JBook"><jalios:icon src="jcmsplugin-jbook-app" /></a>
     </div>
-
+            <%-- VIEWS --%>
+            <jalios:appSidebarSection title="ui.app.sidebar-section.views"
+                name="views">
+                <jalios:field resource="field-app">
+                    <jalios:control settings='<%= appHandler.getViewSettings() %>' />
+                </jalios:field>
+            </jalios:appSidebarSection>
+            
     <div class="app-sidebar-section">
       <div class="app-sidebar-section-title">
         <%= glp("jcmsplugin.jbook.app.filters") %>
       </div>
+			<%-- SEARCH --%>
+			<jalios:field name='text' value="<%= appHandler.getText() %>"
+				resource="field-light" css="app-sidebar-field">
+				<jalios:control
+					settings='<%= new TextFieldSettings().placeholder("ui.com.placeholder.search").css("no-focus app-search-field") %>' />
+				<span class="input-group-btn">
+					<button class="btn btn-primary app-search-submit ajax-refresh"
+						name="opSearch" type="submit">
+						<jalios:icon src="app-search" />
+					</button> <% if (Util.notEmpty(appHandler.getText())) { %>
+					<button type="button"
+						class="btn btn-default add-on app-search-cancel"
+						title='<%= glp("ui.com.btn.reset") %>'>
+						<jalios:icon src="remove" />
+					</button> <% } %>
+				</span>
+			</jalios:field>
 
-      <%-- SEARCH --%>
-      <jalios:field name='text' value="<%= appHandler.getText() %>" resource="field-light" css="app-sidebar-field">
-        <jalios:control settings='<%= new TextFieldSettings().placeholder("ui.com.placeholder.search").css("no-focus app-search-field") %>' />
-        <span class="input-group-btn">
-          <button class="btn btn-primary app-search-submit ajax-refresh" name="opSearch" type="submit"><jalios:icon src="app-search"/></button>
-          <% if (Util.notEmpty(appHandler.getText())) { %>
-          <button type="button" class="btn btn-default add-on app-search-cancel" title='<%= glp("ui.com.btn.reset") %>'><jalios:icon src="remove" /></button>
-          <% } %>
-        </span>
-      </jalios:field>
 
-
-      <%-- FILTER / MEMBER --%>
+			<%-- FILTER / MEMBER --%>
       <jalios:field name="mids" resource="field-light" css="app-sidebar-field">
         <jalios:control settings='<%= appHandler.getMemberSettings() %>' />
       </jalios:field>

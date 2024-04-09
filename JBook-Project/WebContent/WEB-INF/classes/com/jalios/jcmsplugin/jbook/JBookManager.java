@@ -128,6 +128,7 @@ public class JBookManager {
 	}
 	
 	
+	
 	/**
 	 * Returns the list of current borrowing for the given member.
 	 * @param borrower the member.
