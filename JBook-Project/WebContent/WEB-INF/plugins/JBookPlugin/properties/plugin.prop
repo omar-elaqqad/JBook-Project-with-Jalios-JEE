@@ -30,5 +30,5 @@ shortcut.jcmsplugin.jbook.link: plugins/JBookPlugin/jsp/app/jbook.jsp
 channel.less.plugins/JBookPlugin/css/jbook.css: plugins/JBookPlugin/css/jbook.less
 
 
-#editeur de category
+# editeur de category
 $id.jcmsplugin.jbook.catalog.topic-root.chooser-category:

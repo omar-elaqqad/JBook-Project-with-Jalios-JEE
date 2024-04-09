@@ -82,11 +82,6 @@ public class JBookBorrowing extends Data implements DBData{
 	}
 	public void setReleaseDate(Date releaseDate) {
 		this.releaseDate = releaseDate;
-	}
-	
-	
-	
-	
-	
+	}	
 
 }

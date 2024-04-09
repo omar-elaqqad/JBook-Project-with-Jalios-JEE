@@ -17,3 +17,21 @@ jcmsplugin.jbook.app.filters: Filtres
 jcmsplugin.jbook.app.filter.begin-date: Ajouté après...
 jcmsplugin.jbook.app.filter.end-date:   Ajouté avant...
 jcmsplugin.jbook.app.filter.mbr:        Ajouté par...
+
+#borrowing
+jcmsplugin.jbook.btn.release: Je le rends...
+jcmsplugin.jbook.btn.contact: Contacter l'emprunteur
+jcmsplugin.jbook.btn.force-borrow: Je l'ai pris !
+jcmsplugin.jbook.btn.borrow: Je l'emprunte...
+
+#borrowing duration
+jcmsplugin.jbook.borrowing.status.borrowed-by-me: Vous l'empruntez depuis le {0} ({1}).
+jcmsplugin.jbook.borrowing.status.borrowed: {0} l'empunte depuis le {1} ({2}).
+
+#precedents emprunteurs
+jcmsplugin.jbook.lbl.prev-borrowers: Précédents emprunteurs
+
+#display status if disponible, and who borrowed it
+jcmsplugin.jbook.lbl.borrowed-by-you: Vous l'empruntez
+jcmsplugin.jbook.lbl.borrowed-by: {0} l'emprunte
+jcmsplugin.jbook.lbl.available: Disponible

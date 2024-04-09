@@ -6,7 +6,7 @@
 
 %><%@ page import="com.jalios.jcmsplugin.jbook.*"%>
 <%
-
+%><%@ page import="com.jalios.jcmsplugin.jbook.data.*" %><%
 %>
 
 <jsp:useBean id="appHandler" scope="page"

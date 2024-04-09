@@ -14,7 +14,7 @@ QueryResultSet queryResultSet = appHandler.getResultSet();
     <%-- Topics --%>
     <% if (appHandler.showTopics()) { %>
 
-    <%-- Bread crumb --%>
+    <%-- Breadcrumb --%>
     <jalios:breadcrumb items="<%= appHandler.getBreadcrumbItems() %>" />
 
     <jalios:cards css="is-centered">
@@ -37,7 +37,7 @@ QueryResultSet queryResultSet = appHandler.getResultSet();
       <jalios:foreach collection="<%= appHandler.getSortedResultSet() %>" name="book" type="Book"
                       skip="<%= pagerHandler.getStart()%>"
                       max="<%= pagerHandler.getPageSize() %>">
-      <jalios:cardData data="<%= book %>" />
+        <%@ include file='/plugins/JBookPlugin/jsp/app/doBookCard.jspf' %>
       </jalios:foreach>
 
     </jalios:cards>

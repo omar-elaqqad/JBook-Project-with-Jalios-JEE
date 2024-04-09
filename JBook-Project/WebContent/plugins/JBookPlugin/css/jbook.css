@@ -10,4 +10,8 @@
 .card-inline-layout .card.jbook-card-topic {
   height: 243px;
 }
+.app-jbook .app-pub-wrapper .buttons {
+  text-align: center;
+  margin-bottom: 40px;
+}
 /*# sourceMappingURL=jbook.css.map */

@@ -17,3 +17,21 @@ jcmsplugin.jbook.app.filters: Filters
 jcmsplugin.jbook.app.filter.begin-date: Added after...
 jcmsplugin.jbook.app.filter.end-date:   Added before...
 jcmsplugin.jbook.app.filter.mbr:        Added by...
+
+#borrowing
+jcmsplugin.jbook.btn.release: I release it...
+jcmsplugin.jbook.btn.contact: Contact the borrower
+jcmsplugin.jbook.btn.force-borrow: I took it!
+jcmsplugin.jbook.btn.borrow: I borrow it...
+
+#borrowing duration
+jcmsplugin.jbook.borrowing.status.borrowed-by-me: You've been borrowing it since {0} ({1}).
+jcmsplugin.jbook.borrowing.status.borrowed: {0} has been borrowing it since {1} ({2}).
+
+#previous borrowers
+jcmsplugin.jbook.lbl.prev-borrowers: Previous Borrowers
+
+#who borrows it
+jcmsplugin.jbook.lbl.borrowed-by-you: You borrow it
+jcmsplugin.jbook.lbl.borrowed-by: {0} borrows it
+jcmsplugin.jbook.lbl.available: Available

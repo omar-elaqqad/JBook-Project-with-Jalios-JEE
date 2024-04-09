@@ -21,6 +21,7 @@ import com.jalios.jcms.taglib.settings.impl.MemberSettings;
 import com.jalios.jcms.uicomponent.BreadcrumbItem;
 import com.jalios.jcms.uicomponent.DataAttribute;
 import com.jalios.jcmsplugin.jbook.JBookManager;
+import com.jalios.jcmsplugin.jbook.data.JBookBorrowing;
 import com.jalios.util.Util;
 
 import generated.Book;
@@ -281,4 +282,12 @@ public class JBookAppHandler extends QueryHandler {
 
 		  return settings;
 		}
+		
+		public List<JBookBorrowing> getAllBorrowingList() {
+			  return mgr.getAllCurrentBorrowingList();
+			}
+
+			public List<JBookBorrowing> getMyBorrowingList() {
+			  return mgr.getCurrentBorrowingList(loggedMember);
+			}
 }

@@ -1,11 +1,21 @@
+<%@page import="com.jalios.jcmsplugin.jbook.data.JBookBorrowing"%>
 <%@ page contentType="text/html; charset=UTF-8" %><%
 %><%@ include file='/jcore/doInitPage.jspf' %><%
 %><%@ page import="com.jalios.jcms.handler.*" %><%
 %><%@ page import="com.jalios.jcmsplugin.jbook.*" %><%
 %><%@ page import="com.jalios.jcmsplugin.jbook.ui.*" %><%
-%><%
+%>
+
+<%
 
 Book book = (Book)request.getAttribute(PortalManager.PORTAL_PUBLICATION);
+
+//get the current borring for the book
+JBookBorrowing currentBorrowing=book.getCurrentBorrowing();
+		
+boolean isBorrowed=currentBorrowing!=null;
+boolean isBorrowedByMe=isBorrowed && currentBorrowing.getBorrower()==loggedMember;
+
 
 JBookAppHandler appHandler = (JBookAppHandler)request.getAttribute("jbook.appHandler");
 if (appHandler == null) {
@@ -13,7 +23,10 @@ if (appHandler == null) {
   return;
 }
 
-%><%@ include file='/front/doFullDisplay.jspf' %>
+%>
+
+<%@ include file='/front/doFullDisplay.jspf' %>
+
 <div class="fullDisplay Book <%= book.canBeEditedFieldByField(loggedMember) ? "unitFieldEdition" : "" %>" itemscope="itemscope">
 
   <%-- Title --%>
@@ -28,7 +41,11 @@ if (appHandler == null) {
 
   <dl class="dl-horizontal">
 
+<%-- BUTTONS --%>
+<%@ include file='/plugins/JBookPlugin/jsp/app/doJBookButtons.jspf' %>
 
+<%-- BORROWING STATUS --%>
+<%@ include file='/plugins/JBookPlugin/jsp/app/doJBookStatus.jspf' %>
   <%-- Description --%>
   <% String description = book.getDescription(userLang);  %>
   <% if (Util.notEmpty(description)) { %>
@@ -49,7 +66,33 @@ if (appHandler == null) {
   </dd>
   <% } %>
 
-  </dl>
+		<%-- previous borrowers --%>
+		<%
+		Set<Member> borrowerSet = book.getPreviousBorrowerSet();
+		%>
+		<%
+		if (Util.notEmpty(borrowerSet)) {
+		%>
+		<dt><%=glp("jcmsplugin.jbook.lbl.prev-borrowers")%></dt>
+		<dd>
+			<ul class="list-unstyled">
+				<jalios:foreach collection="<%=borrowerSet%>" type="Member"
+					name="itBorrower" max="5">
+					<%
+					if (itBorrower != null) {
+					%>
+					<li><jalios:memberphoto member="<%=itBorrower%>"
+							size="<%=PhotoSize.ICON%>" /> <jalios:link
+							data="<%=itBorrower%>" /></li>
+					<%
+					}
+					%>
+				</jalios:foreach>
+			</ul>
+		</dd>
+		<% } %>
+
+	</dl>
 
   <%-- RELATED RESOURCES --%>
   <%
