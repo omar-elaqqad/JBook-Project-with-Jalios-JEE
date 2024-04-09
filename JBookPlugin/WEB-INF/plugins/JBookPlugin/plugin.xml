@@ -21,6 +21,7 @@
   <!-- ========================== Plugin Components ======================= -->
   <plugincomponents>
     <channellistener class="com.jalios.jcmsplugin.jbook.component.JBookStartupDataGenerator" />
+    <policyfilter    class="com.jalios.jcmsplugin.jbook.component.JBookShortcutPolicyFilter" />
   </plugincomponents>
     
   <!-- ============================= Hibernate ============================ -->

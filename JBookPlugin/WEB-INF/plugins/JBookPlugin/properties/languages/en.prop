@@ -45,3 +45,6 @@ jcmsplugin.jbook.app.view.catalog: Catalog
 
 jcmsplugin.jbook.msg.my-borrowings.none: You have no outstanding borrowings.
 jcmsplugin.jbook.msg.all-borrowings.none: There are no outstanding borrowings.
+
+# CategoryBrowser
+# category.category-browser.jbook: Search in JBook

@@ -43,3 +43,6 @@
 14:24:03,828 INFO [Catalina-utility-1] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
 14:24:08,845 INFO [Catalina-utility-1] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
 14:24:10,395 INFO [Catalina-utility-1] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+14:52:51,410 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+14:52:57,338 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+14:52:58,757 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties

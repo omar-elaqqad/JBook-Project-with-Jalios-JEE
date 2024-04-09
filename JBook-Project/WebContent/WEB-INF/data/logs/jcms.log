@@ -12987,3 +12987,962 @@
 2024-04-09 14:24:10,311 INFO [Catalina-utility-1] [JPlatform 10] [jcms.ChannelInitServlet]  - Memory: Total: 580 MB - Used: 271.61 MB (46%) - Free: 308.39 MB
 2024-04-09 14:24:10,395 INFO [Catalina-utility-1] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
 2024-04-09 14:24:10,422 INFO [Catalina-utility-1] [JPlatform 10] [jcms.ChannelInitServlet]  - JPlatform 10 is ready (JCMS 10.0.7 (build-20230504092642))
+2024-04-09 14:52:17,361 INFO [main] [JPlatform 10] [jcms.ChannelInitServlet]  - Destroy event handled. Fire channel finalization.
+2024-04-09 14:52:17,361 INFO [main] [JPlatform 10] [jcms.ResourceHelper]  - Stop LessFileWatcher
+2024-04-09 14:52:17,361 INFO [main] [JPlatform 10] [db.DBEventLogManager]  - Stop JCMS DBEventLogManager Timer
+2024-04-09 14:52:17,362 INFO [main] [JPlatform 10] [db.DerbyManager]  - Shutdown Internal Derby Server...
+2024-04-09 14:52:17,366 INFO [LessFileWatcher] [JPlatform 10] [lessCompiler.AbstractFileWatcher]  - Watcher has been stopped
+2024-04-09 14:52:17,544 INFO [main] [JPlatform 10] [db.DerbyManager]  - Internal Derby Server has been shutdown successfully
+2024-04-09 14:52:17,544 INFO [main] [JPlatform 10] [db.HibernateManager]  - Closing Hibernate SessionFactory
+2024-04-09 14:52:17,663 INFO [main] [JPlatform 10] [processingmanagement.FileProcessorManager]  - Stop FileProcessor processing thread
+2024-04-09 14:52:17,663 INFO [ProcessingThread-0] [JPlatform 10] [processingmanagement.ProcessingThread]  - Processing thread was interrupted and stopped.
+2024-04-09 14:52:17,663 INFO [ProcessingThread-0] [JPlatform 10] [processingmanagement.ProcessingThread]  - Processing thread terminated.
+2024-04-09 14:52:17,715 INFO [LuceneIndexer CategoriesIndices] [JPlatform 10] [search.LuceneCategorySearchEngine]  - *** STOPPING *** Thread "LuceneIndexer CategoriesIndices" terminated
+2024-04-09 14:52:17,752 INFO [LuceneIndexer PublicationsIndices] [JPlatform 10] [search.LucenePublicationSearchEngine]  - *** STOPPING *** Thread "LuceneIndexer PublicationsIndices" terminated
+2024-04-09 14:52:17,760 INFO [LuceneIndexer MemberIndex] [JPlatform 10] [search.LuceneMemberSearchEngine]  - *** STOPPING *** Thread "LuceneIndexer MemberIndex" terminated
+2024-04-09 14:52:17,760 INFO [main] [JPlatform 10] [jcms.Channel]  - *** STOPPING JPlatform 10 *** Remove alarms for FileProcessing-JCMSUpload-DirectoryScan
+2024-04-09 14:52:17,760 INFO [main] [JPlatform 10] [jcms.Channel]  - *** STOPPING JPlatform 10 *** Remove alarms for public-link.purge
+2024-04-09 14:52:17,760 INFO [main] [JPlatform 10] [jcms.Channel]  - *** STOPPING JPlatform 10 *** Remove alarms for LDAP
+2024-04-09 14:52:17,760 INFO [main] [JPlatform 10] [jcms.Channel]  - *** STOPPING JPlatform 10 *** Remove alarms for JCMS Trash
+2024-04-09 14:52:17,761 INFO [main] [JPlatform 10] [jcms.Channel]  - *** STOPPING JPlatform 10 *** Remove alarms for JCMS AlarmManager WFPublicationListener
+2024-04-09 14:52:17,761 INFO [main] [JPlatform 10] [jcms.Channel]  - *** STOPPING JPlatform 10 *** Remove alarms for JCMS DBEventLogManager
+2024-04-09 14:52:17,761 INFO [main] [JPlatform 10] [jcms.Channel]  - *** STOPPING JPlatform 10 *** Remove alarms for JCMS AlarmManager MonitoringManager
+2024-04-09 14:52:17,761 INFO [main] [JPlatform 10] [jcms.Channel]  - *** STOPPING JPlatform 10 *** Remove alarms for PluginAlarmManager
+2024-04-09 14:52:17,761 INFO [main] [JPlatform 10] [jcms.Channel]  - *** STOPPING JPlatform 10 *** Remove alarms for MemberActivityPurge
+2024-04-09 14:52:17,761 INFO [main] [JPlatform 10] [jcms.Channel]  - *** STOPPING JPlatform 10 *** Remove alarms for JCMS AlarmManager Common
+2024-04-09 14:52:17,761 INFO [main] [JPlatform 10] [jcms.Channel]  - *** STOPPING JPlatform 10 *** Remove alarms for FileProcessing-JCMSUpload-PostponedItemCheck
+2024-04-09 14:52:17,761 INFO [main] [JPlatform 10] [jcms.Channel]  - *** STOPPING JPlatform 10 *** Remove alarms for AlertExpiration
+2024-04-09 14:52:17,761 INFO [main] [JPlatform 10] [jcms.Channel]  - *** STOPPING JPlatform 10 *** Remove alarms for JCMS AlarmManager JSync Sync
+2024-04-09 14:52:17,761 INFO [main] [JPlatform 10] [jcms.Channel]  - *** STOPPING JPlatform 10 *** Remove alarms for MemberSecurityEnforcer
+2024-04-09 14:52:17,761 INFO [main] [JPlatform 10] [jcms.Channel]  - *** STOPPING JPlatform 10 *** Remove alarms for JCMS ReplicaMessageManager
+2024-04-09 14:52:17,761 INFO [main] [JPlatform 10] [jcms.Channel]  - *** STOPPING JPlatform 10 *** Remove alarms for JCMS AlarmManager SearchEngine
+2024-04-09 14:52:17,761 INFO [main] [JPlatform 10] [jcms.Channel]  - *** STOPPING JPlatform 10 *** Remove alarms for Alarm MailFetcher
+2024-04-09 14:52:17,761 INFO [main] [JPlatform 10] [jcms.Channel]  - *** STOPPING JPlatform 10 *** Remove alarms for AlertPurge
+2024-04-09 14:52:17,761 INFO [main] [JPlatform 10] [jcms.Channel]  - *** STOPPING JPlatform 10 *** Remove alarms for jcms.analytics
+2024-04-09 14:52:29,298 INFO [main] [JCMS] [jcms.ChannelInitServlet]  - JCMS Initialization
+2024-04-09 14:52:29,340 INFO [main] [JCMS] [jcms.Channel]  - ******************************************
+2024-04-09 14:52:29,343 INFO [main] [JCMS] [jcms.Channel]  - Start at Tue Apr 09 14:52:29 WET 2024
+2024-04-09 14:52:29,344 INFO [main] [JCMS] [jcms.Channel]  - Operating System: Windows 11, 10.0, amd64
+2024-04-09 14:52:29,344 INFO [main] [JCMS] [jcms.Channel]  - Java Runtime Environment: 17.0.9, Eclipse Adoptium
+2024-04-09 14:52:29,344 INFO [main] [JCMS] [jcms.Channel]  - Java VM: OpenJDK 64-Bit Server VM, 17.0.9+9, Eclipse Adoptium
+2024-04-09 14:52:29,374 INFO [main] [JCMS] [plugin.PluginManager]  - Loading deployed plugins...
+2024-04-09 14:52:29,580 INFO [main] [JCMS] [plugin.PluginManager]  - Load plugin SmartPhonePlugin (deployed)
+2024-04-09 14:52:29,599 INFO [main] [JCMS] [plugin.PluginManager]  - Load plugin ESNPlugin (deployed)
+2024-04-09 14:52:29,611 INFO [main] [JCMS] [plugin.PluginManager]  - Load plugin CollaborativeSpacePlugin (deployed)
+2024-04-09 14:52:29,618 INFO [main] [JCMS] [plugin.PluginManager]  - Load plugin DBPollPlugin (deployed)
+2024-04-09 14:52:29,624 INFO [main] [JCMS] [plugin.PluginManager]  - Load plugin DBCommentPlugin (deployed)
+2024-04-09 14:52:29,631 INFO [main] [JCMS] [plugin.PluginManager]  - Load plugin CategoryRightsPlugin (deployed)
+2024-04-09 14:52:29,637 INFO [main] [JCMS] [plugin.PluginManager]  - Load plugin BlogPlugin (deployed)
+2024-04-09 14:52:29,645 INFO [main] [JCMS] [plugin.PluginManager]  - Load plugin BookmarksPlugin (deployed)
+2024-04-09 14:52:29,652 INFO [main] [JCMS] [plugin.PluginManager]  - Load plugin JBookPlugin (deployed)
+2024-04-09 14:52:29,652 INFO [main] [JCMS] [plugin.PluginManager]  - Loading zipped plugins...
+2024-04-09 14:52:29,717 INFO [main] [JCMS] [plugin.PluginManager]  - Init dependencies
+2024-04-09 14:52:29,732 INFO [main] [JCMS] [plugin.PluginManager]  - Disabled plugins: 
+2024-04-09 14:52:29,732 INFO [main] [JCMS] [plugin.PluginManager]  - Init plugins...
+2024-04-09 14:52:29,741 INFO [main] [JCMS] [plugin.PluginManager]  - Init plugin BookmarksPlugin
+2024-04-09 14:52:29,858 INFO [main] [JCMS] [plugin.PluginManager]  - Init plugin CategoryRightsPlugin
+2024-04-09 14:52:29,861 INFO [main] [JCMS] [plugin.PluginManager]  - Init plugin CollaborativeSpacePlugin
+2024-04-09 14:52:29,867 INFO [main] [JCMS] [plugin.PluginManager]  - Init plugin DBCommentPlugin
+2024-04-09 14:52:29,870 INFO [main] [JCMS] [plugin.PluginManager]  - Init plugin DBPollPlugin
+2024-04-09 14:52:29,873 INFO [main] [JCMS] [plugin.PluginManager]  - Init plugin ESNPlugin
+2024-04-09 14:52:29,880 INFO [main] [JCMS] [plugin.PluginManager]  - Init plugin JBookPlugin
+2024-04-09 14:52:29,883 INFO [main] [JCMS] [plugin.PluginManager]  - Init plugin SmartPhonePlugin
+2024-04-09 14:52:29,888 INFO [main] [JCMS] [plugin.PluginManager]  - Init plugin BlogPlugin
+2024-04-09 14:52:29,890 INFO [main] [JCMS] [plugin.PluginManager]  - Init dependencies
+2024-04-09 14:52:29,903 INFO [main] [JCMS] [property.PropertyManager]  - Read languages properties
+2024-04-09 14:52:30,636 INFO [main] [JCMS] [plugin.PluginManager]  - Register plugins Properties
+2024-04-09 14:52:30,756 INFO [main] [JCMS] [property.PropertyManager]  - Read JCMS properties
+2024-04-09 14:52:30,781 INFO [main] [JCMS] [plugin.PluginManager]  - Register plugins Properties
+2024-04-09 14:52:30,980 INFO [main] [JCMS] [property.PropertyManager]  - Read properties:WEB-INF/data/custom.prop
+2024-04-09 14:52:31,088 INFO [main] [JCMS] [util.DBUtil]  - Look for available Datasources...
+2024-04-09 14:52:31,094 INFO [main] [JCMS] [util.DBUtil]  - ... no Datasource found !
+2024-04-09 14:52:31,132 INFO [main] [JCMS] [plugin.PluginManager]  - Register plugins PolicyFilter
+2024-04-09 14:52:31,137 INFO [main] [JCMS] [jcmsplugin.CategoryRightsPlugin]  - Register: com.jalios.jcmsplugin.categoryrights.CategoryRightsRightPolicyFilter
+2024-04-09 14:52:31,142 INFO [main] [JCMS] [jcmsplugin.CategoryRightsPlugin]  - Register: com.jalios.jcmsplugin.categoryrights.CategoryRightsDataIconPolicyFilter
+2024-04-09 14:52:31,179 INFO [main] [JCMS] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.CSTemplatePolicyFilter
+2024-04-09 14:52:31,181 INFO [main] [JCMS] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.CSRightPolicyFilter
+2024-04-09 14:52:31,182 INFO [main] [JCMS] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.CSRequestRightPolicyFilter
+2024-04-09 14:52:31,189 INFO [main] [JCMS] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.CSPortalPolicyFilter
+2024-04-09 14:52:31,195 INFO [main] [JCMS] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.CSWizardPolicyFilter
+2024-04-09 14:52:31,203 INFO [main] [JCMS] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.guest.filter.GuestAccountMemberCtxMenuPolicyFilter
+2024-04-09 14:52:31,215 INFO [main] [JCMS] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.guest.filter.GuestAccountMemberQueryFilter
+2024-04-09 14:52:31,217 INFO [main] [JCMS] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.guest.filter.GuestAccountPortalPolicyFilter
+2024-04-09 14:52:31,221 INFO [main] [JCMS] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.guest.filter.GuestAccountRightPolicyFilter
+2024-04-09 14:52:31,224 INFO [main] [JCMS] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.portal.CSJPortalPolicyFilter
+2024-04-09 14:52:31,228 INFO [main] [JCMS] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.portal.PortletActionsMenuPolicyFilter
+2024-04-09 14:52:31,230 INFO [main] [JCMS] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.portal.CollaborativeSpaceWizardPolicyFilter
+2024-04-09 14:52:31,241 INFO [main] [JCMS] [jcmsplugin.DBCommentPlugin]  - Register: com.jalios.jcmsplugin.dbcomment.DBCommentRightPolicyFilter
+2024-04-09 14:52:31,243 INFO [main] [JCMS] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.ESNPortalPolicyFilter
+2024-04-09 14:52:31,246 INFO [main] [JCMS] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.ESNCtxMenuPolicyFilter
+2024-04-09 14:52:31,248 INFO [main] [JCMS] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.ESNMemberQueryFilter
+2024-04-09 14:52:31,250 INFO [main] [JCMS] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.ESNRightPolicyFilter
+2024-04-09 14:52:31,252 INFO [main] [JCMS] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.ESNTemplatePolicyFilter
+2024-04-09 14:52:31,257 INFO [main] [JCMS] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.MemberStatusMailPolicyFilter
+2024-04-09 14:52:31,267 INFO [main] [JCMS] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.directory.ESNSearchEnginePolicyFilter
+2024-04-09 14:52:31,272 INFO [main] [JCMS] [jcmsplugin.JBookPlugin]  - Register: com.jalios.jcmsplugin.jbook.component.JBookShortcutPolicyFilter
+2024-04-09 14:52:31,277 INFO [main] [JCMS] [jcmsplugin.SmartPhonePlugin]  - Register: com.jalios.jcmsplugin.smartphone.SmartPhonePortalPolicyFilter
+2024-04-09 14:52:31,281 INFO [main] [JCMS] [jcmsplugin.SmartPhonePlugin]  - Register: com.jalios.jcmsplugin.smartphone.SmartPhoneWikiPageWikiPolicyFilter
+2024-04-09 14:52:31,285 INFO [main] [JCMS] [jcmsplugin.SmartPhonePlugin]  - Register: com.jalios.jcmsplugin.smartphone.SmartPhoneTemplateChannelPolicyFilter
+2024-04-09 14:52:31,289 INFO [main] [JCMS] [jcmsplugin.SmartPhonePlugin]  - Register: com.jalios.jcmsplugin.smartphone.portal.SmartPhonePortalCtxMenuPolicyFilter
+2024-04-09 14:52:31,292 INFO [main] [JCMS] [jcmsplugin.SmartPhonePlugin]  - Register: com.jalios.jcmsplugin.smartphone.portal.SmartPhonePortalApplicationRightPolicyFilter
+2024-04-09 14:52:31,297 INFO [main] [JCMS] [jcmsplugin.BlogPlugin]  - Register: com.jalios.jcmsplugin.blog.BlogTemplatePolicyFilter
+2024-04-09 14:52:31,299 INFO [main] [JCMS] [jcmsplugin.BlogPlugin]  - Register: com.jalios.jcmsplugin.blog.BlogPortalPolicyFilter
+2024-04-09 14:52:31,302 INFO [main] [JCMS] [jcmsplugin.BlogPlugin]  - Register: com.jalios.jcmsplugin.blog.BlogPostRightPolicyFilter
+2024-04-09 14:52:31,304 INFO [main] [JCMS] [jcmsplugin.BlogPlugin]  - Register: com.jalios.jcmsplugin.blog.BlogRightPolicyFilter
+2024-04-09 14:52:31,306 INFO [main] [JCMS] [jcmsplugin.BlogPlugin]  - Register: com.jalios.jcmsplugin.blog.BlogRequestMailPolicyFilter
+2024-04-09 14:52:31,307 INFO [main] [JPlatform 10] [jcms.Channel]  - Version: JCMS 10.0.7 (build-20230504092642)
+2024-04-09 14:52:31,308 INFO [main] [JPlatform 10] [jcms.Channel]  - Name: JPlatform 10
+2024-04-09 14:52:31,308 INFO [main] [JPlatform 10] [jcms.Channel]  - URL: http://127.0.0.1:80/
+2024-04-09 14:52:31,329 INFO [main] [JPlatform 10] [jcms.Channel]  - URID: c
+2024-04-09 14:52:31,332 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Setup plugins...
+2024-04-09 14:52:31,334 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Setup plugin BookmarksPlugin (setup, version:6.3.4)
+2024-04-09 14:52:31,335 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Setup plugin CategoryRightsPlugin (setup, version:3.0.3)
+2024-04-09 14:52:31,335 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Setup plugin CollaborativeSpacePlugin (setup, version:8.0.6)
+2024-04-09 14:52:31,335 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Setup plugin DBCommentPlugin (setup, version:6.3.7)
+2024-04-09 14:52:31,336 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Setup plugin DBPollPlugin (setup, version:6.1.2)
+2024-04-09 14:52:31,336 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Setup plugin ESNPlugin (setup, version:6.7.5)
+2024-04-09 14:52:31,336 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Setup plugin JBookPlugin (setup, version:1.0)
+2024-04-09 14:52:31,336 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Setup plugin SmartPhonePlugin (setup, version:4.6.2)
+2024-04-09 14:52:31,336 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Setup plugin BlogPlugin (setup, version:9.4.2)
+2024-04-09 14:52:31,336 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Init dependencies
+2024-04-09 14:52:31,345 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - packageDir: C:\Jalios\DevPack-Workplace-6.0.1\workspace\JBook-Project-with-Jalios-JEE\JBook-Project\WebContent\WEB-INF\classes\generated\
+2024-04-09 14:52:31,421 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Process Types
+2024-04-09 14:52:31,423 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,423 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Convert old types to new types structure Jcms 5.7
+2024-04-09 14:52:31,427 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,427 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Convert old templates to new templates structure Jcms 6.0
+2024-04-09 14:52:31,492 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,492 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Read types directory
+2024-04-09 14:52:31,945 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Clean the Template Work Directory
+2024-04-09 14:52:31,946 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,946 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type AbstractCollection is uptodate
+2024-04-09 14:52:31,946 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,946 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type AbstractParent is uptodate
+2024-04-09 14:52:31,946 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,947 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type AbstractPortal is uptodate
+2024-04-09 14:52:31,947 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,947 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type AbstractPortlet is uptodate
+2024-04-09 14:52:31,947 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,947 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type AbstractPortletSkinable is uptodate
+2024-04-09 14:52:31,947 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,947 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type Article is uptodate
+2024-04-09 14:52:31,947 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,947 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type Blog is uptodate
+2024-04-09 14:52:31,947 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,948 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type BlogPost is uptodate
+2024-04-09 14:52:31,948 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,948 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type BlogRequest is uptodate
+2024-04-09 14:52:31,948 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,948 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type Book is uptodate
+2024-04-09 14:52:31,948 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,948 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type CSRequest is uptodate
+2024-04-09 14:52:31,949 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,949 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type CSSignupRequest is uptodate
+2024-04-09 14:52:31,949 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,949 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type CollaborativeSpace is uptodate
+2024-04-09 14:52:31,949 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,949 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type DBComment is uptodate
+2024-04-09 14:52:31,949 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,950 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type DBMailMessage is uptodate
+2024-04-09 14:52:31,950 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,950 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type DBWebPage is uptodate
+2024-04-09 14:52:31,950 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,950 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type Faq is uptodate
+2024-04-09 14:52:31,950 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,950 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type FaqEntry is uptodate
+2024-04-09 14:52:31,952 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,952 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type Glossary is uptodate
+2024-04-09 14:52:31,952 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,952 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type GlossaryEntry is uptodate
+2024-04-09 14:52:31,952 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,952 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type GuestConv is uptodate
+2024-04-09 14:52:31,952 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,952 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type GuestCrea is uptodate
+2024-04-09 14:52:31,952 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,952 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type GuestRequest is uptodate
+2024-04-09 14:52:31,953 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,953 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type Interview is uptodate
+2024-04-09 14:52:31,953 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,953 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type JPortal is uptodate
+2024-04-09 14:52:31,953 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,953 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type Media is uptodate
+2024-04-09 14:52:31,953 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,953 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type MemberCategories is uptodate
+2024-04-09 14:52:31,953 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,953 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type MemberEducation is uptodate
+2024-04-09 14:52:31,954 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,954 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type MemberJob is uptodate
+2024-04-09 14:52:31,954 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,954 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type MemberProfile is uptodate
+2024-04-09 14:52:31,954 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,954 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type MicroBlogging is uptodate
+2024-04-09 14:52:31,954 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,954 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type Poll is uptodate
+2024-04-09 14:52:31,954 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,955 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortalJspCollection is uptodate
+2024-04-09 14:52:31,955 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,955 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletBirthday is uptodate
+2024-04-09 14:52:31,955 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,955 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletBlog is uptodate
+2024-04-09 14:52:31,955 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,955 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletBookmarks is uptodate
+2024-04-09 14:52:31,955 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,955 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletCarousel is uptodate
+2024-04-09 14:52:31,955 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,955 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletCollaborativeSpaceSuggestion is uptodate
+2024-04-09 14:52:31,955 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,956 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletColumn is uptodate
+2024-04-09 14:52:31,956 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,956 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletDecorator is uptodate
+2024-04-09 14:52:31,956 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,956 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletFeed is uptodate
+2024-04-09 14:52:31,956 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,956 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletIFrame is uptodate
+2024-04-09 14:52:31,956 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,956 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletImage is uptodate
+2024-04-09 14:52:31,957 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,957 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletIndicator is uptodate
+2024-04-09 14:52:31,957 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,957 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletJsp is uptodate
+2024-04-09 14:52:31,957 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,957 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletJspCollection is uptodate
+2024-04-09 14:52:31,957 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,958 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletLoggedMembers is uptodate
+2024-04-09 14:52:31,958 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,958 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletLogin is uptodate
+2024-04-09 14:52:31,958 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,958 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletMemberActivity is uptodate
+2024-04-09 14:52:31,958 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,958 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletMemberProfile is uptodate
+2024-04-09 14:52:31,958 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,959 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletMemberStatus is uptodate
+2024-04-09 14:52:31,959 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,959 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletMenu is uptodate
+2024-04-09 14:52:31,959 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,959 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletMyCollaborativeSpaces is uptodate
+2024-04-09 14:52:31,960 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,960 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletMyLocks is uptodate
+2024-04-09 14:52:31,960 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,960 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletNavigate is uptodate
+2024-04-09 14:52:31,961 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,961 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletNotification is uptodate
+2024-04-09 14:52:31,961 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,961 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletPoll is uptodate
+2024-04-09 14:52:31,961 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,961 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletPortal is uptodate
+2024-04-09 14:52:31,961 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,961 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletPortalRedirect is uptodate
+2024-04-09 14:52:31,962 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,962 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletPublication is uptodate
+2024-04-09 14:52:31,962 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,962 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletQueryForeach is uptodate
+2024-04-09 14:52:31,962 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,962 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletQueryForeachCards is uptodate
+2024-04-09 14:52:31,962 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,962 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletQueryForeachDetail is uptodate
+2024-04-09 14:52:31,962 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,963 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletRSS is uptodate
+2024-04-09 14:52:31,963 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,963 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletRecentHistory is uptodate
+2024-04-09 14:52:31,963 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,963 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletRow is uptodate
+2024-04-09 14:52:31,963 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,963 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletSearch is uptodate
+2024-04-09 14:52:31,963 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,963 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletSelection is uptodate
+2024-04-09 14:52:31,963 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,965 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletSignUp is uptodate
+2024-04-09 14:52:31,965 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,965 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletTopMember is uptodate
+2024-04-09 14:52:31,965 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,965 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletWYSIWYG is uptodate
+2024-04-09 14:52:31,965 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,965 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletWorkflow is uptodate
+2024-04-09 14:52:31,965 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,965 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type PortletWorkspaceBookmarks is uptodate
+2024-04-09 14:52:31,965 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,965 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type Shortcut is uptodate
+2024-04-09 14:52:31,966 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,966 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type SignUp is uptodate
+2024-04-09 14:52:31,966 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,966 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type SmallNews is uptodate
+2024-04-09 14:52:31,966 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,966 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type SmartPhonePortal is uptodate
+2024-04-09 14:52:31,966 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,966 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type WebPage is uptodate
+2024-04-09 14:52:31,966 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,967 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type CategoryExtension is uptodate
+2024-04-09 14:52:31,967 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,967 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type FileDocumentExtension is uptodate
+2024-04-09 14:52:31,967 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,967 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type GroupExtension is uptodate
+2024-04-09 14:52:31,967 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,967 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type MemberExtension is uptodate
+2024-04-09 14:52:31,967 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,967 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Type WorkspaceExtension is uptodate
+2024-04-09 14:52:31,967 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,967 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Generate shared resources
+2024-04-09 14:52:31,979 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:31,979 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Check StorableHandler
+2024-04-09 14:52:32,113 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:32,114 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.AbstractCollection
+2024-04-09 14:52:32,114 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.AbstractParent
+2024-04-09 14:52:32,115 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.AbstractPortal
+2024-04-09 14:52:32,116 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.AbstractPortlet
+2024-04-09 14:52:32,117 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.AbstractPortletSkinable
+2024-04-09 14:52:32,119 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.Article
+2024-04-09 14:52:32,119 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.Blog
+2024-04-09 14:52:32,120 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.BlogPost
+2024-04-09 14:52:32,120 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.BlogRequest
+2024-04-09 14:52:32,120 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.Book
+2024-04-09 14:52:32,120 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.CSRequest
+2024-04-09 14:52:32,121 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.CSSignupRequest
+2024-04-09 14:52:32,122 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.CollaborativeSpace
+2024-04-09 14:52:32,124 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.DBComment
+2024-04-09 14:52:32,124 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.DBMailMessage
+2024-04-09 14:52:32,125 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.DBWebPage
+2024-04-09 14:52:32,126 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.Faq
+2024-04-09 14:52:32,126 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.FaqEntry
+2024-04-09 14:52:32,126 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.Glossary
+2024-04-09 14:52:32,126 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.GlossaryEntry
+2024-04-09 14:52:32,127 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.GuestConv
+2024-04-09 14:52:32,127 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.GuestCrea
+2024-04-09 14:52:32,127 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.GuestRequest
+2024-04-09 14:52:32,127 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.Interview
+2024-04-09 14:52:32,129 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.JPortal
+2024-04-09 14:52:32,129 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.Media
+2024-04-09 14:52:32,129 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.MemberCategories
+2024-04-09 14:52:32,130 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.MemberEducation
+2024-04-09 14:52:32,130 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.MemberJob
+2024-04-09 14:52:32,130 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.MemberProfile
+2024-04-09 14:52:32,130 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.MicroBlogging
+2024-04-09 14:52:32,131 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.Poll
+2024-04-09 14:52:32,131 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortalJspCollection
+2024-04-09 14:52:32,132 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletBirthday
+2024-04-09 14:52:32,132 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletBlog
+2024-04-09 14:52:32,133 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletBookmarks
+2024-04-09 14:52:32,133 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletCarousel
+2024-04-09 14:52:32,134 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletCollaborativeSpaceSuggestion
+2024-04-09 14:52:32,134 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletColumn
+2024-04-09 14:52:32,134 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletDecorator
+2024-04-09 14:52:32,136 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletFeed
+2024-04-09 14:52:32,136 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletIFrame
+2024-04-09 14:52:32,137 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletImage
+2024-04-09 14:52:32,138 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletIndicator
+2024-04-09 14:52:32,139 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletJsp
+2024-04-09 14:52:32,139 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletJspCollection
+2024-04-09 14:52:32,139 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletLoggedMembers
+2024-04-09 14:52:32,141 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletLogin
+2024-04-09 14:52:32,141 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletMemberActivity
+2024-04-09 14:52:32,141 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletMemberProfile
+2024-04-09 14:52:32,142 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletMemberStatus
+2024-04-09 14:52:32,142 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletMenu
+2024-04-09 14:52:32,142 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletMyCollaborativeSpaces
+2024-04-09 14:52:32,143 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletMyLocks
+2024-04-09 14:52:32,143 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletNavigate
+2024-04-09 14:52:32,144 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletNotification
+2024-04-09 14:52:32,144 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletPoll
+2024-04-09 14:52:32,145 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletPortal
+2024-04-09 14:52:32,145 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletPortalRedirect
+2024-04-09 14:52:32,146 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletPublication
+2024-04-09 14:52:32,146 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletQueryForeach
+2024-04-09 14:52:32,147 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletQueryForeachCards
+2024-04-09 14:52:32,147 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletQueryForeachDetail
+2024-04-09 14:52:32,147 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletRSS
+2024-04-09 14:52:32,148 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletRecentHistory
+2024-04-09 14:52:32,148 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletRow
+2024-04-09 14:52:32,149 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletSearch
+2024-04-09 14:52:32,149 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletSelection
+2024-04-09 14:52:32,150 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletSignUp
+2024-04-09 14:52:32,150 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletTopMember
+2024-04-09 14:52:32,150 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletWYSIWYG
+2024-04-09 14:52:32,151 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletWorkflow
+2024-04-09 14:52:32,151 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.PortletWorkspaceBookmarks
+2024-04-09 14:52:32,151 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.Shortcut
+2024-04-09 14:52:32,152 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.SignUp
+2024-04-09 14:52:32,152 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.SmallNews
+2024-04-09 14:52:32,153 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.SmartPhonePortal
+2024-04-09 14:52:32,153 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.WebPage
+2024-04-09 14:52:32,153 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.CategoryExtension
+2024-04-09 14:52:32,153 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.FileDocumentExtension
+2024-04-09 14:52:32,154 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.GroupExtension
+2024-04-09 14:52:32,154 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.MemberExtension
+2024-04-09 14:52:32,154 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Load generated.WorkspaceExtension
+2024-04-09 14:52:32,154 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - ------------------------------
+2024-04-09 14:52:32,154 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Check Hibernate Mapping
+2024-04-09 14:52:32,154 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Hibernate mapping for BlogPost is uptodate
+2024-04-09 14:52:32,155 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Hibernate mapping for BlogPostRevision is uptodate
+2024-04-09 14:52:32,156 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Hibernate mapping for BlogRequest is uptodate
+2024-04-09 14:52:32,156 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Hibernate mapping for Book is uptodate
+2024-04-09 14:52:32,156 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Hibernate mapping for CSSignupRequest is uptodate
+2024-04-09 14:52:32,156 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Hibernate mapping for DBComment is uptodate
+2024-04-09 14:52:32,156 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Hibernate mapping for DBCommentRevision is uptodate
+2024-04-09 14:52:32,158 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Hibernate mapping for DBMailMessage is uptodate
+2024-04-09 14:52:32,158 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Hibernate mapping for DBWebPage is uptodate
+2024-04-09 14:52:32,159 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Hibernate mapping for DBWebPageRevision is uptodate
+2024-04-09 14:52:32,160 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Hibernate mapping for GuestConv is uptodate
+2024-04-09 14:52:32,160 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Hibernate mapping for GuestCrea is uptodate
+2024-04-09 14:52:32,160 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Hibernate mapping for Media is uptodate
+2024-04-09 14:52:32,160 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Hibernate mapping for MediaRevision is uptodate
+2024-04-09 14:52:32,161 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Hibernate mapping for MemberEducation is uptodate
+2024-04-09 14:52:32,162 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Hibernate mapping for MemberJob is uptodate
+2024-04-09 14:52:32,162 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Hibernate mapping for MemberProfile is uptodate
+2024-04-09 14:52:32,162 INFO [main] [JPlatform 10] [jcms.TypeProcessor]  - Hibernate mapping for MicroBlogging is uptodate
+2024-04-09 14:52:32,162 INFO [main] [JPlatform 10] [jcms.Channel]  - Init the Store
+2024-04-09 14:52:32,162 INFO [main] [JPlatform 10] [jcms.Channel]  - Use NIO
+2024-04-09 14:52:32,251 INFO [main] [JPlatform 10] [jcms.QueryManager]  - Init the QueryManager
+2024-04-09 14:52:32,376 INFO [main] [JPlatform 10] [search.LucenePublicationSearchEngine]  - Init PublicationsIndices
+2024-04-09 14:52:32,376 INFO [main] [JPlatform 10] [search.LucenePublicationSearchEngine]  - Loading lucene configuration from 'C:\Jalios\DevPack-Workplace-6.0.1\workspace\JBook-Project-with-Jalios-JEE\JBook-Project\WebContent\WEB-INF\jalios\lucene\lucene.xml' ...
+2024-04-09 14:52:32,997 INFO [main] [JPlatform 10] [search.LucenePublicationSearchEngine]  - Lucene configuration successfully loaded.
+2024-04-09 14:52:33,452 INFO [main] [JPlatform 10] [search.LucenePublicationSearchEngine]  - Optimization scheduled on Mon Apr 15 02:30:00 WEST 2024
+2024-04-09 14:52:33,459 INFO [main] [JPlatform 10] [search.SpellSuggestEngine]  - Initializing SpellSuggest Engine
+2024-04-09 14:52:33,473 INFO [main] [JPlatform 10] [search.SpellSuggestEngine]  - SpellChecker indexing scheduled on Mon Apr 15 03:30:00 WEST 2024
+2024-04-09 14:52:33,480 INFO [main] [JPlatform 10] [search.LuceneCategorySearchEngine]  - Init CategoriesIndices
+2024-04-09 14:52:33,480 INFO [main] [JPlatform 10] [search.LuceneCategorySearchEngine]  - Loading lucene configuration from 'C:\Jalios\DevPack-Workplace-6.0.1\workspace\JBook-Project-with-Jalios-JEE\JBook-Project\WebContent\WEB-INF\jalios\lucene\lucene.xml' ...
+2024-04-09 14:52:33,633 INFO [main] [JPlatform 10] [search.LuceneCategorySearchEngine]  - Lucene configuration successfully loaded.
+2024-04-09 14:52:33,685 INFO [main] [JPlatform 10] [search.LuceneCategorySearchEngine]  - Optimization scheduled on Mon Apr 15 02:30:00 WEST 2024
+2024-04-09 14:52:33,707 INFO [main] [JPlatform 10] [search.LuceneMemberSearchEngine]  - Init MemberIndex
+2024-04-09 14:52:33,707 INFO [main] [JPlatform 10] [search.LuceneMemberSearchEngine]  - Loading lucene configuration from 'C:\Jalios\DevPack-Workplace-6.0.1\workspace\JBook-Project-with-Jalios-JEE\JBook-Project\WebContent\WEB-INF\jalios\lucene\lucene-Member.xml' ...
+2024-04-09 14:52:33,717 INFO [main] [JPlatform 10] [search.LuceneMemberSearchEngine]  - Lucene configuration successfully loaded.
+2024-04-09 14:52:33,725 INFO [main] [JPlatform 10] [search.LuceneMemberSearchEngine]  - Optimization scheduled on Mon Apr 15 02:30:00 WEST 2024
+2024-04-09 14:52:33,727 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Sign plugins...
+2024-04-09 14:52:33,728 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Sign plugin BookmarksPlugin (not signed)
+2024-04-09 14:52:33,729 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Sign plugin CategoryRightsPlugin (not signed)
+2024-04-09 14:52:33,730 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Sign plugin CollaborativeSpacePlugin (not signed)
+2024-04-09 14:52:33,731 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Sign plugin DBCommentPlugin (not signed)
+2024-04-09 14:52:33,731 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Sign plugin DBPollPlugin (not signed)
+2024-04-09 14:52:33,733 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Sign plugin ESNPlugin (not signed)
+2024-04-09 14:52:33,733 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Sign plugin JBookPlugin (not signed)
+2024-04-09 14:52:33,734 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Sign plugin SmartPhonePlugin (not signed)
+2024-04-09 14:52:33,735 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Sign plugin BlogPlugin (not signed)
+2024-04-09 14:52:33,739 INFO [main] [JPlatform 10] [jcms.Channel]  - Using Java AWT headless mode (java.awt.headless=true)
+2024-04-09 14:52:33,749 INFO [main] [JPlatform 10] [jcms.Channel]  - EmailValidator is: class com.jalios.util.mail.DefaultEmailValidator
+2024-04-09 14:52:33,812 INFO [main] [JPlatform 10] [authentication.AuthenticationThrottleManager]  - Authentication failure throttling is enabled with the following configuration :
+2024-04-09 14:52:33,816 INFO [main] [JPlatform 10] [authentication.AuthenticationThrottleManager]  -  Time range : 3 s
+2024-04-09 14:52:33,816 INFO [main] [JPlatform 10] [authentication.AuthenticationThrottleManager]  -  Threshold : 2
+2024-04-09 14:52:33,817 INFO [main] [JPlatform 10] [authentication.AuthenticationThrottleManager]  -  Throttling duration : 30 s
+2024-04-09 14:52:33,832 INFO [main] [JPlatform 10] [processingmanagement.FileProcessorManager]  - Initialize FileProcessor
+2024-04-09 14:52:33,842 INFO [main] [JPlatform 10] [accesscontrol.AccessControlManager]  - Initialize AccessControlManager
+2024-04-09 14:52:33,970 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Register plugins templates
+2024-04-09 14:52:33,976 INFO [main] [JPlatform 10] [jcms.TypeEntry]  - [Template][CSRequest][full.default] Overriding: types/CSRequest/doCSRequestFullDisplay.jsp -> plugins/CollaborativeSpacePlugin/types/CSRequest/doCSRequestFullDisplay.jsp
+2024-04-09 14:52:33,976 INFO [main] [JPlatform 10] [jcms.TypeEntry]  - [Template][CSSignupRequest][full.default] Overriding: types/CSSignupRequest/doCSSignupRequestFullDisplay.jsp -> plugins/CollaborativeSpacePlugin/types/CSSignupRequest/doCSSignupRequestFullDisplay.jsp
+2024-04-09 14:52:33,976 INFO [main] [JPlatform 10] [jcms.TypeEntry]  - [Template][GuestRequest][full.default] Overriding: types/GuestRequest/doGuestRequestFullDisplay.jsp -> plugins/CollaborativeSpacePlugin/types/GuestRequest/doGuestRequestFullDisplay.jsp
+2024-04-09 14:52:33,977 INFO [main] [JPlatform 10] [jcms.TypeEntry]  - [Template][GuestCrea][full.default] Overriding: types/GuestCrea/doGuestCreaFullDisplay.jsp -> plugins/CollaborativeSpacePlugin/types/GuestCrea/doGuestCreaFullDisplay.jsp
+2024-04-09 14:52:33,977 INFO [main] [JPlatform 10] [jcms.TypeEntry]  - [Template][GuestConv][full.default] Overriding: types/GuestConv/doGuestConvFullDisplay.jsp -> plugins/CollaborativeSpacePlugin/types/GuestConv/doGuestConvFullDisplay.jsp
+2024-04-09 14:52:33,978 INFO [main] [JPlatform 10] [jcms.TypeEntry]  - [Template][PortletPoll][full.default] Overriding: types/PortletPoll/doPortletPollFullDisplay.jsp -> types/PortletPoll/doPortletPollFullDisplay.jsp
+2024-04-09 14:52:33,978 INFO [main] [JPlatform 10] [jcms.TypeEntry]  - [Template][PortletPoll][box.default] Overriding: types/PortletPoll/doPortletPollFullDisplay.jsp -> types/PortletPoll/doPortletPollBoxDisplay.jsp
+2024-04-09 14:52:33,978 INFO [main] [JPlatform 10] [jcms.TypeEntry]  - [Template][MemberProfile][full.default] Overriding: types/MemberProfile/doMemberProfileFullDisplay.jsp -> plugins/ESNPlugin/types/MemberProfile/doMemberProfileFullDisplay.jsp
+2024-04-09 14:52:33,979 INFO [main] [JPlatform 10] [jcms.TypeEntry]  - [Template][BlogPost][full.default] Overriding: types/BlogPost/doBlogPostFullDisplay.jsp -> plugins/BlogPlugin/types/BlogPost/doBlogPostFullDisplay.jsp
+2024-04-09 14:52:33,980 INFO [main] [JPlatform 10] [jcms.TypeEntry]  - [Template][Blog][editFront.default] Overriding: types/Blog/doBlogEditDisplay.jsp -> types/Blog/doBlogEditDisplay.jsp
+2024-04-09 14:52:33,980 INFO [main] [JPlatform 10] [jcms.TypeEntry]  - [Template][PortletBlog][box.default] Overriding: types/PortletBlog/doPortletBlogFullDisplay.jsp -> types/PortletBlog/doPortletBlogFullDisplay.jsp
+2024-04-09 14:52:33,980 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Register plugins StoreListeners before load
+2024-04-09 14:52:33,984 INFO [main] [JPlatform 10] [jcmsplugin.CategoryRightsPlugin]  - Register: com.jalios.jcmsplugin.categoryrights.listener.CrpWorkspaceListener
+2024-04-09 14:52:33,986 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.CSCollaborativeSpaceListener
+2024-04-09 14:52:33,991 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.MemberCategoriesListener
+2024-04-09 14:52:33,991 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Register plugins AuthenticationHandlers
+2024-04-09 14:52:33,995 INFO [main] [JPlatform 10] [jcmsplugin.SmartPhonePlugin]  - Register: com.jalios.jcmsplugin.smartphone.SmartPhoneLoginRedirectAuthenticationHandler
+2024-04-09 14:52:33,995 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Register plugins QueryFilter
+2024-04-09 14:52:33,999 INFO [main] [JPlatform 10] [jcmsplugin.BookmarksPlugin]  - Register: com.jalios.jcmsplugin.bookmarks.BookmarksQueryFilter
+2024-04-09 14:52:33,999 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Register plugins ChannelListener
+2024-04-09 14:52:34,003 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.CSChannelListener
+2024-04-09 14:52:34,005 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.migration.CSMigrationChannelListener
+2024-04-09 14:52:34,008 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.ESNChannelListener
+2024-04-09 14:52:34,012 INFO [main] [JPlatform 10] [jcmsplugin.JBookPlugin]  - Register: com.jalios.jcmsplugin.jbook.component.JBookStartupDataGenerator
+2024-04-09 14:52:34,014 INFO [main] [JPlatform 10] [jcmsplugin.SmartPhonePlugin]  - Register: com.jalios.jcmsplugin.smartphone.SmartPhoneLessDeclareChannelListener
+2024-04-09 14:52:34,016 INFO [main] [JPlatform 10] [jcmsplugin.SmartPhonePlugin]  - Register: com.jalios.jcmsplugin.smartphone.portal.SmartPhonePortalChannelListener
+2024-04-09 14:52:34,020 INFO [main] [JPlatform 10] [jcmsplugin.SmartPhonePlugin]  - Register: com.jalios.jcmsplugin.smartphone.application.SmartPhoneApplicationMappingChannelListener
+2024-04-09 14:52:34,022 INFO [main] [JPlatform 10] [jcmsplugin.SmartPhonePlugin]  - Register: com.jalios.jcmsplugin.smartphone.ios.IOSDownloadCodeChannelListener
+2024-04-09 14:52:34,025 INFO [main] [JPlatform 10] [jcmsplugin.SmartPhonePlugin]  - Register: com.jalios.jcmsplugin.smartphone.deeplink.JMobileDeeplinkChannelListener
+2024-04-09 14:52:34,028 INFO [main] [JPlatform 10] [jcmsplugin.BlogPlugin]  - Register: com.jalios.jcmsplugin.blog.BlogChannelListener
+2024-04-09 14:52:34,028 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Register plugins AlarmListener
+2024-04-09 14:52:34,042 INFO [main] [JPlatform 10] [alert.AlertManager]  - Initialize alert purge. Next purge: Alarm params minute=0 hour=5 dayOfMonth=-1 month=-1 dayOfWeek=-1 (next alarm date=Wed Apr 10 05:00:00 WET 2024 - 1712725200041)
+2024-04-09 14:52:34,049 INFO [main] [JPlatform 10] [jcmsplugin.SmartPhonePlugin]  - Register: com.jalios.jcmsplugin.smartphone.pushNotification.JPushAlertChannel
+2024-04-09 14:52:34,057 INFO [main] [JPlatform 10] [jcms.WorkflowManager]  - Init the workflows
+2024-04-09 14:52:34,087 INFO [main] [JPlatform 10] [jcms.WorkflowManager]  - Available workflows: wfmoderation, wfblogrequest, minimal, wfdraft, wfcssignup, filedocument, basic, wfguestaccountrequest, wfcsrequest
+2024-04-09 14:52:34,098 INFO [main] [JPlatform 10] [jcms.ChannelInitServlet]  - JcmsInit.initBeforeStoreLoad
+2024-04-09 14:52:34,102 INFO [main] [JPlatform 10] [jcms.ChannelInitServlet]  - load the store
+2024-04-09 14:52:35,083 INFO [main] [JPlatform 10] [jstore.Store]  - Store loaded in 981 ms
+2024-04-09 14:52:35,085 INFO [main] [JPlatform 10] [jstore.Store]  - Store consumed an amount of memory estimated at 19 MB (19924992 bytes)
+2024-04-09 14:52:35,085 INFO [main] [JPlatform 10] [jstore.Store]  - Store contains 109 storable objects
+2024-04-09 14:52:35,101 INFO [main] [JPlatform 10] [jcms.Channel]  - No data bound to virtual ID '$id.jcmsplugin.collaborativespace.typology-portal'
+2024-04-09 14:52:35,101 INFO [main] [JPlatform 10] [jcms.Channel]  - No data bound to virtual ID '$id.application.shortcut.category'
+2024-04-09 14:52:35,101 INFO [main] [JPlatform 10] [jcms.Channel]  - No data bound to virtual ID '$id.jcmsplugin.collaborativespace.cs-creation-group'
+2024-04-09 14:52:35,101 INFO [main] [JPlatform 10] [jcms.Channel]  - No data bound to virtual ID '$id.jcmsplugin.blog.blogger.group-attendees'
+2024-04-09 14:52:35,101 INFO [main] [JPlatform 10] [jcms.Channel]  - No data bound to virtual ID '$channel.tag-root'
+2024-04-09 14:52:35,101 INFO [main] [JPlatform 10] [jcms.Channel]  - No data bound to virtual ID '$id.jcmsplugin.blog.blogosphere.category.root'
+2024-04-09 14:52:35,101 INFO [main] [JPlatform 10] [jcms.Channel]  - No data bound to virtual ID '$id.jcmsplugin.blog.blogger.group-validators'
+2024-04-09 14:52:35,101 INFO [main] [JPlatform 10] [jcms.Channel]  - No data bound to virtual ID '$id.GuestRequest.workspace'
+2024-04-09 14:52:35,101 INFO [main] [JPlatform 10] [jcms.Channel]  - No data bound to virtual ID '$id.jcmsplugin.esn.profile.portal'
+2024-04-09 14:52:35,101 INFO [main] [JPlatform 10] [jcms.Channel]  - No data bound to virtual ID '$id.Guest.managerAcl'
+2024-04-09 14:52:35,101 INFO [main] [JPlatform 10] [jcms.Channel]  - No data bound to virtual ID '$id.jcmsplugin.collaborativespace.guestaccounts.manager-group'
+2024-04-09 14:52:35,101 INFO [main] [JPlatform 10] [jcms.Channel]  - No data bound to virtual ID '$id.import-mgr.import-author'
+2024-04-09 14:52:35,101 INFO [main] [JPlatform 10] [jcms.Channel]  - No data bound to virtual ID '$id.import-mgr.import-ws'
+2024-04-09 14:52:35,101 INFO [main] [JPlatform 10] [jcms.Channel]  - No data bound to virtual ID '$id.favorite-ws-root'
+2024-04-09 14:52:35,101 INFO [main] [JPlatform 10] [jcms.Channel]  - No data bound to virtual ID '$id.jcmsplugin.blog.agreement.terms.pub'
+2024-04-09 14:52:35,101 INFO [main] [JPlatform 10] [jcms.Channel]  - No data bound to virtual ID '$id.import-mgr.import-root'
+2024-04-09 14:52:35,101 INFO [main] [JPlatform 10] [jcms.Channel]  - No data bound to virtual ID '$id.jcmsplugin.collaborativespace.guestaccounts.group'
+2024-04-09 14:52:35,101 INFO [main] [JPlatform 10] [jcms.Channel]  - No data bound to virtual ID '$id.jcmsplugin.collaborativespace.typology-root'
+2024-04-09 14:52:35,101 INFO [main] [JPlatform 10] [jcms.Channel]  - No data bound to virtual ID '$id.jcmsplugin.collaborativespace.guestaccounts.homepage-ws'
+2024-04-09 14:52:35,102 INFO [main] [JPlatform 10] [jcms.Channel]  - No data bound to virtual ID '$id.jcmsplugin.blog.blogosphere'
+2024-04-09 14:52:35,103 INFO [main] [JPlatform 10] [jcms.Channel]  - Store backup is enabled
+2024-04-09 14:52:35,106 INFO [main] [JPlatform 10] [jcms.Channel]  - initDerby
+2024-04-09 14:52:35,110 INFO [main] [JPlatform 10] [db.DerbyManager]  - Derby backup is enabled
+2024-04-09 14:52:35,625 INFO [main] [JPlatform 10] [db.DerbyManager]  - derby.system.home: C:\Jalios\DevPack-Workplace-6.0.1\workspace\JBook-Project-with-Jalios-JEE\JBook-Project\WebContent\WEB-INF\data\derby
+2024-04-09 14:52:36,045 INFO [main] [JPlatform 10] [db.DerbyManager]  - Waiting server start...
+2024-04-09 14:52:42,081 INFO [main] [JPlatform 10] [db.DerbyManager]  - Start Derby Server on localhost:62211
+2024-04-09 14:52:42,081 INFO [main] [JPlatform 10] [db.DerbyManager]  - JDBC URL: jdbc:derby://localhost:62211/jcmsdb;create=true;
+2024-04-09 14:52:42,083 INFO [main] [JPlatform 10] [jstore.LogManager]  - Check index for maxStamp c_5089
+2024-04-09 14:52:42,122 INFO [main] [JPlatform 10] [jcms.Channel]  - [JSync] disabled
+2024-04-09 14:52:42,122 INFO [main] [JPlatform 10] [jcms.Channel]  - initHibernate
+2024-04-09 14:52:42,249 INFO [main] [JPlatform 10] [db.HibernateManager]  - jcmsdb profile: derby
+2024-04-09 14:52:42,272 INFO [main] [JPlatform 10] [db.HibernateManager]  - hibernate.connection.url: jdbc:derby://localhost:62211/jcmsdb;create=true;
+2024-04-09 14:52:42,815 INFO [main] [JPlatform 10] [db.HibernateManager]  - Database engine: Apache Derby 10.15.2.0 - (1873585)
+2024-04-09 14:52:43,350 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Register Hibernate mappings
+2024-04-09 14:52:43,362 INFO [main] [JPlatform 10] [jcmsplugin.BookmarksPlugin]  - Register hibernate mapping: com/jalios/jcmsplugin/bookmarks/Bookmark.hbm.xml
+2024-04-09 14:52:43,369 INFO [main] [JPlatform 10] [jcmsplugin.BookmarksPlugin]  - Register hibernate mapping: com/jalios/jcmsplugin/bookmarks/BookmarkFolder.hbm.xml
+2024-04-09 14:52:43,377 INFO [main] [JPlatform 10] [jcmsplugin.BookmarksPlugin]  - Register hibernate mapping: com/jalios/jcmsplugin/bookmarks/analytics/BookmarksReportMetric.hbm.xml
+2024-04-09 14:52:43,393 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Register hibernate mapping: com/jalios/jcmsplugin/collaborativespace/CSInvitation.hbm.xml
+2024-04-09 14:52:43,400 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Register hibernate mapping: com/jalios/jcmsplugin/collaborativespace/analytics/CSReportMetric.hbm.xml
+2024-04-09 14:52:43,407 INFO [main] [JPlatform 10] [jcmsplugin.DBCommentPlugin]  - Register hibernate mapping: com/jalios/jcmsplugin/dbcomment/DBCommentReportMetric.hbm.xml
+2024-04-09 14:52:43,415 INFO [main] [JPlatform 10] [jcmsplugin.DBPollPlugin]  - Register hibernate mapping: com/jalios/jcmsplugin/dbpoll/PollVote.hbm.xml
+2024-04-09 14:52:43,423 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register hibernate mapping: com/jalios/jcmsplugin/esn/MemberActivity.hbm.xml
+2024-04-09 14:52:43,434 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register hibernate mapping: com/jalios/jcmsplugin/esn/MemberConnectionRequest.hbm.xml
+2024-04-09 14:52:43,440 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register hibernate mapping: com/jalios/jcmsplugin/esn/MemberData.hbm.xml
+2024-04-09 14:52:43,446 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register hibernate mapping: com/jalios/jcmsplugin/esn/MemberLink.hbm.xml
+2024-04-09 14:52:43,451 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register hibernate mapping: com/jalios/jcmsplugin/esn/MemberNote.hbm.xml
+2024-04-09 14:52:43,458 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register hibernate mapping: com/jalios/jcmsplugin/esn/analytics/ESNReportMetric.hbm.xml
+2024-04-09 14:52:43,464 INFO [main] [JPlatform 10] [jcmsplugin.JBookPlugin]  - Register hibernate mapping: com/jalios/jcmsplugin/jbook/data/JBookBorrowing.hbm.xml
+2024-04-09 14:52:43,470 INFO [main] [JPlatform 10] [jcmsplugin.SmartPhonePlugin]  - Register hibernate mapping: com/jalios/jcmsplugin/smartphone/portal/SmartPhonePortalStructure.hbm.xml
+2024-04-09 14:52:43,476 INFO [main] [JPlatform 10] [jcmsplugin.SmartPhonePlugin]  - Register hibernate mapping: com/jalios/jcmsplugin/smartphone/ios/IOSDownloadCode.hbm.xml
+2024-04-09 14:52:45,233 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.esn.MemberConnectionRequest]; using defaults.
+2024-04-09 14:52:45,465 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.jbook.data.JBookBorrowing]; using defaults.
+2024-04-09 14:52:45,506 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcms.member.MemberDeleteRequest]; using defaults.
+2024-04-09 14:52:45,534 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.smartphone.ios.IOSDownloadCode]; using defaults.
+2024-04-09 14:52:45,551 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.esn.MemberLink]; using defaults.
+2024-04-09 14:52:45,566 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.smartphone.portal.SmartPhonePortalStructure]; using defaults.
+2024-04-09 14:52:45,603 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.esn.MemberNote]; using defaults.
+2024-04-09 14:52:45,631 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.MemberEducation]; using defaults.
+2024-04-09 14:52:45,670 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.collaborativespace.analytics.CSReportMetric]; using defaults.
+2024-04-09 14:52:45,681 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.DBComment]; using defaults.
+2024-04-09 14:52:45,725 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.CSSignupRequest]; using defaults.
+2024-04-09 14:52:45,760 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.bookmarks.Bookmark]; using defaults.
+2024-04-09 14:52:45,774 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.DBCommentRevision]; using defaults.
+2024-04-09 14:52:45,853 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.BlogPostRevision]; using defaults.
+2024-04-09 14:52:45,972 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.GuestConv]; using defaults.
+2024-04-09 14:52:46,135 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.Book]; using defaults.
+2024-04-09 14:52:46,193 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.esn.MemberActivity]; using defaults.
+2024-04-09 14:52:46,208 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcms.db.SchemaVersion]; using defaults.
+2024-04-09 14:52:46,214 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.MemberJob]; using defaults.
+2024-04-09 14:52:46,254 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.esn.MemberData]; using defaults.
+2024-04-09 14:52:46,282 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.dbcomment.DBCommentReportMetric]; using defaults.
+2024-04-09 14:52:46,297 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.dbpoll.PollVote]; using defaults.
+2024-04-09 14:52:46,313 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.BlogRequest]; using defaults.
+2024-04-09 14:52:46,358 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.GuestCrea]; using defaults.
+2024-04-09 14:52:46,418 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.esn.analytics.ESNReportMetric]; using defaults.
+2024-04-09 14:52:46,424 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.bookmarks.analytics.BookmarksReportMetric]; using defaults.
+2024-04-09 14:52:46,466 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.MicroBlogging]; using defaults.
+2024-04-09 14:52:46,565 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.bookmarks.BookmarkFolder]; using defaults.
+2024-04-09 14:52:46,578 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.collaborativespace.CSInvitation]; using defaults.
+2024-04-09 14:52:46,589 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.BlogPost]; using defaults.
+2024-04-09 14:52:46,637 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.MemberProfile]; using defaults.
+2024-04-09 14:52:46,677 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.collaborativespace.analytics.CSReportMetric.activityTop]; using defaults.
+2024-04-09 14:52:46,681 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.Book.updateGrpIdSet]; using defaults.
+2024-04-09 14:52:46,684 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.MemberProfile.interest]; using defaults.
+2024-04-09 14:52:46,688 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.GuestConv.groupsId]; using defaults.
+2024-04-09 14:52:46,691 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.dbcomment.DBCommentReportMetric.pubCommentTop]; using defaults.
+2024-04-09 14:52:46,695 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.bookmarks.analytics.BookmarksReportMetric.bookmarksTypeTop]; using defaults.
+2024-04-09 14:52:46,698 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.BlogPost.dbFriendlyURLSet]; using defaults.
+2024-04-09 14:52:46,701 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.GuestCrea.authGrpIdSet]; using defaults.
+2024-04-09 14:52:46,703 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.GuestConv.authGrpIdSet]; using defaults.
+2024-04-09 14:52:46,706 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.collaborativespace.analytics.CSReportMetric.accessPolicyTop]; using defaults.
+2024-04-09 14:52:46,709 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.Book.allCatIdSet]; using defaults.
+2024-04-09 14:52:46,714 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.GuestCrea.groupsId]; using defaults.
+2024-04-09 14:52:46,716 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.Book.authGrpIdSet]; using defaults.
+2024-04-09 14:52:46,719 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.bookmarks.analytics.BookmarksReportMetric.bookmarksTotalTop]; using defaults.
+2024-04-09 14:52:46,722 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.esn.analytics.ESNReportMetric.activityTop]; using defaults.
+2024-04-09 14:52:46,724 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.Book.updateMbrIdSet]; using defaults.
+2024-04-09 14:52:46,727 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.collaborativespace.analytics.CSReportMetric.typologyTop]; using defaults.
+2024-04-09 14:52:46,730 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.BlogRequest.authMbrIdSet]; using defaults.
+2024-04-09 14:52:46,733 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.BlogPost.updateGrpIdSet]; using defaults.
+2024-04-09 14:52:46,736 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.BlogPost.catIdSet]; using defaults.
+2024-04-09 14:52:46,739 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.Book.dbFriendlyURLSet]; using defaults.
+2024-04-09 14:52:46,742 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.BlogPost.attachWSIdSet]; using defaults.
+2024-04-09 14:52:46,745 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.collaborativespace.analytics.CSReportMetric.memberTop]; using defaults.
+2024-04-09 14:52:46,749 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.BlogPost.authGrpIdSet]; using defaults.
+2024-04-09 14:52:46,752 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.BlogPost.updateMbrIdSet]; using defaults.
+2024-04-09 14:52:46,755 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.BlogRequest.authGrpIdSet]; using defaults.
+2024-04-09 14:52:46,758 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.esn.MemberData.connectionSet]; using defaults.
+2024-04-09 14:52:46,762 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.Book.catIdSet]; using defaults.
+2024-04-09 14:52:46,765 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.CSSignupRequest.authGrpIdSet]; using defaults.
+2024-04-09 14:52:46,769 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.esn.MemberData.rejectedSuggestionSet]; using defaults.
+2024-04-09 14:52:46,773 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.CSSignupRequest.authMbrIdSet]; using defaults.
+2024-04-09 14:52:46,776 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.GuestCrea.authMbrIdSet]; using defaults.
+2024-04-09 14:52:46,780 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.Book.authMbrIdSet]; using defaults.
+2024-04-09 14:52:46,782 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.GuestConv.authMbrIdSet]; using defaults.
+2024-04-09 14:52:46,785 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.esn.MemberData.followingSet]; using defaults.
+2024-04-09 14:52:46,789 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.BlogPost.allCatIdSet]; using defaults.
+2024-04-09 14:52:46,792 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.BlogPost.authMbrIdSet]; using defaults.
+2024-04-09 14:52:46,795 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [generated.Book.attachWSIdSet]; using defaults.
+2024-04-09 14:52:46,798 WARN [main] [JPlatform 10] [hibernate.AbstractEhcacheRegionFactory]  - Couldn't find a specific ehcache configuration for cache named [com.jalios.jcmsplugin.bookmarks.analytics.BookmarksReportMetric.bookmarksPubTop]; using defaults.
+2024-04-09 14:52:48,953 INFO [main] [JPlatform 10] [jcms.Channel]  - Connection pooling for Hibernate using C3P0 is enabled
+2024-04-09 14:52:48,953 INFO [main] [JPlatform 10] [jcms.Channel]  - Second level cache is enabled
+2024-04-09 14:52:48,953 INFO [main] [JPlatform 10] [jcms.Channel]  - Query cache is enabled
+2024-04-09 14:52:48,996 INFO [main] [JPlatform 10] [jcms.Channel]  - initHibernate: Hibernate has been successfully set up.
+2024-04-09 14:52:49,970 INFO [main] [JPlatform 10] [jcms.StrongLockManager]  - StrongLockManager: cache enabled
+2024-04-09 14:52:49,971 INFO [main] [JPlatform 10] [jcms.StrongLockManager]  - StrongLockManager: init done
+2024-04-09 14:52:49,983 INFO [main] [JPlatform 10] [db.HibernateUtil]  - Database supports storing Date with millisecond resolution
+2024-04-09 14:52:49,989 INFO [main] [JPlatform 10] [db.SchemaUpdater]  - Process schema update from provided SQL files
+2024-04-09 14:52:50,052 INFO [main] [JPlatform 10] [archive.ArchiveManager]  - Init the ArchiveManager
+2024-04-09 14:52:50,071 INFO [main] [JPlatform 10] [monitoring.MonitoringManager]  - Monitoring started
+2024-04-09 14:52:50,071 INFO [main] [JPlatform 10] [jcms.WorkflowManager]  - Init workflow alarms
+2024-04-09 14:52:50,071 INFO [main] [JPlatform 10] [jcms.WorkflowManager]  - Register alarms for JStore publications
+2024-04-09 14:52:50,072 INFO [main] [JPlatform 10] [jcms.WorkflowManager]  - Register alarms for Hibernate publications
+2024-04-09 14:52:50,278 INFO [main] [JPlatform 10] [jcms.Channel]  - initDevAdmin: no dev admin
+2024-04-09 14:52:50,281 INFO [main] [JPlatform 10] [jcms.JcmsSessionTracker]  - Members' traces disabled
+2024-04-09 14:52:50,286 INFO [main] [JPlatform 10] [jcms.CacheManager]  - Init the Cache Manager
+2024-04-09 14:52:50,291 INFO [main] [JPlatform 10] [jcms.CacheManager]  - Maximum number of server's cache : 1000
+2024-04-09 14:52:50,305 INFO [main] [JPlatform 10] [jcms.CacheManager]  - Maximum number of server's cache for 'jspacker' configuration : 200
+2024-04-09 14:52:50,305 INFO [main] [JPlatform 10] [jcms.CacheManager]  - Maximum number of server's cache for 'csspacker' configuration : 200
+2024-04-09 14:52:50,308 INFO [main] [JPlatform 10] [jcms.Channel]  - CacheManager enabled
+2024-04-09 14:52:50,319 INFO [main] [JPlatform 10] [jcms.Channel]  - Mails are disabled
+2024-04-09 14:52:50,319 INFO [main] [JPlatform 10] [jcms.Channel]  - Incoming mail are disabled
+2024-04-09 14:52:50,324 INFO [main] [JPlatform 10] [mail.MailFetcher]  - MailFetcher is disabled
+2024-04-09 14:52:50,359 INFO [main] [JPlatform 10] [jcms.Channel]  - App. Server: Tomcat (Apache Tomcat/9.0.84)
+2024-04-09 14:52:50,359 INFO [main] [JPlatform 10] [jcms.Channel]  - ReverseProxy disabled
+2024-04-09 14:52:50,363 INFO [main] [JPlatform 10] [jcms.NotificationManager]  - Init the Notification Manager
+2024-04-09 14:52:50,369 INFO [main] [JPlatform 10] [jcms.Channel]  - Notification enabled
+2024-04-09 14:52:50,369 INFO [main] [JPlatform 10] [jcms.FriendlyURLManager]  - Load DB Publications with Friendly URL...
+2024-04-09 14:52:50,506 INFO [main] [JPlatform 10] [jcms.FriendlyURLManager]  - Add 0 DB Publications with Friendly URL in 135 ms
+2024-04-09 14:52:50,521 INFO [main] [JPlatform 10] [jcms.WeakLinkManager]  - Scan and index weak links.
+2024-04-09 14:52:50,567 INFO [main] [JPlatform 10] [jcms.Channel]  - Line delimiters ignored for signatures of 'htm txt css java jsp xml prop js html jspf properties'
+2024-04-09 14:52:50,570 INFO [main] [JPlatform 10] [jcms.AudienceRights]  - Audience Rights is disabled
+2024-04-09 14:52:50,576 INFO [main] [JPlatform 10] [rest.RestManager]  - Authorized IPs for read access : 127\.0\.0\.1 0:0:0:0:0:0:0:1 192\.168\..*
+2024-04-09 14:52:50,659 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Register plugins StoreListeners after load
+2024-04-09 14:52:50,666 INFO [main] [JPlatform 10] [categoryrights.CategoryRightsManager]  - Types controlled by Category Rights : class generated.Shortcut, class generated.Blog, class generated.FaqEntry, class generated.DBWebPage, class generated.Faq, class generated.Book, class generated.Media, class generated.Poll, class com.jalios.jcms.Content, class com.jalios.jcms.FileDocument, class generated.GlossaryEntry, class generated.WebPage, class generated.DBMailMessage, class generated.Article, class generated.BlogPost, class generated.SmallNews, class com.jalios.jcms.DBFileDocument, class generated.Interview, class generated.Glossary
+2024-04-09 14:52:50,666 INFO [main] [JPlatform 10] [jcmsplugin.CategoryRightsPlugin]  - Register: com.jalios.jcmsplugin.categoryrights.listener.CrpCategoryListener
+2024-04-09 14:52:50,667 INFO [main] [JPlatform 10] [jcmsplugin.CategoryRightsPlugin]  - Register: com.jalios.jcmsplugin.categoryrights.listener.CrpGroupListener
+2024-04-09 14:52:50,669 INFO [main] [JPlatform 10] [jcmsplugin.CategoryRightsPlugin]  - Register: com.jalios.jcmsplugin.categoryrights.listener.CrpMemberListener
+2024-04-09 14:52:50,671 INFO [main] [JPlatform 10] [jcmsplugin.CategoryRightsPlugin]  - Register: com.jalios.jcmsplugin.categoryrights.listener.CrpPublicationListener
+2024-04-09 14:52:50,674 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.CSWorkspaceListener
+2024-04-09 14:52:50,676 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.portal.override.CSPortletOverrideListener
+2024-04-09 14:52:50,678 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.MemberInfoListener
+2024-04-09 14:52:50,680 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.ESNCategoryListener
+2024-04-09 14:52:50,681 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Register plugins DBListener
+2024-04-09 14:52:50,683 INFO [main] [JPlatform 10] [jcmsplugin.BookmarksPlugin]  - Register: com.jalios.jcmsplugin.bookmarks.BookmarkListener
+2024-04-09 14:52:50,683 INFO [main] [JPlatform 10] [jcmsplugin.CategoryRightsPlugin]  - Register: com.jalios.jcmsplugin.categoryrights.listener.CrpMemberListener
+2024-04-09 14:52:50,683 INFO [main] [JPlatform 10] [jcmsplugin.CategoryRightsPlugin]  - Register: com.jalios.jcmsplugin.categoryrights.listener.CrpPublicationListener
+2024-04-09 14:52:50,684 INFO [main] [JPlatform 10] [jcmsplugin.DBCommentPlugin]  - Register: com.jalios.jcmsplugin.dbcomment.DBCommentListener
+2024-04-09 14:52:50,687 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.activity.MemberActivityListener
+2024-04-09 14:52:50,688 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.activity.MemberActivityDataListener
+2024-04-09 14:52:50,690 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.MemberDataListener
+2024-04-09 14:52:50,692 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.MemberStatusListener
+2024-04-09 14:52:50,692 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.MemberInfoListener
+2024-04-09 14:52:50,692 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Register plugins DataController
+2024-04-09 14:52:50,695 INFO [main] [JPlatform 10] [jcmsplugin.BookmarksPlugin]  - Register: com.jalios.jcmsplugin.bookmarks.BookmarkDataController
+2024-04-09 14:52:50,698 INFO [main] [JPlatform 10] [jcmsplugin.CategoryRightsPlugin]  - Register: com.jalios.jcmsplugin.categoryrights.controller.CrpCategoryDataController
+2024-04-09 14:52:50,700 INFO [main] [JPlatform 10] [jcmsplugin.CategoryRightsPlugin]  - Register: com.jalios.jcmsplugin.categoryrights.controller.CrpPublicationDataController
+2024-04-09 14:52:50,702 INFO [main] [JPlatform 10] [jcmsplugin.CategoryRightsPlugin]  - Register: com.jalios.jcmsplugin.categoryrights.controller.CrpGroupDataController
+2024-04-09 14:52:50,704 INFO [main] [JPlatform 10] [jcmsplugin.CategoryRightsPlugin]  - Register: com.jalios.jcmsplugin.categoryrights.controller.CrpMemberDataController
+2024-04-09 14:52:50,706 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.CSDataController
+2024-04-09 14:52:50,709 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.CSGroupController
+2024-04-09 14:52:50,712 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.CSMemberController
+2024-04-09 14:52:50,714 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.CSPortalElementController
+2024-04-09 14:52:50,716 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.CSRequestController
+2024-04-09 14:52:50,718 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.CSSignupRequestController
+2024-04-09 14:52:50,729 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.CSSlaveDataController
+2024-04-09 14:52:50,730 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.CSWKRoleController
+2024-04-09 14:52:50,732 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.CSWorkspaceController
+2024-04-09 14:52:50,733 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.WorkspaceTypologyDataController
+2024-04-09 14:52:50,735 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.CSWorkspaceModelDataController
+2024-04-09 14:52:50,743 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Guest Accounts Enabled: false
+2024-04-09 14:52:50,743 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Guest Accounts Group: none
+2024-04-09 14:52:50,755 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.guest.controller.GuestAccountConversionRequestController
+2024-04-09 14:52:50,757 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.guest.controller.GuestAccountCreationRequestController
+2024-04-09 14:52:50,758 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.guest.controller.GuestAccountGroupController
+2024-04-09 14:52:50,761 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.guest.controller.GuestAccountMemberController
+2024-04-09 14:52:50,762 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.guest.controller.GuestWorkspaceController
+2024-04-09 14:52:50,764 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.portal.JPortalDataController
+2024-04-09 14:52:50,766 INFO [main] [JPlatform 10] [jcmsplugin.CollaborativeSpacePlugin]  - Register: com.jalios.jcmsplugin.collaborativespace.portal.override.CSPortletOverrideWysiwygInlineController
+2024-04-09 14:52:50,768 INFO [main] [JPlatform 10] [jcmsplugin.DBCommentPlugin]  - Register: com.jalios.jcmsplugin.dbcomment.DBCommentController
+2024-04-09 14:52:50,771 INFO [main] [JPlatform 10] [jcmsplugin.DBCommentPlugin]  - Register: com.jalios.jcmsplugin.dbcomment.DBCommentCommentableController
+2024-04-09 14:52:50,773 INFO [main] [JPlatform 10] [jcmsplugin.DBCommentPlugin]  - Register: com.jalios.jcmsplugin.dbcomment.DBCommentModeratorController
+2024-04-09 14:52:50,775 INFO [main] [JPlatform 10] [jcmsplugin.DBPollPlugin]  - Register: com.jalios.jcmsplugin.dbpoll.PollController
+2024-04-09 14:52:50,777 INFO [main] [JPlatform 10] [jcmsplugin.DBPollPlugin]  - Register: com.jalios.jcmsplugin.dbpoll.PollVoteController
+2024-04-09 14:52:50,779 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.activity.MemberActivityController
+2024-04-09 14:52:50,780 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.MemberCategoriesController
+2024-04-09 14:52:50,784 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.MemberController
+2024-04-09 14:52:50,785 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.MicroBloggingController
+2024-04-09 14:52:50,787 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.ESNExpertiseController
+2024-04-09 14:52:50,789 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.MemberProfileController
+2024-04-09 14:52:50,790 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.MemberInfoController
+2024-04-09 14:52:50,792 INFO [main] [JPlatform 10] [jcmsplugin.SmartPhonePlugin]  - Register: com.jalios.jcmsplugin.smartphone.portal.SmartPhonePortalPortletDataController
+2024-04-09 14:52:50,794 INFO [main] [JPlatform 10] [jcmsplugin.BlogPlugin]  - Register: com.jalios.jcmsplugin.blog.BlogRequestController
+2024-04-09 14:52:50,802 INFO [main] [JPlatform 10] [jcmsplugin.BlogPlugin]  - Register: com.jalios.jcmsplugin.blog.BlogDataController
+2024-04-09 14:52:50,804 INFO [main] [JPlatform 10] [jcmsplugin.BlogPlugin]  - Register: com.jalios.jcmsplugin.blog.BlogPostDataController
+2024-04-09 14:52:50,804 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Register plugins AlarmListener
+2024-04-09 14:52:50,805 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.BirthdayReminder
+2024-04-09 14:52:50,805 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Register plugins CleanFilter
+2024-04-09 14:52:50,808 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Register plugins RestResource
+2024-04-09 14:52:50,887 INFO [main] [JPlatform 10] [esn.MemberActivityManager]  - Initialize MemberActivity purge. Next purge: Alarm params minute=0 hour=5 dayOfMonth=-1 month=-1 dayOfWeek=-1 (next alarm date=Wed Apr 10 05:00:00 WET 2024 - 1712725200886)
+2024-04-09 14:52:50,888 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.openapi.ActivityResource
+2024-04-09 14:52:50,888 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.openapi.ActivityResource
+2024-04-09 14:52:50,888 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.openapi.ActivityResource
+2024-04-09 14:52:50,888 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.openapi.ActivityResource
+2024-04-09 14:52:50,888 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.openapi.ActivityResource
+2024-04-09 14:52:50,888 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.openapi.ActivityResource
+2024-04-09 14:52:50,888 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.openapi.ActivityResource
+2024-04-09 14:52:50,888 INFO [main] [JPlatform 10] [jcmsplugin.ESNPlugin]  - Register: com.jalios.jcmsplugin.esn.openapi.ActivityResource
+2024-04-09 14:52:50,891 INFO [main] [JPlatform 10] [jcmsplugin.SmartPhonePlugin]  - Register: com.jalios.jcmsplugin.smartphone.rest.FeedbackResource
+2024-04-09 14:52:50,893 INFO [main] [JPlatform 10] [jcmsplugin.SmartPhonePlugin]  - Register: com.jalios.jcmsplugin.smartphone.rest.AddJWTokenResource
+2024-04-09 14:52:50,893 INFO [main] [JPlatform 10] [jcmsplugin.SmartPhonePlugin]  - Register: com.jalios.jcmsplugin.smartphone.rest.AddJWTokenResource
+2024-04-09 14:52:50,895 INFO [main] [JPlatform 10] [jcmsplugin.SmartPhonePlugin]  - Register: com.jalios.jcmsplugin.smartphone.rest.RegisterJMobileTokenResource
+2024-04-09 14:52:50,896 INFO [main] [JPlatform 10] [jcmsplugin.SmartPhonePlugin]  - Register: com.jalios.jcmsplugin.smartphone.rest.DeleteDeviceInfoResource
+2024-04-09 14:52:50,898 INFO [main] [JPlatform 10] [jcmsplugin.SmartPhonePlugin]  - Register: com.jalios.jcmsplugin.smartphone.rest.GetNotificationDiagnosticResource
+2024-04-09 14:52:50,899 INFO [main] [JPlatform 10] [jcmsplugin.SmartPhonePlugin]  - Register: com.jalios.jcmsplugin.smartphone.rest.JMobileInfoResource
+2024-04-09 14:52:50,903 INFO [main] [JPlatform 10] [jcmsplugin.SmartPhonePlugin]  - Register: com.jalios.jcmsplugin.smartphone.ios.IOSDownloadResource
+2024-04-09 14:52:50,903 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Register plugins DBListener
+2024-04-09 14:52:50,903 INFO [main] [JPlatform 10] [plugin.PluginManager]  - Init main plugin: no main plugin
+2024-04-09 14:52:50,919 INFO [main] [JPlatform 10] [processingmanagement.FileProcessorManager]  - Start FileProcessor processing thread
+2024-04-09 14:52:50,957 INFO [main] [JPlatform 10] [replicamessage.ReplicaMessageManager]  - JSync not enabled. Do not start message fetching alarm.
+2024-04-09 14:52:50,957 INFO [main] [JPlatform 10] [processingmanagement.FileProcessorManager]  - Initialize FileProcessor repositories (JCMS startup)
+2024-04-09 14:52:50,973 INFO [main] [JPlatform 10] [processingmanagement.FileProcessorManager]  - [JCMSUpload] Initializing repository...
+2024-04-09 14:52:50,984 INFO [main] [JPlatform 10] [repository.Repository]  - [JCMSUpload] No component (processor or parser) configured for this repository.
+2024-04-09 14:52:50,992 INFO [main] [JPlatform 10] [processingmanagement.FileProcessorManager]  - [JCMSUpload] Repository successfully initialized and started.
+2024-04-09 14:52:50,992 INFO [main] [JPlatform 10] [search.LuceneCategorySearchEngine]  - Automatic indexing of all created or modified Data since last index modification (Tue Apr 09 14:52:17 WET 2024) ...
+2024-04-09 14:52:51,000 INFO [main] [JPlatform 10] [search.LucenePublicationSearchEngine]  - Automatic indexing of all created or modified Data since last index modification (Tue Apr 09 14:52:17 WET 2024) ...
+2024-04-09 14:52:51,196 INFO [main] [JPlatform 10] [search.LuceneMemberSearchEngine]  - Automatic indexing of all created or modified Data since last index modification (Tue Apr 09 14:52:17 WET 2024) ...
+2024-04-09 14:52:51,410 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+2024-04-09 14:52:51,450 INFO [main] [JPlatform 10] [jcms.Channel]  - All the JCMS limits are respected.
+2024-04-09 14:52:51,696 INFO [main] [JPlatform 10] [jcms.Channel]  - Data count: Data: 195, Workspace: 2, Group: 11, Member: 1, Category: 12, Content: 27, FileDocument: 0, DBFileDocument: 9, UserContent: 0
+2024-04-09 14:52:51,729 INFO [main] [JPlatform 10] [jcms.ResourceHelper]  - Compiling LESS files...
+2024-04-09 14:52:52,198 INFO [main] [JPlatform 10] [jcms.ResourceHelper]  - 0 LESS files compiled in 469 ms
+2024-04-09 14:52:52,208 INFO [main] [JPlatform 10] [tools.CssPacker]  - Minify CSS files...
+2024-04-09 14:52:53,173 INFO [main] [JPlatform 10] [tools.CssPacker]  - 0 CSS files minified in 965 ms
+2024-04-09 14:52:53,180 INFO [main] [JPlatform 10] [tools.JsPacker]  - Minify JS files...
+2024-04-09 14:52:53,842 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/jalios-wysiwyg-configurations.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/jalios-wysiwyg-configurations.js
+2024-04-09 14:52:53,852 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/langs/cs.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/langs/cs.js
+2024-04-09 14:52:53,856 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/langs/de.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/langs/de.js
+2024-04-09 14:52:53,860 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/langs/en.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/langs/en.js
+2024-04-09 14:52:53,863 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/langs/es.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/langs/es.js
+2024-04-09 14:52:53,866 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/langs/fr_FR.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/langs/fr_FR.js
+2024-04-09 14:52:53,870 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/langs/hu_HU.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/langs/hu_HU.js
+2024-04-09 14:52:53,873 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/langs/it.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/langs/it.js
+2024-04-09 14:52:53,876 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/langs/ja.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/langs/ja.js
+2024-04-09 14:52:53,879 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/langs/ko_KR.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/langs/ko_KR.js
+2024-04-09 14:52:53,882 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/langs/pl.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/langs/pl.js
+2024-04-09 14:52:53,886 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/langs/pt_PT.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/langs/pt_PT.js
+2024-04-09 14:52:53,889 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/langs/ro.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/langs/ro.js
+2024-04-09 14:52:53,891 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/langs/ru.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/langs/ru.js
+2024-04-09 14:52:53,895 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/langs/sk.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/langs/sk.js
+2024-04-09 14:52:53,898 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/langs/zh_CN.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/langs/zh_CN.js
+2024-04-09 14:52:53,900 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/langs/zh_TW.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/langs/zh_TW.js
+2024-04-09 14:52:53,903 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jabstract/langs/cs.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jabstract/langs/cs.js
+2024-04-09 14:52:53,905 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jabstract/langs/de.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jabstract/langs/de.js
+2024-04-09 14:52:53,907 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jabstract/langs/en.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jabstract/langs/en.js
+2024-04-09 14:52:53,909 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jabstract/langs/es.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jabstract/langs/es.js
+2024-04-09 14:52:53,912 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jabstract/langs/fr_FR.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jabstract/langs/fr_FR.js
+2024-04-09 14:52:53,915 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jabstract/langs/hu_HU.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jabstract/langs/hu_HU.js
+2024-04-09 14:52:53,917 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jabstract/langs/it.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jabstract/langs/it.js
+2024-04-09 14:52:53,920 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jabstract/langs/ja.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jabstract/langs/ja.js
+2024-04-09 14:52:53,922 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jabstract/langs/ko_KR.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jabstract/langs/ko_KR.js
+2024-04-09 14:52:53,924 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jabstract/langs/pl.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jabstract/langs/pl.js
+2024-04-09 14:52:53,927 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jabstract/langs/pt_PT.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jabstract/langs/pt_PT.js
+2024-04-09 14:52:53,929 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jabstract/langs/ro.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jabstract/langs/ro.js
+2024-04-09 14:52:53,932 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jabstract/langs/ru.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jabstract/langs/ru.js
+2024-04-09 14:52:53,935 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jabstract/langs/sk.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jabstract/langs/sk.js
+2024-04-09 14:52:53,938 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jabstract/langs/zh_CN.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jabstract/langs/zh_CN.js
+2024-04-09 14:52:53,940 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jabstract/langs/zh_TW.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jabstract/langs/zh_TW.js
+2024-04-09 14:52:53,960 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jmessage/langs/cs.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jmessage/langs/cs.js
+2024-04-09 14:52:53,963 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jmessage/langs/de.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jmessage/langs/de.js
+2024-04-09 14:52:53,965 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jmessage/langs/en.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jmessage/langs/en.js
+2024-04-09 14:52:53,967 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jmessage/langs/es.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jmessage/langs/es.js
+2024-04-09 14:52:53,970 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jmessage/langs/fr_FR.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jmessage/langs/fr_FR.js
+2024-04-09 14:52:53,972 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jmessage/langs/hu_HU.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jmessage/langs/hu_HU.js
+2024-04-09 14:52:53,975 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jmessage/langs/it.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jmessage/langs/it.js
+2024-04-09 14:52:53,977 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jmessage/langs/ja.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jmessage/langs/ja.js
+2024-04-09 14:52:53,980 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jmessage/langs/ko_KR.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jmessage/langs/ko_KR.js
+2024-04-09 14:52:53,982 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jmessage/langs/pl.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jmessage/langs/pl.js
+2024-04-09 14:52:53,985 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jmessage/langs/pt_PT.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jmessage/langs/pt_PT.js
+2024-04-09 14:52:53,987 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jmessage/langs/ro.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jmessage/langs/ro.js
+2024-04-09 14:52:53,989 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jmessage/langs/ru.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jmessage/langs/ru.js
+2024-04-09 14:52:53,991 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jmessage/langs/sk.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jmessage/langs/sk.js
+2024-04-09 14:52:53,994 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jmessage/langs/zh_CN.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jmessage/langs/zh_CN.js
+2024-04-09 14:52:53,996 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jmessage/langs/zh_TW.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jmessage/langs/zh_TW.js
+2024-04-09 14:52:54,001 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/cs.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/cs.js
+2024-04-09 14:52:54,002 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/de.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/de.js
+2024-04-09 14:52:54,004 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/en.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/en.js
+2024-04-09 14:52:54,006 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/es.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/es.js
+2024-04-09 14:52:54,007 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/fr_FR.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/fr_FR.js
+2024-04-09 14:52:54,010 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/hu_HU.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/hu_HU.js
+2024-04-09 14:52:54,012 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/it.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/it.js
+2024-04-09 14:52:54,015 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/ja.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/ja.js
+2024-04-09 14:52:54,017 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/ko_KR.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/ko_KR.js
+2024-04-09 14:52:54,019 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/pl.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/pl.js
+2024-04-09 14:52:54,021 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/pt_PT.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/pt_PT.js
+2024-04-09 14:52:54,023 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/ro.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/ro.js
+2024-04-09 14:52:54,025 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/ru.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/ru.js
+2024-04-09 14:52:54,027 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/sk.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/sk.js
+2024-04-09 14:52:54,029 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/zh_CN.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/zh_CN.js
+2024-04-09 14:52:54,031 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/zh_TW.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/jsmartinsert/langs/zh_TW.js
+2024-04-09 14:52:54,039 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/mentionextra/langs/cs.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/mentionextra/langs/cs.js
+2024-04-09 14:52:54,041 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/mentionextra/langs/de.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/mentionextra/langs/de.js
+2024-04-09 14:52:54,043 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/mentionextra/langs/en.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/mentionextra/langs/en.js
+2024-04-09 14:52:54,046 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/mentionextra/langs/es.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/mentionextra/langs/es.js
+2024-04-09 14:52:54,048 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/mentionextra/langs/fr_FR.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/mentionextra/langs/fr_FR.js
+2024-04-09 14:52:54,051 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/mentionextra/langs/hu_HU.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/mentionextra/langs/hu_HU.js
+2024-04-09 14:52:54,052 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/mentionextra/langs/it.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/mentionextra/langs/it.js
+2024-04-09 14:52:54,054 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/mentionextra/langs/ja.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/mentionextra/langs/ja.js
+2024-04-09 14:52:54,056 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/mentionextra/langs/ko_KR.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/mentionextra/langs/ko_KR.js
+2024-04-09 14:52:54,058 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/mentionextra/langs/pl.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/mentionextra/langs/pl.js
+2024-04-09 14:52:54,062 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/mentionextra/langs/pt_PT.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/mentionextra/langs/pt_PT.js
+2024-04-09 14:52:54,064 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/mentionextra/langs/ro.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/mentionextra/langs/ro.js
+2024-04-09 14:52:54,067 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/mentionextra/langs/ru.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/mentionextra/langs/ru.js
+2024-04-09 14:52:54,069 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/mentionextra/langs/sk.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/mentionextra/langs/sk.js
+2024-04-09 14:52:54,071 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/mentionextra/langs/zh_CN.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/mentionextra/langs/zh_CN.js
+2024-04-09 14:52:54,073 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins/mentionextra/langs/zh_TW.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins/mentionextra/langs/zh_TW.js
+2024-04-09 14:52:54,076 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/emoji/langs/cs.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/emoji/langs/cs.js
+2024-04-09 14:52:54,078 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/emoji/langs/de.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/emoji/langs/de.js
+2024-04-09 14:52:54,080 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/emoji/langs/en.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/emoji/langs/en.js
+2024-04-09 14:52:54,081 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/emoji/langs/es.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/emoji/langs/es.js
+2024-04-09 14:52:54,083 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/emoji/langs/fr_FR.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/emoji/langs/fr_FR.js
+2024-04-09 14:52:54,085 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/emoji/langs/hu_HU.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/emoji/langs/hu_HU.js
+2024-04-09 14:52:54,086 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/emoji/langs/it.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/emoji/langs/it.js
+2024-04-09 14:52:54,088 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/emoji/langs/ja.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/emoji/langs/ja.js
+2024-04-09 14:52:54,089 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/emoji/langs/ko_KR.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/emoji/langs/ko_KR.js
+2024-04-09 14:52:54,090 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/emoji/langs/pl.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/emoji/langs/pl.js
+2024-04-09 14:52:54,092 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/emoji/langs/pt_PT.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/emoji/langs/pt_PT.js
+2024-04-09 14:52:54,093 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/emoji/langs/ro.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/emoji/langs/ro.js
+2024-04-09 14:52:54,095 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/emoji/langs/ru.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/emoji/langs/ru.js
+2024-04-09 14:52:54,097 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/emoji/langs/sk.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/emoji/langs/sk.js
+2024-04-09 14:52:54,098 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/emoji/langs/zh_CN.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/emoji/langs/zh_CN.js
+2024-04-09 14:52:54,100 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/emoji/langs/zh_TW.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/emoji/langs/zh_TW.js
+2024-04-09 14:52:54,104 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/cs.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/cs.js
+2024-04-09 14:52:54,106 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/de.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/de.js
+2024-04-09 14:52:54,107 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/en.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/en.js
+2024-04-09 14:52:54,109 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/es.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/es.js
+2024-04-09 14:52:54,111 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/fr_FR.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/fr_FR.js
+2024-04-09 14:52:54,114 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/hu_HU.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/hu_HU.js
+2024-04-09 14:52:54,115 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/it.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/it.js
+2024-04-09 14:52:54,117 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/ja.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/ja.js
+2024-04-09 14:52:54,119 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/ko_KR.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/ko_KR.js
+2024-04-09 14:52:54,121 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/pl.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/pl.js
+2024-04-09 14:52:54,122 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/pt_PT.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/pt_PT.js
+2024-04-09 14:52:54,124 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/ro.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/ro.js
+2024-04-09 14:52:54,126 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/ru.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/ru.js
+2024-04-09 14:52:54,130 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/sk.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/sk.js
+2024-04-09 14:52:54,132 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/zh_CN.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/zh_CN.js
+2024-04-09 14:52:54,133 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/zh_TW.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jfullscreen/langs/zh_TW.js
+2024-04-09 14:52:54,136 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jlink/langs/cs.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jlink/langs/cs.js
+2024-04-09 14:52:54,139 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jlink/langs/de.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jlink/langs/de.js
+2024-04-09 14:52:54,141 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jlink/langs/en.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jlink/langs/en.js
+2024-04-09 14:52:54,143 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jlink/langs/es.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jlink/langs/es.js
+2024-04-09 14:52:54,146 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jlink/langs/fr_FR.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jlink/langs/fr_FR.js
+2024-04-09 14:52:54,147 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jlink/langs/hu_HU.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jlink/langs/hu_HU.js
+2024-04-09 14:52:54,150 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jlink/langs/it.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jlink/langs/it.js
+2024-04-09 14:52:54,152 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jlink/langs/ja.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jlink/langs/ja.js
+2024-04-09 14:52:54,154 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jlink/langs/ko_KR.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jlink/langs/ko_KR.js
+2024-04-09 14:52:54,156 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jlink/langs/pl.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jlink/langs/pl.js
+2024-04-09 14:52:54,157 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jlink/langs/pt_PT.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jlink/langs/pt_PT.js
+2024-04-09 14:52:54,159 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jlink/langs/ro.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jlink/langs/ro.js
+2024-04-09 14:52:54,162 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jlink/langs/ru.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jlink/langs/ru.js
+2024-04-09 14:52:54,164 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jlink/langs/sk.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jlink/langs/sk.js
+2024-04-09 14:52:54,165 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jlink/langs/zh_CN.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jlink/langs/zh_CN.js
+2024-04-09 14:52:54,167 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jlink/langs/zh_TW.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jlink/langs/zh_TW.js
+2024-04-09 14:52:54,171 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jmedia/langs/cs.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jmedia/langs/cs.js
+2024-04-09 14:52:54,173 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jmedia/langs/de.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jmedia/langs/de.js
+2024-04-09 14:52:54,175 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jmedia/langs/en.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jmedia/langs/en.js
+2024-04-09 14:52:54,177 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jmedia/langs/es.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jmedia/langs/es.js
+2024-04-09 14:52:54,179 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jmedia/langs/fr_FR.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jmedia/langs/fr_FR.js
+2024-04-09 14:52:54,181 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jmedia/langs/hu_HU.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jmedia/langs/hu_HU.js
+2024-04-09 14:52:54,183 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jmedia/langs/it.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jmedia/langs/it.js
+2024-04-09 14:52:54,184 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jmedia/langs/ja.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jmedia/langs/ja.js
+2024-04-09 14:52:54,186 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jmedia/langs/ko_KR.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jmedia/langs/ko_KR.js
+2024-04-09 14:52:54,187 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jmedia/langs/pl.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jmedia/langs/pl.js
+2024-04-09 14:52:54,188 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jmedia/langs/pt_PT.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jmedia/langs/pt_PT.js
+2024-04-09 14:52:54,190 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jmedia/langs/ro.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jmedia/langs/ro.js
+2024-04-09 14:52:54,192 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jmedia/langs/ru.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jmedia/langs/ru.js
+2024-04-09 14:52:54,193 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jmedia/langs/sk.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jmedia/langs/sk.js
+2024-04-09 14:52:54,195 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jmedia/langs/zh_CN.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jmedia/langs/zh_CN.js
+2024-04-09 14:52:54,197 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jmedia/langs/zh_TW.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jmedia/langs/zh_TW.js
+2024-04-09 14:52:54,199 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jtoc/langs/cs.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jtoc/langs/cs.js
+2024-04-09 14:52:54,201 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jtoc/langs/de.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jtoc/langs/de.js
+2024-04-09 14:52:54,203 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jtoc/langs/en.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jtoc/langs/en.js
+2024-04-09 14:52:54,204 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jtoc/langs/es.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jtoc/langs/es.js
+2024-04-09 14:52:54,206 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jtoc/langs/fr_FR.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jtoc/langs/fr_FR.js
+2024-04-09 14:52:54,208 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jtoc/langs/hu_HU.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jtoc/langs/hu_HU.js
+2024-04-09 14:52:54,210 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jtoc/langs/it.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jtoc/langs/it.js
+2024-04-09 14:52:54,213 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jtoc/langs/ja.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jtoc/langs/ja.js
+2024-04-09 14:52:54,215 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jtoc/langs/ko_KR.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jtoc/langs/ko_KR.js
+2024-04-09 14:52:54,217 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jtoc/langs/pl.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jtoc/langs/pl.js
+2024-04-09 14:52:54,219 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jtoc/langs/pt_PT.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jtoc/langs/pt_PT.js
+2024-04-09 14:52:54,221 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jtoc/langs/ro.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jtoc/langs/ro.js
+2024-04-09 14:52:54,224 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jtoc/langs/ru.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jtoc/langs/ru.js
+2024-04-09 14:52:54,226 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jtoc/langs/sk.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jtoc/langs/sk.js
+2024-04-09 14:52:54,228 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jtoc/langs/zh_CN.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jtoc/langs/zh_CN.js
+2024-04-09 14:52:54,230 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/jtoc/langs/zh_TW.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/jtoc/langs/zh_TW.js
+2024-04-09 14:52:54,233 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/cs.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/cs.js
+2024-04-09 14:52:54,235 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/de.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/de.js
+2024-04-09 14:52:54,236 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/en.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/en.js
+2024-04-09 14:52:54,238 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/es.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/es.js
+2024-04-09 14:52:54,239 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/fr_FR.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/fr_FR.js
+2024-04-09 14:52:54,242 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/hu_HU.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/hu_HU.js
+2024-04-09 14:52:54,244 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/it.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/it.js
+2024-04-09 14:52:54,246 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/ja.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/ja.js
+2024-04-09 14:52:54,248 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/ko_KR.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/ko_KR.js
+2024-04-09 14:52:54,249 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/pl.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/pl.js
+2024-04-09 14:52:54,251 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/pt_PT.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/pt_PT.js
+2024-04-09 14:52:54,252 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/ro.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/ro.js
+2024-04-09 14:52:54,254 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/ru.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/ru.js
+2024-04-09 14:52:54,256 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/sk.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/sk.js
+2024-04-09 14:52:54,258 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/zh_CN.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/zh_CN.js
+2024-04-09 14:52:54,261 INFO [main] [JPlatform 10] [tools.JsPacker]  -  js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/zh_TW.js --> WEB-INF/jcmswork/min.js/js/jalios/core/wysiwyg/plugins5/junifiedinsert/langs/zh_TW.js
+2024-04-09 14:52:54,758 INFO [main] [JPlatform 10] [tools.JsPacker]  - 177 JS files minified in 1 s
+2024-04-09 14:52:57,288 INFO [main] [JPlatform 10] [trash.TrashManager]  - Automatic deletion of trashed publication is enabled
+2024-04-09 14:52:57,288 INFO [main] [JPlatform 10] [trash.TrashManager]  - Publication are kept in trash for 15 days before being permanently deleted automatically (if auto delete is enabled)
+2024-04-09 14:52:57,289 INFO [main] [JPlatform 10] [trash.TrashManager]  - Trash Automatic Delete schedule: 00 6 * * * *
+2024-04-09 14:52:57,289 INFO [main] [JPlatform 10] [trash.TrashManager]  - Next automatic deletion of Trash content is scheduled on Wed, 10 Apr 2024 06:00:00 +0000
+2024-04-09 14:52:57,289 INFO [main] [JPlatform 10] [trash.TrashManager]  - The following Publication class (and their subclasses) are authorized in trash : com.jalios.jcms.UserContent, com.jalios.jcms.Content
+2024-04-09 14:52:57,290 INFO [main] [JPlatform 10] [trash.TrashManager]  - The following Publication class (and their subclasses) are NOT authorized in trash : 
+2024-04-09 14:52:57,307 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Localization process is starting.
+2024-04-09 14:52:57,326 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Update data '$id.shortcut.jcmsplugin.bookmarks' via updatePublication process.
+2024-04-09 14:52:57,326 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Cannot localize the element with id $id.jcmsplugin.collaborativespace.data.model.group: null object returned by getData
+2024-04-09 14:52:57,326 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Cannot localize the element with id $id.jcmsplugin.collaborativespace.data.service.glossary: null object returned by getData
+2024-04-09 14:52:57,331 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Cannot localize the element with id $id.jcmsplugin.collaborativespace.data.service.calendar-diary: null object returned by getData
+2024-04-09 14:52:57,331 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Cannot localize the element with id $id.jcmsplugin.collaborativespace.data.model.portal: null object returned by getData
+2024-04-09 14:52:57,331 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Cannot localize the element with id $id.jcmsplugin.collaborativespace.data.service.calendar-full: null object returned by getData
+2024-04-09 14:52:57,331 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Cannot localize the element with id $id.jcmsplugin.collaborativespace.data.internal: null object returned by getData
+2024-04-09 14:52:57,331 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Cannot localize the element with id $id.jcmsplugin.collaborativespace.data.service.calendar-small: null object returned by getData
+2024-04-09 14:52:57,331 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Cannot localize the element with id $id.jcmsplugin.collaborativespace.data.service.workflow: null object returned by getData
+2024-04-09 14:52:57,331 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Cannot localize the element with id $id.jcmsplugin.collaborativespace.data.model: null object returned by getData
+2024-04-09 14:52:57,331 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Cannot localize the element with id $id.jcmsplugin.collaborativespace.data.group: null object returned by getData
+2024-04-09 14:52:57,331 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Update data '$id.shortcut.jcmsplugin.smartphone-portals' via updatePublication process.
+2024-04-09 14:52:57,331 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Update data '$id.shortcut.jcmsplugin.jbook' via updatePublication process.
+2024-04-09 14:52:57,331 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Cannot localize the element with id $id.jcmsplugin.collaborativespace.data.service.faq: null object returned by getData
+2024-04-09 14:52:57,331 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Update data '$id.shortcut.jcmsplugin.collaborativespace-hub' via updatePublication process.
+2024-04-09 14:52:57,337 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Update data '$id.shortcut.core.trashapp' via updatePublication process.
+2024-04-09 14:52:57,338 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Cannot localize the element with id $id.jcmsplugin.collaborativespace.data.service.latest-documents: null object returned by getData
+2024-04-09 14:52:57,338 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Cannot localize the element with id $id.jcmsplugin.collaborativespace.data: null object returned by getData
+2024-04-09 14:52:57,338 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Cannot localize the element with id $id.jcmsplugin.collaborativespace.data.service.latest-contents: null object returned by getData
+2024-04-09 14:52:57,338 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Update data '$id.shortcut.core.public-link' via updatePublication process.
+2024-04-09 14:52:57,338 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Cannot localize the element with id $id.jcmsplugin.collaborativespace.data.service: null object returned by getData
+2024-04-09 14:52:57,338 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Update data '$id.shortcut.jcmsplugin.dbpoll' via updatePublication process.
+2024-04-09 14:52:57,338 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Cannot localize the element with id $id.jcmsplugin.collaborativespace.data.service.subspaces: null object returned by getData
+2024-04-09 14:52:57,338 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Cannot localize the element with id $id.jcmsplugin.collaborativespace.data.service.event-schedule: null object returned by getData
+2024-04-09 14:52:57,338 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Cannot localize the element with id $id.jcmsplugin.collaborativespace.data.service.introduction: null object returned by getData
+2024-04-09 14:52:57,338 INFO [main] [JPlatform 10] [l10n.DataLocalizationManager]  - Cannot localize the element with id $id.jcmsplugin.jbook.catalog: null object returned by getData
+2024-04-09 14:52:57,338 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+2024-04-09 14:52:57,339 INFO [main] [JPlatform 10] [jcms.ChannelInitServlet]  - JcmsInit.initAfterStoreLoad
+2024-04-09 14:52:57,387 INFO [main] [JPlatform 10] [quota.QuotaManager]  - Update workspaces quota 
+2024-04-09 14:52:57,631 INFO [QuotaManager-WsUpdater-1] [JPlatform 10] [quota.FileAnalyzerThread]  - Files quota analysis of 'Modèle d'Espace collaboratif' (c_5021) processed in 235 ms
+2024-04-09 14:52:58,278 INFO [QuotaManager-WsUpdater-0] [JPlatform 10] [quota.FileAnalyzerThread]  - Files quota analysis of all the site processed in 882 ms
+2024-04-09 14:52:58,377 INFO [QuotaManager-WsUpdater-1] [JPlatform 10] [quota.FileAnalyzerThread]  - Files quota analysis of 'Espace de Travail par Defaut' (j_4) processed in 744 ms
+2024-04-09 14:52:58,666 INFO [main] [JPlatform 10] [jcms.ChannelInitServlet]  - Memory: Total: 416 MB - Used: 154 MB (37%) - Free: 262 MB
+2024-04-09 14:52:58,757 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+2024-04-09 14:52:58,781 INFO [main] [JPlatform 10] [jcms.ChannelInitServlet]  - JPlatform 10 is ready (JCMS 10.0.7 (build-20230504092642))
+2024-04-09 14:54:08,168 INFO [http-nio-8080-exec-5] [JPlatform 10] [application.ApplicationManager] [0:0:0:0:0:0:0:1, j_2, Admin] - Initialize install count alarm recomputing. Next recompute: Alarm params minute=0 hour=4 dayOfMonth=-1 month=-1 dayOfWeek=-1 (next alarm date=Wed Apr 10 04:00:00 WET 2024 - 1712721600168)
+2024-04-09 14:54:08,169 INFO [ApplicationManager-RecomputeInstallCountThread] [JPlatform 10] [application.ApplicationManager]  - Recomputing install count cache
+2024-04-09 14:54:08,708 INFO [ApplicationManager-RecomputeInstallCountThread] [JPlatform 10] [application.ApplicationManager]  - Install count cache has been updated successfully
+2024-04-09 14:54:22,700 INFO [http-nio-8080-exec-10] [JPlatform 10] [esn.MemberNetwork] [0:0:0:0:0:0:0:1, j_2, Admin] - initNetwork
+2024-04-09 14:54:22,700 INFO [http-nio-8080-exec-10] [JPlatform 10] [esn.MemberNetwork] [0:0:0:0:0:0:0:1, j_2, Admin] - Graphviz is disabled.
+2024-04-09 14:54:22,702 INFO [http-nio-8080-exec-10] [JPlatform 10] [esn.ESNManager] [0:0:0:0:0:0:0:1, j_2, Admin] - ESN: Agreement is required.
+2024-04-09 14:54:22,702 INFO [http-nio-8080-exec-10] [JPlatform 10] [esn.ESNManager] [0:0:0:0:0:0:0:1, j_2, Admin] - ESN Manager initialized.

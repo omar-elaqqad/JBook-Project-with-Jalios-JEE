@@ -45,3 +45,6 @@ jcmsplugin.jbook.app.view.catalog: Catalogue
 
 jcmsplugin.jbook.msg.my-borrowings.none: Vous n'avez aucun emprunt en curs.
 jcmsplugin.jbook.msg.all-borrowings.none: Il n'y aucun emprunt en cours.
+
+# CategoryBrowser
+# category.category-browser.jbook: Rechercher dans JBook

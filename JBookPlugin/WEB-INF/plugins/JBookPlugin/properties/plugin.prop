@@ -32,3 +32,6 @@ channel.less.plugins/JBookPlugin/css/jbook.css: plugins/JBookPlugin/css/jbook.le
 
 # editeur de category
 $id.jcmsplugin.jbook.catalog.topic-root.chooser-category:
+
+# CategoryBrowser
+# category.category-browser.jbook.class: com.jalios.jcmsplugin.jbook.component.JBookCategoryBrowser
