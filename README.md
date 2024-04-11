@@ -28,6 +28,9 @@ Clicking on a card triggers the display of the book. The book details include in
 
 ![image](https://github.com/omar-elaqqad/JBook-Project-with-Jalios-JEE/assets/80116765/d0625d03-a60a-4975-adab-6d68341fd02f)
 
+![image](https://github.com/omar-elaqqad/JBook-Project-with-Jalios-JEE/assets/80116765/47e2ae5e-67c1-4356-b24b-3adf963676bb)
+
+
 Buttons allow borrowing or releasing the book. When a book is borrowed, a button allows sending a message to the borrower.
 
 The application also provides a view of the books currently borrowed by the member as well as all borrowings:
@@ -37,5 +40,9 @@ The application also provides a view of the books currently borrowed by the memb
 Finally, the application offers dedicated views for JMobile:
 
 The application can also be used within a collaborative space:
+
 ![image](https://github.com/omar-elaqqad/JBook-Project-with-Jalios-JEE/assets/80116765/9ec7fc4a-e873-4cd8-a7fe-4d65aedbc490)
+
+Finally, the application offers dedicated views for JMobile :
+
 
