@@ -21,10 +21,17 @@
 <jalios:field name="image" formHandler="<%= formHandler %>">
   <jalios:control />
 </jalios:field>
+
 <%-- Topics ------------------------------------------------------------ --%>
+<%
+TypeFieldEntry tfe = channel.getTypeFieldEntry(Book.class, "topics", true);
+CategorySettings topicsSettings = (CategorySettings)(tfe.getControlSettings());
+topicsSettings.root(com.jalios.jcmsplugin.jbook.JBookManager.getInstance().getTopicRoot(workspace, loggedMember));
+%>
 <jalios:field name="topics" formHandler="<%= formHandler %>">
-  <jalios:control />
+  <jalios:control settings="<%= topicsSettings %>"/>
 </jalios:field>
+
 <%-- Isbn ------------------------------------------------------------ --%>
 <jalios:field name="isbn" formHandler="<%= formHandler %>">
   <jalios:control />

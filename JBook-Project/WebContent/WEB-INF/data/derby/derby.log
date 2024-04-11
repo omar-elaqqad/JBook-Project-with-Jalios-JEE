@@ -1,0 +1,19 @@
+Thu Apr 11 12:00:12 WET 2024 : Apache Derby Network Server - 10.15.2.0 - (1873585) started and ready to accept connections on port 49241
+----------------------------------------------------------------
+Thu Apr 11 12:00:19 WET 2024:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-018e-cd07-9f87-ffff9e8f9959 
+on database directory C:\Jalios\DevPack-Workplace-6.0.1\workspace\JBook-Project-with-Jalios-JEE\JBook-Project\WebContent\WEB-INF\data\derby\jcmsdb with class loader ParallelWebappClassLoader
+  context: jcms
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@9807454
+ 
+Loaded from file:/C:/Jalios/DevPack-Workplace-6.0.1/workspace/JBook-Project-with-Jalios-JEE/JBook-Project/WebContent/WEB-INF/lib/derby-10.15.2.0.jar
+java.vendor=Eclipse Adoptium
+java.runtime.version=17.0.9+9
+user.dir=C:\Jalios\DevPack-Workplace-6.0.1
+os.name=Windows 11
+os.arch=amd64
+os.version=10.0
+derby.system.home=C:\Jalios\DevPack-Workplace-6.0.1\workspace\JBook-Project-with-Jalios-JEE\JBook-Project\WebContent\WEB-INF\data\derby
+Database Class Loader started - derby.database.classpath=''

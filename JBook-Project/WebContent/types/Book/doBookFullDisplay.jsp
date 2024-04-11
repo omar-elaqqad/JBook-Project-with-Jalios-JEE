@@ -18,10 +18,11 @@ boolean isBorrowedByMe=isBorrowed && currentBorrowing.getBorrower()==loggedMembe
 
 
 JBookAppHandler appHandler = (JBookAppHandler)request.getAttribute("jbook.appHandler");
+
 if (appHandler == null) {
-  sendRedirect("plugins/JBookPlugin/jsp/app/jbook.jsp?book=" + JcmsUtil.getId(book));
-  return;
-}
+	  sendRedirect(book.getAppDisplayUrl(userLocale));
+	  return;
+	}
 
 %>
 

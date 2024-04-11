@@ -6,9 +6,11 @@ import static com.jalios.jcmsplugin.jbook.data.JBookBorrowing.RELEASE_DATE_FIELD
 
 import com.jalios.jcmsplugin.jbook.data.JBookBorrowingQueryBuilder;
 
+import generated.PortletJBook;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -19,6 +21,8 @@ import com.jalios.jcms.Category;
 import com.jalios.jcms.Channel;
 import com.jalios.jcms.ControllerStatus;
 import com.jalios.jcms.Member;
+import com.jalios.jcms.portlet.PortletCollection;
+import com.jalios.jcms.workspace.Workspace;
 import com.jalios.jcmsplugin.jbook.data.AbstractBook;
 import com.jalios.jcmsplugin.jbook.data.JBookBorrowing;
 
@@ -189,8 +193,84 @@ public class JBookManager {
 
 	    return borrowerSet;
 	  }
-	
-	
-	
+	  
+	  public String getAppUrlPrefix(Workspace ws, Locale userLocale) {
+		  PortletJBook portlet = getPortletJBook(ws);
+
+		  if (portlet == null) {
+		    return "plugins/JBookPlugin/jsp/app/jbook.jsp?";
+		  }
+		  PortletCollection cs = ws.getCollaborativeSpace();
+		  return cs.getDisplayUrl(userLocale) + "?portlet=" + portlet.getId() +"&";
+		}
+	  
+	  
+	  
+	  /**
+	   * Returns the PortletJBookInfo associated with the given workspace.
+	   * @param ws the workspace.
+	   * @return the PortletJBookInfo associated with the given workspace.
+	   */
+	  public PortletJBook getPortletJBook(Workspace ws) {
+
+	    PortletCollection cs = ws.getCollaborativeSpace();
+
+	    if (cs == null) {
+	      return null;
+	    }
+
+	    PortletJBook portlet = cs.findFirstPortlet(PortletJBook.class);
+	    return portlet;
+
+	  }
+	  
+	  /**
+	   * Returns the list of current borrowing for the given member.
+	   * @param borrower the member.
+	   * @param ws the workspace
+	   * @return the list of current borrowing for the given member.
+	   */
+	  
+	  public List<JBookBorrowing> getCurrentBorrowingList(Member borrower, Workspace ws) {
+
+	    Objects.requireNonNull(borrower, "borrower must not be null");
+
+	    return new JBookBorrowingQueryBuilder()
+	    .borrower(borrower)
+	    .current()
+	    .workspace(ws)
+	    .list();
+	  }
+
+	  /**
+	   * Returns all the borrowings.
+	   * @param ws the workspace
+	   * @return all the borrowings.
+	   */
+	  public List<JBookBorrowing> getAllCurrentBorrowingList(Workspace ws) {
+	    return new JBookBorrowingQueryBuilder()
+	    .current()
+	    .workspace(ws)
+	    .list();
+	    
+	  }
+	  
+	  /**
+	   * Returns the root topic to use according the given workspace and the given member.
+	   * @param ws the workspace
+	   * @param mbr the member.
+	   * @return  the root topic to use according the given workspace and the given member.
+	   */
+	  public Category getTopicRoot(Workspace ws, Member mbr) {
+		  
+	    PortletJBook portlet = getPortletJBook(ws);
+	    if (portlet == null) {
+	      return getTopicRoot();
+	    }
+
+	    return portlet.getFirstTopicRoot(mbr);
+	  }
+	  
+		
 	
 }

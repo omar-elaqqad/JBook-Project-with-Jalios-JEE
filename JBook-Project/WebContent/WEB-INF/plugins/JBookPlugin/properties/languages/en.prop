@@ -47,4 +47,16 @@ jcmsplugin.jbook.msg.my-borrowings.none: You have no outstanding borrowings.
 jcmsplugin.jbook.msg.all-borrowings.none: There are no outstanding borrowings.
 
 # CategoryBrowser
-# category.category-browser.jbook: Search in JBook
+category.category-browser.jbook: Search in JBook
+
+...
+
+# PortletJBook.xml
+types.PortletJBook.label:                           Borrowable Books portlet
+types.PortletJBook.description:                     This portlet displays the catalog of borrowable books.
+types.PortletJBook.title.label:                     Title
+types.PortletJBook.fields.refineWorkspace.label:    Refine on current workspace
+types.PortletJBook.fields.refineWorkspace.onLabel:  Yes
+types.PortletJBook.fields.refineWorkspace.offLabel: No
+types.PortletJBook.fields.topicRoot.label:          Topic Root
+types.PortletJBook.fields.topicRoot.description:    If no topic root is specified, the common topic root will be used.

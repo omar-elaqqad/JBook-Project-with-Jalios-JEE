@@ -107,3 +107,6 @@
 /Book.class
 /BookRevision.class
 /EditBookHandler.class
+/EditPortletJBookHandler.class
+/PortletJBook.class
+/PortletJBook_HANDLER.class

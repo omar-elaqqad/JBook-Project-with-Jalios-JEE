@@ -8,23 +8,29 @@
     <description xml:lang="fr">JBookPlugin</description>
 
     <types>
+
         <type name="Book">
             <file path="doBookFullDisplay.jsp" />
+            <file path="doEditBookModal.jsp" />
         </type>
+        <type name="PortletJBook">
+            <file path="doPortletJBookFullDisplay.jsp" />
+        </type>
+
     </types>
 
-  <!-- ========================== Classes and Jars ======================== -->
+    <!-- ========================== Classes and Jars ======================== -->
   <java-classes>
     <java package="com.jalios.jcmsplugin.jbook" />
   </java-classes>
 
-  <!-- ========================== Plugin Components ======================= -->
+    <!-- ========================== Plugin Components ======================= -->
   <plugincomponents>
     <channellistener class="com.jalios.jcmsplugin.jbook.component.JBookStartupDataGenerator" />
     <policyfilter    class="com.jalios.jcmsplugin.jbook.component.JBookShortcutPolicyFilter" />
   </plugincomponents>
-    
-  <!-- ============================= Hibernate ============================ -->
+
+    <!-- ============================= Hibernate ============================ -->
   <hibernate>
      <mapping resource="com/jalios/jcmsplugin/jbook/data/JBookBorrowing.hbm.xml"/>
   </hibernate>

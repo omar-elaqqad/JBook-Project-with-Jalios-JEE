@@ -40,28 +40,31 @@ public class JBookAppHandler extends QueryHandler {
 
 	protected View view = View.CATALOG;
 
+	// for collaboratif space
+	protected boolean refineWorkspace;
+	protected Category topicRoot;
+
+	
 	public boolean showAppTitle() {
 		return !getWorkspace().isCollaborativeSpace();
 
 	}
 
 	public String getAppTitle() {
-		
-		switch(view) {
 
-		  case MY_BORROWINGS:
-		    return glp("jcmsplugin.jbook.app.view.my-borrowings");
+		switch (view) {
 
-		  case ALL_BORROWINGS:
-		    return glp("jcmsplugin.jbook.app.view.all-borrowings");
+		case MY_BORROWINGS:
+			return glp("jcmsplugin.jbook.app.view.my-borrowings");
 
-		  default:
-		  case CATALOG:
-		    return glp("jcmsplugin.jbook.app.catalog.title");
-		  }
+		case ALL_BORROWINGS:
+			return glp("jcmsplugin.jbook.app.view.all-borrowings");
+
+		default:
+		case CATALOG:
+			return glp("jcmsplugin.jbook.app.catalog.title");
+		}
 	}
-	
-	
 
 	@Override
 	protected void init() {
@@ -91,6 +94,10 @@ public class JBookAppHandler extends QueryHandler {
 
 			catSet = getCategorySet("cids");
 		}
+		
+		if (topicRoot == null) {
+		      topicRoot = mgr.getTopicRoot();
+		    }
 
 		topic = Util.getFirst(catSet);
 
@@ -218,7 +225,6 @@ public class JBookAppHandler extends QueryHandler {
 
 	}
 
-
 	public boolean showBook() {
 		return getSelectedBook() != null;
 	}
@@ -279,15 +285,22 @@ public class JBookAppHandler extends QueryHandler {
 		return settings;
 	}
 
-	// to get all borrowins
-	public List<JBookBorrowing> getAllBorrowingList() {
-		return mgr.getAllCurrentBorrowingList();
-	}
-
-	public List<JBookBorrowing> getMyBorrowingList() {
-		return mgr.getCurrentBorrowingList(loggedMember);
-	}
+	// to get all borrowins : Modified to take into account the workplace 
 	
+	public List<JBookBorrowing> getAllBorrowingList() {
+		  if (refineWorkspace) {
+		    return mgr.getAllCurrentBorrowingList(getWorkspace());
+		  }
+		  return mgr.getAllCurrentBorrowingList();
+		}
+
+		public List<JBookBorrowing> getMyBorrowingList() {
+		  if (refineWorkspace) {
+		    return mgr.getCurrentBorrowingList(loggedMember, getWorkspace());
+		  }
+		  return mgr.getCurrentBorrowingList(loggedMember);
+		}
+
 	// vues management
 
 	public void setView(String v) {
@@ -313,7 +326,6 @@ public class JBookAppHandler extends QueryHandler {
 	private String getViewUrl(View view) {
 		return getAppUrl() + "?view=" + view;
 	}
-	
 
 	// display the book on the app
 
@@ -328,18 +340,43 @@ public class JBookAppHandler extends QueryHandler {
 	public boolean showAllBorrowings() {
 		return view == View.ALL_BORROWINGS && !showBook();
 	}
-	
-	
+
 	// pour produire le menu des vues dans la sidebar
 	public ControlSettings getViewSettings() {
-		  EnumerateSettings settings = new EnumerateSettings()
-		      .name("view")
-		      .value(view)
-		      .enumLabels("jcmsplugin.jbook.app.view.catalog", "jcmsplugin.jbook.app.view.my-borrowings", "jcmsplugin.jbook.app.view.all-borrowings")
-		      .enumValues(View.CATALOG.toString(), View.MY_BORROWINGS.toString(), View.ALL_BORROWINGS.toString())
-		      .onChange("ajax-refresh");
+		EnumerateSettings settings = new EnumerateSettings().name("view").value(view)
+				.enumLabels("jcmsplugin.jbook.app.view.catalog", "jcmsplugin.jbook.app.view.my-borrowings",
+						"jcmsplugin.jbook.app.view.all-borrowings")
+				.enumValues(View.CATALOG.toString(), View.MY_BORROWINGS.toString(), View.ALL_BORROWINGS.toString())
+				.onChange("ajax-refresh");
 
-		  return settings;
+		return settings;
+	}
+
+	public void setRefineWorkspace(String v) {
+
+		refineWorkspace = Util.toBoolean(v, false);
+	}
+
+	public void setTopicRoot(Category c) {
+		topicRoot = c;
+	}
+
+	public Category getTopicRoot() {
+		return topicRoot;
+	}
+
+	public List<Category> getBreadCrumb() {
+
+		Category currentCat = getSelectedTopic();
+
+		if (currentCat == null || currentCat == topicRoot) {
+			return Collections.emptyList();
 		}
-	
+
+		List<Category> list = currentCat.getAncestorList(topicRoot, false);
+		Collections.reverse(list);
+
+		return list;
+	}
+
 }

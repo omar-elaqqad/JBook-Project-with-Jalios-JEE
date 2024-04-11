@@ -3,15 +3,27 @@ package com.jalios.jcmsplugin.jbook.data;
 
 import static com.jalios.jcmsplugin.jbook.data.JBookBorrowing.BORROWING_DATE_FIELD;
 import static com.jalios.jcmsplugin.jbook.data.JBookBorrowing.RELEASE_DATE_FIELD;
+
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import static com.jalios.jcmsplugin.jbook.data.JBookBorrowing.BOOK_ID_FIELD;
 import static com.jalios.jcmsplugin.jbook.data.JBookBorrowing.BORROWER_ID_FIELD;
 
 import org.hibernate.Criteria;
+import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
 
 import com.jalios.jcms.Member;
 import com.jalios.jcms.db.AbstractDBQueryBuilder;
+import com.jalios.jcms.db.DBConstants;
+import com.jalios.jcms.db.HibernateUtil;
+import com.jalios.jcms.workspace.Workspace;
+
+import generated.Book;
 
 public class JBookBorrowingQueryBuilder extends AbstractDBQueryBuilder<JBookBorrowing> {
 
@@ -20,6 +32,13 @@ public class JBookBorrowingQueryBuilder extends AbstractDBQueryBuilder<JBookBorr
 	private Member borrower;
 	private boolean current;
 	private boolean released;
+	
+	private Workspace workspace;
+	
+	public JBookBorrowingQueryBuilder workspace(Workspace workspace) {
+	    this.workspace = workspace;
+	    return this;
+	  }
 	
 	
 	public JBookBorrowingQueryBuilder(){
@@ -66,7 +85,35 @@ public class JBookBorrowingQueryBuilder extends AbstractDBQueryBuilder<JBookBorr
 	    addBorrowerCriterion(criteria);
 	    addCurrentCriterion(criteria);
 	    addReleasedCriterion(criteria);
+	    addWorkspaceCriterion(criteria);
 		
+	}
+
+
+	private void addWorkspaceCriterion(Criteria criteria) {
+	    if (workspace != null) {
+	      criteria.add(getWorkspaceCriterion());
+	    }
+	  }
+
+
+	private Criterion getWorkspaceCriterion() {
+		
+		// Retreive all the book ids in this workspace
+		
+	    List<String> bookIdList = Collections.emptyList();
+	    Criteria bookCriteria = HibernateUtil.createCriteria(AbstractBook.class);
+	    bookCriteria.setProjection(Projections.property(DBConstants.ROW_ID_FIELD));
+	    bookCriteria.add(Restrictions.eq(DBConstants.WORKSPACE_ID_FIELD, workspace.getId()));
+	    List<Long> bookRowIdList = bookCriteria.list();
+	    if (bookRowIdList != null) {
+	      bookIdList = bookRowIdList.stream()
+	          .map(rowId -> HibernateUtil.buildJcmsId(Book.class, rowId))
+	          .collect(Collectors.toList());
+	    }
+
+	    // Add a restriction on these book ids
+	    return HibernateUtil.buildInCriterion(BOOK_ID_FIELD, bookIdList);
 	}
 
 

@@ -47,4 +47,16 @@ jcmsplugin.jbook.msg.my-borrowings.none: Vous n'avez aucun emprunt en curs.
 jcmsplugin.jbook.msg.all-borrowings.none: Il n'y aucun emprunt en cours.
 
 # CategoryBrowser
-# category.category-browser.jbook: Rechercher dans JBook
+category.category-browser.jbook: Rechercher dans JBook
+
+...
+
+# PortletJBook.xml
+types.PortletJBook.label:                           Portlet Livres empruntables
+types.PortletJBook.description:                     Cette portlet affiche le catalogue des livres empruntables.
+types.PortletJBook.title.label:                     Titre
+types.PortletJBook.fields.refineWorkspace.label:    Affiner sur l'espace de travail courant
+types.PortletJBook.fields.refineWorkspace.onLabel:  Oui
+types.PortletJBook.fields.refineWorkspace.offLabel: Non
+types.PortletJBook.fields.topicRoot.label:          Racine de thématiques
+types.PortletJBook.fields.topicRoot.description:    Si aucune racine de thématiques n'est indiquée, c'est la racine générale qui sera utilisée.
