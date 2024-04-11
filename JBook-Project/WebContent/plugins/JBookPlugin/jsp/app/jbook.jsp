@@ -1,3 +1,4 @@
+<%@page import="com.jalios.jcms.Category"%>
 <%@ include file='/jcore/doInitPage.jspf' %><%
 %><%@ page import="com.jalios.jcmsplugin.jbook.*" %><%
 %><%

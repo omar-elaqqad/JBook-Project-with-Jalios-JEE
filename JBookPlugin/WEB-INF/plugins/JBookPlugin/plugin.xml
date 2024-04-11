@@ -44,6 +44,7 @@
         <directory path="css" />
         <directory path="docs" />
         <directory path="jsp" />
+        <directory path="jmobile" />
         <directory path="images" />
     </public-files>
 </plugin>

@@ -1,6 +1,7 @@
 <%@ page import="com.jalios.jcms.uicomponent.app.*" %><%
 %><%@ page import="com.jalios.jcmsplugin.jbook.data.*" %><%
 %><%@ include file="/front/app/doAppCommon.jspf" %><%
+
 %><jsp:useBean id="appHandler" scope="page" class="com.jalios.jcmsplugin.jbook.ui.JBookAppHandler"><%
   %><jsp:setProperty name="appHandler" property="request"       value="<%= request %>"/><%
   %><jsp:setProperty name="appHandler" property="response"      value="<%= response %>"/><%
@@ -33,4 +34,4 @@ jcmsContext.addJavaScript("plugins/JBookPlugin/js/jbook.js");
 
 </jalios:app>
 
-<%@ include file='/jcore/doAjaxFooter.jspf' %>
+<%@ include file='/jcore/doAjaxFooter.jspf' %>P

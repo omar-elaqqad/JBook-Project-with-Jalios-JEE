@@ -96,8 +96,9 @@ public class JBookAppHandler extends QueryHandler {
 		}
 		
 		if (topicRoot == null) {
+			System.out.println("*****************************"+topicRoot);
 		      topicRoot = mgr.getTopicRoot();
-		    }
+		}
 
 		topic = Util.getFirst(catSet);
 

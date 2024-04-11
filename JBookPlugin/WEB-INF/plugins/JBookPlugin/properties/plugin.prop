@@ -35,3 +35,12 @@ $id.jcmsplugin.jbook.catalog.topic-root.chooser-category:
 
 # CategoryBrowser
 category.category-browser.jbook.class: com.jalios.jcmsplugin.jbook.component.JBookCategoryBrowser
+
+#déclarer book.jsp JSP
+jcmsplugin.smartphone.link-prefix.Book: plugins/JBookPlugin/jmobile/types/book.jsp?id=
+
+jcmsplugin.smartphone.shortcut-mapping.$id.shortcut.jcmsplugin.jbook: plugins/JBookPlugin/jmobile/app/jbook.jsp
+jcmsplugin.smartphone.service.jbook.icon:plugins/JBookPlugin/images/jbook48.png
+
+jcms.resource.include.data-list-item.jmobile-jbook.Book:              plugins/JBookPlugin/jmobile/app/doJBookItem.jsp
+jcms.resource.include.data-list-item.jmobile-jbook.JBookBorrowing:    plugins/JBookPlugin/jmobile/app/doJBookBorrowingItem.jsp
