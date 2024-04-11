@@ -22,7 +22,7 @@ List of Books Currently Borrowed by the User: Displays books currently borrowed 
 
 ![image](https://github.com/omar-elaqqad/JBook-Project-with-Jalios-JEE/assets/80116765/c733b458-87ba-4c78-a379-e6e1ba17eac3)
 
-Books are represented by cards showcasing the image and the title. A marker appears at the top of the cards for books currently borrowed.
+Books are represented by cards showcasing the image ,the title , description and the 'See Also' feature based on books from the same genre.. A marker appears at the top of the cards for books currently borrowed.
 
 Clicking on a card triggers the display of the book. The book details include information about the book, the themes, the borrowing history, and associated comments.
 
