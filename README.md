@@ -43,6 +43,5 @@ The application can also be used within a collaborative space:
 
 ![image](https://github.com/omar-elaqqad/JBook-Project-with-Jalios-JEE/assets/80116765/9ec7fc4a-e873-4cd8-a7fe-4d65aedbc490)
 
-Finally, the application offers dedicated views for JMobile :
 
 
