@@ -11,6 +11,7 @@
 Book book = (Book)request.getAttribute(PortalManager.PORTAL_PUBLICATION);
 
 //get the current borring for the book
+
 JBookBorrowing currentBorrowing=book.getCurrentBorrowing();
 		
 boolean isBorrowed=currentBorrowing!=null;

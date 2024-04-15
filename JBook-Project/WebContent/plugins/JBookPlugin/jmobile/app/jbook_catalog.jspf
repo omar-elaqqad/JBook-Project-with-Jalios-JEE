@@ -5,7 +5,7 @@
   </div>
   <% if (appHandler.getSelectedTopic() != null) { %>
   <input name="cids" type="hidden" value="<%= appHandler.getSelectedTopic().getId() %>" />
-  <input name="view" type="hidden" value="<%= JBookAppHandler.View.CATALOG.toString() %>" />
+  <input name="view" type="hidden" value="<%= appHandler.getDefaultView()%>" />
   <% } %>
 </form>
 

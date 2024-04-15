@@ -15,7 +15,7 @@ title='<%=encodeForHTMLAttribute(glp("ui.com.alt.edit")) %>'>
 </a>
 
 <jalios:edit data="<%= appHandler.getSelectedBook()%>" 
-ctxEdit="false" popup="true" 
+ctxEdit="false" popup="true"
 css="list-group-item pub-action-optional pub-action-edit">
 <span class="pub-action-edit-icon nowrap"><jalios:icon src="edit"/></span>
 <span class="publication-action-label"><%= glp("ui.com.btn.edit-full") %></span>

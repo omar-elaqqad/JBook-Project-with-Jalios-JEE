@@ -3,6 +3,7 @@
 <%@ page import="com.jalios.jcmsplugin.jbook.data.*"%>
 <%@ page import="com.jalios.jcmsplugin.jbook.ui.*" %>
 <%@ include file='/plugins/SmartPhonePlugin/jsp/common/header.jspf' %>
+
 <jsp:useBean id="appHandler" scope="page" class="com.jalios.jcmsplugin.jbook.ui.JMobileJBookAppHandler">
 <jsp:setProperty name="appHandler" property="request"  value="<%= request %>"/>
 <jsp:setProperty name="appHandler" property="response" value="<%= response %>"/>

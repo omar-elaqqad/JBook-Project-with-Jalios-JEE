@@ -1,6 +1,8 @@
 <%-- Parent (Back) --%>
 <% if (appHandler.showParentLink()) { %>
-<jalios:listItem icon="jcmsplugin-smartphone-folder-back" template="jmobile" text="<%= appHandler.getParentName() %>" link="<%= appHandler.getParentUrl() %>"/>
+<jalios:listItem icon="jcmsplugin-smartphone-folder-back" template="jmobile" 
+text="<%= appHandler.getParentName() %>" 
+link="<%= appHandler.getParentUrl() %>"/>
 <% } %>
 
 <%-- Topics --%>

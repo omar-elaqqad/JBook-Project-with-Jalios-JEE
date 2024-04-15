@@ -69,8 +69,6 @@ public class JBookBorrowing extends Data implements DBData{
 		borrower=channel.getData(Member.class,Id);
 		
 	}
-	
-	
 	public Date getBorrowingDate() {
 		return borrowingDate;
 	}

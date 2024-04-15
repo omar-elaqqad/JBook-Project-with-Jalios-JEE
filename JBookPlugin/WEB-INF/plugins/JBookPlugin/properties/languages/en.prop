@@ -40,8 +40,12 @@ jcmsplugin.jbook.lbl.available: Available
 jcmsplugin.jbook.app.view.my-borrowings: My borrowings
 jcmsplugin.jbook.app.view.all-borrowings: All borrowings
 
+jcmsplugin.jbook.jmobile.tab.borrowings: All borrowings
+
 jcmsplugin.jbook.app.views: Views
 jcmsplugin.jbook.app.view.catalog: Catalog
+
+jcmsplugin.jbook.jmobile.tab.catalog: Catalog
 
 jcmsplugin.jbook.msg.my-borrowings.none: You have no outstanding borrowings.
 jcmsplugin.jbook.msg.all-borrowings.none: There are no outstanding borrowings.

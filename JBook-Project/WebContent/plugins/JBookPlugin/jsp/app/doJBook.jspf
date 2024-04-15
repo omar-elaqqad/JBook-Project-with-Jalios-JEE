@@ -34,4 +34,4 @@ jcmsContext.addJavaScript("plugins/JBookPlugin/js/jbook.js");
 
 </jalios:app>
 
-<%@ include file='/jcore/doAjaxFooter.jspf' %>P
+<%@ include file='/jcore/doAjaxFooter.jspf' %>

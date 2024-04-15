@@ -24,7 +24,7 @@ public abstract class AbstractBook extends Content {
 
 	abstract public String getIamge();
 
-	public JBookBorrowing getCurrentBorrowing() {
+	public JBookBorrowing getCurrentBorrowing(){
 		return mgr.getCurrentBorrowing(this);
 	}
 

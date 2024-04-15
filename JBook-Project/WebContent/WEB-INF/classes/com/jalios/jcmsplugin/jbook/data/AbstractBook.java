@@ -8,11 +8,11 @@ import com.jalios.jcms.Content;
 import com.jalios.jcms.Member;
 import com.jalios.jcmsplugin.jbook.JBookManager;
 
-public abstract class AbstractBook extends Content{
+public abstract class AbstractBook extends Content {
 
 	private transient JBookManager mgr = JBookManager.getInstance();
 
-	public AbstractBook(){
+	public AbstractBook() {
 
 	}
 
@@ -24,7 +24,7 @@ public abstract class AbstractBook extends Content{
 
 	abstract public String getIamge();
 
-	public JBookBorrowing getCurrentBorrowing() {
+	public JBookBorrowing getCurrentBorrowing(){
 		return mgr.getCurrentBorrowing(this);
 	}
 

@@ -40,8 +40,12 @@ jcmsplugin.jbook.lbl.available: Disponible
 jcmsplugin.jbook.app.view.my-borrowings: Mes emprunts
 jcmsplugin.jbook.app.view.all-borrowings: Tous les emprunts
 
+jcmsplugin.jbook.jmobile.tab.borrowings: Tous les emprunts
+
 jcmsplugin.jbook.app.views: Affichage
 jcmsplugin.jbook.app.view.catalog: Catalogue
+
+jcmsplugin.jbook.jmobile.tab.catalog: Catalogue
 
 jcmsplugin.jbook.msg.my-borrowings.none: Vous n'avez aucun emprunt en curs.
 jcmsplugin.jbook.msg.all-borrowings.none: Il n'y aucun emprunt en cours.

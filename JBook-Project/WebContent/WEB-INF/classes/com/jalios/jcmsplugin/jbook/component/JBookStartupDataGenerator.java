@@ -10,7 +10,6 @@ public class JBookStartupDataGenerator extends StartupDataGenerator{
 	@Override
 	protected void createData() {
 		createCategory(JBookManager.VID_TOPIC_ROOT);
-
 	}
 
 

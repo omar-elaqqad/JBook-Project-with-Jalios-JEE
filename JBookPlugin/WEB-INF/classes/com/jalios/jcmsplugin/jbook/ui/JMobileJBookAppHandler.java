@@ -30,7 +30,7 @@ public class JMobileJBookAppHandler extends JBookAppHandler {
 
 	}
 
-	protected View getDefaultView() {
+	public View getDefaultView() {
 		if (hasBorrowings) {
 			return View.MY_BORROWINGS;
 		}
