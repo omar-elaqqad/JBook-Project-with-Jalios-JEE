@@ -45,8 +45,8 @@ The application can also be used within a collaborative space:
 
 the JBook application on JMobile: The application enables users to browse the catalog, view books, borrow them, release them, and check their borrowings:
 
-![Screenshot_20240415-111034_Chrome](https://github.com/omar-elaqqad/JBook-Project-with-Jalios-JEE/assets/80116765/5c3e3466-e454-4654-a966-5edeb6732317)![Screenshot_20240415-111042_Chrome](https://github.com/omar-elaqqad/JBook-Project-with-Jalios-JEE/assets/80116765/41790e7d-c792-4f6d-b926-207e9eda09ba)![Screenshot_20240415-111054_Chrome](https://github.com/omar-elaqqad/JBook-Project-with-Jalios-![Screenshot_20240415-111105_Chrome](https://github.com/omar-elaqqad/JBook-Project-with-Jalios-JEE/assets/80116765/eeb320e1-9080-4cce-b0d2-c18c29413793)
-JEE/assets/80116765/73348a14-83d4-498d-8a55-ddcdb35c1da9)
+![Screenshot_20240415-111034_Chrome](https://github.com/omar-elaqqad/JBook-Project-with-Jalios-JEE/assets/80116765/5c3e3466-e454-4654-a966-5edeb6732317) ![Screenshot_20240415-111042_Chrome](https://github.com/omar-elaqqad/JBook-Project-with-Jalios-JEE/assets/80116765/41790e7d-c792-4f6d-b926-207e9eda09ba) ![Screenshot_20240415-111054_Chrome](https://github.com/omar-elaqqad/JBook-Project-with-Jalios-JEE/assets/80116765/eeb320e1-9080-4cce-b0d2-c18c29413793) ![Screenshot_20240415-111105_Chrome](https://github.com/omar-elaqqad/JBook-Project-with-Jalios-JEE/assets/80116765/73348a14-83d4-498d-8a55-ddcdb35c1da9)
+
 
 
 
