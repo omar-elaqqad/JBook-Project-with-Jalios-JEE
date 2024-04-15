@@ -45,8 +45,8 @@ The application can also be used within a collaborative space:
 
 the JBook application on JMobile: The application enables users to browse the catalog, view books, borrow them, release them, and check their borrowings:
 
-<img src="https://github.com/omar-elaqqad/JBook-Project-with-Jalios-JEE/assets/80116765/0c750b7a-a34e-416d-8769-60c8449bc28d" width="200"> <img src="https://github.com/omar-elaqqad/JBook-Project-with-Jalios-JEE/assets/80116765/72faf6bf-e5e0-4da6-bfee-849eea7d8140" width="200"> <img src="https://github.com/omar-elaqqad/JBook-Project-with-Jalios-JEE/assets/80116765/68d239ac-0226-48eb-93e9-966ea218913b" width="200">
-<img src="https://github.com/omar-elaqqad/JBook-Project-with-Jalios-JEE/assets/80116765/3840d9f5-df67-41ae-b792-cbaf692d52c9" width="200"> <img src="https://github.com/omar-elaqqad/JBook-Project-with-Jalios-JEE/assets/80116765/d6030f9a-942a-4129-82cd-dc9eecdbd992" width="200">
+<img src="https://github.com/omar-elaqqad/JBook-Project-with-Jalios-JEE/assets/80116765/0c750b7a-a34e-416d-8769-60c8449bc28d" width="200"> <img src="https://github.com/omar-elaqqad/JBook-Project-with-Jalios-JEE/assets/80116765/72faf6bf-e5e0-4da6-bfee-849eea7d8140" width="200"> <img src="https://github.com/omar-elaqqad/JBook-Project-with-Jalios-JEE/assets/80116765/d6030f9a-942a-4129-82cd-dc9eecdbd992" width="200"> <img src="https://github.com/omar-elaqqad/JBook-Project-with-Jalios-JEE/assets/80116765/68d239ac-0226-48eb-93e9-966ea218913b" width="200">
+<img src="https://github.com/omar-elaqqad/JBook-Project-with-Jalios-JEE/assets/80116765/3840d9f5-df67-41ae-b792-cbaf692d52c9" width="200"> 
 
 
 
