@@ -34,6 +34,7 @@ jcmsplugin.jbook.lbl.prev-borrowers: Previous Borrowers
 #who borrows it
 jcmsplugin.jbook.lbl.borrowed-by-you: You borrow it
 jcmsplugin.jbook.lbl.borrowed-by: {0} borrows it
+jcmsplugin.jbook.lbl.borrowed-at:borrowed at
 jcmsplugin.jbook.lbl.available: Available
 
 #menu for the sidebar
@@ -64,3 +65,5 @@ types.PortletJBook.fields.refineWorkspace.onLabel:  Yes
 types.PortletJBook.fields.refineWorkspace.offLabel: No
 types.PortletJBook.fields.topicRoot.label:          Topic Root
 types.PortletJBook.fields.topicRoot.description:    If no topic root is specified, the common topic root will be used.
+
+jcmsplugin.smartphone.service.jbook: JBook

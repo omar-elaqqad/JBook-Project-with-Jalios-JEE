@@ -22,6 +22,7 @@ jcmsplugin.jbook.app.filter.mbr:        Ajouté par...
 jcmsplugin.jbook.btn.release: Je le rends...
 jcmsplugin.jbook.btn.contact: Contacter l'emprunteur
 jcmsplugin.jbook.btn.force-borrow: Je l'ai pris !
+jcmsplugin.jbook.lbl.borrowed-at: emprunté à
 jcmsplugin.jbook.btn.borrow: Je l'emprunte...
 
 #borrowing duration
@@ -64,3 +65,5 @@ types.PortletJBook.fields.refineWorkspace.onLabel:  Oui
 types.PortletJBook.fields.refineWorkspace.offLabel: Non
 types.PortletJBook.fields.topicRoot.label:          Racine de thématiques
 types.PortletJBook.fields.topicRoot.description:    Si aucune racine de thématiques n'est indiquée, c'est la racine générale qui sera utilisée.
+
+jcmsplugin.smartphone.service.jbook: JBook

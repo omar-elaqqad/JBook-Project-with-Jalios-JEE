@@ -34,3 +34,11 @@
 11:06:43,941 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
 11:06:51,521 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
 11:06:52,928 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+11:35:38,796 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+11:35:49,550 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+11:35:51,329 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+11:37:09,134 INFO [http-nio-8080-exec-4] [JPlatform 10] [handlers.LoggingAuthenticationHandler] [0:0:0:0:0:0:0:1, j_2, Admin] [SECURITY] - Administrator "Admin" starts a new session
+11:42:41,224 INFO [http-nio-8080-exec-9] [JPlatform 10] [handlers.LoggingAuthenticationHandler] [192.168.212.168, j_2, Admin] [SECURITY] - Administrator "Admin" starts a new session
+11:50:38,856 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+11:50:45,937 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
+11:50:46,716 INFO [main] [JPlatform 10] [property.PropertyManager] [SECURITY] - update and save properties
